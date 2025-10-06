@@ -23,10 +23,17 @@ def analyze_benchmark(benchmark_path: Path) -> Dict[str, Any]:
     
     entries = []
     with open(benchmark_path, 'r', encoding='utf-8') as f:
+        line_num = 0
         for line in f:
+            line_num += 1
             if line.strip():
-                entry_dict = json.loads(line)
-                entries.append(entry_dict)
+                try:
+                    entry_dict = json.loads(line)
+                    entries.append(entry_dict)
+                except json.JSONDecodeError as e:
+                    print(f"警告: 第{line_num}行JSON解析错误: {e}")
+                    print(f"内容: {line[:100]}...")
+                    continue
     
     if not entries:
         return {"count": 0, "message": "错题库为空"}
@@ -42,7 +49,11 @@ def analyze_benchmark(benchmark_path: Path) -> Dict[str, Any]:
     }
     
     for entry in entries:
-        q = entry.get("question_data", {})
+        # 兼容两种格式：简单QuestionUnit或完整BenchmarkEntry
+        if "question_data" in entry:
+            q = entry["question_data"]
+        else:
+            q = entry
         
         # 主题统计
         topic = q.get("topic", "Unknown")
