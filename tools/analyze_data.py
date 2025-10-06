@@ -8,11 +8,11 @@ from collections import Counter, defaultdict
 from typing import Dict, List, Any
 
 # 添加src到路径
-sys.path.insert(0, str(Path(__file__).parent.parent / "src"))
+project_root = Path(__file__).parent.parent
+sys.path.insert(0, str(project_root))
+sys.path.insert(0, str(project_root / "src"))
 
-from config_loader import load_config
-from data_persistence import DataPersistence
-from models import QuestionUnit, BenchmarkEntry
+import yaml
 
 
 def analyze_benchmark(benchmark_path: Path) -> Dict[str, Any]:
@@ -201,10 +201,12 @@ def print_report(benchmark_stats: Dict, validation_stats: Dict):
 
 if __name__ == "__main__":
     # 加载配置
-    config = load_config()
+    config_path = project_root / "config.yaml"
+    with open(config_path, 'r', encoding='utf-8') as f:
+        config = yaml.safe_load(f)
     
-    benchmark_path = Path(config["benchmark_bank_path"])
-    validation_path = Path(config["validation_set_path"])
+    benchmark_path = project_root / config["benchmark_bank_path"]
+    validation_path = project_root / config["validation_set_path"]
     
     # 分析两个数据集
     print("\n正在分析数据...")

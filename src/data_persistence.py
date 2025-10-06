@@ -56,8 +56,16 @@ class DataPersistence:
                     line = line.strip()
                     if line:
                         data = json.loads(line)
-                        # 从BenchmarkEntry中提取question_data
-                        question_data = data.get("question_data", data)
+                        # 兼容两种格式：
+                        # 1. 简单的QuestionUnit（种子数据）
+                        # 2. 完整的BenchmarkEntry
+                        if "question_data" in data:
+                            # 完整BenchmarkEntry格式
+                            question_data = data["question_data"]
+                        else:
+                            # 简单QuestionUnit格式（种子题目）
+                            question_data = data
+                        
                         question = QuestionUnit.from_dict(question_data)
                         questions.append(question)
             
