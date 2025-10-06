@@ -23,9 +23,14 @@ wheels/
 .installed.cfg
 *.egg
 
-# Data files
-data/
-*.jsonl
+# Data files (exclude runtime data, but keep seed examples)
+data/benchmark_bank.jsonl
+data/validation_set.jsonl
+!data/seed_examples.jsonl
+
+# Logs
+logs/
+*.log
 
 # IDE
 .vscode/

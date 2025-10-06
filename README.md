@@ -61,6 +61,9 @@ pip install -r requirements.txt
 # 3. 配置环境变量
 # 复制 .env.example 为 .env，填入 Google API Key
 cp .env.example .env
+
+# 4. 初始化种子数据（首次运行）
+Copy-Item data/seed_examples.jsonl data/benchmark_bank.jsonl
 ```
 
 ### 启动 LM Studio
@@ -79,6 +82,10 @@ python tools/batch_run.py --cycles 5 --questions 3
 # 方式3: Web监控界面
 python web_ui.py
 # 访问 http://localhost:5000 查看实时状态
+
+# 可选: 使用PowerShell启动脚本
+scripts\run.ps1      # 运行主程序
+scripts\run_web.ps1  # 启动Web界面
 ```
 
 ### 数据分析
@@ -86,6 +93,9 @@ python web_ui.py
 ```powershell
 # 查看双数据库统计报告
 python tools/analyze_data.py
+
+# 运行系统测试
+python testscript/test_setup.py
 ```
 
 ## 项目结构
@@ -101,20 +111,25 @@ questions/
 ├── src/                        # 核心模块
 │   ├── models.py               # 数据模型（QuestionUnit, BenchmarkEntry等）
 │   ├── prompt_manager.py       # 提示词管理器
-│   ├── question_generator.py   # 题目生成（Gemini 2.5 Pro）
+│   ├── question_generator.py   # 题目生成（Gemini 2.0 Flash）
 │   ├── answering_module.py     # 解答模块（LM Studio）
-│   ├── grading_module.py       # 判题模块（Gemini 2.5 Flash）
+│   ├── grading_module.py       # 判题模块（Gemini 2.0 Flash）
 │   ├── data_persistence.py     # 双数据库持久化
 │   ├── config_loader.py        # 配置加载
 │   └── utils.py                # 工具函数
 │
 ├── data/                       # 数据目录
-│   ├── benchmark_bank.jsonl    # 错题库（含错误答案）
-│   └── validation_set.jsonl    # 验证集（正确答案）
+│   ├── seed_examples.jsonl     # 种子示例（Git追踪，供新用户使用）
+│   ├── benchmark_bank.jsonl    # 错题库（运行时生成，不提交Git）
+│   └── validation_set.jsonl    # 验证集（运行时生成，不提交Git）
 │
 ├── tools/                      # 工具脚本
 │   ├── batch_run.py            # 批量运行
 │   └── analyze_data.py         # 数据分析
+│
+├── scripts/                    # 启动脚本
+│   ├── run.ps1                 # 运行主程序
+│   └── run_web.ps1             # 启动Web监控
 │
 ├── testscript/                 # 测试脚本
 │   └── test_setup.py           # 环境测试
@@ -126,9 +141,9 @@ questions/
 │   ├── 生成题Prompt.md         # 题目生成提示词
 │   ├── 判题Prompt.md           # 判题提示词
 │   ├── 解题Prompt.md           # 解题提示词
-│   └── 高质量题目示例.md
+│   └── 高质量题目示例.md       # 5道完整示例
 │
-└── logs/                       # 日志目录
+└── logs/                       # 日志目录（不提交Git）
     └── system.log
 ```
 
@@ -153,8 +168,8 @@ validation_set_path: "data/validation_set.jsonl"  # 验证集
 prompts_dir: "docs"
 
 # Few-shot配置
-few_shot_count: 2                    # 使用验证集中的示例数
-few_shot_source: "validation_set"    # 从验证集抽取
+few_shot_count: 3                    # 使用错题库中的示例数
+few_shot_source: "benchmark_bank"    # 从错题库抽取（而非验证集）
 ```
 
 ## 使用示例
@@ -162,14 +177,18 @@ few_shot_source: "validation_set"    # 从验证集抽取
 ### 示例1: 初次运行
 
 ```powershell
+# 初始化种子数据
+Copy-Item data/seed_examples.jsonl data/benchmark_bank.jsonl
+
 # 运行主程序（使用种子题目作为Few-shot）
 python main.py
 
 # 输出示例：
+# 从Benchmark错题库抽取了 2 道题目作为Few-shot样本
 # 生成了 3 个题目
 # 题目已解答
 # 判题完成
-# 错题库新增: 2 题
+# 错题库新增: 2 题（包含错误答案原文）
 # 验证集新增: 1 题
 ```
 
@@ -257,8 +276,16 @@ A: 修改 `config.yaml` 中的 `generation_model` 参数。
 
 ### Q: 错题库和验证集的区别？
 A: 
-- **错题库**: 目标模型答错的题，用于构建 benchmark 和分析弱点
-- **验证集**: 目标模型答对的题，用于 Few-shot 示例和质量验证
+- **错题库 (benchmark_bank.jsonl)**: 目标模型答错的题，包含**错误答案原文**和判题结果，用于构建benchmark和分析弱点
+- **验证集 (validation_set.jsonl)**: 目标模型答对的题，用于质量验证
+- **Few-shot来源**: 从**错题库**抽取示例（因为这些是经过验证的高质量难题）
+
+### Q: 数据文件如何管理？
+A:
+- `data/seed_examples.jsonl` - 种子示例（2道题），**提交到Git**供新用户使用
+- `data/benchmark_bank.jsonl` - 运行时错题库，**不提交Git**（在.gitignore中排除）
+- `data/validation_set.jsonl` - 运行时验证集，**不提交Git**
+- 新用户首次运行需要复制种子示例初始化benchmark
 
 ### Q: 如何查看 API 成本？
 A: 运行 `python web_ui.py`，访问 http://localhost:5000 查看实时成本。
