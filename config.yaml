@@ -1,0 +1,19 @@
+# --- Service Endpoints & Models ---
+lm_studio_endpoint: "http://localhost:1234/v1/chat/completions"
+lm_studio_model_name: "qwen/qwen3-8b"
+generation_model: "gemini/gemini-2.5-pro-latest"
+grading_model: "gemini/gemini-2.5-flash-latest"
+
+# --- File Paths ---
+benchmark_bank_path: "./data/benchmark_bank.jsonl"
+validation_set_path: "./data/validation_set.jsonl"
+env_file_path: ".env"
+
+# --- Process Control ---
+lm_studio_concurrency: 1      # 控制本地模型解题的并发数
+few_shot_count: 3              # 每次生成题目时,从Benchmark错题库随机抽取的few-shot示例数量
+batch_size: 10                 # 每次生成的题目数量
+
+# --- Logging ---
+log_level: "INFO"
+log_file: "./logs/system.log"
