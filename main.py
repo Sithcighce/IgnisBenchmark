@@ -117,11 +117,8 @@ def main():
                 # 保存到Benchmark错题库（包含错误答案）
                 benchmark_entry = BenchmarkEntry(
                     question_data=question,
-                    failed_attempt={
-                        "answer": question.candidate_answer or "",
-                        "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-                        "model": config["lm_studio_model_name"]
-                    },
+                    model_name=config["lm_studio_model_name"],
+                    candidate_answer=question.candidate_answer or "",
                     grading_result=result
                 )
                 data_persistence.save_to_benchmark(benchmark_entry)

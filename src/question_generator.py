@@ -102,6 +102,35 @@ class QuestionGenerator:
             elif "```" in content:
                 content = content.split("```")[1].split("```")[0].strip()
             
+            # 处理可能的截断问题 - 检查是否有有效的JSON开始
+            if '"prompt_text"' in content and not '"questions"' in content:
+                logger.warning("响应中只包含prompt_text，没有questions数据，可能是截断或格式问题")
+                logger.error(f"响应内容过短或格式错误: {content[:500]}...")
+                return []
+            
+            if not content.strip().endswith('}'):
+                logger.warning("响应似乎被截断，尝试修复JSON格式")
+                # 尝试找到最后一个完整的问题对象
+                if '"questions"' in content:
+                    # 找到questions数组的开始
+                    questions_start = content.find('"questions"')
+                    bracket_start = content.find('[', questions_start)
+                    if bracket_start != -1:
+                        # 寻找最后一个完整的问题对象
+                        content_part = content[bracket_start:]
+                        # 简单修复：如果没有正确结尾，添加结尾
+                        if not content.strip().endswith(']}'):
+                            if content.count('{') > content.count('}'):
+                                # 缺少结尾括号
+                                content += '}]}'
+                            elif not content.strip().endswith(']'):
+                                content += ']}'
+                            elif not content.strip().endswith('}'):
+                                content += '}'
+                else:
+                    logger.error("响应中没有找到questions字段，可能是严重截断")
+                    return []
+            
             data = json.loads(content)
             
             # 提取questions列表
