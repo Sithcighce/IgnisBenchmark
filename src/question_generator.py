@@ -91,6 +91,7 @@ class QuestionGenerator:
                     {"role": "user", "content": prompt}
                 ],
                 temperature=0.8,  # 提高温度以增加多样性
+                max_tokens=8192,  # 提高token限制，支持更长的思考过程
             )
             
             # 解析响应

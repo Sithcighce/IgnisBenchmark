@@ -96,6 +96,7 @@ class GradingModule:
                     {"role": "user", "content": prompt}
                 ],
                 temperature=0.3,  # 较低温度以保证判题的一致性
+                max_tokens=4096,  # 提高token限制，支持详细的判题理由
             )
             
             # 解析响应

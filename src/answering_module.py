@@ -79,9 +79,10 @@ class AnsweringModule:
                         {"role": "user", "content": prompt}
                     ],
                     "temperature": 0.7,
-                    "max_tokens": 1000
+                    "max_tokens": -1,  # 无限制，避免截断
+                    "stream": False
                 },
-                timeout=120  # 2分钟超时
+                timeout=180  # 3分钟超时，给更多时间思考
             )
             
             if response.status_code == 200:
