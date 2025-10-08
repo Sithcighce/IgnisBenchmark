@@ -50,7 +50,7 @@ Examples / 使用示例:
         '--mode', '-m',
         choices=['gui', 'cli', 'web', 'generate', 'visualize', 'clean', 'validate'],
         default='gui',
-        help='运行模式 (Run mode): gui=图形界面, cli=命令行, web=网页界面, generate=生成题目, visualize=可视化, clean=清理数据, validate=验证系统'
+        help='运行模式 (Run mode): gui=图形界面, cli=命令行, web=网页界面, generate=生成题目, visualize=可视化, clean=清理文件(不加-n)或数据(加-n), validate=验证系统'
     )
     
     parser.add_argument(
@@ -85,8 +85,18 @@ Examples / 使用示例:
         if args.mode == 'gui':
             print("🖥️  Starting GUI application...")
             print("    启动图形用户界面...")
-            from app import main as gui_main
-            gui_main()
+            
+            # Try international GUI first with language support
+            try:
+                from app_international import InternationalQuestionGeneratorGUI
+                app = InternationalQuestionGeneratorGUI(language=args.lang)
+                app.run()
+            except ImportError:
+                # Fall back to original GUI
+                print("   📝 International GUI not available, using standard GUI...")
+                print("   📝 国际化GUI不可用，使用标准GUI...")
+                from app import main as gui_main
+                gui_main()
             
         elif args.mode == 'cli':
             print("⌨️  Starting CLI application...")
@@ -107,14 +117,22 @@ Examples / 使用示例:
             cli_main()
             
         elif args.mode == 'visualize':
-            print("🎨 Generating question browser...")
-            print("    生成题目浏览器...")
-            os.system(f'"{sys.executable}" scripts/visualize_data.py')
+            print("🎨 Generating complete question browser...")
+            print("    生成完整题目浏览器...")
+            os.system(f'"{sys.executable}" scripts/visualize_complete.py')
             
         elif args.mode == 'clean':
-            print("🧹 Cleaning benchmark data...")
-            print("    清理基准数据...")
-            os.system(f'"{sys.executable}" scripts/clean_benchmark.py')
+            if args.questions and args.questions > 0:
+                print("🧹 Cleaning benchmark data...")
+                print("    清理基准数据...")
+                if os.path.exists('scripts/clean_benchmark.py'):
+                    os.system(f'"{sys.executable}" scripts/clean_benchmark.py')
+                else:
+                    print("    Benchmark cleaning script not found")
+            else:
+                print("🧹 Cleaning output files...")
+                print("    清理输出文件...")
+                os.system(f'"{sys.executable}" scripts/clean_output.py')
             
         elif args.mode == 'validate':
             print("✅ Validating system...")

@@ -12,7 +12,7 @@ logger = logging.getLogger(__name__)
 class PromptManager:
     """Prompt管理器，负责加载和提供所有prompt模板"""
     
-    def __init__(self, prompts_dir: str = "./docs/prompts"):
+    def __init__(self, prompts_dir: str = "./prompts"):
         """
         初始化Prompt管理器
         

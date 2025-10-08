@@ -1,57 +1,33 @@
-# Windows启动脚本 - 运行主程序
+# 启动应用程序的PowerShell脚本
+# 不使用 python -c 命令
 
-# 激活虚拟环境（如果存在）
-if (Test-Path ".\venv\Scripts\Activate.ps1") {
-    Write-Host "激活虚拟环境..." -ForegroundColor Green
-    .\venv\Scripts\Activate.ps1
+Write-Host "🚀 正在启动智能题库生成与评估系统..." -ForegroundColor Green
+
+# 设置工作目录
+$ScriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
+$ProjectDir = Split-Path -Parent $ScriptDir
+Set-Location $ProjectDir
+
+Write-Host "📁 工作目录: $ProjectDir" -ForegroundColor Cyan
+
+# 检查Python环境
+if (!(Get-Command python -ErrorAction SilentlyContinue)) {
+    Write-Host "❌ 未找到Python解释器" -ForegroundColor Red
+    exit 1
 }
 
-# 检查依赖
-Write-Host "检查依赖..." -ForegroundColor Green
-$packages = @("litellm", "python-dotenv", "pyyaml", "requests", "flask")
-$missing = @()
+# 显示Python版本
+$PythonVersion = python --version 2>&1
+Write-Host "🐍 $PythonVersion" -ForegroundColor Blue
 
-foreach ($pkg in $packages) {
-    $result = pip show $pkg 2>&1
-    if ($LASTEXITCODE -ne 0) {
-        $missing += $pkg
-    }
-}
-
-if ($missing.Count -gt 0) {
-    Write-Host "缺少以下依赖包: $($missing -join ', ')" -ForegroundColor Yellow
-    Write-Host "正在安装..." -ForegroundColor Green
-    pip install -r requirements.txt
-}
-
-# 检查.env文件
-if (-not (Test-Path ".env")) {
-    Write-Host "警告: .env文件不存在" -ForegroundColor Yellow
-    Write-Host "请复制.env.example为.env并填入API密钥" -ForegroundColor Yellow
-    pause
-    exit
-}
-
-# 检查LM Studio
-Write-Host "检查LM Studio服务..." -ForegroundColor Green
+# 运行应用程序
+Write-Host "⚡ 启动应用程序..." -ForegroundColor Yellow
 try {
-    $response = Invoke-WebRequest -Uri "http://localhost:1234/v1/models" -Method GET -TimeoutSec 5
-    Write-Host "✓ LM Studio服务正常运行" -ForegroundColor Green
-} catch {
-    Write-Host "✗ LM Studio服务未响应" -ForegroundColor Red
-    Write-Host "请确保LM Studio已启动并运行在端口1234" -ForegroundColor Yellow
-    $continue = Read-Host "是否继续？(y/n)"
-    if ($continue -ne "y") {
-        exit
-    }
+    python app.py
+}
+catch {
+    Write-Host "❌ 应用程序启动失败: $($_.Exception.Message)" -ForegroundColor Red
+    exit 1
 }
 
-# 运行主程序
-Write-Host "`n开始运行智能题库生成系统..." -ForegroundColor Green
-Write-Host "================================`n" -ForegroundColor Green
-
-python main.py
-
-Write-Host "`n================================" -ForegroundColor Green
-Write-Host "程序执行完成" -ForegroundColor Green
-pause
+Write-Host "👋 应用程序已退出" -ForegroundColor Green

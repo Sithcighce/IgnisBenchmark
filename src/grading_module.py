@@ -4,6 +4,7 @@
 
 import json
 import logging
+import time
 from typing import List, Optional
 from litellm import completion
 from .models import QuestionUnit, GradingResult
@@ -54,12 +55,13 @@ class GradingModule:
         
         return prompt
     
-    def grade_answer(self, question: QuestionUnit) -> GradingResult:
+    def grade_answer(self, question: QuestionUnit, error_callback=None) -> GradingResult:
         """
         对单个答案进行判题
         
         Args:
             question: 包含候选答案的问题对象
+            error_callback: 判题系统错误时的回调函数，参数为(question, candidate_answer, error_reason)
         
         Returns:
             判题结果
@@ -86,54 +88,95 @@ class GradingModule:
             question.candidate_answer
         )
         
-        try:
-            logger.info(f"正在判题: {question.question_id[:8]}...")
-            
-            # 调用LLM进行判题
-            response = completion(
-                model=self.model_name,
-                messages=[
-                    {"role": "user", "content": prompt}
-                ],
-                temperature=0.3,  # 较低温度以保证判题的一致性
-                max_tokens=4096,  # 提高token限制，支持详细的判题理由
-            )
-            
-            # 解析响应
-            content = response.choices[0].message.content
-            
-            # 尝试提取JSON
-            if "```json" in content:
-                content = content.split("```json")[1].split("```")[0].strip()
-            elif "```" in content:
-                content = content.split("```")[1].split("```")[0].strip()
-            
-            data = json.loads(content)
-            
-            result = GradingResult(
-                is_correct=bool(data["is_correct"]),
-                score=float(data["score"]),
-                reasoning=data["reasoning"]
-            )
-            
-            logger.info(f"判题完成: {question.question_id[:8]}... - {'正确' if result.is_correct else '错误'} (分数: {result.score})")
-            return result
-            
-        except json.JSONDecodeError as e:
-            logger.error(f"JSON解析错误: {e}")
-            logger.error(f"响应内容: {content}")
-            return GradingResult(
-                is_correct=False,
-                score=0.0,
-                reasoning=f"判题系统错误: JSON解析失败"
-            )
-        except Exception as e:
-            logger.error(f"判题时出错: {e}")
-            return GradingResult(
-                is_correct=False,
-                score=0.0,
-                reasoning=f"判题系统错误: {str(e)}"
-            )
+        # 重试配置
+        max_retries = 3
+        
+        for attempt in range(max_retries):
+            try:
+                logger.info(f"正在判题: {question.question_id[:8]}... (第{attempt+1}次尝试)")
+                
+                # 调用LLM进行判题
+                response = completion(
+                    model=self.model_name,
+                    messages=[
+                        {"role": "user", "content": prompt}
+                    ],
+                    temperature=0.3,  # 较低温度以保证判题的一致性
+                    # 无max_tokens限制，模型自由生成任意长度的判题理由
+                )
+                
+                # 统计token使用(仅Gemini)
+                if "gemini" in self.model_name.lower() and hasattr(response, 'usage') and response.usage:
+                    try:
+                        usage_dict = response.usage.__dict__ if hasattr(response.usage, '__dict__') else response.usage
+                        logger.info(f"Gemini判题API usage: {usage_dict}")
+                        from .token_tracker import token_tracker
+                        token_tracker.track_grading_usage(usage_dict)
+                    except Exception as e:
+                        logger.error(f"Token统计失败: {e}")
+                
+                # 解析响应
+                content = response.choices[0].message.content
+                
+                # 尝试提取JSON
+                if "```json" in content:
+                    content = content.split("```json")[1].split("```")[0].strip()
+                elif "```" in content:
+                    content = content.split("```")[1].split("```")[0].strip()
+                
+                data = json.loads(content)
+                
+                # 验证必要字段
+                if "is_correct" not in data or "score" not in data or "reasoning" not in data:
+                    raise ValueError("响应缺少必要字段")
+                
+                result = GradingResult(
+                    is_correct=bool(data["is_correct"]),
+                    score=float(data["score"]),
+                    reasoning=data["reasoning"]
+                )
+                
+                logger.info(f"判题完成: {question.question_id[:8]}... - {'正确' if result.is_correct else '错误'} (分数: {result.score})")
+                return result
+                
+            except (json.JSONDecodeError, ValueError, KeyError) as e:
+                logger.warning(f"第{attempt+1}次尝试解析失败: {e}")
+                if attempt < max_retries - 1:
+                    logger.info(f"将进行第{attempt+2}次尝试...")
+                    time.sleep(1)  # 等待1秒后重试
+                    continue
+                else:
+                    logger.error(f"JSON解析失败，已尝试{max_retries}次")
+                    logger.error(f"最终响应内容: {content if 'content' in locals() else '无响应内容'}")
+                    error_reason = f"JSON解析失败，已重试{max_retries}次"
+                    
+                    # 调用错误回调
+                    if error_callback:
+                        error_callback(question, question.candidate_answer, error_reason)
+                    
+                    return GradingResult(
+                        is_correct=False,
+                        score=0.0,
+                        reasoning=f"判题系统错误: {error_reason}"
+                    )
+            except Exception as e:
+                logger.error(f"第{attempt+1}次尝试时出现其他错误: {e}")
+                if attempt < max_retries - 1:
+                    logger.info(f"将进行第{attempt+2}次尝试...")
+                    time.sleep(1)
+                    continue
+                else:
+                    error_reason = f"{str(e)}，已重试{max_retries}次"
+                    
+                    # 调用错误回调
+                    if error_callback:
+                        error_callback(question, question.candidate_answer, error_reason)
+                    
+                    return GradingResult(
+                        is_correct=False,
+                        score=0.0,
+                        reasoning=f"判题系统错误: {error_reason}"
+                    )
     
     def grade_batch(self, questions: List[QuestionUnit]) -> List[tuple]:
         """

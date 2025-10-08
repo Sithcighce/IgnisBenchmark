@@ -35,6 +35,9 @@ def setup_logging(log_level: str = "INFO", log_file: str = None):
         format=log_format,
         handlers=handlers
     )
+    
+    # 返回logger对象
+    return logging.getLogger(__name__)
 
 
 def load_env_variables(env_path: str = ".env"):

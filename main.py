@@ -1,8 +1,11 @@
 """
 主控程序 - 智能题库生成与评估系统
+统一入口：启动WebUI监控面板并运行后台任务
 """
 
 import logging
+import threading
+import time
 from datetime import datetime
 from src.utils import load_config, setup_logging, load_env_variables
 from src.prompt_manager import PromptManager
@@ -11,13 +14,15 @@ from src.answering_module import AnsweringModule
 from src.grading_module import GradingModule
 from src.data_persistence import DataPersistence
 from src.models import BenchmarkEntry
+from src.token_tracker import token_tracker
+from src.siliconflow_api import siliconflow_api
 
 
 logger = logging.getLogger(__name__)
 
 
-def main():
-    """主函数"""
+def run_generation_cycle():
+    """运行题目生成循环"""
     # 加载配置
     config = load_config()
     
@@ -37,6 +42,12 @@ def main():
     except Exception as e:
         logger.error(f"加载环境变量失败: {e}")
         return
+    
+    # 检查硅基流动API可用性
+    if siliconflow_api.is_available():
+        logger.info("硅基流动API (DeepSeek备选方案) 已配置")
+    else:
+        logger.warning("硅基流动API未配置，DeepSeek备选方案不可用")
     
     # 初始化Prompt管理器
     prompt_manager = PromptManager()
@@ -139,6 +150,10 @@ def main():
         logger.info(f"Validation验证集: {validation_count} -> {final_validation} (+{final_validation - validation_count})")
         logger.info("=" * 60)
         
+        # 显示Token统计摘要
+        if config.get("enable_token_tracking", True):
+            token_tracker.log_summary()
+        
         # 显示一些错题示例
         if wrong_count > 0:
             logger.info("\n错题示例:")
@@ -156,6 +171,37 @@ def main():
         logger.info("\n程序被用户中断")
     except Exception as e:
         logger.error(f"程序执行出错: {e}", exc_info=True)
+
+
+def main():
+    """主函数 - 统一入口点"""
+    logger.info("启动智能题库生成与评估系统")
+    
+    # 启动Web监控界面 (在后台线程)
+    from web_ui import app
+    
+    def run_web_ui():
+        """运行Web UI"""
+        try:
+            logger.info("启动Web监控界面 - http://localhost:5000")
+            app.run(host='0.0.0.0', port=5000, debug=False, use_reloader=False)
+        except Exception as e:
+            logger.error(f"Web界面启动失败: {e}")
+    
+    # 在后台线程启动Web UI
+    web_thread = threading.Thread(target=run_web_ui, daemon=True)
+    web_thread.start()
+    
+    # 等待Web界面启动
+    time.sleep(2)
+    
+    try:
+        # 运行题目生成循环
+        run_generation_cycle()
+    except KeyboardInterrupt:
+        logger.info("程序被用户中断")
+    except Exception as e:
+        logger.error(f"主程序执行出错: {e}", exc_info=True)
 
 
 if __name__ == "__main__":

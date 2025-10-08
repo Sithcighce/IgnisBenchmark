@@ -6,6 +6,7 @@ import json
 import logging
 import random
 import os
+import datetime
 from typing import List, Tuple
 from .models import QuestionUnit, BenchmarkEntry
 from .utils import ensure_directory_exists
@@ -17,22 +18,25 @@ logger = logging.getLogger(__name__)
 class DataPersistence:
     """数据持久化管理器"""
     
-    def __init__(self, benchmark_path: str, validation_path: str):
+    def __init__(self, benchmark_path: str, validation_path: str, grading_error_path: str = "data/grading_errors.jsonl"):
         """
         初始化数据持久化管理器
         
         Args:
             benchmark_path: Benchmark错题库文件路径
             validation_path: Validation验证集文件路径
+            grading_error_path: 判题系统错误记录文件路径
         """
         self.benchmark_path = benchmark_path
         self.validation_path = validation_path
+        self.grading_error_path = grading_error_path
         
         # 确保目录和文件存在
         ensure_directory_exists(benchmark_path)
         ensure_directory_exists(validation_path)
+        ensure_directory_exists(grading_error_path)
         
-        for path in [benchmark_path, validation_path]:
+        for path in [benchmark_path, validation_path, grading_error_path]:
             if not os.path.exists(path):
                 with open(path, 'w', encoding='utf-8') as f:
                     pass
@@ -159,3 +163,48 @@ class DataPersistence:
                 logger.error(f"统计Validation数量时出错: {e}")
         
         return benchmark_count, validation_count
+    
+    def save_grading_error(self, question: QuestionUnit, candidate_answer: str, error_reason: str):
+        """
+        保存判题系统错误的记录到独立文件
+        
+        Args:
+            question: 问题对象
+            candidate_answer: 候选答案
+            error_reason: 错误原因
+        """
+        try:
+            # 创建错误记录
+            error_record = {
+                "question_data": question.to_dict(),
+                "candidate_answer": candidate_answer,
+                "error_reason": error_reason,
+                "timestamp": datetime.datetime.now().isoformat(),
+                "status": "grading_error"
+            }
+            
+            with open(self.grading_error_path, 'a', encoding='utf-8') as f:
+                json_str = json.dumps(error_record, ensure_ascii=False)
+                f.write(json_str + '\n')
+            
+            logger.info(f"保存判题错误记录: {question.question_id[:8]}... - {error_reason}")
+            
+        except Exception as e:
+            logger.error(f"保存判题错误记录时出错: {e}")
+    
+    def get_grading_error_count(self) -> int:
+        """
+        获取判题错误记录数量
+        
+        Returns:
+            错误记录数量
+        """
+        if not os.path.exists(self.grading_error_path):
+            return 0
+            
+        try:
+            with open(self.grading_error_path, 'r', encoding='utf-8') as f:
+                return sum(1 for line in f if line.strip())
+        except Exception as e:
+            logger.error(f"统计判题错误数量时出错: {e}")
+            return 0

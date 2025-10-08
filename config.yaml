@@ -1,23 +1,79 @@
-# --- Servi# --- Process Control ---
-lm_studio_concurrency: 1      # 串行处理，避免本地模型过载
-few_shot_count: 2              # 减少few-shot数量，避免prompt过长
-few_shot_source: "benchmark_bank"  # Few-shot示例来源: benchmark_bank (错题库)
-batch_size: 3                  # 减小批量大小，避免Gemini过载dpoints & Models ---
+# ==================================================================================================
+# 🎓 Intelligent Question Bank Generation & Assessment System - Configuration
+# ==================================================================================================
+
+# --- Model Configurations with Fallback Support ---
+# 模型配置支持备用模型自动切换
+
+# 题目生成模型（按优先级顺序）
+generation_models:
+  - model: "gemini/gemini-2.5-flash"
+    provider: "gemini"
+    priority: 1
+  - model: "deepseek-ai/DeepSeek-V3" 
+    provider: "siliconflow"
+    priority: 2
+  - model: "Qwen/Qwen2.5-7B-Instruct"
+    provider: "siliconflow" 
+    priority: 3
+
+# 解题模型（按优先级顺序）
+answering_models:
+  - model: "gemini/gemini-2.5-flash"
+    provider: "gemini"
+    priority: 1
+  - model: "deepseek-ai/DeepSeek-V3"
+    provider: "siliconflow"
+    priority: 2
+  - model: "Qwen/Qwen2.5-7B-Instruct"
+    provider: "siliconflow"
+    priority: 3
+
+# 判题模型（按优先级顺序）
+grading_models:
+  - model: "gemini/gemini-2.5-flash"
+    provider: "gemini"
+    priority: 1
+  - model: "deepseek-ai/DeepSeek-V3"
+    provider: "siliconflow"
+    priority: 2
+
+# --- Service Endpoints ---
+siliconflow_base_url: "https://api.siliconflow.cn/v1"
 lm_studio_endpoint: "http://localhost:1234/v1/chat/completions"
-lm_studio_model_name: "qwen/qwen3-8b"
-generation_model: "gemini/gemini-2.5-flash"
-grading_model: "gemini/gemini-2.5-flash"
 
 # --- File Paths ---
 benchmark_bank_path: "./data/benchmark_bank.jsonl"
 validation_set_path: "./data/validation_set.jsonl"
 env_file_path: ".env"
+output_dir: "./output"
 
-# --- Process Control ---
-lm_studio_concurrency: 2      # 控制本地模型解题的并发数
-few_shot_count: 3              # 每次生成题目时,从Benchmark错题库随机抽取的few-shot示例数量
-few_shot_source: "benchmark_bank"  # Few-shot示例来源: benchmark_bank (错题库)
-batch_size: 5                  # 每次生成的题目数量
+# --- Advanced Concurrency & Performance Control ---
+# 高级并发与性能控制
+
+# 总体运行配置
+total_rounds: 10               # 总轮次数
+rounds_concurrency: 3          # 轮次间并发数（同时运行的轮次数）
+
+# 单轮次配置  
+questions_per_round: 10        # 每轮题目数量
+round_internal_concurrency: 5  # 轮次内部并发数（题目生成/解答/判题的并发数）
+
+# 模型重试与备用策略
+retry_attempts: 2              # 单个模型重试次数
+retry_delay: 1                 # 重试间隔（秒）
+fallback_enabled: true         # 启用模型备用切换
+timeout_seconds: 120           # 单次调用超时时间
+
+# 并发限制与队列管理
+max_concurrent_requests: 10    # 最大同时请求数
+rate_limit_delay: 0.5          # 请求间隔（秒）
+queue_timeout: 300             # 队列等待超时（秒）
+
+# --- Data Management ---
+few_shot_count: 2              # Few-shot示例数量
+few_shot_source: "benchmark_bank"  # Few-shot示例来源
+enable_token_tracking: true    # 启用token统计
 
 # --- Logging ---
 log_level: "INFO"
