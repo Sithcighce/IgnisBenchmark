@@ -61,6 +61,19 @@ class QuestionGenerator:
         
         return prompt
     
+    def generate_question(self, few_shot_examples: Optional[List[QuestionUnit]] = None) -> Optional[QuestionUnit]:
+        """
+        生成单个题目
+        
+        Args:
+            few_shot_examples: Few-shot示例列表
+        
+        Returns:
+            生成的题目对象，失败时返回None
+        """
+        questions = self.generate_questions(few_shot_examples)
+        return questions[0] if questions else None
+    
     def generate_questions(
         self, 
         few_shot_examples: Optional[List[QuestionUnit]] = None
