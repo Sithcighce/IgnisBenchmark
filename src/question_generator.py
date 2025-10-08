@@ -94,13 +94,11 @@ class QuestionGenerator:
         # 构建prompt
         prompt = self._build_prompt(few_shot_examples)
         
-        # 定义模型回退序列 - 硅基流动有很多模型可用
+        # 从配置文件获取生成模型列表（带提供商前缀）
         model_fallbacks = [
-            self.model_name,  # 主模型
-            "deepseek-chat",  # DeepSeek备选
-            "Qwen/Qwen2.5-72B-Instruct",  # Qwen大模型
-            "01-ai/Yi-1.5-34B-Chat-16K",  # Yi模型
-            "meta-llama/Meta-Llama-3.1-70B-Instruct"  # Llama模型
+            "gemini/gemini-2.5-flash",  # 主模型 - Gemini
+            "siliconflow/deepseek-ai/DeepSeek-V3",  # DeepSeek备选
+            "siliconflow/Qwen/Qwen2.5-7B-Instruct",  # Qwen小模型（更稳定）
         ]
         
         logger.info(f"开始生成 {self.batch_size} 道题目，主模型: {self.model_name}")

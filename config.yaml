@@ -13,21 +13,13 @@ generation_models:
   - model: "deepseek-ai/DeepSeek-V3" 
     provider: "siliconflow"
     priority: 2
-  - model: "Qwen/Qwen2.5-7B-Instruct"
-    provider: "siliconflow" 
-    priority: 3
+
 
 # 解题模型（按优先级顺序）
 answering_models:
-  - model: "gemini/gemini-2.5-flash"
-    provider: "gemini"
-    priority: 1
-  - model: "deepseek-ai/DeepSeek-V3"
-    provider: "siliconflow"
-    priority: 2
   - model: "Qwen/Qwen2.5-7B-Instruct"
     provider: "siliconflow"
-    priority: 3
+    priority: 1
 
 # 判题模型（按优先级顺序）
 grading_models:
@@ -37,6 +29,11 @@ grading_models:
   - model: "deepseek-ai/DeepSeek-V3"
     provider: "siliconflow"
     priority: 2
+
+# 兼容性配置（单模型字段）
+generation_model: "gemini/gemini-2.5-flash"
+answering_model: "siliconflow/Qwen/Qwen2.5-7B-Instruct"
+grading_model: "gemini/gemini-2.5-flash"
 
 # --- Service Endpoints ---
 siliconflow_base_url: "https://api.siliconflow.cn/v1"

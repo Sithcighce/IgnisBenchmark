@@ -84,7 +84,7 @@ class AnsweringModule:
                 logger.info(f"正在解答问题 {question.question_id[:8]}...（第{attempt+1}次尝试，超时{timeout}秒）")
                 
                 response = litellm.completion(
-                    model=f"openai/{self.model_name}",  # 硅基流动格式
+                    model=f"siliconflow/{self.model_name}",  # 硅基流动格式
                     messages=[
                         {"role": "user", "content": prompt}
                     ],
