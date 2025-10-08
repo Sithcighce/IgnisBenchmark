@@ -9,7 +9,7 @@ import os
 from pathlib import Path
 
 # 添加项目根目录到路径
-project_root = Path(__file__).parent
+project_root = Path(__file__).parent.parent
 sys.path.insert(0, str(project_root))
 
 from src.config_loader import load_config
@@ -62,7 +62,7 @@ def test_model_configurations():
         # 测试QuestionGenerator初始化
         try:
             question_generator = QuestionGenerator(
-                model_name=config['generation_model'],
+                config['generation_model'],
                 batch_size=1,
                 prompt_manager=prompt_manager
             )
@@ -75,7 +75,7 @@ def test_model_configurations():
         if os.getenv('SILICONFLOW_API_KEY'):
             try:
                 answering_module = AnsweringModule(
-                    model_name=config['answering_model'].split('/')[-1],  # 只取模型名部分
+                    config,
                     prompt_manager=prompt_manager
                 )
                 logger.info("✅ AnsweringModule 初始化成功")
@@ -88,7 +88,7 @@ def test_model_configurations():
         # 测试GradingModule初始化
         try:
             grading_module = GradingModule(
-                model_name=config['grading_model'],
+                config['grading_model'],
                 prompt_manager=prompt_manager
             )
             logger.info("✅ GradingModule 初始化成功")

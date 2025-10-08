@@ -65,7 +65,7 @@ questions/
 #### Installation
 ```bash
 # Clone the repository
-git clone https://github.com/your-repo/questions
+git clone https://github.com/Sithcighce/distillation_generation.git
 cd questions
 
 # Install dependencies
@@ -89,22 +89,33 @@ python run.py --mode cli
 # Generate questions directly
 python run.py --mode generate -n 20 -r 3
 
-# Generate question browser
-python run.py --mode visualize
+# Ouput data as md
+python run.py --mode output
 
 # Clean benchmark data
 python run.py --mode clean
 ```
 
+## The system supports custom prompt templates for different difficulty levels or styles.
+You can add files like 生成题Prompt_higherlever.md, prompts/生成题Prompt_easy.md, etc.
+
+How to use a custom prompt:
+
+Add your prompt file in the prompts directory, e.g.:
+生成题Prompt_higherlever.md
+生成题Prompt_easy.md
+In your code, manually load the desired prompt file:
+(Optional) You can modify prompt_manager.py to select prompt files by difficulty.
+
 ### 📊 Data Analysis & Visualization
 
-Generate an interactive HTML browser to review all questions:
+Export benchmark library as Markdown files to review all questions:
 
 ```bash
-python run.py --mode visualize
+python run.py --mode output
 ```
 
-This creates `question_browser.html` with:
+This creates Markdown files in `./output/all_by_score_asc_md` with:
 - 📋 **Tabbed Interface**: Separate tabs for validation set, benchmark, and seed examples
 - 🔍 **Detailed View**: Complete question text, standard answers, and model responses
 - 📊 **Quick Stats**: Success rates and question counts
@@ -190,7 +201,7 @@ MIT License - see [LICENSE](LICENSE) for details.
 #### 安装步骤
 ```bash
 # 克隆仓库
-git clone https://github.com/your-repo/questions
+git clone https://github.com/Sithcighce/distillation_generation.git
 cd questions
 
 # 安装依赖
@@ -214,8 +225,8 @@ python run.py --mode cli
 # 直接生成题目
 python run.py --mode generate -n 20 -r 3
 
-# 生成题目浏览器
-python run.py --mode visualize
+# 导出数据为Markdown
+python run.py --mode output
 
 # 清理基准数据
 python run.py --mode clean
@@ -223,13 +234,13 @@ python run.py --mode clean
 
 ### 📊 数据分析与可视化
 
-生成交互式HTML浏览器来查看所有题目：
+导出基准库为Markdown文件来查看所有题目：
 
 ```bash
-python run.py --mode visualize
+python run.py --mode output
 ```
 
-这将创建 `question_browser.html` 文件，包含：
+这将在 `./output/all_by_score_asc_md` 目录下创建Markdown文件，包含：
 - 📋 **选项卡界面**: 验证集、基准库和种子样本的分别显示
 - 🔍 **详细视图**: 完整的题目文本、标准答案和模型回答
 - 📊 **快速统计**: 成功率和题目数量

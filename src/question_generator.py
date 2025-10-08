@@ -16,17 +16,25 @@ logger = logging.getLogger(__name__)
 class QuestionGenerator:
     """题目生成器"""
     
-    def __init__(self, model_name: str, batch_size: int = 10, prompt_manager: Optional[PromptManager] = None):
+    def __init__(self, config_or_model_name, batch_size: int = None, prompt_manager: Optional[PromptManager] = None):
         """
-        初始化题目生成器
+        初始化题目生成器 - 支持配置字典或单独参数
         
         Args:
-            model_name: 使用的模型名称
+            config_or_model_name: 配置字典或模型名称
             batch_size: 每批生成的题目数量
             prompt_manager: Prompt管理器实例
         """
-        self.model_name = model_name
-        self.batch_size = batch_size
+        # 处理配置字典或单独参数
+        if isinstance(config_or_model_name, dict):
+            config = config_or_model_name
+            self.model_name = config.get('generation_model', 'gemini/gemini-2.5-flash')
+            self.batch_size = config.get('questions_per_round', 10)
+        else:
+            # 向后兼容：单独参数
+            self.model_name = config_or_model_name
+            self.batch_size = batch_size or 10
+            
         self.prompt_manager = prompt_manager or PromptManager()
     
     def _build_prompt(self, few_shot_examples: List[QuestionUnit]) -> str:

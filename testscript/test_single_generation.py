@@ -9,7 +9,7 @@ import os
 from pathlib import Path
 
 # 添加项目根目录到路径
-project_root = Path(__file__).parent
+project_root = Path(__file__).parent.parent
 sys.path.insert(0, str(project_root))
 
 from src.config_loader import load_config
@@ -38,7 +38,7 @@ def test_single_question_generation():
         
         # 初始化题目生成器
         question_generator = QuestionGenerator(
-            model_name=config['generation_model'],
+            config['generation_model'],
             batch_size=1,  # 只生成一道题
             prompt_manager=prompt_manager
         )

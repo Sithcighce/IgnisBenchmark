@@ -21,30 +21,39 @@ class AnsweringModule:
     
     def __init__(
         self, 
-        api_base: str = "https://api.siliconflow.cn/v1",
-        model_name: str = "Qwen/Qwen2.5-7B-Instruct",
-        concurrency: int = 1,
+        config_or_api_base=None,
+        model_name: str = None,
+        concurrency: int = None,
         prompt_manager: Optional[PromptManager] = None
     ):
         """
-        初始化解题模块
+        初始化解题模块 - 支持配置字典或单独参数
         
         Args:
-            api_base: 硅基流动API地址
+            config_or_api_base: 配置字典或API地址
             model_name: 模型名称
             concurrency: 并发数
             prompt_manager: Prompt管理器实例
         """
-        self.api_base = api_base
-        self.model_name = model_name
-        self.concurrency = concurrency
+        # 处理配置字典或单独参数
+        if isinstance(config_or_api_base, dict):
+            config = config_or_api_base
+            self.api_base = config.get('siliconflow_base_url', "https://api.siliconflow.cn/v1")
+            self.model_name = config.get('answering_model', "siliconflow/Qwen/Qwen2.5-7B-Instruct").split('/')[-1]
+            self.concurrency = config.get('round_internal_concurrency', 5)
+        else:
+            # 向后兼容：单独参数
+            self.api_base = config_or_api_base or "https://api.siliconflow.cn/v1"
+            self.model_name = model_name or "Qwen/Qwen2.5-7B-Instruct"
+            self.concurrency = concurrency or 1
+        
         self.prompt_manager = prompt_manager or PromptManager()
         self.api_key = os.getenv("SILICONFLOW_API_KEY")
         
         if not self.api_key:
             raise ValueError("SILICONFLOW_API_KEY environment variable is required")
         
-        logger.info(f"AnsweringModule初始化完成: 模型={model_name}, 并发={concurrency}")
+        logger.info(f"AnsweringModule初始化完成: 模型={self.model_name}, 并发={self.concurrency}, API地址={self.api_base}")
     
     def _build_prompt(self, question_text: str) -> str:
         """
@@ -83,8 +92,9 @@ class AnsweringModule:
                 timeout = base_timeout + (attempt * 30)  # 120s, 150s, 180s
                 logger.info(f"正在解答问题 {question.question_id[:8]}...（第{attempt+1}次尝试，超时{timeout}秒）")
                 
+                # 使用OpenAI兼容格式调用SiliconFlow
                 response = litellm.completion(
-                    model=f"siliconflow/{self.model_name}",  # 硅基流动格式
+                    model=f"openai/{self.model_name}",  # OpenAI兼容格式
                     messages=[
                         {"role": "user", "content": prompt}
                     ],
@@ -168,13 +178,8 @@ class AnsweringModule:
         successful = sum(1 for q in answered_questions if q.candidate_answer and not q.candidate_answer.startswith("[ERROR]"))
         logger.info(f"解答完成: {successful}/{len(questions)} 成功")
         
-        # 返回(问题, 答案)元组列表
-        result = []
-        for question in answered_questions:
-            answer = question.candidate_answer if question.candidate_answer else "[ERROR] 无答案"
-            result.append((question, answer))
-        
-        return result
+        # 直接返回已解答的问题列表
+        return answered_questions
     
     def answer_questions_with_callback(self, questions: List[QuestionUnit], 
                                      process_callback=None) -> List[Tuple[QuestionUnit, str]]:

@@ -366,8 +366,9 @@ class InternationalQuestionGeneratorGUI:
                 # Process questions concurrently
                 with ThreadPoolExecutor(max_workers=self.config.get('processing_workers', 5)) as executor:
                     # Submit answering tasks
+                    # AnsweringModule 提供 answer_question 接口，使用该方法替代不存在的 solve_question
                     answer_futures = {
-                        executor.submit(answering_module.solve_question, q): q 
+                        executor.submit(answering_module.answer_question, q): q
                         for q in questions
                     }
                     

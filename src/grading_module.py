@@ -17,15 +17,22 @@ logger = logging.getLogger(__name__)
 class GradingModule:
     """自动判题模块"""
     
-    def __init__(self, model_name: str, prompt_manager: Optional[PromptManager] = None):
+    def __init__(self, config_or_model_name, prompt_manager: Optional[PromptManager] = None):
         """
-        初始化判题模块
+        初始化判题模块 - 支持配置字典或单独参数
         
         Args:
-            model_name: 使用的模型名称
+            config_or_model_name: 配置字典或模型名称
             prompt_manager: Prompt管理器实例
         """
-        self.model_name = model_name
+        # 处理配置字典或单独参数
+        if isinstance(config_or_model_name, dict):
+            config = config_or_model_name
+            self.model_name = config.get('grading_model', 'gemini/gemini-2.5-flash')
+        else:
+            # 向后兼容：单独参数
+            self.model_name = config_or_model_name
+            
         self.prompt_manager = prompt_manager or PromptManager()
     
     def _build_prompt(

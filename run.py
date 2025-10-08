@@ -37,20 +37,20 @@ def main():
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog='''
 Examples / 使用示例:
-  python run.py --mode gui              # 启动图形界面 (Start GUI)
-  python run.py --mode cli              # 启动命令行界面 (Start CLI)  
-  python run.py --mode web              # 启动Web界面 (Start Web UI)
-  python run.py --mode generate -n 10  # 生成10道题目 (Generate 10 questions)
-  python run.py --mode visualize       # 生成题目浏览器 (Generate question browser)
-  python run.py --mode clean           # 清理数据 (Clean data)
+    python run.py --mode gui              # 启动图形界面 (Start GUI)
+    python run.py --mode cli              # 启动命令行界面 (Start CLI)  
+    python run.py --mode web              # 启动Web界面 (Start Web UI)
+    python run.py --mode generate -n 10  # 生成10道题目 (Generate 10 questions)
+    python run.py --mode output          # 导出基准库为Markdown文件 (Export benchmark to ./output)
+    python run.py --mode clean           # 清理数据 (Clean data)
         '''
     )
     
     parser.add_argument(
         '--mode', '-m',
-        choices=['gui', 'cli', 'web', 'generate', 'visualize', 'clean', 'validate'],
+        choices=['gui', 'cli', 'web', 'generate', 'output', 'clean', 'validate'],
         default='gui',
-        help='运行模式 (Run mode): gui=图形界面, cli=命令行, web=网页界面, generate=生成题目, visualize=可视化, clean=清理文件(不加-n)或数据(加-n), validate=验证系统'
+        help='运行模式 (Run mode): gui=图形界面, cli=命令行, web=网页界面, generate=生成题目, output=导出基准库为Markdown, clean=清理文件(不加-n)或数据(加-n), validate=验证系统'
     )
     
     parser.add_argument(
@@ -113,13 +113,17 @@ Examples / 使用示例:
         elif args.mode == 'generate':
             print(f"🚀 Starting question generation: {args.questions} questions, {args.rounds} rounds")
             print(f"    开始生成题目：{args.questions}道题目，{args.rounds}轮")
-            from main import main as cli_main
-            cli_main()
+            from main import generate_only
+            generate_only()
             
-        elif args.mode == 'visualize':
-            print("🎨 Generating complete question browser...")
-            print("    生成完整题目浏览器...")
-            os.system(f'"{sys.executable}" scripts/visualize_complete.py')
+        elif args.mode == 'output':
+            print("📤 Exporting benchmark to markdown files (./output)...")
+            print("    导出基准库为Markdown文件到 ./output ...")
+            # run scripts/output.py which writes markdown files to ./output
+            if os.path.exists('scripts/output.py'):
+                os.system(f'"{sys.executable}" scripts/output.py')
+            else:
+                print("    scripts/output.py not found. Please ensure the script exists in scripts/ directory.")
             
         elif args.mode == 'clean':
             if args.questions and args.questions > 0:

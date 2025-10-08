@@ -60,18 +60,18 @@ def run_generation_cycle():
     
     # 初始化各模块
     question_generator = QuestionGenerator(
-        model_name=config["generation_model"],
+        config["generation_model"],
         batch_size=config.get("batch_size", 10),
         prompt_manager=prompt_manager
     )
     answering_module = AnsweringModule(
-        endpoint=config["lm_studio_endpoint"],
-        model_name=config["lm_studio_model_name"],
-        concurrency=config["lm_studio_concurrency"],
+        config["siliconflow_base_url"],
+        model_name="/".join(config["answering_model"].split('/')[1:]),  # 去掉provider前缀，保留模型路径
+        concurrency=config.get("lm_studio_concurrency", 1),
         prompt_manager=prompt_manager
     )
     grading_module = GradingModule(
-        model_name=config["grading_model"],
+        config["grading_model"],
         prompt_manager=prompt_manager
     )
     
@@ -173,8 +173,20 @@ def run_generation_cycle():
         logger.error(f"程序执行出错: {e}", exc_info=True)
 
 
+def generate_only():
+    """仅生成题目，不启动Web界面"""
+    logger.info("启动题目生成模式（无Web界面）")
+    
+    try:
+        # 直接运行题目生成循环
+        run_generation_cycle()
+    except KeyboardInterrupt:
+        logger.info("程序被用户中断")
+    except Exception as e:
+        logger.error(f"题目生成出错: {e}", exc_info=True)
+
 def main():
-    """主函数 - 统一入口点"""
+    """主函数 - 统一入口点（含Web界面）"""
     logger.info("启动智能题库生成与评估系统")
     
     # 启动Web监控界面 (在后台线程)
