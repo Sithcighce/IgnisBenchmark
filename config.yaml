@@ -57,6 +57,8 @@ rounds_concurrency: 3          # 轮次间并发数（同时运行的轮次数�
 # 单轮次配置  
 questions_per_round: 10        # 每轮题目数量
 round_internal_concurrency: 5  # 轮次内部并发数（题目生成/解答/判题的并发数）
+# 这里有问题！！！！！题目生成、解题和判题的并发数应当是独立的！
+# 题目生成的并发是靠rounds_concurrency: 3  来控制的
 
 # 模型重试与备用策略
 retry_attempts: 2              # 单个模型重试次数

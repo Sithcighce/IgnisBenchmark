@@ -45,7 +45,7 @@ def load_env_variables(env_path: str = ".env"):
     load_dotenv(env_path)
     
     # 验证必要的环境变量
-    required_vars = ["GOOGLE_API_KEY"]
+    required_vars = ["GEMINI_API_KEY"]
     missing_vars = [var for var in required_vars if not os.getenv(var)]
     
     if missing_vars:

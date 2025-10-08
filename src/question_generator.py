@@ -102,34 +102,56 @@ class QuestionGenerator:
         # 构建prompt
         prompt = self._build_prompt(few_shot_examples)
         
-        # 从配置文件获取生成模型列表（带提供商前缀）
-        model_fallbacks = [
-            "gemini/gemini-2.5-flash",  # 主模型 - Gemini
-            "siliconflow/deepseek-ai/DeepSeek-V3",  # DeepSeek备选
-            "siliconflow/Qwen/Qwen2.5-7B-Instruct",  # Qwen小模型（更稳定）
-        ]
-        
+        # 动态生成模型回退列表，支持 config.yaml 配置
+        import os
+        from src.config_loader import load_config
+        config = None
+        try:
+            config = load_config()
+        except Exception:
+            pass
+        model_fallbacks = []
+        if config and 'generation_models' in config:
+            for m in config['generation_models']:
+                provider = m.get('provider', '')
+                model = m.get('model', '')
+                if provider == 'siliconflow':
+                    # 保持完整的模型路径，如 deepseek-ai/DeepSeek-V3
+                    # 用 openai/xxx 兼容格式
+                    model_fallbacks.append({
+                        'model': f"openai/{model}",
+                        'api_base': config.get('siliconflow_base_url', 'https://api.siliconflow.cn/v1'),
+                        'api_key': os.getenv('SILICONFLOW_API_KEY')
+                    })
+                else:
+                    # 直接使用 model 字段（已包含 provider 前缀）
+                    model_fallbacks.append({'model': model})
+        else:
+            # 兜底硬编码
+            model_fallbacks = [
+                {'model': 'gemini/gemini-2.5-flash'},
+                {'model': 'openai/deepseek-ai/DeepSeek-V3', 'api_base': 'https://api.siliconflow.cn/v1', 'api_key': os.getenv('SILICONFLOW_API_KEY')},
+                {'model': 'openai/Qwen/Qwen2.5-7B-Instruct', 'api_base': 'https://api.siliconflow.cn/v1', 'api_key': os.getenv('SILICONFLOW_API_KEY')},
+            ]
         logger.info(f"开始生成 {self.batch_size} 道题目，主模型: {self.model_name}")
-        
         # 尝试所有模型组合，直到成功
         for attempt in range(3):  # 最多3轮尝试
-            for model_index, current_model in enumerate(model_fallbacks):
+            for model_index, m in enumerate(model_fallbacks):
                 try:
                     if attempt > 0 or model_index > 0:
-                        logger.info(f"第{attempt+1}轮，尝试模型: {current_model}")
-                    
-                    # 调用LLM生成题目
-                    response = completion(
-                        model=current_model,
-                        messages=[
-                            {"role": "user", "content": prompt}
-                        ],
-                        temperature=0.8,  # 提高温度以增加多样性
-                        # 无max_tokens限制，模型自由生成任意长度内容
+                        logger.info(f"第{attempt+1}轮，尝试模型: {m['model']}")
+                    completion_kwargs = dict(
+                        model=m['model'],
+                        messages=[{"role": "user", "content": prompt}],
+                        temperature=0.8,
                     )
-                    
+                    if 'api_base' in m and m['api_base']:
+                        completion_kwargs['api_base'] = m['api_base']
+                    if 'api_key' in m and m['api_key']:
+                        completion_kwargs['api_key'] = m['api_key']
+                    response = completion(**completion_kwargs)
                     # 统计token使用(仅Gemini)
-                    if "gemini" in current_model.lower() and hasattr(response, 'usage') and response.usage:
+                    if "gemini" in m['model'].lower() and hasattr(response, 'usage') and response.usage:
                         try:
                             usage_dict = response.usage.__dict__ if hasattr(response.usage, '__dict__') else response.usage
                             logger.info(f"Gemini生成API usage: {usage_dict}")
@@ -139,17 +161,15 @@ class QuestionGenerator:
                             logger.error(f"Token统计失败: {e}")
                     
                     # 解析响应并转换为题目列表
-                    questions = self._parse_response(response.choices[0].message.content, current_model)
-                    
+                    questions = self._parse_response(response.choices[0].message.content, m['model'])
                     if questions:
-                        logger.info(f"✅ 使用模型 {current_model} 成功生成 {len(questions)} 道题目")
+                        logger.info(f"✅ 使用模型 {m['model']} 成功生成 {len(questions)} 道题目")
                         return questions
                     else:
-                        logger.warning(f"模型 {current_model} 返回了空的题目列表")
+                        logger.warning(f"模型 {m['model']} 返回了空的题目列表")
                         continue
-                        
                 except Exception as e:
-                    logger.warning(f"❌ 模型 {current_model} 第{attempt+1}轮失败: {e}")
+                    logger.warning(f"❌ 模型 {m['model']} 第{attempt+1}轮失败: {e}")
                     continue
         
         # 如果所有尝试都失败了
