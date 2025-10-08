@@ -102,7 +102,8 @@ class AnsweringModule:
                     api_base=self.api_base,
                     temperature=0.7,
                     max_tokens=2000,
-                    timeout=timeout
+                    timeout=timeout,
+                    response_format={"type": "json_object"}  # 强制JSON输出
                 )
                 
                 if response and response.choices:

@@ -144,6 +144,7 @@ class QuestionGenerator:
                         model=m['model'],
                         messages=[{"role": "user", "content": prompt}],
                         temperature=0.8,
+                        response_format={"type": "json_object"}  # 强制JSON输出
                     )
                     if 'api_base' in m and m['api_base']:
                         completion_kwargs['api_base'] = m['api_base']

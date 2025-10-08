@@ -55,10 +55,6 @@ SILICONFLOW_API_KEY=your_key
 
 ## 🔍 已知问题
 
-### 1. 地区限制问题
-- **问题**: Gemini API 在某些地区不可用
-- **错误**: "User location is not supported for the API use"
-- **解决方案**: 使用VPN或切换到SiliconFlow模型
 
 ### 2. 并发架构限制  
 - **问题**: 当前为分阶段批量并发，非流水线并发
