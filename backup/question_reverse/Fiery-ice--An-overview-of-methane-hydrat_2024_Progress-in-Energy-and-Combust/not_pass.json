@@ -1,0 +1,39 @@
+[
+  {
+    "question_text": "基于论文中的实验和理论分析，详细解释甲烷水合物燃烧中的自愈现象机理，包括过冷效应和热传递竞争，并推导自愈发生的临界条件。",
+    "standard_answer": "甲烷水合物燃烧中的自愈现象是指水合物表面形成保护性冰壳，阻止进一步解离和甲烷释放的过程。机理主要涉及两种情况：第一，当水合物过冷至纯水冰点以下时，外层解离产生水膜，热损失到过冷核心导致水膜冻结形成保护壳。第二，当水合物轻微过冷时，热力学能最小化驱动相变，水膜释放能量再冻结。在燃烧背景下，火焰热远大于相变焓，因此自愈主要取决于水合物蛋糕的热传递竞争。\n\n热传递平衡分析：设水膜厚度为δ，热导率为k，核心温度为T_c，表面温度为T_s。从火焰到水膜的热通量Q_in必须克服到核心的热损失Q_loss和相变所需能量。热损失通量Q_loss = k(T_s - T_c)/δ，其中δ为水膜厚度。相变能量包括水膜凝固潜热L_solid（凝固潜热）。如果Q_in < Q_loss + ρ_w L_solid dδ/dt（ρ_w为水密度），则发生自愈。\n\n临界条件推导：考虑非稳态热传导，水膜温度分布非线性，表面温度T_s ≈ T_freeze。热平衡要求Q_in = k(T_freeze - T_c)/δ + ρ_w L_solid dδ/dt。自愈发生的临界条件为T_c < T_freeze - (Q_in δ)/k - (ρ_w L_solid δ^2)/(k dt)，此时核心过冷度足够大，使热损失主导，水膜冻结。论文中实验显示，初始温度从-10°C降至-80°C时，火焰传播速度从1000 mm/s降至几mm/s，表明自愈增强，例如在-80°C时，核心热沉效应显著，水膜快速冻结。Misyura等人的研究还表明，孔隙度影响自愈，高孔隙度增加热损失表面，促进冻结。数值模拟中，自愈导致非稳态燃烧，如质量损失波动和局部熄灭。因此，自愈临界条件依赖于初始温度、几何形状和热物性，需通过耦合热传导和解离动力学模型精确预测。",
+    "original_text": {
+      "1": "In the first, more straightforward (and more common) case, the hydrate cake is subcooled well below the freezing temperature of pure water. When the outer layer of hydrate dissociates leaving a water film, heat loss to the core of the subcooled hydrate cake freezes the water film creating a protective shell barrier to further dissociation and methane escape.",
+      "2": "This phenomenon is not captured in the steady 1-D configuration because the flame is always present, and the liquid layer is of constant thickness which ensures that the heat flux from above continues to boil the liquid layer."
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "heat_transfer",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及甲烷水合物燃烧、自愈现象机理、过冷效应、热传递竞争和临界条件推导，需要燃烧科学、热力学、传热学、相变动力学等能源与燃烧工程领域的专业知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "fundamental_error",
+        "unsupported"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在多处事实和基本原理错误：1）错误地将自愈现象归因于水膜凝固形成保护壳，但原文明确说明是水合物外层解离产生水膜后，热损失到过冷核心导致水膜冻结形成保护壳；2）热传递平衡分析中的公式推导存在错误，未正确反映原文描述的非稳态热传导过程；3）临界条件推导缺乏原文支持且逻辑不严谨。建议基于原文引用内容重新构建机理解释，确保热传递分析和临界条件推导与论文实验和理论分析一致。"
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_a1f1f1dc",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Fiery-ice--An-overview-of-methane-hydrat_2024_Progress-in-Energy-and-Combust",
+      "paper_title": "Fiery-ice--An-overview-of-methane-hydrat_2024_Progress-in-Energy-and-Combust"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:51:07.382150",
+      "answer_length": 759
+    }
+  }
+]

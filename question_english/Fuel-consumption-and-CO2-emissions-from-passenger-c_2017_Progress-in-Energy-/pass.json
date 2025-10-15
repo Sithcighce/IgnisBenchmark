@@ -1,0 +1,167 @@
+[
+  {
+    "question_text": "Calculate the additional CO2 emissions from a 1500 kg vehicle carrying 200 kg extra mass during urban driving, considering the energy requirements for acceleration and increased rolling resistance.",
+    "standard_answer": "For a 1500 kg vehicle with 200 kg additional mass (13.3% increase), the CO2 increase can be calculated from first principles. During acceleration, kinetic energy required is E_k = 0.5 × m × Δv². For typical urban accelerations from 0-50 km/h (13.9 m/s), the additional energy per acceleration event is 0.5 × 200 × 13.9² = 19,321 J. With 10 accelerations per km and 30% drivetrain efficiency, this requires 644 kJ extra energy per km. For gasoline (32 MJ/L LHV), this equals 0.0201 L/km extra fuel. At 2.32 kg CO2/L gasoline, this gives 46.6 gCO2/km from acceleration alone. Rolling resistance increases proportionally with mass: Fr = RRC × m × g. With RRC = 10 kg/t, additional rolling force is 10 × 0.2 × 9.81 = 19.6 N. Work per km is 19.6 kJ, requiring 65.3 kJ fuel energy at 30% efficiency, or 0.00204 L/km, adding 4.7 gCO2/km. Total additional emissions ≈ 51 gCO2/km, consistent with literature values of 5-7% increase for 100-200 kg extra mass.",
+    "original_text": {
+      "1": "An increase in the operating mass increases fuel consumption, as more power is needed to accelerate the vehicle during acceleration phases and rolling resistance is also increased proportionally",
+      "2": "Considering the effect of mass over real-world driving, an additional 100 kg can increase fuel consumption by an average 5(cid:1)7% for a medium-sized car of 1500 kg"
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires domain expertise in energy systems, specifically vehicle energy consumption, CO2 emissions, and the physics of vehicle dynamics including acceleration energy calculations and rolling resistance effects on fuel consumption in urban driving conditions.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "The question is well-focused on energy systems domain and the answer provides detailed, factually correct calculations that align with the cited paper content and established physics principles."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_48e3b53a",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Fuel-consumption-and-CO2-emissions-from-passenger-c_2017_Progress-in-Energy-",
+      "paper_title": "Fuel-consumption-and-CO2-emissions-from-passenger-c_2017_Progress-in-Energy-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:20:23.964246",
+      "answer_length": 949
+    }
+  },
+  {
+    "question_text": "What physical mechanisms explain why aerodynamic drag increases fuel consumption proportionally to the square of velocity, and how does this relationship affect real-world versus laboratory CO2 emissions?",
+    "standard_answer": "Aerodynamic drag force follows F_drag = 0.5 × ρ × Cd × A × v², where ρ is air density, Cd is drag coefficient, A is frontal area, and v is velocity. The v² dependence arises because both kinetic energy imparted to displaced air and momentum transfer scale with velocity squared. This means power required to overcome drag scales with v³ (since power = force × velocity). During high-speed driving, aerodynamic losses dominate over rolling resistance and acceleration work. In real-world conditions, vehicles frequently operate at higher speeds than the NEDC's maximum 120 km/h, causing disproportionate increases in fuel consumption. The laboratory test underestimates this effect because it spends limited time at high velocities and uses idealized aerodynamic conditions. Additionally, real-world factors like crosswinds and turbulent airflow around other vehicles increase effective Cd values, further widening the gap between certified and actual CO2 emissions.",
+    "original_text": {
+      "1": "Vehicle aerodynamic resistance is one of the primary factors influencing fuel consumption over high speed driving conditions and is expressed as a function of the square of vehicle's velocity",
+      "2": "Aerodynamic resistance under real-world driving conditions is also affected by various vehicle elements and different shape configurations, which are not necessarily captured by the current vehicle certification procedure"
+    },
+    "type": "reasoning",
+    "difficulty": 5,
+    "topic": "fluid_mechanics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question requires fluid mechanics expertise to explain the physical mechanisms of aerodynamic drag (v² relationship, kinetic energy, momentum transfer) and combustion/energy systems knowledge to connect drag effects to fuel consumption and CO2 emissions in real-world vs laboratory conditions.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question is well-focused on domain physics and answer correctly explains drag mechanisms and real-world vs lab emissions gap."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_8ae50b3f",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Fuel-consumption-and-CO2-emissions-from-passenger-c_2017_Progress-in-Energy-",
+      "paper_title": "Fuel-consumption-and-CO2-emissions-from-passenger-c_2017_Progress-in-Energy-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:20:24.385512",
+      "answer_length": 965
+    }
+  },
+  {
+    "question_text": "Analyze the thermodynamic mechanisms through which auxiliary systems like air conditioning contribute to the gap between laboratory-measured and real-world CO2 emissions in passenger cars, focusing on how these systems create additional thermal loads and affect overall vehicle energy efficiency.",
+    "standard_answer": "Auxiliary systems such as air conditioning contribute significantly to the gap between laboratory and real-world CO2 emissions through their thermodynamic impact on vehicle energy systems. The paper states that 'the test procedure disregards various real-world conditions such as additional weight, number of passengers, use of air conditioning, realistic gear shifting, cold starts, operation at higher velocities and congestion.' This exclusion creates a systematic underestimation because air conditioning systems impose substantial parasitic loads on the engine. Thermodynamically, these systems require mechanical work input to drive compressors, which draws power directly from the engine shaft. This additional load increases fuel consumption proportionally, as more fuel must be burned to maintain the same propulsion power while simultaneously powering the cooling system. The paper further notes that 'factors such as driving behaviour, vehicle configuration and traffic conditions are reconfirmed as highly influential,' with auxiliary systems being a key component of vehicle configuration that affects real-world performance. The cumulative effect of these neglected factors contributes to the reported 30-40% gap between official laboratory values and real-world CO2 emissions estimates, with auxiliary system usage being one of the significant contributors to this divergence in energy efficiency calculations.",
+    "original_text": {
+      "1": "The test procedure disregards various real-world conditions such as additional weight, number of passengers, use of air conditioning, realistic gear shifting, cold starts, operation at higher velocities and congestion",
+      "2": "Factors such as driving behaviour, vehicle configuration and traffic conditions are reconfirmed as highly influential. Neglected factors (e.g. side winds, rain, road grade), which may have significant contributions in fuel consumption in real world driving are identified"
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires deep understanding of thermodynamic principles in vehicle energy systems, specifically how auxiliary systems like air conditioning create thermal loads and affect energy efficiency in combustion-based passenger cars. This requires domain expertise in energy systems, heat transfer, and vehicle thermodynamics.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on paper citations, and no other compliance issues."
+    },
+    "retry_count": 1,
+    "question_id": "deepseek_q_b220ca9d",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Fuel-consumption-and-CO2-emissions-from-passenger-c_2017_Progress-in-Energy-",
+      "paper_title": "Fuel-consumption-and-CO2-emissions-from-passenger-c_2017_Progress-in-Energy-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:21:03.112687",
+      "answer_length": 1425
+    }
+  },
+  {
+    "question_text": "Based on the provided paper, what are the key factors contributing to the divergence between laboratory-measured and real-world CO2 emissions from passenger cars, and how do these factors specifically relate to thermal, fluid, and energy system considerations in vehicle operation?",
+    "standard_answer": "The paper identifies several key factors contributing to the laboratory-real world CO2 emissions gap. First, the test procedure disregards various real-world conditions such as additional weight, number of passengers, use of air conditioning, realistic gear shifting, cold starts, operation at higher velocities and congestion. These factors significantly impact thermal management, fluid flow, and energy system efficiency. Second, factors such as driving behaviour, vehicle configuration and traffic conditions are reconfirmed as highly influential. From a thermal and energy perspective, neglected factors like side winds, rain, and road grade may have significant contributions to fuel consumption in real world driving. The margins of the present certification procedure contribute between 10 and 20% in the gap between reported values and reality. The overall divergence was estimated to be of the order of 40%, or 47.5 gCO2/km for 2015 average fleet emissions, but could range up to 60% or down to 19% depending on prevailing traffic conditions. The introduction of a new test protocol is expected to bridge about half of the present divergence between laboratory and real world.",
+    "original_text": {
+      "1": "The test procedure disregards various real-world conditions such as additional weight, number of passengers, use of air conditioning, realistic gear shifting, cold starts, operation at higher velocities and congestion",
+      "2": "Factors such as driving behaviour, vehicle configuration and traffic conditions are reconfirmed as highly influential. Neglected factors (e.g. side winds, rain, road grade), which may have significant contributions in fuel consumption in real world driving are identified"
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires understanding of vehicle energy systems, thermal management (engine warm-up, A/C operation), fluid mechanics (aerodynamic effects of side winds, rain), and combustion science (CO2 emissions from fuel consumption) in the context of passenger car operation, which are core domain topics in energy systems and combustion science.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "The question is well-focused on domain-specific factors affecting CO2 emissions divergence, and the answer accurately reflects the paper's content with proper citations and detailed explanations."
+    },
+    "retry_count": 1,
+    "question_id": "deepseek_q_930f7652",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Fuel-consumption-and-CO2-emissions-from-passenger-c_2017_Progress-in-Energy-",
+      "paper_title": "Fuel-consumption-and-CO2-emissions-from-passenger-c_2017_Progress-in-Energy-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:21:03.267135",
+      "answer_length": 1186
+    }
+  },
+  {
+    "question_text": "Using the principles of heat transfer and energy dissipation in viscoelastic materials, explain the physical mechanisms of rolling resistance in vehicle tires. Describe how hysteresis losses during cyclic tire deformation convert mechanical energy to thermal energy, and quantify the contribution of rolling resistance to total vehicle energy losses under NEDC conditions based on the provided paper content.",
+    "standard_answer": "Rolling resistance in vehicle tires primarily results from hysteresis losses during cyclic deformation at the tire-road contact patch. As the tire rotates, the viscoelastic rubber compound undergoes repeated compression and recovery phases. During compression, mechanical energy is stored as elastic potential energy, but due to the material's inherent damping properties and internal friction, a significant portion of this energy is dissipated as heat rather than being fully recovered during the rebound phase. This energy conversion from mechanical to thermal energy represents the fundamental dissipation mechanism. The rolling resistance coefficient quantifies this energy loss per unit load, with higher values indicating greater hysteresis losses. According to the literature, rolling resistance accounts for 20-25% of total vehicle energy losses under NEDC conditions, making it a substantial contributor to overall vehicle energy consumption. The energy dissipation occurs through multiple heat transfer pathways: conduction through the tire structure, convection to the surrounding air, and radiation from the tire surface. In real-world driving, additional factors such as road surface roughness, tire pressure variations, and ambient temperature changes can further influence the actual energy dissipation through these rolling resistance mechanisms, potentially increasing the gap between laboratory-measured and real-world fuel consumption values due to altered heat transfer conditions and material properties.",
+    "original_text": {
+      "1": "Rolling resistance refers to the energy loss occurring in the tyre due to the deformation of the contact area and the damping properties of the rubber.",
+      "2": "Rolling resistance of tyres under NEDC conditions is reported to account for 20(cid:1)25% of total vehicle energy loss"
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "heat_transfer",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires understanding of heat transfer principles (energy dissipation, conduction, convection, radiation), viscoelastic material properties, hysteresis losses in cyclic deformation, and vehicle energy systems - all within the context of combustion science and energy systems domain expertise.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and compliant with other requirements."
+    },
+    "retry_count": 2,
+    "question_id": "deepseek_q_c0709d2f",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Fuel-consumption-and-CO2-emissions-from-passenger-c_2017_Progress-in-Energy-",
+      "paper_title": "Fuel-consumption-and-CO2-emissions-from-passenger-c_2017_Progress-in-Energy-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:21:36.865340",
+      "answer_length": 1526
+    }
+  }
+]

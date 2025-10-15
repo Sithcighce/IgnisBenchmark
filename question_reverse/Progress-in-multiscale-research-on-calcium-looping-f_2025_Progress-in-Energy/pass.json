@@ -1,0 +1,68 @@
+[
+  {
+    "question_text": "基于论文中多尺度建模的研究，请详细阐述从电子尺度到宏观尺度的计算模拟方法如何指导钙基热化学储能材料的性能优化。需要包含DFT计算、分子动力学模拟和介观尺度建模的具体应用案例，并分析这些方法在材料设计中的协同作用。",
+    "standard_answer": "多尺度建模方法在钙基热化学储能材料优化中发挥着关键作用。在电子尺度（~10⁻¹¹ m），密度泛函理论（DFT）计算主要用于研究材料的电子结构和反应机理。论文中提到'DFT can reproduce the structural properties of crystals and determine the electronic density with reasonable accuracy, which provides new insights into how materials behave'。具体案例如研究Fe掺杂对CaO光学吸收性能的影响，'Electronic density of states (DOS) shows that the Fe atom doping into the CaO (001) produced many impurity energy levels between the valence-band maxima (VBM) and the conduction-band minima (CBM)'。在原子尺度（~10⁻⁹ m），分子动力学（MD）模拟采用反应力场（ReaxFF）研究原子扩散和烧结行为，'Zhang et al. found that the decline of CO₂ absorption capacity was attributed to the sintering of CaO-CaO particles by tracking the atomic spatial variation under the ReaxFF'。在介观尺度（10⁻⁸~10⁻⁷ m），晶格玻尔兹曼方法（LBM）和相场方法用于研究多孔结构中的质量传递和微观结构演化，'Based on LBM, Liu et al. systematically described the dynamic carbonation process of CaO by building a multi-field model coupled with fluid flow, chemical reactions, and heat/mass transfer'。这些多尺度方法的协同作用体现在：DFT提供基础电子参数，MD模拟原子尺度动力学行为，介观尺度建模连接微观机制与宏观性能。通过这种多层次的计算框架，可以实现材料性能的精准预测和优化设计，'multiscale modeling and simulations allow for the efficient and adventurous design of materials and their modifications from the corresponding scales'。",
+    "original_text": {
+      "1": "DFT can reproduce the structural properties of crystals and determine the electronic density with reasonable accuracy, which provides new insights into how materials behave",
+      "2": "multiscale modeling and simulations allow for the efficient and adventurous design of materials and their modifications from the corresponding scales"
+    },
+    "type": "concept",
+    "difficulty": 5,
+    "topic": "CFD_modeling",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及钙基热化学储能材料的多尺度建模方法（DFT、分子动力学、介观尺度建模），需要燃烧/传热/流体/能源领域的专业知识，特别是热化学储能材料性能优化和计算模拟方法的应用",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": ""
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_a1212b97",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Progress-in-multiscale-research-on-calcium-looping-f_2025_Progress-in-Energy",
+      "paper_title": "Progress-in-multiscale-research-on-calcium-looping-f_2025_Progress-in-Energy"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:27:23.090171",
+      "answer_length": 1201
+    }
+  },
+  {
+    "question_text": "请分析钙循环热化学储能系统中不同反应器类型（流化床、固定床、回转窑）的传热传质特性及其对系统效率的影响。需要从流体动力学、热传递系数、颗粒停留时间、反应转化率等方面进行详细对比，并给出优化建议。",
+    "standard_answer": "不同反应器类型在钙循环热化学储能系统中表现出显著不同的传热传质特性。流化床反应器具有最佳的固体-气体接触特性，'the fluidized bed shows larger heat transfer coefficients and larger thermal diffusivities owing to the motion of the fluidized solid. The improved solid-gas contact and increased residence time of particles are beneficial to the CaO carbonation'。流化床的高传热系数（通常为200-1000 W/m²K）和良好的颗粒混合确保了均匀的温度分布和高效的反应速率，其流体动力学特性表现为强烈的气固混合和湍流流动，有利于传质过程。固定床反应器虽然结构简单、成本低，但'low heat/mass transfer, discontinuous reaction, and particle agglomeration result in low system efficiency'，其传热系数通常仅为50-200 W/m²K，且存在明显的温度梯度，导致上层材料难以充分分解，流体动力学表现为层流流动，传质主要依赖扩散过程。回转窑反应器结合了连续操作和较好的混合特性，'the rotary kiln has the advantages of high heat and mass transfer, increased particle mixing, and continuous operation'，其流体动力学特性表现为颗粒在旋转过程中的翻滚和混合，传热系数介于流化床和固定床之间。从颗粒停留时间来看，流化床可通过床层高度和气体流速精确控制，固定床停留时间固定但易出现沟流，回转窑停留时间受转速和倾角影响较大。反应转化率方面，流化床由于良好的气固接触通常具有最高的转化率，固定床因传质限制转化率较低，回转窑转化率中等但可实现连续操作。优化建议包括：对于大规模应用，流化床是最佳选择，但需要解决颗粒磨损和流化稳定性问题；对于高温分解过程，回转窑具有优势，但需优化旋转速度和倾角以控制停留时间；固定床适用于实验室研究和小规模验证，可通过改进床层结构和增加内部构件改善传热传质性能。",
+    "original_text": {
+      "1": "the fluidized bed shows larger heat transfer coefficients and larger thermal diffusivities owing to the motion of the fluidized solid. The improved solid-gas contact and increased residence time of particles are beneficial to the CaO carbonation",
+      "2": "low heat/mass transfer, discontinuous reaction, and particle agglomeration result in low system efficiency"
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及钙循环热化学储能系统中不同反应器类型的传热传质特性分析，需要燃烧工程、传热传质学、流体动力学、化学反应工程等专业领域的深入知识，属于典型的能源与热工领域专业问题",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量优秀，全面覆盖了问题要求的各个方面，技术细节准确，分析深入，优化建议具有实际指导意义"
+    },
+    "retry_count": 1,
+    "question_id": "deepseek_q_08e9bbf3",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Progress-in-multiscale-research-on-calcium-looping-f_2025_Progress-in-Energy",
+      "paper_title": "Progress-in-multiscale-research-on-calcium-looping-f_2025_Progress-in-Energy"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:28:16.649655",
+      "answer_length": 1019
+    }
+  }
+]

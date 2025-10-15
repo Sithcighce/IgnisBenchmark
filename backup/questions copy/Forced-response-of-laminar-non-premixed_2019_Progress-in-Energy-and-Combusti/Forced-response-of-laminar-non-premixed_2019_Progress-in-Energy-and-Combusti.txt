@@ -1,0 +1,5263 @@
+Progress in Energy and Combustion Science 70 (2019) 89–118
+
+Contents lists available at ScienceDirect
+
+Progress  in  Energy  and  Combustion  Science
+
+journal homepage: www.elsevier.com/locate/pecs
+
+Forced  response  of  laminar  non-premixed  jet  flames
+
+∗
+Nicholas Magina, Vishal Acharya, Timothy Lieuwen
+
+School of Aerospace Engineering, Georgia Institute of Technology, Atlanta, GA 30332-0150, USA
+
+a r t i c l e
+
+i n f o
+
+a b s t r a c t
+
+Article history:
+Received 29 March 2018
+Accepted 21 August 2018
+Available online 22 October 2018
+
+Keywords:
+Laminar non-premixed flame
+Linear velocity coupled flame response
+Combustion instabilities
+Flame transfer function
+
+This paper reviews current understanding of the manner in which non-premixed jet flames respond to
+flow disturbances, and compares these characteristics to premixed flames. Disturbances in flow veloc-
+ity excite wrinkles on non-premixed flame sheets and perturbations in heat release. These disturbances
+convect axially along the flame at the local flow velocity and decay in amplitude. Sufficiently large dis-
+turbance amplitudes cause opposing sides of the flame to merge and pinch off, leading to multiply con-
+nected flame sheets. The space-time characteristics of flame wrinkles on premixed and non-premixed
+flame sheets are quite similar, as they are dominated by flow disturbances moving the flame around,
+convection of the wrinkles downstream, and dissipation of wrinkles. In contrast, the heat release dynam-
+ics are quite different, as heat release oscillations in premixed flames are nearly uniformly distributed
+along the flame, whereas in non-premixed flames they are concentrated near the burner outlet where
+mixture fraction gradients are highest. In addition, flame area fluctuations are the dominant mechanism
+leading to heat release oscillations in constant burning velocity premixed flames, while mass burning
+rate oscillations dominate non-premixed flames. The flame transfer function, i.e., the normalized ratio
+of heat release and flow oscillations, is of O(1) at low frequencies and transitions to a 1/ St behavior
+at high frequencies, for both premixed and non-premixed flames, where St denotes the flame Strouhal
+number, physically representing the ratio of the convective and the forcing time-scale. While the mech-
+anisms dominating heat release oscillations are quite different for premixed and non-premixed flames,
+these comparable asymptotic tendencies are actually the result of the same effects; namely, that the heat
+release is proportional to the instantaneous mass flux of reactants in the quasi-steady, low Strouhal num-
+ber case, and phase cancellation associated with convecting regions of oscillatory heat release leads to
+the 1/ St behavior in the St (cid:3) 1 regime. Non-premixed flames have an additional 1 /
+St transfer function
+character at an intermediate range of Strouhal numbers, due to the sharply varying axial dependence of
+mean heat release near the burner exit.
+
+√
+
+© 2018 Elsevier Ltd. All rights reserved.
+
+Contents
+
+1.
+Introduction  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  90
+2.  Evolution of fields and iso-surface dynamics . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  92
+2.1.  Field equations for premixed and non-premixed flames . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  94
+2.2.  Description of model problems. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  95
+3.  Space-Time dynamics of the reaction sheet . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  96
+3.1.  Two-dimensional bulk axial forcing - Model Problem A . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  96
+3.2.  Model problem results and experimental data - Discussion  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  98
+3.3.  Axial Diffusion effects – model problems B and C . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 101
+3.4.  Multi-dimensional forcing effects . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 103
+3.4.1.  Convecting helical disturbance solutions. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 104
+3.4.2.  Large amplitude forcing and pocket formation  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 106
+4.  Heat release analysis . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 106
+4.1.  Local heat release analysis . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 106
+
+∗ Corresponding author.
+
+E-mail address: tim.lieuwen@aerospace.gatech.edu (T. Lieuwen).
+
+https://doi.org/10.1016/j.pecs.2018.08.001
+0360-1285/© 2018 Elsevier Ltd. All rights reserved.
+
+90
+
+N. Magina et al. / Progress in Energy and Combustion Science 70 (2019) 89–118
+
+4.2.  Global heat release analysis . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 110
+4.2.1.  Asymptotic transfer function characteristics . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 111
+4.2.2.  Transfer function characteristics . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 113
+4.2.3.  Round jet characteristics . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 115
+5.  Concluding remarks . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 115
+Acknowledgements . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 116
+References  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 116
+
+1. Introduction
+
+This  paper  reviews  current  understanding  of  the  response  of
+non-premixed  flames  to  harmonic  flow  perturbations.  This  work
+is motivated by the problem of combustion instabilities and com-
+bustion noise, where narrowband acoustic oscillations associated
+with acoustic modes of a combustor, couple with and excite heat
+release  oscillations  [1] .  Further,  reacting  flows  are  often  globally
+hydrodynamically  unstable,  and  exhibit  intrinsic  oscillations  as-
+sociated  with  natural  hydrodynamic  instabilities  associated  with
+shear  (e.g.,  Kelvin-Helmholtz  instability),  density  gradients  (e.g.,
+Rayleigh-Taylor  instabilities)  or  thermo-diffusive  instabilities  [1] .
+Fig.  1  shows  images  of  the  forced  response  of  a  mixing  layer,
+clearly denoting the rollup of the shear layer.
+
+The feedback loop during combustion instabilities is depicted
+schematically  in  Fig.  2 .  They  have  been  encountered  during  the
+development and operation of various propulsion devices, power
+generation  equipment,  heating  systems,  and  industrial  furnaces,
+and are problematic because of the large amplitude pressure and
+velocity oscillations they produce. Having amplitudes that in some
+cases, specifically rocket applications, exceed several thousand psi ,
+these oscillations can result in thrust oscillations, severe vibrations
+that interfere with control-system operation, enhanced heat trans-
+fer and thermal stresses to combustor walls, oscillatory mechanical
+loads that result in component fatigue, and flame blowoff or flash-
+back [3] . Each of these issues may result in degraded system per-
+formance, unsatisfied product specifications, or premature compo-
+nent/system wear leading to costly shutdown or even catastrophic
+failure. Thus, improved understanding of combustion instabilities
+is  helpful  for  developing  efficient,  safe,  and  reliable  combustion
+systems.
+
+This paper reviews the physics and understanding behind the
+dynamics, both in position and heat release, of non-premixed, mo-
+mentum dominated jet flames responding to fluctuations in flow
+velocity. A great deal of literature on the linear and nonlinear re-
+sponse of premixed flames to flow disturbances and the combus-
+tion  instability  characteristics  of  lean,  premixed  combustors  has
+been generated over the last decade [4–11] . Several review papers
+on  premixed  flame  dynamics  have  appeared  recently  [5,  12–14] ,
+including experimental investigations of various nozzle and com-
+bustor  configurations  [9,  15–18] ,  numerical  simulations  with  de-
+tailed diffusion, chemistry and turbulence [19–21] , and modeling
+effort s using the G -equation for fuel-air ratio, velocity, and pres-
+sure fluctuations [9, 11, 16, 18, 22–26] . As a result of this work,
+the controlling physics governing the forced response of laminar,
+premixed  flames  is  quite  well  understood  and  capabilities  have
+been developed to predict the space-time dynamics of the flame
+position and heat release [5, 27] . Furthermore, while some funda-
+mental questions remain in highly turbulent flames regarding the
+spatio-temporal nature of narrowband and broadband disturbances
+and  their  interaction  with  the  flame,  exciting  progress  has  been
+made in obtaining similar predictive capabilities in turbulent flows
+as well [26, 28–30] .
+
+In  contrast,  the  behavior  of  non-premixed  flames  respond-
+ing  to  flow  disturbances,  both  in  terms  of  the  space-time  reac-
+tion  sheet  dynamics,  as  well  as  the  temporally  varying  heat  re-
+lease,  both  local  and  spatially  integrated,  is  much  less  well  un-
+
+derstood.  Nonetheless,  there  has  been  a  recent  increase  in  re-
+search  addressing  this  topic,  both  from  a  modeling  and  experi-
+mental  viewpoint.  This  collective  intellectual  advancement  moti-
+vated the present review, whose objective is to synthesize these
+results  and  identify  areas  that  need  further  attention  for  future
+work.
+
+This  review  will  specifically  focus  on  the  forced  dynamics  of
+gaseous  non-premixed  flames,  and  does  not  address  the  phe-
+nomenon  of  inherent  non-premixed  flame  instabilities.  As  such,
+we briefly summarize these intrinsic instabilities of both isolated
+flame sheets, as well as that on non-premixed jet flames in Table 1 ,
+and  show  experimental  examples  in  Fig.  3 .  Following  Matalon
+[31]  and  Lieuwen  [1] ,  non-premixed  flames  exhibit  intrinsic  in-
+stabilities, manifested as stationary or time varying cellular flame
+structures,  or  even  bulk  flame  oscillations.  In  premixed  flames,
+both fluid mechanics and the coupling of the flame and flow by
+gas expansion play important roles in intrinsic instability. In con-
+trast, intrinsic instabilities of non-premixed flames are controlled
+by  thermal-diffusive  effects.  In  other  words,  gas  expansion  pro-
+cesses quantitatively influence stability boundaries, but do not in-
+troduce  new  instability  mechanisms.  Rather,  controlling  mecha-
+nisms for intrinsic non-premixed flame instabilities arise from dif-
+ferential  diffusion  of  mass  and  heat,  leading  to  regions  of  ex-
+cess or deficient enthalpy. Instability mechanisms are closely tied
+to  the  fact  that  non-unity  Lewis  number  or  mass  diffusivity  ra-
+tios lead to non-similar temperature and fuel/oxidizer concentra-
+tion  fields.  For  similar  reasons,  heat  loss  leads  to  intrinsic  in-
+stabilities by causing non-similarity in thermal and concentration
+profiles.
+
+In addition, non-premixed jet flames, used in many industrial
+hardware  components,  also  exhibit  intrinsic  instabilities  [34] .  In
+the buoyancy dominated regime where the Froude number, F r =
+U 2
+f ) ,  is  not  too  high,  these  jet  flames  are  globally  unsta-
+0 / (g R
+ble  and  exhibit  narrowband  oscillations,  resulting  from  periodic
+vortical structures traveling along the flame, manifested as flame
+flicker at low frequency [35, 36] . This global instability disappears
+at  small  Froude  numbers,  or  when  the  flame  becomes  momen-
+tum dominated at large Froude numbers [37] . Additional studies
+have investigated instability (oscillatory) onset and mitigation char-
+acteristics, with dependence upon Damköhler and Lewis numbers
+[31, 38, 39] .
+
+Having briefly considered intrinsic instabilities, we next return
+to externally forced flames, which are the focus of this review. Ex-
+ternal excitation of non-premixed flames, such as by acoustic forc-
+ing, has also been studied extensively, often with the motivation of
+enhancing mixing and/or decreasing pollutant emissions, for rea-
+sons discussed below. When subjected to external excitation, nom-
+inally unstable (lower Froude number) flames exhibit a variety of
+response features that depend upon the frequency and magnitude
+of the excitation. For example, Chen et al. studied an acoustically
+excited non-premixed flame [40] , showing oscillations in both the
+fuel jet flow and flame sheet position, both of which were depen-
+dent upon the forcing frequency and amplitude. They and others
+[41-43] also showed nonlinear behavior, such as the presence of
+the  sum  and  difference  in  frequencies  of  the  buoyant  instability
+and external forcing frequencies, subharmonics and harmonics of
+the excitation frequency, and frequency locking – i.e., the disap-
+
+N. Magina et al. / Progress in Energy and Combustion Science 70 (2019) 89–118
+
+91
+
+Nomenclature
+
+D
+Fr
+G
+L
+f
+Ma
+Pe
+ ̇ Q
+
+R
+f
+R w
+St
+
+St
+
+Lf
+
+St p
+
+St ω
+
+St
+1
+
+St
+2
+
+U
+U c
+Y
+Z
+Z st
+
+A n , β − , β
+F
+(cid:5)
+f
+f f
+f
+g
+h R
+
+k
+
+k c
+
+m
+m s
+
+ ̇ m (cid:5)(cid:5)
+F
+n
+q
+
+r
+s
+s c
+s
+d
+t
+u
+u c
+w
+
+x
+y
+
+z
+
+f )
+
+f / U
+0
+
+f,0 / U
+0
+
+0 / (g R
+
+Diffusion coefficient
+Froude number, F r = U 2
+Premixed scalar
+Flame length measured in flow direction
+Markstein number
+Peclet number, see Eq. (12)
+Spatially  integrated  heat  release  rate  oscilla-
+tions, Eq. (57)
+Radial distance to fuel lip, see Fig. 8
+Radial distance to confining wall, see Fig. 8
+Strouhal  number  based  on  fuel  port  half-
+width, f R
+Strouhal  number  based  on  flame  length,
+f L
+Strouhal  number  definition  for  premixed
+flames, St
+Strouhal  number  utilizing  angular  frequency,
+ω R
+St
+totic transition occurs
+St
+totic transition occurs
+Axial flow velocity
+Wrinkle convection velocity, see Table 5
+Species mass fractions
+Mixture fraction, see Eq. (3)
+Stoichiometric  mixture  fraction  value,  see
+Table 3
+
+Lf value at which the O(1) to 1/ St 1/2 asymp-
+
+Lf  value at which the 1/ St 1/2  to 1/ St asymp-
+
+Lf / cos 2 θ
+
+f / U
+0
+
+h , r n  Solution eigenvalues
+
+phase
+
+speed,
+
+disturbance
+
+Flame transfer function, Eq. (58)
+Scalar field
+Frequency
+Experimental forcing frequency
+Inflow profile, see Fig. 7
+Gravitational acceleration
+Heat  release  per  unit  mass  of  reactant  con-
+sumed
+Helical  convective  disturbance  wavenumber,
+k = ω/ U c
+Normalized
+k c = U c /U 0
+Helical mode number
+Maximum  local  response  helical  mode  num-
+ber, see Eq. (47)
+Reactant mass consumption rate per unit area
+Coordinate normal to unforced flame front
+Local distribution of heat release per unit area,
+Eq. (48)
+Coordinate in the radial direction
+Ratio of fuel port radius to wall radius, R
+Flame consumption speed
+Flame displacement speed
+Time
+Flow velocity
+Convective velocity
+Surface velocity with respect to the flow, see
+Eq. (1)
+Coordinate in the flow direction; axial
+Coordinate normal to the flow direction; trans-
+verse
+Coordinate perpendicular to x - y plane
+
+f / R w
+
+θ
+
+ψ
+
+(cid:7)
+∇
+α
+γ
+
+δ
+
+ε
+ζ
+
+η
+λ
+λc
+σ c
+σ C
+ˆ σc
+ξ
+
+ρ
+σ
+τ
+φox
+χ
+ω
+( )
+st
+(  )
+x,y,θ ,r
+
+(  )
+
+n,t
+
+(  ) u
+(  )
+0
+(  )
+1
+( (cid:2) )
+(  ̃ )
+( → )
+(  )
+(cid:2)
+
+f / R
+
+Local angle of flame surface wrt axial coordi-
+nate, 2D see Fig. 9
+Local angle of flame surface wrt axial coordi-
+nate, 3D see Fig. 22
+Angular rate of swirl
+Gradient operator
+f = cot θ
+Premixed flame aspect ratio, α = L
+Flame  wrinkle  dispersion  coefficient,  see
+Table 5
+Model piecewise linear inlet mixture fraction
+profile thickness, Fig. 7
+Small perturbation amplitude parameter
+Flame  wrinkle  dissipation  coefficient,  see
+Table 5
+Gain in η- τ model, Eq. (66)
+Wavelength corresponding to u, u / f
+Wavelength corresponding to u c , u c / f
+Markstein length
+Scaled Markstein length, Eq. (35)
+Rescaled Markstein length,  ˆ σc = σc sin θ tan θ
+Flame  position  measured  in  y -  ,  r -,  or  n -
+direction, see Fig. 9
+Density
+Non-dimensional swirl parameter, σ = (cid:7)/ ω
+Time-delay in η- τ model, Eq. (66)
+Stoichiometric mass ratio of oxidizer to fuel
+Azimuthal interference parameter, see Eq. (46)
+Angular frequency, 2 π f
+Stoichiometric value
+Scalar components in x, y, θ , and r direction,
+respectively
+Scalar  components  in  normal  and  tangential
+directions
+Unburned quantity
+Mean/steady state component
+Fluctuating component
+Frequency domain variable
+Non-dimensional form of a variable
+Directional vector
+Time average
+Phase of quantity
+
+pearance of oscillations associated with the natural buoyant insta-
+bility at sufficient excitation amplitudes. Williams et al. [44] ex-
+plored this lock-in behavior, showing that forcing the fuel stream
+at a frequency close to the natural buoyant instability frequency
+was accompanied by the presence of large vortices on the air side
+of the flame, leading to large amplitude oscillations of the overall
+flame response at the forcing frequency. They also observed that a
+related lock-in phenomenon could happen at the first subharmonic
+of the forcing frequency, when the forcing frequency was close to
+twice the natural instability frequency. Juniper and co-workers [45,
+46]  conducted  a  detailed  study  on  the  lock-in  phenomenon  and
+quasiperiodic evolution of acoustically forced jet diffusion flames.
+They identified the critical amplitudes at which lock-in occur for
+a range of forcing frequencies around the natural instability fre-
+quency.
+
+As a result of the strong effect of forcing on the ambient/co-
+flowing air and its entrainment with the fuel jet, a number of stud-
+ies  have  also  noted  significant  influences  on  soot  and  NOx  pro-
+duction  from  the  flame  [47–59]  – sensitivities  which  are  much
+stronger in non-premixed flames than in premixed flames. For ex-
+ample,  Saito  et  al.  [47]  showed  that  soot  can  be  suppressed  in
+
+92
+
+N. Magina et al. / Progress in Energy and Combustion Science 70 (2019) 89–118
+
+Fig. 1.  Mie scattering images of a forced shear layer (taken from non-reacting experiments in the facility described in Magina et al. [2] ). The first three images are at equal
+time intervals, while the last is from a delayed time where the roll-up has sufficiently evolved.
+
+The specific focus for this review paper is forced, non-premixed
+jet  flames;  particularly,  the  flame  response  and  heat  release  dy-
+namics. This review will not consider the combustor system dy-
+namics (e.g., thermo-acoustic stability of combustor systems with
+non-premixed flames) where non-premixed flames are present, but
+note that an analytical and experimental literature exists on this
+topic, as well as an extensive wealth of industry experience in this
+area [74–77] .
+
+The review is organized as follows. Section 2 starts by inves-
+tigating  the  governing  features  and  properties  of  field  and  iso-
+surface  dynamics.  The  mixture  fraction  governing  equation,  i.e.
+Z -equation,  is  introduced  and  its  features  are  compared  with
+those of the premixed flame G -equation. Section 3 discusses the
+space-time dynamics of harmonically forced non-premixed flames
+through  a  series  of  model  problems  with  increasing  complexity.
+Section 4 presents a parallel discussion to Section 3 , focusing on
+the heat release dynamics of these flames, including the low and
+high St asymptotic trends and transfer function characteristics. Fi-
+nally, Section 5 summarizes key findings and highlights areas of
+needed future work.
+
+2. Evolution of fields and iso-surface dynamics
+
+While  combustion  always  occurs  over  a  distributed  volumet-
+ric region, in many applications of interest its thickness is much
+smaller than other hydrodynamic and acoustic length scales, and
+so  it  can  be  treated  as  a  surface,  enabling  the  flame  dynamics
+problem to be decoupled from that of its complex internal chem-
+ical  kinetics.  Flamelet  models  constitute  one  of  the  most  com-
+mon approaches for analyzing laminar and turbulent flames [97] .
+
+Fig. 2.  Schematic depicting the combustion instability feedback loop.
+
+acoustically excited non-premixed flames, with reductions of up to
+50% in a laminar flame, and 90% for a turbulent flame.
+
+In  addition,  several  studies  on  forced  counter-flow  diffusion
+flames  have  analyzed  the  unsteady  flame  structure  and  flame
+response  [60-62] .  Finally,  other  forced  flame  studies  have  fo-
+cused on the flame’s space-time position dynamics due to veloc-
+ity  and  equivalence  ratio  perturbations.  The  interaction  between
+the acoustic field and the flame produces a spatially varying, os-
+cillatory velocity component that is normal to the flame, causing
+wrinkling, as well as oscillatory reaction and heat release rates [50,
+63] . Further, there are several experimental and numerical studies
+that examine the flow characteristics, flame dynamics, and mixing
+mechanisms of acoustically modulated jet diffusion flames [52, 56,
+64–73] .
+
+Table 1
+Summary of sources of unsteadiness in gaseous, non-premixed flames.
+
+Source of unsteadiness
+
+Relative roles of buoyancy/momentum
+
+References
+
+Intrinsic instabilities - flame sheets
+Intrinsic instabilities - jet flames
+
+Forced counterflow flames
+Forced Jet Flames
+
+Fr ≤ O(1)
+Fr > > 1
+
+Fr ≤ O(1)
+Fr > > 1
+
+[1,31,39,78–81]
+[34–37, 82–84]
+[38,49,51,63,85]
+[60–62]
+[32,41–44,47,64,65,69–71]
+[2,33,40,45,48,50,67,69,86–96]
+
+N. Magina et al. / Progress in Energy and Combustion Science 70 (2019) 89–118
+
+93
+
+Fig. 3.  (top) Experimental laser-induced fluorescence and soot scattering images in a steady and time-varying laminar CH 4 /air diffusion flame that is undergoing intrinsic
+oscillations (reproduced from Shaddix et al. [32] ) and (bottom) OH-PLIF of a forced H 2 /CH 4 flame (Reprinted from Kim et al. [33] with permission from Elsevier).
+
+Within  the  flamelet  approximation,  reactions  are  confined  to  a
+layer  that  is  much  thinner  than  other  flow  length  scales,  which
+may  be  substantially  contorted  and  stretched  by  turbulent  flow
+disturbances. For premixed systems, the flamelet surface separates
+unburnt  reactants  from  burnt  products,  while  for  non-premixed
+systems  it  separates  fuel  and  oxidizer–rich  species.  In  the  latter
+case, the flamelet occurs at the location where fuel and oxidizer
+diffuse into the flame sheet at a rate given by, and equivalently
+coexist at, their stoichiometric ratio.
+
+This  section  discusses  the  dynamics  and  evolution  of  fields
+and isosurfaces, from both a general mathematical standpoint, and
+specifically for combustion related systems, and will closely follow
+the treatment of Pope [80] . Defining a general scalar field as (cid:5), a
+surface can be defined implicitly, through an equation of the form
+(cid:22)
+(cid:5)(X, t ) = (cid:5)
+x , t ), where the evolution of each
+respective entire surface is given by ∂ (cid:5)/ ∂ t or ∂ X/ ∂ t . Additionally,
+the  evolution  equation  for  the  position  of  a  surface  is  given  by
+[80] :
+(cid:22)
+x , t)
+dX(
+dt
+
+(cid:22)
+(cid:22)
+(cid:22)
+x , t)
+n (
+x , t)
++ w (
+
+(cid:4)
+(cid:22)
+x , t) , t
+X (
+
+des , or explicitly, as X (
+
+(cid:3)
+(cid:22)
+u
+
+(1)
+
+=
+
+(cid:22)
+u  is the velocity of the ambient medium, w is the veloc-
+where
+(cid:22)
+ity of the surface with respect to the flow, and
+n  is the surface
+normal. From this, other various properties of the surface elements
+can be obtained, including the principal curvatures, principal direc-
+tions, and the stretch factor [80] . The local geometry of surfaces is
+described by the spatio-temporal surface element properties, con-
+sisting of position, surface normal direction, principal curvatures,
+and fractional area increase.
+
+We can define three types of surfaces, namely - material sur-
+faces, propagating surfaces, and constant-property surfaces. A ma-
+terial surface (e.g. surface of passive tracer particles) is a passive
+(cid:22)
+interface  between  two  fluids  that  is  advected  by  the  flow,
+u .  A
+propagating surface (e.g. premixed flame) is a surface which prop-
+agates normal to itself at a given velocity relative to the fluid. This
+relative propagation velocity, w , is referred to as the displacement
+speed, s
+d , for premixed flamelets. A constant-property surface (e.g.
+non-premixed flame) is a surface where some given property, (cid:5),
+is constant. Non-premixed flame sheets occur along the constant
+property surface where the mixture fraction, Z , has its stoichiomet-
+ric value, Z = Z st .
+
+Following  Pope  [80] ,  a  helpful  way  to  compare  and  contrast
+these three types of surfaces is to recast the surface dynamics of
+one surface type into the other, as shown in Table 2 . For exam-
+ple, a constant property surface is defined as an iso (cid:5) surface, but
+can alternatively be considered as a propagating surface with front
+velocity relative to the flow given by  w = −( D (cid:5)/ Dt )/| ∇(cid:5)|.
+
+For  both  a  material  surface  or  propagating  surface  with  con-
+stant w , the evolution of any surface element is fully described for
+a given velocity field and initial condition, and thus each surface
+element evolves independently. However, the temporal evolution
+of any surface element of a constant property surface is controlled
+by the entire property field at each instant [80] . This has important
+implications for the solution methods, since rather than consider-
+ing evolution equations for a constant-property surface, an alterna-
+tive approach is to deduce the surface properties from the property
+field and its evolution [80] .
+
+Consider a surface that is initially (1) “regular”, defined as hav-
+ing  finite  curvature  everywhere  with  no-self  intersections,  criti-
+cal  points,  or  cusps  [98] ,  and  (2)  simply-connected,  defined  as
+having  no  fully  penetrating  holes  passing  through  it.  A  material
+and constant-property surface remains regular during its evolution,
+while  a  propagating  surface  can  develop  singularities,  i.e.  values
+of infinite local curvature, and self-intersections [80] . For premixed
+flames, this manifests itself as the formation of cusps, shown in
+Fig. 4 – i.e. discontinuities in flame slope for constant w ( s
+d ) flames
+[4] .  As  will  be  seen  later,  external  forcing  complicates  (yet  still
+follows) this behavior, producing multi-connected, i.e. segregated,
+material surfaces and constant-property surfaces; a feature known
+as  flame  clipping  for  non-premixed  flames,  which  occurs  under
+certain critical conditions.
+
+In  addition  to  the  local  properties  discussed,  the  evolution
+equations  for  global  properties  of  level  surfaces  can  also  be  ex-
+pressed [100] . This is of particular interest for combustion systems,
+as total heat release and surface area are significant dynamical pa-
+rameters of interest. The nature of the resulting equation to be es-
+tablished will be kinematic, expressing the time rate of change of
+global variables in terms of the progression velocity and geometric
+parameters of the level surface. A global variable can be defined
+as:
+
+Y (cid:5) ((cid:5), t) ≡
+
+(cid:5)
+
+(cid:5)
+
+(cid:22)
+(cid:22)
+x )
+x , t) dA (
+f (
+
+(2)
+
+94
+
+N. Magina et al. / Progress in Energy and Combustion Science 70 (2019) 89–118
+
+Table 2
+Uniform casting of material, propagating, and constant property surfaces, following Pope [80] , where (cid:5) 0 is a specified value.
+
+Treated as a Propagating Surface with...
+
+Material Surface
+Propagating Surface
+Constant-Property Surface  w = − D (cid:5)
+
+w = 0
+w = s d (controlled by internal flame structure)
+
+Dt / | ∇(cid:5)|
+
+Treated as a Constant Property Surface with...
+D (cid:5)
+Dt  = 0
+D (cid:5)
+Dt  = −w | ∇(cid:5)|
+(cid:5) = (cid:5) 0
+
+Table 3
+Stoichiometric  mixture  fraction  for  hydrogen  and
+various hydrocarbon fuels in air and oxygen.
+
+Fuel
+
+Z st value in air  Z st value in oxygen
+
+Z st = 0.055
+CH 4
+Z st = 0.060
+C 3 H 8
+C 8 H 18  Z st = 0.063
+Z st = 0.029
+H 2
+
+Z st = 0.200
+Z st = 0.216
+Z st = 0.222
+Z st = 0.112
+
+Fig. 4.  Schlieren image of a conical methane-air forced premixed flame at 150 Hz
+(left) (reproduced from Ducruix et al. [99] ) along with line of sight luminosity
+images of forced methane-air non-premixed flames at 30 Hz (middle) and 50 Hz
+(right) forcing frequency (Reprinted from Magina et al. [2] with permission from
+Elsevier).
+
+(cid:22)
+where  f (
+x , t) denotes a scalar of (cid:5), and is a smooth function of
+location and time. This global variable concept will be elaborated
+upon in Section 4 .
+
+2.1. Field equations for premixed and non-premixed flames
+
+Virtually all analytical work on non-premixed flame dynamics
+has utilized the Shvab-Zeldovich mixture fraction formulation, due
+to  its  analytical  tractability  in  the  absence  of  source  terms,  and
+we shall follow this framework in this section. The mixture frac-
+tion is defined as the mass ratio of material at each spatial loca-
+(cid:22)
+x , t) . Thus, Z
+tion having its origin in the fuel stream, i.e., Z = Z (
+takes values of zero and unity in the pure oxidizer and pure fuel
+streams,  respectively,  and  is  given  for  a  simplified  three-species
+system (consisting of fuel and oxidizer reacting to form a single
+product), by:
+
+Z = Y F +
+
+Y Pr
+( φ ox + 1)
+
+(3)
+
+where  φox  is  the  stoichiometric  oxidizer-to-fuel  ratio.  A  founda-
+tion for the analytical work, the governing equation for the mix-
+ture fraction has no source term if all species have equal diffusivity
+coefficients, D , and is given by:
+ρ D Z
+Dt
+
+− ∇ · ( ρD ∇ Z ) = 0
+
+(4)
+
+To solve this equation, the density must be related to the mix-
+ture fraction. The simplest approach to proceed is to assume an
+isodensity field, although certainly an oversimplification for com-
+bustion applications. However, rather than assuming constant den-
+sity, the less restrictive assumption of constant ρD can be utilized
+(although  it  actually  varies  as  T  1/2  for  perfect  gases).  The  final
+modified form of the mixture fraction equation, to be referred to
+
+Fig. 5.  Schematic of the premixed G -field (left) and non-premixed Z -field (right)
+with denoted isocontours representing the flame sheet.
+
+throughout this work as the Z -equation, is given by:
+∂ Z
+∂t
+
+u · ∇ Z = D ∇ 2
+Z
+
++
+
+(cid:22)
+
+(5)
+
+Consistent  with  Table  2 ,  the  flame  lies  on  the  locus  of
+points, defining the flame sheet, given by the parametric equation
+Z ( (cid:2) x , t ) = Z st . Typical representative Z st values are shown in Table 3 .
+For premixed combustion the mixture fraction is uniform ev-
+erywhere, assuming equi-diffusive species, and thus a similar con-
+servation equation would provide no new information. Rather, the
+G -equation is used for premixed flames in the reaction sheet limit
+[5, 101, 102] , given by:
+∂G
+∂t
+
++  (cid:2) u · ∇ G  =  s
+
+d |∇ G |
+
+(6)
+
+The flame lies on the locus of points, defining the flame sheet,
+given by the parametric equation G ( (cid:2) x , t) = 0 . Both of these flame
+front kinematic equations relate the motion of the flame front with
+various flow/flame parameters implicitly, meaning the flamelet is
+treated as a gas dynamic discontinuity in three-dimensional space
+described by a specific isosurface. Simple schematics of the two
+fields are shown in Fig. 5 .
+
+It is helpful to compare the dynamics and governing features
+of the Z -equation, given by Eq. (5) for non-premixed flames, with
+the G -equation, given by Eq. (6) for premixed flames. The two ex-
+pressions have the same convection operator on the left-hand side
+which illustrates the importance of flow perturbations in the direc-
+tion normal to the flame sheet in moving the flame sheet around.
+However, the right-hand sides of these two expressions are differ-
+ent; the premixed flame expression has the normal flame propa-
+d | ∇G |, while the non-premixed flame expression
+gation operator, s
+has a diffusion operator, D ∇ 2
+Z . This difference is significant and
+reflects,  among  other  things,  the  fact  that  non-premixed  flames
+
+N. Magina et al. / Progress in Energy and Combustion Science 70 (2019) 89–118
+
+95
+
+Fig. 6.  Schematic of bluff-body stabilized premixed flame (left) and jet non-premixed flame (right) with its corresponding coordinates and flame front dynamical parameter,
+ξ (x,t) .
+
+do not propagate. Moreover, this propagation term makes the pre-
+mixed flame dynamics equation nonlinear, while the non-premixed
+(cid:22)
+flame dynamics equation is linear (assuming
+u and D are not func-
+tions of Z ).
+
+Another significant, yet subtle, difference is that the G -equation
+is physically meaningful and valid only at the flame itself where
+G ( (cid:2) x , t) = 0  (i.e.,  although  it  can  be  solved  away  from  the  flame,
+the resulting G values have no physical significance [103] ). In con-
+trast, the Z -equation describes the physical values of the mixture
+fraction field everywhere . This point was alluded to earlier as well
+for  constant  property  surfaces,  whose  dynamics  are  determined
+by the instantaneous property field, rather than simply the veloc-
+ity at the surface. Thus, the entire mixture fraction field must be
+solved in the non-premixed problem and the Z ( (cid:2) x , t) = Z st  surface
+extracted from the resulting solution field (which generally can-
+not be expressed explicitly). Consequently, developing explicit so-
+lutions for the non-premixed flame problem is not as straightfor-
+ward as for the premixed problem. This observation has important
+consequences for both solution approaches of these problems, as
+well as the Z ( (cid:2) x , t) = Z st  flame sheet dynamics that are discussed
+next.
+
+Consider  next  the  case  where  the  flame  position  is  a  single
+valued  function  of  some  coordinate.  For  example,  in  the  two-
+dimensional case, the instantaneous position of the reaction sheet
+is  given  by  y = ξ ( x,  t ),  shown  in  Fig.  6  for  representative  two-
+dimensional premixed and non-premixed systems.
+
+A useful transformation of the G -equation can be done by ex-
+pressing Eq. (6) in terms of the flame position, ξ , through use of
+the substitution G ( x, y, t ) = y − ξ ( x, t ). Although the resulting equa-
+tion for the flame position becomes less general (being only valid
+for a flame whose position is single-valued), it enables an explicit
+governing  equation  for  the  flame  position  dynamics.  With  these
+explicit  expressions  dynamical  quantities,  such  as  flame  surface
+area fluctuations and flame curvature, can be obtained and inves-
+tigated. Implementing this transform yields the following explicit
+expression for the premixed flame position:
+
+(cid:6)
+
+(cid:7)
+
+− u y = s
+d
+
+1 +
+
+∂ξ
+∂t
+
++  u x
+
+∂ξ
+∂x
+
+(cid:8)
+
+2
+
+∂ξ
+∂x
+
+Fig. 7.  Model problem steady inlet mixture fraction profiles, f 0 , for the analytically
+imposed step ( Table 4 A, Table 4 B), computed extended inlet ( Pe = 10, Table 4 C), and
+analytically imposed piecewise linear smoothed profile ( Table 4 D), where the mix-
+ture fraction transition occurs linearly over a non-dimensional distance δ. Trans-
+verse and radial coordinate y and r utilized for the 2D and 3D problems, respec-
+tively.
+
+equation  describes  the  entire  spatial  distribution  of  the  mixture
+fraction field.
+
+This discussion reflects important underlying physics of the two
+flames. Consider a premixed and non-premixed flame embedded
+in a velocity field given by (cid:2) u (x, y, z, t) , where the velocity field at
+the flame sheet is given by (cid:2) u ( x, ξ ( x, z, t) , z, t ) = (cid:2) u u . The pr emixed
+flame dynamics are only a function of (cid:2) u u ; this implies that for a
+given (cid:2) u u , its space-time dynamics are the same for a variety of dif-
+ferent velocity fields. In contrast, the space-time dynamics of the
+non-premixed reaction sheet are a function of the entire velocity
+field, (cid:2) u (x, y, z, t) , not just its value at the reaction sheet.
+
+(7)
+
+2.2. Description of model problems
+
+Note that the substitution for G arbitrarily assigns values to the
+G field away from the flame itself, namely that G varies linearly
+with coordinate y away from the flame. Since the G field is com-
+pletely arbitrary away from the flame this is allowable, however,
+we cannot make an analogous substitution for the non-premixed
+(cid:22)
+x , t) − Z st  = y − ξ (x, t) , as this assigns values
+system, such as Z (
+to the Z field away from Z ( (cid:2) x , t) = Z st . As mentioned earlier, un-
+like the G -equation which is valid only at the flame front, the Z -
+
+In this review, we shall present multiple model problems, with
+increasing levels of complexity, in order to understand and isolate
+the effects of different physics. These model problems are summa-
+rized in Table 4 and will be detailed further in the section where
+they are first introduced. The key differences between these model
+problems is their inclusion of axial diffusion, as well as the trans-
+verse  profiles  of  the  steady  state  mixture  fraction  at  the  burner
+0 ( x = 0). The various steady inflow profiles utilized, de-
+exit, i.e. Z
+noted as f 0 ( y ) = Z
+
+0 ( x = 0, y ), are shown in Fig. 7 .
+
+96
+
+N. Magina et al. / Progress in Energy and Combustion Science 70 (2019) 89–118
+
+Table 4
+Model problems and boundary description.
+
+Model problem identification
+
+Axial diffusion included in governing equation?
+
+Inflow boundary condition (see Fig. 7 )
+
+A
+B
+C
+D
+
+No ( b = 0 in Eq. (10) )
+Yes ( b = 1 in Eq. (10) )
+Yes ( b = 1 in Eq. (10) )
+No ( b = 0 in Eq. (10) )
+
+Step profile, see Fig. 8 and Eq. (8)
+Step profile, see Fig. 8 and Eq. (8)
+Extended inlet, see Fig. 20
+Smoothed profile over transition distance, δ
+
+Fig. 8.  Schematic of the forced two-dimensional non-premixed flame model prob-
+lem.
+
+3. Space-Time dynamics of the reaction sheet
+
+This section examines the basic dynamical characteristics of a
+non-premixed  flame  responding  to  harmonic  flow  perturbations.
+We focus on the flame position in this section, and the integrated
+heat  release  in  Section  4 .  This  section  is  organized  by  first  pre-
+senting a basic model problem – the response of a non-premixed
+flame to bulk, harmonic forcing. This analysis utilizes a variety of
+simplifying assumptions in order to allow for analytically tractable
+explicit  expressions  for  the  flame  position.  While  additional  ef-
+fects like non-isothermal heat release and spatial temperature gra-
+dients are neglected in this model problem, it enables us to de-
+scribe some key physics which will be seen in computations and
+experiments presented later that include these neglected effects.
+
+3.1. Two-dimensional bulk axial forcing - Model Problem A
+
+This section presents the results of a model problem to illus-
+trate key physics that influence the spatiotemporal flame dynam-
+ics. It closely follows the analysis from a suite of analytical studies
+which have also considered the response of non-premixed flames
+[87-93] . This work builds from the significant theoretical literature
+on the unforced problem, such as the Burke-Schumann flame [49,
+81, 104] .
+
+As discussed in Section 2.1 , the Z -equation is utilized for this
+formulation, with accompanying key assumptions of infinitely fast
+chemistry,  wherein  the  flame  sheet  collapses  to  the Z st  surface,
+equal  species  diffusivities,  constant  diffusion  coefficients,  speci-
+fied  disturbance  fields,  and  small  perturbation  amplitudes  (see
+Miklav ˇci ˇc  [94]  for  recent  generalization  of  this  work  to  include
+finite  amplitudes).  As  such,  the  space-time  dynamics  of  a  non-
+premixed  flame  can  be  described  by  the  mixture  fraction  field
+using the Z -equation, Eq. (5) . The steady and fluctuating velocity
+fields are imposed, thus decoupling the momentum equation from
+the energy and species equations; this, however, implicitly assumes
+an isothermal field.
+
+Consider first a two-dimensional flame as depicted in Fig. 8 , in
+a uniform axial flow field whose value in the absence of forcing
+0 . At the inlet, i.e. x = 0, fuel and oxidizer flow into
+is given by U
+the domain as indicated in the figure, leading to the following step
+inflow conditions:
+
+(cid:9)
+Z (x = 0 , y ) =
+
+1  for  0 ≤ | y |  < R
+f
+0  for  R
+
+f ≤ | y |  < R w
+
+(8)
+
+Enforcing this boundary condition enables an analytic solution
+of the problem. In reality, however, there is transverse diffusion of
+fuel just downstream of the inlet followed by axial diffusion of fuel
+
+into the oxidizer port and vice versa, so that the solution must ac-
+tually be solved over a larger upstream domain that includes the
+fuel/oxidizer supply systems [95] ; this effect is captured and inves-
+tigated in Model Problem C in Section 3.3 . As such, the boundary
+condition  in  Eq.  (8)  implicitly  neglects  axial  diffusion  at  x = 0,  a
+point which will be returned to in Section 3.3 . Assuming symme-
+try at y = 0, no penetration through the walls at y = R w , and requir-
+ing finite mixture fraction values throughout makes this boundary
+value problem fully defined.
+
+U 0
+
+= D
+
++ b D
+
+0 ( x , y ) + (  )
+
+y ,0 = 0, can be acquired from Eq. (5) as:
+
+For analytical tractability, the solution is derived in the limit of
+small perturbations, and thus each variable is expanded as ( ) ( x ,
+y,  t ) = (  )
+1 ( x , y ,  t ).  Neglecting  higher  order  terms,
+the unforced mixture fraction field, for a system with no transverse
+flow, i.e. u
+∂ Z 0
+∂x
+
+∂ 2
+∂ 2
+Z 0
+Z 0
+∂ x 2
+∂ y 2
+0  is the spatially constant axial
+where the velocity scalar u
+flow velocity and “b ” is an axial diffusion indicator, taking values of
+unity and zero, depending upon whether axial diffusion effects are
+included or neglected, respectively (see Table 4 ); this will be elab-
+orated on in Section 3.3 . Similarly, the dynamical equation for the
+fluctuating mixture fraction field can be obtained from Eq. (5) and
+written in the frequency domain (indicated with an overhat ( (cid:2) ) )
+as:
+
+x ,0 = U
+
+(9)
+
+− D
+
+− b D
+
+∂ ˆ Z 1
+∂x
+
+∂ 2 ˆ Z 1
+∂ y 2
+
+−iω ˆ Z 1 + U 0
+
+∂ 2 ˆ Z 1
+∂ x 2
+The solution to these equations can be derived using separa-
+tion of variables. The full solution, including axial diffusion ( b = 1),
+for  the  steady  state  mixture  fraction  field,  i.e.  Eq.  (9) ,  utilizing
+Eq. (8) as the inlet condition, is given by:
+
+∂ Z 0
+∂y
+
+∂ Z 0
+∂x
+
+= − ˆ u x, 1
+
+− ˆ u y, 1
+
+(10)
+
+R
+f
+R w
+
++
+
+∞ (cid:10)
+
+n =1
+
+(cid:7)
+2
+nπ sin ( A n ) cos
+
+(cid:8)
+
+(cid:11)
+
+(cid:12)
+
+P e 2 −
+
+exp
+
+x
+Pe R
+f
+
+A n
+
+y
+R
+f
+
+Z 0 =
+
+(cid:13)
+
+(cid:14) (cid:15)
+
+P e 4 + 4 P e 2
+
+A n 2
+
+2
+
+(11)
+
+where A n = n π ( R
+Pe , is given by the expression:
+
+f / R w ) are the eigenvalues and the Peclet number,
+
+P e =
+
+U 0 R
+f
+D
+
+(12)
+
+physically corresponding to the relative time scales for convective
+f .
+and diffusive processes to transport mass over a distance R
+
+The subsequent analysis will focus on a simplified version of
+the  solution  that  neglects  axial  diffusion,  since  we  have  already
+done so implicitly in formulating the boundary condition in Eq. (8) .
+Denoted  Model  Problem  A  in  Table  4 ,  the  resulting  steady  state
+mixture fraction field solution is given by:
+
+Z 0 =
+
+R
+f
+R w
+
++
+
+∞ (cid:10)
+
+n =1
+
+(cid:7)
+nπ sin ( A n ) cos
+
+2
+
+(cid:8)
+
+(cid:7)
+
+(cid:8)
+
+A n
+
+y
+R
+f
+
+exp
+
+−A n
+
+2  x
+P e R
+f
+
+(13)
+
+and can be derived by solving Eq. (9) and neglecting the axial dif-
+fusion  term,  i.e.  setting  b = 0,  or  equivalently,  taking  the  Pe → ∞
+limit of Eq. (11) .
+
+Consider  next  the  solution  for  the  fluctuating  flame  position
+responding  to  uniform  bulk  axial  fluctuations  in  flow  velocity,
+
+N. Magina et al. / Progress in Energy and Combustion Science 70 (2019) 89–118
+
+97
+
+Fig. 9.  Representative two-dimensional non-premixed flame mixture fraction field (left) with steady state (red) and instantaneous (black) flame sheet location denoted. A
+close-up view of a “flame wrinkle” (right) shows the steady, ξ 0 ( x ), and fluctuating wrinkle location denoted radially, ξ 1,y ( x,t ), and normally to the mean flame, ξ 1,n ( x,t ). The
+mean flame angle, θ 0 ( x ), is also denoted.
+
+0 exp [ − i ωt ]. The resulting full solution for the fluctuating
+x ,1 = ε U
+u
+mixture fraction field, Z
+(cid:7)
+(cid:16)
+∞ (cid:10)
+
+1 , is:
+
+(cid:8)
+
+(cid:17)
+
+Z 1 =
+
+2 / ( nπ ) sin ( A n ) εβ−
+2 π iPeSt
+(cid:8)
+
+(cid:7)
+
+(cid:7)
+
+cos
+
+y
+A n
+R
+f
+(cid:8)(cid:18)
+
+n =1
+(cid:9)
+
+exp
+
+x
+β−
+Pe R
+f
+
+− exp
+
+x
+β
+Pe R
+f
+
+h −
+
+exp [ −iωt ]
+
+(14)
+
+where the Strouhal number based on the half-width of the fuel
+nozzle is defined by St = fR
+0 , and
+
+f / U
+
+(cid:13)
+
+P e 2 −
+
+β− =
+
+P e 4 + 4 P e 2
+
+A n 2
+
+P e 2 −
+
+h − =
+
+β
+
+2
+
+(cid:13)
+
+P e 4 + 4 P e 2
+2
+
+A n 2 − 8 π iP e 3 St
+
+Again, we will focus the subsequent analysis in the absence of
+
+(15)
+
+axial diffusion, i.e. in the Pe → ∞ limit, whose solution is:
+
+Z 1 =
+
+(cid:16)
+∞ (cid:10)
+
+n =1
+
+(cid:7)
+
+(cid:17)
+iε A n 2 ( 2 / nπ ) sin ( A n )
+2 π St Pe
+(cid:8)(cid:9)
+
+(cid:7)
+
+cos
+
+(cid:7)
+
+(cid:8)
+
+A n
+
+y
+R
+f
+(cid:8)(cid:18)
+
+exp
+
+−A n
+
+2  x
+Pe R
+f
+
+1 − exp
+
+2 π i St
+
+x
+R
+f
+
+exp [ −iωt ]  (16)
+
+Alternatively, this expression can also be written in terms of Z
+0
+
+as:
+
+(cid:16)
+Z 1 =
+
+(cid:17)
+−iε R
+f
+2 π St
+
+(cid:9)
+∂ Z 0
+∂x
+
+(cid:7)
+
+(cid:8)(cid:18)
+
+1 − exp
+
+2 π i St
+
+x
+R
+f
+
+exp [ −iωt ]
+
+(17)
+
+Representative solutions are shown in Fig. 9 . The reaction sheet
+is defined by the locus of points where Z ( x, y = ξ ( x, t ), t ) = Z st . Note,
+the flame position, ξ ( x,t ), is implicitly contained in this expression.
+Expanding this implicit equation for the fluctuating flame in terms
+of Z and ξ ( x,t ), to first order, results in:
+Z 0 (x, y = ξ0 (x ) + ξ1 ,n (x, t)) + Z 1 (x, y = ξ0 (x ) + ξ1 ,n (x, t) , t) = Z st
+(18)
+
+while  subsequently  expanding  this  equation  in  a  Taylor-series
+yields:
+Z 0 ( x, y = ξ0 ( x ) ) + ξ1 ,n ( x ) | ∇ Z 0 ( x, y = ξ0 ( x ) ) |
+
+(cid:19)
++ Z 1 ( x, y = ξ0 ( x ) , t ) + O
+= Z st
+Grouping the leading order terms results in the following im-
+
+(cid:20)
+ε 2
+
+(19)
+
+plicit equation for the steady flame position:
+Z 0 (x, y = ξ0 (x )) = Z st
+
+(20)
+
+while the first order terms lead to the following explicit expression
+for fluctuating flame position:
+
+ξ1 ,n (x, t) = − Z 1 (x, y = ξ0 (x ) , t)
+| ∇ Z 0 (x, y = ξ0 (x )) |
+
+(21)
+
+The perturbation in flame position can be measured radially or
+normally to the mean flame surface in the direction of the oxi-
+dizer, as shown in Fig. 9 . Generally, throughout this work, the nor-
+mal displacement, i.e. ξ
+1, n , is utilized for quantifying flame motion
+due to the substantial change in the angle of the reaction sheet
+with axial location (in contrast, if flame motion is measured as ra-
+dial displacement, its value at the flame tip becomes ambiguous,
+potentially taking infinite values).
+
+An implicit expression for the flame sheet position, ξ
+
+0 ( x ), can
+
+be determined from Eq. (20) , yielding:
+
+Z st =
+
+R
+f
+R w
+
++
+
+∞ (cid:10)
+
+n =1
+
+(cid:7)
+nπ sin ( A n ) cos
+
+2
+
+(cid:8)
+ξ0 (x )
+R
+f
+
+A n
+
+(cid:7)
+
+(cid:8)
+
+exp
+
+−A n
+
+2  x
+P e R
+f
+
+(22)
+
+Similarly,  from  Eq.  (21) ,  the  position  of  the  fluctuating  flame
+
+(cid:7)
+
+can be written as:
+ξ1 ,n ( x, t )
+R
+f
+
+(cid:8)
+∂ Z 0 /∂x
+| ∇ Z 0 |
+
+=
+
+(cid:9)
+
+(cid:16)
+
+(cid:17)
+
+iε
+2 π St
+(cid:8)(cid:18)
+
+( x,y = ξ0 ( x ) )
+
+(cid:7)
+
+2 π i St
+
+x
+R
+f
+0 / ∂ x )/| ∇Z
+
+1 − exp
+
+exp [ −iωt ]
+
+(23)
+
+From here, the ( ∂ Z
+
+0 | term can be written in terms of
+
+(cid:12) (cid:7)
+
+the local angle of the flame, using the geometric relation:
+(cid:8)
+∂ Z 0
+∂y
+
+(cid:8)
+∂ Z 0
+∂x
+
+∂ Z 0 /∂x
+sin θ0 (x )
+
+| ∇ Z 0 | =
+
+(cid:14)
+2
+
+1 / 2
+
++
+
+=
+
+(cid:7)
+
+2
+
+(24)
+
+where θ
+0 denotes the angle of the mean flame with respect to the
+axial coordinate  (as  shown in  Fig. 9 ).  Using these results,  and a
+modified  definition  for  Strouhal  number  for  ease  of  comparison
+1, n ( x,  t )  can  be  written  as
+( S t L
+f
+[92] :
+
+f × St),  the  solution  for  ξ
+
+f, 0 / R
+
+= L
+
+ξ1 ,n ( x, t ) =
+
+iε U 0
+2 π f
+
+(cid:9)
+sin θ0 (x )
+
+1 − exp
+
+(cid:7)
+
+(cid:8)(cid:18)
+
+i 2 π S t L
+f
+L
+
+x
+
+f, 0
+
+exp [ −i 2 π f t ]
+
+(25)
+
+98
+
+N. Magina et al. / Progress in Energy and Combustion Science 70 (2019) 89–118
+
+Fig. 10.  Schematics depicting the difference in wrinkle convection speed for non-
+premixed and premixed flame systems.
+
+For  reference,  the  corresponding  fluctuations  of  an  attached
+premixed flame with constant burning velocity subjected to bulk
+flow oscillations are given by [105] :
+
+ξ1 ,n ( x, t ) =
+
+iε U 0
+2 π f
+
+(cid:9)
+
+(cid:7)
+
+(cid:8)(cid:18)
+
+sin θ
+
+1 − exp
+
+i 2 π S t p
+L
+
+x
+
+f, 0
+
+exp [ −i 2 π f t ]
+
+(26)
+
+where St p is the flame Strouhal number for premixed flames, de-
+/ cos 2 θ , and the flame angle, θ , is a constant (the
+fined as S t p = S t L
+f
+expression is more involved if θ is varying, which would occur if
+the flow or flame speed varies spatially).
+
+3.2. Model problem results and experimental data - Discussion
+
+This  section  discusses  the  key  physics embodied in  the  solu-
+tions  derived  in  Section  3.1 ,  as  well  as  comparison  of  these  re-
+sults  with  measurements.  Due  to  the  similarities  in  the  expres-
+sion for the premixed and non-premixed flame, the equations are
+discussed comparatively. Note first that both expressions are mul-
+tiplied by an amplitude term of the form, ( εU
+0 /2 π f ) × sin θ . This
+1 ,n | / 2 π f ; i.e., the magnitude of the velocity fluctu-
+is equal to | u
+ations  normal  to  the  flame,  divided  by  the  frequency.  Thus,  the
+flame sheet fluctuations act as a low pass filter and the sin θ term
+simply converts the axial velocity fluctuation into the component
+normal  to  the  flame  sheet.  Likewise  a  cos θ term  appears  if  the
+flame is transversely forced [93] . Note that the particle displace-
+1 | at a
+ment associated with a velocity fluctuation of magnitude | u
+1 | / 2 π f , showing that this low pass
+frequency of f is given by | u
+filter characteristic is simply a manifestation of the reduced parti-
+cle displacement for a given magnitude velocity fluctuation with
+increasing  frequency.  Referring  back  to  the  formulating  assump-
+tions of Eq. (5) in Section 2.1 , note that differential diffusion effects
+would alter the time averaged flame shape, which implicitly influ-
+ences its response through the local flame angle and flame length.
+It is not clear whether it introduces additional explicit effects on
+the flame response to disturbances [106] .
+
+Both expressions also contain a term of the form, 1 − e i 2 π f x /U
+0 ;
+the first term which describes spatially invariant bulk fluctuations,
+arises  from  the  homogeneous  boundary  condition  (i.e.,  no  flame
+position fluctuation at x = 0 which is implicitly imposed by Eq. (8) ),
+while  the  second  describes  downstream  convection  of  wrinkles
+whose axial speed is equivalent to the axial mean flow. The pri-
+mary  difference  in  the  premixed  and  non-premixed  solutions  is
+contained  within  this  waveform  term,  and  reflects  the  influence
+of premixed flame propagation on wrinkle convection speeds. The
+non-premixed flame does not propagate, and wrinkles convect ax-
+0 . In contrast, wrinkles
+ially downstream at the bulk flow speed, U
+on the premixed flame convect in the axial direction at the speed
+0 /cos 2 θ , which is the vector superposition of the axial flow ve-
+U
+locity and the axial projection of a vector pointing normal to the
+flame (into the reactants) with a magnitude equal to the burning
+velocity, s
+
+d , as is depicted in Fig. 10 .
+
+In  both  cases,  local  maxima  and  minima  arise  through  this
+1 − e i 2 π f x/ U
+0  waveform term, 1  due to interference between wrin-
+kles generated at the x = 0 boundary and disturbances excited lo-
+cally.
+1 − e i 2 π f x/ U 0 = 2 sin ( π f x/ U 0 ) e i ( π f x/ U 0 −π / 2 )
+
+(27)
+
+For both premixed and non-premixed flames, wrinkles are gen-
+erated  at  the  boundary  because  of  flame  attachment.  For  the
+premixed  flame,  this  is  invoked  directly  through  the  attachment
+boundary condition i.e., ξ
+1, n ( x = 0, t ) = 0. In the non-premixed case,
+wrinkles are generated through the assumption of constant mix-
+1 ( x = 0, t ) = 0. This assump-
+ture fraction at the burner outlet, i.e., Z
+tion will be relaxed in Model Problem C.
+
+We next present several illustrative solutions of the space-time
+dynamics for the flame position. Note that the solution is a func-
+tion of the four dimensionless parameters St
+f / R w , Pe , and Z st .
+Lf appears directly in Eq. (25) , the others are con-
+Although only St
+cealed and influence through the sin θ term, as demonstrated by
+Eq. (24) . The temporal evolution of the flame position is plotted in
+Fig. 11 at two representative Strouhal numbers. Note the bulk axial
+pulsing of the flame at lower Strouhal numbers, and the presence
+of multiple spatial wrinkles within the flame length at higher val-
+ues. The unforced flame is indicated by the dashed lines.
+
+Lf , R
+
+Mohammed et al. [50] have reported measurements and com-
+putations  of  a  forced  CH
+4 -air  diffusion  flame,  which  are  repro-
+duced in Fig. 12 (left). In this experiment, only the fuel flow rate
+was perturbed, as opposed to both fuel and air flow oscillations
+in these calculations. However, it is still useful to compare results,
+using conditions that approximately simulate those from the ex-
+periment. Fig. 12 (right) shows calculations of the unsteady flame
+position at several instants over a forcing cycle for similar condi-
+tions. Similar bulk axial pulsing of the flame is evident in the mea-
+surements.
+
+An  alternative  way  to  visualize  these  results  is  through  the
+magnitude and phase of ξ
+1, n , illustrated in Fig. 13 . The nodes and
+local maxima and minima referred to above are clearly evident in
+the figure. The phase rolls off linearly with axial distance, again re-
+flecting the convection process described by the interference wave-
+form term in Eq. (27) , and jumps 180 ° across the nodes.
+
+These  results  can  be  qualitatively  compared  with  the  experi-
+mental results of Magina et al. [2] of an axially forced jet flame,
+where both the fuel and oxidizer were forced. Representative re-
+sults showing the measured, instantaneous spatial dependence of
+ξ ( x,t ) at different time instances over a forcing period are shown in
+Fig. 14 . Notice the clear downstream axial convection of the flame
+wrinkle crests with time, a result predicted by the waveform por-
+tion of the above equations. Also shown is an x - t diagram, show-
+ing the temporal position of the wrinkle crests, also demonstrating
+their downstream convection.
+
+Flame wrinkle convection can also be directly inferred from the
+phase of  ˆ ξ (x, f = f
+f ) . Note that a wrinkle convecting axially at a
+constant speed, U c , leads to a linear phase-axial location depen-
+dence, with a slope given by:
+2 π f
+f
+∂ ∠ ˆ ξ (x, f = f
+
+(cid:21)
+(cid:21)
+(cid:21)
+U c =
+(cid:21)
+
+(cid:21)
+(cid:21)
+(cid:21)
+(cid:21)
+f ) /∂ x
+
+(28)
+
+In real flames with temperature gradients, complex shear flows,
+and convecting vortical disturbances, it can be anticipated that the
+evolution of flame wrinkles will be more complex than predicted
+by the bulk forcing model given by Eq. (25) . Nonetheless, the re-
+sults from the model problem provide useful interpretative insight
+
+1
+
+Note that this wrinkle convection term can be generalized in the case of axially
+
+varying mean velocity, U 0 ( x ), to [
+
+exp [ −2 π iStψ ]
+U(ψ ) Pe (ψ ) dψ ] where U (x ) = ε U 0 (x )
+ˆ u x, 1  .
+
+x/ R
+f (cid:22)
+
+0
+
+N. Magina et al. / Progress in Energy and Combustion Science 70 (2019) 89–118
+
+99
+
+Fig. 11.  Snapshots showing four instantaneous positions of a forced non-premixed flame at two different forcing frequencies using nominal values of Z st = 0.3, Pe = 50, and
+(left) ε = 0.2, St = 0.0018, S t L
+
+f = 2 . 0 (Reprinted from Magina et al. [92] with permission of Elsevier).
+
+f = 0 . 3 (right) ε = 1.0, St = 0.012, S t L
+
+Fig. 12.  (left) CH mole fraction experimental isopleths of the steady and time-varying laminar CH 4 -air diffusion flame at steady state, 0.00, 0.01, 0.02, 0.03, and 0.04 s
+f = 1 . 82 ,
+(Reprinted from Mohammed et al. [50] with permission of Elsevier). (right) Theoretical results using parameters chosen to match experiments of Pe = 0.86, S t L
+Z st = 0.13 (adjusted from theoretical value shown in Table 3 to match experimental flame length), and ε= 0.5 for a CH 4 -air diffusion flame [107] .
+
+Fig. 13.  Axial dependence of (left) magnitude and (right) phase of flame response, where ξ
+abscissa, ( x / U 0 / f ), can equivalently be written as x / L f ,0 ∗St L
+
+f (Reprinted from Magina et al. [92] with permission of Elsevier).
+
+re f = (ε · U
+
+0 ) / (Pe · 2 π f ) , and using conditions consistent with Fig. 11 . Note the
+
+into these data. For example, representative results for the mag-
+nitude  and  phase  of  the  measured  flame  wrinkle  are  shown  in
+Fig. 15 .
+
+Note  the  nearly  stationary  behavior  of  the  flame  at  the  base
+near  the  burner  lip,  i.e.  ˆ ξ1 (x ∼ 0 , f = f
+f ) ∼ 0 ,  indicative  of  flame
+attachment  – results  consistent  with  the  theoretical  results  de-
+veloped  for  non-premixed  flames  in  the  fast  chemistry,  Pe → ∞
+limit, which will be examined more explicitly with Model Prob-
+lem C. Additionally in this near base region, the response magni-
+tude grows with downstream distance, while further downstream
+f ∼ 6 and oscillates.
+the magnitude of flame wrinkling peaks at x / R
+This behavior is suggestive of an interference phenomenon, consis-
+tent with the model predictions. Similar interference results have
+been observed for axially forced premixed flame systems [108] . The
+
+phase rolls off nearly linearly with axial distance, for the reasons
+discussed earlier in the context of Fig. 14 .
+
+The results from the model problem cannot be directly com-
+pared with experimental data because the assumed mean and un-
+steady velocity fields differ from the actual values. However, direct
+comparisons can be made by extracting the actual velocity fields
+from measurements and solving Eqs. (9) and (10) computationally.
+This was done by Magina et al. [2] and a sample result is shown in
+Fig. 16 . Note similar features as described above and the reasonable
+correspondence between the measured and predicted flame posi-
+tion fluctuations. The primary differences occur in the near-base
+region and are discussed in detail by Magina et al. [2] . In another
+study, the fully nonlinear problem including axial diffusion effects
+was numerically investigated by Li et al. [109] . They analyzed the
+effect of Pe on the flame base oscillation and the distribution of
+
+100
+
+N. Magina et al. / Progress in Energy and Combustion Science 70 (2019) 89–118
+
+Fig. 14.  (left) Instantaneous flame positions at various time instances over a forcing period (black and blue lines indicate raw and smoothed experimental data, respectively,
+while arrows indicate increasing time) (Reprinted from Magina et al. [2] with permission of Elsevier), and (right) representative axial evolution of the wrinkle crests for a
+f /R w = 0.1, U 0 ∼ 0.4 m / s , forcing frequency = 30Hz, and ε= 0.05. The dashed line indicates a convective velocity of
+coflowing natural gas non-premixed flame with conditions R
+0.4 m /s (Reprinted from Magina [106] ).
+
+Fig. 15.  Measured flame wrinkle amplitude (left) and phase (right) results for a coflowing natural gas non-premixed flame with same conditions as Fig. 14 (Reprinted from
+Magina et al. [2] with permission of Elsevier).
+
+Fig. 16.  Axial dependence of magnitude (left) and phase (right) for an axially forced coflowing natural gas non-premixed flame with conditions R f / R w = 0.1, U 0 ∼ 0.2 m/s,
+forcing frequency = 20 Hz, and ε = 0.05. Shown are comparisons between experimental (measured) and modeling (computed) results for both the left and right flame
+branches (Reprinted from Magina et al. [2] with permission of Elsevier).
+
+N. Magina et al. / Progress in Energy and Combustion Science 70 (2019) 89–118
+
+101
+
+Fig. 17.  Non-dimensional velocity of the non-premixed flame surface (see Table 2 ), using nominal values of Z st = 0.3 , Pe = 20 , St = 0.05 , and, ε = 0.01.
+
+mixture fraction field in the near-base region in the presence of
+the nonlinear terms.
+
+Returning  to  the  model  problem  presented,  it  is  of  interest
+to  discuss  the  speed  of  the  non-premixed  flame  sheet  with  re-
+spect  to  the  flow,  referred  to  as  w  in  Table  2 .  For  a  premixed
+flame, this speed is simply the displacement speed, s
+d  ( x,t ). Rec-
+ognizing that the non-premixed flamelet does not propagate, yet
+is  also  not  a  passive  scalar  that  moves  with  the  flow  where
+w = 0,  the  speed  w  can  be  obtained  from  the  expression  in
+Table 2 ,  w = −( D Z / Dt ) /| ∇Z |. This can be made evident by recasting
+Eq. (5) in the following form:
+∂ Z
+∂t
+
+u · ∇ Z = D ∇ 2
+
+Z = −w | ∇ Z |
+
+(29)
+
++
+
+(cid:22)
+
+Recalling  the  flame  attachment  assumption,  this  spatio-
+temporally varying quantity can be non-dimensionalized and ex-
+pressed as:
+w (x, t)
+U 0
+
+= − sin θ (x, t)
+
+(cid:21)
+(cid:21)
+∇ 2
+Z
+(cid:21)
+(cid:21)
+| ∇ Z |
+ξ0 (x )
+
+−R
+f
+P e
+
+(30)
+
+=
+
+=
+
+−R
+f
+P e
+
+= − sin θ0 (x )
+
+where w is defined normal to the flame surface in the direction of
+the fuel. Similarly, this expression can be decomposed into steady
+and fluctuating components as:
+(cid:21)
+(cid:21)
+∇ 2
+w 0 (x )
+Z 0
+(cid:21)
+(cid:21)
+| ∇ Z 0 |
+U 0
+(cid:7)
+−R
+f
+Pe
+(cid:7)
+− w 0 ( x, t )
+U 0
+
+∇ Z 0 · ∇ Z 1 + ξ1 ,n ∇ Z 0 · ∇ ( | ∇ Z 0 | )
+2
+| ∇ Z 0 |
+
+(cid:8)
+Z 1 + ξ1 ,n ∇ 2 ( | ∇ Z 0 | )
+| ∇ Z 0 |
+
+w 1 ( x, t )
+U 0
+
+(cid:8)(cid:17)(cid:21)
+(cid:21)
+(cid:21)
+(cid:21)
+
+ξ0 (x )
+
+(31)
+
+∇ 2
+
+=
+
+(cid:16)
+
+= − sin θ1 ( x, t ) cos θ0 ( x, t )
+
+Representative results are shown in Fig. 17 . Interestingly, w can
+be positive or negative, and varies with both x and t , whereas for
+premixed flames, s
+d is strictly positive and may be a constant. Also,
+note how the fluctuating burning speed amplitude looks similar in
+shape to the flame wrinkle amplitude plot, having the same inter-
+ference node patterns.
+
+3.3. Axial Diffusion effects – model problems B and C
+
+The theoretical analysis in Section 3.1 neglected axial diffusion
+in order to demonstrate the key physics of flame wrinkle excita-
+tion and convection, and the resulting constructive and destructive
+interference effects this introduced. Of course, this and all other
+physics were implicitly included in the experimental results. This
+
+section analyzes axial diffusion (or equivalently, finite Peclet num-
+ber effects) in order to explicitly demonstrate how they influence
+the results.
+
+We  start  with  Model  Problem  B  in  Table  4 ,  due  to  analyti-
+cal tractability. Recall, Eqs. (11) and (14) provide solutions to the
+mixture fraction field for the axially forced problem (other forcing
+configurations can be found in Magina et al. [93] ), subject to the
+step  inlet  condition,  given  by  Eq.  (8) ,  and  the  flame  attachment
+1 ( x = 0, y, t ) = 0. The corresponding solu-
+boundary condition, i.e. Z
+tion for ξ
+1, n ( x, t ) can be written generally, utilizing Eq. (21) and
+defining St ω = 2 π St , as:
+ξ1 ,n ( x, t )
+R
+f
+(cid:23) ∞
+
+(cid:17)
+ε sin θ0 ( x ) e −iωt
+iS t ω
+(cid:4)
+ξ0 ( x )
+R
+f
+
+(cid:3)
+2 β−
+nπ Pe cos
+A n
+
+(cid:4)(cid:17)
+h −−β−}  x
+Pe R
+f
+
+(cid:4)(cid:16)
+x
+Pe R
+f
+
+= −
+
+n =1
+
+β−
+
+(cid:16)
+
+{ β
+
+(cid:3)
+sin ( A n ) e
+(cid:4)
+(cid:3)
+ξ0 ( x )
+2 β−
+nπ Pe cos
+A n
+R
+f
+
+(cid:3)
+1 − e
+(cid:3)
+β−
+sin ( A n ) e
+
+(cid:23) ∞
+
+n =1
+
+(cid:4)
+
+x
+Pe R
+f
+
+(33)
+
+Insight  into  wave  propagation,  dissipation,  and  dispersion  ef-
+fects, as well as direct comparisons between the non-premixed and
+premixed flame wrinkle dynamics can be obtained by expanding
+these expressions around the Pe → ∞ limit in inverse powers of Pe .
+For example, the ( β
+h − − β−) / Pe term in Eq. (33) can be expanded
+as:
+
+{ β
+
+h − − β−}
+Pe
+
+=
+
+(cid:24)
+iS t ω − St 2
+ω
+Pe
+
+−
+
+(cid:20)
+(cid:19)
+A 2
+n + St 2
+2 iS t ω
+ω
+Pe 2
+
++
+
+6 A 2
+
+ω + 5 St 4
+n St 2
+ω
+Pe 3
+
+(cid:19)
++ O
+
+(cid:25)
+(cid:20)
+Pe −4
+
+(34)
+
+ξ0 ( x )
+(32)
+
+and will be referred to as the Pe > > 1 limit. Comparatively, for pre-
+mixed flames the results of Wang et al. [110] can be similarly ex-
+panded for flames that are thin relative to the burner radius; i.e.,
+where σ C << 1, σ C being the scaled Markstein number, Ma , defined
+by:
+
+(cid:7)
+
+(cid:8)
+1 + α2
+α2
+
+σC =
+
+Ma
+2 R
+f
+
+(35)
+
+f / R
+
+f = cot θ is the premixed flame aspect ratio. By fol-
+where α = L
+lowing this procedure to O(1/ Pe 2 ) and O( σ 2
+C ), we can develop the
+following general result, valid for axial or transversely forced pre-
+mixed or non-premixed flames in the Pe > > 1 limit:
+
+ξ1 ,n ( x, t )
+R
+f
+
+(cid:7)
+
+exp
+
+(cid:16)
+
+= −
+
+(cid:8)
+−ζ x
+R
+f
+
+(cid:17)(cid:16)
+
+(cid:7)
+
+1 − exp
+
+ε I ( θ ( x ) ) exp ( −iωt )
+iS t ω
+
+(cid:7)
+
+exp
+
+γ St 2
+ω
+
+(cid:8)(cid:17)
+
+iωx
+U c
+
+(cid:3)
++ O
+
+1
+
+(cid:4)
+Pe 3 , σ 3
+
+C
+
+(cid:8)
+iωx
+U c
+
+(36)
+
+102
+
+N. Magina et al. / Progress in Energy and Combustion Science 70 (2019) 89–118
+
+Table 5
+Propagation, dissipation, and dispersion terms in Eq. (36) .
+
+Propagation speed, U c
+Dissipation, ζ
+
+Dispersion, γ
+
+Premixed
+U 0 cos 2 θ
+St 2
+ω σC
+−2 σ 2
+C
+
+√
+
+α
+1 + α2
+
+Non-premixed
+U 0 + O (1/ Pe 2
+)
+St 2
+ω
+Pe
+−2
+P e 2
+
+where the waveform term is parameterized by a convection speed,
+U c ,  axial  dissipation  rate,  ζ ,  and  dispersion  term,  γ ,  defined  in
+Table  5 .  Additionally, I ( θ ( x ))  is  a  forcing  configuration  parameter
+taking a value of sin θ 0 ( x ) and ± cos θ 0 ( x ) for the axial and trans-
+verse forced cases, respectively [93] .
+
+Consider the various terms in Eq. (36) . Similar to Eqs. (25) and
+(26) , the expression is led by a group of terms which describe the
+wave magnitude and harmonic time dependence, [ ε/( iSt ω )] I ( θ ( x ))
+exp ( − i ωt ),  showing  the  familiar  low-pass  filter  characteristic  of
+flame  wrinkle  amplitude.  The  wave  magnitude  also  has  an  ax-
+ial dependence whose form depends upon whether the flame is
+forced axially or transversely. This shows the controlling nature of
+velocity fluctuations normal to the flame sheet, and how the top
+and bottom flame branches are in-phase, i.e. mirror images of each
+other, for axial forcing, and are out-of-phase for transverse forcing.
+Finally,  the  non-premixed  steady  state  flame  angle  is  a  function
+of axial coordinate, while for premixed flames with a comparable
+0 , I ( θ ( x )) is not.
+spatially uniform inflow, U
+We next consider the general wave propagation term, contained
+in  the  expression  1 − exp ( iωx/ U c ) exp ( −ζ x/ R
+ω ωx/ U c ) .
+Consistent  with  the  discussion  in  Section  3.2 ,  the  leading  unity
+term derives from the particular solution of the equation, and lacks
+spatial  dependence  because  of  the  nature  of  the  assumed  bulk
+forcing. The second term describes a decaying, dispersive travel-
+ing wave generated at the boundary, x = 0, resulting from the as-
+sumption of flame attachment, i.e., ξ
+1, n ( x = 0, t ) = 0, or fixed mix-
+1 ( x = 0, y, t ) = 0, for the pre-
+ture fraction at the burner outlet, Z
+mixed and non-premixed cases, respectively.
+
+f ) exp ( iγ St 2
+
+The leading order expansion of this expression, 1 − exp ( i ωx / U c ),
+was  previously  presented  and  discussed  in  Sections  3.1  and  3.2 .
+It  demonstrates  how  flame  wrinkles  propagate  without  dissipa-
+tion  and  non-dispersively  in  the  Pe → ∞  or σ C → 0  limits.  In  this
+limit,  the  major  difference  between  the  space-time  dynamics  of
+non-premixed and premixed flame dynamics comes from the U c
+parameter  defined  in  Table  5 .  In  both  cases,  local  maxima  and
+minima in flame wrinkle amplitude arise through interference be-
+tween the two terms, revealed in Eq. (27) .
+
+Consider  next  O(1/ Pe )  or  O( σ C )  terms  which,  as  shown  in
+Table 5 , cause wrinkles to decay exponentially with downstream
+distance. This causes the interference effect discussed above to be-
+come  imperfect,  an  effect  that  increases  quadratically  with  St ω .
+The mechanism for wave dissipation for the two flame types are
+entirely different – for premixed flames, it is due to the depen-
+dence of the flame speed on flame surface curvature, which causes
+positive  Markstein  length  flames  to  be  thermo-diffusively  stable.
+For non-premixed flames, it is due to the progressive smoothing by
+diffusion of the spatial variations in the Z field with downstream
+distance. Lastly, O(1/ Pe 2 ) and O( σ C 2 ) effects introduce dispersion,
+as shown explicitly in Table 5 – i.e., a frequency dependent wave
+propagation speed.
+
+Illustrative  solutions  using  Eq.  (36)  are  presented  for  the  in-
+stantaneous non-premixed flame position at several time instances
+over a forcing cycle in Fig. 18 , as well as the amplitude and phase
+of  the  wrinkles  in  Fig.  19 ,  for  constant  values  of  St
+Lf  .  The  gen-
+eration  and  downstream  propagation  of  flame  wrinkles  can  be
+observed, with a larger number of flame wrinkles being present
+within the flame length for increasing frequencies. Again, the spa-
+
+Fig. 18.  Instantaneous snapshots of axially forced flame position at several time
+instances for Model Problem A, i.e. Pe → ∞ solution, (top) and Model Problem B, i.e.
+general Pe >> 1 solution, at two representative Pe values of 20 (middle), and 5
+(bottom) for PeSt ω = 4 π and Z st = 0.3. Note the x -axis is rescaled by Pe (Reprinted
+from Magina et al. [93] with permission of Elsevier).
+
+tial variation in the amplitude comes from the I ( θ ( x )) term, specif-
+ically sin θ
+0 ( x ) for this axially forced case depicted, as well as the
+spatial interference effect in Eq. (36) . The local maxima and min-
+ima  referred  to  above  are  clearly  evident  in  the  figures  for  the
+weakly dissipative solutions. The phase rolls off linearly with ax-
+ial distance, reflecting the convection process described, and jumps
+180 ° across the nodes. Note the smoothing of the wrinkles that oc-
+curs in the mid and far field with decreasing Pe , due to wave dis-
+sipation discussed in the context of Eq. (34) . This effect reduces
+the overall peak-to-crest wrinkle amplitudes, as well as eliminat-
+ing previously spatially stationary nodes, represented by the liftoff
+from the vertical axis. This leads to a complete loss of the spatial
+interference pattern for the Pe = 5 case relative to the Pe → ∞ case.
+In addition, the phase does not roll off linearly in the axial direc-
+tion, and the discontinuous phase jumps are smoothed. Lastly, the
+steady state flame position becomes modified by axial diffusion.
+Both the flame tip location (i.e. overall flame length), and the lo-
+cation of maximum width move downstream, as can be seen from
+Fig. 19 by the movement of the flame angle forced node, an effect
+which was shown to impact the dynamics in Section 3.1 .
+
+It is important to note that although these solutions include ax-
+ial diffusion in the governing equation, they utilize the step inlet
+boundary condition at x = 0, given by Eq. (8) . As noted earlier, this
+boundary condition itself implicitly neglects axial diffusion. It also
+creates a non-physical infinite transverse gradient in mixture frac-
+tion at the fuel port lip, a singularity that dominates certain so-
+lution characteristics such as the flame attachment and asymptotic
+heat release characteristics (to be discussed in Section 4 ). In reality,
+axial diffusion smoothes out this step boundary condition, as fuel
+diffuses  upstream  into  the  oxidizer  “port” and  vice  versa.  These
+additional boundary condition effects can be treated with Model
+Problem C, first considered by Magina et al. [95] , by considering a
+modified domain with an extended inlet, as shown in Fig. 20 . Note
+
+N. Magina et al. / Progress in Energy and Combustion Science 70 (2019) 89–118
+
+103
+
+Fig. 19.  Axial dependence of the magnitude (left) and phase (right) of  ˆ ξ1 ,n , plotted against the ratio of axial coordinate to convective wavelength for Model Problem A, i.e
+the Pe → ∞ limit, and Model Problem B, i.e. general Pe > > 1 solution, at three representative Pe values of 100, 20, and 5 for PeSt ω = 4 π and Z st = 0.3(Reprinted from Magina
+et al. [93] with permission of Elsevier).
+
+values of Pe and Z st , directly resulting from the inlet condition, i.e.
+1 ( x = 0, y, t ) = 0. This is the justification for the analytical | ξ
+1, n |
+Z
+curves starting from zero at x = 0 in Fig. 13 and Fig. 19 . However,
+coupled axial and transverse diffusion effects move this flame at-
+tachment point away from the outlet and into the fuel or oxidizer
+ports (depending on the specific Z st  and Pe values); i.e., into the
+x < 0 domain. This effect can be observed in the experimental | ξ
+1, n |
+curves starting from a slightly positive value at x = 0 in Fig. 16 , or
+other data in Magina et al. [95] .
+
+Fig. 20.  Illustration of the forced non-premixed flame Model Problem C, referred to
+as the “extended inlet” geometry. The x < 0 and x > 0 domains are denoted the
+fuel/oxidizer ports and combustion region, respectively.
+
+the fuel and oxidizer reservoirs, located at x = - ∞ , where:
+0 < | y | < R
+f
+f < | y | < R w
+
+(cid:9)
+Z (x = −∞ , y ) =
+
+1
+0  R
+
+(37)
+
+In  other  words,  to  properly  and  consistently  include  and  ac-
+count  for  axial  diffusion  effects,  and  to  properly  describe  the
+fuel/oxidizer gradients near the burner lip, we must include the
+x < 0 fuel and oxidizer ports, since fuel can diffuse back into the
+oxidizer port and vice versa, altering the inlet profile. In addition,
+no diffusion through the side walls and fuel port walls implies the
+following additional conditions:
+(cid:19)
+∂ Z
+∂ Z
+∂y
+∂y
+
+(cid:20)
+x < 0 , y = ±R
+f
+
+( x, y = ±R w ) = 0
+
+= 0
+
+(38)
+
+Numerical solutions of this equation show that inclusion of ax-
+ial diffusion, in addition to direct effects on the wrinkle dynam-
+ics discussed above, influences the instantaneous flame attachment
+point, i.e. the location where the reaction sheet intersects with the
+fuel port wall. In the Pe → ∞ limit, this location is stationary and
+always positioned at the fuel port lip, x = 0 and y = R
+f , valid for all
+
+1 / U
+
+f )  /  ( u
+
+attach / R
+
+Relatedly,  the  instantaneous  attachment  point  moves  over  a
+forcing  period.  Fig.  21  shows  a  sample  result  for  the  magnitude
+and phase plots of the instantaneous flame attachment point trans-
+fer  function  for  a  range  of  St  values.  The  transfer  function,  de-
+fined  as  ( x
+0 )  quantifies  the  input-output  relation
+between forcing and flame attachment point motion. Notice how
+the magnitude of this axial motion depends upon the forcing fre-
+quency. Consistent with the discussion in Section 3.2 , this is due to
+the low-pass filter characteristic of the flame position, as the time
+derivative of the flame position is related to the local flow velocity
+through Eq. (5) . In addition, there is increased motion at low Pe
+values, due to the increased contribution of axial diffusion. The Z st
+value also has an influence upon the transfer functions, an effect
+which is coupled to Pe [95] . For example, very low and high Z st
+values have larger transfer function amplitudes than intermediate
+values.
+
+3.4. Multi-dimensional forcing effects
+
+The previous sections have covered the idealistic case of two di-
+mensional non-premixed flames excited by unidirectional, spatially
+uniform,  fluctuations  in  flow  velocity.  However,  real  combustion
+systems  are  not  this  simple,  being  inherently  three-dimensional,
+and  are  often  times  exposed  to  multi-dimensional  disturbances
+(e.g., helical vortices or transverse acoustic waves) and have multi-
+dimensional  time  averaged  flow  fields  (e.g.,  swirling  jet  flows),
+effects  which  introduce  rich  flame  dynamics,  such  as  azimuthal
+wrinkle  convection.  This  section  presents  the  results  for  round
+jets (note the prior sections considered two-dimensional jets) sub-
+jected to these disturbances, closely following Magina et al. [111] .
+Still working within the mixture fraction formulation, the in-
+stantaneous  position  of  the  three-dimensional  reaction  sheet,  in
+
+104
+
+N. Magina et al. / Progress in Energy and Combustion Science 70 (2019) 89–118
+
+Fig. 21.  Magnitude (left) and phase (right) of the instantaneous attachment point transfer function for Model Problem C (Reprinted from Magina et al. [95] with permission
+of Elsevier).
+
+the two-dimensional jet eigenvalues in Eq. (15) ):
+
+(cid:13)
+
+P e 4 + 4 ( r n s ) 2
+
+P e 2
+
+P e 2 −
+
+P e 2 −
+
+B − =
+
+h =
+
+B
+
+(cid:13)
+
+2
+
+P e 4 + 4 P e 2 ( r n s ) 2 − 8 π iP e 3 St
+
+2
+
+(40)
+
+f ) U
+
+This form of the swirl velocity represents solid body rotation,
+0 , where σ = (cid:7)/ ω is
+and can also be written as u θ ,0 = 2 π St σ ( r / R
+the non-dimensional swirl parameter. The first order form of the
+Z -equation, in cylindrical coordinates takes the following form:
+(cid:17)
+∂ 2
+∂ Z 1
+∂ Z 1
+Z 1
+∂x
+∂t
+∂x 2
+∂ Z 0
+∂x
+
+∂ Z 1
+∂r
+∂ Z 0
+−
+∂r
+
+∂ Z 1
+∂θ
+∂ Z 0
+∂θ
+
+∂ 2
+Z 1
+∂r 2  +
+
+∂ 2
+Z 1
+∂θ 2  +
+
+(cid:16)
+− D
+
+∂ Z 1
+∂r
+
+u θ , 1
+r
+
+u θ , 0
+r
+
+= −u r, 1
+
++ u x, 0
+
+− u x, 1
+
++ u r, 0
+
+1
+r 2
+
+1
+r
+
++
+
++
+
+(41)
+
+We can identify several canonical forcing configurations, char-
+acterized by the forcing velocity field sets shown in Table 6 . Bulk
+axial forcing of the round jet is conceptually similar to the two-
+dimensional case discussed in Sections 3.1 thru 3.3, the key differ-
+ence being mean flame shape; i.e. θ
+0 ( x ), which will be referred to
+as ψ
+
+0 ( x ) for the cylindrical configuration (see Fig. 22 ).
+
+The next case shown in Table 6 is bulk transverse forcing, which
+is substantially different from the two-dimensional case discussed
+in Section 3.3 . Significantly, the angle of the transverse forcing with
+respect to the sheet ranges from normal incidence (as in the two-
+dimensional case) to grazing (where it causes no wrinkle excita-
+tion). If there is no swirl, this causes the largest wrinkling to oc-
+cur on the opposing sides of the flame that are subjected to the
+normally incident velocity disturbance, and no wrinkling at all to
+occur on the opposing sides with grazing incidence. However, in
+the presence of swirl azimuthal transport of these wrinkles causes
+flame wrinkling to occur at all azimuthal locations [111] . The com-
+bined action of both axial and azimuthal convection of flame wrin-
+kles leads to interference in both axial and azimuthal directions.
+The last case shown in Table 6 is helical forcing, for which there
+is no two-dimensional analogue. For this reason, this problem is
+considered in more detail in the next section.
+
+3.4.1. Convecting helical disturbance solutions
+
+Round jets, whether swirling or non-swirling, often exhibit or-
+ganized  vortical  disturbances  that  wind  helically  around  the  jet
+
+Fig. 22.  Schematic of the model three-dimensional swirling non-premixed flame.
+Images show a steady over (red dashed line) and under (blue dashed line) venti-
+lated flame.(For interpretation of the references to colour in this figure legend, the
+reader is referred to the web version of this article.)
+
+cylindrical  coordinates,  is  defined  by  r = ξ ( θ ,  x,  t ),  as  shown  in
+Fig. 22 .
+
+The  previously  implemented  boundary  conditions  can  be  re-
+formulated for this three-dimensional domain. In order to isolate
+and  spotlight  the  new  dynamics  features  introduced,  a  step  in-
+let  boundary  condition  is  once  again  utilized  (three-dimensional
+variant of Eq. (8) ) and the solution derived in the limit of small
+perturbations, and thus each variable is expanded as ( ) ( r , θ , x ,
+1 ( r , θ , x ,  t ). The solution to the zeroth order
+t ) = ( )
+form of the Z -equation, Eq. (5) , in cylindrical coordinates, subject
+to the flow conditions of uniform axial velocity, U
+0 , swirl velocity,
+u θ ,0 = (cid:7)r (where (cid:7) is the angular rate of swirl), and no radial ve-
+locity, u
+
+0 ( r , θ , x ) + ( )
+
+r ,0 = 0, is given by:
+
+Z 0 (r, x, ζ ) = s 2 +
+
+∞ (cid:10)
+
+n =1
+
+2 s J 1 ( r n s )
+J 0 ( r n ) 2
+r n
+
+J 0
+
+(cid:7)
+
+(cid:8)
+
+(cid:16)
+
+(cid:17)
+
+r n s
+
+r
+R
+f
+
+exp
+
+B −
+P e
+
+x
+R
+f
+
+(39)
+
+where r n is the n th root of the first order Bessel function of the first
+1 ( r n ) = 0 , and B − is given by (noting the similarities to
+kind, i.e. J
+
+N. Magina et al. / Progress in Energy and Combustion Science 70 (2019) 89–118
+
+105
+
+Table 6
+Forcing fluctuating velocity set for various forcing configurations, with reference to Eq. (41) .
+
+u r, 1
+
+u θ , 1
+
+Bulk Axial
+Bulk Transverse
+Convecting Helical
+
+u r ,1 = 0
+u r ,1 = ε U 0 cos θ exp [ − i ωt ]
+u r ,1 = 0
+
+u θ ,1 = 0
+u θ ,1 = −ε U 0 sin θ exp [ − i ωt ]
+u θ ,1 = 0
+
+u x ,1
+u x ,1 = ε U 0 exp [ − i ωt ]
+u x ,1 = 0
+u x ,1 = εU 0 exp [ − i ωt + ikx + im θ ]
+
+Fig. 23.  Steady state and instantaneous mixture fraction field isocontours for an under (top row, Z st = 0.055) and over (bottom row, Z st = 0.08) ventilated non-premixed
+flame in a swirling convecting mean flow, subject to axial bulk disturbance, transverse bulk disturbance, and a helical disturbance with m = −1, k c = 5 (from left to right)
+for parameters Pe = 10, St = 0.1, s = 0.25.
+
+shear  layers.  In  this  formulation,  k = ω/U c  is  the  helical  convec-
+tive disturbance velocity, k c = U c / U
+0 is the phase speed of the dis-
+turbance normalized by the axial flow velocity, and m is the he-
+lical  mode  number;  note  that  m = 0  is  the  axisymmetric  mode,
+whereas,  for  a  positive  axial  wavenumber,  m > 0  and < 0  denote
+the co-swirling, counter-winding and counter-swirling, co-winding
+modes, respectively. In both non-premixed and premixed flames, it
+is well known that important interference effects control the axial
+flame wrinkling character, as vortices disturbing the flame, and the
+flame wrinkles excited by these convecting vortices, do not gener-
+ally travel at the same speed.
+
+The analytical solution of Eq. (41) is considerably simplified by
+neglecting azimuthal diffusion, a good approximation for realistic
+σ and St values [111] , without losing any key dynamical features.
+Considering a variant of Model Problem B to this round jet con-
+figuration, the general solution for the fluctuating mixture fraction
+1 ( r , θ ,
+field, subject to the flame attachment boundary condition, Z
+x = 0) = 0, at the fuel port lip is:
+
+Z 1 ( r, θ , x, t ) =
+
+∞ (cid:10)
+
+n =0
+
+(cid:3)
+r n s r
+−2 ε B −sJ 1 ( r n s ) exp [ im θ ] exp [ −iωt ] J 0
+R
+f
+(cid:11)
+
+(cid:11)
+
+(cid:4)
+
+(cid:3)
+exp
+(cid:15)
+
+r n
+
+J 0 ( r n ) 2
+(cid:16)
+
+2 π iSt
+k c
+
+x
+R
+f
+
+(cid:9)
+
+exp
+
+−2 π iPeSt
+
+1 − σ m −
+
+(cid:17)
+
+(cid:16)
+
+− exp
+
+{ B
+
+hm − B −}
+Pe
+
+x
+R
+f
+
+(cid:26)
+P e 4 +4 P e 2 ( r n s ) 2
+k c Pe 2
+(cid:17)(cid:18)
+
+(cid:4)
+
+B −
+Pe
+
+x
+R
+f
+(cid:20)
+2 π St
+k c
+
+(cid:15)
+2
+
+(cid:19)
++
+
+where
+
+P e 2 −
+
+B
+
+hm =
+
+(cid:13)
+
+P e 4 + 4 P e 2 ( r n s ) 2 − 8 π iP e 3 St ( 1 − σ m )
+
+2
+
+Fig. 23 shows representative instantaneous Z = Z st  isocontours
+for the unforced case and each forced problem denoted in Table 6 ,
+for both the over- and under-ventilated non-premixed flame con-
+figurations.  Notice  the  clear  wrinkling  of  the  flame  and  its  az-
+imuthal dependence in the transverse and helically forced cases,
+a feature that will be discussed further next.
+
+Following the procedure outlined in Section 3.1 , the first order
+flame position fluctuations can be extracted from this solution and
+
+written explicitly as:
+ξ1 ,n ( θ , x, t )
+R
+f
+
+(cid:16)
+
+=
+
+∞ (cid:10)
+(cid:3)
+(cid:3)
+−2 π iSt
+n =0
+(cid:16)
+(cid:17)(cid:9)
+2 π iSt
+k c
+
+ε exp [ im θ ] exp [ −iωt ]
+(cid:4)
+√
+P e 4 +4 P e 2 ( r n s ) 2
+k c Pe 2
+(cid:16)
+{ B hm − B −}
+Pe
+
+1 − σ m −
+(cid:17)
+x
+R
+f
+
+∂ Z 0 ,n /∂x
+| (cid:24)Z 0 | ( r= ξ0 ( x ) ,x )
+where ∂ Z
+1, n
+is the wrinkle fluctuation measured normal to the mean flame sur-
+face.
+
+0, n / ∂ x is the n th term of the ∂ Z
+
+0 / ∂ x summation and ξ
+
+− exp
+
+x
+R
+f
+
+(cid:4)
+( 2 π St ) 2
+k 2
+c Pe
+(cid:17)(cid:18)
+
+(44)
+
+exp
+
++
+
+As was demonstrated by Section 3.2 , more insight into this so-
+lution in the high Pe limit can be obtained by formally expanding
+it in inverse powers of Pe , following the work by Magina et al. [93] .
+Retaining terms up to order 1/ Pe yields 2 :
+−ε exp [ imθ ] exp [ −iωt ]
+ξ1 ,n ( θ , x, t )
+S t 2
+2 π iStχ − 4 π 2
+R
+f
+k 2
+c Pe
+− 4 π 2 S t 2 ( 1 − mσ ) 2
+x
+R
+P e
+f
+
+(cid:16)
+sin ψ 0 (x ) exp
+(cid:17)(cid:18)
+
+2 π iSt
+k c
+(cid:3)
++ O
+
+2 π iStχ x
+R
+f
+
+1 − exp
+
+1
+P e 2
+
+x
+R
+f
+
+exp
+
+=
+
+(cid:9)
+
+(cid:4)
+
+(cid:16)
+
+(cid:17)
+
+(cid:16)
+
+(cid:17)
+
+(42)
+
+where
+χ = 1 − mσ − 1 / k c
+
+(45)
+
+(46)
+
+(43)
+
+2
+
+The equivalent Pe >> 1 solutions for an axially and transversely forced system,
+
+S t 2
+] exp [ − 4 π 2
+sin ψ 0 (x )[1 − exp [ 2 π iSt x
+Pe
+R
+f
+
+x
+] ] + O (  1
+R
+f
+
+P e 2 )
+
+respectively, are:
+
+ξ1 ,n ( x, t )
+R
+f
+ξ1 ,n ( θ , x, t )
+R
+f
+
+⎡
+
+= iε exp [ −iωt ]
+2 π St
+= iε exp [ −iωt ]
+4 π St
+] exp [ − 4 π 2
+{ 1 − exp [ 2 π iSt( 1 −σ ) x
+R
+f
+] exp [ − 4 π 2
+{ 1 − exp [ 2 π iSt( 1 + σ ) x
+R
+f
+
+exp ( iθ )
+(1 −σ )
+exp ( −iθ )
+(1 + σ )
+
+cos ψ 0 (x )
+
+⎢
+⎢
+⎣
+
+S t 2 ( 1 − σ ) 2
+
+Pe
+S t 2 ( 1 + σ ) 2
+
+Pe
+
+⎤
+
+⎥
+⎥
+⎦
+
+x
+] } +
+R
+f
+x
+] }
+R
+f
+
++ O (  1
+
+P e 2 )
+
+106
+
+N. Magina et al. / Progress in Energy and Combustion Science 70 (2019) 89–118
+
+This  solution  has  similar  low-pass  filter  and  mean  flame  an-
+gle axial dependence as the previous bulk forced solutions, how-
+ever, the leading wrinkle magnitude and waveform terms are more
+complicated due to the convective nature of the disturbance and
+the parameter χ ; thus significantly, azimuthal interference changes
+the  axial  amplitude  and  phase  dependence.  To  leading  order  in
+Pe , the denominator shows how the complex interaction of swirl
+strength,  helical  mode,  and  disturbance  phase  speed  act  to  al-
+ter the flame wrinkle magnitude, an interaction which produces
+a maximum in local spatial response for χ = 0, or corresponding
+mode number given by:
+m s σ = 1 − 1 / k c
+
+(47)
+
+Similar  criterion  holds  for  premixed  flames  [112] ,  and  corre-
+sponds  to  the  case  where  the  azimuthal  forcing  exactly  mirrors
+the wrinkle convection, so that no destructive interference occurs;
+rather  they  constructively  superpose  to  cause  the  magnitude  of
+flame wrinkling to grow monotonically with downstream distance
+[111] . Significantly for this axisymmetric mean flow, helical modes
+in the flow excite a corresponding helical motion in the flame re-
+sponse.
+
+In  the  presence  of  swirl,  there  are  no  azimuthal  locations  at
+which the flame is unwrinkled, due to simultaneous azimuthal and
+axial propagation of wrinkles by the flow. Swirl acts to azimuthally
+transport wrinkles around the flame to other θ angles, contributing
+to the imperfect nature of the spatial interference at a given angle,
+thus eliminating previously existing spatial nodes due to azimuthal
+convection.
+
+The  two  new  additional  parameters  which  emerge  as  signifi-
+cant controllers of flame wrinkle dynamics are k c  and σ m ; note
+that σ and m always appear together in this form, indicating that
+swirl  only  influences  the  flame  response  through  helical  modes.
+Both terms alter the wrinkle interference pattern as well as the
+flames relative sensitivity to various co- and counter-rotating heli-
+cal modes, an effect which can be more easily observed by rewrit-
+ing Eq. (46) as, χ = σ ( m s − m ). To leading order in Pe , mode num-
+bers closer to the value m s produce a lower value of χ and hence
+a higher flame motion response amplitude, and vice versa.
+
+An additional important point is that to leading order in Pe , the
+wrinkle magnitude is independent of the sign of χ , whereas this
+is important for the phase of the flame response. At a given az-
+imuthal location, the axial phase varies linearly with downstream
+distance with a slope given by π St ( χ − 2/ k c ). Thus, for the delin-
+eating case of χ = 2/ k c , the flame response fluctuations at all axial
+locations, for a given azimuthal location, are in phase with each
+other. When χ > 2/ k c , the phase roll off is positive, indicating an
+apparent negative phase speed (at a fixed azimuthal location), an
+aliasing previously discussed for helically forced, premixed flames
+[112] . In reality, the flame wrinkles are always convecting down-
+stream, but if imaged via their projection through a plane (such as
+with a laser sheet), the helical flame wrinkle slicing through the
+plane can provide the impression of the wrinkle moving backward
+for certain parameter combinations [113] .
+
+These points are slightly modified if order 1/ Pe terms are in-
+cluded, due to the additional term in the denominator of the mag-
+nitude term, which acts to alter the wrinkle magnitude and phase
+roll off. In addition, the O(1/ Pe ) waveform term (1 – σ m ) 2 acts to
+alter the dissipation term non-monotonically, leading to minimum
+wrinkle  dissipation  when σ m = 1.  These  features  can  be  seen  in
+Fig. 24 which shows illustrative solutions of the axial dependence
+of flame wrinkle magnitude and phase for various values of χ for
+a near-bulk ( k c = 20) and convecting disturbance ( k c = 3.33) case.
+Notice, that results are shown for both Model Problem A ( Pe → ∞ )
+and Model Problem B ( Pe > > 1) from Table 4 .
+
+These results can be compared to those obtained for axisym-
+metric swirling premixed flames under similar forcing conditions
+
+using the results of Acharya et al. [112, 113] . These expressions are
+almost identical in form to those for the non-premixed case, with
+a few subtle differences common to the discussion in Section 3.2 .
+First, the premixed flame angle term is independent of the axial
+coordinate, owing to the flat nature of the steady state flame sheet,
+whereas for the non-premixed case this term is a complex func-
+tion of x, Pe , Z st , and s . Second, the wrinkle convection parameter
+for the premixed case has an additional cos 2 ψ , due to the mech-
+anism of premixed flame normal propagation.
+
+3.4.2. Large amplitude forcing and pocket formation
+
+As was discussed in Section 2 , at large disturbance amplitudes,
+non-premixed flame sheets can become multiply connected. This
+effect  has  been  referred  to  as  “clipping”,  where  the  upper  por-
+tion of the flame becomes detached from the main body and con-
+vects  downstream,  much  like  a  burning  droplet  [32,  114] .  Pre-
+mixed flames similarly become multi-connected, an effect greatly
+enhanced  by  the  front  propagation.  Dworkin  et  al.  [63]  showed
+how large amplitude modulation can lead to pinch-off of the top
+portion of the flame into a pocket. The considerable corrugation of
+the flame front causes it to self-intersect and split, and the result-
+ing  disconnected  region  collapses  while  convecting  downstream,
+even  while  the  remainder  of  the  surface  enlarges  near  the  base
+[90] . As this phenomenon occurs with large particle displacement,
+it has been found in experimental and computational studies to
+only occur below a certain frequency of excitation and above a crit-
+ical amplitude for that frequency.
+
+Experimental  [114]  and  computational  [32]  studies  of  soot
+volume  fraction  in  flickering  CH
+4 /air  non-premixed  flames  have
+shown that for conditions in which the tip of the flame is clipped,
+soot  production  is  significantly  greater  than  similar  unclipped
+flames,  as  well  as  being  4–5x  greater  than  that  measured  for
+steady  flames.  This  effect  can  be  explained  by  the  maximum
+downstream location obtained by a portion of clipped flame ex-
+ceeding that for a similar conditioned, i.e. forcing frequency, un-
+clipped flame, resulting in considerably longer soot growth times.
+Fig. 3 shows two examples of flames with large amplitude oscil-
+lations where the flame becomes multi-connected at the tip, one
+due to a natural instability and the other due to external forcing.
+
+4. Heat release analysis
+
+Having introduced the local space-time wrinkling characteris-
+tics of the flame, this section discusses the heat release dynamics.
+The subsequent discussion considers the local heat release, q ( x, t ),
+followed  by  a  treatment  of  the  spatially  integrated  heat  release,
+ ̇ Q (t) .
+
+4.1. Local heat release analysis
+
+The heat release per unit surface area of the flamelet is given
+
+(cid:22)
+
+(48)
+
+(cid:22)
+x , t)
+
+x , t) h R (
+
+by:
+(cid:22)
+(cid:5)(cid:5)
+F (
+x , t) =   ̇ m
+q (
+where   ̇ m (cid:5)(cid:5)
+F  is the fuel (reactant) mass consumption rate per unit
+area, and h R  is the heat release per unit mass of fuel (reactant)
+consumed  for  the  non-premixed  (premixed)  flame  case.  For  the
+two-dimensional flame to be considered next to illustrate key con-
+cepts, the terms in Eq. (48) take the form ( x,t ), while equivalently
+these expressions would be written as ( x, θ , t ) for a jet flame. This
+mass burning rate term is controlled by quite different processes
+for premixed and non-premixed flames [92] . For premixed flames,
+the mass burning rate is given by:
+
+P remixed f lame :
+
+(cid:5)(cid:5)
+F  = ρ u
+ ̇ m
+
+s u
+c
+
+(49)
+
+N. Magina et al. / Progress in Energy and Combustion Science 70 (2019) 89–118
+
+107
+
+Fig. 24.  Axial dependence of flame wrinkle amplitude (left) and phase (right) for (top) the axial bulk forced case and axial convecting helical disturbance case for various
+χ values and k c = 20 (middle) and k c = 3.33 (bottom), and parameters Pe = 10, St = 0.1, ε = 0.01, s = 0.25, and Z st = 0.055. Results are shown for both Model Problem A
+( Pe → ∞ ) via solid lines and Model Problem B ( Pe  > > 1) via dashed lines.
+
+108
+
+N. Magina et al. / Progress in Energy and Combustion Science 70 (2019) 89–118
+
+burning rate is a very strong function of the axial coordinate for
+non-premixed flames, having a singularity at the flame base, i.e.
+x = 0, when axial diffusion is neglected. In contrast, for a premixed
+flame with no stretch sensitivity, the burning rate is constant (even
+if there were stretch sensitivity, that correction would only be im-
+portant at the flame tip).
+
+These results hint at a point which will be emphasized repeat-
+edly  – the  high  transverse  gradients  near  the  nozzle  exit  cause
+substantial variations in mass burning rate distribution and, more-
+over, cause the burner exit profile details to dominate the mean
+and fluctuating heat release characteristics, both locally and spa-
+tially  integrated.  Given  these  points,  and  the  consequent  limita-
+tions  of  the  prescribed  step  inflow  boundary  condition  ( Eq.  (8)
+utilized in Model Problems A and B) in describing these near x = 0
+details, the results in the remainder of this section will focus on
+solutions  extracted  from  Model  Problem  C,  the  extended  inflow
+configuration  (see  Fig.  20 )  with  axial  diffusion,  closely  following
+the treatment by Magina et al. [95] . The alternate model problems
+will be returned to while examining various asymptotic character-
+istics in Section 4.2 .
+
+0 ( x ), evaluated along the flame sheet, ξ
+
+Fig. 26 shows the steady state distribution of heat release per
+0 ( x ), for vari-
+0,c , is also
+
+unit area, q
+ous Pe values. The cumulative heat release distribution, q
+plotted, defined as:
+(cid:22)
+x
+0 q 0 ( x ) dx
+Q 0
+
+q 0 ,c ( x ) =
+
+where Q
+
+0 is the total steady state heat release defined as:
+L
+f, 0
+
+!
+
+Q 0 =
+
+q 0 ( x ) dx
+
+0
+
+(54)
+
+(55)
+
+Also plotted for reference is the axial distribution for a constant
+burning velocity premixed flame, indicated by “PM Flame” in the
+legend. This abbreviation will be used throughout to denote the
+values for a corresponding premixed flame.
+
+For the steady state distribution, the Pe → ∞ limiting case has
+a singularity at the inlet due to the discontinuity in mixture frac-
+tion at the burner exit, that can be shown analytically 4  to scale
+as   ̇ m (cid:5)(cid:5)
+F  ∼ x −1 / 2 , as also shown in Fig. 26 [106] . With finite Pe val-
+ues , the inlet profile is smoothed and the peak value at x = 0 is
+reduced.  In  addition,  the  heat  release  contribution  from  the  tip
+(where only axial diffusion contributes) increases with decreasing
+Pe value. Comparing the premixed and non-premixed flame curves
+shows that half of the average heat release occurs in roughly the
+first 15–20% of the non-premixed flame, while it occurs at the 50%
+flame midpoint for the premixed flame. This result clearly shows
+the  need  for  particular  care  in  accounting  for  inflow  conditions
+f < < 1 region for non-premixed flame prob-
+that influence the x / R
+lems.
+
+Fig. 27 shows the corresponding unsteady heat release distribu-
+tion,  ˆ q 1 (x ) , for various Pe and St values. The cumulative heat re-
+lease distribution is plotted in Fig. 28 with two different normal-
+izations, defined as:
+x
+ˆ q 1 ( x ) dx
+εQ 0
+
+x
+ˆ q 1 ( x ) dx
+
+q 1 ,c 2 =
+
+q 1 ,c 1 =
+
+0
+L
+f, 0
+
+(56)
+
+!
+
+!
+
+!
+
+0
+
+ˆ q 1 ( x ) dx
+
+0
+
+The first normalization definition, given by Eq. (56) , uses the
+steady state heat release for normalization so that its value at x
+
+4
+
+The infinite summation obscures this point from Eq. (52) . However, the solu-
+tions for the unconfined system, presented in Magina & Lieuwen [95] Magina NA,
+Lieuwen TC. Effect of axial diffusion on the response of diffusion flames to axial
+flow perturbations. Combustion and Flame. 2016;167:395-408., make this point eas-
+ily observable, noting that as x → 0, ξ 0 → R f .
+
+Fig. 25.  Depiction of the time averaged burning rate plotted along the flame surface
+for non-premixed and premixed flames.
+
+where ρu is the density and s u
+c  is the laminar consumption speed
+of the unburned reactant. For non-premixed flames, this term is
+given by [92] :
+
+Non − premixed f lame :
+
+(cid:5)(cid:5)
+F  =
+ ̇ m
+
+−(1 + φ Ox ) 2
+φ Ox
+
+ρD
+
+∂ Z
+∂n
+
+(50)
+
+where n represents the direction normal to the flame surface into
+the oxidizer. For example, considering the two-dimensional flames
+shown in Fig. 8 or Fig. 20 , ∂ Z / ∂ n is given by:
+∂ Z
+∂n
+
+∂ Z
+∂x
+
+∂ Z
+∂y
+
+sin θ −
+
+cos θ
+
+(51)
+
+=
+
+The  remainder  of  this  section  will  consider  the  axial  distri-
+bution  of  the  local  heat  release.  We  will  assume  that  the  reac-
+tant  composition  is  fixed,  such  that h R  does  not  vary,  resulting
+in  the  local  heat  release  rate  being  directly  proportional  to  the
+mass burning rate. The solutions to the model problems detailed
+in Section 3 can then be utilized, along with Eq. (50) to calculate
+the heat release and other useful metrics.
+
+A  key  result  that  controls  many  of  the  non-premixed  heat
+release  characteristics,  as  well  as  provides  significant  differences
+with premixed flames, is that the local heat release distribution is
+extremely non-uniform – for large Pe value flames, the majority of
+the heat release occurs near x = 0 [95] . This can be seen by taking
+the solutions for Model Problem A, detailed in Section 3.1 (specifi-
+cally Eqs. (13) and (17) 3 ), and writing the solution for ∂ Z / ∂ n from
+Eq. (51) (neglecting the axial diffusion term, ∂ Z / ∂ x ):
+
+Means :
+
+∂ Z 0
+∂n
+
+= −
+
+∂ Z 0
+∂y
+
+cos θ = cos θ
+(cid:8)
+
+(cid:7)
+
+∞ (cid:10)
+
+n =1
+
+2 A n
+nπ R
+f
+(cid:7)
+
+sin ( A n )
+(cid:8)
+
+sin
+
+A n
+
+y
+R
+f
+
+exp
+
+−A n
+
+2  x
+Pe R
+f
+
+(52)
+
+Fluc tuat ing :
+
+∂ Z 1
+∂n
+
+= −
+(cid:9)
+
+∂ Z 1
+∂y
+
+(cid:7)
+
+cos θ = cos θ
+
+(cid:16)
+
+(cid:17)
+
+iεR
+f
+2 π St
+
+∂ 2
+Z 0
+∂ xy
+
+(cid:8)(cid:18)
+
+1 − exp
+
+2 π iSt
+
+x
+R
+f
+
+exp [ −iωt ]
+
+(53)
+
+The  mean  expression  for  ∂ Z / ∂ n  is  plotted  in  Fig.  25  below,
+along a representative flame surface. Note how the time averaged
+
+3
+an
+cos θ
+
+n =1
+
+Equivalently,  Eq.
+form
+[ iε A n 3 (2 / nπ ) sin ( A n )
+2 π St Pe R
+f
+
+alternate
+∞ (cid:23)
+
+(16)
+could  have  been  utilized
+in
+∂y cos θ =
+of
+the
+] sin ( A n y
+) { 1 − exp ( 2 π i St x
+) exp ( −A n 2  x
+) } exp [ −iωt ]
+R
+Pe R
+R
+f
+f
+f
+
+∂n  = − ∂ Z 1
+∂ Z 1
+
+fluctuating
+
+resulting
+
+term:
+
+N. Magina et al. / Progress in Energy and Combustion Science 70 (2019) 89–118
+
+109
+
+Fig. 26.  Local heat release solutions from Model Problem C, showing axial dependence of steady state heat release, both distributed (left) and cumulative (right), for Z st = 0.3
+and various Pe values (Reprinted from Magina et al. [95] with permission of Elsevier) .
+
+Fig. 27.  Local heat release solutions from Model Problem C, showing axial dependence of fluctuating heat release distributions for Pe values of 25 (left) and 1 (right) and
+various values St (Reprinted from Magina et al. [95] with permission of Elsevier) .
+
+Fig. 28.  Local heat release solutions from Model Problem C, showing axial dependence of normalized fluctuating cumulative heat release distributions q 1,c1 (left) and q 1,c2
+(right) for various values of Pe and St (Reprinted from Magina et al. [95] with permission of Elsevier) .
+
+110
+
+N. Magina et al. / Progress in Energy and Combustion Science 70 (2019) 89–118
+
+f , 0 = 1 corresponds to the flame transfer function’s value (dis-
+/ L
+cussed in Section 4.2 ). The second normalization uses the spatially
+f , 0 = 1
+integrated  unsteady  heat  release,  so  that  its  value  at  x  /  L
+goes to unity, thus allowing for visualization as to which parts of
+the  flame  contribute  to  its  unsteady  heat  release.  Fig.  27  shows
+that for Pe > > 1 and St < < 1, the largest values of local fluctuat-
+ing heat release occur at both the flame base, due to the sharp in-
+let gradient, and at the flame tip, due to the pulsing flame length.
+However, neither of these regions contributions to the cumulative
+heat release are dominant, as shown in Fig. 28 . An additional sub-
+tlety, as discussed in Section 3.3 , for Model Problem C the flame
+attachment point actually occurs at x < 0, resulting to some heat
+release in that region.
+
+For Pe > > 1 and St ∼ O(1) or > > 1, the local heat release at the
+tip diminishes, and the largest local values occur at the flame base.
+Moreover, the cumulative distributions show that the majority of
+the unsteady heat release occurs at the flame base – a fact which
+enables the development of simple asymptotic expressions for the
+St > > 1 heat release, which is detailed in Section 4.2.1 [95] . The
+same St trends hold for lower finite Pe values, yet the base and
+tip (for low St values), contributions are reduced and the middle
+length of flame has a larger contribution due to axial diffusion.
+
+4.2. Global heat release analysis
+
+Oscillations  in  heat  release  generate  acoustic  waves  via  un-
+steady  gas  expansion,  which  are  manifested  as  broadband  noise
+and  discrete  tones,  for  unconfined  and  confined  flames,  respec-
+tively  [4] .  If  the  combustion  region  of  interest  is  much  smaller
+than  an  acoustic  wavelength,  then  disturbances  originating  from
+different points in the flame arrive at the measurement location
+with  negligible  phase  shift.  This  describes  a  “compact  flame” in
+which the distribution of the heat release is unimportant; rather
+the quantity of relevance is the total, spatially integrated value [4] .
+This spatially integrated quantity is given by the following surface
+integral over the reaction sheet:
+
+!
+
+!
+
+ ̇ Q (t) =
+
+(cid:22)
+x , t) dA =
+q (
+
+(cid:5)(cid:5)
+F (
+ ̇ m
+
+(cid:22)
+(cid:22)
+x , t) dA
+x , t) h R (
+
+(57)
+
+f lame
+
+f lame
+
+It  is  useful  to  define  the  following  (flame)  transfer  function,
+which quantifies the magnitude and phase sensitivity of the heat
+release to flow disturbances:
+
+F ( ω ) =
+
+ˆ  ̇ Q
+1 ( ω ) /  ̇ Q 0
+(cid:22)
+ˆ (cid:22)
+u 1 /
+u 0
+
+(58)
+
+ˆ (cid:22)
+where
+u  denotes  a  reference  forcing  velocity;  for  example,  for
+axial  bulk  forcing  this  transfer  function  takes  the  form  F =
+( ˆ  ̇ Q 1 /  ̇ Q 0 ) / ( ˆ u x, 1 / U 0 ) .  Alternate  definitions  can  be  utilized  for  the
+other  various  heat  release  coupling  mechanisms,  such  as  pres-
+sure or equivalence ratio oscillations, where this parameter phys-
+ically  represents  an  input-output  relation  between  the  distur-
+bance fluctuations and the resulting heat release fluctuations. Once
+again  assuming  constant  composition  reactants,  as  was  done  in
+Section 4.1 such that h R does not vary, the results in Eq. (58) can be
+decomposed into contributions from mass burning rate and flame
+area  fluctuations;  i.e., F = F
+mbr + F wa .  This  can  be  done  by  lin-
+earizing and expanding Eq. (48) as:
+
+⎡
+
+⎢ ⎢ ⎢ ⎢ ⎢ ⎣
+
+ ̇ Q (t) = h R
+
+!
+
+!
+
+!
+
+(cid:5)(cid:5)
+ ̇ m
+F, 0 d A 0
+
++
+
+(cid:5)(cid:5)
+ ̇ m
+F, 1 d A 0
+
++
+
+(cid:5)(cid:5)
+ ̇ m
+F, 0 d A 1
+
+f lame
+"
+
+#$
+ ̇ Q 0
+
+%
+
+f lame
+"
+
+#$
+ ̇ Q
+mbr ( t )
+
+%
+
+f lame
+"
+
+#$
+ ̇ Q wa ( t )
+
+⎤
+
+⎥ ⎥ ⎥ ⎥ ⎥ ⎦
+
+%
+
+which  implicitly  defines  the  fluctuating  heat  release  as   ̇ Q 1 (t) =
+mbr (t) +   ̇ Q wa (t) .
+ ̇ Q
+
+The first term in Eq. (59) represents the mean spatially inte-
+grated heat release, similar to Eq. (55) . The second term defines
+the mass burning rate term. For non-premixed flames, this con-
+tributes to heat release oscillations due to the fluctuations in spa-
+tial  gradients  of  the  mixture  fraction.  For  premixed  flames,  the
+mass  burning  rate  fluctuations  are  linked  to  the  stretch  sensi-
+tivity  of  the  burning  velocity  (or  due  to  oscillations  in  mixture
+composition),  which  fluctuates  because  of  the  oscillatory  curva-
+ture  of  the  wrinkled  front  [110] .  The  last  term  in  Eq.  (59)  is
+a  fluctuating  area  term,  weighted  by  the  time  averaged  burning
+rate.  As  discussed  above  (see  Fig.  25  and  Fig.  26 ),  a  major  dif-
+ference between the heat release response of premixed and non-
+premixed flames is that this weighting term is essentially a con-
+stant  for  premixed  flames,  whereas  it  varies  strongly  for  non-
+premixed flames. If the time averaged burning rate is constant (a
+commonly  studied  case  for  premixed  flames),  then  this  term  is
+given by:
+
+(cid:5)(cid:5)
+F, 0 ( “unweighted ”) :
+Constant   ̇ m
+
+(cid:5)(cid:5)
+ ̇ Q a (t) = h R  ̇ m
+F, 0
+
+d A 1
+
+(60)
+
+!
+
+f lame
+
+There  are  significant  variations  in  time-averaged  heat  release
+rate along the non-premixed flame (e.g., no heat release at the tip
+in the absence of axial diffusion, see Fig. 26 ), thus the weighting
+of flame area is a very significant effect influencing how area fluc-
+tuations lead to heat release. Indeed, it is common in premixed
+flame studies to directly equate heat release fluctuations to flame
+area fluctuations [8, 9, 11, 113] . However, this is not the case in
+non-premixed flames and is responsible for several critical differ-
+ences in the heat release dynamics of these forced flames; even
+while Section 3 showed significant similarities in the space-time
+wrinkle dynamics of premixed and non-premixed flames, this sec-
+tion will show that their heat release dynamics are fundamentally
+different.
+
+For  example,  the  characteristics  of  the  weighted,   ̇ Q wa (t) ,  and
+un-weighted,   ̇ Q a (t) , area transfer functions are essentially the same
+for premixed flames. In contrast, they are quite different for non-
+premixed flames, as illustrated by reference to a quasi-steady ar-
+gument  in  Fig.  29 .  The  first  plot  (on  the  left)  shows  the  non-
+premixed  mean  flame  position  for  two  different  mean  flow  ve-
+locities. As is expected, the higher velocity case produces a flame
+with a larger total area. However, Fig. 25 and Fig. 26 showed that
+for non-premixed flames, the near base-region is of greater impor-
+tance, containing the dominant portion of the mean mass burning
+rate. Significantly, restricting our attention to the near-base region
+of the flame, i.e. the white region in Fig. 29 , it can be observed
+that the resulting (weighted) area actually decreases with increas-
+ing mean flow velocities. The second plot (on the right) shows how
+for low forcing frequencies, the area contribution is in-phase with
+the velocity forcing, while the weighted area contribution is 180 °
+out of phase – in other words, in the low Strouhal number limit,
+the non-premixed flame weighted and un-weighted area transfer
+functions  differ  in  phase  by  180 ° and  have  appreciably  different
+magnitudes.
+
+For the two-dimensional system considered in Section 3.1 thru
+
+3.3, Eq. (57) can be written as:
+
+L
+f (t)
+!
+
+(1 + φ Ox ) 2
+φ Ox
+
+(cid:7)
+ρh R D
+
+∂ Z ( x, ξ ( x, t))
+∂x
+
+sin θ
+cos θ
+
+−
+
+(cid:8)
+∂ Z ( x, ξ ( x, t))
+∂y
+
+dx  (61)
+
+ ̇ Q (t) =
+
+0
+
+(59)
+
+where  the  differential  area  is  projected  onto  the  axial  direction.
+Furthermore, neglecting the axial diffusion terms, decomposing Z ,
+f , and ξ into their mean and fluctuating components, and lineariz-
+L
+
+N. Magina et al. / Progress in Energy and Combustion Science 70 (2019) 89–118
+
+111
+
+Fig. 29.  Plots illustrating the behavior of the weighted area and area transfer functions by comparing quasi-steady area variations for two flow velocities. (left) Shows mean
+flame positions for two different mean flow velocities and (right) shows the fluctuations over one forcing cycle for the various terms.
+
+Table 7
+Heat release asymptotic result summary denoting roll off and transition values for the
+model problems listed in Table 4 [95] .
+
+Model Problem
+
+St < < 1, Pe > > 1
+
+A, B
+C, D
+
+F ∼1
+F ∼1
+
+St 1
+St 1 < St < St 2
+St 1 = 1/8  F ∼1/ ( St 1/2
+)  N/A
+St 1 = 1/8  F ∼1/ ( St 1/2
+)
+
+St 2
+
+Eq. (76)  F ∼1/ St
+
+St > > 1
+
+ing, results in 5 :
+
+ ̇ Q (t) =
+
+−(1 + φ Ox ) 2
+φ Ox
+
+⎧
+
+⎪ ⎪ ⎪ ⎪ ⎪ ⎨
+ρh R D
+⎪ ⎪ ⎪ ⎪ ⎪ ⎩
+
+L
+f, 0 !
+
+∂ Z 1
+∂y
+
++
+
+0
+"
+
+L
+f, 0 !
+
+dx
+
+∂ Z 0
+∂y
+0
+"  #$  %
+ ̇ Q
+0
+
+L
+f, 0 !
+
+dx +
+
+ξ1
+
+0
+#$
+ ̇ Q
+1 (t)
+
+⎫
+
+⎪ ⎪ ⎪ ⎪ ⎪ ⎬
+∂ 2
+Z 0
+∂ y 2 dx
+⎪ ⎪ ⎪ ⎪ ⎪ ⎭
+%
+
+where  the  terms  in  brackets  at  each  x  location  are  evaluated  at
+y = ξ 0 ( x ). The steady and fluctuating components are given by   ̇ Q 0
+and   ̇ Q 1 (t) ,  respectively.  Note  that  fluctuations  in  L
+f  do  not  con-
+tribute  to  this  linearized  expression  since  ∂ Z 0 / ∂ y  is  zero  along
+the  centerline  and,  therefore,  at  the  flame  tip  if  axial  diffusion
+is  neglected.  The  expressions  including  axial  diffusion  are  much
+longer, including the additional set of terms related to ∂ Z 0 / ∂ x from
+Eq. (51) , and are presented in Magina et al. [93] .
+
+4.2.1. Asymptotic transfer function characteristics
+
+Before  presenting  computational  and  experimental  results  for
+flame  transfer  functions,  it  is  useful  to  consider  various  asymp-
+totic limits and the processes controlling these limits. The various
+asymptotic limits for the four model problems listed in Table 4 ,
+as well as the Strouhal number demarcating the various limiting
+regimes, are summarized in Table 7 .
+
+The singularity in mixture fraction gradient in Model Problem
+A near x = 0 was shown to be of the form x −1/2 , and integrable –
+for this reason, significant insight into the spatially integrated heat
+release characteristics can be obtained from this simplest model
+problem.  Utilizing  Eq.  (58)  and  the  results  from  Section  3.1 ,  the
+transfer function can be written as:
+
+Model Problem A :  F =
+
+-
+
++
+f, 0
+−
+
+(cid:22) L
+0
+
+/
+.
+−i R
+f
+g(x, ξ0 )
+2 π St
++
+(cid:22) L
+f, 0
+−
+0
+
+ε
+
+∂ Z
+
+0 (x, ξ
+0 )
+∂y  dx
+
+(cid:3)
+1 − exp
+
+i 2 π St x
+R
+f
+
+(cid:4)0
+
+dx
+
+(63)
+
+5
+
+Comparing the terms in this expression to Eq. (58) , there is an additional term,
+∂Z 0 / dx sin ( θ 1 ), having equal and opposite magnitude in the mass burning rate and
+weighted area terms, thus cancelling in the Q 1 expression shown, as demonstrated
+by Magina et al . [93] Magina N, Acharya V, Sun T, Lieuwen T. Propagation, dissipa-
+tion, and dispersion of disturbances on harmonically forced, non-premixed flames.
+Proc Combust Instit. 2015;35:1097-105..
+
+where g ( x , ξ 0 ) is an axial distribution function defined as:
+d 2
+
+∂ 2
+
+g(x, ξ0 ) = tan ( θ0 )
+
+Z 0 (x, ξ0 )
+∂ y 2
+
++
+
+Z 0 (x, ξ0 )
+d xd y
+
+(64)
+
+(62)
+
+Expanding F , as given by Eq. (63) , in powers of St , leads to [95] :
+
+(cid:3)
++ O
+
+(cid:4)
+St 2
+L
+f
+
+(65)
+
+2 π
+St << 1  F = 1 + iS t L
+f
+
+∂ Z 0 (x, ξ0 (x ))
+∂y
+∂ Z 0 (x, ξ0 (x ))
+∂y
+Significantly,  | F | = 1 + O( St 2 )  for  St
+
+(cid:22) L
+f, 0
+0  x
+(cid:22) L
+f, 0
+0
+
+f, 0
+
+L
+
+· dx
+
+· dx
+
+Lf < < 1.  This  value  of  unity
+can be understood physically from the fact that in the quasi-steady
+limit, the instantaneous heat release is proportional to the instan-
+taneous mass flow rate of fuel and oxidizer into the combustion
+domain, i.e. across the inlet plane; in other words, a 1% fluctua-
+tion in velocity induces a 1% fluctuation in heat release [4] . For the
+same reason, there is no unsteady heat release induced by trans-
+verse bulk forcing, i.e. F = 0, however, this conclusion applies for all
+Strouhal numbers. The justifications for these gain results apply for
+the same reasons to premixed flames. The transfer function gain
+need not converge to unity for Model Problems B, C, and D, be-
+cause axial diffusion causes the convective and total mass flow rate
+to differ. However, it asymptotes to unity in the limit of Pe > > 1 for
+all the model problems.
+
+A  common  unsteady  heat  release  model  used  in  larger  ther-
+moacoustics  systems  dynamics  models  is  the  η- τ model  [115] ,
+where the unsteady heat release is related to the velocity through
+a gain, η, and time delay, τ , given by:
+ ̇ Q 1 ( t ) /  ̇ Q 0 = ηu 1 (t − τ ) / U 0
+
+(66)
+
+or, equivalently written in terms of a transfer function as:
+F = η exp [ iωτ ]
+
+(67)
+We can use the above result to determine these η- τ parameters
+for non-premixed flames in the St << 1 limit. Inspecting Eq. (65) ,
+the gain is unity, i.e. η= 1, and the time delay is given by:
+(cid:14)
+
+τ =
+
+(cid:12)  (cid:22) L
+
+f, 0
+0  x
+(cid:22) L
+f, 0
+0
+
+L
+
+f, 0
+
+∂ Z 0 (x, ξ0 (x ))
+∂y
+
+· dx
+
+∂ Z 0 (x, ξ0 (x ))
+∂y
+
+· dx
+
+L
+f, 0
+U 0
+
+(68)
+
+This time delay is equivalent to replacing the distributed flame
+by a concentrated source at some fractional distance of the flame
+
+112
+
+N. Magina et al. / Progress in Energy and Combustion Science 70 (2019) 89–118
+
+Fig. 30.  Dependence of normalized time delay parameter, τ /( L f ,0 / U 0 ) upon (left) Pe for various Z st values (0.3, 0.6, 0.8, 0.9) for Model Problem C. The corresponding (based
+on geometry, assumptions, and configuration) premixed flame value is also displayed. For each Z st value, the corresponding Model Problem A, i.e. Pe → ∞ , solution is shown
+by a dashed line. (right) Dependence upon Z st for various Pe values.
+
+length. While the gain is straightforward, the time delay is a com-
+plex function of parameters such as Pe and Z st , discussed in more
+detail by Magina [106] . These parametric dependencies of τ cannot
+be calculated analytically but must be extracted from the compu-
+tations due to the implicit nature of the solution for mean flame
+position, at which these integrand values are evaluated.
+
+f ,0 / U
+
+Fig. 30 plots calculations of τ /( L
+
+0 ) as a function of Pe and
+Z st  [95] .  The  corresponding  constant  burning  velocity,  premixed
+flame value is also plotted for reference. The solid lines indicate
+the numerical extended inlet results, i.e. Model Problem C, while
+the dashed lines show the corresponding Pe → ∞ analytical results,
+given by Eq. (68) , i.e. Model Problem A.
+
+f ,0  /  U
+
+Note  that  the  time  delay  value  (normalized  by  L
+
+0 ),  for
+example,  is  around  0.2  for  a  methane-air,  non-premixed system,
+which  has  a Z st  value  of  0.055  (see  Table  3 ).  For  reference,  the
+constant burning velocity two-dimensional bulk axially forced pre-
+mixed flame result is τ /( L
+0 ) ≈ 0.5 (assuming the flow veloc-
+ity is much greater than the flame speed), showing that the non-
+premixed flame time delay is about a factor of two smaller than a
+premixed flame with the same length. This result directly follows
+from the concentration of heat release near the burner outlet, and
+the distributions shown in Fig. 26 .
+
+f ,0 / U
+
+Additionally, in the low St limit, the ratio of weighted area con-
+tributions relative to mass burning rate contributions to the trans-
+fer function gain is of order O(1/ Pe 2 ) [95] – i.e., mass burning rate
+contributions dominate the unsteady heat release in Pe >> 1 flames.
+This point will be returned to in the next section.
+
+Having considered the St << 1 limit of F , we next consider the
+large St limit. Recall, Section 4.1 (see Fig. 28 ) showed that the high
+St limit, Eq. (63) was controlled by the features of g ( x , ξ
+0 ) near
+x = 0 [95] . This fact can be exploited to expand  Eq.  (64) around
+x = 0 which, following Magina [106] , becomes:
+
+g(x, ξ0 ) =
+
+1
+(cid:13)
+f π /P e x 3 / 2
+R
+4
+
+(cid:19)
++ O
+
+(cid:20)
+−1 / 2
+x
+
+(69)
+
+Substituting this expression into Eq. (63) leads to the following
+
+large St result:
+
+St >> 1  F ≈
+
+−( 1 + i )
+(cid:13)
+S t L
+4
+f
+
+(70)
+
+This shows that the phase between the velocity and heat re-
+lease  has  a  constant  value  of  45 ° and  that  the  gain  rolls  off as
+1/( St 1/2 ). As the flame transfer function amplitude was shown to be
+unity in the limit of low St values, the Strouhal number at which
+this  first  transition  occurs,  denoted  St
+1  in  Table  7 ,  from  O(1)  to
+O( St −1/2 ), can be obtained via the intersection of these limits, as
+1 = 1/8. As shown in the next section, the 1/( St 1/2 ) behavior of
+St
+the heat release transfer function is a much slower roll off than
+
+the 1/ St roll off that occurs to leading order in premixed flames,
+causing the heat release response of non-premixed flames to ex-
+ceed  that  of  premixed  flames  at  high  Strouhal  numbers  for  this
+problem.
+
+Recall, however, that g ( x , ξ
+
+0 ), given by Eqs. (64) and (69) , was
+obtained  for  Model  Problem  A,  i.e.  solutions  in  the  Pe → ∞  limit
+(no axial diffusion) utilizing the step inlet boundary, Eq. (8) . There
+exists a third, even higher St asymptotic zone, that cannot be an-
+alyzed without inclusion of more realistic species inflow profiles.
+Note that oscillatory integrals of the following form:
+
+x 2 !
+
+f (x ) exp (iStx ) dx
+
+x 1
+
+(71)
+
+1 )  and  f  ( x
+
+are controlled by the values of the integrand at the boundary, i.e.,
+at  f  ( x
+2 ),  and  generally  lead  to  a  1/ St  asymptotic  be-
+havior. However, for Model Problems A and B the mass burning
+rate has an integrable singularity at the x = 0 inlet boundary due
+to the infinite transverse gradient in Z imposed by the step inlet
+boundary condition, a singularity that ends up controlling the heat
+release asymptotics, leading to the indicated 1/( St 1/2 ) behavior. In
+other  words,  this  singularity  controls  this  asymptotic  trend  and
+causes it to exhibit a 1/ St 1/2 rather than a 1/ St asymptotic behav-
+ior. Note, how this is still valid for Model Problem B, where axial
+diffusion effects were included in the governing equation, i.e. b = 1
+in Eqs. (9) and (10) . When axial diffusion effects are included and
+the inlet profile mixture fractions are not discontinuous, i.e., Model
+Problems C or D (discussed next), this 1/( St 1/2 ) behavior persists for
+a range of Strouhal numbers where the convective wrinkle wave-
+0 / ω, is much longer than the thickness of the transition
+length, U
+zone of fuel/oxidizer profiles at x = 0. However, once the convective
+wavelength becomes of the order of this layer, the standard 1/ St
+behavior occurs, as expected for these oscillatory integrals. Thus,
+the Strouhal number at which the 1/ St 1/2 to 1/ St transition occurs
+is a function of the thickness of this layer, which in turn, is a func-
+tion of Pe .
+
+This point can be demonstrated explicitly through Model Prob-
+lem D, which excludes axial diffusion from the governing equation,
+but utilizes a finite thickness Z
+0 inlet transition layer, parameter-
+ized by δ [95] . In reality, the non-dimensional profile thickness pa-
+rameter, δ,  simulates the  extent  to  which axial diffusion has  al-
+tered the inlet boundary condition, and is proportional to the in-
+verse of Pe . Fig. 31 demonstrates this point explicitly by showing
+extracted profile thicknesses from Model Problem C, for various Pe
+values, where δ is measured as the distance from 0.95 × f
+0 ( y = 0)
+to 0.05 × f
+
+0 ( y = 0) normalized by R
+f .
+Returning  to  Eqs.  (63)  and  (64) ,  which  remain  valid  for  this
+0 ) is given for the
+
+Model Problem formulation, the function g ( x , ξ
+
+N. Magina et al. / Progress in Energy and Combustion Science 70 (2019) 89–118
+
+113
+
+which should make sense as the inlet profile, f
+0 , steepens and be-
+comes thinner, as Pe is increased, converging to a step function in
+the Pe → ∞ limit. Thus, if we substitute in δ∼1/ Pe into Eq. (75) , this
+shows that:
+(cid:8)
+(cid:7)
+| C 2 |
+| C 1 |
+
+P e L
+f
+R
+f
+
+S t 2 =
+
+(76)
+
+2
+
+Fig. 31.  Non-dimensional inlet profile thickness for Model Problem C, at select Pe
+values, for R w / R
+
+f = 10.
+
+4.2.2. Transfer function characteristics
+
+Having  considered  the  asymptotic  tendencies  of, F ,  we  next
+present computed and measured results. The majority of the cal-
+culated results are investigated numerically, due to the implicit na-
+ture of the flame location at which the values of the integral, i.e.
+Eq. (57) , are evaluated at. Fig. 32 plots the computed amplitude
+and phase of F as a function of St for various Pe values, for Model
+Problem C, as well as the Pe → ∞ result, for Model Problem A. For
+the amplitude, the most prominent difference between the results
+which include and neglect axial diffusion are the asymptotic char-
+acteristics discussed in Section 4.2.1 ; Model Problem A having a
+two-zone structure, while Model Problem C results show a three-
+zone asymptotic structure. The phase plot also shows some differ-
+ences between the results, although they all appear qualitatively
+similar.
+
+The solutions for the premixed flame transfer functions are sim-
+pler, as the unforced flame is flat in a uniform velocity field. Fol-
+lowing Wang et al. [110] , and retaining only leading order terms in
+Markstein length, the transfer function is given by:
+
+(77)
+
+smoothed, piecewise-linear profile (visualized in Fig. 7 ) as [95] :
+
+where  ˆ σc is given by  ˆ σc = σc sin θ tan θ .
+
+g(x, ξ0 ) =
+
+1
+(cid:13)
+f π /P e
+R
+
++
+
+1
+4 δx
+
+2 x 3 / 2
+
+(72)
+
+Substituting  this  expression  into  Eq.  (63)  reveals  that  in  the
+
+limit of large St :
+
+1
+
+St >> 1  F =
+
+C 1 (cid:13)
+S t L
+f
+
++
+
+C 2
+S t L
+f
+
+1
+P eδ
+
+P e L
+f
+R
+f
+
+(73)
+
+where
+
+√
+
+π]
+i [ λ−4
+√
+π
+16
+
+−( 1+ i )
+4
+
+(74)
+
+C 2 =
+
+C 1 =
+and λ is Euler’s constant, with numerical value λ (cid:3) 0.577216. Note
+how the leading order St > > 1 term is O(1/ St 1/2 ), consistent with
+Eq. (70) , while the next term is of O(1/ St ). Thus, while a 1/ St 1/2 be-
+havior occurs for the step inlet function profiles, a smooth mixture
+fraction at the base of the flame (resulting from finite Pe value ef-
+fects) leads to the 1/ St asymptotic behavior that one would expect
+of highly oscillatory integrals. For this model problem, we can de-
+velop an explicit expression for the Strouhal number at which the
+1/ St 1/2 to 1/ St transition occurs, denoted as St
+2 , by equating these
+two terms:
+(cid:8)
+(cid:7)
+| C 2 |
+| C 1 |
+
+1
+P e 2 δ2
+
+P e L
+f
+R
+f
+
+S t 2 =
+
+(75)
+
+2
+
+Physically, this transition Strouhal number coincides with con-
+ditions where the convective disturbance wavelength is on the or-
+der of the axial extent required for fuel/oxidizer to diffuse across
+the inlet transition layer.
+
+As was stated previously, the profile thickness parameter, δ, is
+proportional to the inverse of Pe under these conditions, a point
+
+Typical solutions for the overall unsteady heat release, as well
+as the contributions from flame area and mass burning rate, are
+shown  in  Fig.  33  for  the  non-premixed  and  premixed  flame  for
+Model Problem A. Both premixed and non-premixed transfer func-
+tions  have  magnitudes  of  identically  unity  at  zero  St ,  consistent
+with the η- τ discussion regarding Eq. (68) , indicating the direct
+1:1 relation between the fluctuation in velocity and induced fluc-
+tuation in heat release, and then roll off with increasing St , indi-
+cating a progressively smaller induced heat release fluctuation [4] .
+However, the dominant contributors to heat release are com-
+pletely  different.  Starting  with  the  left  plot,  note  how  the  non-
+premixed flame heat release fluctuations for St < < 1 are dominated
+by mass burning rate fluctuations over the entire Strouhal number
+range (the ratio of mass burning rate to area contributions from
+the unsteady heat release being O( Pe 2 ) in the low St limit [106] ).
+In contrast, premixed flames at low and O(1) Strouhal numbers are
+dominated by area fluctuations, shown in the right plot. The mass
+burning rate fluctuations are a much smaller effect and only exert
+a comparable response as area fluctuations at high Strouhal num-
+bers where S t p ∼ O( ˆ σ −1
+
+c  ) [110].
+
+Direct comparisons of the gain and phase response of the pre-
+mixed and non-premixed flame results are shown in Fig. 34 . No-
+tably,  these  results  show  that  non-premixed  flames  are  signifi-
+cantly more sensitive to flow perturbations than premixed flames
+> O(1), an important conclusion, and due to the fact that
+when S t L
+f
+for St > O(1), non-premixed flames roll off initially as 1/ St 1/2 , while
+premixed flames go as 1/ St , as discussed in Section 4.2.1 .
+
+The corresponding phases of the premixed and non-premixed
+flame transfer functions are also included in Fig. 34 . Both curves
+start  at  zero  for  low  Strouhal  numbers,  indicating  that  low  fre-
+
+114
+
+N. Magina et al. / Progress in Energy and Combustion Science 70 (2019) 89–118
+
+Fig. 32.  Model Problem C results, showing heat release transfer function amplitude (left) and phase (right) as a function of St Lf for Z st = 0.3 for various Pe values. The Pe → ∞
+result from Model Problem A is also shown for comparison (Reprinted from Magina et al. [95] with permission of Elsevier).
+
+Fig. 33.  Model Problem A results, showing the Strouhal number dependence of the magnitude of the heat release, area, and mass burning rate transfer functions for a
+(left) non-premixed flame with parameters Z st = 0.06, Pe = 10 , and (right) premixed flame with parameters ˆ σc = 0 . 05 and L f / R f = 932 (Reprinted from Magina et al. [92] with
+permission of Elsevier).
+
+quency flow modulation induces heat release fluctuations that are
+in  phase.  The  curves  roll  off with  different  slopes  toward  nega-
+tive  values  and  asymptote  to  −90 ° for  the  non-premixed  flame
+and −45 ° for the stretch sensitive, premixed flame. This phase is
+a manifestation of the delay in heat release relative to the forc-
+ing, due to convection of disturbances along the front. Note also
+the nearly constant phase (at −45 °) in the non-premixed flame in
+the intermediate Strouhal number range discussed above. The un-
+dulations in phase for the premixed flame correspond to ripples in
+the gain, and reflect the influence of interference processes in con-
+trolling the flame area. The differences in phase between the two
+flames again reflects the different processes controlling unsteady
+heat release.
+
+Although limited in quantity, other researchers have measured
+transfer  functions  of  a  forced  experimental  system  [33]  – a  key
+difference from the above results being that the experiments are
+for a round jet. Fig. 35 shows a measured flame transfer function
+gain comparison (see Kim et al. for phase [33] ) with analytical re-
+
+sults, specifically Eq. (63) for Model Problem A. The differing fuel
+compositions alter the details of the gain and phase oscillations,
+reflected as different Z st values in the analytical study, however the
+trends remain comparable. The gain results are certainly consistent
+with  the  predicted  O(1/ St 1/2 )  trends  from  expressions  above,  i.e.
+Eq. (70) . It is not possible to directly compare the low St values; in
+addition, for these experiments the flames were highly corrugated
+and even multi-connected with high degrees of clipping. Note that
+no transition to the predicted 1/ St is observed in these data; this is
+likely due to the fact that this transition occurs at a Strouhal num-
+ber that is larger than where data was acquired (our estimate of
+St
+
+2 using Eq. (76) and quoted flame lengths is St
+
+2 = 190).
+
+We  close  this  section  by  considering  bulk  transverse  forcing
+of  the  flame.  Unlike  the  space-time  dynamics  conclusions  from
+Section  3 ,  where  flame  wrinkling  was  fundamentally  the  same
+with a subtle change in the forcing-flame front orthogonal direc-
+tion, the heat release results are quite different. In this configura-
+tion, in the Pe → ∞ limit, for all St values the area and mass burn-
+
+N. Magina et al. / Progress in Energy and Combustion Science 70 (2019) 89–118
+
+115
+
+tatively similar to that summarized above in the two-dimensional
+analysis. For the transversely forced configuration, similarly to the
+two-dimensional case, heat release oscillations cancel each other
+on opposite sides of the flame, thus resulting in no unsteady heat
+release. For helical disturbances, this same cancellation occurs for
+all mode numbers except for the m = 0, axisymmetric mode. Thus,
+as is the case for premixed flames, the m = 0 mode is the sole con-
+tributor to the heat release oscillations, with k c  (see disturbance
+form  in  Table  6 )  being  the  only  new  parameter  influencing  the
+transfer functions [112] . Moreover,  the flame transfer function is
+not explicitly a function of the swirl (although, implicitly the un-
+forced flame position is). Thus, the final discussion of this section
+presents analytical results for the response of a jet flame to a con-
+vecting,  axisymmetric  disturbance.  Note  that  the  axial  bulk  case
+corresponds to k c = ∞ .
+
+Fig.  36  shows  heat  release  transfer  function  magnitude  and
+phase results from the three-dimensional variant of Model Prob-
+lem A for various values of k c , the normalized disturbance phase
+speed. It shows that the gain starts at unity and rolls off, with the
+details of the roll off varying with disturbance phase speed. The
+modulation in gain and phase reflects the influence of interference
+between phase cancellation/reinforcement of different regions on
+the flame.
+
+Recall from Section 3.4.1 , specifically Eq. (47) , that for a swirling
+flow,  a  non-axisymmetric  mode,  m s ,  dominated  the  flame  wrin-
+kle response amplitude [106] . This is significant given the fact that
+only the axisymmetric mode, m = 0, contributes to the global spa-
+tially integrated heat release fluctuations. Thus, different measures
+of the flame response, such as local wrinkling, local heat release,
+and global heat release, have very different sensitivities to swirl
+and different azimuthal modes.
+
+5. Concluding remarks
+
+It  has  been  discussed  how  velocity  forcing  of  non-premixed
+flames leads to the excitation of wrinkles that convect downstream
+and lead to local and spatially integrated heat release fluctuations.
+The amplitude of these wrinkles is proportional to the magnitude
+of  flow  displacement  fluctuations  normal  to  the  flame  sheet.  As
+these wrinkles are excited at every point along the flame with ve-
+locity  fluctuations,  the  resultant  flame  wrinkle  amplitude  at  any
+given  position  is  superposition  of  the  upstream  forcing  history,
+convection velocity of the flame, and decay rate of a given wrinkle.
+This  leads  to  constructive  and  destructive  interference  behavior,
+causing  flame  wrinkling  amplitude  magnitudes  to  oscillate  with
+downstream distance. Similarly, the convection of wrinkles by the
+flow, causes the phase of flame wrinkles to roll off roughly linearly
+with axial distance. While the resultant superposition of wrinkles
+can become more analytically complex when the forcing is three-
+dimensional (e.g., a helical vortex), and the flow is swirling (caus-
+ing  wrinkles  to  convect  both  azimuthally  and  axially),  the  basic
+physics remains the same. There are numerous analogies of these
+flame wrinkle behavior characteristics to premixed flames, and this
+review compares and contrasts these results throughout. The key
+difference between the premixed and non-premixed flame is that
+premixed flames propagate normal to themselves, which modifies
+the convection speed of a flame wrinkle causing it to differ from
+that of the local flow velocity, while non-premixed flames do not.
+Once wrinkles are excited on the flame, they decay at a rate that
+increases  quadratically  with  frequency.  In  non-premixed  flames,
+this occurs because of diffusion smoothing out space-time varia-
+tions in mixture fraction, while in premixed flames with positive
+Markstein lengths, this occurs because of the dependence of the
+flame speed on curvature.
+
+Local heat release on the flame is directly proportional to the
+local mass consumption rate of reactants. In non-premixed flames,
+
+Fig. 34.  Strouhal number dependence of the magnitude and phase of the heat re-
+lease transfer function for a non-premixed and premixed flame with the same prop-
+erties as Fig. 33 (Reprinted from Magina et al. [92] with permission of Elsevier).
+
+Fig. 35.  Non-premixed flame transfer function gain comparison at 1.0 m/s for the
+analytical [93] and experimental [33] results (Reprinted from Kim et al. [33] with
+permission of Elsevier).
+
+ing rate contributions from the two branches have the same mag-
+nitude but are out of phase by 180 °, resulting in no unsteady heat
+release for one-half of the flame [93, 96] . This result could be an-
+ticipated, at least in the low Strouhal number limit, as transverse
+forcing  causes  no  fluctuation  in  fuel  and  oxidizer  flow  rate  into
+the domain. Since the heat release in the quasi-steady limit is di-
+rectly proportional to the fuel flow rate into the domain, transverse
+fluctuations consequently lead to no heat release oscillations. Sim-
+ilar conclusions were developed for transversely forced premixed
+flames by Acharya et al. [113] . Significantly, this point emphasizes
+the  important  distinction  between  local  and  global  heat  release
+fluctuations.  As  was  discussed  in  Section  4.1 ,  even  though  there
+are no global heat release fluctuations, the local heat release by
+each segment of flame is fluctuating, as is the instantaneous flame
+position.
+
+4.2.3. Round jet characteristics
+
+This  section  presents  the  transfer  function  characteristics  of
+round jets exposed to disturbances and compliments Section 3.4 ,
+which identified several canonical forcing configurations, character-
+ized by the forcing velocity field sets shown in Table 6 - bulk axial,
+bulk transverse, and convecting helical disturbances. For bulk axial
+fluctuations, the flame transfer function for the round jet is quali-
+
+116
+
+N. Magina et al. / Progress in Energy and Combustion Science 70 (2019) 89–118
+
+Fig. 36.  Convecting helical disturbance heat release transfer function magnitude (left) and phase (right) curves from Model Problem A for various values of k c and parameters
+Pe = 100, ε = 0.01, s = 0.1, and Z st = 0.3. The axial bulk case corresponds to k c = ∞ . .
+
+the  mass  consumption  rate  is  directly  proportional  to  gradients
+in  mixture  fraction.  These  gradients  can  be  very  high  near  the
+burner outlet, where previously separate fuel and oxidizer species
+first meet, but smooth out with downstream distance. This causes
+the local mass burning rate to vary substantially in non-premixed
+flames in the axial directions, with the largest values encountered
+in the near-burner outlet region. In contrast, the mass consump-
+tion  rate  of  premixed  flames  is  proportional  to  the  flame  con-
+sumption  speed  which,  except  in  highly  curved/strained  regions
+of  the  flame,  is  essentially  constant.  As  such,  the  axial  distribu-
+tion of heat release in a premixed flame can be much more uni-
+form than a non-premixed flame. These factors, in turn, directly
+influence the spatially integrated heat release, which is controlled
+by  the  near-burner  outlet  region  in  non-premixed flames  and  is
+more  uniform  in  premixed  flames.  In  the  low  Strouhal  number
+regime,  this  causes  the  time  delay  between  a  velocity  perturba-
+tion and the resultant heat release to be substantially shorter for
+non-premixed  flames  than  premixed  flames.  Additionally,  at  low
+Strouhal numbers, the heat release is directly proportional to mass
+flow  rate of  reactants into the combustor  domain for  both non-
+premixed and premixed flames, causing their gain values to both
+have the same unity value. For the same reason, transverse forcing
+causes local flame wrinkling and heat release fluctuations, but no
+spatially integrated heat release fluctuations. The near discontinu-
+ity in mixture fraction also dominates the high frequency response
+of non-premixed flames, causing it to roll off as 1/ St 1/2 . This leads
+to  a  much  slower  roll  off of  non-premixed  flame  gain  with  fre-
+quency than premixed flames, which roll off as 1/ St . Only at much
+higher Strouhal numbers, where the mixture fraction gradient be-
+comes  of  the  same  order  of  magnitude  as  the  convective  wave-
+length, does the non-premixed gain roll off as 1/ St . These asymp-
+totic  tendencies  of  the  non-premixed  flame,  as  such,  are  largely
+controlled by the near burner exit region with high transverse gra-
+dients, and thus, are expected to be quite sensitive to burner exit
+details and finite chemistry effects (which would lead to extinc-
+tion)).
+
+We close this review with suggestions for needed future work.
+Starting  with  modeling  efforts,  it  is  worth  highlighting  two  key
+assumptions made in the model problems considered - constant
+diffusivity and infinite chemistry. Understanding the dynamics of
+forced  flames  with  relaxation  of  these  assumptions  will  be  very
+interesting.  Previous  studies  have  found  that  finite  rate  effects
+have little to no effect on the natural flickering dynamics of non-
+premixed flames [116] , and it seems unlikely that they would influ-
+ence the basic wrinkle dynamic characteristics presented here, i.e.
+
+convection, dissipation, and dispersion. However, finite chemistry
+will  thicken  the  flame,  introducing  additional  chemical  time  de-
+lays and flame extinction near the burner outlet, where the largest
+gradients in mixture fraction and heat release occurs. Pushing the
+region of heat release downstream, where there is less spatial vari-
+ation in heat release, would introduce significant differences to the
+results shown here, such as potentially eliminating the 1/ St 1/2 re-
+gion of the transfer function. Similarly, it will be very interesting to
+determine what fundamental new characteristics appear with non-
+equidiffusive species. Lastly, alternate flame configurations, such as
+the unconfined jet and jet-in-crossflow, need further investigation,
+being of extreme relevance and potentially having more simplified
+analytical solution forms.
+
+Experimentally, it is evident that there is a strong need for fur-
+ther studies. There is no analogue in the forced non-premixed liter-
+ature to the enormous number of studies that have been reported
+in laminar and turbulent premixed flames, with a wide variety of
+configurations. Such studies are clearly needed. Foundational lami-
+nar studies are needed with different Damkohler numbers to pro-
+vide benchmarking data on frequency effects, configuration effects,
+and finite chemistry effects. Following such work, analysis of tur-
+bulent non-premixed flames should be investigated – again over a
+range of forcing, configuration, and kinetic parameters are needed,
+but where turbulence intensities and length scales can be system-
+atically varied.
+
+Finally,  additional  fundamental  studies  of  partially  premixed
+flames are needed – a number of studies in liquid-fueled aircraft
+engines  have  been  performed  where  the  flame  exists  in  varying
+degrees of premixedness, and further understanding of how to in-
+terpret such data, and their relationship to perfectly non-premixed
+and perfectly premixed results is needed.
+
+Acknowledgements
+
+This work has been partially supported by the Department of
+Energy under contract DE-FE0025174 (contract monitor Seth Law-
+son) and the National Science Foundation under contracts CBET-
+1235779 and CBET-1705649 (contract monitor Ruey-Hung Chen).
+
+References
+
+[1] Lieuwen TC . Unsteady combustor physics . Cambridge University Press; 2012 .
+[2] Magina N , Steele W , Emerson B , Lieuwen T . Spatio-temporal evolution of
+harmonic disturbances on laminar, non-premixed flames: Measurements and
+analysis. Combust Flame 2017; 180 :262–75 .
+
+[3] Lieuwen TC, Yang V. Combustion instabilities in gas turbine engines: opera-
+
+tional experience, fundamental mechanisms and modeling 2005.
+
+N. Magina et al. / Progress in Energy and Combustion Science 70 (2019) 89–118
+
+117
+
+[4] Lieuwen T . Unsteady combustor physics . Cambridge Press; 2013 .
+[5] Lieuwen T . Modeling premixed combustion-acoustic wave interactions: A re-
+
+[38] Kukuck S , Matalon M . The onset of oscillations in diffusion flames. Combust
+
+Theory Model 2001; 5 :217–40 .
+
+view. J. Propuls Power 2003; 19 :765–81 .
+
+[39] Matalon M , Ludford G , Buckmaster J . Diffusion flames in a chamber. Acta As-
+
+[6] Baillot F , Durox D , Prud’Homme R . Experimental and theoretical study of a
+
+tronautica 1979; 6 :943–59 .
+
+premixed vibrating flame. Combust Flame 1992; 88 (149-52):53–68 IN1 .
+
+[7] Huang Y , Yang V . Dynamics and Stability of Lean-Premixed Swirl-Stabilized
+
+Combustion. Prog Energy Combust Sci 2009; 35 :293–364 .
+
+[8] Preetham SH , Lieuwen T . Dynamics of laminar premixed flames forced by
+
+harmonic velocity disturbances. J. Propuls Power 2008; 24 :1390–402 .
+
+[9] Schuller T , Durox D , Candel S . A unified model for the prediction of laminar
+flame transfer functions: comparisons between conical and V-flame dynam-
+ics. Combust Flame 2003; 134 :21–34 .
+
+[10] Boyer L , Quinard J . On the dynamics of anchored flames. Combust Flame
+
+1990; 82 :51–65 .
+
+[11] Fleifil M , Annaswamy AM , Ghoneim ZA , Ghoneim AF . Response of a laminar
+premixed flame to flow oscillations: A kinematic model and thermoacoustic
+instability results. Combust Flame 1996; 106 :487–510 .
+
+[12] Matalon M . Flame dynamics. Proc Combust Instit 2009; 32 :57–82 .
+[13] Candel S , Durox D , Schuller T , Palies P , Bourgouin J-F , Moeck JP . Progress
+and  challenges  in  swirling  flame  dynamics.  Comptes  rendus  mecanique
+2012; 340 :758–68 .
+
+[14] Candel S , Durox D , Schuller T , Bourgouin J-F , Moeck JP . Dynamics of swirling
+
+flames. Annu Rev Fluid Mech 2014; 46 :147–73 .
+
+[15] Lee JG , Santavicca DA . Experimental diagnostics for the study of combustion
+
+instabilities in lean premixed combustors. J. Propuls Power 2003; 19 :735–50 .
+
+[16] Lee JG , Kim K , Santavicca DA . Measurement of equivalence ratio fluctuation
+and its effect on heat release during unstable combustion. Proc Combust Inst
+20 0 0; 28 :415–21 .
+
+[17] Palies P , Durox D , Schuller T , Candel S . The combined dynamics of swirler
+and turbulent premixed swirling flames. Combust Flame 2010; 157 :1698–717 .
+[18] Durox D , Schuller T , Noiray N , Candel S . Experimental analysis of nonlinear
+flame transfer functions for different flame geometries. Proc Combust Instit
+2009; 32 :1391–8 .
+
+[19] Kornilov VN , Rook R , ten Thije Boonkkamp JHM , de Goey LPH . Experimen-
+tal and numerical investigation of the acoustic response of multi-slit Bunsen
+burners. Combust Flame 2009; 156 :1957–70 .
+
+[20] Giauque A , Selle L , Gicquel L , Poinsot T , Buechner H , Kaufmann P , et al. Sys-
+tem identification of a large-scale swirled partially premixed combustor using
+LES and measurements. J Turbulence 2005 N21 .
+
+[21] Truffin K , Poinsot T . Comparison and extension of methods for acoustic iden-
+
+tification of burners. Combust Flame 2005; 142 :388–400 .
+
+[22] Shreekrishna HemchandraS , Lieuwen T . Premixed flame response to equiva-
+
+lence ratio perturbations. Combust Theory Model 2010; 14 :681–714 .
+
+[23] Preetham ThumuluruSK , Santosh H , Lieuwen T . Linear Response of Laminar
+Premixed Flames to Flow Oscillations: Unsteady Stretch Effects. J. Propuls
+Power 2010; 26 .
+
+[24] Hemchandra S , Peters N , Lieuwen T . Heat release response of acoustically
+forced turbulent premixed flames—role of kinematic restoration. Proc Com-
+bust Inst 2011; 33 :1609–17 .
+
+[25] Shreekrishna , Lieuwen T . High Frequency Response of Premixed Flames to
+Acoustic  Disturbances.  15th  AIAA/CEAS  Aeroacoustics  Conference  Miami,  FL ;
+2009 .
+
+[26] Palies P , Schuller T , Durox D , Candel S . Modeling of premixed swirling flames
+
+transfer functions. Proc Combust Instit 2011; 33 :2967–74 .
+
+[27] Ducruix S , Schuller T , Durox D , Candel S . Combustion instability mechanism
+in premixed combustors. Combustion instabilities in gas turbine engines: oper-
+ational experience, fundamental mechanisms and modeling . Lieuwen T, Yang V,
+editors. American Institute of Aeronautics and Astronautics; 2005 .
+
+[28] Schuller T , Ducruix S , Durox D , Candel S . Modeling tools for the prediction of
+premixed flame transfer functions. Proc Combust Instit 2002; 29 :107–13 .
+[29] Acharya  V ,  Emerson  B ,  Mondragon  U ,  Shin  D-H ,  Brown  C ,  McDonell  V ,
+et al. Velocity and flame wrinkling characteristics of a transversely forced,
+bluff-body stabilized flame, Part II: Flame response modeling and compari-
+son with measurements. Combust Sci Technol 2013; 185 :1077–97 .
+
+[30] Acharya V , Malanoski M , Aguilar M , Lieuwen T . Dynamics of a transversely
+excited swirling, lifted flame: flame response modeling and comparison with
+experiments. J Eng Gas Turbines Power 2014; 136 :051503 .
+
+[31] Matalon M . Intrinsic flame instabilities in premixed and nonpremixed com-
+
+bustion. Annu Rev Fluid Mech 2007; 39 :163–91 .
+
+[32] Shaddix  CR ,  Harrington  JE ,  Smyth  KC .  Quantitative  measurements  of  en-
+hanced soot production in a flickering methane/air diffusion flame. Combust
+Flame 1994; 99 :723–32 .
+
+[33] Kim T , Ahn M , Hwang J , Kim S , Yoon Y . The experimental investigation on the
+response of the Burke–Schumann flame to acoustic excitation. Proc Combust
+Instit 2016 .
+
+[34] Lingens A , Neemann K , Meyer J , Schreiber M . Instability of diffusion flames.
+In: Symposium (International) on Combustion . Elsevier; 1996. p. 1053–61 .
+[35] Chamberlin D , Rose A . The flicker of luminous flames. Industr Eng Chem
+
+1928; 20 :1013–16 .
+
+[36] Buckmaster J , Peters N . The infinite candle and its stability—a paradigm for
+flickering diffusion flames. In: Symposium (International) on Combustion . Else-
+vier; 1988. p. 1829–36 .
+
+[37] Boulanger J . Laminar round jet diffusion flame buoyant instabilities: Study on
+the disappearance of varicose structures at ultra-low Froude number. Combust
+Flame 2010; 157 :757–68 .
+
+[40] Chen Ll-W , Wang Q , Zhang Y . Flow characterisation of diffusion flame under
+non-resonant acoustic excitation. Exp Therm Fluid Sci 2013; 45 :227–33 .
+[41] Huang HW , Wang Q , Tang HJ , Zhu M , Zhang Y . Characterisation of external
+acoustic excitation on diffusion flames using digital colour image processing.
+Fuel 2012; 94 :102–9 .
+
+[42] Wang Q , Huang HW , Tang HJ , Zhu M , Zhang Y . Nonlinear response of buoyant
+
+diffusion flame under acoustic excitation. Fuel 2013; 103 :364–72 .
+
+[43] Chrystie R , Chung SH . Response to Acoustic Forcing of Laminar Coflow Jet
+
+Diffusion Flames. Combust Sci Technol 2014; 186 :409–20 .
+
+[44] Williams TC , Shaddix CR , Schefer RW , Desgroux P . The response of buoy-
+ant  laminar  diffusion  flames  to  low-frequency  forcing.  Combust  Flame
+2007; 151 :676–84 .
+
+[45] Juniper MP , Li LKB , Nichols JW . Forcing of self-excited round jet diffusion
+
+flames. Proc Combust Instit 2009; 32 :1191–8 .
+
+[46] Li  LKB ,  Juniper  MP .  Lock-in  and  quasiperiodicity  in  hydrodynamically
+self-excited  flames:  Experiments  and  modelling.  Proc  Combust  Instit
+2013; 34 :947–54 .
+
+[47] Saito M , Sato M , Nishimura A . Soot suppression by acoustic oscillated com-
+
+bustion. Fuel 1998; 77 :973–8 .
+
+[48] Ferreira D , Lacava P , Ferreira M , de Carvalho J,JA . NOx and CO emissions and
+soot presence in partially premixed acoustically excited flames. J Energy Instit
+2009; 82 :123–32 .
+
+[49] Chung S , Law C . Burke–Schumann flame with streamwise and preferential
+
+diffusion. Combust Sci Technol 1984; 37 :21–46 .
+
+[50] Mohammed RK , Tanoff MA , Smooke MD , Schaffer AM , Long MB . Computa-
+tional and experimental study of a forced, timevarying, axisymmetric, lami-
+nar diffusion flame. In: Proc Combust Instit . Elsevier; 1998. p. 693–702 .
+[51] Siwatch V , Lawrence B , Kuchibhatla S , Annamalai K , Ranjan D . Excess Air,
+Schmidt Number, and NOx Formation in Laminar Jet Flames. Combust Sci
+Technol 2014; 186 :1936–53 .
+
+[52] Lakshminarasimhan K , Ryan MD , Clemens NT , Ezekoye OA . Mixing character-
+istics in strongly forced non-premixed methane jet flames. Proc Combust Instit
+2007; 31 :1617–24 .
+
+[53] Dworkin S , Cooke J , Bennett B , Connelly B , Long M , Smooke M , et al. Dis-
+tributed-memory parallel computation of a forced, time-dependent, sooting,
+ethylene/air coflow diffusion flame. Combust Theory Model 2009; 13 :795–822 .
+[54] Jocher A , Foo KK , Sun Z , Dally B , Pitsch H , Alwahabi Z , et al. Impact of acoustic
+forcing on soot evolution and temperature in ethylene-air flames. Proc Com-
+bust Instit 2017; 36 :781–8 .
+
+[55] Foo KK , Sun Z , Medwell PR , Alwahabi ZT , Dally BB , Nathan GJ . Experimen-
+tal investigation of acoustic forcing on temperature, soot volume fraction and
+primary particle diameter in non-premixed laminar flames. Combust Flame
+2017; 181 :270–82 .
+
+[56] Marr KC , Clemens NT , Ezekoye OA . Mixing characteristics and emissions of
+strongly-forced non-premixed and partially-premixed jet flames in crossflow.
+Combust Flame 2012; 159 :707–21 .
+
+[57] De-Hua C , Ta-Hui L , Shuhn-Shyurng H . Flame synthesis of carbon nano-onions
+
+enhanced by acoustic modulation. Nanotechnology 2010; 21 :435604 .
+
+[58] Hou S-S , Chen K-M , Yang Z-Y , Lin T-H . Enhanced Synthesis of Carbon Nano-
+materials  Using  Acoustically  Excited  Methane  Diffusion  Flames.  Materials.
+2015; 8 :4805–16 .
+
+[59] Hu W-C , Sari S , Hou S-S , Lin T-H . Effects of Acoustic Modulation and Mixed
+Fuel on Flame Synthesis of Carbon Nanomaterials in an Atmospheric Environ-
+ment. Materials. 2016; 9 :939 .
+
+[60] Kim JS , Williams FA . Contribution of strained diffusion flames to acoustic
+
+pressure response. Combust Flame 1994; 98 :279–99 .
+
+[61] Sohn CH . Unsteady analysis of acoustic pressure response in N2 diluted H2
+
+and air diffusion flames. Combust Flame 2002; 128 :111–20 .
+
+[62] Welle EJ , Roberts WL , Carter CD , Donbar JM . The response of a propane-air
+counter-flow  diffusion  flame  subjected  to  a  transient  flow  field.  Combust
+Flame 2003; 135 :285–97 .
+
+[63] Dworkin S , Connelly B , Schaffer A , Bennett B , Long M , Smooke M , et al. Com-
+putational and experimental study of a forced, time-dependent, methane–air
+coflow diffusion flame. Proc Combust Instit 2007; 31 :971–8 .
+
+[64] Hou SS , Chung DH , Lin TH . Experimental and numerical investigation of
+jet  flow  and  flames  with  acoustic  modulation.  Int  J  Heat  Mass  Transfer
+2015; 83 :562–74 .
+
+[65] Strawa  AW ,  Cantwell  BJ .  Visualization  of  the  structure  of  a  pulsed
+
+methane–air diffusion flame. Phys Fluids 1985; 28 :2317–20 .
+
+[66] Lee KM , Kim TK , Kim WJ , Kim SG , Park J , In Keel S . A visual study on flame
+behavior in tone-excited non-premixed jet flames. Fuel 2002; 81 :2249–55 .
+[67] Hertzberg  JR .  Conditions  for  a  split  diffusion  flame.  Combust  Flame
+
+1997; 109 :314–22 .
+
+[68] Gore J , Minis I . Acoustically modulated free jet flames. 28th Aerospace Sciences
+
+Meeting . American Institute of Aeronautics and Astronautics; 1990 .
+
+[69] Carpio J , Sánchez-Sanz M , Fernández-Tarrazo E . Pinch-off in forced and non–
+forced, buoyant laminar jet diffusion flames. Combust Flame 2012; 159 :161–9 .
+[70] Jiang J , Jing L , Zhu M , Jiang X . A comparative study of instabilities in forced
+reacting plumes of nonpremixed flames. J. Energy Instit 2016; 89 :456–67 .
+[71] Sawarkar P , Sundararajan T , Srinivasan K . Effects of externally applied pul-
+sations on LPG flames at low and high fuel flow rates. Appl Thermal Eng
+2017; 111 :1664–73 .
+
+118
+
+N. Magina et al. / Progress in Energy and Combustion Science 70 (2019) 89–118
+
+[72] Kim TK , Park J , Shin HD . Mixing Mechanism near the Nozzle Exit in a Tone
+Excited Non-Premixed Jet Flame. Combust Sci Technol 1993; 89 :83–100 .
+[73] Oh SK , Shin HD . A visualization study on the effect of forcing amplitude
+on tone-excited isothermal jets and jet diffusion flames. Int J Energy Res
+1998; 22 :343–54 .
+
+[74] Magri L , Juniper MP . Global modes, receptivity, and sensitivity analysis of dif-
+fusion flames coupled with duct acoustics. J Fluid Mech 2014; 752 :237–65 .
+[75] Chen L-W , Zhang Y . Experimental observation of the nonlinear coupling of
+flame flow and acoustic wave. Flow Measurement Instrum 2015; 46 :12–17 .
+[76] Chen S , Zhao D , Li HKH , Ng TY , Jin X . Numerical study of dynamic response
+of a jet diffusion flame to standing waves in a longitudinal tube. Appl Thermal
+Eng 2017; 112 :1070–82 .
+
+[77] Illingworth SJ , Waugh IC , Juniper MP . Finding thermoacoustic limit cycles for
+
+a ducted Burke-Schumann flame. Proc Combust Instit 2013; 34 :911–20 .
+
+[78] Buckmaster  J ,  Clavin  P ,  Linan  A ,  Matalon  M ,  Peters  N ,  Sivashinsky  G ,
+et al. Combustion theory and modeling. Proc Combust Instit 2005; 30 :1–19 .
+
+[79] Buckmaster JD . Edge Flames. J Eng Math 1997; 31 :269–84 .
+[80] Pope S . The evolution of surfaces in turbulence. Int J Eng Sci 1988; 26 :445–69 .
+[81] Law C , Chung S . Steady state diffusion flame structure with Lewis number
+
+variations. Combust Sci Technol 1982; 29 :129–45 .
+
+[82] Chen LD , Seaba J , Roquemore W , Goss L . Buoyant diffusion flames. In: Sympo-
+
+sium (International) on Combustion . Elsevier; 1989. p. 677–84 .
+
+[104] Burke S , Schumann T . Diffusion flames. Industr Eng Chem 1928; 20 :998–1004 .
+[105] Preetham T , Sai K , Santosh H , Lieuwen T . Linear Response of Laminar Pre-
+mixed Flames to Flow Oscillations: Unsteady Stretch Effects. J. Propuls Power
+2010; 26 :524–32 .
+
+[106] Magina N. Dynamics of Harmonically Forced Non-premixed Flames (PhD The-
+
+sis). Georgia Institute of Technology. 2016.
+
+[107] Magina N , Acharya V , Lieuwen T . Response of non-premixed flames to bulk flow
+perturbations . Eastern States Section of the Combustion Institute; 2011 .
+[108] Shin D, Shanbhogue S, Lieuwen T. Premixed flame kinematics in an axially
+decaying, harmonically oscillating vorticity field, 44th AIAA/ASME/SAE/ASEE
+Joint Propulsion Conference & Exhibit. 2008.
+
+[109] Li Y-Q , Cao H-L , Zhou H-C , Zhou J-J , Liao X-Y . Research on dynamics of a lam-
+inar diffusion flame with bulk flow forcing. Energy. 2017; 141 :1300–12 .
+[110] Wang HY , Law CK , Lieuwen T . Linear Response of stretch-affected premixed
+
+flames to flow oscillations. Combust Flame 2009:889–95 .
+
+[111] Magina N , Lieuwen T . Three-dimensional and swirl effects on harmonically
+forced, non-premixed flames. 9th US National Combustion Meeting ; 2015 .
+[112] Acharya VS , Shin D-H , Lieuwen T . Premixed flames excited by helical dis-
+turbances: Flame wrinkling and heat release oscillations. J. Propuls Power
+2013; 29 :1282–91 .
+
+[113] Acharya V , Shin D-H , Lieuwen T . Swirl effects on harmonically excited, pre-
+
+mixed flame kinematics. Combust Flame 2012; 159 :1139–50 .
+
+[83] Wang Q , Yang J , Huang HW , Zhang Y , Zhao C . Three-dimensional investigation
+
+of the dynamics of a propane diffusion flame. Fuel 2014; 116 :448–54 .
+
+[84] Delichatsios MA . Air entrainment into buoyant jet flames and pool fires. Com-
+
+[114] Kaplan CR , Shaddix CR , Smyth KC . Computations of enhanced soot production
+in time-varying CH 4/air diffusion flames. Combust Flame 1996; 106 :392–405 .
+[115] Crocco L , Cheng S-I . Theory of combustion instability in liquid propellant rocket
+
+bust Flame 1987; 70 :33–46 .
+
+[85] Delichatsios M . Transition from momentum to buoyancy-controlled turbu-
+lent  jet  diffusion  flames  and  flame  height  relationships.  Combust  Flame
+1993; 92 :349–64 .
+
+[86] Farhat  S ,  Kleiner  D ,  Zhang  Y .  Jet  diffusion  flame  characteristics  in
+a  loudspeaker-induced  standing  wave.  Combust  Flame  2005; 142 :
+317–323 .
+
+[87] Balasubramanian K , Sujith R . Nonlinear response of diffusion flames to uni-
+
+form velocity disturbances. Combust Sci Technol 2008; 180 :418–36 .
+
+[88] Balasubramanian K , Sujith R . Non-normality and nonlinearity in combus-
+tion-acoustic interaction in diffusion flames. J Fluid Mech 2008; 594 :29–58 .
+[89] Tyagi  M ,  Chakravarthy  S ,  Sujith  R .  Unsteady  combustion  response  of  a
+ducted non-premixed flame and acoustic coupling. Combust Theory Model
+2007; 11 :205–26 .
+
+[90] Tyagi M , Jamadar N , Chakravarthy S . Oscillatory response of an idealized
+two-dimensional diffusion flame: Analytical and numerical study. Combust
+Flame 2007; 149 :271–85 .
+
+[91] Magri  L,  Balasubramanian  K,  Sujith  R,  Juniper  MP.  Non-normality  in
+combustion-acoustic interaction in diffusion flames: a critical revision. arXiv
+preprint arXiv: 13100238 . 2013.
+
+[92] Magina N , Shin D-H , Acharya V , Lieuwen T . Response of non-premixed flames
+
+to bulk flow perturbations. Proc Combust Instit 2013; 34 :963–71 .
+
+[93] Magina N , Acharya V , Sun T , Lieuwen T . Propagation, dissipation, and dis-
+persion of disturbances on harmonically forced, non-premixed flames. Proc
+Combust Instit 2015; 35 :1097–105 .
+
+[94] Miklav ˇci ˇc M , Wichman IS . Theoretical and numerical analysis of oscillating
+
+diffusion flames. Combust Flame 2016; 173 :99–105 .
+
+[95] Magina NA , Lieuwen TC . Effect of axial diffusion on the response of diffusion
+
+flames to axial flow perturbations. Combust Flame 2016; 167 :395–408 .
+
+[96] Magina N , Lieuwen T . Response of over-ventilated non-premixed flames to trans-
+verse flow perturbations . Eastern States Section of the Combustion Institute;
+2013 .
+
+[97] Peters N . Turbulent combustion . 1 ed. Cambridge University Press; 20 0 0 .
+[98] Do Carmo MP , Do Carmo MP . Differential geometry of curves and surfaces .
+
+Prentice-hall Englewood Cliffs; 1976 .
+
+[99] Ducruix S , Schuller T , Durox D , Candel S . Combustion dynamics and in-
+stabilities: Elementary coupling and driving mechanisms. J. Propuls Power
+2003; 19 :722–34 .
+
+[100] Kollmann  W ,  Chen  J .  Dynamics  of  the  flame  surface  area  in  turbulent
+non-premixed combustion. In: Symposium (International) on Combustion . El-
+sevier; 1994. p. 1091–8 .
+
+[101] Markstein G . Nonsteady flame propagation: published for and on behalf of ad-
+visory group for aeronautical research and development . Pergamon Press; 1964.
+North Atlantic Treaty Organization by .
+
+[102] Williams FA . Combustion theory . 2nd ed. Ca: Benjamin: Cummings Publishing
+
+Co.; 1985. Menlo Park .
+
+[103] Menon S , Jou W-H . Large-eddy simulations of combustion instability in an
+axisymmetric ramjet combustor. Combust Sci Technol. 1991; 75 :53–72 .
+
+motors . Cambridge Univ Press; 1956 .
+
+[116] Katta  V ,  Goss  L ,  Roquemore  W .  Effect  of  nonunity  Lewis  number  and
+finite-rate chemistry on the dynamics of a hydrogen-air jet diffusion flame.
+Combust Flame 1994; 96 :60–74 .
+
+Dr. Nicholas Magina received his PhD in Aerospace En-
+gineering at the Georgia Institute of Technology in 2016.
+His expertise is in combustion instabilities, non-premixed
+flames, and thermo-acoustic wave interactions. He works
+as a Research Engineer at General Electric Corporate Re-
+search in the Thermosciences team.
+
+Dr. Vishal Acharya is a Research Engineer in the School of
+Aerospace Engineering at Georgia Institute of Technology.
+He works in the Aerospace Combustion Lab where he per-
+forms computational and mathematical modeling of un-
+steady combustion phenomena.
+
+Dr. Tim Lieuwen is a Regents Professor, holder of the
+David S. Lewis, Jr., Chair in the School of Aerospace Engi-
+neering and the Executive Director of the Strategic Energy
+Institute at Georgia Tech. His research activities involve
+both theoretical and experimental work in combustion,
+flame-acoustic wave interactions, combustion noise, and
+turbulent combustion. Prof. Lieuwen is an elected mem-
+ber of the National Academy of Engineering, a Fellow of
+the ASME and AIAA, and has been a recipient of the AIAA
+Lawrence Sperry Award and the ASME Westinghouse Gold
+Medal.

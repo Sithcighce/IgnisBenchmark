@@ -1,0 +1,134 @@
+[
+  {
+    "question_text": "论文讨论了燃烧不稳定性与循环变异的控制，请从热力学和流体力学角度分析HCCI发动机循环变异的物理根源，推导基于残余气体温度和成分的循环间耦合模型，并解释强化学习如何通过奖励函数设计来抑制燃烧不稳定。",
+    "standard_answer": "HCCI发动机循环变异的主要物理根源包括：1) 热力学耦合：残余气体温度T_res的循环间波动，满足T_res(k+1) = f(T_res(k), CA50(k), m_res)；2) 化学成分耦合：残余气体中活性中间体浓度变化影响下一循环着火特性；3) 流体力学效应：湍流强度变化导致混合过程变异。基于残余气体的循环耦合模型可表示为：CA50(k+1) = g(IVC条件, T_res(k), [活性物种]_res(k)) + ε(k)，其中T_res(k) = (1-η)T_exh(k) + ηT_res(k-1)，η为残余气体分数，T_exh(k) = f(CA50(k), IMEP(k))。强化学习通过精心设计的奖励函数来抑制不稳定：R = -[w1·(CA50-CA50_target)² + w2·(COV_IMEP)² + w3·|PRR|_penalty]，其中COV_IMEP = σ_IMEP/μ_IMEP为循环变异系数，PRR为压力上升率惩罚项。Actor-critic架构中的策略网络π(a|s)学习最优控制动作（如SOI, EGR率），价值函数V(s)评估状态价值。通过Q-learning更新：Q(s,a) ← Q(s,a) + α[r + γmax_{a'}Q(s',a') - Q(s,a)]，智能体学习到在边界条件下（如爆震、失火极限）保持燃烧稳定的控制策略，将COV_IMEP从5-10%降低到3%以下，显著改善燃烧稳定性。",
+    "original_text": {
+      "1": "Cyclic combustion variability can be caused by 'random' external disturbances or cyclic variability of gas-fuel mixture conditions inside the cylinder. This is due to different time-varying phenomena inside the combustion chamber including flow turbulence, fuel injection variability, mixing dynamics, residual gas amount and temperature variability",
+      "2": "RL-based adaptive controllers are also used for ICEs and are shown to be capable of improving the accuracy and stability of ICE controllers to manage emissions and performance [74,75]. The adaptive approach can take advantage of both model-based and model-free RLs"
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题需要燃烧动力学、热力学循环分析、流体力学湍流效应、残余气体耦合模型推导以及强化学习在燃烧控制中的应用等专业知识，属于典型的燃烧工程与CFD交叉领域",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量优秀，物理机理分析准确，模型推导合理，强化学习应用解释清晰，与论文摘录内容一致，无需修改"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_461d3f2f",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Modeling--diagnostics--optimization--and-control-of-int_2022_Progress-in-Ene",
+      "paper_title": "Modeling--diagnostics--optimization--and-control-of-int_2022_Progress-in-Ene"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:37:53.815012",
+      "answer_length": 634
+    }
+  },
+  {
+    "question_text": "基于论文中关于灰箱建模的讨论，详细分析灰箱模型在内燃机燃烧相位控制中的优势。请解释如何将物理模型与机器学习模型结合来预测CA50（50%燃料燃烧时的曲轴转角），并推导一个结合热力学第一定律和神经网络补偿的灰箱模型方程。",
+    "standard_answer": "灰箱模型结合了物理模型的可解释性和机器学习模型处理复杂非线性关系的能力。对于CA50预测，物理模型可基于热力学第一定律建立基础关系：dQ/dθ = p(dV/dθ) + (γ/(γ-1))V(dp/dθ)，其中Q为热量释放，p为缸内压力，V为容积，γ为比热比。然而，纯物理模型难以准确捕捉残余气体、燃料混合等复杂效应。因此可构建灰箱模型：CA50_pred = f_physical(T_IVC, p_IVC, ϕ, EGR) + f_NN( residuals, mixing_parameters )。其中f_physical基于Arrhenius型反应速率方程：τ_ign = A·p^(-n)·exp(E_a/RT)，通过积分得到CA50的物理估计。f_NN作为补偿项，采用单隐层神经网络：f_NN = Σ[w_j·tanh(Σw_ij·x_i + b_j)] + b，输入包括循环间残余气体分数、当量比分布不均匀度等物理模型未充分捕捉的参数。训练时，先基于实验数据校准物理模型参数，然后固定物理模型，训练神经网络补偿剩余误差。这种结构既保持了物理可解释性，又通过数据驱动方法提高了预测精度，特别适用于瞬态工况下的燃烧相位控制。",
+    "original_text": {
+      "1": "Grey-box models are formed by combining black-box and physics-based submodels. Grey-box models can provide benefits from both black-box and physics-based (also called clear-box) models, by combining their components",
+      "2": "The grey-box model in [19] predicts combustion phasing (CA50p), adiabatic flame temperature (Tad), exhaust gas temperature (Texh), and IMEPp by using a physics-based model. Then the outputs of the physics-based model were fed into ANN-based models to predict engine-out emissions"
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题需要内燃机燃烧、热力学、燃烧相位控制、灰箱建模等专业领域知识，涉及物理模型推导、CA50预测、热力学第一定律应用等燃烧工程专业知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量优秀，无需修改。答案准确解释了灰箱模型在内燃机燃烧相位控制中的优势，正确推导了结合热力学第一定律和神经网络补偿的灰箱模型方程，公式准确，机理解释清晰，与论文引用内容一致"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_fd4c5fac",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Modeling--diagnostics--optimization--and-control-of-int_2022_Progress-in-Ene",
+      "paper_title": "Modeling--diagnostics--optimization--and-control-of-int_2022_Progress-in-Ene"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:37:54.692666",
+      "answer_length": 518
+    }
+  },
+  {
+    "question_text": "论文提到CFD模型与机器学习模型的对比，请从流体力学和传热学角度分析CFD在内燃机燃烧模拟中的局限性，并推导一个基于特征时间尺度的模型简化判据。具体说明机器学习如何通过特征提取来弥补CFD在实时控制中的不足。",
+    "standard_answer": "CFD模型在内燃机燃烧模拟中的主要流体力学局限性包括：1) 湍流时间尺度τ_turb ~ l/u' ~ 10^-3s与化学反应时间尺度τ_chem ~ 10^-6-10^-3s的强烈耦合，需要求解复杂的湍流-化学反应相互作用模型；2) 边界层传热计算需要精细网格，壁面函数引入误差，Nu = hL/k的准确预测困难；3) 多相流中燃油喷雾的破碎、蒸发过程涉及界面动力学，计算成本高昂。基于特征时间尺度的简化判据可推导为：如果系统主导时间尺度τ_dominant远大于控制时间间隔τ_control，则CFD可简化。对于实时控制，τ_control ~ 1ms，而缸内流动特征时间τ_flow ~ L/U ~ 2ms，化学反应时间τ_chem变化范围大。机器学习通过PCA等特征提取方法识别主导模态，将高维CFD数据投影到低维空间：Y = W^T·X，其中W由协方差矩阵Σ的特征向量组成。提取的特征如大尺度涡结构、温度梯度主成分等，可构建降阶模型dY/dt = f(Y, U)，计算成本从O(N^3)降至O(k^3)，k<<N。这样既保留了关键物理信息，又满足实时控制要求，特别适用于燃烧不稳定性预测和排放控制。",
+    "original_text": {
+      "1": "CFD models are capable of simulating the behavior of a fluid system by considering a wide range of submodels including fuel spray and breakup, turbulence, chemical reactions, heat transfer, fluid-surface interactions, multi-phase fluid interactions, etc",
+      "2": "ML-based models will need much less computational resources compared to typical CFD models to simulate ICE processes. CFD models can not be used for real-time engine control since the available computation time to estimate the engine process is only a couple of milliseconds in an ECU"
+    },
+    "type": "reasoning",
+    "difficulty": 5,
+    "topic": "CFD_modeling",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题需要燃烧工程、计算流体力学、传热学和机器学习交叉领域的专业知识，涉及内燃机燃烧模拟的CFD模型局限性分析、特征时间尺度判据推导以及机器学习特征提取方法",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量优秀，无需修改。答案准确分析了CFD在流体力学和传热学方面的局限性，合理推导了基于特征时间尺度的简化判据，并详细说明了机器学习通过特征提取弥补CFD实时控制不足的机制，与论文摘录内容一致。"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_f381862a",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Modeling--diagnostics--optimization--and-control-of-int_2022_Progress-in-Ene",
+      "paper_title": "Modeling--diagnostics--optimization--and-control-of-int_2022_Progress-in-Ene"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:37:54.907859",
+      "answer_length": 505
+    }
+  },
+  {
+    "question_text": "论文强调了排放形成建模的复杂性，请从化学反应动力学和传质过程角度分析NOx形成机理，推导扩展的Zeldovich机理的速率方程，并解释机器学习如何通过特征工程捕捉局部当量比和温度分布对NOx生成的影响。",
+    "standard_answer": "NOx形成主要遵循扩展的Zeldovich机理，涉及三个关键反应：O + N₂ ⇌ NO + N (k₁, k₋₁)，N + O₂ ⇌ NO + O (k₂, k₋₂)，N + OH ⇌ NO + H (k₃, k₋₃)。根据质量作用定律，NO的净生成速率方程为：d[NO]/dt = k₁[O][N₂] + k₂[N][O₂] + k₃[N][OH] - k₋₁[NO][N] - k₋₂[NO][O] - k₋₃[NO][H]。其中，氧原子浓度[O]通常由部分平衡假设确定：[O] = K_O(T)·[O₂]^{1/2}，K_O为温度相关的平衡常数。NOx生成强烈依赖于局部温度（呈指数关系，而非简单的T^6）和当量比，传统模型难以准确捕捉缸内不均匀性。机器学习通过特征工程提取关键参数：1) 局部当量比特征ϕ_local，通过主成分分析(PCA)从CFD数据提取；2) 温度分布矩特征：T_mean（均值）、T_variance（方差）、T_skewness（偏度）；3) 滞留时间特征τ_residence。构建的模型如人工神经网络(ANN)能够学习输入-输出关系，通过训练数据捕捉非线性效应。特征选择算法如基于相关性的模型降阶(MOR)可筛选出最相关的6-9个特征，模型能够准确预测瞬态工况下的NOx排放，均方根误差(RMSE)较传统模型显著降低，特别适用于发动机标定和实时控制。",
+    "original_text": {
+      "1": "Modeling pollutants formation and engine-out emissions particularly for transient conditions is still a major challenge for the ICE combustion researchers, particularly for unburned hydrocarbons [201], CO [203], soot [230], and particulate number [204,205]",
+      "2": "In our prior study [30], a multi input multi output (MIMO) ANN model was developed to predict heat release rate, IMEP, engine-out emissions, and maximum in-cylinder pressure. Feed Forward NN (FFNN) and Radial Basis Function NN (RBFNN) approaches were both used in this study."
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题需要燃烧化学、化学反应动力学、传质过程和NOx形成机理的专业知识，涉及扩展的Zeldovich机理的速率方程推导，以及局部当量比和温度分布对NOx生成的影响分析，这些都是燃烧工程和能源领域的核心专业知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "无需修改，问题和答案质量均符合要求"
+    },
+    "retry_count": 1,
+    "question_id": "deepseek_q_5612366c",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Modeling--diagnostics--optimization--and-control-of-int_2022_Progress-in-Ene",
+      "paper_title": "Modeling--diagnostics--optimization--and-control-of-int_2022_Progress-in-Ene"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:38:41.555081",
+      "answer_length": 595
+    }
+  }
+]

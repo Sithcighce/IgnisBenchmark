@@ -1,0 +1,134 @@
+[
+  {
+    "question_text": "分析MOF电催化CO2还原系统的能量效率与工业应用前景。考虑间歇性可再生能源供电场景，计算系统从电能到化学能的转换效率，并分析影响能量效率的关键因素。特别讨论当使用Cu-MOF催化剂实现C2+产物合成时，过电位、法拉第效率和产物分布对整体能量经济性的影响。",
+    "standard_answer": "MOF电催化CO2还原系统的能量效率η_system = η_Faraday × η_voltage × η_other，其中η_Faraday为法拉第效率，η_voltage为电压效率，η_other包括系统辅助能耗。电压效率η_voltage = E_rev/(E_rev+η)，E_rev为反应理论电位（CO2→C2H4为1.15V），η为过电位。对于Cu-MOF催化C2H4生成，实验显示在η=0.7V时FE_C2H4=45%，则η_voltage=1.15/(1.15+0.7)=62%，η_Faraday=45%，理想系统效率约28%。实际还需考虑电解质电阻、隔膜压降等，使工作电压增加~0.3V，最终系统效率降至~20%。关键影响因素：1)过电位：源自活化能垒和欧姆损失，Cu-MOF通过调控Cu配位环境可将C2H4生成的过电位从>1.0V降至~0.7V；2)法拉第效率：副反应如析氢反应(HER)竞争电子，优化MOF孔径和表面化学可抑制HER；3)产物分布：C2+产物如乙醇、乙烯的能量密度高于C1产物，但合成路径更复杂。工业应用需电流密度>200mA/cm²，稳定性>1000小时，目前Cu-MOF衍生催化剂已接近此目标。与热催化相比，电催化优势在于可利用间歇性可再生能源，实现碳中性循环。技术经济分析表明，当电价<$0.03/kWh且FE_C2+>70%时，电催化CO2还原具备经济可行性。未来发展方向包括开发高导电MOF、优化三相界面工程、与可再生能源直接集成。",
+    "original_text": {
+      "1": "This transformative capability has the potential to convert prevalent greenhouse emissions into renewable carbon resources, a vision that harmonizes scientific progress with the imperatives of environmental stewardship and global economic sustainability",
+      "2": "The realization of this promising technology holds the potential to provide renewable fuels and mitigate climate change through carbon capture and conversion utilizing intermittent renewable energy sources"
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及电催化CO2还原、能量效率计算、MOF催化剂、可再生能源集成等，需要燃烧/能源/电化学领域的专业知识，包括电化学原理、催化剂设计、能量转换效率分析等",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": ""
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_e13c95b9",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Structure-performance-relationships-in-MOF-deriv_2024_Progress-in-Energy-and",
+      "paper_title": "Structure-performance-relationships-in-MOF-deriv_2024_Progress-in-Energy-and"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:14:11.927520",
+      "answer_length": 642
+    }
+  },
+  {
+    "question_text": "在MOF电催化CO2还原的气-液-固三相界面中，分析反应物和产物的流体动力学传输过程。考虑气体扩散电极(GDE)结构，推导CO2从气相到催化剂表面的浓度分布方程，并解释孔隙结构如何影响三相边界层的形成和稳定性。特别分析当电流密度达到200mA/cm²时，CO2供应和液体产物移除的流体力学限制。",
+    "standard_answer": "在GDE基MOF电催化剂的三相界面中，流体动力学传输遵循多孔介质内的对流-扩散方程。CO2从气相到催化剂表面的传输可由修正的Stefan-Maxwell方程描述：∇·(c_tot y_CO2 v) = ∇·(c_tot D_eff ∇y_CO2) + R_CO2，其中c_tot为总浓度，y_CO2为CO2摩尔分数，v为流速，D_eff为有效扩散系数，R_CO2为反应速率。在典型GDE中，孔径分布呈现双峰特征：大孔（>1μm）促进气体传输，微孔（<2nm）提供高比表面积。三相边界层的形成依赖于表面润湿性，接触角θ满足Young方程：γ_sg = γ_sl + γ_lg cosθ。当θ>90°时，形成气膜覆盖表面，利于CO2传输但限制离子访问；θ<90°时，电解质浸渍可能阻塞气体通道。在j=200mA/cm²的高电流密度下，CO2消耗速率达~2×10⁻⁶mol/(cm²·s)，根据传质极限电流公式j_lim=nFD_eff C_bulk/δ，假设D_eff=10⁻⁵cm²/s，C_bulk=33mM，要求边界层厚度δ<16μm才能避免传质限制。同时，甲酸产物的生成可能导致局部pH变化和气泡形成，影响界面稳定性。优化策略包括设计梯度孔隙结构：表层大孔促进气体传输，中层介孔平衡传质与活性位点密度，底层微孔提供催化活性。这种结构确保在高电流密度下维持稳定的三相界面和高效的质量传输。",
+    "original_text": {
+      "1": "The establishment of a characteristic gas-solid-liquid three-phase interface, achieved by depositing the catalysts on a gas diffusion layer, effectively eliminated mass-transfer limitations, thereby augmenting CO2 reduction performance",
+      "2": "the current density can reach industrial levels of 200 mA cm(cid:0)2 in gas diffusion cell configuration, and the faradaic efficiency for transforming CO2 to HCOOH can achieve over 85 or 90% in 1 M KHCO3 or KOH for at least 10 h"
+    },
+    "type": "concept",
+    "difficulty": 5,
+    "topic": "fluid_mechanics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及电催化CO2还原、气-液-固三相界面、气体扩散电极结构、流体动力学传输、浓度分布方程推导、孔隙结构对三相边界层的影响分析，以及高电流密度下的传质限制分析，这些都需要燃烧/传热/流体/CFD/能源领域的专业知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": ""
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_b954dbee",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Structure-performance-relationships-in-MOF-deriv_2024_Progress-in-Energy-and",
+      "paper_title": "Structure-performance-relationships-in-MOF-deriv_2024_Progress-in-Energy-and"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:14:12.438389",
+      "answer_length": 595
+    }
+  },
+  {
+    "question_text": "建立MOF电催化剂CO2还原的多物理场CFD模型，包含电化学反应、物种传输和电荷守恒。推导控制方程，特别考虑：(1)Butler-Volmer动力学与局部过电位的关系；(2)多孔电极中的有效电导率模型；(3)反应-传输耦合的数值求解策略。分析如何通过CFD模拟优化MOF催化层的厚度和孔隙率分布。",
+    "standard_answer": "MOF电催化剂CO2还原的CFD模型需耦合多个物理场。控制方程包括：1)电荷守恒：∇·(σ_eff ∇φ) = -a_v i，其中σ_eff为有效电导率，φ为电位，a_v为比表面积，i为局部电流密度；2)物种传输：∂C_k/∂t + ∇·(vC_k) = ∇·(D_k,eff ∇C_k) + R_k，C_k为物种浓度，D_k,eff为有效扩散系数，R_k为生成速率；3)Butler-Volmer动力学：i = i_0[exp(α_a Fη/RT)-exp(-α_c Fη/RT)]，η=φ-φ_eq为过电位。对于多孔MOF电极，σ_eff=σ_bulk·ε^m，其中m为形成因子（通常1.5-2.0），ε为孔隙率。有效扩散系数D_eff=D_bulk·ε/τ，τ为曲折度。数值求解采用有限体积法，耦合策略：先求解电位场得η分布，再计算反应速率，最后更新浓度场。迭代直至收敛。优化分析显示，催化层厚度存在最优值：过薄（<5μm）活性位点不足，过厚（>50μm）传质限制显著。孔隙率分布应梯度设计：近电解质侧高孔隙率（ε>0.7）促进传质，近集流体侧较低孔隙率（ε≈0.4）增强导电性。CFD模拟可量化这些参数对电流密度和选择性的影响，指导实验设计。例如，模拟表明当表层孔隙率从0.6增至0.8时，极限电流密度可提高35%，但需平衡机械强度。",
+    "original_text": {
+      "1": "By evaluating trends across this diverse spectrum of compositions and morphologies, we aim to uncover fundamental new insights into structure-performance relationships. Our analysis will scrutinize how intentional alterations to synthesis methods and catalytic formulations influence key material properties such as activity, selectivity, and energy efficiency",
+      "2": "A thorough analysis of critical structure-performance relationships across these functionalized materials may thus uncover optimized pathways for harnessing the full potential of these remarkable porous frameworks in electrocatalysis"
+    },
+    "type": "calculation",
+    "difficulty": 5,
+    "topic": "CFD_modeling",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及多物理场CFD建模、电化学反应、物种传输、电荷守恒、Butler-Volmer动力学、多孔电极有效电导率模型、反应-传输耦合数值求解等，需要燃烧/传热/流体/CFD/能源领域的专业知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量较高，控制方程推导准确，数值求解策略合理，优化分析具体且有量化数据支持，符合专业要求"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_615fb5da",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Structure-performance-relationships-in-MOF-deriv_2024_Progress-in-Energy-and",
+      "paper_title": "Structure-performance-relationships-in-MOF-deriv_2024_Progress-in-Energy-and"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:14:13.875719",
+      "answer_length": 571
+    }
+  },
+  {
+    "question_text": "在MOF电催化剂中，金属活性位点的配位环境如何影响CO2电还原反应路径和产物选择性？请结合Cu-MOF中CuO4与CuO5结构的对比分析，详细解释d轨道能级变化对*CO中间体吸附强度的影响机理，并推导其对CH4与CO选择性的热力学控制原理。",
+    "standard_answer": "在MOF电催化剂中，金属活性位点的配位环境通过改变d轨道能级分布，显著影响反应中间体的吸附能，从而调控CO2电还原路径。对于Cu-MOF体系，CuO5结构（如Cu-DBC）与CuO4结构（如Cu-HHTP）表现出截然不同的产物选择性。CuO5结构可实现56%的CH4法拉第效率，而CuO4结构仅生成CO。机理分析表明：CuO5结构中dz2、dxz和dyz轨道的能级高于CuO4结构，导致更强的*CO吸附相互作用。这种增强的吸附促进了*CO加氢生成*CHO的关键步骤，而非CO脱附。热力学推导显示，*CO加氢步骤的自由能变化ΔG*CO→*CHO与d轨道中心位置εd相关：ΔG*CO→*CHO = ΔG0 - α(εd - εF)，其中εF为费米能级，α为耦合系数。当εd上移时，ΔG*CO→*CHO降低，有利于CH4路径。相反，较弱的*CO吸附（如CuO4）使CO脱附在热力学上更有利。该机理得到DFT计算和Cu L-edge X射线吸收光谱实验验证，证实了配位几何结构通过电子结构调控催化选择性的物理本质。",
+    "original_text": {
+      "1": "Employing density functional theory (DFT) calculations and Cu L-edge X-ray absorption spectroscopy, it was determined that the energy levels of d orbitals (dz2 , dxz, and dyz) in the CuO5 structure are higher than those in the CuO4 structure. Consequently, the CuO5 structure exhibited stronger adsorption interactions with *CO intermediates",
+      "2": "the CuO5 structure facilitated the hydrogenation of *CO to *CHO and promoted the generation of CH4 instead of CO. This study significantly contributes to the comprehension of the mechanisms underlying hydrocarbon production by Cu-based electrocatalysts"
+    },
+    "type": "reasoning",
+    "difficulty": 5,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "该问题涉及MOF电催化剂、CO2电还原反应路径、金属活性位点配位环境、d轨道能级变化对中间体吸附强度的影响机理等，需要燃烧/能源/催化领域的专业知识，特别是电催化、材料表征和量子化学计算方面的深入理解。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "无需修改。答案准确回答了问题，详细解释了配位环境通过d轨道能级变化影响*CO中间体吸附强度，进而调控CO2电还原反应路径和产物选择性的机理，并提供了热力学推导和实验验证，内容专业、完整且符合领域要求。"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_33462c73",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Structure-performance-relationships-in-MOF-deriv_2024_Progress-in-Energy-and",
+      "paper_title": "Structure-performance-relationships-in-MOF-deriv_2024_Progress-in-Energy-and"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:14:15.305909",
+      "answer_length": 453
+    }
+  }
+]

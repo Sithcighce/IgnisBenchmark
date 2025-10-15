@@ -1,0 +1,179 @@
+[
+  {
+    "question_text": "在火花点火发动机中，甲醇的快速层流燃烧速度和高抗稀释能力如何实现无节气门运行，并分析其对部分负荷效率的提升机制。",
+    "standard_answer": "甲醇的快速层流燃烧速度（LBV）和宽的可燃极限是其用于高EGR率或稀燃策略的关键优势。从湍流燃烧模型角度，湍流燃烧速度u_t与层流燃烧速度u_l和湍流速度u'相关。论文引用：'Methanol’s LBV is around 15% faster than the other alcohols for rich conditions'。此外，'这种增加的速度有助于更高的抗爆震性，同时允许更短的燃烧持续时间，这也提高了效率'。具体而言，在无节气门（WOT）运行中，负荷通过EGR率控制，这减少了泵气损失。计算显示，在制动平均有效压力（BMEP）为4 bar时，通过EGR稀释而非节气门节流来控制功率输出。这降低了进气歧管中的真空度，从而减少了与吸气相关的功。例如，在部分负荷（如BMEP=3.3 bar）下，WOT EGR策略使得制动热效率（BTE）比节气门化学当量操作提高约5-10%。其物理机制包括：较高的LBV使得在较稀或较高EGR率下仍能保持稳定燃烧（COV<10%）。从热力学循环分析，这更接近等容循环，提高了热效率。同时，较低的燃烧温度减少了热损失和NOx排放。",
+    "original_text": {
+      "1": "Methanol’s LBV is around 15% faster than the other alcohols for rich conditions'，以及'由于较快的预混燃烧，燃烧持续时间缩短，这减少了高温持续时间，从而抑制NOx形成。然而，挑战包括在冷启动时醛类排放较高，因为甲醛是甲醇氧化中的中间体'。",
+      "type": "reasoning",
+      "difficulty": 4,
+      "topic": "combustion_kinetics|CFD_modeling"
+    },
+    "5. 2": {
+      "question_text": "基于CFD模拟，详细解释甲醇喷雾在直接喷射发动机中的特性，包括其贯穿距离、雾化质量和闪沸现象的影响。",
+      "standard_answer": "甲醇的喷雾特性对其在直接喷射（DI）发动机中的混合气形成至关重要。论文指出：'For instance, if the spray changes in such a way that wall wetting would change, this will have an important effect on efficiency and emissions'。",
+      "type": "calculation",
+      "difficulty": 5,
+      "topic": "combustion_kinetics|fluid_mechanics"
+    },
+    "question_id": "batch_detail_q_c1d64657",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Methanol-as-a-fuel-for-internal-combust_2019_Progress-in-Energy-and-Combusti",
+      "paper_title": "Methanol-as-a-fuel-for-internal-combust_2019_Progress-in-Energy-and-Combusti"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T13:14:26.605039",
+      "batch_processing": true,
+      "answer_length": 488
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及火花点火发动机中的燃烧特性、层流燃烧速度、抗稀释能力、EGR策略、热效率分析等，需要燃烧学、发动机原理、热力学循环等领域的专业知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量良好，准确结合了甲醇燃烧特性与发动机运行机制，提供了具体数据和理论解释"
+    },
+    "merge_source": "questions"
+  },
+  {
+    "question_text": "基于甲醇的高汽化潜热和单阶段自燃特性，详细分析其在火花点火发动机中实现高压缩比和抗爆震性能的物理化学机理，并推导压缩比提升对热效率的影响关系。",
+    "standard_answer": "甲醇在火花点火发动机中实现高压缩比和抗爆震性能的机理主要源于其独特的物理化学特性。首先，甲醇的高汽化潜热（1100 kJ/kg，是汽油的6倍）在进气过程中产生显著的冷却效应，降低进气温度约40-50K，从而提高充气密度和降低压缩终了温度。其次，甲醇的化学抗爆震特性表现为单阶段自燃行为，缺乏负温度系数区域，这源于其氧化机制中退化链分支反应的重要性较低。从热力学角度分析，压缩比提升对热效率的影响遵循公式：η = 1 - (1/r^(γ-1))，其中r为压缩比，γ为比热比。当压缩比从10:1提升至12:1时，理论热效率提升约4-5个百分点。甲醇的高辛烷值（RON 109，MON 92）允许压缩比提升至12:1以上，而不会发生爆震。此外，甲醇的快速层流燃烧速度（在φ=1.0，1 bar，360K条件下约0.45 m/s，比异辛烷高30%）缩短了燃烧持续时间，减少了末端气体在高温高压下的滞留时间，进一步抑制了爆震倾向。这些特性共同作用使得甲醇发动机能够实现42%以上的制动热效率，相比汽油发动机提升25%以上。",
+    "original_text": {
+      "1": "Methanol's high heat of vaporization ('latent heat') combined with low stoichiometric air-fuel ratio (AFR) leads to high degrees of intake charge cooling as the fuel evaporates. This is especially true for engines with direct injection. The charge cooling not only leads to increased charge density, and thus higher volumetric efficiency, but also considerably reduces the propensity of the engine to knock",
+      "2": "Methanol has an elevated chemical resistance to autoignition. This is due to the single-stage autoignition behaviour of methanol. The autoignition of gasoline is typically a two-stage process, where at temperatures below 900 K, low-temperature oxidation of the mixture takes place. For methanol, degenerate chain branching reactions are of low importance in the oxidation mechanism. Consequently, methanol does not have a NTC region"
+    },
+    "type": "reasoning",
+    "difficulty": 5,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及甲醇在火花点火发动机中的物理化学机理、抗爆震性能、压缩比与热效率关系等，需要燃烧学、热力学、内燃机工程、燃料化学等专业领域知识。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": ""
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_0c7ee8aa",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Methanol-as-a-fuel-for-internal-combust_2019_Progress-in-Energy-and-Combusti",
+      "paper_title": "Methanol-as-a-fuel-for-internal-combust_2019_Progress-in-Energy-and-Combusti"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:39:23.594401",
+      "answer_length": 456
+    },
+    "merge_source": "question_reverse"
+  },
+  {
+    "question_text": "推导甲醇-空气混合物的层流燃烧速度随压力变化的函数关系，并分析在发动机压缩过程中（从10 bar到80 bar）燃烧速度的变化对火焰传播和燃烧持续期的影响。",
+    "standard_answer": "甲醇-空气混合物的层流燃烧速度随压力的变化遵循幂律关系：u_l = u_l0 * (p/p0)^n，其中u_l0为参考压力p0下的层流燃烧速度，n为压力指数。对于甲醇-空气混合物，在发动机相关条件下（φ=1.0，T=700-900K），压力指数n约为-0.2至-0.3。在压缩过程中，压力从10 bar增加到80 bar，层流燃烧速度将减少约35-45%。具体计算：当p从10 bar增加到80 bar（8倍压力增加），u_l = u_l0 * (80/10)^(-0.25) = u_l0 * 8^(-0.25) = u_l0 * 0.595，即减少约40.5%。这种燃烧速度的降低直接影响火焰传播和燃烧持续期。根据湍流燃烧速度模型u_t = u_l + u'，其中u'为湍流脉动速度，在发动机条件下u'通常为2-5 m/s。虽然湍流分量占主导，但层流燃烧速度的降低仍会导致总燃烧速度下降。燃烧持续期θ_burn与湍流燃烧速度成反比：θ_burn ∝ 1/u_t。当u_t从初始的6 m/s降低到4.5 m/s时，燃烧持续期将增加约33%。在曲轴转角上，这相当于燃烧持续期从25°CA增加到33°CA，可能影响发动机的热效率和排放特性。然而，甲醇的高初始层流燃烧速度（在标准条件下比汽油高30%）部分补偿了压力效应的影响。",
+    "original_text": {
+      "1": "The laminar burning velocity (LBV) of methanol-air mixtures obviously has a large impact on engine combustion. The initial stage of combustion in spark-ignition engines, is the quasi-laminar flame growth of the original ignition kernel. Thus, the duration of this phase is to the first order inversely proportional to the laminar burning velocity",
+      "2": "Reliable LBV data is relatively scarce in general, and even more so for different fuels at similar conditions. Thus, it is mostly necessary to extrapolate values using reported temperature or pressure dependencies. These dependencies in turn have typically been derived from a limited set of measurements where temperature or pressure has been changed"
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及层流燃烧速度的推导、压力变化对燃烧特性的影响、发动机压缩过程分析，需要燃烧学、热力学、发动机原理等专业领域的深入知识。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": ""
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_1679dea5",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Methanol-as-a-fuel-for-internal-combust_2019_Progress-in-Energy-and-Combusti",
+      "paper_title": "Methanol-as-a-fuel-for-internal-combust_2019_Progress-in-Energy-and-Combusti"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:39:23.705523",
+      "answer_length": 562
+    },
+    "merge_source": "question_reverse"
+  },
+  {
+    "question_text": "基于甲醇重整反应的热力学和动力学特性，建立发动机废气热回收重整系统的能量和质量平衡模型，分析不同重整路径（热分解 vs 蒸汽重整）对发动机系统效率的提升潜力。",
+    "standard_answer": "甲醇发动机废气热回收重整系统的建模需要综合考虑热力学和动力学特性。两种主要重整路径为：热分解 CH3OH → CO + 2H2 (ΔH = +90.7 kJ/mol) 和蒸汽重整 CH3OH + H2O → CO2 + 3H2 (ΔH = +49.4 kJ/mol)。建立能量平衡模型：Q_reform = m_fuel * ΔH_reform = η_heat_ex * m_exh * cp_exh * (T_exh_in - T_exh_out)，其中η_heat_ex为换热器效率，通常为0.7-0.85。质量平衡：对于热分解，1 kg甲醇产生0.875 kg合成气（LHV从20.09 MJ/kg增至23.9 MJ/kg，提升19%）；对于蒸汽重整，1 kg甲醇加0.563 kg水产生1.563 kg合成气（LHV增至22.7 MJ/kg，提升13%）。系统效率提升Δη_system = (η_engine_reform - η_engine_base) + (LHV_reform/LHV_MeOH - 1)*η_engine_reform。在部分负荷工况下，废气温度约500-700°C，足够驱动重整反应（热分解需>300°C，蒸汽重整需>200°C）。考虑实际约束，最大理论效率提升为：热分解路径15-20%，蒸汽重整路径10-15%。然而，实际应用中还需考虑重整器压降、催化剂活性衰减和系统复杂性等因素。最优操作策略是在中低负荷时最大化重整，利用合成气的宽可燃极限实现节气门全开运行，减少泵气损失；在高负荷时切换至液态甲醇直喷，保证功率密度。系统级仿真表明，综合效率可提升8-12%，同时显著降低甲醛和未燃碳氢排放。",
+    "original_text": {
+      "1": "Methanol can be made from anything containing carbon by thermochemical means, and the fact that methanol reforms at a temperature that is low enough to make significant use of low-grade exhaust heat even at low loads makes it exceptionally attractive in terms of waste heat recovery on internal combustion engines",
+      "2": "With reaction 13 (thermal decomposition), the LHV of the products is about 20% higher than of the reactant. With reaction 14 (steam reforming), this ratio is 13%. This results in a higher LHV of the resulting gaseous fuel, yielding an overall improvement in system efficiency when the gaseous fuel is used in the engine"
+    },
+    "type": "calculation",
+    "difficulty": 5,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及甲醇重整反应的热力学和动力学特性、发动机废气热回收系统建模、能量和质量平衡分析、不同重整路径对发动机效率的影响评估，需要燃烧工程、热力学、化学反应工程、内燃机系统优化等专业领域知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量优秀，无需修改。答案准确提供了两种重整路径的化学反应式、热力学参数、能量平衡模型、质量平衡计算、效率提升分析，并与提供的文献引用和论文摘录内容一致，体现了良好的专业性和完整性"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_546ed509",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Methanol-as-a-fuel-for-internal-combust_2019_Progress-in-Energy-and-Combusti",
+      "paper_title": "Methanol-as-a-fuel-for-internal-combust_2019_Progress-in-Energy-and-Combusti"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:39:26.260666",
+      "answer_length": 719
+    },
+    "merge_source": "question_reverse"
+  },
+  {
+    "question_text": "分析甲醇在压缩点火发动机中采用部分预混燃烧模式时，其高汽化潜热和长着火延迟期对混合过程、燃烧相位和排放形成的综合影响机制。",
+    "standard_answer": "甲醇在压缩点火发动机中采用部分预混燃烧模式时，其高汽化潜热和长着火延迟期对燃烧过程产生多重影响。首先，甲醇的高汽化潜热（1100 kJ/kg）在喷射和蒸发过程中吸收大量热量，显著降低局部混合气温度，这进一步延长了化学着火延迟期。甲醇的化学着火延迟期在发动机条件下通常比柴油长2-3倍，这为燃料-空气混合提供了充足的时间。混合过程方面，延长的着火延迟期允许燃料喷雾充分发展并与空气混合，形成更均匀的预混混合物。当φ=1.0，T=800K，p=60 bar条件下，甲醇的着火延迟期约为2-3 ms，而柴油仅为0.8-1.2 ms。这种延长的混合时间导致燃烧开始时混合物当量比更接近全局平均值，减少了局部浓区的形成。燃烧相位方面，由于大部分燃料在着火前已完成混合，燃烧主要表现为预混燃烧特征，压力升高率较高。通过优化喷油定时，可以将50%质量燃烧点控制在5-8°ATDC范围内，实现高效燃烧。排放形成方面，甲醇不含碳-碳键和芳香烃，从根本上消除了碳烟前体的形成。即使在不完全混合区域，由于燃料结合氧的存在（质量分数49.93%），局部当量比也倾向于偏稀，进一步抑制碳烟形成。NOx排放通过高比例EGR（可达40-50%）控制，而未燃甲醇和甲醛排放需要通过优化喷射策略和燃烧室设计来最小化。",
+    "original_text": {
+      "1": "Methanol's very low cetane number means that special measures are needed to enable the use of methanol in compression ignition (CI) engines. The high heat of vaporization and the high autoignition temperature of methanol both lead to long ignition delays, making it quite easy to get a long mixing time before autoignition",
+      "2": "This has been shown to result in the mixture being lean at autoignition, completely eliminating any possibility for soot formation. Unlike gasoline, methanol does not have components that only boil at high temperatures and thus can cause UHC emissions"
+    },
+    "type": "concept",
+    "difficulty": 5,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及压缩点火发动机、部分预混燃烧模式、燃料特性（高汽化潜热、着火延迟期）、混合过程、燃烧相位和排放形成机制，需要燃烧学、内燃机工程、燃料化学和排放控制等专业领域的深入知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "无需改进，问题和答案质量均较高。答案准确阐述了甲醇高汽化潜热和长着火延迟期对混合过程（延长混合时间形成更均匀混合物）、燃烧相位（预混燃烧特征、压力升高率）和排放（消除碳烟、控制NOx）的综合影响机制，与提供的文献引用和论文摘录内容一致"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_9f440764",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Methanol-as-a-fuel-for-internal-combust_2019_Progress-in-Energy-and-Combusti",
+      "paper_title": "Methanol-as-a-fuel-for-internal-combust_2019_Progress-in-Energy-and-Combusti"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:39:27.310049",
+      "answer_length": 541
+    },
+    "merge_source": "question_reverse"
+  }
+]

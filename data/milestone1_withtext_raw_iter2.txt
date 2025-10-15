@@ -1,0 +1,209 @@
+{
+  "questions": [
+    {
+      "question_text": "Explain why ANN models require large training datasets compared to other ML methods for ICE applications.",
+      "standard_answer": "ANNs require large training datasets because they operate as black-box models that must learn complex nonlinear input-output relationships entirely from data without physical understanding. The numerous interconnected weights in ANN architectures need sufficient data samples to properly converge and avoid overfitting.",
+      "original_text": {
+        "1": "ANN does not need physical understanding of the system, they operate as a 'black-box' model. The ANN model learns the input-output relationship from a given set of training data, performing a non-linear regression.",
+        "2": "Unlike the traditional ANNs that iteratively learn the output weights through a more time consuming process, ELM analytically calculates the output weights using a linear least squares approach."
+      },
+      "type": "reasoning",
+      "difficulty": 4,
+      "topic": "ML_modeling"
+    },
+    {
+      "question_text": "Calculate the activation function output y_j for a neuron receiving inputs x=[1.2, 0.8] with weights w=[0.5, -0.3] and sigmoid transfer function f(z)=1/(1+e^{-z}).",
+      "standard_answer": "First compute weighted sum z = (1.2*0.5) + (0.8*-0.3) = 0.6 - 0.24 = 0.36. Then apply sigmoid: y_j = 1/(1+e^{-0.36}) ≈ 0.589.",
+      "original_text": {
+        "1": "In an ANN, the input signals are multiplied by the adjustable weights and combined (summed) and then go through a transfer function (typically Sigmoid function) to form the desired output."
+      },
+      "type": "calculation",
+      "difficulty": 3,
+      "topic": "ANN_fundamentals"
+    },
+    {
+      "question_text": "Why does SVM regression require defining both regularization and insensitivity parameters?",
+      "standard_answer": "The regularization parameter controls the trade-off between training error minimization and margin maximization to prevent overfitting. The insensitivity parameter ε defines the acceptable error tolerance band where no penalty is applied, allowing some approximation flexibility.",
+      "original_text": {
+        "1": "SVM regression requires the insensitivity parameter ϵ. An error/margin trade-off parameter (also called the regularization parameter) is required for SVM classification and regression.",
+        "2": "Defining this regularization parameter requires addition effort to the model training and validation process."
+      },
+      "type": "reasoning",
+      "difficulty": 4,
+      "topic": "SVM_theory"
+    },
+    {
+      "question_text": "Describe two key advantages of ELM over traditional ANN for ICE modeling.",
+      "standard_answer": "1) Faster training speed since ELM randomly initializes hidden layer parameters and computes output weights analytically via Moore-Penrose inverse rather than iterative backpropagation. 2) Avoids local minima traps due to closed-form solution.",
+      "original_text": {
+        "1": "ELM is a powerful and promising regression and classification approach with an extremely fast training speed compared to conventional ANN methods.",
+        "2": "The other advantage of using ELM is its high capability of approximating the global optimum without getting trapped in local minima."
+      },
+      "type": "concept",
+      "difficulty": 3,
+      "topic": "ELM_advantages"
+    },
+    {
+      "question_text": "Compare the probabilistic prediction capabilities of RVM versus SVM.",
+      "standard_answer": "RVMs provide full probabilistic predictions using Bayesian inference to estimate posterior distributions, while SVMs only make point predictions. RVMs require fewer kernel functions than SVMs for distribution predictions.",
+      "original_text": {
+        "1": "RVM's prediction capability is similar to the SVM, but it also provides a distribution prediction.",
+        "2": "Due to their distribution (probabilistic) predictions, RVMs require much fewer kernel functions than SVMs."
+      },
+      "type": "concept",
+      "difficulty": 4,
+      "topic": "probabilistic_ML"
+    },
+    {
+      "question_text": "Explain why Gaussian Processes become computationally expensive for large ICE datasets.",
+      "standard_answer": "GP computational cost scales as O(n³) and storage as O(n²) with n data points, making them impractical for large ICE datasets. The kernel matrix inversion operation becomes prohibitively expensive.",
+      "original_text": {
+        "1": "The computational cost of GP increases by O (n3) and its storage requirement increases by O (n2) (where n is the number of points being interpolated). This leads to high computational costs for extremely large data sets."
+      },
+      "type": "reasoning",
+      "difficulty": 4,
+      "topic": "GP_limitations"
+    },
+    {
+      "question_text": "Derive the RKHS prediction equation starting from Mercer's theorem.",
+      "standard_answer": "Mercer's theorem states any positive definite kernel K(x,y) can be expressed as K(x,y)=Σλ_iφ_i(x)φ_i(y). For a function f(x)=Σα_iK(x_i,x) in RKHS, the inner product ⟨f,K(·,x)⟩=f(x) by reproducing property, yielding the prediction y=Σα_iK(x_i,x).",
+      "original_text": {
+        "1": "The Kernel function of SVM has to be a continuous symmetric kernel with a non-negative integral (Mercer's condition).",
+        "2": "Then, a non-negative definite K is called a reproducing kernel. One of the most important features of non-negative symmetric definite kernels is that for any non-negative symmetric definite kernel, there is a reproducing kernel Hilbert space that can be created based on it."
+      },
+      "type": "calculation",
+      "difficulty": 5,
+      "topic": "RKHS_math"
+    },
+    {
+      "question_text": "Why is k-means clustering sensitive to initial centroid selection?",
+      "standard_answer": "K-means uses iterative centroid updates that converge to local minima dependent on initial random centroids. Poor initialization can lead to suboptimal cluster partitions and requires multiple restarts.",
+      "original_text": {
+        "1": "The k-means method requires low computational effort and has a straightforward working principle which makes it easy to implement. The main input parameter of a k-means algorithm is the number of clusters (k) that the data points should be classified into where the mean values of the clusters are learned iteratively until the desired number of groups is achieved."
+      },
+      "type": "reasoning",
+      "difficulty": 3,
+      "topic": "clustering"
+    },
+    {
+      "question_text": "Explain how FCM clustering differs from k-means in handling ICE fault data.",
+      "standard_answer": "FCM assigns partial membership values between 0-1 to each data point across clusters using fuzzy logic, allowing overlapping fault classifications. K-means uses hard binary assignments that may not capture transitional fault states.",
+      "original_text": {
+        "1": "Fuzzy C-Means (FCM) is another commonly used unsupervised clustering techniques which unlike k-means can assign one data point to more than one cluster using a so-called a 'Membership Function' which reflects the fuzzy structure of this method."
+      },
+      "type": "concept",
+      "difficulty": 4,
+      "topic": "fuzzy_clustering"
+    },
+    {
+      "question_text": "Calculate the policy update in RL when action a_t yields reward r_t=0.8 with discount factor γ=0.9 and next state value V(s_{t+1})=1.2.",
+      "standard_answer": "Using TD(0) update: ΔV(s_t) = α[r_t + γV(s_{t+1}) - V(s_t)]. Assuming learning rate α=0.1 and current V(s_t)=1.0: ΔV(s_t) = 0.1[0.8 + 0.9*1.2 - 1.0] = 0.1*0.88 = 0.088.",
+      "original_text": {
+        "1": "Reinforcement learning (RL) is about learning how to take actions and reactions to maximize a numerical 'reward' signal. This is done using a platform, called 'agent' or 'learner' that explores, interacts with, and learns from the environment."
+      },
+      "type": "calculation",
+      "difficulty": 4,
+      "topic": "RL_updates"
+    },
+    {
+      "question_text": "Why does model-based RL reduce knock risk compared to model-free RL in ICE control?",
+      "standard_answer": "Model-based RL incorporates pre-trained knock limit knowledge into its policy, avoiding dangerous exploration actions. Model-free RL must discover knock limits through trial-and-error, risking engine damage.",
+      "original_text": {
+        "1": "Model-based RL takes advantage of a prepared model to make informed decisions and to take low-risk actions to achieve the desired outputs. The main advantage of using model-based RL is that it provides enough information about the environment to reduce the need for high-risk trial and errors."
+      },
+      "type": "reasoning",
+      "difficulty": 4,
+      "topic": "RL_safety"
+    },
+    {
+      "question_text": "Explain how SOM neural networks differ from feedforward ANNs.",
+      "standard_answer": "SOMs use competitive learning where neurons compete to respond to inputs, forming topological maps through neighborhood interactions. Feedforward ANNs use error backpropagation without competitive mechanisms or spatial organization.",
+      "original_text": {
+        "1": "The fundamental difference between SOM and conventional ANN is that unlike conventional ANNs that use error reduction cost functions, SOMs use competitive learning approaches to define the most important neurons associated with each input data."
+      },
+      "type": "concept",
+      "difficulty": 4,
+      "topic": "SOM_architecture"
+    },
+    {
+      "question_text": "Derive the Gaussian Process posterior mean equation given training inputs X and test input x*.",
+      "standard_answer": "The GP posterior mean is μ* = K(X*,X)[K(X,X)+σ²I]^{-1}y, where K is the kernel matrix and σ² is noise variance. This comes from conditioning the joint Gaussian distribution of training and test points.",
+      "original_text": {
+        "1": "A Gaussian distribution with zero-mean is defined as the function to predict f(u) that relates the model input u to the output. This results in a multivariate Gaussian function of given variables."
+      },
+      "type": "calculation",
+      "difficulty": 5,
+      "topic": "GP_math"
+    },
+    {
+      "question_text": "Why is UGM clustering suitable for combustion noise diagnostics?",
+      "standard_answer": "UGM's soft probabilistic assignments can capture gradual transitions between normal and abnormal combustion noise patterns better than hard clustering methods like k-means.",
+      "original_text": {
+        "1": "UGM classifies the data points that belong to each distribution into the corresponding groups which results in soft clustering of the data points. This makes UGMs more suitable for unsupervised ICE applications that involve classes with less distinguishable boundaries such as unsupervised engine combustion diagnostics using engine noise measurements."
+      },
+      "type": "reasoning",
+      "difficulty": 4,
+      "topic": "UGM_applications"
+    },
+    {
+      "question_text": "Calculate the ELM output for input x=[0.5, -0.2] with random hidden weights a=[0.1, -0.4], b=0.3, β=[1.2], using sigmoid activation.",
+      "standard_answer": "Hidden node output h = A(a·x + b) = 1/(1+exp(-(0.1*0.5 + -0.4*-0.2 + 0.3))) ≈ 0.668. Final output f(x) = βh = 1.2*0.668 ≈ 0.802.",
+      "original_text": {
+        "1": "The predicted output becomes f(x) = Σβ_i h_i(x) = Σβ_i A(a_i, b_i, x) = h(x)β where A is the hidden nodes activation function, b_i is the bias, and a_i is the vector of input weights."
+      },
+      "type": "calculation",
+      "difficulty": 3,
+      "topic": "ELM_calculation"
+    },
+    {
+      "question_text": "Explain why SVM kernel functions must satisfy Mercer's condition.",
+      "standard_answer": "Mercer's condition (positive semi-definite kernel matrix) ensures the kernel corresponds to a valid inner product in some feature space, enabling the kernel trick for nonlinear SVM without explicit feature mapping.",
+      "original_text": {
+        "1": "The Kernel function of SVM has to be a continuous symmetric kernel with a non-negative integral (Mercer's condition). This limits the selection of SVM kernel functions."
+      },
+      "type": "reasoning",
+      "difficulty": 5,
+      "topic": "SVM_kernels"
+    },
+    {
+      "question_text": "Compare computational complexity of ANN vs ELM training.",
+      "standard_answer": "ANN training via backpropagation requires O(N*e*d) operations for N samples, e epochs, and d weights updated iteratively. ELM computes output weights analytically in O(N^2*h) for h hidden nodes via matrix pseudoinverse.",
+      "original_text": {
+        "1": "Unlike the traditional ANNs that iteratively learn the output weights through a more time consuming process, ELM analytically calculates the output weights by an inversion method called Moore-Penrose."
+      },
+      "type": "concept",
+      "difficulty": 4,
+      "topic": "training_complexity"
+    },
+    {
+      "question_text": "Explain how RL differs from ILC for ICE transient control.",
+      "standard_answer": "RL maximizes cumulative rewards through policy optimization over state-action space, while ILC minimizes tracking error by refining control signals cycle-to-cycle for repetitive transients.",
+      "original_text": {
+        "1": "Amongst all of the conventional control approaches that are used to control ICEs, there are similarities between RL and ILC for a repetitive disturbance as they both use a trial and error technique to iteratively remove the error between the desired and the actual output."
+      },
+      "type": "concept",
+      "difficulty": 4,
+      "topic": "control_comparison"
+    },
+    {
+      "question_text": "Derive the EM algorithm update for GMM cluster means.",
+      "standard_answer": "In E-step, compute responsibilities γ(z_nk) = π_kN(x_n|μ_k,Σ_k)/Σ_jπ_jN(x_n|μ_j,Σ_j). In M-step, update mean μ_k = (Σ_nγ(z_nk)x_n)/(Σ_nγ(z_nk)).",
+      "original_text": {
+        "1": "One disadvantage of RVMs compared to SVMs is that RVMs training method is based on an expectation maximization (EM) algorithm."
+      },
+      "type": "calculation",
+      "difficulty": 5,
+      "topic": "GMM_updates"
+    },
+    {
+      "question_text": "Why does ANN risk overfitting more than ELM for ICE emission modeling?",
+      "standard_answer": "ANNs tune all weights iteratively to minimize training error, potentially fitting noise. ELM fixes hidden layer weights randomly and only optimizes output weights via least squares regularization.",
+      "original_text": {
+        "1": "Overfitting risk is high for ANNs due to iterative training of all weights. ELM randomly initializes hidden layer parameters and computes output weights analytically."
+      },
+      "type": "reasoning",
+      "difficulty": 4,
+      "topic": "overfitting"
+    }
+  ]
+}

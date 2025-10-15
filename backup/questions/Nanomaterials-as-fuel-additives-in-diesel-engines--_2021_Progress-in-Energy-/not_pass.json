@@ -1,0 +1,39 @@
+[
+  {
+    "question_text": "从多物理场耦合角度，建立一个简化的数学模型来描述纳米颗粒在柴油机燃烧室中的催化活性，特别是阐述CeO2纳米颗粒通过氧化还原反应降低碳烟点火温度的具体化学动力学过程，包括关键的中间产物和最终产物的演化路径。",
+    "standard_answer": "为了从多物理场耦合角度建立纳米颗粒催化活性的数学模型，需要考虑质量守恒、能量守恒和化学动力学方程的耦合。\n\n**1. 质量守恒方程**\n对于CeO2纳米颗粒，其氧缓冲能力可以通过以下氧化还原循环来描述：\n\n**CeO2的氧缓冲机制**\nCeO2纳米颗粒具有在化学计量CeO2（+4价态）和Ce2O3（+3价态）之间通过相对较低氧化还原电位进行转变：2 CeO2 ↔ Ce2O3 + ½ O2\n\n**具体的反应路径**：\n1. **与碳烟反应**：(4x + 2y) CeO2 + CxH2y → (2x + y) Ce2O3 + x CO2 + y H2O\n2. **与CO反应**：2 CeO2 + CO → Ce2O3 + CO2  \n3. **NOx还原**：Ce2O3 + NO → 2 CeO2 + ½ N2\n\n**数学模型建立**\n考虑一个简化的控制体积，包含纳米颗粒和周围的气相物质。\n\n**控制方程**\n- **氧空位浓度变化率**：d[Vo]/dt = k1[Ce3+] - k2[Ce4+][O2]\n\n**能量守恒方程**\nρc_p ∂T/∂t = ∇·(k∇T) + Q_chem + Q_rad\n\n其中：\n- [Vo]为氧空位浓度\n- k1、k2为反应速率常数\n\n**化学动力学模型**\n采用ReaxFF反应力场方法可以更准确地描述这些反应。\n\n**多物理场耦合求解**\n该模型需要耦合求解：\n1. **流体动力学方程**：Navier-Stokes方程描述气相流动。\n\n**数值求解方法**\n可采用有限体积法或有限元法进行离散化求解。\n\n**关键参数影响分析**\n- **颗粒尺寸影响**：较小的纳米颗粒具有更高的比表面积，从而表现出更高的催化活性。\n\n**物理意义阐释**\n这个数学模型揭示了纳米颗粒催化活性的本质：通过可逆的氧化还原反应，纳米颗粒能够提供或吸收氧，从而促进不完全燃烧产物的进一步氧化。",
+    "original_text": {
+      "1": "CeO2 NPs have the ability to undergo a transformation from the stoichiometric CeO2（+4）valence state to the Ce2O3（+3）state and vice versa via a relatively low redox potential.",
+      "2": "These NMs can either provide oxygen and react directly with CO and HC molecules and with C atoms in the soot by oxidation mechanisms.",
+      "type": "calculation",
+      "difficulty": 5,
+      "topic": "CFD_modeling"
+    },
+    "question_id": "batch_detail_q_b781110e",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Nanomaterials-as-fuel-additives-in-diesel-engines--_2021_Progress-in-Energy-",
+      "paper_title": "Nanomaterials-as-fuel-additives-in-diesel-engines--_2021_Progress-in-Energy-"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T14:22:31.064084",
+      "batch_processing": true,
+      "answer_length": 815
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题需要燃烧学、催化化学、多物理场耦合建模、化学动力学等专业领域知识，属于典型的燃烧/能源/CFD领域专业问题",
+      "answer_correct": false,
+      "answer_issues": [
+        "too_brief",
+        "unsupported"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案过于简短，缺乏对具体化学动力学过程的详细描述，未充分阐述中间产物和最终产物的演化路径，需要补充更多化学反应机理和动力学参数的细节"
+    }
+  }
+]

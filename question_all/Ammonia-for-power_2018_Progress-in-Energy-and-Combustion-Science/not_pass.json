@@ -1,0 +1,40 @@
+[
+  {
+    "question_text": "Analyze the NOx formation pathways in ammonia-methane co-fired gas turbine combustors, comparing the contributions of thermal, prompt, and fuel-NOx mechanisms at different equivalence ratios.",
+    "standard_answer": "In ammonia-methane co-firing, NOx formation occurs through three dominant pathways: 1) Fuel-NOx (~90% contribution): NH3 oxidation forms NH2 radicals that primarily react via NH2 + O → HNO + H → NO; 2) Thermal-NOx (<5%): Becomes relevant above 1800K via N2 + O ↔ N + NO, but is suppressed by ammonia's lower flame temperatures; 3) Prompt-NOx (~5-10%): Forms through CH + N2 → HCN + N in CH4-rich zones. At lean conditions (φ=0.6-0.9), Fuel-NOx dominates (>80%) due to abundant O radicals oxidizing NHx species. Near stoichiometric (φ=1.0), the reburn mechanism NH + NO → N2 + OH becomes significant, reducing NOx by ~30%. In rich conditions (φ=1.1-1.3), unburned NH3 acts as a reducing agent via NH2 + NO → N2 + H2O, but N2O formation increases through NH + NO → N2O + H. Measurements show peak NOx of ~600ppm at φ=1.0 dropping to ~200ppm at φ=1.2.",
+    "original_text": {
+      "1": "At these low temperatures, NH3 oxidation occurred in a premixed reaction zone, as sufficiently high temperatures led to the development of a non-premixed reaction zone that produces significantly less NO than the equivalent premixed system",
+      "2": "Both simulations and experiments showed that adding NH3 to CH4-air mixtures resulted in an increase in NOx concentration, especially at stoichiometric conditions"
+    },
+    "type": "reasoning",
+    "difficulty": 5,
+    "topic": "combustion_kinetics",
+    "question_id": "batch_detail_q_96d29c35",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Ammonia-for-power_2018_Progress-in-Energy-and-Combustion-Science",
+      "paper_title": "Ammonia-for-power_2018_Progress-in-Energy-and-Combustion-Science"
+    },
+    "metadata": {
+      "generation_model": "openai/Pro/deepseek-ai/DeepSeek-V3",
+      "quality_check_model": "openai/Pro/deepseek-ai/DeepSeek-V3",
+      "created_at": "2025-10-15T07:24:28.926520",
+      "batch_processing": true,
+      "answer_length": 848
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及燃烧化学中的NOx形成机理、气体涡轮燃烧室特性及当量比影响，需要燃烧学/能源工程领域的专业知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案需修正：1) Fuel-NOx贡献率90%与原文'especially at stoichiometric conditions'矛盾；2) 缺乏对'non-premixed reaction zone produces significantly less NO'现象的讨论；3) N2O形成路径需引用原文支持"
+    },
+    "merge_source": "questions_copy"
+  }
+]

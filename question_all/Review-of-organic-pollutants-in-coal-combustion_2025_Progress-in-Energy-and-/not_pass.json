@@ -1,0 +1,40 @@
+[
+  {
+    "question_text": "根据论文中关于CPM形成机制的分析，请详细推导CPM中有机组分和无机组分在不同温度条件下的相变行为差异，并建立包含组分差异的数学模型描述CPM形成速率与烟气温度、有机前体浓度和停留时间的关系。需分别考虑有机组分和无机组分的均匀成核和非均匀凝结两种机制，特别关注煤燃烧过程中复杂的组分相互作用。",
+    "standard_answer": "根据论文分析，CPM形成主要基于'蒸发-凝结'机制。论文明确指出：'CPM is predominantly present in gaseous form in the flue. Its production is not significant until the flue gas temperature decreases to around 50°C, which occurs when the gas leaves the chimney (stack)'（原文引用1）。这表明温度对CPM形成的决定性作用。\n\n有机组分和无机组分的相变行为存在显著差异：'Since the inorganic components in CPM are more sensitive than the organic components to a reduction in flue gas temperature, they will be found in greater proportion relative to the organic components at lower temperatures'（原文引用2）。在煤燃烧实际过程中，无机组分（如Na₂SO₄、NaCl、CaCO₃等）具有较低的饱和蒸气压和较高的相变敏感性，在较高温度下即可发生凝结；而有机组分（如烷烃、酯类、芳香族化合物等）具有较高的饱和蒸气压和较低的相变敏感性，需要在更低温度下才能凝结。\n\n建立数学模型时，需分别考虑有机组分和无机组分的相变特性。对于均匀成核，有机组分和无机组分的成核速率可分别表示为：\nJ_org = A_org·exp[-16πγ_org³v_org²/(3k³T³(lnS_org)²)]\nJ_inorg = A_inorg·exp[-16πγ_inorg³v_inorg²/(3k³T³(lnS_inorg)²)]\n其中γ为表面张力，v为分子体积，S为过饱和度，T为温度，下标org和inorg分别表示有机和无机组分。\n\n对于非均匀凝结在飞灰和液滴上的过程，有机组分和无机组分的凝结速率可分别表示为：\ndC_org/dt = -k_cond,org·A_s·(C_org-C_sat,org)\ndC_inorg/dt = -k_cond,inorg·A_s·(C_inorg-C_sat,inorg)\n其中k_cond为凝结系数，A_s为可用表面积，C为气相浓度，C_sat为饱和浓度。\n\n综合模型应考虑温度梯度dT/dx、前体浓度分布和停留时间τ，最终CPM形成总量可积分表示为：\nM_CPM = ∫[J_org(T(x)) + J_inorg(T(x)) + J_het,org(T(x)) + J_het,inorg(T(x))]·τ·[C_0,org + C_0,inorg] dx\n其中v为烟气流速。该模型能有效预测在不同操作条件下CPM的排放特性及其组分分布，并考虑了煤燃烧中复杂的组分相互作用。",
+    "original_text": {
+      "1": "CPM is predominantly present in gaseous form in the flue. Its production is not significant until the flue gas temperature decreases to around 50°C, which occurs when the gas leaves the chimney (stack)",
+      "2": "Since the inorganic components in CPM are more sensitive than the organic components to a reduction in flue gas temperature, they will be found in greater proportion relative to the organic components at lower temperatures"
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及煤燃烧过程中CPM（可凝结颗粒物）的形成机制、有机/无机组分相变行为、成核凝结机理以及数学模型建立，需要燃烧学、传热学、流体力学、热力学和化学反应工程等能源领域的专业知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported",
+        "fundamental_error"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在严重问题：1）原文引用与论文摘录内容不符，引用1和2在提供的论文摘录中未找到对应内容；2）数学模型中的积分表达式M_CPM = ∫[J_org(T(x)) + J_inorg(T(x)) + J_het,org(T(x)) + J_het,inorg(T(x))]·τ·[C_0,org + C_0,inorg] dx存在维度不一致问题，成核速率J的单位与浓度C的单位相乘后积分无法得到质量M；3）对有机/无机组分相变行为的描述缺乏论文支持证据。建议：重新查阅论文原文，确保引用准确；修正数学模型中的单位一致性；提供具体的实验数据或文献支持组分相变差异的论述。"
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_e0f48540",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Review-of-organic-pollutants-in-coal-combustion_2025_Progress-in-Energy-and-",
+      "paper_title": "Review-of-organic-pollutants-in-coal-combustion_2025_Progress-in-Energy-and-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:22:47.274441",
+      "answer_length": 1262
+    },
+    "merge_source": "question_reverse"
+  }
+]

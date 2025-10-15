@@ -1,0 +1,181 @@
+[
+  {
+    "question_text": "在粒子基高温热化学储能（TCES）反应器中，热质传递现象对反应动力学和能量转换效率有显著影响。请基于论文内容，详细分析在固定床反应器和移动床反应器中，颗粒-气体-壁面相互作用如何影响**有效导热系数**和**反应速率**，并阐述在反应器设计时如何通过优化这些相互作用来提升储能密度和循环稳定性。",
+    "standard_answer": "在TCES反应器中，热质传递现象直接影响反应动力学和能量转换效率。在固定床反应器中，颗粒床是静止的，气体反应物通过颗粒间的空隙区域，此时有效导热系数受颗粒堆积结构、气体组成和温度分布影响。根据傅里叶定律，有效导热系数可表达为λ_eff = λ_g + λ_r + λ_c，其中λ_g是气体导热贡献，λ_r是辐射传热贡献，λ_c是接触传热贡献。颗粒-气体间的对流传热系数h_g可由Nusselt数关联式Nu = h_g d_p / λ_g表示，其中d_p是颗粒直径。实验数据显示，固定床中由于颗粒-壁面热阻较高，导致床层温度分布不均，例如在CuO/Cu2O固定床反应器中，颗粒床温度梯度可达200°C以上，这会显著降低反应速率，因为反应速率常数k(T) = A exp(-E_a / RT)，当局部温度低于反应活化温度时，反应速率急剧下降。而在移动床反应器中，颗粒在重力作用下缓慢移动，颗粒-壁面摩擦相互作用会降低近壁区域的颗粒填充分数和速度，进而减小有效导热系数。此外，在移动床中，颗粒-颗粒碰撞和气体曳力作用会导致局部空隙率变化，影响气体反应物扩散速率，从而改变反应进程。优化策略包括：1) 采用高导热陶瓷材料（如SiC）作为反应器壁面以增强热传导；2) 设计逆流气体流动模式以实现热回收，减少预热能耗；3) 引入纳米添加剂（如Al2O3）以抑制颗粒烧结和团聚，维持高比表面积。通过CFD-DEM多尺度模型模拟发现，当颗粒填充分数从0.6增加到0.75时，有效导热系数可提升约40%。同时，通过控制颗粒停留时间分布（Residence Time Distribution, RTD），可确保反应物在高温区停留足够时间以达到高转化率（>90%）。",
+    "original_text": {
+      "1": "在固定床反应器中，固体反应物可假设为静止的，而气体反应物通过由堆积颗粒形成的空隙区域，扩散（由Fick扩散定律控制）和渗透（由Darcy定律控制）可用于表征填充床中的传递损失，而在移动床反应器中气体-固体相互作用因颗粒运动而变得更加复杂。",
+      "2": "在流体化床反应器中，固体颗粒的运动可假设为类流体。在稀相流体化区域，颗粒可假设为完全夹带在气体流动中。",
+      "type": "reasoning",
+      "difficulty": 4,
+      "topic": "heat_transfer"
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "CFD_modeling",
+    "question_id": "batch_detail_q_ad747d77",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Particle-based-high-temperature-thermochemica_2024_Progress-in-Energy-and-Co",
+      "paper_title": "Particle-based-high-temperature-thermochemica_2024_Progress-in-Energy-and-Co"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T14:56:43.090915",
+      "batch_processing": true,
+      "answer_length": 723
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "该问题需要深入的燃烧/传热/流体专业知识，涉及热质传递现象、反应动力学、固定床/移动床反应器设计、有效导热系数公式推导等专业领域知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量较高，技术细节丰富且与原文引用一致，建议保持"
+    },
+    "merge_source": "questions"
+  },
+  {
+    "question_text": "论文指出，锰氧化物（MnOx）在TCES应用中因其多价态和丰富性而常用。请推导锰氧化物从Mn2O3到Mn3O4的热还原反应（Mn2O3 ↔ 2/3Mn3O4 + 1/6O2）的动力学模型，包括确定活化能E_a、指前因子A和反应机理函数f(α)。假设实验数据来自热重分析（TGA），加热速率为5-20°C/min，温度范围500-1500°C。",
+    "standard_answer": "锰氧化物的热还原反应动力学可通过Arrhenius方程dα/dt = k(T) f(α) h(p, p_eq)描述，其中k(T) = A exp(-E_a / RT)，f(α)取决于反应机制（例如，成核模型、扩散模型或收缩几何模型）。根据论文中Botas等人的研究（图9），反应分为两个阶段：第一阶段（Mn2O3→Mn3O4）在约500°C开始，第二阶段（Mn3O4→MnO）在1200°C以上开始。对于Mn2O3/Mn3O4反应，表2显示可能的f(α)函数，如Avrami–Erofeev模型f(α) = m(1-α)[-ln(1-α)]^(1-1/m)，其中m通常为2-4。通过拟合TGA数据，第一阶段活化能E_a为246-254 kJ/mol，指前因子A为1.45×10^8 s^-1。压力依赖函数h(p, p_eq) = (1 - p/p_eq)^n，其中n为常数。具体计算时，使用积分法或微分法处理α–t数据。例如，当使用积分法时，G(α) = ∫dα/f(α) = A/β ∫exp(-E_a / RT) dT，其中β为加热速率。当p(O2) < 0.05 bar时，反应速率最大化。",
+    "original_text": {
+      "1": "Botas et al. [89] investigated the chemical kinetics of the thermal reduction of Mn2O3 reactions using the thermogravimetric device as shown in Fig. 9a. The mass change of Mn2O3 particles at various heat rate of 5–20°C⋅min^-1 in Fig. 9b clearly identified two chemical reactions。",
+      "2": "The first reaction onsets at about 500°C, while the heating process ended at 1500°C。",
+      "type": "concept",
+      "difficulty": 3,
+      "topic": "combustion_kinetics"
+    },
+    "type": "reasoning",
+    "difficulty": 5,
+    "topic": "fluid_mechanics",
+    "question_id": "batch_detail_q_78a3cac8",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Particle-based-high-temperature-thermochemica_2024_Progress-in-Energy-and-Co",
+      "paper_title": "Particle-based-high-temperature-thermochemica_2024_Progress-in-Energy-and-Co"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T14:56:52.511767",
+      "batch_processing": true,
+      "answer_length": 498
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "该问题需要深入的热化学动力学专业知识，涉及Arrhenius方程、反应机理函数、活化能计算等燃烧和热化学能量储存领域的专业知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量良好，提供了详细的动力学模型推导和参数，且准确引用了原文数据"
+    },
+    "merge_source": "questions"
+  },
+  {
+    "question_text": "论文比较了五种TCES反应器的优缺点，其中固定床和移动床在热传递速率和连续操作能力上有显著差异。请从**流体力学和颗粒动力学**角度，详细分析移动床反应器如何通过重力驱动颗粒流动和逆流气体设计来提升能量转换效率，并解释其在高功率系统（如MW级）集成中的挑战。",
+    "standard_answer": "五种TCES反应器（固定床、移动床、旋转床、流体化床和携带床）在流体力学和颗粒动力学方面有本质区别。固定床中颗粒静止，气体流动受Darcy–Forchheimer方程控制：-∇P = (μ/K) v + β ρ v^2，其中K为渗透率，β为惯性系数。移动床中，颗粒在重力作用下以速度v_s流动，气体以速度v_g逆流流动，这导致气-固相对速度增加，从而增强对流传热系数h_g ∝ (v_g - v_s)^n，其中n取决于流动状态。在移动床的垂直管设计中，质量流率需满足̇m_s C_p,s = ̇m_g C_p,g，以实现热平衡。然而，颗粒-壁面摩擦会导致近壁区域颗粒速度降低，形成速度分布不均。例如，实验观测到在管中心区域v_s ≈ 0.1 m/s，而近壁处v_s下降至0.02 m/s，这会导致近壁温度较中心低100-200°C，这会限制整体反应速率。此外，移动床允许连续颗粒处理，但需要控制颗粒停留时间以确保充分转化。挑战包括：1) 高温下颗粒团聚导致流动阻塞；2) 颗粒-壁面碰撞引起磨损，增加维护成本；3) 在MW级系统中，维持均匀温度分布和避免局部过热是关键。通过DEM模拟发现，当管倾角从30°增至45°时，颗粒质量流率可提高约30%，但需平衡压降和能耗。",
+    "original_text": {
+      "1": "Fixed bed reactors are suitable for particles of any size, and straightforward to design, construct, and integrate into systems. However, the difficulty in scaling up, heat transfer limitation, and non-continuous operation are major challenges.",
+      "2": "Moving bed reactors allow the particles to move into and out of the reactor chambers with different mass flow rates and exhibit improved heat transfer and energy storage capabilities compared to fixed bed reactors。",
+      "type": "concept",
+      "difficulty": 4,
+      "topic": "energy_systems"
+    },
+    "question_id": "batch_detail_q_ed75acb8",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Particle-based-high-temperature-thermochemica_2024_Progress-in-Energy-and-Co",
+      "paper_title": "Particle-based-high-temperature-thermochemica_2024_Progress-in-Energy-and-Co"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T14:57:03.817767",
+      "batch_processing": true,
+      "answer_length": 534
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及高温热化学能量存储反应器的流体力学和颗粒动力学分析，需要燃烧/传热/流体/CFD/能源领域的专业知识，包括Darcy–Forchheimer方程、气固相对速度、传热系数计算等专业知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量很高，专业性强，提供了具体的数学方程、实验数据和工程分析，完全符合领域要求"
+    },
+    "merge_source": "questions"
+  },
+  {
+    "question_text": "分析在高温TCES反应器中，CFD-DEM耦合方法如何精确模拟颗粒-流体相互作用，并推导考虑化学反应热效应的颗粒动量方程和能量方程，解释该方法在反应器尺度放大中的优势与局限性。",
+    "standard_answer": "CFD-DEM耦合方法中，流体相用欧拉框架描述，颗粒相用拉格朗日框架追踪。流体动量方程：∂(ε_gρ_gU_g)/∂t + ∇·(ε_gρ_gU_gU_g) = -∇p + ∇·τ + β(U_p - U_g) + ρ_gg，其中 ε_g 为气体体积分数，β 为曳力系数，由 Gidaspow 模型计算：当 ε_g > 0.8 时，β = (3/4)C_dρ_gε_g(1-ε_g)|U_g-U_p|/d_p * ε_g^(-2.65)；当 ε_g ≤ 0.8 时，β = 150(1-ε_g)^2μ_g/(ε_gd_p^2) + 1.75(1-ε_g)ρ_g|U_g-U_p|/d_p。\n\n颗粒动量方程：m_p(dU_p/dt) = F_drag + F_pressure + F_virtual_mass + F_buoyancy + ∑F_contact + m_pg，其中 F_drag = V_pβ(U_g - U_p)/ε_g，F_pressure = -V_p∇p，虚拟质量力 F_virtual_mass = 0.5ρ_gV_p(dU_g/dt - dU_p/dt)。接触力 F_contact 由 Hertz-Mindlin 接触模型计算。\n\n颗粒能量方程：m_pc_p(dT_p/dt) = hA_p(T_g - T_p) + ε_pA_pσ(T_w^4 - T_p^4) + ∑Q_cond,contact + ΔH_rxn(dα/dt)，其中 h 为对流换热系数，Q_cond,contact 为接触导热，ΔH_rxn(dα/dt) 为化学反应热源项。化学反应速率 dα/dt 通过 Arrhenius 方程与局部温度、压力耦合。\n\n尺度放大优势：CFD-DEM 能准确预测反应器内的局部温度梯度、颗粒停留时间分布和反应转化率，为从实验室尺度（~10 kW）到工业尺度（~1 MW）的放大提供可靠依据。局限性：计算成本随颗粒数量 N 呈 O(N) 增长，对于百万级以上颗粒系统，需要粗粒化模型或高性能计算资源。在 TCES 反应器设计中，该方法能优化气体分布器设计、预测热点形成和颗粒烧结风险，提高能量存储效率 5-10%。",
+    "original_text": {
+      "1": "In contrast, CFD-DEM models leverage the computational efficiency of the DEM method, treating particles as a discrete phase and employing Newton's second law to track their motion. The gas phase is treated as continuous, with N-S equations being solved.",
+      "2": "Interactions between solid and fluid phases are characterized by effective interphase properties, and solid-solid interactions follow collision models, such as soft sphere model, hard sphere model, and direct simulation Monte Carlo method."
+    },
+    "type": "calculation",
+    "difficulty": 5,
+    "topic": "CFD_modeling",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及高温TCES反应器、CFD-DEM耦合方法、颗粒-流体相互作用模拟、化学反应热效应、动量方程和能量方程推导，以及反应器尺度放大分析，需要燃烧工程、计算流体力学、多相流、传热传质、化学反应工程等领域的专业知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量优秀，无需修改。内容全面覆盖了问题要求的所有方面，包括CFD-DEM方法原理、方程推导、尺度放大分析，且技术细节准确，与提供的论文摘录内容一致"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_8474c46c",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Particle-based-high-temperature-thermochemica_2024_Progress-in-Energy-and-Co",
+      "paper_title": "Particle-based-high-temperature-thermochemica_2024_Progress-in-Energy-and-Co"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:33:25.026833",
+      "answer_length": 924
+    },
+    "merge_source": "question_reverse"
+  },
+  {
+    "question_text": "在高温颗粒基热化学储能（TCES）反应器中，热传递机制对反应动力学和能量存储效率有决定性影响。请详细分析在固定床和流化床反应器中，颗粒-气体、颗粒-颗粒以及颗粒-壁面之间的热传递机理差异，并基于Zehner-Bauer-Schlünder模型和颗粒动力学理论分别推导固定床和流化床的有效热导率表达式，解释其在反应器设计中的关键作用。",
+    "standard_answer": "在固定床反应器中，颗粒静止堆积，热传递主要通过传导、辐射和对流实现。颗粒-颗粒接触热导率由接触半径模型描述：k_contact = 2k_s/(π) * (r_contact/d_p)，其中k_s为固体热导率，r_contact为接触半径，d_p为颗粒直径。颗粒-气体间对流热传递系数h_gp由Ranz-Marshall关联式给出：Nu = 2 + 0.6*Re^(1/2)*Pr^(1/3)。基于Zehner-Bauer-Schlünder模型，固定床有效热导率k_eff可表示为：k_eff = k_continuum * [1 - √(1-ε)] + k_disperse * √(1-ε) + k_radiation，其中k_continuum = k_g * [1 + (1-ε)/(ε) * B]，k_disperse = k_s * [1 - (1-ε)/(ε) * C]，B和C为形状因子，ε为孔隙率。\n\n在流化床反应器中，颗粒剧烈运动，热传递显著增强。颗粒-气体对流热传递系数比固定床高1-2个数量级，实际值通常为50-300 W/m²K。基于颗粒动力学理论（Gidaspow模型），颗粒碰撞频率f_coll = (3(1-ε)g_0)/(2πd_p) * √(Θ_g/π)，其中Θ_g为颗粒温度，g_0为径向分布函数，显著促进热传递。考虑颗粒扩散和气体对流的综合模型，流化床有效热导率表达式为：k_eff,fluidized = k_eff,packed + ρ_p*c_p*d_p*u_s*Pe + k_coll，其中k_coll = (2/3)ρ_p*c_p*d_p^2*f_coll为碰撞贡献项，u_s为颗粒速度，Pe为Peclet数。\n\n机理差异：固定床中热传递受限于静态接触热阻，温度分布不均匀；流化床中动态混合使温度均匀化，但能量消耗增加。颗粒-壁面热传递在固定床中主要依赖传导和辐射，热传递系数通常为50-200 W/m²K；而在流化床中由于颗粒冲刷作用显著增强，可达300-1000 W/m²K。在TCES应用中，固定床适合缓慢反应系统，流化床适合快速动力学系统，但需权衡压降和颗粒磨损。有效热导率是反应器热设计的关键参数，直接影响温度分布、反应速率和能量存储效率。",
+    "original_text": {
+      "1": "The energy balance within the high-temperature reactors necessitates considering of the convection, conduction, radiation, and heat generation or absorption by reactions and phase changes. These coupled transfer phenomena involve complex gas-solid, particle-particle, particle-wall, and reactor-environment interactions.",
+      "2": "With fluidized beds, the particle reactants can minimize hot or cold spots, with very high interstitial heat transfer coefficients and more uniform temperature distribution. However, the pressure drop, parasitic energy consumption, complex hydrodynamics and granular flow behavior, particle attrition, and corrosion of internal components are remaining challenges."
+    },
+    "type": "reasoning",
+    "difficulty": 5,
+    "topic": "heat_transfer",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "该问题需要燃烧/传热/流体/CFD/能源领域的专业知识，涉及热化学储能反应器中的热传递机制、反应动力学、Zehner-Bauer-Schlünder模型、颗粒动力学理论等专业内容，属于典型的能源与传热工程领域问题",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量优秀，无需修改。答案详细分析了固定床和流化床的热传递机理差异，正确推导了有效热导率表达式，并基于文献引用和论文摘录进行了验证，符合专业标准"
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_8a067b19",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Particle-based-high-temperature-thermochemica_2024_Progress-in-Energy-and-Co",
+      "paper_title": "Particle-based-high-temperature-thermochemica_2024_Progress-in-Energy-and-Co"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:36:19.088763",
+      "answer_length": 951
+    },
+    "merge_source": "question_reverse"
+  }
+]

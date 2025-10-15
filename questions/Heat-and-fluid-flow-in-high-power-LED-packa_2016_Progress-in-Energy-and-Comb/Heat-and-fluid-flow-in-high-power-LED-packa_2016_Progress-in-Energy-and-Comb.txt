@@ -1,0 +1,3939 @@
+Progress in Energy and Combustion Science 56 (2016) 1–32
+
+Contents lists available at ScienceDirect
+
+Progress in Energy and Combustion Science
+
+j o u r n a l h o m e p a g e : w w w. e l s e v i e r. c o m / l o c a t e / p e c s
+
+Heat and fluid flow in high-power LED packaging and applications
+
+Xiaobing Luo a,*, Run Hu a, Sheng Liu b, Kai Wang c
+
+a State Key Laboratory of Coal Combustion, School of Energy and Power Engineering, Huazhong University of Science and Technology, Wuhan 430074,
+China
+b School of Power and Mechanical Engineering, Wuhan University, Wuhan 430073, China
+c Department of Electrical & Electronic Engineering, South University of Science and Technology of China, Shenzhen 518055, China
+
+A R T I C L E
+
+I N F O
+
+A B S T R A C T
+
+Article history:
+Received 25 August 2015
+Accepted 25 May 2016
+Available online 7 June 2016
+
+Keywords:
+Light-emitting diode (LED)
+Phosphor coating
+Heat generation
+Thermal management
+
+Contents
+
+Light-emitting diodes (LEDs) are widely used in our daily lives. Both light and heat are generated from
+LED chips and then transmitted or conducted through multiple packaging materials and interfaces. Part
+of the transmitted light converts into heat along the light propagation; in return, the accumulation of
+heat leads to the degradation of light output. The accumulated heat negatively influences the reliability
+and longevity of LEDs, and thus thermal management is critical for LED packaging and applications. On
+the other hand, in LED packaging processes, many fluid flow problems exist, such as phosphor coating,
+silicone injection, chip bonding, solder reflow, etc. Among them, phosphor coating is the most impor-
+tant process which is essential for LED performance. Phosphor gel is a kind of non-Newton fluid and its
+coating process is a typical fluid-flow problem. Overall, since LED packaging and applications present
+many heat and fluid flow problems, obtaining a full understanding of these problems enables advance-
+ments in the development of LED processes and designs. In this review, the emphasis is placed on heat
+generation in chips, heat flow in packages and application products, fluid flow in phosphor coating process,
+etc. This is a domain in which significant progress has been achieved in the last decade, and reporting
+on these advances will facilitate state-of-the-art LED packaging and application technologies.
+
+© 2016 Elsevier Ltd. All rights reserved.
+
+1.
+
+2.
+
+Introduction ............................................................................................................................................................................................................................................................. 2
+Basic knowledge of LED .......................................................................................................................................................................................................................... 2
+1.1.
+LED packaging process and its application ...................................................................................................................................................................................... 3
+1.2.
+Existing heat and fluid flow problems .............................................................................................................................................................................................. 6
+1.3.
+1.4.
+Review arrangement ............................................................................................................................................................................................................................... 7
+Heat generation of LED chips ............................................................................................................................................................................................................................ 7
+Heat generation due to nonradiative recombination ................................................................................................................................................................... 7
+2.1.
+Shockley–Read–Hall (SRH) recombination ..................................................................................................................................................................... 7
+2.1.1.
+Auger recombination .............................................................................................................................................................................................................. 7
+2.1.2.
+2.1.3.
+Surface recombination ........................................................................................................................................................................................................... 8
+Heat generation due to current crowding and overflow ............................................................................................................................................................ 8
+Current crowding in LED chips ........................................................................................................................................................................................... 8
+2.2.1.
+2.2.2.
+Current overflow in LED chips ............................................................................................................................................................................................ 9
+Heat generation due to light confinement ...................................................................................................................................................................................... 9
+Light emitting surface texturing and roughening ........................................................................................................................................................ 9
+2.3.1.
+Photonic crystal to direct the light emitting shape .................................................................................................................................................... 9
+2.3.2.
+2.3.3.
+Patterned sapphire substrate (PSS) ................................................................................................................................................................................ 10
+Adding a reflector in flip chip LEDs ................................................................................................................................................................................ 10
+2.3.4.
+Future trends of LED chip design with low heat generation .................................................................................................................................................. 11
+
+2.2.
+
+2.3.
+
+2.4.
+
+* Corresponding author. State Key Laboratory of Coal Combustion, School of Energy and Power Engineering, Huazhong University of Science and Technology, Wuhan 430074,
+
+China. Tel.: +8627-87544154; Fax: +8627-87540724.
+E-mail address: luoxb@hust.edu.cn (X. Luo).
+
+http://dx.doi.org/10.1016/j.pecs.2016.05.003
+0360-1285/© 2016 Elsevier Ltd. All rights reserved.
+
+2
+
+3.
+
+4.
+
+5.
+
+X. Luo et al. / Progress in Energy and Combustion Science 56 (2016) 1–32
+
+3.3.
+
+Phosphor coating and fluid flow .................................................................................................................................................................................................................... 12
+Phosphor coating methods ................................................................................................................................................................................................................. 12
+3.1.
+Fluid analysis techniques .................................................................................................................................................................................................................... 13
+3.2.
+Fluid property analysis ....................................................................................................................................................................................................... 13
+3.2.1.
+Surface wettability analysis .............................................................................................................................................................................................. 14
+3.2.2.
+3.2.3.
+Energy and force analysis .................................................................................................................................................................................................. 14
+Phosphor coating methods based on fluid analysis .................................................................................................................................................................. 14
+Special packaging structure .............................................................................................................................................................................................. 14
+3.3.1.
+Fluid morphology control .................................................................................................................................................................................................. 15
+3.3.2.
+3.3.3.
+Other typical processes for phosphor coating ............................................................................................................................................................ 15
+3.4.
+Future trends of LED phosphor coating ......................................................................................................................................................................................... 16
+Thermal management in LED packaging and applications ................................................................................................................................................................... 16
+Thermal resistance network of LED lamps ................................................................................................................................................................................... 16
+4.1.
+Thermal resistance of thermal interface material (TIM) and its control ............................................................................................................................ 17
+4.2.
+Thermal resistance of TIM ................................................................................................................................................................................................. 17
+4.2.1.
+4.2.2.
+Thermal resistance of TIM control ................................................................................................................................................................................. 19
+Thermal spreading resistance and its control .............................................................................................................................................................................. 20
+Thermal spreading resistance ........................................................................................................................................................................................... 20
+4.3.1.
+Thermal spreading resistance control ........................................................................................................................................................................... 20
+4.3.2.
+Component-to-ambient thermal resistance control .................................................................................................................................................................. 22
+Passive cooling ....................................................................................................................................................................................................................... 22
+4.4.1.
+Active cooling ......................................................................................................................................................................................................................... 25
+4.4.2.
+Conclusions and perspectives ......................................................................................................................................................................................................................... 27
+Acknowledgement ............................................................................................................................................................................................................................................... 28
+References .............................................................................................................................................................................................................................................................. 28
+
+4.4.
+
+4.3.
+
+1. Introduction
+
+Light-emitting diode (LED), as a type of solid-state lighting (SSL),
+is a lighting technology that arguably constitutes the greatest ad-
+vancement in the lighting industry in the previous century [1–3].
+In an LED, electricity is converted into light. It is well recognized
+that LEDs offer the following advantages. (1) Energy savings: LED
+requires less energy to emit equivalent light compared to other light
+sources. (2) Long lifetime: Due to their compact physical charac-
+teristics, LEDs are also more long-lasting than other lamps.
+Incandescent bulbs tend to last 1000 hours as heat destroys the fil-
+ament, and fluorescent lamps tend to last 10,000 hours. While LEDs
+can last over 50,000 hours or more in theory. (3) Environment-
+friendly characteristics: Unlike fluorescent lamps, there is no mercury
+in LEDs, which is environment-friendly whenever the LEDs are dis-
+carded. (4) Wide color temperatures: LEDs provide a wider range
+of color temperature (4500 K–12,000 K) and a wider operation tem-
+perature (−20 °C to 85 °C). (5) Quick startup: LEDs do not have low-
+temperature startup problems, which is different from many other
+lighting sources, such as metal halogen lamps. Based on the above
+advantages, so far, LEDs have been considered as the fourth gen-
+eration of light sources [1,4]. They have been extensively applied
+
+in our daily lives, including street lamps, backlighting, automobile
+headlamps, and general lighting. It is believed that LEDs will benefit
+the whole world even more extensively and profoundly in the future
+[5,6]. Due to LEDs’ contribution to the whole of human society, the
+2014 Nobel Prize in Physics was awarded to three scientists for the
+invention of efficient blue LEDs based on gallium nitride (GaN) [7].
+
+1.1. Basic knowledge of LED
+
+For high-power LED chips, the key part is the “PN junction” where
+a quantum well or multiple quantum well (MQW) layers are sand-
+wiched with a p-GaN layer and an n-GaN layer [1]. In a PN junction,
+the “P” material contains an excess of positive charges (also called
+holes) due to the absence of electrons. The “N” material contains
+an excess of negative charges due to the presence of electrons. To
+understand the lighting principle, we can consider an unbiased PN
+junction. Fig. 1 shows the PN energy band diagram. The depletion
+region extends mainly into the p-side. There is a potential barrier
+from Ec on the n-side to the Ec on the p-side, which is called the
+built-in voltage, V0. This potential barrier prevents the excess free
+electrons on the n-side from diffusing into the p-side. When a voltage
+V is applied to the junction, the built-in potential is reduced from
+
+Fig. 1. LED lighitng principle. (a) The energy band diagram of a PN junction without any bias. Built-in potential V0 prevents electrons from diffusing from the n-side to the
+p-side. (b) The applied bias reduces V0 and thereby allows electrons to diffuse or be injected into the p-side, resulting in light emission when electrons and holes recombine.
+
+X. Luo et al. / Progress in Energy and Combustion Science 56 (2016) 1–32
+
+3
+
+Fig. 2. Schematic diagram of three types of LED chip architectures.
+
+V0 to V0–V. This allows electrons from the n-side to get injected into
+the p-side and recombine with the holes there, resulting in spon-
+taneous emission of photons (light).
+
+To make the PN junction applicable to LEDs, different types of
+LED chips have been proposed. Fig. 2 presents three kinds of LED
+chip designs, which include the conventional chip, the vertical chip,
+and the flip chip. The conventional chip generally utilizes sap-
+phire as the substrate for epitaxial growth. p- and n-electrodes are
+arranged at the two edges of the top surface of the chip. However,
+the thermal conductivity of the sapphire substrate (~20−40 W/
+(m·K)) is low compared to that of silicon (~150 W/(m·K)); so, it
+establishes a barrier for the chip heat dissipation. To improve this
+shortcoming of conventional chips, vertical injection chip and flip
+chip designs have been proposed [8]. Unlike the conventional chip,
+the electrodes in the vertical injection chip are arranged at the top
+and bottom of the chip. Such an electrode structure can improve
+the uniformity of current density distribution, resulting in MQW
+utilization efficiency enhancement and lighting emitting efficien-
+cy (LEE) improvement. Compared to conventional LEDs, the flip-
+chip LED is “flipped-over” or inverted [9]. The electrodes are arranged
+at the bottom of the chip, and light is emitted from the top surface.
+As a result, such structure avoids light absorption by the metal
+contact in conventional chips, and the utilization efficiency of the
+MQW is enhanced. Moreover, in the flip chip, the sapphire is ar-
+ranged as the top layer, which can, to a certain extent, solve the poor
+heat dissipation problem of conventional chips. Heat generated in
+the flip chip LED can be dissipated to the packaging board through
+the highly thermally conductive contact electrodes rather than sap-
+phire. Thus, flip chips possess better thermal characteristics.
+
+Blue LED chips cannot be directly used in application products,
+and it is necessary that they are packaged and emit white light. Cur-
+rently, the most common packaging method of producing white light
+is shown in Fig. 3. Under the blue light emission, yellow phos-
+phors (such as cerium-doped yttrium aluminum garnet, YAG:Ce3+)
+could emit yellow light, and the mixture of transmitted blue and
+yellow lights generate white light. By controlling the energy ratio
+of blue light and yellow light, the white light can be obtained at
+different color temperatures. This method is easy and simple to
+handle with high luminous efficiency. Thus, it has been widely
+adopted in industry.
+
+1.2. LED packaging process and its application
+
+Fig. 4 shows the LED industry chain. It consists of three catego-
+ries: the upstream, the midstream, and the downstream. Epitaxy
+growth is the first step in the upstream, in which the emitting layer,
+cladding layer, buffer layer, reflector, etc., are accomplished in this
+process. The metal organic chemical vapor deposition (MOCVD) is
+the main method to produce blue, green, and ultraviolet epitaxy ma-
+terials, such as GaN or GaAs. Different colors of LEDs can be made
+by employing different types of epiwafer. After the fabrication of
+LED wafers in the MOCVD chamber, the chip manufacturers will dice
+
+the wafer into LED chips with positive and negative electrodes. The
+chip manufacturing process includes film plating, lithography, chem-
+ical or iron etching, scribing, etc. In Fig. 4, the midstream industry
+is referred to as packaging. Through the upstream, we can obtain
+blue light LED chips. Before the application, we should convert the
+blue light emitted from the blue light LED chips into white light LEDs
+by packaging. The typical way to convert blue light into white light
+is shown in Fig. 3. Currently, there are many types of LED pack-
+ages. According to the number of LED chips, it can be categorized
+as single-chip package, multiple-chip package, or chip-on-board
+(COB) package. The downstream industry refers to the integration
+of LED modules into lighting luminaries and systems aimed at dif-
+ferent applications, such as street lamps, backlighting units, general
+lighting, etc.
+
+From the industry chain of high power LEDs, it is seen that pack-
+aging constitutes an essential step from LED chip to applications.
+Packaging not only can ensure better performance of LED devices
+by enhancing reliability and optical characteristics, but can also
+realize control and adjustment of the final optical performance. A
+typical lead-frame LED package and the function of each part are
+shown in Fig. 5. In this LED packaging, the LED chip is used to emit
+blue light, but it will generate heat as well. The solder is used to
+bond the chip onto the copper slug. The copper heat slug is used
+to dissipate the heat. The lead-frame and boding wire are utilized
+for electrical interconnection. The optical lens and phosphors are
+used to control the lighting performance and light conversion. The
+
+Fig. 3. Typical packaging method to produce white light based on blue LED chips.
+
+4
+
+X. Luo et al. / Progress in Energy and Combustion Science 56 (2016) 1–32
+
+Fig. 4. LED industry chain.
+
+moulding compound is employed to maintain the lead-frame and
+copper heat slug, and to fasten the optical lens.
+
+To reach the above functions, the standard LED packaging process
+is formed in industry, and is shown in Table 1. Step by step, the pack-
+aging processes are as follows.
+
+(a) Chip bonding: The chip is bonded onto the substrate by solder.
+The solder is a kind of non-Newton fluid cured in the reflow
+process. It is a complex problem coupled with fluid flowing,
+fluid curing, and heat dissipation. The solder will cure while
+flowing in the reflow process, and temperatures influence the
+flowing characteristics greatly.
+
+(b) Wire bonding: The electrodes of the chip are connected to
+the lead frame by the bonding wires. The bonding wires can
+be gold, copper, aluminum, etc.
+
+(c) Phosphor coating: Phosphor silicone matrix of a certain con-
+centration is dispersed onto the chip surface to form a
+phosphor layer. The purpose of coating the phosphor layer
+onto the blue LED chip is to convert part of blue light into
+yellow light, resulting in white light after color mixing. Phos-
+phor coating is a typical fluid flowing problem, and the final
+phosphor layer’s morphology is dependent on the flowing
+characteristics, and determines the final optical perfor-
+mance of LEDs. In addition, phosphor particle sedimentation
+may occur in the silicone due to the larger density of phos-
+phors, which plays a negative role in the final optical
+performance. Therefore, phosphor particle distribution also
+needs to be well-controlled during coating. Phosphor coating
+constitutes an important and difficult problem. Understand-
+ing the flowing and thermal properties can greatly help to
+
+Fig. 5. Typical LED packaging structure and functions.
+
+X. Luo et al. / Progress in Energy and Combustion Science 56 (2016) 1–32
+
+5
+
+Table 1
+Typical packaging processes and their applications for white LEDs.
+
+Process Steps
+
+Schematics
+
+Chip bonding
+
+Descriptions
+
+• To attach the LED chips onto the substrate for fastening
+
+and heat dissipation
+
+• Coupled with thermal interface resistance control
+
+Wire bonding
+
+• To realize electrical interconnection
+
+Phosphor coating
+
+• To convert blue light into yellow emission
+• Coupled with phosphor coating fluid flow
+
+Lens laying
+
+• To fasten the optical lens to the mechanical structure
+
+Encapsulation
+
+• To fill the interspace with silicone and to protect the
+
+chip, bonding wires, etc.
+
+• Silicone flow
+
+Module application
+
+in luminary
+
+• Thermal interface resistance, thermal spreading
+
+resistance, and thermal dissipation from component to
+ambient
+
+6
+
+X. Luo et al. / Progress in Energy and Combustion Science 56 (2016) 1–32
+
+control the flow and reveal potential new processes for phos-
+phor coating.
+
+(d) Lens laying: The lens is embedded into the molding com-
+pound by the mechanical structure. The lenses, as the
+dominant optics, are the key components to realize differ-
+ent optical requirements of applications. Conventional lenses
+are hemispherical, but their optical performances are poor.
+Freeform lenses possess better optical performance, and can
+be designed to suit various illumination requirements.
+(e) Encapsulation: The silicone is filled into the interspace
+between the lens and the molding compound to protect the
+chip and bonding wires. This step is a total fluid flowing
+problem since the silicone curing at room temperature could
+be omitted. The injection pressure and nozzle size are the key
+parameters that should be well-controlled.
+
+Through the above packaging steps, white LED modules can be
+obtained. However, the typical power for a single module is about
+1 W, which is not bright enough for lighting. Therefore, we usually
+assembly many modules into LED lamps, whose power ranges from
+several watts (e.g., light bulbs) to hundreds or thousands of watts
+(e.g., street lamps, search lights, etc.). For such lighting fixtures, the
+heat generated in tiny chips will conduct to the ambient through
+multiple materials and interfaces. Thus, there are many thermal re-
+sistances that influence this heat transfer process, such as interfacial
+thermal resistance, thermal spreading resistance, and component-
+to-ambient thermal resistance.
+
+1.3. Existing heat and fluid flow problems
+
+Table 1 shows the LED packaging processes step by step. It can
+be seen that there are many heat and fluid flow problems in LED
+packaging and applications. Among them, three typical problems,
+i.e. heat generation, phosphor flow, and heat dissipation, as shown
+in Fig. 6, are mainly discussed in this review due to the space limi-
+tations. The three problems are introduced in detail as below.
+
+Firstly, LED chips are considered to be the primary heat source
+in LED packages. The mechanism of heat generation in LED chips
+is the non-radiative recombination process, which is dependent on
+the materials of MQWs. The current power conversion efficiency
+for blue LED chips is about 55%, and thus 45% of the input electri-
+cal energy is directly converted to heat [10]. As previously stated
+and shown in Fig. 3, along the light propagation, part of the light
+
+Fig. 7. Flowing process of phosphor gel on LED package.
+
+converts into heat, and thus currently ~70% of the input electrical
+energy converts to heat in LED products.
+
+Secondly, phosphor-embedded silicone matrix or phosphor gel,
+as can be seen from Fig. 3 and Table 1, is the key component that
+converts part of the blue light into yellow light, so as to finally gen-
+erate white light. The phosphor gel is a kind of non-Newton fluid,
+which may cure after a period of time, and the curing time can be
+shortened when heated [11–13]. Fig. 7 shows the phosphor gel
+flowing process, which includes four steps: contacting, wetting,
+spreading, and stabilizing. It can be seen that after dispensing a drop
+of phosphor gel onto the LED chip, the phosphor gel contacts the
+chip first, then wets to cover the chip, then spreads along the heat
+slug, and finally stabilizes to form a convex shape. Meanwhile, in
+the flow process, the phosphor particles may settle due to the gravity
+effect, which would cause non-uniform particle distribution in the
+gel. It has been demonstrated that phosphor gel morphology and
+particle distribution play important roles in determining the final
+optical characteristics of white LED packages [14–18]. Improper phos-
+phor gel morphology and particle distribution may cause poor color
+characteristics, i.e., blue rings or yellow rings, at the edge of the light-
+ing pattern, as shown in Fig. 8. The flowing property of the phosphor
+gel should be well considered in the phosphor coating process in
+LED packaging. In addition, not only the heat generated in LED chips
+will be conducted to phosphors, but also the phosphors will gen-
+erate heat during the photoluminescent process. The curing process
+of the matrix and silicone will occur simultaneously with the flowing
+process. High temperature will accelerate the curing process since
+silicone’s viscosity increases greatly at high temperature. There-
+fore, the heat and fluid flow problems should be considered
+simultaneously in the phosphor coating process.
+
+Thirdly, to prolong the reliability and lifetime of LEDs, we need
+to attempt to dissipate the heat generated inside of the package to
+
+Fig. 6. Schematic of three typical problems in LED packaging, i.e. heat generation,
+phosphor flow, and heat dissipation.
+
+Fig. 8. Poor color characteristics in white LED packages due to improper phosphor
+coating.
+
+X. Luo et al. / Progress in Energy and Combustion Science 56 (2016) 1–32
+
+7
+
+the ambient and decrease the working temperature as much as pos-
+sible because high temperature greatly deteriorates LEDs’
+performance. This is a systematic problem since it refers to heat gen-
+eration, heat conduction and spreading, interface heat flow, and
+convection to the ambient.
+
+It should be noted that the heat dissipation and fluid flow are
+usually coupled with each other and should be considered
+simultaneously.
+
+1.4. Review arrangement
+
+In this review, we began with an introduction of heat genera-
+tion in LED chips, followed by a detailed review of phosphor coating
+process. Different phosphor coating processes were compared with
+a presentation of corresponding advantages and disadvantages. We
+then focused on the thermal management of LEDs, from chip to
+package, and from package to application. Thermal resistance con-
+stituted the parameter to evaluate the heat dissipation ability, and
+thus interfacial resistance, spreading resistance, and component-
+to-ambient resistance were introduced systematically. Finally, state-
+of-the-art thermal management solutions for LEDs were presented.
+
+2. Heat generation of LED chips
+
+LED chips are the core and functional part that produce light.
+Accompanying light emitting, heat will be generated within LED
+chips due to different kinds of nonradiative recombinations and other
+causes of photon annihilation. In this section, emphasis will be placed
+on analyzing the nonradiative recombination in the active region
+of LED chips and the factors that prohibit photon emission and lead
+to heat generation. Efficient LED chip designs from the perspec-
+tive of epitaxial growth are reviewed with the purpose of suppressing
+the nonradiative recombination. In the active region of LED chips,
+Shockley–Read–Hall (SRH) recombination and Auger recombina-
+tion are explained, whereas current crowding and electron overflow
+outside of the active region are also included in this section. Widely
+reported techniques to improve the light extraction efficiency of LED
+chips, such as roughing, photonic crystal integration, surface
+plasmonics, etc., will be covered. In the last part of this section, new
+LED chip designs are listed based on nanowire epitaxial growth tech-
+niques, which show great potential advantages over existing planar
+multiple quantum well (MQW) designs.
+
+2.1. Heat generation due to nonradiative recombination
+
+Fig. 9 shows the schematic of the band gap of semiconductor ma-
+terial, which has an electronic band structure determined by the
+crystal properties of the material. The discrete energy distribution
+is affected by the absolute temperature. Above absolute zero tem-
+perature, the existing energy levels are filled with electrons according
+to the Boltzmann distribution. The free electrons range from their
+bounds to a freely moving state which is called a conduction band
+(CB). The valance band (VB) is the highest range of electron ener-
+gies in which electrons are bounded. The difference between CB and
+VB is called band gap or forbidden band, since ideally there is no
+electron energy state within this region [19].
+
+The freely moving electrons in the meta-stable state exist in the
+CB until they fall to the VB and recombine with an electron hole.
+This process is referred to as recombination. There are two types
+of recombination within the active region of LED chips, i.e., radia-
+tive recombination and nonradiative recombination. For radiative
+recombination, the electron fills a hole in the valance band by re-
+leasing a photon with energy equal to the band gap energy of the
+semiconductor material [20]. This process is the foundation of the
+LED working mechanism. For nonradiative recombination, the re-
+leasing energy exists in the form of atom vibrations within the
+
+Fig. 9. Schematic of the band gap of a semiconductor material.
+
+crystal, such as phonons; if the energy is not collected, it dissi-
+pates as heat. Apparently, the nonradiative recombination should
+be minimized for high device performance and low heat genera-
+tion [21]. In the active layer of LED chips, there are two major
+nonradiative recombination processes, i.e., defect-related SRH re-
+combination and Auger recombination, which will be described in
+detail below.
+
+2.1.1. Shockley–Read–Hall (SRH) recombination
+
+Fig. 10 shows the band diagram which illustrates the recombi-
+nation process. In Fig. 10, the SRH recombination is used to describe
+the recombination of the electron and hole at the undesired energy
+level, which is created within the band gap by defects in the lattice.
+They were first investigated by Shockley, Read, and Hall in 1952 and
+were used as a model to study the nonradiative recombination
+caused by defects [22].
+
+Defects in the crystal structure are the main cause of SRH
+nonradiative recombination. These defects include unwanted foreign
+atoms, crystallographic defects, etc. All of the defects have energy
+level bands that are different from the major semiconductor atoms.
+Therefore, the one or more new energy levels can be generated
+within the forbidden band gap. Unfortunately, these energy levels
+within the gap of the semiconductor are efficient recombination
+centers, especially when the deep level is near the middle of the
+gap. Detailed analytical expressions are obtained for the lifetime es-
+timation of the SRH recombination [21]. These expressions reveal
+that when the trap level is at or close to the mid-gap energy, the
+lifetime is twice the minority lifetime, and the probability of SRH
+recombination is increased. Moreover, the increase of tempera-
+ture will raise the nonradiative recombination probability. For
+simplicity, the recombination rate can be estimated by RSRH = An,
+where A is the SRH recombination coefficient and n is the carrier
+concentration [23].
+
+2.1.2. Auger recombination
+
+Auger recombination describes the process in which the elec-
+tron in CB gives off excess energy and recombines with a hole in
+VB. During this process, the excess energy is obtained by a second
+electron or hole instead of emitting the energy as a photon. The
+newly excited electrons or holes release their energy through col-
+lision with the crystal lattice and return back to the band edges.
+
+The probability of Auger recombination increases with the con-
+centration of charge carriers since this process is based on the ability
+of the charge carriers to exchange energy. The rate of Auger recom-
+bination can be expressed as RAuger = Cn3, where C is Auger
+
+8
+
+X. Luo et al. / Progress in Energy and Combustion Science 56 (2016) 1–32
+
+Fig. 10. Band diagram illustrating: (a) SRH recombination; (b) Auger recombination; and (c) radiative recombination (courtesy of Prof. E. Fred. Schubert from Rensselaer
+Polytechnic Institute, US).
+
+recombination coefficient and n represents the carrier concentra-
+tion. The coefficient C on the scale of 10−28–10−29 cm6/s for III–V
+semiconductors plays an important role [24]. Normally, C de-
+creases with the increased energy band gap. According to the
+reported Auger recombination coefficients in Table 2, the simula-
+tion work adopts 10−30 cm6/s for GaN-based LED chip design, which
+exhibits good prediction of device performance [29]. More de-
+tailed discussions about the Auger recombination coefficients can
+be found in a report by Cho et al. [30] At low carrier concentra-
+tions, the Auger recombination is neglected for practical reasons.
+However, at very high excitation intensity or the carrier injection
+current situation, n is much higher and Auger recombination should
+be considered.
+
+the injected carriers are away from the surface. This can be real-
+ized by carrier injection under one contact which is smaller than
+the LED chip.
+
+2.2. Heat generation due to current crowding and overflow
+
+In Section 2.1, heat generation within the active region of LED
+chips due to the nonradiative recombination was introduced. Here,
+the focus will be placed on heat generated outside of the LED active
+region. Particularly, heat generation due to current crowding and
+overflow will be considered. The solutions are largely attributed to
+efficient LED chip design at the epitaxial and device level.
+
+2.1.3. Surface recombination
+
+2.2.1. Current crowding in LED chips
+
+Nonradiative recombination also occurs at the semiconductor
+surface. At surfaces, the periodicity of the crystal lattice ends. There-
+fore, the band diagram will change at the surface since the strict
+periodicity of the crystal arrangement is perturbed. Additional elec-
+tronic states will appear within the forbidden gap of the material
+[31]. Fortunately, surface recombination can be greatly reduced if
+
+Table 2
+Auger recombination coefficients reported for GaN-based LED chips.
+
+Material
+
+In0.10Ga0.90N/GaN
+InGaN/GaN
+InxGa1−xN(x ∼ 9%–15%)
+GaInN/GaN
+
+Auger recombination
+coefficient (cm6/s)
+
+1.5 × 10−30
+3.5 × 10−31
+1.4 to 2.0 × 10−30
+2.5 × 10−31
+
+Reference
+
+[25]
+[26]
+[27]
+[28]
+
+In the realm of semiconductor physics, current crowding is used
+to describe a nonhomogeneous distribution of current density
+through the semiconductor at the vicinity of the contacts and over
+the PN junctions. As shown in Fig. 11(a), in conventional LED chips,
+the GaN layer grows on insulating substrates (e.g., sapphire) where
+electrons laterally spread from n-pad to p-pad. Due to this geom-
+etry, the finite resistance of the Ohmic contact and the confinement
+layer causes the current to “crowd” near the edge of the contact.
+As shown in Fig. 11(b), the current density distribution can be un-
+desirably non-uniform. The current density could drop from 99 A/
+cm2 at n-pad to 11 A/cm2 at p-pad [32].
+
+Due to the non-linear distribution of the current density, the
+crowding phenomenon becomes more severe in high power LEDs
+operating at large current density. The remarkable current concen-
+tration at the edges of p-type and n-type electrodes has a detrimental
+effect on device performance. On the one hand, the local increase
+
+Fig. 11. Current crowding in GaN/InGaN LEDs on insulating substrates.
+
+X. Luo et al. / Progress in Energy and Combustion Science 56 (2016) 1–32
+
+9
+
+of carrier density leads to a high recombination rate, causing non-
+uniformity of light emission in the active region. This will induce
+localized overheating of the heterostructure at certain points and
+the formation of hot spots, whereas a large portion of the device
+remains inactive during operation. On the other hand, the inho-
+mogeneous distribution of current will increase the electromigration
+effect, and voids are formed. Overall, current crowding will induce
+the local overheating of the heterostructure, lower the device per-
+formance, and increase the series resistance.
+
+Various solutions have been proposed to reduce the current
+crowding problem, such as multi-fingered chip design [33]. Through
+simulations, Joshi et al. report that the current crowding problem
+is finally eliminated by a combination of multi-finger with delta-
+doping design. Vertical chip configuration can also solve this problem.
+
+2.2.2. Current overflow in LED chips
+
+Current overflow, also referred to as electron leakage, de-
+scribes the process in which the energetic electrons move from
+n-type through the active region and recombine with holes in the
+p-type GaN without being confined in the active region. Since only
+the carriers confined in the active region are able to participate in
+the radiative recombination, the recombination caused by elec-
+tron overflow generates unwanted heat. The current overflow is
+mainly caused by the higher carrier mobility of the electrons [34]
+(about 200 cm2 V−1 s−1) than that of the holes (about 10 cm2 V−1 s−1)
+[35]. The longer current spreading length caused by the higher mo-
+bility leads to fewer holes than electrons being injected into the
+active region. This is the reason why the AlGaN electron blocking
+layer (EBL) is usually adopted on the p-side of the active region.
+
+Several theories have been offered to elucidate the reasons for,
+and eliminate, the effect of current overflow. The three most well-
+known are reviewed below. The first explanation concerns the poor
+hole-injection efficiency. Due to the large effective hole mass, low
+hole mobility limits the transportation length. In addition, with the
+purpose of effectively confining electrons, the Al content is raised.
+However, the high mole fraction of Al also prohibits hole injection
+[36–38]. Another explanation is that an ineffective EBL should be
+the cause of the electrons not being blocked. As we pursue high ef-
+ficiency, large carrier concentration is injected into the LED chip.
+The increase of concentration and mobility makes it easier for elec-
+tron transport. Even though a wide band gap design combined with
+an optimal 15% Al mole fraction in the EBL is adopted, this may not
+be sufficient for blocking the electrons. A further increase of Al frac-
+tion, in addition to the above mentioned reason, will also cause a
+polarization mismatch between AlGaN and GaN for the most widely
+researched and industrially accepted LED chip design grown in the
+c-direction [39,40]. One alternative explanation is that the active
+region in the form of MQW and EBL design are not able to fully
+confine the electrons. Those escaped electrons will enter the p-type
+region, non-radioactively recombine with holes, and generate heat.
+The probability of capturing electrons as a function of QW width
+was studied [41]. It was proven that increasing the QW thickness
+will raise the carrier dwell time, and therefore reduce current over-
+flow [42]. Reports on modification of MQW and EBL have also been
+presented [43–47]. Moreover, there are some successful reports that
+explored LED growth on m-, a-, and other non-polar planes [48–50],
+which show lower polarization mismatch than c-plane LEDs.
+
+difference of GaN (n = 2.5)/air (n = 1) interface. Total internal re-
+flection (TIR) occurs when the incident angle exceeds the critical
+value θc = asin(n1/n2), which can be calculated based on Snell’s law.
+The TIR leads to a narrow escape cone of only 23.5°, with an escape
+probability of only 4% from the top surface of the LED [51].
+
+Techniques have been developed to improve light extraction ef-
+ficiency (LEE), including photonic crystal, periodic surface texturing,
+surface roughing, patterned sapphire substrate, and reflectors using
+Al or Au electrodes. In this section, we will review the LEE improve-
+ment techniques separately at different locations of the LED chip.
+Thin-film flip-chip (TFFC) design is widely used in current com-
+mercial LEDs, which possess high LEE as compared to that of
+conventional LED package design. Thin film LEDs could be real-
+ized by removing the sapphire substrate by the laser lift-off
+technique. On the other hand, flip-chip LEDs are achieved by sub-
+mounting the p-GaN on a high reflectance-metallic mirror to form
+the vertical LED configuration. This allows photons to emit from the
+thicker n-GaN layer side, and enables a more flexible surface tex-
+turing and patterning process on n­GaN to enhance LEE without the
+potential effect on the InGaN QWs active region. The TFFC LEDs
+combine these two techniques, and therefore show great poten-
+tial to enhance LEE.
+
+2.3.1. Light emitting surface texturing and roughening
+
+With the purpose of randomizing the light reflected at the
+semiconductor/air or GaN/substrate, surface texturing and rough-
+ening are widely-used methods. On the one hand, the straight
+propagation paths are disturbed, which enable multiple incidents
+on the interface to escape outside of the LED chip [52–54]. On the
+other hand, the spherical micro lens array can form a dome-shape
+at the interface to lead to more efficient LEE. Successful designs have
+been reported by researchers to improve LED output efficiency
+[51,53,55]. In addition, the direction of the emission light is un-
+confined, resulting in a Lambertian radiation pattern.
+
+To increase the photon escape cone, a SiO2/polystyrene micro lens
+array was deposited on the emission surface of the LEDs to form
+closed-packed lens arrays, as shown in Fig. 12 [51]. By adding the
+refractive index gradient, these arrays allow photons emanating from
+the QW to be scattered out of the LED structure with a larger photon
+escape cone from 23.5° to 39.8°. Using the SiO2/PS micro lens arrays,
+the LEE of the LEDs can be increased with a larger photon escape
+cone, and Fresnel reflection loss can be reduced.
+
+An efficient and cost-effective way to study surface texture in
+terms of LEE is through simulation. Zhao et al. studied the LEE of
+the four TFFC LEDs with different surface texturing by the three-
+dimensional finite difference time domain (3D-FDTD) method [53].
+Fig. 13 shows the four simulation cases, i.e., flat top surface and top
+surfaces with SiO2, SiO2/polystyrene, and GaN micro lens array. They
+concluded that by adopting an optimal GaN micro lens diameter
+of 1 μm and p-GaN thickness of 195 nm, the LEE could be im-
+proved by 2.6 times.
+
+Tsai et al. etched the light emitting layer of a vertical LED chip,
+and the corresponding textured structure is shown in Fig. 14(e). The
+etching process is shown in Fig. 14(a)–(d). As expected, the results
+shown in Fig. 14(f) indicate that the light output power of the top
+surface textured LEDs is much higher than conventional LEDs, which
+demonstrates that the top surface textures can improve LEE [55].
+
+2.3. Heat generation due to light confinement
+
+2.3.2. Photonic crystal to direct the light emitting shape
+
+Photons generated by radiative recombination may not be able
+to escape from the LED chip if they are totally internally reflected
+at the semiconductor–air interface. If the incident angle of the light
+ray is close to normal, they are effectively extracted outside of the
+LED chip; otherwise, they will be trapped inside [21] and con-
+verted into heat. This occurs because of the large refractive index
+
+Photonic crystal is added on the top layer of conventional chip
+p-GaN. The dielectric constant of the crystal distributes periodi-
+cally with special microstructures. Electromagnetic waves
+propagating inside will be modulated to form a photonic band gap.
+Then, the photon propagation is prohibited if its frequency falls
+within the range of the forbidden band. One solution is to use
+photonic crystals to gather the non-directional light emitted from
+
+10
+
+X. Luo et al. / Progress in Energy and Combustion Science 56 (2016) 1–32
+
+the active layer to contact the semiconductor; another solution is
+to use the air interface in an angle less than the critical angle of total
+reflection to avoid the absorption in the active layer. As shown in
+Fig. 15, Lai et al. [56] applied a two-dimensional (2D) photonic quasi-
+crystal (PQC) structure to the p-GaN surface of an LED by nano-
+imprint lithography and roughened the side of the n-GaN surface.
+The result shows that the efficiency of the LED with PQC is sub-
+stantially improved compared to the conventional LED.
+
+2.3.3. Patterned sapphire substrate (PSS)
+
+When light emits from the active layer, a very large part will prop-
+agate backward directly to the sapphire substrate. Thus, to increase
+the escaping opportunity from the LED chip, patterned sapphire sub-
+strate offers a promising solution since it can break the TIR and
+increase the LEE [57]. Zhang et al. [58] fabricated three types of
+nanopatterned sapphire substrates (NPSS) by keeping the same
+heights at 200 nm and varying the pattern spacing from 0 nm to
+120 nm. The scanning electron microscope (SEM) images of these
+structures are shown in Fig. 16(a)–(f). Here, FSS means flat sap-
+phire substrate. The performance of the three types of patterned
+substrate LEDs was measured and compared to flat sapphire sub-
+strate LED. As shown in Fig. 16, it is clear that LEDs with a patterned
+substrate exhibit a large enhancement, and that the denser the pat-
+terns are packaged, the higher is the LEE of the LED.
+
+2.3.4. Adding a reflector in flip chip LEDs
+
+Metal reflectors can also be used to enhance LEE, and the dis-
+tance between the active region and the metal reflector has a vital
+influence on the amplification of LEE. When the Ohmic contact layer
+is changed to metal, such as Ag or Au, most of the backward light
+will be reflected. However, although a large portion of light will be
+reflected, a part of the light is still absorbed by the metal or escapes
+
+Fig. 12. (a) Schematic of LEDs coated with a planar layer of intermediate refrac-
+tive index material between the semiconductor/air interfaces; (b) schematic of LEDs
+coated with the SiO2/PS micro lens array, with a great increase in the photon escape
+cone (reprinted from Ref. 51 with permission of IEEE).
+
+Fig. 13. Two-dimensional schematics of the TFFC InGaN QWs LED with: (a) flat surface; (b) SiO2 micro lens array; (c) SiO2/polystyrene micro lens array; and (d) GaN micro-
+hemispheres on top of the LED (reprinted from Ref. 53 with permission of IEEE). PML is short for perfectly matched layer.
+
+X. Luo et al. / Progress in Energy and Combustion Science 56 (2016) 1–32
+
+11
+
+Fig. 14. (a–d) Schematics of the fabrication of biomimetic structures utilizing the PS nanospheres on the n-type GaN layer. (e) SEM image of the fabricated biomimetic
+surface structures. (f) Enhancement of light output power versus the height of biomimetic surface structures. The inset shows the simulated index profile (reprinted from
+Ref. 55 with permission of IEEE).
+
+through the layer. The escaped amount of light will increase if the
+top surface of the metal is rough. Therefore, researchers focus on
+novel structures at the top surface of the metal layer to return the
+back light. Jan et al. [59] put forward a new structure at the inter-
+face between the metal layer and the semiconductor. Specifically,
+they added an n-shaping layer, as shown in Fig. 17(a), which can
+enhance the total reflectance of these layers at the bottom of the
+device. As a result, the LEE increased up to 50% compared to the
+previously reported values. The specific total output light flux is
+shown in Fig. 17(b).
+
+2.4. Future trends of LED chip design with low heat generation
+
+Based on the above analysis and an understanding of heat gen-
+eration within LED chips, efforts have been made to increase the
+probability of radiative recombination, and thus reduce heat gen-
+eration within the active region. From an epitaxial perspective, LED
+chips evolve from p–n junction to double heterojunction and MQW
+
+design. The carriers are well confined within the active region, and
+the recombination probability is greatly improved. Better epitaxy
+design, such as an optimal electron blocking layer, will soften the
+current overflow issues. At the chip level, the sapphire substrates
+with high thermal resistance in conventional LED chip design are
+replaced by the vertical or flip chip design. This trend not only im-
+proves thermal conductivity, but also overcomes the current
+crowding problem. Moreover, a large portion of light will be ex-
+tracted from the LED chip to reduce the photon annihilation which
+generates heat. On the light emitting surface of LEDs, surface tex-
+turing and roughening, as well as photonic crystals, are adopted to
+improve light output efficiency. Patterned sapphire substrate and
+reflector at the metal contact are also proven to constitute effec-
+tive candidates to increase LEE.
+
+In the future, it can be reasonably assumed that researchers and
+industry will continue to pursue high efficiency, brightness, and low
+cost GaN-based solid state lighting technology. In addition to adopt-
+ing the above methods to reduce heat generation, obtaining usage
+
+Fig. 15. (a) Schematic diagram of GaN-based LEDs with the PQC structure on the p-GaN surface and n-side; (b) light output power–current and wall-plug efficiency char-
+acteristics of LED with/without PQC structure (reprinted from Ref. 56 with permission of Springer).
+
+12
+
+X. Luo et al. / Progress in Energy and Combustion Science 56 (2016) 1–32
+
+Fig. 16. Plane-view SEM images of: (a) NPSS1; (c) NPSS2; and (e) NPSS3. Cross-sectional SEM images of the GaN/NPSS interface of: (b) NPSS1; (d) NPSS2; and (f) NPSS3. (g)
+Light output powers and external quantum efficiencies as functions of the injection current for LEDs grown on NPSS1, NPSS2, NPSS3, and FSS (reprinted from Ref. 58 with
+permission of AIP).
+
+of a large area, low cost Si substrates, non-polar GaN, and improve-
+ments of chip design are needed [60]. The GaN nanowire based LED
+offers advantages over its planar counterpart in the following ways.
+Due to the large aspect-ratio, the dislocation density within the GaN
+nanowire could be greatly reduced [61]. The small diameter of the
+nanowire also relieves the strain caused by the lattice and thermal
+expansion mismatch, which presents a problematic challenge when
+planar GaN is grown on a large area or on substrates with large dif-
+ferences of thermal expansion coefficient. Moreover, the active region
+is enclosed within the core/shell nanowire, and surface recombi-
+nation is reduced. Due to the non-planar structure, LEE can be greatly
+improved. Furthermore, researchers have reported that multicolor
+LEDs can be realized on a single chip through controlling over the
+nanocolumn diameter from 137 to 270 nm [62].
+
+3. Phosphor coating and fluid flow
+
+In Section 1.3, we stated that phosphor coating is the most im-
+portant fluid flow problem in LED packaging since the coating
+process determines the phosphor thickness, location, distribution,
+and morphology in LED packaging. For this coating fluid, phos-
+phor particles are dispersed in silicone matrix, and the mixture, or
+phosphor gel, is a kind of non-Newton fluids. It has been vali-
+dated that phosphor concentration, thickness, particle distribution
+and morphology influence the optical performance of LEDs greatly.
+
+Phosphor location constitutes the primary consideration in LED pack-
+aging. When altering the phosphor layer from being close to being
+remote to the chip, the propagation path and energy of the light
+will be affected in terms of the scattering and absorption of the phos-
+phor, the reflection of the reflector, the absorption of the chip, the
+refraction of the lens, etc. Therefore, changing the phosphor loca-
+tion will affect the LEE and CCT of LEDs. Phosphor thickness and
+concentration are the second consideration in LEDs because the lu-
+minous flux and color of LEDs are adjusted mainly through changing
+the thickness and concentration. Thickness and concentration can
+be varied in manufacturing and will therefore affect the optical con-
+sistency of LEDs. Moreover, the dispensed phosphor gel on LED chip
+may have different shapes, such as planar, hemispherical, spheri-
+cal cap, etc. The phosphor particles scatter the light, and thus the
+light propagation in different shapes of phosphor gel may be com-
+pletely different. Therefore, phosphor morphology or shape also
+requires specific consideration.
+
+3.1. Phosphor coating methods
+
+Currently, there are three common methods to coat phosphor
+gel in LED packaging, i.e. freely dispensed coating, conformal coating
+and remote coating. Fig. 18 shows the schematics and pictures of
+the corresponding phosphor morphologies in three methods. Freely
+dispensed coating, as shown in Fig. 18(a), is the most convention-
+
+Fig. 17. SEM image of front-view of the patterned n-shaping layer. (b) Total output light flux of metal bonding type smooth surface AlGaInP LED and micro shaping surface
+AlGaInP LED as a function of the current in LEDs (reprinted from Ref. 59 with permission of SPIE).
+
+X. Luo et al. / Progress in Energy and Combustion Science 56 (2016) 1–32
+
+13
+
+Fig. 18. Illustrations of three phosphor coating methods: (a) freely dispensed coating, (b) conformal coating, and (c) remote coating.
+
+al method. As presented in Fig. 7, this approach dispenses phosphor
+silicone on the chip without a mold restricting the flow of the phos-
+phor gel until a surface force balance is achieved. The shape of the
+phosphor layer is a spherical cap. Therefore, the light color from the
+central zone tends to be warm white, whereas the light color from
+the edge zone tends to be cool white. The major advantage of this
+method is that no special techniques are required, and thereby manu-
+facturing time and cost are reduced. However, the primary
+shortcoming of this approach is also evident. Specifically, it cannot
+effectively control phosphor silicone volume and morphology; there-
+fore the repeatability and consistency are relatively low and may
+reduce the yield of products.
+
+Conformal coating, as shown in Fig. 18(b), is a progressive pack-
+aging process which can realize an extraordinarily thin phosphor
+layer. To control the final color output, the concentration of the phos-
+phor layer is usually high due to the thin thickness. This method
+overcomes the nonuniform thickness of the phosphor layer in the
+freely dispensed method, and the angular color uniformity of the
+white light can be greatly enhanced. The conformal coating method
+was firstly developed by Lumileds, which applied the electropho-
+retic method [63] to deposit charged phosphor particles on the chip
+surface. Since controlling the voltage and deposition time can adjust
+the thickness of phosphor film, conformal coating can easily realize
+micron precision. Other developed approaches such as slurry [64],
+settling [65], and evaporating solvent [66] can also realize confor-
+mal phosphor coating. Although conformal coating can achieve good
+optical performance, it is confirmed by experiments that there is
+still approximately 50%–60% of light that is back-scattered by the
+phosphor layer [67,68]. These light rays will be re-absorbed by the
+chip and part of the energy is lost due to the absorption of pack-
+aging materials. Moreover, the localized heating caused by the high
+power chip can induce thermal quenching and reduce the quantum
+efficiency of the phosphor [69].
+
+Fig. 18(c) shows the remote coating packaging. In this coating
+process, since only a small part of the light rays will reach the chip
+and be absorbed, adjusting the phosphor layer from being close to
+being remote to the chip can reduce the backscattering incidents
+and increase light extraction [70,71]. In addition, increased dis-
+tance also improves color stability by lowering the surface
+temperature of the phosphor [72]. This coating approach normal-
+ly requires a reflector to fix the phosphor layer. The main
+disadvantage of remote coating is that the shape of the phosphor
+
+layer is not perfectly level. Affected by the surface tension of liquid,
+the pre-cured encapsulant materials and phosphor layer normally
+present concave surfaces. Some methods can partly solve this
+concave surface problem such as adjusting the reflector angle, using
+high viscosity silicone gel, lowering the fluid temperature, etc.
+However, these methods cannot fundamentally solve this issue. Since
+the viscosity of phosphor silicone is generally higher than that of
+the pre-cured encapsulant, the curvature of phosphor gel will be
+larger, which will cause the thickness of the phosphor layer to be
+slightly greater in the central zones. Since the remote phosphor layer
+is away from the LED chips, its area is usually much larger than the
+area of the LED chips. Therefore, another disadvantage is that the
+large-area phosphor layer will disorder the light propagation and
+substantially deteriorate the re-emission light pattern because the
+well-designed optics are usually just designed for the chips or small
+light sources.
+
+3.2. Fluid analysis techniques
+
+As a viscous fluid, the flowing behavior of phosphor gel influ-
+ences the phosphor coating process greatly. Elucidating this behavior
+will fundamentally help to realize process control. However, this
+flow is quite complex, as it is related to many factors, such as in-
+ertial force, capillary force, gravitational force, wettability, porosity,
+surface roughness, etc. To realize the flow analysis of phosphor
+coating, the following three techniques are necessary.
+
+3.2.1. Fluid property analysis
+
+Phosphor gel consists of a silicone matrix and phosphor par-
+ticles, and thus its fluid property is dependent on the physical
+properties of silicone and phosphor parameters (concentration, par-
+ticle size distribution, surface properties, etc.). In general, silicone
+behaves as a shear-thinning power-law fluid with a viscosity of ap-
+proximately 4 Pa·s at 20 °C and surface tension of approximately
+0.031 N/m. Similarly, phosphor gel also behaves as a shear-thinning
+power-law fluid, and its flowing process would influence the shear
+rate, viscosity distribution and the dynamic wetting characteristic
+[73,74]. However, due to silicone’s thermosetting property [75] as
+well as the filling effect of phosphor particles, the viscosity, surface
+tension and rheological characteristics of phosphor gel change with
+the phosphor parameters and temperature.
+
+14
+
+X. Luo et al. / Progress in Energy and Combustion Science 56 (2016) 1–32
+
+3.2.2. Surface wettability analysis
+
+It is well-known that surface structure substantially influences
+wetting properties. Fig. 19 shows a liquid droplet on a solid sub-
+strate, and there are three different phases in this case. When
+gravitational forces are negligible compared to surface tensions, the
+shape of the droplet is a spherical cap. Three surface tensions need
+to be considered here: solid–liquid (γsl), liquid–vapor (γlv), and solid–
+vapor (γsv). Young’s equation [76] gives the relation between the
+equilibrium contact angle θeq and the three surface tensions as:
+
+γ
+
+sv
+
+=
+
+γ
+sl
+
++
+
+γ
+lv
+
+cos
+
+θ
+eq
+
+(1)
+
+When the surface tensions differ from each other; such that γsv–
+γsl–γlv > 0, Young’s equation is not satisfied for any angle θ, and the
+fluid would spread over and completely wet the substrate corre-
+spondingly. For macroscopic wetting, Young’s equation is sufficient
+to describe the wetting state of any solid–liquid–vapor system. One
+way of changing the surface properties and wetting state is through
+microtexturing. According to the wetting behaviors on the rough
+surfaces [77,78], two kinds of wetting states exist. When the drop-
+lets reside on the top surface of the roughness surface, this is called
+as Cassie–Baxter (CB) state. When the droplets impale the rough-
+ness grooves, this is called as Wenzel state. Based on the fluid
+properties and surface structure, we can design patterned sur-
+faces or structured surfaces to realize the desired phosphor
+morphology.
+
+3.2.3. Energy and force analysis
+
+During the flowing process, the kinetic energy, interfacial po-
+tential energy, and gravitational potential energy are balanced by
+the viscous dissipation, and the energy balance equation can be
+written as [79]:
+
+Fig. 20. (a) LED module with a conventional freeform lens where the inner surface
+is a hemisphere and (b) LED module with a freeform lens that can realize confor-
+mal phosphor coating.
+
+without impact velocity, the capillary force and gravity are the main
+driving forces. However, when they impact on a surface, the inertia
+force should be taken into consideration, and the capillary effects
+can be neglected if We >> Re1/2 during droplet impact [81]. For drop-
+lets whose diameters are smaller than lc, gravity could be ignored.
+Capillary force and interfacial tension constitute the main driving
+forces in the inner flow, and the viscous force is the main resistant
+force during the flowing process.
+
+Δ
+
+( ) +
+
+E t
+k
+
+Δ
+
+( ) +
+
+E t
+p
+
+Δ
+
+( ) +
+
+E t
+g
+
+Δ
+
+( ) = 0
+
+L t
+f
+
+(2)
+
+3.3. Phosphor coating methods based on fluid analysis
+
+where ΔEk(t) represents the kinetic energy variation, ΔEp(t) is the
+interfacial potential energy variation, ΔEg(t) is the gravitational po-
+tential energy variation, and ΔLf(t) represents viscous dissipation.
+Among these energies, ΔEg(t) can be neglected for tiny liquid drops;
+ΔEk(t) can also be ignored for tiny liquid drops which have no impact
+velocity. Conservation of energy implied that, due to the viscous dis-
+sipation, the total energy of the system must decrease as the
+spreading process proceeds.
+
+Regarding force analysis, the flow of droplets is controlled by cap-
+illary force, gravity, interfacial tension, viscous force and inertia force
+[80]. Two dimensionless numbers are often used to characterize
+droplet wetting dynamics – Weber number (We, =ρu2d/γ) and Reyn-
+olds number (Re, =ρud/μ). In the definitions, ρ is the density, u is
+the velocity, and d is the diameter of the droplet. The Weber number
+represents the ratio of inertia force and interfacial force, while the
+Reynolds number represents the ratio of inertia force and viscous
+force. For droplets whose diameters are larger than the capillary
+length (lc, =(γ/ρg)1/2), when they are gently dropped on the surface
+
+Fig. 19. Young’s equation equates the surface tension forces at equilibrium.
+
+To further enhance the efficiency of LED packaging, great efforts
+have been made to discover new processes, especially for new phos-
+phor coating methods based on the fluid analysis.
+
+3.3.1. Special packaging structure
+
+Conventional phosphor coating methods usually realize a hemi-
+sphere, or spherical cap phosphor morphology, but their optical
+performances are limited. To overcome these limitations, some
+special packaging structures have been developed for realizing more
+optimal phosphor morphologies based on fluid properties.
+
+Kuo et al. [82] employed a pulse spray coating method to realize
+a patterned remote phosphor structure, which could increase the
+extraction efficiency of blue rays at a large angle, and improve the
+stability of angular-dependent CCT. Liu et al. [83] proposed a mul-
+tilayer phosphor configuration with a pyramidal shape and inverse
+concentration distribution. Hu et al. [84] modified the convention-
+al Kubelka–Munk theory to analyze the phosphor layer and proposed
+the bi-layer structure with inverse concentration distribution to
+enhance the light extraction efficiency. Chen et al. [85] inserted a
+thin silicone layer into the dual-layer remote phosphor structure
+and found that this structure enhanced lumen flux by 5% at the same
+CCT. Wang and Huang [86] proposed a feedback coating method to
+stack yellow, green, and red phosphor layers, so as to realize the
+desired chromaticity coordinates and spectra. Hu et al. [87] real-
+ized conformal phosphor coating from the aspect of packaging lens
+design. Fig. 20 shows the freeform lens whose inner surface was flat
+rather than a conventional hemisphere, thus when filling the space
+between the lens and LED chip with phosphor gel, a conformal phos-
+phor coating was formed. They used the flat inner surface to realize
+the conformal coating, while used the freeform outer surface to
+control the lighting characteristics. With accurate control of the light
+
+X. Luo et al. / Progress in Energy and Combustion Science 56 (2016) 1–32
+
+15
+
+Fig. 21. Photographs of (a) spherical and (b) hemispherical phosphor silicone
+encapsulants (reprinted from Ref. 88 with permission of Elsevier).
+
+path by the freeform lens, it was possible to realize phosphor con-
+formal coating and uniform illumination simultaneously.
+
+3.3.2. Fluid morphology control
+
+Accurately controlling the morphology of phosphor gel consti-
+tutes an advanced approach for realizing the desired optical
+performance of white-light LEDs (wLEDs), since this method deals
+with material modification and fluid flow behaviors on a struc-
+tured surface.
+
+Huang et al. [88] added Pt nanoparticles (PtNPs) into the phos-
+phor silicone composite and realized a spherical phosphor
+encapsulant for white LED packaging, and Fig. 21 shows two dif-
+ferent phosphor morphologies with/without PtNPs. With PtNPs, as
+shown in Fig. 21(a), the curing reaction of the silicone was accel-
+erated, thereby resulting in the stabilization of phosphor silicone
+composite quickly. While the composite without PtNP catalyst spread
+over the substrate, as shown in Fig. 21(b). The large surface area of
+the PtNPs effectively catalyzed the curing reaction of the silicone.
+About a 20.6% enhancement in luminous efficiency was observed.
+This spherical morphology was achieved based on the fluid anal-
+ysis by considering the silicone’s flowing and curing simultaneously.
+Zheng and Luo [89] proposed a new substrate structure to enhance
+the CCT consistency of LEDs by controlling the liquid morphology
+based on wetting theory. In the wetting process, the final phos-
+phor morphology meets the rule of interfacial free energy
+minimization. Based on this primary rule, Zheng and Luo added two
+symmetrical parts on the two sides of copper slug. When the dis-
+pensed phosphor volume is too much, phosphor gel will spread along
+the novel structure to keep the interfacial free energy minimal, and
+the phosphor volume on the LED chip is consistent. Using their sub-
+strate, the variations of phosphor volume in each coating process
+could be greatly reduced and controlled, and thus the CCT consis-
+tency could be improved by 42.3%. Lee et al. [90] applied surface
+treatment to phosphors to improve the hydrophobic properties by
+plasmas generated from a O-(Si(CH3)3)2 (HMDSO) plasma in a low-
+pressure environment. They also studied the effect of surface
+treatment on the total surface free energy by measuring the contact
+angle. It was found that plasma treatment of phosphors signifi-
+cantly improved the hydrophobicity of the phosphor gel (contact
+angle >150°) and the corresponding total surface free energy de-
+creased substantially. Jang et al. [91] carried out hydrophobic coating
+on silicate-based yellow phosphors to improve the long-term sta-
+bility and reliability of phosphors. After coating, the contact angle
+of the phosphor powder increased to 133.0° for water and 140.5°
+for glycerol.
+
+3.3.3. Other typical processes for phosphor coating
+3.3.3.1. Pulsed spray process. Huang et al. [92] proposed a pulsed
+spray (PS) process to coat a conformal phosphor on LEDs. The PS
+approach with an interval control is used to feed the phosphor slurry
+through an air atomizing nozzle to spray and pile up the phos-
+
+Fig. 22. Phosphor coating using the PS technique. (a) An array of blue LED chips on
+board (COB); and (b) the magnification of an individual LED (reprinted from Ref. 92
+with permission of OSA).
+
+phor layer by layer. As a result, a thin and uniform phosphor is coated
+along the perimeter of the chip. From their results, an accurate color
+distribution at a wide range of CCT (from 2500 K to 9500 K) was
+observed. This PS approach can also be applied to wire-bonded LED
+chips and an array of chips on a board (COB). The phosphor mor-
+phology coated by this PS process was shown in Fig. 22.
+
+3.3.3.2. Capillary microchannel process. Zheng et al. demonstrated
+a conformal phosphor coating method for wLEDs using a capillary
+microchannel [93]. The phosphor gel flowed spontaneously in the
+capillary microchannel and was pinned at the edge of the fixture
+due to the surface tension effect. With experimental validations both
+by conventional and vertical chips, their method could effectively
+improve the angular color uniformity (ACU) of the wLEDs.
+
+3.3.3.3. Wafer-level process. In an effort to duplicate the success of
+integrated circuit (IC) packaging with LED packaging, the wafer-
+level coating process is the first attempt in terms of phosphor coating.
+Literally, the wafer-level process comprises coating phosphor gel
+on the wafer. Zhang and Lee proposed a novel encapsulation process
+for a wafer-level LED array [94]. The wafer substrates were fabri-
+cated by a wafer-level lithography and plating process. Their process
+takes advantage of square trenches fabricated by a deep reaction
+ion etching (DRIE) process as barriers to limit the spread of the epoxy
+encapsulant, and can adjust the geometry of the encapsulation via
+controlling the volume of the epoxy and the dimension of the
+trenches. The encapsulation array on a wafer is shown in Fig. 23(a).
+Based on the concept of screen printing, Lee and Lee developed a
+new methodology for coating a uniform yellow phosphor layer [95].
+A silicon mold plate was fabricated with etched cavities, and served
+as a printing mask. The yellow phosphor powder was pushed into
+the apertures by a squeegee blade and bonded to the LED with UV
+curable epoxy. The morphology of the screen-printed phosphor layer
+
+Fig. 23. (a) Encapsulation array on a wafer (reprinted from Ref. 94 with permis-
+sion of Elsevier) and (b) screen-printed phosphor layer (reprinted from Ref. 95 with
+permission of IEEE).
+
+16
+
+X. Luo et al. / Progress in Energy and Combustion Science 56 (2016) 1–32
+
+is shown in Fig. 23(b). Liu et al. developed a new structure for 3D
+wafer level LED packaging [96]. The structure consisted of a silicon
+submount wafer, a silicon cap wafer, and a layer of phosphor film.
+Each part was independently fabricated and subsequently as-
+sembled at the wafer-level. Experimental results indicated that the
+current wafer level packaging method with a remote phosphor con-
+figuration could generate white light illumination with CCT ranging
+from cold white to warm white. Xie et al. fabricated a novel pack-
+aging structure for wafer-level LED packaging based on Si material
+and a TSV array [97]. A thin layer of optical glass with phosphor
+was bonded to the cavity wafer. The lumen efficiency is 106 lm/
+W, the color rendering index is 70, and the color temperature is
+4460 K. Compared to traditional LED, the advantages of this 3D in-
+tegration package were good thermal diffusivity, high light efficiency,
+and less footprint.
+
+In addition to the above coating methods, some other coating
+processes, such as electrophoresis process [63], slurry process [64],
+and settling process [65], have also been developed to realize some
+specific phosphor coating. These coating methods may have good
+capability in phosphor morphology control, and could realize the
+desired optical characteristics of LEDs. However, these methods may
+refer to electrical/chemical reactions rather than fluid analysis. There-
+fore, not much detail about these methods is provided here and
+interested readers may refer to Refs. 63–65.
+
+3.4. Future trends of LED phosphor coating
+
+Phosphor coating plays a significant role in affecting the optical/
+thermal performance of phosphor-converted LEDs. Obtaining a better
+understanding of the heat and fluid flow behaviors of phosphor gel
+will help to develop more highly-efficient packaging processes.
+Trends include: (1) application-specific coating process. Based on
+a full understanding and control of phosphor fluid, it may be pos-
+sible to realize the optimal phosphor parameters (such as thickness,
+concentration, location, morphology, distribution, etc.) to achieve
+any desired CCT, luminous efficiency, color uniformity, etc. At the
+same time, the product consistency and yield will be guaranteed
+as well. (2) IC-compatible coating process. In the future, LEDs will
+be more and more widely used and the LED amounts are exponen-
+tially increasing. Analog to the success of IC packaging, LED packaging
+will develop more and more IC-compatible processes. Especially, the
+phosphor coating process will take example for some mature pro-
+cesses in IC packaging, such as inkjet printing, nozzle printing, offset
+printing, gravure printing, roll-to-roll manufacturing, etc. (3) Wafer-
+level coating. As mentioned above, the development of this process
+will simplify the packaging process, enhance product yield and
+reduce manufacturing cost.
+
+4. Thermal management in LED packaging and applications
+
+4.1. Thermal resistance network of LED lamps
+
+There are three modes of heat transfer: conduction, convection
+and radiation [98]. Generally, the operating temperature of LED chips
+should be maintained below 120 °C, and thus heat dissipation of
+LED packaging through radiation could be neglected due to the rel-
+ative low temperature. This implies that in LEDs, conduction and
+convection are the main heat transfer modes. The typical LED lamp
+structure is shown in Fig. 24. The LED chip is mounted onto a copper
+slug for heat dissipation, and is then fastened in the moulding com-
+pound as LED modules. The chip size is usually 1 mm × 1 mm, while
+the module is usually about 10 mm × 10 mm. Due to the high power
+requirement, many modules are then attached to the printed circuit
+board (PCB) substrate which is further bonded with a large heat sink.
+The sizes of the typical LED lamp change from several centimeters
+to meters. Thermal interface materials (TIMs) are usually chosen as
+the bonding materials in this architecture. Fig. 24 also shows the
+heat dissipation paths and thermal resistance network for LED pack-
+aging and applications. Heat generated from the chip is dissipated
+through two paths. Part of the heat generated in the typical
+leadframe LEDs will take the “upper path” to dissipate through the
+phosphor layer, encapsulant and optical lens; the rest of the heat
+is dissipated through the “lower path”, which comprises the chip,
+lead frame, and substrate. Since the encapsulant and phosphor layer
+are usually made of polymer or polymeric composites with low
+thermal conductivity of ~0.2 W/(m·K) [99,100], thermal resistance
+at the upper path is quite large. Therefore, most heat is dissipated
+through the “lower path”. Obviously, in the heat dissipation process,
+heat would conduct through many materials and interfaces.
+
+To evaluate the system thermal resistance network, the thermal
+resistance network model has been developed to predict the thermal
+behavior of LEDs due to its low cost and high accuracy. However,
+this method relies on carefully considered approximations of the
+related heat transfer phenomena [101–108]. Christensen and Graham
+[109] built a thermal resistance model for Luxeon packaging LED
+arrays. In their work, the thermal resistance network was ana-
+lyzed in order to understand the role of various thermal resistances
+in cooling the compact arrays. Han et al. [110] also developed a
+thermal resistance network model for thermal analysis of Luxeon
+packaging. The model was validated with the experimental data and
+utilized to study the effect of key parameters on the junction tem-
+perature. Using the compact thermal model, Luo et al. [111]
+presented an engineering approach to predict the junction tem-
+perature of high power LEDs. Detailed calculations of each thermal
+resistance and the total thermal resistance were validated. Regard-
+
+Fig. 24. Schematic of the structure and thermal resistance network of the leadframe LED based lamp.
+
+X. Luo et al. / Progress in Energy and Combustion Science 56 (2016) 1–32
+
+17
+
+ing the COB packaging LED arrays, Ha and Graham [112] built a
+thermal resistance model for thermal analysis. Using the analyti-
+cal expression of thermal resistance, it is possible to determine the
+effect of design parameters, such as material properties, LED spacing,
+substrate thickness, etc., on the system thermal resistance.
+
+In order to build the resistance network model, there are four
+types of resistances that should be analyzed and calculated: (1) ma-
+terials bulky resistance; (2) thermal interface material (TIM)
+resistance; (3) thermal spreading resistance; and (4) component-
+to-ambient resistance. Regarding materials bulky resistance, it is
+usually determined by the material thermal conductivity and size.
+For thermal interface resistance, it is difficult to estimate due to its
+complicated mechanical and thermal properties. Thermal spread-
+ing resistance constitutes a key resistance in a network, which is
+largely dependent on the geometry of contacting bodies and the
+thermal boundary conditions. Fig. 24 clearly shows the large change
+from chip to lamp. Heat will dissipate from the small-sized chip to
+the large-sized lamp, and finally to the ambient. Obviously, this will
+lead to a large amount of thermal spreading resistance. Last, but
+not the least, the component-to-ambient thermal resistance pre-
+dominantly reflects the heat dissipation ability of the LED lamp. The
+component-to-ambient resistance varies greatly from the differ-
+ent solutions. In this review, three typical thermal resistances are
+discussed specifically in the following sections, i.e., interface resis-
+tance, spreading resistance, and component-to-ambient resistance
+(or heat-sink resistance).
+
+4.2. Thermal resistance of thermal interface material (TIM) and its
+control
+
+4.2.1. Thermal resistance of TIM
+
+In Fig. 24, heat generated from chips must pass through several
+solid–solid interfaces, such as die–slug, die–board, slug–board and
+board–heat sink. It is well known [113,114] that when two solid sur-
+faces are joined, as shown in Fig. 25(a), the real contact between
+two bodies is established only on a few surface asperities. Conse-
+quently, the heat flux Q across such interfaces needs to be constricted
+at the microcontact spots. On a macroscopic scale, it brings in a tem-
+perature difference (ΔT) at the interface resulting in a thermal
+resistance called contact thermal resistance (Rc).
+
+c = Δ
+R
+
+T Q
+
+(3)
+
+To reduce Rc, a typical thermal solution is to fill the interfacial
+gap between the asperities with highly conductive materials, such
+as the thermal interface materials (TIMs). Fig. 25(b) illustrates the
+use of TIMs in LED packaging. The TIM 1 layer is for chip bonding,
+and the TIM 2 layer is utilized for the attachment of the slug to the
+board and the board to the heat sink. The most common TIM 1 in-
+cludes solders and adhesives which require the reflow or curing
+process when used. Fluidic polymer-based TIMs are widely used as
+TIM 2, including thermal greases and phase change materials (PCMs).
+By inserting the TIMs into the solid surface, as shown in Fig. 25(b),
+a solid–TIM–solid joint forms at the surface. Fig. 25(b) shows that
+the TIM has a finite bond line thickness (BLT) at the joint and cannot
+completely fill the gap due to its inability to completely wet the
+surface [115]. Therefore, thermal resistance of TIM (RTIM) has two
+components: the bulk resistance of the TIM (Rbulk) arising from its
+finite BLT and the Rc at the TIM–solid interface arising from the in-
+complete wetting. From Fig. 25(b), RTIM can be written as:
+
+R
+
+TIM
+
+=
+
+BLT
+k
+
+TIM
+
++
+
+R
+c
+
++1
+
+R
+c
+
+2
+
+(4)
+
+From Eq. (4), we can see that there are three factors that deter-
+mine RTIM: (1) Rc; (2) thermal conductivity of TIM (kTIM); and (3) BLT.
+
+Fig. 25. Schematic showing (a) Rc at the solid–solid interface, and (b) RTIM at the
+solid–TIM–solid joint.
+
+One typical TIM is solder, which possesses relatively large thermal
+conductivity [116–118]. However, the continuing increase in pack-
+aging density of LEDs has resulted in a major challenge concerning
+on reliability of this interconnect material. For the solder joints, one
+primary factor that hinders joint reliability is the void formation
+during the reflow process [119–126]. Panton et al. [119] simu-
+lated void growth in molten solder bumps. The physical model in
+the study shows that the bubble motion is subjected to buoyancy
+force, drag force produced by the bulk fluid viscous flow, and the
+thermocapillary self-propulsion effect. The simulation results can
+predict the final locations and sizes of the voids after the reflow
+process. Experiments were also conducted to identify the loca-
+tions and measure the sizes of the voids in the solder bumps [120].
+It is found that the predicted results match well with the experi-
+mental findings. Ume and Jie [125] also detected the voids of solder
+bumps by various techniques, such as 2-D X-ray, 3-D X-ray, acous-
+tic inspection and laser-ultrasound.
+
+Another kind of TIM is the polymer-based TIMs which are pre-
+dominantly manufactured by introducing highly thermally
+conductive particles such as ceramics, metals, and metal oxides into
+the polymer matrix [126–128]. In 2006, Prasher [129] conducted
+a comprehensive review of the polymer-based TIMs by discussing
+and analyzing the models of kTIM, BLT and Rc. Since then, some pro-
+gress has been made on models and new solutions for the reduction
+of RTIM. Thus we would like to introduce the developments from the
+aspects of the three factors in Eq. (4) here.
+
+4.2.1.1. Rc models. Past literature is replete with models of Rc at the
+solid–solid interface [113,114,130–133]. These studies have all as-
+serted that Rc is a function of surface roughness, slope of asperity,
+
+18
+
+X. Luo et al. / Progress in Energy and Combustion Science 56 (2016) 1–32
+
+By analyzing the models at
+
+apparent area of contact, mechanical properties of solid bodies, and
+load between the surfaces. However, these models are not suit-
+able for modeling the TIMs–solid contact, because the mechanical
+properties, such as the hardness and Young’s modulus, cannot be
+defined for polymer-based materials which possess liquid properties.
+the solid–solid contacts
+[113,114,131–138], the development of models should take account
+of both topographical and mechanical analyses at the contact. Based
+on the solid–solid models, some models for the liquid–solid contact
+have been built. Prasher [115] has modeled Rc of PCM and grease
+based on the definition of Rc proposed by Madhusudana [114]. Taking
+the wettability of the TIM on rough surface into consideration and
+by mechanical analysis, the model successfully illustrated the in-
+terface characteristics at the TIM–solid contact. The model is based
+on the surface geometry assumption that the solid asperities are
+conical in shape and the spacing of the peaks and valleys is equal
+to the roughness sampling interval. However, the roughness
+sampling interval cannot be used to describe surface topography
+because it is a profilometer parameter used to modify the rough-
+ness measurement conditions [139]. Heichal and Chandra [140] have
+modeled the Rc between molten metal droplets and a solid surface.
+In this model, the rough surface was idealized as a series of half-
+cylinders with same ratio placed next to each other. However, this
+description of surfaces was concerned that the substrates were pol-
+ished with emery paper in one direction [140,141]. Recently,
+Hamasaiid et al. [142,143] developed a predictive model for the
+casting-die interface. The advantages of this model are assuming
+that the heights of asperity follow a Gaussian distribution which
+is more acceptable for describing the surface topography [113], and
+using a parameter, mean asperity peak spacing (Rsm), as the spacing
+of the peaks and valleys. Fig. 26(a) schematically presents the profile
+of the liquid–solid interface based on the topographic assumption
+of Hamasaiid’s model [143]. Based on the definition of Rc in the CMY
+model [113], the authors expressed Rc as function of the effective
+thermal conductivity of the contacting bodies ks, mean asperity peak
+spacing (Rsm), root-mean-square deviation of the profile (σ) and the
+height of entrapped air (Y) between the liquid and solid surfaces:
+
+1 5
+.
+
+π
+2
+
+c =
+R
+
+R
+
+sm
+
+k
+8
+
+serfc
+
+⎛
+⎝⎜
+⎛
+⎝⎜
+
+−
+
+1
+
+⎛
+⎝⎜
+
+exp
+
+⎛
+⎝⎜
+
+−
+
+⎞
+Y
+⎠⎟
+σ
+2
+
+⎛
+⎝⎜
+
+exp
+
+π
+
+2
+
+2
+
+Y
+σ
+2
+2
+⎛
+⎝⎜
+
+−
+
+⎞
+⎠⎟ −
+⎞
+⎠⎟ −
+
+2
+
+Y
+σ
+2
+2
+
+Y
+σ
+
+erfc
+
+⎛
+⎝⎜
+
+π
+
+2
+
+Y
+σ
+
+erfc
+
+⎞
+⎠⎟
+
+⎞
+Y
+⎠⎟
+σ
+2
+⎛
+⎝⎜
+
+⎞
+⎠⎟
+⎞
+Y
+⎠⎟
+σ
+2
+
+.
+11 5
+
+⎞
+⎠⎟⎟
+
+(5)
+
+In the model, Y is found to influence Rc strongly and deter-
+mined by the mechanical analysis. The analysis in Hamasaiid’s model
+is completed by evaluating the capillarity pressure of the molten
+alloy as a function of the applied pressure through experiments.
+However, this method is difficult to apply in the estimation of Y in
+TIM–solid contact. Based on Hamasaiid’s model, Yuan et al. [144]
+proposed an improved model for the prediction of Rc at the TIM–
+solid interface. In the model, wettability analysis at the interface
+was conducted to calculate Y. As shown in Fig. 26(b), when TIM im-
+pinges on the solid surface, it spreads out and wets the microcavity
+of the solid surface. An equilibrium state is then established at the
+interface among the applied pressure P, the capillarity pressure due
+to the surface tension of TIM γl, and the back pressure of air. By ap-
+plying the ideal gas equilibrium equation on the entrapped air, it
+is possible to calculate the Y for the microcavities [144]. Rc at the
+TIM–aluminum interface was also measured for comparison with
+the modeling results. The modeling results were found to match the
+experimental data within 14.3% when the applied pressure was
+0.1 MPa.
+
+4.2.1.2. kTIM. Polymer-based TIMs are filled with highly conduc-
+tive particles and considered as composites. In addition to the
+
+Fig. 26. Schematic of (a) profile of the TIM–solid interface; and (b) spreading of TIM
+on the solid rough surface.
+
+intrinsic properties of fillers, thermal properties of composites
+depend on the filler loading [100,128], geometry [145,146], orien-
+tation to the thermal gradient [145,147–149], distribution
+[127,150–152], and interfacial properties [100,128]. Much litera-
+ture exists regarding the kTIM models of composites. Prasher [128]
+has reviewed and discussed the most common and important the-
+oretical models, such as the Maxwell–Garnett model (MG) [153–155],
+Bruggeman’s symmetric model (BSM) [156], Bruggeman’s asym-
+metric model (BAM) [157], the percolation model [158–162], and
+the resistive network model [100,163,164]. These models focus on
+homogenous composites filled with randomly distributed spheri-
+cal or cubic particles. However, with the increasing use of new non-
+spherical fillers in TIMs, such as graphene nanosheets (GNPs), boron
+nitride (BN) platelets and carbon nanotube (CNT), TIMs have become
+the heterogeneous materials with anisotropic kTIM. Apart from the
+geometry, the anisotropic thermal property of fillers is another reason
+for the anisotropy of kTIM. For example, GNP, with a high aspect ratio,
+has an in-plane thermal conductivity of ~2000 W/(m·K), whereas
+the through-plane thermal conductivity is less than 1 W/mK
+[165,166]. The experimental results [167] show that kTIM of GNP-
+epoxy in the horizontal direction can be five times higher than that
+in the vertical direction when GNPs are oriented horizontally. There-
+fore, the geometry of fillers should be taken into consideration in
+developing the models.
+
+Lewis and Nielsen (LN) [168] modified the Halpin–Tsai equa-
+tion [169] to build a thermal conductivity model. Their model
+considers the effect of particles shape and orientation, and the type
+of packing for a two-phase system. However, this model does not
+include the interface resistance between the particle and the matrix
+which is found to have a dramatic effect on thermal conductivity
+
+X. Luo et al. / Progress in Energy and Combustion Science 56 (2016) 1–32
+
+19
+
+according to the extant literatures [100,128]. Thermal interface re-
+sistance arises from the combination of a poor mechanical or
+chemical adherence at the interface and a thermal expansion mis-
+match [100,128]. Based on the Maxwell–Garnett model [153], Nan
+and Birringer [170] derived an effective medium approximation
+(EMA) formulation for predicting the effective thermal conductiv-
+ity of composites made of arbitrary ellipsoidal particles dispersed
+in a matrix. The formulation is for four limited cases: (1) aligned
+continuous fibers, (2) laminated flat plates, (3) spheres and (4) com-
+pletely misoriented ellipsoidal particles. One of the advantages of
+the EMA formulation is that it considers the effect of interface re-
+sistance. The LN model and EMA have been applied in previous
+studies [171–173] for thermal conductivity prediction of compos-
+ites filled with platelets or penny-shaped particles, such as BN, GNP,
+SiC, Al2O3, etc. Compared to the experimental results, the predic-
+tion of the model or formulation does not match well. According
+to the studies [171,173,174], a model called the Hatta–Taya (HT)
+model is useful in predicting the thermal conductivity of platelet-
+filled composites. Hatta and Taya [175] used an equivalent inclusion
+method to build the predictive model as expressed:
+
+Fig. 27. Comparison of Rbulk of the conventional flat and hierarchical nested channel
+(HNC) optimized bondlines.
+
+* =
+
+k
+
+k
+m
+
+⎛
+⎝⎜
+
++
+
+1
+
+−(
+1
+
+f
+
+) +
+
+S
+
+i
+
+f
+k
+m
+
+(
+
+k
+
+p
+
+−
+
+k
+m
+
+⎞
+⎠⎟
+
+)
+
+(6)
+
+stress of the material τy and the applied pressure P. τy can be ex-
+pressed as [179]
+
+where km and kp are the thermal conductivities of the matrix and
+particles, respectively; f is the particles volume fraction; and Si is
+a factor dependent on filler shape and direction. When the matrix
+// = π 4
+contains the platelet-shaped fillers, Si can be calculated as S
+p
+⊥ = −1 2 // (perpendicular) where the variable p (= tp/
+(parallel) or S
+d) is the inverse of the particle aspect ratio, tp and d are the thickness
+and diameter of the particle, respectively.
+
+S
+
+In addition to geometry and orientation, particle distribution also
+has a great effect on kTIM. Devpura et al. [176] illustrated the effect
+through percolation theory [177]. As the high thermally conduc-
+tive particles form a continuous chain from heat source to heat sink,
+there is a sudden increase in thermal conductivity. McCullough [178]
+also emphasized that increasing the filler concentration promotes
+the formation of preferential paths for heat conduction passing
+through the composite. Khiabani et al. [151] studied the effect of
+squeeze flow on the thermal properties of particulate TIMs by means
+of lattice Boltzmann method (LBM). They first obtained the parti-
+cle distribution by simulating the squeezing process, and found that
+two particle stack lines form in diagonal directions. After calculat-
+ing the temperature and heat flux distribution of TIMs, it is found
+that there was relatively lower temperature and higher heat flux
+in the diagonal directions.
+
+4.2.1.3. BLT. The BLT of particle-filled TIM should depend on the rhe-
+ology of the material [128]. There are four types of constitutive
+models used to explain the rheological behavior of polymers: (1)
+Newtonian fluid, (2) Power Law fluid, (3) Bingham fluid and (4)
+Herschel–Bulkley (H–B) fluid [179]. For these fluids with constant
+radii located between two substrates, the theoretical formulation
+of thickness has been summarized by Prasher et al. [128] It is found
+that Newtonian and Power Law fluid models cannot be used to model
+BLT of particle-filled TIM because the steady state thickness of the
+two fluid models is assumed as to be zero, which is unrealistic.
+Prasher et al. [128] found that these models underestimated the BLT
+of TIMs greatly and proposed a polymer rheology based empirical
+model:
+
+BLT =
+
+C
+
+⎛
+⎝⎜
+
+Mτ
+⎞
+y
+⎠⎟
+P
+
+(7)
+
+where C and M are 1.31 × 10−4 and 0.166, respectively [130]. This
+model shows that BLT of particle-filled TIM depends on the yield
+
+τy
+
+=
+
+A
+
+⎡
+⎢
+⎢
+⎣
+
+(
+
+f
+
+m
+
+2
+
+⎤
+⎥
+⎥
+⎦
+
+1
+
+(8)
+
+1
+) −
+
+1
+3
+
+f
+
+where A and fm are the constant and maximum particle volume frac-
+tion, respectively. Thus τy depends on the particle volume fraction
+f. The analytical models [153–157] show that kTIM of particle-filled
+TIM also depends on f. Many studies [128,180–183] have found that,
+as shown in Fig. 27, filling the TIM with a high volume fraction of
+particles can only be effective in decreasing Rbulk when the filling
+fraction f is less than the critical f. In this period, the filling will in-
+crease the kTIM and kTIM dominates the filling influence. When the
+filling fraction f is larger than the critical f, the BLT starts to dom-
+inate and causes Rbulk to increase. Therefore, when decreasing the
+Rbulk, the fillers and the fraction should be well designed.
+
+4.2.2. Thermal resistance of TIM control
+
+According to Eq. (4), reduction of RTIM can be achieved by re-
+ducing Rc, increasing kTIM and reducing BLT. Based on models
+[115,144], Rc can be decreased by increasing the applied pressure,
+using the TIMs with high surface tension and thermal conductiv-
+ity, and machining the substrate with low surface roughness.
+
+kTIM is often reinforced by increasing the filler volume fraction
+[128]. However, as mentioned above, a high volume fraction of par-
+ticles may increase the bulk resistance of TIM due to the increase
+of BLT. In addition to particles loading, kTIM can also be reinforced
+by controlling the particles orientation. Inspired by the HT model
+[175], aligning the platelet-shaped fillers in the direction of heat
+load can greatly enhance the thermal performance of TIMs. As il-
+lustrated in Fig. 28, the TIM layer is expected to provide efficient
+heat flow from the heat source to the heat sink in the direction
+normal to the layer. The ideal orientation of fillers is normal to the
+TIM plane (Fig. 28a), whereas the isotropic and parallel orienta-
+tions (Fig. 28b and 28c) are much less favorable. Several synthetic
+approaches have been applied to prepare the polymer composites
+containing the well-aligned fillers, such as electrical fields [127], mag-
+netic fields [172], tape-casting [173], spin-coating combined with
+thermal imidization [174], and gravitational force [183]. Control-
+ling the filler distribution is another effective method to increase
+kTIM. Yung and Liem [150] enhanced the thermal conductivity of com-
+posites by filling different size particles in a matrix. Through multi-
+modal particle mixing, the smaller particles can fill the gaps between
+
+20
+
+X. Luo et al. / Progress in Energy and Combustion Science 56 (2016) 1–32
+
+this technology, as seen in Fig. 27, the optimal volume fraction fo2
+is higher than fo1. In addition, Rae et al. [152] made a qualitative
+analysis of the particle stacking by assuming particle-filled TIM as
+a deformable porous media made up of the particles. They found
+that the squeeze rate had a great effect on the steady state BLT. In
+this work, the sample prepared with a relatively high squeeze rate
+tended to be thinner than those prepared with reduced squeeze rates.
+The increase of power density and integration in LEDs requires
+lower total thermal resistance at the TIMs layer. A large body of re-
+search exists concerning the models and optimization of kTIM.
+However, the increase of kTIM may be not helpful for decreasing re-
+sistance. Models for Rc and BLT are still insufficient, and technical
+methods which focus on their reduction are scarce. Although using
+advanced materials as TIMs is inevitable, the exploitation of these
+materials should follow fundamental physical-based models to obtain
+their full advantages.
+
+4.3. Thermal spreading resistance and its control
+
+4.3.1. Thermal spreading resistance
+
+LED chips are on the scale of millimeters, while LED modules
+are on the scale of centimeters, and the sizes of LED lamps may
+change from several centimeters to several meters. This large size
+difference leads to large thermal spreading resistance (Rs) in the in-
+ternal heat conduction process [187]. Thermal spreading resistance,
+which occurs when a small heat source comes in contact with the
+base of a larger plate, is a key form of thermal resistance in thermal
+modeling of LED packages and applications. Fig. 29 shows a simu-
+lation result for such an occurrence. When the areas of the chip and
+the substrate are the same, the temperature is uniform through-
+out; however, when the chip is much smaller than the substrate,
+the temperature is obviously nonuniform and the hot spot phe-
+nomenon exists. Rs is an increasingly important issue in thermal
+management, as microelectronic/LED packages become increas-
+ingly powerful and compact. In high heat flux applications, Rs can
+comprise 60–70% of the total thermal resistance. When Rs is large,
+heat will not be distributed uniformly throughout the plate and will
+result in a hot spot.
+
+4.3.2. Thermal spreading resistance control
+
+Regarding the control of thermal spreading resistance, the first
+step is to develop methods to calculate or evaluate resistance.
+Kennedy [188] found analytical solutions in a cylinder with a con-
+stant heat flux over a part of one end and a variety of boundary
+conditions at the other surfaces. Kadambi and Abuaf [189] and Krane
+[190] obtained analytical solutions in two- and three-dimensional
+(2D and 3D) rectangular bodies with insulated sides and a convec-
+tive boundary condition on the surface opposite to the heat input.
+Ellison et al. [191] derived an exact 3D solution for the steady state
+heat conduction equation with the source on an otherwise adia-
+batic surface and Newtonian cooling on the opposing surface.
+Muzychka et al. [192–198] studied Rs from a variety of aspects, in-
+cluding heat source location, boundary conditions and types of flux
+channel, and provided a series of analytical expressions for the cal-
+culation of Rs. These works provide methods to deal with the single
+LED packages and multiple LEDs or LED array.
+
+With the formula of Rs, many methods have been developed to
+control thermal spreading resistance. One convenient and intu-
+itive method is to simply increase the ratio of the heat source size
+to its heat sink. Based on this, it is common to use an LED array with
+lower single chip power to decrease Rs. Fig. 30 shows the influ-
+ence of Rs on temperature distribution under different heat source
+distributions. It is seen in Fig. 30 that a centered heat source leads
+to large Rs and hotspot phenomenon, while distributed heat sources
+with the same power input can decrease Rs and cause a more uniform
+temperature distribution and a lower junction temperature. This con-
+
+Fig. 28. Schematic of the utilization of composites sandwiched between the heat
+source and heat sink for heat removal. Possible orientations of platelet-shaped fillers
+in composites: (a) through-plane, (b) isotropic and (c) in-plane.
+
+the bigger particles and matrix, forming the preferential paths for
+heat conduction. Rae et al. [152] found that thermal conductivity
+of the heterogeneous composites can be greater than that of com-
+posites filled with homogeneously distributed particles. The
+heterogeneity of composites in that work was driven by squeeze
+flow during which filler particles become entrapped and com-
+pacted, while the polymer matrix continues to flow. Moreover, some
+studies focus on the reduction of the interface resistance between
+matrix and fillers to increase kTIM. This approach relies on the ef-
+fective surface treatments for the fillers. Xu and Chung [126] made
+surface treatments for BN and AlN particles using acetone, acids,
+and silane. The results show that these treatments can increase the
+thermal conductivity of BN and AlN particle epoxy-matrix com-
+posites by up to 97%. Through experiments, Yung and Liem [150]
+also found that adding the silane coupling agent enhances the ef-
+fective thermal conductivity of the polymer composite material.
+
+Recently, a trend exists to use extremely high thermal conduc-
+tivity materials, such as CNTs, tin nanowires, and graphene as the
+reinforcements in TIMs or TIMs directly. Biercuk et al. [184] pre-
+pared composites loaded with 1 wt% unpurified single-wall CNTs.
+The composites showed a 125% increase in thermal conductivity at
+room temperature. Feng et al. [185] produced a TIM based on double-
+sided array of tin nanowires. This material is prepared using a hot-
+pressing approach with the assistance of anodic aluminum oxide
+templates. The results indicate that RTIM of two rough copper sur-
+faces assisted by the tin nanowires array can reduce to 20 mm2 K W−1
+at 1 MPa. Shahil and Balandin [146] produced graphene–multilayer
+graphene nanocomposites as the highly efficient TIMs. The kTIM mea-
+surements revealed a dramatic enhancement by 2300% in the
+graphene-based polymer at the filler loading fraction of 10 vol %.
+Based on Prasher’s model [128], BLT can be decreased by in-
+creasing the applied pressure and decreasing the yield stress of TIMs.
+However, conventional TIMs, with high particles loading, general-
+ly possess large yield stress resulting in a high BLT. Therefore, it is
+necessary to find effective technical solutions to reduce BLT. Through
+experiments, Brunschwiler et al. [186] found that two particle stack
+lines form in diagonal directions when the TIM is placed between
+two flat plates. Khiabani et al. [151] also found this phenomenon
+by simulations. Based on these observations, the hierarchical nested
+channel interface technology (HNC) [186] was proposed recently
+to achieve thin TIMs but with high particle loadings. In this tech-
+nology, channels are machined along the bifurcation lines in one
+of the solid surfaces, which can prevent particle stacking and pre-
+serve material uniformity during bondline formation. By means of
+
+X. Luo et al. / Progress in Energy and Combustion Science 56 (2016) 1–32
+
+21
+
+Fig. 29. Schematic diagram of Rs.
+
+stitutes an important rule in designing LED packages and
+applications.
+
+Therefore, many researchers optimized LED distribution to de-
+crease the junction temperature according to this rule. Yang et al.
+[199] analyzed the effect of LED chip size on thermal spreading
+resistance by both simulations and experiments. They found that
+when the chip size increased from 15 mil to 40 mil, the total thermal
+resistance decreases exponentially and the thermal spreading re-
+sistance had a great effect on the total thermal resistance of LED
+packages. They also found that for LED modules with the same
+substrate thickness and power input, using graphite composite to
+replace aluminum as the substrate material reduced the spread-
+ing resistance by nearly 14%. Yang et al. [200] studied the thickness
+of copper substrate on the thermal spreading resistance in LED
+packages. They found that with the initial increase in copper thick-
+ness (up to 0.6 mm), the total thermal resistance (Rcu) of the copper
+substrate decreases with the copper thickness, which is attribut-
+able to the decrease in Rs. Afterwards, Rcu starts to lightly increase
+with the copper thickness, which is attributable to the increases
+
+of the bulky thermal resistance of the copper substrate. The
+minimum Rcu value occurs at the copper thickness of about 0.6 mm.
+Concerning LED lamps that assemble many LED modules onto a
+board (e.g., PCB or MCPCB), thermal spreading resistance becomes
+the dominant resistance since the size difference is very large. In
+this circumstance, it would be desirable to optimize the LED dis-
+tribution to control the thermal spreading resistance. Cheng et al.
+[201] applied the thermal spreading resistance network to opti-
+mize the LED chip arrangement for an 80 W LED lamp. Ha and
+Graham [112] analyzed the thermal resistance of LED-array as a
+function of pitch (chip distance) by the analytical method and com-
+pared with the FEA simulations, as shown in Fig. 31. The pitch was
+found to be an important factor in determining the thermal resis-
+tance of LED array. Although the larger pitch can achieve a lower
+thermal resistance, the pitch is usually determined by considering
+other factors such as optical performance. For effective thermal man-
+agement, it is better to minimize the interference of heat spreading
+in the substrate level with tuning the substrate type, thickness of
+each layer, etc.
+
+Fig. 30. Temperature distributions under different heat sources: (a) concentrated heat source; and (b) distributed heat source.
+
+22
+
+X. Luo et al. / Progress in Energy and Combustion Science 56 (2016) 1–32
+
+thermal solutions are chosen on the basis of power, heat source area,
+heat dissipation space, application situations, etc.
+
+Thermal management solutions for LED applications can be
+divided into passive cooling and active cooling, just as the solu-
+tions for electronic devices. The key difference between these two
+methods is whether an external power source is needed. Passive
+cooling generally does not use a power source, such as a heat sink
+by natural convection and a heat pipe; whereas, active cooling means
+that there is a power source, such as forced convection with a cooling
+fan and liquid delivery pump. Compared to active cooling, passive
+cooling offers the advantages of simple structure, easy fabrication,
+flexibility, low cost, and high reliability. However, the heat dissi-
+pation capacity and efficiency of passive cooling are always limited
+by its dimensions and structure. For some high thermal density ap-
+plications, passive cooling is insufficient, and active cooling is
+required.
+
+4.4.1. Passive cooling
+4.4.1.1. Substrate. The first component that LED chips or modules
+are packaged on is the substrate. Currently, LED substrates can be
+classified into five types [202,203]. (1) PCB (printed circuit board)
+is the most widely used LED substrate, which is composed of fiber
+glass and an epoxy resin material (FR4). FR4 is a composite mate-
+rial composed of woven fiberglass cloth and an epoxy resin binder,
+and is nearly impermeable to water. However, the thermal con-
+ductivity of FR-4 is very low (through-plane: 0.29–0.34 W/(m·K);
+in-plane: 0.81–1.1 W/(m·K)). The manufacturing and fabrication of
+PCBs are quite mature and low-cost, but its disadvantage is its poor
+thermal performance, resulting in low power (much less than 1 W).
+An inexpensive way to improve its thermal conductivity is to add
+thermal vias, which are created by drilling holes and copper plating
+them [204]. (2) MCPCBs (metal core printed circuit boards) are at-
+tached by a metal plate (Al- or Cu-thin plate) to increase thermal
+conductivity in PCBs. The merit of this kind of LED is that the contact
+surface temperature of a MCPCB is much lower than that of a PCB.
+However, the thermal conductivity is still at a low level because of
+the dielectric materials inside. (3) IMSs (insulated metal sub-
+strates) create a legal system (insulated level) by accumulating high
+polymer dielectric level etch copper coil electric circuits or printed
+circuits. This is accomplished by adhesive direct bonding on the Al-
+or Cu-plate with no PCB/FR4 materials in between. The thermal con-
+ductivity can be enhanced to about 1.6 W/(m·K). (4) CSs (ceramic
+substrates) are increasingly used as alternatives to PCB or MCPCB.
+In CSs, a thin layer of high polymer dielectric materials is coated
+onto the metal surfaces to block the electric conduction in the metal
+plate. The thermal conductivity of CSs could be enhanced to about
+50 W/(m·K), and the CTE is about 4 ppm/K. The disadvantage of this
+kind of substrate is its high cost with the size limited to about 5
+in2 or below. (5) DCBS (direct copper bonded substrate) is an ad-
+vanced technology. The manufacturing process passes over O2 and
+N2 to interface between the copper plate and the ceramics (Al2O3,
+AlN), and a thin layer of CuO forms with the Cu surface reaction.
+Then, when heated, the CuO and Al2O3 or AlN interact to form the
+insulated compound. When the dielectric level is Al2O3, the thermal
+conductivity is about 24 W/(m·K), and the CTE is about 7 ppm/K.
+When the dielectric level is AlN, the thermal conductivity is about
+170 W/(m·K), and the CTE is about 6 ppm/K. The DCBS exhibits the
+best thermal performance among the above mentioned kinds of LED
+substrates.
+
+4.4.1.2. Fin heat sink. Although the heat dissipation efficiency of the
+fin heat sink is usually limited, it is the most widely used thermal
+solution. In addition to passive cooling, the fin heat sink is also used
+in active cooling, e.g., fins are used to cool the heated working liquid
+in microchannels, microjets, etc. Therefore, the fin heat sink is the
+most fundamental method to dissipate heat to the ambient. In LED
+
+Fig. 31. Thermal resistance of LED-array as a function of pitch (chip distance) of two
+substrates (reprinted from Ref. 112 with permission of Elsevier).
+
+Another method to control thermal spreading resistance com-
+prises focusing on the substrates. However, the ability of bulky
+substrate optimization (e.g., material, size, structure, etc.) to control
+thermal spreading resistance is quite limited. The substrate coupled
+with some other working mechanism, such as phase change, is pre-
+ferred. As a result, a flat heat pipe or vapor chamber offers an optimal
+solution to control thermal spreading resistance. Generally, they are
+fabricated as advanced substrates to assemble LEDs. A detailed dis-
+cussion of these advanced solutions will be presented in the
+following section.
+
+4.4. Component-to-ambient thermal resistance control
+
+To effectively dissipate the heat in LEDs to the ambient is the ul-
+timate goal of thermal management. The thermal resistance in this
+process is called component-to-ambient thermal resistance and is
+different from thermal solutions. In LED applications, different
+
+X. Luo et al. / Progress in Energy and Combustion Science 56 (2016) 1–32
+
+23
+
+Fig. 32. Plate-fin optimization flowchart.
+
+lamp design, placing the LED packaging onto a metallic board and
+then attaching it to a heat sink is recognized as a common method.
+Here, heat generated in LEDs is thus dissipated to the ambient from
+the attached heat sink via either natural convection or forced con-
+vection. So far, in LED packaging and products, studies of the fin heat
+sink can be classified into three categories.
+
+4.4.1.2.1. Fin design and optimization. When selecting a proper
+heat sink that meets the required thermal criteria, one needs to
+evaluate/examine various fin parameters that affect heat sink
+efficiency and the overall performance of the system. Fin heat
+sink design methodology has been well outlined by many research-
+ers [205–211]. Among the extensive studies on fin heat sink in
+LED applications, most researchers focus on the optimization of
+fin parameters, including spacing, height, configurations, orienta-
+tion, etc., through theoretical analysis, numerical simulation, or
+experiments. Changing fin parameters is the most effective way to
+optimize fin performance, and many methods have been devel-
+oped, such as the least energy method [212], the least entropy
+generation method [213–218], the minimum entransy dissipation-
+based thermal resistance principle [219–223], etc. The enhancement
+of fin efficiency results in the decrease of LED junction tempera-
+ture directly. Charles and Wang [224] designed different fin patterns,
+including rectangular, trapezoidal and inverted trapezoidal config-
+uration. They found that the heat transfer coefficient of the
+inverted trapezoidal fins was higher than the trapezoidal and
+rectangular ones by ~25% and ~10%, respectively. Luo et al. [225]
+developed a semi-empirical algorithm to optimize plate fin heat
+sink for LED street lamp application, of which the basic optimiza-
+tion flowchart is shown in Fig. 32. The fin height, fin thickness and
+fin spacing of horizontal plate fin heat sinks were designed and
+optimized with the aim of maximal heat dissipation and the least
+material. The method is based on empirical equations, and is
+relatively simple for engineers.
+
+4.4.1.2.2. Fin heat sink design in specific LED applications.
+Considering the working characteristics of LED applications, such
+as chip distribution, orientation, heat flux density, and system space,
+some specific thermal designs were developed by simulations or
+experiments. Shyu et al. [226] experimentally investigated a 270 W
+LED backlight panel with a plate fin heat sink. Rather than the fin
+parameters, they analyzed the effect of shroud clearance and ob-
+structions at the entrance or exit on overall performance were
+examined. This is the typical specific case for LED applications. Luo
+et al. [227] examined the thermal behavior of a 4 W LED bulb and
+then designed a heat dissipation structure for a 16 W LED bulb.
+
+4.4.1.2.3. Special fin heat sink design with new material or
+structure. Some researchers improved fin efficiency by changing the
+working principles of the conventional fin heat sink. Yang et al. [228]
+brazed a layer of metal foam and carbon foam on the n fin surface.
+Through experiments, they found that the metal/carbon foam could
+enhance the heat transfer performance due to the relatively higher
+emissivity. Meanwhile, the weight of the heat sink was reduced as
+much as 33%. Yang et al. [229] developed a thermosyphon heat sink
+that utilized the phase change of the working liquid inside the heat
+sink. Their design takes advantage of the heat pipe and conven-
+tional heat sink, and thus good performance was achieved in LED
+street lamps. Huang et al. [230] developed a plastic fin sink which
+uses the enhancement of surface emissivity and geometry surface
+area to compensate for the deterioration of heat dissipation ability
+caused by the plastic materials in a 7 W LED lamp. Fig. 33 shows a
+fin heat sink comparison with a conventional aluminum fin heat
+sink. It is observed that the maximal temperature increased by 3 °C;
+however, the material weight and cost will be sharply decreased.
+Jang et al. [231] focused on a radial heat sink for LED lighting
+applications, i.e., in which both convection and radiation are con-
+sidered. Kim et al. [232] reports hybrid pin fins with internal channels
+to cool high power LEDs under natural convection or forced
+
+24
+
+X. Luo et al. / Progress in Energy and Combustion Science 56 (2016) 1–32
+
+Fig. 33. Comparisons between (a) aluminum heat sink and (b) plastic fin heat sink for LED cooling (reprinted from Ref. 230 with permission of IEEE).
+
+convection. Near the bottom of the heat sink, they drilled some holes
+to inhale the air. The heated air flows upward and the chimney effect
+was utilized to enhance heat dissipation efficiency greatly. Fig. 34
+displayed this fin design. Although it is clear that the heat transfer
+coefficient will increase greatly due to the chimney effect, it may
+also raise the manufacturing costs.
+
+4.4.1.3. Heat pipe and vapor chamber. Heat pipe technology is an ad-
+vanced alternative efficient cooling method, which can transfer heat
+while keeping a relatively uniform temperature distribution owing
+to the inherent phase change heat transfer mechanism. The general
+working principle is that the working liquid absorbs heat in the evap-
+oration region and changes to vapor. The vapor will flow in the whole
+space inside the heat pipe, and then condense to a liquid in the con-
+densation region. The condensed liquid will then flow back to the
+evaporation region through wicks. Continuing this cycle, the heat
+in electronic devices (e.g., LEDs) will be transferred efficiently to the
+
+Fig. 34. Smart heat sinks (a) a 3-D view (b) structure of hybrid pin fin (reprinted
+from Ref. 232 with permission of IEEE).
+
+ambient. From the working principle, there are no moving parts in
+a heat pipe and simple fluids, such as water, can be used as the
+working fluid. There are different types of heat pipe cooling methods,
+such as heat pipes, loop heat pipes, vapor chambers (or called as
+flat plate heat pipes), but they all share the similar working prin-
+ciples. The difference between heat pipes and vapor chambers is
+that the heat transfer in heat pipes is in one dimension, but in a
+vapor chamber, it is in two dimensions, thus the heat transfer ef-
+ficiency is enhanced greatly in vapor chambers.
+
+Since heat pipes are advanced passive cooling methods that are
+suitable for cooling electronics, numerous studies exist on heat pipes
+that are applied in LED packages or products. Three categories can
+be identified as follows.
+
+4.4.1.3.1. Performance study of heat pipes. For LED applications,
+the large difference in size between LED chips and substrate results
+in a large temperature difference between the LED chips and the
+edges of the substrates. In this situation, vapor chambers are proven
+to be potential alternatives to solve this problem. It is demon-
+strated that a sophisticated design of a vapor chamber provides an
+equivalent thermal conductivity of 6500–7000 W/(m·K), which is
+much larger than that of a metal substrate [233,234]. To fulfill this
+target, many researchers focused on the performance improve-
+ment of heat pipes or vapor chambers in terms of the reduction of
+thermal resistance. Lu et al. [235] applied a vapor chamber coupled
+heat sink for high power LEDs and the total thermal resistance was
+8.8 K/W at 3 W. The thermal spreading resistance of a vapor chamber
+could be as low as 0.38 K/W from Wang and coworkers [203]. Huang
+et al. [236] applied a lamp-type vapor chamber to high power LED
+systems in natural convection, and found that thermal spreading
+resistance was lower than the metal plate by 34% at 30 W. Li et al.
+[237] fabricated a copper–water loop heat pipe (LHP) for LED illu-
+mination applications. They found that total thermal resistance
+ranged from 1.0 to 0.4 K/W (heating loads ranged from 30 W to
+300 W). Hu et al. [238] fabricated a flat-plate vapor chamber by sin-
+tering copper powders and diffusion bonding. The transient and
+
+X. Luo et al. / Progress in Energy and Combustion Science 56 (2016) 1–32
+
+25
+
+steady temperature distributions of the flat plate vapor chamber
+were experimentally measured. The results illustrate that the vapor
+chamber can realize low thermal resistance (~0.3 K/W) and achieve
+good temperature uniformity. It could be concluded that heat pipes
+or vapor chambers, if well designed and fabricated, possess excel-
+lent thermal behavior in terms of heat transportation and spreading
+with low thermal resistance. However, in heat pipes or vapor cham-
+bers, some limitations confine thermal performance, in particular,
+the maximum heat transfer rate. The most obvious factors under
+common operations are capillary and boiling limits, as these factors
+will cause the dry-out phenomenon, leading to heat pipe failure.
+In fact, these two limitations cannot be eliminated but only post-
+poned. By increasing the capillary pressure and permeability of the
+inner wick structure, the heat transfer rate may be enhanced.
+
+4.4.1.3.2. Novel heat pipes based on new materials or
+structures. Yang et al. [239] investigated a polymer vapor chamber
+with copper micro thermal via, and found that the use of thermal
+via design reduced the lateral thermal resistance by 20–25%. Ye et al.
+[240] designed a polymer based loop heat pipe (LHP) and as-
+sembled with a silicon substrate to cool an LED package. The polymer
+LHP exhibited light weight and transparency, and could enhance the
+thermal conductivity of polymers. A group of sensors can provide
+accurate temperature measurement. Their present design could
+supply a low and relatively stable temperature to maintain higher
+optical power, more luminous flux and less color shift. Luo et al. [241]
+fabricated a silicon-glass microheat pipes (MHPs) to cool a 10 W
+high-power LED module. Grooves were fabricated on the silicon
+wafer and ionized water was chosen as the working fluid in the
+MHPs. Improved performance was observed with comparison ex-
+periments. Lin et al. [242] fabricated an aluminum plate oscillating
+heat pipes (OHPs) to cool 64 W LED modules. A series of parallel
+interconnected rectangular channels were manufactured as a me-
+andering closed loop in an aluminum plate. The results showed that
+the LED temperature significantly decreased by natural convec-
+tion when a plate OHP was used.
+
+Liu et al. [243] studied a bionic transpiration heat pipe system
+for LED cooling, which is inspired by the physiological process of
+plant transpiration. The system consisted of the following inter-
+pretations. As shown in Fig. 35, the leaf section of a plant served
+as a membrane (water-permeable, micro/nano porous) across which
+the ambient water vapor (AWV) quasi-equilibrated with the satu-
+rated liquid water inside of the membrane under the same low
+pressure. A net flux of water vapor emitting into the ambient air
+occurred, and the pressure difference between the ambient air and
+the AWV was balanced by the across-membrane pressure differ-
+ence and the tension of the AWV. The system enabled the extraction
+of water, and the extracted water evaporated on the way, absorb-
+ing a considerable amount of heat from the ambient. This comprised
+a heat pipe or a heat pipe cluster resembling a xylem vasculature,
+as indicated in Fig. 35. Their simulation results demonstrated that
+the bionic transpiration heat pipe used in LED cooling could main-
+tain an average temperature below 55.6 °C.
+
+4.4.1.3.3. Coupled with some specific LED applications. Except for
+the above directions, some researchers have focused on the spe-
+cific application of heat pipes with LED applications. Tang et al. [244]
+investigated the thermal performance of LED street light modules
+with and without heat pipes. The improvement of heat dissipa-
+tion with heat pipes was significant. Thermal resistance could be
+reduced by over 50% with heat pipes compared with the module
+without heat pipes. Fu et al. [245] designed and manufactured a
+1000 W high-power LED tennis court lamp with a heat pipe-fin air
+cooling system. Due to the volume requirement, a large fin heat sink
+could be replaced by a compact one with heat pipes. Simulation
+results showed that the highest LED temperature was controlled at
+
+Fig. 35. Model of the bionic transpiration heat pipe (reprinted from Ref. 243 with
+permission of IEEE).
+
+92 °C, which could guarantee an acceptable thermal and reliabili-
+ty performance.
+
+4.4.2. Active cooling
+
+Not all LED applications can be passively cooled. Higher power
+LEDs usually require higher levels of cooling than standard heat sinks
+can provide. In such cases, active cooling methods are preferred due
+to the great enhancement in heat dissipation ability. Generally, the
+active cooling methods that are suitable for LEDs include forced air
+cooling and liquid cooling. These two methods will be discussed in
+detail as follows.
+
+4.4.2.1. Forced air cooling. Forced air cooling is often necessary for
+applications in which the volume/surface area is small or the ambient
+temperature is high, and thus natural convection is inadequate to
+dissipate the heat in time [246–248]. Forced convection is driven
+by externally powered components, such as a fan or a pump, which
+can generate a high air flow rate and achieve one or two orders of
+magnitude higher heat transfer coefficient compared to that in
+natural convection. Therefore, forced air cooling can endure a lower
+temperature difference over the ambient according to Newton’s
+cooling law. Forced air cooling systems can help provide the needed
+heat dissipation levels for high power LEDs, although not as quietly,
+dependably, or reliably as passive heat sinks cool lower power LEDs.
+They are not orientation-dependent, but typically cost more than
+passive cooling due to their complexity and power consumption.
+Therefore, a balance between performance and reliability needs to
+be considered when choosing the fin heat sink to cool LEDs light
+sources. In forced air cooling, a fin heat sink is usually coupled to
+provide a highly-efficient, highly-reliable cooling solution for LEDs.
+The studied on fin heat sink, whether applied in passive cooling
+(natural convection) or in active cooling (forced convection, forced
+air cooling), falls in the range of parameter optimization, new ma-
+terials or structures, coupling with some specific LED application,
+
+26
+
+X. Luo et al. / Progress in Energy and Combustion Science 56 (2016) 1–32
+
+resistance can be reduced by 50% in the LED thermal performance
+test.
+
+4.4.2.2. Liquid cooling. Liquid cooling can enhance thermal man-
+agement with a simple structure, transparency and small weight.
+Furthermore, liquid can remove the heat rather than conduct it, and
+thus liquid performs as better “thermal conductivity” than solid.
+Liquid cooling has already been successively applied in many mi-
+croelectronic applications and will be easily transferred to LEDs. In
+some LEDs, the output power is likely to go up to 3–10 W for a single
+chip where the heat flux can be very high. Passive heat sinks fail
+to dissipate the heat in a timely manner for these LED devices except
+for exponentially increasing in size and weight. Under this circum-
+stance, some liquid cooling alternatives may be appropriate.
+Currently, the most widely used liquid cooling methods consti-
+tute two main types, i.e. microchannel cooling and microjet cooling.
+
+4.4.2.2.1. Microchannel cooling. Microchannel heat sinks combine
+the attributes of very high surface area to volume ratio, large con-
+vective heat transfer coefficient, small mass and volume, and small
+coolant inventory [256,257]. These attributes render these
+microchannels very suitable for cooling high-power LEDs or LED
+arrays. The microchannel heat sink cooling concept was first intro-
+duced by Tuckerman and Pease in the early 1980s [258]. Since this
+pioneering work, microchannel heat sinks have received consider-
+able attention, and several studies have since been published which
+can be grouped as analytical [259–265], numerical [266,267], or ex-
+perimental [268–277]. In applications, a microchannel heat sink often
+operates in the cooling system which comprises a microchannel heat
+sink, a micropump, a reservoir and a small heat exchanger with a
+fan [278,279]. In a microchannel-based heat sink, the microchannel
+structure plays a critical role in affecting the overall cooling capac-
+ity of the system. The most common structure is a straight fin with
+a rectangular cross-section. Zhang et al. [280] reported such a
+microchannel heat sink to cool a high-power LED array. Theoreti-
+cal analysis and simulation verification were conducted and the
+results revealed that the minimum thermal resistance could reach
+0.019 K/W. Yuan et al. [281] reported a detailed thermal analysis
+of LED packaging with a microchannel cooler. They also opti-
+mized the inner fin geometry inside the microchannel, flow velocity,
+and total power. The simulation results showed that the
+microchannel cooler reduced the average die temperature and the
+staggered fins achieved better thermal performance than the straight
+fins. Deng and Liu [282] proposed to use liquid metal as the coolant
+rather than water to cool high power LEDs. Their experimental setup
+was shown in Fig. 37. A series of experiments under different op-
+erational conditions were conducted to evaluate the thermal
+performance with comparisons to water. Under the same heat load,
+when using the liquid metal as the coolant, the temperature rise
+
+Fig. 37. Schematic of experimental setup for liquid metal cooling (reprinted from
+Ref. 282 with permission of Elsevier).
+
+Fig. 36. (a) Schematic of the experimental setup for piezoelectric fans oriented ver-
+tically to the bottom of the LED package with different arrangements: (b) edge-to-
+edge and (c) face-to-face (reprinted from Ref. 250 with permission of Elsevier).
+
+etc. Therefore, we will not describe this here, and interested readers
+are referred Section 4.4.1.
+
+Instead, we would like to review studies on piezoelectric fans
+to generate forced air cooling. Piezoelectric fans are micro-vibrating
+machines used as airflow generators to help dissipate heat. They
+consist of a cantilever beam bonded with a piezoelectric material
+near their base ends. An input signal to the piezoelectric material
+causes oscillatory motion at the free end of the beam, and the signal
+could induce the surrounding flow. Acikalin et al. [249] experimen-
+tally investigated the optimal design of a single piezoelectric fan
+to cool LEDs. They considered different experimental configura-
+tions, fan amplitude, working distance between the fan and LED,
+fan length, fan frequency offset from resonance, etc. They found that
+applying piezoelectric fan resulted in a temperature drop at the LED
+of more than 36.4 °C. Sufian et al. [250] reported on the heat dis-
+sipation ability study on LED array using piezoelectric fans by both
+numerical and experimental methods. As shown in Fig. 36, two
+piezoelectric fans were vertically oriented to the LED package, i.e.
+edge-to-edge arrangement and face-to-face arrangement. The results
+showed that the single fan enhanced the average heat transfer co-
+efficient by ~1.8 times for the LED package, and the dual fans
+enhanced the coefficient by ~2.3 times for edge-to-edge configu-
+ration and ~2.4 times for face-to-face configuration. Ma and Li [251]
+applied a dual-sided multiple fans system with a piezoelectric ac-
+tuator in the thermal management of 30 W LEDs. Several parameters
+were discussed, including vibrating amplitude, power input, and ar-
+rangements. Ma et al. [252,253] fabricated a micro multiple
+piezoelectric magnetic fan (m-MPMF) to provide an innovative
+cooling solution to the thermal management of LED lighting. The
+results showed that the m-MPMF system could keep the temper-
+ature of a 9 W LEDs substrate below 55 °C, and a T-shape m-MPMF
+could further reduce the temperature to 45.2 °C with only 0.3 W
+[254,255] applied the
+power consumption. Wang et al.
+electrohydrodynamics (EHD) system to produce the ionic wind to
+cool LEDs. The influences of the electrode arrangement (aligned
+angle, distance, ground electrode configuration), electrode type, input
+voltage and frequency were investigated. It is found that the thermal
+
+X. Luo et al. / Progress in Energy and Combustion Science 56 (2016) 1–32
+
+27
+
+Fig. 38. Rectangular fractal tree-like microchannel substrate: (a) schematic and (b) prototype.
+
+of LED substrates was about 13 °C, which was much lower than that
+based on water (about 22 °C).
+
+In the downstream of microchannels, the temperature of the
+working liquid is increased and the cooling characteristics deterio-
+rated consequently. Maintaining the uniform cooling performance
+of the microchannel cooling system plays an essential role in de-
+creasing the thermal stress and enhancing consistent optical/
+thermal performance of multiple LEDs or LED arrays. In this situation,
+Luo et al. [283,284] established a compact thermal model to char-
+acterize the thermal behaviors of a rectangular fractal tree-like
+microchannel substrate with multiple LEDs under a target of high
+temperature uniformity in LEDs. The main concept is to increase
+the microchannel cross area to compensate for the decrease in heat
+transfer coefficient between the working liquid and the substrate.
+Thus, according to Newton’s cooling law, the cooling capability may
+remain constant. They also fabricated prototypes and performed ex-
+periments to validate their models. The schematic and prototype
+of the rectangular fractal tree-like microchannel substrates are il-
+lustrated in Fig. 38.
+
+4.4.2.2.2. Microjet cooling. The microjet cooling method offers
+a new method for heat flux management of the entire surface as
+well as hot spots of the power electronics and high-power LEDs
+[285,286]. Compared with the microchannel cooling system, the
+microjet cooling system is composed of a microjet array device, a
+micro-pump and a mini fluid container with a heat sink. In addi-
+tion, the microjet is comparable with or better than microchannel
+cooling for a large target plate with a proper arrangement [287].
+Luo et al. [288] performed numerical and experimental analyses of
+a microjet-based cooling system for the thermal management of high
+power LEDs. In their study, an array of 2 × 2 LED chips, with a size
+of 1 × 1 mm, was embedded in a 15 × 15 mm substrate. Their system
+showed a maximum increase of 36.7 °C in the chip temperature with
+an input power of 5.6W and a flow rate of 9.7 ml/s. Furthermore,
+Luo and Liu [289] carried out a parametric analysis to determine
+the effect of microjet diameter, top cavity height, flow rate, and the
+material of the device to identify an optimal design. Based on their
+optimal design, they fabricated the microjet cooling system to cool
+a 220 W LED lamp. The substrate temperature of the LED chips in
+the 220 W LED lamp was just 69.4 °C when the room temperature
+was 30.8 °C.
+
+5. Conclusions and perspectives
+
+In this review, the heat and fluid flow problems in LED packag-
+ing and applications were investigated. We first introduced the LED
+packaging processes, from which it can be seen that LED packag-
+ing comprises three aspects: (1) heat generation and dissipation;
+(2) fluid flowing and molding; and (3) light extraction and control;
+
+the latter one is dependent on the first two. To obtain a better un-
+derstanding of the heat and fluid flow problems in LEDs, heat
+generation was first reviewed with some solutions to confine the
+heat generation. Then, the problem of phosphor gel flow was re-
+viewed. Different phosphor coating methods and their developing
+trends were provided. The heat flow problem was presented in detail
+from three separate aspects, i.e., interface resistance, spreading re-
+sistance, and component-to-ambient resistance. The causes and
+corresponding solutions for these three thermal resistances were
+discussed.
+
+The main objective of this review is to provide a comprehen-
+sive understanding of the heat and fluid flow problems in high-
+power LED packaging and applications. In fact, heat and fluid flow
+problems exist not only in LED packaging, but also in other elec-
+tronic packaging. The attempt made here was to illustrate the basic
+mechanism of the heat and fluid flow characteristics, so as to assist
+related engineers to solve these problems fundamentally. The overall
+goal was divided into the following purposes: (1) to understand the
+mechanism of heat generation inside LED chips and to provide some
+ways to extract more light outside of the chips and confine the heat
+generation (see Section 2); (2) to summarize existing state-of-the-
+art phosphor coating processes and to highlight the development
+trends, which are based on a deep understanding of fluid flow be-
+haviors (see Section 3); (3) to present the basic idea of controlling
+the heat flow problem in LED packaging (similar to IC packaging)
+from three aspects, i.e., controlling interface resistance, spreading
+resistance, and the component-to-ambient resistance (see Section
+4); and (4) to develop some practical solutions to solve and control
+the heat flow in LEDs, so as to decrease the junction temperature
+and enhance reliability (see Section 4).
+
+These conclusions do not imply that the heat and fluid flow
+problems in LEDs are totally understood or solved, but simply provide
+state-of-the-art understandings and solutions to these problems.
+Issues that are worth pursuing and/or exploring in the future include,
+but are not limited to: (1) Better LED chips. The chips could be
+modified for higher light extraction efficiency, and less heat gen-
+eration by advanced manufacturing processes. (2) New packaging
+materials. New packaging materials may be developed, such as the
+interfacial materials, phosphors, optical components, heat spread-
+ers, etc. (3) More efficient packaging structures. By developing some
+new structures, both the optical and thermal performance of LEDs
+may be enhanced. No matter which above issues will be broken
+through, it is a must to get a full understanding of heat and fluid
+flow problems in LEDs first since the LED packaging coupled with
+heat and fluid flow indeed. It is hoped that this review will help
+interested readers to obtain a thorough understanding of heat and
+fluid flow problems and to figure out where they come from and
+how to control them. It is only after we achieve this that we will
+be in the position to make our own contributions to designing
+
+28
+
+X. Luo et al. / Progress in Energy and Combustion Science 56 (2016) 1–32
+
+and/or manufacturing better LEDs to improve the quality of our
+lives.
+
+[27] Shen YC, Mueller GO, Watanabe S, Gardner NF, Munkholm A, Krames MR.
+Auger recombination in InGaN measured by photoluminescence. Appl Phys
+Lett 2007;91(14):141101.
+
+Acknowledgement
+
+The authors would like to acknowledge the financial support in
+part by National Science Foundation of China (51576078, 51376070)
+and the 973 Project of the Ministry of Science and Technology of
+China (2011CB013105).
+
+References
+
+[28] Laubsch A, Sabathil M, Bergbauer W, Strassburg M, Lugauer H, Peter M, et al.
+in InGaN LEDs. Phys status solidi C
+
+IQE-‘droop’
+
+On the origin of
+2009;6(S2):S913–16.
+
+[29] Delaney KT, Rinke P, Van de Walle CG. Auger recombination rates in nitrides
+
+from first principles. Appl Phys Lett 2009;94(19):191109.
+
+[30] Cho J, Schubert EF, Kim JK. Efficiency droop in light-emitting diodes: challenges
+
+and countermeasures. Laser Photon Rev 2013;7(3):408–21.
+
+[31] Nguyen HPT, Djavid M, Mi Z. Nonradiative recombination mechanism in
+phosphor-free GaN-based nanowire white light emitting diodes and the effect
+of ammonium sulfide surface passivation. ECS Trans 2013;53(2):93–100.
+[32] Cao B, Zhou S, Liu S. Effects of ITO pattern on the electrical and optical
+
+characteristics of LEDs. ECS J Solid State Sc 2013;2(1):R24–8.
+
+[33] Joshi BC, Pradhan N, Mathew M, Singh K, Danavantri C, Kumar D. Delta doping:
+new technique to reduce current crowding problem in III-nitride LEDs.
+Optoelectron Adv Mat 2009;3(10):985–8.
+
+[1] Liu S, Luo XB. LED packaging for lighting applications-design, manufacturing
+
+[34] Götz W, Johnson NM, Chen C, Liu H, Kuo C, Imler W. Activation energies of
+
+and testing. New York: John Wiley & Sons; 2011.
+
+Si donors in GaN. Appl Phys Lett 1996;68(22):3144–6.
+
+[2] Luo XB, Hu R. Chip packaging: encapsulation of nitride LEDs. In: Nitride
+semiconductor light-emitting diodes (LEDs)-materials, technologies and
+applications. Abington: Woodhead Publishing Limited; 2014. p. 41–81 [Chapter
+15].
+
+[3] Schubert EF, Kim JK. Solid-state light sources getting smart. Science
+
+2005;308(5726):1274–8.
+
+[35] Oh MS, Kwon MK, Park IK, Baek SH, Park SJ, Lee SH, et al. Improvement of
+green LED by growing p-GaN on In0.25GaN/GaN MQWs at low temperature. J
+Cryst Growth 2006;289(1):107–12.
+
+[36] Kaufmann U, Schlotter P, Obloh H, Köhler K, Maier M. Hole conductivity and
+compensation in epitaxial GaN:Mg layers. Phys Rev B 2000;62(16):10867–72.
+[37] Khan A, Balakrishnan K, Katona T. Ultraviolet light-emitting diodes based on
+
+[4] Pimputkar S, Speck JS, Denbaars SP, Nakamura S. Prospects for LED lighting.
+
+group three nitrides. Nat Photonics 2008;2:77–84.
+
+Nature Photon 2009;3(4):179–81.
+
+[5] Tonzani S. Time to change the bulb. Nature 2009;459(7245):312–14.
+[6] Wikipedia [Internet]. San Francisco: Wikimedia Foundation, Inc.; Phases-out
+of incandescent light bulbs. <https://en.wikipedia.org/wiki/Phase-out
+_of_incandescent_light_bulbs>; 2007 [accessed 11.12.14].
+
+[7] Gibney E. Nobel
+
+for blue LED that revolutionized lighting. Nature
+
+2014;514:152–3.
+
+[8] Yang YC, Sheu JK, Lee ML, Tu SJ, Huang FW, Lai WC, et al. Vertical InGaN
+light-emitting diodes with a sapphire-face-up structure. Opt Express
+2012;20(1):119–24.
+
+[9] Wierer JJ, Steigerwald DA, Krames MR, O’Shea JJ, Ludowise MJ, Christenson
+G, et al. High-power AlGaInN flip-chip light-emitting diodes. Appl Phys Lett
+2001;78(22):3379–81.
+
+[10] Bardsley N, Bland S, Pattison L, Stober K, Welsh F, Yamada M. Solid-state
+lighting research and development multi-year program plan. Department of
+Energy, US; 2014.
+
+[11] Fontana QPV. Viscosity: thermal history treatment in resin transfer moulding
+process modelling. Compos Part A Appl Sci Manuf 1997;29(1–2):153–8.
+[12] Kiuna N, Lawrence CJ, Fontana QPV. A model for resin viscosity during cure
+in the resin transfer moulding process. Compos Part A Appl Sci Manuf
+2002;33(11):1497–503.
+
+[13] Wang YM, Zheng H, Hu R, Luo XB. Modeling on phosphor sedimentation
+phenomenon during curing process of high power LED packaging. J Solid Stat
+Light 2014;1(2).
+
+[14] Yu RY, Jin SZ, Cen SY, Liang P. Effect of the phosphor geometry on the luminous
+flux of phosphor-converted light-emitting diodes. Photon Technol Lett
+2010;22(23):1765–7.
+
+[15] Liu ZY, Liu S, Wang K, Luo XB. Studies on optical consistency of white LEDs
+affected by phosphor thickness and concentration using optical simulation.
+IEEE Trans Compon Pack Technol 2010;33(4):680–7.
+
+[16] Sommer C, Wenzl FP, Hartmann P, Pachler P, Schweighart M, Leising G.
+Tailoring of the color conversion elements in phosphor-converted high-power
+LEDs by optical simulations. Photon Technol Lett 2008;20(5):739–41.
+[17] Tran NT, Shi FG. Studies of phosphor concentration and thickness for
+J Lightwave Technol
+
+phosphor-based white light-emitting-diodes.
+2008;26(21):3556–9.
+
+[18] Hu R, Luo XB, Liu S. Study on the optical properties of conformal coating
+light-emitting diode by Monte Carlo simulation. IEEE Photon Technol Lett
+2011;23(20):1673–5.
+
+[19] Neamen DA. Semiconductor physics and devices basic principles. United States
+
+of America: McGraw-Hill; 2003.
+
+[20] Kawakami Y, Omae K, Kaneta A, Okamoto K, Izumi T, Sajou S, et al. Radiative
+and nonradiative recombination processes in GaN-based semiconductors. Phys
+Status Solidi A 2001;183(1):41–50.
+
+[21] Schubert EF. Light-emitting diode. Cambridge University Press; 2006.
+[22] Shockley W, Read WT. Statistics of the recombinations of holes and electrons.
+
+Phys Rev 1952;87(5):835–42.
+
+[23] Dai Q, Shan Q, Wang J, Chhajed S, Cho J, Schubert EF, et al. Carrier
+recombination mechanisms and efficiency droop in GaInN/GaN light-emitting
+diodes. Appl Phys Lett 2010;97:133507.
+
+[24] Olshansky R, Su CB, Manning J, Powazinik W. Measurement of radiative and
+nonradiative recombination rates in InGaAsP and AlGaAs light sources. IEEE
+J Quantum Electron 1984;20(8):838–54.
+
+[25] Zhang M, Bhattacharya P, Singh J, Hinckley J. Direct measurement of auger
+recombination in In0.1Ga0.9N/GaN quantum wells and its impact on the
+efficiency of In0.1Ga0.9N/GaN multiple quantum well light emitting diodes. Appl
+Phys Lett 2009;95(20):201108.
+
+[26] Laubsch A, Sabathil M, Baur J, Peter M, Hahn B. High-power and high-efficiency
+InGaN-based light emitters. IEEE Trans Electron Dev 2010;57(1):79–87.
+
+[38] Nam KB, Nakarmi ML, Li J, Lin JY, Jiang HX. Mg acceptor level in AlN probed
+
+by deep ultraviolet photoluminescence. Appl Phys Lett 2003;83(5):878–80.
+[39] Xu J, Schubert MF, Zhu D, Cho J, Schubert EF, Shim H, et al. Effects of
+polarization-field tuning in GaInN light-emitting diodes. Appl Phys Lett
+2011;99(4):041105.
+
+[40] Wang CK, Chiang TH, Chen KY, Chiou YZ, Lin TK, Chang SP, et al. Investigating
+the effect of piezoelectric polarization on GaN-based LEDs with different
+quantum barrier thickness. J Dis Technol 2013;9(4):207–11.
+
+[41] Schubert MF, Schubert EF. Effect of heterointerface polarization charges and
+well width upon capture and dwell time for electrons and holes above
+GaInN/GaN quantum wells. Appl Phys Lett 2010;96(13):131102.
+
+[42] Maier M, Köhler K, Kunzer M, Pletschen W, Wagner J. Reduced nonthermal
+rollover of wide-well GaInN light-emitting diodes. Appl Phys Lett
+2009;94(4):041103.
+
+[43] Kuo KY, Tsai MC, Yen SH, Hsu TC, Shen YJ. Effect of p-type last barrier on
+efficiency droop of blue InGaN light-emitting diodes. IEEE J Quantum Electron
+2010;46(8):1214–20.
+
+[44] Wang CH, Chang SP, Ku PH, Li JC, Lan YP, Lin CC, et al. Hole transport
+improvement in InGaN/GaN light-emitting diodes by graded-composition
+multiple quantum barriers. Appl Phys Lett 2011;99(17):171106.
+
+[45] Wang CH, Chang SP, Chang WT, Li JC, Lu YS, Li ZY, et al. Efficiency droop
+alleviation in InGaN/GaN light-emitting diodes by graded-thickness multiple
+quantum wells. Appl Phys Lett 2010;97(18):181101.
+
+[46] Ji Y, Zhang ZH, Tan ST, Ju ZG, Kyaw Z, Hasanov N, et al. Enhanced hole transport
+in InGaN/GaN multiple quantum well light-emitting diodes with a p-type
+doped quantum barrier. Opt Lett 2013;38(2):202–4.
+
+[47] Baig H, Sellami N, Mallick TK. Performance modeling and testing of a building
+integrated concentrating photovoltaic (BICPV) system. Sol Energ Mater Sol C
+2015;134:29–44.
+
+[48] Zhao YJ, Tanaka S, Pan CC, Fujito K, Feezell D, Speck JS, et al. High-power
+blue-violet semipolar (2021) InGaN/GaN light-emitting diodes with low
+efficiency droop at 200 A/cm2. Appl Phys Express 2011;4(8):082104.
+
+[49] Ling SC, Lu TC, Chang SP, Chen JR, Kuo HC, Wang SC. Low efficiency droop in
+blue-green m-plane InGaN/GaN light emitting diodes. Appl Phys Lett
+2010;96(23):231101.
+
+[50] Chiu CH, Lin DW, Lin CC, Li ZY, Chang WT, Hsu HW, et al. Reduction of
+efficiency droop in semipolar (1101) InGaN/GaN light emitting diodes grown
+on patterned silicon substrates. Appl Phys Express 2011;4(1):012105.
+[51] Ee YK, Kumnorkaew P, Arif RA, Tong H, Zhao HP, Gilchrist JF, et al. Optimization
+of light extraction efficiency of III-nitride LEDs with self-assembled colloidal-
+based microlenses. IEEE J Quantum Electron 2009;15(4):1218–25.
+
+[52] Fujii T, Gao Y, Sharma R, Hu EL, DenBaars SP, Nakamura S. Increase in the
+extraction efficiency of GaN-based light-emitting diodes via surface
+roughening. Appl Phys Lett 2004;84(6):855–7.
+
+[53] Zhao P, Jiao XC, Zhao HP. Analysis of light extraction efficiency enhancement
+for InGaN quantum wells light-emitting diodes with microspheres. IEEE
+Energytech 2012;1–6.
+
+[54] Huh C, Lee KS, Kang EJ, Park SJ. Improved light-output and electrical
+performance of InGaN-based light-emitting diode by microroughening of the
+p-GaN surface. J Appl Phys 2003;93(11):9383–5.
+
+[55] Tsai MA, Yu PC, Chiu CH, Kuo HC, Lu TC, Lin SH. Self-assembled two-
+dimensional surface structures for beam shaping of GaN-based vertical-
+injection light-emitting diodes. IEEE Photon Technol Lett 2010;22(1):12–14.
+[56] Lai FI, Yang JF. Enhancement of light output power of GaN-based light-emitting
+diodes with photonic quasi-crystal patterned on p-GaN surface and n-side
+sidewall roughing. Nanoscale Res Lett 2013;8:244–6.
+
+[57] Lee YC, Yeh SC, Chou YY, Tsai PJ, Pan JW, Chou HM, et al. High-efficiency
+InGaN-based LEDs grown on patterned sapphire substrates using
+nanoimprinting technology. Microelectron Eng 2013;105:86–90.
+
+X. Luo et al. / Progress in Energy and Combustion Science 56 (2016) 1–32
+
+29
+
+[58] Zhang YH, Wei TB, Wang JX, Lan D, Chen Y, Hu Q, et al. The improvement of
+GaN-based light-emitting diodes using nanopatterned sapphire substrate with
+small pattern spacing. AIP Adv 2014;4(2):027123.
+
+[91] Jang DI, Jo JO, Ko R, Lee SB, Mok YS. Plasma-mediated hydrophobic coating
+on a silicate-based yellow phosphor for the enhancement of durability. Korean
+Chem Eng Res 2013;51(2):214–20.
+
+[59] Jan W, Liao TF, Chen TP, Chang CS. AlGaInP light emitting diode with metal
+
+[92] Huang HT, Tsai CC, Huang YP. Conformal phosphor coating using pulsed spray
+
+reflector structure. Spie Pro 2005;5739:81–5.
+
+[60] Li SF, Waag A. GaN based nanorods for solid state lighting. J Appl Phys
+
+2012;111(7):071101.
+
+[61] Zubia D, Hersee SD. Nanoheteroepitaxy: the application of nanostructuring
+and substrate compliance to the heteroepitaxy of mismatched semiconductor
+materials. J Appl Phys 1999;85(9):6492–6.
+
+[62] Sekiguchi H, Kishino K, Kikuchi A. Emission color control from blue to red with
+nanocolumn diameter of InGaN/GaN nanocolumn arrays grown on same
+substrate. Appl Phys Lett 2010;96(23):231104.
+
+[63] Collins WD, Krames MR, Verhoeckx GJ, Leth NJM. Using electrophoresis to
+produce a conformally coated phosphor-converted light emitting
+semiconductor. United States Patent US6576488. 2003.
+
+[64] Hou B, Rao HB, Li JF. Phosphor coating technique with slurry method in
+
+application of white LED. Proc of Spie 2008;6481:684106.
+
+[65] Yum JH, Seo SY, Lee S, Sung YE. Comparison of Y3Al5O12:Ce0.05 phosphor
+coating on gallium nitride for white-light-emitting diode. J Electrochem Soc
+2003;150(2):H47–52.
+
+[66] Loh BP, Medendorp NW, Andrews P, Fu YK, Laughner M, Letoquin R. Method
+of uniform phosphor chip coating and LED package fabricated using method.
+United States Patent US20080079017. 2001.
+
+[67] Yamada K, Imai Y, Ishii K. Optical simulation of light source devices composed
+of blue LEDs and YAG phosphor. J Light Vis Environ 2003;27(2):70–4.
+[68] Zhu Y, Narendran N, Gu Y. Investigation of the optical properties of YAG: Ce
+phosphor. 6th International Conference on Solid State Lighting, Proceeding
+of SPIE 2006;63370S-8.
+
+[69] Arik M, Setlur A, Weaver S, Haitko D, Petroski J. Chip to system levels thermal
+needs and alternative thermal technologies for high brightness LEDs. J Electron
+Pack 2007;129(3):328–38.
+
+[70] Kim JK, Luo H, Schubert EF, Cho J, Sone C, Park Y. Strongly enhanced phosphor
+efficiency in GaInN white light-emitting diodes using remote phosphor
+configuration and diffuse reflector cup. Jpn J Appl Phys 2005;44:649–51.
+[71] Luo H, Kim JK, Schubert EF, Cho J, Sone C, Park Y. Analysis of high-power
+packages for phosphor-based white-light-emitting diodes. Appl Phys Lett
+2005;86(24):243505.
+
+[72] Luo H, Kim JK, Xi Y, Schubert EF, Cho J, Sone C, et al. Analysis of high-power
+packages for white-light-emitting diode lamps with remote phosphor, vol.
+892. Cambridge University Press; 2005 MRS Proceedings, 0892-FF09-07.
+[73] Min Q, Duan YY, Wang XD, Liang ZP, Si C. Does macroscopic flow geometry
+
+influence wetting dynamic. J Colloid Interf Sci 2011;36(1):221–7.
+
+[74] Min Q, Duan YY, Wang XD, Liang ZP, Lee DJ, Su A. Spreading of completely
+wetting, non-Newtonian fluids with non-power-law rheology. J Colloid Interf
+Sci 2010;348(1):250–4.
+
+[75] Kiuna N, Lawrence CJ, Fontana QPV, Lee PD, Selerland T, Spelt PDM. A model
+for resin viscosity during cure in the resin transfer moulding process. Compos
+Part A Appl Sci Manuf 2002;33(11):1497–503.
+
+to reduce color deviation of white LEDs. Opt Express 2010;18(S2):A201–6.
+
+[93] Zheng H, Luo XB, Hu R, Cao B, Fu X, Wang YM, et al. Conformal phosphor
+coating using capillary microchannel for controlling color deviation of
+phosphor-converted white light-emitting diodes. Opt Express 2012;20(5):
+5092–8.
+
+[94] Zhang R, Lee SW. Moldless encapsulation for LED wafer level packaging using
+
+integrated DRIE trenches. Microelectron Reliab 2012;52(5):922–32.
+
+[95] Lee KH, Lee SW. Process development for yellow phosphor coating on blue
+light emitting diodes (LEDs) for white light illumination. In: Proceedings of
+Electronics Packaging Technology Conference 2006; 379–84.
+
+[96] Liu HH, Zhang R, Lo JCC, Lee SW. LED wafer level packaging with a remote
+phosphor cap. Electronic Materials and Packaging, In: 14th International
+Conference 2012; 1–5.
+
+[97] Xie Y, Chen D, Zhang L, Tan KH, Lai CM. A novel wafer level packaging for white
+light LED. In: 14th International Conference on Electronic Packaging Technology
+2013; 1170–4.
+
+[98] Holman JP. Heat transfer. Boston: McGraw-Hill Press; 2002.
+[99] Zhang Q, Pi ZH, Chen MX, Luo XB, Xu L, Liu S. Effective thermal conductivity
+of silicone/phosphor composites. J Compos Mater 2011;45(23):2465–74.
+
+[100] Yuan C, Luo XB. A unit cell approach to compute thermal conductivity of
+uncured silicone/phosphor composites. Int J Heat Mass Transf 2013;56(1–
+2):206–11.
+
+[101] Luo XB, Cheng T, Xiong W, Gan ZY, Liu S. Thermal analysis of an 80 W
+light-emitting diode street lamp. IET Optoelectron 2007;1(5):191–6.
+[102] Huang W, Ghosh S, Velusamy S, Sankaranarayanan K, Skadron K, Stan MR.
+Hotspot: a compact thermal modeling methodology for early-stage VLSI design.
+IEEE Trans VLSI Syst 2006;14(5):501–13.
+
+[103] Bar-Cohen A, Elperin T, Eliasi R. θjc characterization of chip packages-
+justification, limitations, and future, In: Proceedings of Transactions on
+Components, Hybrids, and Manufacturing Technology. 1989;12(4):724-31.
+
+[104] Rosten HI, Lasance CJM, Parry JD. The world of thermal characterization
+according to DELPHI-part I: background to DELPHI. IEEE Trans Comp Pack
+Manuf 1997;20(4):384–91.
+
+[105] Lasance CJM, Parry JD, Rosten HI. The world of thermal characterization
+according to DELPHI-Part II: experimental and numerical methods. IEEE Trans
+Comp Pack Manuf 1997;20(4):392–8.
+
+[106] Lasance CJM, Vinke H, Rosten H, Weiner KL. A novel approach for the thermal
+characterization of electronic parts. Proceedings of 11th Annual IEEE
+Semiconductor Thermal Measurement and Management Symposium. San Jose,
+CA, USA;1995. p. 1–9.
+
+[107] Hon SJ, Kuo CT, Chen TP, Hsieh MH. High power GaN LED chip with low
+thermal resistance. In: Proceedings of SPIE. San Jose, CA, USA; 2008. vol. 6894,
+p. 89411.
+
+[108] Weng CJ. Advanced thermal enhancement and management of LED packages.
+
+Int Commun Heat Mass Transf 2009;36(3):245–8.
+
+[76] Young T. An essay on the cohesion of fluids. Phil Trans R Soc Lond 1805;95:65–
+
+[109] Christensen A, Graham S. Thermal effects in packaging high power light
+
+87.
+
+[77] Singh SK, Dandapat BS. Spreading of a non-Newtonian liquid drop over a
+
+homogeneous rough surface. Colloid Surf A 2013;419:228–32.
+
+[78] Deng T, Varanasi KK, Hsu M, Bhate N, Keimel C, Stein J, et al. Nonwetting of
+impinging droplets on textured surfaces. Appl Phys Lett 2009;94(13):133109.
+[79] Gu YG, Li DQ. A model for a liquid drop spreading on a solid surface. Colloid
+
+Surf A 1998;142(2–3):243–56.
+
+[80] Bonn D, Eggers J, Indekeu J, Meunier J, Rolley E. Wetting and spreading. Rev
+
+Mod Phys 2009;81(2):739–805.
+
+[81] Pasandideh-Fard M, Qiao YM, Chandra S, Mostaghimi J. Capillary effects during
+
+emitting diode arrays. Appl Therm Eng 2009;29(2–3):364–71.
+
+[110] Han B, Jang C, Bar-Cohen A, Song B. Coupled thermal and thermo-mechanical
+design assessment of high power light emitting diode. IEEE Trans Compon
+Pack Technol 2010;33(4):688–97.
+
+[111] Luo XB, Mao ZM, Yang JH, Liu S. Engineering method for predicting junction
+temperatures of high-power light-emitting diodes. IET Optoelectron
+2012;6(5):230–6.
+
+[112] Ha M, Graham S. Development of a thermal resistance model for chip-on-board
+packaging of high power LED arrays. Microelectron Reliab 2012;52(5):836–44.
+[113] Cooper MG, Mikic BB, Yovanovich MM. Thermal contact conductance. Int J
+
+droplet impact on a solid surface. Phys Fluids 1996;8(3):650–9.
+
+Heat Mass Transf 1969;12(3):279–300.
+
+[82] Kuo HC, Hung CW, Chen HC, Chen KJ, Wang CH, Sher CW, et al. Patterned
+structure of remote phosphor for phosphor-converted white LEDs. Opt Express
+2011;19(104):A930–6.
+
+[83] Liu ZY, Li C, Yu BH, Wang YH, Niu HB. Uniform white emission of wLEDs
+realized by multilayer phosphor with pyramidal shape and inversed
+concentration distribution. IEEE Photon Technol Lett 2012;24(17):1558–60.
+[84] Hu R, Cao B, Zou Y, Zhu YM, Liu S, Luo XB. Modeling the light extraction
+efficiency of bi-layer phosphor in white LEDs. IEEE Photon Technol Lett
+2013;25(12):1141–4.
+
+[85] Chen KJ, Chen HC, Shih MH. Enhanced luminous efficiency of wLEDs using a
+dual-layer structure of the remote phosphor package. J Lightwave Technol
+2013;31(12):1941–5.
+
+[86] Wang MT, Huang JM. Accurate control of chromaticity and spectra by feedback
+
+phosphor-coating. Opt Express 2015;23(9):11576–85.
+
+[87] Hu R, Luo XB, Zheng H, Zong Q, Gan ZQ, Wu BL, et al. Design of a novel freeform
+lens for LED uniform illumination and conformal phosphor coating. Opt
+Express 2012;20(13):13727–37.
+
+[88] Huang KC, Huang YR, Ting SY, Tseng CM, Tseng SH, Huang JE. Facile fabrication
+of spherical silicone encapsulant with Pt nanoparticles for applications as white
+light-emitting diode. Mater Lett 2014;134:244–7.
+
+[89] Zheng H, Luo XB. Color consistency enhancement of white light-emitting
+diodes through substrate design. IEEE Photon Technol Lett 2013;25(5):484–7.
+[90] Lee KH, Cho SC, Jo SY, Uhm HS, Bang CU, Lee DK. Hydrophobic coating of
+Y2O3:Eu phosphors by using hmdso/toluene plasma at low pressure and their
+wettability. J Korean Phys Soc 2008;53(2):631–5.
+
+[114] Madhusudana CV. Thermal contact conductance. New York: Springer-Verlag;
+
+1996.
+
+[115] Prasher RS. Surface chemistry and characteristic based model for the thermal
+contact resistance of fluidic interstitial thermal interface materials. J Heat Trans
+ASME 2001;123(5):969–75.
+
+[116] Chiu CP, Maveety JG, Tran QA. Characterization of solder interfaces using laser
+
+flash metrology. Microelectron Reliab 2002;42(1):93–100.
+
+[117] Pritchard LS, Acarnley PP, Johnson CM. Effective thermal conductivity of porous
+
+solder layers. IEEE Trans Compon Pack Technol 2004;27(2):259–67.
+
+[118] Hu XJ, Jiang LN, Goodson KE. Thermal characterization of eutectic alloy thermal
+interface materials with void-like inclusions. In: Proceedings of 20th Annual
+IEEE Semiconductor Thermal Measurement and Management Symposium. San
+Jose, CA;2004.
+
+[119] Panton RL, Lee JW, Goenka L. Simulation of void growth in molten solder
+
+bumps. J Electron Pack 2003;125(3):329–34.
+
+[120] Wang DJ, Panton RL. Experimental study of void formation in eutectic and
+lead-free solder bumps of flip-chip assemblies. J Electron Pack 2006;128(3):
+202–7.
+
+[121] Ladani LJ, Dasgupta A. Effect of voids on thermomechanical durability of Pb-free
+BGA solder joints: modeling and simulation. J Electron Pack 2007;129(3):273–
+7.
+
+[122] Ladani LJ, Dasgupta A. Damage initiation and propagation in voided joints:
+
+modeling and experiment. J Electron Pack 2008;130(1):011008.
+
+[123] Lee S, Yim MJ, Baldwin D. Void formation mechanism of flip chip package using
+
+no-flow underfill. J Electron Pack 2009;131(3):031014.
+
+30
+
+X. Luo et al. / Progress in Energy and Combustion Science 56 (2016) 1–32
+
+[124] Na SH, Lim SK, Kim JS, Park HS, Oh HJ, Choi JW, et al. Experimental study of
+bump void formation according to process conditions. Microelectron Reliab
+2013;53(4):638–44.
+
+[125] Ume IC, Jie G. Evaluation of lead-free solder bump voiding ball grid array
+packages using laser ultrasound and interferometric technique. IEEE Trans
+Comp Pack Manuf 2013;3(8):1310–20.
+
+[126] Xu YS, Chung DDL. Increasing the thermal conductivity of boron nitride and
+aluminum nitride particle epoxy-matrix composites by particle surface
+treatments. Compos Interface 2000;7(4):243–56.
+
+[127] Han YW, Lv SM, Hao CX, Ding F, Zhang Y. Thermal conductivity enhancement
+of BN/silicone composites cured under electric field: stacking of shape, thermal
+conductivity, and particle packing structure anisotropies. Thermochim Acta
+2012;529:68–73.
+
+[128] Prasher RS, Shipley J, Prstic S, Koning P, Wang JL. Thermal resistance of particle
+J Heat Trans ASME
+
+interface materials.
+
+laden polymeric thermal
+2003;125(6):1170–7.
+
+[129] Prasher RS. Thermal interface materials: historical perspective, status, and
+
+future directions. P IEEE 2006;94(8):1571–86.
+
+[130] Liu Y, Leung SYY, Zhao J, Wong CKY, Yuan CA, Zhang GQ, et al. Thermal and
+mechanical effects of voids within flip chip soldering in LED packages.
+Microelectron Reliab 2014;54(9–10):2028–33.
+
+[131] Tien CR. A correlation for thermal contact conductance of nominally-flat
+surfaces in vacuum. In: Proceedings of 7th Thermal Conductivity Conference.
+US Bureau of Standards;1968.
+
+[132] Thomas TR, Probert SD. Thermal contact resistance: the directional effect and
+
+other problems. Int J Heat Mass Transf 1970;13(5):789–807.
+
+[156] Davis HT, Valencourt LR, Johnson CE. Transport processes in composite media.
+
+J Am Ceram Soc 1975;58(9–10):446–52.
+
+[157] Every AG, Tzou Y, Hassleman DPH, Raj R. The effect of particle size on the
+thermal conductivity of ZnS/diamond composites. Acta Metall Mater
+1992;40(1):123–9.
+
+[158] Scott K. Percolation and conduction. Rev Mod Phys 1973;45(4):574–88.
+[159] Hakansson B, Ross RG. Effective thermal conductivity of binary dispersed
+composites over wide ranges of volume fraction, temperature and pressure.
+J Appl Phys 1990;68(7):3285–92.
+
+[160] Liang XG, Ji X. Thermal conductance of randomly oriented composites of thin
+
+layers. Int J Heat Mass Transf 2000;43(19):3633–40.
+
+[161] Wu JJ, McLachlan DS. Percolation exponents and thresholds obtained from
+the nearly ideal continuum percolation system graphite-boron nitride. Phys
+Rev B 1997;56(3):1236–48.
+
+[162] Kim WJ, Taya M, Yamada K, Kamiya N. Percolation study on electrical resistivity
+J Appl Phys
+
+of SiC/Si3N4 composites with segregated distribution.
+1998;83(5):2593–8.
+
+[163] Phelan PE, Niemann RC. Effective thermal conductivity of a thin, randomly
+
+oriented composite material. J Heat Trans ASME 1998;20(4):971–6.
+
+[164] Ganapathy D, Singh K, Phelan PE. An effective unit cell approach to compute
+the thermal conductivity of composites with cylindrical particles. J Heat Trans
+ASME 2005;127(6):553–9.
+
+[165] Veca LM, Meziani MJ, Wang W, Wang X, Lu FS, Zhang PY, et al. Carbon
+nanosheets for polymeric nanocomposites with high thermal conductivity.
+Adv Mater 2009;21(20):2088–92.
+
+[166] Xiang JL, Drzal LT. Thermal conductivity of exfoliated graphite nanoplatelet
+
+[133] Mikic BB. Thermal contact conductance: theoretical considerations. Int J Heat
+
+paper. Carbon 2011;49(3):773–8.
+
+Mass Transf 1974;17(2):205–14.
+
+[134] Sridhar MR, Yovanovich MM. Review of elastic and plastic contact conductance
+J Thermophys Heat Transf
+
+models: comparison with experiment.
+1994;8(4):633–40.
+
+[135] Sridhar MR, Yovanovich MM. Elastoplastic contact conductance model for
+isotropic conforming rough surfaces and comparison with experiments. J
+Thermophys Heat Transf 1996;118(1):3–9.
+
+[136] Bahrami M, Yovanovich MM, Culham JR. Thermal joint resistances of
+nonconforming rough surfaces with gas-filled gaps. J Thermophys Heat Transf
+2004;18(3):326–32.
+
+[137] Bahrami M, Culham JR, Yovanovich MM, Schneider GE. Thermal contact
+resistance of nonconforming rough surfaces, part 1: contact mechanics model.
+J Thermophys Heat Transf 2004;18(2):209–17.
+
+[138] Bahrami M, Culham JR, Yovanovich MM, Schneider GE. Thermal contact
+resistance of nonconforming rough surfaces, part 2: thermal model. J
+Thermophys Heat Transf 2004;18(2):218–27.
+
+[139] Mitutoyo Corporation. SJ-401 surface roughness tester: user’s manual.
+
+Kawasaki, 2004.
+
+[140] Heichal Y, Chandra S. Predicting thermal contact resistance between molten
+metal droplets and a solid surface. J Heat Trans ASME 2005;127(11):1269–75.
+[141] Xue MX, Heichal Y, Chandra S. Modeling the impact of a molten metal droplet
+on a solid surface using variable interfacial thermal contact resistance. J Mater
+Sci 2007;42(1):9–18.
+
+[142] Hamasaiid A, Dour G, Loulou T, Dargusch M. A predictive model for the
+evolution of the thermal conductance at the casting-die interfaces in high
+pressure die casting. Int J Therm Sci 2010;49(2):365–72.
+
+[143] Hamasaiid A, Dargusch M, Loulou T, Dour G. A predictive model for the thermal
+contact resistance at liquid-solid interfaces: analytical developments and
+validation. Int J Therm Sci 2011;50(8):1445–59.
+
+[144] Yuan C, Duan B, Li L, Shang BF, Luo XB. An improved model for predicting
+thermal contact resistance at liquid-solid interface. Int J Heat Mass Transf
+2015;80:398–406.
+
+[145] Zeng J, Fu RL, Agathopoulos S, Zhang SD, Song XF, He H. Numerical simulation
+of thermal conductivity of particle filled epoxy composites. J Electron Pack
+2009;131(4):041006.
+
+[146] Shahil KMF, Balandin AA. Graphene-multilayer graphene nanocomposites as
+
+highly efficient thermal interface materials. Nano Lett 2012;12(2):861–7.
+
+[147] Dede EM. Simulation and optimization of heat flow via anisotropic material
+
+thermal conductivity. Comput Mater Sci 2010;50(2):510–15.
+
+[148] Song WL, Wang P, Cao L, Anderson A, Meziani MJ, Farr AJ, et al. Polymer/boron
+nitride nanocomposite materials for superior thermal transport performance.
+Angew Chem Int Ed Engl 2012;51(26):6498–501.
+
+[149] Martin JE, Gulley G. Field-structured composites for efficient, directed heat
+
+transfer. J Appl Phys 2009;106(8):084301.
+
+[150] Yung KC, Liem H. Enhanced thermal conductivity of boron nitride epoxy-matrix
+composite through multi-modal particle size mixing. J Appl Polym Sci
+2007;106(6):3587–91.
+
+[151] Khiabani RH, Joshi Y, Aidun CK. Thermal properties of particulate TIMs in
+
+squeeze flow. Int J Heat Mass Transf 2010;53(19–20):4039–46.
+
+[152] Rae DF, Borgesen P, Cotts EJ. The effect of filler-network heterogeneity on
+thermal resistance of polymeric thermal bondlines. JOM 2011;63(10):78–
+84.
+
+[153] Hassleman DPH, Johnson LF. Effective thermal conductivity of composites with
+
+interfacial thermal barrier resistance. J Compos Mater 1987;21(6):508–15.
+
+[154] Davis LC, Artz BE. Thermal conductivity of metal-matrix composites. J Appl
+
+Phys 1995;77(10):4954–60.
+
+[155] Felske JD. Effective thermal conductivity of composite spheres in a continuous
+medium with contact resistance. Int J Heat Mass Transf 2004;47(14–
+16):3453–61.
+
+[167] Tian XJ, Itkis ME, Bekyarova EB, Haddon RC. Anisotropic thermal and electrical
+properties of thin thermal interface layers of graphite nanoplatelet-based
+composites. Sci Rep 2013;3:1710.
+
+[168] Lewis T, Nielsen L. Dynamic mechanical properties of particulate-filled
+
+composites. J Appl Polym Sci 1970;14(6):1449–71.
+
+[169] Ashton JE, Halpin JC, Petit PH. Primer on composite materials analysis.
+
+Westport: Technomic Press; 1969.
+
+[170] Nan CW, Birringer R, Clarke DR, Gleiter H. Effective thermal conductivity of
+particulate composites with interfacial thermal resistance. J Appl Phys
+1997;81(10):6692–9.
+
+[171] Hill RF, Supancic PH. Thermal conductivity of platelet-filled polymer
+
+composites. J Am Ceram Soc 2002;85(4):851–7.
+
+[172] Lin ZY, Liu Y, Raghavan S, Moon KS, Sitaraman SK, Wong CP. Magnetic
+alignment of hexagonal boron nitride platelets in polymer matrix: toward high
+performance anisotropic polymer composites for electronic encapsulation. ACS
+Appl Mater Interfaces 2013;5(15):7633–40.
+
+[173] Ahn HJ, Eoh YJ, Park SD, Kim ES. Thermal conductivity of polymer composites
+with oriented boron nitride. Thermochim Acta 2014;590(20):138–44.
+[174] Tanimoto M, Yamagata T, Miyata K, Ando S. Anisotropic thermal diffusivity
+of hexagonal boron nitride-filled polyimide films: effects of filler particle size,
+aggregation, orientation, and polymer chain rigidity. ACS Appl Mater Interfaces
+2013;5(10):4374–82.
+
+[175] Hatta H, Taya M. Equivalent inclusion method for steady state heat conduction
+
+in composites. Int J Eng Sci 1986;24(7):1159–72.
+
+[176] Devpura A, Phelan PE, Prasher RS. Percolation theory applied to the analysis
+of thermal interface materials in flip-chip technology. ITHERM 2000;1:21–8.
+[177] Stauffer D, Aharony A. Introduction to percolation theory. Washington, DC:
+
+Taylor & Francis; 1992.
+
+[178] McCullough RL. Generalized combining rules for predicting transport
+
+properties of composite materials. Compos Sci Technol 1985;22(1):3–21.
+
+[179] Shenoy AV. Rheology of filled polymer system. New York: Kluwer Academic
+
+Publishers; 1999.
+
+[180] Covey GH, Stanmore BR. Use of the parallel-plate plastometer for the
+characterization of viscous fluids with a yield stress. J Non-Newton Fluid
+1981;8(3–4):249–60.
+
+[181] Singhal V, Siegmund T, Garimella S. Optimization of thermal interface materials
+for electronics cooling applications. IEEE Trans Compon Pack Technol
+2004;27(2):244–52.
+
+[182] Linderman RJ, Brunschwiler T, Kloter U, Toy H, Michel B. Hierarchical nested
+surface channels for reduced particle stacking and low-resistance thermal
+interfaces. In: Proceedings of 23rd Annual IEEE Semiconductor Thermal
+Measurement and Management Symposium San Jose, CA, USA; 2007. p. 87–
+94.
+
+[183] Liang QZ, Yao XX, Wang W, Liu Y, Wong CP. A three-dimensional vertically
+aligned functionalized multilayer graphene architecture: an approach for
+graphene-based thermal interfacial materials. ACS Nano 2011;5(3):2392–401.
+[184] Biercuk MJ, Llaguno MC, Radosavljevic M, Hyun JK, Johnson AT, Fischer JE.
+Carbon nanotube composites for thermal management. Appl Phys Lett
+2002;80(15):2767–9.
+
+[185] Feng B, Faruque F, Bao P, Chien AT, Kumar S, Peterson GP. Double-sided tin
+nanowire arrays for advanced thermal interface materials. Appl Phys Lett
+2013;102(9):093105.
+
+[186] Brunschwiler T, Kloter U, Linderman RJ, Rothuizen H, Michel B. Hierarchically
+nested channels for fast squeezing interfaces with reduced thermal resistance.
+IEEE Trans Compon Pack Technol 2007;30(2):226–34.
+
+[187] Ying TM, Toh KC. A heat spreading resistance model for anisotropic thermal
+conductivity materials in electronic packaging. In: The Seventh Intersociety
+Conference on Thermal and Thermomechanical Phenomena in Electronic
+Systems, ITHERM 2000. 314-321, 23-26 May, Las Vegas, NV, USA; 2000.
+
+X. Luo et al. / Progress in Energy and Combustion Science 56 (2016) 1–32
+
+31
+
+[188] Kennedy DP. Spreading resistance in cylindrical semiconductor devices. J Appl
+
+Phys 1960;31(8):1490–7.
+
+[189] Kadambi V, Abuaf N. An analytical of thermal response for power chip
+
+packages. IEEE Trans Electron Dev 1985;ED-32(6):1024–33.
+
+[190] Krane MJH. Constriction resistance in rectangular bodies. J Electron Pack
+
+1991;113:392–6.
+
+[191] Ellison GN. Maximum thermal spreading resistance for rectangular sources
+and plates with nonunity aspect ratios. IEEE Trans Compon Pack Technol
+2003;26(2):439–54.
+
+[192] Muzychka YS, Stevanovic M, Yovanovich MM. Spreading thermal resistance
+in compound annular sectors. J Thermophys Heat Transf 2001;15(3):354–9.
+[193] Muzychka YS, Yovanovich MM, Culham JR. Thermal spreading resistance in
+compound and orthotropic systems. J Thermophys Heat Transf 2004;18(1):45–
+51.
+
+[194] Muzychka YS, Culham JR, Yovanovich MM. Thermal spreading resistance in
+of eccentric heat sources on rectangular flux channels. J Electron Pack
+2003;125(2):178–85.
+
+[195] Muzychka YS, Yovanovich MM, Culham JR. Influence of geometry and edge
+cooling on thermal spreading resistance. J Thermophys Heat Transf
+2006;20(2):247–55.
+
+[196] Muzychka YS, Bagnall KR, Wang EN. Thermal spreading resistance and heat
+source Temperature in compound orthotropic systems with interfacial
+resistance. IEEE Trans Comp Pack Manuf 2013;3(11):1826–41.
+
+[197] Bagnall KR, Muzychka YS, Wang EN. Application of the Kirchhoff transform
+to thermal spreading problems with convection boundary conditions. IEEE
+Trans Comp Pack Manuf 2014;4(3):408–20.
+
+[198] Bagnall KR, Muzychka YS, Wang EN. Analytical solution for temperature rise
+in complex multilayer structures with discrete heat sources. IEEE Trans Comp
+Pack Manuf 2014;4(5):817–30.
+
+[199] Yang KS, Chung CH, Tu CW, Wong CC, Yang TY, Lee MT. Thermal spreading
+resistance characteristics of a high power light emitting diode module. Appl
+Therm Eng 2014;70:361–8.
+
+[200] Yang CT, Liu WC, Liu CY. Measurement of thermal resistance of first-level Cu
+substrate used in high-power multi-chips LED package. Microelectron Reliab
+2012;52:855–60.
+
+[201] Cheng T, Luo XB, Huang SY, Liu S. Thermal analysis and optimization of
+multiple LED packaging based on a general analytical solution. Int J Therm
+Sci 2010;49:196–201.
+
+[202] Ye HY, Sau K, Henk VZ, Gielen AWJ, Zhang GQ. A review of passive thermal
+
+management of LED module. J Semicond 2011;32(1):014008.
+
+[203] Wang JC. Thermal investigations on LED vapor chamber-based plates. Int
+
+Commun Heat Mass Transf 2011;30:1206–12.
+
+[204] Yu JH, Oepts W, Konijn H. PC board thermal management of high power LEDs.
+In: Proceedings of the Twenty-fourth Annual IEEE Semiconductor Thermal
+Measurement and Management Symposium. San Jose, CA;2008.
+
+[205] Lienhard JH V, Lienhard JH IV. A heat transfer textbook. 3rd ed. Cambridge,
+
+Massachusetts: Phlogiston Press; 2008.
+
+[206] Bar-Cohen A, Iyengar M, Kraus AD. Design of optimum plate-fin natural
+
+convective heat sinks. J Electron Pack 2003;125(2):208–16.
+
+[207] Narasimhan S, Mira A. Characterization of compact heat sink model in natural
+convection. In: Proceedings of 7th Intersociety Conference on Thermal and
+Thermomechanical Phenomena in Electronic Systems. Las Vegas, NV;2000.
+
+[208] Morrison AT. Optimization of heat sink fin geometry for heat sinks in natural
+convection. In: IEEE Inter Society Conference on Thermal Phenomena in
+Electronic Systems; 1992 Feb 5-8; Austin, TX;1992. p.145-8.
+
+[209] Yovanovich MM, Jafarpur K. Models of laminar natural convection from vertical
+and horizontal isothermal cuboids for all Prandtl numbers and all Rayleigh
+numbers below 1011. In: 114th ASME Winter Annual Meeting, New Orleans,
+LA. 1993.
+
+[210] Bar-Cohen A, Iyengar M. Design and optimization of air-cooled heat sinks for
+sustainable development. IEEE Trans Compon Pack Technol 2002;25(4):584–91.
+[211] Culham JR, Khan WA, Yovanovich MM, Muzychka YS. The influence of material
+properties and spreading resistance in the thermal design of plate fin heat
+sinks. J Electron Pack 2007;129(1):76–81.
+
+[212] Bar-Cohen A, Bahadur R, Iyengar M. Least-energy optimization of air-cooled
+heat sinks for sustainability-theory, geometry and material selection. Energy
+2006;31(5):579–619.
+
+[213] Culham JR, Muzychka YS. Optimization of plate fin heat sinks using entropy
+generation minimization. IEEE Trans Compon Pack Technol 2001;24(2):159–65.
+[214] Khan WA, Culham JR, Yovanovich MM. Optimization of pin-fin heat sinks using
+entropy generation minimization. In: Proceedings of 9th Intersociety
+Conference on Thermal and Thermomechanical Phenomena in Electronic
+Systems. Las Vegas, NV;2004.
+
+[215] Bejan A. Entropy generation through heat and fluid flow. New York: Wiley;
+
+1982.
+
+[216] Bejan A, Tsataronis G, Moran K. Thermal design and optimization. New York:
+
+Wiley; 1996.
+
+[217] Bejan A. Entropy generation minimization. Boca Raton, FL: CRC Press; 1996.
+[218] Bejan A. Advanced engineering thermodynamics. New York: Wiley; 1998.
+[219] Guo ZY, Cheng XG, Xia ZZ. Least dissipation principle of heat transport potential
+capacity and its application in heat conduction optimization. Chinese Sci Bull
+2003;48:406–10.
+
+[220] Guo ZY, Zhu HY, Liang XG. Entransy-a physical quantity describing heat transfer
+
+ability. Int J Heat Mass Transf 2006;50(13–14):2545–56.
+
+[221] Liu XB, Guo ZY. A novel method for heat exchanger analysis. Acta Phys Sin
+
+2009;58(7):4766–71.
+
+[222] Liu XB, Meng JA, Guo ZY. Entropy generation extremum and entransy
+dissipation extremum for heat exchanger optimization. Chinese Sci Bull
+2009;54(6):943–7.
+
+[223] Guo ZY, Liu XB, Tao WQ, Shah R. Effectiveness-thermal resistance method for
+heat exchanger design and analysis. Int J Heat Mass Transf 2010;53(13–
+14):2877–84.
+
+[224] Charles R, Wang CC. A novel heat dissipation fin design applicable for natural
+
+convection augmentation. Int Commun Heat Mass Transf 2014;59:24–9.
+
+[225] Luo XB, Xiong W, Cheng T, Liu S. Design and optimization of horizontally-
+located plate fin heat sink for high power LED street lamp. The 59th Electronic
+Components and Technology Conference, San Diego, CA, USA; 2009.
+[226] Shyu JC, Hsu KW, Yang KS, Wang CC. Thermal characterization of shrouded
+plate fin array on an LED backlight panel. Appl Therm Eng 2011;31:2909–
+15.
+
+[227] Luo XB, Mao ZM, Liu S. Thermal design of a 16W LED bulb based on thermal
+analysis of a 4W LED bulb, The 60th Electronic Components and Technology
+Conference, Las Vegas, NV, USA;2010.
+
+[228] Yang KS, Chung CH, Lee MT, Chiang SB, Wong CC, Wang CC. An experimental
+study on the heat dissipation of LED lighting module using metal/carbon foam.
+Int Commun Heat Mass Transf 2013;48:73–9.
+
+[229] Yang K, Chen YQ, Lin B, Lou J. Thermal design based on thermosyphon heat
+sink of high-power LED street light. International Conference on Electronics
+and Optoelectronics; 2011.
+
+[230] Huang L, Chen E, Lee D. Thermal analysis of plastic heat sink for high power
+LED lamp. International Microsystems, Packaging, Assembly and Circuits
+Technology Conference; 2012.
+
+[231] Jang DS, Yu SH, Lee KS. Multidisciplinary optimization of a pin-fin radial heat
+
+sink for LED lighting applications. Int J Heat Mass Transf 2012;55:515–21.
+
+[232] Kim HJ, Kim KJ, Lee YW. Thermal performance of smart heat sinks for cooling
+
+high power LED modules. 13th IEEE Itherm Conference; 2012.
+
+[233] Gillot C, Avenas Y, Cezac N, Poupon G, Schaeffer C, Fournier E. Silicon heat
+IEEE Trans Compon Pack Technol
+
+pipes used as thermal spreader.
+2003;26:332–9.
+
+[234] Moon SH, Yun HG, Hwang G, Choy TG. Experimental study on the performance
+of a miniature heat pipe with woven-wire wick. IEEE Trans Compon Pack
+Technol 2001;24:591–5.
+
+[235] Lu XY, Hua TC, Wang YP. Thermal analysis of high power LED package with
+
+heat pipe heat sink. Microelectron J 2011;42:1257–62.
+
+[236] Huang HS, Chiang YC, Huang CK, Chen SL. Experimental investigation of vapor
+chamber module applied to high-power light-emitting diodes. Exp Heat Transf
+2009;22:26–38.
+
+[237] Li J, Lin F, Wang DM, Tian WK. A loop-heat-pipe heat sink with parallel
+condensers for high-power integrated LED chips. Appl Therm Eng 2013;56:18–
+26.
+
+[238] Hu R, Guo TH, Zhu XL, Liu S, Luo XB. A small flat-plate vapor chamber
+fabricated by copper powder sintering and diffusion bonding for cooling
+electronic packages. In: Proceedings of IEEE 63rd Electronic Components and
+Technology Conference (ECTC). Las Vegas, NV;2013.
+
+[239] Yang KS, Yang TY, Tu CW, Yeh CT, Lee MT. A novel flat polymer heat pipe with
+thermal via for cooling electronic devices. Energy Convers Manage
+2015;100:37–44.
+
+[240] Ye HY, Sokolovskij R, van Zeijl HW, Gielen WJ, Zhang GQ. A polymer based
+miniature loop heat pipe with silicon substrate and temperature sensors for
+high brightness light-emitting diodes. Microelectron Reliab 2014;54:1355–62.
+[241] Luo Y, Liu G, Zou LL, Yang YX, Wang XD. Experimental investigation of
+microheat pipes for high-power light-emitting diode modules. Micro Nano
+Lett 2013;8(10):646–9.
+
+[242] Lin ZR, Wang SF, Huo JP, Hu YX, Chen JJ, Zhang W, et al. Heat transfer
+characteristics and LED heat sink application of aluminum plate oscillating
+heat pipes. Appl Therm Eng 2011;31:2221–9.
+
+[243] Liu YT, Dong K, Dong T. Thermal simulation of bionic transpiration heat pipe
+system for high-power LED. 16th International Conference on Mechatronics-
+Mechatronika; 2014.
+
+[244] Tang HY, Zhao J, Li B, Leung SYY, Yuan CCA, Zhang GQ. Thermal performance
+of embedded heat pipe in high power density LED streetlight module. 15th
+International Conference on Thermal, Mechanical and Multi-physics Simulation
+and Experiments in Microelectronics and Microsystem; 2014.
+
+[245] Fu X, Mao ZM, Luo XB. System packaging of thousands watt high power LEDs
+with heat pipe-fin air cooling system: design and manufacturing. 14th
+International Conference on Electronic Packaging Technology, Dalian,
+China;2013.
+
+[246] Morgan VT. The overall convective heat transfer from smooth circular cylinders.
+In: Irvine TF Jr, Hartnett JP, editors. Advances in heat transfer, vol. 11. New
+York: Academic Press; 1975. p. 199–264.
+
+[247] Moores KA, Joshi YK. Effect of tip clearance on the thermal and hydrodynamic
+performance of a shrouded pin fin array. J Heat Trans ASME 2003;125(6):999–
+1006.
+
+[248] Short BE, Raad PE, Price DC. Performance of pin fin cast aluminum coldwalls,
+Part 1: friction factor correlations. J Thermophys Heat Transf 2002;16(3):389–
+96.
+
+[249] Acikalin T, Garimella SV, Petroski J, Raman A. Optimal design of miniature
+thermal and
+
+piezoelectric fans for cooling light emitting diodes,
+thermomechanical phenomena in electronic system. 9th Itherm; 2004.
+[250] Sufian SF, Fairuz ZM, Zubair M, Abdullah MZ, Mohamed JJ. Thermal analysis
+of dual piezoelectric fans for cooling multi-LED packages. Microelectron Reliab
+2014;54:1534–43.
+
+32
+
+X. Luo et al. / Progress in Energy and Combustion Science 56 (2016) 1–32
+
+[251] Ma HK, Li YT. Thermal performance of a dual-sided multiple fans system with
+a piezoelectric actuator on LEDs. Int Commun Heat Mass Transf 2015;66:40–
+6.
+
+[252] Ma HK, Tan LK, Li YT. Investigation of a multiple piezoelectric-magnetic fan
+system embedded in a heat sink. Int Commun Heat Mass Transf 2014;59:166–
+73.
+
+[253] Ma HK, Su HC, Liu CL, Ho WH. Investigation of a piezoelectric fan embedded
+
+in a heat sink. Int Commun Heat Mass Transf 2012;39:603–9.
+
+[254] Chen IY, Guo MZ, Yang KS, Wang CC. Enhanced cooling for LED lighting using
+
+ionic wind. Int J Heat Mass Transf 2013;57(1):285–91.
+
+[255] Sheu WJ, Hsiao JJ, Wang CC. Effect of oscillatory EHD on the heat transfer
+
+performance of a flat plate. Int J Heat Mass Transf 2013;61:419–24.
+
+[256] Qu WL, Mala GM, Li DQ. Pressure-driven water flows in trapezoidal silicon
+
+microchannels. Int J Heat Mass Transf 2000;43(3):353–64.
+
+[257] Peng XF, Peterson GP. Convective heat transfer and flow friction for water
+flow in microchannel structure. Int J Heat Mass Transf 1996;39(12):2599–
+608.
+
+[272] Rahman MM, Gui F. Design, fabrication, and testing of microchannel heat sinks
+for aircraft avionics cooling. In: Proceedings of the 28th Intersociety Energy
+Conversion Engineering Conference. 1993.
+
+[273] Ravigururajan TS, Cuta J, McDonald CE, Drost MK. Single-phase flow thermal
+performance characteristics of a parallel micro-channel heat exchanger. In:
+Proceedings of National Heat Transfer Conference. 1996.
+
+[274] Harms TM, Kazmierczak MJ, Cerner FM, Holke A, Henderson HT, Pilchowski
+J, et al. Experimental investigation of heat transfer and pressure drop through
+deep microchannels in a (100) silicon substarte. In: Proceedings of the ASME
+Heat Transfer Division. 1997.
+
+[275] Kawano K, Sekimura M, Minakami K, Iwasaki H, Ishizuka M. Micro channel
+heat exchanger for cooling electrical equipment. In: Proceedings of 3rd
+International Conference on Compact Heat Exchangers and Enhancement
+Technology for the Process Industries. Davos, Switzerland; 1998.
+
+[276] Harms TM, Kazmierczak MJ, Cerner FM. Developing convective heat transfer
+in deep rectangular microchannels. Int J Heat Fluid Flow 1999;20(2):149–57.
+[277] Rahman MM. Measurements of heat transfer in microchannel heat sinks. Int
+
+[258] Tuckerman DB, Pease RFW. High-performance heat sinking for VLSI. IEEE
+
+Commun Heat Mass Transf 2000;27(4):495–506.
+
+Electron Device Lett 1981;2(5):126–9.
+
+[278] Luo XB, Liu YL, Liu W. A honeycomb micro channel cooling system for
+
+[259] Keyes RW. Heat transfer in forced convection through fins. IEEE Trans Electron
+
+electronics cooling. Heat Transfer Eng 2011;32(7–8):616–23.
+
+Dev 1984;31(9):1218–21.
+
+[279] Liu YL, Luo XB, Liu W. Experimental research on a honeycomb microchannel
+
+[260] Samalam VK. Convective heat transfer in microchannels. J Electron Mater
+
+cooling System. IEEE Trans Comp Pack Manuf 2011;1(9):1378–86.
+
+1989;18:611–17.
+
+[261] Phillips RJ. Micro-channel heat sinks. In: Bar-Cohen A, Kraus AD, editors.
+Advances in thermal modeling of electronic components. New York, USA:
+ASME Press; 1990. p. 109–84.
+
+[262] Knight RW, Goodling JS, Hall DJ. Optimal thermal design of forced convection
+
+heat sinks-analytical. ASME J Electron Pack 1991;113:313–21.
+
+[263] Knight RW, Hall DJ, Goodling JS, Jaeger RC. Heat sink optimization with
+application to microchannels. IEEE Trans Comp Pack Manuf 1992;15(5):832–
+42.
+
+[264] Bejan A, Morega AM. Optimal arrays of pin fins and plate fins in laminar forced
+
+convection. J Heat Trans ASME 1993;115:75–81.
+
+[265] Lee DY, Vafai K. Comparative analysis of jet impingement and microchannel
+J Heat Mass Transf
+
+Int
+
+cooling for high heat flux applications.
+1999;42(9):1555–68.
+
+[266] Weisberg A, Bau HH, Zemel JN. Analysis of microchannels for integrated
+
+cooling. Int J Heat Mass Transf 1992;35(10):2465–74.
+
+[267] Fedorov AG, Viskanta R. Three-dimensional conjugate heat transfer in the
+microchannel heat sink for electronic packaging. Int J Heat Mass Transf
+2000;43(3):399–415.
+
+[268] Kishimito T, Ohsaki T. VLSI packaging technique using liquid-cooled channels.
+
+IEEE Trans Comp Pack Manuf 1986;9(4):328–35.
+
+[280] Zhang X, Li RC, Zheng Q. Analysis and simulation of high-power LED array
+with microchannel heat sink. Int J Adv Manuf Tech 2013;1(2):191–5.
+[281] Yuan LL, Liu S, Chen MX, Luo XB. Thermal analysis of high power LED array
+packaging with microchannel cooler. 7th International Conference on
+Electronic Packaging Technology; 2006.
+
+[282] Deng YG, Liu J. A liquid metal cooling system for the thermal management
+of high power LEDs. Int Commun Heat Mass Transf 2010;37(7):788–91.
+[283] Luo XB, Mao ZM. Thermal modeling and design for microchannel cold plate
+with high temperature uniformity subjected to multiple heat sources. Int
+Commun Heat Mass Transf 2012;39(6):781–5.
+
+[284] Mao ZM, Luo XB, Liu S. Compact thermal model for microchannel substrate
+with high temperature uniformity subjected to multiple heat sources. In:
+Proceedings of IEEE 61st Electronic Components and Technology Conference
+(ECTC). Lake Buena Vista, USA; 2011.
+
+[285] Husain A, Kim SM, Kim JH, Kim KY. Thermal performance analysis and
+optimization of microjet cooling of high-power light-emitting diodes. J
+Thermophys Heat Transf 2013;27(2):235–45.
+
+[286] Ramezanpour A, Shirvani H, Mirzaee I. A numerical study on the heat transfer
+characteristics of two-dimensional inclined impinging jet. In: Proceedings of
+5th Electronics Packaging Technology Conference. Singapore, SINGAPORE;
+2003.
+
+[269] Sasaki S, Kishimito T. Optimal structure for microgrooved cooling fin for
+
+[287] Jackson MJ. Microfabrication and nanofabrication. Boca Raton, FL: CRC Press;
+
+high-power LSI devices. Electron Lett 1986;22(25):1332–4.
+
+2006.
+
+[270] Nayak D, Hwang LT, Turlik I, Reisman A. A high performance thermal module
+
+for computer packaging. J Electron Mater 1987;16:357–64.
+
+[271] Rahman MM, Gui F. Experimental measurements of fluid flow and heat
+transfer in microchannel cooling passages in a chip substrate. Adv. Electron.
+Packaging ASME EEP-4; 1993, 495–506.
+
+[288] Luo XB, Chen W, Sun RX, Liu S. Experimental and numerical investigation of
+a microjet-based cooling system for high power LEDs. Heat Transfer Eng
+2008;29(9):774–81.
+
+[289] Luo XB, Liu S. A microjet array cooling system for thermal management of
+
+high-brightness LEDs. IEEE Trans Adv Pack 2007;30(3):475–84.

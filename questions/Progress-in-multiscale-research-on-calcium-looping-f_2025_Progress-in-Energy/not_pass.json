@@ -1,0 +1,44 @@
+[
+  {
+    "question_text": "在钙循环-CSP集成系统中，闭式CO₂布雷顿循环相较于开式循环具有优势。请推导在碳化器压力为3.2 bar、温度为875°C条件下，系统的理论热效率。需考虑：(1) 碳化反应热释放；(2) CO₂在涡轮中的膨胀功；(3) 热交换网络的㶲损失分析。",
+    "standard_answer": "对于钙循环-CSP集成系统，闭式CO₂布雷顿循环的理论热效率可基于热力学第一定律和第二定律分析。\n\n系统效率ηtot = Wnet/Qin，其中Wnet为净输出功，Qin为输入热量。根据论文中描述：'The plant efficiency (similar to ηro-tr in Eq. (8) of S.I.) of the system is about 45%'。\n\n详细推导：假设碳化反应CaO + CO₂ → CaCO₃释放的热量为Qr = 178 kJ/mol。考虑压缩机和涡轮的等熵效率。根据论文中Alovisio et al.的研究：'a higher plant efficiency of 44-46% is predicted with a CaO conversion of 0.5'。\n\n详细计算：碳化器温度Tcar = 875 + 273 = 1148 K，压力Pcar = 3.2 bar。根据理想气体状态方程和等熵过程关系，涡轮输出功Wturb = ṁcp(Tin - Tout)。通过对热交换网络进行夹点分析，优化能量回收。在碳化器压力为3.2 bar、温度875°C时，ηtot ≈ 45%。\n\n㶲损失分析：根据热力学第二定律，㶲损失I = T₀σ，其中σ为熵产。",
+    "original_text": {
+      "1": "The interactions between atoms at the microscopic level define how a material behaves at the macroscopic scale, which is the scale of interest for industrial thermochemical energy storage applications.'。\n\n在介观尺度，使用Lattice Boltzmann方法模拟多孔介质中的气体扩散。",
+      "type": "reasoning",
+      "difficulty": 5,
+      "topic": "CFD_modeling"
+    },
+    "type": "calculation",
+    "difficulty": 5,
+    "topic": "energy_systems",
+    "question_id": "batch_detail_q_4bb7e101",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Progress-in-multiscale-research-on-calcium-looping-f_2025_Progress-in-Energy",
+      "paper_title": "Progress-in-multiscale-research-on-calcium-looping-f_2025_Progress-in-Energy"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T16:18:01.629759",
+      "batch_processing": true,
+      "answer_length": 554
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "该问题涉及钙循环-CSP集成系统的热力学分析、CO₂布雷顿循环效率计算、化学反应热释放和㶲损失分析，需要燃烧、传热、流体力学和能源系统领域的专业知识。",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported"
+      ],
+      "other_compliant": false,
+      "other_issues": [
+        "has_meta_info",
+        "too_general"
+      ],
+      "overall_verdict": "fail",
+      "recommendation": "答案应提供基于给定条件的完整热力学推导，而不是引用不相关的论文摘录；需要具体计算过程而非简单引用效率值；避免使用'根据论文'等元信息。"
+    }
+  }
+]

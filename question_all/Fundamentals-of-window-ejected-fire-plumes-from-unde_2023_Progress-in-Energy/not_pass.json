@@ -1,0 +1,76 @@
+[
+  {
+    "question_text": "当存在外部水平障碍物（如阳台）时，窗口喷射火灾羽流的火焰高度和热流分布如何变化？请结合羽流水平扩展长度（Lf,v）和垂直高度（Zf,e）的演化进行建模，并分析热通量降低的物理原因。",
+    "standard_answer": "水平障碍物通过改变羽流发展路径来影响火灾动力学。羽流从窗口水平喷出，在障碍物下方扩展，形成等效半径Rf的火焰扩展区域。根据几何模型，火焰扩展半径Rf满足：Rf = 0.0283(Q̇_ex/ρ∞ΔH))^(1/2) (He - Hn))^(1/2)，其中He为障碍物垂直高度。热流分布修正为：q̇′′·Zf,e/(Q̇_ex/l1) = fcn(z/Zf,e))，其中修正系数φ1表示相交部分与总体火焰体积的比率。物理机制在于：障碍物阻挡了向上动量，迫使羽流水平扩展，增加了卷吸面积但减少了直接冲击立面的热量。具体热流关联为q̇′′·Zf,e/(Q̇_ex/l1) = 0.1455·φ1。垂直温度分布同样修正，衰减指数从-1变为-5/3，表明热流衰减更快。",
+    "original_text": {
+      "1": "Rf = 0.0283(Q̇_ex/ρ∞ΔH))^(1/2) (He - Hn))^(1/2)，其中C1=0.3588(A√H/Lc^(5/2))，其中Lc为舱室尺度。",
+      "type": "reasoning",
+      "difficulty": 5,
+      "topic": "energy_systems"
+    },
+    "question_id": "batch_detail_q_fe2154d2",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Fundamentals-of-window-ejected-fire-plumes-from-unde_2023_Progress-in-Energy",
+      "paper_title": "Fundamentals-of-window-ejected-fire-plumes-from-unde_2023_Progress-in-Energy"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T11:17:44.014299",
+      "batch_processing": true,
+      "answer_length": 329
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及窗口喷射火灾羽流动力学、火焰高度、热流分布等复杂燃烧学和流体力学现象，需要燃烧科学、传热学、流体力学等专业领域的深度知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在明显事实错误和引用支持不足。需要修正火焰扩展半径公式中的变量定义，并提供更完整的热流分布修正机制解释。建议对照原文引用和论文内容重新梳理模型推导过程。"
+    },
+    "merge_source": "questions"
+  },
+  {
+    "question_text": "基于矩形源理论，从浮力通量J₀和动量通量M₀的竞争关系出发，严格推导特征长度尺度l₂=(AH²)^(1/4)的表达式，并阐明其物理意义。同时，基于无量纲对流热流量分析，推导特征长度尺度l₁=(AH^(1/2))^(2/5)的表达式及其物理意义。",
+    "standard_answer": "在矩形源理论中，特征长度尺度l₁和l₂源于窗口流出浮力通量和动量通量的竞争。根据论文定义，浮力通量J₀和动量通量M₀分别为：J₀≈ṁ_g(ΔT_g/T_∞)g，M₀≈ṁ_gv_g，其中ṁ_g为流出质量流量，v_g为流出速度，ΔT_g为温度差，T_∞为环境温度，g为重力加速度。\n\n对于l₂的推导：l₂表征流动从水平转向垂直的特征水平长度，由动量与浮力竞争决定。根据量纲分析，特征长度应满足l₂∝(M₀/ρ_∞)^(3/4)/(J₀/ρ_∞)^(1/2)。代入质量流量ṁ_g≈0.5ρ_∞A√(gH)和速度v_g≈√(gH)，可得M₀≈0.5ρ_∞A√(gH)·√(gH)=0.5ρ_∞AgH，J₀≈0.5ρ_∞A√(gH)·(ΔT_g/T_∞)g。由于ΔT_g/T_∞为无量纲量，在量纲分析中可视为常数，因此l₂∝(AgH)^(3/4)/(A√(gH))^(1/2)=(A^2H^2)^(1/4)=(AH²)^(1/4)。l₂的物理意义为垂直于窗户的流动转向特征长度，表征火焰在垂直于立面方向的特征深度。\n\n对于l₁的推导：基于无量纲对流热流量分析，对流热流量Q̇_conv=ṁ_gc_pΔT_g。引入无量纲对流热流量Q̇*_conv=Q̇_conv/(ρ_∞c_pT_∞√g l₁^(5/2))，该量应为常数。代入ṁ_g≈0.5ρ_∞A√(gH)和ΔT_g/T_∞≈常数，可得l₁∝(A√H)^(2/5)=(AH^(1/2))^(2/5)。l₁的物理意义为平行于窗户的火焰发展特征尺度，用于归一化火焰高度等参数。\n\n这两个特征长度尺度共同描述了窗口喷射火焰的三维发展特性，l₁控制沿立面方向的发展，l₂控制垂直于立面方向的发展，反映了浮力与动量竞争的物理本质。",
+    "original_text": {
+      "1": "l₂ ≈ (M₀/ρ_∞)^(3/4)/(J₀/ρ_∞)^(1/2) ∼ (AH²)^(1/4). This characteristic parameter represents the flame characteristic depth (normal to the facade).",
+      "2": "l₁=(AH^(1/2))^(2/5), parallel to the window; l₂=(AH²)^(1/4), normal to the window."
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "heat_transfer",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及燃烧科学、浮力驱动流动、量纲分析和特征尺度推导，需要燃烧动力学、流体力学、传热传质等专业领域的深入知识，特别是窗口喷射火焰理论和矩形源理论的专业背景",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "fundamental_error"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在严重错误：1）l₂推导中质量流量和速度的表达式不准确，ṁ_g≈0.5ρ_∞A√(gH)和v_g≈√(gH)的假设过于简化且缺乏理论依据；2）l₁推导中无量纲对流热流量的定义和推导过程不严谨，缺乏明确的物理基础；3）两个特征长度的物理意义描述与原文引用存在矛盾。建议：重新基于严格的浮力通量J₀和动量通量M₀定义进行量纲分析，确保推导过程的数学严谨性，并准确阐明l₁和l₂在窗口喷射火焰中的具体物理意义。"
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_c7536a13",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Fundamentals-of-window-ejected-fire-plumes-from-unde_2023_Progress-in-Energy",
+      "paper_title": "Fundamentals-of-window-ejected-fire-plumes-from-unde_2023_Progress-in-Energy"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:49:28.655623",
+      "answer_length": 731
+    },
+    "merge_source": "question_reverse"
+  }
+]

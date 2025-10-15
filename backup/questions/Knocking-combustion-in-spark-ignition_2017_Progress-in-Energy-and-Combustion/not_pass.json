@@ -1,0 +1,38 @@
+[
+  {
+    "question_text": "论文总结了多种抑制常规爆震和超级爆震的控制策略。请从热力学和流体力学原理出发，对比分析废气再循环(EGR)、米勒循环和分层混合气策略在提高发动机热效率方面的协同作用机制。",
+    "standard_answer": "EGR通过降低混合物温度和稀释自由基浓度来抑制爆震。具体分析：\n1. EGR通过增加比热比γ和降低绝热火焰温度T_ad，从而延长点火延迟时间。EGR对热效率的提升可通过以下公式量化：Δη_EGR = (1 - 1/CR_eff)·(1 - 1/γ_eff)。其中CR_eff为有效压缩比。\n2. 米勒循环通过延迟进气门关闭(LIVC)降低有效压缩比，从而抑制端气自燃。\n3. 分层混合气策略通过局部浓度梯度改变火焰传播路径。当采用高滚流-高EGR-阿特金森/米勒循环集成时，可实现热效率提升6-9%。同时，高湍流强度（滚流比2.8）可加速火焰传播，减少爆震倾向。",
+    "original_text": {
+      "1": "EGR通过增加比热比和降低绝热火焰温度来抑制爆震。\n2. 集成高滚流-高EGR-阿特金森/米勒循环时，可在全负荷条件下成功抑制超级爆震。",
+      "type": "reasoning",
+      "difficulty": 4,
+      "topic": "energy_systems"
+    },
+    "question_id": "batch_detail_q_a30cab3e",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Knocking-combustion-in-spark-ignition_2017_Progress-in-Energy-and-Combustion",
+      "paper_title": "Knocking-combustion-in-spark-ignition_2017_Progress-in-Energy-and-Combustion"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T11:58:06.909826",
+      "batch_processing": true,
+      "answer_length": 281
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及发动机热效率、爆震抑制策略，需要燃烧学、热力学和流体力学专业知识来理解EGR、米勒循环和分层混合气等复杂机制",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在关键事实错误：EGR实际降低比热比而非增加；缺乏协同作用机制的对比分析；热效率提升公式的推导和有效性存疑"
+    }
+  }
+]

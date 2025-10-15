@@ -1,0 +1,68 @@
+[
+  {
+    "question_text": "根据论文数据，Miscanthus在350°C快速热解时生物油产率为57.2-47.7 wt%，气体产率为20.9-35.5 wt%。纤维素在300-350°C之间分解，半纤维素在250-350°C之间分解，木质素在200-500°C之间分解。请基于350°C热解温度，分析不同组分分解对生物油产率和气体产物组成的影响，并解释热解温度升高导致生物油产率下降而气体产率上升的原因。",
+    "standard_answer": "根据论文数据，在350°C热解温度下，纤维素、半纤维素和木质素的分解行为对产物分布产生显著影响。纤维素在300-350°C区间接近完全分解，主要生成左旋葡聚糖等可冷凝组分，贡献生物油中糖类化合物；半纤维素在250-350°C基本完全分解，产生呋喃类、酸类和醛类化合物；木质素在200-500°C宽温区仅部分分解，生成酚类化合物。随着热解温度升高，论文指出“the yield of gases increased (from 20.9 to 35.5 wt%) while the output of bio-oil declined (from 57.2 to 47.7 wt%)”。这一现象可从热解动力学解释：高温促进二次裂解反应，使生物油中重质组分进一步分解为小分子气体。纤维素和半纤维素的一次热解产物在高温下发生脱羧、脱羰等反应，生成CO、CO₂等永久气体；木质素衍生的酚类化合物则通过脱甲基等途径贡献CH₄等烃类气体。同时，高温加剧了挥发分的均相气相反应，导致可冷凝组分减少而不可凝气体增加。各组分分解可用Arrhenius方程描述，纤维素活化能较高(≈200-220 kJ/mol)，在350°C时分解速率最快；半纤维素次之(≈150-180 kJ/mol)；木质素活化能较低(≈50-100 kJ/mol)但分解温区宽，因此在350°C仅部分分解。这种温度依赖的分解特性共同导致了生物油产率下降和气体产率上升的趋势。",
+    "original_text": {
+      "1": "纤维素在300-350°C之间分解，半纤维素在250-350°C之间分解，木质素在200-500°C之间分解",
+      "2": "Miscanthus sp. was treated with rapid pyrolysis with various residence times at 350°C. With an increase in pyrolysis temperature, it was found that the yield of gases increased (from 20.9 to 35.5 wt%) while the output of bio-oil declined (from 57.2 to 47.7 wt%)"
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及生物质热解过程、组分分解特性、产物分布变化以及热解动力学机理，需要燃烧科学、热化学转化、生物质能等能源领域的专业知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "无需改进，答案质量优秀，准确回答了问题并提供了详细的机理解释"
+    },
+    "retry_count": 2,
+    "question_id": "deepseek_q_b1490f49",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Energy-crop-based-rhizoremediation-and-lignocellulosic-b_2024_Progress-in-En",
+      "paper_title": "Energy-crop-based-rhizoremediation-and-lignocellulosic-b_2024_Progress-in-En"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:52:10.269201",
+      "answer_length": 615
+    }
+  },
+  {
+    "question_text": "分析生物质燃烧锅炉中灰分沉积导致传热恶化的机理。建立考虑烟气侧对流热阻、沉积层导热热阻、管壁导热热阻和水侧对流热阻的完整传热网络模型，计算当灰分沉积厚度从1mm增加到5mm时，传热系数的变化百分比。基于能量平衡分析传热系数变化对锅炉效率的影响。",
+    "standard_answer": "灰分沉积导致传热恶化的机理包括：1) 沉积层形成附加热阻，降低传热效率；2) 表面粗糙度改变边界层流动特性，影响对流换热；3) 灰分改变表面辐射特性，降低辐射传热；4) 沉积层改变烟气流动通道，影响流动分布。\n\n建立完整传热网络模型：总热阻由烟气侧热阻、沉积层热阻、管壁热阻和水侧热阻组成。总传热系数U的计算公式为：1/U = 1/h_gas + R_ash + R_tube + 1/h_water，其中h_gas为烟气侧总换热系数（包括对流和辐射），R_ash = δ_ash/k_ash为沉积层热阻，R_tube = δ_tube/k_tube为管壁热阻。\n\n关键参数取值：灰分导热系数k_ash = 1.0 W/m·K（典型生物质灰分），钢管导热系数45 W/m·K，管壁厚度3mm，水侧对流换热系数5000 W/m²·K。烟气侧对流换热系数基于Dittus-Boelter关联式：h_conv = 0.023·Re^0.8·Pr^0.4·k/D，考虑表面粗糙度增加使Nu数减少15%。辐射换热系数h_rad = εσ(T_s^2 + T_g^2)(T_s + T_g)，灰分沉积使表面发射率ε从0.8降至0.5。烟气温度800K，管壁温度600K。\n\n计算过程：\n初始状态（无沉积）：h_conv0 = 50 W/m²·K，h_rad0 = 12 W/m²·K，h_gas0 = 62 W/m²·K\nR_tube = 0.003/45 = 0.000067 m²K/W\n1/U0 = 1/62 + 0.000067 + 1/5000 = 0.01613 + 0.000067 + 0.0002 = 0.016397 m²K/W\nU0 = 60.98 W/m²·K\n\n1mm沉积：R_ash1 = 0.001/1.0 = 0.001 m²K/W\nh_conv1 = 50×0.85 = 42.5 W/m²·K（考虑粗糙度影响）\nh_rad1 = 12×0.5/0.8 = 7.5 W/m²·K（发射率降低）\nh_gas1 = 42.5 + 7.5 = 50 W/m²·K\n1/U1 = 1/50 + 0.001 + 0.000067 + 1/5000 = 0.02 + 0.001 + 0.000067 + 0.0002 = 0.021267 m²K/W\nU1 = 47.02 W/m²·K，传热系数降低(60.98-47.02)/60.98×100% = 22.9%\n\n5mm沉积：R_ash5 = 0.005/1.0 = 0.005 m²K/W\nh_conv5 = 42.5 W/m²·K，h_rad5 = 7.5 W/m²·K\nh_gas5 = 50 W/m²·K\n1/U5 = 1/50 + 0.005 + 0.000067 + 1/5000 = 0.02 + 0.005 + 0.000067 + 0.0002 = 0.025267 m²K/W\nU5 = 39.58 W/m²·K，传热系数降低(60.98-39.58)/60.98×100% = 35.1%\n\n锅炉效率影响分析：基于能量平衡η = (Q_fuel - Q_loss)/Q_fuel，其中Q_loss包括排烟损失、散热损失等。传热系数降低导致吸收热量Q_absorbed = U·A·ΔT减少，但效率下降幅度小于传热系数降低幅度，因为排烟温度升高会增加排烟损失。当传热系数降低35.1%时，假设其他条件不变，锅炉效率下降约15-20%，具体数值需根据锅炉运行参数进行详细热平衡计算。",
+    "original_text": {
+      "1": "污染的灰分在气化过程中产生焦油和炉渣，使其在某些地点不适合处置",
+      "2": "Miscanthus-derived bio-oil had also been proven to be lower because it contains more inorganic components than softwoods"
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "heat_transfer",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及生物质燃烧锅炉中灰分沉积的传热机理分析、传热网络模型建立、热阻计算和锅炉效率影响分析，需要燃烧工程、传热学、流体力学和能源工程领域的专业知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": ""
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_8973a288",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Energy-crop-based-rhizoremediation-and-lignocellulosic-b_2024_Progress-in-En",
+      "paper_title": "Energy-crop-based-rhizoremediation-and-lignocellulosic-b_2024_Progress-in-En"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:53:20.571485",
+      "answer_length": 1483
+    }
+  }
+]

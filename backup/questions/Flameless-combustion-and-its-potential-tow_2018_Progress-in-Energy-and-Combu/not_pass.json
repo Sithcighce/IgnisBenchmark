@@ -1,0 +1,38 @@
+[
+  {
+    "question_text": "在燃气轮机中实现Flameless Combustion（FC）模式的一个关键挑战是狭窄的运行范围。请从燃烧室设计和操作参数的角度，分析如何扩展FC燃烧室的运行范围，特别是在部分负荷条件下维持低排放和稳定性。",
+    "standard_answer": "扩展FC燃烧室运行范围的主要策略包括分级燃烧和燃料喷射优化。\n\n1. **分级燃烧**：通过将燃烧过程分为多个阶段，例如在涡轮级间设置再燃烧室（ITB））可以利用前级燃烧产生的高温低氧环境，促进FC模式的实现。\n\n2. **燃料分配调节**：通过在不同喷嘴之间调节燃料分配，可以扩展功率调制范围。例如，在FLOX型燃烧室中，通过改变燃料在不同喷嘴间的分配比例，可以在不同负荷下维持FC条件。\n\n3. **几何设计**：例如，使用具有强旋流或反向流动的燃烧室几何结构可以增强内部再循环，从而在更宽的当量比范围内保持低NOx排放。然而，这种设计需要复杂的燃料控制系统，并可能增加机械复杂性。\n\n4. **数值模拟支持**：使用CFD和化学动力学模型可以预测不同当量比下的温度场和污染物排放。然而，这种策略需要仔细优化，以避免局部热点和确保完全燃烧。\n\n5. **实验验证**：需要在高压环境下进行实验，以验证设计在燃气轮机相关条件下的性能。",
+    "original_text": {
+      "1": "The narrow operational range is a common problem faced by FLOX(cid:1) type combustors have been proposed and are primarily derived from industrial burners。",
+      "type": "reasoning",
+      "difficulty": 4,
+      "topic": "energy_systems"
+    },
+    "question_id": "batch_detail_q_78a763a4",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Flameless-combustion-and-its-potential-tow_2018_Progress-in-Energy-and-Combu",
+      "paper_title": "Flameless-combustion-and-its-potential-tow_2018_Progress-in-Energy-and-Combu"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T10:57:53.489937",
+      "batch_processing": true,
+      "answer_length": 418
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及燃气轮机燃烧室的燃烧模式、运行范围扩展、排放控制和稳定性维持等技术细节，需要燃烧学、热力学、流体力学和燃烧室设计等能源系统领域的专业知识。",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案中‘在涡轮级间设置再燃烧室（ITB）’存在事实错误，ITB通常指‘Inter-Turbine Burner’，而非标准FC燃烧室设计；且大部分策略缺乏原文引用支持。建议修正技术细节并补充引用。"
+    }
+  }
+]

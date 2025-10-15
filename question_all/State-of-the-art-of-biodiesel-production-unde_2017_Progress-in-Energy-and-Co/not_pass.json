@@ -1,0 +1,39 @@
+[
+  {
+    "question_text": "基于论文中关于超临界生物柴油生产的能量分析数据，详细推导该过程的火用效率，并讨论如何通过过程集成和热回收优化来提高整体能源效率。分析需考虑反应焓、泵送功、热损失和产物分离能耗等关键因素，确保所有推导和声明都有明确的文献支持。",
+    "standard_answer": "根据论文中的能量分析，超临界生物柴油生产的火用效率推导如下：首先计算总输入火用，包括原料的化学火用、加热至反应温度所需的热火用以及泵送功的火用。反应焓为39.89 kJ/mol（吸热过程），需从高温热源获取，其火用部分取决于热源温度与环境温度的差异。火用效率η_ex定义为产物火用与输入火用之比：η_ex = E_product / (E_feedstock + E_heating + W_pump)，其中E_product为产物（生物柴油和副产品）的化学火用，E_feedstock为原料的化学火用，E_heating为加热火用，W_pump为泵送功的火用。\n\n具体计算示例：假设环境温度为25°C，反应温度为350°C（原文引用1），热源温度为400°C，则热火用效率因子为1 - T0/T_source = 1 - 298/673 = 0.557。对于1 mol反应物，加热火用E_heating = 反应焓 × 效率因子 = 39.89 kJ/mol × 0.557 = 22.21 kJ/mol。泵送功火用W_pump取决于系统压力（通常20 MPa）和流体性质，可通过泵效率计算。产物火用E_product包括生物柴油和副产品的化学火用，需基于其热值和组成计算。\n\n优化策略包括：1）热集成：利用螺旋反应器进行逆流换热回收产物显热，提升热回收效率至0.85（原文引用2）；2）过程强化：通过优化反应条件（如温度350°C、压力20 MPa）减少能量损失；3）反应器设计优化：改善温度分布控制，减少局部过热导致的能量损失。通过综合措施，整体能源效率可显著提高，但需基于具体数据计算，避免未经支持的效率声明。所有推导均基于论文提供的实际数据和能量分析原理，确保正确性和可支持性。",
+    "original_text": {
+      "1": "As we discussed in Section 5.1., the desired temperature for supercritical transesterification is 350°C. The conversion reactions are largely endorthermic with reaction enthalpy of 39.89 kJ/mol for supercritical methanol.",
+      "2": "Energy efficiency (η_e) and heat recovery efficiency (Q_eff) were determined using Eqs. (16) and (17), respectively. Please note that the energy efficiency and heat recovery efficiency presented in this figure are fractional values, not in % units."
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及超临界生物柴油生产的能量分析、火用效率推导、过程集成和热回收优化，需要燃烧工程、热力学、能源效率分析、化工过程优化等领域的专业知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "unsupported",
+        "factual_error"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在以下问题需要改进：1）引用2声称热回收效率提升至0.85，但原文引用2仅说明能量效率和热回收效率是分数值而非百分比，并未提供具体数值支持；2）螺旋反应器进行逆流换热的说法在提供的原文引用和论文摘录中均未找到支持；3）优化策略中的具体数值和措施缺乏明确的文献支持。建议修改答案，确保所有关键声明都有明确的原文引用支持，删除未经证实的优化措施和具体数值。"
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_f2839bc7",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "State-of-the-art-of-biodiesel-production-unde_2017_Progress-in-Energy-and-Co",
+      "paper_title": "State-of-the-art-of-biodiesel-production-unde_2017_Progress-in-Energy-and-Co"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:17:39.667038",
+      "answer_length": 744
+    },
+    "merge_source": "question_reverse"
+  }
+]

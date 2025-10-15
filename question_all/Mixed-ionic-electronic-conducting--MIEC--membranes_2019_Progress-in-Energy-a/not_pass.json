@@ -1,0 +1,122 @@
+[
+  {
+    "question_text": "分析在CO₂环境中，SrCo₀.₈Fe₀.₂O₃₋δ钙钛矿膜表面碳酸盐形成的机理，并解释其对膜稳定性和性能的影响。",
+    "standard_answer": "碳酸盐形成机理涉及CO₂在膜表面的吸附和与晶格氧/氧空位的反应。根据论文，可能的路径包括：CO₂(g) + O²⁻(s) → CO₃²⁻(s)。具体步骤包括：CO₂分子吸附在表面氧空位V_O^∙∙和晶格氧O_O^×上形成表面碳酸盐(CO₃)^×_O。若碳酸盐分解（如反应(31)），则生成CO；否则，碳酸盐覆盖表面活性位点，导致性能下降。Sr基钙钛矿易形成稳定的SrCO₃，如图8的Ellingham图所示。当CO₂化学势差Δμ_CO₂,T,P低于固相线(-ΔG_P^o），则碳酸盐分解在热力学上有利。然而，实验观察到在操作后表面存在SrCO₃，表明动力学因素主导。碳酸盐形成倾向与表面碱度相关，碱度越高，越易吸附CO₂。然而，高碱度也意味着氧结合能更高，可用氧空位减少，从而氧扩散性下降。此外，CO的连续产生增加了进料侧的还原性环境，这会提高碱度并诱导更多碳酸盐形成。表面修饰（如添加Al₂O₃）可降低碳酸盐形成倾向，但牺牲了性能。",
+    "original_text": {
+      "1": "Ba-containing perovskites tend to form stable and inactive barium carbonate in CO₂ environments, as shown in the Ellingham diagram in Fig. 8 [85] )",
+      "2": "This Ba²⁺ outward diffusion mechanism was confirmed by a recent DFT study on CO₂ adsorption on BaZrO₃ surfaces.",
+      "3": "Hence, in the Ellingham diagram, at the conditions where the dotted line (Δμ_CO₂,T,P) is below the solid line (-ΔG_P^o of the decomposition of a certain carbonate), the carbonate decomposition is thermodynamically favorable."
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "question_id": "batch_detail_q_bdd30f29",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Mixed-ionic-electronic-conducting--MIEC--membranes_2019_Progress-in-Energy-a",
+      "paper_title": "Mixed-ionic-electronic-conducting--MIEC--membranes_2019_Progress-in-Energy-a"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T13:27:36.745072",
+      "batch_processing": true,
+      "answer_length": 417
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及钙钛矿膜在CO₂环境中的表面反应机理、热力学分析和材料性能，需要燃烧科学、材料化学、热力学和膜分离技术等能源领域的专业知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported"
+      ],
+      "other_compliant": false,
+      "other_issues": [
+        "has_meta_info",
+        "too_general"
+      ],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在事实错误：原文讨论的是Ba-containing perovskites而非Sr-based；存在未支持的声明（如反应31、Al₂O₃修饰等）；包含元信息'根据论文'；建议基于准确引用重写，避免推测性内容"
+    },
+    "merge_source": "questions"
+  },
+  {
+    "question_text": "从能量系统分析角度，比较使用惰性扫掠（如Ar）与燃料扫掠（如CH₄）对膜反应器整体效率（基于一次能源）的影响，并给出效率的计算公式。",
+    "standard_answer": "系统效率η定义为产物化学能与一次能源输入之比。对于惰性扫掠：η = (Σn_products * HHV_products) / (Q_in + W/η_e)，其中HHV是高位热值，Q_in和W分别为热能和功输入，η_e为发电效率。以CH₄扫掠为例，总反应为CO₂ + CH₄ → 2CO + 2H₂，总体为吸热反应。热输入包括反应物显热、反应焓、泵和压缩机功以及冷凝器中的分离功。对于真空泵扫掠，效率较低（<20%），而燃料扫掠可利用燃料化学能，效率可达约40%。详细计算需考虑：太阳能吸收效率η_abs = 1 - (σT⁴)/(I C_receiver)，其中I为地表太阳辐照度。燃料扫掠通过消耗渗透氧降低氧化学势，增强驱动力，同时产物（如合成气）具有附加值。热回收率设为95%，η_e取40%。计算显示燃料扫掠在整合化学能利用方面具有显著优势。",
+    "original_text": {
+      "1": "Vacuum pump or inert gas sweep: η = (Σn_products * HHV_products) / (Q_in + W/η_e)。对于惰性扫掠，效率较低，因为需要额外功来维持真空。因此，在系统集成中，选择燃料扫掠可提高经济性和可持续性。",
+      "type": "concept",
+      "difficulty": 4,
+      "topic": "energy_systems"
+    },
+    "question_id": "batch_detail_q_b0b58a8c",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Mixed-ionic-electronic-conducting--MIEC--membranes_2019_Progress-in-Energy-a",
+      "paper_title": "Mixed-ionic-electronic-conducting--MIEC--membranes_2019_Progress-in-Energy-a"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T13:27:48.967501",
+      "batch_processing": true,
+      "answer_length": 376
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及膜反应器能量系统分析、扫掠气体选择对效率的影响、热力学计算等，需要能源工程、热力学和化学反应工程领域的专业知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported"
+      ],
+      "other_compliant": false,
+      "other_issues": [
+        "has_meta_info",
+        "too_general"
+      ],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在概念混淆和技术错误。需要明确区分惰性扫掠与燃料扫掠的系统边界，修正效率计算公式，避免将太阳能吸收效率等无关概念混入膜反应器效率分析"
+    },
+    "merge_source": "questions"
+  },
+  {
+    "question_text": "考虑一个厚度为1.5 mm的SCoFZ-451（SrCo₀.₄Fe₀.₅Zr₀.₁O₃₋δ）膜反应器，在900°C下进行CO₂还原，吹扫侧使用5% CH₄。假设氧渗透受体相扩散和表面反应共同控制，已知膜材料的离子电导率σ_i = 0.1 S/cm，电子电导率σ_e = 10 S/cm，氧空位扩散系数D_V = 10⁻⁷ cm²/s，氧空位浓度C_V = 0.05 mol/cm³。请使用完整的电阻模型计算氧通量J_O₂，并分析表面反应阻力（特别是吹扫侧甲烷氧化）对总通量的影响。推导中需正确使用氧化学势差Δμ_O而非浓度差，并基于Wagner方程和表面反应动力学理论重新推导，其中体相扩散阻力R_b应基于电导率计算，表面反应阻力需考虑具体反应机理。",
+    "standard_answer": "对于MIEC膜，氧通量J_O₂可由电阻模型描述：J_O₂ = Δμ_O / (R_f + R_b + R_s)，其中Δμ_O为氧化学势差，R_f、R_b、R_s分别为进料侧表面反应、体相扩散和吹扫侧表面反应阻力。\n\n首先计算氧化学势差Δμ_O：进料侧CO₂还原平衡氧分压p_O₂,f ≈ 10⁻¹⁰ atm（CO₂/CO平衡），吹扫侧甲烷氧化平衡氧分压p_O₂,s ≈ 10⁻¹⁵ atm（CH₄氧化平衡，修正原值10⁻²⁰ atm为更合理值）。根据Nernst方程，Δμ_O = (RT/4F)ln(p_O₂,f/p_O₂,s)，在900°C（1173 K）下，R = 8.314 J/mol·K，F = 96485 C/mol，故Δμ_O = (8.314×1173/(4×96485))ln(10⁻¹⁰/10⁻¹⁵) ≈ 0.0253 × 11.51 ≈ 0.291 V。\n\n其次计算体相扩散阻力R_b：根据Wagner方程和Nernst-Einstein关系，R_b = t / (4F²D_VC_V)，其中膜厚度t = 0.15 cm，故R_b = 0.15 / (4 × 96485² × 10⁻⁷ × 0.05) ≈ 1.61 × 10⁴ s/cm。\n\n表面反应阻力计算需考虑具体反应机理。进料侧CO₂还原阻力R_f = 1/(k_f,CO₂·C_CO₂)，假设k_f,CO₂ = 10⁻⁵ cm/s（基于文献典型值），C_CO₂ ≈ 10⁻⁴ mol/cm³，则R_f ≈ 10⁹ s/cm。吹扫侧甲烷氧化阻力R_s = 1/(k_f,CH₄·C_CH₄)，假设k_f,CH₄ = 10⁻⁶ cm/s（基于文献典型值），C_CH₄ ≈ 2×10⁻⁶ mol/cm³，则R_s ≈ 5×10¹¹ s/cm。\n\n总阻力R_total = R_f + R_b + R_s ≈ 10⁹ + 1.61×10⁴ + 5×10¹¹ ≈ 5.01×10¹¹ s/cm。因此J_O₂ = Δμ_O / R_total ≈ 0.291 / (5.01×10¹¹) ≈ 5.81×10⁻¹³ mol/cm²·s。\n\n计算显示R_s >> R_f > R_b，表明吹扫侧甲烷氧化阻力主导总通量，理论通量远低于实验值~1.6 μmol/cm²·s，印证了表面反应（特别是吹扫侧）的限速作用。优化吹扫侧催化剂（如添加Ni/Al₂O₃）可显著降低R_s，提升性能。",
+    "original_text": {
+      "1": "Oxygen permeation depends on the surface reactions on both sides, i.e., oxygen adsorption/incorporation on the CO₂ side and its desorption on the sweep/permeate side, and the ambipolar diffusion of oxygen ions/vacancies and electrons/holes across the membrane, as well as the oxygen potential gradient across the membrane.",
+      "2": "For the 1.5 mm thick SCoFZ-451 perovskite membranes with methane sweep and 4.77wt% Ni/Al₂O₃ catalysts on the sweep side, the oxygen fluxes, methane and CO₂ conversion ratios, and CO selectivity from methane oxidation all increased with temperature."
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及混合离子电子导体膜反应器、氧渗透、CO₂还原、甲烷氧化、Wagner方程、表面反应动力学、电阻模型等专业概念，需要燃烧科学、能源工程、材料科学和电化学领域的专业知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "fundamental_error",
+        "unsupported"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在多处严重错误：1) 体相扩散阻力计算错误，应基于Wagner方程使用电导率而非扩散系数计算；2) 表面反应阻力表达式过于简化，未考虑具体反应机理和氧化学势；3) 氧化学势差计算中平衡氧分压取值缺乏依据；4) 关键假设（如反应速率常数）未提供来源支持。建议：重新推导电阻模型，正确使用电导率计算体相阻力，基于表面反应机理详细推导表面阻力，并提供所有参数的合理来源。"
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_40f89aca",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Mixed-ionic-electronic-conducting--MIEC--membranes_2019_Progress-in-Energy-a",
+      "paper_title": "Mixed-ionic-electronic-conducting--MIEC--membranes_2019_Progress-in-Energy-a"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:41:54.043014",
+      "answer_length": 1025
+    },
+    "merge_source": "question_reverse"
+  }
+]

@@ -1,0 +1,68 @@
+[
+  {
+    "question_text": "论文详细讨论了SEI（固体电解质界面）在锂、钠、钾离子电池中的形成和组成差异。请基于电化学动力学和界面科学原理，分析不同碱金属离子电池中SEI形成电位、组成和稳定性的差异，并建立SEI生长动力学模型。",
+    "standard_answer": "SEI的形成和生长遵循电化学动力学模型，可描述为：dδ_SEI/dt = k₀exp(-E_a/RT)×[C]×exp(-αFη/RT)，其中δ_SEI为SEI厚度，k₀为指前因子，E_a为活化能，η为过电位，α为传递系数。不同碱金属电池中SEI特性存在显著差异：在LIBs中，SEI形成起始于~0.8V vs Li⁺/Li，主要成分为Li₂CO₃和LiF，有机组分在较高电压形成，无机组分在较低电压形成。在SIBs中，SEI形成电位类似，但组成含有更多的C=O或C-O物种，有机组分如ROCO₂Na和RONa，无机组分如Na₂CO₃和NaF。论文指出'钠化硬碳上的SEI是有机和无机成分的非均匀且不太致密层'。在KIBs中，SEI在0.6V开始形成，主要组分为(CH₂OCO₂K)₂、C₂H₅OCO₂K、KF和K₂CO₃。稳定性方面，LIBs的SEI最稳定，SIBs次之，KIBs的SEI溶解性最高。这源于不同碱金属盐的溶解能差异：Na⁺的溶解能低于Li⁺，而有机钠盐的溶解度高于相应锂盐。电解质添加剂的影响也不同：FEC在SIBs中促进NaF形成，改善SEI稳定性；而在KIBs中，FEC促进电解质分解，VC反而更有效。SEI的生长机制包括：初始阶段遵循直接成核模型，后期转为扩散控制的生长模型。SEI的电子电导率σ_e和离子电导率σ_i决定了其保护性能，理想SEI应具有低σ_e和高σ_i。不同碱金属的这些参数差异解释了其循环稳定性的不同：LIBs > SIBs > KIBs。",
+    "original_text": {
+      "1": "钠化硬碳上的SEI是有机和无机成分的非均匀且不太致密层，与LIBs相比",
+      "2": "在KPF6基电解质中形成较多K₂CO₃，而在KFSI基电解质中SEI更稳定、致密且更薄"
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及电化学动力学、界面科学原理、SEI形成机制、碱金属离子电池等专业领域知识，属于能源存储和电化学工程的专业范畴，需要燃烧/能源/电化学领域的专业知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量较高，无需修改。内容全面覆盖了SEI形成电位、组成差异、稳定性分析、生长动力学模型等要求，并正确引用了原文内容，电化学动力学模型表述准确"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_69ccceb9",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Progress-and-challenges-in-using-sustainable-carb_2021_Progress-in-Energy-an",
+      "paper_title": "Progress-and-challenges-in-using-sustainable-carb_2021_Progress-in-Energy-an"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:28:57.546996",
+      "answer_length": 642
+    }
+  },
+  {
+    "question_text": "基于论文中关于生物质热解过程中纤维素、半纤维素和木质素分解行为的描述，请分析在生物质衍生硬碳作为钠离子电池负极材料时，不同生物质组分的热解特性如何影响最终碳材料的孔隙结构和电化学性能。需要详细说明热解温度、组分比例与孔隙形成机制之间的关系。",
+    "standard_answer": "生物质中纤维素、半纤维素和木质素的热解行为差异显著影响最终碳材料的孔隙结构。纤维素在200-400°C分解，其线性大分子结构和较高氧含量使其易于分解为H₂O、CO₂和CO，从而促进微孔形成。论文指出'纤维素分解为H₂O、CO₂和CO在较低温度下进行，这有助于活化和生成微孔'。半纤维素在200-320°C分解，其无定形和高度支化结构也利于孔隙形成。而木质素在200-500°C较宽温度范围内缓慢分解，其复杂的交联芳香结构导致形成非多孔碳。不同组分的比例直接影响碳材料的比表面积和孔径分布：高纤维素含量的生物质（如棉籽毛，纤维素含量80-95%）可产生高比表面积（2573 m²/g）的多孔碳，而高木质素含量的生物质则形成较低比表面积的碳材料。热解温度也至关重要，低于700°C时，C-C和C-O键断裂形成小分子，残留碳原子形成平面芳香结构，产生微孔；在600-1200°C时，氢原子被去除，石墨烯片堆叠形成'有组织碳'或'卡片屋'结构。这些结构特征直接影响钠离子存储性能，微孔提供吸附位点，介孔和宏孔促进离子传输，而适当的层间距（约3.8Å）则有利于钠离子嵌入。",
+    "original_text": {
+      "1": "纤维素分解在200-400°C，而半纤维素分解在200-320°C范围。木质素的热分解在200-500°C较宽温度范围内较慢",
+      "2": "纤维素和半纤维素中的官能团氧容易转化为H₂O、CO和CO₂，并有助于活化和生成微孔。相比之下，木质素中的芳香亚基导致形成非多孔碳"
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及生物质热解过程、纤维素/半纤维素/木质素分解行为、热解温度与孔隙形成机制、碳材料电化学性能等，需要燃烧科学、材料科学和电化学领域的专业知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量良好，无需修改。答案准确描述了不同生物质组分的热解特性及其对碳材料孔隙结构和电化学性能的影响，引用了论文内容，机理解释清晰完整"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_4ab1e948",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Progress-and-challenges-in-using-sustainable-carb_2021_Progress-in-Energy-an",
+      "paper_title": "Progress-and-challenges-in-using-sustainable-carb_2021_Progress-in-Energy-an"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:28:58.097424",
+      "answer_length": 481
+    }
+  }
+]

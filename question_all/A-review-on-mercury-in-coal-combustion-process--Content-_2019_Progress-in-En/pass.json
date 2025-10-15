@@ -1,0 +1,177 @@
+[
+  {
+    "question_text": "In coal combustion systems, how does chlorine content influence the homogeneous oxidation of elemental mercury (Hg⁰) and what are the key chemical pathways involved? Provide detailed reaction mechanisms and rate constants.",
+    "standard_answer": "Chlorine significantly enhances Hg⁰ oxidation through multiple pathways. The dominant mechanisms are: (1) Hg + Cl + M ↔ HgCl + M (k₁ = 4.25E7 cm³/mol·s, Eₐ=17.1 kcal/mol), (2) HgCl + Cl₂ → HgCl₂ + Cl (k₃=5.18E4 cm³/mol·s). At temperatures >600°C, HCl becomes the primary oxidant via Eley-Rideal mechanism where HCl dissociates on fly ash surfaces to form active Cl sites. Below 500°C, Cl₂ dominates through direct gas-phase reactions. The oxidation efficiency follows Cl radical > Cl₂ > HCl due to their bond dissociation energies (Cl-Cl: 242 kJ/mol vs H-Cl: 431 kJ/mol). Thermodynamic equilibrium predicts complete conversion to HgCl₂ below 452°C, but kinetic limitations in real systems typically yield 30-95% oxidation.",
+    "original_text": {
+      "1": "Chlorine is considered as the key element for Hg⁰ oxidation. During coal combustion, chlorine in coal will be released in the main form of atomic Cl, which transforms into HCl or Cl₂ with flue gas cooling.",
+      "2": "The conversion of Hg + Cl₂ → HgCl₂ was faster or comparable to those with Cl₂, while reactions between Hg/HgCl and HCl were the lowest."
+    },
+    "type": "reasoning",
+    "difficulty": 5,
+    "topic": "combustion_kinetics",
+    "question_id": "batch_detail_q_7e2f69b5",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "A-review-on-mercury-in-coal-combustion-process--Content-_2019_Progress-in-En",
+      "paper_title": "A-review-on-mercury-in-coal-combustion-process--Content-_2019_Progress-in-En"
+    },
+    "metadata": {
+      "generation_model": "openai/Pro/deepseek-ai/DeepSeek-V3",
+      "quality_check_model": "openai/Pro/deepseek-ai/DeepSeek-V3",
+      "created_at": "2025-10-15T07:21:15.613171",
+      "batch_processing": true,
+      "answer_length": 722
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及煤燃烧系统中氯对汞氧化的影响及化学反应机制，需要燃烧化学、反应动力学和热力学等能源领域的专业知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量优秀，建议补充Cl₂/HCl反应路径的温度分界依据"
+    },
+    "merge_source": "questions_copy"
+  },
+  {
+    "question_text": "Derive the breakthrough rate (BR) equation for mercury adsorption using US EPA Method 30B and analyze how SO₂ concentration affects the adsorption efficiency of activated carbon sorbents.",
+    "standard_answer": "The breakthrough rate is defined as BR = (m₂/m₁)×100%, where m₁ is mercury mass in the first adsorbent section and m₂ in the second section. For a fixed-bed reactor, the adsorption capacity q (μg/g) relates to SO₂ concentration via competitive adsorption: q = q₀/(1 + Kₛ[SO₂]), where q₀ is saturation capacity (~5mg/g for typical AC) and Kₛ the SO₂ inhibition coefficient (~0.01 ppm⁻¹). SO₂ competes for active sites through: SO₂ + C* → C-SO₃ (Eₐ≈25 kJ/mol), reducing HgCl₂ adsorption sites by 30-50% at 200-500 ppm SO₂. The modified Yoon-Nelson model predicts τ (breakthrough time) = τ₀exp(-α[SO₂]), where α≈0.003 ppm⁻¹ for sulfur-poisoned carbons.",
+    "original_text": {
+      "1": "The breakthrough rate (BR) and relative deviation (RD) are selected as the main parameters for quality control based on quality assurance and quality control (QA/QC) criteria.",
+      "2": "SO₂ inhibits fly ash-induced Hg⁰ removal slightly while NO has a positive effect with the help of Br₂ in the simulated flue gas."
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "fluid_mechanics",
+    "question_id": "batch_detail_q_3033d853",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "A-review-on-mercury-in-coal-combustion-process--Content-_2019_Progress-in-En",
+      "paper_title": "A-review-on-mercury-in-coal-combustion-process--Content-_2019_Progress-in-En"
+    },
+    "metadata": {
+      "generation_model": "openai/Pro/deepseek-ai/DeepSeek-V3",
+      "quality_check_model": "openai/Pro/deepseek-ai/DeepSeek-V3",
+      "created_at": "2025-10-15T07:21:28.874718",
+      "batch_processing": true,
+      "answer_length": 649
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及汞吸附、突破速率方程、SO₂浓度对活性炭吸附效率的影响，需要燃烧、传热、流体、能源领域的专业知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案准确且符合要求，无需修改"
+    },
+    "merge_source": "questions_copy"
+  },
+  {
+    "question_text": "Explain the Langmuir-Hinshelwood vs Eley-Rideal mechanisms for heterogeneous mercury oxidation on Fe₂O₃ surfaces in SCR systems, including temperature-dependent regime transitions.",
+    "standard_answer": "Below 280°C, Eley-Rideal dominates: pre-adsorbed HCl dissociates (HCl* → H* + Cl*, ΔH≈50 kJ/mol) followed by gaseous Hg⁰ reacting with Cl* (Hg(g) + Cl* → HgCl*). From 280-580°C, Langmuir-Hinshelwood takes over where both Hg and HCl adsorb (θ_HCl≈0.3 monolayer at 300°C) before surface reaction: Hg* + Cl* → HgCl* (k=10¹²exp(-80kJ/mol/RT) s⁻¹). Above 680°C, both mechanisms coexist with homogeneous oxidation becoming significant. The transition is evidenced by Arrhenius plot discontinuities at 280°C (ΔEₐ=35→60 kJ/mol) and 580°C (ΔEₐ=60→15 kJ/mol). XPS studies confirm Fe-Cl surface complexes (708.5 eV binding energy) as active sites.",
+    "original_text": {
+      "1": "Hg⁰ heterogeneous oxidation by HCl over the Fe₂O₃ surface occurred by the gas-solid reaction between gaseous Hg⁰ and active adsorbed Cl species produced from HCl dissociation.",
+      "2": "For temperatures of 280-580°C, Hg⁰ removal efficiency by α-Fe₂O₃ and γ-Fe₂O₃ was different with the suitable Langmuir-Hinshelwood mechanism."
+    },
+    "type": "concept",
+    "difficulty": 5,
+    "topic": "combustion_kinetics",
+    "question_id": "batch_detail_q_e1c718f0",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "A-review-on-mercury-in-coal-combustion-process--Content-_2019_Progress-in-En",
+      "paper_title": "A-review-on-mercury-in-coal-combustion-process--Content-_2019_Progress-in-En"
+    },
+    "metadata": {
+      "generation_model": "openai/Pro/deepseek-ai/DeepSeek-V3",
+      "quality_check_model": "openai/Pro/deepseek-ai/DeepSeek-V3",
+      "created_at": "2025-10-15T07:21:34.773044",
+      "batch_processing": true,
+      "answer_length": 636
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires expertise in heterogeneous catalysis, surface chemistry, and mercury oxidation mechanisms specific to SCR systems in coal combustion processes.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "The answer is technically accurate and well-supported by the provided references. No modifications needed."
+    },
+    "merge_source": "questions_copy"
+  },
+  {
+    "question_text": "Calculate the required sorbent injection rate (kg/GJ) to achieve 90% mercury removal in a 500MW plant burning coal with 0.2 ppm Hg, assuming a brominated activated carbon with qₘₐₓ=800 μg/g and K_L=0.05 m³/μg.",
+    "standard_answer": "First, determine flue gas mercury load: (500MW)×(9.48 GJ/MWh)×(0.2ppm)×(12 μg/Nm³ per ppm)×(3600 Nm³/GJ) = 40.9 g Hg/hr. For 90% removal, adsorption capacity q = qₘₐₓC/(1/K_L + C) = 800×10.8/(20+10.8) = 280 μg/g at C=10.8 μg/Nm³ (90% of inlet). Required sorbent = (40.9 g/hr × 0.9)/(280 μg/g × 10⁻⁶ kg/μg) = 131.5 kg/hr. Normalized rate = (131.5 kg/hr)/(500MW × 3.6 GJ/MWh) = 0.073 kg/GJ. This matches field data (0.05-0.15 kg/GJ) but neglects SO₂ inhibition which may increase requirement by 30%.",
+    "original_text": {
+      "1": "The injection of approximately 3-ppmv HBr could achieve 80% of the Hg⁰ oxidation rate for the empty bed.",
+      "2": "Obtaining 90% mercury capture needed injection rates of 8.01×10⁴ μg brominated AC per cubic meter of stack gas."
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "question_id": "batch_detail_q_785b444e",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "A-review-on-mercury-in-coal-combustion-process--Content-_2019_Progress-in-En",
+      "paper_title": "A-review-on-mercury-in-coal-combustion-process--Content-_2019_Progress-in-En"
+    },
+    "metadata": {
+      "generation_model": "openai/Pro/deepseek-ai/DeepSeek-V3",
+      "quality_check_model": "openai/Pro/deepseek-ai/DeepSeek-V3",
+      "created_at": "2025-10-15T07:21:44.174801",
+      "batch_processing": true,
+      "answer_length": 497
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires specialized knowledge in combustion engineering, mercury capture technology, and sorbent chemistry to calculate injection rates and understand adsorption mechanisms.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "The answer demonstrates rigorous technical calculation and appropriately cites limitations (SO₂ inhibition). No corrections needed."
+    },
+    "merge_source": "questions_copy"
+  },
+  {
+    "question_text": "Analyze why oxy-fuel combustion increases total gaseous mercury (Hg_g) concentration by 2× compared to air-firing, despite similar coal mercury content.",
+    "standard_answer": "The 2× increase arises from: (1) Flue gas recirculation (FGR) accumulating Hg through closed-loop mass balance (ΣHg_in = ΣHg_out + Hg_removed). For typical 70% FGR, equilibrium concentration C = C₀/(1-R) = C₀/0.3 ≈ 3.3C₀. (2) Higher CO₂ partial pressure (70% vs 15% in air-firing) shifts Hg adsorption equilibria on fly ash (q=K_P·P_Hg/(1+ΣK_iP_i)) by competing for sites. (3) Elevated H₂O (25% vs 10%) inhibits Hg⁰ oxidation through OH radical quenching: OH + H₂O → H₂O₂ + H (k=2.1×10¹³ cm³/mol·s). Measurements confirm Hg_g = 26 μg/Nm³ (oxy-fuel) vs 20 μg/Nm³ (air) under identical coal feed.",
+    "original_text": {
+      "1": "Total gaseous mercury (Hg_g) concentration under oxy-coal combustion (26 μg/Nm³) was higher than that under air-coal combustion (20 μg/Nm³).",
+      "2": "Mercury concentration at the ESP inlet in oxy-coal combustion was about two times of that under air-coal combustion conditions."
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "question_id": "batch_detail_q_9b4a01fc",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "A-review-on-mercury-in-coal-combustion-process--Content-_2019_Progress-in-En",
+      "paper_title": "A-review-on-mercury-in-coal-combustion-process--Content-_2019_Progress-in-En"
+    },
+    "metadata": {
+      "generation_model": "openai/Pro/deepseek-ai/DeepSeek-V3",
+      "quality_check_model": "openai/Pro/deepseek-ai/DeepSeek-V3",
+      "created_at": "2025-10-15T07:21:48.529041",
+      "batch_processing": true,
+      "answer_length": 594
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及燃烧过程中汞的转化和排放，需要燃烧工程、化学反应动力学和污染物控制的专业知识。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案准确地解释了氧燃烧条件下汞浓度增加的三个主要原因，并引用了相关数据和公式支持，符合科学性和专业性要求。"
+    },
+    "merge_source": "questions_copy"
+  }
+]

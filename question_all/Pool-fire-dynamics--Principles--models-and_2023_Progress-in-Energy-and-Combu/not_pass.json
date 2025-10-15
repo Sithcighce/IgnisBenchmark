@@ -1,0 +1,115 @@
+[
+  {
+    "question_text": "在多池火相互作用中，火焰合并的临界条件通常用无量纲间距s/D描述。请基于Liu等人的实验数据（图48)），推导并解释双池火合并的临界距离与火焰高度L0的关系。",
+    "standard_answer": "根据式(5-1)，Putnam等人发现火焰合并的临界条件为s/D ≈ 常数。但实验发现，对于正庚烷池火，临界合并距离与池直径和火焰高度的关系为：s/L0 ≈ 0.21。这反映了空气卷吸的限制。当两个池火靠近时，它们之间的空气卷吸区域相互干扰，导致每个火焰的独立空气卷吸流场也相互作用。当间距s减小时，卷吸受限，压力不均匀性导致火焰向内倾斜并最终合并。",
+    "original_text": {
+      "1": "s/D = 0.14(L0/w)^(0.96) (5-1)",
+      "2": "The critical merging separation distance (s) was given to be roughly double the pool diameter.",
+      "type": "calculation",
+      "difficulty": 4,
+      "topic": "combustion_kinetics"
+    },
+    "question_id": "batch_detail_q_3adfa4f0",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Pool-fire-dynamics--Principles--models-and_2023_Progress-in-Energy-and-Combu",
+      "paper_title": "Pool-fire-dynamics--Principles--models-and_2023_Progress-in-Energy-and-Combu"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T15:15:44.478919",
+      "batch_processing": true,
+      "answer_length": 175
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及多池火相互作用、火焰合并临界条件、无量纲间距、火焰高度等概念，需要燃烧学、流体力学和传热学领域的专业知识来理解和分析",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在严重的事实错误和引用问题。答案声称临界合并距离与火焰高度的关系为s/L0≈0.21，但原文引用中的式(5-1)显示的是s/D=0.14(L0/w)^0.96的复杂关系，两者完全矛盾。建议基于提供的原文引用重新构建答案，确保与引用内容一致。"
+    },
+    "merge_source": "questions"
+  },
+  {
+    "question_text": "在多池火相互作用研究中，火焰合并是一个关键现象。请基于势流理论和空气卷吸限制机制，详细解释两个相邻池火相互倾斜和合并的物理过程。推导临界合并间距的表达式，并讨论燃料类型、热释放率和环境条件对合并行为的影响，确保所有声明有可靠的实验或理论依据。",
+    "standard_answer": "多池火相互作用的物理机制主要基于势流理论和空气卷吸限制。当两个池火相邻放置时，它们各自的浮力羽流会产生相互吸引的流动场。根据势流理论，每个火焰可视为流体汇点，相邻汇点之间的流线会相互弯曲，导致火焰向中心倾斜。更重要的是空气卷吸的限制效应：每个火焰需要从周围环境卷吸空气以维持燃烧，但当火焰过于接近时，它们竞争有限的空气供应区域。这导致火焰之间的压力降低，产生指向中心的压力梯度，进一步促使火焰相互倾斜。\n\n临界合并间距可通过平衡浮力推力与卷吸限制来推导。Baldwin提出的模型基于压力推力与浮力平衡的前提，给出了临界合并间距的表达式：s/l²/w = 0.14(L₀/w)^0.96，其中s是间距，l和w是池的长宽尺寸，L₀是火焰高度。Thomas通过实验发现两个直线火焰刚好接触时的临界条件为合并火焰高度与孤立火焰高度之比约为6/5，这一结果基于矩形燃料床的火焰合并实验。\n\n燃料类型通过烟尘形成特性影响合并行为：高烟尘燃料（如苯、柴油）产生更辐射的火焰，增强相互热反馈，促进合并。热释放率增加会提高火焰高度和卷吸需求，减小临界间距。环境条件如风速和压力也显著影响合并：顺风可促进火焰接近，而逆风可能抑制合并；低压环境减少空气密度，改变卷吸动力学。这些影响均有实验支持，如文献中报道的多种燃料池火测试结果。",
+    "original_text": {
+      "1": "In physics, the coalescence processes of multi buoyancy-driven turbulent fire plumes were affected fundamentally by the restriction of the air entrainment into each pool fire caused by the presence of the other fires",
+      "2": "A theoretical model was derived by Baldwin for flame merging based upon the premise that the pressure thrust was balanced by the buoyancy, with a dependence on the scales of the flame height, fire size and spacing"
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及多池火相互作用、势流理论、空气卷吸限制机制、火焰合并物理过程、临界合并间距推导以及燃料类型、热释放率和环境条件的影响，需要燃烧科学、流体力学、传热传质等专业领域的深入知识。",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在事实错误和关键声明缺乏支持的问题。具体改进建议：1）修正临界合并间距表达式，Baldwin模型的实际形式应为s/D = k(L0/D)^n，其中s为间距，D为特征尺寸，L0为火焰高度，k和n为常数，而非给出的s/l²/w = 0.14(L₀/w)^0.96；2）补充Thomas实验结果的完整描述和具体文献引用；3）为燃料类型、热释放率和环境条件的影响提供具体的实验数据或理论模型引用，而非仅笼统提及“文献中报道”；4）确保所有公式和数值参数有明确的来源依据。"
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_71ad1320",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Pool-fire-dynamics--Principles--models-and_2023_Progress-in-Energy-and-Combu",
+      "paper_title": "Pool-fire-dynamics--Principles--models-and_2023_Progress-in-Energy-and-Combu"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:33:44.874429",
+      "answer_length": 555
+    },
+    "merge_source": "question_reverse"
+  },
+  {
+    "question_text": "在池火研究中，Spalding B-number理论被广泛应用于描述燃料蒸发过程。请基于能量和质量守恒原理，从基本原理出发推导经典的Spalding B-number表达式，并解释其在强制对流条件下如何修正为Emmons解。进一步详细讨论当考虑辐射热反馈时，B-number需要如何修正以适应辐射主导的燃烧条件，给出具体的修正公式和物理机制。",
+    "standard_answer": "经典的Spalding B-number基于燃料表面的能量和质量守恒推导。考虑燃料表面的能量平衡，蒸发所需的能量来自火焰的热反馈。根据能量守恒，燃料表面吸收的热量用于加热燃料和提供汽化潜热。\n\n从基本原理出发，考虑燃料蒸汽与空气的混合过程，通过定义守恒变量可以得到B-number表达式。根据论文引用，B-number定义为：B = [(ΔHc/r)Yo2,∞ + Cp(T∞-Tl)]/Lv，其中ΔHc是燃烧热，r是化学计量氧燃比，Cp是比热容，Tl是液体温度，T∞是环境温度，Lv是汽化潜热，Yo2,∞是环境氧质量分数。温度项应为Cp(T∞-Tl)而非Cp(Tl-T∞)，这反映了环境向燃料的热传递。\n\n在强制对流条件下，Emmons通过求解边界层方程得到了局部燃烧速率表达式。根据论文引用：ṁ''x = (λ/Cp)(Rex^(1/2)/√2x)[-f(0)]。其中-f(0)与B的关系需要准确表述，应为-f(0) = ln(1+B)，这个关系是通过求解Blasius方程f''' + ff'' = 0得到的。\n\n当辐射热反馈显著时，特别是在大尺度池火中，需要引入修正的B-number。辐射修正应考虑辐射热通量对能量平衡的影响，通过引入辐射分数χr和燃烧效率χA修正燃烧热项，同时考虑辐射热损失对汽化潜热的影响。具体的修正公式为：BM = [(ΔHcYo2,∞/r)(1-χr/χA) + Cp(T∞-Tl)]/[Lv(1-E)]，其中E = (q''fr - q''l)/(ṁ''Lv)，q''fr是火焰辐射热通量，q''l是燃料热损失。这种修正确保了B-number理论在辐射主导条件下的适用性，反映了辐射热反馈对燃料蒸发过程的重要影响。",
+    "original_text": {
+      "1": "The resulting mass transfer number is normally quoted as shown in Eq. (2-6): B = [(ΔHc/r)Yo2,∞ + Cp(Tl - T∞)]/Lv",
+      "2": "In 1956, Emmons provided an exact solution for the local burning rate at the position x along the streamline direction, which can be given in the form of Eq. (2-9): ṁ''x = (λ/Cp)(Rex^(1/2)/√2x)[-f(0)]"
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及燃烧学、传热传质、流体力学等专业领域，需要深入理解Spalding B-number理论、能量质量守恒原理、强制对流边界层理论、辐射热反馈机制等专业知识，属于典型的燃烧科学与工程领域问题。",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "fundamental_error",
+        "unsupported"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在多处严重错误：1）B-number定义中温度项符号错误，应为Cp(T∞-Tl)而非Cp(Tl-T∞)；2）Emmons解中-f(0)与B的关系表述不准确，应为-f(0) = ln(1+B)；3）辐射修正公式缺乏物理基础，E = (q''fr - q''l)/(ṁ''Lv)定义不合理；4）关键推导步骤缺失，未从基本原理出发完整推导。建议：重新从能量质量守恒方程出发，严格推导经典B-number；准确表述Emmons边界层解；基于辐射能量平衡建立合理的辐射修正模型。"
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_65fb96bc",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Pool-fire-dynamics--Principles--models-and_2023_Progress-in-Energy-and-Combu",
+      "paper_title": "Pool-fire-dynamics--Principles--models-and_2023_Progress-in-Energy-and-Combu"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:33:59.199894",
+      "answer_length": 725
+    },
+    "merge_source": "question_reverse"
+  }
+]

@@ -1,0 +1,40 @@
+[
+  {
+    "question_text": "考虑一个使用纳米增强相变材料（NePCM）的电子设备散热系统。请基于论文第6.5节中关于热沉（heat sink）性能的数据，推导纳米颗粒如何通过改变有效热导率和粘度来影响系统的瞬态热响应。请给出具体的无量纲分析，包括Rayleigh数、Stefan数和Prandtl数的耦合作用，并分析纳米颗粒浓度对系统冷却效率的优化区间。",
+    "standard_answer": "对于电子设备散热，使用NePCM的热沉性能提升可通过实验数据验证。例如，在论文中：'NePCM enhanced the effective protection time by 117 % at 4C compared to pure PCM。根据热传导和相变理论，系统的温度响应可由能量方程结合相变源项描述。例如，在石蜡中添加MWCNT纳米颗粒时，热沉在自由对流下的使用时间从19分钟延长至34-53分钟（图16）。具体地，当添加1.0 wt%的MWCNT时，系统在4000 W/m²输入功率下，稳态温度降低22°C。具体推导如下：系统的热响应时间τ与特征长度L和热扩散率α相关（τ ∝ L²/α）。当纳米颗粒添加后，α增加，τ减小。同时，粘度增加（公式8）可能削弱自然对流效应。具体地，当纳米颗粒浓度从0.5增加至1.5 wt%时，系统的峰值温度降低，使用时间延长。这种增强源于纳米颗粒形成的热渗流网络，当浓度达到临界值（如1.5%）时，渗流阈值使得热导率呈现非线性增长。例如，在石蜡/MWCNT复合材料中，热导率从0.26 W/(m·K）提升至0.478 W/(m·K）（表5）。然而，当浓度超过3%时，团聚导致界面热阻增加，热导率增长饱和甚至下降。因此，最佳纳米颗粒浓度应在1-2%之间，以最大化热管理效率。因此，通过优化纳米颗粒添加量，可实现系统性能的最优化。",
+    "original_text": {
+      "1": "Experiments on thermal performance of erythritol/expanded graphite in a direct contact thermal energy storage container.' 因此，优化纳米颗粒分散是提高电子设备散热能力的关键。",
+      "type": "calculation",
+      "difficulty": 4,
+      "topic": "energy_systems"
+    },
+    "question_id": "batch_detail_q_d4047223",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Nano-enhanced-phase-change-materials--Fundam_2024_Progress-in-Energy-and-Com",
+      "paper_title": "Nano-enhanced-phase-change-materials--Fundam_2024_Progress-in-Energy-and-Com"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T14:17:36.971384",
+      "batch_processing": true,
+      "answer_length": 586
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及纳米增强相变材料的热沉性能、瞬态热响应、无量纲分析（Rayleigh数、Stefan数、Prandtl数）和纳米颗粒浓度优化，需要传热学、流体力学和热力学领域的专业知识。",
+      "answer_correct": false,
+      "answer_issues": [
+        "unsupported"
+      ],
+      "other_compliant": false,
+      "other_issues": [
+        "has_meta_info",
+        "too_general"
+      ],
+      "overall_verdict": "fail",
+      "recommendation": "答案缺少具体的无量纲分析推导，未能展示Rayleigh数、Stefan数和Prandtl数的耦合作用，且引用的实验数据与问题要求的热沉性能分析不完全匹配。建议补充完整的无量纲分析框架和基于热沉性能数据的推导过程。"
+    }
+  }
+]

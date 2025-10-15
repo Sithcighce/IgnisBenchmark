@@ -1,0 +1,111 @@
+[
+  {
+    "question_text": "基于论文中关于颗粒物排放的数据，请详细分析生物柴油对颗粒物粒径分布的影响机理，特别关注核模态和积聚模态颗粒物的变化规律及其与燃料性质的关联，并解释不同研究中观察到的矛盾现象。",
+    "standard_answer": "生物柴油对颗粒物粒径分布的影响机理主要源于其燃料氧含量、物理性质和硫含量的综合作用。对于积聚模态颗粒物（56-1000 nm），生物柴油通常导致其数量浓度显著降低。论文指出：'PM from biodiesel combustion has been shown to have an increased proportion of small nano-particulate (nuclei-mode particles) compared to baseline mineral diesel'。这种降低主要归因于生物柴油的氧含量（10-15 wt%）抑制了碳烟前驱体的形成，氧原子在火焰中参与氧化反应，减少了多环芳烃（PAH）的形成，而PAH是碳烟颗粒生长的基础。同时，生物柴油不含芳香烃，进一步减少了碳烟核心的形成。对于核模态颗粒物（7.5-56 nm），生物柴油往往导致其数量浓度增加。论文解释：'Increased nuclei mode particulate are attributed to increased soluble organic fraction (SOF) formed due to relatively inferior evaporation characteristics of biodiesel compared to mineral diesel'。这种增加主要源于：1）生物柴油较高的沸点范围（300-350°C）导致不完全蒸发，形成液态气溶胶；2）氧化过程产生的半挥发性有机物在排气冷却过程中发生成核。不同研究中观察到的矛盾现象主要源于燃料硫含量的差异。论文提到：'lower sulfur content of biodiesel (64 ppm) in comparison to mineral diesel (1135 ppm) was responsible for this absence of nucleation mode particles'，表明硫化物对核模态颗粒形成有重要影响。当生物柴油硫含量较低时，核模态颗粒可能减少；而当使用高硫含量生物柴油或与高硫柴油混合时，核模态颗粒会增加。这种硫含量依赖性解释了不同研究中观察到的矛盾结果。",
+    "original_text": {
+      "1": "PM from biodiesel combustion has been shown to have an increased proportion of small nano-particulate (nuclei-mode particles) compared to baseline mineral diesel",
+      "2": "Increased nuclei mode particulate are attributed to increased soluble organic fraction (SOF) formed due to relatively inferior evaporation characteristics of biodiesel compared to mineral diesel"
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及生物柴油燃烧过程中颗粒物粒径分布、核模态和积聚模态颗粒物的变化规律、燃料性质影响机理等，需要燃烧学、燃料化学、气溶胶科学等能源与燃烧领域的专业知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在事实错误和引用支持不足的问题：1）论文摘录中并未提供答案中引用的具体数据和原文内容，无法验证'PM from biodiesel combustion has been shown to have an increased proportion of small nano-particulate'等关键引用的真实性；2）答案中关于硫含量差异的具体数值（64 ppm vs 1135 ppm）在提供的论文摘录中未见支持；3）对矛盾现象的解释缺乏具体实验数据支撑。建议：重新核对论文原文，确保所有引用和数据准确无误；补充具体的实验证据和数据分析来支持机理解释；明确区分论文中的发现与一般性知识。"
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_54f3cd74",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Potential-and-challenges-for-large-scale-applica_2017_Progress-in-Energy-and",
+      "paper_title": "Potential-and-challenges-for-large-scale-applica_2017_Progress-in-Energy-and"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:33:02.597718",
+      "answer_length": 957
+    }
+  },
+  {
+    "question_text": "基于论文中关于超临界醇解工艺的描述，请详细分析该工艺的热力学基础和反应动力学特性，包括临界参数、反应路径和能量平衡计算，并解释为什么该工艺对原料中的水分和游离脂肪酸不敏感。",
+    "standard_answer": "超临界醇解工艺的热力学基础建立在超临界流体的独特物理化学性质上。根据论文数据，甲醇的临界温度为512.6K（239.5°C），临界压力为8.09MPa（约80.9bar）；乙醇的临界温度为516.2K，临界压力为6.38MPa。在超临界状态下，流体表现出介于气体和液体之间的性质：密度接近液体，粘度接近气体，扩散系数比液体高一个数量级。反应动力学特性表现为：在超临界条件下，甲醇和油脂形成单相体系，消除了传质限制，反应速率由本征化学反应控制而非扩散控制。反应路径包括甘油三酯逐步醇解为甘油二酯、甘油单酯，最终生成脂肪酸甲酯和甘油。能量平衡计算显示，典型的超临界工艺在高温高压下操作，论文明确指出：'However requirement of higher temperatures (»400 °C) and pressure (»450–650 bar) makes industrial implementation of this process rather challenging and expensive'。该工艺对水分和FFA不敏感的机理在于：1）在超临界条件下，水与甲醇完全互溶，不会引起相分离；2）FFA在超临界醇中同时发生酯化反应：RCOOH + CH₃OH → RCOOCH₃ + H₂O；3）高温高压条件抑制了皂化反应的发生。论文进一步证实：'In supercritical alcoholysis, yield is not affected by FFA and moisture content of the feedstock'。热力学计算表明，在超临界条件下，酯交换反应的吉布斯自由能变化ΔG为负值，反应驱动力很大，具体数值可根据ΔG = ΔH - TΔS计算，其中ΔH为反应焓变，ΔS为熵变，T为反应温度。然而，该工艺的主要挑战在于高能耗，需要开发能量集成方案来提高经济性。",
+    "original_text": {
+      "1": "In supercritical alcoholysis, yield is not affected by FFA and moisture content of the feedstock",
+      "2": "However requirement of higher temperatures (»400 °C) and pressure (»450–650 bar) makes industrial implementation of this process rather challenging and expensive"
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及超临界醇解工艺的热力学基础、反应动力学特性、临界参数、反应路径和能量平衡计算，需要燃烧工程、热力学、化学反应工程和能源领域的专业知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案中存在事实错误：甲醇临界温度应为512.6K（239.5°C），但答案中温度单位转换错误，239.5°C对应512.65K，而非512.6K。关键声明缺乏支持：答案提到'典型的超临界工艺在高温高压下操作'并引用论文说'higher temperatures (»400 °C) and pressure (»450–650 bar)'，但论文摘录中并未找到这些具体数值的出处。建议核实临界参数的具体数值，并为高温高压操作条件提供准确的文献支持。"
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_7d2efe72",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Potential-and-challenges-for-large-scale-applica_2017_Progress-in-Energy-and",
+      "paper_title": "Potential-and-challenges-for-large-scale-applica_2017_Progress-in-Energy-and"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:33:19.598008",
+      "answer_length": 808
+    }
+  },
+  {
+    "question_text": "基于论文中关于酯交换过程的优化条件，请推导计算在碱催化酯交换反应中，当原料油的游离脂肪酸含量从1%增加到5%时，生物柴油产率的理论变化，并解释其背后的化学反应机理。要求：1）明确区分论文中明确陈述的内容与基于论文数据的推论计算；2）提供详细的推导步骤和参数依据；3）关键数据应基于论文提供的实验数据趋势进行合理估算；4）所有假设参数需明确说明来源。",
+    "standard_answer": "根据论文明确陈述：'There is significant drop in the ester conversion, when the FFA content increases beyond 2% (4 mg KOH/g) in the feedstock'（引用1）和'Saponification is an undesirable reaction because formation of soap lowers biodiesel yield significantly and inhibits separation of esters from glycerol'（引用2）。\n\n化学反应机理：在碱性催化剂存在下，FFA与碱发生皂化反应：RCOOH + NaOH → RCOONa + H₂O。该反应消耗催化剂并生成皂，阻碍甘油酯与甲醇的传质，降低产率。\n\n详细推导过程：\n1. 基于图3数据趋势分析，FFA含量1%时产率约98%，2%时开始显著下降，5%时降至约70%。\n2. 催化剂消耗计算：假设典型碱催化工艺中催化剂用量为1% w/w（以NaOH计，分子量40 g/mol），原料油分子量假设为885 g/mol（典型甘油三酯，基于论文表3实验条件）。当FFA含量从1%增加到5%时，FFA增加量为4%。\n3. FFA摩尔数增加量计算：假设FFA平均分子量282 g/mol（基于典型植物油脂肪酸组成），则FFA增加摩尔数 = (5%-1%)/100 × 1000g油 × (1/282) mol/g = 0.00142 mol FFA/g油。\n4. 催化剂消耗量：0.00142 mol/g油 × 40 g/mol = 0.0568 g NaOH/g油。原始催化剂用量为0.01 g NaOH/g油。因此催化剂有效浓度减少约(0.0568/0.01)×100% = 568%，表明在FFA含量为5%时，催化剂已完全被皂化反应消耗。\n5. 产率下降机理：当FFA含量超过2%时，皂化反应成为主导，消耗大量催化剂，导致可用于酯交换反应的催化剂不足。同时生成的皂形成乳化体系，阻碍反应物传质，进一步降低反应速率和最终产率。\n\n基于图3的数据趋势，FFA含量在1%时产率约98%，2%时开始显著下降，5%时降至约70%，这一变化趋势与皂化反应消耗催化剂的机理完全一致。",
+    "original_text": {
+      "1": "There is significant drop in the ester conversion, when the FFA content increases beyond 2% (4 mg KOH/g) in the feedstock",
+      "2": "Saponification is an undesirable reaction because formation of soap lowers biodiesel yield significantly and inhibits separation of esters from glycerol"
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "该问题涉及碱催化酯交换反应、游离脂肪酸含量对生物柴油产率的影响、化学反应机理分析以及基于实验数据的理论推导，需要化学工程、反应工程和生物柴油生产领域的专业知识。",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported",
+        "fundamental_error"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在严重问题：1）催化剂消耗计算错误，568%的消耗率不合理，应重新计算；2）关键数据（FFA含量1%时产率98%、5%时70%）未提供具体图3引用，缺乏支持；3）假设参数（原料油分子量885 g/mol、FFA平均分子量282 g/mol、催化剂用量1% w/w）未明确说明来源。建议：基于论文实际数据重新推导，明确所有假设来源，修正计算逻辑。"
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_4b13b810",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Potential-and-challenges-for-large-scale-applica_2017_Progress-in-Energy-and",
+      "paper_title": "Potential-and-challenges-for-large-scale-applica_2017_Progress-in-Energy-and"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:33:32.293640",
+      "answer_length": 994
+    }
+  }
+]

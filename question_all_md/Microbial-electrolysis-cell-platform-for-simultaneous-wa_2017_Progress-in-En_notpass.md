@@ -1,0 +1,247 @@
+# Microbial-electrolysis-cell-platform-for-simultaneous-wa_2017_Progress-in-En - Not Passed Questions
+
+**生成时间**: 2025-10-15 15:46:06  
+**未通过问题数**: 5
+
+---
+
+## Question 1
+
+### 问题
+
+In microbial electrolysis cells (MECs), the anode reaction involves oxidation of organic compounds like acetate by electroactive microorganisms, releasing electrons and protons. The proton transport mechanism across ion exchange membranes (e.g., CEM, AEM, BPM) significantly impacts pH gradients and ohmic losses. From a combustion and energy engineering perspective, explain the thermodynamic basis and mass transfer mechanisms leading to pH imbalance in CEM-based systems, and quantify the additional energy input required per pH unit difference based on Nernst equation analysis.
+
+### 标准答案
+
+In MECs utilizing a cation exchange membrane (CEM) like Nafion 117, the primary ion transport mechanism involves migration of cations (e.g., Na+, K+) rather than protons (H+), due to the higher concentration of competitive cations (typically 4–5 orders of magnitude higher than H+), resulting in a pH drop in the anode chamber and an increase in the cathode chamber. This pH gradient arises because CEMs conduct all cations present in the electrolyte, not selectively protons. This leads to thermodynamic inefficiencies. The theoretical cathode potential for hydrogen evolution under standard conditions (pH = 7.0) is E_cat = –0.414 V vs. SHE. The Nernst equation (E = E⁰ – (RT/nF)ln(Q)) governs the equilibrium voltage. For every pH unit difference, the cathode potential shifts by –0.059 V according to ΔE = –(0.059)ΔpH. For acetate oxidation (E_an = –0.300 V), the equilibrium voltage E_eq = E_cat – E_an = (–0.414) – (–0.300) = –0.114 V. A pH gradient of one unit increases the required voltage by 0.06 V, translating to an additional energy input of approximately 0.13 kWh per m³-H₂ per pH unit, as stated: 'every pH unit difference will increase Eeq by 0.06 V according to the Nernst equation, which means an additional energy input of ca. 0.13 kWh m³⁻¹-H₂ per pH unit.' Thus, pH imbalance directly escalates operational energy demands, undermining MEC efficiency.
+
+### 元数据
+
+- **类型**: calculation
+- **难度**: 4
+- **主题**: energy_systems
+- **答案长度**: 1370 字符
+
+### 原文引用
+
+**引用 1**:
+> However, the use of a membrane brings several technical challenges to bioelectrochemical systems, e.g. pH gradient across the membrane, lowered mass transfer rate associated with membrane fouling, increased internal resistance and considerable voltage losses [46].
+
+**引用 2**:
+> For instance, every pH unit difference will increase Eeq by 0.06 V according to the Nernst equation, which means an additional energy input of ca. 0.13 kWh m³⁻¹-H₂ per pH unit [29].
+
+### 质量检查
+
+- **领域聚焦**: ✅ 通过
+- **答案正确性**: ❌ 未通过
+- **其他合规性**: ✅ 通过
+- **总体评价**: fail
+
+**领域聚焦分析**: 问题涉及微生物电解池(MEC)中的热力学基础、传质机制和能量工程分析，需要电化学、热力学、传质过程和能源工程的专业知识，属于燃烧与能源工程领域
+
+**答案问题**: factual_error, unsupported
+
+**改进建议**: 答案存在事实错误和缺乏引用支持。建议修正：1) CEM中质子传输机制的解释不准确；2) 阴极电位计算和能量消耗推导需要原文引用支持；3) 应基于提供的引用[29]和[46]来验证具体数值
+
+### 来源
+
+- **论文**: Microbial-electrolysis-cell-platform-for-simultaneous-wa_2017_Progress-in-En
+- **生成类型**: batch_generation
+- **合并来源**: questions
+
+---
+
+## Question 2
+
+### 问题
+
+Electromethanogenesis in MECs involves CO₂ reduction to methane (CH₄) via direct electron transfer (DET) at E_cat = –0.244 V vs. SHE. However, practical systems often require applied cathode potentials below –0.7 V vs. Ag/AgCl for significant methane yields. Using thermodynamic analysis, explain why such negative potentials are needed compared to the theoretical value, and relate this to activation losses, ohmic resistance, and mass transport limitations in the electrochemical system.
+
+### 标准答案
+
+Electromethanogenesis follows the reaction: CO₂ + 8H⁺ + 8e⁻ → CH₄ (g) + H₂O. Account for the overpotential contributions from electrode kinetics, electrolyte conductivity, and microbial biofilm resistance.
+
+### 元数据
+
+- **类型**: concept
+- **难度**: 4
+- **主题**: combustion_kinetics
+- **答案长度**: 205 字符
+
+### 原文引用
+
+**引用 1**:
+> In electromethanogenic MEC process (Fig. 4), the protons and electrons released from the anodic oxidation of organic matters (or water in some instances [9])
+
+**引用 2**:
+> Due to large overpotentials and imperfect electrode materials used, more negative cathodic potentials of less than –0.7 V vs. Ag/AgCl [56,57] are often poised for perceptible methane production.
+
+**引用 3**:
+> 
+
+### 质量检查
+
+- **领域聚焦**: ✅ 通过
+- **答案正确性**: ❌ 未通过
+- **其他合规性**: ✅ 通过
+- **总体评价**: fail
+
+**领域聚焦分析**: 该问题涉及电化学、微生物电解池、热力学分析以及电化学系统中的各种损耗机制，需要燃烧/传热/流体/CFD/能源领域的专业知识进行深入分析
+
+**答案问题**: too_brief, unsupported
+
+**改进建议**: 答案过于简短且缺乏对过电位来源的具体热力学分析。建议详细解释活化损失、欧姆电阻和传质限制如何导致实际电位远低于理论值，并引用原文中关于过电位的具体描述
+
+### 来源
+
+- **论文**: Microbial-electrolysis-cell-platform-for-simultaneous-wa_2017_Progress-in-En
+- **生成类型**: batch_generation
+- **合并来源**: questions
+
+---
+
+## Question 3
+
+### 问题
+
+In MEC platforms, cathodic catalysts are crucial for reducing overpotentials. Compare the electrochemical performance and durability of noble metal catalysts (e.g., Pt) versus non-precious metal alternatives (e.g., NiFe LDH) in terms of exchange current density, activation energy, and poisoning susceptibility (e.g., by sulfide in real wastewater). Quantify the cost difference and discuss how catalyst selection impacts the net energy recovery in scaled-up systems.
+
+### 标准答案
+
+Noble metal catalysts like Pt exhibit excellent electrocatalytic activity for hydrogen evolution reaction (HER), with exchange current densities on the order of 10⁻³ A cm⁻². However, their high cost (~$32.00 per 10×10 cm for Nafion 117) and sensitivity to poisoning limit their practicality. Non-precious alternatives such as NiFe layered double hydroxide (LDH) films on nickel foam achieve HER rates approaching that of Pt-loaded carbon cloth, while costing less than 5% of Pt/C catalyst. For instance, Pt-catalyzed carbon cloth cathodes achieve hydrogen production rates of ~2.1 m³ m⁻³ d⁻¹ at 1 V. Pt catalysts also deactivate rapidly in presence of sulfides commonly found in wastewater, with lifespans often below 100 h. In contrast, NiFe LDH showed HER (2.01–2.12 m³-H₂ m⁻³ d⁻¹). Durability and cost-effectiveness are paramount for real-world deployment.
+
+### 元数据
+
+- **类型**: reasoning
+- **难度**: 4
+- **主题**: CFD_modeling
+- **答案长度**: 859 字符
+
+### 原文引用
+
+**引用 1**:
+> To date, Pt-catalyzed carbon cloth (Pt/C) is the most popular catalyst-decorated cathode. The major challenges associated with Pt catalyst are the high cost, scarcity [23], and risk of being poisoned by chemicals such as sulfide in waste streams [29].
+
+**引用 2**:
+> By fabricating a carbon black graphite hybrid air-cathode, Li et al. [153] observed a H₂O₂ yield of up to 11.9 mg L⁻¹ h⁻¹ cm⁻² at a current density of 12.3 mA cm⁻², comparable to Pt/C but at a fraction of the cost and with improved resistance to poisoning.
+
+**引用 3**:
+> 
+
+### 质量检查
+
+- **领域聚焦**: ✅ 通过
+- **答案正确性**: ❌ 未通过
+- **其他合规性**: ✅ 通过
+- **总体评价**: fail
+
+**领域聚焦分析**: 问题涉及微生物电解池(MEC)平台、催化剂电化学性能评估、交换电流密度、活化能等专业电化学概念，需要燃烧/传热/流体/CFD/能源领域的专业知识
+
+**答案问题**: unsupported, factual_error
+
+**改进建议**: 答案存在多处未回答问题要求：1)未比较交换电流密度和活化能的具体数值；2)成本比较错误(将Nafion膜价格误作Pt催化剂价格)；3)未讨论催化剂选择对净能量回收的影响。建议基于原文引用补充完善缺失内容。
+
+### 来源
+
+- **论文**: Microbial-electrolysis-cell-platform-for-simultaneous-wa_2017_Progress-in-En
+- **生成类型**: batch_generation
+- **合并来源**: questions
+
+---
+
+## Question 4
+
+### 问题
+
+Microbial electrolysis cells (MECs) integrate electrochemical and biological processes. Describe the governing equations for mass transport of protons and electrons through the biofilm, incorporating Butler-Volmer kinetics for electron transfer and Fick's law for diffusion. Explain how computational fluid dynamics (CFD) can model the coupled phenomena of fluid flow, species diffusion, and electrochemical reactions at the cathode surface during electromethanogenesis.
+
+### 标准答案
+
+The performance of MEC platforms is governed by coupled equations: (1) Nernst-Planck for ion transport: J_i = –D_i∇c_i – z_iFc_i∇φ, where D_i is diffusivity, c_i concentration, and φ electric potential. For HER: i = i₀ [exp(–αFη/RT) – exp((1–α)Fη/RT)] and (2) Fick's second law for transient diffusion: ∂c_i/∂t = D_i∇²c_i + S_i, where S_i is the source term from microbial metabolism. CFD simulations resolve velocity fields (Navier-Stokes), concentration gradients, and potential distribution, optimizing reactor design for maximum energy recovery.
+
+### 元数据
+
+- **类型**: concept
+- **难度**: 3
+- **主题**: heat_transfer
+- **答案长度**: 549 字符
+
+### 原文引用
+
+**引用 1**:
+> The MEC research is a highly new cross-discipline involving environmental engineering, biochemistry, bioelectrochemistry, microbiology, materials science, and molecular biology as well [11].
+
+**引用 2**:
+> The advances made in the relevant fields have motivated the great research interests in this concept.
+
+### 质量检查
+
+- **领域聚焦**: ✅ 通过
+- **答案正确性**: ❌ 未通过
+- **其他合规性**: ✅ 通过
+- **总体评价**: fail
+
+**领域聚焦分析**: 问题涉及微生物电解池(MEC)中质子/电子传输的数学模型、Butler-Volmer动力学、Fick扩散定律以及CFD建模，需要电化学、生物反应工程和计算流体力学等专业领域的深入知识
+
+**答案问题**: too_brief, unsupported
+
+**改进建议**: 答案过于简短，缺乏对生物膜中质子/电子传输的具体描述，未明确解释CFD如何耦合流体流动、物种扩散和电化学反应，且关键声明未得到原文引用支持
+
+### 来源
+
+- **论文**: Microbial-electrolysis-cell-platform-for-simultaneous-wa_2017_Progress-in-En
+- **生成类型**: batch_generation
+- **合并来源**: questions
+
+---
+
+## Question 5
+
+### 问题
+
+从燃烧科学和能源系统角度，比较MEC产生的电燃料（如H₂、CH₄）与传统化石燃料在燃烧特性、能量密度和环境影响方面的差异。计算H₂和CH₄的低位发热值（LHV），并分析在MEC中从乙酸钠生产这些燃料的能量转换效率。假设乙酸钠完全氧化释放电子全部用于燃料合成，系统电压损失为0.3V（包括阳极损失0.04V、膜和欧姆损失0.01V、阴极损失0.25V），实际施加电压为0.8V（基于文献报道的典型MEC操作电压范围）。请提供详细的LHV计算过程和能量效率推导，并明确区分底物化学能和电能的贡献。
+
+### 标准答案
+
+MEC产生的电燃料与传统化石燃料存在显著差异。燃烧特性：H₂燃烧速度快，火焰温度高（~2000°C），无碳排放，但NOx生成可能增加；CH₄燃烧较慢，火焰温度~1950°C，碳强度低。传统化石燃料（如汽油）燃烧产生CO₂、SOx、NOx和颗粒物。能量密度：H₂ LHV为120 MJ kg⁻¹，但体积能量密度低（0.0108 MJ L⁻¹ at STP）；CH₄ LHV为50 MJ kg⁻¹，体积能量密度~0.036 MJ L⁻¹；汽油LHV~44 MJ kg⁻¹，体积能量密度~32 MJ L⁻¹。环境影响：电燃料从废弃物或CO₂生产，具有碳中性潜力；化石燃料碳足迹高。
+
+LHV计算：H₂燃烧反应2H₂ + O₂ → 2H₂O，高位发热值（HHV）为285.8 kJ/mol（水蒸气冷凝），低位发热值（LHV）为241.8 kJ/mol（水为气态），LHV = 241.8 kJ/mol ÷ 0.002016 kg/mol = 120 MJ/kg。CH₄燃烧反应CH₄ + 2O₂ → CO₂ + 2H₂O，HHV为890.8 kJ/mol，LHV为802.3 kJ/mol，LHV = 802.3 kJ/mol ÷ 0.01604 kg/mol = 50.0 MJ/kg。
+
+能量转换效率计算：乙酸钠（CH₃COO⁻）氧化释放8e⁻，理论H₂产量4 mol H₂/mol acetate，能量输出4 × 241.8 = 967.2 kJ/mol acetate；理论CH₄产量1 mol CH₄/mol acetate，能量输出802.3 kJ/mol acetate。总输入能量包括底物化学能和电能：乙酸钠氧化ΔG° = -847.6 kJ/mol（基于文献中乙酸氧化标准吉布斯自由能数据），电荷Q=8×96485=771880 C/mol acetate，电能输入W_in = E_ap × Q = 0.8×771880=617504 J=617.5 kJ。电压损失0.3V体现在理论最小电压E_min=0.114V与实际施加电压E_ap=0.8V的差值中，其中E_min=E_cathode-E_anode=(-0.414V)-(-0.300V)=-0.114V（绝对值），实际电压需克服此值及各类过电位损失。总输入能量应分别计算：底物化学能贡献847.6 kJ（可视为“免费”能源），电能贡献617.5 kJ（外部输入）。H₂能量效率η_H₂=967.2/(847.6+617.5)≈66.0%；CH₄能量效率η_CH₄=802.3/(847.6+617.5)≈54.8%。效率<100%表明系统存在能量损失，主要来自电压损失（0.3V）和热力学不可逆性，实际运行中还需考虑库仑效率、过电位等影响。
+
+### 元数据
+
+- **类型**: calculation
+- **难度**: 4
+- **主题**: energy_systems
+- **答案长度**: 1157 字符
+
+### 原文引用
+
+**引用 1**:
+> Hydrogen gas (H2) is a clean energy carrier. The commonly reported alternative for hydrogen gas production from renewable biomass and wastewaters can be dark fermentation.
+
+**引用 2**:
+> Methane is an excellent and popular fuel that is being widely used all over the world. In electromethanogenic MEC process, the protons and electrons released from the anodic oxidation of organic matters react with carbon dioxide for methane generation.
+
+### 质量检查
+
+- **领域聚焦**: ✅ 通过
+- **答案正确性**: ❌ 未通过
+- **其他合规性**: ✅ 通过
+- **总体评价**: fail
+
+**领域聚焦分析**: 问题涉及燃烧科学（燃烧特性、火焰温度、污染物生成）、能源系统（能量密度、能量转换效率、发热值计算）、电化学系统（MEC操作原理、电压损失分析）和热力学计算（吉布斯自由能、能量效率推导），需要燃烧工程、能源工程和电化学领域的专业知识。
+
+**答案问题**: factual_error, fundamental_error
+
+**改进建议**: 答案存在严重事实和基本原理错误：1）乙酸钠氧化释放电子数错误（应为8e⁻而非8e⁻），2）理论最小电压计算错误（E_min应为阴极电位与阳极电位之差，但给出的数值和符号有误），3）总输入能量计算中底物化学能处理不当（不应将ΔG°直接视为“免费”能源输入，而应基于底物氧化释放的能量或电子数计算），4）能量效率计算未正确区分底物化学能和电能贡献（应分别计算底物转化效率和电能效率）。建议：重新核实乙酸钠氧化反应电子数、标准电极电位、理论最小电压计算方法和能量效率定义，确保热力学和电化学原理应用正确。
+
+### 来源
+
+- **论文**: Microbial-electrolysis-cell-platform-for-simultaneous-wa_2017_Progress-in-En
+- **生成类型**: deepseek_generation
+- **合并来源**: question_reverse
+
+---
+

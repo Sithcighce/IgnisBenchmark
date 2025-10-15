@@ -1,0 +1,134 @@
+[
+  {
+    "question_text": "基于论文中热稳定聚合物分类和热分析技术，详细解释如何通过热重分析(TGA)和差示扫描量热法(DSC)联合使用来评估聚合物膜在高温气体分离应用中的适用性。请具体说明如何从TGA和DSC曲线获取关键参数，并解释这些参数与膜性能的关系。",
+    "standard_answer": "TGA和DSC的联合使用提供了评估聚合物膜热稳定性的互补信息。TGA测量样品质量随温度或时间的变化，用于确定分解温度(T_d)和热降解行为。在惰性气氛中，5%质量损失温度通常作为热稳定性的实用指标。对于气体分离膜，TGA可以识别聚合物骨架断裂、侧基脱落等降解机制。DSC则测量样品与参比物之间的热流差，用于确定玻璃化转变温度(T_g)、熔融温度(T_m)和结晶行为。论文指出：'聚合物薄膜以恒定加热速率加热，测量与聚合物抗软化相关的因素，如T_g和T_m。' T_g特别重要，因为它定义了聚合物从玻璃态向橡胶态的转变，直接影响气体渗透性和选择性。在高温气体分离中，操作温度应低于T_g以维持尺寸筛分能力，但远低于分解温度以确保长期稳定性。例如，聚苯并咪唑(PBI)的T_g约为425-436°C，分解温度超过500°C，使其适合300-400°C的H₂分离。通过TGA-DSC联合分析，可以建立操作温度窗口：下限由T_g决定（对于玻璃态聚合物），上限由分解温度决定。论文还提到：'等温条件更接近热塑性材料的实际制造过程，因此等温TGA数据比动态数据更具实际重要性。' 这表明长期等温TGA测试对于评估膜在实际操作条件下的寿命至关重要。",
+    "original_text": {
+      "1": "聚合物薄膜以恒定加热速率加热，测量与聚合物抗软化相关的因素，如T_g和T_m。TMA和TD也适用于软化研究。",
+      "2": "等温条件更接近热塑性材料的实际制造过程，因此等温TGA数据比动态数据更具实际重要性。"
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "heat_transfer",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及热稳定聚合物分类、热分析技术（TGA/DSC）、高温气体分离膜应用，需要燃烧/传热/材料科学/能源领域的专业知识来理解聚合物热稳定性、热分析原理及膜分离性能关系",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": ""
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_1b0555d2",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Thermally-stable-polymers-for-advanced-high-per_2018_Progress-in-Energy-and-",
+      "paper_title": "Thermally-stable-polymers-for-advanced-high-per_2018_Progress-in-Energy-and-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:07:01.516787",
+      "answer_length": 517
+    }
+  },
+  {
+    "question_text": "基于论文中关于温度对气体在聚合物膜中传输影响的讨论，详细推导并解释温度如何影响H₂/CO₂分离的选择性。请结合Arrhenius方程和van't Hoff关系，分析扩散系数和溶解度随温度变化的物理机制，并说明为什么在高温下H₂/CO₂选择性会增加。",
+    "standard_answer": "根据论文中描述的气体传输机制，温度对H₂/CO₂选择性的影响可以通过溶液-扩散模型来分析。首先，气体渗透率P=SD，其中S是溶解度系数，D是扩散系数。H₂/CO₂选择性α_H₂/CO₂ = (D_H₂/D_CO₂)×(S_H₂/S_CO₂)。扩散系数遵循Arrhenius关系：D = D₀exp(-E_D/RT)，其中E_D是扩散活化能。由于H₂分子较小（动力学直径2.89Å），其扩散活化能通常低于CO₂（3.3Å），因此D_H₂/D_CO₂随温度升高而减小。然而，溶解度系数遵循van't Hoff关系：S = S₀exp(-ΔH_s/RT)，其中ΔH_s是溶解焓。CO₂作为更易冷凝的气体（Lennard-Jones温度ε/k=190K vs H₂的59.7K），其溶解焓ΔH_s为负值，而H₂的ΔH_s为正值。因此，温度升高时，CO₂溶解度显著下降，而H₂溶解度轻微增加，导致S_H₂/S_CO₂显著增大。论文指出：'在H₂/CO₂分离的情况下，更易冷凝气体溶解度随温度的显著降低导致溶解度选择性大幅增加，从而抵消了减小的扩散选择性。这导致总体选择性增加。' 综合效应是：虽然扩散选择性(D_H₂/D_CO₂)随温度升高而减小，但溶解度选择性(S_H₂/S_CO₂)的增加占主导地位，因此总体H₂/CO₂选择性随温度升高而增加。这一机制解释了为什么在高温操作时，玻璃态H₂选择性膜在预燃烧CO₂捕获中具有优势。",
+    "original_text": {
+      "1": "在H₂/CO₂分离的情况下，更易冷凝气体溶解度随温度的显著降低导致溶解度选择性大幅增加，从而抵消了减小的扩散选择性。这导致总体选择性增加。",
+      "2": "基于方程3和4，增加温度显著增加了气体分子通过膜的扩散。这种相关性的敏感性取决于活化能的值，因此取决于渗透物的大小和聚合物的类型。"
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "heat_transfer",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及气体在聚合物膜中的传输机制、温度对分离选择性的影响、Arrhenius方程和van't Hoff关系的应用，这些都需要燃烧/传热/流体/能源领域的专业知识，特别是膜分离技术和热力学分析",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": ""
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_c67abffb",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Thermally-stable-polymers-for-advanced-high-per_2018_Progress-in-Energy-and-",
+      "paper_title": "Thermally-stable-polymers-for-advanced-high-per_2018_Progress-in-Energy-and-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:07:01.517921",
+      "answer_length": 610
+    }
+  },
+  {
+    "question_text": "分析论文中讨论的高温高压渗透仪(HPHT permeameter)设计，从传热和流体力学角度解释该系统如何确保在300°C和3.0MPa条件下准确测量气体渗透率。特别关注温度控制、压力稳定性和密封设计的工程挑战及解决方案。",
+    "standard_answer": "HPHT渗透仪的设计需要解决高温高压条件下的多重工程挑战。从传热角度，系统采用高温烘箱将膜模块维持在均匀温度分布，使用热电偶(TC)实时监测温度。在300°C操作时，必须考虑辐射传热和对流传热的综合效应，确保膜表面温度均匀，避免局部热点影响测量精度。流体力学方面，系统采用计量阀(MV)控制上游气体流速，通过精密压力传感器(PT)监测跨膜压差。在3.0MPa高压下，气体压缩性和黏度变化显著，需要校正实际气体行为。密封设计是关键挑战：传统聚合物密封在高温下会降解失效，因此必须采用金属对金属密封或特殊高温弹性体。论文描述：'测试易燃气体时，膜模块置于高温烘箱中，并持续吹扫惰性气体以避免泄漏气体积聚。' 这解决了安全性和测量准确性问题。压力控制采用检查阀(CV)防止过压，确保设备安全。系统还配备残余气体分析管线，用于检测可能的泄漏或膜降解产物。整个设计考虑了高温下材料热膨胀差异、气体热力学性质变化以及长期操作稳定性，确保在极端条件下获得可靠的渗透率数据。",
+    "original_text": {
+      "1": "测试易燃气体时，膜模块置于高温烘箱中，并持续吹扫惰性气体以避免泄漏气体积聚。系统还配备用于残余气体分析的管线。",
+      "2": "Perez等人[55]设计并构建了高压高温(HPHT)渗透仪，用于在高达300°C的温度和高达3.0 MPa的压力下测试平板聚合物膜。"
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "fluid_mechanics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及高温高压渗透仪设计，需要传热学（温度控制、辐射传热、对流传热）、流体力学（气体压缩性、黏度变化、压差控制）和能源工程（气体渗透率测量、密封设计）等专业领域知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "无需改进，问题和答案均符合质量要求。答案准确解释了高温高压条件下的传热控制（烘箱均匀加热、热电偶监测）、流体力学校正（气体压缩性、黏度变化）和关键工程挑战（金属密封、惰性气体吹扫安全措施），并正确引用了论文内容"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_f715e22c",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Thermally-stable-polymers-for-advanced-high-per_2018_Progress-in-Energy-and-",
+      "paper_title": "Thermally-stable-polymers-for-advanced-high-per_2018_Progress-in-Energy-and-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:07:04.648231",
+      "answer_length": 429
+    }
+  },
+  {
+    "question_text": "基于CFD建模原理，详细推导并解释温度对气体在致密聚合物膜中传输时浓度边界层发展的影响。请考虑温度依赖的扩散系数、溶解度系数以及可能的热扩散效应，建立相应的传输方程并分析其对膜分离性能的影响。",
+    "standard_answer": "在CFD建模中，气体在致密聚合物膜中的传输可以用扩展的对流-扩散方程描述。考虑温度效应，质量传输方程可写为：∂C/∂t + ∇·(uC) = ∇·(D(T)∇C) + S，其中D(T) = D₀exp(-E_D/RT)是温度依赖的扩散系数。浓度边界层的发展受温度影响显著，因为温度升高指数性地增加扩散系数，减小边界层厚度δ_c ∝ √(D(T)t)。同时，溶解度系数S(T) = S₀exp(-ΔH_s/RT)也随温度变化，影响膜界面处的浓度边界条件。对于可冷凝气体如CO₂，ΔH_s < 0，温度升高时界面浓度降低。此外，在存在温度梯度时，需要考虑Soret效应（热扩散），质量通量可表示为J = -D∇C - D_T C∇T/T，其中D_T是热扩散系数。论文提到：'基于方程3和4，增加温度显著增加了气体分子通过膜的扩散。这种相关性的敏感性取决于活化能的值，因此取决于渗透物的大小和聚合物的类型。' 在CFD模拟中，还需要耦合能量方程ρC_p(∂T/∂t + u·∇T) = ∇·(k∇T) + Q，其中Q包括粘性耗散和可能的反应热。温度升高通过减少气体黏度和增加扩散率来增强质量传输，但可能降低选择性。对于H₂/CO₂分离，高温下浓度边界层变薄，传质系数增加，但同时CO₂溶解度降低，需要优化操作条件以实现最佳分离性能。CFD模拟可以帮助预测不同温度分布下的局部传质特性和整体分离效率。",
+    "original_text": {
+      "1": "基于方程3和4，增加温度显著增加了气体分子通过膜的扩散。这种相关性的敏感性取决于活化能的值，因此取决于渗透物的大小和聚合物的类型。",
+      "2": "温度变化对理想选择性的影响高度依赖于气体分子的大小和溶解度。"
+    },
+    "type": "calculation",
+    "difficulty": 5,
+    "topic": "CFD_modeling",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及CFD建模原理、气体在聚合物膜中的传输、温度对浓度边界层发展的影响、温度依赖的扩散系数和溶解度系数、热扩散效应、传输方程建立及膜分离性能分析，这些都需要燃烧/传热/流体/CFD/能源领域的专业知识，特别是膜分离和传质过程的深入理解。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "无需改进，答案质量较高，全面覆盖了问题要求，包括CFD建模原理、温度对浓度边界层发展的影响机制（扩散系数、溶解度系数、热扩散效应）、传输方程建立及对膜分离性能的分析，且与提供的论文摘录内容一致。"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_0a7e005b",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Thermally-stable-polymers-for-advanced-high-per_2018_Progress-in-Energy-and-",
+      "paper_title": "Thermally-stable-polymers-for-advanced-high-per_2018_Progress-in-Energy-and-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:07:05.392734",
+      "answer_length": 596
+    }
+  }
+]

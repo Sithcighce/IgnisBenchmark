@@ -1,0 +1,134 @@
+[
+  {
+    "question_text": "分析光学测量方法（如激光反射、视频摄影）在瞬态回归率测量中的主要技术挑战。基于波动光学和辐射传热理论，解释燃烧表面粗糙度、火焰发光和烟雾颗粒对光学测量精度的影响机理。",
+    "standard_answer": "光学测量方法面临三个主要挑战：表面粗糙度、火焰发光和烟雾散射。\n\n表面粗糙度影响：含能材料燃烧表面通常具有20-200 μm的粗糙度（由氧化剂颗粒尺寸决定）。根据几何光学，粗糙表面会导致反射光束发散，降低定位精度。对于激光反射方法，表面倾斜会改变反射角，引入测量误差。视频摄影的空间分辨率受限于光学系统放大倍数，通常为10-20 μm，难以分辨粗糙表面的真实位置。\n\n火焰发光干扰：燃烧过程产生强烈的热辐射，覆盖从紫外到红外的宽谱段。这会淹没探测器的信号，需要采用光谱滤波或强度补偿。论文提到需要专门的记录系统来补偿火焰发射的光。\n\n烟雾颗粒散射：燃烧产物中的凝相颗粒（如金属氧化物）会对测量光束产生米氏散射。散射效应会：1）衰减信号强度；2）产生背景噪声；3）改变光束传播方向。这会导致空间分辨率降低，特别是在高压条件下颗粒浓度增加时。\n\n理论分析表明，这些因素的综合效应使光学方法的有效带宽限制在20-50 Hz，无法测量高频瞬态过程。需要采用主动照明、窄带滤波和图像处理算法来部分克服这些限制。",
+    "original_text": {
+      "1": "First of all, the local burning surface roughness even in the case of non-metallized propellant comprises 20–200 μm due to typical oxidizer grains size. In addition, the flame emits the light which has to be compensated by the recording system whereas the combustion products typically contain radiation scattering particulates generated via dispersion of the surface layer",
+      "2": "Actually, the ordinary macro optics (2–4 fold magnification) provides resolution only ca. 10–20 μm, which is insufficient to resolve transient burn rate details at frequencies exceeding 50–100 Hz."
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及光学测量方法在瞬态回归率测量中的应用，需要燃烧科学、传热学、流体力学、光学测量技术等专业知识，特别是波动光学和辐射传热理论在燃烧表面粗糙度、火焰发光和烟雾颗粒影响分析中的应用。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量较高，无需修改。"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_20d2e498",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Contemporary-methods-to-measure-regression-rate_2022_Progress-in-Energy-and-",
+      "paper_title": "Contemporary-methods-to-measure-regression-rate_2022_Progress-in-Energy-and-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:53:28.392671",
+      "answer_length": 450
+    }
+  },
+  {
+    "question_text": "分析反冲力测量方法在瞬态燃烧研究中的理论基础和适用范围。推导反冲力与回归率的关系式F(t) = (ρ_c r_b(t))^2 S/ρ_g(t) + L d(ρ_c r_b(t))/dt S，并讨论各项的物理意义。确定该方法适用的频率范围限制。",
+    "standard_answer": "反冲力测量方法基于动量守恒原理。当含能材料燃烧产生气体产物时，气体加速产生反作用力。完整的反冲力表达式为：F(t) = (ρ_c r_b(t))^2 S/ρ_g(t) + L d(ρ_c r_b(t))/dt S。\n\n第一项(ρ_c r_b)^2 S/ρ_g代表稳态动量通量，其中ρ_c为凝聚相密度，r_b为回归率，S为燃烧表面积，ρ_g为气体密度。该项反映了气体产物加速产生的稳态推力。第二项L d(ρ_c r_b)/dt S代表非稳态效应，L为保护管长度，该项考虑了质量流率变化引起的动量变化。\n\n适用范围分析：当燃烧过程变化较慢时，第二项可忽略，简化为F(t) = m^2 S/ρ_g，其中m = ρ_c r_b。频率限制可通过误差分析确定：f < δ m_0/(2πLρ_g δ_m)，其中δ为允许误差，m_0 = ρ_c r_b0为稳态质量流率，δ_m = Δm/m_0。\n\n对于典型参数：δ=0.01，ρ_c/ρ_g=1000，r_b=5 mm/s，L=5 mm，δ_m=0.05，计算得极限频率f ≈ 0.01×5×10^-3×1000/(2π×5×10^-3×0.05) ≈ 31.8 Hz。这表明反冲力方法适用于30 Hz以下的低频振荡测量。",
+    "original_text": {
+      "1": "Based on equations of momentum and mass conservation, the magnitude of recoil force can be calculated as follows [89]: F(t) = ((ρ_c r_b(t))^2/ρ_g(t) + L d(ρ_c r_b(t))/dt) S",
+      "2": "For typical values δ = 0.01, ρ_c/ρ_g = 1000, r_b=5 mm/s, L = 5 mm and δ_m = 0.05 the limiting frequency comprises ca. 30 Hz. Consequently, at higher frequencies it is necessary to use Eq. (6) for deriving correct recoil force value."
+    },
+    "type": "calculation",
+    "difficulty": 5,
+    "topic": "fluid_mechanics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及瞬态燃烧研究、反冲力测量方法、动量守恒原理、回归率与反冲力的关系式推导、各项物理意义解释以及频率范围限制分析，这些都需要燃烧学、流体力学、传热学和能源领域的专业知识。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "无需修改，问题和答案均符合质量要求。"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_d09e11dd",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Contemporary-methods-to-measure-regression-rate_2022_Progress-in-Energy-and-",
+      "paper_title": "Contemporary-methods-to-measure-regression-rate_2022_Progress-in-Energy-and-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:53:28.450196",
+      "answer_length": 530
+    }
+  },
+  {
+    "question_text": "基于论文中关于微波反射技术的讨论，详细分析该方法在测量瞬态回归率时的空间分辨率优势及其物理原理。解释为什么微波技术能够达到亚微米级的空间分辨率，并推导其基本测量公式rb = const(dΦ/dt)的理论基础。",
+    "standard_answer": "微波反射技术通过测量从燃烧表面反射的微波信号的相位变化来确定回归率。其核心物理原理基于多普勒效应和电磁波干涉理论。当燃烧表面以速度rb移动时，反射微波信号会产生相位偏移Φ，该相位偏移与表面位移成正比。根据波动理论，相位变化率dΦ/dt与表面速度rb呈线性关系，即rb = K(dΦ/dt)，其中K为系统常数。\n\n空间分辨率优势来源于微波的短波长特性。论文提到使用140 GHz微波时，波长从30 mm减小到2 mm。根据干涉测量原理，相位分辨率可达0.08-0.16毫弧度，这对应于亚微米级的位移分辨率。具体推导：对于波长为λ的微波，相位变化ΔΦ与位移Δx的关系为ΔΦ = 4πΔx/λ。当λ=2 mm，相位分辨率0.08 mrad时，位移分辨率Δx = (λΔΦ)/(4π) ≈ (2×10^-3 × 0.08×10^-3)/(4π) ≈ 1.27×10^-8 m = 12.7 nm。\n\n该技术的优势还包括：不受火焰发光干扰、可穿透烟雾、适用于封闭容器测量。但需考虑材料介电特性随温度变化的影响，特别是在高温区域接近燃烧表面时。",
+    "original_text": {
+      "1": "The technique implies the measurement of the Doppler shift of frequency phase between the original microwave signal and the one reflected from the burning surface. The burn rate value rb depends on temporal derivative of the phase shift Φ according to formula rb = const (dF/dt).",
+      "2": "Development of setup working at a frequency ca. 140 GHz (decreasing the microwave wavelength from 30 mm to 2 mm) was reported in [61–63] where the potential limitations of the method have been analyzed. In practice these limitations are caused by the effects of propellant compressibility and noticeable radiation attenuation"
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及微波反射技术、燃烧表面回归率测量、多普勒效应、电磁波干涉理论等，需要燃烧科学、传热学、流体力学和微波技术等领域的专业知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量良好，无需修改。答案准确解释了微波反射技术的物理原理，正确推导了空间分辨率计算，并引用了论文中的相关内容，完全符合问题要求"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_1bf1fdcd",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Contemporary-methods-to-measure-regression-rate_2022_Progress-in-Energy-and-",
+      "paper_title": "Contemporary-methods-to-measure-regression-rate_2022_Progress-in-Energy-and-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:53:29.115431",
+      "answer_length": 466
+    }
+  },
+  {
+    "question_text": "比较超声波技术和X射线同步辐射技术在测量含能材料回归率时的空间分辨率和时间分辨率差异。分析这两种技术各自的物理限制因素，并解释为什么同步辐射技术具有更高的空间分辨率潜力。",
+    "standard_answer": "超声波技术的空间分辨率受声波波长限制。论文指出，使用1 MHz超声波时，在声速2000 m/s的推进剂中波长为2 mm，1/4波长对应的空间误差为500 μm。即使采用先进的信号处理技术，空间分辨率也只能达到30-200 μm。时间分辨率受脉冲重复频率限制，通常不超过200 Hz。\n\nX射线同步辐射技术的优势在于其极短的波长（约0.1 nm量级）和高准直性。论文提到同步辐射系统可实现约4 μm的空间分辨率，这比传统X射线系统的100 μm有显著提升。时间分辨率目前受探测器限制（约几Hz），但理论上可通过改进探测器达到更高频率。\n\n物理限制因素对比：超声波受材料声学特性（声速、衰减）和温度分布影响，特别是在热边界层区域声速变化会引入误差。X射线同步辐射受限于光源强度和探测器性能，但不受材料热物理性质变化的影响。\n\n同步辐射的高分辨率源于：1）极小的焦斑尺寸（微米级）；2）高准直性减少几何模糊；3）高亮度允许快速成像。然而，当前时间分辨率不足限制了其在瞬态燃烧研究中的应用，需要开发高速探测器系统。",
+    "original_text": {
+      "1": "For example, let the frequency of ultrasound wave equals 1 MHz that corresponds to 2 mm wavelength in a propellant with a sound speed of 2000 m/s [38]. Thus, an error of 1/4 of the oscillation period corresponds to an error of 500 μm for determining the regression surface location.",
+      "2": "Magnified X-ray image of the sample is recorded by 2D detector with final spatial system resolution ca. 4 μm. The recording system (Fig. 12) can be used to obtain a series of rotating sample X-ray images which allow producing tomography records analyzed with special computer codes that provide detailed information on the specimen internal structure."
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "heat_transfer",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及超声波和X射线同步辐射技术在含能材料回归率测量中的应用，需要燃烧科学、材料科学、声学物理和辐射物理等领域的专业知识，特别是关于空间分辨率和时间分辨率的技术参数分析",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "无需改进，问题和答案均符合质量要求。答案准确引用了论文数据，正确分析了两种技术的物理限制因素，并合理解释了同步辐射技术的高分辨率潜力"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_3b91912a",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Contemporary-methods-to-measure-regression-rate_2022_Progress-in-Energy-and-",
+      "paper_title": "Contemporary-methods-to-measure-regression-rate_2022_Progress-in-Energy-and-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:53:29.226465",
+      "answer_length": 453
+    }
+  }
+]

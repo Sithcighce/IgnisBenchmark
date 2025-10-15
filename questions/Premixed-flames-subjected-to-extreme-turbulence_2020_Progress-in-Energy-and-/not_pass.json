@@ -1,0 +1,39 @@
+[
+  {
+    "question_text": "论文中讨论了湍流燃烧速度的弯曲现象，并指出Damköhler的预测得到实验支持。请详细推导Damköhler的第二个假设中的公式，并解释为什么湍流扩散率增加会导致燃烧速度的非线性增长。",
+    "standard_answer": "Damköhler的第二个假设指出，如果上游所有涡旋的尺度均小于层流火焰厚度，则湍流扩散率D_T主导，导致S_T/S_L ∝ (D + D_T)^0.5。进一步推导：由于层流火焰速度S_L ∝ D^0.5，因此湍流燃烧速度应满足：S_T/S_L = [1 + c_2·(u'·L_x/ν)^0.5。\n\n详细推导步骤：\n1. 分子扩散率D与湍流扩散率D_T的叠加效应。\n2. 湍流扩散率D_T ∝ u'·L_x。\n3. 结合S_L ∝ D^0.5，可得S_T ∝ (D + D_T)^0.5。\n3. 代入D_T的表达式，最终得到S_T/S_L = [1 + c_2·Re_T]^0.5。这一关系在湍流水平(u'/S_L)达到15时开始弯曲，与实验数据一致。",
+    "original_text": {
+      "1": "Damköhler’s relation that contains the Reynolds number avoids this problem.",
+      "2": "Turbulent burning velocities no longer follow the trend predicted by Shchelkin but they tend to follow the trend predicted by Damköhler.",
+      "type": "calculation",
+      "difficulty": 5,
+      "topic": "energy_systems"
+    },
+    "question_id": "batch_detail_q_fd125f86",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Premixed-flames-subjected-to-extreme-turbulence_2020_Progress-in-Energy-and-",
+      "paper_title": "Premixed-flames-subjected-to-extreme-turbulence_2020_Progress-in-Energy-and-"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T15:50:06.514965",
+      "batch_processing": true,
+      "answer_length": 327
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及湍流燃烧、Damköhler假设、湍流扩散率与燃烧速度关系的推导，需要燃烧学、流体力学和传热传质等能源系统领域的专业知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "fundamental_error",
+        "unsupported"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在基础概念错误：S_L ∝ D^0.5的假设过于简化，实际层流火焰速度与热扩散率关系更复杂；推导过程中关键步骤缺乏严谨性，建议重新审视Damköhler理论的基本假设和数学推导"
+    }
+  }
+]

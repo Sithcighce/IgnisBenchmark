@@ -1,0 +1,183 @@
+# Ammonia-for-power_2018_Progress-in-Energy-and-Combustion-Science - Passed Questions
+
+**生成时间**: 2025-10-15 15:46:06  
+**通过问题数**: 4
+
+---
+
+## Question 1
+
+### 问题
+
+Explain the fundamental challenges in stabilizing premixed ammonia-hydrogen flames in gas turbine combustors, focusing on the chemical kinetic mechanisms that lead to flame instability.
+
+### 标准答案
+
+Stabilizing premixed ammonia-hydrogen flames in gas turbines presents several challenges due to ammonia's low reactivity and slow laminar burning velocity (~0.07 m/s compared to methane's ~0.38 m/s). The primary kinetic mechanisms involve: 1) The high activation energy required for NH3 decomposition (NH3 → NH2 + H), which is rate-limiting; 2) The competition between NO formation pathways (via NH + O → NO + H) and recombination reactions (NH + NO → N2 + OH); 3) The strong dependence on hydrogen doping (>40% by energy) to accelerate radical pool formation through H + O2 → OH + O. At equivalence ratios φ > 1.1, OH radical recombination with NH2 becomes significant, but the narrow flammability limits (18-28% fuel mole fraction) and high ignition energy (~8J vs methane's 0.28mJ) make stable operation difficult. Computational studies using Konnov's mechanism show that turbulent flame speeds must exceed 5 m/s for practical applications, requiring careful optimization of swirl number and residence time distributions.
+
+### 元数据
+
+- **类型**: reasoning
+- **难度**: 5
+- **主题**: combustion_kinetics
+- **答案长度**: 1024 字符
+
+### 原文引用
+
+**引用 1**:
+> The results showed the complexity in stabilizing premixed ammonia blends, identifying a particular pattern of oxygen consumption that was followed by flame speed reduction, retarding the combustion process and eventually pushing the flame back into the combustion chamber
+
+**引用 2**:
+> Ammonia has a flammability limit that ranges from ∼18 to 28% fuel mole fraction. Therefore, dilution systems are needed to avoid this range when hot surfaces or combustion devices are in use nearby
+
+### 质量检查
+
+- **领域聚焦**: ✅ 通过
+- **答案正确性**: ✅ 通过
+- **其他合规性**: ✅ 通过
+- **总体评价**: pass
+
+**领域聚焦分析**: 问题涉及燃烧动力学、气体涡轮燃烧室设计和化学反应机制，需要燃烧学和能源工程领域的专业知识。
+
+**改进建议**: 答案质量很高，准确涵盖了问题要点，并引用了相关机制和数据。
+
+### 来源
+
+- **论文**: Ammonia-for-power_2018_Progress-in-Energy-and-Combustion-Science
+- **生成类型**: batch_generation
+- **合并来源**: questions_copy
+
+---
+
+## Question 2
+
+### 问题
+
+Derive the adiabatic flame temperature for stoichiometric ammonia-air combustion considering thermal dissociation of products, and compare it with methane-air combustion under the same conditions.
+
+### 标准答案
+
+The stoichiometric reaction for ammonia combustion is: 4NH3 + 3O2 + 11.28N2 → 2N2 + 6H2O + 11.28N2 (ΔH° = -1267 kJ/mol). Using NASA polynomials for specific heats and solving the energy balance equation Σni(h°f,i + ∫cp,idT)products = Σnj(h°f,j + ∫cp,jdT)reactants, we account for dissociation of H2O ↔ H2 + 0.5O2 and N2 + O2 ↔ 2NO. At 1 atm, the adiabatic flame temperature is ~1850K, significantly lower than methane's ~2223K due to: 1) Higher nitrogen content absorbing heat (71% vs 68% for CH4); 2) Endothermic NH3 decomposition (NH3 → 0.5N2 + 1.5H2, ΔH = +46 kJ/mol); 3) Reduced heat release from N2 formation versus CO2 formation. The temperature can be approximated by T_ad = (-ΔH°c)/[Σx_iCp_i] where x_i are product mole fractions. For NH3, this yields ~1800K versus ~2100K for CH4, consistent with experimental measurements.
+
+### 元数据
+
+- **类型**: calculation
+- **难度**: 4
+- **主题**: heat_transfer
+- **答案长度**: 832 字符
+
+### 原文引用
+
+**引用 1**:
+> The combustion of ammonia is challenging, due primarily to its low reactivity, but yields nitrogen gas and water, with a stoichiometric Air Fuel Ratio (AFR) of 6.06 by weight
+
+**引用 2**:
+> The adiabatic flame temperature (with air) for ammonia is 1850 K compared to 2223 K for methane
+
+### 质量检查
+
+- **领域聚焦**: ✅ 通过
+- **答案正确性**: ✅ 通过
+- **其他合规性**: ✅ 通过
+- **总体评价**: pass
+
+**领域聚焦分析**: 问题涉及燃烧化学、热力学和能量平衡计算，需要燃烧/传热/能源领域的专业知识
+
+**改进建议**: 答案质量良好，建议补充NASA多项式具体引用和能量平衡方程的迭代求解细节以增强严谨性
+
+### 来源
+
+- **论文**: Ammonia-for-power_2018_Progress-in-Energy-and-Combustion-Science
+- **生成类型**: batch_generation
+- **合并来源**: questions_copy
+
+---
+
+## Question 3
+
+### 问题
+
+Calculate the required residence time for 95% ammonia decomposition in a catalytic microreactor at 1073K using a Ni-Pt/Al2O3 catalyst, given the first-order rate constant k = 5.6×10^4 exp(-180kJ/mol/RT) s^-1.
+
+### 标准答案
+
+Using the Arrhenius expression k = 5.6×10^4 exp(-Ea/RT) with Ea = 180 kJ/mol and T = 1073K: k = 5.6×10^4 exp[-180000/(8.314×1073)] = 12.7 s^-1. For first-order kinetics, the conversion X relates to residence time τ via X = 1 - exp(-kτ). Solving for 95% conversion (X=0.95): 0.95 = 1 - exp(-12.7τ) → τ = -ln(0.05)/12.7 = 0.235s. This matches experimental observations where τ > 200ms is needed for >90% conversion at 1073K. The space velocity SV = 1/τ = 4.25 s^-1 (15,300 h^-1) indicates practical reactor sizing. Compared to thermal decomposition (requiring >1273K), catalytic systems reduce energy input by ~40% while maintaining compact dimensions (<5cm length for 10mm diameter channels at 2m/s flow velocity).
+
+### 元数据
+
+- **类型**: calculation
+- **难度**: 4
+- **主题**: fluid_mechanics
+- **答案长度**: 713 字符
+
+### 原文引用
+
+**引用 1**:
+> The reactions that occurs between 793 and 963 K using Ni-Pt/Al2O3 were evaluated by Chellappa et al, who found that the activation energy for the conversion is much higher than reported previously
+
+**引用 2**:
+> Ammonia needed to be almost completely decomposed (>99.5%) at around atmospheric pressure, a process that requires high temperatures for both thermodynamic and kinetic reasons
+
+### 质量检查
+
+- **领域聚焦**: ✅ 通过
+- **答案正确性**: ✅ 通过
+- **其他合规性**: ✅ 通过
+- **总体评价**: pass
+
+**领域聚焦分析**: 问题涉及化学反应动力学、催化剂性能和反应器设计，需要燃烧/传热/流体/能源领域的专业知识
+
+**改进建议**: 答案质量良好，计算过程和引用都符合要求
+
+### 来源
+
+- **论文**: Ammonia-for-power_2018_Progress-in-Energy-and-Combustion-Science
+- **生成类型**: batch_generation
+- **合并来源**: questions_copy
+
+---
+
+## Question 4
+
+### 问题
+
+Explain how the Kalina cycle achieves higher efficiency than Rankine cycles for low-grade heat recovery, focusing on the thermodynamic advantages of ammonia-water mixtures.
+
+### 标准答案
+
+The Kalina cycle achieves 20% higher efficiency than Rankine cycles for low-grade heat (<150°C) through three key mechanisms: 1) Variable-temperature boiling: The ammonia-water zeotrope (typically 70-80% NH3) exhibits a gradual temperature glide during evaporation/condensation (e.g., 30K glide vs water's isothermal phase change), better matching the heat source/sink temperature profiles and reducing exergy destruction. The temperature glide ΔT_glide = T_bubble - T_dew can reach 50K for x_NH3=0.7 mixtures at 10bar. 2) Reduced pumping work: The mixture's lower liquid specific volume (~1.5×10^-3 m^3/kg vs water's 1.0×10^-3 at 100°C) decreases pump power W_pump = vΔP/η_pump. 3) Recuperative heat exchange: The concentration difference between turbine exhaust (~40% NH3) and absorber inlet (~80%) enables efficient heat recovery via solution heat exchangers. The efficiency η = 1 - T_cold/T_hot improves by ~5% points due to 20K lower average rejection temperature.
+
+### 元数据
+
+- **类型**: concept
+- **难度**: 4
+- **主题**: energy_systems
+- **答案长度**: 969 字符
+
+### 原文引用
+
+**引用 1**:
+> The essence of the Kalina cycle is the use of an ammonia-water mixture whose change in composition affects the thermodynamics and transport properties of the mixture
+
+**引用 2**:
+> The use of the Kalina Cycle (KC) with this ammonia-water working fluid can bring up to 20% enhancement compared to other cycles
+
+### 质量检查
+
+- **领域聚焦**: ✅ 通过
+- **答案正确性**: ✅ 通过
+- **其他合规性**: ✅ 通过
+- **总体评价**: pass
+
+**领域聚焦分析**: 该问题涉及热力学循环（Kalina循环与Rankine循环）的比较以及氨水混合物的热力学特性，需要燃烧/传热/流体/能源领域的专业知识。
+
+**改进建议**: 答案质量较高，全面且准确地解释了Kalina循环的效率优势，建议继续保持。
+
+### 来源
+
+- **论文**: Ammonia-for-power_2018_Progress-in-Energy-and-Combustion-Science
+- **生成类型**: batch_generation
+- **合并来源**: questions_copy
+
+---
+

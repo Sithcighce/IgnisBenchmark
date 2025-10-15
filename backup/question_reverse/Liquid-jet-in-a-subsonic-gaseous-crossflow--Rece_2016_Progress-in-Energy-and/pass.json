@@ -1,0 +1,134 @@
+[
+  {
+    "question_text": "分析在燃烧室应用中，液体射流在气体横流中的穿透高度和轨迹对燃料分布、混合效率和排放特性的影响机制。基于论文中的发现，解释为什么在贫预混预蒸发(LPP)燃烧器中需要将动量通量比q控制在15以下以避免壁面撞击。",
+    "standard_answer": "在燃烧室应用中，液体射流在气体横流中的穿透高度和轨迹对燃烧性能具有决定性影响。穿透高度决定了燃料在燃烧室横截面上的分布范围，过小的穿透会导致燃料集中在近壁区域，造成局部富油燃烧和高温区形成，增加NOx排放；过大的穿透则会引起燃料撞击对侧壁面，导致壁面冷却问题和未燃碳氢化合物排放。轨迹形状影响燃料与空气的混合过程，较平缓的轨迹有利于燃料在主流中的均匀分散，而较陡峭的轨迹可能导致燃料集中在特定区域。在贫预混预蒸发(LPP)燃烧器中，需要将动量通量比q控制在15以下的机理在于：q = ρj·vj²/(ρg·ug²)直接决定了射流的穿透能力。当q > 15时，射流具有足够的动量穿透到燃烧室对侧壁面，特别是在小尺寸燃烧室或低空气流速条件下。壁面撞击会引发多重问题：首先，液体燃料在壁面形成液膜，蒸发缓慢且不完全，产生未燃碳氢化合物和CO排放；其次，壁面附近的低温区域会 quenching火焰，导致燃烧不稳定和熄火；第三，液膜燃烧会产生局部高温区，增加热NOx生成。论文中指出'在一些LPP燃烧构型中，q的范围应保持在15以下以避免燃料撞击燃烧室壁面'，这一限制是基于燃烧室几何尺寸、空气动力学结构和燃料喷雾特性的综合考量。优化的q值范围确保了燃料充分穿透到燃烧室中心区域，与空气充分混合，同时避免壁面相互作用，从而实现高效、低排放的燃烧。",
+    "original_text": {
+      "1": "information describing a liquid jet trajectory and its penetration in a crossflow is highly required for the design of combustion chambers as it determines the distribution of fuel, which for instance plays a key role in preventing fuel impingement onto the walls of a combustor",
+      "2": "in some configurations of lean premixed prevaporized (LPP) combustion, the range of q should be kept less than 15 in order to avoid fuel impingement on the combustor walls"
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及燃烧室应用、液体射流在气体横流中的穿透特性、燃料分布、混合效率、排放特性以及贫预混预蒸发(LPP)燃烧器的设计参数控制，这些都需要燃烧学、流体力学、传热传质和燃烧器设计等专业领域的深入知识。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "无需修改，问题和答案均符合质量要求。"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_4e7ba937",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Liquid-jet-in-a-subsonic-gaseous-crossflow--Rece_2016_Progress-in-Energy-and",
+      "paper_title": "Liquid-jet-in-a-subsonic-gaseous-crossflow--Rece_2016_Progress-in-Energy-and"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:41:58.616063",
+      "answer_length": 569
+    }
+  },
+  {
+    "question_text": "基于论文中关于非湍流液体射流在亚音速气体横流中的破碎机制，详细分析气体韦伯数(Weg)在定义不同破碎模式转变中的关键作用。请解释为什么Weg是决定毛细破碎、袋状破碎、多模式破碎和剪切破碎之间转变的最重要参数，并推导这些转变的临界Weg值范围。",
+    "standard_answer": "气体韦伯数Weg = ρg·ug²·dj/σ代表了气体惯性力与液体表面张力的比值，是决定非湍流液体射流破碎模式的关键无量纲参数。当Weg < 5时，表面张力主导破碎过程，表现为毛细破碎模式，液体射流在横流作用下发生整体弯曲变形但表面扰动较小。当5 < Weg < 60时，气体惯性力开始显著影响液体表面，形成袋状破碎，液体表面出现周期性膨胀和收缩形成袋状结构。当60 < Weg < 110时，进入多模式破碎区域，袋状破碎逐渐向表面剥离转变，同时存在多种破碎机制。当Weg > 110时，气体惯性力完全主导，形成剪切破碎模式，液体表面出现高频扰动和细小的液丝剥离。这种转变的物理机理在于：低Weg时表面张力能够抑制气体流动引起的表面扰动，随着Weg增加，气体动能足以克服表面张力，引发不同尺度的表面不稳定波。临界转变的Weg值范围可以通过线性稳定性分析推导：对于袋状破碎向多模式破碎的转变，临界条件为气体惯性力与表面张力力的平衡被打破，即ρg·ug² ≈ k·σ/dj，其中k为与流动条件相关的常数。实验观测表明，这些转变边界相对独立于其他参数如射流韦伯数Wej和奥内佐格数Oh，证实了Weg的主导地位。",
+    "original_text": {
+      "1": "gas Weber number plays a crucial role in defining non-turbulent primary breakup regimes, while liquid jet Weber number is of great importance for the transition to turbulent primary breakup",
+      "2": "capillary breakup (Weg < 5), bag breakup (5 < Weg < 60), bag/shear breakup (60 < Weg < 110), and shear breakup (110 < Weg)"
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "fluid_mechanics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及非湍流液体射流在亚音速气体横流中的破碎机制、气体韦伯数的关键作用、不同破碎模式的转变以及临界值的推导，这需要燃烧、流体力学、多相流和CFD领域的专业知识来准确分析和解释。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "无需改进，答案准确、详细，与论文摘录和原文引用一致，正确解释了气体韦伯数在破碎模式转变中的关键作用及临界值范围。"
+    },
+    "retry_count": 1,
+    "question_id": "deepseek_q_9738cf71",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Liquid-jet-in-a-subsonic-gaseous-crossflow--Rece_2016_Progress-in-Energy-and",
+      "paper_title": "Liquid-jet-in-a-subsonic-gaseous-crossflow--Rece_2016_Progress-in-Energy-and"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:42:36.529814",
+      "answer_length": 502
+    }
+  },
+  {
+    "question_text": "详细分析湍流液体射流与非湍流液体射流在气体横流中初级破碎的物理机制差异。基于论文中q·Weg = 272,000判据，解释为什么这个参数能够有效区分气动破碎和湍流破碎模式，并说明该判据的物理意义。",
+    "standard_answer": "湍流与非湍流液体射流在气体横流中的破碎机制存在本质差异。非湍流射流的破碎主要由气动不稳定性主导，遵循经典的Kelvin-Helmholtz不稳定性机制，表面波的发展受气体韦伯数Weg控制，表现为规则的表面波和袋状结构。而湍流射流的破碎则受到射流出口湍流脉动的显著影响，湍流结构直接参与表面扰动和液丝形成，在近喷嘴区域就出现不规则的液丝和液滴剥离。\n\n判据q·Weg = 272,000的物理基础可以解释如下：q = ρj·vj²/(ρg·ug²)是射流与横流动量通量比，表征射流动量与气体动量的相对强度；Weg = ρg·ug²·dj/σ是气体韦伯数，表征气体惯性力与液体表面张力的比值。两者的乘积q·Weg = ρj·vj²·dj/σ实际上等于液体射流韦伯数Wej，表征射流动能与表面张力能的比值。\n\n当q·Weg < 272,000时，气动作用主导破碎过程，射流表面出现类似于非湍流射流的规则表面波结构。当q·Weg > 272,000时，湍流效应占据主导，射流表面在近喷嘴区域就出现不规则的液丝和液滴剥离。这一判据的重要性在于它量化了湍流强度对射流破碎模式的切换条件，为湍流射流的建模提供了理论基础。\n\n该判据的推导基于湍流时间尺度与气动时间尺度的竞争：湍流时间尺度τ_turb ~ Λ/u'，气动时间尺度τ_aero ~ dj/ug。当τ_turb < τ_aero时湍流破碎主导。将We_LΛ = ρj·vj²·Λ/σ和q = ρj·vj²/(ρg·ug²)代入，经过量纲分析和实验拟合得到临界值272,000。",
+    "original_text": {
+      "1": "transition borderline between the aerodynamic and turbulent primary breakup regimes. Since We_LΛ ≡ (ρj·vj²·Λ)/σ with Λ = dj/8 and Wej ≡ q·Weg, the criterion can be expressed as q·Weg = 272,000",
+      "2": "turbulent primary breakup dominated aerodynamic effect so that crossflow did not exert any influence on the ligament properties"
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "fluid_mechanics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及湍流与非湍流液体射流在气体横流中的破碎机制、气动破碎与湍流破碎模式的区分判据、韦伯数等流体力学概念，需要燃烧、传热、流体力学、CFD等领域的专业知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": ""
+    },
+    "retry_count": 1,
+    "question_id": "deepseek_q_41014649",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Liquid-jet-in-a-subsonic-gaseous-crossflow--Rece_2016_Progress-in-Energy-and",
+      "paper_title": "Liquid-jet-in-a-subsonic-gaseous-crossflow--Rece_2016_Progress-in-Energy-and"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:42:40.679246",
+      "answer_length": 661
+    }
+  },
+  {
+    "question_text": "基于Broumand和Birouk（2016）综述中Sallam等人（2004）基于边界层剥离（BLS）模型的论述，推导液体射流在气体横流中表面液丝直径的演化方程。明确区分瞬态区域和准稳态区域的边界条件，分析在这两个区域中液丝直径随流向距离z的变化规律，并详细解释液丝直径随z增加而增大的物理机理，要求结合BLS模型的核心机制说明边界层增长与液丝直径的关系。",
+    "standard_answer": "根据Broumand和Birouk（2016）综述中Sallam等人（2004）基于边界层剥离（BLS）模型的研究，液体射流表面形成的液丝直径与液体边界层厚度直接相关。在气体剪切作用下，射流表面形成速度边界层，液丝直径的演化基于边界层增长理论推导。\n\n在瞬态区域（z较小），边界层处于发展初期，液丝直径dl与流向距离z的关系为：dl/dj = 3.6·(μj·ρj·z/(vj·dj²))^(1/2)。这一关系来源于非定常边界层增长理论，边界层厚度δ ~ (ν·t)^(1/2)，其中t = z/vj。当(μj·ρj·z/(vj·dj²)) < 0.001时，系统处于瞬态区域。\n\n在准稳态区域（z较大），边界层达到充分发展，液丝直径趋于恒定值：dl/dj = 0.11。此时边界层厚度达到最大值，约为射流直径的固定比例。当(μj·ρj·z/(vj·dj²)) > 0.001时，系统进入准稳态区域。\n\n液丝直径随流向距离z增加而增大的物理机理在于：随着射流在横流中向下游发展，气体对液体表面的剪切作用时间增加，边界层有更多时间发展和增厚。根据BLS模型，边界层剥离机制认为液丝形成源于边界层内液体的剥离，更厚的边界层意味着有更多的液体质量可用于形成液丝。这一过程可以用量纲分析解释：边界层增长的特征时间尺度为τ ~ δ²/ν，而流向发展的特征时间尺度为τ_z ~ z/vj，当τ_z增加时，边界层有更长时间发展，导致δ增加，进而液丝直径相应增大。实验观测证实，在剪切破碎模式下，液丝直径确实从喷嘴出口处的较小值逐渐增加到破碎点附近的最大值。",
+    "original_text": {
+      "1": "transient regime is associated with the progressive growth of the boundary layer as a function of time (or with increasing z) which supplies liquid to the base of ligaments",
+      "2": "quasi-steady regime, the boundary layer reaches its maximum possible growth of a thickness which is a fixed fraction of the liquid jet diameter"
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "fluid_mechanics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及液体射流在气体横流中的边界层剥离模型、液丝直径演化方程推导、瞬态与准稳态区域分析等，需要燃烧学、流体力学、传热传质等领域的专业知识，特别是边界层理论、射流破碎机理和量纲分析等专业概念。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "无需改进，答案准确覆盖了问题要求，包括BLS模型机制、瞬态与准稳态区域边界条件、液丝直径随z变化规律及物理机理解释，并正确引用了原文内容。"
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_f4701ed1",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Liquid-jet-in-a-subsonic-gaseous-crossflow--Rece_2016_Progress-in-Energy-and",
+      "paper_title": "Liquid-jet-in-a-subsonic-gaseous-crossflow--Rece_2016_Progress-in-Energy-and"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:44:09.509559",
+      "answer_length": 671
+    }
+  }
+]

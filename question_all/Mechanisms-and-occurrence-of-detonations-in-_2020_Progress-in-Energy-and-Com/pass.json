@@ -1,0 +1,138 @@
+[
+  {
+    "question_text": "基于论文中描述的爆轰标志物，推导薄饼状蒸气云外部超压衰减的数学模型。假设云半径为R，高度为H，初始CJ压力为P_s，建立超压P随距离云边距离D变化的函数关系，并解释各项物理意义。",
+    "standard_answer": "对于薄饼状蒸气云爆轰产生的外部超压衰减，可以基于几何爆轰理论和冲击波传播原理建立数学模型。论文中给出了两种相关表达式：基于FGE EDEN代码的简化关系P = 7.8(H/D)，以及Geiger的更完整表达式P(D) = P_s[δH/(D+δH)]^(1/2)[2R/(D+R)]。在简化模型中，P ∝ H/D反映了薄饼状云的基本几何特征——超压主要取决于云高H与观测距离D的比值，这是因为爆轰产物沿垂直方向的膨胀受到限制，主要能量沿水平方向辐射。在完整Geiger模型中，第一项[δH/(D+δH)]^(1/2)描述了爆轰源体积的几何衰减，其中δH代表有效爆轰源厚度（通常取0.1H）。第二项[2R/(D+R)]考虑了有限云尺寸的修正，当D<<R时趋近于2，当D>>R时趋近于2R/D。初始压力P_s取CJ压力的约70%，即P_s ≈ 0.7P_CJ。对于典型工业场景，R=200m，H=3m，P_s≈12-13atm，在D=100m处，P ≈ 7.8×(3/100) = 0.234 atm，与观测数据一致。这种快速衰减解释了为什么爆轰破坏主要局限于蒸气云内部，而外部主要经历较弱的冲击波作用。",
+    "original_text": {
+      "1": "A simplified form of Eq. (4.1) is P = 7.8(H/D). For smaller clouds (less than 50 m radius), either the Multi-Energy Method or TNT Equivalence was accurate enough within the limitations of tests and simulations performed.",
+      "2": "Rearranging this equation to obtain P in terms of distance from the cloud edge, D, gives, P(D) = P_s[δH/(D+δH)]^(1/2)[2R/(D+R)]."
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "fluid_mechanics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及薄饼状蒸气云爆轰、超压衰减建模、CJ压力、冲击波传播等专业概念，需要燃烧学、爆炸力学、流体力学和冲击波理论等能源与燃烧领域的专业知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": ""
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_e700297f",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Mechanisms-and-occurrence-of-detonations-in-_2020_Progress-in-Energy-and-Com",
+      "paper_title": "Mechanisms-and-occurrence-of-detonations-in-_2020_Progress-in-Energy-and-Com"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:40:16.119703",
+      "answer_length": 500
+    },
+    "merge_source": "question_reverse"
+  },
+  {
+    "question_text": "分析不同蒸气云爆炸情景中DDT发生的条件和机制差异，特别比较情景3（拥堵区内点火导致DDT）和情景4（拥堵区外点火导致DDT）的物理过程、临界条件和灾害后果。",
+    "standard_answer": "情景3和情景4代表了蒸气云爆炸中DDT发生的两种典型路径，具有显著不同的物理过程和灾害特征。在情景3（拥堵区内点火）中，点火直接发生在拥堵区域内，火焰立即在障碍物诱导的湍流作用下加速。这种情景下，火焰加速路径较短，DDT通常发生在拥堵区域内部。临界条件包括：足够的拥堵水平（通常面积阻塞比>30%）、足够反应性的燃料-空气混合物（在爆轰极限内）、以及足够的拥堵区域尺寸以支持充分的火焰加速。一旦DDT发生，爆轰波直接传播到外部未燃烧云中，产生均匀的高超压（~18 atm）。在情景4（拥堵区外点火）中，点火发生在开放区域，火焰最初以云火形式传播（10-30 m/s），消耗部分云体。当火焰到达拥堵区域时才开始加速，最终在拥堵区域边缘或内部发生DDT。这种情景的临界条件更为严格：需要足够大的剩余云体以支持爆轰传播、拥堵区域必须足够有效以在剩余云体被消耗前引发DDT、以及火焰在到达拥堵区前不能过度消耗可燃混合物。灾害后果方面，情景3通常产生更局域化但更强烈的破坏，因为爆轰几乎立即发生；而情景4可能影响更大区域，但爆轰发生前的云火消耗了部分燃料，可能减轻总体后果。Buncefield和CAPECO事件是情景4的典型代表，而Skikda事件则符合情景3特征。",
+    "original_text": {
+      "1": "In Scenario 3, ignition inside the congested region starts a cloud fire that rapidly accelerates through interactions of the deflagration with the turbulence created by flow around obstacles. The deflagration velocity then exceeds the critical value, and DDT occurs inside the congested region.",
+      "2": "In Scenario 4, ignition is outside the congested area. The flame propagates as a cloud fire at around 10–30 m/s, consuming part of the cloud, until it reaches the congested region where flame acceleration occurs leading to a DDT."
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及蒸气云爆炸、DDT（爆燃转爆轰）机制、物理过程、临界条件和灾害后果分析，需要燃烧学、流体力学、爆炸动力学和热力学等专业领域知识。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "无需改进。答案准确描述了情景3和情景4的物理过程、临界条件及灾害后果差异，与原文引用和论文主题一致，内容详实且专业。"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_28f9c4e4",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Mechanisms-and-occurrence-of-detonations-in-_2020_Progress-in-Energy-and-Com",
+      "paper_title": "Mechanisms-and-occurrence-of-detonations-in-_2020_Progress-in-Energy-and-Com"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:40:17.548121",
+      "answer_length": 529
+    },
+    "merge_source": "question_reverse"
+  },
+  {
+    "question_text": "分析在无约束、无拥堵条件下，仅通过强湍流实现DDT的物理机制。需要解释湍流如何自强化并最终导致爆轰，以及这种机制与传统的障碍物诱导DDT的根本区别。",
+    "standard_answer": "在无约束、无拥堵条件下，强湍流诱导的DDT代表了与传统障碍物诱导机制根本不同的物理过程。传统DDT依赖于几何约束产生的激波反射和火焰褶皱，而湍流诱导DDT完全由流体动力学不稳定性驱动。当湍流强度足够高时（湍流雷诺数Re_t >> 1），火焰表面经历强烈的拉伸和褶皱，导致火焰表面积指数增长。随着湍流强度的自强化，火焰表面的紧密堆积使得在极小体积内发生快速能量释放。当局部能量释放速率超过声学平衡能力时，产生局部压力突增，形成激波。这些激波进一步与湍流火焰相互作用，通过激波-火焰不稳定性产生更多的小尺度湍流，形成正反馈循环。最终，在湍流火焰内部的某些区域，能量释放的时空集中达到临界点，产生局部爆炸并发展为完全爆轰。论文图11展示了氢-空气火焰嵌入高强度湍流背景的计算结果，压力积聚最终在火焰深处产生激波。这种机制的关键区别在于：不需要外部几何约束，DDT完全由流动内在不稳定性驱动；转变发生在火焰内部而非前方未反应气体中；对混合物反应性要求更高，因为缺乏激波预压缩的辅助效应。",
+    "original_text": {
+      "1": "When the turbulence is intense enough, and shocks are somehow generated, a detonation could form. Another result of the simulations is that at some point in the development of a very turbulent deflagration, the turbulence can self-intensify.",
+      "2": "The importance of this result is that it tells us that if the turbulence is strong enough, and shocks are somehow generated, a detonation could form."
+    },
+    "type": "concept",
+    "difficulty": 5,
+    "topic": "fluid_mechanics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及燃烧学中的爆燃转爆轰（DDT）物理机制、湍流流体动力学、激波-火焰相互作用等专业概念，需要燃烧科学、流体力学和计算流体动力学（CFD）领域的专业知识。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "无需改进。答案准确解释了强湍流诱导DDT的物理机制，包括湍流自强化、火焰表面积增长、局部压力突增形成激波、正反馈循环等关键过程，并清晰对比了与传统障碍物诱导DDT的根本区别，与提供的论文摘录内容一致。"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_acc2d31b",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Mechanisms-and-occurrence-of-detonations-in-_2020_Progress-in-Energy-and-Com",
+      "paper_title": "Mechanisms-and-occurrence-of-detonations-in-_2020_Progress-in-Energy-and-Com"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:40:19.110904",
+      "answer_length": 439
+    },
+    "merge_source": "question_reverse"
+  },
+  {
+    "question_text": "基于论文中描述的爆燃转爆轰（DDT）机制，详细分析在障碍物通道中火焰加速过程中激波与火焰相互作用如何导致热点形成和最终DDT的物理过程。需要解释激波反射、热点形成条件以及梯度机制在DDT中的关键作用。",
+    "standard_answer": "在障碍物通道中，DDT过程涉及复杂的激波-火焰相互作用机制。首先，初始火焰在障碍物诱导的湍流作用下加速，产生压力波并逐渐形成激波。当火焰速度达到约350 m/s（混合物声速）时，进入快速爆燃阶段，此时火焰与前方激波形成松散耦合的激波-火焰复合体。激波在障碍物表面反射产生马赫杆，形成局部高压高温区域。当反射激波足够强时，在未反应气体中形成热点——具有适当反应性梯度的局部区域。热点中的温度、压力和化学组成梯度导致点火延迟时间梯度dτ_c/dx，当热点临界长度L_c满足特定条件时，会产生自发燃烧波。这些波最初以极高速度传播，随后减速允许声学通信，最终形成冲击波并发展为完全发展的爆轰。如论文图3所示，在氢-空气混合物中，多个热点（D1-D4）在障碍物12-17处形成，但只有D4成功发展为能在未反应材料中传播的爆轰。梯度机制的关键在于热点的温度、压力和化学梯度必须足够陡峭，以支持从自发燃烧到冲击波形成的转变，这通常需要反复激波压缩和预热的未反应气体。",
+    "original_text": {
+      "1": "The turbulent flame generates acoustic and shock waves as it propagates through a channel. Hot spots are created in unreacted gas that had been shocked repeatedly, so that it was substantially preheated and compressed before ignition.",
+      "2": "The mechanism of hot-spot ignition refers to a spatial gradient in reactivity, which can be caused by gradients in properties such as temperature, pressure, composition, or stoichiometry. When the entire process is moving so quickly, there was not enough time for acoustic communication along the region of the gradient."
+    },
+    "type": "reasoning",
+    "difficulty": 5,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及爆燃转爆轰（DDT）机制、激波与火焰相互作用、热点形成、梯度机制等专业概念，需要燃烧学、流体力学、传热学、计算流体动力学（CFD）等领域的专业知识，属于能源与燃烧工程领域的深度技术问题",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "无需改进，答案质量优秀：1）准确描述了障碍物通道中火焰加速、激波形成、反射产生马赫杆和热点的物理过程；2）正确解释了梯度机制（温度、压力、化学组成梯度）在DDT中的关键作用；3）引用了论文中的具体实验数据（氢-空气混合物中障碍物12-17处的热点D1-D4）和理论依据；4）完整覆盖了问题要求的激波反射、热点形成条件和梯度机制等要点"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_ed9c2d62",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Mechanisms-and-occurrence-of-detonations-in-_2020_Progress-in-Energy-and-Com",
+      "paper_title": "Mechanisms-and-occurrence-of-detonations-in-_2020_Progress-in-Energy-and-Com"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:40:20.719205",
+      "answer_length": 426
+    },
+    "merge_source": "question_reverse"
+  }
+]

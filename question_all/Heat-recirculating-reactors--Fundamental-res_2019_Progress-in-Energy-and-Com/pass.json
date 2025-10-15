@@ -1,0 +1,172 @@
+[
+  {
+    "question_text": "基于论文中关于热循环反应器基本工作原理的描述，详细分析热循环反应器如何实现超绝热温度和燃烧速度增强的物理机制。请解释热从燃烧产物到反应物的传递路径，并说明这种热循环如何影响化学反应速率和火焰稳定性。",
+    "standard_answer": "热循环反应器实现超绝热温度和燃烧速度增强的核心机制在于通过固体介质有效地将热量从高温燃烧产物区域循环到低温反应物区域。具体物理过程如下：首先，在反应区内，气体燃烧产生的高温（通常高于周围固体温度）通过强制对流和辐射将热量传递给固体介质。然后，这些热量通过固体介质的轴向传导和固体-固体辐射向上游传递。在上游区域，固体温度高于进入的冷反应物，热量通过对流传给反应物，使其预热。这种预热机制显著提高了反应物进入反应区前的温度，从而大大增强了化学反应速率。根据阿伦尼乌斯定律，反应速率随温度呈指数增长，因此即使温度升高几十度也能显著提高燃烧速度。同时，预热后的反应物在反应区内能够达到超过绝热火焰温度的超绝热状态，因为除了化学反应释放的热量外，还有来自下游的额外热量输入。这种热循环机制还增强了火焰稳定性，因为它为贫燃或富燃混合物提供了额外的能量来源，使火焰能够在传统可燃极限之外稳定存在。从能量平衡角度看，虽然整体系统遵循第一定律，但局部区域可以实现能量密度的增加，这正是超绝热燃烧的本质。",
+    "original_text": {
+      "1": "The basic principle behind heat recirculating reactors is that energy is recycled from the flame to the reactants to increase the reactant temperature such that reactions will proceed at enhanced rates, without any energy addition from an external source.",
+      "2": "One of the interesting features of heat recirculating reactors is the possibility that maximum temperatures may exceed those predicted by chemical equilibrium. This gave rise to the terms superadiabatic or excess enthalpy combustion"
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "heat_transfer",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及热循环反应器、超绝热温度、燃烧速度增强、传热路径、化学反应速率和火焰稳定性等概念，需要燃烧学、传热学、流体力学和化学反应工程等领域的专业知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "无需改进，问题和答案质量均较高"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_508da650",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Heat-recirculating-reactors--Fundamental-res_2019_Progress-in-Energy-and-Com",
+      "paper_title": "Heat-recirculating-reactors--Fundamental-res_2019_Progress-in-Energy-and-Com"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:45:09.339452",
+      "answer_length": 443
+    },
+    "merge_source": "question_reverse"
+  },
+  {
+    "question_text": "详细分析对向流反应器中横向传热和轴向传导的相对重要性，并解释毕渥数(B)在不同反应器设计中的优化策略。请结合具体的设计实例说明如何通过材料选择和几何设计来优化热循环效率。",
+    "standard_answer": "在对向流反应器中，横向传热和轴向传导的相对重要性取决于具体的反应器设计和操作条件。横向传热主要通过相邻通道间的壁面进行，是热量从热产物向冷反应物传递的主要机制。轴向传导则沿着通道壁面方向传递热量，在某些情况下可能不利于热循环效率。毕渥数B = h_I L_c/k_s，其中h_I是对流换热系数，L_c是特征长度，k_s是固体导热系数，这个参数决定了固体内部导热阻力与表面对流阻力之比。在对向流通道反应器中，横向传热是主导机制，因此需要最大化B值，这意味着应该使用薄壁和高导热材料来增强横向热交换。例如，理想的对向流反应器应该具有无限薄的分离壁(B→∞)。相反，在单向流反应器中，热量主要通过轴向传导和辐射向上游传递，因此需要适中的B值来保证足够的热量沿轴向传递。材料选择方面，对于对向流反应器，高导热材料如金属有利于横向传热，但可能增加外部热损失。实验研究表明，石英等低导热材料在某些情况下能提供更宽的稳定操作范围，因为能维持更高的局部温度。几何设计上，瑞士卷燃烧器通过螺旋结构最大化内部传热面积同时最小化外部热损失面积，实现了优异的超贫燃性能。实际设计中需要在横向传热效率和轴向热损失之间进行权衡，通过优化壁厚、通道间距和材料导热系数来达到最佳的热循环性能。",
+    "original_text": {
+      "1": "B = h_I L_c/k_s where k_s is the solid conductivity and L_c is a characteristic length scale. B has different implications for different designs. For a reactor with counterflowing channels, the main mode of heat transfer is through the walls and transverse to the flow direction, and streamwise conduction is less important, so a maximized value of B is optimal.",
+      "2": "For a reactor with co-flowing channels, however, the only means of heat transfer upstream is through axial conduction and radiation and subsequent solid-to-gas heat transfer, so a finite value of B is necessary for optimal performance."
+    },
+    "type": "concept",
+    "difficulty": 5,
+    "topic": "heat_transfer",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及对向流反应器中的传热机制、毕渥数分析、热循环效率优化等专业内容，需要燃烧工程、传热学、反应器设计等领域的专业知识。论文摘录也来自燃烧科学领域的权威期刊，证实了问题的专业性质。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量良好，无需修改。答案准确解释了横向传热与轴向传导的相对重要性，正确分析了毕渥数在不同反应器设计中的优化策略，并提供了具体的材料选择和几何设计实例，与原文引用和论文内容一致。"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_04b74b41",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Heat-recirculating-reactors--Fundamental-res_2019_Progress-in-Energy-and-Com",
+      "paper_title": "Heat-recirculating-reactors--Fundamental-res_2019_Progress-in-Energy-and-Com"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:45:10.720657",
+      "answer_length": 530
+    },
+    "merge_source": "question_reverse"
+  },
+  {
+    "question_text": "基于过滤燃烧中反应区传播的理论，详细推导并解释反应区传播速度u_w与最大温度升高ΔT之间的关系式ΔT = ΔT_ad/(1 - u_w/u_t)，并分析不同传播方向(同向与反向)对温度分布和反应器性能的影响。",
+    "standard_answer": "过滤燃烧中反应区传播速度u_w与最大温度升高ΔT之间的关系式ΔT = ΔT_ad/(1 - u_w/u_t)源于Zhdanok和Kennedy的理论分析，其中ΔT_ad是绝热燃烧的温度升高，u_t是热波传播速度。这个关系式的物理意义在于描述了反应区相对于多孔介质运动时能量积累的机制。当u_w和u_t符号相同且数值接近时，即反应区与热波几乎对齐传播时，分母(1 - u_w/u_t)趋近于零，导致ΔT显著大于ΔT_ad，实现超绝热燃烧。具体来说，当反应区与流动同向传播(u_w > 0)且u_w ≈ u_t时，热波不断为反应区提供额外的热能，使局部温度超过绝热火焰温度。相反，当反应区与流动反向传播(u_w < 0)时，反应区向冷介质传播，热量不断被冷固体吸收，导致ΔT < ΔT_ad，即亚绝热燃烧。当u_w = 0(静止前沿)时，ΔT = ΔT_ad，温度升高等于绝热计算值。从能量平衡角度，这个关系式反映了热波与燃烧波相对运动导致的能量积累或耗散。在实际应用中，通过控制入口流速和混合物组成可以调节u_w，从而控制反应区温度，这对于燃料重整等应用至关重要，因为不同的温度分布会影响产物组成和反应效率。",
+    "original_text": {
+      "1": "The maximum gas temperature increase ΔT is described by ΔT = ΔT_ad/(1 - u_w/u_t) where ΔT_ad is the temperature increase across an adiabatic combustion front, and u_w and u_t are the velocities of the combustion front and a thermal front, respectively",
+      "2": "According to Zhdanok's theory, superadiabatic temperatures only occur when the combustion front is propagating in the same direction as the flow (co-currently). The analysis also indicates that if u_w and u_t are of opposite signs, indicating that the combustion front and thermal front are moving away from each other, then ΔT is less than the adiabatic temperature rise; this is called subadiabatic combustion."
+    },
+    "type": "calculation",
+    "difficulty": 5,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及过滤燃烧理论、反应区传播速度与温度升高的关系式推导、热波传播机制、超绝热燃烧等专业概念，需要燃烧学、传热学、多孔介质反应器领域的专业知识才能准确回答。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量优秀，无需改进。答案准确解释了关系式的物理意义，正确分析了同向与反向传播对温度分布的影响，并提供了实际应用背景，与提供的原文引用和论文摘录内容一致。"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_2d7e0bf5",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Heat-recirculating-reactors--Fundamental-res_2019_Progress-in-Energy-and-Com",
+      "paper_title": "Heat-recirculating-reactors--Fundamental-res_2019_Progress-in-Energy-and-Com"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:45:10.993805",
+      "answer_length": 503
+    },
+    "merge_source": "question_reverse"
+  },
+  {
+    "question_text": "推导并解释达姆科勒数(Da)和淬火佩克莱特数(Pe_q)在热循环反应器设计中的物理意义和设计指导作用。请详细说明这些无量纲数如何影响嵌入式火焰的稳定性和反应器的操作范围。",
+    "standard_answer": "达姆科勒数(Da)和淬火佩克莱特数(Pe_q)是热循环反应器设计中两个关键的无量纲参数。达姆科勒数定义为Da = τ_f/τ_c = L/Uτ_c，其中τ_f是停留时间，τ_c是化学反应时间尺度，L是反应器长度，U是入口速度。物理上，Da表征了化学反应时间与流体停留时间的相对重要性。当Da ≫ 1时，表明化学反应足够快，能够在给定的停留时间内完成，这对于嵌入式火焰的稳定至关重要。具体来说，Da > 1是维持嵌入式火焰的必要条件，因为反应时间必须小于流体在反应器内的停留时间。淬火佩克莱特数Pe_q = S_L d_q/α，其中S_L是层流火焰速度，d_q是淬火直径，α是热扩散率。Pe_q表征了火焰传播与壁面淬火效应之间的竞争关系。当Pe_q < ~65时，火焰会被冷多孔介质淬灭，这为设计两段式燃烧器提供了理论基础：上游采用小孔径介质(Pe_q < 65)防止火焰回火，下游采用大孔径介质允许火焰稳定。在实际设计中，需要同时优化Da和Pe_q：足够的Da确保完全燃烧，适当的Pe_q确保火焰稳定而不被淬灭。例如，对于给定的燃料混合物，可以通过调整反应器长度L和孔径d来同时满足Da > 1和Pe_q > 65的条件，从而获得稳定的嵌入式火焰。",
+    "original_text": {
+      "1": "Da = τ_f/τ_c = L/Uτ_c where τ_f and τ_c are the residence and chemical times scales, respectively; L and U are the reactor length and inlet velocity, respectively",
+      "2": "Pe_q = S_L d_q/α where S_L, d_q and α are the laminar flame speed, quenching diameter, and thermal diffusivity, respectively. It has been shown that quenching occurs when a flame interacts with a cold porous medium if Pe_q < ~65"
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "fluid_mechanics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及热循环反应器设计、无量纲数（达姆科勒数、淬火佩克莱特数）、嵌入式火焰稳定性等，需要燃烧学、传热学、流体力学及反应器设计等专业领域知识。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "无需改进。答案准确解释了Da和Pe_q的物理意义、公式定义、临界值及其对嵌入式火焰稳定性和反应器操作范围的影响，与论文摘录内容一致，且无事实或原理错误。"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_bbc58014",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Heat-recirculating-reactors--Fundamental-res_2019_Progress-in-Energy-and-Com",
+      "paper_title": "Heat-recirculating-reactors--Fundamental-res_2019_Progress-in-Energy-and-Com"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:45:11.376016",
+      "answer_length": 524
+    },
+    "merge_source": "question_reverse"
+  },
+  {
+    "question_text": "详细分析热循环反应器在燃料重整应用中的化学动力学机理，特别是超富燃条件下合成气生产的反应路径。请解释初级反应区和下游区域在氢气生产中的相对贡献，以及达姆科勒数如何影响最终产物组成。",
+    "standard_answer": "在热循环反应器中，超富燃条件下的燃料重整涉及复杂的化学动力学网络。初级反应区主要发生部分氧化反应，对于甲烷重整，初始反应包括CH₄ + O₂ → CO + 2H₂，但该反应在超富燃条件下会与CH₄ + 1.5O₂ → CO + 2H₂O等竞争反应共存，并伴随中间产物如CH₂O、OH自由基的形成。研究表明，\"Hydrogen production occurs in both the primary reaction zone and downstream in which the relatively slow steam-reforming reaction (C_nH_m + nH₂O → (n + m/2)H₂ + nCO) and water gas shift reaction (CO + H₂O ⇌ H₂ + CO₂) take place\"（原文引用1）。下游区域则主导蒸汽重整反应（CH₄ + H₂O → CO + 3H₂）和水气变换反应（CO + H₂O ⇌ CO₂ + H₂），这些反应速率较慢但对氢气产率贡献显著。在φ=2.4的富燃条件下，对向流反应器实验数据显示氢气产率达53%，一氧化碳产率达82%，而平衡计算在高当量比时高估氢气浓度，凸显有限速率动力学的重要性。达姆科勒数（Da）定义为化学反应时间尺度与流动时间尺度之比，即Da = τ_c/τ_f，其中τ_c为反应特征时间，τ_f为流动停留时间。Da值影响下游区域重整反应的完成程度：Da必须足够大以确保充分停留时间完成慢速重整反应。例如，\"Above ~1300 K, the hydrogen mole fraction after long times (>10,000 s) was ~0.25 and insensitive to temperature, but reaching ~0.25 required ~1000 s when the temperature was 1400 K and only ~0.1 seconds when the temperature was 1900 K\"（原文引用2），这表明温度升高通过降低τ_c提高Da，从而加速氢气生成。优化反应器设计（如增加长度、降低流速或提高温度）可增大Da，提升氢气产率。水添加通过促进蒸汽重整路径，在某些情况下可实现98%的甲烷转化效率，进一步优化产物组成。",
+    "original_text": {
+      "1": "Hydrogen production occurs in both the primary reaction zone and downstream in which the relatively slow steam-reforming reaction (C_nH_m + nH₂O → (n + m/2)H₂ + nCO) and water gas shift reaction (CO + H₂O ⇌ H₂ + CO₂) take place.",
+      "2": "Above ~1300 K, the hydrogen mole fraction after long times (>10,000 s) was ~0.25 and insensitive to temperature, but reaching ~0.25 required ~1000 s when the temperature was 1400 K and only ~0.1 seconds when the temperature was 1900 K."
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及热循环反应器、燃料重整、化学动力学机理、超富燃条件、合成气生产、反应路径分析、达姆科勒数等专业概念，需要燃烧学、化学反应工程、传热传质、流体力学等领域的专业知识。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量较高，无需修改。内容专业准确，涵盖了问题要求的化学动力学机理、反应区域贡献分析和达姆科勒数影响，并提供了实验数据和引用支持。"
+    },
+    "retry_count": 1,
+    "question_id": "deepseek_q_0bce401f",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Heat-recirculating-reactors--Fundamental-res_2019_Progress-in-Energy-and-Com",
+      "paper_title": "Heat-recirculating-reactors--Fundamental-res_2019_Progress-in-Energy-and-Com"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:45:56.971468",
+      "answer_length": 1018
+    },
+    "merge_source": "question_reverse"
+  }
+]

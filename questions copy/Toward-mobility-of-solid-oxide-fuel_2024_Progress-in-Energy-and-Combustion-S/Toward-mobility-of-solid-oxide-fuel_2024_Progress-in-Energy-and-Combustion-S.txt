@@ -1,0 +1,4183 @@
+Contents lists available at ScienceDirect
+
+Progress in Energy and Combustion Science
+
+journal homepage: www.elsevier.com/locate/pecs
+
+Toward mobility of solid oxide fuel cells
+
+Yuqing Wang a, 1, Jixin Shi b, 1, Xin Gu b, Olaf Deutschmann c, **, Yixiang Shi b, *, Ningsheng Cai b
+a School of Mechatronical Engineering, Beijing Institute of Technology, Beijing, 100081, China
+b Key Laboratory for Thermal Science and Power Engineering of Ministry of Education, Department of Energy and Power Engineering, Tsinghua University, Beijing,
+100084, China
+c Institute for Chemical Technology and Polymer Chemistry, Karlsruhe Institute of Technology, 76133, Karlsruhe, Germany
+
+A R T I C L E  I N F O
+
+A B S T R A C T
+
+Handling editor: Hai Wang
+
+Keywords:
+Solid oxide fuel cell
+Mobile and portable application
+Fuel flexibility
+Thermal shock resistance
+Stack compactness
+
+1. Introduction
+
+Solid oxide fuel cells (SOFCs) have witnessed significant advancements in recent years, emerging as potential
+alternatives to low-temperature fuel cells for mobile applications owing to their wide fuel flexibility and high
+efficiency. This paper offers a comprehensive assessment of the progress achieved thus far and the challenges
+faced in transitioning from stationary to mobility sectors. Three pivotal aspects are highlighted across different
+levels: enhancing fuel tolerance and flexibility at the anode level, achieving rapid start-up at the cell level, and
+realizing compact integration at the stack level. This review can lay a theoretical foundation for the development
+of  SOFC  systems  tailored  to  unique  requirements,  such  as  high  power  density  and  rapid  start-up,  crucial  for
+mobile applications. This review will facilitate commercial breakthroughs and advances in the mobility of SOFCs,
+which holds substantial strategic importance.
+
+With  the  growing  urgency  to  address  global  warming  and  air
+pollution concerns, extensive research efforts have been devoted to the
+development of clean energy technologies. Fuel cells are emerging as
+promising technologies for future mobile power supply, serving as al-
+ternatives to conventional combustion engines, primarily owing to their
+high conversion efficiencies and reduced emissions. Among the various
+fuel cell types, proton-exchange membrane fuel cells (PEMFCs) stand as
+pioneers and dominators in this field, especially in the realm of long-
+distance transportation.
+
+◦
+
+Historically,  solid  oxide  fuel  cells  (SOFCs),  which  operate  at  rela-
+tively  high  temperatures  ranging  from 600  to  1000
+C,  were  deemed
+unsuitable for mobile applications. The solid oxide ceramic electrolyte
+presented challenges in terms of rapid start-up and shutdown. However,
+in  the  context  of  the  mobility  sector,  the  high  operating  temperature
+offers  distinct  advantages  over  low-temperature  PEMFCs,  particularly
+concerning  fuel  flexibility  and  efficiency.  SOFCs  exhibit  versatility  in
+handling a variety of fuels, including liquefied natural gas (LNG), liq-
+uefied  petroleum  gas  (LPG),  methanol,  and  ethanol.  Moreover,  their
+tolerance  toward  fuel  impurities  addresses  problems  associated  with
+
+hydrogen  cleaning,  transportation,  and  storage.  The  capability  to
+employ liquid fuels holds significant potential for reducing the required
+fuel storage volume. For example, when using LPG as a fuel source, the
+fuel tank volume can be approximately 1/5 of that needed for a high-
+pressure  hydrogen  tank.  This  feature  holds  particular  importance  in
+the  mobility  sector,  where  space  constraints  are  severe,  especially  in
+long-distance  transportation  applications.  Furthermore,  SOFCs  oper-
+ating with hydrocarbon fuels have demonstrated 50 % system efficiency,
+surpassing the performance of state-of-the-art PEMFCs, which typically
+achieve approximately 40 % efficiency [1].
+
+In recent years, the development of SOFCs has prominently centered
+around  exploration  of  alternative  materials  [2]  and  analysis  of  geo-
+metric  configurations  [3,4]  and  stacking  methodologies  [5].  This
+heightened focus has generated increased interest in the development of
+mobile SOFC systems in competition with PEMFCs [6,7]. SOFCs have
+been  used  in  portable  power,  small  auxiliary  power  units  (APUs),
+portable  electronics,  and  transportation  fields  [8–11].  However,  the
+mobile application of SOFC systems has not progressed at the same rate
+as their stationary counterparts, which have already been commercially
+used in both large-scale 100 kW-class units [12,13] and small-scale 1
+kW-class  SOFC-based  cogeneration  systems  [14].  When  developing  a
+
+* Corresponding author.
+** Corresponding author.
+
+E-mail addresses: deutschmann@kit.edu (O. Deutschmann), shyx@tsinghua.edu.cn (Y. Shi).
+
+1  These authors contributed equally to this study and share first authorship.
+
+https://doi.org/10.1016/j.pecs.2023.101141
+Received 16 January 2023; Received in revised form 29 December 2023; Accepted 30 December 2023
+
+ProgressinEnergyandCombustionScience102(2024)101141Availableonline14February20240360-1285/©2024ElsevierLtd.Allrightsreserved.
+
+Y. Wang et al.
+
+mobile SOFC system, key considerations include ease of use, robustness,
+and power density, while for stationary SOFC systems, total efficiency
+takes  precedence  [15].  This  review  primarily  concentrates  on  the
+progress  made  to  address  the  specific  requirements  of  the  mobility
+sector, aiming to overcome the limitations of and leverage the advan-
+tages of SOFCs.
+
+Fuel flexibility. The elevated operating temperature and presence of
+Ni-based anodes endow SOFCs with remarkable fuel flexibility, allowing
+them to utilize not only carbon-free fuels but also carbon monoxide (CO)
+and  low  levels  of  hydrocarbons.  Enhancing  the  fuel  flexibility  and
+tolerance of SOFCs to accommodate fuels compatible with existing in-
+frastructures  can  expand  their  application  scope  and  promote  system
+compactness.  Additionally,  as  previously  discussed,  the  use  of  easily
+liquefiable fuels with high energy densities can significantly reduce the
+space  needed  for  fuel  storage—a  critical  consideration  for  prolonged
+operation.
+
+Rapid  start-up.  In  contrast  to  stationary  applications  that  demand
+continuous operation, mobile applications are characterized by frequent
+start–stop cycles. Repeated transient operation can result in substantial
+temperature gradients and significant thermal stresses within the cells
+and stacks, leading to performance degradation and reduced lifespan.
+The inherent fragility of ceramics with limited thermal shock resistance
+and  the  high  operating  temperatures  of  traditional  SOFCs  necessitate
+relatively extended start-up times (e.g., on the scale of hours). Therefore,
+when considering mobile applications, it becomes imperative to explore
+SOFC materials and structures that are resistant to mechanical strain as
+well  as  have  lower  operating  temperatures  and  reduced  temperature
+variations.
+
+High power density. In the mobility sector, achieving high volumetric/
+gravimetric stack/system power densities is of paramount importance to
+minimize space and weight requirements. The power density of a stack is
+significantly  influenced  by  the  choice  of  materials  and  its  geometric
+configuration.  Typically,  current  commercial  stacks  exhibit  power
+(cid:0) 1  [1]. However, as evaluated by
+densities ranging from 0.1 to 1 kW L
+AVL List GmbH, it is imperative to elevate this value to a range of 1–1.2
+(cid:0) 1  to effectively compete with existing technologies, particularly
+kW L
+for range extenders [16]. Enhancing the volumetric power density of the
+stack requires not only the compact integration of the stack itself but
+also the implementation of efficient heat management strategies due to
+the elevated rate of heat release.
+
+In addition to the distinctive requirements mentioned above, high
+electrical  efficiency  and  prolonged  durability  are  fundamental  pre-
+requisites  for  both  stationary  and  mobile  SOFC  systems.  Currently,
+SOFCs are predominantly associated with stationary technologies, with
+mobile applications  are still less  known. Thus, this paper reviews the
+progress made in various aspects, ranging from anode materials to cell
+units and stacks, to achieve the unique objectives demanded by mobility
+applications.
+
+The structure of this review is outlined in Fig. 1. Section 2 delves into
+
+the  effective  utilization  of  diverse  fuels  characterized  by  high  energy
+densities. Particular emphasis is placed on examining the reaction ki-
+netics of conversion high hydrocarbons within the anode compartment
+as  well  as  the  advancements  achieved  at  the  anode  material  level  to
+enable  the  efficient  internal  utilization  of  hydrocarbon  fuels  and
+nitrogen-containing  compounds.  Section  3  focuses  on  cell-level  de-
+velopments of SOFCs operating at low temperatures and/or possessing
+exceptional  thermal  shock  resistance  to  facilitate  rapid  start-up.
+Comprehensive comparisons of various cell geometries and configura-
+tions  are  conducted  in  terms  of  their  thermal  cycling  capabilities.
+Finally,  in  Section  4,  stack  integration  concerns,  such  as  current
+collection  and thermal  management, are  discussed in  light of  the im-
+peratives for stack compactness and achieving high volumetric power
+densities.
+
+2. Fuel tolerance and fuel flexibility
+
+Hydrogen  is  the  optimal  fuel  for  SOFCs  from  a  cell  perspective.
+However, H2 production entails high costs and poses challenges in terms
+of storage and transportation. Consequently, a range of alternative fuel
+options have been explored, as summarized in Table 1. Hydrocarbons
+
+Table 1
+Fuels considered for mobile SOFC systems.
+
+Fuel
+
+H2
+
+LNGa
+
+Propane
+
+Storage
+conditions
+
+◦
+
+◦
+
+1 atm at
+(cid:0) 252.77
+C or
+15–70 MPa at
+20
+C
+1 atm at
+◦
+(cid:0) 161.5
+◦
+14 atm at 20
+
+C
+
+C
+
+Butane
+
+Gasoline/
+Diesela
+
+Methanol
+
+2.6 atm at 20
+◦
+C
+Normal
+Temperature
+and Pressure
+(NTP)
+NTP
+
+Ethanol
+
+NTP
+
+Ammonia
+
+1 atm at (cid:0) 33
+◦
+C or 1 MPa at
+20
+
+C
+
+◦
+
+Lower
+Heating
+Value
+
+120.0 MJ
+kg-1
+
+48.6 MJ
+kg-1
+46.4 MJ
+kg-1
+
+45.3 MJ
+kg-1
+42~43.5
+MJ kg-1
+
+19.9 MJ
+kg-1
+26.8 MJ
+kg-1
+18.9 MJ
+kg-1
+
+Volumetric
+energy
+density
+
+10 MJ L-1 at
+◦
+(cid:0) 252.77
+C or
+4.8 MJ L-1 at
+70 MPa
+20.8 MJ L-1
+
+23.1 MJ L-1
+
+27.2 MJ L-1
+
+32~36 MJ L-1
+
+Main Application
+
+Transportation
+
+Transportation
+
+Portable and
+remote;
+Unmanned Aerial
+Vehicle (UAV)
+Portable and
+remote; UAV
+Transportation,
+UAV power
+
+15.8 MJ L-1
+
+Transportation
+
+21.2 MJ L-1
+
+11.4 MJ L-1 at
+1 MPa
+
+Transportation,
+portable
+Portable
+
+a Fuels consist of a mixture that may vary between seasons and markets. The
+
+given values are a typical value of the specified fuel.
+
+Fig. 1. Illustrated main scope of this review.
+
+ProgressinEnergyandCombustionScience102(2024)1011412
+
+Y. Wang et al.
+
+have undergone extensive investigation as potential SOFC fuels. Natural
+gas, primarily composed of methane (CH4), is commonly stored as LNG
+or compressed natural gas (CNG). CH4 has already found widespread use
+as a fuel for commercial internal combustion engines (ICEs) in vehicles;
+it is also being considered as a fuel source for SOFC systems in trans-
+portation applications. Propane and butane exhibit distinct advantages
+as fuels for portable power owing to their unique characteristics. Pro-
+pane remains in a gaseous state at standard temperature and pressure
+but  can  be  easily  liquefied  at  pressures  of  14  atm,  making  it  more
+manageable for storage and transportation compared to methane [17,
+18]. Conversely, liquid propane and butane exhibit considerably higher
+energy densities than methanol and ethanol. Gasoline and diesel, sup-
+ported by mature production and distribution infrastructures, continue
+to serve as primary fuels for transportation applications [19].
+
+In addition to carbon-based fuels, ammonia (NH3) has emerged as an
+alternative hydrogen carrier in portable applications. It can be readily
+liquefied at room temperature under modest pressures (~20 bar) and
+has  a  narrow  combustion  range  [20].  In  addition,  the  low  cost,  high
+energy  density,  and  well-established  transportation  network  position
+NH3  as a promising clean or low-carbon fuel with a broad application
+scope [21].
+
+In the case of nitrogen-bearing compounds such as ammonia, direct
+utilization at the anode is feasible, owing to the high catalytic activity of
+nickel (Ni) in facilitating ammonia decomposition. Conversely, for hy-
+drocarbons,  a  reforming  process  is  typically  utilized  to  improve  the
+performance and durability of fuel cells. The reforming process for hy-
+drocarbons involves breaking down C–C and C–H bonds, yielding H2 and
+smaller  carbonaceous  molecules.  This  process  can  be  classified  into
+several types depending on the type of oxidants used: steam reforming,
+partial oxidation, dry reforming, and autothermal reforming [22].
+
+Steam reforming : CxHy + xH2O → xCO +
+
+2x + y
+2
+
+H2 ΔH > 0
+
+Partial oxidation : CxHy +
+
+x
+O2 → xCO +
+2
+
+y
+H2 ΔH < 0
+2
+
+Dry reforming : CxHy + xCO2 → 2xCO +
+
+y
+H2 ΔH > 0
+2
+
+(1)
+
+(2)
+
+(3)
+
+Autothermal reforming : CxHy + aO2 + bH2O → cCO + dH2 + eH2O ΔH = 0
+
+(4)
+
+Among  the  various  reforming  processes,  partial  oxidation  (POx)
+stands  out  as  the  most  favorable  choice  for  portable  systems.  This
+preference is attributed to its rapid start-up and responsive character-
+istics, as well as its elimination of the need for external sources of steam
+and  heat  [23].  In  addition,  autothermal  reforming  (ATR)  has  been
+considered as an option for fuel reforming in SOFC-APU systems.
+
+Fig. 2 illustrates the typical utilization mode of hydrocarbon fuels in
+mobile SOFC systems. Both external reforming and partial pre-reforming
+processes require an external reformer to convert hydrocarbons to more
+readily useable fuels for SOFCs, such as H2, CO, and small C–C chain
+
+hydrocarbons. While external reformers have been well-established for
+large-scale stationary systems, the trend for small-scale portable appli-
+cations is to downsize the reformer to achieve compactness, rapid start-
+up, and transient response [24,25]. One effective approach is to increase
+the surface-to-volume ratio of reformers, enabling them to handle high
+volumes of fluid flow within a small reactor [26,27]. With the use of
+monolithic honeycombs and foams as catalyst carriers and even micro-
+reactors with submillimeter-scale dimensions, surface-to-volume ratios
+ranging from 10,000 to 50,000 m
+
+(cid:0) 1 can be achieved [28].
+
+Despite  the  advantages  of  external  reformers  in  addressing  issues
+such  as  carbon  deposition  and  enhancing  SOFC  efficiency,  their
+increased  system  complexity  makes  them  less  suitable  for  mobile  ap-
+plications. Thus, there is a greater preference for the internal utilization
+of  fuels  with  high  energy densities.  This  can be  achieved through  in-
+ternal reforming or direct utilization (Fig. 2 (c)). In this scenario, the
+anode must perform three crucial functions: catalyze the fuel reforming
+process, catalyze the electrochemical oxidation reactions of H2 and CO,
+and provide an electron pathway [22]. Methanol and ethanol, owing to
+the presence of O, exhibit easy direct utilization characteristics. Conse-
+quently, there have been a few studies demonstrating the direct utili-
+zation of alcohols for portable applications [29–34].
+
+The utilization of methane in SOFCs can be found in previous reviews
+[35,36].  In  this  comprehensive  review,  particular  emphasis  has  been
+placed on hydrocarbons beyond CH4, as they are more preferable and
+practical  for  mobile  applications.  However,  the  internal  utilization  of
+these higher hydrocarbons at the anode can lead to significant carbon
+deposition issues. A profound and comprehensive understanding of the
+kinetics  of  reactions  on  traditional  Ni-based  anodes  forms  a  crucial
+foundation for the development of novel anode materials, ensuring the
+efficient utilization of higher hydrocarbons. Section 2.1 delves into the
+investigation of reaction kinetics of the conversion of hydrocarbons on
+Ni-based anodes, while Section 2.2 explores strategies for enhancing fuel
+tolerance through anode development.
+
+2.1. Reaction kinetics of hydrocarbon conversion on Ni-based anodes
+
+2.1.1. Mechanisms of chemical and electrochemical reactions
+
+When  hydrocarbons  enter  the  SOFC  anode  compartment  without
+being fully converted to syngas, several possible reaction pathways may
+occur, as shown in Fig. 3. The reaction kinetics are quite complicated in
+SOFC  anodes  and  include  the  interaction  of  heterogeneous  electro-
+chemical/chemical reactions on the metal (Ni/reforming catalyst) sur-
+face and the potential homogeneous reactions in anode flow channels
+and pores [37–39]. Although homogeneous reactions can be neglected
+for  SOFCs  fueled  with  methane  at  normal  operating  temperatures
+(approximately 800
+C), the  pyrolysis and oxidation of  higher  hydro-
+carbons should be taken into account [40]. Small molecules and radicals
+are produced from homogeneous reactions of fuels. The homogeneous
+reactions in the gas phase and the heterogeneous reactions at the cata-
+lytic  surface  are  coupled  through  the  adsorption/desorption  of
+
+◦
+
+Fig. 2. Hydrocarbon utilization modes in SOFC systems: (a) external reforming, (b) partial pre-reforming, and (c) internal reforming or direct utilization.
+
+ProgressinEnergyandCombustionScience102(2024)1011413
+
+Y. Wang et al.
+
+Fig. 3. Possible reaction pathways of hydrocarbon conversion in SOFC anodes.
+
+intermediates and radicals [41]. Radicals may adsorb on the catalyti-
+cally  active  sites  and  further  participate  in  heterogeneous  reactions.
+Then, the intermediates and products from the heterogeneous reactions
+desorb  from the  catalytic  surface  and  participate  in  the  gas-phase  re-
+actions. In addition, the intermediates from homogenous reactions and
+heterogeneous  thermocatalytic  reactions  can  possibly  also  transfer  to
+the triple-phase boundary (TPB) through surface diffusion and finally
+react  with  the  oxygen  ions  transported  from  the  electrolyte  through
+electrochemical reactions.
+
+H2 + O2(cid:0) → H2O + 2e(cid:0)
+
+CO + O2(cid:0) → CO2 + 2e(cid:0)
+
+(5)
+
+(6)
+
+Steam  and  CO2,  which  are  major  products  of  electrochemical  re-
+actions, can further drive steam reforming, dry reforming and water gas
+shift (WGS) reactions on the anode Ni surface or even undergo further
+reactions in the gas phase.
+
+The electrochemically  active  species produced from the  reforming
+process then transfer from the catalyst surface to the TPB through sur-
+face diffusion. Although some simulation studies have considered sur-
+face diffusion processes [42,43], the role of surface diffusion is still not
+entirely known, especially when various electrochemically active spe-
+cies exist [44]. When the electrochemically active species reach the TPB,
+electrochemical  oxidation  then  occurs.  In  early  studies,  the  electro-
+chemical  oxidation  kinetics  were  described  using  the  Bulter-Volmer
+equation,  assuming  that  H2  is  the  only  electrochemically  active  spe-
+cies.  Although  H2  electrochemical  oxidation  kinetics  are  proven  to
+proceed much faster than that of CO, the CO electrochemical conversion
+may become nonnegligible and act as a parallel charge-transfer pathway
+to H2 oxidation under some conditions. A detailed discussion of the H2
+and CO electrochemical oxidation kinetics lies outside the scope of this
+article but can be found in previous reviews [45,46].
+
+The utilization of hydrocarbon fuels leads to carbon deposition and
+further  leads  to  severe  degradation  of  performance  of  the  SOFC  Ni
+anode. Thus, carbon deposition remains a large obstacle for the long-
+term  operation  and  commercial  application  of  SOFCs  with  hydrocar-
+bon fuels. Carbon can be produced either from heterogeneous reactions
+over  the  catalyst  or  from  gas-phase  homogeneous  reactions.  For  the
+heterogeneous  route,  the  reactions  leading  to  carbon  formation  are
+mainly the decomposition of hydrocarbons and the Boudouard reaction.
+
+CxHy → xC +
+
+y
+H2
+2
+
+(7)
+
+2CO → C + CO2
+
+(8)
+
+The  carbon  formation process  on  the  catalyst  surface  involves  the
+deposition of a carbon source, the dissolution of carbon into the metal
+bulk and the precipitation of carbon at the catalyst surface [47].
+
+In addition to the heterogeneous route, carbon can also be formed
+through gas-phase reactions, in which case carbon is known as soot. The
+formation of soot is initialized by C–C bond scission at high tempera-
+tures and involves the formation of precursors (such as C2H4 and C2H2),
+the recombination of precursors to form polycyclic aromatic hydrocar-
+bons (PAHs), and the growth and agglomeration of PAHs to form soot
+particles [48]. Soot will then further condense and precipitate on the
+catalytic surface, which leads to carbon deposition. The structures of the
+deposited carbon from the two different routes are found to be different.
+The carbon from heterogeneous reactions occurs mainly in the form of
+graphitic  fibers,  while  the  carbon  from  homogeneous  reactions  is
+amorphous. The contributions of both routes to carbon deposition are
+typically dependent on the fuel type, catalyst type and operation con-
+ditions. Since the C–H bonds in CH4  are much stronger than the C–C
+bonds in heavier hydrocarbons, the carbon deposition is mainly from the
+heterogeneous  route  for  methane  at  the  typical  SOFC  operation  tem-
+peratures  (<1000  K).  However,  for  higher  hydrocarbons  such  as
+iso-octane, the gas-phase pyrolysis route of carbon formation cannot be
+ignored.  A  simulation  study  by  Sheng  et  al.  suggested  that  H2O  can
+remove the carbon filaments formed by surface reactions but does not
+take part in the gas-phase reactions, thus showing no obvious effect on
+preventing carbon formation from gas-phase reactions [40]. In addition,
+applying a polarization current can help remove the surface coke due to
+the increased oxygen flux from the cathode to the anode side.
+
+2.1.2.
+
+In situ optical characterization for anode kinetic studies
+
+As  outlined  in  Section  2.1.1,  the  chemical  and  electrochemical
+mechanisms  occurring  at  the  anode  are  quite  complicated  when  hy-
+drocarbons serve as the fuel source. Given the high operating temper-
+atures  and  sealing  requirements  of  SOFCs,  capturing  changes  in
+components  and  probing  chemistry  during  operation  presents  consid-
+erable challenges. Thus, anode kinetics are primarily inferred through
+the  overall  electrochemical  performance  and  analysis  of  outlet  gas
+compositions, often with the support of kinetic models. More recently,
+several in situ and operando optical techniques have been developed to
+facilitate  direct  and  noninvasive  measurements  of  temperature  distri-
+butions, intermediate gas species, and surface species under the elevated
+operating  temperatures  of  SOFCs.  These  advanced  techniques  offer
+
+ProgressinEnergyandCombustionScience102(2024)1011414
+
+Y. Wang et al.
+
+direct evidence for the study of anode mechanisms.
+
+◦
+
+invaluable
+
+technique  proves
+
+Near-infrared  thermal  imaging  (NIRTI),  as  depicted  in  Fig.  4  (a),
+offers  the  ability  to  measure  thermal  variations  on  the  anode  surface
+with an impressive spatial resolution of approximately 0.1 mm, a tem-
+perature resolution of approximately 0.1
+C and 200 ms temporal res-
+olution  [49].  This  advanced
+in
+distinguishing various chemical processes with distinct thermal effects.
+For instance, when transitioning the anode gas from H2/Ar to C3H8/Ar,
+the temperature of the Ni/YSZ (yttria stabilized zirconia) anode expe-
+rienced  an  immediate  drop,  signifying  rapid  carbon  deposition  [49].
+NIRTI has enabled a comparative analysis of carbon removal processes
+using  oxygen,  steam,  and  electrochemical  oxidation,  with  spatial  dis-
+tributions  revealing  varying  rates  of  NiO  formation.  The  temperature
+distributions and variations recorded through NIRTI provide valuable
+insights  into  the  primary  reactions  with  differing  thermal  effects.
+However,  to  comprehensively  understand  the  possible  reaction  path-
+ways  and  kinetics,  additional  information  on  chemical  species  is
+required.
+
+In situ Fourier-transform infrared emission (FTIR) spectroscopy and
+Raman  scattering  both  rely  on  vibrational  spectroscopy  to  identify
+typical  species  associated  with  high-temperature  electrochemical  pro-
+cesses. In the case of in situ FTIR spectroscopy (Fig. 4 (b)), it exhibits
+sensitivity to gas-phase oxidation products such as CO2 and CO, as well
+as intermediate adsorbed species such as CO2(ads)  [50]. In contrast, in
+situ  surface  Raman  spectroscopy  is  highly  sensitive  to  carbonaceous
+species  and  has  been  extensively  employed  to  differentiate  between
+various  forms  of  carbon  bonding.  The  detection  of  the  D-band  corre-
+sponds  to  amorphous  carbon,  while  that  of  the  G-band  represents
+graphite carbon, as illustrated in Fig. 4 (c) [51]. The high time resolution
+of approximately 1s offered by FTIR and Raman spectroscopy enables
+the rapid detection of species dynamics, facilitating in-depth investiga-
+tion of anode reaction mechanisms.
+
+Recently, in situ powder X-ray diffraction (XRD) has been employed
+to directly monitor changes in the crystal structure of Ni when exposed
+to CH4  at temperatures of 650 and 800
+C. These observed structural
+alterations  have  provided  valuable  insights  into  the  deactivation
+mechanisms  of  Ni-YSZ  cermet  at  different  temperatures.  It  has  been
+◦
+speculated that at 650
+C, deactivation results from the growth of carbon
+fibers, while at 800
+
+C, it occurs due to carbon accumulation [52].
+
+◦
+
+◦
+
+Through the utilization of in situ optical techniques, either individ-
+ually or in combination, a deeper understanding of chemical and ma-
+terial  processes  can  be  obtained,  particularly  regarding  the  coking
+mechanism, a significant degradation factor when heavy hydrocarbons
+are used as fuel. In comparison to ex situ approaches, in situ techniques
+enable the detection of deposited and removed  carbon compounds in
+
+real  time  during  operation  and  have  been  extensively  used  in  recent
+years  [53].  Generally,  it  has  been  observed  that  carbon  deposition  is
+more pronounced when using heavier hydrocarbons than that with the
+lighter ones [54]. The disparities in the quantity and type of carbon, as
+stated in Section 2.1.1, have been corroborated by Pomfret et al. through
+in situ Raman studies [51], as illustrated in Fig. 4 (c). Leveraging in situ
+Raman spectroscopy, the carbon removal process was investigated on a
+Ni/YSZ surface fueled with CH4 at various overpotentials [55–57]. The
+suppression of the “G” peak at an overpotential of 0.6 V suggested that
+graphite formation was inhibited by the polarization current.
+
+Although many studies have concluded that carbon formation pref-
+erentially occurs on the Ni surface than YSZ [58], determining the exact
+initiation  point  of  the  coking  reaction  in  SOFC  anodes  has  proven
+challenging  owing  to  the  complex  porous  structure  of  the  anode.  To
+overcome  this  obstacle,  a  patterned  Ni  anode  with  a  well-defined
+boundary  was  designed  and  employed  in  place  of  a  porous  electrode
+[59], as illustrated in Fig. 5. This patterned anode facilitated the expo-
+sure of the reaction site and enabled the detection of the precise location
+of carbon deposition through in situ Raman spectroscopy. By mapping
+the carbon signals on the patterned anode, it was established that the
+Ni-YSZ interface represents the most active site for carbon deposition
+and removal when fueled with C3H8 [60]. Fig. 5 further illustrates that
+the  accumulated  hydrocarbons  at  the  interface  react  with  oxygen
+transferred  from  the  cathode  side,  resulting  in  the  oxidation  of  these
+hydrocarbons to CO and H2O upon the application of current. This ul-
+timately leads to a reduction in deposited carbon.
+
+Given the distinct advantages of different methods, a combination of
+the  aforementioned  techniques  can  yield  a  more  comprehensive  un-
+derstanding of the mechanisms governing anode behavior when fueled
+with hydrocarbons [57,61]. By combining NIRTI and Raman and FTIR
+spectroscopy, researchers have studied the intertwined effects of surface
+reforming,  carbon  deposition,  and  electrochemical  oxidation  on  cell
+performance in greater detail [62,63]. Furthermore, the capabilities of
+these techniques can be further enhanced, and novel methods can be
+developed. For example, surface enhanced Raman spectroscopy (SERS)
+has demonstrated the ability to enhance the sensitivity of surface species
+detection, allowing for the identification of carbon deposition at early
+stages [64]. The use of Ag nanoparticles coated with a SiO2 shell as SERS
+◦
+enhancers has enabled robust operation at temperatures of 400–450
+C
+[65].  However,  further  exploration  of  nanoparticles  with  optimized
+geometries or alternative coating materials is necessary to ensure the
+stability  of  SERS  at  higher  temperatures.  Moreover,  more  recent  ad-
+vancements  have  allowed  the  utilization  of  ambient  pressure  X-ray
+photoelectron  spectroscopy  (APXPS)  in  SOFC  studies  to  elucidate  the
+chemical  states  of  materials  and  species  during  electrochemical
+
+Fig.  4. In situ  optical techniques  and typical  characterization  results of  (a) NIRTI  [49] (b)  in  situ FTIR  [50]  (c)  in  situ  Raman  [51],  and (d)  in  situ XRD  [52].
+Reprinted from [49,52] with permission of Elsevier, and from [50,51] with permission of American Chemical Society.
+
+ProgressinEnergyandCombustionScience102(2024)1011415
+
+Y. Wang et al.
+
+Fig. 5. Detection of (a) carbon deposition and (b) removal processes by patterned anodes [60]. Reprinted from [60] with permission of Royal Society of Chemistry.
+
+reactions  [66].  However,  efforts  are  required  to  expand  the  working
+pressure range of APXPS (typically less than 100 mbar for SOFC studies
+[67]) to enable its application under real operational conditions.
+
+2.2. Fuel tolerance enhancement by anode development
+
+As  discussed  in  Section  2.1,  Ni-based  anodes  can  facilitate  fast
+reforming  kinetics;  however,  they  cause  the  rapid  breakdown  of  C–C
+bonds, resulting in severe carbon deposition [1]. Consequently, several
+strategies  have  been  proposed  to  modify  traditional  Ni  anodes  and
+enhance  their  tolerance  to  heavier  hydrocarbons.  One  commonly
+employed approach is the addition of an extra catalytic layer to promote
+hydrocarbon reforming to H2  and CO. Another method involves modi-
+fying the surface of the traditional Ni-based anode by infiltrating it with
+different  materials.  Additionally,  novel  materials,  particularly  perov-
+skite  materials,  have  been  developed  to  enhance  anode  carbon
+
+resistance.
+
+◦
+
+(cid:0) 2 at 450
+
+C and from 298 to 395 mW cm
+
+Addition of an extra catalytic layer.Fig. 6 (a)). Ru–CeO2 was among the
+first  materials  utilized  as  an  anode  reforming  layer  owing  to  its  high
+activity in the partial oxidation of methane [68], propane [69,70], and
+iso-octane [71]. The integration of the Ru–CeO2 layer led to a significant
+improvement in power density, which increased from <10 to 160 mW
+cm
+C when fueled
+with  propane  [72].  Furthermore,  the  addition  of  the  Ru–CeO2  layer
+enabled 60 h of stable operation on iso-octane/air mixtures at 590
+C,
+whereas cell performance without the catalyst layer decreased by 37 %
+over 23 h [71]. More recently, a NiMo-ceria-zirconia catalyst layer was
+applied atop the Ni-YSZ anode, demonstrating high catalytic activity in
+reforming an iso-octane/air mixture at a fuel conversion rate of >80 %
+and  high  yields  of  H2  (~70  %)  and  CO  (~80  %)  [73,74].  The  cell
+degradation rate in the real gasoline/air operation mode decreased from
+(cid:0) 1  after  the  incorporation  of  a  NiMo-CZ  catalyst  layer
+100  to  6  mV  h
+
+(cid:0) 2 at 500
+
+◦
+
+◦
+
+Fig. 6. Schematic illustration of several strategies for enhancing fuel tolerance to heavier hydrocarbons: (a) addition of an extra catalytic layer, (b) alloying with
+noble metals, (c) adding BaO to the Ni-based anodes and (d) in situ exsolution of nanocatalysts [1]. Reprinted from [1] with permission of Springer Nature.
+
+ProgressinEnergyandCombustionScience102(2024)1011416
+
+Y. Wang et al.
+
+[75].  By  packing  the  catalyst  inside  a  tubular  channel,  instead  of
+creating a reforming layer on top of a button cell, both catalyst loading
+and  reforming  performance  were  improved,  resulting  in  more  stable
+operation for up to 15 h [75].
+
+Adding other materials into Ni-based anode. Numerous strategies have
+been proposed to modify conventional Ni-based anodes [76], including
+impregnating  noble  metals  [77],  introducing  ceria  and  other  oxygen
+
+storage  materials  [78],  and  increasing  alkalinity  [79],  among  others.
+The surface modification of Ni-based anodes with noble metals such as
+Ru,  Rh,  Pt,  and  Pd  has  been  found  to  accelerate  the  hydrocarbon
+reforming  reaction,  as  illustrated  in  Fig.  6(b).  For  instance,  when
+Pd–Ni-YSZ was used instead of Ni-YSZ for butane steam reforming, the
+maximum power density (MPD) increased from approximately 800 to
+(cid:0) 2, while the degradation rate decreased from 3.75 to 0.63
+946 mW cm
+
+Table 2
+Electrochemical performances and stability characteristics of SOFCs fueled with higher hydrocarbon fuels.
+
+Method
+
+Fuel
+
+Anode/Electrolyte/Cathode
+
+T
+(oC)
+
+I at 0.7V (A
+(cid:0) 2)
+cm
+
+MPD (mW
+(cid:0) 2)
+cm
+
+Stability Characteristic
+
+Ref.
+
+Extra catalytic
+
+layer
+
+Modified Ni-based
+
+Perovskite-based
+
+Ni-modified
+
+perovskite-based
+
+In situ exsolution
+
+10.7%propane-18.7%
+O2-70.6%Ar
+6%iso-octane-94%air
+
+10.7%propane-89.3%
+air
+iso-octane-air mixture
+(O2/C = 0.4)
+petrol-air mixture
+
+iso-octane-air mixture
+(O2/C = 0.4)
+wet butane (3 %
+steam)
+butane-steam mixture
+(SCR = 3)
+butane-steam mixture
+(SCR = 3)
+butane-steam mixture
+(SCR = 3)
+wet propane (3 %
+steam)
+propane-air mixture
+(O2/C3H8 = 3)
+10%propane-3%
+H2O–87%N2
+10%butane-3%
+H2O–87%N2
+wet propane (3 %
+steam)
+propane-air mixture
+(~10%propane)
+butane-air mixture
+(~10%butane)
+wet propane (3 %
+steam)
+propane-air mixture
+
+propane-air mixture
+
+wet propane (3 %
+steam)
+wet butane (3 %
+steam)
+Propane
+
+wet propane (3 %
+steam)
+Propane
+
+wet propane (3 %
+steam)
+wet propane (3 %
+steam)
+20%propane-20%
+O2–60%H2O
+10%n-butane-20%
+O2–70%H2O
+10%iso-butane-20%
+O2–70%H2O
+2.3%i-octane-39.7%
+N2–58%H2O
+50%propane-50%N2
+
+[69]
+
+[71]
+
+[72]
+
+[73]
+
+[75]
+
+[89]
+
+[80]
+
+[90]
+
+[90]
+
+[90]
+
+[91]
+
+[92]
+
+[93]
+
+[93]
+
+[94]
+
+[95]
+
+[95]
+
+[96]
+
+[97]
+
+[98]
+
+Ru–CeO2/Ni-YSZ/YSZ/LSCF-GDC
+
+Ru–CeO2/Ni-SDC/SDC/LSCF-SDC
+
+Ru–CeO2/PSZ-CeO2/Ru–CeO2
+/Ni-SDC/SDC/LSCF-SDC
+3%NiMo-CZ/Ni-YSZ/YSZ-SDC/LSCF
+
+NiMo-CZ/YSZ-Ni-SDC/YSZ-SDC
+/LSCF
+NiMoRuCZ-60%Ni-SDC
+/YSZ/LSCF
+Pd–Ni-YSZ/YSZ/LSC-GDC
+
+Cu–Ni-YSZ/YSZ/LSC-GDC
+
+Ru–Ni-YSZ/YSZ/LSC-GDC
+
+Pd–Ni-YSZ/YSZ/LSC-GDC
+
+750
+
+0.65
+
+590
+
+0.54
+
+500
+
+0.36
+
+750
+
+0.50
+
+750
+
+0.37
+
+700
+
+/
+
+600
+
+1.28
+
+600
+
+0.92
+
+600
+
+1.06
+
+600
+
+0.82
+
+65%Ni-GDC/GDC/70%SSC-GDC
+
+600
+
+0.34
+
+460
+
+620
+
+390
+
+425
+
+280
+
+/
+
+946
+
+771
+
+959
+
+824
+
+433
+
+Ni-CGO/CGO/LSCO
+
+585
+
+0.18(0.6V)
+
+38
+
+/
+
+Stable for over 60 h at 460
+mW cm
+/
+
+(cid:0) 2
+
+Stable for 6 h at 0.5 A cm
+
+(cid:0) 2
+
+Stable for over 15 h at 0.3
+mA cm
+Stable for 16h at 0.2A cm
+
+(cid:0) 2
+
+(cid:0) 2
+
+(cid:0) 2
+
+Stable over 100 h at 0.15A
+cm
+/
+
+(cid:0) 2
+
+Stable over 100 h at 0.1 A
+cm
+/
+
+(cid:0) 2
+
+Stable for 3 h at 433 mW
+cm
+/
+
+60%Ni-GDC/YSZ/LSCF
+
+60%Ni-GDC/YSZ/LSCF
+
+PrBaMn2O5-LDC/LSGM
+/NbBa0.5Sr0.5Co1.5Fe0.5O5-CGO
+Ce(Mn,Fe)O2–La(Sr)Fe(Mn)O3
+/LSGMC/SSC
+Ce(Mn,Fe)O2–La(Sr)Fe(Mn)O3
+/LSGMC/SSC
+La0.4Sr0.6Co0.2Fe0.7Nb0.1O3-GDC
+/GDC-YSZ-GDC/La0.4Sr0.6Co0.2Fe0.7Nb0.1O3-GDC
+10%Ni-LSCF-CGO/CGO
+/LSCF-CGO
+10%Ni-LSCF-GDC/LSGM
+/LSCF
+5%Ni-GDC-La0.8Sr0.2Cr0.98V0.02O3
+/GDC/LSCF-GDC
+5%Ni-GDC-La0.8Sr0.2Cr0.98V0.02O3
+/GDC/LSCF-GDC
+Pr0.4Sr0.6Co0.2Fe0.7Nb0.1O3/LSGM
+/LSGM-Ba0.9Co0.7Fe0.2Nb0.1O3
+Sr1.95Fe1.4Co0.1Mo0.5O6(cid:0) δ
+/LSGM-GDC/LSCF
+5%Ru–Sr0.8Ce0.2FeO3/LSGM/5%
+Ru–Sr0.8Ce0.2FeO3
+LSCF/LSGM/10%Ni–Sr2Fe1.5Mo0.5O6-δ
+
+(Pr0.4Sr0.6)3(Fe0.85Nb0.15)2O7
+/LDC-LSGM/Ba0.9Co0.7Fe0.2Nb0.1O3
+60%Ni–BaZr0.8Y0.2O3/1%Ni–BaZr0.8Y0.2O3/1%
+Ni–BaCe0.7Zr0.1Y0.1Yb0.1O3
+60%Ni–BaZr0.8Y0.2O3/1%Ni–BaZr0.8Y0.2O3/1%
+Ni–BaCe0.7Zr0.1Y0.1Yb0.1O3
+60%Ni–BaZr0.8Y0.2O3/1%Ni–BaZr0.8Y0.2O3/1%
+Ni–BaCe0.7Zr0.1Y0.1Yb0.1O3
+60%Ni–BaZr0.8Y0.2O3/1%Ni–BaZr0.8Y0.2O3/1%
+Ni–BaCe0.7Zr0.1Y0.1Yb0.1O3
+RP-PSFeRu-FRA-GDC/LSGM/LSCF-GDC
+
+650
+
+0.21
+
+650
+
+0.21
+
+850
+
+0.71
+
+800
+
+1.46
+
+800
+
+1.40
+
+850
+
+0.40
+
+800
+
+0.15
+
+800
+
+0.35
+
+189
+
+189
+
+1320
+
+1078
+
+1050
+
+324
+
+300
+
+320
+
+(cid:0) 2
+
+(cid:0) 2
+
+Stable for over 100 h at 0.2
+A cm
+Stable for over 100 h at 0.2
+A cm
+Stable for over 500 h at 0.2
+A cm
+Stable for over 60h at 0.4 A
+cm
+/
+
+(cid:0) 2
+
+(cid:0) 2
+
+Stable for over 100 h at
+1.046 V
+Stable for over 100h at 0.5
+V
+/
+
+700
+
+0.43 (0.8V)
+
+128
+
+Stable for 195 h at 0.8 V
+
+[99]
+
+700
+
+850
+
+0.34
+(0.81V)
+1.08
+
+750
+
+1.17
+
+800
+
+0.38
+
+800
+
+0.24
+
+800
+
+0.69
+
+600
+
+0.49
+
+600
+
+0.58
+
+600
+
+0.62
+
+600
+
+0.23
+
+750
+
+0.34
+
+85
+
+917
+
+771
+
+310
+
+327
+
+590
+
+378
+
+408
+
+448
+
+166
+
+238
+
+Stable for 408 h at 0.8 V
+
+[99]
+
+(cid:0) 2
+
+Stable for 80 h at 0.4 A
+cm
+Stable for over 200 h at
+0.75 V, 0.85 A cm
+Stable for 15 h at 0.45 V
+
+(cid:0) 2
+
+(cid:0) 2
+
+Stable for over 20 h at 1.08
+V
+Stable for over 100h at 0.4
+A cm
+Stable for 3200 h at 0.2 A
+cm
+/
+
+(cid:0) 2
+
+(cid:0) 2
+
+Stable for 3000 h at 0.2 A
+cm
+Stable for 3000 h at 0.2 A
+cm
+Stable for 50 h at 0.15 A
+cm
+
+(cid:0) 2
+
+(cid:0) 2
+
+[100]
+
+[101]
+
+[86]
+
+[102]
+
+[103]
+
+[2]
+
+[2]
+
+[2]
+
+[2]
+
+[104]
+
+ProgressinEnergyandCombustionScience102(2024)1011417
+
+Y. Wang et al.
+
+(cid:0) 1  at 600
+
+◦
+
+mV h
+C [80]. However, it should be noted that the reported
+high power density at low temperatures was achieved due to the rela-
+tively thin electrolyte with a YSZ/gadolinia-doped ceria (GDC) bilayer
+of 1 μm and 200 nm. When GDC is used as the catalyst support instead of
+YSZ, the deactivation of the Ni catalyst can be prevented as the good
+oxygen exchange capability of GDC helps preserve the activity of the
+catalytic partial oxidation (CPOx) reaction sites [81]. Adding alkaline
+oxides to Ni-based anodes, such as BaO (as shown Fig. 6(c)), can increase
+surface basicity, which, in turn, can deaccelerate C–C cracking reactions.
+This promotes water adsorption on the surface and accelerates carbon
+removal, particularly in the presence of BaO on the surface [82].
+
+Perovskite-based anode materials. Perovskite materials have emerged
+as efficient alternative to Ni-based anode materials for SOFCs fueled by
+
+higher hydrocarbons, showing promise in terms of carbon tolerance [83,
+84]. However, the perovskite anode cells typically exhibit lower power
+density than Ni-based anodes owing to their lower catalytic activity and
+electrical  conductivity.  Recently,  a  promising  method  has  been
+demonstrated  to  enhance  the  activity  of  perovskite  anodes  while
+maintaining high carbon resistance. This approach involves the in situ
+exclusion  of  catalyst  nanoparticles  from  the  crystal  structure  of  the
+perovskite support [85], as illustrated in Fig. 6(d). By simultaneously
+exsolving CeO2, SrO, and Ru nanoparticles from the SrFeO3 perovskite,
+(cid:0) 2  at
+the peak power density upon C3H8  feeding reached 330 mW cm
+C.  In  this  context,  CeO2  and  SrO  play  important  roles  in  C3H8
+800
+adsorption and carbon resistance, respectively [86]. Moreover, in wet
+C3H8 at 0.15 A cm
+C, stable operation for 50 h was achieved
+
+(cid:0) 2 and 750
+
+◦
+
+◦
+
+Fig. 7. Performance comparison between various strategies using higher hydrocarbon fuels: (a) maximum power density (b) operation durability [2,69,71–73,75,80,
+86,87,89–91,93–96,101–103].
+
+ProgressinEnergyandCombustionScience102(2024)1011418
+
+Y. Wang et al.
+
+with  the  FeRu  alloy  in  situ  exsolved  from  Ruddlesden-Popper  oxides
+[87]. Furthermore, it has been observed that the exclusion of traditional
+Ni catalysts leads to higher resistance to coking than that to the depo-
+sition of Ni nanoparticles [88]. The exsolution of active Ni nanoparticles
+from the crystal structure of yttrium-doped barium zirconate (BZY) has
+been shown to enhance carbon tolerance when fueled with various hy-
+drocarbons, including propane, n-butane, i-butane, and iso-octane [2].
+The exsolved Ni nanoparticles, with diameters of <100 nm, provide a
+large  surface  area,  reducing  the  distance  for  the  spillover  of
+oxygen-related  species  to  the  Ni  surface  and  thereby  increasing  the
+carbon removal reaction rate [2].
+
+Comparison between various strategies. Table 2 provides a summary of
+the electrochemical performance and stability characteristics of higher-
+hydrocarbon-fueled SOFCs, while Fig. 7 shows the MPD and operational
+
+durability achieved through some promising strategies at various tem-
+peratures. In general, it can be observed that as temperature increases,
+the MPD tends to increase while the operational durability decreases.
+Among  the  existing  technologies,  the  addition  of  a  reforming  layer
+stands out for its high fuel flexibility and wide temperature adaptability.
+It  enables  the  internal  reforming  of  propane,  butane,  iso-octane,  and
+even  petrol  in  the  temperature  range  of  500–750
+C.  However,  co-
+feeding  an  additional  oxidant  (usually  air)  with  hydrocarbons  is
+required to achieve sufficient reforming, which may be unfavorable for
+electrochemical  performance  and  necessitates  oxidant  management.
+Utilizing perovskite materials or alloying Ni with other elements allows
+for the direct utilization of higher hydrocarbons. Traditional perovskite
+anodes  are  particularly  suitable  for  high-temperature  operation
+(750–850
+C), resulting in higher power densities. In contrast, alloying
+
+◦
+
+◦
+
+Fig. 8. Working principle of an NH3-fed SOFC based on (a) oxygen ion-conductive electrolytes and (b) proton-conductive electrolytes.
+
+ProgressinEnergyandCombustionScience102(2024)1011419
+
+Y. Wang et al.
+
+◦
+
+Ni  with  noble  metal  catalysts  provides  a  method  for  utilizing  higher
+◦
+hydrocarbons at intermediate temperatures of ~600
+C. Furthermore, a
+combination of the use of proton-conductive perovskite materials (e.g.,
+BZY) with the in situ exsolution of Ni nanoparticles enables the utili-
+zation of various wet hydrocarbons, ranging from propane to iso-octane,
+at 600
+C for over 3000 h. Except for the decreased spillover distance
+caused by the Ni nanoparticle, BZY is considered to contribute to H2O
+dissociation to form OH(s) and facilities the carbon removal processes
+[2]. This strategy demonstrates high stability and fuel flexibility at low
+temperatures, making it a feasible option for future applications. How-
+ever, it is important to note that steam is still required to provide an
+amount of steam to generate OH(s) for carbon removal in this approach.
+
+2.3. Direct utilization of nitrogen-bearing compounds
+
+While hydrocarbons have been extensively investigated as fuels for
+portable SOFCs, the issue of coking remains a significant challenge for
+traditional Ni anodes. In recent years, nitrogen-bearing compounds such
+as  ammonia and  hydrazine have  attracted increasing  attention as  po-
+tential fuels for portable SOFCs owing to their carbon-free characteris-
+tics.  The  feasibility  of  using  NH3  as  an  SOFC  fuel  was  initially
+demonstrated in the 1980s [105]. Till now, NH3 has been used as a fuel
+in SOFCs based on both oxygen-ion-conductive electrolytes (O–SOFCs)
+and proton-conductive electrolytes (H–SOFCs). Regardless of the elec-
+trolyte type, the oxidation of ammonia at the anode was found to occur
+in two stages [106]. NH3  is first decomposed to N2  and H2  on the Ni
+catalyst,  followed  by  the  electrochemical  oxidation  of  the  generated
+hydrogen for power generation, as illustrated in Fig. 8. Importantly, the
+endothermic decomposition reaction allows for the absorption of heat
+generated  in  the  anode,  facilitating  temperature  control  [107].  In
+addition, the ammonia-fueled SOFC system was found to be more effi-
+cient than the equivalent hydrogen-fueled system owing to the cooling
+effect induced by ammonia decomposition.
+
+Through thermodynamic analysis, Ni et al. concluded that H–SOFCs
+have  a  theoretically  higher  maximum  efficiency  than  O–SOFCs  when
+fueled with NH3 [108]. However, most experimental results have shown
+that  high  power  densities  are  achieved  with  O–SOFCs  owing  to  their
+high  ion  conductivities  at  high  temperatures.  In  the  intermediate  to
+◦
+low-temperature  range  (400–600
+C),  H–SOFCs  are  advantageous
+because the conductivity of proton-conductive electrolytes is compara-
+C. It is
+ble to that of typical oxygen-ion-conductive electrolytes at 800
+worth noting that toxic NOx can be produced through the oxidation of
+NH3  by O2(cid:0)
+at higher temperatures and currents when using O–SOFCs
+[20,109].
+
+◦
+
+2NH3 + 5O2(cid:0) → 2NO + 3H2O + 10e(cid:0)
+
+(9)
+
+◦
+At lower temperatures approximately 600
+
+C, NO was reported to be
+undetectable in the anode off-gas when using NH3 as a fuel source [110].
+Extensive research has been conducted on NH3-fed SOFCs, exploring
+various anode and electrolyte materials. A comprehensive review pro-
+vides a detailed summary of the materials developed for NH3-fed SOFCs
+[111]; some results are presented in Fig. 9. It should be noted that in
+for  the  performance  of
+Fig.  9  (b),  solid  data  points  stand
+anode-supported  cells  while  hollow  points  stand
+for  that  of
+electrolyte-supported cells. As depicted in Fig. 9 (a), the performance of
+the NH3-fed SOFCs can reach that of the hydrogen-fed SOFCs at tem-
+peratures  of  >600
+C  because  ammonia  can  rapidly  and  completely
+decompose  to  hydrogen  and  nitrogen.  The  catalytic  activity  toward
+ammonia decomposition is dependent on the catalyst’s ability of NH3
+adsorption and N2 desorption [112]. In addition to traditional Ni-based
+anodes, several transition metals with high metal-nitrogen binding en-
+ergy have been alloyed with Ni or used in place of Ni to promote NH3
+adsorption.  For  example,  Co  and  Fe  have  been  introduced  to  Ni-YSZ
+anodes,  enabling  NH3-fed  SOFCs  to  achieve  peak  power  densities
+equivalent  to  those  of  H2-fed  SOFCs  at  temperatures  of  650–800
+C
+
+◦
+
+◦
+
+Fig. 9. Performance comparison between various SOFCs (a) MPDNH3 to MPDH2
+(b) Maximum power density when fueled with NH3  [106,113–124].
+
+[113]. Furthermore, the in situ exsolution of these catalysts increases the
+number of catalytic sites. For example, alloyed NiCo nanoparticles with
+dimensions
+the
+La0.52Sr0.28Ti0.94Ni0.03Co0.03O3-δ  (LSTNC) anode, achieving the MPD of
+361 mW cm
+C [114]. This performance ranks among the best
+for NH3-fed electrolyte-supported cells.
+
+(cid:0) 2 at 800
+
+nm  were
+
+exsolved
+
+10–20
+
+from
+
+of
+
+◦
+
+◦
+C. At temperatures below 600
+
+However, the kinetics of NH3 decomposition are found to be too slow
+◦
+at temperatures as low as 400
+C, which limits the performance of NH3-
+fed SOFCs. The ratio of MPDNH3 to MPDH2 significantly decreases when
+◦
+C, the
+the temperature drops below 600
+MPDs achieved upon using the NH3  fuel are typically <40 % of those
+achieved upon using the hydrogen fuel for traditional O–SOFCs. In the
+last decade, novel anode materials have been developed to enhance NH3
+decomposition  at  low  temperatures.  For  Ni-based  anodes,  several
+proton-conductive materials have been employed as a support for Ni,
+such  as  BaZr0.1Ce0.7Y0.2O3-δ  (BZCY),  and  have  demonstrated  higher
+catalytic performance than traditional oxygen-conductive oxides such as
+GDC and YSZ at temperatures of <600
+C. This improvement is attrib-
+uted to the larger number of basic sites, which favor NH3 adsorption and
+N2 desorption. Using the Ni-BZCY anode, the ratio of MPDNH3 to MPDH2
+reached 48 % [115]. More recently, a new proton-conductive electro-
+lyte,  Pd-doped  Ba(Zr0.1Ce0.7Y0.1Yb0.1)0.95Pd0.05O3-δ  (BZCYYbPd),  was
+developed,  and  the  Ni-BZCYYbPd  anode  exhibited  excellent  catalytic
+activity toward NH3  decomposition and H2  electrochemical reactions.
+The  MPDNH3/MPDH2  reached  approximately  80  %  at  temperatures
+
+◦
+
+ProgressinEnergyandCombustionScience102(2024)10114110
+
+Y. Wang et al.
+
+◦
+
+C, with the MPD of 724 mW cm
+
+ranging from 550 to 650
+C
+[116].  It  should be noted that this  exceptional performance was  ach-
+ieved because of increased basicity and exsolution of Pd nanoparticles
+from the BZCYYbPd perovskite, further enhancing catalytic activity.
+
+(cid:0) 2 at 650
+
+◦
+
+Except for ammonia, hydrazine was also considered as the fuel for
+mobile  applications.  Liquid  hydrazine  can  be  selectively  decomposed
+into N2 and H2 at the SOFC anode in situ, using BSCF as a catalyst at a
+◦
+low temperature of 450
+C [125]. The cell showed a similar performance
+operating on hydrazine decomposition products to that obtained with
+hydrogen, which is higher than that acquired from a similar cell with
+ammonia  as  fuel.  In  general,  although  nitrogen-bearing  compounds
+have  been  considered  alternative  SOFC  fuels  for  mobile  and  portable
+applications, research in this field is still in the infant stage, which fo-
+cuses on single-cell performance tests and material optimization. Few
+stack-level  studies  could  be  found  with  ammonia  or  hydrazine-fueled
+SOFCs [126,127].
+
+3. Achieving rapid start-up
+
+For portable and mobile power generators, achieving rapid start-up
+is  crucial,  and  significant  efforts  have  been  made  at  the  cell  level  to
+address this challenge. One direct approach to mitigate this problem is
+to lower the operating temperature of SOFCs. Moreover, enhancing the
+thermal shock resistance of SOFCs enables them to be heated at a high
+rate,  further  reducing  start-up  times.  This  can  be  achieved  through
+optimization of the configurations and geometries of SOFCs.
+
+3.1. Rapid start-up by lowering the operating temperature
+
+◦
+
+◦
+
+◦
+
+Reducing the operating temperature of SOFCs from the typical range
+of  800–1000
+C  to  intermediate  temperatures  (600–800
+C)  or  even
+lower  (below  600
+C)  can  effectively  alleviate  issues  related  to  rapid
+start-up and thermal cycling. Fig. 10 illustrates a typical SOFC operating
+temperature  profile  during  the  start-up  process  [128].  Initially,  the
+SOFC stack is heated by an external heat source, such as hot air. As the
+SOFC stack reaches an intermediate temperature of approximately 600
+◦
+C, the rate of temperature increase gradually decreases owing to the
+reduced  temperature  difference  between  the  SOFC  stack  and  hot  air.
+This  results  in  a  prolonged  heating-up  time.  Therefore,  lowering  the
+SOFC  operating  temperature  to  <600
+C  can  effectively  reduce  the
+start-up time.
+
+◦
+
+Operating SOFCs at <600
+
+C enables rapid start-up within several
+minutes  [129–132].  For  instance,  Jeong  et  al.  [129]  developed  a
+low-temperature  SOFC  designed  for  mobile  applications,  operating  at
+500 or 600
+C, achieving cold start-ups within 5 min. During 15 rapid
+thermal  cycles  between  room  temperature  and  600
+C  at  a  constant
+current  of  0.5  A,  the  SOFC  maintained  relatively  stable  performance.
+Similarly, Suzuki et al. [130] constructed a cube-type micro SOFC stack
+
+◦
+
+◦
+
+◦
+
+◦
+
+using  submillimeter  (0.8  mm)  SOFCs,  achieving  a  maximum  output
+C. The microtubular SOFC (mT-SOFC) stack un-
+power of 2 W at 500
+◦
+C in 3 min, for 5 cycles,
+derwent rapid start-up, heating from 150 to 400
+showing no significant degradation. To investigate the long-term ther-
+mal cycling durability of low-temperature SOFCs, Akira conducted a test
+in  which  an  mT-SOFC  was
+from  a
+high-temperature furnace 1000 times [132]. The single cell was heated
+◦
+from room temperature to 510
+C in 5 min. At a current density of 0.125
+(cid:0) 2, the cell exhibited only an 18.9 % voltage degradation after 1000
+A cm
+thermal  cycles,  with  no  observed  cell  failure.  This  cell  demonstrated
+excellent high cycling performance.
+
+inserted  and  removed
+
+However,  it  is  worth  noting  that  although  lowering  the  operating
+temperature enhances rapid start-up, it increases ohmic and polarization
+losses,  resulting  in  a  significant  reduction  in  power  density.  This
+reduction  in  power  density  is  a  critical  challenge  to  overcome  when
+aiming  for  rapid  start-up  under  intermediate  temperature  conditions
+while  maintaining  acceptable  thermal  shock  resistance,  especially  for
+mobile applications.
+
+The ohmic loss in electrolytes contributes significantly to total losses
+at  low  temperatures.  A  prevalent  approach  is  employing  a  thin  elec-
+trolyte  layer.  For  example,  a  cell  with  a  1  μm-thick  electrolyte  layer
+demonstrated superior performance, achieving 1.7 W cm
+C
+[133].  However,  the  use  of  a  thin  electrolyte  layer  compromises  me-
+chanical strength, rendering the electrolyte susceptible to damage dur-
+ing rapid thermal cycling.
+
+(cid:0) 2  at 600
+
+◦
+
+◦
+
+Alternatively, developing electrolyte materials with high ionic con-
+ductivity at low temperatures is effective. Fig. 11 illustrates the ionic
+conductivities of various electrolyte materials at different temperatures.
+In the context of SOFCs operating at intermediate temperatures, elec-
+trolytes such as scandia-stabilized zirconia (ScSZ) and LSGM have been
+introduced as alternatives to YSZ, offering high ionic conductivity [134,
+135].  For  operations  at  <600
+C,  gadolinia-doped  ceria  (GDC)  is  a
+promising electrolyte because its ionic conductivity is two to three times
+higher than those of ScSZ and YSZ [136]. In particular, its ionic con-
+ductivity is 5.8 × 10
+C, significantly surpassing that of
+(cid:0) 1) [137]. More
+(cid:0) 1) and YSZ (1.1 × 10
+ScSZ (2.5 × 10
+recently,  the  exploration  of  electrolyte  materials  has  extended  to
+proton-conductive electrolytes, with BaCeO3-based materials being the
+widely investigated. At intermediate/low temperatures, these materials
+exhibit  conductivity  comparable  to  that of  oxide  ion-conductive  elec-
+trolytes at 800
+
+(cid:0) 1 at 500
+
+C [138,139].
+
+(cid:0) 3  S cm
+
+(cid:0) 3  S cm
+
+(cid:0) 3 S cm
+
+◦
+
+◦
+
+In  scenarios  where  ohmic  loss  has  been  sufficiently  reduced,
+
+Fig. 10. Start-up process of SOFC modules [128]. Reprinted from [128] with
+permission of John Wiley and Sons.
+
+Fig.  11. Ionic  conductivity  of  typical  electrolyte  materials  as  a  function  of
+reciprocal  temperature  [140].  Reprinted  from  [140]  with  permission
+of Elsevier.
+
+ProgressinEnergyandCombustionScience102(2024)10114111
+
+Y. Wang et al.
+
+polarization loss becomes the dominant factor, especially at low tem-
+peratures [141]. Cathode polarization loss becomes particularly evident
+owing to the sluggish kinetics of the oxygen reduction reaction (ORR) at
+low  temperatures.  This  loss  can  be  mitigated  through  microstructure
+optimization.  One  recent  advancement  in  addressing  the  cathode  po-
+larization  loss  is  the  development  of  a  highly  active  and  robust  1D
+nanofiber cathode designed to accelerate ORR kinetics at intermediate
+◦
+temperatures of ~600
+C. This nanofiber cathode offers advantages such
+as  high  porosity,  strong  connectivity,  and  presence  of  a  continuous
+pathway  for  charge  and  mass  transport [142].  Building  upon  this  1D
+nanofiber  morphology,  researchers  have  designed  and  fabricated  3D
+fibrous  architectures  using  a  template-derived  method  [143–145],  as
+depicted in Fig. 12(a) and (b). Compared to conventional sponge-like
+cathodes,  these  highly  porous  3D  fibrous  structures  significantly
+enhance  mass  and  charge  transfer,  enabling  the  SOFC  to  achieve  an
+excellent power density of 0.41 W cm
+C, as shown in Fig. 12(c)
+and (d). Moreover, the 3D fibrous structure exhibits excellent robustness
+and high mechanical strength, meeting the unique requirements of rapid
+start-up in mobile applications.
+
+(cid:0) 2 at 400
+
+◦
+
+3.2. Improvement of thermal shock resistance
+
+To realize the rapid start-up of SOFCs, it is essential to improve their
+thermal shock resistance, which can be accomplished through modifi-
+cations to the SOFC configurations. In general, metal-supported SOFCs
+demonstrate superior thermal shock resistance to traditional ceramic-
+supported  configurations  owing  to  the  higher  mechanical  strength  of
+the metal support. Additionally, optimizing the geometries of SOFCs can
+enhance their thermal shock resistance.
+
+3.2.1. Metal-supported SOFCs
+
+Over  the  past  few  decades,  significant  research  and  development
+have  been  focused  on  metal-supported  SOFCs  (MS-SOFCs)  owing  to
+their  superior  thermal  shock  resistance.  Compared  to  the  use  of  con-
+ventional ceramic supports in SOFCs, metal supports allow substantial
+improvements  in  the  mechanical  strength  of  the  fuel  cells  [146].
+Moreover, metal supports have a thermal conductivity more than four
+times  that  of  ceramic  supports  [147].  This  high  thermal  conductivity
+significantly  reduces  internal  temperature  gradients  and  mitigates
+thermal  stress  during  the  heating  process  [148],  allowing  for  rapid
+start-up [149]. Fig. 13 compares the thermal shock resistance between
+
+Fig.  13. Comparison  of  the  thermal  shock  resistances  of  the  SOFCs  with
+different configurations [130,131,150,151,153–169].
+
+◦
+
+C min
+
+MS-SOFCs and ceramic-supported SOFCs. MS-SOFCs have achieved the
+highest number of cycles at 2500 [150] and the highest heating rate at
+(cid:0) 1  [151], demonstrating their  exceptional thermal  shock
+2000
+resistance.  Tucker  et  al.  conducted  a  comparison  of  thermal  shock
+resistance between MS-SOFCs and conventional anode-supported SOFCs
+(AS-SOFCs) through a hot plug experiment involving heating and cool-
+(cid:0) 1  [152].  The  AS-SOFC  exhibited  a
+ing  at  a  rate  of  ~500
+noticeable reduction in the OCV after just two cycles, accompanied by
+the formation of visible cracks. In contrast, the MS-SOFC maintained a
+stable open circuit voltage (OCV) for over 30 rapid thermal cycles. The
+outstanding  thermal  shock  resistance  of  the  MS-SOFC  ensures  that
+multiple rapid start-ups in mobile applications will not result in damage
+to the SOFC stack.
+
+C  min
+
+◦
+
+Very recently, the thermal shock resistance of MS-SOFCs was eval-
+uated and tested under harsh start-up conditions using a flame fuel cell
+(FFC) configuration [151]. In this setup, the MS-SOFC is directly heated
+by an open flame, achieving a start-up time of less than 1 min, signifi-
+cantly shorter than that achieved in conventional portable SOFC systems
+[170]. The MS-SOFC underwent more than 10 extremely rapid thermal
+
+Fig. 12. (a) SEM image of the 3D fibrous cathode architecture, (b) enlarged SEM image of a single fiber, (c) Comparison of the I–V curves and (d) EIS between
+conventional cathode and 3D fibrous cathode at 400
+
+C [143]. Reprinted from [143] with permission of John Wiley and Sons.
+
+◦
+
+ProgressinEnergyandCombustionScience102(2024)10114112
+
+Y. Wang et al.
+
+◦
+
+cycles, during which it was placed directly on top of a flame, with the
+temperature reaching 600
+C in just 20 s, and experienced a maximum
+(cid:0) 1  [151].  Remarkably,  the  MS-SOFC
+◦
+heating  rate  of  ~2000
+demonstrated high tolerance to these extremely rapid thermal cycling
+conditions, indicating that it is well-suited for realizing rapid start-up in
+mobile applications.
+
+C  min
+
+The metal support plays a crucial role in the operation of MS-SOFCs;
+it must meet several strict requirements related to physical properties,
+such  as  low  cost,  high  mechanical  strength,  excellent  oxidation  resis-
+tance, and high electron conductivity. Furthermore, one key factor for
+achieving high thermal shock resistance in MS-SOFCs is the match of the
+coefficient of thermal expansion (CTE) between the metal support and
+electrolyte [171]. This match allows the electrolyte to expand or con-
+tract  synchronously  with  the  metal  support  during  rapid  thermal
+cycling,  preventing  the  formation  of  micro-cracks.  Metal-support  ma-
+terials primarily fall into two categories: Ni- and Fe-based alloys [171].
+Table 3 lists the properties of some candidate metal-support materials.
+Although some groups have used pure Ni [172,173] or Ni-based alloys
+[174] as metal supports, their higher CTE than that of the electrolyte
+limits  their  application.  Fe-based  metals  are  the  most  widely  used
+metal-support materials owing to their matched CTE and low cost. For
+example, Zhang et al. [175] utilized 430 steel as a metal support and
+prepared  functional layers through thermal spraying. This  system did
+not  degrade  when  it  was  subjected  to  a  temperature  of  650
+C  at  a
+(cid:0) 2  for over 600 h, demonstrating a good
+current density of 350 mA cm
+match between 430 steel and SOFC functional layers. Additionally, the
+CTE  of  Fe-based  alloys  can  be  adjusted  by  adding  a  small  amount  of
+ceramic additives with a low CTE, such as aluminum titanate [153], to
+achieve complete matching with the electrolyte layer.
+
+◦
+
+◦
+
+Co-sintering  is  a  typical  method  for  fabricating  MS-SOFCs  [171].
+However, due to the presence of a metal support, co-sintering is more
+challenging  for  the  fabrication  of  MS-SOFCs  than  conventional
+ceramic-supported SOFCs. Generally, to achieve the complete densifi-
+◦
+cation of the electrolyte layer, sintering temperatures exceeding 1200
+C
+are  required;  temperatures  of  >1400
+C  are  commonly  employed  for
+YSZ electrolytes [176]. To prevent the excessive oxidation of the metal
+support, it is necessary to conduct the sintering process in an inert or
+reductive atmosphere. High temperature can also lead to the interdif-
+fusion of elements such as Fe and Cr in the metal support with Ni in the
+anode  layer  [177],  causing  a  decrease  in  power  density  and  rapid
+degradation  [156].  To  mitigate  this  issue,  an  intermediate  layer
+composed of LDC and steel is introduced between the metal support and
+anode layer [178]; however, this configuration complicates the fabri-
+cation  process.  Additionally,  the  cathode  must  be  sintered  in  a  weak
+reducing  atmosphere  to  prevent  the  oxidation  of  the  metal  support.
+Conventional  perovskite  cathodes,  such  as  LSM,  can  be  decomposed
+under reducing conditions [156], further reducing cell performance.
+
+Recently,  sintering-free  MS-SOFC  fabrication  methods  have  been
+developed,  including  thermal  spraying  [179,180]  and  physical  vapor
+deposition  (PVD)  [181,182].  Thermal  spraying  is  a  cost-effective
+approach  for  SOFC  fabrication  [183],  and  cells  produced  using  this
+method  exhibit  excellent  thermal  shock  resistance  during  thermal
+cycling. For example, Wang et al. [131] fabricated an MS-SOFC with an
+SDC electrolyte through thermal spraying. The cell showed no structural
+(cid:0) 1 during 12
+◦
+damage even when subjected to a heating rate of 60
+
+C min
+
+Table 3
+Summary of candidate metal support materials [171].
+
+Metal
+
+CTE(ppm/K)
+
+Relative oxidation resistance
+
+NiCrAlY
+Hastelloy-X
+Ni
+Ni–Fe (1:1)
+300-Series stainless steel
+400-Series stainless steel
+
+15–16
+15.5–16
+16.5
+13.7
+18–20
+10–12
+
+Excellent
+Excellent
+None
+None
+Poor
+Very good
+
+Note: CTE of electrolytes such as YSZ, GDC and LSGM are 10–12 ppm/K.
+
+C min
+
+(cid:0) 1 rate typically
+◦
+rapid thermal cycles, which is higher than the 50
+used for the fabrication of sintered MS-SOFCs with YSZ electrolytes. In
+contrast, PVD allows for the formation of an extremely dense electrolyte
+layer; a thickness of  only approximately 1 μm  can allow  for effective
+isolation of the cathode and anode atmospheres, significantly reducing
+ohmic loss [184]. However, the high cost of PVD limits its large-scale
+application [185].
+
+3.2.2. Modification of traditional geometries
+
+◦
+
+C  min
+
+Over the past decades, two major SOFC geometries, namely, planar
+and tubular SOFCs, have been developed, as shown in Fig. 14(a) and (b).
+Planar SOFCs are characterized by easy fabrication, simple construction,
+and  high  power  density  owing  to  their  short  current  collection  path.
+However, traditional planar SOFCs require very long start-up times and
+(cid:0) 1)  to  avoid  thermal
+low  heating/cooling  rates  (typically  1–2
+stresses [186]. Although the tubular type has a lower power density, it is
+advantageous in terms of mechanical and thermal cycling stability due
+to  its  symmetric  circular  nature,  which  allows  for  fast  radial-to-axial
+heat  transfer  [187].  In  mobile  applications,  SOFC  stacks  are  required
+to  possess  both  high  power  density  and  good  thermal  shock
+resistance—a requirement that cannot be met by traditional planar or
+tubular design. Therefore, mT-SOFCs with a diameter of several milli-
+meters (shown in Fig. 14 (c)) have been well developed in the last two
+decades owing to their potential to enhance the thermal shock resistance
+and  volumetric  power  density  of  conventional  tubular  systems
+[188–191].  More  recently,  a  novel  flat-tube  SOFC,  featuring  a  cross
+design that combines elements of planar and tubular SOFCs, as shown in
+Fig.  14(d),  was  also  developed  to  achieve  improvements  in  thermal
+shock resistance and volumetric power density.
+
+Fig.  15  shows  the  number  of  thermal  cycles  and  heating  rate  of
+SOFCs  with  different  geometries.  The  number  of  thermal  cycles  for
+planar SOFCs, tubular SOFCs, and mT-SOFCs ranges from 10 to 1000,
+showing no significant difference. The largest number of thermal cycles,
+2500,  was  achieved  by  the  metal-supported  planar  SOFC  stack  fabri-
+cated  by  Ceres  Power  [192].  However,  considering  that  after  the  re-
+ported  maximum  thermal  cycle  number,  no  structural  failure  was
+observed  and  the  tested  SOFCs  still  maintained  satisfactory  perfor-
+mance,  the  thermal  cycling  durability  of  the  planar,  tubular,  and
+microtubular SOFCs still needs further investigation. The thermal shock
+resistance  of  SOFCs  is  also  evaluated  using  the  heating  rate.  Conven-
+tional planar and tubular SOFCs generally operate at heating rates of
+(cid:0) 1, requiring several hours for the start-up
+approximately 1–10
+process,  which  is  too  long  for  mobile  applications.  In  contrast,
+(cid:0) 1,  and  the
+mT-SOFCs  can be  heated  at  rates  higher  than 100
+(cid:0) 1, reducing the start-up
+◦
+highest heating rate achieved was 8000
+time  from  hours  to  minutes  and  even  seconds  [193].  Therefore,
+mT-SOFCs possess the highest thermal shock resistance, making them a
+promising  candidate  for  mobile  applications.  As  shown  in  Fig.  16,
+Kendall  et  al.  revealed  a  strong  dependence  (almost  d3  power  law
+relationship) of the thermal shock resistance on the diameter of tubular
+SOFCs [194]. A 1000-fold improvement in the start-up performance was
+achieved when the tube diameter was decreased from 25 to 2 mm.
+
+C  min
+
+C min
+
+C min
+
+◦
+
+◦
+
+Recently,  several  new  manufacturing  techniques  have  been
+employed  to  replace  the  conventional  extrusion  process  and  produce
+more robust mT-SOFCs. For instance, WATT Fuel Cell Corporation uti-
+lized 3D printing technology for mT-SOFC production [201,202]. Due to
+their  homogeneous  microstructures,  3D  printed  cells  can  potentially
+withstand higher thermal stresses than nonuniform cells fabricated via
+traditional techniques. The mT-SOFC resisted 1000 thermal cycles with
+only  a  0.47  mW  power  loss  per  cycle  and  showed  excellent  thermal
+shock resistance during extreme thermal cycles with a maximum ramp
+rate of 1000
+
+C min
+
+(cid:0) 1.
+
+◦
+
+In  addition  to  the  mentioned  geometries,  the  flat-tube  SOFC  also
+exhibits excellent thermal shock resistance owing to its symmetric na-
+ture. More recently, a flat-tube solid oxide fuel cell was developed and
+operated in a methane-fuel-rich flame. The heating time of the flat-tube
+
+ProgressinEnergyandCombustionScience102(2024)10114113
+
+Y. Wang et al.
+
+Fig. 14. Typical SOFC geometries: (a) tubular SOFC, (b) planar SOFC, (c) microtubular SOFC, and (d) flat-tube SOFC.
+
+Fig.  15. Comparison  of  the  thermal  shock  resistance  of  the  SOFCs  with
+[130,148,150,152,153,156–159,161–163,166–169,
+different
+195–199]. Reprinted from [148] with permission of Elsevier.
+
+geometries
+
+◦
+
+SOFC from room temperature to 800
+C using the fuel-rich flame was
+less than 10 min [203]. As almost all the components of the flat-tube
+SOFC  are  similar  in  composition,  thermal  expansion  does  not  vary
+significantly  among  the  layers,  reducing  thermal  stress  during  rapid
+heating.
+
+Fig.  16. Start-up  time  and  volumetric  power  density  for  tubular  SOFCs  with
+different  diameters  [194,200].  Reprinted  from  [194]  with  permission  of
+Elsevier, and from [200] with permission of John Wiley and Sons.
+
+thermal stress during the long-term operation. Novel stack designs and
+thermal  management  methods  have  been  developed  to  address  these
+issues.
+
+4. Achieving SOFC stack compactness
+
+4.1. Comparison of stack designs
+
+To meet the unique requirements of the mobility sector, stack inte-
+gration techniques (e.g., current collection, and thermal management)
+to achieve stack compactness and high volumetric power densities are
+also vital. The stack typically contains multiple duplicate fuel cell units
+and  interconnectors,  sealing  components,  gas  distribution  and  aggre-
+gation manifolds, and possibly thermal insulated shells. A more compact
+layout  places  greater  demands  on  the  design  of  these  components.
+Furthermore,  an  increase  in  the  volumetric  power  density  leads  to
+intensive heat generation, while the compact integration weakens the
+heat dissipation. This generates hot spots and thermal stress within the
+stack, which further leads to the structural and functional failure due to
+
+As  emphasized  in  Section  3,  both  high  power  density  and  good
+thermal shock resistance are needed for SOFC stacks. The start-up and
+thermal  cycling  performances  of  cells  with  novel  geometries  were
+compared  and  analyzed  in  the  last  section,  with  a  focus  on  cell-level
+development. In this section, the stacking issues for several promising
+aforementioned  geometries  are  discussed,  with  a  focus  on  the  volu-
+metric  power  density  at  the  stack  level.  The  geometric  differences
+among  fuel  cell  designs  can  significantly  impact  sealing  and  current
+collection  methods,  ultimately  affecting  the  integration  process  and
+stack compactness.
+
+Fig.  16  not  only  demonstrated  that  the  thermal  shock  resistance
+increased dramatically when the diameter of tubular cells decreased, but
+
+ProgressinEnergyandCombustionScience102(2024)10114114
+
+Y. Wang et al.
+
+also  showed  that  the  stack  volumetric  power  density  scales  with  the
+reciprocal  of the  diameter  [194,200].  Thus, mT-SOFCs exhibit  higher
+power  densities  than  classic  tubular  SOFCs.  Suzuki  et  al.  developed
+submillimeter  "pin-like"  mT-SOFCs  and  integrated  them  into  a  micro-
+(cid:0) 1 [130,
+stack, achieving a stack volume power density exceeding 2 kW L
+204,205].  To  further  decrease  the  weight  and  volume  of  mT-SOFC
+stacks, researchers have extensively worked on hollow-fiber mT-SOFCs
+by combining spinning/phase inversion and sintering techniques. This
+approach  results  in  a  thinner  wall  thickness,  reduced  polarization
+resistance  and  increased  power  density  [206].  For  instance,  a  high
+(cid:0) 2  was  achieved  with  hollow  fiber
+power  density  of  1.21  W  cm
+mT-SOFCs operating at 600
+
+C using pure hydrogen as fuel [207].
+
+◦
+
+The primary technical challenge when integrating mT-SOFC stacks is
+efficient  current  collection  from  interior  electrodes.  To  address  this,
+several techniques have been proposed, broadly categorized into three
+groups,  as  shown  in  Fig.  17.  The  first  involves  exposing  parts  of  the
+interior electrodes by leaving small areas in rings and strips uncovered
+by the electrolyte layer [7,208,209]. This approach simplifies current
+collection in modules or stacks but leads to a longer current transfer path
+and  a  reduced  effective  area.  The  second  strategy  includes  adding  a
+conductive  functional  layer,  such  as  nickel,  inside  the  anode  layer  to
+serve  as  the  current  collector  [210,211].  This  layer  directs  current
+collection from the anode side, shortening the current transfer path but
+complicating  the  fabrication  process.  The  third  method  involves
+embedding a current collector (such as nickel mesh [212], nickel felt
+[213], or nickel wire [214]) within the anode surface to ensure direct
+contact.  While  this  approach  simplifies  fabrication,  it  may  introduce
+mechanical stress in the cell due to the proximity of the components. In a
+recent  study,  a  wire  brush  was  inserted  into  the  interior  anode of  an
+mT-SOFC to ensure close and stable contact between the wires and the
+anode  surface  [215–217].  This  metal  wire  brush  also  demonstrated
+feasibility as a catalyst carrier for internal reforming processes, offering
+a compact design for using hydrocarbon fuels [215].
+
+In addition to mT-SOFC stacks, several other stack designs have also
+been proposed to realize the goals of high volumetric power density and
+good thermal shock resistance. As shown in Fig. 18 (a), in a honeycomb
+stack, the characteristics of the tubular and flat designs are merged. The
+interior surfaces of the honeycomb-shaped electrolytes are coated with
+anode  or  cathode  layers  to  create  air  and  fuel  channels  [218].  The
+honeycomb  design  offers  a  combination  of  high  mechanical  strength,
+due to the effective load distribution and high volumetric power density
+due to the extensive volumetric electrode area. For example, the volu-
+metric  power  density  reached  600  W  L
+C  for  an
+LSGM-electrolyte-supported cell [219]. However, the thick electrolyte
+wall in electrolyte-supported honeycomb cells limits further improve-
+ments due to the high ohmic resistance.
+
+(cid:0) 1  at  800
+
+◦
+
+By modifying the cell structure of electrode-supported honeycomb
+
+cells, the volumetric power density can be increased to as high as 2 kW
+(cid:0) 1  [220].  In  anode-supported  honeycomb  cells,  the  arrangement  of
+L
+flow  channels  plays  a  crucial  role  in  determining  the  output  power
+density due to the 3D fuel transport and distribution within the porous
+anode support [218]. More recently, Li et al. combined the character-
+istics  of  microtubular  and  honeycomb  designs  to  create  a  6-channel
+honeycomb anode-supported  mT-SOFC  with  an outer  diameter  of  2.2
+mm, as shown in Fig. 18 (b), achieving an MPD of 2.27 W cm
+C
+when fueled with hydrogen [221,222]. Future research on honeycomb
+SOFCs should prioritize optimizing geometric structures, such as chan-
+nel  arrangement,  wall  thickness,  and  channel  size,  to  achieve  even
+higher  volumetric  power  densities  and  improved  thermal  shock
+resistance.
+
+(cid:0) 2 at 700
+
+◦
+
+A cone-shaped SOFC stack, as shown in Fig. 18(c), has been proposed
+to ease the problem of cell connection in a tubular SOFC stack. The cells
+are  stacked  by  fitting  one  cone  into  another,  with  interconnectors
+serving  as  seals  and  current  collectors.  This  stacking  structure  also
+functions  as  a  self-supporting  tubular  structure,  providing  excellent
+thermal  stability.  Additionally,  a  compact  cone-shaped  stack  can
+generate higher power output within a small volume. The concept for
+this design was initially proposed by Sui and Liu in 2007 [223] and has
+undergone  continuous  development  and  improvement  over  the  past
+decade. For instance, Ding and Liu manufactured a cone-shaped SOFC
+based on a YSZ electrolyte, achieving an MPD of 1.78 W cm
+C
+[224]. Although cone-shaped designs offer attractive prospects for mo-
+bile applications, the fabrication of complex geometries presents chal-
+lenges and has limited scalability efforts.
+
+(cid:0) 2 at 800
+
+◦
+
+Fig. 19 compares the output power and volumetric power density of
+various stacks from past literature. The volumetric power density of the
+stack is based on reported values in the literature or calculated from the
+power and volume of the stack. It should be noted that solid data points
+consider only the size of the stack body, while hollow points take into
+account the external thermal insulation shell of the stack body.
+
+Fig.  19  illustrates  that  mT-SOFCs  achieve  the  highest  volumetric
+power  density,  especially  at  smaller  output  powers  (<1  kW).  Stacks
+composed of mT-SOFCs with diameters of several millimeters can ach-
+(cid:0) 1.  Re-
+ieve  volumetric power  densities  ranging  from  0.1  to  0.7  kW L
+searchers from AIST have even used submillimeter mT-SOFCs to create
+integrated microstacks with volumetric power densities exceeding 2 kW
+(cid:0) 1  [130,204,205]. However, the small size of microtubular cells can
+L
+pose  challenges  during  the  stack  assembly  process,  requiring  careful
+consideration. In contrast, planar-type stacks achieve volumetric power
+(cid:0) 1  at larger output powers (>1
+densities in the range of 0.1–0.3 kW L
+kW). Due to the flat structure of planar cells, a significant portion of the
+surrounding area of the fuel cell units is used for stack sealing and layout
+of the fuel/air distribution manifold. Additionally, planar stacks require
+upper  and  lower  end  plates  and  fixed  fixtures  for  stack  installation,
+
+Fig. 17. Schematic of the various current collection methods for mT-SOFCs: (a) current collecting at exposed parts of anode by leaving small areas uncovered of the
+electrolyte layer [209]; (b) current collecting by adding an inner conductive functional layer [211]; (c) current collecting by embedding a current collector within the
+anode surface [212]. Reprinted from [209,212] and with permission of Elsevier and from [211] with permission of IOP Publishing.
+
+ProgressinEnergyandCombustionScience102(2024)10114115
+
+Y. Wang et al.
+
+Fig. 18. Novel stack designs developed for high volumetric power densities: (a) honeycomb design (b) honeycomb combined with microtubular design, and (c) cone-
+shaped design.
+
+heat conduction, heat convection, and heat radiation, and their corre-
+sponding relationships are as follows:
+
+Qloss = Ql,cond + Ql,conv + Ql,rad
+
+(12)
+
+Outside the insulation shell, heat conduction is rare, with minimal
+heat loss. After insulation, the outer surface temperature of the reactor is
+◦
+typically maintained at a low level (<50
+C). In cases where the ambient
+temperature is not excessively low, radiation heat loss from the outer
+surface is negligible and can be ignored. Consequently, stack heat loss
+primarily occurs through the convection process, described by Newton’s
+law of cooling:
+
+Qloss = h(Ts (cid:0) Tsurr)S
+
+(13)
+
+(cid:0) 2 k
+
+where  h  denotes  the  convective  heat  transfer  coefficient  of  the  outer
+(cid:0) 1), Ts represents the temperature of the
+surface of the reactor (W m
+outer surface of the stack (K), and Tsurr signifies the temperature of the
+external environment (K). When the stack is made more compact under
+the same input conditions, operational parameters, and fuel cell char-
+acteristics,  the  outer  surface  area  of  the  stack  decreases,  resulting  in
+reduced heat loss through convection. Consequently, the  temperature
+inside  the  stack  increases,  and  the  temperature  distribution  becomes
+more uneven, posing new challenges to stack operation.
+
+Considering the definition of thermal resistance, the expression for
+
+heat loss can be further derived as follows:
+
+Qloss =
+
+)
+
+S
+
+(cid:0)
+
+Tref (cid:0) Tsurr
+Lref
++ 1
+kins
+h
+
+(14)
+
+It  can  be  observed  that  increasing  the  thickness  of  the  insulation
+shell,  choosing  insulation  materials  with  lower  thermal  conductivity,
+and mitigating the convection process outside the reactor are effective
+methods to control stack heat loss.
+
+When the stack operates in a stable state, the relationship between
+
+heat production and heat loss follows the formula:
+
+Qh = Qloss + Qads
+
+(15)
+
+Here, Qh denotes the total heat generation power (W) in the stack and
+Qads represents the heat absorbed by the gas in the stack (W). According
+to the principle of electrochemical reaction of the electrode, the source
+of heat can be further subdivided:
+
+∫
+
+Qh =
+
+ ̇qhdV
+
+V
+
+ ̇qh =  ̇qh,chem +  ̇qh,rev +  ̇qh,act +  ̇qh,ohm +  ̇qh,conc
+
+(16)
+
+(17)
+
+Here, qh  represents the total heat generation power density of the
+(cid:0) 3); it includes the heat released or consumed by the
+SOFC stack (W m
+(cid:0) 3), the reversible heat
+chemical reaction in the electrode, qh,chem (W m
+generated by the entropy change of the electrochemical reaction, qh,rev
+(cid:0) 3), and the irreversible heat generated by the electrode polari-
+(W m
+(cid:0) 3). The latter category can be further divided into
+zation process (W m
+three sections: irreversible heat generation due to ohmic loss, qh,ohm (W
+(cid:0) 3), and concentration polari-
+m
+(cid:0) 3). Further, the detailed expressions of each heat
+zation, qh,conc  (W m
+source can be referred to the previous review [148].
+
+(cid:0) 3), activation polarization, qh,act (W m
+
+The heat absorbed by the gas in the stack can be calculated based on
+
+Fig.  19. Comparison  of  the  output  power  and  volumetric  power  density  for
+different stack designs [130,204,205,209,216,225–232].
+
+resulting  in  poor  effective  space  utilization  for  plate-type  designs.  It
+should  be  noted  that the  volumetric power  density  of  planar-type re-
+actors shows an upward trend with increasing reactor power, possibly
+because the increased number of cells and expanded area can increase
+the proportion of effective area utilization.
+
+4.2. Effective thermal management for compact SOFC stacks
+
+4.2.1. Energy balance and heat transfer process in SOFC
+
+As  the  pursuit  of  stack  compactness  continues,  the  issue  of  heat
+management becomes increasingly crucial. To maintain a stable oper-
+ation mode, the internal energy conservation equation is as follows
+
+Hin = Hout + Qloss + Pe
+
+(10)
+
+where Hin represents the total enthalpy value of the fuel flowing into the
+stack (W), Hout denotes the total enthalpy value of the fuel flowing out of
+the  stack  (W),  Qloss  denotes  the  heat  loss  (W)  of  the  reactor,  and  Pe
+represents the total electrical power generated by the stack (W).
+
+The heat generated within the stack is transferred to the outside via
+thermal  conduction  through  the  thermal  insulation  shell,  typically
+described using Fourier’s law of heat conduction:
+
+Qloss =
+
+(cid:0)
+
+kins
+
+)
+S
+
+Ts (cid:0) Tref
+Lref
+
+(11)
+
+(cid:0) 1  k
+
+where kins  denotes the thermal conductivity of the insulation material
+(cid:0) 1), Ts  represents the temperature of the outer surface of the
+(W m
+thermal insulation shell (K), S represents the area of the outer surface
+(m2),  and  Tref  and  Lref  denote  the  equivalent  temperature  (K)  and
+equivalent thickness (m) of the inner surface of the thermal insulation
+shell, respectively. An equivalent linear heat conduction method is used
+to simplify the influence of difference between the internal and external
+surface areas.
+
+External  heat  loss  from  the  stack  encompasses  three  mechanisms:
+
+ProgressinEnergyandCombustionScience102(2024)10114116
+
+Y. Wang et al.
+
+the temperature and specific heat capacity of the gas at the inlet and
+outlet of the stack.
+
+(cid:0)
+Qads = m
+
+cP,Tout Tout (cid:0) cP,Tin Tin
+
+)
+
+(18)
+
+As  the  stack  becomes  more  compact,  the  exit  temperature  of  the
+reaction gas inside the stack will be higher, leading to increased energy
+loss.
+
+4.2.2. Stack thermal management methods
+
+The  high  operation  temperature  and  compact  integration  require
+effective  heat  management.  One  challenge  is  to  maintain  the  high
+operation  temperature  of  a  hot  box  with  limited  insulation  while  the
+other  is  to  decrease  the  temperature  gradient  caused  by  compact
+integration.
+
+Compact thermal insulation design. Indeed, the need for heavy insu-
+lation materials in SOFC systems to maintain high operating tempera-
+tures  can  result  in  significant  heat  loss,  particularly  in  small-scale
+portable applications. For example, in a 2-kW planar SOFC stack mod-
+ule, the heat loss is estimated to account for approximately 9–10 % of the
+input fuel energy [233]. Thus, effective insulation of the stack/hotbox is
+crucial for maximizing internal heat utilization and achieving thermal
+self-sustainable  operation.  Typically,  both  the  internal  and  external
+surfaces of the stack and hotbox are lined with multiple layers of insu-
+(cid:0) 1
+lating materials that possess low thermal conductivity (~10
+(cid:0) 1) to prevent heat loss [6]. However, a mobile SOFC system of several
+K
+hundred watts can require up to several kgs of thermal insulating ma-
+terial to maintain high operating temperatures.
+
+(cid:0) 1  W m
+
+To address the size and weight concerns associated with the use of
+insulation  materials,  highly  efficient  microporous  insulation  has  been
+developed and utilized [19]. This type of insulation offers an order of
+magnitude  lower  thermal  conductivity  than  conventional  alumina
+insulation materials. In addition, researchers have explored the use of
+nanoparticle-based  thermal  insulation,  which  boasts  a  significantly
+(cid:0) 1 and a lower insulation
+reduced thermal conductivity of 0.02 W m
+mass of 150 g, as observed in a 100 W SOFC mobile system [5]. Utilizing
+insulation materials with lower thermal conductivity not only improves
+thermal efficiency but also reduces the volume of insulation materials,
+ultimately leading to higher volumetric power density of mobile SOFC
+systems.
+
+(cid:0) 1 K
+
+Cathode air flow management. In previous research efforts, addressing
+the issue of local hot spots in SOFC stacks has often involved supplying
+excess air to the cathode and optimizing the airflow path. The utilization
+of excess air could help remove the heat generated from electrochemical
+reactions due to the enhanced heat convection between the cool air and
+the stack. However, it is important to note that increasing the cathode
+airflow can lead to greater energy consumption by the fan.
+
+The  air  flow path  should  also be well  designed  to  ensure  uniform
+distribution  and  effective  heat  management  of  the  stack.  For  planar
+SOFC stacks, the air flow path depends on the channel design and the
+arrangement  of  the  flow  directions.  For  example,  several  co-flow,
+counter-flow  and  cross-flow  arrangements  have  been  proposed  and
+optimized [148]. For tubular SOFC stacks, however, the gas channels are
+formed by the tubes. Thus, the diameter of the cell as well as the gap
+
+between the cells will directly determine the flow path. In addition, the
+inlet (and outlet) arrangements also impact on the gas uniformities and
+have been optimized typically with computational fluid dynamics (CFD)
+methods.
+
+For  example,  the  uniformity  of  air  flow  was  optimized  by  three-
+dimensional  CFD  models  with  a  2in-2out-Z  shaped  air  flow  channel
+configuration  design  for  a  36-tube  mT-SOFC  [234].  An  external
+distributor was designed for a 7 × 7 tubular stack to optimize the air
+flow at the location of each tube in the reactor [235], as shown in Fig. 20
+(a). By comparing two mT-SOFC stacks with the same volume but con-
+sisting of cells with different diameters, the air distribution was found to
+be  more  uniform  for  stacks  with  smaller  tubes.  However,  the  more
+(cid:0) 1 [236].
+compact design led to a high temperature gradient of 100 K cm
+Anode  fuel  chemical  reaction  management.  SOFC  stacks  exhibit
+exceptional fuel flexibility, allowing them to utilize a wide variety of
+fuels, as reviewed in Section 2. When hydrocarbons or ammonia are fed
+to  the  anode,  reactions  with  different  heat  effects  will  occur.  For
+example,  the  steam  reforming  of  hydrocarbons  and  ammonia  decom-
+position are highly endothermic  processes. The direct combination of
+endothermic  reactions  in  situ  with  exothermic  electro-oxidation  re-
+actions  provides  the  possibility  of  easing  the  problem  of  hot  spots.
+However, since the reaction rate of the reforming reaction was found to
+be  much  faster  than  that  of  electro-oxidation  reactions,  additional
+temperature gradient may be introduced to the stack where a temper-
+ature drop occurs at the inlet and a temperature increase subsequently
+follows downstream.
+
+The steam/carbon (S/C) ratio  and the molar fraction of  hydrocar-
+bons were found to strongly influence on the temperature gradient. To
+take advantage of the endothermic effect while avoiding the introduc-
+tion of a large temperature gradient, the inlet compositions should be
+carefully designed. For example, the fuel with an S/C ratio of 2:1 caused
+a smaller cell temperature gradient than the fuel with an S/C ratio of 1:1
+[237]. It is worth noting that fuel composition not only affects the heat
+generation  of  electrochemical  reactions  but  also  the  fuel  reforming
+process. Local heat transfer enhancement could not be effectively ach-
+ieved since it is difficult to precisely control the fuel composition of fuel
+cells  [148].  However,  by  adjusting  the  inlet  fuel  composition  and
+promising  anode  materials/structures,  the  matching  between  the
+endothermic reactions and exothermic reactions could be realized. For
+example, as shown in Fig. 20(b)–a cooling strategy that separates the
+layer in which endothermic NH3 decomposition occurs from the layer in
+which exothermic electrochemical reactions occur was proposed [238,
+239]. By adjusting the catalyst coating distribution for the cooling layer,
+the  endothermic  reaction  can  be  controlled  to  achieve  the  desired
+thermal management effect.
+
+Application  of  phase  change  heat  transfer  technology.  Traditional
+methods of cathode air convection heat transfer suffer from limited heat
+transfer  rates.  An  innovative  thermal  management  approach  involves
+using a phase change process with high heat flux capabilities. Heat pipes
+are commonly used phase change heat transfer devices and have wide-
+spread applications in aerospace, electronic equipment [240], commu-
+nication base stations [241], waste heat boilers and various other fields
+[242,243].  When  a  heat  pipe  operates,  it  achieves  minimal  thermal
+
+Fig. 20. Schematic illustration of several heat management strategies: (a) design of an external gas distributor [235], (b) introduction of endothermic anode re-
+actions [238], and (c) application of high-temperature heat pipes [247]. Reprinted from [235,238,247] with permission of Elsevier.
+
+ProgressinEnergyandCombustionScience102(2024)10114117
+
+Y. Wang et al.
+
+resistance  and  excellent  thermal  conductivity  by  employing  the
+gas–liquid phase change of the working medium. The equivalent ther-
+(cid:0) 1 [244], which is
+mal conductivity of heat pipes can reach 104 W m
+more than 10 times that of metals such as silver, copper, and aluminum.
+In a high-temperature heat pipe, the working medium absorbs heat in
+the high-temperature region, forming steam, which is then transferred
+to the low-temperature region within the tube. There, it condenses and
+the
+releases  heat,
+high-temperature region to the low-temperature area.
+
+rapid  heat  conduction
+
+facilitating
+
+(cid:0) 1 K
+
+from
+
+(cid:0) 1 K
+
+Dillig et al. successfully integrated a liquid metal heat pipe into an
+interconnector structure, achieving a remarkable heat conductivity of
+(cid:0) 1 and reducing the temperature difference by 10 K in
+15,000 W m
+the active zones through the latent heat of sodium vaporization. They
+placed  an  SOFC  unit  between  two  heat  pipes,  resulting  in  a  20  %
+reduction  in  the  maximum  temperature  of  the  SOFC  and  an  85  %
+reduction in the maximum cell temperature gradient [245,246]. In our
+research,  we  focused  on  the  thermal  management  of  tubular  SOFCs
+using high-temperature heat pipes, as shown in Fig. 20 (c). To suit the
+characteristics of tubular cells, we developed and tested an annular heat
+pipe, which effectively reduced the temperature difference of the cell
+from 304 to 130 K and increased the power density from 73 to 120 mW
+(cid:0) 2  [247].  Furthermore,  in  a  numerical  simulation  study  involving
+cm
+segmented-in-series  tubular  SOFCs,  we  successfully  reduced  the  tem-
+perature inhomogeneity among different sections from 111 K to 25 K by
+introducing a high-temperature tubular heat pipe to replace the original
+gas pipe [248].
+
+Other studies have explored the use of high specific heat capacity
+fluids such as liquid metals and saturated water as heat transfer working
+media  for  the  thermal  management  of  electric  reactors  [249,250].
+Despite the excellent performance of heat pipes in reducing temperature
+gradients in SOFC stacks, integrating them into SOFC stacks for mobile
+applications,  such  as  vehicles  and  airplanes,  still  presents  challenges.
+The heavy stainless-steel envelope significantly reduces the gravimetric
+power density of the stack, and heat pipe start-up times can be quite long
+[251,252]. Substantial reductions in envelope weight and start-up times
+are required before heat pipes can be effectively integrated into SOFC
+stacks for mobile applications.
+
+5. Conclusions and future directions
+
+Recent  advancements  in  anode  materials,  cell,  and  stack  designs
+have aimed to overcome the disadvantages and exploit the advantages
+of SOFCs, notably their fuel flexibility and high efficiency, particularly
+in  the  mobility  sector.  This  work  reviews  the  progress  made  in  three
+critical  areas:  enhancing  fuel  tolerance  and  fuel  flexibility,  achieving
+rapid start-up, and realizing stack compactness. The main conclusions
+are summarized as follows.
+
+1.  The  direct  use  of  higher  hydrocarbons  and  NH3  is  a  promising
+approach  to  meet  the  requirements  of  compactness  and  rapid  dy-
+namic response in SOFCs. Extensive efforts have been dedicated to
+the elucidation of the mechanistic details of reaction kinetics in the
+anode compartments when fed with these fuels. In situ and operando
+optical techniques, such as NIRTI and Raman and FTIR spectroscopy,
+have been employed to directly measure temperature distributions
+and detect intermediate gas and surface species at the high operating
+temperatures  of  SOFCs.  These  studies  have  provided  valuable  in-
+sights into reaction mechanisms, particularly in relation to carbon
+deposition and removal.
+
+Various strategies have been explored to improve SOFC tolerance to
+heavier hydrocarbons and ammonia. These strategies include the addi-
+tion of reforming layers, modification of conventional Ni-based anodes,
+and  use  of  perovskite  materials.  Although  the  addition  of  reforming
+layers allows for the utilization of a wide range of fuels across different
+temperature  ranges,  it  presents  challenges,  including  decreased
+
+electrochemical performance and increased system complexity. For both
+higher hydrocarbons and ammonia, the in situ exsolution of Ni nano-
+particles  from  proton-conductive  perovskite  materials  has  shown
+C,  although  this
+promise,  particularly  at  temperatures  of  ~  600
+approach is still primarily at the laboratory or device scale.
+
+◦
+
+◦
+
+2.  Two  development  trends  have  emerged  to  shorten  SOFC  start-up
+time  and  alleviate  thermal-stress-related  issues.  The  first  involves
+lowering  SOFC  operating  temperatures  to  <600
+C,  significantly
+reducing  start-up  time  to  within  5  min.  For  power  density
+improvement at intermediate temperatures, it is essential to main-
+tain reasonable thermal shock resistance to meet the specific rapid
+start-up  requirements  of  mobile  applications.  To  minimize  ohmic
+loss, reducing the electrolyte thickness to approximately 1 μm may
+be impractical owing to the diminished mechanical strength of thin
+electrolyte layers. Instead, using electrolyte materials with high ionic
+conductivity, such as LSGM, is advisable. Regarding the reduction of
+polarization  loss,  cathodes  with  a  highly  porous  3D  fibrous  archi-
+tecture  are  promising  candidates,  offering  both  excellent  electro-
+chemical performance and high mechanical strength.
+
+Another emerging trend is to increase the thermal shock resistance
+through the development of novel configurations and geometries. MS-
+SOFCs  demonstrate  higher  thermal  shock  resistance  than  traditional
+ceramic-supported  systems  owing  to  the  exceptional  mechanical
+strength and temperature uniformity induced by metal supports. This is
+evidenced by MS-SOFCs withstanding up to 2500 thermal cycles [150]
+(cid:0) 1 [151]. In terms of
+and exhibiting a high heating rate of 2000
+geometry, mT-SOFCs exhibit the highest thermal shock resistance. Their
+compact design allows for a high volumetric power density in the SOFC
+stack—an  advantage  for  mobile  applications.  Thus,  considering  both
+their configuration and geometry, metal-supported mT-SOFCs emerge as
+the  most  promising  candidates  for  achieving  rapid  start-up  in  mobile
+SOFC systems.
+
+C min
+
+◦
+
+3.  With regard to stack integration, mT-SOFC stacks have the highest
+volume power density. This advantage is primarily attributed to the
+simple sealing design and air flow distribution structure. Moreover,
+this feature becomes particularly significant in scenarios wherein the
+power demand is below the kilowatt level. In contrast, planar and
+flat-tube  type  stacks  exhibit  similar  characteristics  and  are  more
+suited for applications at the kilowatt level and above. By judiciously
+increasing the size of the fuel cell units and design power of the stack,
+these configurations can also achieve a higher volume power density.
+
+Introducing chemical reactions  or  phase change  heat transfer  pro-
+cesses in the stack can significantly improve temperature distribution
+within the reactor, promoting long-term stable operation. However, this
+approach can complicate the reaction process and structure of the stack,
+potentially  leading  to  increased  weight.  In  contrast,  optimizing  the
+cathode airflow path, typically through the refinement of gas channel
+structures  or  distribution  manifolds,  remains  the  simplest  and  most
+reliable  solution  for  achieving  improved  thermal  management  and
+performance.
+
+Although significant progress has been made in SOFC technology for
+mobile applications, several areas still require further improvement to
+enhance its suitability for the mobility sector. To increase fuel tolerance,
+a deeper understanding of the kinetics and development of anode ma-
+terials that are particularly suitable for fuel reforming at low tempera-
+tures are needed. Metal-supported SOFCs with microtubular geometry,
+produced  through  sintering-free  and  cost-effective  methods,  hold
+promise for further improving thermal shock resistance. The stack de-
+signs should be further optimized with the aid of hierarchical and hybrid
+models  to  achieve  high  power  density  and  temperature  uniformity
+simultaneously.
+
+Development  of  optical
+
+techniques  for  kinetic  study  of  higher
+
+ProgressinEnergyandCombustionScience102(2024)10114118
+
+Y. Wang et al.
+
+hydrocarbons. Most optical studies in the SOFC field have focused pri-
+marily on detecting species related to surface reactions, especially for
+light hydrocarbons. However, there is a relative lack of research on the
+reaction kinetics of higher hydrocarbon conversion in SOFCs, particu-
+larly the role of gas-phase reactions. Given that the C–C bonds in higher
+hydrocarbons are weaker, gas-phase kinetics, including soot formation
+processes under fuel-rich anode conditions, cannot be ignored. There-
+fore, it is crucial to further clarify the roles of both gas-phase and surface
+reaction  routes in  hydrocarbon  reforming  and  carbon  deposition  pro-
+cesses, drawing from the knowledge gained in catalysis and combustion
+fields.  A  combination  of  patterned  anodes  and  existing  techniques  as
+well  as  other  in  situ  optical  measurement  techniques  developed  in
+combustion  fields,  such  as  laser-induced  fluorescence  (LIF)  for
+measuring CH [253] and PAH [254] and laser-induced incandescence
+(LII) for soot measurement [255], could provide deeper insights into the
+complex reaction mechanisms of higher-hydrocarbon-fueled SOFCs.
+
+Development of anode materials to enhance fuel flexibility at low tem-
+◦
+peratures. SOFCs operating at temperatures <600
+C have demonstrated
+rapid  start-up  times  within  5  min  and  excellent  power  densities
+(cid:0) 2  [256]. However,  most  of  these  low-temperature
+exceeding  1  W  cm
+SOFCs  have  been  tested  with  hydrogen  as  the  fuel,  and  there  are
+limited reports on cells operated with hydrocarbon fuels [257], which
+are crucial for mobile SOFC systems. A significant challenge faced by
+low-temperature SOFC operation is the mismatch between the typical
+reforming processes that typically occur at temperatures above 600
+C.
+Therefore, the utilization of hydrocarbon fuels and ammonia should be
+◦
+explored at temperatures lower than 600
+C, with a focus on improving
+coking resistance and decomposition ability. One promising approach is
+to  modify  Ni-based  anodes  with  proton-conductive  materials  such  as
+barium-based oxides to enhance coking resistance and catalytic activity
+at  low  temperatures.  However,  there  is  limited  research  on  the
+long-term durability of SOFCs fueled with higher hydrocarbons or NH3
+operating  below  600
+C.  For  example,  Ni-BZCYYbPd  anodes  showed
+only a slight voltage decline after 130 h of operation with ammonia at
+550
+C [116], while Ni-BZY anodes experienced less than 1.5 % degra-
+dation per 1000 h when exposed to 11 different carbon-containing fuels
+[2].
+
+◦
+
+◦
+
+◦
+
+Development  of  metal-supported  microtubular  SOFCs.  To  improve
+thermal  shock  resistance,  future  research  should  focus  on  metal-
+supported SOFCs with microtubular geometries, which exhibit the best
+thermal shock resistance among various configurations and geometries.
+The main challenge lies in fabricating microtubular MS-SOFCs with high
+power density and robust thermal cycling stability. Lv et al. [156] pro-
+posed  methods  involve  complex  fabrication  processes  that  may  have
+limitations in thermal cycling stability. Sintering-free and cost-effective
+methods such as plasma spraying show promise and should be further
+developed.
+
+Optimization  of  stack  design  with  the  aid  of  hierarchical  and  hybrid
+models. A high volumetric power density and low temperature gradient
+are difficult to simultaneously achieve in a compact SOFC stack. Thus,
+compromises must be made when designing the geometry parameters,
+such  as  the  diameter, length,  and  gap  distance  in  an  mT-SOFC  stack.
+These  parameters  are  mainly  optimized  through  CFD  simulations;
+however, these simulations require long simulation time and multiple
+iterative  cycles  of  design  and  optimization.  The  computational  effi-
+ciency  could  be  greatly  enhanced  through  a  hierarchical  modeling
+approach developed by the authors, which decouples the fast electro-
+chemical and mass transport at the cell level from the slow heat trans-
+port at the stack level [258–260]. This approach enables the use of an
+agglomerative clustering algorithm to obtain the mean temperature of
+each cluster after each iteration of the stack-level model. The cell-level
+models  are  only  called  and  simulated  for  these  mean  temperatures,
+which could reduce the computation time from several days to several
+hours  while  maintaining  the  solution  accuracy  [261].  More  recently,
+several artificial neutral network (ANN) models have been developed for
+optimizing the homogeneity and efficiency of solid oxide cells. A hybrid
+
+method could be further developed by combining multiphysics models
+and surrogate ANN models [262], which uses the data from the multi-
+physics models to train the ANN model. The fast ANN model can be used
+for  accelerating  the  multiobjective  optimization,  which  makes  the
+hybrid  method  promising  for  the  synchronous  optimization  of  volu-
+metric power density and stack uniformity.
+
+CRediT authorship contribution statement
+
+Yuqing Wang: Conceptualization, Data curation, Funding acquisi-
+tion, Writing – original draft, Writing – review & editing. Jixin Shi: Data
+curation, Investigation, Writing – original draft. Xin Gu: Data curation,
+Writing  –  original  draft.  Olaf  Deutschmann:  Supervision,  Writing  –
+review & editing. Yixiang Shi: Conceptualization, Supervision, Writing
+– review & editing. Ningsheng Cai: Supervision.
+
+Declaration of competing interest
+
+The authors declare that they have no known competing financial
+interests or personal relationships that could have appeared to influence
+the work reported in this paper.
+
+Data availability
+
+Data will be made available on request.
+
+Acknowledgments
+
+The research is supported by the National Natural Science Founda-
+tion of China (52176176 and 52322609) and the Fundamental Research
+Funds  for  the  Central  Universities.  We  would  like  to  thank  our  col-
+leagues Bokun Li, Xiaoxiao Li and Ruiyu Zhang from Beijing Institute of
+Technology for the helpful discussions.
+
+NOMENCLATURE
+
+atmospheric plasma spraying
+auxiliary power unit
+autothermal reforming
+artificial neutral network
+ambient pressure X-ray photoelectron spectroscopy
+
+balance of plant
+computational fluid dynamics
+compressed natural gas
+catalytic partial oxidation
+coefficient of thermal expansion
+electrochemical impedance spectroscopy
+flame fuel cell
+Fourier-transform infrared emission spectroscopy
+internal combustion engine
+lower heating value
+laser-induced fluorescence
+laser-induced incandescence
+liquefied natural gas
+liquefied petroleum gas
+maximum power density
+
+APS
+APU
+ATR
+ANN
+APXPS
+AS-SOFC anode supported solid oxide fuel cell
+BOP
+CFD
+CNG
+CPOx
+CTE
+EIS
+FFC
+FTIR
+ICE
+LHV
+LIF
+LII
+LNG
+LPG
+MPD
+MS-SOFC metal supported solid oxide fuel cell
+mT-SOFC microtubular solid oxide fuel cell
+NIRTI
+OCV
+ORR
+PAH
+PEMFC  polymer electrolyte membrane fuel cell
+POx
+PVD
+
+near infrared thermal imaging
+open circuit voltage
+oxygen reduction reaction
+polycyclic aromatic hydrocarbon
+
+partial oxidation
+physical vapor deposition
+
+ProgressinEnergyandCombustionScience102(2024)10114119
+
+Y. Wang et al.
+
+SEM
+SERS
+SOFC
+TPB
+WGS
+XRD
+
+scanning electron microscopy
+surface enhanced Raman spectroscopy
+solid oxide fuel cell
+triple phase boundary
+water gas shift
+X-ray powder diffraction
+
+Materials
+BZCY
+
+zirconium-doped barium cerate partially substituted with
+zirconium BaZr0.1Ce0.7Y0.2O3-δ
+
+BZCYYb  yttria-doped barium cerate partially substituted with
+
+zirconium and ytterbium BaZrxCe0.8-xY0.2-yYbyO3-δ
+
+BZCYYb  yttria-doped barium cerate partially substituted with
+
+zirconium and ytterbium BaZrxCe0.8-xY0.2-yYbyO3-δ
+
+BZCYYbPd Pd-doped Ba(Zr0.1Ce0.7Y0.1Yb0.1)0.95Pd0.05O3-δ
+BZY
+CGO
+CZ
+GDC
+LDC
+LSC
+LSCF
+
+yttria-doped barium zirconate BaZr0.9Y0.1O3-α
+gadolinium doped ceria Ce1(cid:0) xGdxO2(cid:0) y
+ceria-zirconia
+gadolinium-dpoed ceria
+La0.4Ce0.6O2(cid:0) δ
+strontium-doped lanthanum cobaltite LaxSr1-xCoO3-δ
+strontium-doped lanthanum ferrite partially substituted with
+cobalt La0.6Sr0.4Co0.2Fe0.8O3-δ
+strontium-doped lanthanum cobaltate La1(cid:0) xSrxCoO3
+strontium-doped lanthanum gallate partially substituted with
+magnesium La0.8Sr0.2Ga0.8Mg0.2O3-δ
+
+LSCO
+LSGM
+
+LSGMC  La0.8Sr0.2Ga0.8Mg0.15Co0.05O3
+LSTNC
+LSM
+PSZ
+RP-PSFeRu-FRA FeRu alloy nanoparticles decorated Ruddlesden-
+
+La0.52Sr0.28Ti0.94Ni0.03Co0.03O3-δ
+strontium-doped lanthanum manganate La1-xSrxMnO3+δ
+partially stabilized zirconia
+
+ScSZ
+SDC
+SSC
+YSZ
+
+Popper type layered perovskite structure Pr0.8Sr1.2(FeRu)O4-δ
+scandia-stabilized zirconia
+samaria-doped ceria like Ce0.8Sm0.2O1.9
+samarium-doped strontium cobaltite Sm0.5Sr0.5CoO3-δ
+yttria-stabilized zirconia
+
+References
+
+[1] Boldrin P, Brandon NP. Progress and outlook for solid oxide fuel cells for
+
+transportation applications. Nat Catal 2019;2(7):571–7.
+
+[2] Duan C, Kee RJ, Zhu H, Karakaya C, Chen Y, Ricote S, Sullivan NP. Highly
+durable, coking and sulfur tolerant, fuel-flexible protonic ceramic fuel cells.
+Nature 2018;557(7704):217.
+
+[3] Garbayo I, Pla D, Morata A, Fonseca L, Sabate N, Tarancon A. Full ceramic micro
+solid oxide fuel cells: towards more reliable MEMS power generators operating at
+high temperatures. Energy Environ Sci 2014;7(11):3617–29.
+
+[4] Hanifi AR, Sandhu NK, Etsell TH, Luo JL, Sarkar P. Fabrication and
+
+characterization of a tubular ceramic fuel cell based on
+BaZr0.1Ce0.7Y0.1Yb0.1O3-δ proton conducting electrolyte. J Power Sources
+2017;341:264–9.
+
+[5] Kendall K, Liang B, Kendall M. Mobile Robots enhanced by microtubular solid
+
+oxide fuel cells (mSOFCs). Innov Ener Res 2018;7(200):2576. 1463.
+
+[6] Mehran MT, Park SW, Kim J, Hong JE, Lee SB, Park SJ, Lim T. Performance
+
+characteristics of a robust and compact propane-fueled 150 W-class SOFC power-
+generation system. Int J Hydrogen Energy 2019;44(12):6160–71.
+
+[7] Chen Y, Lu M, Yang H, Yao Y, Liang B. 80 hours operation of a tubular solid oxide
+
+fuel cell using propane/air. Appl Energy 2020;272:115099.
+
+[8] Sumi H, Nakabayashi S, Kawada T, Uchiyama Y, Uchiyama N, Ichihara K.
+
+Demonstration of SOFC power sources for drones (UAVs; Unmanned Aerial
+vehicles). ECS Trans 2019;91(1):149–57.
+
+[9] Atrex, Ascend energy demonstrate ATV with SOFC range-extenderBarrett S,
+
+editor. Fuel Cells Bull 2017;3–4. 2017.
+
+[10] Delphi demos SOFC tech for truck APUBarrett S, editor. Fuel Cells Bull 2010;3.
+
+2010.
+
+[11] Fernandes MD, Andrade SDP, Bistritzki VN, Fonseca RM, Zacarias LG,
+
+Gonçalves HNC, Matencio T. SOFC-APU systems for aircraft: a review. Int J
+Hydrogen Energy 2018;43(33):16311–33.
+
+[12] Huang K, Singhal SC. Cathode-supported tubular solid oxide fuel cell technology:
+
+a critical review. J Power Sources 2013;237:84–97.
+
+[13] Efforts toward Introduction of SOFC-MGT Hybrid System to the Market. http
+s://www.mhi.co.jp/technology/review/pdf/e554/e554170.pdf [accessed
+22.06.15].
+
+[14] Nakao T, Inoue S, Uenoyama S, Takuwa Y, Suzuki M. Progress of SOFC residential
+CHP system: over 50,000 units market experience of Osaka Gas. ECS Trans 2019;
+91(1):43–9.
+
+[15] Reuber S, Schneider M, Stelter M, Michaelis A. Portable μ-SOFC system based on
+
+multilayer technology. ECS Trans 2011;35(1):251–8.
+
+[16] Udomsilp D, Rechberger J, Neubauer R, Bischof C, Thaler F, Schafbauer W, et al.
+Metal-supported solid oxide fuel cells with exceptionally high power density for
+range extender systems. Cell Reports Physical Science 2020;1(6):100072.
+[17] Du Y, Cui D, Reifsnider K. Characterization of propane-fueled SOFC portable
+
+power systems. Electrochem Solid State Lett 2012;15(5):B65–9.
+
+[18] Antolini E. Direct propane fuel cells. Fuel 2022;315:123152.
+[19] Cheekatamarla PK, Finnerty CM, Robinson CR, Andrews SM, Brodie JA, Lu Y,
+
+DeWald PG. Design, integration and demonstration of a 50 W JP8/kerosene
+fueled portable SOFC power generator. J Power Sources 2009;193(2):797–803.
+[20] Wojcik A, Middleton H, Damopoulos I. Ammonia as a fuel in solid oxide fuel cells.
+
+J Power Sources 2003;118(1–2):342–8.
+
+[21] Valeramedina A, Xiao H, Owenjones M, David WI, Bowen PJ. Ammonia for
+
+power. Prog Energy Combust Sci 2018:63–102.
+
+[22] Cimenti M, Hill JM. Direct utilization of liquid fuels in SOFC for portable
+
+applications: challenges for the selection of alternative anodes. Energies 2009;2
+(2):377–410.
+
+[23] Enger BC, Lødeng R, Holmen A. A review of catalytic partial oxidation of methane
+
+to synthesis gas with emphasis on reaction mechanisms over transition metal
+catalysts. Appl Catal Gen 2008;346(1–2):1–27.
+
+[24] Waller MG, Walluk MR, Trabold TA. Operating envelope of a short contact time
+fuel reformer for propane catalytic partial oxidation. J Power Sources 2015;274:
+149–55.
+
+[25] Sengodan S, Lan R, Humphreys J, Du D, Xu W, Wang H, Tao S. Advances in
+
+reforming and partial oxidation of hydrocarbons for hydrogen production and
+fuel cell applications. Renew Sustain Energy Rev 2018;82:761–80.
+[26] Santis-Alvarez AJ, Nabavi M, Jiang B, Maeder T, Muralt P, Poulikakos D.
+
+A nanoparticle bed micro-reactor with high syngas yield for moderate
+temperature micro-scale SOFC power plants. Chem Eng Sci 2012;84:469–78.
+
+[27] Jiang B, Santis-Alvarez AJ, Muralt P, Poulikakos D, Borhani N, Thome JR,
+
+Maeder T. Design and packaging of a highly integrated microreactor system for
+high-temperature on-board hydrogen production. Chem Eng J 2015;275:206–19.
+
+[28] Pennemann H, Hessel V, Kolb G, Lowe H, Zapf R. Partial oxidation of propane
+using micro structured reactors. Chem Eng J 2008;135(supp-S1):S66–73.
+[29] Cimenti M, Hill JM. Importance of pyrolysis and catalytic decomposition for the
+direct utilization of methanol in solid oxide fuel cells. J Power Sources 2010;195
+(1):54–61.
+
+[30] Cimenti M, Hill JM. Direct utilization of methanol and ethanol in solid oxide fuel
+cells using Cu–Co(Ru)/Zr0. 35Ce0.  65O2(cid:0) δ  anodes. J Power Sources 2010;195(13):
+3996–4001.
+
+[31] Sumi H, Yamaguchi T, Shimada H, Fujishiro Y, Awano M. Development of a
+
+portable SOFC system with internal partial oxidation reforming of butane and
+steam reforming of ethanol. ECS Trans 2017;80(9):71–7.
+
+[32] Ye XF, Wang SR, Wang ZR, Xiong L, Sun XF, Wen TL. Use of a catalyst layer for
+anode-supported SOFCs running on ethanol fuel. J Power Sources 2008;177(2):
+419–25.
+
+[33] Ye XF, Yuan C, Chen YP, Zhong CY, Zhan ZL, Wang SR. Micro-tubular solid oxide
+
+fuel cells and their stacks running on direct ethanol fuels. J Electrochem Soc
+2014;161(9):F894–8.
+
+[34] Cimenti M, Hill J. Direct utilization of methanol on ceria-based anodes for SOFC.
+
+ECS Trans 2009;16(50):189–96.
+
+[35] Gür TM. Comprehensive review of methane conversion in solid oxide fuel cells:
+prospects for efficient electricity generation from natural gas. Prog Energy
+Combust Sci 2016;54:1–64.
+
+[36] Xu Q, Guo Z, Xia L, He Q, Li Z, Bello IT, et al. A comprehensive review of solid
+oxide fuel cells operating on various promising alternative fuels. Energy Convers
+Manag 2022;253:115175.
+
+[37] Mogensen D, Grunwaldt JD, Hendriksen PV, Dam-Johansen K, Nielsen JU.
+
+Internal steam reforming in solid oxide fuel cells: Status and opportunities of
+kinetic studies and their impact on modelling. J Power Sources 2011;196(1):
+25–38.
+
+[38] Zhu H, Kromp A, Leonide A, Ivers-Tiff ́ee E, Deutschmann O, Kee RJ. A model-
+based interpretation of the influence of anode surface chemistry on solid oxide
+fuel cell electrochemical impedance spectra. J Electrochem Soc 2012;159(7):
+F255.
+
+[39] Janardhanan VM, Deutschmann O. CFD analysis of a solid oxide fuel cell with
+
+internal reforming: coupled interactions of transport, heterogeneous catalysis and
+electrochemical processes. J Power Sources 2006;162(2):1192–202.
+
+[40] Sheng CY, Dean AM. Importance of gas-phase kinetics within the anode channel
+
+of a solid-oxide fuel cell. J Phys Chem 2004;108(17):3772–83.
+
+[41] Deutschmann O, Beller M, Renken A, van Santen R. In: Beller M, Renken A, van
+
+Santen RA, editors. High temperature catalysis: role of heterogeneous,
+homogeneous, and radical chemistry. Catalysis; 2012. p. 365–89.
+
+[42] Shi Y, Cai N, Chen L. Numerical modeling of an anode-supported SOFC button cell
+considering anodic surface diffusion. J Power Sources 2007;164(2):639–48.
+
+[43] Vogler M, Bieberle-Hpütter A, Gauckler L, Warnatz J, Bessler WG. Modelling
+
+study of surface reactions, diffusion, and spillover at a Ni/YSZ patterned anode.
+J Electrochem Soc 2009;156(5):B663–72.
+
+[44] Janardhanan VM, Deutschmann O. Modeling diffusion limitation in solid-oxide
+
+fuel cells. Electrochim Acta 2011;56(27):9775–82.
+
+[45] Bessler WG, Vogler M, St ̈ormer H, Gerthsen D, Utz A, Weber A, Ivers-Tiff ́ee E.
+
+Model anodes and anode models for understanding the mechanism of hydrogen
+
+ProgressinEnergyandCombustionScience102(2024)10114120
+
+Y. Wang et al.
+
+oxidation in solid oxide fuel cells. Phys Chem Chem Phys 2010;12(42):
+13888–903.
+
+[46] Hanna J, Lee WY, Shi Y, Ghoniem AF. Fundamentals of electro-and
+
+thermochemistry in the anode of solid-oxide fuel cells with hydrocarbon and
+syngas fuels. Prog Energy Combust Sci 2014;40:74–111.
+
+[47] Kim T, Liu G, Boaro M, Lee SI, Vohs JM, Gorte RJ, Dabbousi BO. A study of carbon
+
+formation and prevention in hydrocarbon-fueled SOFC. J Power Sources 2006;
+155(2):231–8.
+
+[48] Frenklach M, Wang H. Detailed mechanism and modeling of soot particle
+
+formation. In: Soot formation in combustion. Berlin, Heidelberg: Springer; 1994.
+p. 165–92.
+
+[49] Pomfret MB, Steinhurst DA, Kidwell DA, Owrutsky JC. Thermal imaging of SOFC
+
+anode processes. J Power Sources 2010;195:257–62.
+
+[50] Pomfret MB, Steinhurst DA, Owrutsky JC. Identification of a methane oxidation
+intermediate on solid oxide fuel cell anode surfaces with Fourier transform
+infrared emission. J Phys Chem Lett 2013;4(8):1310–4.
+
+[51] Pomfret MB, Marda J, Jackson GS, et al. Hydrocarbon fuels in solid oxide fuel
+
+cells: in situ Raman studies of graphite formation and oxidation. J Phys Chem C
+2008;112(13):5232–40.
+
+[75] Zhao K, Hou X, Norton MG, Ha S. Application of a NiMo–Ce0. 5Zr0. 5O2-δ
+
+catalyst for solid oxide fuel cells running on gasoline. J Power Sources 2019:
+226732.
+
+[76] Wang W, Su C, Wu Y, Ran R, Shao Z. Progress in solid oxide fuel cells with nickel-
+based anodes operating on methane and related fuels. Chem Rev 2013;113(10):
+8104–51.
+
+[77] Wu X, Tian Y, Zhang J, Zuo W, Kong X, Wang J, Zhou X. Enhanced
+
+electrochemical performance and carbon anti-coking ability of solid oxide fuel
+cells with silver modified nickel-yttrium stabilized zirconia anode by electroless
+plating. J Power Sources 2016;301:143–50.
+
+[78] Lee JG, Jeon OS, Hwang HJ, Jang J, Lee Y, Hyun SH, Shul YG. Durable and high-
+performance direct-methane fuel cells with coke-tolerant ceria-coated Ni catalysts
+at reduced temperatures. Electrochim Acta 2016;191:677–86.
+
+[79] Yang L, Choi Y, Qin W, Chen H, Blinn K, Liu M, Liu M. Promotion of water-
+
+mediated carbon removal by nanostructured barium oxide/nickel interfaces in
+solid oxide fuel cells. Nat Commun 2011;2:357.
+
+[80] Thieu CA, Park S, Kim H, et al. Improved electrochemical performance and
+durability of butane-operating low-temperature solid oxide fuel cell through
+palladium infiltration. Int J Energy Res 2020;44(13):9995–10007.
+
+[52] Yu F, Xiao J, Zhang Y, Cai W, Xie Y, Yang N, et al. New insights into carbon
+
+[81] Lee D, Myung J, Tan J, Hyun SH, Irvine JT, Kim J, Moon J. Direct methane solid
+
+deposition mechanism of nickel/yttrium-stabilized zirconia cermet from methane
+by in situ investigation. Appl Energy 2019;256:113910.
+
+oxide fuel cells based on catalytic partial oxidation enabling complete coking
+tolerance of Ni-based anodes. J Power Sources 2017;345:30–40.
+
+[53] Yue W, Li Y, Zheng Y, Wu T, Zhao C, Zhao J, Yu B. Enhancing coking resistance of
+
+Ni/YSZ electrodes: in situ characterization, mechanism research, and surface
+engineering. Nano Energy 2019;62:64–78.
+
+[54] Bierschenk DM, Pillai MR, Lin Y, Barnett SA. Effect of ethane and propane in
+simulated natural gas on the operation of Ni–YSZ anode supported solid oxide
+fuel cells. Fuel Cell 2010;10(6):1129–34.
+
+[55] Pomfret MB, Owrutsky JC, Walker RA. High-temperature Raman spectroscopy of
+solid oxide fuel cell materials and processes. J Phys Chem B 2006;110(35):
+17305–8.
+
+[56] Pomfret MB, Marda J, Jackson GS, Eichhorn BW, Dean AM, Walker RA.
+
+Hydrocarbon fuels in solid oxide fuel cells: in situ Raman studies of graphite
+formation and oxidation. J Phys Chem C 2008;112(13):5232–40.
+
+[57] Pomfret MB, Walker RA, Owrutsky JC. High-temperature chemistry in solid oxide
+fuel cells: in situ optical studies. The journal of physical chemistry letters 2012;3
+(20):3053–64.
+
+[58] Blinn KS, Abernathy H, Li X, Liu M, Bottomley LA, Liu M. Raman spectroscopic
+monitoring of carbon deposition on hydrocarbon-fed solid oxide fuel cell anodes.
+Energy Environ Sci 2012;5(7):7913–7.
+
+[59] Li W, Shi Y, Yu L, Wang Y, Cai N. Carbon deposition on patterned nickel/yttria
+stabilized zirconia electrodes for solid oxide fuel cell/solid oxide electrolysis cell
+modes. J Power Sources 2015;276:26–31.
+
+[60] Li X, Liu M, Lee J, et al. An operando surface enhanced Raman spectroscopy
+
+(SERS) study of carbon deposition on SOFC anodes. Phys Chem Chem Phys 2015;
+17(33):21112–9.
+
+[61] Kirtley JD, Pomfret MB, Steinhurst DA, Owrutsky JC, Walker RA. Toward a
+
+working mechanism of fuel oxidation in sofcs: in situ optical studies of simulated
+biogas and methane. J Phys Chem C 2015;119(23):12781–91.
+
+[62] Maza WA, Steinhurst DA, McIntyre MD, Walker R, Owrutsky J. Operando optical
+studies of solid oxide fuel cells operating on CO and simulated syngas fuels.
+J Power Sources 2021;492:229598.
+
+[63] Kirtley JD, Steinhurst DA, Owrutsky JC, et al. In situ optical studies of methane
+and simulated biogas oxidation on high temperature solid oxide fuel cell anodes.
+Phys Chem Chem Phys 2014;16(1):227–36.
+
+[64] Li X, Blinn K, Chen D, et al. In situ and surface-enhanced Raman spectroscopy
+study of electrode materials in solid oxide fuel cells. Electrochem Energy Rev
+2018;1:433–59.
+
+[65] Li X, Lee JP, Blinn KS, et al. High-temperature surface enhanced Raman
+
+spectroscopy for in situ study of solid oxide fuel cell materials. Energy Environ Sci
+2014;7(1):306–10.
+
+[66] Han Y, Zhang H, Yu Y, et al. In situ characterization of catalysis and
+electrocatalysis using APXPS. ACS Catal 2021;11(3):1464–84.
+
+[67] Kooser K, K ̈a ̈ambre T, Vestli M, et al. Operando high-temperature near-ambient
+pressure X-ray photoelectron spectroscopy and impedance spectroscopy study of
+Ni(cid:0) Ce0. 9Gd0. 1O2(cid:0) δ solid oxide fuel cell anode. Int J Hydrogen Energy 2020;
+45(46):25286–98.
+
+[68] Zhan Z, Lin Y, Pillai M, Kim I, Barnett SA. High-rate electrochemical partial
+oxidation of methane in solid oxide fuel cells. J Power Sources 2006;161(1):
+460–5.
+
+[69] Zhan Z, Barnett SA. Use of a catalyst layer for propane partial oxidation in solid
+
+oxide fuel cells. Solid State Ionics 2005;176(9–10):871–9.
+
+[70] Shao Z, Haile SM, Ahn J, Ronney PD, Zhan Z, Barnett SA. A thermally self-
+
+sustained micro solid-oxide fuel-cell stack with high power density. Nature 2005;
+435(7043):795.
+
+[71] Zhan Z, Barnett SA. Operation of ceria-electrolyte solid oxide fuel cells on iso-
+
+octane–air fuel mixtures. J Power Sources 2006;157(1):422–9.
+
+[72] Liu X, Zhan Z, Meng X, Huang W, Wang S, Wen T. Enabling catalysis of Ru–CeO2
+for propane oxidation in low temperature solid oxide fuel cells. J Power Sources
+2012;199:138–41.
+
+[73] Bkour Q, Zhao K, Scudiero L, Yoon CW, Marin-Flores OG, Norton MG, Ha S.
+
+Synthesis and performance of ceria-zirconia supported Ni-Mo nanoparticles for
+partial oxidation of isooctane. Appl Catal B Environ 2017;212:97–105.
+
+[74] Zhao K, Hou X, Bkour Q, Norton MG, Ha S. NiMo-ceria-zirconia catalytic
+
+reforming layer for solid oxide fuel cells running on a gasoline surrogate. Appl
+Catal B Environ 2018;224:500–7.
+
+[82] Yang L, Choi YM, Qin W, et al. Promotion of water-mediated carbon removal by
+nanostructured barium oxide/nickel interfaces in solid oxide fuel cells. Nat
+Commun 2011;2(1):357.
+
+[83] Ding H, Tao Z, Liu S, Yang Y. A redox-stable direct-methane solid oxide fuel cell
+(SOFC) with Sr2FeNb0.2Mo0.8O6(cid:0) δ  double perovskite as anode material. J Power
+Sources 2016;327:573–9.
+
+[84] Tao, S., Irvine, J. T., & Plint, S. M. (2006). Methane oxidation at redox stable fuel
+cell electrode La0.75Sr0.25Cr0.5Mn0.5O3-5. J Phys Chem B, 110(43), 21771-21776.
+[85] Neagu D, Oh T, Miller DN, Menard H, Bukhari SM, Gamble SR, Irvine JT. Nano-
+socketed nickel particles with enhanced coking resistance grown in situ by redox
+exsolution. Nat Commun 2015;6(1):8120. 8120.
+
+[86] Li B, He S, Li J, et al. A Ce/Ru codoped SrFeO3(cid:0) δ  perovskite for a coke-resistant
+anode of a symmetrical solid oxide fuel cell. ACS Catal 2020;10(24):14398–409.
+
+[87] Qin M, Tan T, Li K, et al. In-situ exsolved FeRu alloy nanoparticles on
+
+Ruddlesden-Popper oxides for direct hydrocarbon fuel solid oxide fuel cells. Int J
+Hydrogen Energy 2020;45(41):21464–72.
+
+[88] Neagu D, Oh TS, Miller DN, M ́enard H, Bukhari SM, Gamble SR, et al. Nano-
+
+socketed nickel particles with enhanced coking resistance grown in situ by redox
+exsolution. Nat Commun 2015;6:8120.
+
+[89] Bkour Q, Zhao K, Kim Y, et al. Partial oxidation of isooctane over Ru-promoted
+nickel–Molybdenum/Cerium–zirconium oxide catalyst at an intermediate
+temperature for internal reforming solid oxide fuel cell applications. Energy
+Technol 2021;9(8):2100064.
+
+[90] Thieu CA, Yang S, Ji HI, et al. Effect of secondary metal catalysts on butane
+
+internal steam reforming operation of thin-film solid oxide fuel cells at 500–600
+C. Appl Catal B Environ 2020;263:118349.
+
+[91] Zha S, Moore A, Abernathy H, et al. GDC-based low-temperature SOFCs powered
+
+by hydrocarbon fuels. J Electrochem Soc 2004;151(8):A1128.
+
+[92] Pi ̃nol S, Morales M, Espiell F. Low temperature anode-supported solid oxide fuel
+cells based on gadolinium doped ceria electrolytes. J Power Sources 2007;169(1):
+2–8.
+
+[93] Sumi H, Yamaguchi T, Suzuki T, et al. Direct hydrocarbon utilization in
+
+microtubular solid oxide fuel cells. J Ceram Soc Jpn 2015;123(1436):213–6.
+[94] Sengodan S, Choi S, Jun A, et al. Layered oxygen-deficient double perovskite as
+
+an efficient and stable anode for direct hydrocarbon solid oxide fuel cells. Nat
+Mater 2015;14(2):205–9. 2015.
+
+[95] Shin TH, Ida S, Ishihara T. Doped CeO2–LaFeO3 composite oxide as an active
+anode for direct hydrocarbon-type solid oxide fuel cells. J Am Chem Soc 2011;
+133(48):19399–407.
+
+[96] Xu N, Zhu T, Yang Z, et al. Co-synthesis of LSCFN-GDC electrode for symmetric
+
+solid oxide fuel cell running on propane. Electrochim Acta 2018;265:259–64.
+
+[97] Faro ML, La Rosa D, Nicotera I, et al. Electrochemical investigation of a propane-
+fed solid oxide fuel cell based on a composite Ni–perovskite anode catalyst. Appl
+Catal B Environ 2009;89(1–2):49–57.
+
+[98] Faro ML, Aric`o AS. Electrochemical behaviour of an all-perovskite-based
+
+intermediate temperature solid oxide fuel cell. Int J Hydrogen Energy 2013;38
+(34):14773–8.
+
+[99] Madsen BD, Barnett SA. Effect of fuel composition on the performance of ceramic-
+based solid oxide fuel cell anodes. Solid State Ionics 2005;176(35–36):2545–53.
+[100] Zhang L, Yang C, Frenkel AI, et al. Co-generation of electricity and chemicals from
+
+propane fuel in solid oxide fuel cells with anode containing nano-bimetallic
+catalyst. J Power Sources 2014;262:421–8.
+
+[101] Xu C, Sun W, Ren R, et al. A highly active and carbon-tolerant anode decorated
+with in situ grown cobalt nano-catalyst for intermediate-temperature solid oxide
+fuel cells. Appl Catal B Environ 2021;282:119553.
+
+[102] Xiao G, Wang S, Lin Y, et al. Ni-doped Sr2Fe1.5Mo0.5O6-δ as anode materials for
+
+solid oxide fuel cells. J Electrochem Soc 2014;161(3):F305.
+
+[103] Yang C, Li J, Lin Y, et al. In situ fabrication of CoFe alloy nanoparticles structured
+(Pr0. 4Sr0. 6) 3 (Fe0. 85Nb0. 15) 2O7 ceramic anode for direct hydrocarbon solid
+oxide fuel cells. Nano Energy 2015;11:704–10.
+
+[104] Tan T, Qin M, Li K, et al. In-situ exsolved NiFe alloy nanoparticles on Pr0. 8Sr1. 2
+
+(NiFe) O4-δ for direct hydrocarbon fuel solid oxide fuel cells. Int J Hydrogen
+Energy 2020;45(53):29407–16.
+
+ProgressinEnergyandCombustionScience102(2024)10114121
+
+Y. Wang et al.
+
+[105] Vayenas CG, Farr RD. Cogeneration of electric energy and nitric oxide. Science
+
+1980;208(4444):593–4.
+
+[106] Ma Q, Ma J, Zhou S, Yan R, Gao J, Meng G. A high-performance ammonia-fueled
+SOFC based on a YSZ thin-film electrolyte. J Power Sources 2007;164(1):86–9.
+[107] Cinti G, Discepoli G, Sisani E, Desideri U. SOFC operating with ammonia: stack
+test and system analysis. Int J Hydrogen Energy 2016;41(31):13583–90.
+[108] Ni M, Leung DY, Leung MK. Thermodynamic analysis of ammonia fed solid oxide
+
+fuel cells: comparison between proton-conducting electrolyte and oxygen ion-
+conducting electrolyte. J Power Sources 2008;183(2):682–6.
+
+[109] Farr RD, Vayenas CG. Ammonia high temperature solid electrolyte fuel cell.
+
+J Electrochem Soc 1980;127(7):1478–83.
+
+[110] Ma Q, Peng RR, Tian L, Meng G. Direct utilization of ammonia in intermediate-
+
+temperature solid oxide fuel cells. Electrochem Commun 2006;8(11):1791–5.
+
+[111] Afif A, Radenahmad N, Cheok Q, Shams S, Kim JH, Azad AK. Ammonia-fed fuel
+cells: a comprehensive review. Renewable & Sustainable Energy Reviews; 2016.
+p. 822–35.
+
+[112] Hashinokuchi M, Yokochi R, Akimoto W, Doi T, Inaba M, Kugai J. Enhancement
+of anode activity at Ni/Sm-doped CeO2  cermet anodes by Mo addition in NH3-
+fueled solid oxide fuel cells. Solid State Ionics 2016;285:222–6.
+
+[137] Zhang J, Lenser C, Menzler NH, Guillon O. Comparison of solid oxide fuel cell
+
+(SOFC) electrolyte materials for operation at 500 oC. Solid State Ionics 2020;344:
+115138.
+
+[138] Bi L, Boulfrad S, Traversa E. Steam electrolysis by solid oxide electrolysis cells
+(SOECs) with proton-conducting oxides. Chem Soc Rev 2014;43(24):8255–70.
+[139] Li Y, Wong LM, Xie H, Wang S, Su PC. Nanoporous palladium anode for direct
+ethanol solid oxide fuel cells with nanoscale proton-conducting ceramic
+electrolyte. J Power Sources 2017;340:98–103.
+
+[140] Weber A, Ivers-Tiffee E. Materials and concepts for solid oxide fuel cells (SOFCs)
+in stationary and mobile applications. J Power Sources 2004;127:273–83.
+[141] Wachsman ED, Lee KT. Lowering the temperature of solid oxide fuel cells. Science
+
+2011;334(6058):935–9.
+
+[142] Chen Y, et al. A highly efficient and robust nanofiber cathode for solid oxide fuel
+
+cells. Adv Energy Mater 2017;7(6). 2017.
+
+[143] Bian W, et al. Regulation of cathode mass and charge transfer by structural 3D
+C. Adv Funct Mater 2021;31
+
+engineering for protonic ceramic fuel cell at 400
+(33).
+
+◦
+
+[144] Tian H, et al. Protonic ceramic materials for clean and sustainable energy:
+
+advantages and challenges. Int Mater Rev 2022;2022:1–29.
+
+[113] Liu L, Sun K, Wu X, Li X, Zhang M, Zhang N, Zhou X. Improved performance of
+
+[145] Zhang W, Liu M, Gu X, Shi Y, Deng Z, Cai N. Water electrolysis toward elevated
+
+ammonia-fueled solid oxide fuel cell with SSZ thin film electrolyte and Ni-SSZ
+anode functional layer. Int J Hydrogen Energy 2012;37(14):10857–65.
+[114] Song Y, Li H, Xu M, Yang G, Wang W, Ran R, Shao Z. Infiltrated NiCo alloy
+
+nanoparticle decorated perovskite oxide: a highly active, stable, and antisintering
+anode for direct-ammonia solid oxide fuel cells. Small 2020;16(28):2001859.
+
+[115] Lin Y, Ran R, Guo Y, Zhou W, Cai R, Wang J, Shao Z. Proton-conducting fuel cells
+operating on hydrogen, ammonia and hydrazine at intermediate temperatures. Int
+J Hydrogen Energy 2010;35(7):2637–42.
+
+[116] He F, Gao Q, Liu Z, Yang M, Ran R, Yang G, Shao Z. A new Pd doped proton
+
+conducting perovskite oxide with multiple functionalities for efficient and stable
+power generation from ammonia at reduced temperatures. Adv Energy Mater
+2021;11(19):2003916.
+
+[117] Zhang H, Zhou Y, Pei K, Pan Y, Xu K, Ding D, et al. An efficient and durable anode
+for ammonia protonic ceramic fuel cells. Energy Environ Sci 2022;15(1):287–95.
+
+[118] Zhang L, Yang W. Direct ammonia solid oxide fuel cell based on thin proton-
+
+conducting electrolyte. J Power Sources 2008;179(1):92–5.
+
+[119] Meng G, Jiang C, Ma J, Ma Q, Liu X. Comparative study on the performance of a
+SDC-based SOFC fueled by ammonia and hydrogen. J Power Sources 2007;173:
+189–93.
+
+[120] Seongkook O, Min JO, Jongsup H, Kyung JY, Ho-Il J, JongHo L, et al.
+
+A comprehensive investigation of direct ammonia-fueled thin-film solid-oxide
+fuel cells: performance, limitation, and prospects. iScience 2022;25(9):105009.
+
+[121] Akimoto W, Fujimoto T, Saito M, Inaba M, Yoshida H, Inagaki T. Ni-Fe/Sm-doped
+
+CeO2 anode for ammonia-fueled solid oxide fuel cells. Solid State Ionics 2014;
+256:1–4.
+
+[122] Ma Q, Peng R, Lin Y, Gao J, Meng G. A high-performance ammonia-fueled solid
+
+oxide fuel cell. J Power Sources 2006;161(1):95–8.
+
+[123] Xu K, Zhu F, Hou M, Li C, Zhang H, Chen Y. Activating and stabilizing the surface
+
+of anode for high-performing direct-ammonia solid oxide fuel cells. Nano Res
+2023;16(2):2454–62.
+
+[124] Pan X, Zhang H, Xu K, Zhou Y, Zhao B, Yuan W, et al. A high-performance and
+durable direct NH3 tubular protonic ceramic fuel cell integrated with an internal
+catalyst layer. Appl Catal B Environ 2022;306:121071.
+
+[125] Song J, Ran R, Shao Z. Hydrazine as efficient fuel for low-temperature SOFC
+
+through ex-situ catalytic decomposition with high selectivity toward hydrogen.
+Int J Hydrogen Energy 2010;35(15):7919–24.
+
+[126] Okanishi T, Okura K, Srifa A, Muroyama H, Matsui T, Kishimoto M, Eguchi K.
+
+Comparative study of ammonia-fueled solid oxide fuel cell systems. Fuel Cell
+2017;17(3):383–90.
+
+[127] Kishimoto M, Muroyama H, Suzuki S, Saito M, Eguchi K. Development of 1 kw-
+
+class ammonia-fueled solid oxide fuel cell stack. Fuel Cell 2020;20(1):80–8.
+
+[128] Kobayashi Y, Kosaka K, Tomida K, Matake N, Ito K, Sasaki K. Start-up
+
+characteristics of segmented-in-series tubular SOFC power modules improved by
+catalytic combustion at cathodes. Fuel Cell 2014;14(6):1028–35.
+
+[129] Jeong H, et al. Advancing towards ready-to-use solid oxide fuel cells: 5 minute
+
+cold start-up with high-power performance. J Mater Chem A 2023;11(14):
+7415–21.
+
+[130] Suzuki T, Funahashi Y, Yamaguchi T, Fujishiro Y, Awano M. Cube-type micro sofc
+stacks using sub-millimeter tubular sofcs. J Power Sources 2008;183(2):544–50.
+
+[131] Wang Z, et al. Dynamic evaluation of low-temperature metal-supported solid
+
+oxide fuel cell oriented to auxiliary power units. J Power Sources 2008;176(1):
+90–5.
+
+[132] Ishihara T. Perovskite oxide for solid oxide fuel cells. Springer; 2009.
+[133] Noh HS, Son JW, Lee H, Song HS, Lee HW, Lee JH. Low temperature performance
+
+improvement of SOFC with thin film electrolyte and electrodes fabricated by
+pulsed laser deposition. J Electrochem Soc 2009;156(12):B1484–90.
+
+[134] Morales M, P ́erez-Falc ́on JM, Moure A, Tartaj J, Espiell F, Segarra M. Performance
+and degradation of La0.8Sr0.2Ga0.85Mg0.15O3(cid:0) δ  electrolyte-supported cells in
+single-chamber configuration. Int J Hydrogen Energy 2014;39(10):5451–9.
+[135] Ding J, Zhou X, Liu Q, Yin G. Development of tubular anode-supported solid oxide
+fuel cell cell and 4-cell-stack based on lanthanum gallate electrolyte membrane
+for mobile application. J Power Sources 2018;401:336–42.
+
+[136] Ding J, Liu J, Feng Y, Yin G. Direct operation of cone-shaped LT-SOFCs with
+
+methane fuel for portable application. Int J Hydrogen Energy 2011;36(13):
+7649–55.
+
+temperature: advances, challenges and Frontiers. Chem Rev 2023;11:7119–92.
+
+[146] Opakhai S, Kuterbekov K. Metal-supported solid oxide fuel cells: a review of
+
+recent developments and problems. Energies 2023;16(12):4700.
+
+[147] Wang Y, Ren J, Shi Y, Li X. Numerical model of direct internal reforming sofc: a
+
+comparison between anode-support and metal-support. ECS Trans 2019;91(1):
+2013–22.
+
+[148] Zeng Z, Qian Y, Zhang Y, Hao C, Zhuge W. A review of heat transfer and thermal
+management methods for temperature gradient reduction in solid oxide fuel cell
+(sofc) stacks. Appl Energy 2020;280:115899.
+
+[149] Blennow P, et al. Planar metal-supported SOFC with novel cermet anode. Fuel
+
+Cell 2011;11(5):661–8.
+
+[150] Leah RT, et al. Development progress on the ceres power steel cell technology
+Platform: further progress towards Commercialization. ECS Trans 2017;78(1):
+87–95.
+
+[151] Tucker MC, Ying AS. Metal-supported solid oxide fuel cells operated in direct-
+
+flame configuration. Int J Hydrogen Energy 2017;42(38):24426–34.
+[152] Tucker MC, Jacobson CP, Jonghe LCD. A braze system for sealing metal-
+supported solid oxide fuel cells. J Power Sources 2006;160(2):1049–57.
+[153] Matus Y, et al. Metal-supported solid oxide fuel cell membranes for rapid thermal
+
+cycling. Solid State Ionics 2005;176(5–6):443–9.
+
+[154] Dayaghi AM, Kim KJ, Kim SJ, Kim S, Bae H, Choi GM. Thermal cycling and
+
+electrochemical characteristics of solid oxide fuel cell supported on stainless steel
+with a new 3-phase composite anode. J Power Sources 2017;354:74–84.
+[155] Kim KJ, Park BH, Kim SJ, Lee Y, Bae H, Choi GM. Micro solid oxide fuel cell
+
+fabricated on porous stainless steel: a new strategy for enhanced thermal cycling
+ability. Sci Rep 2016;6:22443.
+
+[156] Lv H, Huang Z, Zhang G, Chen T, Wang S. A new design of metal supported micro-
+tubular solid oxide fuel cell with sandwich structure. Int J Hydrogen Energy 2022;
+47(78):33420–8.
+
+[157] Tucker MC. Dynamic-temperature operation of metal-supported solid oxide fuel
+
+cells. J Power Sources 2018;395:314–7.
+
+[158] Hagen A, et al. SOFC stacks for mobile applications with excellent robustness
+towards thermal stresses. Int J Hydrogen Energy 2020;45(53):29201–11.
+[159] Blum L, et al. SOFC stack and system development at Forschungszentrum Jülich.
+
+J Electrochem Soc 2015;162(10):F1199–205.
+
+[160] Guan W, Du Z, Wang J, Jiang L, Zhou XD. Mechanisms of performance
+
+degradation induced by thermal cycling in solid oxide fuel cell stacks with flat-
+tube anode-supported cells based on double-sided cathodes. Int J Hydrogen
+Energy 2020;45(38):19840–6.
+
+[161] Howe KS, Hanifi AR, Kendall K, Zazulak M, Etsell TH, Sarkar P. Performance of
+microtubular sofcs with infiltrated electrodes under thermal cycling. Int J
+Hydrogen Energy 2013;38(2):1058–67.
+
+[162] Bujalski W, Dikwal CM, Kendall K. Cycling of three solid oxide fuel cell types.
+
+J Power Sources 2007;171(1):96–100.
+
+[163] Pan J, Yang J, Yan D, Pu J, Chi B, Li J. Effect of thermal cycling on durability of a
+solid oxide fuel cell stack with external manifold structure. Int J Hydrogen Energy
+2020;45(35):17927–34.
+
+[164] Ding J, Liu J. A novel design and performance of cone-shaped tubular anode-
+
+supported segmented-in-series solid oxide fuel cell stack. J Power Sources 2009;
+193(2):769–73.
+
+[165] Noh HS, Yoon KJ, Kim BK, Je HJ, Lee HW, Lee JH, et al. Thermo-mechanical
+
+stability of multi-scale-architectured thin-film-based solid oxide fuel cells assessed
+by thermal cycling tests. J Power Sources 2014;249:125–30.
+
+[166] Kilbride IP. Preparation and properties of small diameter tubular solid oxide fuel
+
+cells for rapid start-up. J Power Sources 1996;61(1):167–71.
+
+[167] Leah R, Bone A, Lankin M, Selcuk A, Pierce R, Rees L, et al. Low-cost, redox-
+
+stable, low-temperature sofc developed by ceres power for multiple applications:
+latest development update. ECS Trans 2013;57(1):461–70.
+
+[168] Rodriguez-Martinez LM, et al. Degradation studies on tubular metal supported
+
+SOFC. ECS Trans 2009;25(2):745–52.
+
+[169] Campana R, Merino RI, Larrea A, Villarreal I, Orera VM. Fabrication,
+
+electrochemical characterization and thermal cycling of anode supported
+microtubular solid oxide fuel cells. J Power Sources 2009;192(1):120–5.
+[170] Tucker MC. Personal power using metal-supported solid oxide fuel cells operated
+in a camping stove flame. Int J Hydrogen Energy 2018;43(18):8991–8.
+
+ProgressinEnergyandCombustionScience102(2024)10114122
+
+Y. Wang et al.
+
+[171] Tucker MC. Progress in metal-supported solid oxide fuel cells: a review. J Power
+
+[205] Toshio S, Yoshihiro F, Toshiaki Y, Yoshinobu F, Masanobu A. Development of
+
+Sources 2010;195(15):4570–82.
+
+[172] Mineshige A, Fukushima K, Okada S, Kikuchi T, Kobune M, Yazawa T, et al.
+
+Porous metal tubular support for solid oxide fuel cell design. Electrochem Solid
+State Lett 2006;9(9):A427–9.
+
+cube-type SOFC stacks using anode-supported tubular cells. J Power Sources
+2008;175:68–74.
+
+[206] Monz ́on H, Laguna-Bercero MA. Highly stable microtubular cells for portable
+solid oxide fuel cell applications. Electrochim Acta 2016;222:1622–7.
+
+[173] Cho HJ, Park YM, Choi GM. Enhanced power density of metal-supported solid
+
+[207] Li T, Wu Z, Li K. Co-extrusion of electrolyte/anode functional layer/anode triple-
+
+oxide fuel cell with a two-step firing process. Solid State Ionics 2011;192(1):
+519–22.
+
+[174] Kang YJ, Choi GM. Fabrication and performance of Ni-Fe metal-supported SOFC
+
+using Gd-doped ceria electrolyte. ECS Trans 2009;25(2):859–64.
+
+[175] Zhang S, Yu H, Li C, Lai SY, Li C, Yang GJ, et al. Thermally sprayed high-
+
+performance porous metal-supported solid oxide fuel cells with nanostructured
+La0.6Sr0.4Co0.2Fe0.8O3δ cathodes. J Mater Chem A 2016;4(19):7461.
+[176] Yu B, Zhang W, Xu J, Chen J, Luo X, Stephan K. Preparation and electrochemical
+behavior of dense YSZ film for SOEC. Int J Hydrogen Energy 2012;37(17):
+12074–80.
+
+[177] Blennow P, et al. Planar metal-supported SOFC with novel cermet anode. Fuel
+
+Cell 2011;11(5):661–8.
+
+layer ceramic hollow fibres for micro-tubular solid oxide fuel
+cells–electrochemical performance study. J Power Sources 2015;273(273):
+999–1005.
+
+[208] Bai Y, Wang C, Jin C, Liu J. Anode current collecting efficiency of tubular anode-
+
+supported solid oxide fuel cells. Fuel Cell 2011;11(3):465–8.
+
+[209] Liang B, Yao Y, Guo J, Yang H, Liang J, Zhao Z, Wu G, Zhan Y, Zhao X, Tao T,
+
+Yao Y, Lu S, Zhao R. Propane-fuelled microtubular solid oxide fuel cell stack
+electrically connected by an anodic rectangular window. Appl Energy 2022;309:
+118404.
+
+[210] Panthi D, Choi B, Tsutsumi A. Fabrication and evaluation of a micro-tubular solid
+oxide fuel cell with an inert support using scandia-stabilized zirconia electrolyte.
+J Electrochem Soc 2015;162(14):F1555–60.
+
+[178] Satardekar P, et al. Production of metal-supported solid oxide fuel cells by co-
+
+[211] Panthi D, Tsutsumi A. Development of a high-performance micro-tubular SOFC
+
+sintering route. Mater Today Proc 2022;63:76–84.
+
+based on a hollow fiber support. ECS Trans 2013;57(1):789–98.
+
+[179] Wang Y, et al. Development of ScSZ electrolyte by very low pressure plasma
+
+spraying for high-performance metal-supported SOFCs. J Therm Spray Technol
+2020;29(1–2):223.
+
+[212] Lee TJ, Kendall K. Characterisation of electrical performance of anode supported
+micro-tubular solid oxide fuel cell with methane fuel. J Power Sources 2008;181
+(2):195–8.
+
+[180] Wang YP, Gao JT, Li JH, Li CJ, Li CX. Preparation of bulk-like La
+
+[213] Lee SB, Lim TH, Song RH, Shin DR, Dong SK. Development of a 700 w anode-
+
+0.8Sr0.2Ga0.8Mg0.2O3-δ  coatings for porous metal-supported solid oxide fuel cells
+via plasma spraying at increased particle temperatures. Int J Hydrogen Energy
+2021;46(64):32655–64.
+
+[181] Roehrens D, et al. Redox-stability of a planar metal-supported SOFC. ECS Trans
+
+2013;57(1):665.
+
+[182] Thaler F, Nenning A, Bischof C, Udomsilp D, Bram M. Optimized cell processing
+
+as the key of high electrochemical performance of metal-supported solid oxide
+fuel cells. ECS Trans 2019;91(1):887–900.
+
+[183] Zhang S, Liu T, Li C, Yao S, Li C, Yang G, et al. Atmospheric plasma-sprayed
+
+La0.8Sr0.2Ga0.8Mg0.2O3 electrolyte membranes for intermediate-temperature
+solid oxide fuel cells. J Mater Chem A 2015;14(3):7535–53.
+
+[184] Shin SS, Kim JH, Bae KT, Lee KT, Kim H. Multiscale structured low-temperature
+
+solid oxide fuel cells with 13 W power at 500
+3459–68.
+
+◦
+
+C. Energy Environ Sci 2020;13:
+
+supported micro-tubular SOFC stack for APU applications. Int J Hydrogen Energy
+2008;33(9):2330–6.
+
+[214] Torre R, Casarin M, Sglavo VM. Production of compliant current collector-
+
+supported micro-tubular solid oxide fuel cells. ECS Trans 2011;35(1):747–55.
+
+[215] Shi J, Fan J, Wang Y, Shi Y, Cai N. A new design using metal wire brushes as the
+
+current collector and catalyst carrier for internal reforming of micro-tubular
+SOFCs. J Electrochem Soc 2021;168(10):104508.
+
+[216] Zhang R, Wang Y, Shi J, Shi Y. Design and fabrication of an easily assembled
+
+anode-supported microtubular SOFC stack. ECS Trans 2023;111(6):851–7.
+[217] Hai F, Dhruba P, Yanhai D. Improving current collection of tubular solid oxide
+
+fuel cells. ECS Trans 2021;103(1):83–92.
+
+[218] Nakajima H, Murakami S, Ikeda S, Kitahara T. Three-dimensional flow channel
+arrangements in an anode-supported honeycomb solid oxide fuel cell. Heat Mass
+Tran 2018;54(8):2545–50.
+
+[185] Choudhary LAS. Electrophoretic deposition studies of Ba(Zr-Ce-Y)O-3 ceramic
+
+[219] Zhong H, Matsumoto H, Ishihara T, Toriyama A. Honeycomb-type solid oxide fuel
+
+coating. Annals of the American Thoracic Society 2019;16(3):1022.
+
+cells using la0.9sr0.1ga0.8mg0.2o3 electrolyte. Chem Lett 2007;36(7):846–7.
+
+[186] Bujalski W, Dikwal CM, Kendall K. Cycling of three solid oxide fuel cell types.
+
+[220] Yamaguchi T, Shimizu S, Suzuki T, Fujishiro Y, Awano M. Evaluation of extruded
+
+J Power Sources 2007;171(1):96–100.
+
+[187] Pusz J, Smirnova A, Mohammadi A. Fracture strength of micro-tubular solid oxide
+
+fuel cell anode in redox cycling experiments. J Power Sources 2007;163(2):
+900–6.
+
+[188] Lawlor V, Griesser S, Buchinger G, Olabi AG, Cordiner S, Meissner D. Review of
+
+the micro-tubular solid oxide fuel cell: Part I. Stack design issues and research
+activities. J Power Sources 2009;193(2):387–99.
+
+[189] Jamil SM, Othman MHD, Rahman MA, Jaafar J, Ismail AF, Li K. Recent
+
+fabrication techniques for micro-tubular solid oxide fuel cell support: a review.
+J Eur Ceram Soc 2015;35(1):1–22.
+
+[190] Lawlor V. Review of the micro-tubular solid oxide fuel cell (part II: cell design
+
+issues and research activities). J Power Sources 2013;240:421–41.
+[191] Howe KS, Thompson GJ, Kendall K. Micro-tubular solid oxide fuel cells and
+
+stacks. J Power Sources 2011;196(4):1677–86.
+
+[192] Leah RT, et al. Development progress on the ceres power steel cell technology
+Platform: further progress towards Commercialization. ECS Trans 2017;78(1):
+87–95.
+
+cathode honeycomb monolith-supported sofc under rapid start-up operation.
+Electrochim Acta 2009;54(5):1478–82.
+
+[221] Li T, Lu X, Mohamad FR, Wang B, Nicholas MF, Geoff HK, et al. High-performance
+fuel cell designed for coking resistance and efficient conversion of waste methane
+to electrical energy. Energy Environment Science 2020;13:1879.
+
+[222] Li T, Thomas MMH, Mohamad FR, Wang B, Nicholas MF, Geoff HK, et al. Design
+of next-generation ceramic fuel cells and real-time characterization with
+synchrotron X-ray diffraction computed tomography. Nat Commun 2019;10:
+1497.
+
+[223] Sui J, Liu J. An electrolyte-supported SOFC stack fabricated by slip casting
+
+technique. ECS Trans 2007;7(1):633.
+
+[224] Ding J, Liu J. A novel design and performance of cone-shaped tubular anode-
+
+supported segmented-in-series solid oxide fuel cell stack. J Power Sources 2009;
+193(2):769–73.
+
+[225] Shi J, Yao Y, Zhang R, Wang Y, Fan J, Shi Y, Liang B, Cai N. Experimental study
+
+on high-efficiency microtubular solid oxide fuel cell stacks using various fuels.
+ECS Trans 2023;111(6):839–49.
+
+[193] Kendall K, Dikwal CM, Bujalski W. Comparative analysis of thermal and redox
+
+[226] Junichiro O, Keiko W, Koichi Y. Multicriteria assessment of the performance of
+
+cycling for microtubular SOFCs. ECS Trans 2007;7(1):1521–6.
+
+[194] Kendall K, Meadowcroft A. Improved ceramics leading to microtubular solid
+oxide fuel cells (msofcs). Int J Hydrogen Energy 2013;38(3):1725–30.
+
+[195] Dikwal CM, Bujalski W, Kendall K. The effect of temperature gradients on thermal
+
+cycling and isothermal ageing of micro-tubular solid oxide fuel cells. J Power
+Sources 2009;193(1):241–8.
+
+[196] Kendall K, Dikwal CM, Bujalski W. Comparative analysis of thermal and redox
+
+cycling for microtubular SOFCs. ECS Trans 2007;7(1):1521–6.
+
+[197] Sarkar P, Yamarte L, Rho H, Johanson L. Anode-supported tubular micro-solid
+
+oxide fuel cell. Int J Appl Ceram Technol 2007;4(2):103–8.
+
+solid oxide fuel cells by cell design and materials development: design and
+modeling approach. J Fuel Cell Sci Technol 2013;10:1–11. 011007.
+
+[227] Kashif R, Sang KD, Rashid AK, Seung HP. Optimization of manifold design for 1
+kW-class flat-tubular solid oxide fuel cell stack operating on reformed natural gas.
+J Power Sources 2016;327:638–52.
+
+[228] Leah R, Bone A, Lankin M, Selcuk A, Rahman M, Clare A, Rees L, Phillip S,
+
+Mukerjee S, Selby M. Ceres power steel cell technology: rapid progress towards a
+Truly commercially viable SOFC. ECS Trans 2015;68(1):95–107.
+
+[229] https://global.kyocera.com/prdct/fc/stack/index.html [accessed 23.12.16].
+[230] https://elcogen.com/wp-content/uploads/2022/12/Elcogen_tooteleht_A4blee
+
+[198] Bujalski W, Paragreen J, Reade G. Cycling studies of solid oxide fuel cells. J Power
+
+d_72dpi_2022.pdf [accessed 23.12.16].
+
+Sources 2006;157(2):745–9.
+
+[199] Schiller G, Franco T, Lang M, Metzger P, St ̈ormer AO. Recent results of the SOFC
+
+APU development at DLR. International Symposium on Solid Oxide Fuel Cells
+2005;7:66–75.
+
+[200] Kendall K. Progress in microtubular solid oxide fuel cells. Int J Appl Ceram
+
+Technol 2010;7(1):1–9.
+
+[201] Huang W, Finnerty C, Sharp R, Wang K, Balili B. High-performance 3D printed
+microtubular solid oxide fuel cells. Advanced Materials Technologies 2017;2(4):
+1600258.
+
+[202] Huang W, Finnerty C, Wang K, Sharp R, Balili B. Operation of micro tubular solid
+oxide fuel cells integrated with propane reformers. Int J Hydrogen Energy 2019.
+[203] Zeng H, Gong S, Wang Y, Shi Y, Hu Q, Cai N. Flat-chip flame fuel cell operated on
+a catalytically enhanced porous media combustor. Energy Convers Manag 2019;
+196:443–52.
+
+[204] Suzuki T, Funahashi Y, Yamaguchi T, Fujishiro Y, Awano M. New stack design of
+
+micro-tubular SOFCs for portable power sources. Fuel Cell 2008;8(6):381–4.
+
+[231] http://www.huatsing-power.com/product/8/[accessed 23.12.16].
+[232] https://www.sofc.com.cn/productinfo/1663802.html [accessed 23.12.16].
+[233] Kattke KJ, Braun RJ. Implementing thermal management modeling into SOFC
+
+system level design. J Fuel Cell Sci Technol 2011;8(2).
+
+[234] Yu Z, Xu Y, Hu B, et al. Comparing the air flow distribution Qualities among three
+different air flow path configurations for tubular solid oxide fuel cell stacks. Int J
+Electrochem Sci 2016;11:9100–9.
+
+[235] Chen D, Xu Y, Hu B, Yan C, Liu L. Investigation of proper external air flow path for
+
+tubular fuel cell stacks with an anode support feature. Energy Convers Manag
+2018;171:807–14.
+
+[236] Funahashi Y, Shimamori T, Suzuki T, Fujishiro Y, Awano M. Simulation study for
+
+the optimization of microtubular solid oxide fuel cell bundles. J Fuel Cell Sci
+Technol 2010;7(2):021015.
+
+[237] Dokmaingam P, Irvine JTS, Assabumrungrat S, Charojrochkul S, Laosiripojana N.
+Modeling of IT-SOFC with indirect internal reforming operation fueled by
+
+ProgressinEnergyandCombustionScience102(2024)10114123
+
+Y. Wang et al.
+
+methane: effect of oxygen adding as autothermal reforming. Int J Hydrogen
+Energy 2010;35(24):13271–9.
+
+[238] Zheng K, Sun Y, Shen S, Li L, Wang S. A novel cooler for the thermal management
+of solid oxide fuel cell stack. Sustain Energy Technol Assessments 2021;48:
+101564.
+
+[239] Lai Y, Wang Z, Cui D, Han F, Ji Y, Cai W. Thermal impact performance study for
+the thermal management of ammonia-fueled single tubular solid oxide fuel cell.
+Int J Hydrogen Energy 2023;48(6):2351–67.
+
+[240] Weng YC, Cho HP, Chang CC, Chen SL. Heat pipe with PCM for electronic cooling.
+
+Appl Energy 2011;88(5):1825–33.
+
+[241] Zhang LY, Liu YY, Guo X, Meng XZ, Jin LW, Zhang QL, et al. Experimental
+
+investigation and economic analysis of gravity heat pipe exchanger applied in
+communication base station. Appl Energy 2017;194:499–507.
+
+[242] Tian E, He Y, Tao W. Research on a new type waste heat recovery gravity heat
+
+pipe exchanger. Appl Energy 2017;188:586–94.
+
+[243] Ma H, Yin L, Shen X, Lu W, Sun Y, Zhang Y, et al. Experimental study on heat pipe
+
+assisted heat exchanger used for industrial waste heat recovery. Appl Energy
+2016;169:177–86.
+
+[244] Vasiliev LL. Heat pipes in modern heat exchangers. Appl Therm Eng 2005;25(1):
+
+1–19.
+
+[245] Dillig M, Leimert J, Karl J. Planar high temperature heat pipes for SOFC/SOEC
+
+stack applications. Fuel Cell 2014;14(3):479–88.
+
+[246] Dillig M, Karl J. Thermal management of high temperature solid oxide
+electrolyser cell/fuel cell systems. Energy Proc 2012;28:37–47.
+
+[247] Zeng H, Wang Y, Shi Y, Cai N, Yuan D. Highly thermal integrated heat pipe-solid
+
+oxide fuel cell. Appl Energy 2018;216:613–9.
+
+[248] Fan J, Shi J, Zhang R, Wang Y, Shi Y. Numerical study of a 20-cell tubular
+
+segmented-in-series solid oxide fuel cell. J Power Sources 2023;556:232449.
+
+[249] Promsen M, Komatsu Y, Sciazko A, Kaneko S, Shikazono N. Feasibility study on
+saturated water cooled solid oxide fuel cell stack. Appl Energy 2020;279:115803.
+[250] Fan J, Wang Y, Tian R, Shi J, Shi Y, Cao H, Cai N. Thermal management of solid
+oxide fuel cells with liquid metal. Int J Hydrogen Energy 2023;48(28):10659–70.
+[251] Cao Y, Faghri A. A numerical analysis of high-temperature heat pipe startup from
+
+the frozen state. J Heat Tran 1993;115(1):247–54.
+
+[252] Zhao J, Yuan DZ, Tang DW, Jiang YY. Heat transfer characteristics of a concentric
+
+annular high temperature heat pipe under anti-gravity conditions. Appl Therm
+Eng 2019;148:817–24.
+
+[253] Boyette WR, Steinmetz SA, Guiberti TF, Dunn MJ, Roberts WL, Masri AR. Soot
+formation in turbulent flames of ethylene/hydrogen/ammonia. Combust Flame
+2021;226:315–24.
+
+[254] Zhang YR, Xiao B, Li YP, Liu P, Zhan R, Huang Z, et al. LIF diagnostics for
+
+selective and quantitative measurement of PAHs in laminar premixed flames.
+Combust Flame 2020;222:5–17.
+
+[255] Michelsen HA, Schulz C, Smallwood GJ, Will S. Laser-induced incandescence:
+
+particulate diagnostics for combustion, atmospheric, and industrial applications.
+Prog Energy Combust Sci 2015;51:2–48.
+
+[256] Bian W, Wu W, Wang B, Tang W, Zhou M, Jin C, et al. Revitalizing interface in
+
+protonic ceramic cells by acid etch. Nature 2022;604(7906):479–85.
+[257] Chen Y, Deglee B, Tang Y, Wang Z, Zhao B, Wei Y, Liu M. A robust fuel cell
+
+operated on nearly dry methane at 500
+catalysis and electrocatalysis. Nat Energy 2018;3(12):1042–50.
+[258] Wehrle L, Wang Y, Boldrin P, Brandon NP, Deutschmann O, Banerjee A.
+
+C enabled by synergistic thermal
+
+◦
+
+Optimizing solid oxide fuel cell performance to re-evaluate its role in the mobility
+sector. ACS Environmental Au 2022;2(1):42–64.
+
+[259] Wang Y, Banerjee A, Deutschmann O. Dynamic behavior and control strategy
+
+study of CO2/H2O co-electrolysis in solid oxide electrolysis cells. J Power Sources
+2019;412:255–64.
+
+[260] Wang Y, Banerjee A, Wehrle L, Shi Y, Brandon N, Deutschmann O. Performance
+analysis of a reversible solid oxide cell system based on multi-scale hierarchical
+solid oxide cell modelling. Energy Convers Manag 2019;196:484–96.
+
+[261] Banerjee A. Integrated Multiscale modeling of solid oxide electrodes, cells, stacks,
+
+and systems. Chem Ing Tech 2022;94(5):766–73.
+
+[262] Chi Y, Yokoo K, Nakajima H, Ito K, Lin J, Song Y. Optimizing the homogeneity
+and efficiency of a solid oxide electrolysis cell based on multiphysics simulation
+and data-driven surrogate model. J Power Sources 2023;562:232760.
+
+Jixin Shi is a PhD candidate of the Department of Enegy and
+Power  Engineering,  Tsinghua  University,  China.  He  has
+completed his undergraduate study and obtained his BEng de-
+gree from Zhejiang University, China. His research interests lie
+in  the  multi-fuel  reforming,  solid  oxide  cells  and  distributed
+energy systems. His current research is focused on integration
+of small scale portable systems based on solid oxide fuel cells.
+
+Xin  Gu  is  a  PhD  candidate  of  the  Department  of  Enegy  and
+Power  Engineering,  Tsinghua  University,  China.  He  has
+completed his undergraduate study and obtained his BEng de-
+gree  from  Xi’an  Jiaotong  University,  China.  His  research  in-
+terests lie in the metal-supported solid oxide fuel cells, liquid
+metal fuel cells and batteries. His current research is focused on
+development of metal-supported liquid antimony anode solid
+oxide fuel cells.
+
+Olaf Deutschmann holds the Chair in Chemical Technology at
+Karlsruhe Institute of Technology and serves as director at the
+Institute for Chemical Technology and Polymer Chemistry and
+at the Institute of Catalysis Research and Technology at KIT. He
+studied physics and chemistry in Magdeburg, Berlin, and Hei-
+delberg, receiving his PhD in 1996 and venia legendi in 2001.
+Before  coming  to  Karlsruhe  in  2003,  he  also  worked  at  the
+University of Minnesota and Los Alamos National Laboratory.
+His  work  focuses  on  the  development  of  climate-  and
+environmentally-friendly  chemical  technologies  and  novel
+digitalization  tools.  Today’s  research  topics  include  carbon
+capture, C-free chemical energy carriers, emission control, fuel
+and  electrolysis  cells,  and  circular  economy.  The  software
+packages  DETCHEM,  CaRMeN,  and  Adacta  were  developed  under  his  guidance.  He  is
+recipient of the DECHEMA Award, the Hermann-Oberth-Medal, and Fellow of The Com-
+bustion Institute.
+
+Yixiang Shi obtained his BEng degree (2003) and PhD (2008)
+in  thermal  engineering  from  Tsinghua  University.  During
+2007–2008, he worked in the University of California, Irvine, as
+a  joint  educated  PhD  candidate.  After  that,  he  worked  as  a
+postdoctoral  researcher  in  MIT  during  2008–2009.  He  was
+appointed as research assistant (2010–2011), associate profes-
+sor (2011–2020) and professor (since 2020) in Tsinghua Uni-
+versity.  His  current  research  activities  include  fuel  cell  and
+electrochemical  conversion,  CO2  separation  and  utilization,
+renewable  energy/low  grade  heat  power  generation  technol-
+ogy. He is the author/coauthor of more than 280 peer-reviewed
+articles with cites time of more than 6000. Prof. Shi is a com-
+mittee  member  of  the  International  Academy  of  Electro-
+chemical  Energy  Science  (IAOEES),  the  International  Association  for  Hydrogen  Energy
+(IAHE) and the Tsinghua Science and Technology Association.
+
+Yuqing Wang received her BEng degree and PhD from Tsing-
+hua  University  in  2012  and  2017,  respectively.  She  joined
+Beijing
+Institute  of  Technology  as  assistant  professor
+(2017–2022),  associate  professor  (2022–2023)  and  professor
+(since 2023). Prof. Wang received the Humboldt Fellowship in
+2017 and conducted collaboration research as a senior scientist
+at  Karlsruhe  Institute  of Technology,  Germany  for  one  and  a
+half  years  between  2017  and  2020.  Her  current  research  in-
+terests  include  solid  oxide  cells,  multi-scale  modeling  of
+chemical/electrochemical  reaction  processes,  and  distributed
+energy systems. She has published more than 30 research pa-
+pers in a wide range of high-quality journals, 20 of which have
+her as the first/corresponding author.
+
+Ningsheng  Cai  received  his  BEng  (1982)  degree  from  Xi’an
+Jiaotong University and his MEng (1987) and PhD (1991) de-
+grees from Southeast University. Then he worked in Southeast
+lecturer  (1991–1992),  associate  professor
+University  as
+(1992–1996) and professor (1996–2002). After that, he joined
+Tsinghua University as a professor and led a group working on
+clean  coal  power  generation,  coal  pollutant  control,  carbon
+dioxide capture and utilization, hydrogen energy and fuel cells,
+combined cycle and polygeneration. He has a total of more than
+300  high  impact  publications  with  cites  times  of  more  than
+9000.  Prof.  Cai  was  selected  as  Elsevier  Most  Cited  Chinese
+Researchers.
+
+ProgressinEnergyandCombustionScience102(2024)10114124

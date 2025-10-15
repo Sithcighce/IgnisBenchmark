@@ -1,0 +1,146 @@
+[
+  {
+    "question_text": "在非水系锂空气电池的气体扩散电极中，氧气传输阻力RO2,e的表达式如何建立？请详细推导考虑电解液薄膜厚度de和氧扩散系数DO2,e的影响机制。",
+    "standard_answer": "氧气传输阻力RO2,e的表达式建立基于菲克扩散定律和电极-电解液界面的两相平衡。具体推导如下：\n1. 根据菲克第一定律，氧通量JO2 = -DO2,e·Δc/de，其中Δc为浓度梯度\n2. 在稳态条件下，消耗速率SO2,g/a = (cO2,g/H - cO2,e)/RO2,e\n3. 结合亨利定律cO2,e = cO2,g/H，可得RO2,e = de/DO2,e\n4. 厚度de由电极润湿特性决定，DO2,e受电解液粘度和温度影响\n5. 该模型假设：\n   - 薄膜内为稳态扩散\n   - 忽略对流效应\n   - 界面处达到瞬时平衡\n实际应用中需通过Bruggeman修正系数ae考虑多孔介质影响：DeffO2,e = ae·DO2,e",
+    "original_text": {
+      "1": "The oxygen transport resistance through the electrolyte film to the reaction sites, RO2,e, is expressed as a function of the electrolyte film thickness de and the oxygen diffusion coefficient DO2,e as RO2,e = de/DO2_e",
+      "2": "The conservation of oxygen in the air electrode requires that the consumption rate of oxygen by the ORR is equal to the rate of oxygen diffusion through the electrolyte film"
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "fluid_mechanics",
+    "question_id": "batch_detail_q_dd16f76b",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Advances-in-modeling-and-simulation-of-Li_2017_Progress-in-Energy-and-Combus",
+      "paper_title": "Advances-in-modeling-and-simulation-of-Li_2017_Progress-in-Energy-and-Combus"
+    },
+    "metadata": {
+      "generation_model": "openai/Pro/deepseek-ai/DeepSeek-V3",
+      "quality_check_model": "openai/Pro/deepseek-ai/DeepSeek-V3",
+      "created_at": "2025-10-15T07:24:23.206644",
+      "batch_processing": true,
+      "answer_length": 320
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "该问题涉及非水系锂空气电池中氧气传输阻力的建模，需要电化学、传质理论和多孔介质扩散等能源领域的专业知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": false,
+      "other_issues": [
+        "has_meta_info"
+      ],
+      "overall_verdict": "pass",
+      "recommendation": "删除答案中'原文引用'等元信息表述，直接呈现推导过程即可"
+    },
+    "merge_source": "questions_copy"
+  },
+  {
+    "question_text": "锂空气电池中Li2O2的两种形成机制（溶液机制和表面机制）如何导致不同的产物形貌？从LiO2溶解度和吸附自由能角度进行机理解释。",
+    "standard_answer": "两种机制的形成差异源于LiO2中间体的竞争路径：\n溶液机制：\n1. 高溶解度LiO2通过均相歧化反应：2LiO2 → Li2O2 + O2\n2. 形成三维生长的颗粒状Li2O2（toroidal形态）\n3. 受O2-扩散控制，生长速率∝(DO2)^1/2\n\n表面机制：\n1. 强吸附的LiO2*直接电化学还原：LiO2 + Li+ + e- → Li2O2\n2. 形成二维生长的薄膜状Li2O2（厚度<10nm）\n3. 受表面覆盖度θ控制，服从Langmuir吸附等温式\n\n关键控制参数：\n- 溶剂供体数(DN)决定LiO2溶解度\n- 电极材料功函数影响吸附能ΔGads\n- 电流密度改变表面浓度梯度\n实验证据显示高DN溶剂（如DMSO）倾向溶液机制，而低DN溶剂（醚类）易发生表面机制。",
+    "original_text": {
+      "1": "In the solution mechanism, two soluble LiO2 molecules disproportionate to form Li2O2 with particle-like morphology. In the surface mechanism, two sequential one-electron transfer steps to yield insoluble Li2O2 at the electrode surface with film-like morphology",
+      "2": "the detailed mechanism is governed by the competition between the LiO2 solubility and the adsorption free energy of LiO2 on the air electrode"
+    },
+    "type": "reasoning",
+    "difficulty": 5,
+    "topic": "combustion_kinetics",
+    "question_id": "batch_detail_q_4ae4af86",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Advances-in-modeling-and-simulation-of-Li_2017_Progress-in-Energy-and-Combus",
+      "paper_title": "Advances-in-modeling-and-simulation-of-Li_2017_Progress-in-Energy-and-Combus"
+    },
+    "metadata": {
+      "generation_model": "openai/Pro/deepseek-ai/DeepSeek-V3",
+      "quality_check_model": "openai/Pro/deepseek-ai/DeepSeek-V3",
+      "created_at": "2025-10-15T07:24:32.546880",
+      "batch_processing": true,
+      "answer_length": 344
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "该问题涉及锂空气电池的电化学反应机理和产物形貌控制，属于电化学能源存储领域的专业问题，需要燃烧/能源领域的专业知识。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量优秀，完整解释了两种机制的形成差异及其关键控制参数，且所有声明均有引用支持。建议继续保持。"
+    },
+    "merge_source": "questions_copy"
+  },
+  {
+    "question_text": "在连续介质模型中，如何通过Bruggeman修正系数ae来修正多孔电极的有效扩散系数？推导考虑孔隙率ε和弯曲度τ的完整表达式。",
+    "standard_answer": "Bruggeman修正系数的完整推导过程：\n1. 基本假设：\n   - 多孔介质为随机堆积球体\n   - 孔隙通道呈弯曲路径\n2. 原始表达式：Deff = D0·(ε/τ)^ae\n3. 对于典型Li-air电池阴极：\n   - 取ae=1.5（经验值）\n   - 弯曲度τ=1/ε^0.5（随机孔隙模型）\n4. 最终表达式：\n   DeffLi+ = DLi+·ε^1.5\n   DeffO2 = DO2·ε^1.5\n5. 考虑Li2O2沉积时的动态修正：\n   ε(t) = ε0 - Vm·Q(t)/2F\n6. 实验验证：\n   - 当ε<0.3时需引入逾渗阈值修正\n   - 对于纳米孔道需叠加Knudsen扩散效应\n该模型的局限在于未考虑孔径分布和润湿性梯度，实际应用中需结合Mercury Porosimetry数据校准。",
+    "original_text": {
+      "1": "These parameters for the porous air electrode are corrected to account for the porosity effect using Bruggeman correlation as: DeffLi+ = ε^α·DLi+",
+      "2": "where α is the Bruggeman coefficient and α=1.5 has been generally used in modeling"
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "CFD_modeling",
+    "question_id": "batch_detail_q_2950abaa",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Advances-in-modeling-and-simulation-of-Li_2017_Progress-in-Energy-and-Combus",
+      "paper_title": "Advances-in-modeling-and-simulation-of-Li_2017_Progress-in-Energy-and-Combus"
+    },
+    "metadata": {
+      "generation_model": "openai/Pro/deepseek-ai/DeepSeek-V3",
+      "quality_check_model": "openai/Pro/deepseek-ai/DeepSeek-V3",
+      "created_at": "2025-10-15T07:24:40.980834",
+      "batch_processing": true,
+      "answer_length": 367
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及多孔电极的有效扩散系数修正，需要燃烧/传热/流体/CFD/能源领域的专业知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案准确且完整，建议继续保持"
+    },
+    "merge_source": "questions_copy"
+  },
+  {
+    "question_text": "锂空气电池中氧化还原介体（如TEMPO）如何降低充电过电位？建立包含介体扩散和表面反应的动力学模型。",
+    "standard_answer": "氧化还原介体的作用机制模型：\n1. 电化学反应步骤：\n   TEMPO → TEMPO+ + e- （在电极表面）\n   E0 = 3.1V vs Li+/Li\n2. 化学氧化步骤：\n   TEMPO+ + Li2O2 → 2Li+ + O2 + TEMPO\n3. 动力学方程：\n   - 电极电流：i = nFk0[cTEMPO*exp(αFη/RT)-cTEMPO+*exp(-(1-α)Fη/RT)]\n   - 扩散方程：∂cTEMPO/∂t = DTEMPO∇²cTEMPO - k1cTEMPO+\n4. 过电位降低机制：\n   - 绕过Li2O2电子隧穿限制（σLi2O2~10-19 S/cm）\n   - 提供液相反应路径\n5. 关键参数优化：\n   - 介体浓度~0.1M（平衡溶解度和粘度）\n   - 扩散系数DTEMPO需>10-6 cm²/s\n实验数据显示添加10mM TEMPO可使充电电压从4.2V降至3.3V，但需注意介体穿梭效应导致的循环稳定性问题。",
+    "original_text": {
+      "1": "TEMPO and TEMPO+ concentration profiles between the carbon electrode and the Li2O2 surface at different electrode potentials",
+      "2": "The potential of oxygen and ksca is the salting-out parameter"
+    },
+    "type": "calculation",
+    "difficulty": 5,
+    "topic": "energy_systems",
+    "question_id": "batch_detail_q_aaec2f9d",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Advances-in-modeling-and-simulation-of-Li_2017_Progress-in-Energy-and-Combus",
+      "paper_title": "Advances-in-modeling-and-simulation-of-Li_2017_Progress-in-Energy-and-Combus"
+    },
+    "metadata": {
+      "generation_model": "openai/Pro/deepseek-ai/DeepSeek-V3",
+      "quality_check_model": "openai/Pro/deepseek-ai/DeepSeek-V3",
+      "created_at": "2025-10-15T07:24:47.815992",
+      "batch_processing": true,
+      "answer_length": 439
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及锂空气电池的电化学反应机理和动力学建模，需要电化学、能源存储和材料科学领域的专业知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": false,
+      "other_issues": [
+        "has_meta_info"
+      ],
+      "overall_verdict": "pass",
+      "recommendation": "建议删除答案中'原文引用'和'论文摘录'等元信息部分，直接呈现经过整合的技术内容"
+    },
+    "merge_source": "questions_copy"
+  }
+]

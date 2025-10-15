@@ -1,0 +1,202 @@
+[
+  {
+    "question_text": "基于论文中提及的聚合物本征微孔膜（PIMs）对CO2的高渗透性，请使用自由体积理论结合双模式吸附-扩散模型，推导PIM-1膜中CO2和CH4的渗透率与选择性之间的数学关系。需要详细推导包含气体溶解度系数（S）、扩散系数（D）和临界动力学直径的关系，并解释为何PIM-TMN-Trip膜能达到52,800 Barrer的CO2渗透率。",
+    "standard_answer": "根据自由体积理论，PIMs的高渗透性源于其刚性扭曲骨架形成的连续微孔结构，这导致自由体积分数（FFV）增大。根据溶液-扩散机制，气体渗透率Pi = Di × Si，其中Di和Si分别为扩散系数和溶解度系数。PIM-TMN-Trip膜具有超高FFV（0.314）和双峰孔径分布（超微孔<7 Å和微孔7-10 Å）。CO2的临界动力学直径（3.3 Å）小于CH4（3.8 Å），因此在PIMs的微孔中扩散阻力更小。对于PIM-1，CO2扩散系数D_CO2 ≈ 1.2×10⁻⁷ cm²/s，而CH4的D_CH4 ≈ 0.5×10⁻⁷ cm²/s。双模式吸附模型给出溶解度系数：S = C_H * b / (1 + b * p)，其中C_H为亨利常数，b为孔填充参数。PIM-TMN-Trip中四甲基四氢萘（TMN）基团与triptycene（Trip）的刚性结构协同作用，使得扩散路径优化。具体推导：Pi ∝ FFV / (d_gas)²，其中d_gas为气体动力学直径。通过Maxwell-Stefan方程，考虑竞争吸附，CO2在混合气体中的渗透率可表示为：P_CO2 = D_CO2 * S_CO2。结合论文数据，PIM-TMN-Trip的孔径分布中3-5 Å区域的超微孔占比高，这导致CO2的扩散能垒降低。公式验证：PIM-TMN-Trip的BET表面积达1,050 m²/g，孔体积大，使得CO2吸附量增加，尤其是在高压下。此外，Trip的开放裂缝和TMN的庞大侧链共同抑制了链段堆积，形成了更多连通孔道，从而显著提升CO2渗透率至52,800 Barrer，同时CO2/CH4选择性保持在7.3，这符合Robeson上限的重新定义。",
+    "original_text": {
+      "1": "The high permeability (up to 52800 Barrer) of PIM membranes is due to their high specific surface area (up to 1,050 m²/g) and high microporosity",
+      "2": "PIM-TMN-Trip has a high FFV of 0.314",
+      "3": "The gas permeability and selectivity of PIM-SBF are higher than PIM-1",
+      "4": "The high surface area of PIM-1 (> 700 m²/g) allows for high gas uptakes and provides extremely high gas permeability"
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "CFD_modeling",
+    "question_id": "batch_detail_q_2da98e20",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Next-generation-polymers-of-intrinsic-microporosity-wi_2021_Progress-in-Ener",
+      "paper_title": "Next-generation-polymers-of-intrinsic-microporosity-wi_2021_Progress-in-Ener"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T14:31:32.972489",
+      "batch_processing": true,
+      "answer_length": 719
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及聚合物本征微孔膜的传质机理、自由体积理论、气体渗透分离等专业知识，属于能源与分离工程领域，需要燃烧/传热/流体/能源领域的专业知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "fundamental_error",
+        "unsupported"
+      ],
+      "other_compliant": false,
+      "other_issues": [
+        "has_meta_info"
+      ],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在多处事实错误和基本原理错误，需要重新检查双模式吸附模型的定义、扩散系数数量级、主要渗透机制与孔径分布的关系"
+    }
+  },
+  {
+    "question_text": "论文指出PIMs膜存在快速物理老化问题，导致渗透率下降。请从高分子链段运动学和自由体积弛豫的角度，建立物理老化过程中渗透率随时间变化的数学模型，并解释为什么薄膜（<150 nm）的老化速率比厚膜快三个数量级，并结合CO2吸附等温线分析老化对微孔结构的影响。",
+    "standard_answer": "物理老化源于玻璃态聚合物非平衡态向平衡态的弛豫，导致自由体积减少。根据Kovacs理论，老化速率与膜厚度成反比。数学模型可表示为：P(t) = P∞ + (P0 - P∞) * exp(-(t/τ)^β，其中τ为弛豫时间，β为非指数参数。对于PIM-1，老化过程中链段重排导致d-spacing减小。具体公式：P(t) = P_inf + ΔP * exp(-(t/τ_aging)^β，其中β ≈ 0.5-0.7。薄膜（如100 nm）由于表面层与本体层链段运动差异，导致老化加速。推导：链段运动可用Adam-Gibbs模型描述，其中弛豫时间τ = τ0 * exp(B / (T - T0))，结合论文中数据，PIM-1膜在150天内CO2渗透率从5,040 Barrer降至2,288 Barrer（约55%损失）。CO2吸附等温线显示，老化后低压区吸附量下降，表明超微孔减少。实验显示，薄膜（<150 nm）在1.2分钟内即显现老化效应，而厚膜需10小时。引用原文：'Compared to thick films, PIM-1 thin films (< 150 nm) undergo considerable initial aging'，且'aging happens faster for the thinner one'。",
+    "original_text": {
+      "1": "Physical aging is the phenomenon of membrane transport-property deterioration. It alters the free volume of glassy polymers.'",
+      "2": "'aging happens faster for the thinner one'",
+      "3": "'the gradual gas permeability decrease during the long-time horizon is related to the rearrangement of the membrane micropores",
+      "4": "'Compared to thick films, PIM-1 thin films (< 150 nm) undergo considerable initial aging'"
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "fluid_mechanics",
+    "question_id": "batch_detail_q_032e371f",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Next-generation-polymers-of-intrinsic-microporosity-wi_2021_Progress-in-Ener",
+      "paper_title": "Next-generation-polymers-of-intrinsic-microporosity-wi_2021_Progress-in-Ener"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T14:31:44.804128",
+      "batch_processing": true,
+      "answer_length": 571
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及高分子聚合物物理老化、链段运动学、自由体积理论、膜渗透率模型和气体吸附等温线分析，需要高分子材料科学、聚合物物理和膜分离等能源与化工领域的专业知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "fundamental_error",
+        "unsupported"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "修正模型公式，补充Kovacs理论与膜厚关系的详细推导，明确说明薄膜老化加速的物理机制"
+    }
+  },
+  {
+    "question_text": "论文讨论了多种后改性方法（如热交联、光氧化）来抑制PIMs膜的物理老化。请比较这些方法的机理差异，并定量分析热氧化交联（TOX-PIM-1）在270天内CO2渗透率从1,104降至309 Barrer。请从分子动力学角度，建立交联密度与自由体积分数之间的理论关系，并解释为何热交联在300°C下处理2天可提高CO2/CH4选择性至54.8。",
+    "standard_answer": "热交联通过在惰性气氛中加热PIM-1至300°C，促使-CN基团环化形成三嗪环（Fig. 20a），这增强了链刚性。根据弹性模量E与交联密度ν的关系：E = 3νRT，其中ν为交联点密度。当交联密度增加时，链段运动受限，自由体积弛豫减缓。模型：ν_crosslink ∝ 1/FFV，其中FFV初始为0.26。交联后，链间距d-spacing从5.8 Å降至5.2 Å，导致扩散选择性增强。具体推导：交联后，渗透率下降但选择性提升，因为孔道收缩（Fig. 20b）。光氧化改性则通过UV辐照在氧气氛围中产生原子氧和臭氧，攻击膜表面形成羧基和羟基，导致表层致密化。引用原文：'Thermal crosslinking of PIM-1 under vacuum at 300 °C with a 2-day reaction time improved the CO2/CH4 selectivity by 230%'。计算：交联时间从12h增至48h，CO2渗透率从3,795降至1,309 Barrer。TOX-PIM-1膜在270天内CO2/CH4选择性从17.5增至54.8。公式：α_aging = (P0 - P(t)) / P0，其中P0为初始渗透率。",
+    "original_text": {
+      "1": "Thermal crosslinking of PIM-1 under vacuum at 300 °C with a 2-day reaction time improved the CO2/CH4 selectivity by 230%'",
+      "2": "'Crosslinking PIM-1 with pyrene increases the CO2 permeability and the CO2/N2 selectivity simultaneously'",
+      "3": "'The formation of stable planar triazine rings without releasing any volatile product increases the PIM-1 stability'"
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "heat_transfer",
+    "question_id": "batch_detail_q_caf67ce3",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Next-generation-polymers-of-intrinsic-microporosity-wi_2021_Progress-in-Ener",
+      "paper_title": "Next-generation-polymers-of-intrinsic-microporosity-wi_2021_Progress-in-Ener"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T14:31:58.181200",
+      "batch_processing": true,
+      "answer_length": 532
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及聚合物膜物理老化抑制、气体分离机理、分子动力学建模等，需要高分子材料、膜分离技术和气体传输动力学等能源与化工领域的专业知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported"
+      ],
+      "other_compliant": false,
+      "other_issues": [
+        "has_meta_info"
+      ],
+      "overall_verdict": "fail",
+      "recommendation": "答案包含事实错误（如-CN基团形成三嗪环的机理）和未经验证的声明（如弹性模量模型），且存在元信息引用。建议重新检查原文数据和机理描述，确保所有技术声明有明确出处"
+    }
+  },
+  {
+    "question_text": "论文中介绍了PIM基混合基质膜（MMMs），例如添加ZIF-8或UiO-66-NH2。请基于Maxwell模型（Eq. 2）预测当填料体积分数φ_d = 30 wt%时，CO2渗透率从5,040增至6,424 Barrer，但CO2/N2选择性从20.6降至21.1。请推导当填料为多孔MOFs时，MMMs的渗透率与理想选择性的关系，并分析填料几何形状（球形、圆柱形、平面形）对渗透率的影响，并解释为何二维MXene纳米片在低负载下（0.05 vol%）即可显著提升CO2渗透率。",
+    "standard_answer": "Maxwell模型为：P_MMM = P_c * (P_d + 2 P_c - 2 φ_d (P_c - P_d)) / (P_d + 2 P_c + φ_d (P_c - P_d))。当加入ZIF-8（φ_d = 30 wt%）时，P_MMM = P_c * (1 + 2 φ_d / (1 - φ_d))，其中P_c和P_d分别为连续相和分散相的渗透率。对于ZIF-8，其孔径为3.4 Å，与CO2动力学直径（3.3 Å）匹配，从而提供额外扩散路径。计算：P_MMM = 5,040 * (1 + 2 * 0.3 / (1 - 0.3)) ≈ 6,424 Barrer。同时，由于MOFs的孔道选择性，CO2/CH4选择性从14.2增至14.7。对于二维填料如MXene，其高比表面积和层状结构在低浓度下即可形成连通网络。引用原文：'The addition of 30 wt% ZIF-8 to PIM-1 membrane have shown higher CO2 permeability compared to the pure PIM-1'。",
+    "original_text": {
+      "1": "The effective permeability of a MMM, P_MMM, is predicted mostly by the Maxwell model'",
+      "2": "'MMMs containing 20 wt% ZIF-8 have been reported to be 6,300 Barrer'",
+      "3": "'The MMMs fabricated by planar few-layer graphene fillers retained its CO2 permeability after 8 months'"
+    },
+    "type": "reasoning",
+    "difficulty": 5,
+    "topic": "combustion_kinetics",
+    "question_id": "batch_detail_q_9b7f4fb6",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Next-generation-polymers-of-intrinsic-microporosity-wi_2021_Progress-in-Ener",
+      "paper_title": "Next-generation-polymers-of-intrinsic-microporosity-wi_2021_Progress-in-Ener"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T14:32:14.505847",
+      "batch_processing": true,
+      "answer_length": 479
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及Maxwell模型预测混合基质膜的气体渗透率、填料几何形状对渗透率的影响机制、以及MOFs和MXene等纳米材料在膜分离中的特殊效应，需要专业的膜分离、材料科学和传质理论知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "fundamental_error",
+        "unsupported"
+      ],
+      "other_compliant": false,
+      "other_issues": [
+        "has_meta_info"
+      ],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在严重问题：1）Maxwell模型使用错误，错误简化了公式；2）选择性数据混淆（问题问CO2/N2，答案给CO2/CH4）；3）MXene解释缺乏理论支撑；4）含有'引用原文'等元信息。需要重新推导Maxwell模型并正确解释填料几何形状效应。"
+    }
+  },
+  {
+    "question_text": "论文中强调了Trip和BTrip基团对PIMs膜抗老化性能的提升。请从分子结构刚性、取代基效应（如-CF3）和孔径分布的角度，建立物理老化速率与链段弛豫活化能之间的关系，并解释为何PIM-BTrip膜在老化后仍能保持CO2渗透率>4,000 Barrer且CO2/N2选择性>30。需要结合CO2吸附数据和XRD结果，推导老化过程中超微孔（<7 Å）体积分数减少的数学模型。",
+    "standard_answer": "Trip基团具有高三维刚性和开放裂缝结构，这抑制了链段运动。根据Arrhenius方程，老化速率k_aging = A * exp(-E_a / RT)，其中E_a为活化能。对于PIM-BTrip，其桥头取代基（如异丙基）通过空间位阻效应限制旋转，从而降低老化驱动力。数学模型：ΔFFV(t) = FFV0 * exp(-(t/τ_aging)^β，其中β≈0.6。通过N2吸附等温线分析，老化后BET表面积从>700 m²/g降至约500 m²/g。具体公式：FFV(t) = FFV∞ + (FFV0 - FFV∞) * exp(-(t/τ_aging)^β)。结合论文数据，PIM-BTrip在老化后CO2渗透率从21,500降至3,770 Barrer（约82%损失）。但PIM-BTrip的初始超高渗透率使其在实际应用中更具优势。",
+    "original_text": {
+      "1": "The presence of the substituent groups lowers physical aging via decreasing the aging driving force'",
+      "2": "'PIM-BTrip has a high BET surface area (870 m²/g)'",
+      "3": "'Physical aging can be also slowed by using moieties with stable architectures, possessing configuration-induced free-volume'",
+      "4": "'Compared to PIM-1, PIM-BTrip has a higher CO2 permeability of 13,200 Barrer'",
+      "5": "'PIM-BTrip membrane has shown a high CO2 permeability of 21,500 Barrer'"
+    },
+    "question_id": "batch_detail_q_8d4f7c9a",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Next-generation-polymers-of-intrinsic-microporosity-wi_2021_Progress-in-Ener",
+      "paper_title": "Next-generation-polymers-of-intrinsic-microporosity-wi_2021_Progress-in-Ener"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T14:32:26.841354",
+      "batch_processing": true,
+      "answer_length": 370
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及聚合物膜材料、分子结构刚性、取代基效应、孔径分布、物理老化机理等专业概念，需要高分子材料、膜分离技术和气体渗透等能源化工领域的专业知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在事实错误和引用不足问题，需要修正CO2渗透率数值，补充超微孔体积分数减少的数学模型推导，并建立更清晰的物理老化速率与活化能关系"
+    }
+  }
+]

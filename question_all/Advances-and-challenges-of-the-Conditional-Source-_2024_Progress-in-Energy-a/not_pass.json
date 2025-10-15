@@ -1,0 +1,40 @@
+[
+  {
+    "question_text": "Conditional Source-term Estimation (CSE)模型在处理湍流燃烧问题时，如何通过条件矩封闭假设（CMC）来近似平均/过滤反应速率？请详细说明其物理机理和数学推导过程。",
+    "standard_answer": "CSE模型通过条件矩封闭假设（CMC）来近似平均/过滤反应速率的核心思想是利用条件标量场来减少非线性反应速率计算中的误差。具体步骤如下：\n1. 物理机理：湍流燃烧中温度和物种质量分数的剧烈波动导致直接使用平均/过滤值计算反应速率会严重低估实际值（如论文中所述，误差可达41%）。CMC假设通过条件平均显著降低了标量的波动幅度，从而提高了反应速率计算的准确性。\n2. 数学推导：\n   a) 首先定义条件平均反应速率：̃̇ωk ≈ ∫₀¹ ̇ωk(ρ|ξ, ̃Yk|ξ, ̃T |ξ)̃Pξ(ξ)dξ\n   b) 其中ξ是条件变量（如混合分数或反应进度变量），̃Pξ(ξ)是其Favre-PDF\n   c) 通过求解无条件标量的输运方程（如式5），然后利用积分方程（式6）反演得到条件标量\n   d) 关键假设是条件标量在测试过滤尺度（ensemble）内是均匀的，如式7所示\n3. 优势：相比直接闭合（式1），CMC将CO2生成速率的误差从41%降低到7%（如图1所示）。",
+    "original_text": {
+      "1": "Estimating the mean/filtered reaction rates by evaluating the rate expressions using the mean/filtered scalars directly is ordinarily unacceptably inaccurate (an approach known as ''first-moment closure'')",
+      "2": "The relative error in using the first-moment closure approach is 41%; but this error drops to 7% when the first-moment CMC hypothesis is used."
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "question_id": "batch_detail_q_65e589a1",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Advances-and-challenges-of-the-Conditional-Source-_2024_Progress-in-Energy-a",
+      "paper_title": "Advances-and-challenges-of-the-Conditional-Source-_2024_Progress-in-Energy-a"
+    },
+    "metadata": {
+      "generation_model": "openai/Pro/deepseek-ai/DeepSeek-V3",
+      "quality_check_model": "openai/Pro/deepseek-ai/DeepSeek-V3",
+      "created_at": "2025-10-15T07:24:41.819577",
+      "batch_processing": true,
+      "answer_length": 436
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及湍流燃烧模型CSE和CMC的物理机理与数学推导，需要燃烧建模和CFD领域的专业知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "too_brief",
+        "unsupported"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "需要补充更详细的数学推导步骤（如积分方程反演的具体过程），并增加对关键假设（如测试过滤尺度的均匀性）的物理解释。建议引用论文中2.1-2.3节的具体公式编号"
+    },
+    "merge_source": "questions_copy"
+  }
+]

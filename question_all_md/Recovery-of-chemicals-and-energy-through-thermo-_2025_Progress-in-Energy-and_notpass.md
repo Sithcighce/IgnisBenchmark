@@ -1,0 +1,99 @@
+# Recovery-of-chemicals-and-energy-through-thermo-_2025_Progress-in-Energy-and - Not Passed Questions
+
+**生成时间**: 2025-10-15 15:46:06  
+**未通过问题数**: 2
+
+---
+
+## Question 1
+
+### 问题
+
+论文描述了塑料气化过程中当量比（ER）对合成气组成和热值的影响。请从燃烧学角度，分析在空气气化中ER（实际氧/化学计量氧）如何通过控制氧化区与还原区的反应平衡来调控H2、CO、CO2的浓度。推导聚丙烯（C3H6）_n气化的碳、氢、氧、氮元素平衡方程，并计算在ER=0.25–0.45范围内气化产物的理论组成和低热值（LHV），解释ER>0.35时热值下降的原因。
+
+### 标准答案
+
+当量比ER是气化中氧含量的关键参数，影响反应平衡和产物热值。对于聚丙烯（C3H6）_n，完全氧化化学计量为：C3H6 + 4.5O2 → 3CO2 + 3H2O。气化时，ER定义为单位质量塑料的实际氧与化学计量氧之比。在ER<1（欠氧）下，发生部分氧化和气化反应：C3H6 + aO2 + bN2 → cCO + dCO2 + eH2 + fH2O + gCH4 + hN2，其中a、b、c、d、e、f、g、h由元素平衡决定。碳平衡：c + d + g = 3；氢平衡：2e + 2f + 4g = 6；氧平衡：c + 2d + f = 2a；氮平衡：h = b。空气中N2/O2体积比为3.76，故b = 3.76a。ER = a/4.5。随着ER从0.25增至0.35，放热氧化反应升温，促进吸热的水煤气反应（C + H2O → CO + H2）和干重整，增加H2和CO产量，提高合成气热值。在ER=0.35时，典型组成：H2 ~30 vol%，CO ~25 vol%，CH4 ~10 vol%，CO2 ~15 vol%，N2 ~20 vol%，LHV ≈ 10–12 MJ/m³。当ER>0.35，过量氧导致CO和H2进一步氧化为CO2和H2O，且N2稀释效应加剧。计算LHV = (10.8×H2% + 12.6×CO% + 35.8×CH4%)/100 MJ/m³，其中系数为各组分热值（MJ/m³）。ER=0.45时，CO2增至~25 vol%，H2/CO下降，LHV降至~5–7 MJ/m³。因此，ER优化在0.3–0.35以实现高能效。
+
+### 元数据
+
+- **类型**: calculation
+- **难度**: 4
+- **主题**: combustion_kinetics
+- **答案长度**: 676 字符
+
+### 原文引用
+
+**引用 1**:
+> In air gasification, the yield and composition of gasifying products are dependent on the ER, which represents the molar ratio between the oxygen used in practice and the oxygen required for stoichiometric oxidation. An increase in ER often enhances the production of syngas from plastic waste.
+
+**引用 2**:
+> However, a continuous increase in ER beyond the stoichiometric ratio noticeably decreased the higher heating value (HHV) of the gasification products from 11.4 to 5.2 MJ m⁻³. This is likely due to the dilution effect caused by the increased N2 content. Moreover, surplus oxidants result in additional oxidation of gasification products, leading to an increase in CO2 content.
+
+### 质量检查
+
+- **领域聚焦**: ✅ 通过
+- **答案正确性**: ❌ 未通过
+- **其他合规性**: ✅ 通过
+- **总体评价**: fail
+
+**领域聚焦分析**: 问题涉及燃烧学中的当量比概念、气化反应平衡、元素平衡方程推导、热值计算等，需要燃烧学、热化学、能源工程等领域的专业知识
+
+**答案问题**: factual_error, unsupported, fundamental_error
+
+**改进建议**: 答案存在多处严重问题：1）聚丙烯(C3H6)_n的完全氧化化学计量式错误，应为C3H6 + 4.5O2 → 3CO2 + 3H2O；2）元素平衡方程不完整，缺少关键反应机理；3）具体组成数据缺乏推导过程支持；4）LHV计算公式不准确，应包含所有可燃组分。建议：重新推导聚丙烯气化的完整元素平衡方程，基于平衡计算ER=0.25-0.45范围内的理论组成，使用标准LHV计算公式，并详细解释ER>0.35时热值下降的机理。
+
+### 来源
+
+- **论文**: Recovery-of-chemicals-and-energy-through-thermo-_2025_Progress-in-Energy-and
+- **生成类型**: deepseek_generation
+- **合并来源**: question_reverse
+
+---
+
+## Question 2
+
+### 问题
+
+论文讨论了CO₂作为反应介质在塑料热解中的作用，包括与热解挥发分的部分氧化和Boudouard反应。请从反应工程角度，推导CO₂参与下塑料热解的反应网络（包括热解初始步骤、CO₂与挥发分/焦炭的次级反应），分析CO₂如何通过逆向水煤气变换（RWGS）和干重整反应改变产物H₂/CO比和总焓变。计算在600°C下，PE（C₂H₄）_n与CO₂反应生成CO和H₂的平衡常数及热效应，并验证Boudouard反应（CO₂ + C(s) → 2CO）在600°C的平衡常数以支持结焦抑制机理。
+
+### 标准答案
+
+CO₂在塑料热解中作为反应介质，通过多步反应路径改变产物分布和能量平衡。反应网络包括：1) 热解初始步骤：PE（C₂H₄）_n → CₓHᵧ（挥发分，主要为烷烃、烯烃等）；2) CO₂与挥发分的次级反应：干重整 CₓHᵧ + xCO₂ → 2xCO + (y/2)H₂（需根据具体碳氢比调整，如C₂H₄ + 2CO₂ → 4CO + 2H₂），RWGS CO₂ + H₂ → CO + H₂O；3) CO₂与焦炭的次级反应：Boudouard反应 CO₂ + C(s) → 2CO（ΔH° = +172 kJ/mol）。以PE代表性干重整反应 C₂H₄ + 2CO₂ → 4CO + 2H₂ 为例，在600°C（873 K）下计算平衡常数：ΔG°基于标准生成自由能 ΔG_f°(C₂H₄)=68.4 kJ/mol，ΔG_f°(CO₂)=-394.4 kJ/mol，ΔG_f°(CO)=-137.2 kJ/mol，ΔG_f°(H₂)=0 kJ/mol，得 ΔG°=[4×(-137.2)+2×0]-[68.4+2×(-394.4)]=-548.8-(-720.4)=+171.6 kJ/mol=171600 J/mol，Kp=exp(-ΔG°/(RT))=exp(-171600/(8.314×873))≈1.2×10⁻¹⁰，表明反应非自发。热效应ΔH°基于标准生成焓 ΔH_f°(C₂H₄)=52.4 kJ/mol，ΔH_f°(CO₂)=-393.5 kJ/mol，ΔH_f°(CO)=-110.5 kJ/mol，ΔH_f°(H₂)=0 kJ/mol，得 ΔH°=[4×(-110.5)+2×0]-[52.4+2×(-393.5)]=-442-(-734.6)=+292.6 kJ/mol（吸热）。验证Boudouard反应在600°C的平衡常数：ΔG°≈-20 kJ/mol（基于标准数据），Kp=exp(-ΔG°/(RT))≈exp(20000/(8.314×873))≈12.5 > 1，反应自发，支持结焦抑制机理。CO₂通过RWGS消耗H₂（CO₂+H₂→CO+H₂O），降低H₂/CO比（从纯热解>2降至~1），并通过Boudouard反应消耗固体碳（CO₂+C(s)→2CO），减少结焦；尽管600°C下Boudouard反应速率较慢，但其热力学驱动力（Kp>1）仍贡献于焦炭抑制。能量平衡上，CO₂增加反应吸热量，但通过降低结焦和提高合成气产量补偿。
+
+### 元数据
+
+- **类型**: reasoning
+- **难度**: 4
+- **主题**: combustion_kinetics
+- **答案长度**: 1032 字符
+
+### 原文引用
+
+**引用 1**:
+> CO2 can be used as reactive raw material to impart the green/sustainable feature to the pyrolysis process. In the thermo-chemical process, CO2 can participate in various reaction routes such as the reverse water gas shift reaction (H2+CO2 → CO + H2O), methane dry reforming (CH4+CO2 → 2CO+2H2), Boudouard reaction (CO2+C(s) → 2CO), and others.
+
+**引用 2**:
+> The mechanistic role of CO2 helps to divert the product distribution patterns, resulting in the enhanced formation of gaseous products.
+
+### 质量检查
+
+- **领域聚焦**: ✅ 通过
+- **答案正确性**: ❌ 未通过
+- **其他合规性**: ✅ 通过
+- **总体评价**: fail
+
+**领域聚焦分析**: 问题涉及热化学过程、反应工程、热力学计算（平衡常数、热效应）、反应网络分析、产物分布调控等，需要燃烧、能源、化学反应工程领域的专业知识。
+
+**答案问题**: factual_error, fundamental_error
+
+**改进建议**: 答案存在关键错误：1）PE代表性干重整反应C₂H₄+2CO₂→4CO+2H₂的ΔG°计算错误（实际应为正值，但数值需复核标准生成自由能数据）；2）Boudouard反应在600°C的ΔG°≈-20 kJ/mol及Kp≈12.5未提供具体计算过程或可靠引用，且与常见热力学数据（600°C时Kp约1-2）不符。建议：修正热力学计算，使用权威数据源（如NIST）验证ΔG_f°和ΔH_f°，明确Boudouard反应平衡常数计算步骤，并补充RWGS对H₂/CO比影响的定量分析。
+
+### 来源
+
+- **论文**: Recovery-of-chemicals-and-energy-through-thermo-_2025_Progress-in-Energy-and
+- **生成类型**: deepseek_generation
+- **合并来源**: question_reverse
+
+---
+

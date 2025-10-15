@@ -1,0 +1,134 @@
+[
+  {
+    "question_text": "分析氢过氧化物在烷烃低温氧化负温度系数（NTC）行为中的作用机理，详细说明温度对˙QOOH自由基竞争路径的影响，以及氢过氧化物浓度分布与NTC区域的关系。",
+    "standard_answer": "氢过氧化物在烷烃低温氧化NTC行为中起着核心作用，其浓度分布直接反映了温度对自由基反应路径竞争的影响。在低温区（<650K），第二传播循环（cycle 2）占主导，˙QOOH自由基主要进行O₂加成形成˙OOQOOH，随后异构化形成KHP并释放˙OH自由基，导致反应性增加和氢过氧化物积累。在NTC区域（650-800K），温度升高使˙QOOH自由基的分解路径（形成环醚+˙OH）和 concerted HO₂˙消除变得有利，而O₂加成反应因平衡逆转被抑制。同时，RO₂自由基的 concerted HO₂˙消除增加，导致HO₂˙浓度上升，进而通过HO₂˙ + HO₂˙ → H₂O₂ + O₂形成H₂O₂。这解释了在NTC区域观察到的KHP浓度下降而H₂O₂浓度上升的现象。在高温区（>800K），H₂O₂分解（H₂O₂ → 2˙OH）成为主要分支反应，触发第二段自燃。实验数据显示，在n-戊烷JSR氧化中，KHP在~600K达到峰值~4.6×10⁻⁴，而在NTC区域下降；H₂O₂则在~650K和~800K出现双峰，分别对应低温和高温反应区。这种温度依赖的路径竞争是NTC行为的化学本质，氢过氧化物作为关键中间体其浓度变化直接表征了反应机制的转变。",
+    "original_text": {
+      "1": "With increased temperature, cycle 2 becomes less important and ˙OH radicals are reduced. In contrast, cycle 1 and the formation of HO₂˙ radicals begins to prevail. First, oxygen addition reactions are reversed and inhibited at higher temperatures.",
+      "2": "The second zone is the NTC zone, in which cycle 1 and HO₂˙ radical formation are dominant. Reactivity above 800 K is due to high-temperature chemistry triggered by the decomposition of H₂O₂."
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及烷烃低温氧化、负温度系数行为、氢过氧化物作用机理、自由基竞争路径等燃烧化学核心概念，需要燃烧化学、反应动力学、自由基化学等专业领域知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": ""
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_611cec5e",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Exploring-hydroperoxides-in-combustion--History_2019_Progress-in-Energy-and-",
+      "paper_title": "Exploring-hydroperoxides-in-combustion--History_2019_Progress-in-Energy-and-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:49:07.613477",
+      "answer_length": 525
+    }
+  },
+  {
+    "question_text": "基于论文中氢过氧化物检测的实验技术，详细比较同步辐射真空紫外光电离质谱（SVUV-PIMS）与连续波腔衰荡光谱（cw-CRDS）在测量燃烧中间体时的优缺点，包括检测限、物种识别能力、定量精度和技术局限性。",
+    "standard_answer": "SVUV-PIMS和cw-CRDS是检测氢过氧化物中间体的两种主要技术，各有显著优缺点。SVUV-PIMS基于分子束采样和软电离，检测限约为1 ppm，可同时检测所有物种而无需预先了解化学结构，特别适合检测大分子和复杂氢过氧化物如酮氢过氧化物（KHPs）。其高分辨率质谱（m/Δm ~2500-4000）能精确确定元素组成，通过光电离效率（PIE）曲线提供结构信息。然而，物种识别严重依赖理论计算，光电离截面不确定性导致定量误差可达25-50%，且大型同步辐射设施访问受限。cw-CRDS基于直接吸收测量，检测限约50 ppm（对甲醛），使用绝对吸收截面定量，不确定性约30%。其优势在于无需校准即可绝对定量，特别适合小分子如H₂O₂和HO₂˙自由基。但技术局限性明显：仅限于已知光谱的物种，光谱干扰严重，重燃料（如n-癸烷）因冷凝问题难以检测。在n-戊烷氧化实验中，两种技术测量的H₂O₂浓度一致性良好，验证了各自的可靠性。SVUV-PIMS更适合探索性研究和新物种发现，而cw-CRDS更适合小分子的精确定量。",
+    "original_text": {
+      "1": "Mass spectrometry is a universal diagnostic tool based on determining a molecule's mass-to-charge (m/z) ratio after an ionization process; it has been applied to detect hydroperoxide species in several laboratories.",
+      "2": "The sensitivity of CRDS depends mainly on the length of the optical path in the cell. In optimal conditions, and due to the trapping of the absorbed laser beam inside the cavity, a CRDS technique can have a sensitivity 10^7 times better than a single path absorption technique."
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及燃烧中间体检测、氢过氧化物分析、同步辐射真空紫外光电离质谱（SVUV-PIMS）和连续波腔衰荡光谱（cw-CRDS）等专业实验技术，需要燃烧诊断、光谱分析和质谱技术等能源与燃烧工程领域的专业知识。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "无需修改。答案全面覆盖了问题要求的检测限、物种识别能力、定量精度和技术局限性等方面，技术细节准确，比较分析清晰，符合专业标准。"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_010c3b9c",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Exploring-hydroperoxides-in-combustion--History_2019_Progress-in-Energy-and-",
+      "paper_title": "Exploring-hydroperoxides-in-combustion--History_2019_Progress-in-Energy-and-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:49:09.004077",
+      "answer_length": 457
+    }
+  },
+  {
+    "question_text": "推导酮氢过氧化物（KHP）通过Korcek机制形成羧酸的反应动力学表达式，包括反应路径、能垒计算和温度依赖性。以C₃ γ-KHP为例，计算500K时甲酸和乙酸的形成速率常数，并分析其在低温氧化中的重要性。",
+    "standard_answer": "Korcek机制描述了γ-KHP通过环状过氧化物异构体形成羧酸的路径。对于C₃ γ-KHP（3-氢过氧丙醛），理论计算显示其通过六元环过渡态异构化为环状过氧化物，随后分解为甲酸和乙酸。势能面计算表明，甲酸形成路径（HCOOH + CH₂O）的能垒为22.99 kcal/mol，乙酸形成路径（CH₃COOH + HCHO）的能垒为23.41 kcal/mol。在500K、101.3 kPa氦气条件下，甲酸形成速率常数k₁ = 2.80×10⁴³ T^(-10.22) exp(-22990/T) = 7.9×10⁻⁵ s⁻¹，乙酸形成速率常数k₂ = 3.26×10⁴³ T^(-10.36) exp(-23409/T) = 1.7×10⁻⁵ s⁻¹。与KHP的O–OH键断裂（k ≈ 10⁻² s⁻¹）相比，Korcek路径较慢但在低温氧化早期阶段（~500K）贡献显著。该机制解释了烷烃氧化中观察到的C₁-C₂羧酸形成，在n-丁烷JSR氧化中乙酸浓度可达10⁻³。对于更大烷烃，Korcek路径速率常数随碳数增加而增大，C₇-KHP在500K时k ≈ 3×10⁻³ s⁻¹。该机制提供了除˙OH加成甲醛外的另一重要羧酸来源。",
+    "original_text": {
+      "1": "A rate constant of k = 1.8 × 10^16 exp(−21,640/T) s^−1 was reported for γ-KHP decomposition. This rate expression is close to the study of Sahetchian et al.",
+      "2": "For the C3 γ-KHP, the following rate expressions at 101.3 kPa in helium for the formation of formic acid and acetaldehyde (k1) and of acetic acid and formaldehyde (k2), are respectively: k1 = 2.80 × 10^43 T^(-10.22) exp(−22,990/T) s^-1 (k = 7.9 ×10^−5 s^−1 at 500 K), and k2 = 3.26 × 10^43 T^(-10.36) exp(−23,409/T) s^−1 (k = 1.7 ×10^−5 s^−1 at 500 K)."
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及酮氢过氧化物（KHP）的Korcek机制、反应动力学表达式推导、能垒计算、温度依赖性分析以及具体速率常数计算，这些都需要燃烧化学、反应动力学和量子化学计算等专业领域的知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量优秀，无需修改。包含了完整的反应路径描述、能垒数据、速率常数表达式、具体计算值以及机制重要性分析，与提供的原文引用和论文摘录内容一致"
+    },
+    "retry_count": 1,
+    "question_id": "deepseek_q_a22ee3fc",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Exploring-hydroperoxides-in-combustion--History_2019_Progress-in-Energy-and-",
+      "paper_title": "Exploring-hydroperoxides-in-combustion--History_2019_Progress-in-Energy-and-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:50:02.324724",
+      "answer_length": 515
+    }
+  },
+  {
+    "question_text": "在烷烃低温氧化过程中，第三氧加成反应如何影响点火延迟时间？请基于论文内容分析其反应机理、关键中间体及其对链分支反应的影响，并解释压力依赖性。",
+    "standard_answer": "第三氧加成反应通过形成额外的链分支中间体显著影响烷烃低温氧化的点火延迟时间。该反应路径始于˙OOQOOH自由基的替代异构化形成˙P(OOH)₂自由基，随后进行第三次O₂加成形成˙OOP(OOH)₂自由基，进一步异构化形成三氢过氧烷基自由基˙T(OOH)₃，最终分解形成酮二氢过氧化物（KDHP）。KDHP通过O–OH键断裂释放额外的˙OH自由基，提供额外的链分支路径。在100kPa条件下，第三氧加成反应可使n-庚烷的点火延迟时间减少约20%，而在5MPa条件下减少约60%。这种压力依赖性源于O₂加成反应的双分子性质，高压条件下O₂浓度增加促进第三氧加成路径。该机理在长碳链烷烃和环烷烃中更为显著，因为更长的碳骨架有利于多次氢迁移反应。计算奇异摄动分析表明，KDHP分解是降低点火延迟时间的主导反应，在爆炸阶段具有较小的特征时间尺度。该反应网络通过生成额外的˙OH自由基扩展了点火极限，特别是在高压和贫燃条件下更为明显。",
+    "original_text": {
+      "1": "The prerequisite of this reaction mechanism is alternative isomerization of ˙OOQOOH radicals. The reaction kinetics of this type of reaction has been investigated in recent years.",
+      "2": "At 100 kPa, a reduction of about 20% in the ignition delay time was noted at 100 kPa, and 60% at 5 MPa, at a temperature of 600 K."
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及烷烃低温氧化、点火延迟时间、第三氧加成反应机理、链分支反应等燃烧化学核心概念，需要燃烧动力学、化学反应工程和燃料氧化机理等专业领域知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量优秀，无需修改。答案准确描述了第三氧加成反应机理、关键中间体形成过程、对链分支反应的影响机制以及压力依赖性，与论文内容一致，技术细节完整且专业"
+    },
+    "retry_count": 2,
+    "question_id": "deepseek_q_3a16b1d2",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Exploring-hydroperoxides-in-combustion--History_2019_Progress-in-Energy-and-",
+      "paper_title": "Exploring-hydroperoxides-in-combustion--History_2019_Progress-in-Energy-and-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:50:37.683854",
+      "answer_length": 411
+    }
+  }
+]

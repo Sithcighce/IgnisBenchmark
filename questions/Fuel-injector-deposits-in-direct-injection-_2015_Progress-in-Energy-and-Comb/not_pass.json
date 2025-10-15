@@ -1,0 +1,148 @@
+[
+  {
+    "question_text": "Using the kinetic model proposed by Aradi et al. (dV/dt = K₁ - K₂·V), derive the fuel flow rate loss equation starting from the net deposit rate equation. Explain the physical significance of the rate constants K₁ and K₂, and discuss how engine operating conditions (injection pressure, nozzle temperature) affect these constants.",
+    "standard_answer": "Starting from the net deposit rate equation: dV/dt = K₁ - K₂·V. This is a first-order linear differential equation. Solving it: dV/dt + K₂·V = K₁. Using integrating factor e^(K₂·t): d/dt(V·e^(K₂·t)) = K₁·e^(K₂·t). Integrating both sides: V·e^(K₂·t) = (K₁/K₂)·e^(K₂·t) + C. Applying initial condition V(0)=0: 0 = (K₁/K₂) + C ⇒ C = -K₁/K₂. Thus V·e^(K₂·t) = (K₁/K₂)·(e^(K₂·t) - 1). Rearranging: V = (K₁/K₂)·(1 - e^(-K₂·t)). The fuel flow rate loss is proportional to the deposit volume V, hence: Fuel flow rate loss = -K₁/K₂·(1 - e^(-K₂·t)). K₁ represents the deposit formation rate constant, dependent on fuel thermal stability (olefin content, T90) and nozzle temperature. K₂ represents the deposit removal rate constant, dependent on fuel injection pressure and shear forces. Higher injection pressure increases K₂, accelerating deposit removal. Nozzle temperature affects both K₁ (increases with temperature via pyrolysis) and K₂ (increases with temperature enhancing removal). This model explains the observed flow loss pattern: rapid initial loss followed by stabilization as formation and removal rates balance.",
+    "original_text": {
+      "1": "Net deposit rate 1⁄4 Deposit rate (cid:3) Deposit removal rate dV/dt 1⁄4 K1 (cid:3) K2 (cid:4) V",
+      "2": "Fuel flow rate loss 1⁄4 (cid:3)K1=K2 (cid:4) ð1 (cid:3) expð(cid:3)K2 (cid:4) tÞÞ"
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "question_id": "batch_detail_q_ee61c9da",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Fuel-injector-deposits-in-direct-injection-_2015_Progress-in-Energy-and-Comb",
+      "paper_title": "Fuel-injector-deposits-in-direct-injection-_2015_Progress-in-Energy-and-Comb"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T11:09:52.662581",
+      "batch_processing": true,
+      "answer_length": 1116
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及燃料喷射器沉积物动力学模型、燃料流动损失方程推导以及发动机操作条件对沉积物形成和去除的影响，这需要燃烧科学、燃料化学和发动机工程领域的专业知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "fundamental_error"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案中存在严重的数学推导错误（燃料流动损失方程符号错误）和物理意义解释不准确。建议仔细检查微分方程求解过程和比例关系假设，确保与原文引用和论文内容一致"
+    }
+  },
+  {
+    "question_text": "Analyze how injector deposits affect PM emissions in GDI engines from both fluid mechanics and combustion perspectives. Explain why accumulation mode particles increase more significantly than nucleation mode.",
+    "standard_answer": "From fluid mechanics perspective, deposits alter spray characteristics: 'spray angle and envelope are likely to be affected, and spray penetration distance as well as droplet diameter can be increased.' Larger droplets reduce evaporation rate and increase wall impingement. From combustion perspective, deposits on injector tip absorb liquid fuel, causing diffusive combustion near nozzle: 'higher soot emission was found with a fouled injector resulting from diffusive combustion near the injector tip due to liquid fuel absorbed on deposits.' This localized rich combustion generates soot particles (accumulation mode). Meanwhile, incomplete combustion increases HC emissions which form nucleation mode particles via condensation. However, the research shows 'the total PM emission of injector 1 was increased mainly because of the increase of the accumulation mode PM emissions.' The nucleation mode increase is less significant because HC condensation is secondary compared to direct soot formation from fuel-rich zones.",
+    "original_text": {
+      "1": "spray angle and envelope are likely to be affected, and spray penetration distance as well as droplet diameter can be increased.",
+      "2": "higher soot emission was found with a fouled injector resulting from diffusive combustion near the injector tip due to liquid fuel absorbed on deposits."
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "question_id": "batch_detail_q_250cd9a7",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Fuel-injector-deposits-in-direct-injection-_2015_Progress-in-Energy-and-Comb",
+      "paper_title": "Fuel-injector-deposits-in-direct-injection-_2015_Progress-in-Energy-and-Comb"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T11:10:03.696138",
+      "batch_processing": true,
+      "answer_length": 1024
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及GDI发动机中喷油器沉积物对颗粒物排放的影响，需要燃烧学、流体力学、喷雾特性、颗粒物形成机理等专业领域的深度知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "unsupported"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案在解释积累模态颗粒物相对于核模态颗粒物增加更显著时，关键声明缺乏原文引用支持，需要补充具体的研究数据或引用"
+    }
+  },
+  {
+    "question_text": "Explain the controversial role of T90 and nozzle temperature in deposit formation. Discuss why reducing nozzle temperature below T90 doesn't always reduce deposits, and why increasing temperature above T90 doesn't always promote them, referencing the data in Figure 6.",
+    "standard_answer": "The controversy stems from two competing mechanisms. Kinoshita's hypothesis suggests nozzle temperature > T90 promotes deposit formation because 'most of the liquid fuel was evaporated resulting in the deposit precursors adhering strongly to the nozzle wall.' However, experimental data shows injector flow rate losses at 184°C were lower than at 173°C for several fuels. This is because deposit formation rate (K₁) and removal rate (K₂) both increase with temperature. At lower temperatures (<140°C), both rates are low. As temperature rises, K₁ increases faster initially. But above ~173°C, K₂ (removal rate) increases more rapidly due to enhanced fuel scouring effects. Thus, the relationship is non-monotonic: at very high temperatures, removal dominates. Additionally, the composition of deposit precursors varies with fuel chemistry. When nozzle temperature exceeds T90, light fractions evaporate but heavy fractions may polymerize slower. The transition temperature where K₂ overtakes K₁ depends on fuel properties and injector design.",
+    "original_text": {
+      "1": "when the nozzle temperature was higher than the T90 of the fuel, most of the liquid fuel was evaporated resulting in the deposit precursors adhering strongly to the nozzle wall.",
+      "2": "injector flow rate losses at a tip temperature of 184°C were lower than the cases of a tip temperature of 173°C."
+    },
+    "type": "reasoning",
+    "difficulty": 5,
+    "topic": "heat_transfer",
+    "question_id": "batch_detail_q_b00ac709",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Fuel-injector-deposits-in-direct-injection-_2015_Progress-in-Energy-and-Comb",
+      "paper_title": "Fuel-injector-deposits-in-direct-injection-_2015_Progress-in-Energy-and-Comb"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T11:10:16.054739",
+      "batch_processing": true,
+      "answer_length": 1042
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "该问题涉及燃料喷射器沉积形成的复杂机理，需要燃烧科学、燃料化学和热力学等领域的专业知识来理解T90温度、沉积形成与清除动力学等概念",
+      "answer_correct": false,
+      "answer_issues": [
+        "unsupported"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案虽然提供了合理的机理解释，但缺乏对Figure 6数据的直接引用和具体分析。需要明确引用图中的具体数据点来支持关于沉积形成率(K₁)和清除率(K₂)随温度变化的论述"
+    }
+  },
+  {
+    "question_text": "Compare the robustness against fouling between multi-hole, swirl, and outward-opening injectors. Explain the fluid mechanics reasons why outward-opening designs show superior performance.",
+    "standard_answer": "Multi-hole injectors are most vulnerable because small deposits in micrometer-scale orifices significantly disrupt flow: 'multi-hole injectors are highly vulnerable to deposits formed inside the nozzle.' Swirl injectors have larger flow passages but suffer from 'poorly atomized pre-spray structure.' Outward-opening injectors have several advantages: 'conical shape and zero SAC volume prevents carbon formation.' The SAC volume in inward-opening designs traps residual fuel which undergoes thermal degradation. Outward-opening designs eliminate this volume. Additionally, 'the deposit built up may only influence spray pattern, not the flow rate' for outward-opening designs due to their different internal geometry. The 'robustness of the inward opening injectors against fouling can be improved by appropriately designing the needle tip and seat.' Fluid dynamically, the outward needle movement creates different shear patterns that reduce deposit adhesion. The counter-bore design in outward-opening nozzles reduces edge effects where deposits typically initiate.",
+    "original_text": {
+      "1": "multi-hole injectors are highly vulnerable to deposits formed inside the nozzle",
+      "2": "the deposit built up may only influence spray pattern, not the flow rate' for outward-opening injectors."
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "fluid_mechanics",
+    "question_id": "batch_detail_q_b52af27a",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Fuel-injector-deposits-in-direct-injection-_2015_Progress-in-Energy-and-Comb",
+      "paper_title": "Fuel-injector-deposits-in-direct-injection-_2015_Progress-in-Energy-and-Comb"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T11:10:38.293896",
+      "batch_processing": true,
+      "answer_length": 1068
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及不同喷油器类型的抗结焦性能比较和流体力学机理分析，需要燃烧工程、流体力学和燃油喷射系统等领域的专业知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在事实错误，特别是关于旋流喷油器的描述与原文矛盾。建议修正旋流喷油器的描述，并补充更多关于向外开启喷油器流体力学优势的具体机理支持"
+    }
+  }
+]

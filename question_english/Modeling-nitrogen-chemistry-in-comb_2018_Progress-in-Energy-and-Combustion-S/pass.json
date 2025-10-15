@@ -1,0 +1,167 @@
+[
+  {
+    "question_text": "How does the pressure dependence of the N + NO ↔ O + N2 reaction (R1) influence thermal NO formation modeling, and what are the underlying physical reasons for its pressure independence?",
+    "standard_answer": "The N + NO ↔ O + N2 reaction (R1) exhibits no significant pressure dependence due to its reaction pathway occurring on a purely attractive ground electronic potential energy surface without a potential well or intermediate complex formation. This means the reaction proceeds via a direct abstraction or exchange mechanism where the minimum energy path lacks a bound intermediate, eliminating collisional stabilization effects that typically cause pressure-dependent behavior in recombination or dissociation reactions. The absence of a potential well implies that the reaction rate is governed solely by the Arrhenius activation energy and collision frequency, independent of third-body collisions. This pressure independence simplifies thermal NO modeling since the rate constant can be treated as a function of temperature only, without requiring fall-off corrections. The high activation energy (~75 kcal/mol) for the forward O + N2 step makes it rate-limiting, and its pressure-insensitive nature ensures consistent predictions across different combustion pressures, crucial for accurate CFD simulations of thermal NO in engines and turbines.",
+    "original_text": {
+      "1": "The N + NO reaction is expected to have little if any pressure dependence because the minimum energy path on the ground electronic surface is purely attractive with no minimum.",
+      "2": "The rate constant for the rate limiting step (R1b) has been measured directly in shock tube studies and inferred from a number of flame studies."
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question requires deep combustion kinetics expertise, specifically understanding the pressure dependence of the N + NO reaction and its implications for thermal NO formation modeling, which is a core combustion chemistry topic.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other issues."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_f2cb83a2",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Modeling-nitrogen-chemistry-in-comb_2018_Progress-in-Energy-and-Combustion-S",
+      "paper_title": "Modeling-nitrogen-chemistry-in-comb_2018_Progress-in-Energy-and-Combustion-S"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:23:17.015024",
+      "answer_length": 1146
+    }
+  },
+  {
+    "question_text": "What are the key uncertainties in the thermochemistry of NCN that impact prompt-NO modeling, and how do these uncertainties propagate to NO predictions in flames?",
+    "standard_answer": "The heat of formation of NCN (ΔfH°298) is a major uncertainty in prompt-NO modeling, with reported values ranging from 106.1 to 111.1 kcal/mol. This ±2.5 kcal/mol uncertainty significantly affects the equilibrium constants and rate constants of reactions involving NCN, particularly the reverse reaction CH + N2 ↔ NCN + H (R4/R4b) and the branching of NCN + H. A higher ΔfH°(NCN) makes R4 less exothermic, reducing the forward rate constant k4 and thus decreasing prompt-NO initiation. It also shifts the equilibrium of R4b, affecting the recycling of NCN to CH. This uncertainty propagates to NO predictions because the NCN concentration and its reaction pathways control the fixed nitrogen partitioning between NO and cyanides. For example, a 1 kcal/mol increase in ΔfH°(NCN) can alter NO yields by 10-20% in fuel-rich flames due to changes in the NCN + H branching ratio. The recent ATcT value of 107.7 kcal/mol helps reduce this uncertainty, but residual errors in high-temperature extrapolations of thermochemical data still limit modeling accuracy, especially in predicting the transition from NO to HCN dominance under very rich conditions.",
+    "original_text": {
+      "1": "Values for the heat of formation of NCN used in modeling studies vary more than three kcal mol^-1; differences that have a significant impact on modeling predictions.",
+      "2": "The accuracy of the theoretical values is affected by uncertainty in the prediction of the inter-system crossing probability for NCN + H and in the thermodynamic properties for NCN and CH when extrapolated to high temperatures."
+    },
+    "type": "concept",
+    "difficulty": 5,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question requires deep expertise in combustion kinetics, specifically prompt-NO formation mechanisms, thermochemistry of nitrogen species (NCN), and how uncertainties in thermodynamic properties propagate through chemical kinetic models to affect NOx predictions. It cannot be answered with general ML knowledge and requires specialized combustion chemistry understanding.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer are both high quality - domain-focused, factually correct based on citations, and compliant with all quality checks."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_e2239222",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Modeling-nitrogen-chemistry-in-comb_2018_Progress-in-Energy-and-Combustion-S",
+      "paper_title": "Modeling-nitrogen-chemistry-in-comb_2018_Progress-in-Energy-and-Combustion-S"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:23:17.851140",
+      "answer_length": 1147
+    }
+  },
+  {
+    "question_text": "Explain the role of the NCN + H reaction branching in prompt-NO formation, including how the competition between CH + N2 regeneration and HCN + N production affects NO yield under fuel-rich conditions, based on the provided paper content.",
+    "standard_answer": "The NCN + H reaction is a critical branching point in prompt-NO formation with two main product channels: CH + N2 (R4b) and HCN + N (R8). Under fuel-rich conditions, this branching directly influences NO yield through competing pathways. The CH + N2 regeneration channel (R4b) recycles NCN back to the prompt-NO initiation step, effectively delaying NO formation by conserving fixed nitrogen as NCN. In contrast, the HCN + N channel (R8) produces nitrogen atoms that can rapidly oxidize to NO through reactions with OH or O2. The branching ratio exhibits temperature dependence: at lower temperatures, R4b dominates due to its negative temperature dependence, while R8 becomes increasingly competitive at higher temperatures as its rate increases with temperature. This temperature-sensitive branching means that in fuel-rich flames where temperatures are moderate, NO formation can be suppressed if R4b prevails, but under hotter rich conditions, R8 enhances NO production. The accurate prediction of this branching is essential for modeling prompt-NO in diffusion flames and reburning zones, as the competition between these pathways determines whether nitrogen is recycled back to N2 or converted to NO.",
+    "original_text": {
+      "1": "The NCN + H reaction is dominated by the channel to CH + N2 (R4b) at low to medium temperatures, while HCN + N (R8) becomes competitive at high temperatures.",
+      "2": "Since k4b has a negative temperature dependence while k8 increases with temperature, the overall rate constant for NCN + H has an inflection point."
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires deep knowledge of combustion kinetics, specifically prompt-NO formation mechanisms, reaction pathways (NCN + H branching), and how these affect NO yield under fuel-rich conditions. This is specialized combustion science knowledge that cannot be answered with general ML or CS expertise.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+    },
+    "retry_count": 1,
+    "question_id": "deepseek_q_1a432868",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Modeling-nitrogen-chemistry-in-comb_2018_Progress-in-Energy-and-Combustion-S",
+      "paper_title": "Modeling-nitrogen-chemistry-in-comb_2018_Progress-in-Energy-and-Combustion-S"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:23:56.252085",
+      "answer_length": 1206
+    }
+  },
+  {
+    "question_text": "Based on the Glarborg et al. (2018) review, explain the chemical mechanisms through which reburning reduces NO in combustion systems, focusing on the role of hydrocarbon radicals and the specific pathways described in the paper's reburning section. Include the key chemical transformations and how local conditions affect these processes.",
+    "standard_answer": "Reburning reduces NO through chemical interactions between NO and hydrocarbon radicals (CHn-radicals) that convert NO into cyanides and isocyanides, diverting nitrogen away from NO formation pathways. Under fuel-rich conditions, the chemistry shifts from oxidation pathways to reactions that generate CHn-radicals like CH3, which are precursors to more reactive radicals such as CH. These CHn-radicals react efficiently with NO to form cyanides (HCN) and isocyanides (HNC), as supported by the paper: 'Recycling of amine radicals and NO back to HCN through reaction with hydrocarbon radicals becomes dominant. At richer conditions the reactions of CH3 leading to CHn-radicals are favored compared to the oxidation pathways leading to formaldehyde.' Additionally, 'Reactions between the CHn-radicals and NO then efficiently convert NO to cyanides and isocyanides.' The efficiency of reburning is highly dependent on local equivalence ratio and temperature; under reducing (fuel-rich) conditions, high concentrations of CHn-radicals enhance these conversion reactions, while under lean conditions, oxidation pathways dominate, limiting NO reduction. In practical systems, reburning is implemented by injecting secondary fuel to create a reducing zone where these reactions occur, but the paper does not specify quantitative reduction percentages like 50-60%, focusing instead on the chemical mechanisms.",
+    "original_text": {
+      "1": "Recycling of amine radicals and NO back to HCN through reaction with hydrocarbon radicals becomes dominant. At richer conditions the reactions of CH3 leading to CHn-radicals are favored compared to the oxidation pathways leading to formaldehyde.",
+      "2": "Reactions between the CHn-radicals and NO then efficiently convert NO to cyanides and isocyanides."
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question specifically requires knowledge of combustion chemistry, focusing on NO reduction mechanisms through reburning, hydrocarbon radical chemistry, and the effects of local conditions like equivalence ratio. This requires specialized combustion kinetics expertise beyond general ML/CS knowledge.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+    },
+    "retry_count": 1,
+    "question_id": "deepseek_q_7cde770b",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Modeling-nitrogen-chemistry-in-comb_2018_Progress-in-Energy-and-Combustion-S",
+      "paper_title": "Modeling-nitrogen-chemistry-in-comb_2018_Progress-in-Energy-and-Combustion-S"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:23:58.755407",
+      "answer_length": 1401
+    }
+  },
+  {
+    "question_text": "Using the provided paper content, explain the thermal NO formation mechanism based on the Zeldovich mechanism. Describe the initiating step and its characteristics, and discuss how the O/H radical pool influences thermal NO formation in high-temperature combustion. Use only the reaction numbering and activation energy values explicitly stated in the paper.",
+    "standard_answer": "The thermal NO formation mechanism, known as the Zeldovich mechanism, involves the attack of an oxygen atom on molecular nitrogen as the initiating step: O + N2 ↔ NO + N (R1b). According to the paper, 'This reaction has a high activation energy, about 75 kcal mol^-1, and it is the rate limiting step in thermal NO formation.' The high activation energy of approximately 75 kcal mol^-1 makes this step highly temperature-dependent and explains why thermal NO formation becomes significant only at elevated temperatures. The paper further states that 'Formation of NO through the thermal NO mechanism is dependent on the O/H radical pool, which is typically controlled by the fuel oxidation chemistry.' This indicates that the concentration of oxygen atoms, which is part of the O/H radical pool, is a critical factor controlling thermal NO production. In high-temperature combustion, the O/H radical pool is governed by the fuel oxidation kinetics, meaning that the availability of O atoms for the initiating reaction R1b depends on the overall combustion chemistry. Since the rate-limiting step has a high activation energy and the O-atom concentration is tied to the fuel oxidation process, thermal NO formation exhibits a strong dependence on both temperature and the combustion environment. The paper does not provide the full three-reaction Zeldovich mechanism or specific numerical values for O2 dissociation energy or temperature thresholds beyond the activation energy for R1b, so the explanation is limited to the explicitly stated information.",
+    "original_text": {
+      "1": "The initiating step is attack of an oxygen atom on the triple bond in N2, O + N2 ↔ NO + N (R1b). This reaction has a high activation energy, about 75 kcal mol^-1, and it is the rate limiting step in thermal NO formation.",
+      "2": "Formation of NO through the thermal NO mechanism is dependent on the O/H radical pool, which is typically controlled by the fuel oxidation chemistry."
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question requires specific combustion science knowledge about thermal NO formation mechanisms, including the Zeldovich mechanism, activation energies, and the role of O/H radical pools in high-temperature combustion. It cannot be answered with general ML or CS knowledge alone.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other issues."
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_e01d543f",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Modeling-nitrogen-chemistry-in-comb_2018_Progress-in-Energy-and-Combustion-S",
+      "paper_title": "Modeling-nitrogen-chemistry-in-comb_2018_Progress-in-Energy-and-Combustion-S"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:25:37.340059",
+      "answer_length": 1553
+    }
+  }
+]

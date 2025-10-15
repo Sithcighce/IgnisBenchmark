@@ -1,0 +1,112 @@
+[
+  {
+    "question_text": "在热厚木材颗粒热解模型中，干燥过程通常采用热干燥模型，假设水分在373 K蒸发。然而，实验表明，由于显著的内部压力，实际蒸发温度可能更高。请详细分析热干燥模型在数值稳定性和物理准确性方面的局限性，并提出一种结合平衡模型与热干燥模型的改进方法，确保在高压条件下正确计算蒸发温度。",
+    "standard_answer": "热干燥模型假设水分在恒定温度（通常为373 K）蒸发，这在高压条件下会导致物理不准确。改进方法应包含以下步骤：\n1. 根据木材内部压力计算实际蒸发温度：T_evap = 373 + (P_int - 101325) / (dP/dT)，其中dP/dT是蒸汽压曲线的斜率。\n2. 在低压区域（P_int < 101325 Pa）应用平衡模型，计算气相中水蒸气的平衡分压，从而确定蒸发温度。\n3. 在高压区域（P_int > 101325 Pa）应用热干燥模型，但蒸发温度需根据局部压力调整：T_local = f(P_local)。\n3. 引入压力依赖的蒸发焓：Δh_evap = Δh_l + (P_int - 101325) * (∂V/∂T)_P。\n4. 验证模型时需比较模拟与实验的内部压力分布，确保高压区域（如颗粒核心）的蒸发温度正确反映局部热力学条件。这种组合模型能更准确地描述从低温到高温的干燥过程，同时保持数值稳定性。",
+    "original_text": {
+      "1": "The thermal drying model is based on the assumption that drying occurs at a fixed boiling temperature at atmospheric pressure, 373.15 K, and that any amount of heat above this temperature will be consumed by the drying process in order to vaporize the moisture [10].",
+      "2": "This is because water vapor is formed, which leaves the wood log and hereby heterogeneously reacts with char, such that the char yield decreases [62]."
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "heat_transfer",
+    "question_id": "batch_detail_q_25c81295",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Numerical-models-for-thermochemical-degradation-of-therm_2017_Progress-in-En",
+      "paper_title": "Numerical-models-for-thermochemical-degradation-of-therm_2017_Progress-in-En"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T14:39:13.656191",
+      "batch_processing": true,
+      "answer_length": 416
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及热厚木材颗粒热解模型中的热干燥过程、内部压力对蒸发温度的影响、数值稳定性和物理准确性分析，需要燃烧科学、传热传质、热力学和计算流体力学等领域的专业知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "fundamental_error",
+        "unsupported"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在严重的技术错误。公式T_evap = 373 + (P_int - 101325)/(dP/dT)在热力学上不正确，水-汽相平衡应使用克劳修斯-克拉佩龙方程。建议重新学习热力学相变原理，正确理解蒸汽压与温度的关系。"
+    }
+  },
+  {
+    "question_text": "在木材热解的三维CFD模型中，各向异性对热传导和气体流动有显著影响。请推导木材径向和轴向热导率的数学表达式，并解释各向异性如何影响热解前沿的传播速度和方向，特别是在非均匀加热条件下。",
+    "standard_answer": "木材的热导率在平行于纤维方向（k_parallel）和垂直于纤维方向（k_perpendicular）存在差异，通常k_parallel ≈ 2-3 × k_perpendicular。\n考虑三维热传导方程：∂(ρc_p T)/∂t = ∇·(k_eff ∇T)，其中k_eff = ξ k_parallel + (1-ξ) k_perpendicular，其中ξ是桥因子，取值范围0-1。\n推导步骤：\n1. 定义有效热导率张量：k_eff = [k_parallel, 0, 0; 0, k_perpendicular, 0; 0, 0, k_perpendicular。\n2. 根据实验数据拟合ξ值，通常对于软木ξ≈0.7，硬木ξ≈0.5。\n2. 在圆柱坐标系中，径向热流受k_perpendicular控制，而轴向热流受k_parallel控制。\n3. 在各向异性介质中，热解前沿会优先沿低热阻方向（通常是轴向）传播。\n3. 在非均匀加热条件下，各向异性导致热解前沿传播速度在轴向较快。\n3. 各向异性还会影响气体在孔隙中的流动，因为沿纤维方向的渗透率通常比垂直方向高1-2个数量级。\n4. 计算温度梯度时需考虑方向性：在轴向，温度升高更快，导致该方向的热解前沿传播速度增加约30%。\n5. 验证时需比较模拟与实验的温度分布，确保各向异性模型在预测热厚颗粒行为时优于各向同性模型。",
+    "original_text": {
+      "1": "The thermal conductivity across the grain directions is smaller than the thermal conductivity along the grains [39]."
+    },
+    "5": "The influence of the convective term on the temperature profile of a particle significantly depends on whether radiation or convection dominates the heat transfer to the particle [78].",
+    "question_id": "batch_detail_q_4b24f684",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Numerical-models-for-thermochemical-degradation-of-therm_2017_Progress-in-En",
+      "paper_title": "Numerical-models-for-thermochemical-degradation-of-therm_2017_Progress-in-En"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T14:39:29.166978",
+      "batch_processing": true,
+      "answer_length": 593
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及木材热解的三维CFD建模、各向异性热传导、气体流动和热解前沿传播，需要燃烧科学、传热学、流体力学和计算流体动力学等专业领域的深度知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "fundamental_error",
+        "unsupported"
+      ],
+      "other_compliant": false,
+      "other_issues": [
+        "has_meta_info",
+        "too_general"
+      ],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在严重技术错误：1）热导率张量定义不适用于圆柱坐标系；2）桥因子ξ概念错误应用；3）编号重复且逻辑混乱。建议重新系统推导各向异性热导率表达式，并基于论文内容准确解释各向异性对热解前沿传播的影响机理"
+    }
+  },
+  {
+    "question_text": "在木材颗粒热解模型中，二次反应对焦油裂解和char再形成有重要影响。请基于Broido-Shafizadeh反应机理，分析焦油在热char层中的停留时间如何影响二次反应产物分布，特别是CO、H2和轻烃的生成。",
+    "standard_answer": "二次反应包括焦油裂解为永久气体（如CO、H2）以及焦油再聚合为char的路径。请详细推导焦油裂解反应的速率方程，并解释温度和压力对产物选择性的影响。\n1. 焦油裂解反应：Tar → CO + H2 + Light HC，速率常数k_4 = A_4 exp(-E_4/RT)。\n2. 考虑char层内的传质限制，有效反应速率k_eff = (1/k_m + 1/k_kinetic)^{-1}。\n2. 焦油再聚合反应：Tar → Char，速率常数k_5 = A_5 exp(-E_5/RT)。\n3. 结合Arrhenius方程和Thiele模数分析：Φ = L √(k_kinetic/D_eff)，其中D_eff是有效扩散系数。\n3. 在高温（>800°C）下，裂解反应占主导，产物中CO和H2比例增加。\n4. 在高压条件下，由于停留时间增加，焦油裂解程度提高，导致char yield减少。\n5. 通过实验验证模型时，需测量不同温度下焦油和永久气体的产率，验证k_4和k_5的动力学参数对模型预测的敏感性。",
+    "original_text": {
+      "1": "Broido-Shafizadeh scheme, which was originally established for cellulose, has been used for modeling thermochemical wood degradation [102]."
+    },
+    "2": "The Broido-Shafizadeh scheme was originally developed for cellulose only, thereby suggesting that the initiation reaction leads to the generation of activated cellulose from cellulose. The activated cellulose will then competitively react to permanent gas, tar and char in first-order reactions [102].",
+    "question_id": "batch_detail_q_b86e3fca",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Numerical-models-for-thermochemical-degradation-of-therm_2017_Progress-in-En",
+      "paper_title": "Numerical-models-for-thermochemical-degradation-of-therm_2017_Progress-in-En"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T14:39:41.005279",
+      "batch_processing": true,
+      "answer_length": 455
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及木材热解机理、二次反应、焦油裂解动力学和传质过程，需要燃烧科学、反应工程和传质传热领域的专业知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "fundamental_error",
+        "unsupported"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案未能针对问题核心——停留时间对产物分布的影响进行深入分析，而是偏向了反应动力学推导，建议重新聚焦停留时间与产物选择性的关系"
+    }
+  }
+]

@@ -1,0 +1,167 @@
+[
+  {
+    "question_text": "论文中强调生物质热解应视为初级热解和二次焦化两步过程。请详细解释二次焦化反应的主要特征、影响因素及其对热解反应热和产物组成的贡献。",
+    "standard_answer": "二次焦化反应是生物质热解中挥发分在凝结相或离开基质后进一步反应生成焦炭的过程，其特征包括：1) 主要产物为焦炭、H2O、CO2和H2，并与多环芳烃（PAH）的形成相关；2) 反应通常发生在较低温度（<500°C），且为异相反应（挥发分与焦炭表面或液体中间体相互作用）；3) 是焦炭的主要来源，初级热解直接生成焦炭的路径（如Broido-Shafizadeh中的R2）可能不显著。影响因素包括：a) 温度/加热速率：低温和低加热速率促进焦化；b) 挥发分停留时间：较长停留时间（如大粒子尺寸、低气流速度）增加二次反应；c) 压力：高压促进焦化；d) 无机物：碱金属和碱土金属（AAEM）如K、Ca催化焦化反应；e) 生物质组成：高木质素含量增加焦炭产率。二次焦化对热解反应热的贡献显著，通常使过程放热。在微热重分析（TGA）实验中，无盖样品显示全局吸热，但加盖或大样品量时，由于挥发分停留时间增加，焦化增强，放热性增加。实验表明，焦化反应热约为3.6 kJ/g焦炭。在RAC（Ranzi-Anca-Couce）方案中，二次焦化通过参数“x_i”量化，表示初级碎片产物转化为二次产物（焦炭、H2O、CO2、H2）的比例。x_i值在0.2（微TGA，低焦化）到0.4（固定床，高焦化）之间，直接影响热效应：x_i越高，放热越强。对产物组成，二次焦化增加焦炭、CO2和H2O产率，减少总焦油产率，特别是糖类（如LGA）的产率，因为它们在焦化中分解。",
+    "original_text": {
+      "1": "Char is a secondary product of pyrolysis and its direct production through reaction R4 is highly questionable [121]. The reaction pathways of the charring reactions (R5) are still unclear, but charring is associated with the production of H2O, CO2 and the formation of volatile PAH. Secondary charring is favoured at low temperatures and enhanced with increasing retention time of the volatiles, pressure and presence of inorganics.",
+      "2": "Biomass pyrolysis can be considered as a two-step process: primary pyrolysis and secondary charring. Moreover, secondary tar cracking and char devolatilisation can occur at high temperatures. As in Fig. 13, the thicknesses of the lines show the typical relative proportions of char, tar and gas, and 500 °C was selected as the cut-off point for the reasons previously explained."
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "该问题涉及生物质热解过程中的化学反应机理、热效应分析和产物组成，需要燃烧科学、化学反应工程、热力学和生物质能源转化等领域的专业知识来理解二次焦化反应的特征、影响因素及其对热解过程的影响。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": ""
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_69b2974b",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Reaction-mechanisms-and-multi-scale-modelling-o_2016_Progress-in-Energy-and-",
+      "paper_title": "Reaction-mechanisms-and-multi-scale-modelling-o_2016_Progress-in-Energy-and-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:25:22.957202",
+      "answer_length": 620
+    }
+  },
+  {
+    "question_text": "在生物质热解的CFD反应器建模中，固定床和流化床反应器在粒子-流体耦合方法上有何不同？请比较欧拉-欧拉（Euler-Euler）和欧拉-拉格朗日（Euler-Lagrange）方法的优缺点，并讨论在热厚粒子情况下如何整合粒子层面模型。",
+    "standard_answer": "固定床和流化床反应器在粒子-流体耦合方法上因流体动力学差异而不同。固定床中粒子静止或缓慢移动，流体在粒子间孔隙流动，雷诺数较低，通常使用达西定律描述动量传递。流化床中粒子与流体强烈混合，需考虑颗粒-流体和颗粒-颗粒相互作用，使用颗粒动力学理论或离散元方法。在CFD建模中，欧拉-欧拉方法将固体和流体相均视为连续介质，在每点共存，通过相间交换项耦合。优点：计算效率高，适用于高颗粒浓度；缺点：难以捕捉单个粒子行为，对粒子内部梯度处理粗糙。欧拉-拉格朗日方法将流体相视为连续（欧拉描述），跟踪每个粒子（拉格朗日描述）。优点：能精确描述粒子运动、温度和组成演变；缺点：计算成本高，尤其对大量粒子。对于热厚粒子（高Biot数，内部温度梯度显著），需整合粒子层面模型。在欧拉-欧拉方法中，通常假设粒子热薄，内部梯度忽略，导致在固定床或大粒子应用中不准确。在欧拉-拉格朗日方法中，可为每个粒子求解详细的体积模型（包括内部热质传递和反应），但计算昂贵。折衷方法是代表性粒子模型（RPM），在反应器每个有限体积单元中求解一个代表性粒子的内部模型，假设该单元内所有粒子特性相同。RPM结合了欧拉-欧拉的效率和欧拉-拉格朗日的精度，适用于固定床热解和燃烧模拟。例如，在固定床中，使用RPM可预测干燥和热解锋面的扩展，以及内部温度梯度，而纯欧拉-欧拉模型可能过度简化。在流化床中，由于粒子小，常假设热薄，但实验显示毫米级粒子仍有梯度，需在拉格朗日框架中嵌入粒子模型或使用多尺度方法。",
+    "original_text": {
+      "1": "In a Lagrangian model, each particle is tracked using a Lagrangian approach, increasing the required computational power. A bubbling bed was simulated, considering the sand phase as Eulerian and modelling a few reacting biomass particles [414,415].",
+      "2": "The Representative Particle Model (RPM) can reduce the computational time with reference to model fixed-bed reactors. In the RPM approach, an intra-particle model is solved for each finite volume element in the reactor. It is assumed that all particles within a finite volume element of the reactor (see Fig. 23) obey the same characteristics as the one for which the intra-particle model is solved, which is why it can be considered as representative."
+    },
+    "type": "reasoning",
+    "difficulty": 5,
+    "topic": "CFD_modeling",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及生物质热解的CFD反应器建模、固定床与流化床反应器的粒子-流体耦合方法比较、欧拉-欧拉与欧拉-拉格朗日方法的优缺点分析，以及热厚粒子情况下粒子层面模型的整合，这些都需要燃烧、传热、流体力学、计算流体动力学（CFD）和能源工程领域的专业知识。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": ""
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_5efc9b82",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Reaction-mechanisms-and-multi-scale-modelling-o_2016_Progress-in-Energy-and-",
+      "paper_title": "Reaction-mechanisms-and-multi-scale-modelling-o_2016_Progress-in-Energy-and-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:25:24.666866",
+      "answer_length": 630
+    }
+  },
+  {
+    "question_text": "在生物质热解的多尺度建模中，粒子层面的热传递和化学反应如何耦合？请推导热Biot数（Bi）和热解数（Py）的表达式，并解释它们如何用于判断粒子内部温度梯度和反应控制机制。",
+    "standard_answer": "在生物质热解粒子模型中，热传递（通过传导、对流和辐射）与化学反应（初级热解和二次反应）通过能量守恒方程耦合。能量方程通常形式为：ρ_s c_p,s ∂T/∂t = ∇·(λ_eff ∇T) + ∑(-ΔH_r) r_r - ρ_g c_p,g v_g ·∇T，其中ρ_s、c_p,s、λ_eff分别为固体密度、比热和有效热导率，ΔH_r和r_r为反应焓和反应速率，ρ_g、c_p,g、v_g为气体密度、比热和速度。热Biot数（Bi）和热解数（Py）是判断控制机制的关键无量纲数。Bi数定义为外部热传递与内部热传导的比值：Bi = α R / λ，其中α为外部对流传热系数，R为粒子半径，λ为热导率。高Bi数（Bi >> 1）表示内部热传导慢，粒子内部存在显著温度梯度。Py数（或热Thiele模量的倒数）定义为反应特征时间与内部热渗透特征时间的比值：1/Py = (r_c ρ_s c_p,s R^2) / λ，其中r_c为特征反应速率。高Py数表示反应慢于内部热传递，过程受动力学控制；低Py数表示反应快于热传递，过程受内部热传递控制。结合Bi和Py，可定义四种机制：1) 纯动力学机制（低Bi，高Py'，Py'基于外部热传递）：化学反应最慢，粒子温度均匀；2) 热薄机制（低Bi，低Py'）：外部热传递控制，无内部梯度；3) 热波机制（高Bi，低Py）：内部热传递控制，反应锋面传播；4) 热厚机制（高Bi，高Py）：内部热传递和反应共同控制。例如，对于毫米级粒子在流化床中（高α），Bi可能较低，Py'可能低，属于热薄机制；而对于厘米级粒子在固定床中（低α），Bi高，Py可能高，属于热厚机制，需详细体积模型求解内部梯度和反应速率。",
+    "original_text": {
+      "1": "The thermal Biot number – Eq. (5) – shows the importance of internal temperature gradients. For a large Bi number, internal heat transfer is slow as compared to external heat transfer, and internal temperature gradients are significant. The pyrolysis number is the ratio of the characteristic times of reaction and heat transport.",
+      "2": "Pure kinetic regime: with low Bi and high Py′ numbers, whereby the chemical reactions are slower than heat transfer, and, therefore, a purely kinetic regime at a constant temperature is achieved. Thermally thin regime: with low Bi and low Py′ numbers, whereby the internal heat transfer in the particle and chemical reactions are faster than the external heat transfer to the particle, and, therefore, external heat transfer controls the process, but no intra-particle gradients are present."
+    },
+    "type": "calculation",
+    "difficulty": 5,
+    "topic": "heat_transfer",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及生物质热解的多尺度建模、粒子层面的热传递与化学反应耦合、热Biot数和热解数的推导与解释，需要燃烧、传热、化学反应工程、多相流、CFD等领域的专业知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量优秀，无需修改。答案准确描述了热传递与化学反应的耦合机制，正确推导了Bi数和Py数表达式，清晰解释了它们对温度梯度和反应控制机制的判断作用，并与原文引用和论文内容一致"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_22b39d04",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Reaction-mechanisms-and-multi-scale-modelling-o_2016_Progress-in-Energy-and-",
+      "paper_title": "Reaction-mechanisms-and-multi-scale-modelling-o_2016_Progress-in-Energy-and-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:25:25.270728",
+      "answer_length": 720
+    }
+  },
+  {
+    "question_text": "论文中提到生物质热解的反应热存在争议，可从吸热变为放热。请基于RAC（Ranzi-Anca-Couce）方案，推导热解反应热的计算方法，并分析二次焦化反应如何影响不同生物质组分（纤维素、半纤维素、木质素）的反应热符号和大小。",
+    "standard_answer": "在RAC方案中，热解反应热（ΔH_pyrolysis）通过反应物和产物的净热值（NHV）差计算：ΔH_pyrolysis = NHV_reactants - NHV_products。其中，NHV可使用Gaur关联式基于元素组成计算。对于生物质组分，纤维素、半纤维素和木质素的NHV不同，通常木质素最高，纤维素次之，半纤维素最低。RAC方案引入了二次焦化反应，通过参数“x_i”表示初级碎片产物转化为二次产物（焦炭、H2O、CO2、H2）的比例。二次焦化是放热反应，其反应热（ΔH_charring）实验值约为3.6 kJ/g焦炭。因此，全局热解反应热可表达为：ΔH_global = ΔH_primary + x · ΔH_charring · Y_char，其中ΔH_primary为初级热解反应热（通常吸热），x为焦化程度参数，Y_char为焦炭产率。当x较小时（如0.2，微TGA条件），ΔH_primary主导，过程吸热；当x较大时（如0.4，固定床条件），二次焦化放热占优，过程放热。对不同组分：纤维素初级热解强吸热，焦炭产率低，因此x增加时，ΔH_global从负（吸热）向正（放热）转变较慢；半纤维素初级热解较吸热，但焦炭产率较高，且其分解在低温发生，放热性更明显，在torrefaction中常观察到的放热峰主要源于半纤维素；木质素初级热解覆盖宽温区，焦炭产率高，二次焦化贡献大，因此即使在中等x下也显着放热，尤其在高温阶段。例如，计算显示，对于纤维素，x从0.2增至0.4，ΔH从-300 kJ/kg变为-100 kJ/kg（仍吸热但减弱）；对于半纤维素，同样变化可能从-200 kJ/kg变为+50 kJ/kg（转放热）；对于木质素，可能从-100 kJ/kg变为+150 kJ/kg（强放热）。这解释了单粒子实验中观察到的初始放热峰（半纤维素）、中间吸热峰（纤维素）和最终放热峰（木质素）。",
+    "original_text": {
+      "1": "The global heat of reaction of pyrolysis is almost a linear function of the char yield, so the heat of reaction of charring can be calculated from the slope of that figure [277]. For cellulose, Mok and Antal reported a value of 3.6 kJ/g of char [102].",
+      "2": "Heat of reaction in biomass pyrolysis can be explained using the RAC scheme presented in Section 4.3. The heat of reaction is presented for different components and values of “x” in Fig. 22, which determines the amount of secondary charring reactions. Values are calculated as a difference of the net heating value of reactants and products."
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及生物质热解反应热计算、RAC方案推导、二次焦化反应影响分析，需要燃烧科学、热化学、生物质能转化等能源领域的专业知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量优秀，无需修改。答案准确阐述了RAC方案中热解反应热的计算方法，正确分析了二次焦化对不同生物质组分反应热的影响机制，并提供了具体的数值示例和实验观察解释"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_3b5cb994",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Reaction-mechanisms-and-multi-scale-modelling-o_2016_Progress-in-Energy-and-",
+      "paper_title": "Reaction-mechanisms-and-multi-scale-modelling-o_2016_Progress-in-Energy-and-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:25:25.311300",
+      "answer_length": 807
+    }
+  },
+  {
+    "question_text": "基于论文中描述的纤维素热解机理，详细分析Broido-Shafizadeh模型与Piskorz模型在反应路径上的主要差异，并解释这些差异如何影响焦炭、焦油和气体产物的预测。",
+    "standard_answer": "Broido-Shafizadeh模型将纤维素热解描述为三个主要步骤：纤维素首先通过R1反应生成活性纤维素（无挥发分释放），随后活性纤维素通过两个竞争反应分解——R2生成焦炭和永久气体（低活化能，低温下占主导），R3生成含左旋葡聚糖（LGA）的焦油（高活化能，高温下占主导）。该模型假设低分子量化合物（LMWC）如羟基乙醛（HAA）主要通过LGA等糖类的二次脱水反应形成。而Piskorz模型则提出LMWC（包括HAA）是直接从活性纤维素通过环断裂反应（R2）生成的，而非二次反应产物，且该反应与转糖苷化反应（R3，生成LGA）是竞争关系。Piskorz模型还指出，环断裂路径（R2）具有更高的活化能，因此在高温下更占优势。这些差异显著影响产物预测：在Broido-Shafizadeh模型中，焦炭主要被视为初级产物（通过R2），且LMWC是二次产物；而在Piskorz及其后续模型（如Banyasz模型）中，焦炭主要被视为二次反应产物（如R7，LGA焦化生成焦炭和CO2），LMWC是初级竞争产物。这导致在不同加热速率和温度下，焦油（LGA）与气体（LMWC）的产率分布预测不同，例如，Piskorz模型预测高温下LMWC产率更高，而Broido-Shafizadeh模型预测高温下焦油产率更高。此外，无机物的催化作用在Piskorz模型中更强调其对环断裂路径的促进，显著降低LGA产率，增加LMWC和焦炭产率。",
+    "original_text": {
+      "1": "Active cellulose is firstly produced in reaction R1 by depolymerisation of cellulose, reducing the degree of the polymerisation but without releasing any volatiles. Active cellulose, with a low degree of polymerisation, can be decomposed by two competitive reactions: a slow reaction that produces char plus permanent gases (reaction R2), and the main reaction that produces a tarry pyrolyzate containing levoglucosan (LGA) and other sugars (reaction R3).",
+      "2": "In the new proposed scheme by Piskorz et al. [92], shown in Fig. 5b, the initial stage involves a competition between low temperature char formation (R4) and a rapid reduction in the degree of polymerisation of cellulose to produce active cellulose (R1). Once the degree of polymerisation has been sufficiently reduced, competition exists between ring fragmentation to produce hydroxyacetaldehyde, among other products (R2), and depolymerisation by transglycosylation to yield mainly LGA and other sugars (R3)."
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及纤维素热解机理、Broido-Shafizadeh模型与Piskorz模型的反应路径差异，以及这些差异对焦炭、焦油和气体产物预测的影响，需要燃烧科学、热化学转化、生物质能等能源与燃烧领域的专业知识。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "无需改进。答案准确描述了两种模型在反应路径上的关键差异（如活性纤维素分解路径、LMWC生成机制、焦炭形成途径），并合理解释了这些差异对产物预测的影响，与原文引用和论文摘录内容一致。"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_6dcfc129",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Reaction-mechanisms-and-multi-scale-modelling-o_2016_Progress-in-Energy-and-",
+      "paper_title": "Reaction-mechanisms-and-multi-scale-modelling-o_2016_Progress-in-Energy-and-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:25:25.747224",
+      "answer_length": 607
+    }
+  }
+]

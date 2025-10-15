@@ -1,0 +1,104 @@
+[
+  {
+    "question_text": "论文比较了ZSM-5、USY和MCM-41等催化剂在塑料热解中对产物选择性的影响。请从催化剂孔道结构（微孔 vs. 介孔）、酸性位点（Brønsted vs. Lewis）和形状选择性角度，分析这些因素如何通过 carbenium ion 机制调控烃类裂解、异构化和芳构化路径。推导在ZSM-5（孔道~0.55 nm）与MCM-41（孔道>2 nm）上，长链烃扩散限制对反应速率和产物分布的影响，使用Thiele模数解释选择性差异。",
+    "standard_answer": "催化剂孔道结构和酸性位点通过扩散限制和反应机制调控热解产物。ZSM-5具有强Brønsted酸性和微孔（~0.55 nm），其形状选择性允许小分子（如轻质烯烃、BTEX）进入孔道，而长链烃（C20+）受扩散限制。Thiele模数φ = L√(k/D)描述内扩散影响，其中L为孔道长度，k为表面反应速率常数，D为有效扩散系数。对于ZSM-5，大分子φ高，反应受内扩散控制，导致初级裂解在外部表面发生，生成C2–C4烯烃；内部酸位促进烯烃低聚/环化生成BTEX。USY具有较大孔（~0.74 nm）和较弱酸性，φ较低，允许较大分子扩散，产物以C5–C11汽油范围烃为主。MCM-41为介孔（>2 nm），无形状选择性，弱酸性导致裂解速率慢，产物分布宽（C5–C27）。Brønsted酸位通过质子化生成carbenium离子，促进β-断裂和氢转移；Lewis酸位辅助脱氢。ZSM-5高[B]/[L]比增强异构化和芳构化，而MCM-41主要发生裂解。产物选择性由扩散-反应耦合决定：ZSM-5中微孔限制使BTEX选择性高，而MCM-41中介孔导致线性烷烃/烯烃为主。",
+    "original_text": {
+      "1": "ZSM-5 has the strongest acidity; therefore, it provides a favorable condition to produce C2–C4 olefinic HCs. Simultaneously, the light olefins could be readily recombined to form aromatic compounds, while their product distribution is not selective. This implies that the catalytic reaction is activated at the external surface of zeolite.",
+      "2": "Aluminosilicates such as MCM-41 and SBA-15 offer an alternative strategy owing to their mesoporous pore size (1.5–30 nm) over zeolites. They enable the larger volatile molecules to be diffused into the internal active sites. Their high surface area provides high acid density per unit mass of reactants."
+    },
+    "type": "concept",
+    "difficulty": 5,
+    "topic": "CFD_modeling",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及催化剂孔道结构、酸性位点、carbenium ion机制、Thiele模数等专业概念，需要燃烧、催化、反应工程等能源化工领域的专业知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": ""
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_d9b98891",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Recovery-of-chemicals-and-energy-through-thermo-_2025_Progress-in-Energy-and",
+      "paper_title": "Recovery-of-chemicals-and-energy-through-thermo-_2025_Progress-in-Energy-and"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:22:13.530113",
+      "answer_length": 480
+    },
+    "merge_source": "question_reverse"
+  },
+  {
+    "question_text": "论文指出在塑料热解中，加热速率和挥发分停留时间显著影响产物分布。请从传热和流体动力学角度分析：在闪速热解（加热速率≥1000°C/s）与慢速热解（0.1–10°C/s）中，塑料颗粒内部的温度梯度、热传导方程及挥发分在反应器内的停留时间如何共同决定初级热解产物与二次反应（如芳构化、结焦）的竞争？推导考虑内部热阻的颗粒能量方程，并解释为何短停留时间抑制二次反应。",
+    "standard_answer": "加热速率和停留时间通过影响传热和流动动力学调控热解路径。对于塑料颗粒，内部温度分布由非稳态热传导方程描述：ρCp ∂T/∂t = ∇·(k∇T) + Q_pyro，其中ρ、Cp、k分别为密度、比热容和热导率，Q_pyro为热解吸热项。在闪速热解（≥1000°C/s）中，高加热速率导致颗粒表面与中心产生大温度梯度（Bi数高），表面迅速达到降解温度（~500°C），而中心可能仍处于低温，导致挥发分快速释放（初级产物为主）。挥发分在反应器内停留时间短（≤2 s），由流动雷诺数和反应器几何决定，减少了二次反应（如Diels-Alder环化、脱氢）的时间。相反，慢速热解（0.1–10°C/s）下温度梯度小，颗粒整体缓慢升温，挥发分释放慢，停留时间长（>10 s），允许初级产物（如烯烃）通过二次反应生成芳香烃和焦炭。短停留时间τ与二次反应速率常数k_secondary满足Da = k_secondary τ << 1，从而抑制二次反应。流体动力学上，短停留通过高气速或反应器设计（如锥形喷动床）实现，减少扩散时间，限制挥发分-催化剂接触或均相反应。",
+    "original_text": {
+      "1": "Flash/fast pyrolysis is conducted at heating rates of ≥1000°C s⁻¹. A faster heating rate in the pyrolysis process favorably generates primary pyrogenic products with negligible secondary reactions since the plastics quickly reach the high temperature.",
+      "2": "The residence time for volatile pyrogenic products stemming from plastics is appropriately adjusted to obtain the desired product distribution. The residence time of the volatile pyrogenic products is typically ≤2 s, which is shortened by fast heating. The short residence time offers favorable conditions to suppress the secondary reactions of primary pyrogenic products."
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "heat_transfer",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及塑料热解过程中的传热机制（温度梯度、热传导方程）、流体动力学（挥发分停留时间）、化学反应动力学（初级产物与二次反应竞争），需要燃烧工程、传热传质、化学反应工程等领域的专业知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "无需改进，答案准确阐述了闪速热解与慢速热解中温度梯度、热传导方程和停留时间对产物分布的影响机制，推导了考虑内部热阻的颗粒能量方程，并正确解释了短停留时间抑制二次反应的原因"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_254d4acf",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Recovery-of-chemicals-and-energy-through-thermo-_2025_Progress-in-Energy-and",
+      "paper_title": "Recovery-of-chemicals-and-energy-through-thermo-_2025_Progress-in-Energy-and"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:22:16.934044",
+      "answer_length": 474
+    },
+    "merge_source": "question_reverse"
+  },
+  {
+    "question_text": "基于论文中关于塑料热解机理的讨论，分析在聚烯烃（如HDPE、PP）热解过程中，温度如何通过影响自由基反应路径来调控轻质烯烃（C2-C4）和芳香烃（如BTEX）的产物选择性。请详细阐述温度升高时自由基链式反应、β-断裂、Diels-Alder反应及后续脱氢反应的竞争关系，并基于原文内容分析关键反应步骤的温度依赖性。",
+    "standard_answer": "在聚烯烃热解中，温度是调控产物分布的关键参数。根据原文引用1，热解主要通过随机链断裂和末端链断裂生成宽碳数分布的烃类（C7–C45），且碳数分布随温度升高而缩短。随着温度升高至700–800°C，C–C键均裂加剧，自由基浓度增加，促进β-断裂生成C2–C4轻质烯烃（如乙烯、丙烯）。根据原文引用2，温度进一步升高（>800°C）时，轻质烯烃（特别是C4–C5二烯）通过Diels-Alder环化反应生成环己烯中间体，随后脱氢形成芳香烃（如BTEX）。温度升高使反应从动力学控制的链断裂转向热力学有利的芳构化，因此低温（~500°C）利于轻质烯烃，高温（>800°C）促进BTEX生成。产物选择性受Arrhenius方程（k = A exp(-Ea/RT)）支配，其中高活化能反应在高温下速率增加更显著。",
+    "original_text": {
+      "1": "The thermal degradation of polyolefins such as HDPE, LDPE, PP, and PS occurs via free radical mechanisms located at random and/or end positions in the polymer chain. Random bond scission generates a wide range of HCs with a carbon number of 7–45. The carbon number distribution of the HCs shortens as the reaction temperature increases.",
+      "2": "At higher temperatures (typically above 800°C) the pyrolysis tends to favor the production of smaller molecular weight HCs such as C2–C4 light olefins through free radical mechanisms. However, the presence of these light olefins in the pyrolytic products creates conditions conducive to recombination. This recombination can lead to the formation of aromatic compounds, often through reactions like the Diels-Alder reaction and subsequent dehydrogenation."
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及塑料热解机理、自由基反应路径、温度对产物选择性的影响、自由基链式反应、β-断裂、Diels-Alder反应及脱氢反应等，需要燃烧、热化学转化、反应动力学等能源与燃烧工程领域的专业知识。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": ""
+    },
+    "retry_count": 2,
+    "question_id": "deepseek_q_d72d0f06",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Recovery-of-chemicals-and-energy-through-thermo-_2025_Progress-in-Energy-and",
+      "paper_title": "Recovery-of-chemicals-and-energy-through-thermo-_2025_Progress-in-Energy-and"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:23:59.526694",
+      "answer_length": 351
+    },
+    "merge_source": "question_reverse"
+  }
+]

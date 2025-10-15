@@ -1,0 +1,74 @@
+[
+  {
+    "question_text": "分析在强漂移极限（strong-drift limit）下，湍流对高密度粒子扩散的各向异性影响。请详细推导纵向（x方向）和横向（y方向）扩散率的差异，并解释连续性效应（continuity effect）如何导致横向扩散率显著低于纵向扩散率。",
+    "standard_answer": "在强漂移极限下，相对速度远大于湍流脉动强度（〈w〉≫u_Λ），湍流可视为'冻结'。沿粒子路径的流体速度脉动相关性仅取决于空间偏移：Γ_@p,x(τ) ≈ Γ_x(wτ, 0)。纵向积分时间尺度为τ_sd,x = Λ_x/〈w〉，横向积分时间尺度为τ_sd,y = Λ_y/〈w〉。对于HIST流动，连续性方程导致横向积分尺度与纵向积分尺度存在固定关系：Λ_y = Λ_z = 1/2Λ_x。因此，粒子穿越涡旋的时间尺度具有各向异性：τ_sd,y ≈ 1/2 τ_sd,x。根据Eq. (62)和Eq. (63)，纵向和横向湍流扩散率分别为：Θ_sd,x = (Λ_x/〈w〉)u_Λ²，Θ_sd,y = (Λ_y/〈w〉)u_Λ²。代入长度尺度关系，得：Θ_sd,x = (Λ_x/〈w〉)u_Λ²，Θ_sd,y = (1/2Λ_x/〈w〉)u_Λ²。横向扩散率仅为纵向的一半，这是由连续性效应和涡旋穿越效应共同导致的。连续性效应源于不可压缩流体的质量守恒，要求在流向上有更大的相关尺度来维持连续性。",
+    "original_text": {
+      "1": "The streamwise integral length scale is defined with streamwise velocity fluctuations (with a streamwise spatial shift) as ∫_0^∞ Γ_x dx = ∫_0^∞ [u'_x(X,t)u'_x(X+χ_L,t)]/[(u'_x,rms)²] dx",
+      "2": "For HIST at low turbulence intensities, Wang & Stock [11] and Synder & Lumley [12] showed that the continuity effect (which stems from applying the continuity equation) yields Λ_y = Λ_z = 1/2Λ_x for u_Λ≪u and HIST",
+      "3": "Thus, the lateral spread rate is approximately half of the longitudinal spread rate for strong-drift particles in HIST due to a combination of the eddy-crossing and the integral length scale isotropy",
+      "4": "The first two relationships can be qualitatively inferred from Fig. 8 where τ_sd can be related to the time it takes for a particle to cross a turbulent structure of size Λ while moving at a speed w"
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "fluid_mechanics",
+    "question_id": "batch_detail_q_69c25cca",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Particles-in-a-turbulent-gas--Diffusion--bias_2023_Progress-in-Energy-and-Co",
+      "paper_title": "Particles-in-a-turbulent-gas--Diffusion--bias_2023_Progress-in-Energy-and-Co"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T15:01:15.937804",
+      "batch_processing": true,
+      "answer_length": 450
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及湍流扩散、强漂移极限、连续性效应等专业流体力学概念，需要燃烧/传热/流体力学领域的专业知识来分析和推导扩散率的各向异性",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量优秀，准确捕获了强漂移极限下湍流扩散的关键物理机制，包括冻结湍流假设、积分时间尺度关系以及连续性效应的具体数学表达"
+    }
+  },
+  {
+    "question_text": "比较分析湍流中粒子碰撞的两种极限机制：基于大惯性粒子的动能理论（kinetic-based）和基于小惯性粒子的扩散理论（diffusion-based）的物理基础和应用条件。",
+    "standard_answer": "动能理论适用于大惯性粒子（St_Λ > 1），假设粒子轨迹来自不同涡旋且互不相关。碰撞频率：f_coll,k = 4d²n_p√(π) v'_rms。对应碰撞斯托克斯数：St_coll,k ≡ τ_pf_coll,k ≈ (13αSt_Λ)/[√(1 + St_Λ)]·(Λ_y/d)。扩散理论适用于小粒子（d«η）且St_η«1时：f_coll,ε = √(2π/15) d³n_p/τ_η。物理机理差异：动能理论基于粒子速度脉动的高斯分布和随机相遇概率；扩散理论基于同一Kolmogorov尺度涡旋内的应变场作用。中间惰性粒子的碰撞频率可经验性地组合为：f_coll ≈ (f_coll,ε + St_Λf_coll,k)/(1 + St_Λ)。当St_Λ很小时，f_coll趋近于扩散极限；当St_Λ很大时，f_coll趋近于动能极限。",
+    "original_text": {
+      "1": "For kinetic-based collisions, particle trajectories are assumed to intersect based on random fluctuations of the particles in turbulent flow.",
+      "2": "In the other limit of very small particle inertias, Saffman & Turner [67] investigated a diffusion-based collision mechanism by considering two particles in a straining region associated with the same Kolmogorov-scale eddy",
+      "3": "For monodisperse particles, the corresponding collisional Stokes number is St_coll,k ≡ τ_pf_coll,k ≈ (13αSt_Λ)/[√(1 + St_Λ)]·(Λ_y/d)",
+      "4": "For intermediate particle sizes, one may expect that the collision frequency will have an upper bound given by the large-inertia kinetic-based theory and a lower bound given by the small-inertia diffusion-based theory"
+    },
+    "type": "concept",
+    "difficulty": 3,
+    "topic": "combustion_kinetics",
+    "question_id": "batch_detail_q_29afd021",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Particles-in-a-turbulent-gas--Diffusion--bias_2023_Progress-in-Energy-and-Co",
+      "paper_title": "Particles-in-a-turbulent-gas--Diffusion--bias_2023_Progress-in-Energy-and-Co"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T15:01:54.619232",
+      "batch_processing": true,
+      "answer_length": 371
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及湍流中粒子碰撞的物理机制，需要燃烧/传热/流体力学领域的专业知识，特别是湍流理论和粒子动力学知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量优秀，准确区分了两种碰撞机制的应用条件和物理基础，公式引用正确，机理解释清晰，完全符合原文内容"
+    }
+  }
+]

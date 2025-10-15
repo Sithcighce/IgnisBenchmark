@@ -1,0 +1,40 @@
+[
+  {
+    "question_text": "基于论文数据，从能源系统角度建立HTL-AP valorization不同技术路线的完整能量流分析模型，计算厌氧消化、水热气化和藻类培养路径的净能量产出，并基于热力学第二定律分析各技术的㶲效率。要求：1）明确各路径的能量输入基准为HTL-AP的化学能，基于论文中HTL-AP的COD=80 g/L和热值15 MJ/kg COD数据计算；2）提供详细的能量平衡计算过程，包括理论能量回收率和净能量回收率；3）给出㶲效率的完整计算方法，包括HTL-AP和产物的㶲值计算依据。",
+    "standard_answer": "建立HTL-AP valorization能量流分析模型，系统边界为HTL反应器出口的HTL-AP作为输入，各valorization技术的能量产品作为输出。能量平衡方程：E_in = E_out + E_loss。\n\n厌氧消化路径：输入能量E_in为HTL-AP的化学能，基于论文数据COD=80 g/L，热值约15 MJ/kg COD（原文引用1）。根据原文引用2，甲烷产率平均值为194 mL/g COD，对应能量回收率57%。甲烷热值35.8 MJ/m³，理论能量回收率η_1=(194×35.8)/(1000×15)=46.3%。原文引用2显示\"甲烷产率对应能量回收率为57%\"，该差异源于不同HTL条件导致的COD组成变化。考虑泵送和加热能耗占总产出15%，净能量回收率约39.4%。\n\n水热气化路径：基于Duan等研究（原文第77页），在600°C条件下氢气产率约30 vol.%，甲烷20 vol.%。氢气热值120 MJ/kg，甲烷热值35.8 MJ/m³，能量回收率η_2=(0.3×120+0.2×35.8)/15=52.8%。高温高压操作能耗占产出20-25%，净能量回收率约35-40%。\n\n藻类培养路径：利用HTL-AP中营养物质培养微藻，基于Biller等研究（原文第120页），藻类生物质热值约22 MJ/kg。光能转化效率低，考虑培养过程能耗，净能量回收率约5-10%，主要优势在于实现营养物循环。\n\n热力学第二定律分析：定义㶲效率η_ex=产物㶲/输入㶲。输入HTL-AP㶲值基于其有机组成计算，含氮有机物㶲值较高，采用标准化学㶲计算方法。厌氧消化：甲烷㶲≈51.6 MJ/kmol，输入HTL-AP㶲约18 MJ/kg（基于元素组成和标准㶲值表计算），㶲效率约25%；水热气化：氢气㶲≈236 MJ/kmol，㶲效率约30%；藻类培养：生物质㶲≈22 MJ/kg，㶲效率约8%。综合比较，水热气化具有最高㶲效率但技术成熟度低，厌氧消化技术成熟能量回收稳定，藻类培养实现营养物循环具有环境效益。",
+    "original_text": {
+      "1": "Fig. 7 also demonstrates that a large portion of energy (37.9 ± 18.0%), C (36.1 ± 14.0%), N (75.4 ± 18.9%) remains trapped within the HTL-AP.",
+      "2": "Previous studies indicated that a methane yield range of 14–314 mL/g COD (average value of 194 mL/g COD) was observed, and most studies reported a yield of around 200 mL/g COD which corresponded to an energy recovery of 57%."
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及能源系统建模、能量流分析、热力学第二定律分析、㶲效率计算等，需要燃烧工程、热力学、能源系统分析和生物质转化等领域的专业知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported",
+        "fundamental_error"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在多处事实错误和计算问题：1）厌氧消化路径中甲烷产率194 mL/g COD对应的能量回收率计算错误，实际应为(194×35.8)/(1000×15)=46.3%，但原文引用2明确说明对应能量回收率为57%，存在矛盾；2）水热气化路径中氢气产率30 vol.%和甲烷20 vol.%未提供具体计算基准（如每kg HTL-AP产气量），无法验证能量回收率计算；3）藻类培养路径净能量回收率5-10%缺乏具体计算过程支持；4）㶲效率计算中HTL-AP㶲值18 MJ/kg和产物㶲值缺乏明确计算依据和元素组成数据支持。建议：提供完整的能量平衡计算过程，明确各路径的输入输出能量流，基于论文数据详细计算㶲值，确保所有数值计算有据可依。"
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_a6cbc5c8",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Valorization-of-hydrothermal-liquefaction-aqueous_2020_Progress-in-Energy-an",
+      "paper_title": "Valorization-of-hydrothermal-liquefaction-aqueous_2020_Progress-in-Energy-an"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:11:26.442064",
+      "answer_length": 865
+    },
+    "merge_source": "question_reverse"
+  }
+]

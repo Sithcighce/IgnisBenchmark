@@ -1,0 +1,167 @@
+[
+  {
+    "question_text": "What are the key vibrational modes and their wavenumbers for ³NCN, and how do these spectroscopic parameters inform the calculation of thermodynamic properties like heat capacity?",
+    "standard_answer": "The triplet NCN radical has three fundamental vibrational modes: the symmetric stretch (ω₁ ≈ 1245 cm⁻¹), the bending mode (ω₂ ≈ 423 cm⁻¹), and the asymmetric stretch (ω₃ ≈ 1472 cm⁻¹), with a rotational constant B₀ ≈ 0.3973 cm⁻¹. These parameters, determined from high-resolution UV and IR spectroscopy, are essential for computing thermodynamic properties via the rigid rotor harmonic oscillator (RRHO) approximation. The molar heat capacity Cₚ°(T) is derived from the partition function Q, which sums over all accessible rovibrational states. Specifically, Cₚ°/R = T²(∂²lnQ/∂T²) + 2T(∂lnQ/∂T) + 1, where Q includes contributions from translational, rotational, and vibrational degrees of freedom. The vibrational partition function depends on the wavenumbers ωᵢ, and the rotational partition function on B₀. At high temperatures, the low bending frequency (423 cm⁻¹) means this mode contributes significantly to Cₚ° even at moderate temperatures, while the stretches become fully excited at higher T. These data are fitted to NASA polynomials for combustion modeling, ensuring accurate enthalpy and entropy calculations critical for kinetic simulations.",
+    "original_text": {
+      "1": "Experimental results reported in the literature... vibrational wavenumbers for 3NCN, rounded to integer values (ω1: symmetric stretch, ω2: bending, ω3: antisymmetric stretch) and rotational constants (B0)... ω1 = 1245 cm⁻¹, ω2 = 423 cm⁻¹, ω3 = 1472 cm⁻¹, B0 = 0.3973 cm⁻¹",
+      "2": "The heat capacity of an ideal gas, Cₚ°, can be related to the corresponding spectroscopic properties via the molecular partition function Q. One has: Cₚ°/R = T²(∂²lnQ/∂T²) + 2T(∂lnQ/∂T) + 1 with R denoting the gas constant."
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "thermochemistry",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question requires specific knowledge of combustion spectroscopy and thermochemistry, focusing on vibrational modes of the NCN radical and their relationship to thermodynamic property calculations, which is directly relevant to combustion science and energy systems.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question is well-focused on combustion domain knowledge and answer is factually correct based on provided citations."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_58fdce43",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "The-story-of-NCN-as-a-key-species-in-prom_2021_Progress-in-Energy-and-Combus",
+      "paper_title": "The-story-of-NCN-as-a-key-species-in-prom_2021_Progress-in-Energy-and-Combus"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:31:03.154670",
+      "answer_length": 1154
+    }
+  },
+  {
+    "question_text": "Explain the role of the 'prompt-NO switch' reaction NCN + H in controlling the flux towards NO formation versus recycling back to CH + N₂, including how the enthalpy of formation of NCN influences this branching.",
+    "standard_answer": "The 'prompt-NO switch' refers to the critical branching in the NCN + H reaction, which can either proceed as the reverse reaction NCN + H → CH + N₂ (R-1a) on the doublet surface or as the forward reaction NCN + H → HCN + N (R2) on the quartet surface. This branching determines whether NCN is recycled back to reactants or advances to form HCN, a direct precursor to NO via subsequent reactions. The enthalpy of formation of NCN (ΔfH°(NCN)) is pivotal because reaction R1a (CH + N₂ ⇌ NCN + H) is endothermic. A higher ΔfH°(NCN) increases the endothermicity of R1a, shifting the equilibrium towards reactants and making the reverse reaction R-1a more favorable relative to R2. This reduces the net flux to HCN and NO. Conversely, a lower ΔfH°(NCN) favors the forward pathway, enhancing NO production. The subtle balance between these channels is temperature-dependent and sensitive to the precise value of ΔfH°(NCN), which has been refined through combined experimental and theoretical studies to ensure accurate modeling of prompt-NO in flames.",
+    "original_text": {
+      "1": "Regarding prompt-NO formation, the role of the reaction network initialized by the reaction CH + N2 ⇌ NCN + H is examined by modeling measured flame profiles of NCN, HCN, and NO. In these simulations, the critical role of the product channel-branching of the NCN + H reaction, termed the prompt-NO switch, is confirmed.",
+      "2": "A particularly sensitive balance is observed between the product channels leading back to CH + N2 or forward to HCN + N."
+    },
+    "type": "concept",
+    "difficulty": 5,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires deep knowledge of combustion kinetics, specifically prompt-NO formation mechanisms, reaction pathways involving NCN radicals, spin state considerations, and thermodynamic influences on reaction branching. This is specialized combustion chemistry expertise beyond general ML/CS knowledge.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer are both high quality - domain-focused, factually correct based on paper content, and compliant with all quality requirements."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_02989aa2",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "The-story-of-NCN-as-a-key-species-in-prom_2021_Progress-in-Energy-and-Combus",
+      "paper_title": "The-story-of-NCN-as-a-key-species-in-prom_2021_Progress-in-Energy-and-Combus"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:31:03.974822",
+      "answer_length": 1044
+    }
+  },
+  {
+    "question_text": "In flame modeling, how does the inclusion of intersystem crossing (ISC) processes in the CH + N₂ reaction system affect the predicted concentrations of NCN and NO, and why are these non-adiabatic transitions significant?",
+    "standard_answer": "Incorporating intersystem crossing (ISC) in the CH + N₂ reaction system is crucial for accurately predicting NCN and NO concentrations in flames. ISC allows transitions between the doublet and quartet potential energy surfaces, enabling the spin-forbidden CH + N₂ → HCN + N pathway (R1b) alongside the spin-allowed CH + N₂ → NCN + H pathway (R1a). Although R1b is slow due to weak spin-orbit coupling, it provides a direct route to HCN and thence NO, bypassing NCN. Without ISC, models would underestimate NO formation at conditions where the quartet pathway contributes, such as at lower temperatures or in specific flame zones where NCN consumption is limited. Additionally, ISC affects the steady-state concentration of NCN by providing an alternative consumption path. The multi-well, multi-channel nature of the CHN₂ system, with ISC connecting surfaces, means that master equation approaches are needed to capture pressure and temperature effects. Neglecting ISC can lead to overprediction of NCN and underprediction of NO, highlighting the importance of non-adiabatic transitions in detailed kinetic mechanisms for prompt-NO.",
+    "original_text": {
+      "1": "The overall kinetics of the CH + N2 reaction is complicated because this bimolecular step initiates a multi-channel/multi-well reaction system including a doublet-quartet spin conversion. These so-called intersystem crossing (ISC) processes are known to be comparatively slow, and therefore reaction channels proceeding along such pathways are termed to be 'spin-forbidden'.",
+      "2": "For an adequate treatment of this reaction system at combustion-relevant conditions, it is necessary to first consider the reaction CH + N2 leading to NCN + H on the doublet surface or, via ISC, to HCN + N on the quartet surface."
+    },
+    "type": "application",
+    "difficulty": 5,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires deep knowledge of combustion kinetics, specifically intersystem crossing processes in the CH + N₂ reaction system and their impact on NCN and NO concentrations in flame modeling. This involves understanding spin-forbidden reactions, potential energy surfaces, and prompt-NO formation mechanisms - all specialized combustion chemistry concepts.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_c10dc050",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "The-story-of-NCN-as-a-key-species-in-prom_2021_Progress-in-Energy-and-Combus",
+      "paper_title": "The-story-of-NCN-as-a-key-species-in-prom_2021_Progress-in-Energy-and-Combus"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:31:04.181943",
+      "answer_length": 1132
+    }
+  },
+  {
+    "question_text": "Quantitatively, how does the high-temperature absorption cross-section of ³NCN at 329.13 nm vary with temperature, and what physical principles underlie this temperature dependence?",
+    "standard_answer": "The Doppler-limited absorption cross-section of triplet NCN at 329.13 nm decreases with increasing temperature, following the empirical relation σ(³NCN, 329.13 nm)(T) = 3.30 × 10⁻¹⁵ exp(-1.80 × 10⁻³ × T/K) cm², valid from 750 to 2500 K. This negative temperature dependence arises from the Boltzmann distribution of population among rovibrational states. At higher temperatures, the population spreads over more rotational and vibrational levels, reducing the fractional population in the specific ground state levels that contribute most to absorption at 329.13 nm. Specifically, the dominant absorption feature shifts from the (000)-(000) band at low temperatures to the (010)-(010) hot band at high temperatures, but the overall cross-section decreases due to the dilution of population across many states. The calculation involves partition functions and transition moments derived from spectroscopic constants and lifetime measurements, with the radiative lifetime of 183 ± 7 ns used to determine Einstein coefficients. Pressure broadening has a minor effect, causing only a ~6% reduction in peak cross-section from 0.05 to 0.1 MPa.",
+    "original_text": {
+      "1": "The Doppler-limited absorption cross section of 3NCN at λ = 329.1302 nm as a function of temperature... can be approximated over the temperature range from 750 to 2500 K with an average uncertainty of ±22%: σ (3NCN, 329.13 nm)(T) / cm2 = 3.30 × 10⁻¹⁵ exp(–1.80 × 10⁻³× T / K)",
+      "2": "As expected, the obtained Doppler-limited absorption cross section was found to have a negative temperature dependence... due to the Boltzmann distribution of population among rovibrational states."
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "spectroscopy",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question requires specific knowledge of combustion spectroscopy, including absorption cross-sections, temperature dependence in molecular spectroscopy, rovibrational states, Boltzmann distributions, and spectroscopic transitions in combustion-relevant species like NCN. It cannot be answered with general ML knowledge alone.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_5a97be25",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "The-story-of-NCN-as-a-key-species-in-prom_2021_Progress-in-Energy-and-Combus",
+      "paper_title": "The-story-of-NCN-as-a-key-species-in-prom_2021_Progress-in-Energy-and-Combus"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:31:04.483676",
+      "answer_length": 1137
+    }
+  },
+  {
+    "question_text": "How does the spin conservation principle govern the branching between the CH + N2 → NCN + H and CH + N2 → HCN + N reaction pathways, and what are the implications for prompt-NO formation kinetics?",
+    "standard_answer": "Spin conservation dictates that the total spin angular momentum must be preserved in elementary reactions. The CH radical has a doublet ground state (²CH), and N₂ is a singlet. The reaction CH + N₂ → NCN + H is spin-allowed because it proceeds on the doublet surface: doublet + singlet yields triplet (³NCN) + doublet (H), conserving overall spin. In contrast, CH + N₂ → HCN + N is spin-forbidden as it would require a doublet + singlet to yield singlet (HCN) + quartet (⁴N), violating spin conservation. This necessitates an intersystem crossing (ISC) from the doublet to quartet potential energy surface, which is a slow process due to weak spin-orbit coupling. Consequently, the spin-allowed pathway producing NCN dominates at combustion temperatures (>1200 K), making NCN a key intermediate in prompt-NO formation rather than direct HCN production. The kinetic favorability of the spin-conserved route explains why earlier models assuming direct HCN formation required anomalously high rate constants.",
+    "original_text": {
+      "1": "The new pathway with NCN + H products proposed by Moskaleva et al. [7,8] accounts for spin conservation (a doublet + singlet reaction can yield triplet + doublet species without overall spin-flip).",
+      "2": "In contrast, the original Fenimore pathway does not obey spin conservation (a doublet + singlet reaction should not directly yield singlet + quartet species as the main products) and therefore the assumed rate constant values were unusually high for such a spin-forbidden process."
+    },
+    "type": "reasoning",
+    "difficulty": 5,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question requires deep expertise in combustion kinetics, specifically understanding spin conservation principles in chemical reactions, reaction pathways for prompt-NO formation, and the implications for combustion modeling. It involves specialized knowledge of electronic spin states, intersystem crossing, and how these quantum mechanical principles govern reaction kinetics in combustion systems.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "The question is well-focused on combustion kinetics domain and the answer accurately reflects the paper's content on spin conservation principles governing CH + N2 reaction pathways and their implications for prompt-NO formation."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_92163bd6",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "The-story-of-NCN-as-a-key-species-in-prom_2021_Progress-in-Energy-and-Combus",
+      "paper_title": "The-story-of-NCN-as-a-key-species-in-prom_2021_Progress-in-Energy-and-Combus"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:31:04.920198",
+      "answer_length": 1005
+    }
+  }
+]

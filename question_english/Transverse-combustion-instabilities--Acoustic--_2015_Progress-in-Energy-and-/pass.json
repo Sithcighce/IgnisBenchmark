@@ -1,0 +1,134 @@
+[
+  {
+    "question_text": "Calculate the expected time delay τ in the n-τ model for a premixed flame with length Lf = 0.1 m and mean flow velocity u0 = 20 m/s, and explain the physical significance of this delay in the flame transfer function.",
+    "standard_answer": "For a laminar premixed flame in the n-τ model, the time delay τ is typically proportional to the convection time from disturbance origin to flame midpoint. For a 2D flame, τ = Lf/(2u0) = 0.1 m / (2 × 20 m/s) = 0.0025 s or 2.5 ms. This delay represents the time for flow disturbances (velocity fluctuations, vortices, or equivalence ratio perturbations) to convect from their point of excitation (e.g., nozzle exit) to the region of maximum heat release in the flame. Physically, this convection time determines the phase relationship between the input disturbance and the resulting heat release oscillation in the flame transfer function F(ω) = n exp(-iωτ). The phase angle φ = -ωτ increases linearly with frequency, causing the flame response to lag the excitation. At frequencies where ωτ = π (f = 1/(2τ) = 200 Hz for this case), the phase reaches -180° and the heat release becomes completely out of phase with the disturbance, potentially leading to damping rather than driving of oscillations. This time delay is crucial for determining stability boundaries since it affects whether heat release reinforces or opposes acoustic pressure oscillations according to the Rayleigh criterion.",
+    "original_text": {
+      "1": "Typical characteristic delay times between the excitation of the flow disturbance and the heat release are convective in nature, usually involving the time required for a vortex to convect from its point of initiation to the midpoint of the flame.",
+      "2": "It can be shown that the n-τ model accurately describes velocity-coupled premixed flame response in the fLf/u0 ≪ 1 limit, where τ is proportional to Lf/u0 (e.g., for laminar 2-D flames, τ = Lf/2u0)."
+    },
+    "type": "calculation",
+    "difficulty": 3,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires specific knowledge of combustion science (n-τ model for premixed flames), flame transfer functions, and the physical interpretation of time delays in combustion instability analysis. It involves understanding flame dynamics, convection processes, and the relationship between flow disturbances and heat release oscillations.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer are well-structured, domain-focused, and factually correct based on the provided citations."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_a08f378d",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Transverse-combustion-instabilities--Acoustic--_2015_Progress-in-Energy-and-",
+      "paper_title": "Transverse-combustion-instabilities--Acoustic--_2015_Progress-in-Energy-and-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:32:00.239030",
+      "answer_length": 1190
+    }
+  },
+  {
+    "question_text": "What is the Rayleigh criterion for thermoacoustic instability, and how does the spatial distribution of unsteady heat release relative to pressure oscillations determine stability in non-compact flames?",
+    "standard_answer": "The Rayleigh criterion states that thermoacoustic oscillations are self-excited when the net energy added to the acoustic field by unsteady heat release over an acoustic cycle is positive. Mathematically, this requires the volume integral of the product of pressure and heat release rate oscillations to be greater than zero over a cycle: ∫∫∫ p₁(x,t)q̇₁(x,t) dV dt > 0. Physically, this means heat release must occur when pressure is high (in phase within ±90°) to do work on the gas through dilatation. For acoustically compact flames (dimensions ≪ acoustic wavelength), only the spatially integrated heat release matters. However, for non-compact flames, the spatial distribution becomes critical because local regions can add energy while others remove it. The relative phase between local heat release and pressure oscillations varies spatially due to wave propagation effects. Regions where heat release leads pressure by 0-90° add energy, while those lagging by 90-180° remove energy. The net instability depends on the integral over the flame volume. This explains why flame shape and position relative to pressure nodes/antinodes significantly influence stability boundaries in transverse modes, where the pressure field has strong spatial variations.",
+    "original_text": {
+      "1": "A necessary condition for the oscillations to be self-excited is that net energy must be added to the acoustic disturbance field by the heat release. It can be shown that this occurs when the phase of the heat release rate and pressure oscillations is within ±90°, i.e., the 'Rayleigh criterion'.",
+      "2": "In contrast, the spatial distribution of the unsteady heat release is very important in non-compact flames, as it is the relative phase of the local heat release and pressure that controls the value of the Rayleigh integral."
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "combustion_instability",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question requires deep expertise in combustion science and thermoacoustics, specifically addressing the Rayleigh criterion for thermoacoustic instability and the role of spatial distribution in non-compact flames - core concepts in combustion instability analysis that cannot be answered with general ML knowledge.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_e343245c",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Transverse-combustion-instabilities--Acoustic--_2015_Progress-in-Energy-and-",
+      "paper_title": "Transverse-combustion-instabilities--Acoustic--_2015_Progress-in-Energy-and-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:32:00.857025",
+      "answer_length": 1259
+    }
+  },
+  {
+    "question_text": "How do transverse acoustic modes in annular combustors act as a 'clock' to drive axial flow disturbances at the nozzles, and what is the physical mechanism behind this indirect coupling pathway?",
+    "standard_answer": "Transverse acoustic modes in annular combustors act as a 'clock' by setting the frequency and modal structure of the disturbance field, but the dominant heat release oscillations are often driven indirectly by axial flow disturbances at the nozzles. This occurs because the oscillatory pressure field from the transverse mode induces axial velocity fluctuations through the nozzle impedance. Specifically, the pressure gradient across the nozzle inlet excites axial flow oscillations according to the linearized momentum equation, where the unsteady pressure difference drives acceleration of the flow. For acoustically compact nozzles (dimensions much smaller than acoustic wavelength), the transverse pressure oscillations are nearly uniform across the nozzle cross-section, creating a spatially coherent axial velocity perturbation. This axial flow disturbance then convects vortical structures or equivalence ratio fluctuations to the flame, causing heat release oscillations. The key mechanism is the conversion of transverse acoustic energy into axial hydrodynamic disturbances through the nozzle's acoustic response, which then interact with the flame more effectively than direct transverse velocity fluctuations due to the flame's higher sensitivity to axial disturbances.",
+    "original_text": {
+      "1": "However, in many instances, it is the indirect axial flow disturbances at the nozzles (driven by pressure oscillations from the transverse mode), and the vortices that they excite, that cause the dominant heat release rate oscillations.",
+      "2": "In this way, the azimuthal acoustic fluctuations act as a 'clock,' setting the overall frequency of the disturbance. These disturbances excite axial motions in the nozzle, which are often the dominant source of flame response."
+    },
+    "type": "reasoning",
+    "difficulty": 5,
+    "topic": "combustion_instability",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires deep expertise in combustion science (transverse acoustic modes, annular combustors), fluid mechanics (axial flow disturbances, nozzle impedance), and combustion instability mechanisms. It specifically addresses how acoustic modes drive flow disturbances and heat release oscillations in combustion systems, which is a specialized domain topic.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "This is an excellent domain-focused question with a comprehensive, factually correct answer that aligns well with the paper's content and citations."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_df6926ff",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Transverse-combustion-instabilities--Acoustic--_2015_Progress-in-Energy-and-",
+      "paper_title": "Transverse-combustion-instabilities--Acoustic--_2015_Progress-in-Energy-and-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:32:01.343133",
+      "answer_length": 1281
+    }
+  },
+  {
+    "question_text": "Explain the physical mechanisms by which transverse acoustic oscillations excite hydrodynamic instabilities like vortex shedding in bluff-body stabilized flames, and how this leads to heat release fluctuations.",
+    "standard_answer": "Transverse acoustic oscillations excite hydrodynamic instabilities through several mechanisms. First, the transverse acoustic velocity field creates an asymmetric pressure distribution around bluff bodies or swirlers, leading to periodic vortex shedding from alternating edges. This occurs because the acoustic velocity component perpendicular to the mean flow direction imposes a time-varying pressure gradient across the flame holder. For a bluff body, when the transverse acoustic velocity is directed from one side, it accelerates flow separation on that edge while suppressing it on the opposite side, creating a vortex that sheds into the wake. As the acoustic cycle reverses, the shedding switches to the other side. These vortices convect downstream and interact with the flame, causing fluctuations in flame surface area through roll-up and stretching. The enhanced mixing in vortex cores can also alter local equivalence ratio and reaction rates. The synchronization between the acoustic period and vortex convection time to the flame midpoint creates a phase-locked heat release oscillation. This mechanism is particularly effective when the Strouhal number (St = fL/u0) is near unity, ensuring optimal timing between vortex generation and flame interaction.",
+    "original_text": {
+      "1": "In all these studies, asymmetric vortex shedding from alternating edges of the flame-holder were observed, driven by the asymmetry of the transverse acoustic mode relative to the combustor centerline.",
+      "2": "These data show synchronization between transverse velocity fluctuations in the chamber and vortex rollup on the flameholder."
+    },
+    "type": "reasoning",
+    "difficulty": 5,
+    "topic": "fluid_mechanics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires deep expertise in combustion science, fluid mechanics, and acoustics, specifically addressing how transverse acoustic oscillations interact with hydrodynamic instabilities (vortex shedding) in bluff-body stabilized flames and lead to heat release fluctuations. This involves understanding flame stabilization, vortex dynamics, acoustic-flame interactions, and thermoacoustic coupling, which are core topics in combustion and energy systems.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "The question is domain-focused, the answer is factually correct and well-supported by the provided citations and paper content, and there are no other quality issues. It effectively explains the physical mechanisms linking transverse acoustics to hydrodynamic instabilities and heat release fluctuations."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_be2693ad",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Transverse-combustion-instabilities--Acoustic--_2015_Progress-in-Energy-and-",
+      "paper_title": "Transverse-combustion-instabilities--Acoustic--_2015_Progress-in-Energy-and-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:32:01.739605",
+      "answer_length": 1269
+    }
+  }
+]

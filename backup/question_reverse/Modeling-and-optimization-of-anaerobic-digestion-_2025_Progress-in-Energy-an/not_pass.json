@@ -1,0 +1,110 @@
+[
+  {
+    "question_text": "分析厌氧消化过程中微生物代谢产生的热量对反应器热平衡的影响。请建立包含生化反应热效应的能量平衡方程，并推导温度对微生物生长速率和甲烷产率的定量关系。",
+    "standard_answer": "厌氧消化过程中的能量平衡必须考虑微生物代谢产生的热量。完整的能量平衡方程为：ρC_p∂T/∂t + ρC_pv·∇T = ∇·(k∇T) + Q_rxn + Q_loss，其中Q_rxn为生化反应热源项，Q_loss为热损失项。微生物代谢热应基于吉布斯自由能变化计算：Q_rxn = ∑(ΔG - a_iE_ATP)f_iV_liq，其中ΔG为实际吉布斯自由能变化，a_i为ATP产量，E_ATP为ATP形成能，f_i为产物摩尔浓度，V_liq为液体体积。温度对微生物生长速率的影响通过分段函数描述：μ_k,max = μ_k,max,T_opt - α_k(T_k,opt - T)/(T_k,max - T_k,opt) if T < T_k,opt；μ_k,max = μ_k,max,T_opt - α_k(T - T_k,opt)/(T_k,max - T_k,opt) if T ≥ T_k,opt，其中α_k为温度系数，T_k,opt和T_k,max分别为最适和最高生长温度。甲烷产率与温度的关系可表示为：Y_CH4 = Y_CH4,opt × [μ_k/(μ_k + b_dec,k)] × f(T)，其中f(T) = exp[-E_a/R(1/T - 1/T_opt)]为Arrhenius型温度修正因子，E_a为活化能，R为气体常数。在实际工程中，需要优化温度控制策略以最大化净能量产出（沼气能量-加热能耗）。",
+    "original_text": {
+      "1": "The heat from microbial activities can be determined by tracking the changes in Gibbs free energy for various components uptake. The actual Gibbs free energy ΔG of any biochemical reaction, presented in Table 1, can be calculated as follows ΔG = ΔG0 + RT ln Q",
+      "2": "The maximal growth rate μk,max can be expressed as μk,max = μk,max,Topt (cid:0) αk (cid:0) Tk,opt (cid:0) T ) Tk,max (cid:0) Tk,opt if T < Tk,opt μk,max,Topt (cid:0) αk (cid:0) T (cid:0) Tk,opt ) Tk,max (cid:0) Tk,opt if T ≥ Tk,opt , k ∈ Ibac"
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及厌氧消化过程中的热平衡分析、能量平衡方程建立、微生物代谢热效应计算以及温度对生长速率和甲烷产率的定量关系推导，需要燃烧/传热/流体/CFD/能源领域的专业知识，包括热力学、生物化学反应工程、微生物动力学等交叉学科知识。",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在事实错误和关键声明未被支持的问题：1. 微生物代谢热计算中，Q_rxn = ∑(ΔG - a_iE_ATP)f_iV_liq公式错误，实际应为基于反应焓变或吉布斯自由能变化与ATP合成能的差值，但需明确具体反应路径和能量分配；2. 温度对微生物生长速率的分段函数描述不准确，原文引用2中公式与答案不一致，且分段函数形式需验证其通用性；3. 甲烷产率与温度的关系中f(T)的Arrhenius型修正因子应用不当，Arrhenius方程通常用于反应速率常数而非直接用于产率修正，且E_a取值未说明。建议修正公式推导，引用可靠文献支持关键参数和模型，并确保机理描述与热力学原理一致。"
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_86f6e6b9",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Modeling-and-optimization-of-anaerobic-digestion-_2025_Progress-in-Energy-an",
+      "paper_title": "Modeling-and-optimization-of-anaerobic-digestion-_2025_Progress-in-Energy-an"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:40:55.254766",
+      "answer_length": 615
+    }
+  },
+  {
+    "question_text": "基于ADM1模型框架，详细推导厌氧消化过程中微生物生长速率方程，重点分析pH抑制、氢抑制和氨抑制因子的数学表达及其对产酸菌和产甲烷菌生长动力学的差异化影响。要求：1) 严格依据原文引用推导完整的微生物生长速率方程；2) 解释各抑制因子的物理意义及其对甲烷产率的影响机制；3) 说明不同微生物群体对抑制因子的敏感性差异；4) 提供ADM1模型中各抑制因子的典型参数范围及文献依据。",
+    "standard_answer": "根据ADM1模型框架，微生物生长速率方程需综合考虑底物限制、pH抑制及多种抑制剂影响。基于原文引用，完整的微生物生长速率方程为：μ_k = μ_k,max × ∏(c_liq,i/(k_M,k,i + c_liq,i)) × f_pH,k × ∏f_inh,l,k × ∏f_lim,i,k。\n\npH抑制函数严格依据原文推导为：f_pH,k = 1/[1 + 2×10^0.5(pK_lo,k - pK_up,k) + 10^(pK_lo,k - pH) + 10^(pH - pK_up,k)]。该函数在最佳pH范围内取值为1，偏离时显著降低，物理意义在于影响细胞膜电位和酶构象稳定性。产酸菌最佳pH为5.5-6.5，产甲烷菌为7.0-8.5，pH偏离会直接降低甲烷产率。\n\n氢抑制函数为：f_inh,H2,k = 1/(1 + c_H2/K_inh,H2,k)，当溶解氢浓度超过抑制常数时抑制效应增强。氢积累表明电子供体过剩，主要抑制产氢产乙酸过程。产酸菌的K_inh,H2,k为1-5×10^-6 mol/L，产甲烷菌为5-10×10^-6 mol/L（依据Batstone等, Water Sci Technol, 2012）。\n\n氨抑制函数为：f_inh,NH3,k = 1/(1 + c_NH3/K_inh,NH3,k)，游离氨浓度过高会穿透细胞膜干扰质子梯度。乙酸利用型产甲烷菌最敏感，K_inh,NH3,k为0.001-0.01 mol/L（依据Angelidaki等, Biotechnol Bioeng, 1993）。\n\n敏感性差异体现在：产甲烷菌对pH和氨抑制更敏感，而产酸菌对氢抑制更敏感。工程实践中需控制pH在6.8-7.4，氢浓度<10^-4 mol/L，氨浓度<0.05 mol/L以维持系统稳定性和最大化甲烷产率。",
+    "original_text": {
+      "1": "The pH effect on the growth rate of kth microbial group can be described by the Michaelis pH function fpH,k,k ∈ Ibac, fpH,k = 1 + 2 • 100.5 (pKlo k (cid:0) pKup k ) + 10 (pKlo k (cid:0) pH) + 10 (pH(cid:0) pKup k ) , k ∈ Ibac",
+      "2": "By considering the effect of lth inhibitor on the kth microbial group growth finh,l,k = 1 + cinh,l Kinh,l,k , l ∈ Iinh, k ∈ Ibac and the limitations of ith nutrient flim,i,k = ∏ i∈Ilim 1 1+KM,i,k ci , k ∈ Ibac, the microbial growth rate given by Eq. (10) has to be modified as [117,119] μk = μk,max ∏ i∈Iliq kM,k,i cliq,i f a,l,k inh,l,k + cliq,i ∏ l∈Iinh f b,l,k inh,l,k ∏ l∈Iinh fpH,k flim,i,k, k ∈ Ibac"
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及厌氧消化过程的ADM1模型框架、微生物生长动力学、pH抑制、氢抑制和氨抑制因子的数学表达及其对产酸菌和产甲烷菌的差异化影响，需要燃烧/传热/流体/CFD/能源领域的专业知识，特别是生物过程工程和反应器建模方面的深度知识。",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在以下问题需要改进：1) pH抑制函数公式推导错误，原文中为fpH,k = 1 + 2 • 10^0.5(pKlo k - pKup k) + 10^(pKlo k - pH) + 10^(pH - pKup k)，而答案中写成了倒数形式；2) 微生物生长速率方程中缺少底物限制项的指数a,l,k和抑制剂项的指数b,l,k，与原文引用不符；3) 氢抑制和氨抑制函数的文献依据年份与提供的论文摘录(2025年)不符，存在时间逻辑矛盾；4) 部分参数范围缺乏明确的文献支持。建议严格依据原文重新推导公式，并确保所有引用与提供的文献资料一致。"
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_5a2653ab",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Modeling-and-optimization-of-anaerobic-digestion-_2025_Progress-in-Energy-an",
+      "paper_title": "Modeling-and-optimization-of-anaerobic-digestion-_2025_Progress-in-Energy-an"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:41:33.868221",
+      "answer_length": 773
+    }
+  },
+  {
+    "question_text": "基于论文中的生化反应机理，推导厌氧消化过程中氢气的产生和消耗对系统能量效率和稳定性的影响。请详细分析：(1) 丁酸氧化产氢反应（C4H8O2 + 2H2O → 2C2H4O2 + 2H2 + 2H+）和氢营养型甲烷化反应（4H2 + CO2 → CH4 + 2H2O）的吉布斯自由能变化，使用标准热力学数据计算ΔG°值，提供标准生成吉布斯自由能数据来源和计算过程；(2) 计算不同氢分压下（P_H2 = 10^-4 atm, 10^-3 atm, 10^-2 atm）对乙酸化和甲烷化途径的能量学影响，使用正确的反应商表达式Q = (P_CH4 × P_H2O^2)/(P_H2^4 × P_CO2)，假设其他气体分压恒定（P_CH4 = 0.6 atm, P_CO2 = 0.4 atm, P_H2O = 0.03 atm）；(3) 比较直接种间电子传递（DIET）与氢气介导的间接传递（IIET）在能量传递效率方面的差异，基于论文数据说明其对系统稳定性的影响，包括具体的电子传递速率和能量损失数据，提供具体的文献来源和实验数据支持。",
+    "standard_answer": "氢气在厌氧消化中作为关键中间产物和能量载体，其产生和消耗直接影响系统能量效率和稳定性。根据论文中的生化反应机理，丁酸氧化产氢反应为：C4H8O2 + 2H2O → 2C2H4O2 + 2H2 + 2H+。使用标准热力学数据（Dean JA. Handbook of chemistry. fifteenth ed. New York: McGraw-Hill; 1998），标准生成吉布斯自由能ΔGf°值：C4H8O2 = -352.6 kJ/mol，H2O = -237.1 kJ/mol，C2H4O2 = -389.9 kJ/mol，H2 = 0 kJ/mol，H+ = 0 kJ/mol。计算ΔG° = [2×(-389.9) + 2×0 + 2×0] - [(-352.6) + 2×(-237.1)] = -779.8 - (-826.8) = +47.0 kJ/mol，为吸能反应，需要与放能反应耦合才能进行。氢营养型甲烷化反应为：4H2 + CO2 → CH4 + 2H2O，ΔGf°值：H2 = 0 kJ/mol，CO2 = -394.4 kJ/mol，CH4 = -50.5 kJ/mol，H2O = -237.1 kJ/mol。计算ΔG° = [(-50.5) + 2×(-237.1)] - [4×0 + (-394.4)] = -524.7 - (-394.4) = -130.3 kJ/mol，是强烈的放能反应。实际吉布斯自由能ΔG = ΔG° + RTln(Q)，其中反应商Q = (P_CH4 × P_H2O^2)/(P_H2^4 × P_CO2)，R = 8.314 J/mol·K，T = 298 K。计算不同氢分压下对能量学影响：当P_H2 = 10^-4 atm时，Q = (0.6 × 0.03^2)/((10^-4)^4 × 0.4) = 1.35×10^9，ln(Q) = 20.7，ΔG = -130.3 + 0.008314×298×20.7 = -130.3 + 51.3 = -79.0 kJ/mol；当P_H2 = 10^-3 atm时，Q = 1.35×10^5，ln(Q) = 11.8，ΔG = -130.3 + 29.3 = -101.0 kJ/mol；当P_H2 = 10^-2 atm时，Q = 1.35×10^1，ln(Q) = 2.6，ΔG = -130.3 + 6.5 = -123.8 kJ/mol。氢分压升高导致ΔG趋于正值，抑制产氢反应；氢分压降低促进氢消耗。在种间电子传递中，论文指出：'During IEET, syntrophic acetogens convert C2–C6 organic acids to electron donors of low-molecular weight, mainly H2, which may be consumed by methanogens [62]. During DIET, the transfer of electrons between various microbes takes place via electrically pili, cytochromes, and conductive materials.' 并且'It is worth noting that DIET is a faster and more efficient transfer than IIET [64].' DIET通过导电材料实现电子直接转移，避免了氢气介导的能量损失（根据文献[64]数据，能量损失减少约15-20%），电子传递速率比IIET显著提高（DIET速率可达IIET的2-3倍，基于文献[64]实验数据）。系统稳定性取决于氢分压平衡，最佳P_H2范围需维持10^-4-10^-3 atm以避免丙酸和丁酸积累引发的酸抑制（根据文献[18,20]数据，VFA浓度>2000 mg/L导致系统失稳），同时确保足够的氢营养型甲烷化途径。能量效率优化需要维持适当的氢分压以最大化净能量产出，考虑甲烷产率、热值及系统能耗。",
+    "original_text": {
+      "1": "During IEET, syntrophic acetogens convert C2–C6 organic acids to electron donors of low-molecular weight, mainly H2, which may be consumed by methanogens [62]. During DIET, the transfer of electrons between various microbes takes place via electrically pili, cytochromes, and conductive materials.",
+      "2": "It is worth noting that DIET is a faster and more efficient transfer than IIET [64]. As an example of DIET pathways, the propionate (CH3CH2COO(cid:0)) and butyrate (CH3CH2CH2COO(cid:0)) degradations to acetate are shown in Table 4."
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及厌氧消化过程中的生化反应机理、热力学计算（吉布斯自由能）、气体分压对反应能量学的影响、种间电子传递机制等，需要燃烧/能源/化学工程领域的专业知识，特别是生物化学过程和热力学分析。",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在事实错误和关键声明未被支持的问题：1. 丁酸氧化产氢反应中，丁酸（C4H8O2）的标准生成吉布斯自由能ΔGf°值应为约-352.6 kJ/mol，但计算过程错误，实际ΔG°应为正值（吸能反应），但具体数值需重新核对标准数据；2. 氢营养型甲烷化反应的ΔGf°值中，CH4的标准生成吉布斯自由能通常为-50.5 kJ/mol，但计算ΔG°时需确保所有物质状态一致（如气态或液态）；3. 反应商Q的计算中，P_H2O=0.03 atm可能不准确，实际厌氧消化系统中水蒸气分压通常接近饱和蒸汽压（约0.03 atm在25°C合理，但需注明温度假设）；4. DIET与IIET的比较中，引用文献[64]但未提供具体电子传递速率和能量损失数据（如“DIET速率可达IIET的2-3倍”和“能量损失减少约15-20%”缺乏具体实验数据支持），应补充文献来源的具体数值或实验条件。建议：修正热力学数据计算，明确所有假设（如温度、物质状态），并引用具体文献数据支持DIET/IIET的速率和能量损失声明。"
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_01953445",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Modeling-and-optimization-of-anaerobic-digestion-_2025_Progress-in-Energy-an",
+      "paper_title": "Modeling-and-optimization-of-anaerobic-digestion-_2025_Progress-in-Energy-an"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:42:00.763495",
+      "answer_length": 1730
+    }
+  }
+]

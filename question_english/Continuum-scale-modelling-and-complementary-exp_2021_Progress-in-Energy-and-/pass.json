@@ -1,0 +1,168 @@
+[
+  {
+    "question_text": "What are the key challenges in continuum scale modelling of solid oxide cells, and how do modellers address the trade-off between model representativeness and computational efficiency?",
+    "standard_answer": "Continuum scale modelling of solid oxide cells faces the fundamental challenge of accurately representing the complex multi-physics phenomena while maintaining computational tractability. The primary difficulty lies in identifying which physical processes are most important to include in detail versus those that can be simplified or omitted. This requires careful consideration of the 'trade-off triad' between generality, realism and precision. Modellers must determine the appropriate level of detail for phenomena spanning different length and time scales, from electrochemical reactions at the microscale to thermal transport at the cell level. The key achievement is successfully choosing the trade-off between representativeness and efficiency in the model preparation. This involves selecting which governing equations to solve, what level of spatial resolution is necessary, and which physical parameters require detailed treatment versus simplified approximations. The challenge is compounded by the need to obtain accurate property values from experimental measurements or sub-scale models, as many past models have relied on inaccurate literature values or oversimplistic schemes for computing effective properties.",
+    "original_text": {
+      "1": "Continuum scale modelling in the range of μm/μs to m/days is the primary focus of this article, dealing with the complex interplay between fluid flow, charge transport, and electrochemical reactions.",
+      "2": "The challenge facing the modeller is to identify the important phenomena to be analysed in detail, as well as those which are less important. Successfully choosing the trade-off between representativeness and efficiency in the model is the key achievement in preparation for the set of processes to be simulated."
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "CFD_modeling",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question specifically addresses continuum scale modeling of solid oxide cells, requiring expertise in CFD modeling, multi-physics phenomena, electrochemical reactions, thermal transport, and the computational trade-offs inherent in energy systems modeling - all core domain topics in combustion science and energy systems.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+    },
+    "retry_count": 1,
+    "question_id": "deepseek_q_f5921061",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Continuum-scale-modelling-and-complementary-exp_2021_Progress-in-Energy-and-",
+      "paper_title": "Continuum-scale-modelling-and-complementary-exp_2021_Progress-in-Energy-and-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:18:46.669216",
+      "answer_length": 1228
+    }
+  },
+  {
+    "question_text": "Based on the provided paper content, explain how concentration overpotentials develop in porous SOC electrodes and describe the relationship between mass transport limitations and the different regions of polarization curves.",
+    "standard_answer": "Concentration overpotentials in porous SOC electrodes develop due to mass transport limitations that create reactant concentration gradients from bulk gas channels to active reaction sites. As described in the paper, 'Concentration overpotential arises from mass transport limitations that create reactant concentration gradients from bulk gas channels to active reaction sites in porous electrodes.' This phenomenon becomes particularly significant at high current densities where reactant consumption accelerates, leading to steep concentration gradients. The relationship between mass transport and polarization curves is clearly established: 'For solid oxide cells, the low, intermediate and high current-density regions are frequently referred to as activation, ohmic and concentration areas where losses are primarily due to charge-transfer kinetics, electrical resistance and mass transport, respectively.' In the concentration region of the polarization curve, mass transport limitations dominate the performance losses as reactant diffusion through the porous electrode structure cannot keep pace with the electrochemical reaction rates. The development of concentration overpotentials is influenced by the electrode microstructure, including porosity and tortuosity, which affect gas transport pathways. As current density increases towards limiting conditions, the concentration at reaction sites approaches zero, leading to significant voltage losses that manifest as the characteristic steep drop in the high current density portion of polarization curves.",
+    "original_text": {
+      "1": "Concentration overpotential arises from mass transport limitations that create reactant concentration gradients from bulk gas channels to active reaction sites in porous electrodes.",
+      "2": "For solid oxide cells, the low, intermediate and high current-density regions are frequently referred to as activation, ohmic and concentration areas where losses are primarily due to charge-transfer kinetics, electrical resistance and mass transport, respectively."
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question requires specific knowledge of solid oxide cell (SOC) electrochemistry, including concentration overpotentials in porous electrodes, mass transport limitations, and polarization curve analysis - all specialized energy systems concepts that cannot be answered with general ML or CS knowledge.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "The question is well-focused on SOC domain knowledge and the answer correctly explains concentration overpotential development and polarization curve relationships using appropriate citations from the paper."
+    },
+    "retry_count": 1,
+    "question_id": "deepseek_q_93eb0fa2",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Continuum-scale-modelling-and-complementary-exp_2021_Progress-in-Energy-and-",
+      "paper_title": "Continuum-scale-modelling-and-complementary-exp_2021_Progress-in-Energy-and-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:18:52.200164",
+      "answer_length": 1569
+    }
+  },
+  {
+    "question_text": "Using the provided paper content, analyze how flow configuration affects thermal gradient development in solid oxide cell stacks and explain the resulting thermo-mechanical stress implications. Include a detailed discussion of the specific temperature distribution patterns mentioned in cross-flow configurations and their consequences for stack operation.",
+    "standard_answer": "Thermal gradients in solid oxide cell stacks develop primarily due to uneven temperature distribution resulting from electrochemical reactions and flow configurations. The paper specifically states that 'The uneven temperature distribution will result in high thermo-mechanical stresses and uneven operating conditions across the stack, especially when operated in fuel cell mode of operation.' Cross-flow configurations exhibit particularly problematic thermal profiles with 'one cold corner at the intersect of the two inlets, and a hot corner at the junction of the two outlets.' This creates significant temperature differentials across the stack, leading to substantial thermo-mechanical stresses. The mechanism involves differential thermal expansion between stack components, where localized heating and cooling create internal stresses that can exceed material limits. In cross-flow arrangements, the cold inlet corner experiences minimal reaction heating while the hot outlet corner accumulates thermal energy from both fuel and air streams, creating a diagonal thermal gradient across the cell plane. This uneven thermal distribution not only induces mechanical stresses but also creates uneven operating conditions, affecting reaction kinetics and current density distribution. The paper emphasizes that 'it is of vital importance that the coefficient of thermal expansion of the different components lie as close to each other as possible in order to avoid undesired mechanical stresses.' This thermal management challenge is particularly acute in fuel cell mode where exothermic reactions generate substantial heat that must be properly distributed to prevent localized overheating and associated mechanical failures.",
+    "original_text": {
+      "1": "The uneven temperature distribution will result in high thermo-mechanical stresses and uneven operating conditions across the stack, especially when operated in fuel cell mode of operation.",
+      "2": "The challenge with cross-flow is the very uneven temperature distribution with one cold corner at the intersect of the two inlets, and a hot corner at the junction of the two outlets.",
+      "3": "It is of vital importance that the coefficient of thermal expansion of the different components lie as close to each other as possible in order to avoid undesired mechanical stresses."
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "heat_transfer",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires specific knowledge of solid oxide cell stack operation, thermal gradient development in electrochemical systems, flow configuration effects (cross-flow), thermo-mechanical stress analysis, and temperature distribution patterns in energy conversion devices - all requiring combustion science, heat transfer, and energy systems expertise.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no compliance issues."
+    },
+    "retry_count": 2,
+    "question_id": "deepseek_q_989e65ff",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Continuum-scale-modelling-and-complementary-exp_2021_Progress-in-Energy-and-",
+      "paper_title": "Continuum-scale-modelling-and-complementary-exp_2021_Progress-in-Energy-and-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:19:33.420994",
+      "answer_length": 1730
+    }
+  },
+  {
+    "question_text": "How does the triple-phase boundary (TPB) function as the electrochemically active region in solid oxide cell electrodes, and what continuum scale modeling approaches and experimental characterization techniques are described in the paper for analyzing electrode performance?",
+    "standard_answer": "The triple-phase boundary (TPB) serves as the exclusive location where electrochemical reactions occur in solid oxide cell electrodes, as it represents the intersection of gas, ion-conducting, and electron-conducting phases. According to the paper, SOC fuel electrodes oxidize H₂ in fuel cell mode or reduce H₂O in electrolysis mode specifically at these TPB regions, which are distributed throughout the entire electrode to maximize performance. For continuum scale modeling, the paper emphasizes that mathematical models range from simple lumped-parameter methods to detailed three-dimensional solutions based on effective transport properties, with numerical reconstruction of electrode microstructures enabling determination of these effective properties. Experimental characterization techniques include electrochemical impedance spectroscopy (EIS), which allows for fundamental physicochemical parameters to be obtained, and micro-scale computer simulations based on digital reconstruction from X-ray tomography and focused ion beam scanning electron microscopy. These complementary approaches provide the necessary data to parameterize mathematical models and validate results, bridging the gap between experimental measurements and computational predictions in solid oxide cell analysis.",
+    "original_text": {
+      "1": "SOC fuel electrodes oxidise H₂ (SOFC) or reduce H₂O (SOEC) at the boundaries where the gas, ion- and electron-conducting phases meet. This region is known as the triple phase boundary (TPB) and is distributed throughout the whole electrode to maximise performance.",
+      "2": "In this article, state-of-the-art techniques for measuring kinetic, electric and transport properties are also described. Methods such as electrochemical impedance spectroscopy allow for fundamental physicochemical parameters to be obtained. In addition, effective properties may be obtained using micro-scale computer simulations based on digital reconstruction obtained from X-ray tomography/focussed ion beam scanning electron microscopy, as well as percolation theory."
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires specific knowledge of solid oxide cell electrochemistry, triple-phase boundary mechanisms, continuum scale modeling approaches, and experimental characterization techniques - all core concepts in energy systems, combustion science, and electrochemical engineering that cannot be answered with general ML knowledge.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question is well-focused on domain-specific electrochemical concepts and answer accurately reflects the paper's content about TPB function, modeling approaches, and experimental techniques."
+    },
+    "retry_count": 2,
+    "question_id": "deepseek_q_b5957ab8",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Continuum-scale-modelling-and-complementary-exp_2021_Progress-in-Energy-and-",
+      "paper_title": "Continuum-scale-modelling-and-complementary-exp_2021_Progress-in-Energy-and-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:19:33.445179",
+      "answer_length": 1295
+    }
+  },
+  {
+    "question_text": "Explain the thermodynamic basis of the Nernst potential in solid oxide fuel cells, focusing on how water production affects the maximum achievable voltage. Discuss why the open circuit potential represents the thermodynamic limit and how actual operating conditions differ from this ideal value due to various loss mechanisms.",
+    "standard_answer": "The Nernst potential represents the thermodynamic maximum voltage achievable in solid oxide fuel cells under equilibrium conditions where no current flows. This potential is fundamentally derived from the Gibbs free energy change of the electrochemical reactions occurring in the cell. When dry hydrogen is used as fuel, the production of water during operation leads to a reduction in the thermodynamically-maximum potential. This occurs because the reaction products change the gas composition at the electrodes, altering the chemical potentials that drive the electrochemical reactions. The open circuit potential occurs at equilibrium when current density equals zero and represents the theoretical maximum voltage under given operating conditions. However, in actual operation, the cell voltage decreases significantly from this ideal value due to various overpotentials including activation losses from charge transfer kinetics, ohmic losses from electrical resistance in cell components, and concentration losses from mass transport limitations of reactants and products. These losses become more pronounced as current density increases, causing the actual operating voltage to deviate substantially from the thermodynamic Nernst potential limit.",
+    "original_text": {
+      "1": "The open circuit or Nernst potential, E, occurs at equilibrium i'' = 0 and represents the thermodynamic maximum voltage achievable under given operating conditions.",
+      "2": "When the fuel employed is dry hydrogen, the production of water by the reaction leads to a reduction in the thermodynamically-maximum potential, E."
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question requires deep expertise in energy systems, specifically solid oxide fuel cell thermodynamics, electrochemical principles, and fuel cell operation. It demands understanding of Nernst potential derivation from Gibbs free energy, the impact of water production on electrochemical potential, and various loss mechanisms in fuel cell operation - all specialized combustion/energy domain knowledge.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer are both high quality - domain-focused, factually correct based on citations, and compliant with all quality requirements."
+    },
+    "retry_count": 2,
+    "question_id": "deepseek_q_846bca9a",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Continuum-scale-modelling-and-complementary-exp_2021_Progress-in-Energy-and-",
+      "paper_title": "Continuum-scale-modelling-and-complementary-exp_2021_Progress-in-Energy-and-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:19:45.265336",
+      "answer_length": 1253
+    }
+  }
+]

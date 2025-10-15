@@ -1,0 +1,138 @@
+[
+  {
+    "question_text": "混合物不均匀性通过两种竞争机制影响湍流燃烧速率：火焰表面积增加和平均消耗速度变化。请详细推导在弱湍流条件下，这两种机制如何共同决定净燃烧速率，并分析在不同平均当量比Φ和波动幅度Φ'条件下净效应的变化规律。",
+    "standard_answer": "在分层湍流燃烧中，混合物不均匀性通过两种竞争机制影响净燃烧速率：火焰表面积增加效应和平均消耗速度变化效应。在弱湍流条件下(u'/SL ~ O(1))，这两种机制的竞争尤为明显。从物理上分析，火焰表面积增加源于不同火焰面元素因当地混合物组成不同而以不同速度传播，导致火焰皱褶增加。数学上，这可以表示为总燃烧速率ω̇c,total = ρuuc(Φ)A，其中A是火焰表面积。混合物不均匀性通过两种途径影响此表达式：一方面增加A，另一方面改变uc(Φ)。当平均当量比Φ接近化学计量比(Φ~1.0)时，uc(Φ)在Φ=1处达到最大值，任何波动都会降低平均消耗速度uc(Φ)，因为uc(Φ)在化学计量比附近是凹函数。此时，即使火焰表面积有所增加，净效应可能是燃烧速率降低。当Φ显著偏离化学计量比且波动幅度较小时，uc(Φ)近似线性，波动对uc(Φ)的影响相互抵消，此时火焰表面积增加主导，净效应为正。当波动幅度很大且Φ接近可燃极限时，发现不可燃混合物的概率显著增加，导致uc(Φ)急剧下降，此时即使火焰表面积增加，净效应也为负。实验数据支持这一分析：在Φ=1.1的近化学计量混合物中，适度不均匀性对归一化火焰速度影响微弱，而强不均匀性显著降低燃烧速率；在Φ=0.7的贫混合物中，适度不均匀性可增加燃烧速率达40%。",
+    "original_text": {
+      "1": "In a turbulent flow, the overall effect of mixture inhomogeneities on burning rate is controlled not only by an increase in the area of the flame surface, but also by variations in uc, caused by variations in the local equivalence ratio Φ(x,t) due to the inhomogeneities.",
+      "2": "If the amplitude of fluctuations in Φ is sufficiently small and the mean Φ is sufficiently far from both ΦSL,max and the flammability limits, then, the dependence of uc on Φ may be close to a linear one and the influence of positive and negative fluctuations in Φ on uc(Φ) may be negligible after averaging even if the amplitude of fluctuations in uc is significant."
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "fluid_mechanics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及湍流燃烧、混合物不均匀性、火焰传播机制、当量比影响等燃烧学和流体力学专业概念，需要燃烧科学、湍流理论和化学反应动力学的专业知识才能准确回答。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量较高，无需修改。答案准确描述了弱湍流条件下两种竞争机制的作用机理，正确分析了不同当量比和波动幅度条件下的净效应变化规律，与提供的原文引用和论文背景一致。"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_0ba47ead",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Stratified-turbulent-flames--Recent-advances-in-underst_2017_Progress-in-Ene",
+      "paper_title": "Stratified-turbulent-flames--Recent-advances-in-underst_2017_Progress-in-Ene"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:15:35.250505",
+      "answer_length": 552
+    },
+    "merge_source": "question_reverse"
+  },
+  {
+    "question_text": "在分层湍流燃烧的RANS建模中，联合概率密度函数P(Z,c)的建模面临根本性挑战。请详细分析为什么基于前两个矩ec和rc''²/r的预设PDF方法在平均反应速率ω̇c时存在基本缺陷，并提出更合理的替代建模方法。",
+    "standard_answer": "在分层湍流燃烧的RANS建模中，基于前两个矩ec和rc''²/r的预设PDF方法在平均反应速率ω̇c时存在根本性缺陷，原因如下：首先，反应速率ω̇c(c)是c的高度非线性函数，在反应区附近变化剧烈。预设PDF方法试图仅通过前两个矩来捕捉整个PDF形状，但这无法准确描述控制ω̇c的低概率薄反应区。如论文第121-122页所述，即使两个不同的预设PDF具有相同的前三个矩，它们给出的平均反应速率ω̇c可能相差高达7倍。其次，预设PDF方法的基本问题在于：平均反应速率ω̇c由发现薄反应区的低概率gr控制，而用于建模PDF形状的量ec和rc''²/r主要受发现新鲜反应物和产物概率a和b的控制，对gr的变化不敏感。这种不匹配导致即使ec和rc''²/r的微小计算误差也会强烈影响ω̇c。更合理的替代方法包括：1）传输PDF方法，直接求解PDF输运方程，虽然计算昂贵但物理上更一致；2）条件矩封闭方法，避免直接平均高度非线性反应速率；3）基于火焰面密度的方法，将反应速率建模为ρuucΣ，其中Σ是火焰面密度；4）泰勒展开方法，当混合物分数波动较小时可能更合适。这些方法更好地处理了控制湍流燃烧的关键物理过程。",
+    "original_text": {
+      "1": "The use of a presumed PDF P(c, ec, rc''²/r) for averaging the mass rate ω̇c(c) of product creation in an inhomogeneously premixed turbulent flame appears to be a fundamentally flawed approach, because (i) the mean rate ω̇c is controlled by a low probability gr of finding thin reaction zones, whereas (ii) the values of ec and rc''²/r, which are invoked to model the PDF, depend weakly on gr.",
+      "2": "Even if not only the first c and second c'² moments, but also the third c'³ moments were equal for the two compared PDFs, the obtained dependencies of ω̇c(c) were significantly different at gc = c'²/[c(1-c)] as low as 0.25."
+    },
+    "type": "concept",
+    "difficulty": 5,
+    "topic": "CFD_modeling",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及分层湍流燃烧的RANS建模、联合概率密度函数建模、平均反应速率计算等专业概念，需要燃烧学、湍流燃烧建模、计算流体力学等领域的专业知识来理解和评估。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "无需改进。答案准确分析了预设PDF方法的根本缺陷（反应速率高度非线性、低概率反应区控制问题、建模参数不敏感等），并提出了合理的替代方法，与原文引用和论文内容一致。"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_56a82a42",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Stratified-turbulent-flames--Recent-advances-in-underst_2017_Progress-in-Ene",
+      "paper_title": "Stratified-turbulent-flames--Recent-advances-in-underst_2017_Progress-in-Ene"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:15:35.602496",
+      "answer_length": 501
+    },
+    "merge_source": "question_reverse"
+  },
+  {
+    "question_text": "在分层燃烧的LES建模中， thickened flame模型常与预设过滤密度函数(pFDF)结合使用。请详细推导效率函数在分层条件下的修正形式，并分析混合物分数梯度|∇Z|对亚网格尺度皱褶因子的影响机理。",
+    "standard_answer": "在分层燃烧的LES建模中，thickened flame模型与预设过滤密度函数(pFDF)的结合需要特别考虑混合物不均匀性的影响。标准thickened flame模型将反应速率建模为ω̇c = ρuSL,uj∇c̃jE，其中E是效率函数，用于考虑未解析的亚网格尺度皱褶。在分层条件下，效率函数需要修正以包含混合物分数梯度的影响。扩展的效率函数可表示为E = E(u'/SL, Δ/δL, |∇Z|δZ)，其中δZ = Z/|∇Z|是混合物分数梯度长度尺度。从物理机理分析，混合物分数梯度通过两种途径影响亚网格尺度皱褶：首先，当地火焰速度SL(Z)的空间变化会产生额外的火焰面皱褶，这可以建模为额外的皱褶因子ξZ = 1 + CZ(|∇Z|δZ/SL)²，其中CZ是模型常数。其次，混合物分数梯度会影响火焰面与湍流涡结构的相互作用，因为密度和输运系数随混合物组成变化。数学上，这可以通过分析火焰面方程在存在混合物梯度时的稳定性来推导。扩展的皱褶因子可表示为ξtotal = ξturb × ξZ，其中ξturb是纯湍流贡献，ξZ是 stratification贡献。对于β-pFDF P̃Z(Z; Z̃, Z''²/ρ̃)，平均反应速率需要通过卷积计算：⟨ω̇c⟩ = ∫∫ω̇c(c,Z)P̃c(c)P̃Z(Z)dcdZ。在数值实现中，这通常通过查询预先计算的火焰面库来完成，其中每个火焰面对应特定的Z和梯度|∇Z|条件。这种方法的优势在于能够自洽地处理湍流-化学相互作用和混合物不均匀性的耦合效应。",
+    "original_text": {
+      "1": "Within the framework of thickened flame approach [295], which is widely used in LES of turbulent combustion [3,17], the aforementioned effect is taken into account by invoking an efficiency function [295-297], which parameterizes results of 2D DNSs of the influence of a pair of counter-rotating vortices on a laminar premixed flame.",
+      "2": "For instance, Proch and Kempf [262] used a top-hat pFDF P̃Z(Z; Z̃, Z''²/ρ̃). Accordingly, mean or filtered combustion characteristics could be sensitive to the shape of PZ(Z, Z̃, Z''²/ρ) in RANS framework or the shape of P̃Z(Z; Z̃, Z''²/ρ̃) in LES framework, respectively."
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "CFD_modeling",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及分层燃烧LES建模、thickened flame模型、预设过滤密度函数(pFDF)、效率函数修正、混合物分数梯度对亚网格尺度皱褶因子的影响机理等专业内容，需要燃烧学、湍流燃烧建模、计算流体力学等领域的专业知识。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量较高，无需修改。内容专业准确，详细推导了效率函数在分层条件下的修正形式，分析了混合物分数梯度对亚网格尺度皱褶因子的影响机理，与提供的论文摘录和原文引用一致。"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_a23d321a",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Stratified-turbulent-flames--Recent-advances-in-underst_2017_Progress-in-Ene",
+      "paper_title": "Stratified-turbulent-flames--Recent-advances-in-underst_2017_Progress-in-Ene"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:15:35.920103",
+      "answer_length": 651
+    },
+    "merge_source": "question_reverse"
+  },
+  {
+    "question_text": "在分层湍流火焰中，交叉标量耗散率xc,Z在燃烧进度变量c的输运方程中引入了额外项2rxc,Z/Z。请详细分析这一项对局部位移速度Sd的物理贡献，并推导其在分层燃烧与均匀预混燃烧中的差异表达式。",
+    "standard_answer": "在分层湍流火焰中，局部位移速度Sd的定义需要扩展以考虑混合物不均匀性的影响。根据论文第97页的推导，局部位移速度可表示为：Sd = Sd,c + Sd,Z，其中Sd,c = [∇·(ρD∇c) + ω̇c]/(ρ|∇c|)是与预混燃烧相关的部分，而Sd,Z = 2rxc,Z/(ρ|∇c|Z)是混合物不均匀性引入的额外贡献。这一项源于混合物分数Z与燃烧进度变量c之间的耦合输运。在数学上，这可以从扩展的燃烧进度变量输运方程推导：ρ(∂c/∂t + u·∇c) = ∇·(ρD∇c) + ω̇c + 2rxc,Z/Z。当火焰传播通过不均匀混合物时，混合物分数的空间梯度会产生额外的标量通量，这通过交叉耗散项影响火焰传播。物理上，Sd,Z代表了由于混合物组成变化导致的火焰面相对于当地流体的额外运动速度。在均匀预混情况下，Z为常数，此项为零；而在分层燃烧中，此项可能显著影响火焰结构和传播特性，特别是在混合物梯度较大的区域。",
+    "original_text": {
+      "1": "In a stratified flame, the local displacement speed defined as follows Sd ≜ [∇·(ρD∇c) + ω̇c]/(ρ|∇c|) involves not only the local displacement speed Sd,c associated with premixed burning, but also contribution Sd,Z due to mixture inhomogeneity, which vanishes in the premixed case.",
+      "2": "Eq. (57) with Y1 = 0 was introduced into the combustion literature by Domingo et al. [143] and was subsequently analyzed by Bray et al. [144]. This equation clearly shows the discussed challenge that stems from mixture inhomogeneity."
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及分层湍流火焰、交叉标量耗散率、燃烧进度变量输运方程、局部位移速度等燃烧学和计算流体力学专业概念，需要燃烧物理、湍流燃烧模型、标量输运理论等专业领域知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量优秀，无需修改。答案准确解释了交叉标量耗散率项对局部位移速度的物理贡献，正确推导了分层燃烧与均匀预混燃烧的差异表达式，并提供了恰当的原文引用支持"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_4ac3eceb",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Stratified-turbulent-flames--Recent-advances-in-underst_2017_Progress-in-Ene",
+      "paper_title": "Stratified-turbulent-flames--Recent-advances-in-underst_2017_Progress-in-Ene"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:15:35.964722",
+      "answer_length": 410
+    },
+    "merge_source": "question_reverse"
+  }
+]

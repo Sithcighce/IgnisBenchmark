@@ -1,0 +1,75 @@
+[
+  {
+    "question_text": "MOF光催化剂的光热效应对其性能有重要影响。请分析太阳辐射在MOF材料中的能量分配（反射、吸收、透射），建立光热转换的能量平衡方程，并推导温度场分布与光催化反应速率耦合的数学模型。",
+    "standard_answer": "太阳辐射在MOF材料中的能量分配遵循能量守恒定律：I₀ = R + A + T，其中I₀为入射光强，R为反射率，A为吸收率，T为透射率。对于多孔MOF材料，其吸收特性受孔隙结构和材料组分影响，吸收率A可表示为A = 1 - exp(-αd) + ΔA_porous，其中α为吸收系数，d为材料厚度，ΔA_porous为多孔结构引起的额外吸收修正项。光热转换的能量平衡方程为：ρCp∂T/∂t = ∇·(k∇T) + Q_photothermal - Q_loss，其中ρ为密度，Cp为比热容，k为热导率，Q_photothermal = ηAI₀为光热源项（η为光热转换效率），Q_loss = h(T-T∞) + εσ(T⁴-T∞⁴)为对流和辐射热损失。对于MOF光催化剂，反应速率遵循Arrhenius定律：r = A₀exp(-Ea/RT)，其中A₀为指前因子，Ea为活化能，R为气体常数，T为绝对温度。温度通过指数关系影响反应速率，根据热力学原理，反应速率随温度升高而增加，具体数值取决于活化能大小。对于核壳结构的MOF复合材料，温度场分布需考虑实际几何结构和边界条件，可用三维热传导方程求解：∂T/∂t = α∇²T + Q/ρCp，其中α为热扩散系数。研究表明，Ag@Co-ZIF-9 MOF在可见光照射下表现出优异的光催化性能，其增强的光催化还原归因于掺杂Ag NPs可能的电子陷阱效应，在光催化过程中加速了电子向CO₂的转移。Ag@Co-ZIF-9 MOF被发现相对于原始Co-ZIF-9在光催化性能上表现出增强，并具有优异的光稳定性。合理的温度管理是优化MOF光催化剂能量效率的关键因素。",
+    "original_text": {
+      "1": "The enhanced photocatalytic reduction was explained by the possible electron trap effect by doped Ag NPs, which accelerated electron transfer to CO2 during photocatalysis.",
+      "2": "Ag@Co-ZIF-9 MOF was found to exhibit a two-fold enhancement in photocatalytic performance in reference to pristine Co-ZIF-9."
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及太阳辐射能量分配、光热转换能量平衡方程、温度场分布与光催化反应速率耦合的数学模型，需要燃烧/传热/流体/CFD/能源领域的专业知识，包括热力学、传热学、光热转换机理和反应动力学等。",
+      "answer_correct": false,
+      "answer_issues": [
+        "unsupported",
+        "factual_error"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在以下问题需改进：1. 关键声明未充分支持：如多孔结构引起的额外吸收修正项ΔA_porous、光热转换效率η的具体定义和取值依据未说明；2. 事实错误：将三维热传导方程中的热扩散系数α与吸收系数α混淆（符号冲突），且未明确区分；3. 推导不完整：未建立温度场分布与光催化反应速率的具体耦合关系（如通过Arrhenius定律将温度场代入反应速率方程，形成耦合模型）。建议补充相关理论依据，修正符号混淆，并完善耦合模型的推导过程。"
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_b48c021f",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Metal-organic-framework-as-a-photocatalyst--Progress_2020_Progress-in-Energy",
+      "paper_title": "Metal-organic-framework-as-a-photocatalyst--Progress_2020_Progress-in-Energy"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:43:19.094007",
+      "answer_length": 703
+    }
+  },
+  {
+    "question_text": "MOF光催化剂在水环境中的动力学稳定性对其实际应用至关重要。请从化学键强度和配体交换动力学的角度，分析不同金属节点（Cr³⁺、Al³⁺、Zr⁴⁺）MOF在水解条件下的稳定性差异，并建立水解速率与金属-氧键能的理论关系模型。",
+    "standard_answer": "MOF在水环境中的动力学稳定性主要由金属-配体键的强度和金属离子的配体交换速率决定。根据配位化学原理，金属离子的配体交换速率常数k与其配位场稳定化能(LFSE)和金属-氧键强度相关。对于八面体配位的金属离子，配体交换速率遵循趋势：Cr³⁺(d³, LFSE最大) < Al³⁺(d⁰, 无LFSE) < V³⁺(d², LFSE较小)，这与原文引用1中“Cr(III) ≥ Al(III) ≥ V(III) ≥ V(IV)”的稳定性趋势一致。\n\nZr⁴⁺(d⁰)虽然无LFSE，但高氧化态和较大的离子半径使其形成更强的M-O键（Zr-O: 760 kJ/mol），同时[Zr₆O₄(OH)₄]簇的十二配位结构提供了额外的稳定性。实验数据表明，MIL-53-Cr在酸性条件下48小时仍保持稳定，而MIL-53-Al在3小时内即发生7.7%的解离，这与其M-O键能趋势一致。\n\n水解速率常数k_h可表示为：k_h = A·exp(-E_a/RT)，其中活化能E_a与M-O键解离能ΔH_M-O相关。根据原文引用2，不同MOF的活化能数据为：MOF-5(11.6 kcal/mol) < HKUST-1(28.9 kcal/mol) < MIL-53-Cr(30.5 kcal/mol) < MIL-101(35.8 kcal/mol) < MOF-74(42.0 kcal/mol) < MIL-53-Al(43.4 kcal/mol)。通过线性回归分析，可建立E_a与ΔH_M-O的定量关系：E_a = α·ΔH_M-O + β，其中α为比例系数，β为常数项。对于UiO-66(Zr)，其水解活化能高达43.4 kcal/mol，远高于MOF-5（11.6 kcal/mol），这与Zr-O键的高键能(760 kJ/mol)密切相关。这种稳定性差异直接影响MOF光催化剂在水处理应用中的寿命和循环使用性能。",
+    "original_text": {
+      "1": "the chemical stabilities of those MIL-series materials were well-correlated with that of the kinetic inertness (or decreasing lability) of the metal ions: Cr(III) ≥ Al(III) ≥ V(III) ≥ V(IV)",
+      "2": "the activation/reaction energy (e.g., 11.6, 28.9, 30.5, 35.8, 42.0, and 43.4 kcal mol−1 for MOF-5, HKUST-1, MIL-53-Cr, MIL-101, MOF-74, and MIL-53-Al, respectively) during the ligand displacement/hydrolysis reactions by water molecules."
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及MOF光催化剂在水环境中的动力学稳定性分析，需要配位化学、金属-氧键能、配体交换动力学等专业知识，属于能源与环境催化领域",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "fundamental_error",
+        "unsupported"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在多处严重错误：1）配体交换速率趋势错误，原文引用1明确为Cr(III) ≥ Al(III) ≥ V(III) ≥ V(IV)，但答案中错误地写成了Cr³⁺ < Al³⁺ < V³⁺；2）活化能数据引用混乱，将MIL-53-Al的活化能错误地归给UiO-66(Zr)；3）未正确建立水解速率与金属-氧键能的理论关系模型。建议：重新核对原文数据，正确理解配体交换速率趋势，准确引用活化能数据，并基于金属-氧键能（如Cr-O: 402 kJ/mol, Al-O: 512 kJ/mol, Zr-O: 760 kJ/mol）建立定量关系模型。"
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_5336a7f5",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Metal-organic-framework-as-a-photocatalyst--Progress_2020_Progress-in-Energy",
+      "paper_title": "Metal-organic-framework-as-a-photocatalyst--Progress_2020_Progress-in-Energy"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:43:29.786258",
+      "answer_length": 802
+    }
+  }
+]

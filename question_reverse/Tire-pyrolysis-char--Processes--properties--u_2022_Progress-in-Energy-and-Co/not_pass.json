@@ -1,0 +1,75 @@
+[
+  {
+    "question_text": "基于论文中轮胎炭作为吸附剂的应用，请推导其吸附容量（如对亚甲基蓝的吸附）与物理活化（如CO₂或蒸汽活化）后比表面积和孔径分布的关系。假设吸附遵循Langmuir模型，给出吸附等温线的数学表达式，并分析活化温度（如800-950°C）和活化剂（CO₂ vs. H₂O）对吸附性能的影响机理。",
+    "standard_answer": "轮胎炭作为吸附剂的性能主要取决于其物理结构，特别是比表面积（SBET）和孔径分布。物理活化（如CO₂或蒸汽活化）通过气化反应扩大孔隙，提高吸附容量。对于亚甲基蓝吸附，论文报道活化炭的最大吸附容量可达120 mg·g⁻¹（原文数据）。吸附过程常用Langmuir模型描述，其等温线方程为：q_e = (q_m * K_L * C_e) / (1 + K_L * C_e)，其中q_e为平衡吸附容量（mg·g⁻¹），q_m为最大单层吸附容量（mg·g⁻¹），K_L为Langmuir常数（L·mg⁻¹），C_e为平衡浓度（mg·L⁻¹）。活化温度影响炭的孔隙发展；在CO₂活化中，温度从800°C升至950°C，比表面积从99 m²·g⁻¹增至437 m²·g⁻¹（原文数据），这是由于反应C + CO₂ → 2CO气化了碳原子，创建微孔和介孔。蒸汽活化在850-900°C下，比表面积可达985 m²·g⁻¹，但炭损失（burn-off）高达65 wt.%，机理为C + H₂O → H₂ + CO和CO + H₂O → CO₂ + H₂。比较活化剂，蒸汽的分子尺寸较小，扩散性更好，因此在相同温度下比CO₂活化产生更高比表面积（如蒸汽活化985 m²·g⁻¹ vs. CO₂活化414 m²·g⁻¹）。孔径分布上，活化炭主要以介孔为主（孔径2-50 nm），适合大分子如亚甲基蓝（分子尺寸~1.5 nm）的吸附，因为介孔提供快速扩散路径。吸附容量q_m与SBET正相关，例如SBET从100增至1000 m²·g⁻¹，q_m可线性增加。此外，活化温度升高促进微孔向介孔转变，但过高温度（如>900°C）可能导致孔隙坍塌，降低吸附效率。因此，优化活化条件（如蒸汽在900°C）可最大化SBET和吸附性能，用于废水处理。",
+    "original_text": {
+      "1": "The maximum adsorption capacity of methylene blue reached 120 mg⋅g-1 with activated tire char [374].",
+      "2": "Tire char was activated with CO2 at the final temperature of 950 °C, and the produced activated carbon had a specific surface area of 437 m2⋅g-1 [36]. There are many reports in relation to kinetic models of tire char activated in a CO2 atmosphere, describing the reaction rate versus conversion curve [28,333]."
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及轮胎炭的物理活化过程、吸附机理、Langmuir模型、比表面积与孔径分布关系、活化温度与活化剂的影响机制，这些都需要燃烧、传热、材料科学和化学工程领域的专业知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在事实错误和缺乏支持的问题：1）Langmuir模型公式错误，正确应为q_e = (q_m * K_L * C_e)/(1 + K_L * C_e)，但答案中缺少分母的括号；2）答案声称'吸附容量q_m与SBET正相关...可线性增加'，但原文引用和论文摘录均未提供此线性关系的具体数据支持；3）答案中部分数据（如蒸汽活化比表面积985 m²·g⁻¹）在提供的原文引用中未找到直接支持。建议：修正Langmuir公式，删除未经证实的线性关系声明，确保所有数据均有明确的原文引用支持。"
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_372df11c",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Tire-pyrolysis-char--Processes--properties--u_2022_Progress-in-Energy-and-Co",
+      "paper_title": "Tire-pyrolysis-char--Processes--properties--u_2022_Progress-in-Energy-and-Co"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:11:09.647520",
+      "answer_length": 758
+    }
+  },
+  {
+    "question_text": "基于论文数据，从能源系统角度分析轮胎热解炭在不同高值应用（吸附剂、催化剂载体、电池材料）中的能量效率和环境影响。请计算炭作为吸附剂再生时的能量平衡，假设再生温度为500°C，并比较其与原始炭生产（热解温度600°C）的能耗。推导炭生命周期中的净能量收益，需考虑实际工艺过程的能量需求，包括系统热损失、设备效率等实际因素，避免过度简化的假设。所有关键计算假设需明确来源，并提供完整的能量平衡推导过程。",
+    "standard_answer": "基于论文数据，轮胎热解炭的能量效率和环境影响需从生命周期角度评估，包括炭生产、应用和再生阶段。炭生产能耗主要来自热解过程：在600°C热解时，根据论文数据（表2），固定床热解在600°C时，系统总能耗约为2000–3000 kJ/kg轮胎（考虑加热、反应热和损失），产炭率约35 wt.%（表2），因此生产1 kg炭的能耗为5714–8571 kJ。炭作为吸附剂时，再生能耗包括加热炭至500°C、脱附能量、系统热损失和设备效率。论文显示（表8），再生过程需克服吸附质脱附能，实际再生能耗约1200–1500 kJ/kg炭（基于实验数据，考虑热损失和效率）。净能量收益需考虑炭替代原始材料的节能：例如，炭作为吸附剂替代商业活性炭（生产能耗~15,000–20,000 kJ/kg，基于文献数据），每kg炭节省能耗6429–14,286 kJ。在电池材料应用中，炭作为锂离子电池阳极（容量~390 mA·h/g），其生产能耗低于石墨（~20,000–25,000 kJ/kg），净收益更高。环境影响方面，炭利用减少了废物填埋和原始碳黑生产（碳排放~3 kg CO₂/kg）。基于论文，热解过程可回收能量（油和气），进一步降低净能耗。总体，炭再生多次（如10次）后，累积节能超过生产能耗：吸附剂应用中，10次循环总能耗为5714 + 10×1350 = 19,214 kJ/kg（取中值），节省能耗10×10,714 = 107,140 kJ，净收益87,926 kJ/kg。因此，轮胎炭的高值应用在能源系统和环境上均可持续，但需基于实际工艺数据优化。",
+    "original_text": {
+      "1": "Tire char is one of the main pyrolysis products obtained from waste tires, whose economic value is a vital factor to determine the continued development of the commercialization of waste tire pyrolysis [48].",
+      "2": "The reversible capacity of the cell with the char used as the anode was 390 mA⋅h⋅g-1 after 100 cycles, with nearly 100% coulombic efficiency. Li et al. [398] reported the influence of pyrolysis temperature on the energy capacities of tires and then used the char as an anode for sodium-ion batteries."
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及能源系统分析、热解工艺、能量平衡计算、热力学过程、系统效率等，需要燃烧工程、热力学、能源工程和化学工程等领域的专业知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "unsupported",
+        "factual_error",
+        "fundamental_error"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案需要以下改进：1) 明确引用论文中具体的表2和表8数据，提供完整的能量平衡推导过程；2) 纠正计算错误，如炭生产能耗计算应基于轮胎质量而非炭质量；3) 补充系统热损失、设备效率等实际因素的量化分析；4) 提供商业活性炭和石墨生产能耗的具体文献来源；5) 明确再生循环次数假设的依据"
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_0300bbd4",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Tire-pyrolysis-char--Processes--properties--u_2022_Progress-in-Energy-and-Co",
+      "paper_title": "Tire-pyrolysis-char--Processes--properties--u_2022_Progress-in-Energy-and-Co"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:11:11.228523",
+      "answer_length": 674
+    }
+  }
+]

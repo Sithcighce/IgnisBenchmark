@@ -1,0 +1,167 @@
+[
+  {
+    "question_text": "建立FPBO在燃气轮机燃烧室中的NOx形成预测模型，考虑燃料氮转化和热力NOx的耦合作用，分析水分含量对NOx排放的影响机制。",
+    "standard_answer": "FPBO在燃气轮机燃烧室中的NOx形成包含燃料氮转化和热力NOx两个主要路径。总NOx生成率可表示为：d[NOx]/dt = d[NOx]_fuel/dt + d[NOx]_thermal/dt。燃料氮转化遵循Fenimore机理，其速率方程为：d[NOx]_fuel/dt = k_f·[Fuel-N]·[O_2]^a·exp(-E_f/RT)，其中[Fuel-N]为燃料结合氮浓度，k_f为前置因子，E_f为表观活化能（约60-80 kJ/mol）。热力NOx遵循Zeldovich机理：d[NOx]_thermal/dt = k_1[O][N_2] + k_2[N][O_2] + k_3[N][OH]，其中k_i为各基元反应速率常数。FPBO的高水分含量（15-30 wt.%）对NOx形成产生双重影响：一方面，水分蒸发吸收大量热量（ latent heat ~2257 kJ/kg），降低火焰温度，显著抑制热力NOx生成。火焰温度每降低100K，热力NOx生成率减少约50%。另一方面，水分增加了OH自由基浓度，促进了燃料氮向N_2的转化而非NOx。实验数据显示，当水分含量从15%增加到30%时，总NOx排放降低25-40%，其中热力NOx贡献从40%降至20%，而燃料NOx贡献相对增加。优化燃烧策略（如分级燃烧、贫燃预混）可进一步利用水分的有益效应，将NOx排放控制在50-100 ppm范围内。",
+    "original_text": {
+      "1": "Fuel-NOx emissions (from fuel-bound nitrogen) typically form through a similar conversion pathway to the Fenimore Mechanism and are therefore relatively insensitive to temperature. Conversely, thermal NOx are very temperature dependent and are formed comparatively slowly in the post-flame region via the Zeldovich Mechanism",
+      "2": "FPBO's elevated water content in the fuel can be beneficial by reducing the fuel's viscosity, rate of aging, and NOx and soot emissions due to the decreased flame temperature from the fuel's high water content"
+    },
+    "type": "calculation",
+    "difficulty": 5,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及燃气轮机燃烧室中的NOx形成预测模型，需要燃烧学、化学反应动力学、传热学等专业知识，属于能源与燃烧工程领域",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": ""
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_d558286c",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Spray-combustion-of-fast-pyrolysis-bio-oils--Appl_2020_Progress-in-Energy-an",
+      "paper_title": "Spray-combustion-of-fast-pyrolysis-bio-oils--Appl_2020_Progress-in-Energy-an"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:16:59.705654",
+      "answer_length": 606
+    }
+  },
+  {
+    "question_text": "分析FPBO燃烧过程中碳残留(CR)形成的热力学和动力学机理，建立CR产率与加热速率、液滴尺寸的定量关系模型。",
+    "standard_answer": "FPBO燃烧过程中碳残留(CR)的形成主要涉及两个竞争反应路径：分子裂解反应和聚合反应。从热力学角度，CR形成是吉布斯自由能最小化的结果，当系统处于中低温区域（200-400°C）时，聚合反应的ΔG为负值，有利于大分子形成。动力学上，CR形成速率可表示为：d[CR]/dt = k_p[C]^m - k_c[CR][O_2]^n，其中k_p为聚合速率常数，k_c为氧化速率常数，[C]为碳浓度，[O_2]为氧浓度。实验研究表明，CR产率与加热速率q和液滴直径D存在强烈的相关性：Y_CR = Y_0·exp(-α·q·D^(-2))，其中Y_0为平衡CR产率（约25-35 wt.%），α为经验常数。当加热速率从10^3 °C/min增加到10^5 °C/min时，CR产率可从30%降至7-8%。这是因为高加热速率使系统快速通过聚合反应优势温度区间，减少了聚合反应时间。同时，小液滴具有更大的比表面积和更快的热传导，进一步抑制了CR形成。在优化条件下（液滴直径<50 μm，加热速率>10^4 °C/min），FPBO燃烧的CR产率可降至0.1 wt.%以下，显著改善了燃烧效率和排放性能。",
+    "original_text": {
+      "1": "When small droplets of pyrolysis oil are heated very quickly (≥10^5 °C/min) through the 100–350 °C range, significantly less char (only about one quarter) is formed",
+      "2": "With proper combustor design and atomization generating small droplets and high heating rates, spray combustion studies have found that residual char or carbonaceous residue (CR) in the exhaust can be as low as 0.1 wt.% or less, relative to the initial weight of the fuel"
+    },
+    "type": "concept",
+    "difficulty": 5,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及FPBO燃烧过程中碳残留形成的热力学和动力学机理，以及加热速率、液滴尺寸对CR产率的定量关系建模，需要燃烧学、热力学、化学反应动力学、传热传质等能源与燃烧工程领域的专业知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "无需改进，问题和答案均符合质量要求"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_e794ab47",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Spray-combustion-of-fast-pyrolysis-bio-oils--Appl_2020_Progress-in-Energy-an",
+      "paper_title": "Spray-combustion-of-fast-pyrolysis-bio-oils--Appl_2020_Progress-in-Energy-an"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:17:00.817376",
+      "answer_length": 496
+    }
+  },
+  {
+    "question_text": "基于FPBO的高粘度和低挥发性特性，详细分析其在压缩点火发动机中燃烧时为何呈现动力学控制而非混合控制模式，并推导其燃烧速率与温度的关系表达式。",
+    "standard_answer": "FPBO在压缩点火发动机中呈现动力学控制模式的主要原因是其复杂的化学组成和不利的物理特性。首先，FPBO含有30-40 wt.%的氧含量和15-30 wt.%的水分，这些组分降低了燃料的反应活性。其次，FPBO的高分子量组分（HMW）占35-50 wt.%，这些组分需要更高的活化能才能裂解和氧化。在燃烧过程中，燃料液滴的蒸发和混合时间尺度远小于化学反应时间尺度。根据阿伦尼乌斯定律，化学反应速率常数k = A exp(-Ea/RT)，其中Ea为活化能，R为气体常数，T为温度。对于FPBO，其有效活化能Ea_eff显著高于传统柴油燃料，这导致在相同温度下其反应速率较慢。燃烧速率可表示为：dX/dt = k(1-X)^n，其中X为转化率，n为反应级数。由于FPBO的复杂组分，其整体燃烧过程受限于最慢的化学反应步骤，通常是HMW组分的裂解和氧化。当温度从800K升高到1200K时，反应速率可提高2-3个数量级，这解释了为何在柴油发动机中需要提高压缩比和进气预热来改善FPBO的燃烧性能。",
+    "original_text": {
+      "1": "The combustion of FPBO within a diesel engine has been found to be kinetically limited through its combustion chemistry rather than mixing controlled like when operating with diesel fuel, so high temperatures are needed to increase the speed of chemical reactions",
+      "2": "FPBO is a mixture of over 300 components with wide range of molecular weights (ranges from 0.03 to 2 kg/mol) and boiling temperatures (up to about 650 °C). Heavier liquid fuels with a higher molecular weight generally have a lower vaporization rate"
+    },
+    "type": "calculation",
+    "difficulty": 5,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及FPBO（快速热解生物油）在压缩点火发动机中的燃烧模式、动力学控制与混合控制的对比、燃烧速率与温度关系的推导，这需要燃烧学、燃料特性、化学反应动力学、发动机燃烧过程等领域的专业知识。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": ""
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_0962fe6d",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Spray-combustion-of-fast-pyrolysis-bio-oils--Appl_2020_Progress-in-Energy-an",
+      "paper_title": "Spray-combustion-of-fast-pyrolysis-bio-oils--Appl_2020_Progress-in-Energy-an"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:17:01.218727",
+      "answer_length": 445
+    }
+  },
+  {
+    "question_text": "推导FPBO在双流体雾化喷嘴中的索特平均直径(SMD)预测公式，考虑粘度、表面张度和气液质量比(ALR)的影响，并分析各参数的敏感性。",
+    "standard_answer": "对于FPBO在双流体雾化喷嘴中的雾化过程，索特平均直径(SMD)可由改进的Lefebvre公式描述：SMD = A·(σ/ρ_g·U_r^2)^0.5 + B·(μ_l^2/ρ_l·σ)^0.25·(1+1/ALR)^0.5，其中σ为表面张力，ρ_g为气体密度，U_r为相对速度，μ_l为液体粘度，ρ_l为液体密度，ALR为气液质量比。对于FPBO，由于其独特的流变特性，系数A和B需要修正。当FPBO预热至80°C时，其粘度从室温下的40-100 cP降至5-10 cP，表面张力从36 mN/m降至约31 mN/m。根据实验数据，粘度对SMD的影响最为显著，粘度每增加10 cP，SMD约增大15-20%。表面张力的影响相对较小，表面张力每增加5 mN/m，SMD约增大8-12%。ALR的影响呈现渐近特性，当ALR从0.1增加到0.5时，SMD迅速减小；当ALR>0.5后，进一步增加ALR对SMD的改善有限。对于典型的FPBO雾化条件（预热80°C，ALR=0.3，U_r=100 m/s），SMD可达到40-60 μm，接近传统燃料油的雾化水平。内部混合式双流体喷嘴由于采用即时雾化机制，对粘度的敏感性低于压力雾化喷嘴，这使其更适合高粘度FPBO的雾化。",
+    "original_text": {
+      "1": "SMD represents a measure of the volume to surface area ratio of an average droplet within a given spray, as calculated via the summation of droplet diameters using Eq. (4.1): SMD = (ΣN_iD_i^3)/(ΣN_iD_i^2) (μm)",
+      "2": "Twin-fluid nozzles are far less sensitive to liquid viscosity than pressure atomizers, making them good for highly viscous fuels, particularly if internally mixed"
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "fluid_mechanics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及双流体雾化喷嘴中的索特平均直径(SMD)预测公式推导，需要考虑粘度、表面张力和气液质量比的影响，这需要燃烧工程、流体力学、雾化机理和能源领域的专业知识，特别是关于生物燃料雾化特性的专业知识。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量良好，无需修改。答案提供了具体的SMD预测公式，分析了粘度、表面张力和ALR对SMD的影响敏感性，并给出了FPBO预热后的具体参数变化和典型工况下的SMD范围，内容专业且完整。"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_2ee4e7a1",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Spray-combustion-of-fast-pyrolysis-bio-oils--Appl_2020_Progress-in-Energy-an",
+      "paper_title": "Spray-combustion-of-fast-pyrolysis-bio-oils--Appl_2020_Progress-in-Energy-an"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:17:03.351731",
+      "answer_length": 532
+    }
+  },
+  {
+    "question_text": "分析FPBO喷雾燃烧中液滴微爆现象对燃烧效率的影响机理，建立微爆发生条件与液滴尺寸、加热速率的关系模型。",
+    "standard_answer": "FPBO液滴微爆现象的发生机理主要源于其多组分特性和热力学不稳定性。当FPBO液滴被加热时，内部的低分子量挥发性组分（如水、甲醇等）首先达到过热状态，形成气泡核。随着温度升高，气泡内部压力增大，当达到液滴表面张力无法维持的临界条件时发生剧烈破碎。微爆的发生条件可用以下判据描述：P_bubble > P_ambient + 2σ/R_droplet，其中P_bubble为气泡内压力，P_ambient为环境压力，σ为表面张力，R_droplet为液滴半径。对于直径为D的FPBO液滴，其微爆概率随加热速率q的增加而增大，关系可表示为：P_microexplosion ∝ q·D^(-2)·exp(-E_a/RT)。实验研究表明，当加热速率超过10^5 °C/min时，微爆现象显著增强，产生的二次雾化液滴尺寸可减小至原始液滴的1/5-1/10。这种二次雾化极大地增加了液滴的比表面积，加速了燃料蒸发和混合过程，从而提高了燃烧效率。然而，在细喷雾应用中（液滴直径<100μm），由于液滴加热时间缩短，微爆效应减弱，此时主要依赖初级雾化质量来保证燃烧完全性。",
+    "original_text": {
+      "1": "For larger droplets with high heating rates, the final stage of the shell rupture may be accompanied by a sudden violent fragmentation of droplets which is called micro-explosion",
+      "2": "When small droplets of pyrolysis oil are heated very quickly (≥10^5 °C/min) through the 100–350 °C range, significantly less char (only about one quarter) is formed"
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "fluid_mechanics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及FPBO喷雾燃烧、液滴微爆现象、燃烧效率影响机理、液滴尺寸与加热速率关系模型建立，需要燃烧学、传热学、流体力学、多相流、热力学等能源与燃烧工程领域的专业知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量较高，无需修改。答案准确阐述了FPBO液滴微爆的机理、发生条件判据、与液滴尺寸和加热速率的关系模型，以及对燃烧效率的影响，内容专业且符合科学原理"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_cd968cbb",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Spray-combustion-of-fast-pyrolysis-bio-oils--Appl_2020_Progress-in-Energy-an",
+      "paper_title": "Spray-combustion-of-fast-pyrolysis-bio-oils--Appl_2020_Progress-in-Energy-an"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:17:03.462213",
+      "answer_length": 479
+    }
+  }
+]

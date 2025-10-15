@@ -1,0 +1,70 @@
+[
+  {
+    "question_text": "基于综述论文中关于K2CO3/MG30吸附剂在400°C和20 bar条件下的CO2吸附动力学研究，请详细分析该吸附剂在高温高压条件下的吸附机理，并解释为何吸附量随时间的对数呈线性关系。需要结合Elovich方程进行数学推导，并说明这种动力学行为对ET-PSA工艺设计的影响。",
+    "standard_answer": "K2CO3/MG30在高温高压条件下的CO2吸附遵循Elovich型动力学，这反映了吸附过程的非均质表面特性。Elovich方程的一般形式为：dq/dt = αexp(-βq)，其中α为初始吸附速率常数，β为与表面覆盖度相关的参数。积分推导过程如下：将方程改写为dq/exp(-βq) = αdt，即exp(βq)dq = αdt。两边积分得∫exp(βq)dq = ∫αdt，即(1/β)exp(βq) = αt + C。当t=0时，q=0，代入得C=1/β。因此(1/β)exp(βq) = αt + 1/β，整理得exp(βq) = αβt + 1。取对数得βq = ln(αβt + 1)。当αβt >> 1时，q ≈ (1/β)ln(αβ) + (1/β)lnt，表明吸附量q与时间的对数lnt呈线性关系。常数项(1/β)ln(αβ)的物理意义是初始吸附阶段的贡献，而斜率1/β反映了表面覆盖度对吸附速率的抑制程度。\n\n从机理角度分析，这种动力学行为源于吸附剂表面的非均质性。论文中通过in-situ FTIR分析表明，K2CO3/MG30表面存在多种吸附位点，形成不同类型的碳酸盐物种，包括可逆的单齿、双齿碳酸盐和不可逆的多齿碳酸盐。在初始吸附阶段，CO2分子优先占据高能吸附位点，吸附速率较快；随着表面覆盖度增加，吸附逐渐转向低能位点，吸附速率减慢。\n\n论文中实验数据显示，在300-450°C和1-20 bar条件下，CO2吸附量确实与吸附时间的对数成正比。原文引用1明确指出：\"Fig. 16 shows that the CO2 uptake in all conditions were in proportion to the logarithm of the adsorption time, which indicated that the CO2 adsorption kinetics of K2CO3/MG30 at high pressures also followed the Elovich equation.\"\n\n这种动力学特性对ET-PSA工艺设计具有重要影响：首先，较慢的吸附动力学要求更长的吸附时间以确保充分吸附；其次，原文引用2指出：\"The desorption rate was much slower than the adsorption rate, which led to irreversible adsorption capacities at a limited cycle time. When increasing the temperature, both the adsorption and desorption rate increased, and therefore the total working capacities increased.\"这表明脱附速率远慢于吸附速率，在有限循环时间内会导致不可逆吸附容量，需要在工艺优化中考虑吸附/脱附速率的不匹配问题；最后，Elovich型动力学表明吸附过程受表面反应控制而非扩散控制，这为吸附剂改性提供了方向。",
+    "original_text": {
+      "1": "Fig. 16 shows that the CO2 uptake in all conditions were in proportion to the logarithm of the adsorption time, which indicated that the CO2 adsorption kinetics of K2CO3/MG30 at high pressures also followed the Elovich equation.",
+      "2": "The desorption rate was much slower than the adsorption rate, which led to irreversible adsorption capacities at a limited cycle time. When increasing the temperature, both the adsorption and desorption rate increased, and therefore the total working capacities increased."
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及高温高压条件下的CO2吸附动力学、Elovich方程数学推导、吸附机理分析以及ET-PSA工艺设计影响，需要燃烧工程、传热传质、吸附动力学和化工工艺设计等能源与化工领域的专业知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": ""
+    },
+    "retry_count": 2,
+    "question_id": "deepseek_q_dbfa7ab0",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Recent-advances-in-elevated-temperature-pressure-sw_2019_Progress-in-Energy-",
+      "paper_title": "Recent-advances-in-elevated-temperature-pressure-sw_2019_Progress-in-Energy-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:26:32.613710",
+      "answer_length": 1322
+    },
+    "merge_source": "question_reverse"
+  },
+  {
+    "question_text": "在ET-PSA系统中，蒸汽冲洗和蒸汽吹扫步骤对H2纯度和回收率有重要影响。请从热力学和传质角度分析蒸汽冲洗如何通过置换机制提高H2回收率，蒸汽吹扫如何通过降压再生原理提高H2纯度，并推导相关的质量平衡方程。需要详细说明操作参数（R/F比和P/F比）对系统性能的影响机制。",
+    "standard_answer": "在ET-PSA系统中，蒸汽冲洗和蒸汽吹扫是实现高H2纯度和高回收率的关键步骤。从热力学和传质角度分析，蒸汽冲洗在吸附步骤后使用高压蒸汽置换床层死空间和孔隙中的残留H2，将其推向产品端，从而提高H2回收率。质量平衡方程可表示为：∂(εbCi)/∂t = -∂(vCi)/∂z - (1-εb)∂qi/∂t，其中εb为床层空隙率，Ci为组分i的气相浓度，v为流速，qi为吸附相浓度。蒸汽吹扫则使用低压蒸汽逆向通过床层，通过降低CO2分压促进吸附剂再生，根据吸附等温线理论，降低分压可使吸附平衡向解吸方向移动，从而提高H2纯度。R/F比（冲洗与进料比）主要影响H2回收率，较高的R/F比意味着更多蒸汽用于置换残留H2，但会增加蒸汽消耗；P/F比（吹扫与进料比）主要影响H2纯度，较高的P/F比可更彻底地再生吸附剂，减少CO2穿透，但同样会增加能耗。论文中明确指出：“The steam rinse mainly affected the HRR and the steam purge mainly affected the HP. The model could stably achieve above 99% HRR and 99.999% HP with less than a total steam-to-feed ratio of 0.25。” 此外，“By replacing the H2 purge step in NT-PSAs with steam rinsing and steam purging, where the high pressure rinse steam squeezes the residual H2 out of the column after the adsorption step, and the low pressure purge steam promotes CO2 desorption on the surface of adsorbents” 进一步支持了置换和降压再生机制。",
+    "original_text": {
+      "1": "The steam rinse mainly affected the HRR and the steam purge mainly affected the HP. The model could stably achieve above 99% HRR and 99.999% HP with less than a total steam-to-feed ratio of 0.25.",
+      "2": "By replacing the H2 purge step in NT-PSAs with steam rinsing and steam purging, where the high pressure rinse steam squeezes the residual H2 out of the column after the adsorption step, and the low pressure purge steam promotes CO2 desorption on the surface of adsorbents"
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及ET-PSA系统、蒸汽冲洗和蒸汽吹扫步骤对H2纯度和回收率的影响，需要热力学和传质角度分析，包括置换机制、降压再生原理、质量平衡方程推导以及操作参数（R/F比和P/F比）对系统性能的影响机制，这需要燃烧、传热、流体力学、能源工程等领域的专业知识。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": ""
+    },
+    "retry_count": 2,
+    "question_id": "deepseek_q_a4ab8f80",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Recent-advances-in-elevated-temperature-pressure-sw_2019_Progress-in-Energy-",
+      "paper_title": "Recent-advances-in-elevated-temperature-pressure-sw_2019_Progress-in-Energy-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:26:34.827716",
+      "answer_length": 870
+    },
+    "merge_source": "question_reverse"
+  }
+]

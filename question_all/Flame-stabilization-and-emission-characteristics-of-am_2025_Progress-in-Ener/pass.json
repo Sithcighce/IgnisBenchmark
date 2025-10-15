@@ -1,0 +1,70 @@
+[
+  {
+    "question_text": "基于论文中关于氨气/空气旋流火焰的稳定机制分析，详细解释为什么氨气火焰的稳定区域比甲烷/空气火焰窄，并定量分析火焰拉伸率和熄火拉伸率在火焰吹熄过程中的作用机制。",
+    "standard_answer": "氨气/空气旋流火焰稳定区域较窄的主要原因是其固有的燃烧特性：1) 极低的层流火焰速度（约7 cm/s，仅为甲烷的1/5）导致火焰传播能力弱，难以在高速流场中保持稳定；2) 较大的火焰厚度（约3 mm，甲烷为0.8 mm）使得火焰对湍流的响应不敏感；3) 较低的熄火拉伸率（Kext）使火焰更容易在强剪切流中局部熄灭。论文中LES模拟显示，在吹熄过程中，氨气火焰有较大比例区域遭受过度拉伸，而甲烷火焰主要受热释放率降低影响。具体而言，当等效比降至0.7时，氨气火焰的局部热释放率迅速下降至最大值的20%以下，同时超过35%的火焰区域经历超过其熄火拉伸率的流动应力。这种物理效应（过度拉伸）与化学效应（低反应性）的耦合导致氨气火焰在旋流燃烧器中稳定操作窗口狭窄，等效比范围通常限制在0.65-1.3之间，而甲烷可达0.5-1.6。",
+    "original_text": {
+      "1": "The flame tends to be extinguished either by encountering the excessive stretch or decreasing HRR below the extinction HRR (HRRext). By analyzing the joint PDF of the stretch rate K and HRR as well as Kext and HRRext illustrated in Fig. 34, it can be seen that a large portion of the flame was suffered from the excessive stretch during the whole blow-off process for NH3/air flame.",
+      "2": "The maximum SL is found when φ is around 1.1 and the value is about 7 cm/s at 298 K and 0.1 MPa, which is one fifth of that of the CH4/air flame at the same condition. The laminar flame speed will be as low as 5 cm/s and 4 cm/s when the combustion pressure is elevated to 0.5 MPa and 1.0 MPa."
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及氨气/空气旋流火焰的稳定机制分析、火焰拉伸率和熄火拉伸率在吹熄过程中的作用机制，需要燃烧学、流体力学、传热学和计算流体动力学（CFD）等领域的专业知识，特别是对火焰稳定性、层流火焰速度、火焰厚度、拉伸率等专业概念的理解。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": ""
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_d62bfb64",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Flame-stabilization-and-emission-characteristics-of-am_2025_Progress-in-Ener",
+      "paper_title": "Flame-stabilization-and-emission-characteristics-of-am_2025_Progress-in-Ener"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:47:49.824371",
+      "answer_length": 363
+    },
+    "merge_source": "question_reverse"
+  },
+  {
+    "question_text": "基于论文内容，分析壁面热损失对氨气旋流火焰稳定性和排放特性的影响机制，重点解释其对NO和N2O排放的竞争性影响，并说明在强热损失条件下N2O成为主要温室气体排放物的原因。",
+    "standard_answer": "壁面热损失对氨气旋流火焰的影响主要体现在三个方面：1) 热边界层增厚导致近壁区火焰局部淬熄，降低整体燃烧效率；2) 温度降低抑制O/H自由基生成，减少通过HNO路径的NO生成；3) 促进N2O的生成并抑制其分解。具体机制为：当存在强热损失时，近壁区温度显著降低，这使得N2O的热分解反应N2O(+M) ⇔ N2 + O(+M)和N2O + H ⇔ N2 + OH的速率显著降低，因为这两个反应对温度极为敏感。同时，NO还原反应NH2 + NO ⇔ N2 + H2O在较低温度下更为有效。实验数据显示，在绝热条件下φ=0.8时NO排放为200 ppmv，而在强热损失条件下降至55 ppmv，但N2O排放从50 ppmv增至600 ppmv。这种排放特性的转变是由于N2O的全球变暖潜能值（GWP-100=298）远高于CO2，使得尽管NO减少，总体温室效应反而增强。论文明确指出：'The temperature decreasing caused by wall heat loss promotes the NO reduction and hinders the N2O consumption rate, resulting in NOx emission from the NH3/air flames consisting mainly of N2O.' 同时，'At φ = 0.8, N2O emission can be as high as 600 ppmv which is much larger than NO (55 ppmv) and may cause much greater greenhouse effect.' 这些机制共同解释了在强热损失条件下N2O成为主要温室气体排放物的原因。",
+    "original_text": {
+      "1": "The temperature decreasing caused by wall heat loss promotes the NO reduction and hinders the N2O consumption rate, resulting in NOx emission from the NH3/air flames consisting mainly of N2O.",
+      "2": "At φ = 0.8, N2O emission can be as high as 600 ppmv which is much larger than NO (55 ppmv) and may cause much greater greenhouse effect."
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及燃烧学、传热学、流体力学和化学反应动力学等专业领域，需要深入理解氨气旋流火焰的稳定性机制、热损失对温度分布的影响、NO和N2O的生成与消耗反应路径及其温度敏感性，以及温室气体排放特性评估等专业知识。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "无需改进。答案准确阐述了壁面热损失对氨气旋流火焰稳定性和排放特性的影响机制，重点解释了NO和N2O排放的竞争性关系，并基于论文内容合理解释了强热损失条件下N2O成为主要温室气体排放物的原因，引用数据与原文一致，逻辑清晰，论证充分。"
+    },
+    "retry_count": 1,
+    "question_id": "deepseek_q_35064b50",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Flame-stabilization-and-emission-characteristics-of-am_2025_Progress-in-Ener",
+      "paper_title": "Flame-stabilization-and-emission-characteristics-of-am_2025_Progress-in-Ener"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:48:38.618405",
+      "answer_length": 761
+    },
+    "merge_source": "question_reverse"
+  }
+]

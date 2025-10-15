@@ -1,0 +1,172 @@
+[
+  {
+    "question_text": "分析LTC发动机中循环变动（cycle-to-cycle variation）的确定性模式特征，解释返回映射图和符号序列统计在识别非线性燃烧动力学中的应用价值。",
+    "standard_answer": "LTC发动机中的循环变动表现出明显的确定性模式特征，而非纯粹的随机过程。通过返回映射图可以观察时间序列中固有的结构特征，对于随机时间序列，连续循环间不相关，返回映射显示围绕固定点的无结构数据点云；而存在确定性耦合时，返回映射显示更结构化的模式，如沿对角线分散的数据点。量化返回映射通过构造燃烧定量的分位数而非CA50定时本身，避免了偏态分布可能造成的误解。符号序列统计方法进一步揭示了循环变动的确定性本质，当序列长度设为3时，特定符号序列频率显著高于随机高斯数据点的预期频率，表明这些模式在实验数据中重复出现。随着混合气变浓（λ降低），序列数频率进一步增加，确定性结构增强；发动机转速提高也导致确定性模式增加。这种确定性行为的重要诊断意义在于，循环变动不是纯粹的随机过程，而是具有内在动力学结构。混沌方法（返回映射和符号序列统计）为理解HCCI发动机中的非线性循环燃烧动力学提供了有力工具，确定性模式的存在意味着智能控制系统可以利用这种非线性特性，通过小的控制输入变化将系统推回稳定运行点。",
+    "original_text": {
+      "1": "For a random time series, consecutive cycles are uncorrelated and the return map shows an unstructured cloud of data points gathered around a fixed point. With deterministic coupling between points, the return map shows more structures such as dispersed data points about a diagonal line",
+      "2": "The symbol sequence numbers having higher frequency indicated that these patterns were repeated more number of times in experimental data points. It is observed from the figures that the frequency of sequence number increases more above the red line as mixture become richer"
+    },
+    "type": "concept",
+    "difficulty": 5,
+    "topic": "CFD_modeling",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及LTC发动机循环变动分析、返回映射图和符号序列统计等非线性燃烧动力学方法，需要燃烧工程、内燃机动力学、非线性系统分析等专业领域知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": ""
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_c91cc00b",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Evolution--challenges-and-path-forward-for-low_2017_Progress-in-Energy-and-C",
+      "paper_title": "Evolution--challenges-and-path-forward-for-low_2017_Progress-in-Energy-and-C"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:49:47.254945",
+      "answer_length": 445
+    },
+    "merge_source": "question_reverse"
+  },
+  {
+    "question_text": "基于论文中关于HCCI燃烧化学动力学的描述，详细解释负温度系数（NTC）现象在低温和中温反应中的作用机理，并分析其对燃烧定时的控制意义。",
+    "standard_answer": "负温度系数（NTC）现象是HCCI燃烧中低温反应向中温反应过渡的关键特征。在低温区域（约750-850K），燃料分子通过氢提取反应生成烷基自由基（R·），随后与O₂快速结合形成过氧自由基（ROO·）。这些过氧自由基通过分子内异构化形成氢过氧烷基自由基（QOOH），最终分解生成酮类化合物和OH自由基，释放热量形成冷焰。随着温度升高至中温区域（约850-1000K），ROO·的分解反应速率增加，与异构化反应形成竞争，导致链分支效率降低，反应速率反而随温度升高而下降，形成NTC区域。这种NTC行为对燃烧定时控制至关重要，因为它延长了点火延迟时间，为燃料-空气混合提供了更长时间窗口。在HCCI发动机中，NTC现象使得通过EGR、进气温度调节等手段精确控制燃烧相位成为可能。当温度超过1000K时，H₂O₂分解反应主导，产生大量OH自由基，引发高温热释放。这种两阶段点火特性使得燃料的化学性质成为控制HCCI燃烧的关键参数，高十六烷值燃料表现出更强的低温反应活性，而高辛烷值燃料则主要依赖高温反应。",
+    "original_text": {
+      "1": "The first stage is related to LTHR period and the second or main combustion is associated with the high temperature heat release (HTHR) period. The first stage ignition is also regarded as 'cool flame', with negative temperature coefficient (NTC)",
+      "2": "At higher temperatures (900 to 1100 K), intermediate reactions dominate the low-temperature reactions, resulting in chain branching"
+    },
+    "type": "reasoning",
+    "difficulty": 5,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及HCCI燃烧化学动力学、负温度系数现象、低温/中温反应机理以及燃烧定时控制，需要燃烧学、化学反应动力学、内燃机工程等专业领域的深入知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量优秀，无需修改。答案详细解释了NTC现象的化学机理，准确描述了低温反应向中温反应的过渡过程，正确分析了NTC对燃烧定时控制的意义，且与提供的论文引用内容一致"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_2c664b78",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Evolution--challenges-and-path-forward-for-low_2017_Progress-in-Energy-and-C",
+      "paper_title": "Evolution--challenges-and-path-forward-for-low_2017_Progress-in-Energy-and-C"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:49:48.789230",
+      "answer_length": 448
+    },
+    "merge_source": "question_reverse"
+  },
+  {
+    "question_text": "根据论文中关于热释放率（HRR）与燃烧定时的关系，推导最大压力上升率（MPRR）与燃烧参数之间的函数关系，并解释各参数对燃烧噪声的影响。",
+    "standard_answer": "基于论文中提出的热力学模型，最大压力上升率（MPRR）可表示为：MPRR = (γ-1)·(m_f·LHV)/(V·τ_reaction)_max，其中γ为比热比，m_f为燃料质量，LHV为燃料低热值，V为燃烧室容积，τ_reaction为反应时间尺度。通过多元线性回归分析，论文给出了更具体的经验关系式：MPRR = 36.7·φ + 2.86·P_in - 0.344·CA50 - 0.053·S - 8.45，其中φ为当量比，P_in为进气压力（bar），CA50为50%质量燃烧时的曲轴转角（CAD），S为燃料敏感性（RON-MON）。当量比φ的增加导致更浓的混合气，化学反应速率加快，MPRR显著增大；进气压力P_in的提高增加了混合气密度和温度，同样促进快速燃烧；CA50的推迟意味着燃烧发生在膨胀冲程，燃烧室容积增大，压力上升减缓；燃料敏感性S的增加表明燃料对运行条件变化的敏感性增强，有助于抑制压力振荡。在HCCI发动机中，MPRR超过5-12 bar/CAD通常被认为是敲缸极限，对应的环振强度（RI）应控制在2-6 MW/m²以内。通过调节这些参数，可以实现对燃烧噪声的有效控制，特别是在高负荷工况下防止破坏性压力振荡。",
+    "original_text": {
+      "1": "MPRR = (γ-1)·(mf LHV)/(V·τreaction)_max Here V is volume and τ is Reaction time scale",
+      "2": "MPRR = 36.7 φ + 2.86 Pin - 0.344 CA50 - 0.053 S - 8.45 Where MPRR is expressed in bar/degree; Pin in bar; S is fuel sensitivity expressed as (RON-MON); and CA50 in CAD"
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及热释放率、最大压力上升率、燃烧参数关系及燃烧噪声影响，需要燃烧学、热力学、内燃机工程等专业领域知识，属于典型的燃烧/能源工程领域问题",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量良好，无需修改。答案准确引用了论文中的公式，对各参数影响机理解释清晰，并提供了具体的工程应用参考值（敲缸极限、环振强度控制范围），完全符合问题要求"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_83c20de4",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Evolution--challenges-and-path-forward-for-low_2017_Progress-in-Energy-and-C",
+      "paper_title": "Evolution--challenges-and-path-forward-for-low_2017_Progress-in-Energy-and-C"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:49:49.535255",
+      "answer_length": 521
+    },
+    "merge_source": "question_reverse"
+  },
+  {
+    "question_text": "基于论文中关于排放特性的讨论，详细解释LTC发动机中氮氧化物（NOx）形成的三种主要反应机理，并分析为何在HCCI条件下热NO机理不再是主导因素。",
+    "standard_answer": "根据论文内容，LTC发动机中氮氧化物的形成主要通过三种主要反应机理：热力NO（thermal NO）、快速NO（prompt NO）和N₂O中间体机理（N₂O-intermediate）。论文明确指出：“NO formation during combustion of fuels that do not contain nitrogen, is through three main reaction mechanisms namely thermal, prompt, and N2O-intermediate”（引用1）。热力NO基于扩展的Zeldovich机理：O + N₂ ⇌ NO + N；N + O₂ ⇌ NO + O；N + OH ⇌ NO + H，该机理具有强烈的温度依赖性，第一反应的高活化能使其成为速率控制步骤。快速NO由Fenimore提出，通过烃类自由基与N₂反应引发：N₂ + CHₓ ⇌ HCN + N + ...；N₂ + C₂ ⇌ 2CN；N + OH ⇌ NO + H，在火焰前沿的富燃料区域快速产生。N₂O中间体机理通过重组反应：O + N₂ + M ⇌ N₂O + M，随后N₂O + H ⇌ NO + NH和N₂O + O ⇌ 2NO。在常规柴油燃烧条件下，热力NO机理通常占主导，但在HCCI的低温燃烧条件下（峰值温度<1800K），热力NO的形成受到显著抑制，因为其强烈的温度依赖性（指数关系）。论文进一步指出：“In standard diesel combustion conditions, it is often assumed that nearly all NOx is formed via Zeldovich mechanism. In LTC conditions such as in HCCI engine, theoretical chemical kinetics analysis showed that the 'prompt' and 'via N2O' formation mechanisms were not negligible anymore”（引用2）。这种机理转变使得HCCI能够在保持高热效率的同时实现超低NOx排放。",
+    "original_text": {
+      "1": "NO formation during combustion of fuels that do not contain nitrogen, is through three main reaction mechanisms namely thermal, prompt, and N2O-intermediate. There is growing evidence of a fourth reaction mechanism of NOx formation involving NNH species",
+      "2": "In standard diesel combustion conditions, it is often assumed that nearly all NOx is formed via Zeldovich mechanism. In LTC conditions such as in HCCI engine, theoretical chemical kinetics analysis showed that the 'prompt' and 'via N2O' formation mechanisms were not negligible anymore"
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及LTC发动机中氮氧化物形成的反应机理，需要燃烧学、化学反应动力学、内燃机工程等领域的专业知识，包括热力NO、快速NO和N₂O中间体机理的详细解释，以及HCCI条件下温度对反应机理影响的分析。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": ""
+    },
+    "retry_count": 1,
+    "question_id": "deepseek_q_c65f27f8",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Evolution--challenges-and-path-forward-for-low_2017_Progress-in-Energy-and-C",
+      "paper_title": "Evolution--challenges-and-path-forward-for-low_2017_Progress-in-Energy-and-C"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:50:46.688736",
+      "answer_length": 957
+    },
+    "merge_source": "question_reverse"
+  },
+  {
+    "question_text": "分析LTC发动机中未燃碳氢化合物（UHC）的形成机理，特别关注活塞顶岸间隙对UHC排放的影响，并解释不同顶岸宽度下的质量分数分布变化。",
+    "standard_answer": "在LTC发动机中，未燃碳氢化合物的形成主要源于六个机理：燃烧室缝隙效应、润滑油吸附/解吸、燃烧室壁面沉积物、壁面淬熄效应、排气门泄漏以及不完全燃烧。其中活塞顶岸间隙是最主要的UHC来源，该区域形成的小容积狭窄入口使得燃料-空气混合物在压缩过程中进入，但由于温度较低和氧气不足而无法完全燃烧。当顶岸宽度从0.26mm增加到1.3mm时，在λ<2.8的较浓混合气条件下，UHC体积分数显著降低，在700rpm时降低超过50%。这种改善源于更宽的顶岸间隙允许更多新鲜充量进入，促进了部分氧化反应。在2.1mm顶岸宽度条件下，顶岸充量的消耗对当量比极为敏感，在λ=4.5时仅发生部分氧化，而壁面淬熄现象明显。几何分布分析显示，在0.26mm顶岸宽度情况下，陷入顶岸的充量完全不参与燃烧；而在2.1mm条件下，顶岸充量消耗强烈依赖于λ值。这种尺寸效应可归因于边界层发展和热分层的影响，较宽的顶岸间隙改善了热量和质量传递，促进了UHC的后期氧化。具体数据支撑来源于原文引用：在700rpm和λ<2.8条件下，顶岸宽度从0.26mm增加到1.3mm时，HC排放降低超过50%，这主要是由于更宽的顶岸间隙改善了充量的氧化条件。",
+    "original_text": {
+      "1": "The crevices between the cylinder walls and the piston (small volumes with narrow entrances) are the primary source of unburned HC emissions, and the largest of these crevice volumes is in the piston ring pack crevice",
+      "2": "Increasing the top land width from 0.26 mm to 1.3 mm or wider, resulted in a reduction of HC at lower engine speeds and for mixtures richer than λ≈2.8"
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及LTC发动机中未燃碳氢化合物的形成机理、活塞顶岸间隙对排放的影响以及质量分数分布变化，需要燃烧学、发动机设计、流体力学和传热传质等专业领域知识。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "无需修改，答案准确、全面，与原文引用一致，符合领域专业要求。"
+    },
+    "retry_count": 1,
+    "question_id": "deepseek_q_4eb1dba4",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Evolution--challenges-and-path-forward-for-low_2017_Progress-in-Energy-and-C",
+      "paper_title": "Evolution--challenges-and-path-forward-for-low_2017_Progress-in-Energy-and-C"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:50:47.110774",
+      "answer_length": 505
+    },
+    "merge_source": "question_reverse"
+  }
+]

@@ -1,0 +1,197 @@
+[
+  {
+    "question_text": "基于图4提供的β-裂解反应的高压极限速率常数数据，解释为什么OME1的二级自由基的β-裂解反应在低温和中温范围内仍占主导地位，并定量分析这种反应路径对OME1自燃倾向（如十六烷值）的影响机理。",
+    "standard_answer": "图4显示了OME1和OME0自由基β-裂解反应的高压极限速率常数。对于OME1的二级自由基，其β-裂解反应的速率常数在整个温度范围内（如300-1000 K）显著高于其他自由基（如OME0自由基），通常高出1-2个数量级。这种现象归因于C-O键解离能显著低于C-C键。具体而言，OME1分子中与氧原子相邻的C-O键强度较弱，解离能约为30-40 kcal/mol，而典型烷烃的C-C键解离能约为80-90 kcal/mol。根据阿伦尼乌斯公式，速率常数k = A * exp(-Ea/RT)。假设OME1二级自由基β-裂解的活化能Ea较低（如20-25 kcal/mol），而频率因子A通常较高（如10^14-10^15 s^-1)。在低温和中温条件下（如600-900 K），即使温度较低，由于Ea值小，exp(-Ea/RT)项较大，因此反应速率快。这导致在低温和中温条件下，OME1的二级自由基主要通过β-裂解快速分解为甲基自由基和甲酸甲酯，而非通过O2添加和后续低温反应路径（如RO2 → QOOH）进行链分支。这种反应路径抑制了链传播，显著降低了OME1的自燃倾向，表现为其较低的十六烷值（DCN ≈ 28），而OME0的十六烷值约为55-68。计算表明，在800 K时，OME1二级自由基的β-裂解速率常数可达10^4 s^-1，而OME0自由基的类似反应在相同温度下可能低几个数量级。因此，OME1的燃烧过程更依赖于预混燃烧阶段，而非扩散控制阶段。",
+    "original_text": {
+      "1": "Fig. 4 shows the comparison of high-pressure limiting rate constants of β-scission reactions of OME1 radicals [83] with those of OME0 radicals calculated by Burke et al. [78]. It is apparent from Fig. 4 that the rate constants of secondary OME1 radicals are much larger than others over the entire temperature range, indicating a rapid β-scission of secondary OME1 radicals even at low and intermediate temperatures.",
+      "2": "This favored β-scission reaction is attributed to the significantly lower dissociation energy of the corresponding C-O bond, as discussed by Jacobs et al. [71], and has a strong impact on the ignition propensity of OME1 at low and intermediate temperatures.",
+      "3": "This decomposition reaction decelerates auto-ignition by inhibiting the chain propagation in the low- and intermediate-temperature ranges."
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "question_id": "batch_detail_q_ea0ea5df",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Potential-of-oxymethylene-ethers-as-renewab_2024_Progress-in-Energy-and-Comb",
+      "paper_title": "Potential-of-oxymethylene-ethers-as-renewab_2024_Progress-in-Energy-and-Comb"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T15:34:08.093901",
+      "batch_processing": true,
+      "answer_length": 630
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及化学反应动力学、燃料燃烧特性、十六烷值评估等专业领域，需要燃烧化学和燃料工程的专业知识来解析β-裂解反应机理及其对自燃倾向的影响",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案中C-O键解离能数值(30-40 kcal/mol)和活化能估计(20-25 kcal/mol)缺乏原文支持，且与化学常识不符；建议严格依据引用文献提供准确数据"
+    }
+  },
+  {
+    "question_text": "基于图12中不同OMEx燃料的液体和蒸汽穿透长度实验数据，结合燃料物性参数（密度、粘度、表面张力、蒸气压）分析OME1与OME3-5在喷雾特性上的差异，并用无量纲数（如韦伯数We，雷诺数Re）定量解释这些差异如何影响发动机混合气形成和燃烧过程。",
+    "standard_answer": "图12显示了在喷雾室实验中，OME1到OME4、化石柴油及其混合燃料的液体穿透长度（LPL）和蒸汽穿透长度（VPL）。OME1的LPL显著短于OME4和柴油燃料。这主要由燃料的蒸气压差异驱动。OME1的沸点约为42°C，而OME3-5的沸点范围为155-242°C。根据喷雾动力学理论，液滴破碎由韦伯数We = ρ * U^2 * d / σ 和雷诺数Re = ρ * U * d / μ。OME1的高蒸气压导致其在喷射后迅速闪蒸，加速液滴蒸发。OME1的LPL约为10-15 mm，而OME4的LPL可达20-25 mm。液体穿透长度主要由燃料的动量通量 ρ * U^2 决定。OME1的密度约为860 kg/m³，粘度约为0.6 mm²/s（25°C）。相比之下，OME4的密度约为1074 kg/m³，粘度约为1.7 mm²/s。表面张力σ的影响较小，因为不同OMEx的σ差异不大（如OME1约20 mN/m，OME4约33 mN/m。计算韦伯数：We = ρ_g * U^2 * d / σ。对于OME1，在喷射压力1000 bar、环境压力100 bar条件下，韦伯数较高，促进液滴破碎。然而，OME1的较低LPL可能导致混合气过稀区域增加，影响燃烧稳定性。",
+    "original_text": {
+      "1": "Fig. 12. Liquid (solid lines) and vapor penetration lengths (dashed lines) in spray chamber experiments. Neat OME1 to OME4, fossil diesel fuel and two blends of fossil diesel with 35 vol% OME1 and 26 vol% OME3−5, respectively.",
+      "2": "The penetration length of the liquid fuel spray, however, is significantly lower for the low boiling point fuel OME1 compared to the longer chained OME4 and diesel fuel as shown by Ottenwälder et al. [166] and Goeb et al. [167].",
+      "3": "Within their work, spray chamber measurements were performed with OME1 to OME4 as well as with diesel fuel and blends of OME1 with diesel fuel and a mixture of OME3−5 with diesel fuel."
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "fluid_mechanics",
+    "question_id": "batch_detail_q_1064220d",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Potential-of-oxymethylene-ethers-as-renewab_2024_Progress-in-Energy-and-Comb",
+      "paper_title": "Potential-of-oxymethylene-ethers-as-renewab_2024_Progress-in-Energy-and-Comb"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T15:34:23.434692",
+      "batch_processing": true,
+      "answer_length": 534
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及喷雾特性分析、燃料物性参数、无量纲数计算及其对发动机燃烧过程的影响，这需要燃烧学、流体力学和喷雾动力学的专业知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在事实错误和缺乏支持：1）错误地将OME1的LPL归因于蒸气压差异，而原文明确表明主要受动量通量影响；2）缺少对蒸汽穿透长度的分析；3）无量纲数计算缺乏具体参数支持；4）燃烧稳定性影响缺乏依据。建议基于原文引用2和3重新组织答案，明确区分液体和蒸汽穿透长度的主导因素"
+    }
+  },
+  {
+    "question_text": "结合图7所示的OME1-4自燃过程中的反应通道分支比，解释为什么随着链长增加，OME2-4的自燃倾向（点火延迟时间）比OME1更高，尽管它们的分子结构相似。",
+    "standard_answer": "图7显示了在20 bar、825 K条件下，化学当量OME1-4/空气混合物自燃过程中（20%燃料消耗时）的关键反应路径。对于OME1，二级自由基的β-裂解反应占比超过90%。随着链长增加，二级自由基的产量从OME2的29%下降到OME4的19%。这种减少是由于随着OME链长增加，分子中CH2O单元数量增加，但甲基端基数量不变。因此，虽然OME2-4的β-裂解反应仍然重要，但其他反应路径（如O2添加）变得相对更重要。这些其他路径包括：1）RO2异构化形成QOOH，2）QOOH分解产生OH自由基。对于更长的OMEx，由于分子中氧含量增加，H-提取反应活性增强。计算表明，OME1的H-提取反应速率常数通常比OME4高约30-50%。此外，随着链长增加，燃料的总体反应活性增加，点火延迟时间缩短。例如，在相同条件下，OME3的点火延迟时间比OME1短约40-60%。",
+    "original_text": {
+      "1": "Fig. 7. Reaction channels during the auto-ignition of stoichiometric mixtures of OMEx in air at 20 bar, 825 K, and 20% fuel consumption, predicted by using the model of Cai et al. [77].",
+      "2": "The consumption pathways of primary fuel radicals follow the conventional reaction channels of alkane radicals, which decompose via β-scission at high temperatures and are oxidized via oxygen addition at low temperatures.",
+      "3": "With the increased chain length, the fuel reactivity increases significantly, which is evidenced by the decreased initial pyrolysis temperature."
+    },
+    "type": "reasoning",
+    "difficulty": 5,
+    "topic": "combustion_kinetics",
+    "question_id": "batch_detail_q_136d2725",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Potential-of-oxymethylene-ethers-as-renewab_2024_Progress-in-Energy-and-Comb",
+      "paper_title": "Potential-of-oxymethylene-ethers-as-renewab_2024_Progress-in-Energy-and-Comb"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T15:34:37.303371",
+      "batch_processing": true,
+      "answer_length": 384
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及燃料自燃机理、反应路径分析、点火延迟时间等燃烧化学动力学专业知识，需要燃烧和化学动力学领域的专业知识来理解反应通道分支比和分子结构对自燃倾向的影响",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在明显的事实错误：1）H-提取反应速率常数部分表述错误（原文表明OME1比OME4高）；2）缺乏对β-裂解反应减少与其他反应路径增加的机制关联的清晰解释；建议重新核对数据并完善机理解释"
+    }
+  },
+  {
+    "question_text": "利用图3中OME0-4的点火延迟时间数据，结合图8中甲烷峰值摩尔分数的计算结果，分析OME燃料在CI发动机应用中未燃碳氢化合物排放（特别是甲烷）的形成机理及其对排放控制策略的影响。",
+    "standard_answer": "图3显示OME0-4的点火延迟时间。OME1的点火延迟时间最长，而OME2-4的则更短。这种非线性行为与它们的十六烷值趋势一致。从反应动力学角度分析，OME分子中的甲基端基通过β-裂解反应生成甲基自由基：R(secondary) → CH3 + CH3OCHO（甲酸甲酯）。图8显示在20 bar、825 K条件下，OME1-4自燃过程中甲烷的峰值摩尔分数。计算表明，在化学当量条件下，OME1产生的甲烷浓度最高，约为2000 ppm（图8）。这是因为OME1的二级自由基的β-裂解是主要反应路径。例如，对于OME1，在相同条件下，其甲烷峰值摩尔分数比OME4高约2-3倍。这种高甲烷排放主要源于：1）分子结构中的甲基端基；2）β-裂解反应的速率常数高。随着链长增加，甲烷排放减少，因为更长的OMEx分子中CH2O单元比例增加。这种高甲烷排放对后处理系统构成挑战，因为甲烷在典型氧化催化剂上需要较高的起燃温度（通常>400°C）才能有效转化。",
+    "original_text": {
+      "1": "Fig. 3. Measured ignition delay times of OME0−4. Ignition delay times of OME0 were determined at 25 atm [78] and scaled to 20 bar following a linear function.",
+      "2": "Fig. 8. Peak mole fractions of CH4 during the auto-ignition of OME1−4 and gasoline at 20 bar and 825 K.",
+      "3": "The formation of methane is promoted significantly in the oxidation of OME1−4 at the investigated conditions.",
+      "4": "These reactions have a significant influence on the production and consumption of methyl formate."
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "question_id": "batch_detail_q_db2e9646",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Potential-of-oxymethylene-ethers-as-renewab_2024_Progress-in-Energy-and-Comb",
+      "paper_title": "Potential-of-oxymethylene-ethers-as-renewab_2024_Progress-in-Energy-and-Comb"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T15:34:48.178954",
+      "batch_processing": true,
+      "answer_length": 421
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题需要燃烧科学、化学反应动力学和发动机排放控制等专业领域的知识，涉及燃料特性、点火延迟时间、自由基反应机理和后处理系统等专业技术内容",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在多处事实错误和缺乏引用支持的问题，需要基于原文引用进行修正，确保所有声明都有可靠来源支持"
+    }
+  },
+  {
+    "question_text": "基于图18中归一化乙炔质量分数分布以及混合分数PDF的卷积结果，解释为什么OMEx在柴油混合燃料中表现出超线性碳烟降低的机理。",
+    "standard_answer": "图18显示了n-十二烷和OME1混合燃料在1D火焰面混合分数空间中的归一化乙炔质量分数。对于OMEx混合燃料，乙炔生成峰值向更高混合分数值移动。计算表明，在LES域中积分乙炔生成量可降低一个数量级。这主要由三个因素造成：1）燃料氧含量导致局部当量比降低。根据混合分数理论，乙炔生成主要在富燃料区域（ξ > ξ_st）发生。对于OME1混合燃料，局部混合分数分布向更高值偏移。这种偏移导致在较高混合分数区域（如ξ > 0.3），乙炔浓度降低约60-80%。此外，火焰抬升长度（FLOL）增加，导致更多的空气夹带进入燃料射流。计算FLOL：H = C * (ρ_a/ρ_f)^0.5 * d。重叠数（ON）定义为ON = (L - H)/S，其中L为液体穿透长度，H为火焰抬升长度，S为喷嘴直径。对于OME1，ON接近零，表明液体喷雾和火焰之间没有显著相互作用。",
+    "original_text": {
+      "1": "Fig. 18. Normalized mass fractions of acetylene for n-dodecane and a blend in 1D flamelet mixture fraction space.",
+      "2": "The stationary FLOL of OMEx and blends of OMEx with diesel fuel are generally longer compared to neat diesel fuel or diesel surrogates [155,166,167,193].",
+      "3": "A higher FLOL likely also means higher air entrainment up to the flame and thereby lower local equivalence ratios.",
+      "4": "This effect can be quantified by the overlap number [219].",
+      "5": "For diesel fuel, the overlap number is significantly negative, reaching below −0.5 in the early combustion phase and only going towards zero in the later combustion phase."
+    },
+    "type": "reasoning",
+    "difficulty": 5,
+    "topic": "combustion_kinetics",
+    "question_id": "batch_detail_q_106e2246",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Potential-of-oxymethylene-ethers-as-renewab_2024_Progress-in-Energy-and-Comb",
+      "paper_title": "Potential-of-oxymethylene-ethers-as-renewab_2024_Progress-in-Energy-and-Comb"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T15:34:59.707170",
+      "batch_processing": true,
+      "answer_length": 379
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及燃烧化学、混合分数理论、乙炔生成机理、火焰抬升长度等专业概念，需要燃烧科学和计算流体力学领域的专业知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported"
+      ],
+      "other_compliant": false,
+      "other_issues": [
+        "has_meta_info"
+      ],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在事实错误和未支持的关键声明，建议重新梳理乙炔生成机理与混合分数PDF卷积的关系，并修正火焰抬升长度的计算逻辑"
+    }
+  }
+]

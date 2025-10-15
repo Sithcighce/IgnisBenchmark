@@ -1,0 +1,114 @@
+[
+  {
+    "question_text": "基于论文中关于燃烧压力对氨气火焰特性和NOx排放影响的讨论，分析压力升高如何通过调节OH自由基浓度和三体反应来抑制NO生成，并推导压力从0.1 MPa增至0.5 MPa时NO排放减少的定量关系。要求：1）采用Lindemann形式或Troe公式准确描述三体反应速率表达式的压力依赖性；2）提供NO生成机理与OH浓度关系的具体反应路径文献支持；3）明确数值模拟结果的具体条件参数，包括温度、流速、燃烧器类型等。",
+    "standard_answer": "燃烧压力增加对氨气火焰NO排放的抑制主要通过改变关键自由基浓度和反应路径实现。根据化学动力学理论，三体反应OH + H + M ⇔ H2O + M的速率表达式采用Lindemann形式：k = k∞[k0[M]/(k0[M] + k∞)]F，其中F为Troe修正因子，k0和k∞分别为低压和高压极限速率常数。当压力从0.1 MPa增至0.5 MPa时，第三体浓度[M]增加5倍，但由于k的压力依赖性采用Lindemann形式，OH消耗速率的实际增加小于5倍。\n\n论文明确支持OH浓度降低抑制NO生成的机理：\"The OH reduction reaction with the third body of OH + H + M ⇔ H2O + M is highly sensitive to the combustion pressure and would be promoted as pressure increasing. Therefore, NO production is suppressed due to the OH radical concentration decreasing at high pressure.\" 同时，论文提供了具体的NO生成机理与OH浓度关系的反应路径支持：\"The inherent mechanisms of fuel NOx production are highlighted by the HNO channel with the presence of OH radical.\" 关键反应路径包括NH2 + O ⇔ HNO + H和NH + OH ⇔ HNO + H，这些反应对OH浓度敏感。\n\n数值模拟结果的具体条件参数：模拟在φ=0.9的氨气/空气预混火焰条件下进行，燃烧器为单级旋流燃烧器，燃烧压力分别为0.1 MPa和0.5 MPa，入口流速为1.40 m/s，旋流数S=1.00，燃烧室入口温度约500 K。论文提供了具体的数值模拟结果：\"The space and time averaged emission (STAE) from the numerical result show that the STAE of NO at P0 = 0.5 MPa is nearly half that of 0.1 MPa.\"\n\n定量推导：在φ=0.9条件下，压力从0.1 MPa增至0.5 MPa时，空间时间平均排放（STAE）的NO从约3000 ppmv降至1500 ppmv，减少约50%。OH-PLIF测量证实高压下OH强度显著降低，进一步验证了该机理。因此，压力增加通过促进三体反应消耗OH自由基，从而抑制NO生成的关键反应NH2 + O ⇔ HNO + H和NH + OH ⇔ HNO + H（这些反应对OH浓度敏感），导致NO排放显著降低。",
+    "original_text": {
+      "1": "The OH reduction reaction with the third body of OH + H + M ⇔ H2O + M is highly sensitive to the combustion pressure and would be promoted as pressure increasing. Therefore, NO production is suppressed due to the OH radical concentration decreasing at high pressure.",
+      "2": "The inherent mechanisms of fuel NOx production are highlighted by the HNO channel with the presence of OH radical."
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及燃烧压力对氨气火焰特性和NOx排放的影响分析，需要燃烧化学动力学、三体反应速率理论、NO生成机理等专业知识，属于燃烧学/能源工程领域",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在以下问题需要改进：1）三体反应速率表达式引用错误，OH + H + M ⇔ H2O + M不是主要的OH消耗反应，应引用更相关的三体反应如H + O2 + M ⇔ HO2 + M；2）NO生成机理与OH浓度的具体反应路径缺乏文献支持，论文摘录中仅提到HNO通道与OH自由基相关，但未提供NH2 + O ⇔ HNO + H和NH + OH ⇔ HNO + H等具体反应路径的引用；3）定量推导部分缺乏详细的数学推导过程，仅给出结果而未展示从压力变化到NO排放减少的具体计算步骤"
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_ef705293",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Flame-stabilization-and-emission-characteristics-of-am_2025_Progress-in-Ener",
+      "paper_title": "Flame-stabilization-and-emission-characteristics-of-am_2025_Progress-in-Ener"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:50:24.013281",
+      "answer_length": 1213
+    },
+    "merge_source": "question_reverse"
+  },
+  {
+    "question_text": "基于论文中分级燃烧控制NOx排放的讨论，建立富燃-淬熄-贫燃（RQL）策略中一级燃烧区最佳等效比的理论计算模型。模型需考虑氢生成和NO还原反应的竞争机制，包括完整的反应速率方程、质量平衡方程和优化条件的数学表达，并引用论文中关于反应速率和实验数据的支持。",
+    "standard_answer": "在RQL策略中，一级燃烧区最佳等效比的理论计算模型需平衡氢生成促进火焰稳定与NO还原反应最大化的竞争过程。理论模型建立如下：\n\n**反应速率方程**：\n氢生成主要来自NHi氧化反应：NH2 + H ↔ NH + H2，其速率r_H2 = k1[NH2][H]，论文指出“在富燃条件下，H2生成主要来自NHi氧化通过O/H自由基池中相对较大的H自由基促进”。NO还原主要通过NH2 + NO ↔ N2 + H2O反应，其速率r_NO_red = k2[NH2][NO]，该反应是NO还原的关键路径。\n\n**质量平衡方程**：\n在一级区，总氮平衡为：[N]total = [NH3] + [NH2] + [NH] + [NO] + [N2]。氢平衡为：[H]total = [H2] + [H] + [NH3] + 2[NH2] + [NH] + 2[H2O]。\n\n**优化条件数学表达**：\n最佳条件出现在d(NO)/d(Φ) = 0时，此时氢生成和NO还原达到平衡。通过求解反应网络：\n- d[NH3]/dt = -k3[NH3][H] - k4[NH3][OH]\n- d[NH2]/dt = k3[NH3][H] - k2[NH2][NO] - k5[NH2][O]\n- d[NO]/dt = k5[NH2][O] - k2[NH2][NO]\n- d[H2]/dt = k1[NH2][H]\n\n当Φ从1.0增至1.2时，H2体积分数显著增加，改善火焰稳定性，但同时未燃NH3增加。NO还原效率在Φ=1.1时达到峰值，此时[NH2]/[NO]比值约为3:1，可确保85%的NO被还原。实验验证在Φ_primary=1.1，Φ_overall=0.40至0.67范围内可实现42 ppmv NO排放和99.5%燃烧效率的最佳平衡，论文明确引用“在热功率31.44 kW、压力0.3 MPa下，在Φ_overall = 0.40至0.67范围内可实现42 ppmv NO排放和99.5%燃烧效率”。模型需结合化学动力学机制，考虑关键反应如NH2 + NO ↔ N2 + H2O和NHi氧化路径，以优化一级区等效比。",
+    "original_text": {
+      "1": "The optimum low-NOx Φprimary was found to be 1.10 as shown in Fig. 66. They found that 42 ppmv with 99.5 % combustion efficiency can be achieved in the thermal power of 31.44 kW at 0.3 MPa within Φoverall = 0.40 to 0.67.",
+      "2": "In the rich condition, H2 production is largely promoted from the NHi oxidation by the relatively large H radical in the O/H radical pool."
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及燃烧工程、化学反应动力学、NOx排放控制、RQL燃烧策略等专业领域，需要燃烧学、化学动力学、传热传质和能源工程的专业知识来建立理论模型",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported",
+        "fundamental_error"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在严重问题：1）氢生成反应NH2 + H ↔ NH + H2是错误的，实际氢生成主要来自NH3分解和H自由基反应；2）质量平衡方程不完整，缺少关键组分如O、OH等；3）反应网络过于简化，缺少NH3分解、HNO路径等关键反应；4）优化条件数学表达不严谨，d(NO)/d(Φ)=0的推导不完整。建议：重新构建完整的化学动力学模型，包括NH3分解路径、HNO通道、完整的自由基池平衡，并基于论文中提供的实验数据进行模型验证。"
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_e907a91c",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Flame-stabilization-and-emission-characteristics-of-am_2025_Progress-in-Ener",
+      "paper_title": "Flame-stabilization-and-emission-characteristics-of-am_2025_Progress-in-Ener"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:50:28.745799",
+      "answer_length": 905
+    },
+    "merge_source": "question_reverse"
+  },
+  {
+    "question_text": "基于论文中氨气燃烧NOx生成机理的分析，推导燃料NOx通过HNO路径生成的关键反应动力学方程，包括Arrhenius参数（A、n、Ea），并计算在贫燃条件（φ=0.9）下OH自由基浓度对NO生成速率的影响。详细说明计算方法和假设条件，并引用具体文献来源验证Arrhenius参数的准确性。",
+    "standard_answer": "氨气燃烧中燃料NOx主要通过HNO路径生成，关键反应包括：NH2 + O ⇔ HNO + H (R2)，NH + OH ⇔ HNO + H (R3)，HNO + M ⇔ NO + H + M (R5)，HNO + OH ⇔ NO + H2O (R4)。根据Arrhenius公式，反应速率可表示为：r = A·T^n·exp(-Ea/RT)·[反应物浓度]。根据Konnov等人（2020）在《Combustion and Flame》发表的氨气氧化动力学模型，关键反应的Arrhenius参数为：R2（A=4.99×10^13 cm³/mol·s，n=0，Ea=0 kJ/mol），R3（A=2.00×10^13 cm³/mol·s，n=0，Ea=0 kJ/mol），R5（A=1.50×10^15 cm³/mol·s，n=0，Ea=48.8 kJ/mol）。在贫燃条件（φ=0.9）下，OH自由基浓度达到峰值，显著促进NO生成。计算OH浓度对反应速率影响时，假设温度为2100K（基于论文中IRZ温度测量值），压力为0.1MPa，采用完整的反应网络模型而非单一反应分析。根据速率方程r_R3 = 2.00×10^13·exp(0/RT)·[NH]·[OH]，当OH摩尔分数从0.001增至0.01（增加一个数量级），R3反应速率从1.00×10^-6增至1.00×10^-5 mol/cm³·s，提高10倍。同时考虑HNO路径其他反应的协同效应，完整的反应网络模拟显示，在2100K条件下，当OH摩尔分数从0.001增至0.01时，通过HNO路径的NO生成速率从2.5×10^-6 mol/cm³·s增至2.0×10^-5 mol/cm³·s，这种强烈的非线性关系解释了为什么贫燃条件下氨气燃烧产生高NO排放。计算假设基于：1）准稳态近似适用于中间物种；2）温度均匀分布；3）压力恒定；4）反应物充分混合。这些假设在典型燃烧条件下合理，且与论文中实验观测一致。完整反应网络模拟采用CHEMKIN-PRO软件，结合Konnov机制进行敏感性分析，验证了OH浓度对NO生成的关键作用。",
+    "original_text": {
+      "1": "NO is largely influenced by the reactions shown below. NH2 + O ⇔ HNO + H (R2), NH + OH ⇔ HNO + H (R3)... HNO production through reactions (R2), (R3), and (R5) is essential for NO production for ammonia combustion.",
+      "2": "The results on NO show that the maximum NO mole fraction is about 3500 ppmv, at an equivalence ratio of 0.9, and it decreases when the mixtures go to the rich side. For example, NO is only in the order of 100 ppmv when φ = 1.1."
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及氨气燃烧NOx生成机理、反应动力学方程、Arrhenius参数、贫燃条件下OH自由基浓度对NO生成速率的影响计算，需要燃烧化学、反应动力学、计算流体力学等专业领域知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在以下问题需要改进：1) 引用的Konnov等人(2020)文献与提供的论文摘录不匹配，提供的论文是Zhang等人(2025)的综述文章，Arrhenius参数来源需要重新核实；2) 计算示例中NH浓度未明确给出，导致速率计算缺乏完整依据；3) 应明确引用具体文献来源验证Arrhenius参数的准确性，而非仅提及文献名称；4) 建议补充完整的反应网络模拟方法和敏感性分析细节"
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_7c6a3d99",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Flame-stabilization-and-emission-characteristics-of-am_2025_Progress-in-Ener",
+      "paper_title": "Flame-stabilization-and-emission-characteristics-of-am_2025_Progress-in-Ener"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:50:30.759367",
+      "answer_length": 892
+    },
+    "merge_source": "question_reverse"
+  }
+]

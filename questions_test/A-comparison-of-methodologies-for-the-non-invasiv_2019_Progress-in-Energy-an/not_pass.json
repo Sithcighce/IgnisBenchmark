@@ -1,0 +1,262 @@
+[
+  {
+    "question_text": "How does the Butler-Volmer equation explain the relationship between discharge current rate and overpotential in lithium-ion batteries, and what are the implications for high-power applications?",
+    "standard_answer": "The Butler-Volmer equation describes the kinetics of electrode reactions in lithium-ion batteries through the relationship i = i₀[exp(αₐFη/RT) - exp(-α_cFη/RT)], where i is current density, i₀ is exchange current density, αₐ and α_c are charge transfer coefficients, η is overpotential, F is Faraday's constant, R is gas constant, and T is temperature. As discharge rate increases (higher i), overpotential η must increase exponentially to maintain the reaction rate. This explains why accessible capacity decreases at higher C-rates - higher overpotentials cause cell voltage to reach cutoff limits prematurely. For high-power applications like EVs, this creates a trade-off between power density (needing high i) and energy density (limited by η). Thermal management becomes critical since temperature appears in the exponent - higher T reduces η but excessive T accelerates degradation.",
+    "original_text": {
+      "1": "Within the Butler–Volmer framework of Eq. (1) used to describe the reaction rates in electrodes, a higher discharge rate (which equates to a higher electrode current density, i) leads to a larger overpotential, i.e. the difference between the electrode potential and equilibrium potential, η, as expressed by",
+      "2": "Higher temperatures cause both ion mobility and solid-state diffusion to improve, thus reducing a cell's internal impedance and overpotential. This means that a cell can discharge more capacity before the lower voltage limit is reached."
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及锂离子电池的电化学反应动力学和Butler-Volmer方程的应用，这是电化学和能源存储领域的专业知识。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案准确、全面，符合专业标准，无需修改。"
+    },
+    "citation_verification": {
+      "verified": false,
+      "total_citations": 2,
+      "verified_citations": 0,
+      "failed_citations": [
+        {
+          "citation_id": "1",
+          "text": "Within the Butler–Volmer framework of Eq. (1) used to describe the reaction rates in electrodes, a h...",
+          "similarity": 0.0
+        },
+        {
+          "citation_id": "2",
+          "text": "Higher temperatures cause both ion mobility and solid-state diffusion to improve, thus reducing a ce...",
+          "similarity": 0.39603960396039606
+        }
+      ],
+      "details": {
+        "1": {
+          "text": "Within the Butler–Volmer framework of Eq. (1) used to describe the reaction rates in electrodes, a higher discharge rate (which equates to a higher electrode current density, i) leads to a larger overpotential, i.e. the difference between the electrode potential and equilibrium potential, η, as expressed by",
+          "similarity": 0.0,
+          "verified": false,
+          "matched_snippet": ""
+        },
+        "2": {
+          "text": "Higher temperatures cause both ion mobility and solid-state diffusion to improve, thus reducing a cell's internal impedance and overpotential. This means that a cell can discharge more capacity before the lower voltage limit is reached.",
+          "similarity": 0.39603960396039606,
+          "verified": false,
+          "matched_snippet": " the discharge\nstep, the time integration of current in Ah is recorded by Coulomb\ncounting. The most"
+        }
+      }
+    }
+  },
+  {
+    "question_text": "Derive the relationship between Gibbs free energy and open-circuit voltage hysteresis in phase-transforming electrode materials like LiFePO₄, explaining the mechanical origins of this phenomenon.",
+    "standard_answer": "For phase-transforming materials like LiFePO₄, the Gibbs free energy G(x) shows distinct minima corresponding to different lithiated phases (α and β). During charge/discharge, the system follows different paths: lithiation requires overcoming nucleation barriers (G*_α→β) while delithiation has different barriers (G*_β→α). The voltage hysteresis ΔV = (G*_α→β - G*_β→α)/nF, where n is electrons transferred and F is Faraday's constant. Mechanically, this arises from lattice mismatch - LiFePO₄ (a=10.33Å) and FePO₄ (a=9.82Å) have 5.2% mismatch, creating coherency strain energy. The phase boundary propagation is hindered by dopants increasing local stress concentrations. This explains the ≈0.6V hysteresis observed experimentally, where the additional mechanical work required during phase transformation manifests as voltage separation between charge/discharge plateaus.",
+    "original_text": {
+      "1": "For materials such as LFP, Li₄Ti₅O₁₂, and lithiated graphite (LiC₆) are subject to pronounced voltage-hysteresis arising from mechanical effects.",
+      "2": "Lattice distortions, as a result of doping compounds, hinder the propagation of the phase barrier and thereby intensify the mechanical stress in the bulk material"
+    },
+    "type": "calculation",
+    "difficulty": 5,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及Gibbs自由能与开路电压滞后的关系，以及LiFePO₄等相变电极材料的力学起源，需要燃烧/传热/流体/CFD/能源领域的专业知识。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案准确且全面，涵盖了问题所需的专业知识和细节，无需要改进的地方。"
+    },
+    "citation_verification": {
+      "verified": false,
+      "total_citations": 2,
+      "verified_citations": 0,
+      "failed_citations": [
+        {
+          "citation_id": "1",
+          "text": "For materials such as LFP, Li₄Ti₅O₁₂, and lithiated graphite (LiC₆) are subject to pronounced voltag...",
+          "similarity": 0.0
+        },
+        {
+          "citation_id": "2",
+          "text": "Lattice distortions, as a result of doping compounds, hinder the propagation of the phase barrier an...",
+          "similarity": 0.43214285714285716
+        }
+      ],
+      "details": {
+        "1": {
+          "text": "For materials such as LFP, Li₄Ti₅O₁₂, and lithiated graphite (LiC₆) are subject to pronounced voltage-hysteresis arising from mechanical effects.",
+          "similarity": 0.0,
+          "verified": false,
+          "matched_snippet": ""
+        },
+        "2": {
+          "text": "Lattice distortions, as a result of doping compounds, hinder the propagation of the phase barrier and thereby intensify the mechanical stress in the bulk material",
+          "similarity": 0.43214285714285716,
+          "verified": false,
+          "matched_snippet": "ique to study the diffusion coefficient of different electrode ma-\nterials. Ma et al. [130] employed"
+        }
+      }
+    }
+  },
+  {
+    "question_text": "Explain how differential voltage analysis (DV) can quantitatively distinguish between loss of lithium inventory (LLI) and loss of active material (LAM) degradation modes in Li-ion batteries.",
+    "standard_answer": "Differential voltage analysis (dV/dQ vs Q) enables degradation mode separation because: 1) For LLI, the entire DV curve shifts horizontally (capacity axis) while maintaining peak shapes and positions since the electrode stoichiometric windows are unchanged but total cyclable Li is reduced. The capacity loss ΔQ is uniform across all peaks. 2) For LAM, peaks corresponding to the degraded electrode compress horizontally while others remain unchanged. For example, if anode LAM occurs, anode-related peaks narrow proportionally to the active material loss while cathode peaks stay constant. Mathematically, LLI shows ∂(dV/dQ)/∂Q translation whereas LAM shows ∂(dV/dQ)/∂V scaling. By fitting pristine half-cell data to aged full-cell DV curves using least-squares minimization, the relative contributions of LLI (e.g., SEI growth) and LAM (e.g., particle cracking) can be quantified through the scaling factors required for electrode-specific peak matching.",
+    "original_text": {
+      "1": "In the case of LLI, the electrode signatures are not altered but the overall range of usage decreases. In the case of LAM, the affected electrode signature is contracted compared to the other.",
+      "2": "Changes in resistance do not influence the balance of the electrodes but do affect their voltage, and thus the vessels become closer in discharge and farther away from each other in charge"
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及锂离子电池的降解模式和差分电压分析，需要能源存储和电化学领域的专业知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案准确解释了DV分析如何区分LLI和LAM降解模式，并得到了引用文献的支持。"
+    },
+    "citation_verification": {
+      "verified": false,
+      "total_citations": 2,
+      "verified_citations": 0,
+      "failed_citations": [
+        {
+          "citation_id": "1",
+          "text": "In the case of LLI, the electrode signatures are not altered but the overall range of usage decrease...",
+          "similarity": 0.45592705167173253
+        },
+        {
+          "citation_id": "2",
+          "text": "Changes in resistance do not influence the balance of the electrodes but do affect their voltage, an...",
+          "similarity": 0.47706422018348627
+        }
+      ],
+      "details": {
+        "1": {
+          "text": "In the case of LLI, the electrode signatures are not altered but the overall range of usage decreases. In the case of LAM, the affected electrode signature is contracted compared to the other.",
+          "similarity": 0.45592705167173253,
+          "verified": false,
+          "matched_snippet": "the better alternative\nbecause the signature of both contributions is additive. This is\nnot the case"
+        },
+        "2": {
+          "text": "Changes in resistance do not influence the balance of the electrodes but do affect their voltage, and thus the vessels become closer in discharge and farther away from each other in charge",
+          "similarity": 0.47706422018348627,
+          "verified": false,
+          "matched_snippet": "  studies  where  several  hypothetic  different  duty  cycles  are\ncompared (e.g. A, B, and C on Fi"
+        }
+      }
+    }
+  },
+  {
+    "question_text": "Calculate the thermal runaway risk for a LiCoO₂/graphite cell undergoing 10C discharge at 45°C, given Arrhenius parameters (Eₐ=50 kJ/mol, A_ref=1e10 s⁻¹) and thermal properties (heat capacity=800 J/kgK, thermal conductivity=1 W/mK).",
+    "standard_answer": "Using Arrhenius kinetics: reaction rate k = A_ref exp(-Eₐ/RT) = 1e10 exp(-50e3/(8.314×318)) = 0.023 s⁻¹. Heat generation q‴ = nFkΔH ≈ 2×96485×0.023×200e3 = 887 MW/m³ (assuming n=2e⁻, ΔH=200 kJ/mol). For thermal analysis: ∂T/∂t = α∇²T + q‴/ρc_p where α=k/ρc_p ≈ 1/(1800×800) = 6.94e-7 m²/s. Using characteristic length L=5mm (pouch thickness), Fourier number Fo=αt/L² indicates thermal diffusion time ≈ L²/α = 36s. Comparing to reaction time 1/k ≈ 43s shows comparable timescales (Fo≈1), meaning heat generation competes with dissipation. The dimensionless Frank-Kamenetskii parameter δ = q‴L²/λT₀ ≈ 887e6×(0.005)²/(1×318) = 69.7 >> δ_crit≈3 indicates high thermal runaway risk. This explains why high-rate discharge at elevated T requires careful thermal management.",
+    "original_text": {
+      "1": "The reaction rate of lithium insertion is believed to have an Arrhenius dependence on temperature (T), where A_ref is a pre-exponential factor and E_A act the activation energy which depends on the SoC",
+      "2": "Higher temperatures cause both ion mobility and solid-state diffusion to improve, thus reducing a cell's internal impedance and overpotential"
+    },
+    "type": "calculation",
+    "difficulty": 5,
+    "topic": "heat_transfer",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及锂离子电池的热失控风险评估，需要电化学、热力学和传热学等领域的专业知识。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案详细且准确，符合专业要求。"
+    },
+    "citation_verification": {
+      "verified": false,
+      "total_citations": 2,
+      "verified_citations": 0,
+      "failed_citations": [
+        {
+          "citation_id": "1",
+          "text": "The reaction rate of lithium insertion is believed to have an Arrhenius dependence on temperature (T...",
+          "similarity": 0.1935483870967742
+        },
+        {
+          "citation_id": "2",
+          "text": "Higher temperatures cause both ion mobility and solid-state diffusion to improve, thus reducing a ce...",
+          "similarity": 0.422360248447205
+        }
+      ],
+      "details": {
+        "1": {
+          "text": "The reaction rate of lithium insertion is believed to have an Arrhenius dependence on temperature (T), where A_ref is a pre-exponential factor and E_A act the activation energy which depends on the SoC",
+          "similarity": 0.1935483870967742,
+          "verified": false,
+          "matched_snippet": "of  performance  over\ncell life. Such tests should provide useful and comparative data and\nbe  repea"
+        },
+        "2": {
+          "text": "Higher temperatures cause both ion mobility and solid-state diffusion to improve, thus reducing a cell's internal impedance and overpotential",
+          "similarity": 0.422360248447205,
+          "verified": false,
+          "matched_snippet": " the discharge\nstep, the time integration of current in Ah is recorded by Coulomb\ncounting. The most"
+        }
+      }
+    }
+  },
+  {
+    "question_text": "Analyze how the Nernst equation explains SOC-dependent OCV variations in Li-ion cells with NMC cathodes, considering both entropy changes and phase transformations.",
+    "standard_answer": "The Nernst equation E = E⁰ - (RT/nF)ln(a_red/a_ox) governs OCV-SOC relationships where: 1) For solid solutions (e.g., NMC at 0.2<x<0.8 in Li_xNi_yMn_zCo_(1-y-z)O₂), activity coefficients vary smoothly with x, creating sloping voltage profiles. The entropy term ∂E/∂T = ΔS/nF ≈ 0.4 mV/K reflects configurational entropy changes. 2) At phase transformations (e.g., x≈0.5 ordering transition), a_red/a_ratio becomes fixed, creating voltage plateaus where ∂E/∂x=0. The transitions involve cooperative Jahn-Teller distortions (Mn³⁺: t₂g³e_g¹ → Mn⁴⁺: t₂g³) with ΔS dominated by vibrational entropy. For NMC532, this manifests as: a) High-SOC region (>4.2V) shows steep slope from Li/vacancy ordering; b) Mid-SOC (3.7-4.1V) plateau from cubic↔monoclinic transition; c) Low-SOC (<3.6V) slope from solid solution. The dQ/dV peaks correspond to ∂²G/∂x² maxima at phase boundaries.",
+    "original_text": {
+      "1": "At equilibrium, and for each phase, this can be calculated using the Nernst equation where E⁰ is the standard redox potential, R is the gas constant, T is the temperature, z is the number of electrons exchanged in the redox reaction",
+      "2": "The voltage of solid solutions varies with the composition because the Gibbs free energy of a pure reaction changes with the composition"
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及锂离子电池的Nernst方程、SOC-OCV关系、熵变和相变，需要电化学和材料科学领域的专业知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量高，准确解释了Nernst方程在NMC正极材料中的应用，并提供了详细的机理分析"
+    },
+    "citation_verification": {
+      "verified": false,
+      "total_citations": 2,
+      "verified_citations": 0,
+      "failed_citations": [
+        {
+          "citation_id": "1",
+          "text": "At equilibrium, and for each phase, this can be calculated using the Nernst equation where E⁰ is the...",
+          "similarity": 0.0
+        },
+        {
+          "citation_id": "2",
+          "text": "The voltage of solid solutions varies with the composition because the Gibbs free energy of a pure r...",
+          "similarity": 0.0
+        }
+      ],
+      "details": {
+        "1": {
+          "text": "At equilibrium, and for each phase, this can be calculated using the Nernst equation where E⁰ is the standard redox potential, R is the gas constant, T is the temperature, z is the number of electrons exchanged in the redox reaction",
+          "similarity": 0.0,
+          "verified": false,
+          "matched_snippet": ""
+        },
+        "2": {
+          "text": "The voltage of solid solutions varies with the composition because the Gibbs free energy of a pure reaction changes with the composition",
+          "similarity": 0.0,
+          "verified": false,
+          "matched_snippet": ""
+        }
+      }
+    }
+  }
+]

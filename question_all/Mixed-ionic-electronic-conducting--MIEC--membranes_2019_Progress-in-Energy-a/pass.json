@@ -1,0 +1,210 @@
+[
+  {
+    "question_text": "从CFD和传热学角度，分析在膜反应器中进行CO₂热化学还原时，流场结构（如撞击流与平板流反应器）如何影响膜表面附近的气体浓度分布和总转化率，并解释如何优化反应器几何结构以最小化浓度极化效应。",
+    "standard_answer": "在膜反应器中，流场结构直接影响膜表面附近的气体浓度边界层厚度。在平板流反应器中，径向存在显著浓度梯度（如图11(c)所示），导致局部CO₂分压下降，从而降低氧渗透驱动力。对于CO₂还原，反应器设计必须确保膜表面CO₂浓度尽可能接近体相值。对于撞击流反应器（Hiemenz流），其自相似流场使得浓度和温度仅在垂直于膜的方向上变化，这提供了更均匀的反应环境。质量传递系数hₘ可由Sherwood数关联式计算，公式为J = hₘ(C_b - C_s)，其中C_b和C_s分别是体相和表面浓度。优化方法包括减小撞击流反应器中喷嘴与膜表面的距离，或增加平板反应器中扫掠气流速，但这会以降低停留时间为代价。CFD模拟显示，较大间隙和较小扫掠气流速增加浓度均匀性但降低氧通量。因此，需要通过参数化研究确定最佳几何结构（如通道尺寸、长度）和操作条件（流速、温度），以在均匀浓度分布和高渗透通量之间取得平衡。反应器设计还应考虑热集成，以维持等温操作条件，避免因温度梯度引起的热应力。最终，优化的反应器应在最小化浓度极化和最大化反应速率之间找到平衡点。",
+    "original_text": {
+      "1": "Gozalvez-Zafrilla et al. [62] carried out a computational fluid dynamics (CFD) simulation of the oxygen partial pressure on the sweep side (inert sweep) of a membrane reactor for air separation. They found the oxygen concentration varying along the radius, which is impacted by the sweep gas flow rate and the gap between the feeding tube of the sweep gas and the membrane (Fig. 11(c))). Larger gap and smaller sweep gas flow rate increase the homogeneity of the gas concentration, but decrease the oxygen flux.",
+      "2": "Larger gap and smaller sweep gas flow rate increase the homogeneity of the gas concentration, but decrease the oxygen flux.",
+      "3": "Hence, higher-fidelity models of the membrane supported CO₂ reduction system, including sensitivity analysis, are required to correlate the membrane design, area requirement, pressure drop in the reactor and system optimization."
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "fluid_mechanics|CFD_modeling",
+    "question_id": "batch_detail_q_4be8416d",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Mixed-ionic-electronic-conducting--MIEC--membranes_2019_Progress-in-Energy-a",
+      "paper_title": "Mixed-ionic-electronic-conducting--MIEC--membranes_2019_Progress-in-Energy-a"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T13:27:12.579774",
+      "batch_processing": true,
+      "answer_length": 466
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及CFD模拟、传热学、流场结构分析、浓度极化效应和反应器几何优化，需要专业的燃烧科学、传热传质和计算流体力学知识，属于能源与化工反应器工程领域",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量较高，准确解释了不同流场结构对浓度分布的影响，并基于引用文献提供了具体的优化策略"
+    },
+    "merge_source": "questions"
+  },
+  {
+    "question_text": "基于混合导电膜的氧渗透过程涉及体相扩散和表面反应。请详细推导当体相扩散为速率控制步骤时，氧通量J_O₂与跨膜氧分压差的关系式，并解释其物理意义。",
+    "standard_answer": "当体相扩散为速率控制步骤时，假设膜表面反应处于准平衡状态。对于电子空穴主导的p型导体，离子电导率常假设为常数。根据Nernst-Einstein关系，σ_i = (4F²/V_m) * D_V * [V_O^∙∙]。氧通量J_O₂可表示为：J_O₂ = (σ_i RT)/(4F² L) * ln(P'_O₂/P''_O₂)，其中L为膜厚度，P'_O₂和P''_O₂分别为进料侧和扫掠侧的氧分压。推导从一般通量方程开始：J_i = - (σ_i / (Z_i F)²) * (dμ_i/dx)。在等温条件下，化学势梯度dμ_i/dx可关联到氧分压梯度：dμ_O₂ = RT d(ln P_O₂)。对于1D稳态系统，积分后得到：J_O₂ = (σ_i RT)/(4F² L) ∫_{P''_O₂}^{P'_O₂} d(ln P_O₂) = (σ_i RT)/(4F² L) * ln(P'_O₂/P''_O₂)。此公式表明氧通量与离子电导率σ_i、温度T成正比，与膜厚度L成反比。物理意义：通量受氧空位扩散系数D_V和氧非化学计量δ的影响，因为σ_i ∝ D_V δ。该模型适用于厚膜或高表面反应速率的情况，且强调了通过减少膜厚度可显著提高性能。",
+    "original_text": {
+      "1": "For materials in which the electronic conductivity is much higher than the ionic conductivity and assuming the ionic conductivity can be described as constant (σ̄_i) across the membrane, (44) is simplified to: J_O₂ = (σ̄_i RT)/(4F² L) ln (P′_O₂/P″_O₂)。",
+      "2": "Similarly, for the case of water splitting with hydrogen sweep, or CO₂ reduction with CO as the sweep gas, assuming the surface reaction is at equilibrium.",
+      "3": "Hence, a critical thickness, t_c, is defined to identify whether the flux across the membrane is surface or transport-limited."
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "heat_transfer|fluid_mechanics",
+    "question_id": "batch_detail_q_dcb6b2a6",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Mixed-ionic-electronic-conducting--MIEC--membranes_2019_Progress-in-Energy-a",
+      "paper_title": "Mixed-ionic-electronic-conducting--MIEC--membranes_2019_Progress-in-Energy-a"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T13:27:23.206832",
+      "batch_processing": true,
+      "answer_length": 522
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及混合导电膜、氧渗透过程、体相扩散和表面反应机制、氧通量推导等，需要燃烧/传热/流体/能源领域的专业知识，特别是膜材料和传输现象方面的深入理解",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量很高，推导完整，物理意义解释清晰，且与原文引用一致。建议保持这种严谨的学术风格"
+    },
+    "merge_source": "questions"
+  },
+  {
+    "question_text": "论文指出SCoF-82（SrCo₀.₈Fe₀.₂O₃₋δ）钙钛矿膜在CO₂还原中表现出高反应速率但存在碳酸盐形成导致的降解问题。请从表面酸碱性和缺陷化学角度，分析碳酸盐形成的机理，并推导如何通过掺杂（如Nb₂O₅）或表面修饰来增强膜稳定性，同时讨论这些改性对氧渗透通量的潜在影响。",
+    "standard_answer": "碳酸盐形成是MIEC膜在CO₂环境中降解的主要机制，其根源在于膜表面的碱性位点（如晶格氧O²⁻）与酸性CO₂分子之间的相互作用。对于SCoF-82等Sr基钙钛矿，Sr²⁺阳离子和晶格氧提供碱性位点，促进CO₂化学吸附形成单齿或双齿碳酸盐（如CO₂ + O×O + V••O ↔ (CO₃)••O）。该过程受表面Lewis酸碱性控制：碱性越强，CO₂吸附和碳酸盐形成倾向越高。在还原性CO₂环境中，膜表面氧空位浓度增加，进一步增强了碱性，加速碳酸盐形成。从缺陷化学看，碳酸盐覆盖活性位点，阻碍氧表面交换反应，降低氧渗透通量。通过掺杂高价阳离子（如Nb⁵⁺替代B位Co/Fe）可调节表面酸碱性：Nb⁵⁺作为强Lewis酸性位点，降低了整体碱性，抑制CO₂吸附。同时，Nb掺杂可能形成更稳定的氧空位缺陷，减少表面还原倾向。表面修饰（如多孔保护层）通过物理隔离减少CO₂与致密膜直接接触，但需优化孔隙结构以最小化气体传输阻力。这些改性可能对氧通量产生双重影响：掺杂可能降低氧空位迁移率（因Nb—O键较强），减少体相扩散系数D_V，从而降低通量；而表面修饰若催化表面反应（如增强CO₂解离动力学），可补偿体相扩散限制。总体而言，稳定性提升常以牺牲部分性能为代价，需在材料设计中平衡。",
+    "original_text": {
+      "1": "Strontium based perovskites, e.g., Nb₂O₅-doped SrCo₀.₈Fe₀.₂O₃₋δ (SCoF-82) show the highest CO₂ reduction rates so far, but they suffer degradation mainly from carbonate formation.",
+      "2": "Higher oxidation states or higher binding energy for lattice oxygen are related to lower basicity, which means less prone to CO₂ adsorption or carbonate formation. For example, the acidity decreases in the order of Nb⁵⁺ > Co⁴⁺ > Fe⁴⁺ > Co³⁺ > Fe³⁺ > Co²⁺ > Fe²⁺, so the doping of Nb⁵⁺ in the perovskite structure can decrease the carbonate formation tendency."
+    },
+    "type": "concept",
+    "difficulty": 5,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及钙钛矿膜材料在CO₂还原中的性能、碳酸盐形成机理、表面酸碱性、缺陷化学、掺杂改性等，需要燃烧科学、能源材料、电化学、材料科学等领域的专业知识。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": ""
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_74e27dc9",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Mixed-ionic-electronic-conducting--MIEC--membranes_2019_Progress-in-Energy-a",
+      "paper_title": "Mixed-ionic-electronic-conducting--MIEC--membranes_2019_Progress-in-Energy-a"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:38:44.147465",
+      "answer_length": 536
+    },
+    "merge_source": "question_reverse"
+  },
+  {
+    "question_text": "论文比较了化学循环（氧化还原）和膜支撑CO₂还原两种热化学过程。请从反应工程角度，分析两者在氧传输尺度、温度/压力操作策略和反应器设计方面的关键差异，并讨论这些差异如何影响过程强化和系统集成效率。",
+    "standard_answer": "化学循环和膜支撑CO₂还原虽均涉及氧化还原反应，但在氧传输尺度、操作策略和反应器设计上存在本质差异。氧传输方面：化学循环中，氧通过氧载体（如CeO₂₋δ）的宏观移动（在流化床或旋转反应器中）或微观体相-表面扩散（在固定床中）实现传输，氧空位浓度随时间变化（氧化时减少，还原时增加）；而膜反应器中，氧通过膜厚度方向的微观扩散（氧离子和电子协同传输）连续进行，氧空位浓度在空间上分布（进料侧最低，吹扫侧最高）。操作策略上：化学循环允许氧化和还原反应器在不同温度下运行（如氧化800°C，还原1500°C），以优化热力学，但可能导致系统热效率低下；膜反应器通常等温操作（两侧温度相同），简化热管理，但吹扫侧和进料侧压力可独立调节以增强化学势梯度。反应器设计上：化学循环多用流化床、旋转反应器或切换式固定床，涉及固体循环或气流切换，设备复杂；膜反应器采用平面、管式或整体式结构，实现连续操作，易于放大。这些差异影响过程强化：膜反应器通过原位产物分离显著提升单程转化率，实现过程强化，但膜材料和密封挑战大；化学循环灵活性高，但固体循环能耗和颗粒烧结可能限制效率。系统集成时，膜反应器更易与太阳能热源耦合（等温操作简化设计），而化学循环可灵活利用多热源梯度。总体，膜技术更适合紧凑、连续过程，而化学循环在处理固体燃料时具优势。",
+    "original_text": {
+      "1": "In chemical looping, oxygen transport occurs at different scales, depending on the reactor design. If the OC is transported between different reactors, e.g., rotary reactors and fluidized bed reactors, oxygen is transported with the OCs at the macro scale and between the surface and the bulk of the particles at the micro scale. On the other hand, in a membrane reactor, oxygen diffuses from the feed to the sweep side, driven by the chemical potential gradient, not requiring moving the particles or switching the gas streams.",
+      "2": "The operating temperatures for the two reactors in redox CO₂ splitting can be different to favor the thermodynamics and kinetics of reduction or oxidation. However, operating the two reactors at different temperatures may not be optimal for the efficiency of the overall system. On the other hand, the membrane reactor mostly operates under isothermal condition across the feed and sweep sides, and there can be a temperature-gradient from the inlet to outlet of the membrane reactor depending on the heat integration methods."
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及化学循环和膜支撑CO₂还原的热化学过程，需要燃烧工程、反应工程、传热传质、能源系统等专业知识来分析氧传输尺度、温度/压力操作策略、反应器设计及其对过程强化和系统集成效率的影响。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "无需修改，答案准确、全面，符合领域要求。"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_8950b554",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Mixed-ionic-electronic-conducting--MIEC--membranes_2019_Progress-in-Energy-a",
+      "paper_title": "Mixed-ionic-electronic-conducting--MIEC--membranes_2019_Progress-in-Energy-a"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:38:44.794467",
+      "answer_length": 557
+    },
+    "merge_source": "question_reverse"
+  },
+  {
+    "question_text": "在CO₂热化学还原的CFD建模中，如何耦合气体相反应-扩散、膜表面动力学和体相电荷传输？请推导描述氧渗透的广义传输方程，并讨论在甲烷吹扫条件下，气体相反应（如甲烷重整）对靠近膜表面区域物种浓度边界层的影响。",
+    "standard_answer": "在CFD建模中，耦合气体相反应-扩散、膜表面动力学和体相电荷传输需多物理场方法。首先，气体相由物种守恒方程描述：∂C_i/∂t + ∇·(u C_i) = ∇·(D_i ∇C_i) + R_i,g，其中C_i为物种浓度，u为流速，D_i为扩散系数，R_i,g为气体相反应源项（如甲烷蒸汽重整：CH₄ + H₂O → CO + 3H₂）。在甲烷吹扫时，靠近膜表面区域存在边界层，气体相反应显著改变物种分布：例如，膜表面释放的氧与CH₄发生完全氧化（生成CO₂和H₂O），而在边界层外侧，未反应CH₄与产物发生重整，使H₂/比趋近于部分氧化化学计量比。这导致浓度边界层内梯度非线性，需通过Sherwood数关联或直接求解边界层方程。膜表面动力学由边界条件实现：进料侧，氧通量J_O₂ = k_f,CO₂ C_CO₂ C_V，其中k_f,CO₂为表面反应速率常数，C_V为表面氧空位浓度；吹扫侧，J_O₂ = k_f,CH₄ C_CH₄ (C_O - C_V)。体相电荷传输由Poisson-Nernst-Planck方程控制：J_j = - (σ_j / (Z_j F)²) (dμ_j/dx + Z_j F dφ/dx)，其中j为电荷物种（O²⁻, h•, e'），σ_j为电导率，μ_j为化学势，φ为电势。在无外场时，净电流为零：Σ Z_j F J_j = 0，导出广义氧通量方程：J_O₂ = - (σ_tot t_i t_e / (2Z_i² F²)) dμ_O₂/dx。CFD中需迭代求解表面通量、体相传输和气体相反应，使用自定义函数耦合边界条件。例如，在Fluent中，通过用户定义标量（UDS）求解膜内电势和缺陷浓度，并通过用户定义函数（UDF）设置表面通量边界。这种耦合可预测局部通量、热点形成和产物选择性，但对计算资源要求高，常需简化模型（如电阻模型）用于系统级优化。",
+    "original_text": {
+      "1": "The five steps of oxygen permeation in the membrane supported CO₂ reduction process. The feed and sweep sides have high and low chemical potential, μ’ and μ’’, respectively. The thickness of the heterogeneous reaction regions on either side of the membrane is not to the scale.",
+      "2": "When more complex fuels such as methane, ethane and methanol are used on the sweep side, the gas phase reactions cannot be neglected. Wu et al. used a micro-probe to sample the gas close to the surface, and compared them with values measured at the reactor outlet. They found gas phase reactions to contribute greatly to the final products."
+    },
+    "type": "calculation",
+    "difficulty": 5,
+    "topic": "CFD_modeling",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及CO₂热化学还原的CFD建模，需要耦合气体相反应-扩散、膜表面动力学和体相电荷传输，并推导氧渗透的广义传输方程，这需要燃烧学、传热传质、流体力学、电化学和计算流体动力学（CFD）等多领域的专业知识。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量较高，无需修改。"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_d53da0f2",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Mixed-ionic-electronic-conducting--MIEC--membranes_2019_Progress-in-Energy-a",
+      "paper_title": "Mixed-ionic-electronic-conducting--MIEC--membranes_2019_Progress-in-Energy-a"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:38:45.496499",
+      "answer_length": 791
+    },
+    "merge_source": "question_reverse"
+  },
+  {
+    "question_text": "基于论文中关于MIEC膜反应器在CO₂热化学还原中的工作原理，详细分析在甲烷作为吹扫气时，膜两侧的氧化学势梯度如何驱动氧渗透过程，并解释该过程如何通过产物分离来克服CO₂直接热解的热力学平衡限制。",
+    "standard_answer": "在MIEC膜反应器中，CO₂热化学还原过程涉及膜两侧的氧化学势梯度驱动氧渗透。当甲烷作为吹扫气时，吹扫侧的氧化学势极低（pO₂可低至10⁻²⁰–10⁻¹⁵ bar），而进料侧由于CO₂分解产生CO和O₂，氧化学势较高。这种化学势梯度驱动氧离子（O²⁻）和电子空穴（h•）或电子（e'）的协同扩散穿过膜。具体而言，氧在进料侧通过表面反应（如CO₂ + V••O + O×O ↔ (CO₃)••O）被还原并掺入晶格，形成氧离子；这些氧离子在化学势梯度下扩散至吹扫侧，并在该侧通过表面反应（如CH₄与渗透氧反应）被氧化并释放为O₂或参与甲烷部分氧化。该过程通过原位分离氧产物，显著降低了进料侧的氧分压，从而将CO₂分解反应（CO₂ → CO + 1/2 O₂, ΔH°₂₉₈K = 282.9 kJ/mol）的平衡向右移动，使CO₂转化率在较低温度（700–1000°C）下即可达到较高水平，而直接热解需1200–2000°C。氧通量J_O₂可由广义传输模型描述：J_O₂ ∝ (σ_i σ_e / (σ_i + σ_e)) · (Δμ_O₂ / L)，其中σ_i和σ_e分别为离子和电子电导率，Δμ_O₂为化学势差，L为膜厚度。该机制通过产物分离实现了过程强化，提升了热力学效率。",
+    "original_text": {
+      "1": "Oxygen permeation is driven by its partial pressure gradient across the membrane (or its chemical potential in the general case). In order to maintain low oxygen partial pressure on the sweep side, different methods can be applied as shown in Fig. 2 (a): (1) using inert gas to sweep away the produced oxygen; (2) using vacuum to maintain a low total pressure; (3) using fuels to consume oxygen by full or partial oxidation.",
+      "2": "By incorporating a perm-selective membrane in the CO₂ reduction process, thermodynamics equilibrium on the feed side can be shifted by separating one of the products, that’s oxygen, and hence, lowering the temperature required to achieve similar yields as that achieved by direct thermolysis in the pure gas phase operation at temperatures in the range 1200–2000°C."
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及MIEC膜反应器、CO₂热化学还原、氧化学势梯度、氧渗透过程、热力学平衡限制等核心概念，需要燃烧科学、能源工程、热力学、膜分离技术等专业领域的深度知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "无需改进，问题和答案均符合高质量标准。答案准确阐述了MIEC膜反应器的工作原理，详细解释了氧化学势梯度驱动机制、表面反应过程、热力学平衡突破原理，并提供了具体的氧通量模型，与论文内容高度一致"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_02c8045e",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Mixed-ionic-electronic-conducting--MIEC--membranes_2019_Progress-in-Energy-a",
+      "paper_title": "Mixed-ionic-electronic-conducting--MIEC--membranes_2019_Progress-in-Energy-a"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:38:46.643516",
+      "answer_length": 538
+    },
+    "merge_source": "question_reverse"
+  }
+]

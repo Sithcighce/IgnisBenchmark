@@ -1,0 +1,167 @@
+[
+  {
+    "question_text": "How does the Biot number classification distinguish between thermally thin and thermally thick particles in biomass combustion, and what are the implications for intra-particle temperature gradients and conversion stages?",
+    "standard_answer": "The Biot number (Bi = h_eff * d / λ) distinguishes thermally thin (Bi < 0.1) from thermally thick (Bi > 0.1) particles based on the ratio of internal to external heat transfer resistance. For thermally thick particles, significant intra-particle temperature gradients exist due to limited internal conduction relative to surface convection/radiation, leading to simultaneous drying, devolatilization, and char conversion stages occurring at different radial positions. In contrast, thermally thin particles exhibit uniform temperature, resulting in sequential conversion stages. This gradient in thermally thick particles necessitates modeling intra-particle transport phenomena, as varying temperatures affect reaction rates, product yields, and overall conversion times. The characteristic length (d) and thermal conductivity (λ) are critical, with larger particles or lower conductivity exacerbating gradients, impacting heat and mass transfer during combustion.",
+    "original_text": {
+      "1": "The Biot number is defined as Bi = h_eff d / λ, where the thermal conductivity (λ), characteristic length (d) and effective heat transfer coefficient (h_eff) are used.",
+      "2": "For low Biot numbers (< 0.1), a thermally thin regime is present, whereas large Biot numbers (> 0.1) indicate the presence of a thermally thick regime."
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "heat_transfer",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires specific knowledge of heat transfer principles (Biot number), biomass combustion processes (drying, devolatilization, char conversion), and intra-particle transport phenomena in thermal conversion systems, which are core topics in combustion science and energy systems.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer are well-aligned with domain expertise and paper content; no issues detected."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_9d6a380b",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Numerical-models-for-thermochemical-degradation-of-therm_2017_Progress-in-En",
+      "paper_title": "Numerical-models-for-thermochemical-degradation-of-therm_2017_Progress-in-En"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:23:57.808727",
+      "answer_length": 965
+    }
+  },
+  {
+    "question_text": "Why does anisotropic thermal conductivity in wood logs significantly affect heat transfer during combustion compared to isotropic pellets, and how does this influence devolatilization rates?",
+    "standard_answer": "Wood logs exhibit anisotropic thermal conductivity due to their cellular structure, with higher conductivity along the grain (longitudinal direction) than across it (radial/tangential directions), whereas pellets are often modeled as isotropic. This anisotropy causes non-uniform heat penetration in logs, leading to faster heating along the grain and slower transverse heating. Consequently, devolatilization initiates earlier in regions aligned with the grain, creating asymmetric reaction fronts and varying volatile release rates. In contrast, isotropic pellets heat uniformly, promoting symmetric conversion. The anisotropic effect complicates modeling by requiring direction-dependent properties, impacting temperature distributions, and potentially leading to localized hotspots or incomplete conversion in transverse directions, which can affect pollutant formation and combustion efficiency.",
+    "original_text": {
+      "1": "Wood logs are considered anisotropic. Therefore, e.g. the thermal conductivity of wood is smaller in the radial and the tangential direction to the grains compared to the longitudinal direction.",
+      "2": "The anisotropy of wood also affects shrinkage during drying and devolatilization. The highest degree of shrinkage occurs tangentially to the grains, which means in the direction of annual growth rings."
+    },
+    "type": "reasoning",
+    "difficulty": 5,
+    "topic": "heat_transfer",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question requires specific knowledge of combustion science (devolatilization), heat transfer principles (thermal conductivity, anisotropic vs isotropic materials), and material science of biomass (wood cellular structure). It compares wood logs vs pellets in combustion contexts, which is directly related to energy systems and thermochemical conversion.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other issues."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_7b091bdb",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Numerical-models-for-thermochemical-degradation-of-therm_2017_Progress-in-En",
+      "paper_title": "Numerical-models-for-thermochemical-degradation-of-therm_2017_Progress-in-En"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:23:57.932111",
+      "answer_length": 900
+    }
+  },
+  {
+    "question_text": "Calculate the effective diffusion coefficient for a gas species in dry wood with porosity 0.6, tortuosity 2.5, constriction factor 1.2, and binary diffusion coefficient 1e-5 m²/s. How does this value impact species transport compared to free diffusion?",
+    "standard_answer": "The effective diffusion coefficient is calculated as D_eff = (ε * s_c * D) / τ, where ε is porosity (0.6), s_c is constriction factor (1.2), D is binary diffusion coefficient (1e-5 m²/s), and τ is tortuosity (2.5). Substituting values: D_eff = (0.6 * 1.2 * 1e-5) / 2.5 = (7.2e-6) / 2.5 = 2.88e-6 m²/s. This value is approximately 29% of the binary diffusion coefficient, indicating significantly reduced species transport due to the porous wood structure. The reduction arises from longer diffusion paths (tortuosity) and pore constrictions, slowing down mass transfer of volatiles and gases. In combustion modeling, this lower D_eff emphasizes the importance of convective transport via Darcy's law and can lead to higher intra-particle concentrations, affecting reaction rates and product yields.",
+    "original_text": {
+      "1": "It is suggested by Fogler that it can be related to the binary diffusion coefficient, D, such that D_eff = (ε_g s_c D) / τ, where τ is tortuosity, s_c is a constriction factor and ε_g is the volume fraction occupied by the gas phase, which is equal to the porosity in the case of dry wood.",
+      "2": "In some works, diffusion of the gas species is neglected, since it is assumed that it is much smaller compared to convection."
+    },
+    "type": "calculation",
+    "difficulty": 3,
+    "topic": "fluid_mechanics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires knowledge of porous media transport, diffusion in wood structures, and combustion modeling - all specific to fluid mechanics and energy systems domain expertise. It involves calculating effective diffusion coefficients in biomass materials and understanding their impact on species transport in combustion processes.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct, and compliant with other requirements."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_d7ca566f",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Numerical-models-for-thermochemical-degradation-of-therm_2017_Progress-in-En",
+      "paper_title": "Numerical-models-for-thermochemical-degradation-of-therm_2017_Progress-in-En"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:23:58.341092",
+      "answer_length": 798
+    }
+  },
+  {
+    "question_text": "How does the assumption of local thermal equilibrium simplify the energy equation in wood combustion models, and under what conditions is this assumption valid based on Peclet number analysis?",
+    "standard_answer": "The local thermal equilibrium assumption simplifies the energy equation by considering a single temperature for all phases (solid, liquid, gas), reducing computational cost by avoiding separate energy equations. This is valid when heat transfer between phases is rapid compared to internal gradients, typically justified by high Peclet numbers (Pe = d * u * ρ * c_p / λ), where convective transport dominates over conductive transport. For wood combustion, large Peclet numbers indicate that gas flow through pores efficiently couples phase temperatures, supporting equilibrium. However, deviations occur if phases have significantly different thermal capacities or if flow rates are low, leading to errors such as overestimated conversion times. The assumption is more accurate for smaller particles or higher flow velocities, but in large logs with slow heating, separate phase temperatures may be needed for precision.",
+    "original_text": {
+      "1": "Large Peclet numbers, defined as Pe = d u ρ c_p / λ for heat transfer, justify the simplifying assumption of a local thermal equilibrium.",
+      "2": "The assumption of thermal equilibrium reduces the number of required temperature equations to one, and consequently reduces the computational cost."
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "heat_transfer",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires specific knowledge of combustion science (wood combustion), heat transfer principles (local thermal equilibrium), and fluid mechanics (Peclet number analysis) applied to biomass energy systems. It cannot be answered with general ML/CS knowledge alone.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct, and compliant with other requirements."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_64352c35",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Numerical-models-for-thermochemical-degradation-of-therm_2017_Progress-in-En",
+      "paper_title": "Numerical-models-for-thermochemical-degradation-of-therm_2017_Progress-in-En"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:23:58.362829",
+      "answer_length": 921
+    }
+  },
+  {
+    "question_text": "What mechanisms explain the formation of intra-particle pressure peaks during wood devolatilization, and how do these pressures influence mass transfer and product distribution?",
+    "standard_answer": "Intra-particle pressure peaks during devolatilization arise from rapid volatile production within the porous wood structure, where gas generation rates exceed outflow capacities. Key mechanisms include: (1) Thermal degradation of biopolymers (cellulose, hemicellulose, lignin) releasing gases and tars, increasing local gas density. (2) Restricted permeability due to pore structure and possible tar condensation, reducing gas escape. (3) Temperature-dependent reaction kinetics accelerating gas production in heated regions. These pressure gradients drive convective mass transfer, affecting product distribution by altering residence times—higher pressures can force volatiles inward, leading to secondary reactions like tar cracking or condensation, which modify yields of char, gases, and tars. Conversely, lower pressures favor outward flow, reducing secondary reactions. Modeling this requires coupling Darcy's law for flow with reaction kinetics to capture transport-reaction interactions.",
+    "original_text": {
+      "1": "It has been experimentally shown that significant pressure peaks can form inside a wood log.",
+      "2": "The pressure has an influence on the distribution of the devolatilization products within the solid, since the mass transfer is linked to the effect of pressure gradients on mass transfer velocity and thus also on residence times of products in the interior of the particle."
+    },
+    "type": "reasoning",
+    "difficulty": 5,
+    "topic": "fluid_mechanics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires specific knowledge of wood devolatilization processes, including thermal degradation mechanisms of biopolymers (cellulose, hemicellulose, lignin), intra-particle pressure dynamics, mass transfer in porous media, and product distribution effects - all core topics in combustion science and thermochemical conversion of biomass.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer are well-aligned with domain expertise and paper content. The answer provides comprehensive mechanisms and correctly links pressure effects to mass transfer and product distribution as supported by the citations."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_20d785f9",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Numerical-models-for-thermochemical-degradation-of-therm_2017_Progress-in-En",
+      "paper_title": "Numerical-models-for-thermochemical-degradation-of-therm_2017_Progress-in-En"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:23:58.765426",
+      "answer_length": 996
+    }
+  }
+]

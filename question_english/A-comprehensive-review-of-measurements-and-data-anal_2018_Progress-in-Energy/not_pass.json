@@ -1,0 +1,44 @@
+[
+  {
+    "question_text": "Using the spherical flame method, calculate the unstretched laminar burning velocity for a stoichiometric methane-air mixture at 1 bar and 300 K. The stretched flame speed S_b is measured as 40 cm/s at a flame radius of 3 cm with a burned gas Markstein length L_b of 0.1 cm. Apply the linear stretch model S_b = S_b^0 - L_b K, where K = 2S_b/r_f. After obtaining S_b^0, determine S_L^0 using the density ratio σ = ρ_u/ρ_b = 5.8. Compare this calculated value with established methane-air combustion data from the literature and explain the physical significance of flame stretch correction in spherical flame propagation experiments, citing relevant sections from the provided paper.",
+    "standard_answer": "To calculate the unstretched laminar burning velocity, first determine the stretch rate K using K = 2S_b/r_f. Given S_b = 40 cm/s and r_f = 3 cm, K = (2 × 40)/3 = 80/3 ≈ 26.67 s^(-1). Next, apply the linear stretch model S_b = S_b^0 - L_b K. Rearranging for S_b^0 gives S_b^0 = S_b + L_b K. Substituting L_b = 0.1 cm and K ≈ 26.67 s^(-1), S_b^0 = 40 + (0.1 × 26.67) = 40 + 2.667 = 42.667 cm/s. The unstretched laminar burning velocity S_L^0 is related to S_b^0 by S_L^0 = S_b^0 × (ρ_b/ρ_u) = S_b^0/σ, where σ is the density ratio (ρ_u/ρ_b). For stoichiometric methane-air at 300 K and 1 bar, σ is approximately 5.8 based on equilibrium product composition and temperature from established combustion data. Thus, S_L^0 = 42.667/5.8 ≈ 7.36 cm/s. This calculated value of 7.36 cm/s is significantly lower than the established range of approximately 36-40 cm/s for stoichiometric methane-air mixtures at ambient conditions reported in the paper. The discrepancy arises because the given parameters (S_b = 40 cm/s, r_f = 3 cm, L_b = 0.1 cm) are not physically realistic for methane-air flames, as they would correspond to an unusually high stretch rate and Markstein length combination that does not align with typical experimental conditions. In actual spherical flame experiments, the flame stretch correction accounts for the effects of flame curvature and flow divergence on propagation speed. As stated in the paper: 'For spherical flame method, flame stretch rate is K= 2S_b/r_f. The S_b needs to be extrapolated to zero stretch to obtain unstretched flame speed, S_b^0 and burned gas Markstein length, L_b using any of models summarized in Table 1.' The physical significance is that 'flame stretch corrections are required for obtaining the accurate magnitude of the laminar burning velocity' because 'flame stretch and it is defined as logarithmic rate of change of flame area with time' affects the measured propagation speed. The linear model used here represents the first-order correction, though nonlinear models may be needed for more accurate extrapolation, especially for mixtures with non-unity Lewis numbers, as discussed in the paper's analysis of various stretch extrapolation models.",
+    "original_text": {
+      "1": "For spherical flame method, flame stretch rate is K= 2S_b/r_f. The S_b needs to be extrapolated to zero stretch to obtain unstretched flame speed, S_b^0 and burned gas Markstein length, L_b using any of models summarized in Table 1.",
+      "2": "flame stretch corrections are required for obtaining the accurate magnitude of the laminar burning velocity"
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question requires specific knowledge of combustion science (spherical flame method, laminar burning velocity calculation), fluid mechanics (flame stretch concepts), and thermodynamics (density ratios in combustion). It involves specialized equations and correction methods specific to combustion experiments.",
+      "answer_correct": false,
+      "answer_issues": [
+        {
+          "type": "factual_error",
+          "description": "The answer incorrectly states that 7.36 cm/s is 'significantly lower than the established range of approximately 36-40 cm/s' for stoichiometric methane-air at ambient conditions. According to standard combustion data and the paper's context, the actual laminar burning velocity for stoichiometric methane-air at 300K, 1 bar is around 36-40 cm/s, so the calculated 7.36 cm/s is indeed too low, but the answer misrepresents the comparison direction."
+        },
+        {
+          "type": "unsupported",
+          "description": "The answer makes claims about 'unusually high stretch rate and Markstein length combination that does not align with typical experimental conditions' but provides no citation from the paper to support these assertions about typical parameter ranges."
+        }
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "The question is domain-appropriate but the answer contains factual errors in the comparison and makes unsupported claims. Revise the answer to correctly compare the calculated value with established data and provide citations for claims about typical experimental parameters."
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_907b7f68",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "A-comprehensive-review-of-measurements-and-data-anal_2018_Progress-in-Energy",
+      "paper_title": "A-comprehensive-review-of-measurements-and-data-anal_2018_Progress-in-Energy"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:17:43.745177",
+      "answer_length": 2200
+    }
+  }
+]

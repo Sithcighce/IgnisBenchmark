@@ -1,0 +1,104 @@
+[
+  {
+    "question_text": "分析灰分沉积对催化颗粒过滤器性能的多重影响机制，包括对压降、过滤效率、传质阻力和热行为的影响。详细讨论灰分在壁内沉积、灰分层形成和灰分堵塞三种不同分布形式对过滤器性能的特定影响。",
+    "standard_answer": "灰分沉积通过三种主要形式影响过滤器性能：壁内灰分沉积通过降低壁渗透率增加压降，数学模型为1/κ_w = 1/κ_w0 + V̂_ash/κ_ash + V̂_soot/κ_soot。这种沉积减少有效过滤厚度，缩短深度过滤阶段持续时间。灰分层作为附加多孔介质，产生额外压降ΔP_ash = (μw_ash/κ_ash)v，同时提高过滤效率，因为灰分层本身成为有效过滤介质。灰分堵塞通过减少有效通道长度和改变流动分布影响性能，中通道堵塞导致局部流速急剧增加。在传质方面，灰分层作为扩散屏障，阻碍反应物到达催化剂表面，降低催化效率，有效扩散系数D_m,eff = (τ/ε)(1/D_m,bulk + 1/D_m,Kn)⁻¹因灰分堵塞而减小。热行为影响复杂：灰分增加整体热容量(ρc_p)_total = ρ_ashc_p,ash + ρ_wc_p,w，可能降低再生峰值温度，但灰分掩蔽催化剂会导致局部过热。灰分组成也影响性能，镁基灰分促进soot再生，而钙基灰分可能抑制反应。灰分通过烧结和老化过程改变微观结构，影响长期性能预测的准确性。",
+    "original_text": {
+      "1": "Ash deposits in the filter can increase filter pressure drop via different means depending on their form and location. Ash deposits within the filter wall can lead to a reduction in the permeability of the filter wall. The ash layer is a porous medium that gas has to flow through in addition to the soot cake. The ash plug can influence the momentum balance in inlet channels via reduction of the effective inlet channel length.",
+      "2": "The formation of an ash layer generally leads to an increase in filtration efficiency [111,121,271,272]. Deep bed filtration is assumed to be negligible once the ash layer is established. When the ash layer has not been established, ash deposition within the filter wall can reduce the duration of deep bed filtration [273]."
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及催化颗粒过滤器的性能分析，需要燃烧工程、传热传质、流体力学、多孔介质流动、化学反应工程等领域的专业知识，特别是关于灰分沉积对过滤器压降、过滤效率、传质阻力和热行为的多重影响机制",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量优秀，全面覆盖了问题要求的各个方面，包含详细的数学表达式和物理机制解释，与原文引用和论文摘录内容一致，无需修改"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_7dfcce89",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Modelling-treatment-of-deposits-in-particulate-f_2023_Progress-in-Energy-and",
+      "paper_title": "Modelling-treatment-of-deposits-in-particulate-f_2023_Progress-in-Energy-and"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:37:00.081138",
+      "answer_length": 467
+    },
+    "merge_source": "question_reverse"
+  },
+  {
+    "question_text": "推导soot cake层在颗粒过滤器中的压降数学模型，考虑cake孔隙率、渗透率、厚度和气体性质的影响。详细分析soot cake的微观结构（宏观孔隙率和微观孔隙率）如何影响其有效渗透率，并讨论温度对cake渗透率的影响机制。",
+    "standard_answer": "soot cake层的压降由达西定律描述：ΔP_cake = (μ/κ_cake)∫₀^{w_cake} v_cake(y)dy。对于方形通道中的soot cake，压降可简化为：ΔP_cake = (μv_cake,top)/(2κ_cake)(d - 2w_cake)ln[d/(d - 2w_cake)]，其中v_cake,top是cake顶部的气体速度，w_cake是cake厚度，d是通道直径。soot cake的微观结构通过双重孔隙率模型描述：ε_cake = 1 - (1 - ε_cake,macro)(1 - ε_cake,micro)，其中ε_cake,macro ≈ 0.65是soot聚集体间的宏观孔隙率，ε_cake,micro ≈ 0.81是聚集体内部的微观孔隙率，计算得到ε_cake = 0.93。有效渗透率由Carmen-Kozeny方程计算：κ_cake = (ε_cake³/(1-ε_cake)²)(d_p,cake²/36)，其中d_p,cake是平均颗粒直径，常数36适用于球形颗粒堆积。温度影响通过气体平均自由程变化体现：κ_cake = κ_cake0[1 + C(P0/P)√(μT/M_r)]，其中C是数值参数，考虑了滑移现象。实验测量显示soot cake孔隙率为0.93-0.97，高孔隙率导致较高渗透率。温度升高降低气体粘度但增加平均自由程，综合效应需通过上述公式精确计算。soot cake的堆积密度也影响渗透率，ballistic沉积产生致密cake（低渗透率），而扩散受限沉积形成疏松结构（高渗透率），这由Konstandopoulos等人通过Peclet数相关性实验证实。",
+    "original_text": {
+      "1": "The pressure drop across the soot cake is usually described by Darcy's law (Eq. (41)), which requires the knowledge of the thickness and the permeability of the soot cake [153–156]. Assuming constant gas density across the soot cake, the pressure drop across the soot cake formed in square channels is [157] ΔPcake = ∫ y=wcake y=0 μ κcake vcake(y)dy = μvcake,top 2κcake (d − 2wcake ) ln ( d d − 2wcake ) ,",
+      "2": "The actual porosity of the soot cake depends on both the macro-porosity between soot aggregates εcake,macro and the micro-porosity within the soot aggregates εcake,micro εcake = 1 − ( 1 − εcake,macro ) ( 1 − εcake,micro ) , the true porosity of the cake becomes 0.93 if εcake,macro = 0.65 and εcake,micro = 0.81 are assumed."
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "fluid_mechanics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及颗粒过滤器中的soot cake压降数学模型推导，需要考虑孔隙率、渗透率、厚度和气体性质等参数，以及微观结构分析和温度影响机制，这需要燃烧工程、流体力学、多孔介质传输和颗粒过滤领域的专业知识。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量良好，无需修改。答案准确引用了相关文献，提供了详细的数学模型推导，正确解释了soot cake的微观结构特征和温度影响机制，符合专业领域要求。"
+    },
+    "retry_count": 2,
+    "question_id": "deepseek_q_b9e963e5",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Modelling-treatment-of-deposits-in-particulate-f_2023_Progress-in-Energy-and",
+      "paper_title": "Modelling-treatment-of-deposits-in-particulate-f_2023_Progress-in-Energy-and"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:38:41.978662",
+      "answer_length": 719
+    },
+    "merge_source": "question_reverse"
+  },
+  {
+    "question_text": "在柴油颗粒过滤器（DPF）的球形单元收集器模型中，如何基于原文引用精确描述颗粒沉积对过滤器壁孔隙率和渗透率的影响？请详细推导收集器直径和壁孔隙率随颗粒沉积质量变化的函数关系，并解释这些参数变化对过滤效率和压降的物理影响机制。推导过程需明确假设条件（如低雷诺数、均匀沉积等）。",
+    "standard_answer": "在球形单元收集器模型中，颗粒沉积对过滤器壁特性的影响通过以下数学关系精确描述。首先，收集器直径随颗粒沉积质量增加而增大，根据原文引用1：'The diameter of the collector dc is often treated as a function of the mass of trapped particles [107,110] dc = 2 [ 3 4π msw ρsw ( dc0 2 )3 + ] 1 3 , where dc0 is the collector diameter without any trapped particles, msw is the mass of particle deposits and ρsw is the packing density of particle deposits within the filter wall.' 推导过程：假设颗粒均匀沉积在收集器表面，形成球形壳层，则沉积颗粒体积为 msw/ρsw，清洁收集器体积为 (4/3)π(dc0/2)^3，总体积为两者之和，即 (4/3)π(dc/2)^3 = msw/ρsw + (4/3)π(dc0/2)^3，整理得 dc = 2[(3/(4π))(msw/ρsw + (dc0/2)^3)]^(1/3)。壁孔隙率εw随收集器直径增大而减小，根据原文引用2：'The local wall porosity εw which is another important input for the filtration model can be calculated from the local collector diameter εw = 1 − ( 1 − εw0 ) ( dc dc0 )3 , where the subscript 0 denotes clean wall condition.' 推导过程：孔隙率定义为孔隙体积与总体积之比，清洁壁孔隙体积为 εw0V0，其中V0为清洁壁总体积。沉积后，固体体积增加导致孔隙体积减少，但总体积不变（假设壁结构刚性），因此 εw = 1 - (固体体积/总体积) = 1 - [(1-εw0)(dc/dc0)^3]，因为固体体积与收集器直径立方成正比。物理影响机制：收集器直径增大和孔隙率降低减少流动通道，增加流体流动阻力，从而提高过滤效率（更多颗粒被拦截）但增加压降。压降变化可用达西定律描述：ΔP = (μw/κ)v，其中仅包含粘性损失项，适用于多孔介质流动的低雷诺数条件（Re < 1），假设沉积均匀且忽略惯性项。这种耦合关系决定了DPF在深度过滤阶段的性能演变，孔隙率降低和流动阻力增加共同作用，增强颗粒捕获能力，但显著提高压降。",
+    "original_text": {
+      "1": "The diameter of the collector dc is often treated as a function of the mass of trapped particles [107,110] dc = 2 [ 3 4π msw ρsw ( dc0 2 )3 + ] 1 3 , where dc0 is the collector diameter without any trapped particles, msw is the mass of particle deposits and ρsw is the packing density of particle deposits within the filter wall.",
+      "2": "The local wall porosity εw which is another important input for the filtration model can be calculated from the local collector diameter εw = 1 − ( 1 − εw0 ) ( dc dc0 )3 , where the subscript 0 denotes clean wall condition."
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "fluid_mechanics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及柴油颗粒过滤器(DPF)的球形单元收集器模型，需要燃烧工程、多孔介质流体力学、颗粒过滤机理、传质过程等专业领域知识，属于典型的燃烧/传热/流体/能源工程领域问题",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量优秀，无需修改。答案准确引用了原文公式，详细推导了收集器直径和壁孔隙率随颗粒沉积质量变化的函数关系，正确解释了物理影响机制，并明确说明了低雷诺数、均匀沉积等假设条件，完全符合问题要求"
+    },
+    "retry_count": 2,
+    "question_id": "deepseek_q_2d3132fc",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Modelling-treatment-of-deposits-in-particulate-f_2023_Progress-in-Energy-and",
+      "paper_title": "Modelling-treatment-of-deposits-in-particulate-f_2023_Progress-in-Energy-and"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:38:42.475666",
+      "answer_length": 1167
+    },
+    "merge_source": "question_reverse"
+  }
+]

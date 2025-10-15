@@ -1,0 +1,104 @@
+[
+  {
+    "question_text": "基于论文中关于燃烧温度对飞灰形成机制的影响，详细分析燃烧温度如何通过挥发-冷凝理论影响不同元素在飞灰颗粒中的分布，并说明温度对元素富集行为的影响机制。",
+    "standard_answer": "根据挥发-冷凝理论，燃烧温度通过影响元素的挥发性和冷凝行为决定其在飞灰颗粒中的分布。论文指出：'Volatilization-condensation theory distinguishes three groups of elements [151,152]: Group I elements (Al, Ca, Fe, K, Mg, Na, and Ti), which are classified as 'lithophiles', show little or no enrichment in smaller fly ash particles; Group II elements (As, Cd, Mn, Pb, Sb, and Se) are defined as 'chalcophiles' and display increasing concentration with decreasing particle size; and, finally, Group III elements (Be, Cu, Ni, V, and Co) exhibit intermediate behavior, being enriched in smaller particles but to a lesser extent than elements in Group II.' 这种分布机制表明，不同元素根据其挥发特性在飞灰颗粒中呈现不同的富集模式。论文进一步说明：'However, combustion temperature affects the extent of volatilisation of mineral elements and thus changes the characteristics of the ash produced [153]. The finer fly ash fractions are enriched in glass, whereas minerals such as mullite, quartz, and lime characterize coarser fractions.' 温度升高时，挥发性元素的挥发程度增强，导致更多元素从燃烧颗粒中挥发出来，随后在冷却过程中优先冷凝在细小颗粒表面，形成表面富集层。这种温度依赖的分布机制对飞灰的后续利用具有重要影响，因为不同粒径和元素分布的飞灰具有不同的反应活性。具体而言，温度升高会增强第II组元素的挥发和冷凝过程，使其在细小颗粒中的富集程度更高，而第I组元素由于挥发性较低，其分布受温度影响较小。",
+    "original_text": {
+      "1": "Volatilization-condensation theory distinguishes three groups of elements [151,152]: Group I elements (Al, Ca, Fe, K, Mg, Na, and Ti), which are classified as 'lithophiles', show little or no enrichment in smaller fly ash particles; Group II elements (As, Cd, Mn, Pb, Sb, and Se) are defined as 'chalcophiles' and display increasing concentration with decreasing particle size; and, finally, Group III elements (Be, Cu, Ni, V, and Co) exhibit intermediate behavior, being enriched in smaller particles but to a lesser extent than elements in Group II.",
+      "2": "However, combustion temperature affects the extent of volatilisation of mineral elements and thus changes the characteristics of the ash produced [153]. The finer fly ash fractions are enriched in glass, whereas minerals such as mullite, quartz, and lime characterize coarser fractions."
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及燃烧温度对飞灰形成机制的影响、挥发-冷凝理论、元素在飞灰颗粒中的分布以及温度对元素富集行为的影响机制，这些都属于燃烧科学、能源工程和材料科学的专业领域，需要燃烧过程、热力学、传质传热等专业知识。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": ""
+    },
+    "retry_count": 1,
+    "question_id": "deepseek_q_7865358a",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "State-of-the-art-applications-of-fly-ash-from-coal-a_2018_Progress-in-Energy",
+      "paper_title": "State-of-the-art-applications-of-fly-ash-from-coal-a_2018_Progress-in-Energy"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:17:32.928165",
+      "answer_length": 1116
+    },
+    "merge_source": "question_reverse"
+  },
+  {
+    "question_text": "基于飞灰颗粒在燃烧系统中的流体动力学行为，分析静电除尘器中飞灰颗粒的收集效率与颗粒粒径、电场强度和气流速度的关系，推导收集效率的数学表达式，并详细解释Cunningham修正因子的物理意义及其在收集效率中的作用。",
+    "standard_answer": "静电除尘器中飞灰颗粒的收集效率由颗粒的流体动力学行为和电场作用共同决定。根据Deutsch-Anderson方程，收集效率η可表示为：η = 1 - exp(-A·w/v)，其中A为集尘板面积（m²），w为颗粒驱进速度（m/s），v为气流速度（m/s）。驱进速度w的表达式为：w = (q·E)/(3πμd_p)·C_c，其中q为颗粒电荷（C），E为电场强度（V/m），μ为气体粘度（Pa·s），d_p为颗粒直径（m），C_c为Cunningham修正因子。将驱进速度表达式代入收集效率公式得：η = 1 - exp[-A·(q·E·C_c)/(3πμd_p·v)]。该公式的物理意义表明：收集效率随电场强度E增大而提高，因为更强的电场增强了颗粒向集尘板的迁移力；收集效率随气流速度v增大而降低，因为颗粒在电场中的停留时间减少。对于颗粒粒径d_p，收集效率呈现U型曲线：亚微米颗粒由于扩散作用增强而效率较高，微米级颗粒效率最低，大颗粒因惯性碰撞效率再次升高。Cunningham修正因子C_c的物理意义是考虑气体分子平均自由程与颗粒粒径可比拟时，气体对颗粒的阻力减小，导致颗粒迁移速度增加。当颗粒粒径远大于气体分子平均自由程时，C_c≈1；当颗粒粒径接近或小于气体分子平均自由程时，C_c>1，显著影响亚微米颗粒的收集效率。原文引用支持：'Biomass fly ash consists of the fine ash fraction (i.e. particles with a median size below 4 μm–100 μm [91–93]) that 'flies' from the biomass combustion chamber and is captured by emission control devices such as electrostatic precipitators (ESPs) [94,95].' 以及 'Coal ash is commonly divided into two categories: bottom ash and fly ash. Bottom ash is composed of the residual coal ash that settles on the bottom of the boiler after the combustion process, while fly ash is the finer coal ash that floats into the exhaust stacks and is collect by electrostatic precipitators during the coal burning process.'",
+    "original_text": {
+      "1": "Biomass fly ash consists of the fine ash fraction (i.e. particles with a median size below 4 μm–100 μm [91–93]) that 'flies' from the biomass combustion chamber and is captured by emission control devices such as electrostatic precipitators (ESPs) [94,95].",
+      "2": "Coal ash is commonly divided into two categories: bottom ash and fly ash. Bottom ash is composed of the residual coal ash that settles on the bottom of the boiler after the combustion process, while fly ash is the finer coal ash that floats into the exhaust stacks and is collect by electrostatic precipitators during the coal burning process."
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "fluid_mechanics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及静电除尘器中飞灰颗粒的流体动力学行为、收集效率分析、数学表达式推导以及Cunningham修正因子的物理意义，这些都需要燃烧工程、气溶胶力学、静电除尘技术和流体动力学等专业领域的深入知识。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量优秀，无需修改。"
+    },
+    "retry_count": 2,
+    "question_id": "deepseek_q_df1b4788",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "State-of-the-art-applications-of-fly-ash-from-coal-a_2018_Progress-in-Energy",
+      "paper_title": "State-of-the-art-applications-of-fly-ash-from-coal-a_2018_Progress-in-Energy"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:18:31.021527",
+      "answer_length": 1176
+    },
+    "merge_source": "question_reverse"
+  },
+  {
+    "question_text": "建立飞灰合成沸石过程的CFD模型，详细描述模型中需要包含的输运方程、反应动力学源项和相变模型，并解释如何通过CFD模拟优化合成工艺参数（包括网格划分、边界条件设置和收敛标准等具体方法）。",
+    "standard_answer": "飞灰合成沸石的CFD模型需要耦合质量、动量、能量和组分输运方程。连续性方程：∂ρ/∂t + ∇·(ρv) = 0；动量方程：ρ(∂v/∂t + v·∇v) = -∇p + ∇·τ + ρg；能量方程：ρc_p(∂T/∂t + v·∇T) = ∇·(k∇T) + S_h；组分输运方程：∂(ρY_i)/∂t + ∇·(ρvY_i) = ∇·(ρD_i∇Y_i) + S_i。反应动力学源项S_i需基于文献中描述的溶解-沉淀机制：'Fig. 10 shows a simplified scheme of the coal fly ash zeolitization mechanism based on Al and Si dissolution, geopolymer formation, crystalline structure nucleation, and, finally, zeolite crystal growth.' 具体反应速率表达式应基于实验数据拟合，例如硅铝溶解速率可表示为r_diss = k_diss·exp(-E_diss/RT)·(1 - C/C_sat)，凝胶形成和结晶速率需根据具体反应条件确定参数。相变模型需考虑非晶相向晶相的转变，采用Eulerian多相流模型描述固液两相流动，其中固相体积分数通过输运方程求解，并考虑相变过程中的质量传递和能量变化。'The literature agrees that fly ash pre-fusion treatment improves zeolites synthesis performance. Indeed, numerous experiments have demonstrated that, via fusion with alkaline hydroxides, fly ash can be converted into large amounts of silicate and aluminosilicate.' 通过CFD模拟优化工艺参数时，首先进行网格独立性验证，采用非结构化网格在反应器壁面和搅拌器附近加密，确保y+<5。边界条件设置：入口为质量流量入口，出口为压力出口，壁面采用无滑移边界条件。收敛标准为所有方程的残差降至10^-6以下，且关键监测点（如出口浓度、温度）变化小于0.1%。通过参数化研究分析温度（80-150°C）、碱浓度（1-5M NaOH）、搅拌速率（100-500 rpm）对局部过饱和度分布和结晶速率的影响，预测最佳操作条件以提高沸石产率和结晶度。CFD模拟结果需与实验数据对比验证，例如通过XRD分析沸石结晶度与模拟预测的结晶速率关联，确保模型准确性。",
+    "original_text": {
+      "1": "Fig. 10 shows a simplified scheme of the coal fly ash zeolitization mechanism based on Al and Si dissolution, geopolymer formation, crystalline structure nucleation, and, finally, zeolite crystal growth.",
+      "2": "The literature agrees that fly ash pre-fusion treatment improves zeolites synthesis performance. Indeed, numerous experiments have demonstrated that, via fusion with alkaline hydroxides, fly ash can be converted into large amounts of silicate and aluminosilicate."
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "CFD_modeling",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及CFD建模、输运方程、反应动力学、相变模型以及工艺参数优化，需要燃烧、传热、流体力学、计算流体动力学和化学反应工程等领域的专业知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": ""
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_a9f9d538",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "State-of-the-art-applications-of-fly-ash-from-coal-a_2018_Progress-in-Energy",
+      "paper_title": "State-of-the-art-applications-of-fly-ash-from-coal-a_2018_Progress-in-Energy"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:19:16.511626",
+      "answer_length": 1148
+    },
+    "merge_source": "question_reverse"
+  }
+]

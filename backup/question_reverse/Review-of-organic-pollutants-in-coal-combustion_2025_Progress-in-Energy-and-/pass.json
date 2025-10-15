@@ -1,0 +1,134 @@
+[
+  {
+    "question_text": "基于论文中关于吸附剂注入技术去除VOCs的机理分析，请从多孔介质传质和表面化学角度详细解释为什么中孔和大孔结构比微孔结构具有更高的VOCs吸附速率，并建立考虑内外扩散阻力的吸附动力学模型来描述吸附剂在烟气中的瞬态吸附行为。",
+    "standard_answer": "吸附剂孔结构对VOCs吸附速率的影响可以从传质阻力和表面化学两方面分析。论文指出\"吸附剂丰富的介孔和大孔非常有利于吸附质的颗粒内扩散，这提高了传质速率并加速了有机污染物的去除速率\"。建立完整的吸附动力学模型需要考虑三个主要步骤：外扩散阶段，VOCs分子通过对流、轴向扩散和颗粒扩散接近吸附剂颗粒表面，传质系数可用k_f = (2.0 + 0.6·Re^(1/2)·Sc^(1/3))·(D_AB/d_p)计算；内扩散阶段，VOCs分子在吸附剂孔隙内移动，根据孔道尺寸不同，扩散机制各异：微孔（<2nm）中以活化扩散为主，D_micro = D_0·exp(-E_a/RT)；中孔（2-50nm）中以Knudsen扩散为主，D_knud = (d_pore/3)·(8RT/πM)^(1/2)；大孔（>50nm）中以分子扩散为主。总有效扩散系数可表示为1/D_eff = 1/D_micro + 1/D_knud + 1/D_mol。吸附平衡阶段，VOCs分子通过范德华力、π络合、氢键和静电相互作用吸附在吸附剂颗粒的孔隙表面。论文强调\"典型吸附剂（如活性炭）的孔隙大多在微孔范围（<2nm），这可能会减慢VOC分子进入活性炭结构的迁移速率\"。完整的瞬态吸附模型可表示为：∂q/∂t = D_eff·(∂²q/∂r² + 2/r·∂q/∂r)，边界条件：-D_eff·∂q/∂r|_(r=R) = k_f·(C_b - C_s)，初始条件：q(r,0)=0。该模型能准确预测吸附剂在复杂烟气环境中的动态吸附性能，为吸附剂设计和优化提供理论指导。",
+    "original_text": {
+      "1": "The abundant mesopores and macropores in an adsorbent are very beneficial to the intra-granular diffusion of adsorbates, this improves the mass transfer rate and accelerates the removal rate of organic pollutants",
+      "2": "The pores of a typical adsorbent, such as activated carbon are mostly in the microporous range (<2 nm), which may slow down the migration rate of VOC molecules into the activated carbon structure"
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及多孔介质传质、表面化学、吸附动力学模型建立，需要燃烧工程、传质学、吸附理论和化学反应工程等专业知识，属于典型的能源与环境工程领域",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "无需改进，答案质量优秀，准确解释了孔结构对吸附速率的影响机制，并建立了完整的吸附动力学模型，引用了论文相关内容"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_63fb5b72",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Review-of-organic-pollutants-in-coal-combustion_2025_Progress-in-Energy-and-",
+      "paper_title": "Review-of-organic-pollutants-in-coal-combustion_2025_Progress-in-Energy-and-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:19:41.597516",
+      "answer_length": 671
+    }
+  },
+  {
+    "question_text": "根据论文中关于煤热解过程中有机污染物释放特性的描述，请分析VOCs和PAHs在煤热解和燃烧过程中的形成机制、影响因素及排放特性，并基于论文内容阐述现有空气污染控制设备对有机污染物的协同去除效果。",
+    "standard_answer": "根据论文内容，煤热解是煤燃烧过程的重要初始阶段，有机污染物的形成和释放主要受温度、煤质、加热速率和停留时间等因素影响。论文指出：'Pyrolysis is an important initial stage of the coal combustion process. In order to study the release mechanism of organic compounds in coal combustion, the composition and content of organic compounds in pyrolysis gas have been studied extensively'。在热解过程中，温度是关键影响因素，研究表明：'With increase in temperature within this temperature range, the alkanes (CnH2n+2, n > 1) and aromatic hydrocarbon (BTEX) reached a maximum value at around 520°C, whereas the concentration of the CH4 reached its maximum value closer to 600°C'。VOCs主要在300-600°C温度范围内释放，包括烷烃、烯烃、芳香烃和酚类化合物，其中烷烃和芳香烃在520°C左右达到最大值。PAHs的形成更为复杂，涉及自由态PAHs的释放和通过化学反应生成的新PAHs，其浓度在400-1200°C范围内先增加后减少，在800°C左右达到峰值。煤质对有机污染物排放有显著影响，烟煤由于芳香结构丰富，PAHs排放量较高；褐煤由于芳香化程度低且富含含氧芳香碳，酚类物质含量较高。现有空气污染控制设备对有机污染物具有协同去除效果：SCR装置通过催化氧化可去除55.8-87.6%的VOCs；ESP和WESP通过冷凝和吸附作用可去除74.7-89.8%的PAHs；WFGD通过喷淋冷却和石膏吸附可去除36.3-81.5%的CPM。不同煤种、燃烧条件和APCDs配置导致有机污染物排放浓度存在较大差异，VOCs排放浓度范围为0.01-16.29 mg/m³，PAHs为0.42-43.3 μg/m³，CPM为5.90-65.1 mg/m³。",
+    "original_text": {
+      "1": "Pyrolysis is an important initial stage of the coal combustion process. In order to study the release mechanism of organic compounds in coal combustion, the composition and content of organic compounds in pyrolysis gas have been studied extensively",
+      "2": "With increase in temperature within this temperature range, the alkanes (CnH2n+2, n > 1) and aromatic hydrocarbon (BTEX) reached a maximum value at around 520°C, whereas the concentration of the CH4 reached its maximum value closer to 600°C"
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及煤热解和燃烧过程中有机污染物的形成机制、影响因素及排放特性，需要燃烧科学、能源工程、环境化学等领域的专业知识，特别是关于VOCs和PAHs的生成机理、温度影响、煤质特性以及空气污染控制设备的协同去除效果。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": ""
+    },
+    "retry_count": 1,
+    "question_id": "deepseek_q_f171e955",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Review-of-organic-pollutants-in-coal-combustion_2025_Progress-in-Energy-and-",
+      "paper_title": "Review-of-organic-pollutants-in-coal-combustion_2025_Progress-in-Energy-and-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:20:37.786973",
+      "answer_length": 1014
+    }
+  },
+  {
+    "question_text": "基于论文中关于LLE-ESP和传统ESP对PAHs去除效率的对比分析，请从流体力学和颗粒动力学角度详细解释为什么LLE-ESP系统（去除效率88-98%）比传统ESP（去除效率45.6-97.6%）对PAHs具有更好的捕获性能？需要分析温度降低对飞灰电阻率、烟气流速的影响机制，并确保所有物理解释与原文描述一致。",
+    "standard_answer": "LLE-ESP系统对PAHs的优异捕获性能源于温度降低带来的电学和流体力学优化。首先，温度降低显著改善飞灰的电阻特性。论文明确指出'An LLT-ESP system reduces the temperature of the flue gas (at the inlet of the LLE-ESP device) below the acid dew point using a flue gas cooler positioned before the ESP. This had the effect of reducing the specific resistance of fly ash and the flow velocity of flue gas'。当烟气温度降至酸露点以下时，烟气中酸性组分在飞灰表面凝结形成导电层，显著降低飞灰比电阻，有效抑制反电晕现象，提高颗粒充电效率。\n\n在流体力学方面，温度降低导致烟气密度增加（根据理想气体状态方程ρ = P/(RT)，温度T降低时密度ρ增加），在相同质量流量下，根据连续性方程ρAv = constant，流速v相应降低。流速降低显著延长了颗粒在电场中的停留时间，为PAHs的充分充电和迁移提供了更充足的时间。\n\n此外，论文证实'The lower flue gas temperature and higher fly ash capture efficiency can further improve the capture of VOCs and PAHs. Li et al. [38] showed that LLT-ESP has a good removal effect on total PAH emissions, in which the removal rate of gas phase PAHs is about 88 % and particulate phase PAHs of 98 %'。这表明较低温度下飞灰捕获效率的提高进一步增强了PAHs的去除效果。综合这些因素，LLE-ESP通过优化电学和流体力学条件的协同作用，实现了对PAHs的高效去除。",
+    "original_text": {
+      "1": "An LLT-ESP system reduces the temperature of the flue gas (at the inlet of the LLE-ESP device) below the acid dew point using a flue gas cooler positioned before the ESP. This had the effect of reducing the specific resistance of fly ash and the flow velocity of flue gas",
+      "2": "The lower flue gas temperature and higher fly ash capture efficiency can further improve the capture of VOCs and PAHs. Li et al. [38] showed that LLT-ESP has a good removal effect on total PAH emissions, in which the removal rate of gas phase PAHs is about 88 % and particulate phase PAHs of 98 %"
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "fluid_mechanics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及静电除尘器(ESP)系统、流体力学、颗粒动力学、飞灰电阻率、烟气温度影响机制等，需要燃烧工程、传热传质、流体力学和静电除尘技术等能源与环境工程领域的专业知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量优秀，无需修改。答案准确解释了温度降低对飞灰电阻率和烟气流速的影响机制，正确引用了原文内容，从电学和流体力学角度详细分析了LLE-ESP系统的优势，所有物理解释与原文描述一致"
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_384f0e1f",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Review-of-organic-pollutants-in-coal-combustion_2025_Progress-in-Energy-and-",
+      "paper_title": "Review-of-organic-pollutants-in-coal-combustion_2025_Progress-in-Energy-and-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:22:38.654213",
+      "answer_length": 930
+    }
+  },
+  {
+    "question_text": "基于论文中关于SCR催化剂对VOCs和PAHs的不同去除效果，请从化学反应机理角度详细分析：1）为什么SCR装置对VOCs表现出良好的氧化去除效率（55.8-87.6%），需要结合V2O5-WO3/TiO2催化剂表面特性和Mars-van Krevelen、Langmuir-Hinshelwood、Eley-Rideal等氧化机制进行解释；2）尽管APCDs系统对PAHs的整体去除效率达到74.7-89.8%，但在SCR装置中特定PAHs浓度反而增加的现象如何通过HACA、HAVA、MAC和PAC等PAHs生长机制解释？需要结合催化剂表面反应机理、PAHs分子生长路径以及SCR装置条件（温度、氧含量）对PAHs生成与去除平衡的影响进行综合分析，并明确区分烟气与固相（飞灰/底灰）中PAHs的归趋差异。",
+    "standard_answer": "SCR装置对VOCs和PAHs的不同处理效果源于其反应机理和存在形态的本质差异。对于VOCs，在SCR装置的高温条件（260-380°C）下，V2O5-WO3/TiO2催化剂通过三种氧化机制有效降解VOCs分子：Mars-van Krevelen机制中VOCs与催化剂表面晶格氧反应形成氧空位，随后气相氧再生完成氧化循环；Langmuir-Hinshelwood机制中VOCs和氧共吸附在催化剂表面发生氧化反应；Eley-Rideal机制中气相VOCs与吸附氧反应。这些机制在催化剂表面V5+活性位点上协同作用，实现55.8-87.6%的VOCs去除效率。\n\n对于PAHs，情况更为复杂。论文数据显示APCDs系统对PAHs的整体去除效率为74.7-89.8%，但SCR装置中特定PAHs浓度反而增加。这种矛盾现象可通过PAHs在高温环境下的生长机制解释：HACA机制中乙炔在SCR催化剂存在下加速PAHs分子生长，通过氢提取和乙炔加成形成更大环结构；HAVA机制在低氧含量条件下促进LPAHs合成；MAC机制通过甲基加成和环化反应生成新PAHs；PAC机制中苯基加成和环化在高温和颗粒环境下有利于从低环到高环的聚合。具体表现为：\"Field tests on PAHs concentration in the flue gas at the inlet and outlet of a SCR device showed that the 2, 4, 5, and 6-ring PAHs were significantly increased except for 3-ring PAHs concentration which were reduced in concentration\"。这些生长机制的存在说明SCR装置的高温环境不仅提供了氧化条件，同时也为PAHs的分子重组和生长创造了有利条件。\"Currently, the growth mechanisms of PAHs are divided into: HACA [148,149], hydrogen extraction and hydrogen abstraction acetylene addition (HAVA) [150], methyl addition/cyclization (MAC) [151], and phenyl addition/cyclization (PAC) [152]\"。3环PAHs浓度减少是因为其分子结构相对不稳定，在高温下易被氧化分解，而2、4、5、6环PAHs由于热稳定性更高，在催化剂表面通过生长机制生成速率超过氧化去除速率，导致净浓度增加。\n\n需要特别强调的是，论文明确指出\"PAHs are mainly concentrated in fly ash and bottom ash\"，而SCR装置中观察到的PAHs浓度增加现象主要针对烟气相PAHs。在固相（飞灰/底灰）中，PAHs主要通过ESP等设备被有效去除。SCR装置对烟气相PAHs的净效果是氧化去除与新生成之间的动态平衡，在特定高温和催化剂条件下新生成过程占主导，这解释了为什么尽管APCDs系统整体去除效率高，但在SCR装置中特定PAHs浓度反而增加的现象。",
+    "original_text": {
+      "1": "Field tests on PAHs concentration in the flue gas at the inlet and outlet of a SCR device showed that the 2, 4, 5, and 6-ring PAHs were significantly increased except for 3-ring PAHs concentration which were reduced in concentration",
+      "2": "Currently, the growth mechanisms of PAHs are divided into: HACA [148,149], hydrogen extraction and hydrogen abstraction acetylene addition (HAVA) [150], methyl addition/cyclization (MAC) [151], and phenyl addition/cyclization (PAC) [152]"
+    },
+    "type": "reasoning",
+    "difficulty": 5,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及SCR催化剂、VOCs和PAHs的化学反应机理、催化剂表面特性、氧化机制（Mars-van Krevelen、Langmuir-Hinshelwood、Eley-Rideal）、PAHs生长机制（HACA、HAVA、MAC、PAC）、烟气条件（温度、氧含量）等，需要燃烧工程、催化化学、污染物控制等能源与环境工程领域的专业知识。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "无需改进。答案准确解释了VOCs氧化机制和PAHs浓度增加的矛盾现象，结合了催化剂表面反应、生长机制及烟气/固相归趋差异，引用原文支持关键论点，符合问题要求。"
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_f71fa822",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Review-of-organic-pollutants-in-coal-combustion_2025_Progress-in-Energy-and-",
+      "paper_title": "Review-of-organic-pollutants-in-coal-combustion_2025_Progress-in-Energy-and-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:23:04.107254",
+      "answer_length": 1377
+    }
+  }
+]

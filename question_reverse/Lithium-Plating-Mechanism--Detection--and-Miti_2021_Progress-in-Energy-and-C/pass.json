@@ -1,0 +1,167 @@
+[
+  {
+    "question_text": "解释锂沉积过程中枝晶生长的流体力学机理，包括界面不稳定性和浓度梯度驱动的对流效应。分析枝晶形貌（苔藓状、颗粒状、树枝状）与电流密度和温度的关系，并讨论枝晶穿透隔膜导致内部短路的流体动力学过程。",
+    "standard_answer": "锂沉积过程中枝晶生长的流体力学机理涉及界面不稳定性和浓度梯度驱动的对流效应。根据Mullins-Sekerka稳定性理论，平坦沉积界面在存在浓度梯度时可能失稳，形成枝晶。浓度过饱和梯度∇c驱动对流，影响枝晶尖端生长速率。枝晶形貌与电流密度和温度密切相关：在低电流密度下，界面动力学控制生长，形成苔藓状或颗粒状沉积；在高电流密度下，扩散控制主导，形成树枝状结构。树枝状枝晶具有高纵横比，易穿透隔膜。枝晶穿透隔膜的过程涉及多孔介质中的流体-结构相互作用：枝晶生长产生的应力可能导致隔膜变形或 pore closure，进一步局部化电流密度，加速枝晶生长。当枝晶穿透隔膜并与正极接触时，形成内部短路。短路电流密度isc = (Ucathode - Uanode) / Rshort，其中Rshort为短路电阻。局部焦耳热q˙ = isc² Rshort可能导致热失控。论文中提到，树枝状结构比苔藓状和颗粒状更危险，因为它们易穿透隔膜，引发内部短路。通过优化电解质组成（如添加LiFSI、FEC）和充电协议（如脉冲充电），可调节界面稳定性，抑制枝晶生长。",
+    "original_text": {
+      "1": "Morphology is determined by the current rate. Mossy and granular lithium form at low current rates, whereas dendrites form at high current rates.",
+      "2": "Dendritic growth can be particularly destructive to the cell because it can penetrate the separator and reach the cathode electrode, causing an internal short-circuit and rapid heating of the cell."
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "fluid_mechanics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及锂沉积过程中的流体力学机理、界面不稳定性、浓度梯度驱动的对流效应、枝晶形貌与电流密度/温度的关系，以及枝晶穿透隔膜的流体动力学过程，需要燃烧/传热/流体/CFD/能源领域的专业知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "无需改进，答案质量良好"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_66c6beb6",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Lithium-Plating-Mechanism--Detection--and-Miti_2021_Progress-in-Energy-and-C",
+      "paper_title": "Lithium-Plating-Mechanism--Detection--and-Miti_2021_Progress-in-Energy-and-C"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:41:47.691519",
+      "answer_length": 473
+    }
+  },
+  {
+    "question_text": "基于多孔电极理论和电解质中的离子传输，建立锂离子在负极界面处浓度分布的数学模型。考虑电解质中的扩散、迁移和反应源项，推导在快速充电条件下界面锂离子浓度达到饱和时的临界条件，并解释这与锂沉积的发生有何关系。",
+    "standard_answer": "基于多孔电极理论，锂离子在电解质中的传输由Nernst-Planck方程描述：∂ce/∂t = ∇·(Deff∇ce) - ∇·(t+ i / F) + (1 - t+) j / F，其中ce为电解质浓度，Deff为有效扩散系数，t+为锂离子迁移数，i为电流密度，j为局部反应电流密度。在负极界面处，锂离子通量边界条件为：-Deff ∂ce/∂x|interface = j / F。在快速充电条件下，高电流密度导致锂离子在界面处大量积累。当界面浓度ce,interface达到饱和浓度ce,sat时，锂嵌入速率达到极限，进一步增加的锂离子无法及时嵌入石墨层，导致负极电位下降至0V以下，触发锂沉积。临界条件可表示为：ce,interface ≥ ce,sat。此时，锂沉积电流j2开始显著贡献总电流。数值求解该传输方程可预测锂沉积的起始时间和位置。论文中指出，锂沉积往往始于靠近隔膜的负极区域，因为该处电流密度和浓度梯度最大。通过优化电极结构（如降低曲折度、激光结构化）和电解质组成（如提高迁移数），可改善离子传输，延缓界面浓度饱和，从而抑制锂沉积。",
+    "original_text": {
+      "1": "At a high C-rate, the amount of Li+ ions moved from the cathode to the anode in the charge-transfer process per unit time increases. Increased charging rates are often associated with higher polarization due to transport and kinetic overpotentials, making lithium plating favorable.",
+      "2": "If the concentration at the anode surface is saturated, lithium plating occurs."
+    },
+    "type": "calculation",
+    "difficulty": 5,
+    "topic": "fluid_mechanics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及多孔电极理论、电解质中的离子传输、Nernst-Planck方程、锂离子浓度分布建模、快速充电条件下的临界条件分析等，需要电化学、电池技术、传质理论等能源与燃烧科学领域的专业知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量优秀，无需修改。答案准确建立了数学模型，正确推导了临界条件，清晰解释了与锂沉积的关系，且与提供的论文摘录内容一致"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_80fa2d1f",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Lithium-Plating-Mechanism--Detection--and-Miti_2021_Progress-in-Energy-and-C",
+      "paper_title": "Lithium-Plating-Mechanism--Detection--and-Miti_2021_Progress-in-Energy-and-C"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:41:49.015354",
+      "answer_length": 476
+    }
+  },
+  {
+    "question_text": "基于电化学-热耦合模型，推导锂离子电池在快速充电过程中的多物理场控制方程，包括离子传输、电荷守恒、能量守恒和锂沉积反应动力学。解释模型如何预测锂沉积的起始和演化，并讨论模型在电池管理系统（BMS）中实时应用的挑战。",
+    "standard_answer": "锂离子电池在快速充电过程中的多物理场行为由电化学-热耦合模型描述。控制方程包括：1) 电解质中的离子传输：∂ce/∂t = ∇·(Deff∇ce) - ∇·(t+ i / F) + (1 - t+) j / F；2) 电荷守恒：∇·(σeff∇φs) = j（固相），∇·(κeff∇φe) + ∇·(κD∇ln ce) = -j（电解液相），其中κD为扩散电导率；3) 能量守恒：ρCp∂T/∂t = ∇·(k∇T) + q˙gen，产热项q˙gen包括欧姆热、反应热和极化热；4) 锂沉积反应动力学：j2 = min{0, j0,2[exp(αa,2Fη2/RT) - exp(-αc,2Fη2/RT)]}，当η2 < 0时触发沉积。该模型通过求解偏微分方程组，可预测负极电位分布、界面锂离子浓度和温度场，从而确定锂沉积的起始位置和时间。模型参数如交换电流密度j0,2、活化能Ea等需通过实验标定。在BMS中实时应用该模型的挑战包括：计算复杂度高（P2D模型需解10个非线性偏微分方程）、参数不确定性、实时性要求。论文中提到，降阶模型（ROM）和机器学习方法（如LSTM）可加速计算，实现实时预测。例如，LSTM模型可在87秒内完成测试，而物理模型需7小时44分钟，显著提升BMS的实时决策能力。",
+    "original_text": {
+      "1": "Computational cost is also one of the challenges in lithium plating modeling due to a large number of governing equations (e.g., ten nonlinear and multidimensional partial differential in spatial directions x, r, t) that are required to be solved at the same time with the highly nonlinear algebraic expression for transport and kinetic parameters.",
+      "2": "The LSTM model can complete the entire test in 87 seconds, whereas the physics-based model takes 7 hours and 44 minutes."
+    },
+    "type": "calculation",
+    "difficulty": 5,
+    "topic": "CFD_modeling",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及电化学-热耦合模型、锂离子电池多物理场控制方程（离子传输、电荷守恒、能量守恒、锂沉积反应动力学）、电池管理系统实时应用等，需要燃烧/传热/流体/CFD/能源领域的专业知识，特别是电化学工程和电池建模方面的深度知识。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "无需改进，答案已全面覆盖问题要求，控制方程推导准确，锂沉积起始和演化预测机制解释清晰，BMS应用挑战分析合理，且引用论文内容支持关键声明。"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_2812d0d9",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Lithium-Plating-Mechanism--Detection--and-Miti_2021_Progress-in-Energy-and-C",
+      "paper_title": "Lithium-Plating-Mechanism--Detection--and-Miti_2021_Progress-in-Energy-and-C"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:41:49.801976",
+      "answer_length": 550
+    }
+  },
+  {
+    "question_text": "分析低温条件下锂离子电池内部的热传递和温度分布对锂沉积的影响。考虑电池内部产热机制（欧姆热、反应热、极化热）和热管理策略，推导温度对电解质离子电导率、电荷转移速率和锂固相扩散系数的Arrhenius关系，并解释为何低温充电易引发锂沉积。",
+    "standard_answer": "低温条件下，锂离子电池内部热传递和温度分布显著影响锂沉积行为。电池内部产热主要包括欧姆热（I²R）、反应热（ηI）和极化热。根据能量守恒方程：ρCp∂T/∂t = ∇·(k∇T) + q˙gen，其中q˙gen为产热率。低温时，电解质离子电导率σ随温度降低而减小，遵循Arrhenius关系：σ = σ0exp(-Ea,σ/RT)，导致欧姆电阻增大。电荷转移速率常数kct也随温度降低而减小：kct = kct,0exp(-Ea,ct/RT)，其中Ea,ct为电荷转移活化能。锂在石墨中的固相扩散系数Ds同样服从Arrhenius关系：Ds = Ds,0exp(-Ea,diff/RT)。这些参数的温度依赖性导致低温下电池内部极化增大，负极电位更易降至0V以下。此外，低温时电池内部温度梯度增大，局部低温区域进一步加剧锂沉积。论文中提到，在-50°C条件下，即使采用3.5C高倍率充电，通过内部加热使电池温度升高，也可避免锂沉积。这表明温度均匀性和局部热管理对抑制锂沉积至关重要。热管理策略如预加热、不对称温度调制（ATM）通过提升电池温度，改善动力学条件，减少极化，从而抑制锂沉积。",
+    "original_text": {
+      "1": "Low temperature is one of the main obstacles to fast charging. Charging at high C-rates can result in a severe capacity fade. Charging a 7.5 Ah cell at 1 C-rate at 0°C, for example, would result in a considerable capacity loss (3.6%).",
+      "2": "The structured cell can be charged to 80% SOC without lithium plating in 15 minutes with high charging currents (3.5 C-rate) at temperatures as low as -50°C."
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "heat_transfer",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及锂离子电池内部热传递、温度分布、产热机制（欧姆热、反应热、极化热）、热管理策略、Arrhenius关系推导等，需要燃烧/传热/流体/CFD/能源领域的专业知识，特别是电化学热耦合分析。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "无需修改。答案准确解释了低温下锂离子电池内部热传递和温度分布对锂沉积的影响，正确推导了温度对电解质离子电导率、电荷转移速率和锂固相扩散系数的Arrhenius关系，并合理结合了论文引用内容。"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_bf679371",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Lithium-Plating-Mechanism--Detection--and-Miti_2021_Progress-in-Energy-and-C",
+      "paper_title": "Lithium-Plating-Mechanism--Detection--and-Miti_2021_Progress-in-Energy-and-C"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:41:49.992230",
+      "answer_length": 492
+    }
+  },
+  {
+    "question_text": "基于论文中描述的锂沉积热力学和动力学条件，分析在快速充电过程中，负极电位如何降至0V以下，并推导锂沉积与锂嵌入之间的竞争关系。考虑电荷转移、电解质浓度和锂固相扩散对负极过电位的贡献，解释高充电速率和低温条件下如何促进锂沉积。",
+    "standard_answer": "在锂离子电池快速充电过程中，锂沉积的触发条件是负极电位降至0V（相对于Li+/Li）。根据Butler-Volmer方程，总电化学反应电流密度j分为锂嵌入电流j1和锂沉积电流j2：j = j1 + j2。其中，j1 = j0,1[exp(αaFη1/RT) - exp(-αcFη1/RT)]，j2 = j0,2[exp(αa,2Fη2/RT) - exp(-αc,2Fη2/RT)]。当负极过电位η2 < 0V时，锂沉积发生。高充电速率下，锂离子在电解质中的传输速率增加，但由于石墨电极中锂固相扩散速率有限，锂离子在电极界面处积累，导致界面浓度饱和，极化增大，负极电位下降。低温条件下，根据Arrhenius方程，电解质离子电导率降低，电荷转移动力学变慢，锂在石墨中的固相扩散系数减小，进一步加剧极化。这些因素共同导致负极电位更容易降至0V以下，使锂沉积电流j2占主导，与锂嵌入电流j1竞争电子和锂离子。热力学上，锂沉积比嵌入更有利（反应自由能更负），但动力学限制在非平衡充电过程中起主导作用，使得锂沉积在高C率、低温条件下成为主要副反应。具体而言，电荷转移过电位源于界面反应能垒，电解质浓度过电位源于离子传输限制，锂固相扩散过电位源于石墨内部扩散缓慢，三者叠加使负极电位降至0V以下，触发锂沉积。",
+    "original_text": {
+      "1": "When the local potential at the negative electrode falls below 0 V (vs. Li+/Li) due to high SOC, high charging C-rate, and low temperatures, all of which polarize the electrode, lithium plating can occur thermodynamically.",
+      "2": "The main contributors to the graphite electrode overpotential are i) charge transfer, ii) electrolyte concentration (mass transfer), and iii) lithium solid-phase in the negative electrode. These are the kinetics cause for lithium plating."
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及锂离子电池电化学、热力学和动力学机制，需要能源存储、电化学工程和电池材料领域的专业知识，包括Butler-Volmer方程、Arrhenius方程、电极极化、锂沉积机制等专业概念",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量优秀，无需修改。答案准确解释了锂沉积的热力学和动力学条件，正确推导了锂沉积与锂嵌入的竞争关系，详细分析了电荷转移、电解质浓度和锂固相扩散对负极过电位的贡献，并合理解释了高充电速率和低温条件下促进锂沉积的机制"
+    },
+    "retry_count": 1,
+    "question_id": "deepseek_q_bf9df0e1",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Lithium-Plating-Mechanism--Detection--and-Miti_2021_Progress-in-Energy-and-C",
+      "paper_title": "Lithium-Plating-Mechanism--Detection--and-Miti_2021_Progress-in-Energy-and-C"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:42:31.494817",
+      "answer_length": 550
+    }
+  }
+]

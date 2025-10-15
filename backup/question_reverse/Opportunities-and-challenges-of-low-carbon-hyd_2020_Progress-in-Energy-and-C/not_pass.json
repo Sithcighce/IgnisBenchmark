@@ -1,0 +1,39 @@
+[
+  {
+    "question_text": "基于论文提供的技术参数，计算比较PSA技术与Pd基膜技术在大型氢生产装置中的天然气消耗量和CO2排放差异。假设PSA系统氢回收率为70%，Pd膜系统为99%，SMR转化率为90%，天然气为纯甲烷，价格为3.268 $/MMBtu，计算每生产78,000吨氢时的天然气节约量和CO2减排量。请基于完整的甲烷重整和水煤气变换反应(CH4 + 2H2O → CO2 + 4H2)计算实际天然气消耗量，确保单位换算准确，并验证计算结果与原文引用数据的一致性。",
+    "standard_answer": "根据论文提供的计算基准：对于100,000 m³/h的氢生产单元，年产量为78,000吨氢。PSA技术：90%转化率，70%回收率；Pd膜技术：90%转化率，99%回收率。假设天然气为纯甲烷，标准条件为15.56°C和1.01325 bar。\n\n首先计算生产78,000吨氢所需的理论甲烷量：\n完整甲烷重整反应：CH4 + 2H2O → CO2 + 4H2\n分子量：CH4 = 16 g/mol，H2 = 2 g/mol\n理论甲烷消耗量 = (78,000 × 10^6 g H2) / (4 × 2 g H2/mol) × (16 g CH4/mol) / 10^6 = 156,000吨CH4\n\n考虑转化率和回收率后的实际天然气消耗量：\nPSA系统：实际天然气消耗量 = 156,000 / (0.9 × 0.7) = 247,619吨CH4\nPd膜系统：实际天然气消耗量 = 156,000 / (0.9 × 0.99) = 175,084吨CH4\n天然气节约量 = 247,619 - 175,084 = 72,535吨CH4\n\n按天然气价格3.268 $/MMBtu计算：\n1吨天然气 ≈ 52.2 MMBtu（基于甲烷热值）\n节约费用 = 72,535 × 52.2 × 3.268 ≈ 12.4百万美元/年\n\nCO2排放计算：\n考虑重整过程排放和燃烧排放，总排放因子采用0.055吨CO2/MMBtu\n避免CO2排放 = 72,535 × 52.2 × 0.055 ≈ 208,000吨CO2/年\n\n计算结果与原文引用数据趋势一致：天然气节约比例约为29.3%（原文引用36%），CO2减排量约208,000吨（原文引用31,000吨，差异可能源于不同的排放因子假设）。这体现了膜技术在过程强化和碳减排方面的显著优势。",
+    "original_text": {
+      "1": "By using this technology, 36% less natural gas can be used to produce the same amount of hydrogen, resulting in an annual savings of 11,000 tonnes of natural gas and $2 million per PSA unit. Furthermore, more than 31,000 of CO2 emissions could be avoided annually.",
+      "2": "The PSA process operates at approximately 20-25 bar and has a hydrogen separation efficiency of 85-90%. Moreover, PSA technology has the ability to process large capacities of feed gas, i.e., on the order of 100,000 m³/h while maintaining a hydrogen purity of 99.999+%."
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及蒸汽甲烷重整(SMR)、氢分离技术(PSA和Pd膜)、天然气消耗计算、CO2排放计算、化学反应计量学、单位换算等技术细节，需要能源工程、化学工程和燃烧科学领域的专业知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "fundamental_error",
+        "unsupported"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在严重计算错误和概念混淆：1) 理论甲烷消耗量计算错误，应为78,000吨H2/(4×2)×16 = 156,000吨CH4，但后续计算未考虑反应计量关系；2) 实际消耗量计算中混淆了转化率和回收率的概念；3) 与原文引用数据存在巨大差异(天然气节约量72,535吨 vs 原文11,000吨，CO2减排208,000吨 vs 原文31,000吨)，但未合理解释差异原因；4) 未明确说明CO2排放因子的来源和合理性。建议重新计算理论甲烷需求，正确应用转化率和回收率，验证单位换算，并合理解释与原文数据的差异。"
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_acac9ac0",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Opportunities-and-challenges-of-low-carbon-hyd_2020_Progress-in-Energy-and-C",
+      "paper_title": "Opportunities-and-challenges-of-low-carbon-hyd_2020_Progress-in-Energy-and-C"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:35:27.372285",
+      "answer_length": 766
+    }
+  }
+]

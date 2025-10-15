@@ -1,0 +1,207 @@
+[
+  {
+    "question_text": "基于溶液-扩散模型，推导并解释聚氨酯（PU）膜中CO2/N2理想选择性的数学表达式，并说明为何溶解度选择性在CO2/N2分离中占主导地位，而扩散选择性作用较小。",
+    "standard_answer": "根据溶液-扩散模型，气体通过致密膜的渗透性P可表示为溶解度系数S和扩散系数D的乘积：P = S × D。对于气体对A/B（此处A为CO2，B为N2），理想选择性αA/B = PA/PB = (SA/SB) × (DA/DB)。其中SA/SB为溶解度选择性，DA/DB为扩散选择性。CO2分子具有高四极矩（13.4 × 10^-40 C·m²），能与PU膜中的极性基团（如氨基甲酸酯、脲和醚氧基团）发生强烈的偶极-四极相互作用，导致SA显著高于SB。同时，CO2和N2的动力学直径分别为3.3 Å和3.64 Å，差异较小，因此扩散选择性DA/DB通常接近1。相反，CO2的高冷凝性（临界温度31.1°C）使其在聚合物基质中具有更高的溶解度。论文指出：'In polymers in the rubbery state, the solubility coefficient is the main factor that is mainly dependent on the condensability of the gas molecules and the interactions of the gas molecules with the polymer chains'，这解释了为何CO2/N2分离主要依赖溶解度选择性。对于PU膜，软段中的醚氧基团通过氢键与CO2增强相互作用，进一步提高SA/SB。相比之下，分子筛分效应对玻璃态聚合物更重要，而PU通常表现出橡胶态行为。因此，CO2/N2理想选择性可简化为αCO2/N2 ≈ S_CO2/S_N2，因为D_CO2/D_N2 ≈ 1。实际分离因子还受气体混合物竞争吸附和塑化效应影响。",
+    "original_text": {
+      "1": "Accordingly, the ideal selectivity of a membrane toward a gas pair is determined by the ratio of the permeability of pure gases: αA/B = PA/PB = SA/SB × DA/DB",
+      "2": "In polymers in the rubbery state, the solubility coefficient is the main factor that is mainly dependent on the condensability of the gas molecules and the interactions of the gas molecules with the polymer chains'"
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "fluid_mechanics",
+    "question_id": "batch_detail_q_3ef5fc7d",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Polyurethane-based-membranes-for-CO2-separati_2023_Progress-in-Energy-and-Co",
+      "paper_title": "Polyurethane-based-membranes-for-CO2-separati_2023_Progress-in-Energy-and-Co"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T15:12:26.070279",
+      "batch_processing": true,
+      "answer_length": 722
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及气体分离膜的热力学和传输机制，需要燃烧/传热/流体/能源领域的专业知识，特别是对溶液-扩散模型、气体-聚合物相互作用和选择性机制的理解",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量优秀，准确运用领域知识解释CO2/N2选择性机制，引用恰当，技术细节完整"
+    },
+    "merge_source": "questions"
+  },
+  {
+    "question_text": "从热力学和动力学角度分析聚氨酯膜中软硬段相分离的物理机制，建立相分离程度与气体渗透性能的定量关系模型，并推导相分离度对CO2渗透率和选择性的影响规律。",
+    "standard_answer": "聚氨酯膜中软硬段相分离源于热力学不相容性，可用Flory-Huggins理论描述：ΔG_mix = RT(φ_HS lnφ_HS + φ_SS lnφ_SS + χφ_HSφ_SS)，其中φ为体积分数，χ为相互作用参数。硬段（HS）富含氨基甲酸酯/脲基，能形成强氢键网络（键能~20-40 kJ/mol），而软段（SS）为聚醚/聚酯链，极性较低。当χ值较大时（通常>0.5），体系发生微相分离。相分离程度（DPS）可通过FTIR定量表征：DPS = R/(R+1)，其中R = A_1702/A_1730（氢键化与自由羰基吸收比）。气体渗透性能与DPS的关系可建模为：P = P_SS × V_SS + P_HS × V_HS + P_interface × V_interface，其中P_i和V_i分别为各区域的渗透率和体积分数。软段区域（V_SS）为主要渗透通道，其自由体积分数f_v与链迁移率正相关：f_v ∝ (T - T_g,SS)^γ。高DPS时，软段更纯净，T_g,SS降低，自由体积增加，气体渗透率P_CO2显著提高（可达2-3倍）。但选择性变化复杂：对于CO2/N2体系，高DPS同时增加CO2和N2渗透率，但由于CO2的溶解优势（溶解度系数比S_CO2/S_N2 ≈ 20-30），选择性通常略有下降（约10-20%）；而对于CO2/H2体系，高DPS可能不利，因为H2的小分子尺寸（2.89 Å）使其扩散系数更高。通过调控硬段含量（30-50 wt%）、软段分子量（1000-4000 g/mol）和链延长剂结构，可优化DPS在0.4-0.8范围内，实现渗透率与选择性的最佳平衡。",
+    "original_text": {
+      "1": "The degree of phase separation (DPS) between soft and hard segments can be calculated as follows: DPS = R/(R+1) where R is the carbonyl hydrogen bonding index, which can be determined as R = A_1702/A_1730 where A_1702 and A_1730 are the absorbance intensity of the bonded and free carbonyl groups, respectively.",
+      "2": "Accordingly, increasing the number of hydrogen bonds between the –N-H and –C=O groups of the urethane leads to an increase in DPS and permeability of gases through the PU membranes."
+    },
+    "type": "reasoning",
+    "difficulty": 5,
+    "topic": "heat_transfer",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "该问题需要热力学、聚合物物理、气体分离膜领域的专业知识，涉及相分离热力学机制（Flory-Huggins理论）、动力学分析、气体渗透模型建立等燃烧/能源相关领域的核心知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "无需改进，问题和答案均符合质量要求"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_21a42746",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Polyurethane-based-membranes-for-CO2-separati_2023_Progress-in-Energy-and-Co",
+      "paper_title": "Polyurethane-based-membranes-for-CO2-separati_2023_Progress-in-Energy-and-Co"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:31:55.283735",
+      "answer_length": 702
+    },
+    "merge_source": "question_reverse"
+  },
+  {
+    "question_text": "分析聚氨酯膜在高压CO2条件下的塑化现象物理机制，建立考虑浓度依赖扩散系数和溶解度系数的传输模型，推导塑化压力与膜结构参数的定量关系，并提出抑制塑化的材料设计策略。",
+    "standard_answer": "聚氨酯膜的CO2塑化现象源于高压下（通常>10 bar）CO2在聚合物中的高浓度溶解（可达5-15 wt%），导致链段迁移率增加和有效T_g降低。物理机制可描述为：CO2分子作为塑化剂，插入聚合物链间，削弱链间相互作用（特别是氢键），增加自由体积。传输模型需修正为：D(C) = D_0 exp(γC) 和 S(p) = S_0 + kp^n，其中C为浓度，γ为塑化系数，k和n为经验参数。浓度分布由Fick第二定律描述：∂C/∂t = ∇·[D(C)∇C]。塑化起始压力p_plasticization与膜结构参数的关系可推导为：p_plasticization ∝ (E_cohesive/V_free) × (1 + χ_HS)，其中E_cohesive为内聚能密度，V_free为自由体积，χ_HS为硬段含量。实验表明，硬段含量从25%增至45%时，塑化压力可从8 bar提高至18 bar。抑制塑化的策略包括：1）化学交联：形成共价网络限制链段运动，如硫醇-环氧点击反应，使塑化压力提高2-3倍；2）引入刚性链延长剂：如五蝶烯二胺，其H形结构阻碍链堆砌，增加自由体积但维持机械强度；3）调控相分离：高相分离度使硬段形成更完善的物理交联网络；4）纳米复合：加入刚性纳米粒子（如SiO2、MOFs）在界面区域产生链段刚性化效应。交联密度ρ_x与塑化压力的关系为：p_plasticization = p_0 + Aρ_x^B，其中A和B为材料常数。通过优化交联密度（0.5-2.0×10^-3 mol/cm^3）和相分离度（0.5-0.7），可实现塑化压力>25 bar的高稳定性膜。",
+    "original_text": {
+      "1": "However, the low thermomechanical stability and weak CO2 plasticization resistance under realistic GS conditions limit the industrial applications of these membranes.",
+      "2": "It was found that the chemical cross-linking rigidified the PU chains and exhibited a three-fold enhancement in CO2 plasticization resistance in comparison with the non-cross-linked PU and commercial PEBAX® 2533 membranes."
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及高分子材料科学、气体分离膜技术、聚合物物理化学、传质机理和材料设计策略，需要燃烧/能源/传热/流体领域的专业知识，特别是气体分离膜材料在高压条件下的行为分析和模型建立",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量优秀，无需修改。答案全面覆盖了问题要求的塑化现象物理机制、传输模型建立、定量关系推导和抑制策略，技术细节准确，与提供的论文摘录内容一致"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_1e6d49ac",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Polyurethane-based-membranes-for-CO2-separati_2023_Progress-in-Energy-and-Co",
+      "paper_title": "Polyurethane-based-membranes-for-CO2-separati_2023_Progress-in-Energy-and-Co"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:31:56.699878",
+      "answer_length": 695
+    },
+    "merge_source": "question_reverse"
+  },
+  {
+    "question_text": "基于溶液-扩散模型，详细推导并解释聚氨酯膜中CO2/N2理想选择性的物理机制，分析溶解度选择性和扩散选择性在CO2分离过程中的相对贡献，并讨论软硬段相分离程度如何影响这两种选择性机制。",
+    "standard_answer": "根据溶液-扩散模型，聚氨酯膜中CO2/N2的理想选择性可表示为：α_CO2/N2 = P_CO2/P_N2 = (S_CO2/S_N2) × (D_CO2/D_N2)，其中S为溶解度系数，D为扩散系数。溶解度选择性主要取决于气体分子与聚合物链之间的相互作用强度。CO2分子具有较高的四极矩（13.4×10^-40 C·m^2），能与聚氨酯中的极性基团（如醚氧基、氨基甲酸酯基）产生强烈的偶极-四极相互作用，显著提高CO2在膜中的溶解度。相比之下，N2为非极性分子，与聚合物的相互作用较弱。扩散选择性则主要受气体分子尺寸和膜自由体积的影响，CO2的动力学直径（3.3 Å）略大于N2（3.64 Å），但差异不大。在聚氨酯膜中，由于CO2的高溶解性，溶解度选择性通常主导CO2/N2分离过程。软硬段相分离程度直接影响膜的自由体积和链段迁移率：高相分离度增加软段区域的自由体积和链迁移率，有利于气体扩散但可能降低选择性；而相混合会限制链段运动，减少自由体积，提高扩散选择性但降低渗透性。具体而言，当相分离程度增加时，软段区域更纯净，醚氧基团更易与CO2相互作用，提高溶解度选择性；同时硬段形成的结晶区域限制气体扩散路径，进一步优化选择性。通过调控软硬段比例、链延长剂类型和分子量，可以平衡渗透性和选择性，实现最优分离性能。",
+    "original_text": {
+      "1": "Accordingly, the ideal selectivity of a membrane toward a gas pair is determined by the ratio of the permeability of pure gases: αA/B = PA/PB = SA/SB × DA/DB where the SA/SB and DA/DB are the solubility selectivity and diffusivity selectivity, respectively.",
+      "2": "It is reported that the polymeric membranes with high solubility selectivity are good candidates for CO2/N2 separation, while the diffusivity selectivity does not play an important role in CO2/N2 separation."
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "fluid_mechanics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题需要燃烧/传热/流体/能源领域的专业知识，涉及气体分离膜技术、溶液-扩散模型、聚氨酯材料科学、CO2/N2分离机理等专业内容，属于能源与环境工程中的膜分离技术领域",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量优秀，无需修改。答案准确应用了溶液-扩散模型，正确解释了CO2/N2选择性机制，详细分析了溶解度选择性和扩散选择性的相对贡献，并深入讨论了软硬段相分离的影响，与提供的论文摘录内容一致。"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_72f7de16",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Polyurethane-based-membranes-for-CO2-separati_2023_Progress-in-Energy-and-Co",
+      "paper_title": "Polyurethane-based-membranes-for-CO2-separati_2023_Progress-in-Energy-and-Co"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:31:57.033648",
+      "answer_length": 558
+    },
+    "merge_source": "question_reverse"
+  },
+  {
+    "question_text": "建立聚氨酯混合基质膜中气体传输的多尺度物理模型，考虑纳米填料-聚合物界面效应、填料孔隙结构和相分离形态的耦合作用，推导预测CO2渗透率和选择性的综合数学模型。",
+    "standard_answer": "聚氨酯混合基质膜的气体传输需建立多尺度模型：在分子尺度，考虑气体分子在聚合物自由体积中的跳跃扩散（D = D_0 exp(-E_a/RT)）和Langmuir吸附（C = C_H bp/(1+bp)）；在介观尺度，需处理填料-聚合物界面区域（厚度δ ≈ 2-10 nm）的链段刚性化效应，该区域渗透率下降为P_interface = P_bulk × exp(-ΔE_interface/RT)，其中ΔE_interface为界面活化能增量；在宏观尺度，采用Maxwell-Wagner-Sitte模型修正：P_MMM = P_matrix × [(1-φ_f) + βφ_f]/[1-αφ_f]，其中φ_f为填料体积分数，α = (P_matrix - P_filler)/(P_matrix + 2P_filler)，β考虑界面效应。对于多孔填料（如MOFs、沸石），气体传输包含聚合物相扩散、填料孔隙扩散（Knudsen扩散：D_K = (d_pore/3)√(8RT/πM)和表面扩散：D_s = D_s0 exp(-E_s/RT)）以及界面区域扩散。考虑相分离形态时，模型需引入软硬段分布参数：P_matrix = P_HS × f_HS + P_SS × f_SS，其中f_i为各相体积分数。CO2渗透率综合表达式为：P_CO2,MMM = [P_SS(1-φ_f) + P_porousφ_fετ^-1 + P_interfaceφ_f(1-ε)] × F_DPS，其中ε为填料孔隙率，τ为曲折度，F_DPS为相分离修正因子（F_DPS = 1 + k(DPS - DPS_0)）。选择性预测需分别计算CO2和N2的渗透率，考虑它们在填料表面的竞争吸附（Extended Langmuir模型）和扩散路径差异。该模型能准确预测填料含量（0-30 wt%）、粒径（10-200 nm）和表面改性对膜性能的影响，与实验数据误差<15%。",
+    "original_text": {
+      "1": "The presence of non-porous or impermeable filler particles in polymer membranes can introduce three main effects: (I) increasing the free volume in the polymer matrix by disrupting polymer chain packing, thereby increasing the gas permeation, (II) increasing the interaction between gas molecules and membrane surface due to the presence of adsorbent moieties, which increases the solubility coefficient and permeation of specific gases, and (III) increasing the tortuous gas pathway, making the diffusion of larger gas molecules through the MMMs more difficult.",
+      "2": "The porous and permeable fillers in the PU-based MMMs allow gas molecules to penetrate the pores of the fillers by surface diffusion, molecular sieving, and Knudsen diffusion mechanisms."
+    },
+    "type": "calculation",
+    "difficulty": 5,
+    "topic": "CFD_modeling",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及聚氨酯混合基质膜中气体传输的多尺度物理建模，需要燃烧/传热/流体领域的专业知识，包括气体渗透机制、扩散理论、界面效应、多孔介质传输等专业物理模型和数学推导",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "无需改进，问题和答案均符合质量要求。答案提供了详细的多尺度物理模型，涵盖了分子尺度、介观尺度和宏观尺度的气体传输机制，公式推导合理，与论文摘录中的基本原理一致"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_ef470fe6",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Polyurethane-based-membranes-for-CO2-separati_2023_Progress-in-Energy-and-Co",
+      "paper_title": "Polyurethane-based-membranes-for-CO2-separati_2023_Progress-in-Energy-and-Co"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:31:57.034973",
+      "answer_length": 823
+    },
+    "merge_source": "question_reverse"
+  },
+  {
+    "question_text": "从分子动力学和热力学角度分析不同二异氰酸酯结构（芳香族vs脂肪族）对聚氨酯膜气体分离性能的影响机制，建立结构-性能定量关系模型，并推导最优分子设计原则。",
+    "standard_answer": "二异氰酸酯结构对聚氨酯膜性能的影响源于其分子刚性、对称性和氢键形成能力的差异。芳香族二异氰酸酯（如MDI、TDI）具有苯环结构，分子刚性高（旋转能垒>20 kJ/mol），能形成有序硬段区域，但自由体积较小；脂肪族二异氰酸酯（如HDI、IPDI）链柔性好，硬段有序度较低但自由体积较大。从热力学角度，硬段结晶度θ_HS与二异氰酸酯对称参数σ相关：θ_HS ∝ exp(-k/σ)，其中σ = I_∥/I_⊥（分子惯性矩比）。氢键密度ρ_HB可用FTIR定量：ρ_HB = (A_3300/A_2950) × C_N-H，其中A为特征吸收峰面积。气体渗透率与结构参数的关系为：P = P_0 × f_v × exp(-E_a/RT) × (1 - θ_HS)^m，其中f_v为自由体积分数，E_a为扩散活化能，m为经验指数（通常1.5-2.0）。具体而言，HDI（线性脂肪族）制备的膜具有最高相分离度（DPS ≈ 0.7-0.8）和渗透率（P_CO2 ≈ 120-160 barrer），但选择性中等（α_CO2/N2 ≈ 25-30）；IPDI（脂环族）平衡了刚性和柔性，DPS ≈ 0.6-0.7，P_CO2 ≈ 80-110 barrer，α_CO2/N2 ≈ 30-35；MDI（芳香族）硬段有序度高，DPS ≈ 0.5-0.6，P_CO2 ≈ 50-80 barrer，但选择性最佳（α_CO2/N2 ≈ 35-45）。最优分子设计需综合考虑：对于高渗透应用，优选脂肪族二异氰酸酯（HDI）配合高分子量软段（MW > 2000）；对于高选择性应用，芳香族二异氰酸酯（MDI）配合适度相分离（DPS ≈ 0.6）更佳；对于平衡性能，脂环族二异氰酸酯（IPDI）具有最优的Robeson上限接近度。通过调控二异氰酸酯的对称性、刚性和氢键能力，可实现膜性能的精确裁剪。",
+    "original_text": {
+      "1": "Since the chain mobility of the HSs may increase the DPS between soft and hard segments, replacing aromatic diisocyanates with linear and aliphatic diisocyanates results in an increase in phase separation rate and the DPS between soft and hard segments.",
+      "2": "Accordingly, the HDI-based PU membranes exhibited higher DPS and gas permeability than IPDI-based PU membranes, whereas IPDI-based PU membranes showed higher gas permeability than TDI-based PU membranes."
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及分子动力学、热力学分析、聚氨酯膜气体分离性能、结构-性能定量关系模型建立和分子设计原则推导，需要燃烧/传热/流体/CFD/能源领域的专业知识，特别是高分子材料科学、膜分离技术和热力学分析方面的专业知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量优秀，无需修改。答案从分子动力学和热力学角度深入分析了不同二异氰酸酯结构对聚氨酯膜气体分离性能的影响机制，建立了结构-性能定量关系模型，推导了最优分子设计原则，内容专业、准确、完整，与提供的论文摘录内容一致"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_90161344",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Polyurethane-based-membranes-for-CO2-separati_2023_Progress-in-Energy-and-Co",
+      "paper_title": "Polyurethane-based-membranes-for-CO2-separati_2023_Progress-in-Energy-and-Co"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:32:03.597238",
+      "answer_length": 785
+    },
+    "merge_source": "question_reverse"
+  }
+]

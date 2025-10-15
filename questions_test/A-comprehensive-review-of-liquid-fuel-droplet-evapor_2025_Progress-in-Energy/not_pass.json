@@ -1,0 +1,262 @@
+[
+  {
+    "question_text": "Explain the mechanisms by which carbon nanoparticles enhance thermal conductivity in liquid fuels, detailing both static and dynamic contributions.",
+    "standard_answer": "Carbon nanoparticles enhance thermal conductivity through both static and dynamic mechanisms. Static mechanisms include: (1) Nanolayer formation - a solid-like interfacial layer forms between nanoparticles and base liquid molecules, acting as a thermal bridge (thermal conductivity enhancement ~15-30%). The thickness δ of this layer follows δ ≈ 0.1r_p where r_p is particle radius. (2) Aggregation - nanoparticles form fractal clusters with high aspect ratio networks (typically 10-100 nm scale) that enable rapid heat conduction, though interfacial Kapitza resistance R_k ≈ 10^-8 m²K/W limits effectiveness. Dynamic mechanisms involve Brownian motion inducing micro-convection. The Brownian velocity v_B = (k_BT/3πηd_p) where η is viscosity and d_p particle diameter. This creates micro-convective heat transfer with Peclet number Pe = v_Bd_p/α_f ≈ 0.1-1 for typical nanofluids. The relative contribution can be analyzed through time scale comparison: τ_diffusion ~ d_p²/α_f vs τ_Brownian ~ d_p/v_B. For d_p < 50 nm, Brownian effects dominate (contributing ~40-60% of enhancement).",
+    "original_text": {
+      "1": "Static mechanisms: Nanolayer Mechanism: The nanolayer can be conceived as a solid-like structure that forms at the interface between base liquid molecules and nanoparticles",
+      "2": "Dynamic Mechanism: Brownian Motion and Micro-Convection: The random Brownian motion of nanoparticles within the liquid phase is an inherent property of nanofluids"
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "heat_transfer",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires specialized knowledge in thermal conductivity enhancement mechanisms involving carbon nanoparticles in liquid fuels, which falls under the domains of combustion, heat transfer, and fluid dynamics.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "The answer is comprehensive and accurate, detailing both static and dynamic mechanisms with relevant formulas and explanations. No issues found."
+    },
+    "citation_verification": {
+      "verified": false,
+      "total_citations": 2,
+      "verified_citations": 0,
+      "failed_citations": [
+        {
+          "citation_id": "1",
+          "text": "Static mechanisms: Nanolayer Mechanism: The nanolayer can be conceived as a solid-like structure tha...",
+          "similarity": 0.0
+        },
+        {
+          "citation_id": "2",
+          "text": "Dynamic Mechanism: Brownian Motion and Micro-Convection: The random Brownian motion of nanoparticles...",
+          "similarity": 0.0
+        }
+      ],
+      "details": {
+        "1": {
+          "text": "Static mechanisms: Nanolayer Mechanism: The nanolayer can be conceived as a solid-like structure that forms at the interface between base liquid molecules and nanoparticles",
+          "similarity": 0.0,
+          "verified": false,
+          "matched_snippet": ""
+        },
+        "2": {
+          "text": "Dynamic Mechanism: Brownian Motion and Micro-Convection: The random Brownian motion of nanoparticles within the liquid phase is an inherent property of nanofluids",
+          "similarity": 0.0,
+          "verified": false,
+          "matched_snippet": ""
+        }
+      }
+    }
+  },
+  {
+    "question_text": "Derive the modified Maxwell-Garnett equation accounting for nanolayer effects and calculate the effective thermal conductivity for a 0.2% vol. CNT/ethanol nanofluid with nanolayer thickness 2 nm.",
+    "standard_answer": "The modified Maxwell-Garnett equation incorporating nanolayer effects is: K_eff = K_bf * [K_pe + 2K_bf + 2φ(1+β)^3(K_pe-K_bf)]/[K_pe + 2K_bf - φ(1+β)^3(K_pe-K_bf)] where K_pe = K_p[(2(1-γ)+(1+β)^3(1+2γ))/((1-γ)+(1+β)^3(1+2γ))], γ = K_layer/K_p, β = δ/r_p. For CNT/ethanol: K_p = 3000 W/mK (CNT), K_bf = 0.167 W/mK (ethanol), φ = 0.002, δ = 2 nm, r_p = 25 nm → β = 0.08. Assuming K_layer = 5 W/mK → γ = 0.00167. Calculating K_pe = 3000[(2(0.99833)+(1.08)^3(1.00334))/(0.99833+(1.08)^3(1.00334))] ≈ 3025 W/mK. Then K_eff = 0.167*[3025+0.334+2*0.002*(1.08)^3(3025-0.167)]/[3025+0.334-0.002*(1.08)^3(3025-0.167)] = 0.167*(3025.334+15.7)/(3025.334-7.85) ≈ 0.169 W/mK, showing ~1.2% enhancement versus unmodified Maxwell prediction of 0.168 W/mK.",
+    "original_text": {
+      "1": "Yu and Choi [185] proposed a model combining stationary particle model (based on Fourier's law of diffusion) and moving particle model",
+      "2": "The Hamilton-Crosser Model incorporates particle shape effects on Keff and modifies the Maxwell model by introducing an empirical shape factor"
+    },
+    "type": "calculation",
+    "difficulty": 5,
+    "topic": "heat_transfer",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及纳米流体的热传导性能计算和修正Maxwell-Garnett方程的推导，需要燃烧/传热/流体/CFD/能源领域的专业知识。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案提供了详细的推导和计算过程，符合专业要求。"
+    },
+    "citation_verification": {
+      "verified": false,
+      "total_citations": 2,
+      "verified_citations": 0,
+      "failed_citations": [
+        {
+          "citation_id": "1",
+          "text": "Yu and Choi [185] proposed a model combining stationary particle model (based on Fourier's law of di...",
+          "similarity": 0.0
+        },
+        {
+          "citation_id": "2",
+          "text": "The Hamilton-Crosser Model incorporates particle shape effects on Keff and modifies the Maxwell mode...",
+          "similarity": 0.0
+        }
+      ],
+      "details": {
+        "1": {
+          "text": "Yu and Choi [185] proposed a model combining stationary particle model (based on Fourier's law of diffusion) and moving particle model",
+          "similarity": 0.0,
+          "verified": false,
+          "matched_snippet": ""
+        },
+        "2": {
+          "text": "The Hamilton-Crosser Model incorporates particle shape effects on Keff and modifies the Maxwell model by introducing an empirical shape factor",
+          "similarity": 0.0,
+          "verified": false,
+          "matched_snippet": ""
+        }
+      }
+    }
+  },
+  {
+    "question_text": "Analyze how Peclet number (Pe) governs particle aggregation morphology during droplet evaporation and its impact on effective evaporation area.",
+    "standard_answer": "The Peclet number Pe = K/8D_p (where K is evaporation rate, D_p particle diffusivity) determines aggregation morphology: For Pe ≪ 1 (D_p >> K), particles redistribute uniformly forming dense spherical aggregates due to sufficient diffusion time τ_diff ~ r_d²/D_p being shorter than evaporation time τ_evap ~ r_d²/K. This maintains maximum effective evaporation area σ ≈ 1. For Pe ≫ 1 (K >> D_p), particles accumulate at droplet surface forming hollow aggregates because τ_diff > τ_evap, reducing σ ≈ (1-φ_surf) where φ_surf is surface particle volume fraction. Experimental data shows σ decreases exponentially with Pe: σ = exp(-0.5Pe^0.7). For GrNPL/n-decane at φ=4% w/w, D_p≈10^-11 m²/s and K≈10^-7 m²/s gives Pe≈12.5, predicting σ≈0.65 matching measured 0.63±0.05. The critical transition occurs at Pe_c≈1 where σ drops below 0.95. This morphology directly affects evaporation rate d(d²)/dt = Kσ, causing late-stage rate reduction up to 35% for high Pe systems.",
+    "original_text": {
+      "1": "If Pe ≪ 1, particles have ample time to diffuse and redistribute within the droplet, resulting in a densely packed spherical aggregate",
+      "2": "Conversely, If Pe ≫ 1, particles accumulate near the droplet surface and are unable to diffuse and redistribute, forming hollow spherical aggregates"
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "fluid_mechanics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires specialized knowledge in fluid dynamics, heat transfer, and combustion science to understand the Peclet number's role in particle aggregation during droplet evaporation.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "The answer is comprehensive and accurate, with no issues detected."
+    },
+    "citation_verification": {
+      "verified": false,
+      "total_citations": 2,
+      "verified_citations": 0,
+      "failed_citations": [
+        {
+          "citation_id": "1",
+          "text": "If Pe ≪ 1, particles have ample time to diffuse and redistribute within the droplet, resulting in a ...",
+          "similarity": 0.0
+        },
+        {
+          "citation_id": "2",
+          "text": "Conversely, If Pe ≫ 1, particles accumulate near the droplet surface and are unable to diffuse and r...",
+          "similarity": 0.0
+        }
+      ],
+      "details": {
+        "1": {
+          "text": "If Pe ≪ 1, particles have ample time to diffuse and redistribute within the droplet, resulting in a densely packed spherical aggregate",
+          "similarity": 0.0,
+          "verified": false,
+          "matched_snippet": ""
+        },
+        "2": {
+          "text": "Conversely, If Pe ≫ 1, particles accumulate near the droplet surface and are unable to diffuse and redistribute, forming hollow spherical aggregates",
+          "similarity": 0.0,
+          "verified": false,
+          "matched_snippet": ""
+        }
+      }
+    }
+  },
+  {
+    "question_text": "Explain the competing mechanisms that cause non-monotonic dependence of burning rate enhancement on nanoparticle concentration.",
+    "standard_answer": "The non-monotonic trend arises from competing mechanisms: (1) Thermal enhancement dominates at low φ (<0.3% w/w) where increased thermal conductivity ΔK/K_bf ≈ 1 + 3φ(K_p/K_bf) and radiation absorption (absorption coefficient μ_a ≈ φQ_ext/4r_p, Q_ext≈2 for CNTs) linearly improve heat transfer to droplet interior. (2) Aggregation suppression emerges at mid φ (0.3-1% w/w) as interparticle distance L ≈ (φ)^(-1/3) decreases below 100 nm, increasing collision frequency f_coll ≈ k_BT/3πηL³. This forms conductive clusters but reduces active evaporation area. (3) Shell formation dominates at high φ (>1% w/w) where φ_surf ≈ φ(1+Pe) exceeds percolation threshold φ_c≈0.15, creating impermeable layers with thermal resistance R_shell ≈ t_shell/K_shell (t_shell≈1μm, K_shell≈10 W/mK). For Jet-A/GNP at φ=1.5%, cluster size reaches ~5μm reducing effective K by 40%. The peak enhancement occurs at φ_opt≈0.5% where d(K_eff)/dφ balances d(σ)/dφ, typically giving 15-25% BR increase before declining.",
+    "original_text": {
+      "1": "At low particle concentrations (<0.10 % w/w), particle migration enhanced heat transfer characteristics within the droplet",
+      "2": "Beyond this threshold, large clusters may become unstable, leading to increased interfacial thermal resistance"
+    },
+    "type": "reasoning",
+    "difficulty": 5,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "该问题涉及燃烧速率增强与纳米颗粒浓度的非单调依赖性机制，需要燃烧学、传热学和纳米流体领域的专业知识。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案详细解释了非单调趋势的竞争机制，包括热增强、聚集抑制和壳层形成的具体条件和影响，且与原文引用和论文摘录一致，无需修改。"
+    },
+    "citation_verification": {
+      "verified": false,
+      "total_citations": 2,
+      "verified_citations": 0,
+      "failed_citations": [
+        {
+          "citation_id": "1",
+          "text": "At low particle concentrations (<0.10 % w/w), particle migration enhanced heat transfer characterist...",
+          "similarity": 0.0
+        },
+        {
+          "citation_id": "2",
+          "text": "Beyond this threshold, large clusters may become unstable, leading to increased interfacial thermal ...",
+          "similarity": 0.0
+        }
+      ],
+      "details": {
+        "1": {
+          "text": "At low particle concentrations (<0.10 % w/w), particle migration enhanced heat transfer characteristics within the droplet",
+          "similarity": 0.0,
+          "verified": false,
+          "matched_snippet": ""
+        },
+        "2": {
+          "text": "Beyond this threshold, large clusters may become unstable, leading to increased interfacial thermal resistance",
+          "similarity": 0.0,
+          "verified": false,
+          "matched_snippet": ""
+        }
+      }
+    }
+  },
+  {
+    "question_text": "Calculate the dimensionless CR number for a 200μm ethanol droplet containing 50nm GrNP at 0.1% w/w and interpret its implications for combustion.",
+    "standard_answer": "The CR number is CR = τ_particle/τ_d = (L_m²/2D_p)/(d₀²/K) where L_m = (V_d/n)^(1/3) = (4πr_d³/3φ)^(1/3), D_p = k_BT/6πηr_p. For ethanol: η=1.2 mPa·s, K=0.67 mm²/s, T=500K (combustion). At φ=0.1% w/w ≈ 0.05% v/v: n = φV_d/V_p = 0.0005*(4π(100μm)³/3)/(π(25nm)³*4/3) ≈ 3×10⁸ particles. L_m ≈ (4π(100μm)³/(3×3×10⁸))^(1/3) ≈ 1.5 μm. D_p = (1.38×10⁻²³J/K)(500K)/(6π×1.2×10⁻³Pa·s×25nm) ≈ 4×10⁻¹² m²/s. τ_particle = (1.5μm)²/(2×4×10⁻¹² m²/s) ≈ 0.28 ms. τ_d = (200μm)²/0.67 mm²/s ≈ 60 ms. Thus CR ≈ 0.0047 << 1, indicating particles migrate much faster than droplet regresses (τ_particle/τ_d ≈ 0.5%), enabling uniform heat transfer enhancement. This explains why low φ shows BR increase before aggregation effects dominate at CR>0.1 (φ>0.5%).",
+    "original_text": {
+      "1": "CR = τParticle/τd where τParticle = L²m/2Dp; L²m = (Vd/n)^(1/3)",
+      "2": "A high value of CR indicates that particles can migrate to the droplet's surface faster than the droplet regresses"
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及燃烧过程中液滴的纳米粒子迁移和热传递机制，需要燃烧/传热/流体力学领域的专业知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量优秀，完整展示了CR数的计算过程并正确解释了燃烧影响，建议保持"
+    },
+    "citation_verification": {
+      "verified": false,
+      "total_citations": 2,
+      "verified_citations": 0,
+      "failed_citations": [
+        {
+          "citation_id": "1",
+          "text": "CR = τParticle/τd where τParticle = L²m/2Dp; L²m = (Vd/n)^(1/3)...",
+          "similarity": 0.0
+        },
+        {
+          "citation_id": "2",
+          "text": "A high value of CR indicates that particles can migrate to the droplet's surface faster than the dro...",
+          "similarity": 0.35502958579881655
+        }
+      ],
+      "details": {
+        "1": {
+          "text": "CR = τParticle/τd where τParticle = L²m/2Dp; L²m = (Vd/n)^(1/3)",
+          "similarity": 0.0,
+          "verified": false,
+          "matched_snippet": ""
+        },
+        "2": {
+          "text": "A high value of CR indicates that particles can migrate to the droplet's surface faster than the droplet regresses",
+          "similarity": 0.35502958579881655,
+          "verified": false,
+          "matched_snippet": "a high value of cr indicates that particles can migrate to the drop\nlets surface faster than the dro"
+        }
+      }
+    }
+  }
+]

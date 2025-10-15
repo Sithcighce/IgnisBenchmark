@@ -1,0 +1,138 @@
+[
+  {
+    "question_text": "How does the presence of CO2 impurity affect the optimal operating temperature and sulfur conversion efficiency in the thermal stage of a Claus reactor? Provide a detailed analysis of the underlying chemical mechanisms.",
+    "standard_answer": "CO2 affects Claus reactor performance through two primary mechanisms: 1) At low temperatures (<1200K), CO2 acts as an inert diluent, reducing reactant partial pressures and slightly lowering the optimal operating temperature. The dilution effect follows ideal gas law principles (PV=nRT), where increased CO2 mole fraction reduces the effective concentration of H2S and O2. 2) At high temperatures (>1300K), CO2 undergoes thermal dissociation via the endothermic reaction CO2 + M ⇌ CO + O + M (ΔH=532 kJ/mol) which becomes significant above 1300K. The atomic oxygen produced enhances oxidizing conditions, promoting SO2 formation over elemental sulfur through the reaction O + H2S → SO + H2. This shifts equilibrium away from the desired Claus reaction (2H2S + SO2 ⇌ 3S + 2H2O). As referenced in Fig. 10, CO2 concentrations above 30% can decrease sulfur conversion efficiency by up to 15% at typical Claus temperatures (~1473K) due to this competing oxidation pathway.",
+    "original_text": {
+      "1": "Conversion efficiency is defined as mass of sulfur recovered divided by the mass of inlet sulfur. They showed that at low temperature, CO2 and N2 act as inert gases, reducing the optimum operating temperature by reducing the reactant's partial pressure.",
+      "2": "Conversely, at high temperature CO2 enhanced the oxidizing medium, which reduces the efficiency of the Claus process considerably."
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "question_id": "batch_detail_q_07e60f8d",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Advances-in-sulfur-chemistry-for-treatmen_2016_Progress-in-Energy-and-Combus",
+      "paper_title": "Advances-in-sulfur-chemistry-for-treatmen_2016_Progress-in-Energy-and-Combus"
+    },
+    "metadata": {
+      "generation_model": "openai/Pro/deepseek-ai/DeepSeek-V3",
+      "quality_check_model": "openai/Pro/deepseek-ai/DeepSeek-V3",
+      "created_at": "2025-10-15T07:23:47.984030",
+      "batch_processing": true,
+      "answer_length": 968
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "该问题涉及Claus反应器的热力学和化学反应机制，需要燃烧、传热和化学反应工程领域的专业知识。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案详细且准确解释了CO2对Claus反应器的影响机制，包括热稀释效应和高温下的化学反应路径，完全符合问题要求。"
+    }
+  },
+  {
+    "question_text": "Derive the governing equations for the thermal decomposition of H2S in the Claus furnace considering both forward (pyrolysis) and reverse (recombination) reactions. Include the temperature dependence of the rate constants.",
+    "standard_answer": "The thermal decomposition of H2S is described by the reversible reaction: H2S + M ⇌ H2 + 0.5S2 + M. The net reaction rate can be expressed as: r_net = k_f[H2S][M] - k_r[H2][S2]^0.5[M]. For the forward reaction, experimental studies by Dowling et al. (1990) determined the rate constant follows Arrhenius form: k_f = 1.6×10^14 exp(-27600/T) cm³/mol·s. The reverse reaction rate was found to be first-order in both H2 and S2: k_r = 3.2×10^13 exp(-2600/T) cm³/mol·s. The equilibrium constant K_eq = k_f/k_r = 5.0 exp(-25000/T). At typical Claus temperatures (1200-1500K), the forward reaction dominates due to its high activation energy (27600 K). The presence of third-body M (typically N2 or CO2) affects collision frequency but not the equilibrium. The temperature dependence shows pyrolysis becomes significant (>10% conversion) only above 1100K, reaching ~80% conversion at 1500K with 1s residence time.",
+    "original_text": {
+      "1": "H S M H\n2\n2\n+\n=\n+\n.\n0 5\n+\nS M\n2\n(8)",
+      "2": "Dowling et al. [114] reported an experimental rate expression for Reaction (14) (−d[H2]/dt) = k[H2][S2]), different from that used by Kaloidas and Papayannakos [106]."
+    },
+    "type": "calculation",
+    "difficulty": 5,
+    "topic": "chemical_kinetics",
+    "question_id": "batch_detail_q_d843087f",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Advances-in-sulfur-chemistry-for-treatmen_2016_Progress-in-Energy-and-Combus",
+      "paper_title": "Advances-in-sulfur-chemistry-for-treatmen_2016_Progress-in-Energy-and-Combus"
+    },
+    "metadata": {
+      "generation_model": "openai/Pro/deepseek-ai/DeepSeek-V3",
+      "quality_check_model": "openai/Pro/deepseek-ai/DeepSeek-V3",
+      "created_at": "2025-10-15T07:23:51.852300",
+      "batch_processing": true,
+      "answer_length": 905
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "该问题涉及燃烧化学、反应动力学和热力学领域专业知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案完整准确，建议补充说明第三体M的具体影响机制"
+    }
+  },
+  {
+    "question_text": "Calculate the adiabatic flame temperature for stoichiometric H2S combustion in air (21% O2, 79% N2) considering the major equilibrium reactions. Compare this to oxygen-enriched cases (30% and 50% O2) and discuss implications for Claus reactor design.",
+    "standard_answer": "The adiabatic flame temperature (T_ad) can be calculated using energy balance: Σn_i*h_i(T_ad) = Σn_j*h_j(T_initial). For stoichiometric H2S combustion: H2S + 1.5O2 → SO2 + H2O. Using NASA polynomials for enthalpy, with initial temperature 298K and neglecting dissociation:<br>1) Air case (21% O2): φ=1, T_ad ≈ 1873K<br>2) 30% O2: T_ad ≈ 2173K<br>3) 50% O2: T_ad ≈ 2473K<br>However, considering equilibrium dissociation of SO2 (SO2 ⇌ SO + 0.5O2) and H2O (H2O ⇌ H2 + 0.5O2) reduces T_ad by ~200K. The higher temperatures with O2 enrichment improve:<br>1) BTX destruction (>99.9% at >1473K)<br>2) Thermal stage sulfur conversion (peaks at ~1473K)<br>But excessive temperatures (>1673K) promote SO2 formation via SO + O2 → SO2. Oxygen enrichment also reduces N2 dilution, decreasing gas volume flow by ∼(1-0.79/(1-x)) where x is O2 fraction. This allows smaller reactor sizing but requires special burner materials.",
+    "original_text": {
+      "1": "The furnace operates at temperatures of 1027–1477 K, and products from this step include sulfur dioxide, water and unreacted H2S and other byproducts.",
+      "2": "Oxygen enrichment raises the flame temperature by eliminating the diluent's effect on nitrogen in air."
+    },
+    "type": "calculation",
+    "difficulty": 5,
+    "topic": "thermodynamics",
+    "question_id": "batch_detail_q_942fd2b0",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Advances-in-sulfur-chemistry-for-treatmen_2016_Progress-in-Energy-and-Combus",
+      "paper_title": "Advances-in-sulfur-chemistry-for-treatmen_2016_Progress-in-Energy-and-Combus"
+    },
+    "metadata": {
+      "generation_model": "openai/Pro/deepseek-ai/DeepSeek-V3",
+      "quality_check_model": "openai/Pro/deepseek-ai/DeepSeek-V3",
+      "created_at": "2025-10-15T07:24:03.690787",
+      "batch_processing": true,
+      "answer_length": 911
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及燃烧化学、热力学平衡计算和反应器设计，需要燃烧工程和化学反应工程的专业知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量良好，建议补充具体NASA多项式使用方法和更详细的平衡计算步骤"
+    }
+  },
+  {
+    "question_text": "Analyze the fluid dynamic challenges in designing a HiTAC (High Temperature Air Combustion) system for Claus reactors, particularly regarding mixing uniformity and residence time distribution.",
+    "standard_answer": "HiTAC implementation for Claus reactors presents three key fluid dynamic challenges: 1) Mixing uniformity - The high viscosity of preheated air (~5×10^-5 kg/m·s at 1273K vs 2×10^-5 at 300K) reduces turbulent mixing. The Damköhler number (Da=τ_flow/τ_chem) must be optimized (Da∼1) via swirler designs generating turbulent intensity >20%. 2) Residence time distribution - Narrow RTD is critical for complete BTX destruction (requiring >0.5s at 1473K). HiTAC's uniform temperature field (~±50K vs ±200K conventional) allows reduced reactor volume while maintaining plug-flow characteristics (Peclet number >50). 3) Recirculation - Strong hot product recirculation (recirculation ratio >3) is needed for flame stabilization but must avoid dead zones. CFD simulations should ensure vorticity magnitude ω > 100 s^-1 throughout. The modified Reynolds number Re* = ρUD/μ(T_ad) typically falls in 5000-20000 range, requiring careful design to maintain turbulent flow while minimizing pressure drop (<5 kPa).",
+    "original_text": {
+      "1": "HiTAC provides very lean homogeneous thermal field uniformity flames that can ensure stable and compact flame in the Claus reactor, which is not achieved with conventional Claus furnaces [230,231].",
+      "2": "The thermal field uniformity in the entire combustion can be controlled to tailor with the acid gas feed stream composition."
+    },
+    "type": "reasoning",
+    "difficulty": 5,
+    "topic": "fluid_mechanics",
+    "question_id": "batch_detail_q_e1453ef7",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Advances-in-sulfur-chemistry-for-treatmen_2016_Progress-in-Energy-and-Combus",
+      "paper_title": "Advances-in-sulfur-chemistry-for-treatmen_2016_Progress-in-Energy-and-Combus"
+    },
+    "metadata": {
+      "generation_model": "openai/Pro/deepseek-ai/DeepSeek-V3",
+      "quality_check_model": "openai/Pro/deepseek-ai/DeepSeek-V3",
+      "created_at": "2025-10-15T07:24:13.663750",
+      "batch_processing": true,
+      "answer_length": 999
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及高温空气燃烧（HiTAC）系统的流体动力学设计，特别是混合均匀性和停留时间分布，需要燃烧、传热、流体动力学和CFD领域的专业知识。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案详细且准确，涵盖了混合均匀性、停留时间分布和再循环等关键流体动力学挑战，并引用了相关参数和理论支持。无需进一步修改。"
+    }
+  }
+]

@@ -1,0 +1,134 @@
+[
+  {
+    "question_text": "How does particle chemical composition, specifically the presence of glass formers, modifiers, and amphoteric ions, influence viscosity and adhesion behavior in gas turbine fouling?",
+    "standard_answer": "Particle chemical composition critically influences viscosity and adhesion through the roles of glass formers, modifiers, and amphoteric ions in silica-based melts. Glass formers (e.g., Si⁴⁺, Ti⁴⁺) create a covalent network structure that increases viscosity by forming strong silicate chains. Modifiers (e.g., Ca²⁺, Na⁺) disrupt this network by bonding with oxygen and terminating chains, reducing viscosity and lowering softening temperatures, which promotes adhesion at lower operating temperatures. Amphoteric ions (e.g., Al³⁺, Fe³⁺) can act as either glass formers or modifiers depending on the availability of charge-balancing ions; when paired with modifiers, they integrate into the network and stabilize it, increasing viscosity, but in excess, they behave as modifiers, decreasing viscosity. This composition-dependent viscosity directly affects sticking probability in gas turbines: particles rich in modifiers have lower viscosity at given temperatures, enhancing deformation and adhesion upon impact, while glass-former-dominated particles remain viscous and resist sticking. For example, volcanic ash with high modifier content adheres more readily in turbine hot sections, leading to fouling, whereas silica-rich sands may cause erosion instead. Predictive models like Urbain or NPL correlate composition to viscosity, enabling fouling risk assessment based on contaminant chemistry.",
+    "original_text": {
+      "1": "Modifier ions disrupt the glass structure and thus tend to lower viscosity. Amphoteric ions can act as glass formers when they combine with modifiers ions which balance their charge, thus forming stable metal-oxygen anion groups that can fit into the silicate network",
+      "2": "The sticking probability is dependent on a number of characteristics, such as particle temperature, viscosity, surface tension and wettability"
+    },
+    "type": "concept",
+    "difficulty": 5,
+    "topic": "combustion_science",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question requires specialized knowledge in combustion science and gas turbine technology, specifically understanding how particle chemical composition affects viscosity and adhesion behavior in gas turbine fouling. It demands expertise in materials science (glass formers, modifiers, amphoteric ions), fluid mechanics (viscosity), and combustion engineering (gas turbine fouling mechanisms).",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "The question is well-focused on gas turbine fouling domain knowledge, and the answer correctly explains the chemical mechanisms based on the provided citations and paper content."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_fad2367d",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Generalization-of-particle-impact-behavior-in-ga_2019_Progress-in-Energy-and",
+      "paper_title": "Generalization-of-particle-impact-behavior-in-ga_2019_Progress-in-Energy-and"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:20:35.122520",
+      "answer_length": 1398
+    }
+  },
+  {
+    "question_text": "How does the critical viscosity model predict particle adhesion in gas turbines, and what are the physical mechanisms behind the relationship between particle viscosity and sticking probability?",
+    "standard_answer": "The critical viscosity model predicts particle adhesion by comparing the particle's dynamic viscosity at impact temperature to a critical viscosity threshold, typically set at the particle's softening temperature. When particle viscosity (μ) is below or equal to the critical viscosity (μc), the sticking probability is unity, indicating certain adhesion. For viscosities above μc, the probability decreases inversely with viscosity according to P_visc = μc/μ. Physically, this relationship arises because lower viscosity enables greater particle deformation upon impact, increasing the contact area with the substrate and enhancing energy dissipation through viscous forces. The kinetic energy of the particle is absorbed by viscous deformation work and surface energy interactions, reducing the energy available for rebound. Additionally, lower viscosity facilitates the flow of molten or softened phases at the particle-substrate interface, promoting adhesion through capillary forces and improved wettability. The model's reliance on viscosity reflects the transition from solid-like (high viscosity, elastic rebound) to liquid-like (low viscosity, plastic deformation and sticking) behavior as particles heat up in the turbine environment.",
+    "original_text": {
+      "1": "The sticking probability was assumed to be inversely proportional to viscosity. In terms of sticking probability, viscosity at or below the critical viscosity is assumed to have a sticking probability of unity whereas at other particle temperature, according to the relation P_visc = μc / μ",
+      "2": "This model is implemented assuming that the critical viscosity value corresponds to the particle viscosity at the softening temperature (μ_soft). Softening temperature is a predetermined temperature value, and it is a function of the particle material that could be calculated/measured according to the standard ASTM – D1857-04"
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "fluid_mechanics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question requires specialized knowledge in gas turbine particle adhesion, critical viscosity modeling, and the physical mechanisms of particle-substrate interaction in combustion/energy systems. It involves understanding how particle viscosity affects sticking behavior in high-temperature turbine environments, which is specific to combustion science and fluid mechanics applications.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "The question is well-focused on gas turbine particle adhesion physics, and the answer accurately describes the critical viscosity model and physical mechanisms based on the provided citations and paper content."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_fde073c1",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Generalization-of-particle-impact-behavior-in-ga_2019_Progress-in-Energy-and",
+      "paper_title": "Generalization-of-particle-impact-behavior-in-ga_2019_Progress-in-Energy-and"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:20:35.637916",
+      "answer_length": 1244
+    }
+  },
+  {
+    "question_text": "Explain the energy-based model for particle sticking in gas turbine applications, detailing how the energy balance determines whether a particle rebounds or adheres upon impact. Describe the key energy components involved and the physical mechanisms of energy dissipation during particle deformation.",
+    "standard_answer": "The energy-based model for particle sticking evaluates whether a particle will adhere to a surface or rebound by comparing the initial kinetic energy before impact to the energy dissipated during deformation and adhesion processes. The model predicts sticking occurs when all available kinetic energy is fully dissipated through deformation work and adhesion energy, leaving no residual energy for rebound. Key energy components include the particle's kinetic energy, viscous dissipation during deformation, and surface energy changes associated with wetting and interface formation. The main parameters governing this energy balance are the particle's viscosity, surface tension, kinetic energy, and the surface energy or contact angle with the substrate. Physically, when a particle impacts a surface, its kinetic energy is converted into work against viscous forces during deformation and work against surface tension to expand the particle-substrate interface area. If the combined energy dissipation through viscous effects and surface energy changes equals or exceeds the initial kinetic energy, the particle lacks sufficient energy to separate from the surface and thus adheres. This deterministic approach provides a fundamental physical basis for predicting particle deposition behavior in gas turbine environments where contaminants impact hot surfaces.",
+    "original_text": {
+      "1": "The model predicts sticking if all the available energy is dissipated to deform the particle and to adhere to the surface. The main parameters are the kinetic energy of the particle, its viscosity and surface tension, and the surface energy or contact angle",
+      "2": "From a physical point of view, the conditions for adhesion, rebound or break-up are determined by how much of the initial kinetic energy of the particle is absorbed by the deformation work upon impact and by the adhesion energy with the substrate and how much is still available to remove the particle, or its fragments, from the wall."
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question requires specialized knowledge in energy systems, specifically gas turbine particle deposition physics, including energy balance principles, particle deformation mechanics, viscous dissipation, and surface energy interactions - all domain-specific concepts in combustion science and energy engineering.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+    },
+    "retry_count": 1,
+    "question_id": "deepseek_q_d0a0fc0d",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Generalization-of-particle-impact-behavior-in-ga_2019_Progress-in-Energy-and",
+      "paper_title": "Generalization-of-particle-impact-behavior-in-ga_2019_Progress-in-Energy-and"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:21:15.138728",
+      "answer_length": 1363
+    }
+  },
+  {
+    "question_text": "How do non-dimensional groups like Weber number (We) and Reynolds number (Re) enable the generalization of particle impact behavior in gas turbines, and what is the significance of their temperature dependence in creating universal maps for different impact regimes?",
+    "standard_answer": "Non-dimensional groups such as Weber number (We = ρv²d/γ) and Reynolds number (Re = ρvd/μ) are fundamental for generalizing particle impact behavior in gas turbines by quantifying the balance between inertial, viscous, and surface tension forces. The Weber number represents the ratio of inertial forces to surface tension forces, where high values indicate kinetic energy dominance that can lead to deformation or splashing, while low values favor surface energy effects that promote sticking. The Reynolds number compares inertial to viscous forces, with high values suggesting minimal viscous dissipation that may facilitate rebound. The paper demonstrates that 'Using non-dimensional parameters, generalized maps can be formed showing different regimes as stick, rebound, spread, break up, and splash for the interaction between sprays and heated walls.' These universal maps allow classification of impact behavior across diverse conditions by capturing the essential physics through dimensionless ratios. A critical aspect is the temperature dependence of these parameters, as 'Both the Reynolds and Weber numbers change with temperature because of the temperature dependence of viscosity, surface tension and, to a lesser extent, density.' This temperature sensitivity means that as particles heat up in gas turbine environments, viscosity decreases and surface tension changes, altering both Re and We values and consequently shifting the predicted impact regime. The dimensional analysis approach enables identification of universal thresholds for transitions between erosion, deposition, fragmentation, and splashing based on particle properties and impact conditions, providing a robust framework for predicting fouling behavior across different turbine operating scenarios.",
+    "original_text": {
+      "1": "Using non-dimensional parameters, generalized maps can be formed showing different regimes as stick, rebound, spread, break up, and splash for the interaction between sprays and heated walls",
+      "2": "Both the Reynolds and Weber numbers change with temperature because of the temperature dependence of viscosity, surface tension and, to a lesser extent, density"
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "fluid_mechanics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires deep understanding of fluid mechanics concepts (Weber number, Reynolds number), particle impact behavior, gas turbine fouling mechanisms, and dimensional analysis - all specific to combustion/energy/CFD domain expertise. It cannot be answered with general ML knowledge alone.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct with proper citations, and no other compliance issues."
+    },
+    "retry_count": 1,
+    "question_id": "deepseek_q_4eacd817",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Generalization-of-particle-impact-behavior-in-ga_2019_Progress-in-Energy-and",
+      "paper_title": "Generalization-of-particle-impact-behavior-in-ga_2019_Progress-in-Energy-and"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:21:15.240251",
+      "answer_length": 1785
+    }
+  }
+]

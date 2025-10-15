@@ -1,0 +1,177 @@
+[
+  {
+    "question_text": "How does the fatty acid composition of biodiesel affect its cetane number (CN), and what structural factors contribute to variations in CN among different methyl esters? Provide a detailed mechanistic explanation.",
+    "standard_answer": "The cetane number of biodiesel is primarily determined by the molecular structure of its constituent fatty acid methyl esters (FAMEs). Key structural factors influencing CN include: (1) Chain length - Longer fatty acid chains (e.g., C18 vs C12) generally increase CN due to better autoignition characteristics under compression. For saturated esters, CN increases approximately linearly with carbon number. (2) Degree of unsaturation - Each double bond decreases CN significantly, with the effect being non-linear (relative oxidation rates: oleates=1, linoleates=41, linolenates=98). This is because double bonds reduce the fuel's reactivity towards radical-initiated combustion. (3) Double bond position - Esters with double bonds near the middle of the chain (e.g., Δ9) have lower CNs than those with bonds near the terminus due to differences in radical stabilization energies. (4) Branching - While branching in the alcohol moiety has minimal effect, branching in the fatty acid chain can slightly reduce CN. The CN of mixtures can be predicted using a weighted average formula: CN_mix = Σ(A_C × CN_C), where A_C is the relative amount and CN_C is the cetane number of each component.",
+    "original_text": {
+      "1": "The cetane number (CN) is a prime indicator of diesel fuel quality as it relates to the ignition behavior of the fuel. The higher the CN, the shorter the ignition delay time, i.e. the time that passes between injection of the fuel into the cylinder and the onset of ignition and vice versa.",
+      "2": "The CNs of low-CN compounds show better agreement in the literature than those of compounds with higher CNs. The cause of this is the non-linear relationship between the ignition delay time and the CN."
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "question_id": "batch_detail_q_1cb8e684",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Biodiesel-fuels_2017_Progress-in-Energy-and-Combustion-Science",
+      "paper_title": "Biodiesel-fuels_2017_Progress-in-Energy-and-Combustion-Science"
+    },
+    "metadata": {
+      "generation_model": "openai/Pro/deepseek-ai/DeepSeek-V3",
+      "quality_check_model": "openai/Pro/deepseek-ai/DeepSeek-V3",
+      "created_at": "2025-10-15T07:25:47.250594",
+      "batch_processing": true,
+      "answer_length": 1188
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及生物柴油的脂肪酸组成和十六烷值（CN）的关系，需要燃烧和燃料特性的专业知识。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案准确且详细，符合领域专业知识要求。"
+    },
+    "merge_source": "questions_copy"
+  },
+  {
+    "question_text": "Derive the equation used to predict the kinematic viscosity of biodiesel mixtures from individual fatty acid methyl ester components, and explain the physical significance of each term.",
+    "standard_answer": "The kinematic viscosity (ν_mix) of biodiesel mixtures can be predicted using the linear blending equation: ν_mix = Σ(A_C × ν_C), where A_C is the fractional composition (0-1) of each FAME component and ν_C is its kinematic viscosity at 40°C. This equation is derived from the Grunberg-Nissan equation for dynamic viscosity of mixtures, simplified by assuming ideal mixing behavior where molecular interactions between different ester species are negligible compared to self-interactions. The key assumptions are: (1) No significant volume change upon mixing (validated by small excess volumes observed experimentally). (2) Molecular interactions are dominated by London dispersion forces proportional to chain length. (3) Polar interactions from ester groups are similar across components. For saturated esters >C20 that are solid at 40°C, their viscosity contribution is estimated using a third-order polynomial ν = 0.30487 + 0.0265×C + 0.0066×C² + 0.000491×C³, where C is carbon number. This accounts for their hypothetical liquid-phase viscosity contribution.",
+    "original_text": {
+      "1": "The kinematic viscosity of a mixture of fatty esters can be determined by an equation in which the overall kinematic viscosity is directly proportional to amounts and viscosities of the individual components.",
+      "2": "Thus a third-order polynomial equation ν = 0.30487 + 0.0265 × C + 0.0066 × C² + 0.000491 × C³ in which ν = kinematic viscosity as calculated viscosity contribution (CVC) and C = number of carbon atoms was obtained."
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "fluid_mechanics",
+    "question_id": "batch_detail_q_6ea0b73f",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Biodiesel-fuels_2017_Progress-in-Energy-and-Combustion-Science",
+      "paper_title": "Biodiesel-fuels_2017_Progress-in-Energy-and-Combustion-Science"
+    },
+    "metadata": {
+      "generation_model": "openai/Pro/deepseek-ai/DeepSeek-V3",
+      "quality_check_model": "openai/Pro/deepseek-ai/DeepSeek-V3",
+      "created_at": "2025-10-15T07:25:53.336091",
+      "batch_processing": true,
+      "answer_length": 1062
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "该问题涉及生物柴油混合物的运动粘度预测，需要流体力学、热力学和燃料化学领域的专业知识。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案准确且详细，涵盖了方程推导、物理意义及假设条件，符合学术规范。"
+    },
+    "merge_source": "questions_copy"
+  },
+  {
+    "question_text": "Explain the mechanism by which biodiesel composition affects NOx emissions in diesel engines, relating molecular structure to combustion chemistry and thermodynamic effects.",
+    "standard_answer": "Biodiesel composition affects NOx emissions through three primary mechanisms: (1) Thermal NOx formation: Higher unsaturation (more double bonds) increases adiabatic flame temperature due to greater heat release per mole of CO₂ produced. For example, methyl linolenate (3 double bonds) burns hotter than methyl oleate (1 double bond), promoting N₂ + O₂ → 2NO via the Zeldovich mechanism. (2) Prompt NOx: Oxygenated structures in biodiesel (ester groups) produce CH radicals that catalyze N₂ dissociation at lower temperatures than thermal NOx pathways. (3) Combustion phasing: Higher cetane numbers from saturated esters advance ignition timing, increasing peak cylinder pressure/temperature. Additionally, biodiesel's higher speed of sound (~1411 m/s for methyl linoleate vs ~1324 m/s for petrodiesel) causes earlier pressure wave reflections in fuel injection systems, effectively advancing injection timing. The combined effect typically increases NOx by 5-15% compared to petrodiesel, with the exact increase depending on engine calibration and biodiesel composition.",
+    "original_text": {
+      "1": "NOx exhaust emissions increase with increasing unsaturation and decreasing chain length, which can also lead to a connection with the CNs of these compounds.",
+      "2": "Speed of sound, which decreases with increasing temperature, and isentropic bulk modulus tend to increase as the degree of unsaturation and chain length increase with the increase in isentropic bulk modulus being fairly uniform with the addition of each double bond."
+    },
+    "type": "reasoning",
+    "difficulty": 5,
+    "topic": "combustion_kinetics",
+    "question_id": "batch_detail_q_ac09d8d7",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Biodiesel-fuels_2017_Progress-in-Energy-and-Combustion-Science",
+      "paper_title": "Biodiesel-fuels_2017_Progress-in-Energy-and-Combustion-Science"
+    },
+    "metadata": {
+      "generation_model": "openai/Pro/deepseek-ai/DeepSeek-V3",
+      "quality_check_model": "openai/Pro/deepseek-ai/DeepSeek-V3",
+      "created_at": "2025-10-15T07:26:01.031841",
+      "batch_processing": true,
+      "answer_length": 1070
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及柴油发动机中生物柴油成分对NOx排放的影响机制，需要燃烧化学、热力学和分子结构领域的专业知识。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案全面且准确，涵盖了热NOx形成、即时NOx和燃烧相位等多个机制，并提供了具体的分子结构影响示例，与原文引用和论文内容一致。"
+    },
+    "merge_source": "questions_copy"
+  },
+  {
+    "question_text": "Calculate the theoretical cloud point of a biodiesel blend containing 60% methyl oleate (C18:1), 30% methyl linoleate (C18:2), and 10% methyl palmitate (C16:0), given their individual melting points and explaining why simple weighted averaging doesn't accurately predict cold flow properties.",
+    "standard_answer": "While viscosity and cetane number follow linear blending rules, cloud point (CP) exhibits strongly non-ideal behavior due to: (1) Eutectic effects - Mixtures often melt below individual component melting points (mp). Methyl palmitate (mp=30.5°C) depresses the crystallization temperature when mixed with unsaturated esters. (2) Crystal packing disruption - Unsaturated esters (methyl oleate mp=-20°C, linoleate mp=-43°C) prevent saturated esters from forming stable crystals. (3) Supercooling - Metastable states can persist 10-20°C below thermodynamic equilibrium. A rigorous calculation would require: ΔG_mix = ΔH_mix - TΔS_mix < 0, where ΔH_mix accounts for interactions between different ester molecules. Experimentally, such blends typically show CP ≈ -5°C to 0°C, much lower than the weighted average (-20×0.6 + -43×0.3 + 30×0.1 = -15.9°C). The actual CP is dominated by the onset of methyl palmitate crystallization, but its crystallization is inhibited by unsaturated esters until significantly supercooled.",
+    "original_text": {
+      "1": "The CP depends on the nature and amounts of the saturated fatty compounds. Thus, biodiesel fuels derived from fats or oils with significant amounts of saturated fatty compounds will display higher CPs and PPs.",
+      "2": "These properties are oxidative stability and cold flow. Minor FAME components influence these properties more strongly than indicated by the amounts."
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "heat_transfer",
+    "question_id": "batch_detail_q_a84ecdf9",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Biodiesel-fuels_2017_Progress-in-Energy-and-Combustion-Science",
+      "paper_title": "Biodiesel-fuels_2017_Progress-in-Energy-and-Combustion-Science"
+    },
+    "metadata": {
+      "generation_model": "openai/Pro/deepseek-ai/DeepSeek-V3",
+      "quality_check_model": "openai/Pro/deepseek-ai/DeepSeek-V3",
+      "created_at": "2025-10-15T07:26:10.118772",
+      "batch_processing": true,
+      "answer_length": 1015
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及生物柴油的低温流动性能（云点计算）和酯类混合物的相变行为，需要燃烧/能源工程和热力学领域的专业知识。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量优秀，完整解释了非理想混合行为的三项机制（共晶效应、晶体堆积破坏、过冷），并通过热力学公式和实验数据验证了结论。"
+    },
+    "merge_source": "questions_copy"
+  },
+  {
+    "question_text": "Analyze how the transesterification reaction equilibrium can be shifted towards higher biodiesel yields using Le Chatelier's Principle, considering four different process intensification methods discussed in the paper.",
+    "standard_answer": "Le Chatelier's Principle predicts four approaches to shift transesterification equilibrium (TG + 3ROH ⇄ 3FAME + glycerol): (1) Excess alcohol (Typically 6:1 methanol:oil vs stoichiometric 3:1) - Increases ROH concentration, driving equilibrium right. (2) Product removal - Continuous separation of glycerol (denser phase) or use of reactive distillation to remove FAME avoids reverse reactions. (3) Supercritical conditions - At ~573-673K and 15-45MPa, single-phase operation eliminates mass transfer limitations between immiscible oil/alcohol phases. (4) Microwave irradiation - Selective heating of polar methanol creates localized high-temperature regions (> bulk temperature) that accelerate forward reaction kinetics. Process intensification methods like reactive distillation (simultaneous reaction/separation) and membrane reactors (selective FAME permeation) combine multiple principles. The equilibrium constant K_eq = [FAME]³[glycerol]/[TG][ROH]³ increases with temperature (endothermic reaction), but excessive temperature can degrade unsaturated FAMEs.",
+    "original_text": {
+      "1": "Early product removal to drive equilibrium ................................................................................................................................................................ 41",
+      "2": "At supercritical conditions, the reaction mixture is in one phase only and thus interphase mass transfer constraints are eliminated."
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "question_id": "batch_detail_q_dc978fcf",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Biodiesel-fuels_2017_Progress-in-Energy-and-Combustion-Science",
+      "paper_title": "Biodiesel-fuels_2017_Progress-in-Energy-and-Combustion-Science"
+    },
+    "metadata": {
+      "generation_model": "openai/Pro/deepseek-ai/DeepSeek-V3",
+      "quality_check_model": "openai/Pro/deepseek-ai/DeepSeek-V3",
+      "created_at": "2025-10-15T07:26:17.064946",
+      "batch_processing": true,
+      "answer_length": 1064
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "该问题涉及化学反应平衡（transesterification）、Le Chatelier's Principle以及过程强化方法，需要燃烧/能源领域的专业知识。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案准确且完整，涵盖了所有关键点，无需修改。"
+    },
+    "merge_source": "questions_copy"
+  }
+]

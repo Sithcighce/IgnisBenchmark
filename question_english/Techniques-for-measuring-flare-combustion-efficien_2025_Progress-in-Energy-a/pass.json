@@ -1,0 +1,167 @@
+[
+  {
+    "question_text": "How does crosswind-induced fuel stripping in industrial flares lead to decreased combustion efficiency, and what are the underlying fluid mechanics mechanisms?",
+    "standard_answer": "Crosswind-induced fuel stripping occurs when aerodynamic forces divert unburned fuel from the combustion zone, creating regions of low combustion efficiency in the flare plume. This phenomenon is driven by vortex formation in the wake of the flare stack, where crosswind velocities exceed the fuel jet momentum. The momentum flux ratio (MFR = ρ_j·V_j²/ρ_∞·V_∞²) quantifies this interaction, with low MFR values (<1) indicating susceptibility to stripping. As crosswind speed increases, vortices formed in the shear layer between the fuel jet and crosswind entrain fuel-rich pockets and transport them away from the reaction zone before complete combustion can occur. These fuel-rich regions become diluted below the lower flammability limit through intense local mixing, leading to local extinction events. The stripped fuel appears as cold, unburned hydrocarbons in the plume wake, significantly reducing overall combustion efficiency. Computational fluid dynamics simulations show this creates spatially heterogeneous CE fields with localized regions of <50% efficiency despite global CE estimates above 90%.",
+    "original_text": {
+      "1": "Crosswind-induced fuel stripping was first proposed by Johnson et al. [52,53]. Their wind tunnel experiments on 1′′ (25.4 mm) and 3′′ (76.2 mm) diameter flare tips revealed a strong, nonlinear relationship between CE and crosswind speed at low momentum flux ratios",
+      "2": "This low CE region results from fuel stripping, which occurs when fuel is diverted from the combustion zone by vortices formed in the wake of the flare stack, resulting in a region of unburned fuel beneath the reaction zone in the buoyant combustion plume"
+    },
+    "type": "reasoning",
+    "difficulty": 5,
+    "topic": "fluid_mechanics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question requires specialized knowledge in combustion science (flare combustion efficiency), fluid mechanics (crosswind effects, vortex formation, momentum flux ratio), and CFD expertise to understand the underlying mechanisms of fuel stripping in industrial flares.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct, and compliant with other requirements."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_9911bee9",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Techniques-for-measuring-flare-combustion-efficien_2025_Progress-in-Energy-a",
+      "paper_title": "Techniques-for-measuring-flare-combustion-efficien_2025_Progress-in-Energy-a"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:29:54.307548",
+      "answer_length": 1110
+    }
+  },
+  {
+    "question_text": "Why does steam over-assistance in downstream flares paradoxically increase gas-phase hydrocarbon emissions despite suppressing visible soot formation?",
+    "standard_answer": "Steam over-assistance creates a thermal quenching effect that reduces the net heating value of the combustion zone (NHV_cz), leading to incomplete combustion and increased gaseous hydrocarbon emissions. While steam injection enhances turbulent mixing between fuel and oxidizer, suppressing soot formation through improved oxidation kinetics, excessive steam dilutes the reaction zone and lowers local temperatures below the ignition threshold. This thermal quenching occurs through multiple mechanisms: (1) The high heat capacity of steam absorbs significant combustion energy, reducing flame temperature and slowing chemical reaction rates according to Arrhenius kinetics. (2) Steam molecules participate in three-body recombination reactions that compete with chain-branching pathways, reducing radical concentrations needed for complete fuel oxidation. (3) The diluted mixture falls below the lean flammability limit in localized regions, causing flame extinction. Operators often over-assist to eliminate visible soot (which indicates >20% opacity violations) while inadvertently increasing invisible gas-phase emissions of methane and volatile organic compounds, creating a trade-off between particulate and gaseous pollutant control.",
+    "original_text": {
+      "1": "While injecting steam and air into the flare combustion zone is intended to suppress soot formation and breakthrough by promoting turbulent mixing between the HC and oxidizer streams, too much assistance can lower the net heating value of the combustion zone (NHV_cz), leading to local quenching or complete extinguishment of the flare",
+      "2": "Since gaseous HC emissions are invisible to the unaided eye, operators may over-assist to suppress visible soot formation and breakthrough at the cost of excessive gas-phase emissions"
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "combustion_science",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question requires deep combustion science expertise including flame dynamics, soot formation mechanisms, thermal quenching effects, hydrocarbon oxidation kinetics, and flare operation principles. It specifically addresses the paradoxical relationship between steam assistance, soot suppression, and gas-phase emissions in combustion systems.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer are both high quality - domain-focused with correct, detailed explanation that aligns with paper content and combustion principles."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_2208f3b8",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Techniques-for-measuring-flare-combustion-efficien_2025_Progress-in-Energy-a",
+      "paper_title": "Techniques-for-measuring-flare-combustion-efficien_2025_Progress-in-Energy-a"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:29:54.492480",
+      "answer_length": 1239
+    }
+  },
+  {
+    "question_text": "What are the fundamental differences between local and global combustion efficiency definitions in flare performance assessment, and why do they yield different values in spatially heterogeneous plumes?",
+    "standard_answer": "Local combustion efficiency (CE_local) is defined using point measurements or line-of-sight column densities of species concentrations (CE = [CO₂]/([CO₂] + [CO] + [CH₄] + ...)), while global CE (CE_global) employs mass flow rates through a control volume enveloping the entire plume (CE = ṁ_C,CO₂/(ṁ_C,CO₂ + ṁ_C,THC + ṁ_C,CO + ṁ_C,soot)). The key distinction lies in velocity weighting: CE_global accounts for spatial variations in mass flux, whereas CE_local assumes uniform velocity distribution. In heterogeneous flare plumes, regions with high unburned hydrocarbon concentrations often coincide with different flow velocities than CO₂-rich zones. For example, fuel-stripped regions containing cold, dense methane may have lower velocities than hot buoyant combustion products, causing CE_local measurements to overestimate CE_global when sampling predominantly from high-velocity, high-efficiency regions. This discrepancy is exacerbated by the need to select 'representative' sampling locations, which often miss low-CE zones in the plume wake. The difference can be significant, with studies showing CE_local overestimating CE_global by up to 50% of the combustion inefficiency (1-CE) in crosswind conditions.",
+    "original_text": {
+      "1": "Local CE measurements are based on the relative amounts of combustion products at a single point, Eq. (5), or as column densities along an LOS, Eqs. (6) and (7). Global CE is based on an overall carbon balance as shown in Eqs. (2)–(4)",
+      "2": "Concentrations and column densities do not capture the effect of nonuniform velocities throughout the plume and thus may be poor approximations of CE in regions of the flare plume where there is significant spatial variation in velocity"
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question requires specialized knowledge in combustion science (flare combustion efficiency definitions), fluid mechanics (spatial heterogeneity in plumes, velocity variations), and energy systems (flare performance assessment). It specifically addresses measurement techniques and physical phenomena unique to combustion systems.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer are both high quality - the question requires domain expertise and the answer accurately reflects the paper's content about local vs global combustion efficiency measurements in flare plumes."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_f6937e5c",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Techniques-for-measuring-flare-combustion-efficien_2025_Progress-in-Energy-a",
+      "paper_title": "Techniques-for-measuring-flare-combustion-efficien_2025_Progress-in-Energy-a"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:29:55.639516",
+      "answer_length": 1215
+    }
+  },
+  {
+    "question_text": "How do infrequent bursts of black carbon production in flare plumes affect the statistical distribution of species concentration ratios, and what implications does this have for accurately measuring combustion efficiency?",
+    "standard_answer": "Infrequent bursts of black carbon (BC) production in flare plumes create positively skewed statistical distributions in species concentration ratios like BC/H₂O. These bursts populate the long tail of the distribution and have an outsized influence on the mean value. The skewed distribution means that a single measurement would most probably return the mode of the distribution, which was approximately 13% less than the mean for both types of flare gas tested. This statistical behavior calls into question the assumption that species concentration ratios used to derive combustion efficiency are highly correlated and fixed. Inadequate sampling that misses these infrequent high-emission events would cause combustion efficiency estimates to be biased toward higher values, as the measurement would capture the more frequent low-emission periods while missing the bursts that substantially reduce global efficiency. The positive skewness observed in BC/H₂O ratios suggests that BC/CO₂ ratios would follow similar trends, introducing considerable uncertainty into measurements that assume fixed concentration ratios.",
+    "original_text": {
+      "1": "The infrequent bursts of BC production in laboratory-scale flare plumes [59], evidenced by the positive skewness in BC/H₂O ratios, are one such example. These bursts populate the distribution's long tail and have an outsized influence on the mean value",
+      "2": "How do we capture rogue events in flaring and account for their impact on the global, time-integrated CE? The solution may lie in coupling experimental measurements taken at higher spatial resolution over longer time frames"
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question requires specialized knowledge of combustion science (flare plumes, black carbon production), statistical analysis of species concentration distributions, and combustion efficiency measurement techniques in energy systems. It specifically addresses combustion kinetics, emissions behavior, and measurement challenges in flaring applications.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer are both high quality - domain-focused, factually correct based on citations, and compliant with all quality standards."
+    },
+    "retry_count": 1,
+    "question_id": "deepseek_q_de05c3b3",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Techniques-for-measuring-flare-combustion-efficien_2025_Progress-in-Energy-a",
+      "paper_title": "Techniques-for-measuring-flare-combustion-efficien_2025_Progress-in-Energy-a"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:30:35.760438",
+      "answer_length": 1119
+    }
+  },
+  {
+    "question_text": "A remote sensing measurement of a flare plume using open-path FTIR spectroscopy yields column densities of CO₂ = 850 ppm·m, CH₄ = 15 ppm·m, and CO = 8 ppm·m. Unmeasured hydrocarbons are estimated to contribute an additional 5% to the carbon balance. Calculate the combustion efficiency using the column density definition and explain why this measurement cannot be used to determine the destruction removal efficiency (DRE) of methane. Discuss the fundamental limitations of column density measurements for DRE calculations, including the role of spatial heterogeneity, velocity variations, and the need for mass flow rate information.",
+    "standard_answer": "The combustion efficiency (CE) based on column densities is calculated using the formula CE = n'_CO₂/(n'_CO₂ + n'_CH₄ + n'_CO + n'_other). First, the measured carbon column density sum is 850 + 15 + 8 = 873 ppm·m. Accounting for unmeasured hydrocarbons contributing 5% additional carbon, the correction factor is 1/(1-0.05) = 1.0526, giving an adjusted total carbon column density of 873 × 1.0526 = 918.9 ppm·m. Thus, CE = 850/918.9 = 0.925 or 92.5%. However, this column density-based CE cannot be used to determine the destruction removal efficiency (DRE) of methane. The fundamental limitation lies in the definition of DRE, which requires mass flow rates: DRE_CH₄ = 1 - (ṁ_CH₄,out/ṁ_CH₄,in). Column density measurements (ppm·m) represent concentration integrated along a path but do not provide information about actual mass flow rates. Without knowledge of the velocity field and plume geometry, it's impossible to convert column densities to the mass flow rates needed for DRE calculation. Additionally, spatial heterogeneity in the plume means that concentration ratios measured at a single location may not represent the global average, and velocity variations throughout the plume further complicate the relationship between concentration and mass flux. The proper DRE calculation requires simultaneous measurement of both concentration and velocity fields across the entire plume cross-section.",
+    "original_text": {
+      "1": "The DRE for a specific component of the vent gas will always be greater than or equal to the CE. According to Schwartz et al., 'A flare operating with a combustion efficiency of 98 % can achieve a destruction efficiency in excess of 99.5 %'",
+      "2": "We emphasize that the above definitions are not all equivalent. Concentrations and column densities do not capture the effect of nonuniform velocities throughout the plume and thus may be poor approximations of CE in regions of the flare plume where there is significant spatial variation in velocity."
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question requires specialized knowledge in combustion science (flare combustion efficiency calculations), spectroscopy (open-path FTIR), and fluid mechanics (mass flow rates, spatial heterogeneity, velocity variations). It specifically addresses combustion efficiency calculations using column density measurements and the limitations of these measurements for determining destruction removal efficiency, which are core topics in combustion diagnostics and flare performance assessment.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "The question is well-structured, domain-focused, and the answer correctly applies combustion efficiency calculations while explaining the fundamental limitations of column density measurements for DRE determination, aligning with the paper's content about spatial heterogeneity and velocity variations."
+    },
+    "retry_count": 1,
+    "question_id": "deepseek_q_d01b8e32",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Techniques-for-measuring-flare-combustion-efficien_2025_Progress-in-Energy-a",
+      "paper_title": "Techniques-for-measuring-flare-combustion-efficien_2025_Progress-in-Energy-a"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:30:41.301712",
+      "answer_length": 1404
+    }
+  }
+]

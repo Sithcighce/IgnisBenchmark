@@ -1,0 +1,134 @@
+[
+  {
+    "question_text": "论文中详细讨论了不同转化方法对生物质衍生碳纳米材料表面形貌和性能的影响。请从计算流体动力学(CFD)角度，建立微波辅助热解反应器的多物理场耦合模型，包括电磁场、温度场、流场和化学反应场的相互作用。",
+    "standard_answer": "建立微波辅助热解反应器的CFD多物理场耦合模型需要综合考虑电磁场、温度场、流场和化学反应场的相互作用，具体模型构建如下：\n\n1. 电磁场模型：\n微波在反应器中的传播遵循Maxwell方程：\n∇×H = J + ∂D/∂t\n∇×E = -∂B/∂t\n∇·D = ρ\n∇·B = 0\n\n其中介电特性随温度变化：ε*(T) = ε'(T) - jε''(T)\n微波功率耗散密度：Q_em = (1/2)ωε₀ε''|E|²\n\n2. 温度场模型：\n能量守恒方程：ρc_p(∂T/∂t + v·∇T) = ∇·(k∇T) + Q_em + Q_chem\n其中Q_chem是化学反应热源项。\n\n3. 流场模型：\n连续性方程：∂ρ/∂t + ∇·(ρv) = 0\n动量方程：ρ(∂v/∂t + v·∇v) = -∇p + ∇·τ + ρg\n\n4. 化学反应场：\n生物质热解反应可以用多组分输运方程描述：\n∂(ρY_i)/∂t + ∇·(ρvY_i) = ∇·(ρD_i∇Y_i) + R_i\n其中R_i是组分i的净生成速率。\n\n耦合求解策略：\n- 首先求解电磁场得到Q_em分布\n- 将Q_em作为热源代入能量方程\n- 温度变化影响介电特性，反馈到电磁场计算\n- 流场变化影响温度分布和组分传输\n- 化学反应释放的热量影响温度场\n\n边界条件设置：\n- 微波端口：设置入射功率和频率\n- 反应器壁面：对流和辐射散热边界\n- 气体进出口：质量流率或压力边界\n\n模型验证可以通过与实验数据对比，如论文中提到的温度分布、产物收率和碳材料特性。这种多物理场耦合模型能够优化反应器设计，提高碳纳米材料的质量和产率，对于实现生物质废物的高效增值转化具有重要意义。",
+    "original_text": {
+      "1": "Microwave assisted pyrolysis is a time tested approach and efficacious technique. Its use reduces the time of pyrolysis and upsurges the superiority of the end product",
+      "2": "The key advantage of microwave assisted heating over the conventional heating comprises handy start-up and shut down, quick, controlled, non-contact and volumetric heating, little heat losses, time efficiency, high energy efficiency, uniform temperature distribution and low processing costs"
+    },
+    "type": "concept",
+    "difficulty": 5,
+    "topic": "CFD_modeling",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及计算流体动力学(CFD)、多物理场耦合建模、微波辅助热解反应器、电磁场-温度场-流场-化学反应场相互作用，需要燃烧工程、传热传质、流体力学、电磁学等专业领域的深度知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量优秀，无需修改。包含了完整的物理场模型构建、耦合求解策略、边界条件设置和模型验证方法，专业性强且内容详实"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_81575670",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Methods-for-the-conversion-of-biomass-waste-into-val_2022_Progress-in-Energy",
+      "paper_title": "Methods-for-the-conversion-of-biomass-waste-into-val_2022_Progress-in-Energy"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:39:11.419355",
+      "answer_length": 717
+    }
+  },
+  {
+    "question_text": "基于论文中关于微波辅助热解生物质制备碳纳米材料的讨论，请分析微波加热与传统热传导加热在生物质热解过程中的传热机制差异，并详细解释微波加热如何影响碳纳米材料的孔隙结构和比表面积。",
+    "standard_answer": "微波辅助热解与传统热传导加热在生物质热解过程中的传热机制存在本质差异。传统热传导加热是通过辐射、对流或传导现象从材料表面向中心传递热量，热量传递速率受限于材料的热导率，导致加热速率较慢且温度分布不均匀。而微波加热采用体积加热机制，微波辐射穿透生物质材料内部，通过介电加热将微波能量转化为热能，在整个材料体积内同时产生热量。这种加热机制导致更快的加热速率和更均匀的温度分布。\n\n从传热方程来看，传统热传导遵循傅里叶定律：q = -k∇T，其中q是热流密度，k是热导率，∇T是温度梯度。而微波加热的能量吸收遵循P = 2πfε₀ε''E²，其中P是功率密度，f是频率，ε₀是真空介电常数，ε''是损耗因子，E是电场强度。\n\n微波加热对碳纳米材料孔隙结构和比表面积的增强机制主要体现在：1）快速加热导致挥发性物质迅速释放，形成更多孔隙通道；2）均匀加热减少局部过热，避免孔隙塌陷；3）内部压力积累促进微孔形成。如论文中所述，通过微波加热制备的碳纳米材料比表面积可达2090 m²/g，而传统方法通常只能达到500-800 m²/g。这种高比表面积对于超级电容器等电化学器件的性能至关重要，因为它提供了更多的活性位点和更短的离子扩散路径。",
+    "original_text": {
+      "1": "In contrast, microwaves used in microwave assisted pyrolysis infiltrate the matter and release energy, thereby; heat gets created all through the volume of material i.e. in-core volumetric heating",
+      "2": "The increase in temperature enhances the surface area and pore volume of the pyrolyzed biomass, while increase of temperature and reaction time upsurge the yield of volatile materials"
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "heat_transfer",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及微波辅助热解、传统热传导加热的传热机制差异，以及微波加热对碳纳米材料孔隙结构和比表面积的影响，需要燃烧、传热、能源和材料科学领域的专业知识，包括传热方程、介电加热原理、材料表征等",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量优秀，无需修改。答案准确解释了微波加热与传统热传导加热的传热机制差异，提供了正确的传热方程，详细分析了微波加热对孔隙结构和比表面积的影响机制，并引用了论文中的具体数据支持观点"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_975508cb",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Methods-for-the-conversion-of-biomass-waste-into-val_2022_Progress-in-Energy",
+      "paper_title": "Methods-for-the-conversion-of-biomass-waste-into-val_2022_Progress-in-Energy"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:39:12.004449",
+      "answer_length": 515
+    }
+  },
+  {
+    "question_text": "论文中讨论了生物质热解过程中复杂的化学反应网络。请基于Broido-Shafizadeh模型，详细推导纤维素热解的反应动力学模型，包括完整的反应机理网络、各步反应的速率方程，并说明表观活化能的实验测定方法。",
+    "standard_answer": "Broido-Shafizadeh模型采用三步反应机理描述纤维素热解过程：首先纤维素在约250-300°C转化为活性纤维素，随后活性纤维素通过两条竞争路径分别生成脱水纤维素和左旋葡聚糖。完整的反应网络为：\n\n1. 纤维素 → 活性纤维素 (k₁, Ea₁)\n2. 活性纤维素 → 脱水纤维素 + H₂O (k₂, Ea₂)\n3. 活性纤维素 → 左旋葡聚糖 + 其他挥发物 (k₃, Ea₃)\n\n速率方程推导如下：\nd[Cellulose]/dt = -k₁[Cellulose]\nd[Active Cellulose]/dt = k₁[Cellulose] - (k₂ + k₃)[Active Cellulose]\nd[Dehydrated Cellulose]/dt = k₂[Active Cellulose]\nd[Levoglucosan]/dt = k₃[Active Cellulose]\n\n各步反应速率常数遵循Arrhenius方程：kᵢ = Aᵢexp(-Eaᵢ/RT)，其中Aᵢ为指前因子，Eaᵢ为活化能，R为气体常数，T为绝对温度。\n\n表观活化能可通过等转化率法实验测定，采用Friedman法：ln(dα/dt) = ln[A f(α)] - Ea/RT，其中α为转化度，f(α)为反应机理函数。通过在不同升温速率下测量热重曲线，绘制ln(dα/dt)对1/T的关系图，斜率即为-Ea/R。\n\n根据文献研究，纤维素热解在200-350°C温度范围内表观活化能约为140-220 kJ/mol，具体数值取决于纤维素结晶度和热解条件。对于更精确的描述，可采用分布式活化能模型(DAEM)：dα/dt = ∫₀^∞ k(E)f(E)dE，其中f(E)为活化能分布函数，能够准确描述纤维素复杂组分的热解行为。",
+    "original_text": {
+      "1": "The reaction mechanism involved in the formation of biochar during the pyrolysis of biomass consisting cellulose is close to hemicellulose because of structural similarities",
+      "2": "In this effort it was found that carbonization of bio-waste obeyed 1st order reaction kinetics with the deceptive activation energy of 67.41 & 179.54 kJ/mol for coconut fibre and 59.18 &173.70 kJ/mol for eucalyptus leaves in the temperature ranges of 150–300 °C, respectively"
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及生物质热解、化学反应网络、Broido-Shafizadeh模型、反应动力学推导、速率方程和表观活化能测定方法，这些都需要燃烧科学、化学反应工程和热分析领域的专业知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量良好，无需修改。问题明确聚焦专业领域，答案提供了完整的反应机理网络、速率方程推导和实验方法说明，内容准确且详细"
+    },
+    "retry_count": 2,
+    "question_id": "deepseek_q_e78d22f2",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Methods-for-the-conversion-of-biomass-waste-into-val_2022_Progress-in-Energy",
+      "paper_title": "Methods-for-the-conversion-of-biomass-waste-into-val_2022_Progress-in-Energy"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:40:46.730553",
+      "answer_length": 762
+    }
+  },
+  {
+    "question_text": "基于论文中关于生物质衍生碳纳米材料在超级电容器中应用的讨论，请建立电极-电解质界面的双电层电容和赝电容的物理模型，并推导相应的电荷存储容量计算公式。要求模型需准确反映Gouy-Chapman-Stern模型中的电容并联关系，并考虑具体的表面氧化还原反应动力学。",
+    "standard_answer": "生物质衍生碳纳米材料在超级电容器中的电荷存储机制包括双电层电容（EDLC）和赝电容两个主要组成部分。根据论文内容，双电层电容模型基于Gouy-Chapman-Stern理论，其中总电容为紧密层（Stern层）电容和扩散层电容的并联关系：C_total = C_H + C_GC。Helmholtz层电容C_H = ε₀ε_rA/d，其中ε₀是真空介电常数（8.854×10⁻¹² F/m），ε_r是电解质相对介电常数，A是电极比表面积，d是双电层厚度（通常为0.3-0.5 nm）。Gouy-Chapman电容C_GC = (2ε₀ε_rze²n∞/kT)^(1/2)cosh(zeψ₀/2kT)，其中z是离子价态，e是元电荷（1.602×10⁻¹⁹ C），n∞是体相离子浓度，ψ₀是表面电位，k是玻尔兹曼常数（1.381×10⁻²³ J/K），T是绝对温度。赝电容模型考虑含氮、硫、磷等杂原子的生物质衍生碳材料的表面氧化还原反应，赝电容电荷存储Q_pseudo = ∫ΓdE，其中Γ是表面吸附的电荷量，E是电极电位。对于准可逆的表面氧化还原反应，赝电容可表示为C_pseudo = (nFΓ₀/RT)exp[(E - E⁰)nF/RT]/[1 + exp[(E - E⁰)nF/RT]]²，其中n是电子转移数，F是法拉第常数（96485 C/mol），Γ₀是表面活性位点浓度，E⁰是标准电极电位。总电荷存储容量Q_total = Q_EDLC + Q_pseudo = ∫C_EDLC dV + ∫C_pseudo dV。对于具体的生物质衍生碳材料，如论文中提到的花生壳衍生的多孔碳，其比电容可达525 F/g，可通过公式C_sp = (∫I dV)/(m·ΔV·v)验证，其中I是电流，m是活性物质质量，ΔV是电压窗口，v是扫描速率。",
+    "original_text": {
+      "1": "SCs store the electrical charge in an electric double layer at the interface of electrode and electrolyte (EDLC) and also via the redox reactions (referred as the pseudocapacitance)",
+      "2": "The fabricated electrodes were electrochemically active and displayed a specific capacitance of 525 F g⁻¹ for an asymmetric supercapacitor device"
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及超级电容器、电极-电解质界面、双电层电容、赝电容、Gouy-Chapman-Stern模型、表面氧化还原反应动力学等电化学和能源存储领域的专业知识，需要燃烧/传热/流体/CFD/能源领域的深度知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量优秀，无需修改。答案准确建立了双电层电容和赝电容的物理模型，正确推导了相关计算公式，完整反映了Gouy-Chapman-Stern模型的电容并联关系，并考虑了表面氧化还原反应动力学，与论文内容高度一致。"
+    },
+    "retry_count": 2,
+    "question_id": "deepseek_q_520cae40",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Methods-for-the-conversion-of-biomass-waste-into-val_2022_Progress-in-Energy",
+      "paper_title": "Methods-for-the-conversion-of-biomass-waste-into-val_2022_Progress-in-Energy"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:41:03.044416",
+      "answer_length": 769
+    }
+  }
+]

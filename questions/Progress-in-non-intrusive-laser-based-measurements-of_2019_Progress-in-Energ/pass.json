@@ -1,0 +1,83 @@
+[
+  {
+    "question_text": "在燃料贫乏的氢气/空气混合物在铂涂层通道内的异相/均相湍流燃烧中，表面放热性如何导致流动层流化？请结合湍动能和涡量的分布，详细阐述热传递与流体动力学耦合的物理机理。",
+    "standard_answer": "在铂催化剂表面发生的剧烈放热反应会导致通道内气体温度显著升高，特别是靠近壁面的区域。由于气体粘度随温度升高而增加，这显著抑制了湍流脉动。具体而言，高温壁面通过增强的分子粘性耗散，减少了湍流涡结构的生成和强度。这可以通过比较等温非催化壁面与催化反应壁面的瞬时涡量等值面图进行阐明。高温壁面会降低湍流强度，表现为近壁区域湍动能的显著衰减（如图所示，非反应工况下湍动能近壁值较高，而催化反应工况下湍动能近壁值大幅降低。例如，在入口雷诺数Re_IN = 16,110时，催化燃烧导致近壁区（y < 0.65 mm）的PIV数据缺失，反映出强烈的热阻尼效应。数值模拟中，采用低雷诺数湍流模型（如Ezato模型）时，必须包含一个依赖于y的阻尼函数f_μ，该函数使得涡粘性（ν_t = C_μ f_μ k^2/ε) 在近壁区被过度耗散。这种层流化过程可以通过分析Favre平均的湍动能k̃的横向剖面来量化，在催化反应条件下，近壁湍动能可比非催化等温情况低一个数量级。此外，表面放热性引起的密度降低会进一步加速核心区流动（平均速度Ũ增加），同时，由于ρμ = 常数的Chapman-Rubesin条件，动态粘度μ的增加会进一步抑制湍流。在工程应用中，这种层流化有利于稳定燃烧，但同时也可能因湍流输运减弱而影响反应物向催化剂表面的传输，从而影响总转化率。因此，在催化燃烧系统的湍流模型开发中，准确捕捉表面放热性对湍流的阻尼作用是至关重要的。",
+    "original_text": {
+      "1": "Turbulent hetero-/homogeneous combustion over Pt has been investigated in the 7-mm channel height of Fig. 6 for fuel-lean H2/air mixtures at atmospheric pressure.",
+      "2": "The laminarization process is illustrated by comparing in Fig. 56 measured instantaneous spanwise vorticity maps for a catalytically reacting case with an inlet Re_IN = 16,110 (based on the mean inlet velocity, the inlet gas properties and the 7 mm full channel height).",
+      "type": "reasoning",
+      "difficulty": 4,
+      "topic": "combustion_kineties"
+    },
+    "2": {
+      "question_text": "在甲烷在铂上的总氧化过程中，如何通过一维拉曼测量和数值模拟评估局部催化反应速率？请详细描述该方法，并解释为何在Da_s < Da_s,ig范围内进行测量是至关重要的。",
+      "standard_answer": "该方法依赖于在催化剂边界层内进行主要气相物种（例如CH₄、H₂O）和温度的横向剖面测量。根据理论分析，催化反应速率与燃料在壁面的横向梯度成正比，即̇s_F ∝ (∂Y_F/∂y)_w。为了准确评估催化反应速率，实验必须在表面Damköhler数Da_s小于催化点火Damköhler数Da_s,ig的条件下进行，因为在这个范围内，归一化的壁面梯度(1/Y_F,IN)Y'_F,w随Da_s变化显著（如图8所示）。具体地，通过比较测量和预测的甲烷摩尔分数横向剖面（如图12所示），可以验证催化反应机理的适用性。例如，在p=1 bar, φ=0.40条件下，通过拉曼技术在多个轴向位置（如x=9, 21, 51 mm）获得的边界层剖面，显示了在Da_s < Da_s,ig时，近壁燃料质量分数Y_F,w和壁面梯度Y'_F,w随Da_s变化明显，例如在ζ=0.16时，Da_s从0.1增加到1.0，Y_F,w从约0.9下降到0.6，这对应于催化反应从动力学控制向混合控制过渡。此外，必须确保测量在气相点火位置x_ig,g的上游进行，以避免气相化学反应对催化动力学的干扰。因此，空间分辨的拉曼测量结合二维CFD模拟，提供了评估局部催化反应速率的强大工具。然而，由于拉曼信号在靠近热催化壁面约0.5-0.7 mm的区域内信噪比过低而无法使用，但通过分析剩余的通道高度内的物种剖面，仍足以确定催化反应状态。",
+      "original_text": {
+        "1": "The local wall gradient is proportional to the catalytic reaction rate: (ρD_F ∂Y_F/∂y)_w = W_F ̇s_F。因此，燃料的归一化梯度也与催化反应速率成正比：(1/Y_F,IN) Y'_F,w = Le_F (2Prζ)^(1/2) (ρ_w/ρ_IN) (Y_F,w/Y_F,IN) Da_s ~ ̇s_F。",
+        "2": "Comparisons between measured and predicted boundary layer profiles over the remaining channel height suffice to assess the catalytic reactivity.",
+        "type": "calculation",
+        "difficulty": 4,
+        "topic": "heat_transfer"
+      },
+      "3": {
+        "question_text": "在甲烷在铑和铂上的催化部分氧化（CPO）中，均相燃烧的剧烈程度如何影响反应进程？请结合OH和CH₂O的PLIF测量结果，详细阐述均相燃烧对氧化区长度和产物选择性的影响。",
+        "standard_answer": "在铑催化剂上，剧烈的均相燃烧显著缩短了氧化区的长度。例如，在φ=3, p=5 bar条件下，使用铑时，氧气在x≈150 mm处已完全消耗，而在铂上，氧气持续存在直至通道出口x=300 mm。这种缩短是由于均相反应路径具有更弱的传输限制（由层流质量燃烧速率决定）相比催化路径快得多。具体而言，在铑上，均相燃烧导致一个强烈的火焰，该火焰在氧化区内快速消耗氧气，从而减少了达到完全转化所需的通道长度。此外，均相燃烧的存在并不影响通道出口处的H₂和CO选择性，因为甲烷CPO是一个过程平衡限制而非动力学限制。然而，剧烈的均相燃烧可能会通过提高气相温度而间接影响后续的蒸汽重整反应。反应通量分析图（例如图15）显示，在铑上，均相路径将CH₄主要转化为CO，但大部分生成的CO会吸附在催化剂上，只有一小部分在气相中氧化为CO₂。因此，通过PLIF技术监测均相点火位置x_ig,g和火焰形态，对于准确评估CPO过程至关重要。数值模拟必须包含详细的异相和均相反应机理，以正确解释实验观察结果。",
+        "original_text": {
+          "1": "Heterogeneous and combined hetero-/homogeneous chemical processes have attracted increased attention in many energy conversion systems, which include large-scale power generation, microreactors for portable power generation, household burners, fuel-processing technologies and automotive exhaust gas after treatment。",
+          "2": "The syngas and the unconverted reactants are then mixed with the remaining air establishing an overall fuel-lean homogeneous combustion zone。",
+          "type": "concept",
+          "difficulty": 5,
+          "topic": "combustion_kineties"
+        },
+        "4": {
+          "question_text": "在燃料贫乏的氢气/空气催化燃烧中，扩散不平衡（Le_H₂ ~ 0.3）如何影响均相燃烧区的形状和位置？请结合详细的流动和输运分析，解释为何在铂上会形成两个分离的火焰分支，而不是封闭的火焰？",
+          "standard_answer": "由于氢气的分子扩散率远高于氧气和热量，这导致燃料更有效地向催化壁面输运，而不是热量从壁面向外输运，从而将均相燃烧限制在靠近壁面的狭窄区域内。具体而言，轻质氢气分子相对于重质氧气的优先扩散，使得在壁面附近的催化当量比约为体相气相当量比的2.4倍。这种优先扩散效应在理论分析中通过引入燃料路易斯数Le_F来量化。例如，在p=1 bar, φ=0.28条件下，OH-PLIF测量显示两个清晰的火焰分支沿着上下催化壁面发展（如图27所示）。在数值模拟中，必须使用混合物平均输运模型，并包含详细的多步化学反应机理，以准确预测火焰形态。此外，湍流倾向于均衡物种输运速率，从而缓和优先扩散效应。因此，在评估催化反应性时，必须通过拉曼测量确定边界层物种剖面。这种火焰构型与燃料贫乏的甲烷燃烧（其中形成封闭的V形火焰）形成对比。这种差异对非侵入式激光诊断技术的应用具有重要影响。",
+          "original_text": {
+            "1": "In fuel-lean H₂/air laminar catalytic combustion, the preferential diffusion of H₂ with respect to O₂ leads to a catalytic fuel-to-oxygen equivalence ratio about 2.4 times the bulk gas equivalence ratio。",
+            "2": "Turbulence tends to equalize species transport rates and moderates the preferential diffusion effects。",
+            "type": "reasoning",
+            "difficulty": 4,
+            "topic": "fluid_mechanics"
+          },
+          "5": {
+            "question_text": "在湍流异相/均相燃烧中，催化反应速率的脉动有多大？请基于直接数值模拟（DNS）数据，详细分析概率密度函数（PDF）的形状和范围，并解释这些脉动对湍流模型闭合的影响。",
+            "standard_answer": "根据DNS结果，局部催化反应速率的瞬时脉动可达300%。例如，在Re_τ = 182和Re_τ = 385时，不同Da_s组合下的PDF显示，反应速率的分布具有明显的非高斯特性，尤其是在近壁区域。具体而言，对于Re_τ = 182, Da_s = 0.5时，PDF呈现宽尾分布，表明存在强烈的间歇性。这种脉动主要是由于近壁湍流结构的非定常演化，例如图61(c)所示。这种大脉动与催化反应中浓度依赖性的适度非线性（例如，氢气在铂上的反应级数约为1.15）耦合导致的。因此，在开发湍流异相燃烧模型时，必须考虑这种脉动，因为传统的“层流类似”闭合可能无效。因此，实验上需要单次发射的1-D拉曼测量来直接评估催化反应速率的脉动。然而，由于拉曼信号在靠近热壁面区域信噪比低，这构成了一个重大挑战。未来的发展可能依赖于稳定物种的PLIF技术的定量化，以提供必要的瞬时浓度数据。",
+            "original_text": {
+              "1": "Large fluctuations coupled with even modest non-linearities in the concentration dependencies can invalidate the 'laminar like' closure。",
+              "original_text": {
+                "1": "Probability density functions (PDFs) of the catalytic reaction rates for two combinations of Re_τ and Da_s。",
+                "2": "Assessment of the local catalytic reaction rate fluctuations is necessary for turbulent model development。",
+                "type": "calculation",
+                "difficulty": 5,
+                "topic": "CFD_modeling"
+              }
+            }
+          }
+        }
+      }
+    },
+    "question_id": "batch_detail_q_8faefd53",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Progress-in-non-intrusive-laser-based-measurements-of_2019_Progress-in-Energ",
+      "paper_title": "Progress-in-non-intrusive-laser-based-measurements-of_2019_Progress-in-Energ"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T16:21:24.408456",
+      "batch_processing": true,
+      "answer_length": 612
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "该问题涉及湍流燃烧、催化剂表面反应、热传递与流体动力学耦合等燃烧学、传热学和计算流体动力学（CFD）的专业知识，需要深入理解异相/均相反应、湍动能、涡量、壁面热效应等专业概念。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量高，机制解释清晰且与原文引用一致，无需修改。"
+    }
+  }
+]

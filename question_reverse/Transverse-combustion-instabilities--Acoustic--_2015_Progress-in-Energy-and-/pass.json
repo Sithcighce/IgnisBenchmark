@@ -1,0 +1,134 @@
+[
+  {
+    "question_text": "根据论文中关于横向燃烧不稳定性的讨论，详细解释横向声学模式如何作为'时钟'控制扰动场的频率和模态结构，同时轴向流动扰动如何成为主导热释放率振荡的主要机制。请结合声学-流体-火焰耦合过程进行机理分析。",
+    "standard_answer": "横向声学模式作为'时钟'的机制体现在：在环形燃烧室中，当喷嘴横截面积远小于燃烧室横截面积（Acs,s/Acs,A≪1）时，横向声学波动相关的非定常体积流量通常远大于喷嘴中的体积流量波动，这使得我们能够在许多情况下解耦它们的声学特性。横向声学波动设定整体扰动的频率，这些扰动激发喷嘴中的轴向运动，这通常是火焰响应的主要来源。\n\n具体机理：横向声波在燃烧室内形成特定的压力分布模式，这些压力波动通过喷嘴阻抗耦合产生轴向流动扰动。对于压力反节点位置，压力波动较大但横向速度为零，这导致近乎轴对称的轴向速度扰动。这些轴向流动扰动随后激发流体动力学不稳定性，特别是轴对称剪切层模式，最终导致显著的热释放率振荡。\n\n物理过程包括：1) 横向声压波动通过喷嘴阻抗转换为轴向速度扰动；2) 轴向速度扰动激发对流不稳定的剪切层；3) 剪切层卷起形成涡结构；4) 涡结构对流到火焰区域引起火焰面积波动；5) 火焰面积变化导致热释放率振荡。这种间接耦合机制解释了为什么横向模式控制频率，而轴向扰动主导热释放响应的现象。",
+    "original_text": {
+      "1": "In this case, the unsteady volume flow rate associated with transverse flow oscillations is generally much larger than the volume flow oscillations in the nozzles, enabling us to decouple their acoustics in many instances. In this way, the azimuthal acoustic fluctuations act as a 'clock,' setting the overall frequency of the disturbance.",
+      "2": "However, in many instances, it is the indirect axial flow disturbances at the nozzles (driven by pressure oscillations from the transverse mode), and the vortices that they excite, that cause the dominant heat release rate oscillations."
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "fluid_mechanics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及燃烧不稳定性、声学模式、流体力学耦合、热释放率振荡等专业概念，需要燃烧学、流体力学、声学和热力学领域的专业知识才能准确理解和回答。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": ""
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_4ff9399a",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Transverse-combustion-instabilities--Acoustic--_2015_Progress-in-Energy-and-",
+      "paper_title": "Transverse-combustion-instabilities--Acoustic--_2015_Progress-in-Energy-and-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:07:00.520911",
+      "answer_length": 448
+    }
+  },
+  {
+    "question_text": "详细解释轴向温度不均匀性对横向声学模式特征频率的影响机制，特别是温度跃变界面如何改变环形燃烧室中纯横向模式的存在条件，并分析刚性边界与压力释放边界条件下的差异。",
+    "standard_answer": "轴向温度不均匀性通过改变声速分布显著影响横向声学模式：\n\n物理机制：在具有轴向温度梯度的燃烧室中，声波传播速度随位置变化，导致波数k(z)=ω/c(z)的空间变化。这引入了轴向依赖性，使得纯横向模式（无轴向变化）不再满足边界条件。\n\n数学模型：考虑在z=L_i处具有温度跃变的薄环形管道，温度比κ=T_b,0/T_u,0，声速比c_b,0/c_u,0=√κ。特征方程涉及双曲函数组合，反映了波在高温和低温区域的传播。\n\n边界条件影响：\n- 刚性边界条件：允许纯横向模式存在，频率近似为f_m = m_a c_0/L_θ，其中c_0为加权平均声速\n- 压力释放边界条件：不存在纯横向模式，所有模式都是混合的轴向-横向模式\n\n物理解释：压力释放边界强制z=L处的非定常压力为零，这破坏了纯横向模式的轴向均匀性假设。在真实发动机中，阻塞喷嘴近似刚性边界，因此存在纯横向模式，而在开放式燃烧室实验中无法准确模拟这一条件。\n\n参考频率定义：\n轴向模式：f_ref,axial = n/[2L(b/c_u,0 + (1-b)/c_b,0)]（刚性）\n横向模式：f_ref,transverse = m_a[c_u,0b + c_b,0(1-b)]/(2πR)\n\n这种温度效应对于正确缩放实验设施和预测实际发动机中的不稳定性频率至关重要，强调了准确模拟边界条件在横向不稳定性研究中的重要性。",
+    "original_text": {
+      "1": "Axial temperature gradients increase the dimensionality of transverse acoustic problems and modify the basic natural frequency considerations described in Sec. 3.1.",
+      "2": "This boundary condition causes significantly more alteration of the axial wave distribution than the rigid condition, due to it forcing the unsteady pressure to zero at z = L."
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "heat_transfer",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及燃烧室声学、温度梯度对声波传播的影响、边界条件效应等专业燃烧不稳定性领域知识，需要燃烧动力学、热声学和流体力学专业知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "无需改进，问题和答案质量均较高"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_cb8c2e38",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Transverse-combustion-instabilities--Acoustic--_2015_Progress-in-Energy-and-",
+      "paper_title": "Transverse-combustion-instabilities--Acoustic--_2015_Progress-in-Energy-and-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:07:01.430247",
+      "answer_length": 588
+    }
+  },
+  {
+    "question_text": "推导并分析环形燃烧室中横向热声不稳定性的特征方程，特别关注喷嘴耦合因子G对不稳定增长率的定量影响，以及时间延迟参数如何通过Rayleigh准则影响稳定性边界。",
+    "standard_answer": "基于薄环形间隙假设和准一维模型，环形燃烧室的热声稳定性特征方程可推导为：\n\ndet[T_s - (1 0; 0 1)∏_{s=1}^N] = 0\n\n其中传递矩阵T_s包含几何和声学参数。对于相同喷嘴的情况，特征方程简化为：\n\nHe/N = m_a - (i/2π)ln[(1-G(He))/(1+G(He))]\n\n其中喷嘴耦合因子G定义为：\nG = -1/2 (Acs,s/Acs,A)(1/Z̃_tr)[1+F̂(ω)]\n\n在G≪1和G≫1极限下的不稳定性增长率：\n\nG≪1时：Im(uR/c_b,0) = -(N/2π)(Acs,s/Acs,A)[(1+n cos(2πm_aτ̃_q))Re(1/Z̃_tr) - n sin(2πm_aτ̃_q)Im(1/Z̃_tr)]\n\nG≫1时：Im(uR/c_b,0) = -(2N/π)(Acs,s/Acs,A)[(1+n cos(2πm_aτ̃_q))Re(Z̃_tr) - n sin(2πm_aτ̃_q)Im(Z̃_tr)]/|1+2n cos(2πm_aτ̃_q)+n²|\n\n时间延迟τ_q通过Rayleigh准则影响稳定性：当压力与热释放率同相时系统不稳定，即相位差Φ = 2πτ_q/T_a < π/2，或等效地τ_q/T_a < 1/4。\n\n物理意义：G因子量化了喷嘴几何、阻抗和火焰响应对系统稳定性的综合影响。时间延迟参数τ̃_q = τ_q/(2πR/c_b,0)控制压力-热释放率相位关系，决定了Rayleigh积分的符号，从而决定系统是吸收还是向声场添加能量。",
+    "original_text": {
+      "1": "Gs is a 'nozzle coupling factor' given by: Gs = -1/2 (Acs,s/Acs,A)(1/Z̃_tr)[1+F̂_s(ω)]",
+      "2": "The variation of Im(ũ) for the G≪1 case shows that the growth rate is an oscillatory function of τ̃_q, and oscillates between positive and negative values."
+    },
+    "type": "calculation",
+    "difficulty": 5,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及环形燃烧室热声不稳定性的特征方程推导、喷嘴耦合因子对不稳定增长率的影响分析、时间延迟参数通过Rayleigh准则影响稳定性边界等，需要燃烧学、热声学、流体力学、传热学等领域的专业知识。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "无需改进，问题和答案均符合质量要求。"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_00f5cdd5",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Transverse-combustion-instabilities--Acoustic--_2015_Progress-in-Energy-and-",
+      "paper_title": "Transverse-combustion-instabilities--Acoustic--_2015_Progress-in-Energy-and-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:07:01.738092",
+      "answer_length": 665
+    }
+  },
+  {
+    "question_text": "详细分析横向声学强迫如何激发不同的流体动力学模式（轴对称vs螺旋模式），并解释这些模式对轴对称和非轴对称火焰热释放率振荡的不同影响机制。",
+    "standard_answer": "横向声学强迫通过特定的空间分布激发不同的流体动力学模式：\n\n模式激发机制：\n根据雅可比-安格尔展开，平面波e^(ikx)可分解为无穷螺旋模式的和：e^(ikx) = Σ_{m_h=-∞}^{∞} i^{m_h} J_{m_h}(kr) e^{im_hφ}\n其中J_{m_h}是第一类贝塞尔函数。\n\n在kr≪1极限下：\n- 对称强迫（cos(kx)）主要激发m_h=0（轴对称）模式\n- 不对称强迫（sin(kx)）主要激发m_h=±1（螺旋）模式\n- 行波强迫激发m_h=0和m_h=±1模式\n\n对热释放率的影响：\n对于轴对称火焰，只有m_h=0模式贡献于全局积分热释放率振荡：\nQ̇_MBR(ω) = ∫[ṁ″_{F,1,m_h=0}(r,ω)h_R(r)]2πdA_{f,0}(r) dr (m_h=0时)\nQ̇_MBR(ω) = 0 (m_h≠0时)\n\n物理机理：螺旋模式虽然引起显著的火焰褶皱和摆动，但由于火焰的轴对称性，不同方位角位置的波动相互抵消，净热释放率变化很小。只有当时间平均火焰形状非轴对称时（如由于火焰-火焰相互作用或约束效应），螺旋模式才会导致显著的全局热释放率振荡。\n\n这一机制解释了为什么在单喷嘴圆形几何中测量的火焰响应可能与多喷嘴配置中的响应不同，后者由于火焰相互作用而具有非轴对称特性。",
+    "original_text": {
+      "1": "Symmetric forcing most strongly excites the axisymmetric, m_h = 0 mode, and does not excite odd modes. Finally, asymmetric forcing most strongly excites the m_h = ±1 modes, and does not excite even modes.",
+      "2": "An important implication of these results is that helical modes (m_h ≠ 0), while introducing substantial wrinkling of the flame front, do not lead to fluctuations in the azimuthally integrated heat release in axisymmetric flames."
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "该问题涉及燃烧不稳定性、横向声学强迫、流体动力学模式（轴对称与螺旋模式）以及火焰热释放率振荡的耦合机制，需要燃烧学、流体力学、声学及热力学等领域的专业知识。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "无需改进。答案准确解释了横向声学强迫激发不同流体动力学模式的机制（基于雅可比-安格尔展开和贝塞尔函数），并清晰阐述了轴对称与螺旋模式对热释放率振荡的不同影响（轴对称火焰中螺旋模式因方位角积分抵消而贡献小，非轴对称火焰中可能显著）。原文引用和论文摘录进一步验证了答案的正确性。"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_ffce9d5c",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Transverse-combustion-instabilities--Acoustic--_2015_Progress-in-Energy-and-",
+      "paper_title": "Transverse-combustion-instabilities--Acoustic--_2015_Progress-in-Energy-and-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:07:05.089207",
+      "answer_length": 560
+    }
+  }
+]

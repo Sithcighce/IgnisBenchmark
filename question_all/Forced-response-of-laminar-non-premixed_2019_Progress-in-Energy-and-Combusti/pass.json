@@ -1,0 +1,172 @@
+[
+  {
+    "question_text": "分析轴向扩散效应（有限Peclet数）如何改变非预混火焰的皱纹动力学特性，包括传播速度、耗散和色散效应？请对比Pe→∞和有限Pe情况下的控制方程差异和物理机制。",
+    "standard_answer": "轴向扩散效应通过修改控制方程和边界条件显著影响非预混火焰的皱纹动力学。在Pe→∞极限下，Z方程简化为∂Z/∂t + u·∇Z = D∇²_⊥Z，仅考虑横向扩散。对于有限Pe情况，完整的Z方程为∂Z/∂t + u·∇Z = D(∇²_⊥Z + ∇²_∥Z)，包含轴向扩散项。这种差异导致三个关键动力学参数的变化：传播速度U_c从U_0修正为U_0 + O(1/Pe²)，耗散系数ζ从0变为St_ω²/Pe，色散系数γ从0变为-2/Pe²。论文指出'O(1/Pe)或O(σ_C)项导致皱纹随下游距离呈指数衰减，这种效应随St_ω二次方增加'。物理上，轴向扩散通过平滑混合物分数场的时空变化引入耗散，这与预混火焰中由火焰速度对曲率的依赖性引起的热扩散稳定性机制完全不同。对于色散效应，O(1/Pe²)项引入频率相关的波传播速度，导致不同频率的皱纹以略微不同的速度传播。此外，轴向扩散还改变了入口边界条件，'在现实中，燃料在入口下游发生横向扩散，随后燃料轴向扩散到氧化剂端口，反之亦然'，这消除了Pe→∞情况下在x=0处的非物理无限梯度，从而修改了火焰附着点的动力学行为。",
+    "original_text": {
+      "1": "O(1/Pe)或O(σ_C)项导致皱纹随下游距离呈指数衰减，这种效应随St_ω二次方增加",
+      "2": "在现实中，燃料在入口下游发生横向扩散，随后燃料轴向扩散到氧化剂端口，反之亦然"
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "CFD_modeling",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及燃烧科学中的非预混火焰、轴向扩散效应、Peclet数、皱纹动力学特性、传播速度、耗散和色散效应等专业概念，需要燃烧学、流体力学、传热传质等领域的专业知识来分析和解答。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "无需修改，问题和答案均符合专业标准。答案准确阐述了轴向扩散效应对非预混火焰皱纹动力学的影响，包括控制方程差异、物理机制和关键参数变化，并正确引用了相关文献内容。"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_65890c3e",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Forced-response-of-laminar-non-premixed_2019_Progress-in-Energy-and-Combusti",
+      "paper_title": "Forced-response-of-laminar-non-premixed_2019_Progress-in-Energy-and-Combusti"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:47:18.293574",
+      "answer_length": 482
+    },
+    "merge_source": "question_reverse"
+  },
+  {
+    "question_text": "分析三维旋流环境中螺旋扰动对非预混火焰皱纹动力学的影响，特别关注参数χ = 1 - mσ - 1/k_c的物理意义及其如何控制火焰的空间响应特性？",
+    "standard_answer": "在三维旋流环境中，参数χ = 1 - mσ - 1/k_c是控制非预混火焰对螺旋扰动响应的关键无量纲参数。其中m是螺旋模态数，σ = Ω/ω是非维度旋流参数，k_c = U_c/U_0是归一化扰动相速度。χ的物理意义表征了螺旋扰动的方位角传播与火焰皱纹的方位角对流之间的失配程度。当χ = 0时，对应最大局部空间响应的模态数m_sσ = 1 - 1/k_c，此时'方位角强迫恰好镜像皱纹对流，因此不发生破坏性干涉；相反，它们建设性地叠加，导致火焰皱纹幅度随下游距离单调增长'。这种建设性干涉源于螺旋扰动的方位角相位与火焰皱纹的方位角传播完美匹配，避免了相位抵消。对于χ > 0或χ < 0的情况，方位角干涉变得不完美，导致皱纹幅度出现空间振荡。特别值得注意的是，在Pe→∞极限下，皱纹幅度与χ的符号无关，但相位特性强烈依赖于χ。当χ = 2/k_c时，给定方位角位置的所有轴向位置的火焰响应波动彼此同相。当χ > 2/k_c时，相位滚降为正，表明表观负相速度，这实际上是由于螺旋火焰皱纹通过平面成像时的混叠效应。这些复杂的干涉现象解释了为什么在旋流环境中，'没有方位角位置处的火焰是无皱纹的，由于流动同时进行的方位角和轴向皱纹传播'。",
+    "original_text": {
+      "1": "方位角强迫恰好镜像皱纹对流，因此不发生破坏性干涉；相反，它们建设性地叠加，导致火焰皱纹幅度随下游距离单调增长",
+      "2": "没有方位角位置处的火焰是无皱纹的，由于流动同时进行的方位角和轴向皱纹传播"
+    },
+    "type": "reasoning",
+    "difficulty": 5,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及三维旋流环境、螺旋扰动、非预混火焰皱纹动力学、无量纲参数χ的物理意义及其对火焰空间响应特性的控制机制，需要燃烧学、流体力学、传热传质、CFD等领域的专业知识。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "无需修改。问题聚焦燃烧流体力学专业领域，答案准确解释了参数χ的物理意义及其对火焰皱纹动力学的影响，机理清晰，公式合理，且无事实或基本原理错误。"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_c2460a6c",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Forced-response-of-laminar-non-premixed_2019_Progress-in-Energy-and-Combusti",
+      "paper_title": "Forced-response-of-laminar-non-premixed_2019_Progress-in-Energy-and-Combusti"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:47:18.337591",
+      "answer_length": 517
+    },
+    "merge_source": "question_reverse"
+  },
+  {
+    "question_text": "计算并比较非预混火焰和预混火焰在低Strouhal数极限下的时间延迟参数τ，解释为什么非预混火焰的时间延迟通常比预混火焰短？请基于热释放的空间分布特性进行定量分析。",
+    "standard_answer": "在低Strouhal数极限下，非预混火焰和预混火焰的时间延迟参数τ可通过η-τ模型推导。对于非预混火焰，τ = [∫₀^(L_f,0) x(∂Z_0/∂y)dx]/[∫₀^(L_f,0) (∂Z_0/∂y)dx] × (L_f,0/U_0)。计算表明对于典型的甲烷-空气非预混系统(Z_st=0.055)，τ/(L_f,0/U_0) ≈ 0.2。相比之下，恒定燃烧速度的二维轴向受迫预混火焰的对应值为τ/(L_f,0/U_0) ≈ 0.5。这种差异的根本原因在于热释放的空间分布特性。论文明确指出'非预混火焰的热释放集中在燃烧器出口附近，而预混火焰的热释放更均匀'。具体而言，'非预混火焰平均热释放的一半发生在大约前15-20%的火焰长度内，而预混火焰发生在50%火焰中点处'。这种分布差异使得非预混火焰的有效热释放位置更靠近火焰基部，因此对流动扰动的响应更快。物理上，非预混火焰基部强烈的混合物分数梯度导致该区域的质量燃烧率远高于火焰下游区域，而预混火焰由于燃烧速度基本恒定，热释放沿火焰长度均匀分布。这种热释放分布的根本差异直接决定了两种火焰系统动态响应的时间尺度特性。",
+    "original_text": {
+      "1": "非预混火焰的热释放集中在燃烧器出口附近，而预混火焰的热释放更均匀",
+      "2": "非预混火焰平均热释放的一半发生在大约前15-20%的火焰长度内，而预混火焰发生在50%火焰中点处"
+    },
+    "type": "calculation",
+    "difficulty": 3,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及非预混火焰和预混火焰的时间延迟参数计算、热释放空间分布特性分析，以及低Strouhal数极限下的燃烧动力学，这需要燃烧学、流体力学和传热学等专业领域的深入知识。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "无需改进。答案准确引用了论文内容，定量分析了时间延迟参数差异，并基于热释放空间分布特性合理解释了非预混火焰响应更快的机制。"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_a05cc689",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Forced-response-of-laminar-non-premixed_2019_Progress-in-Energy-and-Combusti",
+      "paper_title": "Forced-response-of-laminar-non-premixed_2019_Progress-in-Energy-and-Combusti"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:47:18.377258",
+      "answer_length": 487
+    },
+    "merge_source": "question_reverse"
+  },
+  {
+    "question_text": "基于论文中非预混火焰与预混火焰在热释放动态响应机制上的根本差异，详细分析为什么在低Strouhal数下非预混火焰的热释放波动主要由质量燃烧率波动主导，而预混火焰则由火焰面积波动主导？请结合两种火焰的燃烧速率表达式和空间分布特性进行机理分析。",
+    "standard_answer": "非预混火焰与预混火焰在热释放动态响应机制上的差异源于它们燃烧速率表达式的本质不同。对于非预混火焰，质量燃烧率由混合物分数梯度决定：ṁ_F = -((1+φ_Ox)^2/φ_Ox)ρD(∂Z/∂n)，其中∂Z/∂n表示混合物分数在火焰法向的梯度。论文明确指出'非预混火焰的局部热释放分布极不均匀——对于大Peclet数火焰，大部分热释放发生在x=0附近'，这导致非预混火焰的热释放高度集中在火焰基部区域。在低Strouhal数下，火焰基部的强混合物分数梯度波动直接驱动质量燃烧率波动，而火焰面积波动由于权重函数ṁ_F,0(x)在火焰尖端趋近于零，对整体热释放贡献较小。相比之下，预混火焰的质量燃烧率ṁ_F = ρ_us_u_c基本恒定，论文指出'对于具有恒定燃烧速度的预混火焰，火焰面积波动是导致热释放波动的主导机制'。预混火焰的ṁ_F,0沿火焰表面均匀分布，因此面积波动直接转化为热释放波动。这种根本差异解释了为什么非预混火焰在低Strouhal数下质量燃烧率波动主导，而预混火焰面积波动主导，反映了两种火焰在燃烧物理机制上的本质区别。",
+    "original_text": {
+      "1": "非预混火焰的局部热释放分布极不均匀——对于大Peclet数火焰，大部分热释放发生在x=0附近",
+      "2": "对于具有恒定燃烧速度的预混火焰，火焰面积波动是导致热释放波动的主导机制"
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及燃烧科学中的非预混火焰与预混火焰的热释放动态响应机制，需要燃烧动力学、流体力学、传热传质等专业领域的深入知识，包括Strouhal数、质量燃烧率、火焰面积波动、混合物分数梯度等专业概念。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量优秀，准确结合了论文中的燃烧速率表达式、空间分布特性和引用内容，对两种火焰在低Strouhal数下热释放波动主导机制的差异进行了清晰的机理分析。无需修改。"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_55a707c4",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Forced-response-of-laminar-non-premixed_2019_Progress-in-Energy-and-Combusti",
+      "paper_title": "Forced-response-of-laminar-non-premixed_2019_Progress-in-Energy-and-Combusti"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:47:18.517531",
+      "answer_length": 468
+    },
+    "merge_source": "question_reverse"
+  },
+  {
+    "question_text": "根据论文内容，推导非预混火焰和预混火焰在高Strouhal数极限下火焰传递函数均呈现1/St渐近行为的原因，并解释为什么非预混火焰在中间Strouhal数范围内会呈现1/√St特性？请从混合物分数梯度在火焰基部的分布特性角度进行数学推导。",
+    "standard_answer": "根据论文内容，非预混火焰和预混火焰在高Strouhal数极限下都呈现1/St渐近行为。从火焰传递函数表达式F = ∫[g(x,ξ₀)(1-exp(i2πStx/R_f))]dx出发，其中g(x,ξ₀)描述混合物分数梯度分布。在x→0极限下，对于包含轴向扩散效应的真实入口边界条件（如Model Problem C），混合物分数梯度呈现有限值分布，而非奇异性。将这一有限梯度分布代入传递函数积分，通过变量代换和留数定理计算振荡积分，可得主导项为F ∝ 1/St。这种1/St行为源于对流区域振荡热释放的相位抵消效应，对于预混和非预混火焰都是相同的物理机制。然而，非预混火焰在中间Strouhal数范围内（St₁ < St < St₂）会呈现1/√St特性，这是由于在阶梯入口边界条件近似下（Model Problem A），混合物分数梯度在火焰基部呈现x^(-1/2)奇异性，即g(x,ξ₀) ~ 1/(R_f√(π/Pe)x^(3/2)) + O(x^(-1/2))。将这一渐近形式代入传递函数积分，得到F ~ ∫[x^(-3/2)(1-exp(i2πStx/R_f))]dx，通过计算可得主导项为F ∝ 1/√St。这种中间范围的1/√St行为比高St极限的1/St衰减更慢，物理上源于火焰基部强梯度区域的持续贡献，即使在高频下，基部区域的强烈混合物分数梯度波动仍能产生显著的热释放响应。相比之下，预混火焰由于燃烧速率均匀分布，高频下的相位抵消效应更强烈，直接导致1/St衰减。",
+    "original_text": {
+      "1": "The flame transfer function, i.e., the normalized ratio of heat release and flow oscillations, is of O(1) at low frequencies and transitions to a 1/St behavior at high frequencies, for both premixed and non-premixed flames",
+      "2": "Non-premixed flames have an additional 1/√St transfer function character at an intermediate range of Strouhal numbers, due to the sharply varying axial dependence of mean heat release near the burner exit"
+    },
+    "type": "reasoning",
+    "difficulty": 5,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及燃烧学中的火焰传递函数、Strouhal数渐近行为、混合物分数梯度分布特性等专业概念，需要燃烧动力学、流体力学和传热传质领域的专业知识进行数学推导和物理解释。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量优秀，准确阐述了高Strouhal数极限下1/St行为的物理机制，清晰解释了非预混火焰中间Strouhal数范围1/√St特性的数学推导和物理原因，与论文内容完全一致。"
+    },
+    "retry_count": 1,
+    "question_id": "deepseek_q_3b590a5f",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Forced-response-of-laminar-non-premixed_2019_Progress-in-Energy-and-Combusti",
+      "paper_title": "Forced-response-of-laminar-non-premixed_2019_Progress-in-Energy-and-Combusti"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:47:59.397663",
+      "answer_length": 640
+    },
+    "merge_source": "question_reverse"
+  }
+]

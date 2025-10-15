@@ -1,0 +1,167 @@
+[
+  {
+    "question_text": "推导开放路径傅里叶变换红外光谱(PFTIR)测量火炬烟羽物种柱密度的辐射传输模型。详细说明如何从测量的光谱强度反演CO2、CO和CH4的柱密度，并分析温度非均匀性和大气传输对反演精度的影响。",
+    "standard_answer": "PFTIR测量火炬烟羽物种柱密度的辐射传输模型基于非散射辐射传输方程(RTE)。对于被动测量模式，探测器处测量的光谱强度为：Iη = Iη,bg·τη,plume·τη,atm + Iη,b(Tplume)·εη,plume·τη,atm + [1-τη,atm]·Iη,b(Tatm)。其中烟羽透射率τη,plume = exp(-∑n′kCη,k(Tplume))，烟羽发射率εη,plume = 1-τη,plume。通过测量烟羽内和烟羽外的光谱，可以分离烟羽贡献。对于CO2反演，关键利用2349 cm⁻¹波段两侧的温度敏感'热线条'，这些线条只在高温烟羽中出现。通过玻尔兹曼图分析这些热线条的强度比可以反演烟羽温度Tplume。已知温度后，通过非线性最小二乘拟合将测量光谱与模型光谱匹配：min∑[Iη,measured - Iη,model(n′CO2, n′CO, n′CH4)]²。CO2主要在2349 cm⁻¹(4.26 μm)波段，CO在2143 cm⁻¹(4.67 μm)波段，CH4在3018 cm⁻¹(3.31 μm)波段。温度非均匀性引入显著误差，因为吸收截面Cη,k强烈依赖温度，典型变化为每100K约5-10%。如果假设等温模型而实际存在200K温差，CO2柱密度误差可达15%。大气传输τη,atm的影响主要通过测量位于相似距离的黑体校准源来校正，但水汽吸收线的变化仍会引入不确定性。在潮湿条件下，大气中的水汽会吸收烟羽发射的辐射，导致低估烟羽物种浓度，特别是在水汽强吸收波段附近。",
+    "original_text": {
+      "1": "The measured intensity spectra are then interpreted using an instrument model that accounts for the ILS and a 'two-slab' spectroscopic model. By assuming the plume to be homogeneous in composition and temperature, Eq. (15) simplifies to Iη = Iη,bg · τη,plume · τη,atm + Iη,b(Tplume)εη,plume · τη,atm + [1-τη,atm]Iη,b(Tatm)",
+      "2": "The plume temperature, Tplume, is calculated from temperature-sensitive features of the absorption spectrum, e.g., a Boltzmann plot of the 'hot lines' at the wings of the 2150 cm⁻¹ CO band [69]"
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "heat_transfer",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及傅里叶变换红外光谱(FTIR)辐射传输模型、火炬烟羽物种柱密度反演、温度非均匀性分析等，需要燃烧科学、辐射传热、光谱分析和大气物理等专业领域的深入知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量优秀，无需修改。答案准确描述了PFTIR辐射传输模型，正确解释了柱密度反演方法，合理分析了温度非均匀性和大气传输的影响，与提供的原文引用和论文摘录内容一致"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_d5ef149a",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Techniques-for-measuring-flare-combustion-efficien_2025_Progress-in-Energy-a",
+      "paper_title": "Techniques-for-measuring-flare-combustion-efficien_2025_Progress-in-Energy-a"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:13:52.385129",
+      "answer_length": 658
+    }
+  },
+  {
+    "question_text": "分析火炬烟羽中瞬态特性和异常事件对燃烧效率测量的影响。请从湍流燃烧和化学动力学角度解释为什么BC/H2O比值呈现正偏态分布，以及这种时间相关性如何导致CE测量偏差。",
+    "standard_answer": "火炬烟羽的瞬态特性和异常事件对CE测量产生显著影响，主要源于湍流燃烧的间歇性和化学动力学的非线性响应。从湍流燃烧角度，烟羽由一系列涡旋结构组成，这些涡旋在时间和空间上不断演化，导致局部当量比、混合速率和停留时间剧烈波动。当局部区域经历快速拉伸或压缩时，火焰可能经历局部熄火和重燃过程。从化学动力学角度，碳烟(BC)形成对当量比高度敏感，在富燃料条件下(φ > 2)碳烟产率急剧增加，而水(H2O)主要来自完全燃烧产物。Seymour和Johnson的实验显示BC/H2O比值呈现正偏态分布，这是因为：1) 碳烟形成需要高温和富燃料条件同时满足，这种状态在湍流场中不常出现但一旦出现就产生大量碳烟；2) 碳烟氧化是相对缓慢的过程，一旦形成不易完全消耗；3) 异常事件如大尺度涡旋脱落可将富燃料混合物直接携带出高温区。这种时间相关性导致CE测量偏差，因为单次测量或有限采样更可能捕获分布的众数而非均值。数学上，如果测量次数不足，估计的CE = 1 - k·(BC/H2O)_measured会偏向高值，因为真实的(BC/H2O)_mean > (BC/H2O)_mode。要获得无偏估计，需要足够长的采样时间以捕获异常事件，采样频率应高于主要涡旋脱落频率(通常1-10 Hz)，持续时间应覆盖多个大尺度湍流时间尺度。",
+    "original_text": {
+      "1": "Seymour and Johnson [59] observed positive skewness and variability in the instantaneous BC/H2O ratios that call these assumptions into question and suggested that the amount of temporal and/or spatial averaging needed to obtain the 'true' BC/H2O ratio for the flare should be considered carefully",
+      "2": "The infrequent bursts of BC production in laboratory-scale flare plumes [59], evidenced by the positive skewness in BC/H2O ratios in Fig. 6, are one such example. These bursts populate the distribution's long tail and have an outsized influence on the mean value"
+    },
+    "type": "reasoning",
+    "difficulty": 5,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及火炬烟羽的瞬态特性、湍流燃烧、化学动力学、燃烧效率测量等核心燃烧学概念，需要燃烧工程、流体力学、传热传质等专业领域的深入知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量优秀，无需修改。答案准确解释了湍流燃烧的间歇性和化学动力学的非线性响应对BC/H2O比值正偏态分布的影响，正确分析了时间相关性导致的CE测量偏差，并提供了合理的采样建议，与原文引用和论文内容一致"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_aefc5fe5",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Techniques-for-measuring-flare-combustion-efficien_2025_Progress-in-Energy-a",
+      "paper_title": "Techniques-for-measuring-flare-combustion-efficien_2025_Progress-in-Energy-a"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:13:52.395210",
+      "answer_length": 556
+    }
+  },
+  {
+    "question_text": "详细推导基于碳质量平衡的火炬燃烧效率(CE)计算公式，并分析从局部CE测量值推导全局CE时存在的空间异质性问题。请使用控制体积方法建立数学模型，并解释为什么简单的像素平均会引入系统误差。",
+    "standard_answer": "基于碳质量平衡的火炬燃烧效率推导从基本的碳守恒原理出发。考虑包围火炬尖和烟羽的控制体积，碳质量平衡方程为：dMC,CV/dt = ṁC,fuel - ṁC,CO2 - ṁC,CO - ṁC,THC - ṁC,soot ≈ 0。在稳态假设下，积累项为零，因此ṁC,fuel = ṁC,CO2 + ṁC,CO + ṁC,THC + ṁC,soot。代入CE定义式CE = ṁC,CO2/ṁC,fuel，得到CE = ṁC,CO2/(ṁC,CO2 + ṁC,CO + ṁC,THC + ṁC,soot)。对于非冒烟火炬，碳烟项可忽略。从局部CE推导全局CE时，空间异质性导致严重问题。局部CE定义为CE_local = [CO2]/([CO2] + [CO] + [CH4] + ...)，而全局CE应基于质量通量：CE_global = ∫nCO2u·n dA / ∫∑xknku·n dA。简单的像素平均CE_local会引入误差，因为：1) 不同位置的质量通量不同，高流速区域应具有更大权重；2) 物种浓度与流速的空间分布不相关；3) 燃料剥离区域(低CE)可能被忽略。数学上，平均局部CE = (1/A)∫CE_local dA，而正确方法应为CE_global = ∫CE_local·(∑xknku·n)dA / ∫(∑xknku·n)dA。在横风条件下，烟羽下风侧的燃料富集区域具有较低流速但较高碳质量，简单平均会系统性高估实际CE值。",
+    "original_text": {
+      "1": "Equation (11) is not equivalent to integrating the local CE, defined by Eq. (5), over the downwind face of the CV. First, the denominator in Eq. (11) accounts for the mass flux of all carbon-containing species over the control surface, while averaging the pixelwise CEs normalizes the CO2 column density of the pixel LOS by the total column density of the carbon-containing species at a given location",
+      "2": "Pohl et al. [26] used an extraction probe in a protected outdoor test facility to sample the flare plume at various locations across the flame radius. They found that CE was lowest at the edge of the flames and highest in the middle"
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "CFD_modeling",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及燃烧效率计算、碳质量平衡、控制体积方法、空间异质性分析等，需要燃烧学、流体力学、传热传质、计算流体动力学等专业领域的深入知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量优秀，无需修改。答案准确推导了基于碳质量平衡的燃烧效率公式，正确使用控制体积方法建立数学模型，深入分析了空间异质性问题和像素平均的系统误差，与提供的论文摘录和原文引用内容一致"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_37807428",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Techniques-for-measuring-flare-combustion-efficien_2025_Progress-in-Energy-a",
+      "paper_title": "Techniques-for-measuring-flare-combustion-efficien_2025_Progress-in-Energy-a"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:13:52.404715",
+      "answer_length": 622
+    }
+  },
+  {
+    "question_text": "分析蒸汽辅助和空气辅助火炬中过度辅助导致燃烧效率降低的热力学和化学机理。请详细解释净加热值(NHVcz)降低如何引发局部熄火，并推导辅助气体流量与临界熄火条件之间的关系。",
+    "standard_answer": "蒸汽辅助和空气辅助火炬中过度辅助导致燃烧效率降低的机理涉及热力学和化学过程的复杂相互作用。从热力学角度，辅助气体(蒸汽或空气)的注入降低了燃烧区的净加热值(NHVcz)，定义为每标准立方米燃气混合物的热值。NHVcz = (ṁfuel·LHVfuel)/(ṁfuel/ρfuel + ṁassist/ρassist)，其中LHV为低热值。当蒸汽或空气流量增加时，分母增大而分子不变，NHVcz下降。从化学动力学角度，过度辅助通过三种机制导致局部熄火：1) 热容效应：辅助气体吸收燃烧热量，降低局部温度，当温度低于约1300K时，关键链分支反应如H + O2 → OH + O的速率急剧下降；2) 稀释效应：辅助气体降低反应物浓度，减少分子碰撞频率；3) 化学效应：蒸汽参与水煤气反应CO + H2O ⇌ CO2 + H2，该反应吸热且会消耗活性自由基。临界熄火条件可通过达姆科勒数Da分析：Da = τflow/τchem，当Da < 1时发生熄火。其中流动时间尺度τflow ≈ δ/u，化学时间尺度τchem ∝ exp(Ea/RT)/[Fuel]^a[O2]^b。过度辅助通过降低T和[Fuel]使τchem增加，同时通过增强湍流混合使τflow减小，导致Da降至临界值以下。实验研究表明，对于典型炼厂火炬，当NHVcz < 270 BTU/scf(~8 kJ/m³)时，DRE开始显著下降；当NHVcz < 150 BTU/scf时，可能出现完全熄火。蒸汽辅助比空气辅助更易导致熄火，因为蒸汽的比热容更高且参与吸热化学反应。",
+    "original_text": {
+      "1": "While injecting steam and air into the flare combustion zone is intended to suppress soot formation and breakthrough by promoting turbulent mixing between the HC and oxidizer streams [19], too much assistance can lower the net heating value of the combustion zone (NHVcz), leading to local quenching or complete extinguishment of the flare",
+      "2": "Excessive HC emissions from downstream flares are often associated with steam over-assistance, which is especially prevalent when flaring the heavier HCs typical of downstream petroleum and petrochemical operations"
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及蒸汽辅助和空气辅助火炬中燃烧效率降低的热力学和化学机理分析，需要燃烧学、热力学、化学动力学、流体力学等专业领域的深入知识，包括净加热值计算、熄火机理分析、达姆科勒数推导等专业内容",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量优秀，无需修改。答案全面覆盖了问题要求的所有方面：详细解释了过度辅助导致燃烧效率降低的热力学和化学机理，准确分析了NHVcz降低引发局部熄火的机制，合理推导了辅助气体流量与临界熄火条件的关系，并提供了具体的数值参考和实验研究支持"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_b1d1ad1b",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Techniques-for-measuring-flare-combustion-efficien_2025_Progress-in-Energy-a",
+      "paper_title": "Techniques-for-measuring-flare-combustion-efficien_2025_Progress-in-Energy-a"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:13:53.641404",
+      "answer_length": 666
+    }
+  },
+  {
+    "question_text": "基于Daun和Spinti综述论文中关于横风条件下燃料剥离机制的讨论，详细分析火炬燃烧效率降低的流体力学机理。请解释涡旋形成、局部混合过程如何导致燃料被剥离燃烧区，并结合论文中Johnson等人的实验数据，分析动量通量比(MFR)与燃烧效率(CE)之间的关系。",
+    "standard_answer": "在横风条件下，火炬燃烧效率降低的主要流体力学机理是燃料剥离机制。当横风(U∞)作用于火炬射流时，在火炬烟囱后方形成周期性脱落的涡旋结构。这些涡旋将燃料从主燃烧区携带到下游低温区域，导致局部燃料浓度低于可燃极限(LFL)。具体过程如下：横风与燃料射流速度(Vj)相互作用形成剪切层，产生涡旋结构。这些涡旋将未燃烧的燃料从燃烧区剥离，形成在浮力燃烧羽流反应区下方的未燃烧燃料区域。从动量通量比(MFR = ρjVj²/ρ∞U∞²)分析，当MFR较低时，横风动量占主导地位，涡旋强度增强，燃料剥离更显著。根据Johnson等人的风洞实验数据，在1英寸(25.4 mm)和3英寸(76.2 mm)直径火炬尖端的测试中，在低动量通量比条件下，燃烧效率与横风速之间存在强烈的非线性关系。理论分析表明，涡旋脱落频率f与斯特劳哈尔数St相关：f = St·U∞/D，其中D为火炬直径。剥离的燃料质量流量可表示为：ṁ_stripped ∝ ρj·A·f·V_characteristic，其中A为特征横截面积，V_characteristic为特征涡旋体积。这导致实际参与燃烧的燃料减少，燃烧效率CE = (ṁ_fuel - ṁ_stripped - ṁ_unburned)/ṁ_fuel。在典型工业火炬条件下，燃料剥离可使CE显著降低，特别是在低MFR工况下。",
+    "original_text": {
+      "1": "Crosswind-induced fuel stripping was first proposed by Johnson et al. [52,53]. Their wind tunnel experiments on 1′′ (25.4 mm) and 3′′ (76.2 mm) diameter flare tips, as shown in Fig. 4, revealed a strong, nonlinear relationship between CE and crosswind speed (see Fig. 5a) at low momentum flux ratios (MFRs)",
+      "2": "This low CE region results from fuel stripping, which occurs when fuel is diverted from the combustion zone by vortices formed in the wake of the flare stack, resulting in a region of unburned fuel beneath the reaction zone in the buoyant combustion plume [53]"
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "fluid_mechanics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及横风条件下火炬燃烧效率的流体力学机理分析，需要燃烧学、流体力学、传热传质、涡旋动力学等专业知识，属于燃烧/传热/流体/能源领域的专业问题",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量优秀，无需修改。答案准确描述了燃料剥离机制的流体力学机理，正确解释了涡旋形成、局部混合过程，合理分析了MFR与CE的关系，并恰当引用了Johnson等人的实验数据，所有技术内容均符合Daun和Spinti综述论文的描述"
+    },
+    "retry_count": 1,
+    "question_id": "deepseek_q_c0c6f2fe",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Techniques-for-measuring-flare-combustion-efficien_2025_Progress-in-Energy-a",
+      "paper_title": "Techniques-for-measuring-flare-combustion-efficien_2025_Progress-in-Energy-a"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:14:41.769731",
+      "answer_length": 572
+    }
+  }
+]

@@ -1,0 +1,172 @@
+[
+  {
+    "question_text": "推导准稳态点火理论中球形火焰传播速度U与火焰半径Rf的关系方程，并分析外部加热功率Qm如何影响火焰核的演化轨迹。",
+    "standard_answer": "在准稳态点火理论中，球形火焰传播速度U与火焰半径Rf的关系可通过求解固定在火焰前缘的坐标系中的能量和物种方程得到。控制方程为：-UdT/drs = (1/(rs+Rf)^2)d/drs[(rs+Rf)^2dT/drs] 和 -UdYF/drs = (1/Le)(1/(rs+Rf)^2)d/drs[(rs+Rf)^2dYF/drs]，其中rs为移动坐标。通过边界条件：中心处热流为-Qm，远场T=Tu, YF=1，以及反应区匹配条件，可得到隐式代数方程：Tf = Tu + Γ(-1,RfU)/[Le^2Γ(-1,LeRfU)] + Qm/(RfU) 和 exp[(Tad/Tf - Ar)/2] = {Tf-Tu-Qm/[RfUΓ(-1,RfU)]}/[2Γ(-1,RfU)]。这些方程描述了U-Rf相图中的演化轨迹。当Qm较小时，相图呈现分离的内外支，对应稳定的火焰球解；当Qm增加时，内外支逐渐接近；当Qm超过临界加热功率Qm,cr时，两支合并形成连续轨迹，火焰核能够成功过渡到自持传播的球形火焰。对于大Lewis数混合物，临界加热功率显著增加，因为正拉伸效应使火焰核更易熄灭。",
+    "original_text": {
+      "1": "the correlation depicting the change in flame propagation speed with flame radius can be obtained, which was shown in Refs. [237,238]",
+      "2": "For sufficiently low heating powers, these two branches are separated from each other, yielding a pair of intersecting points on the Rf axis corresponding to zero propagation speed"
+    },
+    "type": "calculation",
+    "difficulty": 5,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及燃烧学中的准稳态点火理论、球形火焰传播、火焰核演化等专业概念，需要燃烧动力学、传热传质、流体力学等领域的专业知识来理解和分析。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": ""
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_a7c73816",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Premixed-flame-ignition--Theoretical-d_2024_Progress-in-Energy-and-Combustio",
+      "paper_title": "Premixed-flame-ignition--Theoretical-d_2024_Progress-in-Energy-and-Combustio"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:29:34.590566",
+      "answer_length": 492
+    },
+    "merge_source": "question_reverse"
+  },
+  {
+    "question_text": "详细分析火焰球理论中Lewis数对火焰球温度Tf和半径RZ的影响机理，并解释为什么在Le<1的混合物中能够观察到稳定火焰球。",
+    "standard_answer": "在火焰球理论中，Lewis数通过影响热扩散与质量扩散的竞争关系来决定火焰球特性。根据Zel'dovich的推导，归一化火焰温度满足(Tf-Tu)/(Tad-Tu) = 1/Le，火焰球半径RZ = [Le/(Leσ+1-σ)^2]exp[Ar(Le-1)(1-σ)/(2(σLe+1-σ))]。当Le<1时，质量扩散优于热扩散，燃料更有效地向反应区输送，导致火焰温度Tf > Tad（绝热火焰温度）。这种超绝热状态使得火焰能够在低于可燃极限的贫燃混合物中维持。同时，较小的Lewis数对应较小的火焰球半径RZ < dL（火焰厚度）。火焰球的稳定性机制涉及辐射热损失：当火焰球半径因扰动增大时，辐射热损失与总释热之比增加，火焰减弱而收缩；反之，半径减小时，该比值减小，火焰增强而膨胀，形成稳定机制。Buckmaster等人的分析表明，只有在Lewis数低于临界值时，考虑辐射热损失的火焰球才能稳定存在，这与Ronney等在微重力实验中观察到的Le≈0.3的氢/空气混合物中稳定火焰球现象一致。",
+    "original_text": {
+      "1": "For Le < 1, we have RZ < d0L, and the flame ball temperature is higher than the adiabatic flame temperature of a planar flame, i.e., Tf > Tad",
+      "2": "stable flame balls can only exist in mixtures with Lewis numbers below a critical value, which is consistent with the micro-gravity experiments on flame balls"
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及火焰球理论、Lewis数对火焰特性的影响机理、热扩散与质量扩散的竞争关系、火焰稳定性分析等，需要燃烧学、传热传质、流体力学等专业领域的深入知识。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "无需改进，问题和答案均符合质量要求。"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_7dac8537",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Premixed-flame-ignition--Theoretical-d_2024_Progress-in-Energy-and-Combustio",
+      "paper_title": "Premixed-flame-ignition--Theoretical-d_2024_Progress-in-Energy-and-Combustio"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:29:35.086237",
+      "answer_length": 445
+    },
+    "merge_source": "question_reverse"
+  },
+  {
+    "question_text": "详细解释瞬态点火理论中的'记忆效应'概念，并分析重复脉冲加热如何通过火焰复兴效应降低最小点火能量。",
+    "standard_answer": "瞬态点火理论中的'记忆效应'指的是外部加热停止后，火焰前缘仍能维持一段距离传播的现象。这种效应源于火焰核演化过程中的热惯性：即使外部能源移除，已沉积的能量通过热传导持续支持火焰传播。记忆效应的强度随加热功率增加而增强，因为更高的功率导致更陡的温度梯度和更强的热流。对于重复脉冲加热，当后续加热脉冲在火焰熄灭前到达火焰前缘时，会产生'火焰复兴效应'：额外的点火能量通过降低热损失率来促进火焰传播。理论分析表明，将单脉冲替换为适当间隔的双脉冲可在总点火能量相同的情况下显著降低MIE。当脉冲数np增加时，MIE单调下降并渐近于下限值，因为脉冲间的能量 reinforcement 增强了点火过程。这种机制与实验观察到的纳秒重复脉冲放电（NRPD）促进点火的现象一致。在湍流环境中，加热脉冲频率与流动再循环频率的协同效应能有效将点火能量输送到火焰核前缘，进一步提高点火概率。",
+    "original_text": {
+      "1": "the memory effect of external heating helps to sustain flame front propagation even after the removal of the heating source and thereby reduces the MIE",
+      "2": "repetitive pulses can improve the ignition capability due to the flame revitalization effect, which is attributed to the memory effect of flame front propagation"
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及瞬态点火理论、记忆效应、火焰复兴效应、最小点火能量等燃烧学专业概念，需要燃烧动力学、传热学、流体力学等领域的专业知识才能准确理解和回答。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "无需改进，问题和答案均符合专业标准。答案准确解释了记忆效应的物理机制，正确分析了重复脉冲加热通过火焰复兴效应降低最小点火能量的过程，与论文摘录中的理论描述一致。"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_839851ad",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Premixed-flame-ignition--Theoretical-d_2024_Progress-in-Energy-and-Combustio",
+      "paper_title": "Premixed-flame-ignition--Theoretical-d_2024_Progress-in-Energy-and-Combustio"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:29:36.845601",
+      "answer_length": 384
+    },
+    "merge_source": "question_reverse"
+  },
+  {
+    "question_text": "基于瞬态点火理论，详细推导并解释最小点火能量（MIE）与临界点火半径Rcr之间的标度关系，并分析Lewis数如何影响这种关系。",
+    "standard_answer": "根据瞬态点火理论，最小点火能量（MIE）与临界点火半径Rcr之间存在Emin ∼ Rcr^3的标度关系。这一关系可以从能量平衡角度推导：MIE是使火焰核达到临界半径所需的最小能量，而临界半径对应的体积为(4/3)πRcr^3。在热扩散模型中，临界半径由热释放与热损失的平衡决定：4πRcr^2λ(dT/dr) = (4/3)πRcr^3ρcpω，其中λ为热导率，ω为反应速率。简化后得到Rcr ∼ λ/(ρcpS_L)，其中S_L为层流火焰速度。由于MIE正比于加热临界体积到绝热火焰温度所需的能量，即Emin ∼ ρcp(T_ad-T_u)Rcr^3。Lewis数通过影响火焰拉伸响应来改变临界半径：当Le>1时，正拉伸使火焰减弱，Rcr增大；当Le<1时，火焰增强，Rcr减小。因此，对于Le>1的混合物，MIE显著增加，因为Emin ∼ Rcr^3。数值模拟验证了这种标度关系，并显示对于大Lewis数混合物，基于火焰球半径的MIE预测会显著高估。",
+    "original_text": {
+      "1": "The MIE was proposed to be the energy required to heat a sphere in the critical ignition radius to the adiabatic flame temperature",
+      "2": "the critical flame radius increases significantly with the Lewis number. This is because the positive stretch rate of the outwardly propagating spherical flame kernel makes the flame weaker at larger Lewis number"
+    },
+    "type": "calculation",
+    "difficulty": 5,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及瞬态点火理论、最小点火能量与临界点火半径的标度关系、Lewis数影响等燃烧学核心概念，需要燃烧动力学、传热传质、火焰理论等专业领域知识。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "无需修改。答案准确推导了MIE与Rcr的标度关系（Emin ∼ Rcr^3），正确解释了Lewis数通过火焰拉伸影响临界半径的机制，与论文摘录中'positive stretch makes the expanding ignition kernel weaker at larger Lewis numbers, consequently increasing the critical ignition radius and MIE'的论述一致。"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_5fb371cb",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Premixed-flame-ignition--Theoretical-d_2024_Progress-in-Energy-and-Combustio",
+      "paper_title": "Premixed-flame-ignition--Theoretical-d_2024_Progress-in-Energy-and-Combustio"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:29:38.141355",
+      "answer_length": 427
+    },
+    "merge_source": "question_reverse"
+  },
+  {
+    "question_text": "分析火花点火过程中不同放电阶段（击穿、电弧、辉光）的能量分配特性，并基于论文内容解释为什么击穿阶段在点火效率方面最为有效。",
+    "standard_answer": "火花点火过程包含击穿、电弧和辉光三个主要放电阶段，各阶段具有显著不同的能量分配特性。根据论文内容，击穿阶段持续时间约1-10纳秒，能量损失仅约6%（电极热损失5%，辐射损失<1%），等离子体能量高达94%。电弧阶段持续微秒量级，能量损失增至50%（电极热损失45%，辐射损失5%）。辉光阶段持续毫秒量级，能量损失达70%（主要来自电极热损失）。击穿阶段的高效性源于其极短持续时间和高电场强度，导致电子雪崩形成等离子体通道，而热损失机制尚未充分发展。论文明确指出“the effectiveness of breakdown discharge in ignition is higher than that of arc discharge, which is in turn more efficient than glow discharge”。此外，击穿产生的高温高压等离子体通道和伴随的冲击波为火焰核形成提供了理想初始条件，论文指出“The breakdown phase is associated with a shock wave originating from the plasma channel. Propagation of the shock wave leads to the convective transfer of ignition energy from the plasma channel”。电弧阶段由于持续时间较长，电极热损失显著增加；辉光阶段因电流降低，阴极位降导致的能量损失占主导。因此，优化点火系统应最大化击穿阶段的能量沉积，同时最小化电弧和辉光阶段的能量损失，这对于贫燃或高稀释度混合物的可靠点火尤为重要。",
+    "original_text": {
+      "1": "the effectiveness of breakdown discharge in ignition is higher than that of arc discharge, which is in turn more efficient than glow discharge",
+      "2": "The breakdown phase is associated with a shock wave originating from the plasma channel. Propagation of the shock wave leads to the convective transfer of ignition energy from the plasma channel"
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及火花点火过程中的放电阶段能量分配特性、点火效率机制分析，需要燃烧学、等离子体物理、热力学等专业领域知识，属于典型的燃烧与能源工程领域问题",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "无需改进，问题和答案质量均符合要求"
+    },
+    "retry_count": 1,
+    "question_id": "deepseek_q_1227539d",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Premixed-flame-ignition--Theoretical-d_2024_Progress-in-Energy-and-Combustio",
+      "paper_title": "Premixed-flame-ignition--Theoretical-d_2024_Progress-in-Energy-and-Combustio"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:30:27.374058",
+      "answer_length": 729
+    },
+    "merge_source": "question_reverse"
+  }
+]

@@ -1,0 +1,149 @@
+[
+  {
+    "question_text": "在旋转爆震燃烧室中，填充高度（h）与爆震胞格宽度（λ）的比值被证明是控制爆震波多重性（例如，从单波模式过渡到双波或多波模式）的关键参数。请推导填充高度与爆震波传播速度及稳定性的定量关系，并说明在何种临界条件下会发生从单波模式向更高波数模式的转变。",
+    "standard_answer": "填充高度h定义为爆震波完成一圈前，新鲜混合物柱的最大高度。基于质量守恒和爆震胞格尺寸，h/λ的临界值决定了爆震波多重性的发生。根据Bykovskii等人的实验数据，当h/λ超过约7.4时，系统会分岔到更高波数模式。具体推导如下：设RDC周长为P，爆震波数为n，则每个波消耗的混合物高度为h_n = (P * ρ_fill) / (n * U_wave)，其中ρ_fill为填充区密度。在临界条件下，归一化周长P/λ达到约7.4时，系统会发生分岔，增加一个爆震波。例如，当质量流率增加时，h增大，若h/λ > 7.4，则n增加。实验数据显示，在氢-空气混合物中，当h/λ从5增加到10时，波数从1增加到2或3。例如，在U_wave ≈ 1500 m/s的氢-空气系统中，当h/λ ≈ 8时，观察到从单波到双波模式的转变。这种多重性导致单个波速下降，如在双波模式下，波速可能降至C-J值的70%。这种转变与火箭发动机HFI中观察到的多重切向模式类似，表明其物理机制可能源于近极限爆震的不稳定性，类似于经典管中爆震的胞格不稳定性。",
+    "original_text": {
+      "1": "This multiplicity-linked velocity deficit from the ideal C-J speeds has also been a recurring theme about rotating detonation waves [27,134]. In fact, when there is eight [49] or nine-waves mode [298], it was noted that they could be 'acoustic waves' instead of C-J detonations.",
+      "2": "Bykovskii et al. note that the minimum h/ λ required to sustain a rotating detonation wave is 12 ±5, after which it would bifurcate into unit-incrementally higher modes."
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "fluid_mechanics",
+    "question_id": "batch_detail_q_39ee6e2d",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Rotating-detonation-combustors-and-their-simil_2019_Progress-in-Energy-and-C",
+      "paper_title": "Rotating-detonation-combustors-and-their-simil_2019_Progress-in-Energy-and-C"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T18:40:31.677014",
+      "batch_processing": true,
+      "answer_length": 462
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及旋转爆震燃烧室中的爆震波多重性、填充高度与爆震胞格宽度的比例关系、爆震波传播速度和稳定性等专业概念，需要燃烧学、流体力学和爆震物理等领域的专业知识来理解和解答。",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在事实错误和与原文引用不符的问题，需要修正临界h/λ值并确保所有关键声明都有原文支持。"
+    }
+  },
+  {
+    "question_text": "旋转爆震燃烧室与火箭发动机中观测到的‘DC偏移’现象（平均静压显著增加）在RDC和HFI中均存在，请分析这种平均压力偏移的成因，并基于质量流参数（MFP）和C-J条件，推导在背压条件下RDC平均压力上升的数学模型，并说明该现象对系统稳定性的影响。",
+    "standard_answer": "DC偏移现象是由于非线性能量释放与压力波动的强烈耦合引起的。在RDC中，当出口被阻塞（如通过收敛-扩张喷嘴）时，上游燃烧室压力因产物不完全排出而积累，导致平均静态压力增加。根据Flandro等人的分析，这种偏移源于爆震波通过后，喷射器元件因瞬时高压而完全闭塞，导致质量流率瞬时下降，随后在压力恢复时产生非线性振荡。例如，在实验中，当空气流率为0.5 kg/s时，平均压力从点火前的基准值上升约20%，持续约0.95秒后达到稳态。在火箭发动机中，DC偏移常伴随灾难性故障，如F-1发动机中压力比可达20:1，平均压力偏移量可估算为Δp_mean ∝ (ρ_inject * U_wave^2) / (2 * p_0)，其中p_0为初始压力。在RDC中，这种偏移会引发低频不稳定，如喘振，频率在150–250 Hz。这种机制与RDC中观测到的纵向脉冲爆震（LPD）模式相关联。这种偏移不仅降低喷射器恢复均匀性，还可能导致局部自燃，生成新的爆震波。",
+    "original_text": {
+      "1": "Predictably, all facilities running their combustor at back-pressurized conditions show these sharp low speed pressure shifts from their static gauge sensors [14,167,255,257,265].",
+      "2": "This is a direct result of DC shift, which was in turn used by Flandro et al. to arrive at their highly accurate model to predict this instability [66,69]."
+    },
+    "type": "reasoning",
+    "difficulty": 5,
+    "topic": "energy_systems",
+    "question_id": "batch_detail_q_32785526",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Rotating-detonation-combustors-and-their-simil_2019_Progress-in-Energy-and-C",
+      "paper_title": "Rotating-detonation-combustors-and-their-simil_2019_Progress-in-Energy-and-C"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T18:40:44.922102",
+      "batch_processing": true,
+      "answer_length": 421
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及旋转爆震燃烧室、火箭发动机、质量流参数、C-J条件等专业概念，需要燃烧学、流体力学和推进系统的专业知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "unsupported"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案未能完整回答问题要求：1) 未基于质量流参数和C-J条件推导数学模型；2) 提供的压力偏移公式Δp_mean ∝ (ρ_inject * U_wave^2) / (2 * p_0)缺乏引用支持"
+    }
+  },
+  {
+    "question_text": "旋转爆震波在环形RDC中传播时，其波前呈现明显径向曲率，请基于D_n-κ规则（法向爆震速度-曲率关系），推导在曲率影响下爆震波速度的修正方程，并讨论这种曲率如何影响爆震胞格结构和稳定性边界。",
+    "standard_answer": "根据D_n-κ规则，爆震波速度D_n与曲率κ的关系可表示为D_n = D_CJ * (1 - α * κ * L_c)，其中α为比例常数，L_c为反应区宽度。在环形RDC中，外壁（凹面）通过压缩效应增强爆震波，而内壁（凸面）则引起膨胀波，导致速度赤字。例如，当κ增大时，D_n下降，如在实验中，外壁附近的波速可能比内壁高10%–15%。例如，在数值模拟中，对于曲率半径r，κ = 1/r，则赤字量ΔD_n = D_CJ - D_n ∝ κ * L_c。在RDC中，这种曲率导致非均匀的胞格尺寸，外壁附近胞格较小，内壁附近胞格较大，从而产生不稳定传播。",
+    "original_text": {
+      "1": "The fundamental difference between the two is that a rotating detonation is axially fixed at a given point in space whereas a spinning detonation moves helically in an enclosed structure, and therefore has an axial velocity component [22].",
+      "2": "The phenomena described above are non-trivial to investigate on their own."
+    },
+    "type": "calculation",
+    "difficulty": 5,
+    "topic": "CFD_modeling",
+    "question_id": "batch_detail_q_9986e187",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Rotating-detonation-combustors-and-their-simil_2019_Progress-in-Energy-and-C",
+      "paper_title": "Rotating-detonation-combustors-and-their-simil_2019_Progress-in-Energy-and-C"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T18:41:00.079302",
+      "batch_processing": true,
+      "answer_length": 275
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及旋转爆震波传播、D_n-κ规则、爆震波速度修正方程、胞格结构和稳定性边界，这需要燃烧学、爆震物理、流体力学等领域的专业知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "fundamental_error",
+        "unsupported"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在基本原理错误：将D_n-κ规则简化为线性关系D_n = D_CJ * (1 - α * κ * L_c)过于简化，且提供的两个原文引用完全不支持答案中关于曲率效应的具体论述。建议基于经典爆震理论重新推导曲率修正方程，并提供相关实验或模拟证据。"
+    }
+  },
+  {
+    "question_text": "在旋转爆震燃烧室中，对向旋转爆震波模式被观察到，请详细分析此类模式的形成机制、稳定性条件及其与火箭发动机HFI中对应现象的关联。",
+    "standard_answer": "对向旋转爆震波模式主要由喷射器恢复不均匀性引起，导致局部当量比偏离全局值。例如，当燃料喷射孔间距增大时，混合质量下降，产生强度不对称的爆震波。例如，在实验中，一个波可能以1600 m/s传播，而另一个波可能仅为1400 m/s，其碰撞点可能固定或移动，取决于混合程度。例如，在数值模拟中，当局部当量比从1.0波动到0.8或1.2时，会引发此类模式。这种机制与火箭发动机HFI中观察到的‘旋转切向模式’相似。",
+    "original_text": {
+      "1": "Counter-rotating waves are also observed widely in RDCs [47,48,123,145,196,261,299,303,306–309].",
+      "2": "Their driving physics can be reasoned to be quite different from co-rotating waves, because of the regime and nature of occurrence. First, counter-rotation seemingly occurs only at lower flow rates [47,303,307,310]."
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "question_id": "batch_detail_q_e7facd68",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Rotating-detonation-combustors-and-their-simil_2019_Progress-in-Energy-and-C",
+      "paper_title": "Rotating-detonation-combustors-and-their-simil_2019_Progress-in-Energy-and-C"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T18:41:13.015054",
+      "batch_processing": true,
+      "answer_length": 203
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "该问题涉及旋转爆震燃烧室中的对向旋转爆震波模式，需要深入的燃烧学、流体力学和爆震物理专业知识，属于专业的燃烧/流体/推进工程领域问题",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在事实错误且缺乏引用支持。应修正对向旋转波形成机制（喷射器不均匀性不是主要原因），补充稳定性条件分析，并基于原文引用2解释低流量条件的关键作用"
+    }
+  }
+]

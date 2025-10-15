@@ -1,0 +1,167 @@
+[
+  {
+    "question_text": "What mechanisms cause the flame in a parallel-channel unidirectional reactor to exhibit two-dimensional curvature, and how does this relate to external heat losses?",
+    "standard_answer": "The flame in a parallel-channel unidirectional reactor exhibits two-dimensional curvature due to radial variations in external heat losses. Channels near the reactor periphery experience greater heat loss to the environment, leading to lower local temperatures and reduced reaction rates. This causes flames in outer channels to stabilize further downstream (closer to the reactor center) where radiative and conductive losses are minimized. In contrast, inner channels have less heat loss, allowing flames to stabilize closer to the inlet. Consequently, the overall flame front becomes curved, with a concave shape towards the flow direction when viewed from the side. This curvature is a result of the balance between heat recirculation (which promotes upstream preheating) and heat loss (which dampens reactivity). Computational studies show that without external losses, flames are nearly flat; with losses, the curvature emerges as heat transfers transversely from inner to outer channels, trying to compensate for the differential cooling. Thus, the two-dimensional flame shape is a direct manifestation of non-uniform heat loss distribution, impacting stability and requiring design considerations to minimize Ȟ (dimensionless heat loss ratio) for optimal performance.",
+    "original_text": {
+      "1": "For channels near the exterior, there is more external radial heat loss and the flame stabilizes closer to the center where there is less radiative heat loss from the ends of the channels.",
+      "2": "These results show that the flames are two-dimensional on two different scales: the individual flames within the channels are elongated and the overall flame in the burner is curved, which indicates heat loss via transfer in the transverse direction"
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "CFD",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question requires specific knowledge of combustion science, heat transfer principles, and CFD modeling related to flame behavior in heat recirculating reactors. It involves understanding how external heat losses affect flame curvature and stabilization positions, which are specialized combustion engineering concepts.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer are both high quality - domain-focused with correct, detailed explanation supported by citations"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_21b13606",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Heat-recirculating-reactors--Fundamental-res_2019_Progress-in-Energy-and-Com",
+      "paper_title": "Heat-recirculating-reactors--Fundamental-res_2019_Progress-in-Energy-and-Com"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:20:54.725812",
+      "answer_length": 1275
+    }
+  },
+  {
+    "question_text": "How does the Biot number (B) influence the dominant heat transfer mechanisms in counter-flow versus co-flow heat recirculating reactors, and what are the implications for reactor design?",
+    "standard_answer": "The Biot number B = h_I L_c / k_s characterizes the relative importance of convective heat transfer at the gas-solid interface versus conductive heat transfer through the solid. In counter-flow reactors, heat transfer occurs primarily transversely through channel walls from hot products to cold reactants flowing in opposite directions. Here, maximizing B (approaching infinity with thin walls) is optimal because it enhances transverse heat exchange while minimizing detrimental axial conduction that could reduce temperature gradients. Conversely, in co-flow reactors (unidirectional flow), heat must travel upstream axially through the solid via conduction and radiation to preheat incoming reactants. Thus, a finite B is necessary to facilitate this axial conduction; if B is too high (low solid conductivity), axial heat recirculation is insufficient, impairing preheating and flame stability. This distinction dictates material selection: counter-flow reactors benefit from high-conductivity thin walls to maximize transverse heat transfer, while co-flow reactors require materials with adequate axial conductivity to sustain upstream heat recirculation.",
+    "original_text": {
+      "1": "For a reactor with counterflowing channels, the main mode of heat transfer is through the walls and transverse to the flow direction, and streamwise conduction is less important, or even detrimental, so a maximized value of B is optimal.",
+      "2": "For a reactor with co-flowing channels, however, the only means of heat transfer upstream is through axial conduction and radiation and subsequent solid-to-gas heat transfer, so a finite value of B is necessary for optimal performance."
+    },
+    "type": "reasoning",
+    "difficulty": 5,
+    "topic": "heat_transfer",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question requires specialized knowledge of heat transfer mechanisms (Biot number, conduction, convection), reactor design principles (counter-flow vs co-flow configurations), and combustion engineering concepts specific to heat recirculating reactors. It cannot be answered with general ML or CS knowledge alone.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other issues."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_7ec85023",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Heat-recirculating-reactors--Fundamental-res_2019_Progress-in-Energy-and-Com",
+      "paper_title": "Heat-recirculating-reactors--Fundamental-res_2019_Progress-in-Energy-and-Com"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:20:54.814329",
+      "answer_length": 1161
+    }
+  },
+  {
+    "question_text": "In a two-section porous burner, how does the pore size in the upstream section prevent flashback, and what role does the Peclet number (Pe_q) play in flame stabilization at the interface?",
+    "standard_answer": "In a two-section porous burner, the upstream section has small pores (d < d_q, where d_q is the quenching diameter) to prevent flashback by exploiting flame quenching mechanisms. The Peclet number Pe_q = S_L d_q / α (with S_L as laminar flame speed, d_q as quenching diameter, α as thermal diffusivity) determines flame stability; quenching occurs when Pe_q < ~65. The small pores in the upstream section ensure Pe_q is below this critical value, as the high surface-to-volume ratio enhances heat loss to the solid, overwhelming heat release and extinguishing any flame attempting to propagate upstream. This forces the flame to stabilize at the interface with the downstream section, which has larger pores (Pe_q > 65) that support combustion. The interface acts as a flame arrestor: upstream, heat losses dominate; downstream, heat recirculation through conduction and radiation preheats reactants, enabling stable combustion. Thus, Pe_q governs the transition from quenching to stable combustion, ensuring the flame remains anchored at the interface over a range of equivalence ratios and velocities.",
+    "original_text": {
+      "1": "In these designs, the upstream section has pores sizes such that d < d_q and Pe < Pe_q which halts potential upstream propagation and stabilizes combustion in the downstream section.",
+      "2": "it has been shown that quenching occurs when a flame interacts with a cold porous medium if Pe_q < ~65, so flame stabilization within porous media can be achieved at the interface of two sections of porous media with different characteristic length scales"
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "fluid_mechanics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question requires specific knowledge of combustion science (flame quenching mechanisms, flashback prevention), fluid mechanics (Peclet number analysis), and porous burner design principles. It cannot be answered with general ML/CS knowledge and demands expertise in combustion physics and heat transfer in porous media.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer are both high quality - domain-focused, factually correct based on citations, and compliant with all quality checks."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_0bfd761e",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Heat-recirculating-reactors--Fundamental-res_2019_Progress-in-Energy-and-Com",
+      "paper_title": "Heat-recirculating-reactors--Fundamental-res_2019_Progress-in-Energy-and-Com"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:20:55.107698",
+      "answer_length": 1103
+    }
+  },
+  {
+    "question_text": "Why do filtration reactors exhibit superadiabatic temperatures during co-current propagation (reaction zone moving with flow), and how does the propagation velocity relative to the thermal front velocity enable this?",
+    "standard_answer": "Filtration reactors achieve superadiabatic temperatures due to the alignment of combustion and thermal fronts during co-current propagation. The temperature rise ΔT is given by ΔT = ΔT_ad / (1 - u_w/u_t), where ΔT_ad is the adiabatic temperature rise, u_w is the combustion front velocity, and u_t is the thermal front velocity. When u_w < u_t but close in magnitude (co-current propagation), the denominator becomes less than 1, amplifying ΔT beyond adiabatic values. This occurs because the thermal front, driven by heat conduction and radiation through the porous solid, preheats the incoming reactants more effectively when moving in the same direction as the combustion front. The solid acts as a regenerator, storing heat from products and transferring it to reactants, leading to local enthalpy exceeding equilibrium. If u_w = 0 (stationary front), ΔT = ΔT_ad; if u_w and u_t are opposite (counter-current), ΔT < ΔT_ad (subadiabatic). Thus, superadiabatic conditions rely on the synergistic propagation of thermal and reaction fronts, enhancing preheating and reaction rates.",
+    "original_text": {
+      "1": "The temperature increase may be significantly greater than that due to adiabatic combustion when u_w is less than u_t but close in magnitude so that the thermal and combustion fronts shown in Fig. 16 are nearly aligned.",
+      "2": "According to Zhdanok's theory, superadiabatic temperatures only occur when the combustion front is propagating in the same direction as the flow (co-currently)."
+    },
+    "type": "reasoning",
+    "difficulty": 5,
+    "topic": "combustion_science",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question requires specialized knowledge of combustion science, specifically filtration reactors, superadiabatic temperatures, thermal front propagation, and heat recirculation mechanisms. It involves understanding combustion front dynamics, thermal transport in porous media, and the physics of excess enthalpy combustion - all core combustion science concepts.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_2bf1180e",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Heat-recirculating-reactors--Fundamental-res_2019_Progress-in-Energy-and-Com",
+      "paper_title": "Heat-recirculating-reactors--Fundamental-res_2019_Progress-in-Energy-and-Com"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:20:55.127943",
+      "answer_length": 1082
+    }
+  },
+  {
+    "question_text": "Calculate the dimensionless velocity enhancement (Ũ) for a methane/air mixture at equivalence ratio 0.6 if the measured burning velocity in a heat recirculating reactor is 62.8 cm/s, given the laminar flame speed is 12 cm/s. Interpret what this value implies about heat recirculation effectiveness.",
+    "standard_answer": "The dimensionless velocity enhancement is calculated as Ũ = U / S_L, where U is the measured burning velocity and S_L is the laminar flame speed. Here, U = 62.8 cm/s and S_L = 12 cm/s, so Ũ = 62.8 / 12 = 5.23. This value indicates the burning velocity is over 5 times the laminar flame speed, demonstrating significant enhancement due to heat recirculation. In heat recirculating reactors, this enhancement arises from preheating reactants via solid conduction and radiation, which increases reaction rates and flame speeds. A Ũ > 1 confirms superadiabatic combustion characteristics, where internal heat recovery elevates reactant temperatures beyond adiabatic predictions, enabling faster combustion and extended flammability limits. For context, Ũ values typically range from 2 to 5 in such reactors, so 5.23 represents high performance, likely due to optimized solid conductivity and minimal heat losses, facilitating efficient energy feedback from products to reactants.",
+    "original_text": {
+      "1": "These two parameters describe the enhancement of the combustion process over that of an adiabatic premixed laminar flame; values of nondimensional temperature and velocity greater than unity indicate superadiabatic or enhanced combustion.",
+      "2": "Similarly, Ũ gives a measure of burning velocity relative to the adiabatic laminar flame speed for a specific fuel/oxidizer mixture."
+    },
+    "type": "calculation",
+    "difficulty": 3,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question requires specific combustion science knowledge about heat recirculating reactors, dimensionless velocity enhancement (Ũ), laminar flame speeds, and interpretation of superadiabatic combustion characteristics. It involves understanding how heat recirculation affects burning velocities and requires domain expertise in combustion engineering and energy systems.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "The question is well-focused on combustion domain knowledge and the answer correctly calculates Ũ = 5.23, provides accurate interpretation based on the citations, and explains heat recirculation mechanisms appropriately. No issues detected."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_51caf741",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Heat-recirculating-reactors--Fundamental-res_2019_Progress-in-Energy-and-Com",
+      "paper_title": "Heat-recirculating-reactors--Fundamental-res_2019_Progress-in-Energy-and-Com"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:20:55.597919",
+      "answer_length": 975
+    }
+  }
+]

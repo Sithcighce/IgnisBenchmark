@@ -1,0 +1,134 @@
+[
+  {
+    "question_text": "基于MEC中电氢生成（electrohydrogenesis）的热力学原理，详细推导以乙酸钠为底物时，在标准生物条件（pH=7.0，T=298.15K，[CH3COO⁻]=0.0169 mol L⁻¹，[HCO3⁻]=0.005 mol L⁻¹）下，阳极电位和阴极电位的理论计算过程，并解释为什么需要施加外部电压（0.2-0.8V）才能驱动氢气的生成。",
+    "standard_answer": "根据论文中电氢生成的热力学原理，阳极反应为：CH3COO⁻ + 4H2O → 2HCO3⁻ + 9H⁺ + 8e⁻。标准电极电位E⁰_an为0.187V。使用能斯特方程计算实际阳极电位：E_an = E⁰_an - (RT/8F)ln([CH3COO⁻]/([HCO3⁻]²[H⁺]⁹))。代入参数：R=8.31 J mol⁻¹ K⁻¹，T=298.15K，F=9.65×10⁴ C mol⁻¹，[H⁺]=10⁻⁷ mol L⁻¹，计算得E_an = -0.300V vs SHE。阴极反应为：2H⁺ + 2e⁻ → H₂(g)，标准电极电位E⁰_cat=0V。能斯特方程：E_cat = E⁰_cat - (RT/2F)ln(pH₂/[H⁺]²)，假设pH₂=1 atm，计算得E_cat = -0.414V vs SHE。平衡电压E_eq = E_cat - E_an = (-0.414) - (-0.300) = -0.114V。负值表明反应非自发，需外部电压克服热力学障碍。实际运行中，由于细菌代谢损失、活化损失、欧姆损失和传质损失（如论文所述电压损失：阳极0.04V，膜和欧姆电阻0.01V，阴极>0.28V），总损失约0.33V，因此需施加0.2-0.8V外部电压以确保高效氢气生成。",
+    "original_text": {
+      "1": "CH3COO⁻ + 4H2O ! 2HCO3⁻ + 9H+ + 8e⁻",
+      "2": "the applied voltage (Eap, 0.2–0.8 V in practice) would be larger than Eeq because of voltage or energy losses, mainly arising from bacterial metabolic losses, activation losses, ohmic losses, and mass transport losses in the system"
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "该问题涉及微生物电解池（MEC）中电氢生成的热力学原理、电极电位计算、能斯特方程应用以及外部电压需求分析，属于能源工程、电化学和生物电化学交叉领域，需要燃烧/传热/流体/CFD/能源领域的专业知识。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "无需修改。答案准确推导了阳极和阴极电位，正确应用了能斯特方程，解释了外部电压的必要性，并与论文引用一致。"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_686cef29",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Microbial-electrolysis-cell-platform-for-simultaneous-wa_2017_Progress-in-En",
+      "paper_title": "Microbial-electrolysis-cell-platform-for-simultaneous-wa_2017_Progress-in-En"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:39:03.981531",
+      "answer_length": 549
+    }
+  },
+  {
+    "question_text": "分析MEC中电甲烷生成（electromethanogenesis）的两种电子转移路径（直接电子转移和通过H₂的间接电子转移）的热力学和动力学差异。计算在pH=7.0，T=298.15K条件下，两种路径的阴极电位，并讨论哪种路径在能量效率上更优，以及在实际应用中如何通过阴极电位控制来促进直接电子转移。",
+    "standard_answer": "电甲烷生成的两种电子转移路径热力学和动力学差异显著。直接电子转移路径：CO₂ + 8H⁺ + 8e⁻ → CH₄ + H₂O，标准电极电位E⁰_cat=0.169V。能斯特方程：E_cat = E⁰_cat - (RT/8F)ln(pCH₄/(pCO₂[H⁺]⁸))，假设pCH₄=pCO₂=1 atm，计算得E_cat = -0.244V vs SHE。间接电子转移路径：第一步2H⁺ + 2e⁻ → H₂，E_cat = -0.414V vs SHE；第二步4H₂ + CO₂ → CH₄ + 2H₂O，ΔG⁰' = -131 kJ mol⁻¹。热力学上，直接路径阴极电位更高（-0.244V vs -0.414V），意味着所需外部能量输入更少，能量效率更优。动力学上，直接路径依赖电活性微生物（如Methanobacterium palustre）的细胞-电极直接电子转移，避免了H₂的低溶解度和传质限制，但需要特定的细胞膜蛋白（如细胞色素）介导；间接路径依赖H₂作为电子载体，受H₂传质速率限制，且H₂可能被其他微生物消耗。实际应用中，通过控制阴极电位在-0.7V以下（如论文所述-0.9V vs Ag/AgCl）可促进直接电子转移，因为较低电位提供更大驱动力，同时抑制H₂生成，减少间接路径竞争。优化电极材料和微生物群落可进一步增强直接电子转移效率。",
+    "original_text": {
+      "1": "methane electrosynthesis from the reduction of CO2 can occur under typical biochemical conditions (pH = 7.0, and T = 298.15 K) by means of direct extracellular electron transfer (EET) between electrotrophs and cathode at the Ecat of –0.244 V vs. SHE, or indirect EET at –0.414 V vs. SHE with the help of abiotic hydrogen gas",
+      "2": "more negative cathodic potentials of less than –0.7 V vs. Ag/AgCl are often poised for perceptible methane production"
+    },
+    "type": "reasoning",
+    "difficulty": 5,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及微生物电解池(MEC)中的电甲烷生成过程，需要热力学计算（能斯特方程、电极电位）、动力学分析（电子转移机制、传质限制）以及生物电化学系统优化，属于能源转换与生物电化学交叉领域，需要燃烧/能源/电化学专业知识。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "无需修改。答案准确计算了阴极电位，清晰对比了热力学和动力学差异，并基于文献提出了电位控制策略，内容完整且与引用文献一致。"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_3f2cf14b",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Microbial-electrolysis-cell-platform-for-simultaneous-wa_2017_Progress-in-En",
+      "paper_title": "Microbial-electrolysis-cell-platform-for-simultaneous-wa_2017_Progress-in-En"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:39:04.769301",
+      "answer_length": 580
+    }
+  },
+  {
+    "question_text": "基于MEC中碳基电极材料（如石墨毡）的电子传导机制，从量子力学角度深入分析碳基材料需要高阴极过电位的根本原因。详细比较碳基材料（电导率~10⁴-10⁵ S m⁻¹）与金属（如铜，电导率58×10⁶ S m⁻¹）的电子传导特性差异，包括费米能级位置、电子态密度分布与催化活性的关系。分别计算并明确区分欧姆损失和活化过电位对系统电压效率的影响机制。假设电流密度为10 A m⁻²，电极厚度为1 mm，计算单位面积欧姆损失电压，并分析该欧姆损失与典型活化过电位（>0.3 V）的相对大小关系。",
+    "standard_answer": "碳基电极材料在MEC中需要高阴极过电位的根本原因在于其电子传导特性和催化活性的量子力学本质。从电子结构分析，碳材料的sp²杂化轨道形成π电子体系，其费米能级位于禁带边缘，电子态密度在费米能级附近较低，导致电子注入能垒较高。相比之下，金属具有连续的电子态和高电子密度，能更有效地促进界面电子转移。碳材料表面缺乏合适的催化活性位点，电子从电极转移到反应物（如H⁺或CO₂）需要克服较大的活化能垒，因此需要更高的过电位来驱动反应。\n\n欧姆损失计算：根据欧姆定律ΔV_ohm = J × R_s，其中J为电流密度（10 A m⁻²），R_s为面电阻（Ω·m²）。电阻R_s = ρ × L = L/σ，取碳基材料σ=10⁵ S m⁻¹，则ρ=1/σ=10⁻⁵ Ω·m。电极厚度L=1 mm=0.001 m，因此R_s = 0.001/10⁵ = 10⁻⁸ Ω·m²。ΔV_ohm = 10 × 10⁻⁸ = 10⁻⁷ V。\n\n关键区分：欧姆损失（10⁻⁷ V）与活化过电位（>0.3 V）是两种不同性质的电压损失。欧姆损失源于材料电阻导致的电压降，与电流密度成正比；而活化过电位源于电极反应动力学限制，需要额外电压克服反应能垒。在碳基电极系统中，活化过电位（>0.3 V）比欧姆损失（10⁻⁷ V）大6个数量级，是导致高阴极过电位的主要因素。系统电压效率η_V = (E_theoretical/E_applied) × 100%，其中E_applied = E_theoretical + η_activation + η_ohmic + η_concentration。碳基电极因高活化过电位显著增加E_applied，导致η_V大幅下降。",
+    "original_text": {
+      "1": "the electric conductivity of carbon-based materials has two to three orders of magnitude below that of most metals, e.g. 3 × 104–1 × 105 S m−1 of polycrystalline graphite vs. 58 × 106 S m−1 of copper",
+      "2": "they, when used solely for cathodes, usually require a high cathodic over-potential for driving electrohydrogenesis or electromethanogenesis"
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及MEC（微生物电解池）中碳基电极材料的电子传导机制、量子力学分析、费米能级、电子态密度、催化活性、欧姆损失和活化过电位计算等，需要燃烧/能源/电化学领域的专业知识，特别是电极材料电子结构和电化学动力学的深入理解。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "无需改进。答案从量子力学角度深入分析了碳基材料高阴极过电位的根本原因，正确比较了碳基材料与金属的电子传导特性差异，准确计算了欧姆损失电压并合理区分了其与活化过电位的影响机制，与论文摘录内容一致。"
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_cae28d6d",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Microbial-electrolysis-cell-platform-for-simultaneous-wa_2017_Progress-in-En",
+      "paper_title": "Microbial-electrolysis-cell-platform-for-simultaneous-wa_2017_Progress-in-En"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:41:44.612422",
+      "answer_length": 718
+    }
+  },
+  {
+    "question_text": "从传热和流体力学角度，分析MEC中膜（如Nafion 117）的使用对系统性能的影响。讨论膜导致的pH梯度如何通过能斯特方程影响平衡电压，并计算每单位pH差增加的额外能量输入（以kWh m⁻³-H₂为单位）。假设操作电压为0.5V，阴极室pH上升1单位（[H⁺]减少10倍）。",
+    "standard_answer": "从传热角度分析，膜在MEC中作为热阻元件影响系统热传递效率。Nafion 117膜的导热系数较低（约0.1-0.2 W/m·K），在阳极和阴极室之间形成热阻。阳极微生物氧化反应放热（如乙酸氧化ΔH≈-870 kJ/mol），阴极氢析出反应在标准条件下为可逆反应（ΔH≈0 kJ/mol），膜的存在阻碍热量均匀分布，可能导致阳极局部温度升高（文献报道MEC操作温度通常为25-35°C），阴极温度偏低，影响微生物活性和反应动力学。温度分布不均还可能导致膜热应力变形，影响长期稳定性。\n\n从流体力学角度，膜增加系统流动阻力，导致压降升高。对于典型MEC流道（宽度1-2 cm，流速0.1-0.5 cm/s），Nafion 117膜（厚度183 μm）可增加流动阻力，文献表明膜的存在会形成边界层增厚，减少质传速率。膜表面粗糙度（Ra≈0.1-0.5 μm）和孔隙结构（孔径<5 nm）易导致浓差极化和生物膜附着，进一步增加传质阻力，雷诺数（Re<100）表明流动多为层流，膜的存在强化了速度分布不均匀性。\n\npH梯度通过能斯特方程影响平衡电压。对于氢析出反应（2H⁺ + 2e⁻ → H₂），能斯特方程为：E_cat = E⁰_cat - (RT/2F)ln(P_H2/[H⁺]²)。在标准条件下（T=298 K，P_H2=1 atm），阴极室pH上升1单位（[H⁺]减少10倍）。代入能斯特方程（R=8.314 J/mol·K，F=96485 C/mol）：ΔE = (RT/2F)ln(100) = (0.059/2)×2 = 0.059 V。根据论文数据，每单位pH差增加E_eq约0.06 V，与理论计算一致。\n\n额外能量输入计算：根据法拉第定律，产生1 m³ H₂需电子2 mol e⁻/mol H₂ × (1000/22.4 mol/m³) = 89.29 mol e⁻/m³-H₂。所需电荷Q = 89.29 × 96485 = 8.61×10⁶ C。ΔE=0.06 V时，额外能量ΔW = ΔE × Q = 0.06 × 8.61×10⁶ = 5.17×10⁵ J = 0.143 kWh。因此，每单位pH差增加额外能量输入约0.143 kWh m⁻³-H₂。\n\n综上，膜引起的pH梯度通过能斯特方程增加平衡电压，导致额外能量消耗，同时从传热和流体力学角度降低系统效率。",
+    "original_text": {
+      "1": "every pH unit difference will increase Eeq by 0.06 V according to the Nernst equation, which means an additional energy input of ca. 0.13 kWh m3-H2 per pH unit",
+      "2": "the use of a membrane assures a stable environment for bacteria growth and high purity for products, it brings several technical challenges to bioelectrochemial systems, e.g. pH gradient across the membrane, lowered mass transfer rate associated with membrane fouling, increased internal resistance and considerable voltage losses"
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及微生物电解池(MEC)中膜的传热特性(导热系数、热阻)、流体力学特性(流动阻力、压降、雷诺数)以及电化学中的能斯特方程和能量计算，需要燃烧/传热/流体/能源领域的专业知识。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量较高，无需修改。"
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_bd344416",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Microbial-electrolysis-cell-platform-for-simultaneous-wa_2017_Progress-in-En",
+      "paper_title": "Microbial-electrolysis-cell-platform-for-simultaneous-wa_2017_Progress-in-En"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:42:00.815646",
+      "answer_length": 991
+    }
+  }
+]

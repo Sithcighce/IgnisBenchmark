@@ -1,0 +1,138 @@
+[
+  {
+    "question_text": "基于论文中关于层流火焰速度（S_L）对废气再循环（EGR）稀释耐受性影响的实验数据，建立火焰速度与发动机热效率之间的定量关系模型。请详细推导dη_b/dS_L的表达式，并解释湍流火焰发展初期阶段为什么对循环变动特别敏感。",
+    "standard_answer": "层流火焰速度通过提高EGR稀释耐受性来影响发动机热效率，这种关系可以量化为：dη_b/dS_L = (dη_b/dEGR) × (dEGR/dS_L)。\n\n从实验数据来看，Szybist和Splitter的研究显示，在2000 rpm和3.5 bar IMEP_g条件下，火焰速度从45 cm/s增加到50.3 cm/s时，EGR耐受性从8%提高到12%（相对增加50%），每百分比点EGR增加对应指示热效率提高0.064个百分点。因此，dη_b/dEGR = 0.064%/%EGR，dEGR/dS_L = 4%EGR/5.3 cm/s = 0.755 %EGR/(cm/s)。\n\n综合得到：dη_b/dS_L = 0.064 × 0.755 = 0.0483 %/(cm/s)。转换为相对效率增益（基效率27%）：(1/η_b)×(dη_b/dS_L) = 0.0483/27 = 0.00179 相对效率/(cm/s) = 0.179%相对效率增益/(cm/s)。\n\nKolodziej等人的数据在1500 rpm和5.6 bar IMEP_n条件下给出类似结果：火焰速度从45.7 cm/s增加到52.1 cm/s，EGR耐受性从18.6%提高到22.8%，每百分比点EGR提高对应效率增益0.11%，计算得到相对效率增益为0.190%/(cm/s)。取平均值得到最终关系：(1/η_b)×(dη_b/dS_L) ≈ 0.185%相对效率增益/(cm/s)。\n\n关于湍流火焰发展初期的敏感性：初始火焰核发展阶段约占整个燃烧持续期的三分之一，此阶段燃烧速率主要由层流火焰速度主导，因为火焰核尺寸较小，尚未受到多个湍流涡的同时影响。较高的S_L使初始火焰核发展更快，减少了随机循环间湍流变化的影响，从而提供更稳定的燃烧。",
+    "original_text": {
+      "1": "During flame kernel development, the laminar flame speed of the mixture dominates the combustion rate; the turbulent flame propagation stage dominates only after the flame kernel is sufficiently large to be influenced by multiple turbulent eddies simultaneously.",
+      "2": "Fuels with high flame speed complete the early flame kernel development process more quickly, making them less susceptible to the stochastic cycle-to-cycle differences in turbulence and ultimately provide more stable combustion."
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "fluid_mechanics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及层流火焰速度、废气再循环、发动机热效率、湍流火焰发展等燃烧学和内燃机工程的专业概念，需要燃烧学、热力学和发动机原理等领域的专业知识来理解和解答。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": ""
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_450c310a",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "What-fuel-properties-enable-higher-thermal-effi_2021_Progress-in-Energy-and-",
+      "paper_title": "What-fuel-properties-enable-higher-thermal-effi_2021_Progress-in-Energy-and-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:07:31.925593",
+      "answer_length": 762
+    },
+    "merge_source": "question_reverse"
+  },
+  {
+    "question_text": "基于论文中关于辛烷指数（OI）的讨论，详细解释为什么在增压直喷火花点火发动机中，高辛烷敏感性（S_octane）燃料在负K值条件下表现出更好的抗爆震性能。请从化学动力学角度分析低温和高温热释放机制如何影响不同燃料在'超越RON'压力-温度轨迹下的自燃倾向。",
+    "standard_answer": "在增压直喷火花点火发动机中，负K值条件对应于'超越RON'的压力-温度轨迹，即比RON测试条件具有更高的压力和更低的温度。在这种条件下，高辛烷敏感性燃料（如芳香烃和醇类）表现出更好的抗爆震性能，这主要源于其化学动力学特性的差异。\n\n从化学动力学角度分析，低辛烷敏感性燃料（如烷烃类）表现出典型的两阶段点火过程：低温热释放（LTHR）后跟随负温度系数（NTC）区域。在'超越RON'条件下，较低的温度增强了LTHR过程，LTHR释放的热量提高了末端气体温度，加速了高温自燃反应，从而增加了爆震倾向。相比之下，高辛烷敏感性燃料由于分子结构中存在电子离域特征（如碳碳双键或羟基），优先在不易发生异构化的位点发生氢提取反应，降低了低温链支化反应速率，减少了LTHR强度。这种降低的低温反应性使得高辛烷敏感性燃料在低温高压条件下更不易发生自燃。\n\n具体而言，当K值为负时，辛烷指数公式OI = RON - K × S_octane表明，高S_octane值会导致更高的OI值，意味着更好的抗爆震性能。例如，在K = -1.25的增压条件下，S_octane从8增加到15可使OI提高约9个单位，相当于抗爆震性能显著提升。这种效应在压力-温度轨迹远离RON测试条件时尤为明显，因为此时低温反应路径对自燃过程的影响更加显著。",
+    "original_text": {
+      "1": "Pressure-temperature trajectories that have a negative K value are 'beyond RON' because they have a higher pressure at a given temperature than the RON test.",
+      "2": "Fuels with high S_octane have reduced low-temperature reactivity and reduced NTC behavior, causing a difference in behavior between these types of fuels (e.g., olefins, alcohols) relative to paraffins, which is expressed as S_octane."
+    },
+    "type": "reasoning",
+    "difficulty": 5,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及增压直喷火花点火发动机、辛烷指数、辛烷敏感性、抗爆震性能、化学动力学、低温/高温热释放机制等专业概念，需要燃烧学、内燃机工程、燃料化学和热力学等领域的专业知识。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "无需改进。答案准确解释了高辛烷敏感性燃料在负K值条件下抗爆震性能更好的化学动力学机制，涵盖了低温热释放、负温度系数区域、分子结构影响等关键点，并与提供的原文引用和论文背景一致。"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_dfb8ec78",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "What-fuel-properties-enable-higher-thermal-effi_2021_Progress-in-Energy-and-",
+      "paper_title": "What-fuel-properties-enable-higher-thermal-effi_2021_Progress-in-Energy-and-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:07:34.989002",
+      "answer_length": 555
+    },
+    "merge_source": "question_reverse"
+  },
+  {
+    "question_text": "详细分析低速早燃（LSPI）的多步序列物理机制，特别关注燃料性质如何通过液滴喷射理论影响LSPI initiation。请解释颗粒物指数（PMI）为何能作为LSPI频率的预测指标，并讨论芳香烃含量和蒸馏特性在LSPI中的作用机制。",
+    "standard_answer": "低速早燃（LSPI）是一个多步序列物理过程，每个步骤都是必要但不充分的。根据Chapman和Costanzo的研究，序列包括：initiation（点火源向燃料-空气混合物沉积能量）、preignition（火花点火前燃烧室中的火焰传播）、end gas autoignition（末端气体因压缩加热而自燃）和superknock（发展中的爆震）。对于initiation机制，液滴喷射理论认为活塞顶环岸区域的燃料或润滑油液滴被喷射到燃烧室中成为点火源。这些液滴必须具有高反应性（比正庚烷更易自燃）才能成功引发早燃事件。燃料性质通过影响液滴形成和蒸发特性来影响LSPI initiation，特别是高沸点组分蒸发较慢，增加了液滴在燃烧室中存留时间，提高了LSPI概率。\n\n颗粒物指数（PMI）能作为LSPI频率预测指标的原因是它同时考虑了燃料的蒸馏特性和芳香烃含量。PMI公式为：PMI = Σ[(DBE_i + 1)/VP(443K)_i] × Wt_i，其中双键当量（DBE）捕获高度不饱和化合物（如芳香烃）形成更多烟炱的倾向，443K下的蒸气压（VP）代表不易挥发化合物抵抗蒸发并在浓混合气中形成烟炱的倾向。研究表明，PMI与LSPI频率强相关（R² = 0.78），优于单独使用T50蒸馏温度（R² = 0.73）。\n\n芳香烃在LSPI中起重要作用，因为高沸点馏分的芳香烃优先残留在缝隙区域。Mansfield等人研究表明，芳香烃含量高的燃料特别容易发生LSPI，液态芳香烃在高温高压和NOx存在下可形成硝基化合物，成为可能的LSPI点火源。同时，蒸馏特性也至关重要，T50（50%燃料蒸发温度）与LSPI频率强相关，沸点高于150°C的燃料分数与LSPI呈线性依赖关系。Chapman等人的实验数据显示，T50从100°C增加到140°C时，LSPI事件频率增加了约3倍。",
+    "original_text": {
+      "1": "LSPI occurs stochastically and, under appropriate operating conditions, will typically occur within every 10,000 cycles. However, LSPI can also manifest as a cluster of many events that occur in an alternating pattern; wherein, every-other-cycle exhibits LSPI behavior.",
+      "2": "A more probable initiation mechanism is droplets of fuel or lubricant ejected from the top-ring land of a piston, as shown in Fig. 37. A significant amount of recent LSPI research on the droplet ejection theory has focused on understanding the effects of fuel and lubricant properties."
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及低速早燃(LSPI)的物理机制、液滴喷射理论、燃料性质影响、颗粒物指数(PMI)预测指标等，需要燃烧学、内燃机工程、燃料化学等领域的专业知识。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "无需改进。答案全面覆盖了问题要求，准确解释了LSPI的多步序列机制、液滴喷射理论、PMI作为预测指标的原理，以及芳香烃含量和蒸馏特性的作用机制，技术细节完整且与原文引用和论文摘录一致。"
+    },
+    "retry_count": 1,
+    "question_id": "deepseek_q_c4ddffc8",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "What-fuel-properties-enable-higher-thermal-effi_2021_Progress-in-Energy-and-",
+      "paper_title": "What-fuel-properties-enable-higher-thermal-effi_2021_Progress-in-Energy-and-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:08:39.994701",
+      "answer_length": 791
+    },
+    "merge_source": "question_reverse"
+  },
+  {
+    "question_text": "基于热力学第一定律，系统分析燃料汽化潜热（HoV）对火花点火发动机效率的多重影响机制。请详细推导HoV如何通过改变气缸内工质的热力学状态影响发动机的组分效率项，包括理想循环效率、换热损失和泵气损失，并基于论文数据定量评估E85燃料相对于基础汽油的效率增益。",
+    "standard_answer": "燃料汽化潜热（HoV）通过热力学机制影响火花点火发动机效率，需从发动机热效率的组分分解分析：η_b = η_mech × η_comb × η_GE × σ_HT × η_ideal。首先，HoV通过燃料蒸发冷却降低进气温度，直接影响多个效率项。对于直接喷射发动机，燃料蒸发从气缸内工质吸收热量，降低压缩始点温度。根据理想气体状态方程，温度降低增加工质密度，提高容积效率，但同时也降低压缩始点压力，增加泵气损失（降低η_GE）。然而，更显著的影响是降低的工质温度减少了壁面换热损失（提高σ_HT），因为换热速率与工质和壁面之间的温差成正比。其次，降低的温度提高了工质的比热比（γ），根据奥托循环效率公式η_Otto = 1 - r_c^(1-γ)，γ的增加直接提高理想循环效率η_ideal。对于E85燃料（HoV ≈ 800 kJ/kg），相对于基础汽油（HoV ≈ 415 kJ/kg），理论绝热冷却可降低进气温度约40-50K。燃烧效率η_comb的计算需修正：实际释放的化学能应为燃料低热值（LHV），汽化潜热（HoV）是吸热过程，不增加化学能释放。正确公式为η_comb = Q_HR / [m_fuel × LHV]，其中HoV不应计入分母。定量分析表明，E85相对于汽油的效率增益约为4.2%，其中主要来自换热损失减少和比热比增加的综合效应。论文数据显示：“With the E85 fuel, HC and CO2 emissions are reduced, and η_comb increases. However, the increased evaporative cooling of the E85 reduces the cylinder pressure during the intake stroke and therefore increases the pumping work, thus decreasing η_GE, although that effect was very small for E85”。具体计算显示，每增加130 kJ/kg的HoV，热效率相对提高约1%，这考虑了所有热力学机制的净效应，但需注意该数据为实验观测值，非严格线性关系。效率组分分解公式中符号定义：η_mech为机械效率，η_comb为燃烧效率，η_GE为气体交换效率，σ_HT为换热损失比例，η_ideal为理想循环效率。",
+    "original_text": {
+      "1": "With the E85 fuel, HC and CO2 emissions are reduced, and η_comb increases. However, the increased evaporative cooling of the E85 reduces the cylinder pressure during the intake stroke and therefore increases the pumping work, thus decreasing η_GE, although that effect was very small for E85 and would be even less significant for mid-level ethanol blends.",
+      "2": "The increased evaporative cooling of the E85 reduces the cylinder pressure during the intake stroke and therefore increases the pumping work, thus decreasing η_GE, although that effect was very small for E85 and would be even less significant for mid-level ethanol blends."
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及热力学第一定律、燃料汽化潜热、火花点火发动机效率、气缸内工质热力学状态、组分效率项（理想循环效率、换热损失、泵气损失）以及E85燃料与基础汽油的定量效率对比，需要燃烧学、热力学、内燃机工程等领域的专业知识。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "无需修改。答案准确解释了HoV通过热力学机制影响发动机效率的多个方面，包括理想循环效率、换热损失、泵气损失等，并基于论文数据定量评估了E85燃料的效率增益，机理解释清晰，公式和推导合理，事实准确。"
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_8fc14679",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "What-fuel-properties-enable-higher-thermal-effi_2021_Progress-in-Energy-and-",
+      "paper_title": "What-fuel-properties-enable-higher-thermal-effi_2021_Progress-in-Energy-and-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:11:01.228419",
+      "answer_length": 1029
+    },
+    "merge_source": "question_reverse"
+  }
+]

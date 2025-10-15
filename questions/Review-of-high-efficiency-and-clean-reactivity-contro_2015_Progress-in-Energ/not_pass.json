@@ -1,0 +1,39 @@
+[
+  {
+    "question_text": "RCCI aims to achieve >60% thermal efficiency. Explain the thermodynamic principles and loss mechanisms involved. How do reduced heat transfer, optimized combustion phasing, and lower exhaust temperatures contribute to efficiency gains? Provide a detailed energy balance analysis.",
+    "standard_answer": "RCCI targets high thermal efficiency through several thermodynamic optimizations. The gross indicated efficiency η_gross = W_gross/(m_fuel * LHV)). At 9 bar IMEP, RCCI achieves η_gross = 56% compared to 48% for conventional diesel combustion. The energy balance can be broken down: fuel energy input = gross work + heat transfer losses + exhaust energy + incomplete combustion losses. For a 9.3 bar IMEP case: combustion losses ≈ 2%, heat transfer ≈ 11.4%, exhaust ≈ 30.5%. The reduced heat transfer stems from: (1) Lower peak combustion temperatures (1600-1800K vs. 2200-2600K for diesel). The heat transfer reduction is primarily due to avoidance of high-temperature diffusion flames near walls. The combustion phasing (CA50) is optimized near 2-6°CA aTDC to maximize work extraction via the ideal Otto cycle efficiency η_Otto = 1 - (1/r^(γ-1)) * (combustion efficiency factor). The lower exhaust temperatures (e.g., 271°C at EVO for RCCI vs. 344°C for diesel at 11.6 bar IMEP. The specific heat ratio γ decreases with temperature and EGR dilution (γ ≈ 1.26-1.28). The expansion work increases because γ remains higher during the expansion stroke due to lower temperatures. The work extraction follows the relation: W = ∫ P dV from IVC to EVO. The pressure-volume work integral W = Σ P_i * ΔV_i. The exhaust energy is reduced because the gas temperatures are lower, decreasing the enthalpy h_exhaust = c_p * T_exhaust. The pumping losses are reduced with lower EGR requirements (0-40% vs. 60% for high-EGR diesel). The incomplete combustion losses increase at light loads (e.g., 4.6 bar IMEP: exhaust enthalpy ≈ 22% of fuel energy vs. 24% for HCCI with PRF fuels). The improved efficiency is also due to reduced combustion duration, which minimizes heat loss during the combustion event. The energy balance equation: 1 = η_gross + Q_ht + Q_exh + Q_incomb). For instance, at 4.6 bar IMEP, the gross indicated efficiency is 49%. The heat transfer rate q_ht″ = h * (T_g - T_w) + ε * σ * (T_g^4 - T_w^4) for radiative heat transfer. In RCCI, the combustion efficiency can reach 98% at optimized conditions. The combined effect of reduced heat transfer and optimized combustion phasing yields a net gain of ~8% in indicated efficiency. The friction and auxiliary losses account for the difference between indicated and brake efficiencies.",
+    "original_text": {
+      "1": "The desire to increase IC engine fuel efficiency while simultaneously meeting emissions mandates has thus motivated considerable research. This paper describes recent progress to improve the fuel efficiency of diesel or CI engines through advanced combustion and fuels research.",
+      "2": "The results demonstrated that the use of optimized fuel reactivity provides control of the combustion phasing and spatially stratified reactivity extends the combustion duration. Thus, the ability of the strategy to extend the operating range of low emission, high efficiency PCCI combustion to higher engine loads (e.g., 11 bar IMEP) was explored.",
+      "type": "calculation",
+      "difficulty": 5,
+      "topic": "energy_systems"
+    },
+    "question_id": "batch_detail_q_23a12837",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Review-of-high-efficiency-and-clean-reactivity-contro_2015_Progress-in-Energ",
+      "paper_title": "Review-of-high-efficiency-and-clean-reactivity-contro_2015_Progress-in-Energ"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T18:26:26.753211",
+      "batch_processing": true,
+      "answer_length": 2335
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及RCCI燃烧系统的热力学原理、损失机制、能量平衡分析等，需要燃烧学、热力学、发动机原理等专业领域的深入知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案包含事实错误和未经支持的数据。需要修正效率数值，明确引用具体实验条件，并提供与问题目标（>60%热效率）更直接相关的分析"
+    }
+  }
+]

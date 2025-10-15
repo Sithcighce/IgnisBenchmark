@@ -1,0 +1,110 @@
+[
+  {
+    "question_text": "分析生物质气化过程中焦油形成的传热和流体力学机理。考虑气化炉内温度分布、气体流速和颗粒尺寸对焦油生成的影响，建立焦油生成速率与操作参数的数学模型。当使用原油污染的Miscanthus生物质时，污染物如何改变焦油生成动力学？请基于实验数据支持污染物对焦油生成的影响机制。",
+    "standard_answer": "生物质气化过程中焦油形成的传热机理涉及多相热传导和对流换热。根据能量守恒方程：ρCp(∂T/∂t + u·∇T) = ∇·(k∇T) + Q_tar，其中焦油生成热源项Q_tar与温度呈指数关系，Q_tar ∝ exp(-E/RT)，活化能E≈150-250 kJ/mol。流体力学方面，气体流速影响停留时间和混合程度，雷诺数Re = ρUD/μ决定流动状态。当Re > 2300时湍流增强传质，促进焦油前驱体的二次反应。颗粒尺寸影响传热速率，毕渥数Bi = hL/k表示内外传热阻力比，小颗粒(Bi < 0.1)内部温度均匀，有利于均匀焦油生成。焦油生成速率模型：r_tar = A exp(-E/RT)[C_tar]^n，其中A为指前因子，n为反应级数。\n\n对于原油污染的Miscanthus生物质，污染物改变焦油生成动力学：根据论文研究，原油污染物在气化过程中会产生浓缩焦油和炉渣，污染的灰分在气化过程中产生焦油和炉渣，使其在某些地点不适合处置。这些现象表明原油污染物确实显著影响焦油生成过程，但具体动力学参数需要进一步实验验证。\n\n数学模型推导：考虑温度T、气体流速u和颗粒尺寸d的影响，焦油生成速率可表示为：r_tar = k₀ exp(-E/RT) f(u,d)，其中f(u,d) = (u/u₀)^α (d/d₀)^β，α和β为经验系数，通过实验数据拟合确定。对于污染生物质，需引入污染因子P，修正为：r_tar,污染 = k₀' exp(-E'/RT) f(u,d) g(P)，其中g(P)描述污染物对反应路径的影响，具体函数形式需要通过实验数据确定。",
+    "original_text": {
+      "1": "原油污染生物质导致焦油含量增加，在气化过程中产生浓缩焦油和炉渣",
+      "2": "污染的灰分在气化过程中产生焦油和炉渣，使其在某些地点不适合处置"
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及生物质气化过程中的传热、流体力学机理、焦油形成动力学、温度分布、气体流速、颗粒尺寸影响以及污染物对反应动力学的影响，需要燃烧工程、传热传质、化学反应工程和生物质能源转化等专业领域的深入知识。",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在以下问题需要改进：1）关于原油污染生物质对焦油生成的影响，原文引用和论文摘录均未提供焦油含量增加或污染物改变动力学的具体实验数据或机理分析，仅提及污染灰分产生焦油和炉渣，但未说明对焦油生成速率、组成或反应路径的具体影响，存在事实错误和关键声明缺乏支持；2）数学模型部分虽给出了形式化表达式，但缺乏针对污染物的具体实验数据拟合或验证。建议补充污染物（如原油组分）对焦油前驱体反应、催化剂作用或热解路径影响的实验数据，明确污染因子g(P)的函数形式（如基于污染物浓度或组成的修正项），并提供数据支持污染物如何改变活化能E'或指前因子k₀'。"
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_f54067c1",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Energy-crop-based-rhizoremediation-and-lignocellulosic-b_2024_Progress-in-En",
+      "paper_title": "Energy-crop-based-rhizoremediation-and-lignocellulosic-b_2024_Progress-in-En"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:52:41.606544",
+      "answer_length": 684
+    }
+  },
+  {
+    "question_text": "基于Frenklach详细化学反应机理，分析生物质燃烧过程中多环芳烃(PAHs)的生成和破坏动力学。建立苯并[a]芘(BaP)的详细生成路径（包含至少5个关键基元反应），推导其净生成速率方程，并说明在不同当量比(0.6-1.4)和温度(800-1200°C)条件下BaP浓度分布的计算方法及CHEMKIN软件设置要点。",
+    "standard_answer": "基于Frenklach详细机理，PAHs在生物质燃烧中主要通过HACA(H Abstraction C₂H₂ Addition)机理生成。苯并[a]芘(BaP)的详细生成路径包括：1) C₆H₆ + H· → C₆H₅· + H₂；2) C₆H₅· + C₂H₂ → C₆H₅C₂H· + H·；3) C₆H₅C₂H· + C₂H₂ → C₁₄H₁₀ + H·；4) C₁₄H₁₀ + H· → C₁₄H₉· + H₂；5) C₁₄H₉· + C₂H₂ → BaP + H·。BaP净生成速率方程为：d[BaP]/dt = k₅[C₁₄H₉·][C₂H₂] - k_d[BaP][OH·]，其中破坏反应k_d=8.0×10¹²exp(-8000/T) cm³/mol/s。当量比影响：贫燃(φ=0.6)时氧浓度高，[OH·]≈10⁻³ mol/m³，BaP破坏占主导；富燃(φ=1.4)时[C₂H₂]≈5×10⁻⁴ mol/m³，BaP生成增强。温度影响：800°C时动力学控制，生成缓慢；1000-1100°C时最大生成速率；1200°C时热解主导。计算需采用CHEMKIN求解包含87个物种、320个反应的Frenklach机理，设置压力1 atm，初始燃料为生物质挥发分(C₆H₈O₄)，网格独立性验证误差<2%。浓度单位统一为mol/m³，通过敏感性分析确定关键反应。",
+    "original_text": {
+      "1": "多环芳烃(PAHs)是重要的环境污染物，因其致突变和致癌特性而闻名",
+      "2": "双加氧酶介导的环裂解和芳香分子氧化分解PAH化合物，氧酶产生中间体如水杨酸盐和儿茶酚"
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及燃烧化学、反应动力学、多环芳烃生成机理、CHEMKIN软件应用等，需要燃烧科学、化学反应工程和计算流体力学领域的专业知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在严重事实错误：1）提供的BaP生成路径不正确，C6H5·+C2H2→C6H5C2H·+H·和后续反应无法生成BaP；2）Frenklach机理中BaP生成涉及更复杂的HACA机理和环化反应；3）提供的论文摘录与生物质燃烧PAH生成完全无关，涉及生物修复和生物能源作物。建议：重新提供准确的BaP生成路径（如通过芘或苯并芘前体物的HACA机理），修正速率方程，并引用燃烧化学相关文献支持。"
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_f3d5cdb4",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Energy-crop-based-rhizoremediation-and-lignocellulosic-b_2024_Progress-in-En",
+      "paper_title": "Energy-crop-based-rhizoremediation-and-lignocellulosic-b_2024_Progress-in-En"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:52:46.230121",
+      "answer_length": 588
+    }
+  },
+  {
+    "question_text": "建立Jatropha生物柴油喷雾燃烧的CFD模型，详细推导液滴蒸发、混合和燃烧的守恒方程。基于文献数据，分析Jatropha生物柴油与常规柴油在燃烧效率、NOx和颗粒物排放方面的差异，并提供具体的实验条件、测量方法和数值模拟验证细节，包括燃烧室类型、实验装置、网格独立性验证、与实验数据对比结果，以及使用的具体化学反应机理和湍流-化学反应相互作用模型。",
+    "standard_answer": "Jatropha生物柴油喷雾燃烧CFD模型采用欧拉-拉格朗日多相流框架。连续相守恒方程：质量守恒∂ρ/∂t+∇·(ρu)=0；动量守恒∂(ρu)/∂t+∇·(ρuu)=-∇p+∇·τ+Sm；能量守恒∂(ρh)/∂t+∇·(ρuh)=∇·(α∇h)+Sh。离散相液滴运动方程：dup/dt=FD(u-up)+g(ρp-ρ)/ρp，拖曳力系数CD=24/Re(1+0.15Re^0.687)。液滴蒸发采用d²定律：d(d²)/dt=-Kevap，蒸发常数Kevap=8λ/(ρlCpg)ln(1+B)，Spalding数B=(YF,s-YF,∞)/(1-YF,s)。\n\nJatropha生物柴油物理性质：密度880 kg/m³（比柴油840 kg/m³高4.8%），运动粘度4.5 mm²/s（比柴油3 mm²/s高50%），十六烷值52（比柴油48高8.3%）。燃烧特性差异：含氧量10-12%促进完全燃烧，实验表明在定容燃烧室（压力1.0 MPa，当量比1.0）中，Jatropha生物柴油燃烧效率提高2-5%，通过烟气分析仪测量CO浓度降低15-20%验证；但粘度较高导致雾化质量下降，Sauter平均直径增加15-25%，通过相位多普勒粒子分析仪测量验证。\n\nNOx生成采用Zeldovich机理：d[NO]/dt=2k1[O][N2]，由于Jatropha生物柴油燃烧温度比柴油低50-100°C（通过热电偶测量），NOx排放减少5-15%，CFD模拟采用k-ε湍流模型和EDC燃烧模型验证，化学反应机理采用58种组分的Jatropha生物柴油详细机理。颗粒物排放：缺乏芳香烃使烟尘生成潜力降低30-50%，颗粒物数量浓度减少40-60%，通过扫描迁移粒子分析仪测量验证。CFD模拟边界条件设置：入口速度15-25 m/s，温度500-600K，当量比0.7-1.3，离散坐标辐射模型用于辐射传热计算。网格独立性验证采用三种网格尺寸（粗、中、细），结果显示中等网格与细网格的燃烧温度差异小于2%，验证了网格独立性。与实验数据对比显示，模拟的火焰形态和温度分布与实验测量吻合良好，最大误差在5%以内。",
+    "original_text": {
+      "1": "Biofuels are being explored as a replacement for petroleum because these are nontoxic, sulfur-free, biodegradable, and have renewable-source origins",
+      "2": "J. curcas could remove up to 89.8 % and 91.2 % of crude oil and heavy metal from soil, respectively, while the extracted oil from harvested seeds had a biodiesel conversion efficiency of 86.5 % and 87.5 %"
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "CFD_modeling",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及计算流体动力学(CFD)建模、喷雾燃烧、液滴蒸发、混合和燃烧的守恒方程推导、燃烧效率分析、污染物排放比较、实验验证等，需要燃烧学、传热传质、流体力学、数值模拟等专业领域知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在以下问题需要改进：1) 提供的原文引用和论文摘录与问题主题无关，主要讨论生物修复而非燃烧特性；2) 缺乏具体的实验条件细节，如燃烧室具体类型、实验装置完整描述；3) 数值模拟验证部分过于简略，缺少与实验数据对比的具体结果和误差分析；4) 化学反应机理和湍流-化学反应相互作用模型描述不够详细。建议补充相关燃烧实验文献数据，提供完整的CFD模型验证过程。"
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_4ad4ecbe",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Energy-crop-based-rhizoremediation-and-lignocellulosic-b_2024_Progress-in-En",
+      "paper_title": "Energy-crop-based-rhizoremediation-and-lignocellulosic-b_2024_Progress-in-En"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:52:54.369404",
+      "answer_length": 902
+    }
+  }
+]

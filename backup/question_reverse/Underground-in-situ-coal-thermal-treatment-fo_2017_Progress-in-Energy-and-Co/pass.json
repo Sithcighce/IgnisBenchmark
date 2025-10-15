@@ -1,0 +1,101 @@
+[
+  {
+    "question_text": "分析UCTT与地下油页岩干馏在传质特性上的本质差异，从孔隙结构演化、渗透率发展和流动机制角度解释为什么煤不需要破碎化而油页岩需要。",
+    "standard_answer": "UCTT与油页岩干馏的传质差异根源在于原料的初始孔隙结构和热解过程中的结构演化。煤具有天然的双重孔隙系统：基质孔隙（1-100nm）和割理裂缝（微米-毫米级），初始渗透率可达10-100mD。热解过程中，煤的孔隙率从5-10%增至30-50%，渗透率增加3个数量级（从10mD至10000mD），这是因为挥发分析出形成连通的气体通道和气泡网络。相反，油页岩是致密无机岩石，有机质充填在纳米孔隙中，初始渗透率<0.1mD，热解后孔隙增长有限，主要依赖干酪根热解产生的有限孔隙，渗透率仅增加1-2个数量级。流动机制方面：煤中气体流动以达西流为主，Knudsen流仅在纳米孔隙中显著；油页岩中Knudsen流主导，流动阻力大。破碎化对油页岩必要的原因：1）创造人工裂缝网络，将渗透率从<0.1mD提升至10-100mD；2）增加热接触面积，改善传热；3）提供挥发分析出通道。而煤天然具备这些特性，破碎化反而可能破坏原有的割理系统，增加操作成本。实验数据表明：煤热解后渗透率可达10000mD，足以满足生产要求；油页岩即使热解后渗透率通常<100mD，需要额外增强。",
+    "original_text": {
+      "1": "Rubblization is usually needed for efficient operation of underground oil shale retorting due to the low permeability and porosity in oil shale. Thanks to the low content of inorganic matter and massive internal pore structures, coal usually has much higher permeability than oil shale.",
+      "2": "In fact, rubblization was deemed unnecessary in Shell's UCTT patent [80,81], because high permeability and porosity in coal seams will develop during devolatilization."
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "fluid_mechanics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及地下煤热解(UCTT)与油页岩干馏的传质特性对比，需要燃烧工程、多孔介质传质、渗透率演化、热解机理等能源与化工领域的专业知识，属于典型的燃烧/传热/流体/能源工程领域问题",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量优秀，无需修改。答案准确分析了UCTT与油页岩干馏在孔隙结构、渗透率发展和流动机制方面的本质差异，解释清晰，数据具体，与原文引用和论文摘录内容一致，专业性强"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_4ad17e6e",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Underground-in-situ-coal-thermal-treatment-fo_2017_Progress-in-Energy-and-Co",
+      "paper_title": "Underground-in-situ-coal-thermal-treatment-fo_2017_Progress-in-Energy-and-Co"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:07:07.543681",
+      "answer_length": 479
+    }
+  },
+  {
+    "question_text": "建立UCTT热解反应的详细动力学模型，包含初级热解、二次反应和焦油裂解，推导考虑传质限制的表观动力学参数，分析慢加热条件下产物分布的变化机理。",
+    "standard_answer": "UCTT热解动力学模型包含三个主要反应网络：1）初级热解：Coal → Volatiles1 + Char1，速率r1 = A1exp(-E1/RT)(1-α1)；2）二次反应：Volatiles1 → Light gases + Tar，速率r2 = A2exp(-E2/RT)C_v1；3）焦油裂解：Tar → Light gases + Coke，速率r3 = A3exp(-E3/RT)C_tar。其中α1为煤转化率，C_v1和C_tar为挥发分和焦油浓度。表观动力学参数受传质限制修正：k_app = k_int/(1+Da)，其中Damköhler数Da = k_intτ_diff，τ_diff为扩散时间尺度。对于大煤块（~1m），τ_diff ≈ L²/D_eff ≈ 10-100天，D_eff为有效扩散系数（10⁻⁸-10⁻¹⁰m²/s）。慢加热条件（0.1-1°C/min）下，产物分布显著变化：焦油产率下降30-50%，轻质气体（CH4、H2）产率增加20-40%。机理分析：1）延长挥发分在孔隙内的停留时间，促进二次反应和焦油裂解；2）降低加热速率使热解发生在较低温度区间，有利于氢转移反应生成甲烷；3）空间约束抑制气泡快速生长，增加气相反应时间。动力学参数典型值：E1=150-250kJ/mol（初级热解），E2=80-120kJ/mol（二次反应），E3=180-220kJ/mol（焦油裂解）。表观活化能E_app比本征值低20-40%，因传质限制掩盖了真实动力学行为。",
+    "original_text": {
+      "1": "Pyrolysis is essentially the process of destructing the network by bond-breaking reactions and formation of new molecules. The most important pyrolysis reactions determining the volatiles yield are the ones involving hydrogen evolution",
+      "2": "For large coal, low heating rates are more realistic considering the heating cost. The review by J€untgen [26] can be used for interpreting low-heating rate pyrolysis. At low heating rates, devolatilization tends to occur at lower temperatures."
+    },
+    "type": "calculation",
+    "difficulty": 5,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及UCTT热解反应的详细动力学模型构建，包含初级热解、二次反应、焦油裂解等复杂反应网络，需要传热传质、化学反应工程、煤化学等能源与燃烧工程领域的专业知识。同时需要推导考虑传质限制的表观动力学参数，分析慢加热条件下产物分布变化机理，这涉及多孔介质内的扩散理论、反应工程和热解机理等专业内容。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量良好，无需修改。答案详细描述了UCTT热解的三级反应网络，正确给出了动力学方程和表观动力学参数的传质修正方法，对慢加热条件下产物分布变化的机理分析合理，且提供了典型的动力学参数范围，与论文摘录中关于UCTT和慢加热条件的内容相符。"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_ce387002",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Underground-in-situ-coal-thermal-treatment-fo_2017_Progress-in-Energy-and-Co",
+      "paper_title": "Underground-in-situ-coal-thermal-treatment-fo_2017_Progress-in-Energy-and-Co"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:07:10.825691",
+      "answer_length": 652
+    }
+  },
+  {
+    "question_text": "在UCTT过程中，分析纳米-微米级孔隙网络中气体流动的Knudsen流与达西流竞争机制，推导考虑气体滑移效应的表观渗透率模型，并计算在典型孔隙尺寸分布下的主导流动模式。",
+    "standard_answer": "在UCTT的纳米-微米级孔隙网络中，气体流动由Knudsen数Kn = λ/d控制，其中λ为分子平均自由程，d为孔隙直径。考虑气体滑移效应的表观渗透率模型可表示为：k_app = k_∞(1 + αKn) + (4/3)(D_kμ)/(τP)，其中k_∞为固有渗透率，α为滑移系数（通常取1-2），D_k为Knudsen扩散系数，μ为粘度，τ为曲折度，P为压力。Knudsen扩散系数D_k = (4/3)d√(RT/(2πM))，R为气体常数，T为温度，M为分子量。对于甲烷（CH4），在500K、3MPa条件下，分子平均自由程λ ≈ k_BT/(√2πd_m^2P) ≈ 2.3nm（其中k_B为玻尔兹曼常数，d_m为分子直径约0.38nm）。在典型UCTT条件下（P=3MPa, T=500K, d=10nm-10μm），计算表明：当d<50nm时，Kn>1，Knudsen流主导，表观渗透率主要取决于第二项；当50nm<d<1μm时，0.1<Kn<1，过渡流区，两项贡献相当；当d>1μm时，Kn<0.1，达西流主导。考虑孔隙尺寸分布，整体渗透率需积分：k_total = ∫f(d)k_app(d)dd，其中f(d)为孔隙尺寸分布函数。实验数据显示，UCTT过程中渗透率可显著增加，如Wyodak次烟煤从初始10mD增至650°C时的16,000mD，主要归因于宏孔（d>50nm）的形成和连通。",
+    "original_text": {
+      "1": "Knudsen flow occurs when the mean flow path of gas molecules is longer than the diameter of the pores. Therefore, it mainly takes place in micropores and mesopores of coal [68], which are generally below 50 nm.",
+      "2": "The permeability of a Wyodak subbituminous coal increases from 10 mD at 30 °C to 1200 mD at 400 °C, and further increases to 16,000 mD at 650 °C."
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "fluid_mechanics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及UCTT（地下煤热解处理）过程中的气体流动机制、Knudsen数与达西流的竞争、表观渗透率模型推导以及孔隙尺寸分布下的流动模式分析，这需要燃烧、传热、流体力学、多孔介质流动和能源工程领域的专业知识。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "无"
+    },
+    "retry_count": 2,
+    "question_id": "deepseek_q_70a4f830",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Underground-in-situ-coal-thermal-treatment-fo_2017_Progress-in-Energy-and-Co",
+      "paper_title": "Underground-in-situ-coal-thermal-treatment-fo_2017_Progress-in-Energy-and-Co"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:08:52.512912",
+      "answer_length": 603
+    }
+  }
+]

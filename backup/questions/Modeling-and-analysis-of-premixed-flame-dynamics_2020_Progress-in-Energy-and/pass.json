@@ -1,0 +1,69 @@
+[
+  {
+    "question_text": "论文指出，预混火焰的动力学响应通常可以采用分布时滞（DTD）模型，即通过有限脉冲响应（FIR）来表征。请详细阐述：1）为何对于对流输运主导的火焰动力学过程，一个线性时不变（LTI）系统可以完全由其脉冲响应 h 来表征的数学原理；2）如何从物理上解释这种分布时滞通常源于对流输运过程。请结合线性系统理论和对流扰动传播的物理机制进行深入分析。",
+    "standard_answer": "1. 根据线性系统理论（论文2.1.1节），一个LTI系统对任何输入信号 s 的响应 r 可以通过脉冲响应 h 与输入信号 s 的卷积来精确计算：对于离散时间系统，r_l = Σ_{k=-∞}^{+∞} h_{l-k} s_k。这表明，系统在任意时刻 l 的响应，是其脉冲响应与输入信号历史在所有时间点 k 上加权叠加的结果。这背后的数学原理是，任何输入序列 s 可以被视为在不同时间点 l 施加的、权重为 s_l 的脉冲 e^{(0)} 的叠加（式(8)）。因此，只要知道了系统的脉冲响应 h，就能预测它对任何输入的响应，因此 h 完全表征了LTI系统的动力学。\n2. 从物理机制上解释，在预混燃烧中，关键的扰动（如火焰形状的皱纹、当量比扰动）是由平均流对流输运的。例如，一个局部的速度扰动会沿着火焰锋面以某个相速度 W 传播（图9右）。火焰响应的分布特性直接来源于这些对流扰动的传播。例如，对于速度脉冲扰动（式(28)），它仅在局部位置 Y = Wt 瞬间产生一个火焰位移的不连续性（一个'间隙'）。同时，火焰的恢复过程从锚定点以速度 V = 1 传播（图9左）。这两种机制（对流扰动和恢复过程）各自贡献一个时间尺度（τ_c 和 τ_r）。在火焰响应中观察到的分布时滞，本质上是火焰上不同位置处（对应不同对流时间）的扰动到达火焰锋面并开始影响放热率的时间是不同的。因此，最终的脉冲响应 h 是由这两个过程在不同时间点（例如，对于锥形火焰，h_{CC}(t) 在 0 ≤ t ≤ τ_c 区间内，是负的（对流产生的间隙）和正的（恢复产生的重叠）贡献的叠加。正如论文2.3.1节所述：'时间延迟主要源于对流输运的扰动'。具体地，对于锥形火焰在对流速度模型下的脉冲响应由式(30)给出：h_{CC}(t) = [2/(1-τ_c)] [S(t) - S(t/τ_c)]，这清晰地展示了多个物理时间尺度如何共同作用，并在脉冲响应中体现为一个在时间上延展的分布，而不是一个单一的、集中的时间延迟。这种物理图像使得DTD模型非常直观。",
+    "original_text": {
+      "1": "The convective transport of the respective perturbations of flame shape, vorticity and equivalence ratio are understood to play a crucial role in flame dynamics. A time-domain representation in terms of distributed delays corresponds in a very natural manner to the flow physics of convectively transported disturbances",
+      "2": "In such a framework, the linear dynamics of an acoustically compact flame is completely characterized by its impulse response . The concept of distributed time delays emerges as an appropriate description of the convective transport of flow and flame perturbations."
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "combustion_dynamics",
+    "question_id": "batch_detail_q_cdfbcbbc",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Modeling-and-analysis-of-premixed-flame-dynamics_2020_Progress-in-Energy-and",
+      "paper_title": "Modeling-and-analysis-of-premixed-flame-dynamics_2020_Progress-in-Energy-and"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T13:38:20.552998",
+      "batch_processing": true,
+      "answer_length": 863
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及燃烧动力学、预混火焰响应、对流输运过程、线性时不变系统理论等燃烧学和流体力学专业知识，需要深厚的领域背景才能准确回答",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量优秀，数学原理和物理解释都准确完整，与论文内容高度一致"
+    }
+  },
+  {
+    "question_text": "论文在第5.2节中讨论了如何通过非定常CFD模拟和系统辨识（SI）来获得火焰的脉冲响应和传递函数。请：1）详细阐述CFD/SI方法的主要步骤，并解释为何采用宽带随机信号（如离散随机二进制信号DRBS）进行激励，在辨识精度和计算效率方面相比传统的逐频谐波激励方法有何优势？2）结合论文内容，讨论在CFD/SI过程中可能面临的挑战（例如，对FIR模型阶数的敏感性、噪声的影响等）。",
+    "standard_answer": "1. CFD/SI方法的主要步骤包括：a）在CFD计算中，在火焰上游边界施加一个宽带随机信号作为输入（例如速度扰动）。b）记录相应的输出信号（如总体放热率）。c）利用系统辨识算法（例如，通过求解Wiener-Hopf方程进行相关分析，或使用先进的回归方法，如Box-Jenkins模型。具体而言，首先，设计一个具有低自相关性和在所关心频率范围内平直幅值谱的激励信号s，并确保其满足持续激励条件。d）从输入和输出的时间序列数据中估计出脉冲响应的系数 h_k。其优势在于：i）计算效率：通过一次非定常CFD模拟，即可获得整个频带上的频率响应信息，而无需像谐波激励那样在每个频率点进行独立的模拟，这大大减少了计算成本。ii）频率分辨率：通过对足够长的时间序列进行傅里叶分析或z变换，可以获得比逐频点测量更精细的频率响应。iii）鲁棒性：SI方法基于统计相关分析，能够在一定程度上有力地滤除（如湍流）噪声的影响，从而获得对真实系统动力学的无偏估计。iv）鲁棒性：高级SI方法可以量化估计的不确定性（例如置信区间），并且可以同时辨识燃烧噪声源项模型。\n2. 面临的挑战包括：a）对FIR模型阶数（即记忆长度）的选择敏感。如果阶数过低，模型可能无法捕捉所有重要的动力学特征；如果阶数过高，则可能导致过拟合。b）信噪比：如果激励信号幅度太小，或者计算中的数值耗散过大，可能导致估计的信噪比过低，从而影响辨识质量。c）时间序列长度：为了获得可靠的估计，特别是对于低频或弱阻尼模态，需要足够长的模拟时间以获得稳定的统计特性。d）激励信号类型：需要确保激励信号在所关心的频带内具有足够的能量，并且输入通道之间（对于MISO模型）需要统计独立。e）反馈与因果性：在实际燃烧系统中，可能存在从火焰到上游流动的反馈，这可能违反开环辨识的基本假设，需要特别注意或采用闭环辨识技术。这些挑战在论文相关讨论中有所体现，需要通过仔细的参数选择（如采样间隔、时间序列长度、正则化参数）来应对。",
+    "original_text": {
+      "1": "System identification (SI), which nowadays might be classified as a variant of supervised machine learning with the objective of generating data-based, reduced-order models",
+      "type": "reasoning",
+      "difficulty": 5,
+      "topic": "CFD_modeling"
+    },
+    "question_id": "batch_detail_q_61b39bfa",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Modeling-and-analysis-of-premixed-flame-dynamics_2020_Progress-in-Energy-and",
+      "paper_title": "Modeling-and-analysis-of-premixed-flame-dynamics_2020_Progress-in-Energy-and"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T13:38:31.627115",
+      "batch_processing": true,
+      "answer_length": 828
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及计算流体动力学(CFD)模拟、系统辨识(SI)、火焰动力学、脉冲响应和传递函数等专业概念，需要燃烧动力学、流体力学和控制系统领域的专业知识来理解和回答",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量优秀，涵盖了CFD/SI方法的关键步骤和优势，对挑战的分析全面且专业，与论文主题高度相关"
+    }
+  }
+]

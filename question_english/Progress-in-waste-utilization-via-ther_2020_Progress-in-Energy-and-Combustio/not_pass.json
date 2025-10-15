@@ -1,0 +1,44 @@
+[
+  {
+    "question_text": "In transferred arc plasma systems for waste treatment, what percentage of the total anode heat transfer do the first two terms in the anode heat flux equation typically constitute according to the cited paper, and what specific physical mechanisms are represented by these first two terms in the equation?",
+    "standard_answer": "According to the cited paper, the first two terms in the anode heat flux equation for transferred arc plasma systems typically constitute around 50% of the total heat transfer. The paper specifically states that 'Eq. (5) depicts the heat flux (q_A) given to the anode where the first two terms constitute around 50% of the total heat transfer.' The first term, j_e∅_w, represents the energy transfer due to electron condensation at the anode surface, where j_e is the current density and ∅_w is the work function of the anode material. This mechanism involves electrons releasing their kinetic energy and potential energy as they condense onto the anode surface. The second term, (k/e)(∅/σ)j_eT_e, represents thermionic emission effects and electron transport phenomena, where k is Boltzmann's constant, e is the electronic charge, ∅ is the thermo-diffusion coefficient, σ is the electrical conductivity, and T_e is the electron temperature. This term accounts for energy transfer associated with electron temperature gradients and thermoelectric effects in the plasma-anode boundary layer. These two electron-dominated mechanisms collectively account for approximately half of the total heat transfer to the anode in transferred arc configurations, highlighting the critical role of electron-related energy transport processes in plasma waste treatment systems.",
+    "original_text": {
+      "1": "Eq. (5) depicts the heat flux (q_A) given to the anode where the first two terms constitute around 50% of the total heat transfer.",
+      "2": "where j_e is the current density, ∅_w is the work function of the anode material, ∅ is the thermo-diffusion coefficient, σ is the electrical conductivity, k is Boltzmann's constant, e is the electronic charge, T_e and T_a are the electron and heavy particle temperatures, respectively"
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "heat_transfer",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires specific knowledge of plasma physics, heat transfer mechanisms in thermal plasma systems, and detailed understanding of anode heat flux equations in transferred arc plasma systems for waste treatment - all within the combustion/energy/thermal systems domain.",
+      "answer_correct": false,
+      "answer_issues": [
+        {
+          "type": "unsupported",
+          "description": "The answer provides detailed physical interpretations of the first two terms (electron condensation and thermionic emission effects) that are not supported by the provided citations. The citations only define the variables but do not explain the physical mechanisms represented by these terms."
+        },
+        {
+          "type": "factual_error",
+          "description": "The answer states the second term represents 'thermionic emission effects and electron transport phenomena' and specifically mentions 'thermo-diffusion coefficient', but the citation shows ∅ is actually the 'thermo-diffusion coefficient' (likely a typo for thermal diffusion coefficient), not supporting the thermionic emission interpretation."
+        }
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "Revise the answer to only include interpretations that are explicitly supported by the provided citations. The percentage information is correctly cited, but the detailed physical mechanism explanations go beyond what the citations support."
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_87e54b98",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Progress-in-waste-utilization-via-ther_2020_Progress-in-Energy-and-Combustio",
+      "paper_title": "Progress-in-waste-utilization-via-ther_2020_Progress-in-Energy-and-Combustio"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:28:28.776959",
+      "answer_length": 1362
+    }
+  }
+]

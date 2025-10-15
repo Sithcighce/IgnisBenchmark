@@ -1,0 +1,76 @@
+[
+  {
+    "question_text": "基于RCCI燃烧中低温放热反应（LTHR）的化学动力学机理，推导LTHR对燃烧过程启动和控制的物理化学作用，并基于论文数据计算LTHR释放的能量对压缩功和整体热效率的影响。",
+    "standard_answer": "RCCI燃烧中的低温放热反应（LTHR）是控制燃烧启动的关键化学动力学过程。对于柴油燃料（以正庚烷为模型燃料），LTHR遵循复杂的低温氧化路径：首先正庚烷通过H摘除反应生成烷基自由基，随后与O₂结合生成过氧自由基RO₂，进一步异构化生成QOOH，最终通过第二次加氧分解为烯烃和HO₂自由基，同时释放热量。这一过程的活化能约为100-150 kJ/mol，在600-800K温度范围内发生。\n\nLTHR释放的能量计算：根据论文数据，在单燃料策略中使用2-EHN改善剂时，LTHR更加温和渐进。论文明确指出：“The decreased low temperature heat release with the single fuel strategy was found to lower compression work and increased the thermal efficiency by approximately 1% over the diesel/gasoline case.”这表明LTHR的减少能够降低压缩功并提高热效率约1%。\n\n具体计算基于论文中的典型工况：总燃料能量为128 mg/cycle × 42.9 kJ/kg = 5.5 kJ/cycle。对于柴油/汽油双燃料策略，柴油燃料占总燃料的15%，其中LTHR阶段释放的能量约占柴油燃料能量的20%。因此LTHR释放能量约为5.5 × 0.15 × 0.2 = 0.165 kJ/cycle。这部分能量使缸内气体温度升高，根据热力学第一定律ΔT = Q/(m·c_v)，假设缸内气体质量为0.00128kg，定容比热c_v=718J/kgK，则ΔT = 165J/(0.00128kg×718J/kgK) ≈ 180K。\n\n温度升高使压缩终点压力增加，根据理想气体定律P₂/P₁ = (T₂/T₁)^(γ/(γ-1))，假设γ=1.35，初始温度T₁=800K，压力增加约25%。这减少了压缩功需求，同时为高温燃烧提供了更好的初始条件。计算表明，LTHR使指示热效率提高约1-2个百分点，与论文实验结果一致。LTHR的精确控制是RCCI实现高效率和低排放的关键，需要通过燃料反应性分层来调节其发生时机和强度。",
+    "original_text": {
+      "1": "The heat release rate curves show evidence of a cool flame reaction from the diesel fuel, followed by two distinct bumps on the high temperature heat release.",
+      "2": "The decreased low temperature heat release with the single fuel strategy was found to lower compression work and increased the thermal efficiency by approximately 1% over the diesel/gasoline case."
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及RCCI燃烧、低温放热反应(LTHR)的化学动力学机理、燃烧过程控制、压缩功和热效率计算，需要燃烧学、化学动力学、热力学和发动机原理等专业领域知识。",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported",
+        "fundamental_error"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在多处事实错误和推导问题：1）LTHR活化能范围不准确，应为40-80 kJ/mol而非100-150 kJ/mol；2）温度升高计算中初始温度T₁=800K不合理，LTHR发生在600-800K，压缩终点温度应更高；3）压力增加25%的推导缺乏依据，理想气体定律应用不当；4）LTHR释放能量占总燃料能量比例（0.15×0.2=3%）与热效率提高1-2%的关联性未充分论证。建议：重新核实LTHR化学动力学参数，修正热力学计算过程，提供更严谨的能量转换效率分析。"
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_7008e5c3",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Review-of-high-efficiency-and-clean-reactivity-contro_2015_Progress-in-Energ",
+      "paper_title": "Review-of-high-efficiency-and-clean-reactivity-contro_2015_Progress-in-Energ"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:22:03.410134",
+      "answer_length": 947
+    }
+  },
+  {
+    "question_text": "基于论文第3.6.2节中9.3 bar IMEP工况下RCCI与传统柴油燃烧的对比数据（表25），重新推导并计算RCCI燃烧相比传统柴油燃烧在热效率提升方面的具体贡献因素，包括传热损失、燃烧损失和排气损失的定量分析。要求：1）明确引用论文中9.3 bar IMEP工况的具体数据来源；2）验证能量平衡计算中各损失项的具体数值是否与论文一致，确保各损失项百分比之和等于100%减去热效率；3）修正燃烧损失解释，使其符合稀薄燃烧条件下不完全燃烧产物的形成机理；4）合理解释净效率提升计算与实测值的差异，并分析测量误差和计算近似的影响。",
+    "standard_answer": "根据论文第3.6.2节中9.3 bar IMEP工况的对比数据（表25），RCCI的指示热效率为56.1%，传统柴油燃烧为48.2%，效率提升7.9个百分点。通过能量平衡分析各损失项的贡献：\n\n传热损失方面，RCCI为11.4%，传统柴油为19.1%，减少7.7个百分点。论文明确指出“RCCI combustion avoids the high temperature regions that are located near the piston bowl surface... Thus, the HT losses are reduced by nearly a factor of two.”这主要由于RCCI避免了高温扩散火焰与壁面的直接接触，燃烧温度分布更均匀，峰值温度降低。\n\n燃烧损失方面，RCCI为2%，传统柴油为0.1%，增加1.9个百分点。这主要由于RCCI在稀薄燃烧条件下部分燃料未完全氧化，生成较多的CO和UHC。论文表25显示RCCI的燃烧损失为2%，而传统柴油由于高温扩散燃烧更完全，燃烧损失仅为0.1%。\n\n排气损失方面，RCCI为30.5%，传统柴油为32.6%，减少2.1个百分点。这反映了RCCI更优化的燃烧相位和膨胀过程，使更多能量在膨胀冲程转化为功。\n\n能量平衡验证：RCCI：56.1%（热效率）+11.4%（传热损失）+2%（燃烧损失）+30.5%（排气损失）=100%；传统柴油：48.2%+19.1%+0.1%+32.6%=100%。\n\n综合计算：净效率提升=传热损失减少(7.7%)+排气损失减少(2.1%)-燃烧损失增加(1.9%)=7.9%，与实测的7.9%完全吻合。其中传热损失的减少贡献最大，占总提升的约65%。这表明RCCI通过燃烧模式的根本改变，显著改善了能量分配，尽管稀薄燃烧条件下不完全燃烧产物略有增加，但整体热效率得到显著提升。差异分析：实测值与计算值完全一致，表明能量平衡计算准确，各损失项数值与论文表25数据一致。",
+    "original_text": {
+      "1": "Compared to conventional diesel combustion, RCCI demonstrated three orders of magnitude lower NOx, a factor of six lower soot levels, and 16.4% higher gross indicated efficiency.",
+      "2": "RCCI combustion avoids the high temperature regions that are located near the piston bowl surface, as observed in the comparisons with the conventional diesel combustion case. Thus, the HT losses are reduced by nearly a factor of two."
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及内燃机燃烧技术（RCCI与传统柴油燃烧对比）、热效率分析、能量平衡计算、传热损失、燃烧损失和排气损失的定量分析，需要燃烧学、热力学、内燃机原理等专业领域的深入知识。",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "fundamental_error",
+        "unsupported"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在以下问题需要修正：1）燃烧损失解释错误，稀薄燃烧条件下不完全燃烧产物（CO、UHC）增加是燃烧损失增大的主要原因，而非答案中简单描述的\"部分燃料未完全氧化\"；2）未明确引用论文表25的具体数据来源，仅笼统提及\"论文表25显示\"；3）未按要求分析净效率提升计算与实测值的差异及测量误差、计算近似的影响；4）答案中\"传热损失减少贡献最大，占总提升约65%\"的结论缺乏论文直接支持。建议：基于论文表25具体数据重新推导各损失项，修正燃烧损失机理解释，补充差异分析内容。"
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_c3143889",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Review-of-high-efficiency-and-clean-reactivity-contro_2015_Progress-in-Energ",
+      "paper_title": "Review-of-high-efficiency-and-clean-reactivity-contro_2015_Progress-in-Energ"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:22:18.347043",
+      "answer_length": 847
+    }
+  }
+]

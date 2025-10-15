@@ -1,0 +1,138 @@
+[
+  {
+    "question_text": "基于论文中描述的拉瓦尔喷嘴内非平衡凝结过程，详细分析经典成核理论(CNT)在预测CO2凝结过程中的局限性，并解释分子动力学(MD)模拟如何提供更准确的成核率预测。请包括成核能垒、临界半径计算和分子尺度相互作用的分析。",
+    "standard_answer": "经典成核理论(CNT)在预测CO2凝结过程中的主要局限性在于其基于连续介质假设和理想化的热力学参数。根据论文，CNT预测的成核率与MD模拟结果存在数量级差异，这主要是因为：1) CNT假设分子簇为球形且表面张力恒定，而实际CO2分子簇在超音速流动中呈现复杂的非球形结构；2) CNT未充分考虑分子间相互作用能对成核能垒的影响。临界半径r*的计算公式为r* = 2σr/(ρLRTGln(S))，其中σr为表面张力，ρL为液滴密度，TG为气体温度，S为过饱和度比。在超音速分离器中，由于快速膨胀导致的温度骤降(可达-60°C)，S值急剧增大，但CNT无法准确描述这种非平衡状态下的分子聚集过程。MD模拟通过跟踪单个分子的轨迹，能够捕捉到：1) CO2气体分子与周围分子的能量相互作用对簇稳定性的影响；2) 潜热释放对局部温度场的影响；3) 分子尺度上的非平衡动力学行为。论文明确指出：'The study revealed a substantial deviation between the CNT results and MD simulations by orders of magnitude, emphasizing the need for corrections to the classical theory.' 此外，'With MD simulations, nucleation rates can be calculated using methods such as average first-pass times or thresholds.' 这表明MD模拟通过统计方法能够更准确地量化成核过程，为优化CO2分离效果提供理论依据。",
+    "original_text": {
+      "1": "The study revealed a substantial deviation between the CNT results and MD simulations by orders of magnitude, emphasizing the need for corrections to the classical theory.",
+      "2": "With MD simulations, nucleation rates can be calculated using methods such as average first-pass times or thresholds."
+    },
+    "type": "reasoning",
+    "difficulty": 5,
+    "topic": "fluid_mechanics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及拉瓦尔喷嘴内非平衡凝结过程、经典成核理论(CNT)、分子动力学(MD)模拟、成核能垒、临界半径计算和分子尺度相互作用分析，这些内容属于燃烧/传热/流体/CFD/能源领域的专业知识，特别是相变、成核理论和分子模拟在超音速分离中的应用。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "无"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_068d9c80",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Supersonic-separation-towards-sustainable-gas_2024_Progress-in-Energy-and-Co",
+      "paper_title": "Supersonic-separation-towards-sustainable-gas_2024_Progress-in-Energy-and-Co"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:13:55.516866",
+      "answer_length": 731
+    },
+    "merge_source": "question_reverse"
+  },
+  {
+    "question_text": "推导超音速分离器中液滴生长速率方程，并分析Knudsen数对传热传质过程的影响。请详细说明Gyarmathy模型中考虑毛细管效应和分子扩散的物理机理。",
+    "standard_answer": "液滴生长速率方程基于能量和质量守恒原理推导。根据论文，液滴的能量平衡方程为：L(dmr/dt) = 4πr²αr(TL - TG)，其中L为汽化潜热，mr为液滴质量，r为液滴半径，αr为对流传热系数，TL和TG分别为液滴和气体温度。生长速率可表示为dr/dt = αr(TL - TG)/(ρLL)。Gyarmathy模型进一步考虑了表面张力效应，给出了液滴温度的计算公式：TL = TG + [1 - r*/r](Ts(p) - TG)，其中r*为临界半径，Ts(p)为对应蒸汽压力的饱和温度。Knudsen数Kn = l/(2r)（l为蒸汽分子平均自由程）对传热传质过程有重要影响：当Kn较小时（连续流区），传热由对流主导；当Kn较大时（自由分子流区），分子与液滴表面的碰撞频率成为控制因素。论文指出：'A high Kn means the droplet diameter is smaller than the distance between vapor molecules, so the free molecular flow model can find the flow field.' 对流传热系数αr的表达式为αr = λ/[r(1 + 3.18Kn)]，其中λ为热导率。该模型综合考虑了：1) 毛细管效应通过表面张力影响临界半径和液滴稳定性；2) 分子扩散通过Knudsen数修正传热系数；3) 非平衡热力学状态下的温度分布。正如论文所述：'In the model, heat and mass are transmitted, capillary influence is considered, and vapor molecules are diffused through the surrounding media.' 这种综合方法能够更准确地描述超音速流动中的液滴生长动力学。",
+    "original_text": {
+      "1": "A high Kn means the droplet diameter is smaller than the distance between vapor molecules, so the free molecular flow model can find the flow field.",
+      "2": "In the model, heat and mass are transmitted, capillary influence is considered, and vapor molecules are diffused through the surrounding media."
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "heat_transfer",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及超音速分离器中的液滴生长动力学、传热传质过程、Gyarmathy模型、Knudsen数效应等，需要燃烧/传热/流体力学/CFD/能源领域的专业知识，特别是相变、非平衡热力学和分子输运机制方面的深入理解。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量较高，无需修改。"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_a8e8f4e9",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Supersonic-separation-towards-sustainable-gas_2024_Progress-in-Energy-and-Co",
+      "paper_title": "Supersonic-separation-towards-sustainable-gas_2024_Progress-in-Energy-and-Co"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:13:55.706059",
+      "answer_length": 808
+    },
+    "merge_source": "question_reverse"
+  },
+  {
+    "question_text": "分析超音速分离器中激波与边界层相互作用对凝结效率和能量回收的影响机制，包括激波位置优化、温度分布变化和液滴再蒸发过程的详细物理描述。",
+    "standard_answer": "激波与边界层相互作用对超音速分离器的性能具有决定性影响。当激波发生在分离部分时，会产生高温导致液滴再蒸发，阻碍气液分离过程。激波位置由喷嘴几何形状、入口条件和流体性质共同决定。优化的激波位置应位于液滴收集器之后，以避免凝结产物的再蒸发。温度分布方面，激波前后存在显著的温度跳跃：激波前为低温区（由于绝热膨胀），有利于凝结；激波后温度急剧升高，可能导致已凝结液滴的再蒸发。论文明确指出：'If a shock wave occurs in the separation part, it generates a high temperature that leads to droplet re-evaporation, hindering the gas-liquid separation process.' 边界层分离会进一步复杂化流动结构，产生涡旋和回流，影响分离效率。在能量回收方面，扩散器通过激波将超音速流动减速为亚音速，实现压力恢复，但伴随熵增和能量损失。Shooshtari和Shahsavand的研究表明，通过选择8°的倾斜角可以实现0.88的压力恢复系数和最小能量损失。论文还指出：'Shock waves are generated by the diffuser to decrease the flow velocity from supersonic to subsonic levels, which enhances the utilization of pressure energy, with a trade-off of some pressure reduction.' 这种权衡需要在设计中精心优化，以确保在最大化分离效率的同时实现有效的能量回收。创新的圆柱形排水结构被证明可以有效减轻激波与边界层的相互作用，促进喷嘴中更平衡的温度场分布。",
+    "original_text": {
+      "1": "If a shock wave occurs in the separation part, it generates a high temperature that leads to droplet re-evaporation, hindering the gas-liquid separation process.",
+      "2": "Shock waves are generated by the diffuser to decrease the flow velocity from supersonic to subsonic levels, which enhances the utilization of pressure energy, with a trade-off of some pressure reduction."
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "fluid_mechanics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及超音速分离器中的激波与边界层相互作用、凝结效率、能量回收机制等复杂流体力学和热力学概念，需要燃烧/传热/流体/CFD/能源领域的专业知识进行深入分析",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "无需改进，问题和答案质量均较高。答案准确描述了激波与边界层相互作用的物理机制，正确引用了相关研究，对凝结效率、温度分布、液滴再蒸发过程和能量回收机制的解释符合领域专业知识"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_9abc5cd2",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Supersonic-separation-towards-sustainable-gas_2024_Progress-in-Energy-and-Co",
+      "paper_title": "Supersonic-separation-towards-sustainable-gas_2024_Progress-in-Energy-and-Co"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:13:56.037346",
+      "answer_length": 791
+    },
+    "merge_source": "question_reverse"
+  },
+  {
+    "question_text": "解释超音速分离技术在天然气净化（特别是CO2分离）中相比传统分离方法（吸附、吸收、膜分离）在可持续性方面的优势，从热力学第二定律角度分析其㶲效率更高的根本原因，包括设备紧凑性、无化学添加剂和能量转换效率等方面的机理。",
+    "standard_answer": "超音速分离技术在天然气净化，特别是CO2分离中的可持续性优势源于其独特的热力学和流体动力学原理。从热力学第二定律角度分析，㶲效率更高的根本原因在于：1) 直接利用流体的压力能转化为动能和冷却效应，避免了多次能量转换损失；2) 绝热膨胀过程接近等熵过程，熵产最小化；3) 紧凑的一体化设计减少了散热和流动损失。与传统方法相比，吸附和吸收过程需要化学再生，涉及显著的能量惩罚和㶲破坏。膜分离虽然无相变，但需要维持跨膜压差，同样伴随不可逆损失。论文指出：'Scientists have shown that supersonic separators are more energy-efficient than conventional natural gas separators.' 以及 'Supersonic separators stand out in several aspects compared to other purification technologies, such as adsorption, absorption, cryogenics, and membranes. Unlike adsorption and absorption methods that often require substantial facilities, complex systems, and the use of chemicals with adverse environmental effects, supersonic separators offer a more streamlined and cost-effective solution.' 在设备紧凑性方面，超音速分离器采用简单的管状结构，无运动部件，减少了制造和维护的㶲投入。无化学添加剂避免了溶剂再生过程中的大量㶲耗散，正如论文所述：'Due to their compact tube structure and the absence of rotating parts, the design of supersonic separators ensures stability and eliminates chemical discharge, making them environmentally friendly.' 能量转换效率方面，拉瓦尔喷嘴将压力能高效转化为动能，产生低温环境促进凝结，然后通过离心力分离，整个过程在单一设备中完成，减少了中间环节的㶲损失。与传统的TEG+JT/LTS工艺相比，超音速分离虽然初始投资较高，但运行阶段的㶲效率显著优越，这体现在更高的自然气体液体回收率和更低的运营成本上。这种基于物理原理的分离方法代表了碳捕获和天然气净化技术的发展方向。",
+    "original_text": {
+      "1": "Scientists have shown that supersonic separators are more energy-efficient than conventional natural gas separators.",
+      "2": "Supersonic separators stand out in several aspects compared to other purification technologies, such as adsorption, absorption, cryogenics, and membranes. Unlike adsorption and absorption methods that often require substantial facilities, complex systems, and the use of chemicals with adverse environmental effects, supersonic separators offer a more streamlined and cost-effective solution."
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及超音速分离技术、天然气净化、CO2分离、热力学第二定律、㶲效率分析、能量转换效率等专业概念，需要燃烧/传热/流体/CFD/能源领域的专业知识进行深入分析",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量较高，从热力学第二定律角度深入分析了㶲效率优势，涵盖了设备紧凑性、无化学添加剂和能量转换效率等要求的方面，引用恰当，机理解释清晰准确"
+    },
+    "retry_count": 1,
+    "question_id": "deepseek_q_2ebcc650",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Supersonic-separation-towards-sustainable-gas_2024_Progress-in-Energy-and-Co",
+      "paper_title": "Supersonic-separation-towards-sustainable-gas_2024_Progress-in-Energy-and-Co"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:14:46.388277",
+      "answer_length": 1193
+    },
+    "merge_source": "question_reverse"
+  }
+]

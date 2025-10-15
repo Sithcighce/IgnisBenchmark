@@ -1,0 +1,223 @@
+# Progress-in-non-intrusive-laser-based-measurements-of_2019_Progress-in-Energ - Passed Questions
+
+**生成时间**: 2025-10-15 15:46:06  
+**通过问题数**: 5
+
+---
+
+## Question 1
+
+### 问题
+
+推导并解释在平面通道流中催化燃烧的异相反应速率评估方法。详细说明如何通过测量边界层物种分布来确定局部催化反应速率，并分析表面Damköhler数（Da_s）对燃料壁面质量分数和壁面梯度的影响。
+
+### 标准答案
+
+在平面通道流催化燃烧中，局部催化反应速率通过测量边界层物种分布并结合理论分析来确定。对于燃料为缺乏反应物的单步不可逆Arrhenius反应，催化摩尔反应速率˙s_F与壁面横向燃料梯度直接相关：(ρD_F ∂Y_F/∂y)_w = W_F ˙s_F。归一化壁面梯度(1/Y_F,IN)Y'_F,w与催化反应速率成正比：(1/Y_F,IN)Y'_F,w = Le_F √(2Prζ)(ρ_w/ρ_IN)(Y_F,w/Y_F,IN)Da_s ∼ ˙s_F。表面Damköhler数定义为Da_s = (bB_s exp(-E_s/RT_w))/α_th,IN，其中b为通道半高，B_s为指前因子，E_s为活化能，α_th,IN为入口热扩散系数。分析解表明，归一化燃料壁面质量分数(1/Y_F,IN)Y_F,w和壁面梯度(1/Y_F,IN)Y'_F,w是ζ、Le_F、T_w/T_IN和Da_s的函数。当Da_s < Da_s,ig时，壁面梯度（即催化反应速率）随Da_s显著变化，而Da_s > Da_s,ig时变化缓慢。催化着火Damköhler数可近似为Da_s,ig ≈ (T_w/T_IN)^(3/2) Le_F^(-2/3) ζ^(-1/2)。在Da_s ≈ Da_s,ig时，(1/Y_F,IN)Y_F,w范围从0.20到0.35，这仍可通过时间平均Raman测量解析。因此，通过比较测量和预测的边界层物种分布（尽管在距催化剂壁面∼0.5-0.7 mm内缺乏Raman数据），可以评估催化反应性，前提是操作在Da_s < ∼Da_s,ig的范围内，以利用催化反应速率对Da_s的显著依赖性。
+
+### 元数据
+
+- **类型**: calculation
+- **难度**: 4
+- **主题**: CFD_modeling
+- **答案长度**: 698 字符
+
+### 原文引用
+
+**引用 1**:
+> The local wall gradient is proportional to the catalytic reaction rate: (ρD_F ∂Y_F/∂y)_w = W_F ˙s_F, such that the normalized gradient of the fuel is also proportional to the catalytic reaction rate.
+
+**引用 2**:
+> It is fortunate that in the region of interest Da_s ≲ Da_s,ig the deficient reactant mass fraction at the wall is still appreciable. Analytical solutions indicate that at Da_s,ig the ratio (1/Y_F,IN)Y_F,w ranges from 0.20 to 0.35.
+
+### 质量检查
+
+- **领域聚焦**: ✅ 通过
+- **答案正确性**: ✅ 通过
+- **其他合规性**: ✅ 通过
+- **总体评价**: pass
+
+**领域聚焦分析**: 问题涉及催化燃烧、异相反应速率评估、边界层物种分布测量、表面Damköhler数分析等，需要燃烧学、传热传质、流体力学、化学反应工程等领域的专业知识。
+
+### 来源
+
+- **论文**: Progress-in-non-intrusive-laser-based-measurements-of_2019_Progress-in-Energ
+- **生成类型**: deepseek_generation
+- **合并来源**: question_reverse
+
+---
+
+## Question 2
+
+### 问题
+
+分析在燃料贫氢/空气混合物在铂催化剂上异相/均相燃烧中，压力对均相着火抑制的物理化学机制。详细解释在高预热的实际系统条件下，压力如何通过内在气相动力学和异相/均相竞争导致均相燃烧减弱。
+
+### 标准答案
+
+在燃料贫氢/空气混合物在铂催化剂上的异相/均相燃烧中，压力对均相着火的抑制涉及内在气相动力学和异相/均相竞争的共同作用。内在气相动力学方面，通过恒压非催化批次反应器计算氢气的逆着火延迟（代表气相反应性）表明：在初始温度950 K、φ=0.30时，气相反应性随压力升高至∼2 bar迅速下降，之后在p≥2 bar时变化不大；而在更高温度（1000 K < T ≤ 1200 K）时，反应性随压力升高单调增加，在临界压力p_cr达到峰值，然后在p > p_cr时下降。p_cr随初始温度升高而增加，且p > p_cr时的反应性下降得到缓解。这种复杂行为是链分支步骤H + O_2 ⇔ O + OH、链终止步骤H + O_2 + M ⇔ HO_2 + M以及在高温度下变得重要的链分支序列HO_2 + H ⇔ H_2O_2 + M ⇔ 2OH + M竞争的结果。在耦合的异相/均相燃烧系统中，对于高预热的实际情况（如T_IN ∼ 780 K），相关温度在1100 K或更高，导致在p ≥ 12 bar时，催化途径有利于与气相途径竞争，并在延长的气相诱导区消耗大量氢气，从而抑制均相着火。此外，催化途径在转化氢气方面非常有效，这是由于其在铂上的高反应性（即使在中等壁面温度下）及其大的分子扩散性。因此，在p ≥ 12 bar时，均相着火被抑制，如在OH-PLIF测量中观察到的均相着火距离x_ig,g增加和OH水平消失所证明的。这种抑制对于燃气轮机混合概念（图1）中燃料贫氢混合物的均相燃烧具有重要意义，表明在这些条件下均相燃烧基本被抑制。
+
+### 元数据
+
+- **类型**: reasoning
+- **难度**: 5
+- **主题**: combustion_kinetics
+- **答案长度**: 666 字符
+
+### 原文引用
+
+**引用 1**:
+> This complex behavior in hydrogen gaseous chemistry is a result of the competition between the chain branching step H + O_2 ⇔ O + OH, the chain terminating step H + O_2 + M ⇔ HO_2 + M and also of the chain branching sequence HO_2 + H ⇔ H_2O_2 + M ⇔ 2OH + M that becomes significant at higher temperatures.
+
+**引用 2**:
+> The implication for a coupled hetero-/homogeneous combustion system is that the catalytic pathway can favorably compete against the gaseous pathway and consume substantial amounts of hydrogen during the elongated gas-phase induction zones at p ≥ 12 bar, such that homogeneous ignition is inhibited.
+
+### 质量检查
+
+- **领域聚焦**: ✅ 通过
+- **答案正确性**: ✅ 通过
+- **其他合规性**: ✅ 通过
+- **总体评价**: pass
+
+**领域聚焦分析**: 问题涉及燃料贫氢/空气混合物在铂催化剂上的异相/均相燃烧机制，需要燃烧动力学、催化化学、气相反应机理（如链分支/终止步骤）、压力对反应路径竞争的影响等专业领域知识，属于燃烧/能源/化学工程领域。
+
+### 来源
+
+- **论文**: Progress-in-non-intrusive-laser-based-measurements-of_2019_Progress-in-Energ
+- **生成类型**: deepseek_generation
+- **合并来源**: question_reverse
+
+---
+
+## Question 3
+
+### 问题
+
+在湍流异相/均相燃烧中，热壁面引起的流动层流化如何影响湍流输运和催化反应速率？详细分析近壁湍流标量通量的建模方法，并解释不同低雷诺数湍流模型在预测催化氢转化方面的性能差异。
+
+### 标准答案
+
+在湍流异相/均相燃烧中，热壁面引起的流动层流化通过增加气体粘度来抑制湍流，显著影响湍流输运和催化反应速率。实验（PIV）和DNS均证实，催化放热导致的强烈壁面传热阻尼了平行于催化壁面的涡量分量，减少了涡量幅度，并改变了涡结构拓扑，如与相同Re_IN下等温流动相比，瞬时展向涡量图所示。这种层流化过程影响了近壁湍流标量通量的建模。湍流标量通量通常用标量湍流扩散率ϵ_t建模，根据−(v'g') = ϵ_t (∂g/∂y)，因此有效扩散率为层流和湍流贡献之和：ϵ_eff = ϵ_lam + ϵ_t。低雷诺数方法使用ϵ_t = (C_μ f_μ/σ_g)(k^2/ε)，其中k和ε分别为湍流动能及其耗散率，C_μ = 0.09，σ_g = 0.85用于近壁流动，f_μ为y相关阻尼函数，使模型过度耗散。DNS显示，虽然O_2和H_2O具有几乎相同的湍流扩散率，但较轻的氢气表现出显著偏差，且σ_g通常恒定，与物种分子Schmidt数无关。在预测催化氢转化方面，测试了三种不同的低雷诺数湍流模型：Patel模型（仅考虑壁面邻近）、Ezato模型（针对强烈层流化加热通道开发）和Lin模型（针对有/无传热的通道流动构建）。Ezato模型通过强烈流动层流化允许更长的火焰停留时间，导致持续的近壁气相燃烧，与OH-PLIF实验一致，并提供了测量的Favre平均轴向速度Ũ和湍流动能k̃的最佳一致性。相反，Patel和Lin模型导致Ũ和近壁k̃的显著高估，从而增强了朝向壁面的横向质量输运，进而导致催化H_2消耗的高估，因为催化化学仍然足够快以应对增强的湍流输运（计算显示所有三种模型均产生近乎传输限制的催化H_2转化）。有趣的是，层流预测比不充分层流化的Patel或Lin模型更符合测量结果，表明对于研究的雷诺数范围，简单的层流模型可能比不适当的低雷诺数湍流模型表现更好。
+
+### 元数据
+
+- **类型**: concept
+- **难度**: 5
+- **主题**: fluid_mechanics
+- **答案长度**: 782 字符
+
+### 原文引用
+
+**引用 1**:
+> The intense heat transfer from the hot catalytic walls dampens turbulence and laminarizes the flow. The laminarization process is illustrated by comparing measured instantaneous spanwise vorticity maps for a catalytically reacting case with an inlet bulk Reynolds number Re_IN = 16,110 and for the same Re_IN under isothermal flow conditions.
+
+**引用 2**:
+> The Ezato LR model provides good agreement to the measured Ũ and fair to the measured k̃. The Lin model, and to greater degree the Patel model, substantially overpredict Ũ; furthermore, these two models result in considerably higher near-wall k̃ that in turn critically enhances transport of heat from the hot wall towards the channel core, causing in turn an unrealistic acceleration of the mean flow Ũ.
+
+### 质量检查
+
+- **领域聚焦**: ✅ 通过
+- **答案正确性**: ✅ 通过
+- **其他合规性**: ✅ 通过
+- **总体评价**: pass
+
+**领域聚焦分析**: 问题涉及湍流燃烧、热壁面层流化、湍流输运、催化反应速率、近壁湍流标量通量建模、低雷诺数湍流模型性能比较等专业内容，需要燃烧学、流体力学、传热传质、计算流体动力学（CFD）和催化化学等领域的专业知识。
+
+**改进建议**: 无需改进，问题和答案均符合质量要求。
+
+### 来源
+
+- **论文**: Progress-in-non-intrusive-laser-based-measurements-of_2019_Progress-in-Energ
+- **生成类型**: deepseek_generation
+- **合并来源**: question_reverse
+
+---
+
+## Question 4
+
+### 问题
+
+在催化燃烧系统中，异相/均相化学反应的耦合机制如何影响均相着火距离？请详细分析四种主要耦合途径及其对甲烷/空气混合物在铂催化剂上均相着火的影响机理。
+
+### 标准答案
+
+在催化燃烧系统中，异相/均相化学反应的耦合通过四种主要机制影响均相着火距离：首先，异相反应的放热性加热通道壁面进而加热流动气体，促进均相着火。其次，近壁区域缺乏反应物（如燃料质量分数Y_F）抑制均相着火。第三，异相途径产生的产物（如H₂O）在均相诱导区（x < x_ig,g）发挥化学作用：在H₂/空气混合物中，催化产生的水通过H + O₂ + M ⇔ HO₂ + M链终止步骤化学抑制均相着火；而在CH₄/空气混合物中则化学促进均相着火。第四，自由基的催化吸附/解吸反应：在均相着火远上游，催化自由基通量为净解吸，但在接近x_ig,g的均相诱导区部分转变为净吸附，并在着火后区域保持净吸附，通过异相/均相自由基耦合适度抑制均相着火。对于甲烷在铂上的燃烧，催化途径将CH₄主要转化为CO，但大部分形成的CO因在铂上的高粘附系数而吸附，只有小部分在气相氧化为CO₂，从而通过剥夺气相CO抑制均相着火。这种复杂的耦合机制导致均相着火距离ζ_ig,g对气相和表面Damköhler数（Da_g和Da_s）具有强依赖性，如理论分析所示：F(ζ_ig,g)/(ζ_ig_g)^(1/2) = (1/(2Pr)) * A * (1/Da_g_eff)，其中Da_g_eff = τ_d_eff/τ_ch_g，且τ_d_eff = τ_d/K(ζ_ig_g, Da_s)，K是Da_s的单调递增函数且K ≤ 1。
+
+### 元数据
+
+- **类型**: reasoning
+- **难度**: 5
+- **主题**: combustion_kinetics
+- **答案长度**: 599 字符
+
+### 原文引用
+
+**引用 1**:
+> The first mechanism of hetero-/homogeneous chemistry coupling is the promotion of homogeneous ignition due to the exothermicity of the catalytic pathway that heats up the channel walls and consequently the flowing gas. At the same time homogeneous ignition is inhibited by the near-wall depletion of the deficient reactant (Y_F profiles).
+
+**引用 2**:
+> For example, catalytically-produced H_2O chemically inhibits homogeneous ignition in H_2/air mixtures while it chemically promotes homogeneous ignition in CH_4/air mixtures. The fourth mechanism of coupling is via catalytic adsorption/desorption reactions of radical species.
+
+### 质量检查
+
+- **领域聚焦**: ✅ 通过
+- **答案正确性**: ✅ 通过
+- **其他合规性**: ✅ 通过
+- **总体评价**: pass
+
+**领域聚焦分析**: 该问题涉及催化燃烧系统中的异相/均相化学反应耦合机制、均相着火距离的影响因素、甲烷/空气混合物在铂催化剂上的燃烧机理，需要燃烧学、催化化学、反应工程、传热传质等专业领域的深入知识。
+
+**改进建议**: 无需改进，问题和答案均符合高质量标准。答案详细分析了四种耦合途径及其对甲烷/空气混合物均相着火的影响机理，内容准确、专业且与原文引用及论文摘录一致。
+
+### 来源
+
+- **论文**: Progress-in-non-intrusive-laser-based-measurements-of_2019_Progress-in-Energ
+- **生成类型**: deepseek_generation
+- **合并来源**: question_reverse
+
+---
+
+## Question 5
+
+### 问题
+
+在甲烷催化部分氧化（CPO）过程中，铑和铂催化剂在促进均相燃烧方面表现出显著差异。详细解释这种差异的物理化学根源，并分析均相燃烧的存在如何影响CPO反应器的氧化区长度和合成气收率。
+
+### 标准答案
+
+在甲烷催化部分氧化过程中，铑和铂催化剂在促进均相燃烧方面的差异源于它们对部分氧化与完全氧化路径的偏好。铑倾向于部分氧化路径（2CH_4 + O_2 → 2CO + 4H_2），而铂倾向于完全氧化路径（CH_4 + 2O_2 → CO_2 + 2H_2O）。因此，对于给定量的O_2，铑通过 favoring partial oxidation 消耗更多CH_4 compared to Pt that favors total oxidation。这导致铑产生约十倍于铂的H_2，如Raman测量的横向H_2摩尔分数分布所示。铑中较高的H_2产量促进了剧烈的均相燃烧，因为H_2已知能显著扩展甲烷的上可燃极限（UFL）。尽管铑的壁面温度比铂低达40 K，但铑仍促进剧烈火焰形成，如CH_2O-PLIF测量所示：在铑中，CH_2O在火焰后区域消失，表明气相化学遵循序列CH_2O → CO → CO_2，而在铂中，甲烷氧化不超过CH_2O。均相燃烧的存在显著影响CPO反应器的氧化区长度：在铑中，O_2在气相燃烧区末端x ∼150 mm处完全消耗，而在铂中，由于缺乏剧烈均相燃烧，O_2持续存在至通道出口x=300 mm。均相燃烧通过其比催化途径弱得多的传输限制（由层流质量燃烧速率决定）显著缩短了O_2消耗所需的通道长度。特征上，对于燃料贫H_2/空气在铂上的燃烧，气相H_2转化率（kg/m^2 s）可比相应的层流催化H_2转化率高四倍。在实际系统中，氧化区的缩短是有益的，因为它允许随后的蒸汽重整区（CH_4 + H_2O → CO + 3H_2）更早开始，从而减少整体反应器长度要求。此外，火焰的存在不影响出口处的H_2和CO选择性，因为甲烷CPO是平衡限制过程而非动力学限制过程。最后，气相燃烧似乎不会因在催化剂或排气段未观察到积碳而恶化铑的低积碳倾向，可能是由于催化剂吸收了积碳前体物种。
+
+### 元数据
+
+- **类型**: reasoning
+- **难度**: 4
+- **主题**: energy_systems
+- **答案长度**: 799 字符
+
+### 原文引用
+
+**引用 1**:
+> Production of H_2 in Rh is about a factor of ten higher compared to Pt. Hydrogen production in Rh is somewhat overpredicted and this is accompanied by an underprediction of H_2O.
+
+**引用 2**:
+> The presence of a vigorous flame in Rh drastically affects the CPO processes. Most importantly, it substantially reduces the length of the oxidation zone: the X_O2 profile reveals that O_2 is fully consumed at the end of the gaseous combustion zone x ∼150 mm, while in O_2 persists down to the channel outlet x=300 mm due to the lack of vigorous homogeneous combustion.
+
+### 质量检查
+
+- **领域聚焦**: ✅ 通过
+- **答案正确性**: ✅ 通过
+- **其他合规性**: ✅ 通过
+- **总体评价**: pass
+
+**领域聚焦分析**: 问题涉及甲烷催化部分氧化（CPO）过程、铑和铂催化剂的差异、均相燃烧的物理化学根源、氧化区长度和合成气收率分析，需要燃烧学、催化化学、反应工程、传热传质等能源与燃烧领域的专业知识。
+
+**改进建议**: 无需修改。答案详细解释了铑和铂催化剂在促进均相燃烧方面的差异及其物理化学根源（如对部分氧化与完全氧化路径的偏好、H₂产量差异、上可燃极限影响等），分析了均相燃烧对氧化区长度和合成气收率的影响，并引用了原文数据支持关键结论，符合问题要求。
+
+### 来源
+
+- **论文**: Progress-in-non-intrusive-laser-based-measurements-of_2019_Progress-in-Energ
+- **生成类型**: deepseek_generation
+- **合并来源**: question_reverse
+
+---
+

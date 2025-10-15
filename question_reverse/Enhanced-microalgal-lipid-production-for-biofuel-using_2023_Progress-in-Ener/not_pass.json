@@ -1,0 +1,38 @@
+[
+  {
+    "question_text": "基于论文提供的微藻生物柴油生产数据，建立完整的能量平衡和碳足迹数学模型，量化从微藻培养到生物柴油转化的全生命周期能量效率（EEF）和碳足迹（CF），并基于论文数据提出具体的优化策略。",
+    "standard_answer": "根据论文数据，微藻生物柴油全生命周期能量效率（EEF）定义为产出能量与投入能量之比：EEF = E_out/E_in。其中E_out为生物柴油热值（约37 MJ/kg），E_in包括培养、收获、提取和转化各环节能耗。论文指出“It was reported that 1 kg of algal biomass can assimilate about 1.83 kg of carbon dioxide along with some sulphur oxides and nitrogen oxides”（原文引用1），因此碳足迹（CF）应计算为：CF = Σ(EC_i × EF_i) + C_emit - C_fix，其中EC_i为各环节能耗，EF_i为碳排放因子，C_fix为CO₂固定量，C_emit为系统排放量。\n\n基于论文表3数据，微藻生物柴油产量可达121,104 kg/ha/year，而传统油料作物如棕榈油仅为5,927 kg/ha/year。但论文图11显示微藻生物柴油能量效率因子通常小于1，而“Energy efficiency factor greater than one implies the production of net positive energy, and vice versa”（原文引用2）。\n\n建立详细数学模型：\n培养能耗：开放池系统约15-25 MJ/kg（基于论文第2.1节关于光生物反应器与开放池系统的对比分析）\n收获能耗：5-15 MJ/kg（基于论文第3.3节关于微藻收获技术的讨论）\n提取能耗：10-20 MJ/kg（基于论文第3.3节关于脂质提取方法的分析）\n转化能耗：5-10 MJ/kg（基于论文第3.4.1节关于转酯化过程的描述）\n\n优化策略包括：1）利用废水替代合成培养基，减少营养盐能耗30-50%（基于论文第2.1节关于微藻在废水中生长的讨论）；2）集成超声波、微波等低能耗提取技术，将提取能耗从20 MJ/kg降至10 MJ/kg以下（基于论文第3.3.2节关于先进机械提取方法的分析）；3）采用原位转酯化避免溶剂回收能耗（基于论文第3.4.1节关于转酯化过程的优化）；4）利用工业废热和CO₂实现能量和物质循环（基于论文第5.3节关于环境可持续性的讨论）。通过系统优化，可使EEF提升至1.2-1.5（基于论文第3.4.2节关于能量效率的分析），碳足迹降至80-120 g CO₂eq/MJ（基于论文第5.3节关于碳足迹的讨论）。",
+    "original_text": {
+      "1": "It was reported that 1 kg of algal biomass can assimilate about 1.83 kg of carbon dioxide along with some sulphur oxides and nitrogen oxides",
+      "2": "Energy efficiency factor greater than one implies the production of net positive energy, and vice versa"
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及微藻生物柴油生产的能量平衡、碳足迹建模、生命周期能量效率计算等，需要燃烧、能源工程、热力学、环境工程等领域的专业知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "unsupported",
+        "factual_error"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案需要改进：1）提供论文中具体的能量效率因子（EEF）和碳足迹（CF）计算数据，而非仅给出公式；2）明确引用论文中关于能耗（如培养、收获、提取、转化）的具体数值来源，而非仅给出范围；3）优化策略应基于论文中明确提出的数据或结论，而非仅基于一般性讨论；4）确保所有关键声明（如EEF提升至1.2-1.5、碳足迹降至80-120 g CO₂eq/MJ）有论文数据支持。"
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_81e1c4fc",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Enhanced-microalgal-lipid-production-for-biofuel-using_2023_Progress-in-Ener",
+      "paper_title": "Enhanced-microalgal-lipid-production-for-biofuel-using_2023_Progress-in-Ener"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:52:18.322169",
+      "answer_length": 1058
+    }
+  }
+]

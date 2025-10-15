@@ -1,0 +1,268 @@
+# Dynamics-of-cool-flames_2019_Progress-in-Energy-and-Combustion-Science - Passed Questions
+
+**生成时间**: 2025-10-15 15:46:06  
+**通过问题数**: 5
+
+---
+
+## Question 1
+
+### 问题
+
+分析微重力液滴燃烧中辐射熄火向冷却火焰转变的物理机制，建立包含辐射热损失、多步化学动力学和瞬态输运的液滴燃烧模型，解释观察到的振荡燃烧现象。
+
+### 标准答案
+
+微重力液滴燃烧中从辐射熄火向冷却火焰的转变涉及复杂的多物理场耦合。建立完整的数学模型需要考虑：
+
+液滴能量方程：ρₗcₚₗ∂Tₗ/∂t = ∂/∂r(kₗ∂Tₗ/∂r)
+气相守恒方程：∂ρ/∂t + ∇·(ρv) = 0
+ρ∂Yₖ/∂t + ρv·∇Yₖ = ∇·(ρDₖ∇Yₖ) + ωₖ
+ρcₚ∂T/∂t + ρcₚv·∇T = ∇·(λ∇T) - ∑ωₖhₖ - ∇·q_rad
+
+其中辐射热通量q_rad采用球对称近似：∇·q_rad = 4κσ(T⁴ - T∞⁴)，κ是吸收系数。
+
+辐射熄火机制：当液滴直径较大时，火焰直径与液滴直径比值增大，辐射热损失与火焰体积成正比（~r_f³），而化学热释放与火焰表面积成正比（~r_f²）。这导致辐射熄火参数χ_rad = (4κσT_f⁴r_f)/(ρS_LΔh_c)超过临界值，热火焰无法维持。
+
+向冷却火焰的转变：辐射熄火后，系统进入低温化学主导的区域。NTC效应在此起关键作用——当温度降至NTC区域时，反应性反而增加，使得冷却火焰能够稳定存在。振荡燃烧现象源于热-动力学不稳定性：温度的小幅升高导致NTC区域反应性降低，从而减少热释放，温度下降；温度下降又增加反应性，形成极限环振荡。这种振荡的条件可以用线性稳定性分析确定：∂ω/∂T < 0（NTC条件）且系统的热损失时间尺度与化学时间尺度相当。
+
+### 元数据
+
+- **类型**: concept
+- **难度**: 4
+- **主题**: heat_transfer
+- **答案长度**: 580 字符
+
+### 原文引用
+
+**引用 1**:
+> The hot flame luminescence decreased dramatically (lower than the detectable threshold of the optical setup), indicating the extinction of the hot flame. Surprisingly, the rate of droplet regression was unchanged for much longer durations
+
+**引用 2**:
+> The manifestation of thermo-kinetic instability in cool flames is simply the kinetic amplification of perturbations in the HRR. Note that the thermo-kinetic instability of NTC-affected burning is well known for closed stirred and unstirred reactors
+
+### 质量检查
+
+- **领域聚焦**: ✅ 通过
+- **答案正确性**: ✅ 通过
+- **其他合规性**: ✅ 通过
+- **总体评价**: pass
+
+**领域聚焦分析**: 问题涉及微重力液滴燃烧、辐射熄火、冷却火焰转变、多步化学动力学、瞬态输运和振荡燃烧现象，需要燃烧学、传热学、流体力学、化学反应动力学和计算流体动力学（CFD）等领域的专业知识。
+
+**改进建议**: 答案质量较高，无需修改。
+
+### 来源
+
+- **论文**: Dynamics-of-cool-flames_2019_Progress-in-Energy-and-Combustion-Science
+- **生成类型**: deepseek_generation
+- **合并来源**: question_reverse
+
+---
+
+## Question 2
+
+### 问题
+
+在非预混对向流冷却火焰中，负温度系数（NTC）效应如何影响火焰的稳定性和熄火极限？请详细分析NTC化学动力学与输运过程之间的耦合机制，并解释为什么冷却火焰的熄火极限预测与实验数据存在显著差异。
+
+### 标准答案
+
+负温度系数（NTC）效应在非预混冷却火焰的稳定性和熄火极限中起着决定性作用。NTC效应源于低温化学动力学中竞争反应路径的温度依赖性：在中间温度区间（约750-1050K），随着温度升高，链分支反应R→RO₂→QOOH→O₂QOOH→OQ'O+2OH被抑制，而链传播反应如RO₂→烯烃+HO₂和QOOH分解加速，导致自由基生成速率降低。这种非单调的温度依赖性使得冷却火焰在特定温度范围内能够稳定存在。
+
+在对向流火焰中，NTC效应与输运过程的耦合表现为：当应变率增加时，流动停留时间缩短，化学反应时间与输运时间尺度比值（达姆科勒数）减小。在NTC区域，温度升高反而降低反应速率，这使得火焰在较高应变率下仍能维持稳定，从而扩展了冷却火焰的熄火极限。然而，当前化学动力学模型在预测冷却火焰熄火极限时存在显著误差，主要原因是：1）大分子燃料（如C₇及以上烷烃）的低温反应路径（特别是O₂QOOH的形成和分解）具有较大的反应速率和热化学不确定性；2）模型简化过程中丢失了关键的链分支路径；3）热释放率与扩散输运的耦合预测不准确。如图7所示，实验测量的冷却火焰熄火燃料质量分数比模型预测低近一个数量级，这表明现有模型严重高估了低温化学的热释放能力。
+
+### 元数据
+
+- **类型**: reasoning
+- **难度**: 5
+- **主题**: combustion_kinetics
+- **答案长度**: 518 字符
+
+### 原文引用
+
+**引用 1**:
+> However, a large discrepancy existed between the predicted and measured CFE limits, which were predicted to occur for fuel mass fractions nearly an order of magnitude higher. Such remarkable disagreement was far larger than that for ignition delay and could not be solely explained by the uncertainty in transport coefficients.
+
+**引用 2**:
+> The NTC effect is particularly evident in flow reactor or a jet-stirred reactor experiments. A wide range of intermediate species including radicals and hydroperoxides have been quantified in these devices.
+
+### 质量检查
+
+- **领域聚焦**: ✅ 通过
+- **答案正确性**: ✅ 通过
+- **其他合规性**: ✅ 通过
+- **总体评价**: pass
+
+**领域聚焦分析**: 问题涉及非预混对向流冷却火焰、负温度系数效应、火焰稳定性、熄火极限、化学动力学与输运过程耦合机制等专业概念，需要燃烧学、化学反应动力学、流体力学和传热传质等领域的专业知识才能准确理解和回答。
+
+**改进建议**: 无需改进。答案专业准确，详细解释了NTC效应的化学动力学机制及其与输运过程的耦合，正确分析了模型预测与实验数据差异的原因，并引用了相关文献支持。
+
+### 来源
+
+- **论文**: Dynamics-of-cool-flames_2019_Progress-in-Energy-and-Combustion-Science
+- **生成类型**: deepseek_generation
+- **合并来源**: question_reverse
+
+---
+
+## Question 3
+
+### 问题
+
+分析湍流预混火焰中低温点火（LTI）对湍流火焰速度增强的物理机制，建立LTI辅助火焰传播的理论框架，解释反应器辅助湍流槽燃烧器（RATS）实验中观察到的燃烧模式转变。
+
+### 标准答案
+
+湍流预混火焰中低温点火（LTI）对湍流火焰速度的增强源于多个物理机制的耦合：
+
+1. 层流火焰速度增加：LTI通过部分氧化燃料产生中间物种（如CH₂O、CO、H₂），改变未燃混合物的热物理性质和反应性。这可以用修正的层流火焰速度公式描述：
+S_L = S_L⁰ × [1 + α·Da_LTI] × exp(β·ΔT_ad/T_u)
+其中Da_LTI = t_res/t_LTI是LTI达姆科勒数，α和β是经验参数。
+
+2. 路易斯数效应：LTI产生的轻质中间物种（如H₂、CO）具有较高的扩散率，降低了有效路易斯数，增强火焰拉伸耐受性。
+
+3. 湍流强度调制：放热的LTI过程增加未燃混合物的温度和湍流强度，进一步促进火焰传播。
+
+LTI辅助火焰传播的理论框架基于多阶段燃烧模型：第一阶段是LTI控制的分布式反应区，第二阶段是传统的高温火焰传播。这两种模式的耦合产生了一种新的燃烧机制，其中湍流火焰速度不再唯一由湍流强度和层流火焰速度决定，而是强烈依赖于LTI达姆科勒数。
+
+在RATS燃烧器实验中，观察到两种明显的燃烧模式：化学冻结状态（低反应器温度）和LTI状态（高反应器温度）。在LTI状态下，CH₂O PLIF显示大量的甲醛在上游形成，表明低温化学反应显著改变了预燃区的热化学状态。这种状态转变的临界条件可以表示为：
+Da_LTI = t_flow/t_ignition ≥ 1
+其中t_flow是流动停留时间，t_ignition是低温点火延迟时间。当Da_LTI > 1时，系统进入LTI辅助的火焰传播模式，湍流火焰速度显著增加，且随着LTI达姆科勒数的增加而连续增加，这表明具有LTC的燃料的湍流燃烧速度不是唯一确定的。
+
+### 元数据
+
+- **类型**: reasoning
+- **难度**: 5
+- **主题**: CFD_modeling
+- **答案长度**: 718 字符
+
+### 原文引用
+
+**引用 1**:
+> The turbulent burning velocity was found to have two different regimes: (a) a chemically-frozen regime at lower initial reactor temperatures and (b) a LTI regime at a higher initial reactor temperatures.
+
+**引用 2**:
+> The turbulent flame speeds in the LTI regime were much higher than those in the chemically-frozen regime. The OH and CH₂O PLIF images revealed the differences in the turbulent flame structures of these two flame regimes.
+
+### 质量检查
+
+- **领域聚焦**: ✅ 通过
+- **答案正确性**: ✅ 通过
+- **其他合规性**: ✅ 通过
+- **总体评价**: pass
+
+**领域聚焦分析**: 问题涉及湍流预混火焰、低温点火物理机制、湍流火焰速度增强、理论框架建立以及RATS燃烧器实验分析，需要燃烧学、流体力学、化学反应动力学和实验燃烧诊断等专业领域的深入知识。
+
+**改进建议**: 无需改进。答案准确阐述了LTI增强湍流火焰速度的物理机制（层流火焰速度增加、路易斯数效应、湍流强度调制），建立了合理的理论框架（多阶段燃烧模型、LTI达姆科勒数依赖），并正确解释了RATS实验中的燃烧模式转变（化学冻结状态与LTI状态），与提供的原文引用和论文摘录内容一致。
+
+### 来源
+
+- **论文**: Dynamics-of-cool-flames_2019_Progress-in-Energy-and-Combustion-Science
+- **生成类型**: deepseek_generation
+- **合并来源**: question_reverse
+
+---
+
+## Question 4
+
+### 问题
+
+基于论文中图25所示的K形可燃极限图，推导高压下贫预混冷却火焰向热火焰过渡的临界条件。请建立包含低温化学和中间温度化学的火焰传播模型，分析压力对火焰结构转变的影响机制，并明确区分冷却火焰、温暖火焰和热火焰的转变路径。
+
+### 标准答案
+
+在高压条件下，贫预混冷却火焰向热火焰的过渡遵循特定的临界条件，这可以通过建立包含多阶段化学的火焰传播模型来分析。考虑质量、能量和物种守恒方程：
+
+∂(ρu)/∂x = 0
+ρu∂T/∂x = ∂/∂x(λ∂T/∂x) + ∑ωₖhₖ
+ρu∂Yₖ/∂x = ∂/∂x(ρDₖ∂Yₖ/∂x) + ωₖ
+
+其中关键的是包含低温化学（LTC）和中间温度化学（ITC）的多步反应源项ωₖ。在高压下（如20atm），低温链分支反应R→RO₂→QOOH→O₂QOOH→OQ'O+2OH的平衡向正方向移动，因为氧加成反应R+O₂=RO₂和QOOH+O₂=O₂QOOH是体积减小的反应。这导致低温反应性增强，冷却火焰温度升高。
+
+根据图25的K形可燃极限图，当压力超过临界值（对DME/空气混合物约为5atm）时，冷却火焰点火极限（AC线）与热火焰可燃极限（AB线）合并。此时，火焰结构从单一阶段的冷却火焰（~750K）转变为两阶段的温暖火焰，包含前导的冷却火焰和尾随的中间温度火焰（~900-1050K），最终平滑过渡到热火焰（>1500K）。
+
+这种转变的临界条件可以表示为达姆科勒数平衡关系：
+
+Da = τ_flow/τ_chem = (L/S_L)/(A·P^(Δn)·exp(-E_a/RT)) ≥ Da_crit
+
+其中Δn是有效反应级数（对于DME约为1.5-2.0），E_a是表观活化能（约30-40 kJ/mol），Da_crit是临界达姆科勒数（约0.1-1.0）。高压促进了第二次氧加成反应，增强了O₂QOOH的形成，这使得中间温度链分支路径R'+HO₂→R'O+OH和R'CO+O₂→醛+CO+OH变得重要，从而实现了从冷却火焰到温暖火焰再到热火焰的平滑过渡，而不经历熄火-点火转变。
+
+### 元数据
+
+- **类型**: reasoning
+- **难度**: 4
+- **主题**: combustion_kinetics
+- **答案长度**: 746 字符
+
+### 原文引用
+
+**引用 1**:
+> At high pressures (e.g., 20 atm), the LTI timescale can be comparable to or even shorter than the timescales of the engine combustion processes, turbulent flow eddies, and flame burning.
+
+**引用 2**:
+> As the pressure is increased further to 20 atm, the cool flame ignition limit merges with the lean flammability limit of hot flame (A), leading to a direct transition from cool flame to hot flame without an extinction limit.
+
+### 质量检查
+
+- **领域聚焦**: ✅ 通过
+- **答案正确性**: ✅ 通过
+- **其他合规性**: ✅ 通过
+- **总体评价**: pass
+
+**领域聚焦分析**: 问题涉及燃烧学、化学反应动力学、火焰传播模型、可燃极限图分析、压力对化学反应路径的影响等专业领域知识，需要燃烧科学、传热传质、流体力学和化学动力学的专业知识。
+
+**改进建议**: 答案质量优秀，无需修改。答案准确建立了包含低温化学和中间温度化学的火焰传播模型，正确分析了压力对火焰结构转变的影响机制，清晰区分了不同火焰类型的转变路径，并提供了具体的临界条件推导和原文引用支持。
+
+### 来源
+
+- **论文**: Dynamics-of-cool-flames_2019_Progress-in-Energy-and-Combustion-Science
+- **生成类型**: deepseek_generation
+- **合并来源**: question_reverse
+
+---
+
+## Question 5
+
+### 问题
+
+推导对向流冷却火焰中氧化剂侧的应变率定义，分析应变率对火焰结构的影响，建立包含臭氧敏化的低温化学动力学模型，并阐明活性自由基对冷却火焰稳定性的增强机制。
+
+### 标准答案
+
+对向流冷却火焰中的应变率定义为氧化剂侧的密度加权轴向速度梯度，根据论文中公式(1)：a = 2(U_L/L)[√(ρ_U/ρ_L) + (U_U/U_L)]，其中U_U和U_L分别是上下燃烧器出口速度，ρ_U和ρ_L是相应出口的混合物密度，L是燃烧器间距。应变率对火焰结构的影响体现在：1）高应变率缩短流动停留时间，要求更快的化学反应来维持火焰；2）增强的流动拉伸增加热和物质损失；3）改变火焰面处的混合分数梯度。建立包含臭氧化学的动力学模型需要添加关键反应：O₃ + M ⇌ O₂ + O + M（臭氧分解）、O + RH → R + OH（氢提取）、O + O₃ → 2O₂、O + HO₂ → OH + O₂，并详细考虑低温链分支路径R→RO₂→QOOH→O₂QOOH→OQ'O+2OH。敏感性分析显示，臭氧添加使冷却火焰熄火极限的应变率显著扩展，这是因为在冷却火焰特征性的低热释放率条件下，臭氧分解提供的活性自由基使自由基池大小增加了一个数量级。臭氧敏化通过以下机制增强冷却火焰稳定性：臭氧在约450K开始分解生成O原子，O原子加速燃料的H提取反应，显著缩短了低温链引发阶段，使得低温链分支路径能够在更短的停留时间内完成。这种机制在冷却火焰的低热释放率条件下特别有效，因为臭氧分解提供的活性自由基使原本较小的自由基池显著增大，从而增强了火焰在拉伸流场中的稳定性。
+
+### 元数据
+
+- **类型**: reasoning
+- **难度**: 4
+- **主题**: combustion_kinetics
+- **答案长度**: 585 字符
+
+### 原文引用
+
+**引用 1**:
+> The strain rate (a) was defined as the density-weighted gradient of the axial flow velocities on the oxidizer side, specifically, a = 2(U_L/L)[√(ρ_U/ρ_L) + (U_U/U_L)] where U_U and U_L are the velocities at the upper and lower burner exits
+
+**引用 2**:
+> Whereas, owing to the characteristically lower HRR and radical concentrations in the cool flame (0.1-10 ppm), ozone doping by the same amount increased the cool flame HRR and radical pool size by an order of magnitude.
+
+### 质量检查
+
+- **领域聚焦**: ✅ 通过
+- **答案正确性**: ✅ 通过
+- **其他合规性**: ✅ 通过
+- **总体评价**: pass
+
+**领域聚焦分析**: 问题涉及对向流冷却火焰、应变率定义、火焰结构影响、低温化学动力学模型建立和臭氧敏化机制，需要燃烧学、流体力学、化学反应动力学等专业领域知识
+
+**改进建议**: 无需改进，答案质量优秀，准确回答了问题的所有方面，包含详细的公式推导、机理分析和模型建立
+
+### 来源
+
+- **论文**: Dynamics-of-cool-flames_2019_Progress-in-Energy-and-Combustion-Science
+- **生成类型**: deepseek_generation
+- **合并来源**: question_reverse
+
+---
+

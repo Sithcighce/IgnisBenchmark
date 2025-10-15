@@ -1,0 +1,139 @@
+[
+  {
+    "question_text": "The economic feasibility of FOG-biodiesel is highly dependent on the capital and operational energy costs of the conversion process. Considering the supercritical esterification (SCE) method for converting high FFA brown grease, perform a detailed calculation of the energy input required for a plant producing 10^4 tons of biodiesel annually. Use the provided data point that SCE requires an estimated 2407 kW per 10^4 tons of biodiesel. Calculate the total energy consumption in MJ per kg of biodiesel, and compare it to the lower heating value of the produced biodiesel (approximately 40 MJ/kg). Discuss whether the process is energy-positive and the implications for large-scale implementation.",
+    "standard_answer": "The energy input for SCE is given as 2407 kW for a production capacity of 10^4 tons/year. First, convert the annual production to mass flow: 10^4 tons/year = 10^7 kg/year. To find the energy per kg, first calculate the total annual energy consumption. Power (kW) is energy per time (kJ/s). To find annual energy, multiply power by operational time. Assuming continuous operation (8760 hours/year), Annual Energy Input = 2407 kW * 8760 h = 21,092,520 kWh. Convert to MJ: 1 kWh = 3.6 MJ, so Total Energy Input = 21,092,520 kWh * 3.6 MJ/kWh = 75,933,072 MJ/year. Energy per kg biodiesel = 75,933,072 MJ / 10^7 kg = 7.593 MJ/kg. The lower heating value of FOG-biodiesel is approximately 40 MJ/kg. Therefore, the energy output to input ratio is 40 / 7.593 ≈ 5.27. This indicates the process is energy-positive, as the energy content of the fuel (40 MJ/kg) is significantly higher than the energy required for the reaction (7.593 MJ/kg), indicating a net energy gain. However, this high energy input highlights one of the major challenges for SCE: the intensive energy requirement for maintaining supercritical conditions (e.g., 400°C and 200 bar). However, the high operational cost associated with this energy input remains a significant barrier to commercialization. The energy consumption is primarily due to the high-pressure pumps and heaters. The feasibility for large-scale implementation depends on reducing this energy demand, possibly through heat integration or using co-solvents like CO2 to lower the critical point. The economic viability thus hinges on optimizing reaction parameters to reduce residence time or temperature, thereby improving the overall process economy and making it competitive with fossil diesel.",
+    "original_text": {
+      "1": "However, this technique is energy intensive (an estimated 2407 kW are required to produce 10^4 tons of biodiesel).",
+      "2": "In addition, the elevated cost of FOG-biodiesel production is still far away from the acceptable ranges to compete fossil diesel."
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "question_id": "batch_detail_q_941f8c0f",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Potential-of-fat--oil-and-grease--FOG--for-biodiesel-p_2020_Progress-in-Ener",
+      "paper_title": "Potential-of-fat--oil-and-grease--FOG--for-biodiesel-p_2020_Progress-in-Ener"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T15:29:13.717736",
+      "batch_processing": true,
+      "answer_length": 1725
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及生物柴油生产的能量平衡计算，需要能源工程、热力学和化学反应工程的专业知识来计算能量输入输出比，评估过程可行性",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案计算准确，解释全面，符合专业要求"
+    },
+    "merge_source": "questions"
+  },
+  {
+    "question_text": "分析FOG衍生生物柴油的燃烧特性，重点讨论十六烷值(CN)与脂肪酸组成的关系。从燃烧化学角度解释为何FOG生物柴油具有较高的十六烷值(高达74.7)及其对发动机燃烧过程的影响。",
+    "standard_answer": "FOG衍生生物柴油的高十六烷值(高达74.7)主要源于其脂肪酸组成特征。根据燃烧化学，十六烷值衡量燃料的着火性能，与分子结构密切相关。FOG中主要脂肪酸为棕榈酸(C16:0, 38.3%)、油酸(C18:1, 36.9%)和硬脂酸(C18:0, 7.2%)，饱和脂肪酸比例高达46.8%。饱和脂肪酸甲酯具有较长的直链烷基结构，在压缩点火过程中更容易发生低温氧化反应。燃烧机理包括：首先形成烷基自由基R·，然后与氧气反应生成过氧自由基ROO·，进一步异构化为QOOH，最终分解为醛类和OH自由基链载体。饱和脂肪酸甲酯的碳链较长且无双键，分子间作用力较强，需要较高的活化能才能断裂，这导致更易发生自燃。从发动机燃烧角度，高十六烷值意味着较短的着火延迟期，根据Wolfer方程τ_ign=A·exp(B/T)·P^(-n)，其中τ_ign为着火延迟时间，T为温度，P为压力。较短的着火延迟使预混合燃烧阶段缩短，扩散燃烧阶段延长，减少了压力升高率，改善了燃烧噪声，但可能增加NOx排放。实验证明FOG生物柴油的B20混合燃料可减少CO排放18.6%，HC排放26.7%，总颗粒物排放20.58%。",
+    "original_text": {
+      "1": "FOG-derived biodiesel showed higher cetane number (up to 74.7) than diesel (49–52), edible oil-biodiesel (up to 46.7) or microalgae-biodiesel (up to 56.6)",
+      "2": "In general, various reports stated that palmitic, stearic and oleic acids are the predominant fatty acids in FOG. The presence of these acids in larger proportions results in biodiesel characteristics similar to conventional fossil diesel"
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及燃烧特性分析、十六烷值与脂肪酸组成关系、燃烧化学机理解释以及发动机燃烧过程影响，需要燃烧学、燃料化学、热力学和发动机原理等能源与燃烧工程领域的专业知识。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": ""
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_ca181831",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Potential-of-fat--oil-and-grease--FOG--for-biodiesel-p_2020_Progress-in-Ener",
+      "paper_title": "Potential-of-fat--oil-and-grease--FOG--for-biodiesel-p_2020_Progress-in-Ener"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:30:00.413355",
+      "answer_length": 494
+    },
+    "merge_source": "question_reverse"
+  },
+  {
+    "question_text": "基于CFD模拟方法，建立FOG酯化反应器的多相流模型，分析搅拌速度对油-醇两相体系传质系数的影响。请推导Sherwood数、Schmidt数和Reynolds数之间的无量纲关联式，并解释各无量纲数的物理意义。",
+    "standard_answer": "在FOG酯化反应器的CFD建模中，采用Eulerian多相流模型描述油-醇两相体系。连续性方程为∂(α_kρ_k)/∂t+∇·(α_kρ_kv_k)=0，动量方程为∂(α_kρ_kv_k)/∂t+∇·(α_kρ_kv_kv_k)=-α_k∇P+∇·τ_k+α_kρ_kg+M_k。搅拌速度通过影响湍流强度改变传质过程，根据实验数据，当搅拌速度从静态增加到350rpm时，FFAs转化率从20%提升至93%，对应的Reynolds数从层流区过渡到湍流区。\n\n传质系数k_L的无量纲分析基于Sherwood数(Sh)、Schmidt数(Sc)和Reynolds数(Re)的关联式：Sh = aRe^bSc^c。其中Sh = k_Ld/D，表征对流传质与分子扩散的比值；Sc = ν/D，表征动量扩散与质量扩散的比值；Re = ρNd²/μ，表征惯性力与粘性力的比值。\n\n推导过程：根据边界层理论，传质系数与速度梯度和浓度梯度相关。在湍流状态下，采用渗透理论k_L=2√(D/πt_c)，其中表面更新时间t_c与湍流能量耗散率ε相关，ε∝N³。结合Kolmogorov尺度理论η=(ν³/ε)^(1/4)，可得k_L∝(Dν)^(1/2)(ε/ν)^(1/4)。代入无量纲数定义，经量纲分析得到Sh∝Re^(3/4)Sc^(1/3)。\n\n物理意义：Sherwood数反映传质强化程度，值越大表示对流传质越强；Schmidt数表征流体物性对传质的影响，值大表示质量扩散慢；Reynolds数表征流动状态，值大表示湍流强度高，有利于界面更新和传质增强。该关联式建立了搅拌速度通过改变Re来影响Sh的定量关系，为反应器优化设计提供理论依据。",
+    "original_text": {
+      "1": "static esterification resulted in low reduction in the acid value by 20% and 60% using Fe₂(SO₄)₃ and H₂SO₄, respectively, while increasing the mixing speed up to 350 rpm significantly improved the acid value reduction to 93%",
+      "2": "Reynolds numbers of 1635, 934 and 584 were derived for the orbital speed of 300, 200 and 125 rpm, respectively. On comparing to an orbital shaker, an impeller device (diameter = 4 cm, rotational speed = 150 rpm) is equivalent to a Reynolds number of 3300.4"
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "CFD_modeling",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及CFD模拟、多相流模型、传质系数分析、无量纲数推导等，需要燃烧/传热/流体/CFD/能源领域的专业知识，特别是化学反应工程和流体力学知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量较高，包含了完整的理论推导、物理意义解释和实验数据支持，符合专业要求"
+    },
+    "retry_count": 1,
+    "question_id": "deepseek_q_de477cfb",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Potential-of-fat--oil-and-grease--FOG--for-biodiesel-p_2020_Progress-in-Ener",
+      "paper_title": "Potential-of-fat--oil-and-grease--FOG--for-biodiesel-p_2020_Progress-in-Ener"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:30:59.452118",
+      "answer_length": 714
+    },
+    "merge_source": "question_reverse"
+  },
+  {
+    "question_text": "基于FOG中高含量游离脂肪酸(FFAs)对酯化反应的影响，从化学反应动力学角度分析酸催化酯化过程中甲醇:FFAs摩尔比对反应平衡和转化效率的作用机理。请详细推导反应速率方程，并解释为何需要过量甲醇来推动反应平衡。",
+    "standard_answer": "在FOG的酸催化酯化过程中，甲醇与FFAs的反应为可逆反应：RCOOH + CH₃OH ⇌ RCOOCH₃ + H₂O。根据质量作用定律，反应速率可表示为：r = k₁[FFA][CH₃OH] - k₂[FAME][H₂O]，其中k₁和k₂分别为正逆反应速率常数。当甲醇:FFAs摩尔比从化学计量比1:1增加到20:1-50:1时，根据Le Chatelier原理，反应平衡向生成FAME的方向移动。从动力学角度，增加甲醇浓度可提高反应物碰撞频率，从而提高反应速率，同时根据Le Chatelier原理推动平衡向产物方向移动。实验研究表明，当甲醇:FFAs摩尔比从20:1增加到50:1时，FFAs转化率从80%提升至95%，这是因为过量甲醇不仅推动平衡移动，还促进了反应物在油-醇两相体系中的传质效率。此外，高甲醇比例有助于及时移除生成的水分，防止逆反应发生，这对于含水量较高的FOG原料尤为重要。",
+    "original_text": {
+      "1": "The theoretical stoichiometry of the esterification reaction shows that 1 mol of methanol is required for conversion of 1 mol of FFAs to eventually produce 1 mol of FAMEs and water as a byproduct. However, excess of methanol is required in order to attain the equilibrium and achieve the maximum yield of esters",
+      "2": "Chai et al. suggested the optimum conditions of 40:1 methanol:FFAs molar ratio with 10% H₂SO₄ for esterifying the FFAs within a range of 15–35% at 600 rpm and 65 °C, which enhanced the conversion efficiency to 95%"
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "该问题涉及化学反应动力学、酯化反应平衡、反应速率方程推导以及传质效率分析，需要燃烧工程、化学反应工程和能源转化领域的专业知识，特别是关于FOG生物柴油生产过程中的酸催化酯化机理。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": ""
+    },
+    "retry_count": 1,
+    "question_id": "deepseek_q_db03f774",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Potential-of-fat--oil-and-grease--FOG--for-biodiesel-p_2020_Progress-in-Ener",
+      "paper_title": "Potential-of-fat--oil-and-grease--FOG--for-biodiesel-p_2020_Progress-in-Ener"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:31:10.456110",
+      "answer_length": 400
+    },
+    "merge_source": "question_reverse"
+  }
+]

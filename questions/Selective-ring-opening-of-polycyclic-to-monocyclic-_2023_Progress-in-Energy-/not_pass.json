@@ -1,0 +1,155 @@
+[
+  {
+    "question_text": "基于论文中关于选择性开环（SRO）反应机理的描述，详细推导从多环芳烃（如萘）生成单环芳烃（如BTX）的详细反应路径，包括各中间体的氢化、异构化和β-断裂步骤，并解释双功能催化剂中金属位点和酸性位点的协同作用机理。",
+    "standard_answer": "在SRO反应中，萘首先在金属位点（如Pt、Pd）上发生部分氢化，生成四氢萘。四氢萘在酸性位点上质子化形成碳正离子中间体，该中间体可能发生β-断裂生成烷基苯（如甲苯），或进一步氢化生成十氢萘。若目标是BTX，需控制氢化程度，避免过度氢化生成饱和环烷烃，而是促进C–C键断裂生成单环芳烃。具体反应路径为：萘 → 四氢萘 → 碳正离子 → β-断裂 → 甲苯 + 烯烃。其中金属位点负责氢化/脱氢反应，酸性位点通过碳正离子机制促进异构化和裂解。氢分压和温度需优化以平衡氢化与裂解。双功能催化剂的协同作用体现在金属位点提供氢化活性，生成部分饱和中间体，这些中间体迁移至酸性位点形成碳正离子。碳正离子可发生β-断裂（经典双分子裂解机制）或氢转移反应（Haag-Dessau机制），其中氢化反应速率快于裂解，需控制酸强度和孔结构以避免过度裂解和积碳。",
+    "original_text": {
+      "1": "Fig. 3a shows the reaction mechanism from naphthalene with alternative reaction routes depending on the production aim: the selective production of BTX chemicals (uppermost course) or high cetane number chemicals to be blended in automotive fuel pools (lowermost route).",
+      "2": "Hydrocracking comprises both the hydrotreating reaction routes and the cracking (scission of a carbon-carbon bond) of hydrocarbons [50], involving carbenium- or carbonium-ion intermediates that have specific chemistries [51,52]."
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "question_id": "batch_detail_q_84a83157",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Selective-ring-opening-of-polycyclic-to-monocyclic-_2023_Progress-in-Energy-",
+      "paper_title": "Selective-ring-opening-of-polycyclic-to-monocyclic-_2023_Progress-in-Energy-"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T18:43:55.303642",
+      "batch_processing": true,
+      "answer_length": 369
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "该问题涉及多环芳烃的选择性开环反应机理、催化剂协同作用、反应路径推导等专业内容，需要燃烧、催化、能源化工领域的专业知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "unsupported"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案缺乏对原文引用的准确对应，特别是关于反应路径的具体描述与原文Fig. 3a的关联不明确"
+    }
+  },
+  {
+    "question_text": "分析论文中PFO（裂解燃料油）作为SRO原料的挑战，包括其高密度、高沥青质含量（15-40 wt%）和胶体不稳定性，并从流体力学角度推导其在滴流床反应器中的流动特性，包括压降和传质系数。",
+    "standard_answer": "PFO是蒸汽裂解器的副产品，含有高达C70分子，导致高粘度（>100 cP）和低H/C比（约1.1）。其胶体不稳定性可由稳定性交会图（SCP）分析，其中SARA组分（饱和分、芳香分、胶质、沥青质）的比例影响稳定性。根据论文，PFO的沥青质含量高，易导致沉淀和结焦。从流体力学角度，PFO在反应器中的流动需考虑雷诺数Re = ρUD/μ，其中U为流速，D为粒径。压降ΔP可通过Ergun方程计算：ΔP = (150 μ(1-ε)² U / (ε³ D²) + (1.75 ρ (1-ε) U² / (ε³ D）。传质系数k_L与Schmidt数Sc = μ/ρD_m相关，其中D_m为分子扩散系数。PFO的高芳香性（A2占43.5 wt%）虽有利于SRO，但需稀释（如用甲苯）以降低粘度和沉淀风险。",
+    "original_text": {
+      "1": "PFO is the only stream in which A2 compounds predominate among gas oils.",
+      "2": "Because of its high asphaltene content derived from steam cracking, PFOs suffer from severe instability issues, causing fouling in equipment downstream of the steam cracking unit [158]."
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "fluid_mechanics",
+    "question_id": "batch_detail_q_04f00f28",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Selective-ring-opening-of-polycyclic-to-monocyclic-_2023_Progress-in-Energy-",
+      "paper_title": "Selective-ring-opening-of-polycyclic-to-monocyclic-_2023_Progress-in-Energy-"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T18:44:17.241522",
+      "batch_processing": true,
+      "answer_length": 348
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及燃料油特性、胶体稳定性、流体力学计算和反应器工程，需要燃烧、流体力学、传质和能源化工领域的专业知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "unsupported",
+        "fundamental_error"
+      ],
+      "other_compliant": false,
+      "other_issues": [
+        "has_meta_info"
+      ],
+      "overall_verdict": "fail",
+      "recommendation": "删除'根据论文'等元信息，补充沥青质含量范围的具体引用，修正Ergun方程中密度项的位置"
+    }
+  },
+  {
+    "question_text": "基于论文中关于反应器技术（如滴流床、沸腾床）的描述，推导在高温高压下（如410°C、20 MPa）氢化裂解过程中反应热的控制策略，并建立能量平衡方程。",
+    "standard_answer": "在SRO过程中，氢化反应放热，而裂解反应吸热，需平衡热效应。能量平衡方程为：∑ m_i c_p,i dT/dt = Q_rxn - Q_removed，其中Q_rxn为反应热，Q_removed为通过冷却系统移除的热量。反应热ΔH_rxn可通过键能估算，例如萘氢化为四氢萘的ΔH约为-200 kJ mol⁻¹，而裂解的ΔH为+50 kJ mol⁻¹。通过多床层配置和中间氢淬灭（如环形分布器）控制温度分布。例如，在沸腾床反应器中，催化剂通过循环泵悬浮，实现等温操作。具体地，反应器热控制需优化氢油比和空间速度，以避免热点和失控反应。",
+    "original_text": {
+      "1": "TBRs typically follow a multibed configuration (e.g., 3–4 beds) to enable intermediate H2 quenching via rings with multiple slots, spiders, and slotted tubes [123].",
+      "2": "The main hydrocracking reactor technology has been the fixed-bed reactor, which serves efficiently for the upgrading of feedstock of moderate densities and neglectable metal contents.",
+      "3": "The liquid hydrocarbon and H2 are fed to the plenum chamber below the grid in each reactor, flowing upward and keeping the catalyst in suspension."
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "heat_transfer",
+    "question_id": "batch_detail_q_2dd42197",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Selective-ring-opening-of-polycyclic-to-monocyclic-_2023_Progress-in-Energy-",
+      "paper_title": "Selective-ring-opening-of-polycyclic-to-monocyclic-_2023_Progress-in-Energy-"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T18:44:31.705204",
+      "batch_processing": true,
+      "answer_length": 266
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及高温高压下的氢化裂解过程、反应热控制和能量平衡方程建立，需要燃烧/传热/流体/能源领域的专业知识，特别是化学反应工程和热力学知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在事实错误和缺乏引用支持：1)SRO过程中氢化和裂解的热效应描述不准确；2)能量平衡方程中反应热的计算方式未在引用中体现；3)沸腾床等温操作的说法与原文不符。建议基于原文提供更准确的机理解释和引用支持"
+    }
+  },
+  {
+    "question_text": "根据论文中关于动力学建模的讨论，推导SRO过程的单事件微动力学模型，包括速率常数和活化能的计算方法。",
+    "standard_answer": "单事件微动力学（SEKM）方法在分子水平描述反应路径，包括氢转移、β-断裂等基元步骤。例如，十氢萘裂解为C10开环产物的速率r = k [C]^n，其中k = A T^β exp(-E_a / RT)。每个基元步骤的活化能E_a可通过DFT计算或实验数据拟合得到。对于萘的SRO，关键步骤包括：1）萘→四氢萘（氢化，金属位点），2）四氢萘→碳正离子（质子化，酸性位点），3）碳正离子β-断裂生成单环芳烃。总反应网络需考虑所有可能的中间体，并使用结构导向集总（SOL）简化。",
+    "original_text": {
+      "1": "The number of elementary steps that can take place within a complex reaction mixture is considerably limited in contrast to the number of reacting compounds present in that mixture.",
+      "2": "SEKM methodologies operate at the microkinetic level to describe the reaction pathways in elementary steps (e.g., hydride transfer, (de)alkylation, cyclization, and β-scission) [89,90]."
+    },
+    "type": "calculation",
+    "difficulty": 5,
+    "topic": "energy_systems",
+    "question_id": "batch_detail_q_aa969ec1",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Selective-ring-opening-of-polycyclic-to-monocyclic-_2023_Progress-in-Energy-",
+      "paper_title": "Selective-ring-opening-of-polycyclic-to-monocyclic-_2023_Progress-in-Energy-"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T18:44:44.667817",
+      "batch_processing": true,
+      "answer_length": 236
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及化学动力学建模、反应机理、速率常数和活化能计算，需要热力学、催化反应工程和分子动力学等燃烧/能源领域的专业知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "too_brief",
+        "unsupported"
+      ],
+      "other_compliant": false,
+      "other_issues": [
+        "has_meta_info",
+        "too_general"
+      ],
+      "overall_verdict": "fail",
+      "recommendation": "答案过于简略且缺乏论文引用支持。建议详细推导SEKM模型，明确引用原文中关于基元步骤限制和微动力学描述的内容，并删除'例如'等元信息表述"
+    }
+  }
+]

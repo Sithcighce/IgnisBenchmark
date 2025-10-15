@@ -1,0 +1,179 @@
+[
+  {
+    "question_text": "根据论文中关于PEM燃料电池膜激活的讨论，解释为什么液态水接触膜表面比水蒸气能更有效地加速膜的水合过程？需要从膜的微观结构和表面性质角度分析。",
+    "standard_answer": "液态水接触膜表面能更有效加速水合过程的关键原因在于PFSA膜的疏水表皮层重构机制。当膜表面接触液态水时，聚合物束会垂直排列于表面（Schmidt-Rohr提出的圆柱模型），使亲水位点（SO3-）暴露，形成更亲水的表面层。这一过程在AFM实验中表现为15秒内的阶梯式电流增加（Hiesgen et al.）。而水蒸气环境下，膜表面会形成由疏水聚合物束组成的表皮层（Bass et al.测量到表面张力增加），其动力学障碍导致吸水速率降低38倍（Gebel的SANS数据）。数学上可描述为：液态水接触时质量传递系数k_m显著提高，使Fick第二定律中的特征扩散时间τ_d从小时级降至分钟级（τ_d=L^2/D_d）。这种差异源自液态水能破坏疏水束的排列，而蒸汽无法提供足够的能量克服表面重构能垒。",
+    "original_text": {
+      "1": "By changing the medium surrounding the ionomer from vapor to liquid water, the surface skin transforms, aligning the polymer bundles perpendicular towards the surface, supporting earlier simulations made by Schmidt-Rohr [82].",
+      "2": "The measurement suggests that the membrane is completely swollen after less than one minute, when liquid water is introduced into the measurement cell. The diffusion inside the bulk is in agreement with a Fickian behavior and shows a characteristic time in an order of a few seconds."
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "fluid_mechanics",
+    "question_id": "batch_detail_q_a829c0e5",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Activation-mechanisms-in-the-catalyst-coated-_2021_Progress-in-Energy-and-Co",
+      "paper_title": "Activation-mechanisms-in-the-catalyst-coated-_2021_Progress-in-Energy-and-Co"
+    },
+    "metadata": {
+      "generation_model": "openai/Pro/deepseek-ai/DeepSeek-V3",
+      "quality_check_model": "openai/Pro/deepseek-ai/DeepSeek-V3",
+      "created_at": "2025-10-15T07:20:44.885678",
+      "batch_processing": true,
+      "answer_length": 346
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及PEM燃料电池膜激活的微观结构和表面性质分析，需要燃烧/传热/流体/能源领域的专业知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量高，准确引用了论文内容并解释了机理"
+    },
+    "merge_source": "questions_copy"
+  },
+  {
+    "question_text": "计算在80℃下Nafion®112膜从初始干燥状态到完全水合（λ=22）所需的时间，假设膜厚度为50μm且水扩散系数D_d=1×10^-6 cm^2/s。比较预煮沸处理与退火处理对吸水动力学的影响。",
+    "standard_answer": "根据Fick第二定律，特征扩散时间τ_d=L^2/D_d=(50×10^-4 cm)^2/(1×10^-6 cm^2/s)=2500秒≈42分钟。但实际过程包含多个时间尺度：(1)表面重构（液态水接触时约1分钟）；(2)本体扩散（42分钟）；(3)域间距调整（可达200分钟）。预煮沸处理会降低结晶度（SAXS显示离子峰从0.2Å^-1偏移），使EW=1100的Nafion®吸水率提高15%（Kusoglu数据），但干燥后失去优势。退火处理（140℃）增加结晶度（WAXS显示1.2Å^-1峰增强），使吸水率降低20%。数学表达为：M(t)/M_∞=1-∑A_m exp(-t/τ_m)，预煮沸膜的A_1更大而τ_1更小。实验证明（图6数据）：预煮沸膜在液水中λ=22需60分钟，退火膜需120分钟。",
+    "original_text": {
+      "1": "For pristine membranes, further processes, like relaxation of polymer backbones or domain spacing, could dominantly affect the water uptake, which would result in an up to three order of magnitude slower transport process.",
+      "2": "Preboiled and casted membranes show a slightly higher water uptake than extruded, annealed or untreated membranes."
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "heat_transfer",
+    "question_id": "batch_detail_q_2c1f4822",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Activation-mechanisms-in-the-catalyst-coated-_2021_Progress-in-Energy-and-Co",
+      "paper_title": "Activation-mechanisms-in-the-catalyst-coated-_2021_Progress-in-Energy-and-Co"
+    },
+    "metadata": {
+      "generation_model": "openai/Pro/deepseek-ai/DeepSeek-V3",
+      "quality_check_model": "openai/Pro/deepseek-ai/DeepSeek-V3",
+      "created_at": "2025-10-15T07:20:51.835020",
+      "batch_processing": true,
+      "answer_length": 351
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及聚合物膜的吸水动力学、扩散系数计算以及热处理对材料性能的影响，需要燃烧/传热/流体/能源领域的专业知识。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案提供了详细的计算过程、机理解释和实验数据支持，符合要求。"
+    },
+    "merge_source": "questions_copy"
+  },
+  {
+    "question_text": "分析铂催化剂在初始活化过程中粒径增长（9.5-37%）与ORR质量活性提升的矛盾现象，结合论文中的表面结构敏感性和CV测试结果给出机理解释。",
+    "original_text": {
+      "1": "All measured initial mean particle sizes are in the optimum range and therefore, the improvement in performance cannot be attributed to changes in particle size, especially that in [29] this is accompanied by a reduction of the ECSA.",
+      "2": "Ruge et al. [201] showed that edges are preferred targets for oxidation, which supports earlier studies, that rounding of the Pt nanoparticles takes place during the first 200min of operation of a fuel cell."
+    },
+    "standard_answer": "这种表观矛盾可通过表面重构机制解释：(1)初始颗粒具有高密度台阶位点（如Pt(110)），虽然ECSA高但对ORR中间体（O*, OH*）吸附过强（Sabatier原理），导致反应能垒升高；(2)电位循环（>1.2V）引发铂原子place exchange，形成亚表面氧原子（Ruge的XAS证明），在还原时产生更平滑的Pt(111)晶面（CV中氢吸附峰变化）；(3)虽然粒径增大使ECSA降低，但Pt(111)比例上升优化了氧吸附能（ΔG_O*接近0.2eV），使比活性提高补偿了面积损失。具体表现为：2-4nm颗粒经200分钟循环后，质量活性提升40%（Ramaker数据），尽管粒径增大30%。这符合d带中心理论：粒径增大使d带中心下移，削弱氧吸附强度。",
+    "type": "reasoning",
+    "difficulty": 5,
+    "topic": "combustion_kinetics",
+    "question_id": "batch_detail_q_00c8771f",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Activation-mechanisms-in-the-catalyst-coated-_2021_Progress-in-Energy-and-Co",
+      "paper_title": "Activation-mechanisms-in-the-catalyst-coated-_2021_Progress-in-Energy-and-Co"
+    },
+    "metadata": {
+      "generation_model": "openai/Pro/deepseek-ai/DeepSeek-V3",
+      "quality_check_model": "openai/Pro/deepseek-ai/DeepSeek-V3",
+      "created_at": "2025-10-15T07:20:57.389839",
+      "batch_processing": true,
+      "answer_length": 330
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及铂催化剂在ORR过程中的粒径增长与活性提升的机理，需要燃烧/能源/催化领域的专业知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量较高，解释清晰且符合论文内容"
+    },
+    "merge_source": "questions_copy"
+  },
+  {
+    "question_text": "推导催化剂层中局部氧传输阻力R_local的表达式，并解释短侧链（SSC）离聚物比长侧链（LSC）能降低R_local的物理机制。",
+    "original_text": {
+      "1": "Simulation results from Kongkanand [136] suggest that the oxygen diffusion through the ionomer at or near the Pt surface, referred to as local oxygen resistance, is the dominant loss.",
+      "2": "The shorter side chain ionomer shows a higher ordering and phase separation in thin films, while Nafion®has a higher crystallinity due to its higher EW, but is less ordered towards a preferred direction."
+    },
+    "standard_answer": "R_local表达式：R_local=δ_ion/(D_O2·C_O2)，其中δ_ion为离聚物膜有效厚度，D_O2为氧扩散系数（~10^-6 cm^2/s），C_O2为溶解度（~10^-6 mol/cm^3）。SSC的优势体现在：(1)更高的相分离度（SAXS显示更明显的离子峰），形成连续水通道，使D_O2提高2倍；(2)侧链长度缩短（3M™离子醚基团更少）减少与Pt表面的磺酸基吸附（FTIR证明吸附能降低0.3eV），使δ_ion从5nm降至3nm；(3)EW降低（如Aquivion®EW=790）增加水含量，根据λ=0.016EW+2.5公式，SSC的λ比Nafion®高3-5。实验数据（图15）显示：50nm SSC薄膜在95%RH下吸水率比Nafion®高40%，使R_local从0.15降至0.08 s/cm。",
+    "type": "calculation",
+    "difficulty": 5,
+    "topic": "CFD_modeling",
+    "question_id": "batch_detail_q_1f9e1e1f",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Activation-mechanisms-in-the-catalyst-coated-_2021_Progress-in-Energy-and-Co",
+      "paper_title": "Activation-mechanisms-in-the-catalyst-coated-_2021_Progress-in-Energy-and-Co"
+    },
+    "metadata": {
+      "generation_model": "openai/Pro/deepseek-ai/DeepSeek-V3",
+      "quality_check_model": "openai/Pro/deepseek-ai/DeepSeek-V3",
+      "created_at": "2025-10-15T07:21:06.351418",
+      "batch_processing": true,
+      "answer_length": 366
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及催化剂层、氧传输阻力和离聚物结构，需要燃烧/能源领域的专业知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": false,
+      "other_issues": [
+        "has_meta_info"
+      ],
+      "overall_verdict": "pass",
+      "recommendation": "移除答案中的实验数据引用格式（如'图15'）和商品名称标注（如'3M™'）以符合规范"
+    },
+    "merge_source": "questions_copy"
+  },
+  {
+    "question_text": "对比分析铂合金（PtCo/C）与非铂（Fe-N-C）催化剂在活化阶段的性能演化差异，从脱合金动力学和质子传导路径角度解释原因。",
+    "original_text": {
+      "1": "The selective leaching, also called dealloying is a common activation process for alloys and was performed by Koh [211] for Pt/Cu nanoparticles with 200 cycles between 0.05 and 1.2V.",
+      "2": "Slack et al. [219] highlighted the importance of this topic by comparing PGM-free catalysts with different binder compositions. They found that this difference in composition can result in significant differences in the first hours of operation."
+    },
+    "standard_answer": "关键差异：(1)动力学方面：PtCo需200次循环（1.2V上限）完成Co溶出（Koh数据），形成Pt-rich表层，时间约7.5分钟；而Fe-N-C需要40-150小时（Osmieri数据），因其依赖微孔水合建立H+路径（λ从<5增至>10）。(2)传导机制：PtCo的离聚物/Pt界面质子跳跃距离固定（~1nm）；Fe-N-C的N-C点位需形成连续水网络，其渗透阈值φ_c≈0.2，符合标度律σ=σ_0(φ-φ_c)^μ（μ≈2）。(3)性能曲线：PtCo在活化后ECSA仅增0.3%（Baldizzone数据），而Fe-N-C电流密度可增300%（Chenitz数据），因其活性位点数从<10%升至>50%。根本原因在于PtCo是表面重构过程，Fe-N-C是体相渗透过程。",
+    "type": "reasoning",
+    "difficulty": 5,
+    "topic": "energy_systems",
+    "question_id": "batch_detail_q_94433d7b",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Activation-mechanisms-in-the-catalyst-coated-_2021_Progress-in-Energy-and-Co",
+      "paper_title": "Activation-mechanisms-in-the-catalyst-coated-_2021_Progress-in-Energy-and-Co"
+    },
+    "metadata": {
+      "generation_model": "openai/Pro/deepseek-ai/DeepSeek-V3",
+      "quality_check_model": "openai/Pro/deepseek-ai/DeepSeek-V3",
+      "created_at": "2025-10-15T07:21:10.103751",
+      "batch_processing": true,
+      "answer_length": 339
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及催化剂活化阶段的性能演化差异，需要燃烧/传热/流体/能源领域的专业知识。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量良好，无需修改。"
+    },
+    "merge_source": "questions_copy"
+  }
+]

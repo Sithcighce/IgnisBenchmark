@@ -1,0 +1,70 @@
+[
+  {
+    "question_text": "基于论文中热等离子体与颗粒之间的传热机制，详细推导并解释热等离子体处理废物时颗粒加热过程中的能量平衡方程。请分析方程中各项的物理意义，并讨论在高温条件下等离子体辐射光谱特性与颗粒吸收率的匹配对辐射传热效率的影响。",
+    "standard_answer": "根据论文中描述的热等离子体与颗粒之间的传热机制，完整的能量平衡方程为：Q = hA(T_p - T_s) + Aq_r - σεAT_s^4。其中Q表示颗粒加热和熔化所需的净能量，h为对流传热系数，A为颗粒表面积，T_p为等离子体温度，T_s为颗粒表面温度，q_r为等离子体向单位颗粒表面积的辐射热通量，σ为斯特藩-玻尔兹曼常数，ε为颗粒发射率。\n\n各项物理意义分析：第一项hA(T_p - T_s)代表对流传热，取决于温度梯度和传热系数；第二项Aq_r表示等离子体辐射对颗粒的加热；第三项-σεAT_s^4为颗粒向环境的辐射散热，负号表示能量损失。\n\n在高温条件下（T_p > 15000K），辐射传热项q_r变得尤为重要，因为等离子体在高温下产生强烈的辐射。此时，等离子体辐射光谱特性与颗粒吸收率的匹配对传热效率具有决定性影响。当等离子体辐射光谱峰值与颗粒吸收波段相匹配时，辐射传热效率显著提高；反之，若光谱不匹配，即使等离子体辐射强度很高，颗粒吸收效率也会降低。在热等离子体废物处理中，由于等离子体温度极高且辐射光谱覆盖范围广，通常能够与多种颗粒材料的吸收特性形成良好匹配，这使得辐射传热成为主导传热机制，特别是在颗粒表面温度接近等离子体温度时，对流传热项会减小，而辐射项成为主要加热机制。\n\n该能量平衡方程的推导基于热等离子体处于局部热力学平衡状态，可视为具有特定热力学和输运性质的流体，因此热等离子体中的传热可以通过热对流、传导和辐射来描述。净能量Q是等离子体向颗粒的传导和对流传热与颗粒表面向环境的辐射能量损失之差，同时颗粒还受到来自等离子体的辐射加热q_rA。",
+    "original_text": {
+      "1": "The heat transfer in thermal plasma process is similar to that of conventional thermal process. As thermal plasma is in local thermodynamic equilibrium (LTE), it may be described as a fluid with specific thermodynamic and transport properties. Therefore, heat transfer in ThP can be described in terms of heat convection, conduction and radiation.",
+      "2": "Q = hA ( T p − T s ) + A q r − σ (cid:3)AT 4 s Where h is heat transfer coefficient (heat transferred per unit area per Kelvin), A is the surface area of the particle, T p is the plasma temperature, T s is the surface temperature of the particle, q r is the radiation heat flux (heat transferred per unit area per unit time) from plasma to unit surface area of particle, σ is the Stefan-Boltzmann constant and (cid:3) is the particle emissivity (ratio of the energy radiated from the particle’s surface to that radiated from a black body)."
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "heat_transfer",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及热等离子体传热机制、能量平衡方程推导、辐射光谱特性与颗粒吸收率匹配等，需要燃烧学、传热学、等离子体物理、流体力学等领域的专业知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": ""
+    },
+    "retry_count": 2,
+    "question_id": "deepseek_q_fae06b0b",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Progress-in-waste-utilization-via-ther_2020_Progress-in-Energy-and-Combustio",
+      "paper_title": "Progress-in-waste-utilization-via-ther_2020_Progress-in-Energy-and-Combustio"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:27:31.564192",
+      "answer_length": 687
+    },
+    "merge_source": "question_reverse"
+  },
+  {
+    "question_text": "建立热等离子体气化过程的CFD模型，需要包含哪些关键物理模型和边界条件？请详细说明湍流模型、辐射模型、化学反应模型的选择依据，并推导能量方程和组分输运方程在热等离子体条件下的特殊形式，特别考虑电磁场耦合、非平衡热力学效应、电子-重粒子能量交换、电场功项、电子压力功项、电子密度输运和电离度计算等特殊项。",
+    "standard_answer": "热等离子体气化过程的CFD建模需要包含以下关键要素：\n\n湍流模型选择：热等离子体流动通常为高度湍流，需考虑电磁场耦合效应。应采用考虑电磁力作用的修正k-ε模型或雷诺应力模型。湍流模型需耦合洛伦兹力项：F = j × B，其中j为电流密度，B为磁感应强度。\n\n辐射模型：热等离子体温度极高（>10000K），辐射传热占主导，需考虑热等离子体特有的谱线辐射和连续辐射。应采用考虑非灰介质的离散坐标法（DO）或谱线辐射模型。辐射传递方程需包含谱线吸收系数κ_λ和连续吸收系数κ_c。\n\n化学反应模型选择依据：热等离子体气化过程涉及电离反应和电子碰撞反应。应采用包含电离反应和复合反应的详细化学反应机理，考虑电子碰撞电离、三体复合等过程。反应速率需考虑电子温度T_e和重粒子温度T_h的差异。\n\n能量方程特殊形式推导：考虑热等离子体非平衡效应，需采用双温度模型。\n电子能量方程：∂(ρ_eh_e)/∂t + ∇·(ρ_eU_eh_e) = ∇·(k_e∇T_e) + S_{e-h} + j·E - ∇·(p_eU_e) - ∇·q_{r,e} + (τ:∇U_e)\n其中j·E为电场功项，∇·(p_eU_e)为电子压力功项，S_{e-h} = 3k_Bn_en_hν_{eh}(T_h-T_e)为电子-重粒子能量交换项。\n重粒子能量方程：∂(ρ_hh_h)/∂t + ∇·(ρ_hU_hh_h) = ∇·(k_h∇T_h) - S_{e-h} - ∇·q_{r,h} + (τ:∇U_h) + S_h\n\n组分输运方程特殊形式：考虑电离反应源项和电子密度输运，\n∂(ρY_i)/∂t + ∇·(ρUY_i) = ∇·(ρD_i∇Y_i) + R_i + S_{ion,i}\n其中S_{ion,i}为电离反应源项，需考虑电子碰撞电离和复合过程。\n电子密度输运方程：∂n_e/∂t + ∇·(n_eU_e) = ∇·(D_e∇n_e) + S_{ion} - S_{rec}\n电离度计算需通过Saha方程：n_e^2/n = (2πm_ekT_e/h^2)^{3/2}(Q_i/Q)exp(-E_i/kT_e)\n\n边界条件：入口需指定等离子体气体组分、温度分布、电流密度和电磁场分布；出口为压力出口；壁面考虑鞘层效应，采用自定义热流边界，考虑电子和重粒子的不同能量传递机制。电极边界需考虑电弧附着区域的高热流密度、电流密度分布和冷却条件。",
+    "original_text": {
+      "1": "Nowadays, advanced 3-D CFD codes are employed in combination with the chemical reaction kinetics to develop advanced models for the optimization of the plasma reactor design. The phenomenon of the mixing of waste stream with plasma is predicted by many modeling studies along with the reactions of the volatile species inside the plasma reactor.",
+      "2": "This technique was especially useful in calculating the destruction efficiency while treating the organic matter. The modeling investigations are also carried out to evaluate the ThP vitrification process. These studies assessed the relation between the leaching behavior and the composition of the waste (or of the glassy slag)."
+    },
+    "type": "reasoning",
+    "difficulty": 5,
+    "topic": "CFD_modeling",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及热等离子体气化过程的CFD建模，需要燃烧学、传热学、流体力学、计算流体动力学、等离子体物理、化学反应工程等领域的专业知识，包括湍流模型、辐射模型、化学反应模型的选择依据，以及能量方程和组分输运方程在热等离子体条件下的特殊形式推导。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量优秀，无需修改。"
+    },
+    "retry_count": 2,
+    "question_id": "deepseek_q_78304674",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Progress-in-waste-utilization-via-ther_2020_Progress-in-Energy-and-Combustio",
+      "paper_title": "Progress-in-waste-utilization-via-ther_2020_Progress-in-Energy-and-Combustio"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:28:01.154175",
+      "answer_length": 1013
+    },
+    "merge_source": "question_reverse"
+  }
+]

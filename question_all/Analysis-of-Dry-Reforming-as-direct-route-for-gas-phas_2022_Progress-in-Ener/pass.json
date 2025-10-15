@@ -1,0 +1,179 @@
+[
+  {
+    "question_text": "Explain the thermodynamic constraints and dominant reaction pathways in dry reforming of methane (DRM) at temperatures above 800°C, focusing on how methane decomposition leads to carbon deposition despite favorable syngas production conditions.",
+    "standard_answer": "At temperatures >800°C, DRM becomes thermodynamically favorable for syngas production (CO2 + CH4 ↔ 2CO + 2H2, ΔH°=247.3 kJ/mol). However, methane decomposition (CH4 ↔ C + 2H2, ΔH°=75 kJ/mol) becomes increasingly favorable with temperature according to equilibrium constants (Fig. 2). The Boudouard reaction (2CO ↔ C + CO2) becomes unfavorable above 700°C, leaving CH4 decomposition as the primary carbon formation pathway. This is evidenced by the equilibrium constant ln(K) values: DRM reaches ln(K)≈0 at 650°C while CH4 decomposition's ln(K) increases monotonically with temperature. Carbon deposition occurs when the rate of CH4 decomposition exceeds the rate of carbon gasification by CO2. The high activation energy barrier for methane dissociation (439.3 kJ/mol C-H bond) necessitates metallic catalysts like Ni, but these also catalyze carbon nucleation on step sites.",
+    "original_text": {
+      "1": "The DRM reaction, as expected, is favoured at temperature above 650°C. However, in this temperature range, methane decomposition is also highly favoured as well as the RWGS reaction.",
+      "2": "Carbon deposition during DRM is likely to be mainly due to CH4 decomposition (eq. 11)."
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "question_id": "batch_detail_q_17f024c2",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Analysis-of-Dry-Reforming-as-direct-route-for-gas-phas_2022_Progress-in-Ener",
+      "paper_title": "Analysis-of-Dry-Reforming-as-direct-route-for-gas-phas_2022_Progress-in-Ener"
+    },
+    "metadata": {
+      "generation_model": "openai/Pro/deepseek-ai/DeepSeek-V3",
+      "quality_check_model": "openai/Pro/deepseek-ai/DeepSeek-V3",
+      "created_at": "2025-10-15T07:24:33.954367",
+      "batch_processing": true,
+      "answer_length": 875
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "该问题涉及燃烧/传热/流体领域的专业知识，特别是关于甲烷干重整的热力学约束和反应路径的详细分析。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量高，包含了准确的热力学数据和反应机理解释，且与原文引用一致。"
+    },
+    "merge_source": "questions_copy"
+  },
+  {
+    "question_text": "Derive the relationship between Ni particle size and carbon formation propensity in DRM catalysts, explaining why particles below 6-7nm show improved coke resistance.",
+    "standard_answer": "Carbon formation exhibits strong particle size dependence due to geometric constraints: (1) Critical nucleation radius: DFT calculations show graphite nucleation requires Ni ensembles ≥6-7nm diameter. Smaller particles lack sufficient contiguous facets (<111> terraces) for stable carbon nucleation. (2) Surface energy effects: The Gibbs-Thomson equation γ = γ∞(1 + 2δ/r) predicts higher surface energy γ for smaller particles (radius r), increasing carbon dissolution energy δ. (3) Step site density: Carbon growth proceeds via Ni step edges (Fig. 6), with step density ∝1/r. Below 2nm, particles become spherical with negligible steps. Experimentally, Ni/Al2O3 with 7nm vs 102nm particles showed delayed carbon initiation temperature (-100°C difference) and lower coking rates (Fig. 6 shows CNT diameter matches particle size). The theoretical limit arises when particle diameter < carbon diffusion length (~2nm), preventing carbon dissolution/precipitation cycles.",
+    "original_text": {
+      "1": "Most studies have estimated the critical size for Ni particles to 6-7 nm, using DFT calculations, thermodynamic analysis and experimental data but some suggest particle diameters as low as 2 nm",
+      "2": "Step sites are considerably more reactive than close-packed facets for the nucleation of graphite hence if the facets or step edges are too small, nucleation cannot proceed."
+    },
+    "type": "calculation",
+    "difficulty": 5,
+    "topic": "combustion_kinetics",
+    "question_id": "batch_detail_q_7ef07366",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Analysis-of-Dry-Reforming-as-direct-route-for-gas-phas_2022_Progress-in-Ener",
+      "paper_title": "Analysis-of-Dry-Reforming-as-direct-route-for-gas-phas_2022_Progress-in-Ener"
+    },
+    "metadata": {
+      "generation_model": "openai/Pro/deepseek-ai/DeepSeek-V3",
+      "quality_check_model": "openai/Pro/deepseek-ai/DeepSeek-V3",
+      "created_at": "2025-10-15T07:24:40.478692",
+      "batch_processing": true,
+      "answer_length": 967
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "该问题涉及DRM催化剂中Ni颗粒尺寸与碳形成倾向的关系，需要燃烧/催化/材料科学领域的专业知识。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量优秀，准确引用原文并详细解释机理，建议保持"
+    },
+    "merge_source": "questions_copy"
+  },
+  {
+    "question_text": "Analyze the heat transfer challenges in solar-driven DRM reactors, comparing volumetric vs tubular receiver designs in terms of temperature gradients and catalyst stability.",
+    "standard_answer": "Solar DRM reactors face two key heat transfer challenges: (1) Flux limitations: Tubular designs (e.g., WIS sodium reflux) achieve ~300kW/m2 flux but suffer from radial temperature gradients (>100°C/mm) causing catalyst sintering. Volumetric receivers (e.g., SOLREF) use porous SiC/Al2O3 foams reaching 1700°C with better uniformity (<30°C/mm) via volumetric absorption. (2) Thermal inertia: Tubular reactors exhibit slow response (τ~10min) to cloud transients, risking thermal shock versus volumetric designs (τ~10s). The CAS (Catalytically Active Absorber) in volumetric reactors combines: (i) High solar absorptivity (α>0.9) via CeO2 coatings, (ii) Gas permeability (Darcy number Da>0.1) through 10-100PPI foam structures, and (iii) Thermal shock resistance (CTE<5×10^-6 K^-1). Temperature control is critical as ±30°C variation reduces reformer tube lifetime from 100,000 to 25,000 hours (Section 2). Molten salt heat transfer fluids (e.g., Li/Na/K2CO3) in DCBR designs mitigate gradients but face decomposition limits (<800°C).",
+    "original_text": {
+      "1": "The reformer is the most critical and expensive unit of the process. In order to operate at high temperatures, high alloy steel tubes are required to ensure good mechanical strength and corrosion resistance",
+      "2": "A deviation of 30°C from the designed operating conditions can reduce the lifetime of the tubes from 100 000 hours to 25 000"
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "heat_transfer",
+    "question_id": "batch_detail_q_4e4366cf",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Analysis-of-Dry-Reforming-as-direct-route-for-gas-phas_2022_Progress-in-Ener",
+      "paper_title": "Analysis-of-Dry-Reforming-as-direct-route-for-gas-phas_2022_Progress-in-Ener"
+    },
+    "metadata": {
+      "generation_model": "openai/Pro/deepseek-ai/DeepSeek-V3",
+      "quality_check_model": "openai/Pro/deepseek-ai/DeepSeek-V3",
+      "created_at": "2025-10-15T07:24:48.810437",
+      "batch_processing": true,
+      "answer_length": 1031
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及太阳能驱动的DRM反应器中的传热挑战，需要燃烧/传热/能源领域的专业知识来分析和比较不同接收器设计的温度梯度和催化剂稳定性。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案准确且详细地分析了太阳能DRM反应器的传热挑战，并提供了具体的温度和设计参数。建议保持这种详细和专业的回答风格。"
+    },
+    "merge_source": "questions_copy"
+  },
+  {
+    "question_text": "Calculate the specific energy input (SEI) required for plasma-catalytic DRM assuming a dielectric barrier discharge reactor with 100W power, 50% energy coupling efficiency, and 1 SLM total flow rate of equimolar CH4/CO2.",
+    "standard_answer": "SEI (kJ/L) = (Power × Coupling Efficiency) / (Total Flow Rate × 60/1000) Given: Power = 100W = 0.1kW, η = 50% = 0.5, Flow = 1 SLM = 1L/min: SEI = (0.1 kW × 0.5) / (1 L/min × 1 min/60s × 1000L/m3) = 0.05 kW / (0.01667 L/s) = 3 kJ/L This matches typical DBD conditions (Table 3) where SEI=3kJ/L yields CH4 conversion ~55%. For comparison: - Thermal DRM requires >800°C (enthalpy input ~247 kJ/mol ≈ 110 kJ/L). - The plasma enhances vibrational excitation of CH4, reducing apparent activation energy from 91 kJ/mol (thermal) to 44.7 kJ/mol (plasma). Energy distribution: ~30% goes to electron impact dissociation (e + CH4 → CH3 + H + e), 20% to CO2 vibrational excitation (asymmetric stretch at 2349 cm^-1), and 50% lost as heat. Optimal SEI balances conversion and selectivity - excessive SEI (>5 kJ/L) promotes RWGS over DRM.",
+    "original_text": {
+      "1": "The apparent activation energy dropped from 118.4 kJ mol^-1 under conventional convective heating to 38.5 kJ mol^-1 under microwave irradiation",
+      "2": "Plasma parameters such as Specific Energy Input (SEI) affects the selectivity of the C-C coupling process"
+    },
+    "type": "calculation",
+    "difficulty": 3,
+    "topic": "CFD_modeling",
+    "question_id": "batch_detail_q_e1d3e0ec",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Analysis-of-Dry-Reforming-as-direct-route-for-gas-phas_2022_Progress-in-Ener",
+      "paper_title": "Analysis-of-Dry-Reforming-as-direct-route-for-gas-phas_2022_Progress-in-Ener"
+    },
+    "metadata": {
+      "generation_model": "openai/Pro/deepseek-ai/DeepSeek-V3",
+      "quality_check_model": "openai/Pro/deepseek-ai/DeepSeek-V3",
+      "created_at": "2025-10-15T07:24:59.137591",
+      "batch_processing": true,
+      "answer_length": 824
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及等离子体催化重整甲烷和二氧化碳（DRM）的特定能量输入计算，需要燃烧、能源转化和反应工程领域的专业知识。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": false,
+      "other_issues": [
+        "has_meta_info"
+      ],
+      "overall_verdict": "pass",
+      "recommendation": "答案在技术上是正确和详细的，但应避免引用原文的具体部分（如'Table 3'）。建议删除此类具体引用以保持答案的通用性。"
+    },
+    "merge_source": "questions_copy"
+  },
+  {
+    "question_text": "Compare the oxygen ion transport mechanisms in perovskite (ABO3) vs pyrochlore (A2B2O7) membranes for DRM applications, highlighting how cation substitutions affect ionic conductivity.",
+    "standard_answer": "Perovskites (e.g., La0.8Sr0.2Cr0.5Mn0.5O3) conduct O2- via vacancy hopping (VO••) with conductivity σ ∝ [VO••] = (2-δ)/2 where δ is oxygen non-stoichiometry. Doping Sr2+ at La3+ sites creates VO•• (Krӧger-Vink notation: 2SrO + 2LaLa× → 2SrLa' + VO•• + La2O3). Pyrochlores (e.g., La2Zr2O7) utilize intrinsic oxygen vacancies (1/8 site deficiency) with ordered 48f/8a sites. Key differences: (1) Activation energy: Pyrochlores show lower Ea (~0.7eV) vs perovskites (~1eV) due to pre-existing vacancy channels along <110>. (2) Dopant effects: In La2Zr2-xNixO7, Ni2+ substitution decreases Ea by 0.2eV via unit cell expansion (XRD shows a0 increases 0.05Å per Ni). (3) Stability: Pyrochlores maintain phase purity up to 1600°C vs perovskite decomposition above 1200°C. Ionic conductivities at 800°C: - Undoped La2Zr2O7: 0.01 S/cm - La1.8Pr0.2NiAl11O19: 0.1 S/cm - La0.6Sr0.4Co0.2Fe0.8O3: 1 S/cm (highest but prone to reduction).",
+    "original_text": {
+      "1": "The perovskite-type oxide A2BO4 where Ni ions can be carefully dispersed benefiting from insulation of Mg and Al ions",
+      "2": "Pyrochlore phase catalysts show great oxygen mobility and resilience to high temperatures"
+    },
+    "type": "reasoning",
+    "difficulty": 5,
+    "topic": "energy_systems",
+    "question_id": "batch_detail_q_b2853276",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Analysis-of-Dry-Reforming-as-direct-route-for-gas-phas_2022_Progress-in-Ener",
+      "paper_title": "Analysis-of-Dry-Reforming-as-direct-route-for-gas-phas_2022_Progress-in-Ener"
+    },
+    "metadata": {
+      "generation_model": "openai/Pro/deepseek-ai/DeepSeek-V3",
+      "quality_check_model": "openai/Pro/deepseek-ai/DeepSeek-V3",
+      "created_at": "2025-10-15T07:25:07.043600",
+      "batch_processing": true,
+      "answer_length": 924
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及DRM应用中氧离子传输机制的深入对比，需要燃烧/能源/材料科学领域的专业知识，特别是对钙钛矿和烧绿石结构的理解。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量较高，建议补充具体文献引用以增强Pyrochlore稳定性数据的可信度（例如引用论文中的'resilience to high temperatures'）。"
+    },
+    "merge_source": "questions_copy"
+  }
+]

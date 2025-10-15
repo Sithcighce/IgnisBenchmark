@@ -1,0 +1,42 @@
+[
+  {
+    "question_text": "论文中提到Pd基膜在功率生成和大规模氢生产中面临扩展挑战，特别是材料可用性。请从能源系统工程角度，计算在1.5 million m³/day的氢生产规模下，所需Pd量，并分析其对经济可行性的影响。",
+    "standard_answer": "根据论文数据，Pd基膜的材料需求取决于膜厚度δ和渗透率Pe_H₂。假设膜厚度为10 μm，渗透率取Pd-Ag23%的典型值18 × 10^{-9} mol/m·s·Pa^{0.5}。在350°C和2.2 MPa下，氢通量J_H₂ = Pe_H₂/δ * (p_H₂,ret^0.5 - p_H₂,perm^0.5）。首先，计算每日氢生产总量对应的氢摩尔数：n_H₂ = (1.5e6 m³/day) / 22.4 m³/kmol) ≈ 6.7e4 kmol/day。根据Sieverts-Fick定律，所需膜面积A_m = n_H₂ / J_H₂。全球Pd资源有限，2017年产量约225吨。对于1.5 million m³/day的规模，假设操作条件为T=350°C，Δp=2.1 MPa，则J_H₂ ≈ 0.1 mol/m²·s。则A_m ≈ 6.7e4e3 mol/day / 0.1 mol/m²·s ≈ 6.7e8 m²。Pd质量m_Pd = A_m * δ * ρ_Pd，其中ρ_Pd ≈ 12000 kg/m³。因此，m_Pd = 6.7e8 m² * 10e-6 m * 12000 kg/m³ ≈ 8.0e4 kg Pd（即80吨）。此数量超过全球年产量的35%，可能导致Pd价格飙升，影响经济性。通过灵敏度分析，若膜厚度减至5 μm，m_Pd降至40吨，但可能增加机械故障风险。因此，优化膜设计需在成本和性能间权衡。",
+    "original_text": {
+      "1": "material availability, Pd cost, and scale-up potential on the order of 1.5 million m³/day may be limiting factors。",
+      "2": "Helmi et al. estimated that approximately 2 tonnes of Pd would be needed for a 386-MW IGCC plant， given a thickness of 10 μm。",
+      "type": "calculation",
+      "difficulty": 5,
+      "topic": "energy_systems"
+    },
+    "question_id": "batch_detail_q_0af48ad8",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Opportunities-and-challenges-of-low-carbon-hyd_2020_Progress-in-Energy-and-C",
+      "paper_title": "Opportunities-and-challenges-of-low-carbon-hyd_2020_Progress-in-Energy-and-C"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T14:54:10.115949",
+      "batch_processing": true,
+      "answer_length": 618
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及氢能系统工程、Pd基膜材料计算、渗透率分析以及经济可行性评估，需要能源系统工程、材料科学和热力学领域的专业知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported"
+      ],
+      "other_compliant": false,
+      "other_issues": [
+        "has_meta_info",
+        "time_sensitive"
+      ],
+      "overall_verdict": "fail",
+      "recommendation": "答案中存在计算错误和时间敏感表述，应修正Pd膜面积计算，删除'2017年'等时效性内容，并确保所有关键参数有明确引用支持"
+    }
+  }
+]

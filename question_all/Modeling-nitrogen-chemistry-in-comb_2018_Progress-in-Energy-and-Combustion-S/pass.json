@@ -1,0 +1,172 @@
+[
+  {
+    "question_text": "瞬发NO形成机制中，CH + N₂ → NCN + H反应是关键引发步骤。请详细分析NCN自由基的热化学性质对其后续反应路径选择性的影响，特别是NCN + H反应中不同通道的竞争机制。讨论NCN生成焓的不确定性如何影响瞬发NO的模型预测精度，并解释当前ATcT方法确定NCN生成焓的技术优势。",
+    "standard_answer": "NCN自由基的热化学性质对瞬发NO形成路径具有决定性影响。NCN + H反应存在三个竞争通道：NCN + H → CH + N₂ (R4b，负温度依赖性)、NCN + H → HCN + N (R8，正温度依赖性)和NCN + H → HNC + N (R9，次要通道)。NCN的生成焓直接影响这些反应的平衡常数和速率常数。当前ATcT方法确定的ΔfH°₂₉₈(NCN) = 107.7 ± 0.2 kcal mol⁻¹，这一数值基于ANL1高水平理论计算和Fassheber等人的实验研究，解决了早期文献中3 kcal mol⁻¹的差异。NCN生成焓的不确定性会显著影响NCN + H反应的选择性预测：较高的生成焓会增强HCN + N通道，而较低的生成焓有利于CH + N₂通道。在富燃料条件下，这种选择性差异可导致NO预测偏差达因子2。ATcT方法的技术优势在于其通过热化学网络分析整合多个实验和理论数据，利用等反应方法减少系统误差，并通过方差分解分析确定各数据源的贡献权重。当前值76.5%依赖于ANL1计算结果，5.6%来自Fassheber实验，确保了结果的可靠性。这种精确的热化学数据对于在1200-2000K温度范围内准确预测瞬发NO形成至关重要。",
+    "original_text": {
+      "1": "The thermodynamic properties for NCN are important in modeling prompt-NO formation since they affect the branching fraction of the NCN + H reaction towards CH + N2 (R4b) and HCN/HNC + N (R8, R9). Values for the heat of formation of NCN used in modeling studies [61,62,67,71,72] vary more than three kcal mol-1; differences that have a significant impact on modeling predictions.",
+      "2": "In the present work, we use the current ATcT value of DfH0 298 (NCN) = 107.7 § 0.2 kcal mol-1 (see Section 2.1). The value is partially based on new experimental and theoretical information. The relevant new theoretical information emanates from recent high-accuracy computational results at the ANL1 level of theory [13], and was added to the TN as appropriate isodesmic reactions; the new experimental information is based on the 2nd and 3rd law interpretation of the studies of Fassheber et al. [78]."
+    },
+    "type": "reasoning",
+    "difficulty": 5,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及瞬发NO形成机制、NCN自由基热化学性质、反应路径选择性、ATcT方法等技术细节，需要燃烧化学、热力学、反应动力学等专业领域知识。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "无需改进，答案准确、全面且符合领域要求。"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_955b6e4d",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Modeling-nitrogen-chemistry-in-comb_2018_Progress-in-Energy-and-Combustion-S",
+      "paper_title": "Modeling-nitrogen-chemistry-in-comb_2018_Progress-in-Energy-and-Combustion-S"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:37:50.761909",
+      "answer_length": 531
+    },
+    "merge_source": "question_reverse"
+  },
+  {
+    "question_text": "在再燃过程中，碳氢化合物自由基与NO的反应是NO还原的关键步骤。请系统分析不同碳氢自由基（CH₃、³CH₂、HCCO等）与NO反应的反应路径、速率常数和产物分布，并解释这些反应如何共同作用实现NO的高效还原。特别讨论HCNO中间体的命运及其对再燃效率的影响。",
+    "standard_answer": "再燃过程中不同碳氢自由基与NO的反应具有特定的反应路径和动力学特性：CH₃ + NO主要通过两个通道进行，形成HCN + H₂O (R74)和H₂CN + OH (R75)，总体速率常数在1200-1500K范围内约为10¹¹-10¹² cm³ mol⁻¹ s⁻¹，分支比约为50:50。³CH₂ + NO产生HCNO + H (R76)和HCN + OH (R77)，其中HCNO通道占主导。HCCO + NO反应生成HCNO + CO (R91)和HCN + CO₂ (R92)，HCNO通道贡献64-88%。这些反应共同作用形成氰化物池，其中HCN是主要产物。HCNO中间体的命运对再燃效率具有重要影响：HCNO可通过HCNO + H → HCN + OH转化为有用产物，但更大部分通过HCNO + OH → CO + H₂NO和HCNO + O → HCO + NO等路径循环回NO，降低了再燃效率。在典型的再燃条件下（1200-1500K，富燃料），CH₃和HCCO反应在较低温度下占主导，而³CH₂、CH和C在高温下更为重要。总体NO还原效率取决于氰化物形成速率与氧化速率的竞争，在最佳当量比（φ ≈ 1.2-1.4）下可实现50-80%的NO还原。模型预测显示，对于甲烷再燃，在1400-1600K温度范围内，NO还原率随温度升高而增加，但受HCN形成限制。当前机理能够较好地预测实验观察到的趋势，但对于乙烷等较大烃类的预测仍存在不确定性。",
+    "original_text": {
+      "1": "In the 1200-1500 K range typical of the reburn process it is primarily the reactions HCCO + NO, CH3 + NO and 3CH2 + NO that are active in reducing NO [21,23]. At higher temperatures, for instance in well-stirred reactors or flames, NO is primarily reduced by smaller hydrocarbon radicals, i.e., 3CH2, CH, and C [1].",
+      "2": "The HCNO is partly converted to HCN by reaction with atomic hydrogen and possibly also by thermal dissociation. However, a significant fraction of the HCNO is recycled directly or indirectly (via HNO and H2NO) to NO through reaction with OH (R97, R98) and O (R95); these recycling pathways are shown in Fig. 40 as a single dashed line."
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及燃烧化学、再燃过程、碳氢自由基与NO的反应机理、反应路径分析、速率常数、产物分布等专业内容，需要燃烧化学、反应动力学、氮氧化物控制等领域的专业知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量优秀，系统分析了不同碳氢自由基与NO的反应路径、速率常数和产物分布，准确解释了HCNO中间体的命运及其对再燃效率的影响，与原文引用和论文内容一致，无需改进"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_82e453eb",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Modeling-nitrogen-chemistry-in-comb_2018_Progress-in-Energy-and-Combustion-S",
+      "paper_title": "Modeling-nitrogen-chemistry-in-comb_2018_Progress-in-Energy-and-Combustion-S"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:37:51.927662",
+      "answer_length": 627
+    },
+    "merge_source": "question_reverse"
+  },
+  {
+    "question_text": "在热力NO形成机制中，O + N₂ → NO + N反应是速率控制步骤。请详细分析该反应的动力学特性，包括其高活化能的物理意义、温度依赖性，以及如何通过实验和理论方法确定其速率常数。同时讨论该反应在热力NO预测中的不确定性来源及其对工程计算的影响。",
+    "standard_answer": "热力NO形成机制中的关键反应O + N₂ → NO + N具有约75 kcal mol⁻¹的高活化能，这源于需要破坏N₂分子中极强的三键（键能941 kJ/mol）。该反应的高活化能导致其强烈的温度依赖性，遵循阿伦尼乌斯关系k = A exp(-Ea/RT)。在温度从1550K升至1750K时，反应速率增加约5倍。实验测定主要通过激波管测量直接反应速率，或通过测量逆反应N + NO → O + N₂并利用热力学平衡常数转换。最新研究采用流动反应器在1700-1800K测量N₂/O₂混合物中NO形成，结合文献数据外推获得更准确的速率常数。当前采用的速率常数k₁b = 9.4×10¹² exp(-57,901/RT) cm³ mol⁻¹ s⁻¹，在高温下不确定性约为25%。这种不确定性主要来源于实验条件控制、温度测量精度以及表面效应干扰。在工程计算中，热力NO预测的准确性受限于温度场预测精度和湍流-化学反应相互作用建模，但在良好控制条件下，预测误差可控制在30%以内。热力NO在贫燃高温条件下占主导，其准确预测对燃气轮机和工业炉设计至关重要。",
+    "original_text": {
+      "1": "The thermal NO or Zeldovich mechanism [25] is the most important source of NO in high-temperature gas combustion. The mechanism of thermal NO formation is well established. The initiating step is attack of an oxygen atom on the triple bond in N2, O + N2 @ NO + N (R1b) This reaction has a high activation energy, about 75 kcal mol-1 [26], and it is the rate limiting step in thermal NO formation.",
+      "2": "The accuracy in the rate constant for the rate limiting step (R1) is probably of the order of 25% at high temperatures and modeling predictions for thermal NO formation under well-controlled conditions are likely to have a similar accuracy. In practical systems, the accuracy of the calculations would be limited to a greater extent by uncertainties in temperature and/or in turbulence-chemistry interactions."
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及热力NO形成机制、化学反应动力学、活化能物理意义、温度依赖性、速率常数测定方法以及工程计算影响，需要燃烧化学、化学反应工程、热力学和计算流体力学等专业领域的深入知识。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量优秀，全面覆盖了问题的所有方面，事实准确，解释清晰，与提供的原文引用和论文摘录内容一致。无需修改。"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_5b1c6577",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Modeling-nitrogen-chemistry-in-comb_2018_Progress-in-Energy-and-Combustion-S",
+      "paper_title": "Modeling-nitrogen-chemistry-in-comb_2018_Progress-in-Energy-and-Combustion-S"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:37:52.050242",
+      "answer_length": 475
+    },
+    "merge_source": "question_reverse"
+  },
+  {
+    "question_text": "在燃烧系统的CFD模拟中，氮化学模型与湍流-化学反应相互作用的耦合是预测NOx排放的关键挑战。请详细讨论在工程计算中简化氮化学机理的必要性、常用简化方法及其对预测精度的影响。特别分析在湍流扩散火焰中，如何通过条件矩封闭(CMC)方法处理氮物种的输运和反应。",
+    "standard_answer": "在燃烧CFD模拟中，完整的氮化学机理包含数百个反应物种和数千个反应步骤，直接耦合计算成本过高，因此简化是必要的。常用简化方法包括：1) 骨架机理简化，保留主要反应路径但减少物种数量；2) 准稳态假设(QSSA)，对快速达到平衡的自由基应用稳态近似；3) 存储化学表格，预先计算化学反应源项并制表。对于氮化学，典型的简化策略包括将热力NO、瞬发NO和燃料NO路径分别处理，对快速平衡的氨基和氰基自由基应用QSSA。在湍流扩散火焰中，条件矩封闭(CMC)方法通过引入混合分数条件平均来解耦湍流混合和化学反应。对于氮物种，CMC方程可写为：∂Q_α/∂t + ⟨u_i|η⟩∂Q_α/∂x_i = ⟨N|η⟩∂²Q_α/∂η² + ⟨ω_α|η⟩，其中Q_α是条件物种质量分数，η是混合分数，⟨N|η⟩是条件标量耗散率。这种方法能够准确预测火焰中NO的形成峰值位置和浓度分布，特别是对于瞬发NO在富燃料侧形成并在火焰面氧化的过程。简化对预测精度的影响主要体现在：过度简化可能丢失重要反应路径，如忽略NCN化学会严重低估瞬发NO；而合理的简化在保持主要物理机制的同时可将计算成本降低1-2个数量级。在实际工程应用中，通常采用20-50个物种的简化机理，在保证合理精度的前提下实现计算可行性。",
+    "original_text": {
+      "1": "The use of detailed reaction mechanisms together with engineering models such as Computational Fluid Dynamics (CFD) has, with the strongly enhanced computational power now available, become an important tool in designing low-NOx combustion systems.",
+      "2": "we focus on experimental conditions that are sufficiently well-defined for kinetic interpretation and refrain from modeling practical combustion systems, partly due to the fact that turbulent flow characteristics and turbulence/chemistry interactions may play a significant role, and partly due to the need for simplified chemistry when used in computational fluid dynamics calculations."
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "CFD_modeling",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及燃烧系统CFD模拟、氮化学模型、湍流-化学反应相互作用、NOx排放预测、条件矩封闭(CMC)方法等专业概念，需要燃烧学、计算流体力学、化学反应动力学等领域的专业知识。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量优秀，全面覆盖了问题要求的所有方面，包括简化氮化学机理的必要性、常用简化方法、对预测精度的影响，以及CMC方法在湍流扩散火焰中的具体应用，技术细节准确，无需修改。"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_68921f96",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Modeling-nitrogen-chemistry-in-comb_2018_Progress-in-Energy-and-Combustion-S",
+      "paper_title": "Modeling-nitrogen-chemistry-in-comb_2018_Progress-in-Energy-and-Combustion-S"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:37:52.477071",
+      "answer_length": 541
+    },
+    "merge_source": "question_reverse"
+  },
+  {
+    "question_text": "在热力DeNOx过程中，NH₂ + NO反应的分支比对过程效率具有决定性影响。请详细推导该反应两个主要通道（NH₂ + NO → NNH + OH 和 NH₂ + NO → N₂ + H₂O）的动力学参数如何影响温度窗口的位置和宽度。基于反应网络分析，解释为什么分支比α = k₆₅/(k₆₅ + k₆₆)必须至少25%才能维持自持反应。",
+    "standard_answer": "在热力DeNOx过程中，NH₂ + NO反应的分支比α = k₆₅/(k₆₅ + k₆₆)直接影响过程的温度窗口特性。链分支通道NH₂ + NO → NNH + OH (R65)产生自由基，而链终止通道NH₂ + NO → N₂ + H₂O (R66)消耗反应物。当α ≥ 25%时，系统才能维持自持反应，原因如下：R65产生的NNH快速分解为N₂ + H，随后H + O₂ → O + OH和O + H₂O → OH + OH序列净产生3个OH自由基。每个NH₂通过R65通道最终产生3个OH，而通过R66通道不产生自由基。维持链反应需要自由基生成速率大于消耗速率。温度窗口的位置由分支比的温度依赖性决定：在1100-1250K范围内，实验和理论确定的α值为0.3-0.4。较高的α值使窗口向低温移动，因为较低温度下即可维持足够的自由基浓度。窗口宽度受NH₂消耗路径竞争控制：高温下NH₂ + OH → NH + H₂O变得重要，产生的NH通过NH + O₂ → NO + OH等路径重新生成NO，限制了NO还原效率。当前采用Song等人的速率常数k₆₅ = 4.3×10¹⁰ T².⁹⁵ exp(866/T)和k₆₆ = 2.6×10¹⁹ T⁻².³⁶⁹ exp(-1186/T) cm³ mol⁻¹ s⁻¹，在1250K时α ≈ 0.37，能够准确预测观察到的1150-1400K温度窗口。",
+    "original_text": {
+      "1": "The NH2 + NO reaction has two product channels, NH2 + NO @ NNH + OH (R65) NH2 + NO @ N2 + H2O (R66) PReaction R65 is chain branching while R66 is in effect terminating, and for this reason, modeling predictions are very sensitive to the branching fraction for the reaction, defined as a = k65/(k65 + k66).",
+      "2": "For the overall process to be self-sustainable, it is required that the branching fraction of the NH2 + NO reaction, a = k65/(k65 + k66), must be at least 25%. Early experiments [207,279] indicated a smaller branching fraction, but it is now well established that a attains values of 0.3-0.4 in the 1100-1400 K range (Fig. 23)."
+    },
+    "type": "calculation",
+    "difficulty": 5,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "该问题涉及热力DeNOx过程中的化学反应动力学、分支比对温度窗口的影响、反应网络分析等专业内容，需要燃烧化学、化学反应工程、氮氧化物控制技术等领域的专业知识才能准确理解和回答。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量优秀，无需改进。答案准确解释了NH₂+NO反应两个通道的动力学特性对温度窗口的影响，详细说明了分支比α≥25%的必要性，提供了具体的速率常数表达式和温度窗口范围，与原文引用和论文内容一致。"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_81fb860c",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Modeling-nitrogen-chemistry-in-comb_2018_Progress-in-Energy-and-Combustion-S",
+      "paper_title": "Modeling-nitrogen-chemistry-in-comb_2018_Progress-in-Energy-and-Combustion-S"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:37:52.960694",
+      "answer_length": 598
+    },
+    "merge_source": "question_reverse"
+  }
+]

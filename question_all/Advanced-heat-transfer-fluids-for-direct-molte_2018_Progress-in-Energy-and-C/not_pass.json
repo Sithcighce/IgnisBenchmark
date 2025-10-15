@@ -1,0 +1,42 @@
+[
+  {
+    "question_text": "Analyze the viscosity-temperature relationships for Solar Salt and CaLiNaK (Eq. 10 vs Eq. 14) and explain how the different compositional effects impact pump design requirements for CSP plants. Include a discussion on the Arrhenius behavior and activation energy implications.",
+    "standard_answer": "Solar Salt viscosity follows a third-order polynomial (Eq. 10) while CaLiNaK shows stronger Arrhenius behavior (Eq. 14). The presence of Ca2+ increases viscosity significantly through charge-dipole interactions - at 200°C, CaLiNaK's viscosity is 569000000×473^-3.32 = 28.7 mPa·s vs Solar Salt's 12.2 mPa·s. This requires:\n1) Higher pump pressures (ΔP ~ μ) - approximately 2.35× more power\n2) Careful heating to maintain T > Tmin+30K to avoid viscosity spikes\n3) Larger pipe diameters to reduce shear stress\n\nThe Arrhenius exponent (3.32 vs 1 for ideal fluids) indicates complex flow activation energies. The higher exponent for CaLiNaK suggests stronger temperature dependence of viscous flow, meaning pump control systems must be more responsive to temperature fluctuations to maintain laminar flow (Re<2300).",
+    "original_text": {
+      "1": "For the measurement of the viscosity of CaLiNaK a commercial shear rheometer was utilized by DLR (Anton Paar MCR 501)",
+      "2": "Technical drawbacks regarding the pumpability of the fluid may arise from that fact. Gomez et al. [78] describe that a Ca-Na-K mixture of 44-12-44 wt-%, respectively, displayed viscosities high enough to make it not pumpable immediately above its melting point"
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "fluid_mechanics",
+    "question_id": "batch_detail_q_e471bdf9",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Advanced-heat-transfer-fluids-for-direct-molte_2018_Progress-in-Energy-and-C",
+      "paper_title": "Advanced-heat-transfer-fluids-for-direct-molte_2018_Progress-in-Energy-and-C"
+    },
+    "metadata": {
+      "generation_model": "openai/Pro/deepseek-ai/DeepSeek-V3",
+      "quality_check_model": "openai/Pro/deepseek-ai/DeepSeek-V3",
+      "created_at": "2025-10-15T07:22:06.920775",
+      "batch_processing": true,
+      "answer_length": 810
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及太阳能热电站(CSP)中的熔盐粘度-温度关系、泵设计要求和阿伦尼乌斯行为，需要流体力学、热力学和能源工程领域的专业知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported"
+      ],
+      "other_compliant": false,
+      "other_issues": [
+        "has_meta_info"
+      ],
+      "overall_verdict": "fail",
+      "recommendation": "答案中关于CaLiNaK在200°C时的粘度计算(569000000×473^-3.32 = 28.7 mPa·s)缺乏直接引用支持，且论文摘录中未明确证实此具体数值。建议补充准确的实验数据引用并移除'approximately 2.35×'等不确定性表述"
+    },
+    "merge_source": "questions_copy"
+  }
+]

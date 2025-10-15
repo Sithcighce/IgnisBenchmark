@@ -1,0 +1,106 @@
+[
+  {
+    "question_text": "从传质和反应工程的角度，分析为什么磺化聚苯乙烯系阳离子交换树脂（如Amberlyst 15）在脂肪酸酯化反应中容易因水的生成而失活，而凝胶型树脂（如Amberlyst BD20）表现出更好的水耐受性？请结合催化剂微观结构和反应机理进行解释。",
+    "standard_answer": "磺化聚苯乙烯系阳离子交换树脂的失活主要源于水分子在催化剂孔道和活性位点上的竞争吸附。对于大孔树脂Amberlyst 15，其具有永久性孔道结构（BET比表面积约50 m²/g），水会优先吸附在亲水性的磺酸位点周围，形成水合质子（-H₃O⁺-SO₃⁻）。这会产生两方面影响：首先，水分子与磺酸基团形成稳定的水合结构，降低了质子在酯化反应中的有效酸性；其次，水在孔道内聚集会阻碍疏水性的脂肪酸分子接近活性位点。引用中明确说明：'在非常酸性和/或亲水性的材料（即许多相邻位点和/或羟基基团）上，水会导致催化剂失活（即水层会阻止酸和醇接触催化剂）'。而凝胶型树脂（如Amberlyst BD20）在干态比表面积极低（<0.1 m²/g），缺乏永久性孔道，主要依靠在反应介质中的溶胀来暴露活性位点。在低甲醇含量（醇/酸摩尔比1:1）时，非孔性Nafion NR50的溶胀度有限，导致转化率较低（78%）'。这种结构差异导致大孔树脂对水的吸附容量更强。当反应温度高于水沸点时，水蒸发并被甲醇气流带走，从而缓解了失活问题。因此，催化剂微观结构通过影响水吸附行为和反应物扩散路径，决定了其水耐受性。",
+    "original_text": {
+      "1": "水会导致催化剂失活（即水层会阻止酸和醇接触催化剂）'。",
+      "2": "非孔性Nafion NR50的溶胀度有限，导致转化率较低（78%）'"
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "CFD_modeling",
+    "question_id": "batch_detail_q_4d20c203",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Recent-advances-in-sulfonated-resin-catalysts-for-e_2018_Progress-in-Energy-",
+      "paper_title": "Recent-advances-in-sulfonated-resin-catalysts-for-e_2018_Progress-in-Energy-"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T17:13:59.252546",
+      "batch_processing": true,
+      "answer_length": 491
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "该问题涉及磺化聚苯乙烯系阳离子交换树脂在脂肪酸酯化反应中的失活机理，需要传质工程（孔道结构、扩散限制、竞争吸附）和反应工程（催化剂酸性、反应动力学）的专业知识来分析微观结构对催化剂性能的影响",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported"
+      ],
+      "other_compliant": false,
+      "other_issues": [
+        "has_meta_info"
+      ],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在关键事实错误和引用不当问题。Amberlyst BD20并非凝胶型树脂，而是大孔树脂；引用的Nafion NR50数据与问题中的树脂类型不符。建议重新核实树脂类型定义和相关实验数据。"
+    }
+  },
+  {
+    "question_text": "在固定床反应器中，脂肪酸与甲醇在磺酸树脂催化下的酯化反应受到传质限制。请推导出有效因子（η）的表达式，并分析当树脂从凝胶型转变为大孔型时，有效因子如何变化？假设反应为一级反应，考虑孔道内扩散和反应动力学。",
+    "standard_answer": "在固定床反应器中，酯化反应的有效因子η定义为实际反应速率与无扩散限制时的反应速率之比。对于球形催化剂颗粒，η可表示为：η = (3/φ) * (1/tanh(φ) - 1/φ，其中φ为蒂勒模数，φ = R * sqrt(k/D_e)，其中R为颗粒半径，k为反应速率常数，D_e为有效扩散系数。当树脂从凝胶型（如Amberlyst BD20）转变为大孔型（如Amberlyst 15）时，比表面积从<0.1 m²/g增加到50 m²/g。但孔道结构变化同时影响D_e。对于大孔树脂，D_e = ε_p * D_m / τ，其中ε_p为孔隙率，D_m为分子扩散系数，τ为曲折因子。对于脂肪酸酯化，分子尺寸较大，D_m较小。根据论文：'当反应在甲醇饱和条件下进行时，脂肪酸转化率最低（约25-35%）'。这种变化是因为在甲醇饱和条件下，磺酸基团与甲醇的相互作用更强，导致脂肪酸分子难以接近活性位点'。因此，有效因子可能先增加后下降，取决于孔道尺寸与分子尺寸的相对关系。",
+    "original_text": {
+      "1": "当反应在甲醇饱和条件下进行时，脂肪酸转化率最低（约25-35%）'。",
+      "type": "calculation",
+      "difficulty": 5,
+      "topic": "fluid_mechanics"
+    },
+    "3": {
+      "question_text": "从热力学和流体力学角度，解释为什么在高温（>100°C）下操作固定床反应器有利于提高脂肪酸转化率？请结合反应平衡和传质过程进行分析。",
+      "standard_answer": "从热力学角度看，酯化反应为可逆反应：RCOOH + R'OH ⇌ RCOOR' + H₂O。请推导反应平衡常数K_eq的表达式，并分析温度对K_eq的影响。根据范特霍夫方程：d(lnK_eq)/dT = ΔH_r / (RT²）。对于脂肪酸酯化，ΔH_r通常为负值（放热反应），但水作为产物，其移除对平衡移动至关重要。在高温下（>100°C），水的沸点低于反应温度，因此水会蒸发并被甲醇气流带走，从而推动反应向产物方向进行。从流体力学角度，高温降低了反应混合物的粘度，根据斯托克斯-爱因斯坦关系：D_m ∝ T/μ，其中μ为粘度。温度升高通常导致μ下降，从而D_m增加。同时，高温提高了分子动能，增强了反应物在催化剂孔道内的扩散能力。引用中指出：'当操作温度超过水的沸点时，水开始蒸发并被甲醇气流带走，从而平衡向产物方向移动'。此外，高温可能促进催化剂表面疏水性的提高，有利于脂肪酸分子的吸附。",
+      "original_text": {
+        "1": "当操作温度超过水的沸点时，水开始蒸发并被甲醇气流带走，从而推动反应向产物方向进行'。",
+        "type": "concept",
+        "difficulty": 4,
+        "topic": "heat_transfer"
+      },
+      "4": {
+        "question_text": "设计一个CFD模型来模拟固定床反应器中脂肪酸与甲醇的酯化反应。请列出控制方程，包括连续性方程、动量方程、能量方程和组分输运方程。请解释如何耦合化学反应动力学与流动传输过程。",
+        "standard_answer": "计算流体动力学（CFD）模型应包含以下控制方程：连续性方程：∂ρ/∂t + ∇•(ρv) = 0，动量方程：ρ(∂v/∂t + v•∇v) = -∇P + μ∇²v + S_m，其中S_m为质量源项，由酯化反应速率决定。对于稳态、不可压缩流动，连续性方程简化为 ∇•v = 0。对于低雷诺数流动，动量方程可简化为达西定律：v = -(κ/μ)∇P。对于反应源项，可采用：S_i = M_i * (R_f - R_b)，其中R_f = k_f * [RCOOH] * [R'OH]。能量方程：ρc_p(∂T/∂t + v•∇T) = λ∇²T + Q_r，其中Q_r为反应热。对于酯化反应，反应热ΔH_r约为-20 kJ/mol。",
+        "original_text": {
+          "1": "当操作温度超过水的沸点时，水开始蒸发并被甲醇气流带走，从而推动反应向产物方向进行。在高温下（>100°C），水的沸点低于反应温度，因此水会蒸发并被甲醇气流带走，从而平衡向产物方向移动'。"
+        },
+        "5": {
+          "question_text": "从燃烧科学角度，分析为什么乙酰丙酸酯（如乙酰丙酸乙酯）适合作为生物柴油添加剂？请从分子结构、氧化稳定性和低温流动性进行解释。",
+          "standard_answer": "乙酰丙酸酯（如乙酰丙酸乙酯）与生物柴油脂肪酸甲酯（FAME）在分子结构上相似，都具有酯基官能团。但乙酰丙酸酯的分子链较短，因此其凝点更低，改善了低温流动性。同时，酯基的存在提供了氧元素，有助于更清洁燃烧。引用指出：'乙酰丙酸酯在结构上与生物柴油非常相似。此外，它们具有更好的氧化稳定性、低温性能和较低的胶质形成倾向'。从燃烧动力学看，乙酰丙酸酯的加入可以提高燃料的十六烷值，改善点火性能。此外，乙酰丙酸酯的氧含量有助于减少颗粒物排放。",
+          "original_text": {
+            "1": "乙酰丙酸酯在结构上与生物柴油非常相似'。",
+            "2": "此外，它们具有更好的氧化稳定性、低温性能和较低的胶质形成倾向'。"
+          }
+        }
+      }
+    },
+    "question_id": "batch_detail_q_bccd36d9",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Recent-advances-in-sulfonated-resin-catalysts-for-e_2018_Progress-in-Energy-",
+      "paper_title": "Recent-advances-in-sulfonated-resin-catalysts-for-e_2018_Progress-in-Energy-"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T17:14:12.384693",
+      "batch_processing": true,
+      "answer_length": 431
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及固定床反应器、传质限制、有效因子推导、催化剂孔道结构对扩散和反应的影响，需要化学反应工程、多相催化和传质过程的专业知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "fundamental_error",
+        "unsupported"
+      ],
+      "other_compliant": false,
+      "other_issues": [
+        "has_meta_info",
+        "too_general"
+      ],
+      "overall_verdict": "fail",
+      "recommendation": "答案包含多个严重错误：甲醇饱和条件与问题无关；有效因子公式不完整；比表面积数据与树脂类型对应错误；缺乏对有效因子随孔道结构变化的系统分析"
+    }
+  }
+]

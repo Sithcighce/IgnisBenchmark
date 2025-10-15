@@ -1,0 +1,36 @@
+[
+  {
+    "question_text": "基于旋转爆震燃烧室（RDC）与液体火箭发动机高频切向不稳定性（HFI）在现象学和物理机制上的相似性，请深入分析RDC中爆震波速度赤字（低于C-J理论值）的主要成因，并详细阐述这些成因与经典爆震物理中边界层诱导面积发散效应的关联。此外，请解释这种速度赤字如何影响RDC作为压力增益燃烧（PGC）装置的实际效率。",
+    "standard_answer": "在旋转爆震燃烧室中，爆震波速度赤字主要由三个核心因素导致：(1) 边界层效应引起的面积发散：在爆震波固定参考系中，边界层位移厚度导致流管面积增加，产生虚拟扩张喷嘴效应，使产物以亚音速相对于爆震波膨胀，从而降低波速。根据Fay和Dabora等人的理论，当爆震波在受限通道中传播时，边界层内的密度低于自由流产物，导致流速增加和流线发散。这种二维结构破坏了理想C-J条件，导致速度赤字。例如，在稳定传播中，速度赤字通常不超过C-J速度的20%，具体可由以下关系式估算：ΔU/U_CJ ∝ δ*/L_c，其中δ*为边界层位移厚度，L_c为反应区宽度（近似于胞格长度）。(2) 横向卸压效应：在RDC的环形或空心几何中，爆震波一侧为惰性产物边界，产生类似曲线通道中的侧向卸压，进一步扩大反应区，降低化学反应速率，从而加剧速度赤字。Paxson的数值模拟显示，这种效应可导致15%–40%的速度赤字。(3) 非均匀混合导致的局部当量比波动，进一步引发不稳定的近极限传播。这些机制与火箭发动机HFI中观察到的‘爆震样波’特性一致，表明RDC可能是一种近极限爆震现象。这种赤字直接导致RDC的实际压力增益低于理论预测，如在实验中观测到的峰值压力有时低于C-J预测值的50%，直接降低热力学效率和比冲。例如，在氢-空气混合物中，实测波速常仅为C-J值的80%–90%，进而影响其集成到燃气轮机或火箭发动机中的整体性能。",
+    "original_text": {
+      "1": "Velocity deficits (from the C-J speed) at near-limits are due to two fundamentally different mechanisms. Using argon-diluted and argon-undiluted mixtures in a porous-walled tube, they established that there are two types of near-limit detonation wave behavior: stable and unstable. In stable detonation wave propagation (argon diluted), despite there being a velocity deficit, the detonation wave travels with a rather steady velocity over time and distance.",
+      "2": "This 'area divergence' effect was first noted by Fay, who used it to explain the observed velocity deficits in planar detonations [96]. Since the streamlines diverge due to negative boundary layer thickness, the products expand with subsonic velocities through the virtual diverging nozzle, thereby establishing a strong coupling between the downstream products and the upstream shock wave."
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "question_id": "batch_detail_q_ba4a179e",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Rotating-detonation-combustors-and-their-simil_2019_Progress-in-Energy-and-C",
+      "paper_title": "Rotating-detonation-combustors-and-their-simil_2019_Progress-in-Energy-and-C"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T18:40:18.700114",
+      "batch_processing": true,
+      "answer_length": 600
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及旋转爆震燃烧室（RDC）、爆震波速度赤字、边界层效应、C-J理论、压力增益燃烧等专业概念，需要燃烧学、流体力学、推进系统和爆震物理等领域的专业知识。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量较高，机制解释清晰，与原文引用一致，无需修改。"
+    }
+  }
+]

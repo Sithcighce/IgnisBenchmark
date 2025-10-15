@@ -1,0 +1,150 @@
+[
+  {
+    "question_text": "Compare the oxygen permeation mechanisms and driving forces for polymeric membranes and ceramic ion transport membranes (ITMs) in air separation for oxy-fuel combustion. Explain how the solution-diffusion model for polymeric membranes differs fundamentally from the mixed ionic-electronic conduction (MIEC) process in perovskite membranes. Include a discussion on how membrane thickness affects flux in both systems, referencing the relevant transport equations.",
+    "standard_answer": "Polymeric membranes operate via the solution-diffusion mechanism, where gas molecules dissolve into the membrane matrix and diffuse through it due to a partial pressure difference. The flux J_x for a gas component is given by J_x = (p_x / l) * (P_b - P_l) (Eq. 1 in the paper), where p_x is permeability, l is thickness, and P_b - P_l is the pressure difference across the membrane. This process is driven by a pressure gradient, and the flux is inversely proportional to membrane thickness. These membranes typically operate at near-ambient temperatures but suffer from limited O2/N2 selectivity, often requiring multi-stage systems for high-purity oxygen. In contrast, ceramic ITMs (MIEC membranes) function through oxygen ion transport. At the high-O2-concentration side, oxygen molecules adsorb, dissociate into ions, and are incorporated into the crystal lattice. The ions are transported through the dense ceramic via a combination of ionic diffusion and electronic conduction, driven by an oxygen chemical potential gradient (typically a partial pressure difference). Oxygen molecules are reformed on the permeate side. For MIEC membranes like LSCF, the flux can be modeled by an equation considering surface exchange kinetics and bulk diffusion: JO2 = [ (kr/kf) * (P'O2^0.5 - P''O2^0.5 ] / [ 1/kox + 2L/D_v + 1/kre ) (Eq. 2). Here, flux is also inversely related to thickness L, but critically depends on surface exchange coefficients kox and kre, and the bulk diffusion coefficient D_v. The driving force is the difference in oxygen partial pressures, but operation requires high temperatures (>700°C) to achieve sufficient ionic mobility. The key difference is that polymeric membranes rely on molecular solubility and diffusion, while ITMs depend on ionic mobility and vacancy diffusion within the crystal structure, making them fundamentally different mass transport phenomena.",
+    "original_text": {
+      "1": "The term ‘adsorption’ was first used by Kayser in 1881 [98]. This process differs from absorption, in which a fluid permeates or is dissolved by a solid absorbent. Adsorption is a surface-based process, while absorption is a bulk process involving the whole volume of the material.",
+      "2": "In order to diffuse through the membrane, oxygen must first be incorporated into the crystal lattice structure of the material [24,62]. Oxygen is adsorbed on a porous, electrically conductive coating applied to the membrane surface. The oxygen dissociates to form oxygen ions, which are transported through the non-porous ceramic electrolyte.",
+      "3": "Generally, ITMs are composed of specific combinations of inorganic compounds with particular crystal lattice structures, such as perovskite or fluorite [23]."
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "CFD_modeling",
+    "question_id": "batch_detail_q_32feba4e",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Progress-in-O2-separation-for-oxy-fuel-combustion-A_2018_Progress-in-Energy-",
+      "paper_title": "Progress-in-O2-separation-for-oxy-fuel-combustion-A_2018_Progress-in-Energy-"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T16:26:02.562756",
+      "batch_processing": true,
+      "answer_length": 1889
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题需要深入的膜分离技术专业知识，包括聚合物膜和陶瓷膜的传质机理、驱动力的物理化学原理、溶液-扩散模型与混合离子-电子传导模型的区别，以及对膜厚度影响通量的定量分析，这些都是燃烧/能源/材料工程领域的核心专业知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "修正聚合物膜通量公式中的变量符号错误，补充MIEC膜通量公式的完整形式，确保所有关键声明都有原文引用支持"
+    }
+  },
+  {
+    "question_text": "Derive the relationship between oxygen flux and membrane thickness for both polymeric and ion transport membranes, starting from first principles. Explain why reducing thickness is more effective for improving flux in ITMs compared to polymeric membranes, considering the rate-limiting steps in each process.",
+    "standard_answer": "For polymeric membranes following the solution-diffusion model, Fick's First Law gives the flux J_x = -D * (dc/dx). Assuming linear concentration profile and Henry's law (c = S * P), we get J_x = (P_x / l) * (P_b - P_l) (Eq. 1). Here, p_x is the permeability coefficient (often p_x = D * S), l is thickness, P_b and P_l are upstream and downstream pressures. Thus, J_x ∝ 1/l. For ceramic ITMs, the oxygen permeation flux JO2 for a material like LSCF can be expressed as Eq. 2: JO2 = [ (kr/kf) * (P'O2^0.5 - P''O2^0.5) / [1/kox + 2L/D_v + 1/kre ]. When the membrane is thick, bulk diffusion (L/D_v term) dominates the denominator. In this case, JO2 ∝ 1/L. However, for thin membranes (small L), the surface exchange terms (1/kox and 1/kre) dominate. Therefore, reducing thickness L significantly increases flux, especially when surface exchange kinetics are fast. In contrast, for polymeric membranes, flux is always inversely proportional to thickness. However, the effectiveness is different because for ITMs, if surface exchange is slow, reducing thickness below a critical value won't improve flux as it becomes surface-exchange-limited. In polymeric membranes, thinning generally improves flux linearly, but mechanical integrity limits minimal thickness. For ITMs, thinning is highly effective until the critical thickness where surface exchange becomes rate-limiting. The paper states for polymeric membranes: 'the flux of gas passing per unit time and unit area is proportional to the pressure difference across the membrane, but inversely proportional to membrane thickness [39].' Mathematically, for ITMs, when L is small, JO2 ≈ [ (kr/kf) * (P'O2^0.5 - P''O2^0.5) / [1/kox + 1/kre ], becoming independent of L. Thus, ITMs benefit more from thinning down to this critical thickness.",
+    "original_text": {
+      "1": "Jx 1⁄4 px Pb l (cid:1)Pl (cid:2) (cid:3) (cid:4) (E1) from Fick's 1st law [40].",
+      "2": "JO2 1⁄4 (cid:4) (cid:3) kr=kf (cid:2) P 00 O2 (cid:1)0:5(cid:1)P0 O2 (cid:4) (cid:5) (cid:4) (cid:5) þ 2L Dv þ 1 kre (cid:4) (cid:5) 1 kox (cid:5) 0:5 (E2)"
+    },
+    "type": "calculation",
+    "difficulty": 5,
+    "topic": "fluid_mechanics",
+    "question_id": "batch_detail_q_d4b7aae6",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Progress-in-O2-separation-for-oxy-fuel-combustion-A_2018_Progress-in-Energy-",
+      "paper_title": "Progress-in-O2-separation-for-oxy-fuel-combustion-A_2018_Progress-in-Energy-"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T16:26:12.980054",
+      "batch_processing": true,
+      "answer_length": 1789
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及高分子膜和离子传输膜的氧通量与厚度关系推导，需要薄膜分离、气体传输机理、表面交换动力学等能源和材料工程领域的专业知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "修正ITM通量公式中的参数符号不一致问题，确保公式变量与引用原文保持一致"
+    }
+  },
+  {
+    "question_text": "Analyze the thermodynamic constraints and operational challenges of using CuO/Cu2O as an oxygen carrier in Chemical Looping with Oxygen Uncoupling (CLOU). Discuss why CuO's decomposition is exothermic (R5) provides an advantage in the fuel reactor, but also creates material stability issues. Explain the role of supports like MgAl2O4 in mitigating these problems.",
+    "standard_answer": "CuO decomposes via 4CuO ↔ 2Cu2O + O2(g) (R5). The enthalpy change ΔH850 = 263.2 kJ/mol O2 is positive, indicating endothermicity. Correction: The paper states: 'DH850 1⁄4 263:2 kJ=mol O2', which is endothermic, not exothermic. My initial statement was incorrect. The thermodynamic challenge is that the reaction requires significant energy input (endothermic). The operational challenges include CuO's low melting temperature, which can lead to agglomeration and deactivation. The low melting point causes sintering and loss of surface area. The equilibrium constant K_c = (a_MexOy-1 / a_MexOy) * P_O2^n. The high temperature required for decomposition (>1028°C from Fig. 13a) can approach or exceed the material's thermal stability limit, potentially leading to phase changes or irreversible decomposition. Supports like MgAl2O4 are used to disperse CuO, increase surface area, and provide mechanical strength to prevent agglomeration. The support helps maintain structural integrity over multiple redox cycles. However, interactions can form CuAl2O4 spinel, which lacks CLOU properties. The key is to design a support that minimizes chemical interaction while maximizing physical dispersion.",
+    "original_text": {
+      "1": "4CuO $ 2Cu2O þ O2 gð Þ DH850 1⁄4 263:2 kJ=mol O2' (R5).",
+      "2": "Although highly promising with respect to reactivity, Adanez-Rubio et al. also reported that the particles of CuO and MgAl2O4 increase in porosity as a function of time and hence lose mechanical strength [136].",
+      "3": "Particles with high mechanical strength have been developed by optimizing preparation and calcining conditions. Particles with high mechanical strength must be maintained during multiple redox cycles, which is the main problem to be overcome."
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "question_id": "batch_detail_q_362d5442",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Progress-in-O2-separation-for-oxy-fuel-combustion-A_2018_Progress-in-Energy-",
+      "paper_title": "Progress-in-O2-separation-for-oxy-fuel-combustion-A_2018_Progress-in-Energy-"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T16:26:26.612274",
+      "batch_processing": true,
+      "answer_length": 1193
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及化学链燃烧中CuO/Cu2O作为氧载体的热力学约束、操作挑战和载体作用，需要燃烧工程、热力学和材料科学领域的专业知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在重大事实错误：将CuO分解反应错误地描述为放热反应，而引用原文明确显示ΔH=263.2 kJ/mol O2为正值，应为吸热反应。建议重新检查热力学基础概念并确保与引用数据一致。"
+    }
+  },
+  {
+    "question_text": "Calculate the required membrane area for an ITM oxygen separation unit to supply 100 ton/day of O2 with 95% purity. Assume an LSCF membrane operating at 850°C with an oxygen flux of 1.0 × 10^-6 mol/(m²·s) (representative value from Table 1). Assume the feed air is at 1 bar and the permeate side is swept with CO2 at 0.1 bar O2 partial pressure. Use the flux equation for LSCF (Eq. 2) and estimate the surface exchange and diffusion coefficients from typical values (kox ~ kre ~ 2×10^-8 m/s, D_v ~ 1×10^-10 m²/s, and membrane thickness L = 1 mm. Show all steps.",
+    "standard_answer": "First, convert the oxygen production rate to molar flow rate. 100 ton/day = 100 * 1000 kg/day = 1×10^5 kg/day. O2 molar mass = 32 g/mol, so molar flow rate = (1×10^5 kg/day) / (32 g/mol) = 3.125×10^6 mol/day. Convert to mol/s: 3.125×10^6 / (24*3600) ≈ 36.17 mol/s. However, this is the total O2 production. For flux calculation, we use Eq. 2 for LSCF: JO2 = [ (kr/kf) * (P'O2^0.5 - P''O2^0.5) / [1/kox + 2L/D_v + 1/kre ]. Using representative values: kox = kre = 2e-8 m/s, D_v = 1e-10 m²/s, L = 0.001 m. P'O2 (feed side) = 0.21 bar. P''O2 (permeate side) = 0.1 bar. Assume kr/kf is of order 1. Then numerator ≈ (1) * (0.21^0.5 - 0.1^0.5) = (0.458 - 0.316) = 0.142 bar^0.5. But need in consistent units. Convert pressures to Pa: P'O2 = 0.21e5 Pa, P''O2 = 0.1e5 Pa. So P'O2^0.5 = (0.21e5)^0.5 ≈ (21000)^0.5 ≈ 145 Pa^0.5. Similarly, P''O2^0.5 ≈ 100 Pa^0.5. Difference ≈ 45 Pa^0.5. Denominator: 1/kox = 1/(2e-8) = 5e7 s/m. 2L/D_v = 2*0.001 / 1e-10 = 2e7 s/m. So 1/kox + 2L/D_v + 1/kre ≈ 5e7 + 2e7 + 5e7 ≈ 1.2e8 s/m. Then JO2 ≈ 45 / 1.2e8 ≈ 3.75e-7 mol/m²/s. But the given flux is 1e-6 mol/m²/s, which is higher. So use JO2 = 1e-6 mol/m²/s. Then total membrane area A = (molar flow rate) / JO2 = 36.17 / (1e-6) = 3.617e7 m². This is a large area, highlighting the challenge. More accurately, using the given flux value: A = (100 ton/day * 1000 kg/ton / (24*3600 s/day)) / (32e-3 kg/mol) / (1e-6 mol/m²/s) = (3.125e6 mol/day) / (86400 s/day) / (1e-6) = (36.17 mol/s) / (1e-6 mol/m²/s) = 3.617e7 m². This demonstrates the scale of the challenge for ITM scale-up.",
+    "original_text": {
+      "1": "LSCF 700(cid:1)1000 0.21(cid:1)1 1 £ 10¡3(cid:1)1 £ 10¡2 [88].",
+      "2": "JO2 1⁄4 (cid:4) (cid:3) kr=kf (cid:2) P 00 O2 (cid:1)0:5(cid:1)P0 O2 (cid:4) (cid:5) (cid:4) (cid:5) þ 2L Dv þ 1 kre (cid:4) (cid:5) 1 kox (cid:5) 0:5 (E2)"
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "question_id": "batch_detail_q_f1453ee0",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Progress-in-O2-separation-for-oxy-fuel-combustion-A_2018_Progress-in-Energy-",
+      "paper_title": "Progress-in-O2-separation-for-oxy-fuel-combustion-A_2018_Progress-in-Energy-"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T16:26:39.893169",
+      "batch_processing": true,
+      "answer_length": 1555
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及离子传输膜氧分离、传质通量计算、材料性能参数等专业知识，属于能源工程和膜分离技术领域",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "fundamental_error"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在严重技术错误：1）通量计算中单位不一致且系数错误；2）对通量方程的理解有误（kr/kf不能简单假设为1）；3）分子分母计算逻辑混乱。建议重新推导通量方程并确保单位统一。"
+    }
+  }
+]

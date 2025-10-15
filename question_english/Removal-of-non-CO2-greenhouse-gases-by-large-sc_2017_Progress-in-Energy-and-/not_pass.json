@@ -1,0 +1,90 @@
+[
+  {
+    "question_text": "Using the scaling principles described in the paper, calculate the theoretical power output of a solar chimney power plant (SCPP) with a collector area of 38 km² and chimney height of 1000 m, given that the Spanish pilot plant had a 50 kW output with 194.6 m chimney height and 0.0467 km² collector area. Explain the scaling methodology step-by-step, including proper unit conversions and how the scaling relationship follows directly from the paper's geometric principles.",
+    "standard_answer": "According to the paper's scaling principles, the power output of an SCPP scales linearly with the product of chimney height and collector diameter ratios. Citation 1 states: 'The power output of a SCPP greatly depends on chimney height and collector diameter allowing scale economies: multiplying both by 2 increases power by 4 meanwhile the construction costs are almost only doubled.' This indicates that power scales with (height × diameter), not (height × diameter)^2. For the Spanish pilot: chimney height h₁ = 194.6 m, collector area A₁ = 0.0467 km² = 46,700 m², giving collector radius r₁ = √(A₁/π) = √(46,700/3.1416) ≈ 122 m, so diameter d₁ = 244 m, power P₁ = 50 kW. For the target plant: h₂ = 1000 m, A₂ = 38 km² = 38,000,000 m², giving r₂ = √(38,000,000/3.1416) ≈ 3478 m, so diameter d₂ = 6956 m. The correct scaling ratio is: P₂/P₁ = (h₂/h₁) × (d₂/d₁) = (1000/194.6) × (6956/244) = 5.14 × 28.52 ≈ 146.6. Thus, P₂ ≈ 50 kW × 146.6 ≈ 7,330 kW or 7.33 MW. This scaling methodology demonstrates that power increases linearly with the product of height and diameter ratios, consistent with the paper's statement that doubling both dimensions quadruples power output (2×2=4×). The relationship follows from geometric similarity principles where power scales with the product of characteristic length dimensions that govern the driving pressure difference and airflow rate in the SCPP system.",
+    "original_text": {
+      "1": "The power output of a SCPP greatly depends on chimney height and collector diameter allowing scale economies: multiplying both by 2 increases power by 4 meanwhile the construction costs are almost only doubled.",
+      "2": "The maximum theoretical efficiency is equal to the Carnot's efficiency in the following Equation. η = 1 - T_in / T_out where T_in and T_out are respectively the temperatures at the engine inlet and exhaust."
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires understanding of solar chimney power plant scaling principles, geometric relationships, energy system calculations, and specific domain knowledge about SCPP power output dependencies on chimney height and collector diameter, which are core energy systems concepts.",
+      "answer_correct": false,
+      "answer_issues": [
+        {
+          "type": "fundamental_error",
+          "description": "The answer incorrectly interprets the scaling relationship. Citation 1 states 'multiplying both by 2 increases power by 4' which means power scales with (height × diameter)^2, not linearly with (height × diameter). The answer's linear scaling contradicts the paper's explicit statement."
+        },
+        {
+          "type": "factual_error",
+          "description": "The calculation uses incorrect scaling: P₂/P₁ = (h₂/h₁) × (d₂/d₁) = 5.14 × 28.52 ≈ 146.6. With correct quadratic scaling: P₂/P₁ = (h₂/h₁) × (d₂/d₁) = 5.14 × 28.52 ≈ 146.6, but this should be squared: (5.14 × 28.52)^2 ≈ 21,500, giving P₂ ≈ 1.075 GW, not 7.33 MW."
+        }
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "Reject due to fundamental error in scaling interpretation. The answer incorrectly applies linear scaling when the paper clearly indicates quadratic scaling (doubling both dimensions quadruples power)."
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_a64da93a",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Removal-of-non-CO2-greenhouse-gases-by-large-sc_2017_Progress-in-Energy-and-",
+      "paper_title": "Removal-of-non-CO2-greenhouse-gases-by-large-sc_2017_Progress-in-Energy-and-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:30:15.983291",
+      "answer_length": 1396
+    }
+  },
+  {
+    "question_text": "Based on the photocatalytic oxidation mechanism of methane in solar chimney power plants (SCPPs), explain how the SCPP design enhances photocatalytic methane removal through fluid mechanics and heat transfer principles. Using the paper's stated GWP reduction of 'at least 90%' for methane photocatalysis, calculate the equivalent CO₂ removal for 1 kg of methane processed, considering the IPCC GWP values and proper radiative forcing comparisons.",
+    "standard_answer": "The SCPP enhances photocatalytic methane removal through several fluid mechanics and heat transfer mechanisms. The large collector area provides extensive illuminated surface for TiO₂ photocatalyst coating, while the stack effect created by the tall chimney generates continuous airflow that optimizes mass transfer of methane to the catalyst surface. Heat transfer principles are leveraged through the greenhouse effect under the collector, which maintains elevated temperatures favorable for photocatalytic reactions, and thermal energy storage in the ground enables 24/7 operation. The continuous unidirectional airflow ensures efficient contact between methane molecules and photocatalyst surfaces, overcoming transport limitations that often plague photocatalytic systems. According to the paper, 'Photocatalysis of methane oxidizes it to CO₂, effectively reducing its global warming potential (GWP) by at least 90%.' For the GWP calculation, methane has a GWP of 28-34 over 100 years according to IPCC AR5. Using the conservative value of GWP=28, 1 kg of methane has the radiative forcing equivalent of 28 kg CO₂. After photocatalytic conversion to CO₂, the paper states 'transforming atmospheric CH₄ into equimolar amounts of CO₂, as discussed in this review, would have a significant impact in fighting global warming.' With the minimum 90% GWP reduction, the equivalent CO₂ removal is 28 kg CO₂-eq × 90% = 25.2 kg CO₂ removed per kg of methane processed. This represents the reduction in radiative forcing achieved by converting high-GWP methane to lower-GWP CO₂.",
+    "original_text": {
+      "1": "Photocatalysis of methane oxidizes it to CO₂, effectively reducing its global warming potential (GWP) by at least 90%.",
+      "2": "Transforming atmospheric CH₄ into equimolar amounts of CO₂, as discussed in this review, would have a significant impact in fighting global warming."
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires deep understanding of solar chimney power plant design, photocatalytic mechanisms, fluid mechanics (stack effect, airflow optimization), heat transfer (greenhouse effect, thermal energy storage), and GWP calculations specific to energy systems and greenhouse gas removal technologies.",
+      "answer_correct": false,
+      "answer_issues": [
+        {
+          "type": "factual_error",
+          "description": "The calculation incorrectly states that 25.2 kg CO₂ is 'removed' per kg of methane processed. Actually, the process converts methane to CO₂, so there is net CO₂ production, not removal. The 90% GWP reduction refers to the reduction in radiative forcing impact, not actual CO₂ removal."
+        },
+        {
+          "type": "fundamental_error",
+          "description": "The answer fundamentally misunderstands the GWP concept. Converting 1 kg of methane (GWP=28) to CO₂ produces approximately 2.75 kg of CO₂. The net radiative forcing reduction is the difference between methane's GWP and the resulting CO₂'s GWP, not simply 90% of the methane's GWP-equivalent."
+        },
+        {
+          "type": "unsupported",
+          "description": "The paper's statement 'reducing its global warming potential (GWP) by at least 90%' does not support the calculation method used. The answer makes unsupported claims about how to calculate 'equivalent CO₂ removal' from this GWP reduction percentage."
+        }
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "The question is domain-focused and well-structured, but the answer contains fundamental errors in interpreting GWP calculations and the concept of CO₂ removal. The answer should be corrected to properly explain that photocatalytic conversion reduces radiative forcing by transforming high-GWP methane to lower-GWP CO₂, rather than claiming CO₂ is 'removed'."
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_973e5c0e",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Removal-of-non-CO2-greenhouse-gases-by-large-sc_2017_Progress-in-Energy-and-",
+      "paper_title": "Removal-of-non-CO2-greenhouse-gases-by-large-sc_2017_Progress-in-Energy-and-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:30:17.488488",
+      "answer_length": 1572
+    }
+  }
+]

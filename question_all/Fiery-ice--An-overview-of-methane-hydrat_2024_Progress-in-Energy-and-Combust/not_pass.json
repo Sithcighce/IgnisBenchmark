@@ -1,0 +1,169 @@
+[
+  {
+    "question_text": "In the context of direct methane hydrate combustion, the balance between the heat required to dissociate the hydrate and the heat released from methane combustion is critical. Using the global energy balance approach detailed in Section 1.4.1 and Table 2, calculate the percentage of combustion heat needed to transform a methane hydrate with a water to methane molar ratio of 6.2:1 (ideal maximum thermodynamic limit) from an initial temperature of 253 K to a final state of all gas-phase reactants at 373 K. Discuss how this energy partitioning affects the sustainability of the flame, considering the role of water drainage as observed in experiments.",
+    "standard_answer": "To address this, we begin with the ideal molar ratio of water to methane at 6.2:1, corresponding to a methane mass fraction of 0.125 in the hydrate. The hydrate's lower heating value is 6.27 MJ/kg. The energy requirements are: (1) Sensible heat to raise hydrate temperature from 253 K to dissociation temperature (273 K): Energy_sensible1 = cps * (Tls - Ti) = 2.11 kJ/kg/K * (273 K - 253 K) = 42.2 kJ/kg. (2) Effective latent heat of fusion (including dissociation energy): Lf = 333 kJ/kg. (3) Sensible heat to raise liquid water temperature from 273 K to 373 K: Energy_sensible2 = cpl * (Tgl - Tls)= 4.186 kJ/kg/K * (373 K - 273 K)= 418.6 kJ/kg. (4) Latent heat of evaporation: Lv = 2260 kJ/kg. Summing these per kg of hydrate: Total dissociation and evaporation energy = 0.0422 + 0.333 + 0.4186 + 2.26 = 3.0538 MJ/kg. The total energy needed is 3.054 MJ/kg (Table 2). The percentage of combustion heat needed is (3.054 MJ/kg) / (6.27 MJ/kg) ≈ 48.7%. This high percentage implies that without water drainage, the flame temperature would drop significantly. As shown in Table 2, for a 6.2:1 molar ratio, the total energy needed is 2.66 MJ/kg, and the percentage is 42%. The discrepancy arises from whether all water evaporates. If water drains, the effective water/methane ratio in the flame zone decreases. For instance, if the ratio effectively becomes 2:1, the energy needed reduces to approximately 1.5 MJ/kg, and the percentage drops to ~24%. This drainage is crucial to maintain a flame temperature above the ignition threshold (~1300 K). Without drainage, the adiabatic flame temperature is 1372 K, close to extinction limits. Thus, energy partitioning dictates that steady combustion is only possible when a significant portion of water is removed, preventing self-healing and ensuring sufficient methane release. The experiments (Ref. [76,79]) confirm that only about 1 mole of water vapor accompanies each mole of methane during steady burning, confirming partial evaporation.",
+    "original_text": {
+      "1": "Table 2 shows the level of energy needed to convert solid hydrate to all gas phase reactants.",
+      "2": "The table shows, unsurprisingly, that the major energy sink in the system is the water evaporation, and so the energy demand increases substantially with water fraction in the hydrate.",
+      "type": "calculation",
+      "difficulty": 4,
+      "topic": "energy_systems"
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "fluid_mechanics",
+    "question_id": "batch_detail_q_360e8501",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Fiery-ice--An-overview-of-methane-hydrat_2024_Progress-in-Energy-and-Combust",
+      "paper_title": "Fiery-ice--An-overview-of-methane-hydrat_2024_Progress-in-Energy-and-Combust"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T10:38:55.444773",
+      "batch_processing": true,
+      "answer_length": 1986
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及甲烷水合物燃烧过程中的能量平衡计算，需要燃烧学、传热学、热力学和化学反应工程等领域的专业知识，特别是关于水合物分解、相变热、燃烧热值等专业概念的计算。",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported"
+      ],
+      "other_compliant": false,
+      "other_issues": [
+        "has_meta_info"
+      ],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在数据不一致和元信息问题。应确保能量计算与原文引用一致，移除'Table 2 shows'等元信息表述，使答案更加严谨准确。"
+    },
+    "merge_source": "questions"
+  },
+  {
+    "question_text": "The phenomenon of 'self-healing' in hydrate combustion involves the formation of an ice layer that inhibits further dissociation. Using the 1-D planar model described in Section 2.1 and Figure 9, derive the condition under which a water film on the hydrate surface will refreeze and thus stop the combustion process. Consider a convective heat transfer coefficient hg = 260 W/m²/K from the flame to the water surface, a water film thickness tl = 1.5 mm, and a subcooled hydrate core at 253 K. Explain the thermal competition between heat flux from the flame (Qfh) and heat loss to the subcooled core, leading to self-healing.",
+    "standard_answer": "Self-healing occurs when the heat loss to the subcooled hydrate core exceeds the heat input from the flame through the liquid layer. The heat flux from the gas phase into the liquid is Qgl = hg * (Tf - Tgl). Assuming Tf ≈ 1700 K and Tgl = 373 K, Qgl = 260 * (1700 - 373) ≈ 345 kW/m². The heat flux required to dissociate the hydrate is Qls = kl * (Tgl - Tls) / tl = 0.6 * (373 - 273) / 0.0015 = 40 kW/m². For steady burning, Qgl must supply both Qls and the energy to evaporate water. However, if the hydrate is deeply subcooled, the heat conducted away from the liquid/solid interface into the core is significant. If the core temperature is 253 K, the temperature gradient across the hydrate cake drives heat conduction inward. If the heat loss to the core is greater than Qls, the liquid water at the interface will freeze. The critical condition is when the heat extracted by the subcooled core is sufficient to freeze the water film. The energy balance at the liquid/solid interface is critical. The water film freezes if Q_loss_to_core > Qls. The heat loss can be estimated by the thermal penetration depth in the hydrate. The heat flux into the solid, Q_loss = ks * (Tls - Ti) / δ, where δ is the thermal penetration depth, δ = √(αs * t), where αs is thermal diffusivity (~10⁻⁷ m²/s for hydrate/ice). Over a characteristic time t (e.g., dissociation time), if δ is small, the heat loss is concentrated. When the subcooling is severe (e.g., Ti = 253 K), the heat loss per unit area is approximately ks * (Tls - Ti) / δ. With ks ≈ 0.6 W/m/K, Tls - Ti = 20 K, and δ ≈ 1 mm, Q_loss ≈ 0.6 * 20 / 0.001 = 12 kW/m². Since Qls is 40 kW/m², and Qgl is 345 kW/m², normally the heat in exceeds loss. However, if the flame is intermittent or the liquid layer thickens (tl increases), Qls decreases (since Qls ∝ 1/tl). If tl increases to 3 mm, Qls = 0.6 * 100 / 0.003 = 20 kW/m². Now, if Q_loss ≈ 12 kW/m², but if the hydrate geometry or internal porosity changes, the heat loss may exceed the dissociation heat flux. For example, if Qls drops to 15 kW/m² due to a thicker water layer, and if the core is subcooled such that Tls - Ti is larger, Q_loss increases. When Q_loss > Qls, the water film freezes, forming an ice shell that blocks methane release, leading to self-healing. Experiments (Ref. [90,94]) show that with surface temperature below dissociation temperature, flame propagation is slow (few mm/s) and self-healing can occur.",
+    "original_text": {
+      "1": "In the first, more straightforward (and more common) case, the hydrate cake is subcooled well below the freezing temperature of pure water.",
+      "2": "This thermal competition may be one cause of the self-preserving effect discussed later where an ice sheet forms over a hydrate limiting further dissociation.",
+      "type": "reasoning",
+      "difficulty": 4,
+      "topic": "heat_transfer"
+    },
+    "type": "calculation",
+    "difficulty": 5,
+    "topic": "combustion_kinetics",
+    "question_id": "batch_detail_q_31195070",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Fiery-ice--An-overview-of-methane-hydrat_2024_Progress-in-Energy-and-Combust",
+      "paper_title": "Fiery-ice--An-overview-of-methane-hydrat_2024_Progress-in-Energy-and-Combust"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T10:39:09.982552",
+      "batch_processing": true,
+      "answer_length": 2433
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及水合物燃烧过程中的自愈合现象、热传导分析、能量平衡计算等专业内容，需要燃烧学、传热学和热力学等能源与工程领域的专业知识。",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "fundamental_error",
+        "unsupported"
+      ],
+      "other_compliant": false,
+      "other_issues": [
+        "has_meta_info",
+        "time_sensitive"
+      ],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在多个事实性错误和基本原理问题。核心温度梯度计算错误，热渗透深度假设不合理，Qls计算忽略了实际相变热需求。建议重新推导能量平衡，正确计算各热通量分量，并确保与原文引用一致。"
+    },
+    "merge_source": "questions"
+  },
+  {
+    "question_text": "In the spherical model of hydrate combustion (Section 2.2), the fuel burning rate is given by ṡF = 4πkgrs / cpg * ln[1 + B], where B = [ΔHc/ν + cpg(T∞ - Ts)] / hfg. For a methane hydrate sphere with radius rs = 10 mm, initial temperature Ts = 273 K, and ambient T∞ = 300 K. Using the properties in Table 1 and assuming a water to methane molar ratio b = 2, calculate the flame temperature Tf and normalized flame standoff distance rf/rs. Discuss the implications for flame stability, especially regarding the water vapor content in the fuel stream.",
+    "standard_answer": "The spherical model treats the hydrate as a droplet with intimate water-methane mixture. Given: rs = 0.01 m, Ts = 273 K, T∞ = 300 K. For methane combustion, ΔHc ≈ 50 MJ/kg. The stoichiometric mass ratio ν = (mass of air)/(mass of fuel) for stoichiometric methane/air reaction: CH4 + 2(O2 + 3.76N2) → CO2 + 2H2O + 7.52N2. Mass of air per kg methane = (2*32 + 7.52*28) / 16 ≈ 17.2. But here, the fuel is a mixture of methane and water vapor. For b = 2 moles water/mole methane, mass fraction of water in fuel vapor α = (2*18) / (16 + 2*18) = 36/52 ≈ 0.692. The effective heat of combustion ΔHc_eff = (1 - α) * ΔHc = (1 - 0.692) * 50 ≈ 15.4 MJ/kg. The number B = [ΔHc_eff / ν + cpg(T∞ - Ts)] / hfg. cpg ≈ 1.1 kJ/kg/K (average for gas mixture). hfg = 2260 kJ/kg. So B = [15.4e6 / 17.2 + 1100*(300 - 273)] / 2260e3 = [15.4e6 / 17.2 + 1100*27)] / 2260e3 ≈ [0.895e6 + 29700)] / 2260e3 ≈ [0.895e6 + 0.0297e6)] / 2260e3 ≈ (0.895e6 + 0.0297e6) / 2260e3 = (0.9247e6) / 2260e3 ≈ 0.409. Then ṡF = 4π * 0.026 * 0.01 / 1100 * ln(1+0.409) ≈ (0.00327) * ln(1.409) ≈ 0.00327 * 0.344 ≈ 0.001125 kg/s. The flame temperature Tf = (Qdiss + hfg) / [cpg(1+ν)] * (νB + 1) + Ts. Qdiss includes dissociation and sensible heat to boiling. For b=2, Qdiss ≈ Lf + cps(Tls - Ti) + cpl(Tgl - Tls) = 333 + 2.11*20 + 4.186*100 ≈ 333 + 42.2 + 418.6 = 793.8 kJ/kg of fuel mixture. hfg = 2260 kJ/kg. So Tf = (793.8 + 2260) / [1100*(1+17.2)] * (17.2*0.409 + 1) + 273 ≈ (3053.8) / (1100*18.2) * (7.0348 + 1) + 273 ≈ (3053.8) / 20020 * 8.0348 + 273 ≈ (0.1524 * 8.0348) + 273 ≈ 1.224 + 273 ≈ 274.2 K. This is clearly too low for combustion. The error is that not all water evaporates. In experiments, the water vapor to methane molar ratio is near 1:1 (b_effective=1). Then α_eff = 18/(16+18)=18/34≈0.529. ΔHc_eff = (1 - 0.529)*50 ≈ 23.55 MJ/kg. B = [23.55e6 / 17.2 + 1100*27)] / 2260e3 ≈ [1.369e6 + 29700)] / 2260e3 ≈ (1.369e6) / 2260e3 ≈ 0.605. Tf = (793.8 + 2260) / [1100*18.2] * (17.2*0.605 + 1) + 273 ≈ (3053.8) / 20020 * (10.406 + 1) + 273 ≈ 3053.8 / 20020 * 11.406 + 273 ≈ 0.1524 * 11.406 + 273 ≈ 1.738 + 273 ≈ 274.7 K. This is still too low. The correct interpretation is that the spherical model assumes all water evaporates, but in reality, drainage occurs. The normalized flame radius rf/rs = ln(1+B) / ln[(ν+1)/ν] = ln(1.605) / ln[(17.2+1)/17.2] = ln(1.605) / ln(18.2/17.2) = ln(1.605) / ln(1.058) ≈ 0.473 / 0.0564 ≈ 8.38. This large standoff distance indicates a weak flame. The analysis shows that without drainage, the flame temperature is below sustainable levels, confirming the need for partial water removal in practical hydrate combustion.",
+    "original_text": {
+      "1": "The fuel burning rate ṡF is given by: ṡF = 4πkgrs / cpg * ln [1 + B]",
+      "2": "Fig. 11 shows a typical outcome from the analytical solution of the spherical hydrate model... The figure shows how the increasing water fraction reduces the flame temperature.",
+      "type": "calculation",
+      "difficulty": 5,
+      "topic": "CFD_modeling"
+    },
+    "type": "concept",
+    "difficulty": 3,
+    "topic": "combustion_kinetics",
+    "question_id": "batch_detail_q_20d7a8c1",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Fiery-ice--An-overview-of-methane-hydrat_2024_Progress-in-Energy-and-Combust",
+      "paper_title": "Fiery-ice--An-overview-of-methane-hydrat_2024_Progress-in-Energy-and-Combust"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T10:39:22.966963",
+      "batch_processing": true,
+      "answer_length": 2617
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及甲烷水合物燃烧的球形模型，需要燃烧学、传热学、流体力学和化学反应工程领域的专业知识来分析燃烧速率、火焰温度、火焰位置和火焰稳定性等核心概念",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "fundamental_error"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在严重计算错误和概念误解。火焰温度计算结果274K明显不合理（低于环境温度），表明对球形燃烧模型和热力学平衡的基本理解有误。需要重新检查公式应用、参数选择和单位转换的准确性。"
+    },
+    "merge_source": "questions"
+  },
+  {
+    "question_text": "基于论文中的实验和理论分析，详细解释甲烷水合物燃烧中的自愈现象机理，包括过冷效应和热传递竞争，并推导自愈发生的临界条件。",
+    "standard_answer": "甲烷水合物燃烧中的自愈现象是指水合物表面形成保护性冰壳，阻止进一步解离和甲烷释放的过程。机理主要涉及两种情况：第一，当水合物过冷至纯水冰点以下时，外层解离产生水膜，热损失到过冷核心导致水膜冻结形成保护壳。第二，当水合物轻微过冷时，热力学能最小化驱动相变，水膜释放能量再冻结。在燃烧背景下，火焰热远大于相变焓，因此自愈主要取决于水合物蛋糕的热传递竞争。\n\n热传递平衡分析：设水膜厚度为δ，热导率为k，核心温度为T_c，表面温度为T_s。从火焰到水膜的热通量Q_in必须克服到核心的热损失Q_loss和相变所需能量。热损失通量Q_loss = k(T_s - T_c)/δ，其中δ为水膜厚度。相变能量包括水膜凝固潜热L_solid（凝固潜热）。如果Q_in < Q_loss + ρ_w L_solid dδ/dt（ρ_w为水密度），则发生自愈。\n\n临界条件推导：考虑非稳态热传导，水膜温度分布非线性，表面温度T_s ≈ T_freeze。热平衡要求Q_in = k(T_freeze - T_c)/δ + ρ_w L_solid dδ/dt。自愈发生的临界条件为T_c < T_freeze - (Q_in δ)/k - (ρ_w L_solid δ^2)/(k dt)，此时核心过冷度足够大，使热损失主导，水膜冻结。论文中实验显示，初始温度从-10°C降至-80°C时，火焰传播速度从1000 mm/s降至几mm/s，表明自愈增强，例如在-80°C时，核心热沉效应显著，水膜快速冻结。Misyura等人的研究还表明，孔隙度影响自愈，高孔隙度增加热损失表面，促进冻结。数值模拟中，自愈导致非稳态燃烧，如质量损失波动和局部熄灭。因此，自愈临界条件依赖于初始温度、几何形状和热物性，需通过耦合热传导和解离动力学模型精确预测。",
+    "original_text": {
+      "1": "In the first, more straightforward (and more common) case, the hydrate cake is subcooled well below the freezing temperature of pure water. When the outer layer of hydrate dissociates leaving a water film, heat loss to the core of the subcooled hydrate cake freezes the water film creating a protective shell barrier to further dissociation and methane escape.",
+      "2": "This phenomenon is not captured in the steady 1-D configuration because the flame is always present, and the liquid layer is of constant thickness which ensures that the heat flux from above continues to boil the liquid layer."
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "heat_transfer",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及甲烷水合物燃烧、自愈现象机理、过冷效应、热传递竞争和临界条件推导，需要燃烧科学、热力学、传热学、相变动力学等能源与燃烧工程领域的专业知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "fundamental_error",
+        "unsupported"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在多处事实和基本原理错误：1）错误地将自愈现象归因于水膜凝固形成保护壳，但原文明确说明是水合物外层解离产生水膜后，热损失到过冷核心导致水膜冻结形成保护壳；2）热传递平衡分析中的公式推导存在错误，未正确反映原文描述的非稳态热传导过程；3）临界条件推导缺乏原文支持且逻辑不严谨。建议基于原文引用内容重新构建机理解释，确保热传递分析和临界条件推导与论文实验和理论分析一致。"
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_a1f1f1dc",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Fiery-ice--An-overview-of-methane-hydrat_2024_Progress-in-Energy-and-Combust",
+      "paper_title": "Fiery-ice--An-overview-of-methane-hydrat_2024_Progress-in-Energy-and-Combust"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:51:07.382150",
+      "answer_length": 759
+    },
+    "merge_source": "question_reverse"
+  }
+]

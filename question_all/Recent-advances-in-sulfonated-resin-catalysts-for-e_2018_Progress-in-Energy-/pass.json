@@ -1,0 +1,104 @@
+[
+  {
+    "question_text": "基于论文中关于磺化树脂催化剂表面疏水性对脂肪酸酯化反应机理影响的讨论，详细分析在CFD模拟中如何建立考虑催化剂表面疏水性、反应物吸附构型和传质限制的多物理场耦合模型。请推导相关的表面反应动力学方程并解释如何将其与流体流动方程耦合。",
+    "standard_answer": "在CFD模拟中建立磺化树脂催化剂表面酯化反应的多物理场耦合模型需要考虑以下几个关键方面：首先，根据论文中描述的三种表面吸附构型，需要建立不同的表面反应动力学模型。对于孤立亲水位点周围疏水环境的情况，脂肪酸分子平行吸附于表面，反应速率可表示为：r = k·θ_FA·θ_AL，其中θ_FA和θ_AL分别为脂肪酸和醇的表面覆盖度。对于多个相邻酸位点的情况，脂肪酸垂直吸附，需要考虑位点间的协同效应：r = k·θ_FA^n·θ_AL，n>1表示协同因子。对于强亲水材料，水分子优先吸附导致催化剂失活，需要引入失活因子：r = k·θ_FA·θ_AL·(1-θ_H2O)^m。在CFD框架中，这些表面反应动力学需要与质量传递方程耦合：∂C_i/∂t + u·∇C_i = D_i∇^2C_i - S_i，其中S_i为表面反应源项。对于多孔催化剂，还需要考虑孔隙内的扩散限制，使用有效扩散系数D_eff = D·ε/τ。表面覆盖度通过Langmuir-Hinshelwood动力学计算：θ_i = K_iC_i/(1+ΣK_jC_j)。最终建立完整的耦合方程组，包括Navier-Stokes方程描述流体流动、对流扩散方程描述质量传递、以及表面反应动力学方程，通过有限体积法进行数值求解。",
+    "original_text": {
+      "1": "if there is one isolated (hydrophilic) Bronsted acid site, surrounded by a hydrophobic environment, the lipophilic tail of e.g., the fatty acid would likely approach and adsorb in a parallel fashion with respect to the hydrophobic surface",
+      "2": "in the case of a very acidic and/or hydrophilic material (i.e. many adjacent sites and/or hydroxy groups), the by-product water produced during the esterification process would adsorb preferentially on the surface. Water causes the catalyst to deactivate"
+    },
+    "type": "calculation",
+    "difficulty": 5,
+    "topic": "CFD_modeling",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及CFD模拟、多物理场耦合、表面反应动力学、传质限制等，需要燃烧/传热/流体/CFD/能源领域的专业知识，特别是化学反应工程和计算流体动力学的交叉领域知识。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": ""
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_4a01320c",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Recent-advances-in-sulfonated-resin-catalysts-for-e_2018_Progress-in-Energy-",
+      "paper_title": "Recent-advances-in-sulfonated-resin-catalysts-for-e_2018_Progress-in-Energy-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:24:06.256009",
+      "answer_length": 540
+    },
+    "merge_source": "question_reverse"
+  },
+  {
+    "question_text": "论文讨论了金属离子杂质对树脂催化剂的失活效应。请从燃烧科学和能源系统角度，基于论文内容分析金属离子杂质如何影响树脂催化剂在生物柴油生产中的性能，并详细讨论这种影响对使用废弃油脂原料的生物柴油生产过程的影响。",
+    "standard_answer": "根据论文内容，金属离子杂质（如Fe³⁺）对树脂催化剂的影响主要通过金属离子交换机制实现。论文明确指出：'A catalyst deactivation effect of metal ions impurities (e.g., Fe+3) through metal exchange may be observed on biodiesel production from waste cooking oil, particularly for high alcohol: FFA molar ratios'。这种金属离子交换过程会置换树脂中的活性酸性位点，导致催化剂活性降低。\n\n从燃烧科学角度分析，催化剂失活会降低生物柴油生产过程的反应效率，影响燃料的燃烧特性。当使用含有金属杂质的废弃油脂作为原料时，金属离子会与树脂催化剂的磺酸基团发生离子交换反应，形成金属磺酸盐，从而减少可用于催化酯化反应的酸性位点数量。论文进一步指出：'For high methanol:FFA molar ratios the latter phenomenon became predominant due to the higher viscosity of the reaction mixture and the higher dispersion of Fe+3 in the alcohol phase, promoting the metal ion exchange'。在高醇油比条件下，反应混合物粘度增加，金属离子在醇相中的分散度提高，进一步促进了金属离子交换过程。\n\n从能源系统角度分析，这种失活效应会严重影响生物柴油生产过程的整体能效和经济性。催化剂失活导致需要更频繁的再生或更换，增加了生物柴油生产的运营成本和能源消耗。同时，反应转化率降低和反应时间延长会影响产品质量稳定性，最终降低整个能源系统的效率和可持续性。为了缓解这一问题，需要对废弃油脂原料进行预处理以去除金属离子，或开发具有抗金属中毒能力的新型催化剂体系。",
+    "original_text": {
+      "1": "A catalyst deactivation effect of metal ions impurities (e.g., Fe+3) through metal exchange may be observed on biodiesel production from waste cooking oil, particularly for high alcohol: FFA molar ratios",
+      "2": "For high methanol:FFA molar ratios the latter phenomenon became predominant due to the higher viscosity of the reaction mixture and the higher dispersion of Fe+3 in the alcohol phase, promoting the metal ion exchange"
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题明确要求从燃烧科学和能源系统角度分析金属离子杂质对树脂催化剂在生物柴油生产中的影响，这需要燃烧科学（燃料特性、燃烧效率）、能源系统（能效、经济性、可持续性）以及催化化学领域的专业知识。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "无需改进。答案准确引用了论文内容，从燃烧科学和能源系统角度进行了详细分析，解释了金属离子交换机制、对催化剂活性的影响、高醇油比条件下的加剧效应，以及对生物柴油生产过程能效、经济性和可持续性的影响，并提出了缓解措施。"
+    },
+    "retry_count": 2,
+    "question_id": "deepseek_q_3ba17a94",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Recent-advances-in-sulfonated-resin-catalysts-for-e_2018_Progress-in-Energy-",
+      "paper_title": "Recent-advances-in-sulfonated-resin-catalysts-for-e_2018_Progress-in-Energy-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:25:38.639465",
+      "answer_length": 864
+    },
+    "merge_source": "question_reverse"
+  },
+  {
+    "question_text": "基于论文中不同树脂催化剂（凝胶型、大孔型、超交联型）的孔结构特性，从流体力学角度分析在固定床反应器中，催化剂颗粒尺寸、孔隙率和孔径分布对反应物传质效率、压降和反应选择性的影响机制。结合Ergun方程讨论固定床反应器的压降特性，并基于论文数据提出优化策略。",
+    "standard_answer": "不同树脂催化剂的孔结构特性对固定床反应器的流体力学性能具有重要影响。根据论文数据，凝胶型树脂在干态下几乎无孔（BET表面积<0.1 m²/g），但具有良好的溶胀性；大孔树脂具有永久孔结构（BET表面积50-100 m²/g）和宽孔径分布；超交联树脂具有高比表面积和微孔结构。在固定床中，压降由Ergun方程描述：ΔP/L = 150(1-ε)²/ε³ · μu/(φd_p)² + 1.75(1-ε)/ε³ · ρu²/(φd_p)。其中ε为床层孔隙率，d_p为颗粒直径，φ为形状因子，μ为流体粘度，ρ为流体密度，u为表观流速。\n\n对于凝胶型树脂，由于溶胀特性，在实际反应条件下孔隙率显著增加，传质阻力降低，但机械强度较差易破碎。大孔树脂具有永久孔结构，但宽孔径分布导致部分大孔传质效率低，部分小孔可能限制大分子扩散。超交联树脂的高比表面积提供了更多活性位点，但微孔结构可能导致脂肪酸大分子的扩散限制。\n\n反应选择性受孔结构影响显著：凝胶型树脂在溶胀状态下孔径增大，有利于大分子反应物扩散，提高选择性；大孔树脂的宽孔径分布可能导致不同尺寸分子的竞争吸附，影响选择性；超交联树脂的微孔结构可能产生尺寸筛分效应，提高对小分子的选择性。\n\n优化策略包括：选择合适的颗粒尺寸（通常0.5-1 mm平衡压降和传质）、控制孔径分布（中孔为主兼顾传质和活性位点可及性）、调整床层孔隙率以降低压降，以及考虑溶胀效应对床层结构的影响。根据论文数据，对于典型条件，最优的催化剂颗粒特性应充分考虑不同树脂类型的孔结构特点，在保证足够活性位点的同时避免严重扩散限制。",
+    "original_text": {
+      "1": "gel-type resins are able to swell in 'good' solvents, giving rise to a porous structure and becoming readily accessible. The swelling level is inversely related to the cross-linker (DVB) content",
+      "2": "Macroporous resins can have much higher surface area in the dry state (50–100 m2g¡1) than gel-type resins and tend to exhibit a wide pore size distribution ranging from micropores (<20 Å) to mesopores (20–500 Å) to macropores (>500 Å)"
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "fluid_mechanics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及固定床反应器流体力学、催化剂孔结构特性、Ergun方程、传质效率和反应选择性分析，需要燃烧/能源工程、化学反应工程、多孔介质传质和流体力学领域的专业知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量良好，无需修改。答案准确分析了不同树脂催化剂的孔结构特性对固定床反应器性能的影响，正确应用了Ergun方程，基于论文数据提出了合理的优化策略，且与提供的原文引用相符。"
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_132ca9bc",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Recent-advances-in-sulfonated-resin-catalysts-for-e_2018_Progress-in-Energy-",
+      "paper_title": "Recent-advances-in-sulfonated-resin-catalysts-for-e_2018_Progress-in-Energy-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:26:47.256036",
+      "answer_length": 671
+    },
+    "merge_source": "question_reverse"
+  }
+]

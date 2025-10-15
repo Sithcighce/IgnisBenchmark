@@ -1,0 +1,4997 @@
+Progress in Energy and Combustion Science 63 (2017) 146(cid:1)172
+
+Contents lists available at ScienceDirect
+
+Progress in Energy and Combustion Science
+
+journal homepage: www.elsevier.com/locate/pecs
+
+CO2 capture from the industry sector
+
+PPraveen Bainsa,b, Peter Psarrasa, Jennifer Wilcoxa,*
+
+Pa Department of Chemical and Biological Engineering, Colorado School of Mines, Golden, CO 80401, USA
+b Department of Energy Resources Engineering, Stanford University, Stanford, CA 94305, USA
+
+PA R T I C L E
+
+I N F O
+
+PA B S T R A C T
+
+Article History:
+Received 11 January 2017
+Accepted 9 July 2017
+Available online 17 August 2017
+
+PKeywords:
+Climate change
+Carbon capture from industry
+Cement manufacturing
+Iron and steel production
+Petroleum refining
+Natural gas processing
+
+It is widely accepted that greenhouse gas emissions, especially CO2, must be significantly reduced to pre-
+vent catastrophic global warming. Carbon capture and reliable storage (CCS) is one path towards controlling
+emissions, and serves as a key component to climate change mitigation and will serve as a bridge between
+the fossil fuel energy of today and the renewable energy of the future. Although fossil-fueled power plants
+emit the vast majority of stationary CO2, there are many industries that emit purer streams of CO2, which
+result in reduced cost for separation. Moreover, many industries outside of electricity generation do not
+have ready alternatives for becoming low-carbon and CCS may be their only option. The thermodynamic
+minimum work for separation was calculated for a variety of CO2 emissions streams from various indus-
+tries, followed by a Sherwood analysis of capture cost. The Sherwood plot correlates the relationship
+between concentrations of a target substance with the cost to separate it from the remaining components.
+As the target concentration increases, the cost to separate decreases on a molar basis. Furthermore, the low-
+est cost opportunities for deploying first-of-a-kind CCS technology were found to be in the Midwest and
+along the Gulf Coast. Many high purity industries, such as ethanol production, ammonia production and
+natural gas processing, are located in these regions. The southern Midwest and Gulf Coast are also co-
+located with potential geologic sequestration sites and enhanced oil recovery opportunities. As a starting
+point, these sites may provide the demonstration and knowledge necessary for reducing carbon capture
+technology costs across all industries, and improving the economic viability for CCS and climate change mit-
+igation. The various industries considered in this review were examined from a dilution and impact per-
+spective to determine the best path forward in terms of prioritizing for carbon capture. A possible
+implementation pathway is presented that initially focuses on CO2 capture from ethanol production, fol-
+lowed by the cement industry, ammonia, and then natural gas processing and ethylene oxide production.
+While natural gas processing and ethylene oxide production produce high purity streams, they only account
+for relatively small portions of industrial process CO2. Finally, petroleum refineries account for almost a fifth
+of industrial process CO2, but are comprised of numerous low-purity CO2 streams. These qualities make
+these three industries less attractive for initial CC implementation, and better suited for consideration
+towards the end of the industrial CC pathway.
+
+© 2017 Elsevier Ltd. All rights reserved.
+
+Contents
+
+1.
+2.
+3.
+
+Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 147
+Process CO2 versus combustion CO2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 148
+The cost of capture: minimum work and economic cost . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 149
+3.1. Minimum work of separation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 149
+Sherwood analysis. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 149
+3.2.
+The cost of CO2 capture . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 150
+3.3.
+Top CO2 emitters from the industrial sector. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 151
+3.4.
+Petroleum refining . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 151
+3.4.1.
+3.4.1.1.
+Process heaters . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 151
+3.4.1.2. Utilities (Electricity and steam generation) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 153
+
+* Corresponding author.
+
+E-mail addresses: jen.wilcox@stanford.edu, wilcox@mines.edu (J. Wilcox).
+
+http://dx.doi.org/10.1016/j.pecs.2017.07.001
+0360-1285/© 2017 Elsevier Ltd. All rights reserved.
+
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+A
+G
+G
+E
+D
+T
+A
+G
+G
+E
+D
+T
+a
+g
+g
+e
+d
+
+P. Bains et al. / Progress in Energy and Combustion Science 63 (2017) 146(cid:1)172
+
+147
+
+3.4.4.
+
+3.4.5.
+
+3.4.2.
+
+3.4.3.
+
+3.4.1.3.
+Fluid catalytic cracker (FCC) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 153
+3.4.1.4. Hydrogen production . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 153
+Ethylene production . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 154
+3.4.2.1.
+Process overview. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 154
+Cement production . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 154
+3.4.3.1.
+Process overview. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 154
+Iron and steel production . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 156
+Process overview(cid:1)primary BF/BOF. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 156
+3.4.4.1.
+Process overview(cid:1)secondary EAF . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 156
+3.4.4.2.
+Process conditions(cid:1)BF/BOF . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 157
+3.4.4.3.
+Ethylene oxide production . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 157
+Process overview(cid:1)air oxidation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 157
+3.4.5.1.
+Process overview(cid:1)direct oxygen oxidation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 158
+3.4.5.2.
+Process conditions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 158
+3.4.5.3.
+3.4.6. Hydrogen production. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 159
+Process overview. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 159
+3.4.7. Ammonia processing . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 160
+Process overview. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 161
+3.4.8. Natural gas processing . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 162
+3.4.8.1.
+Process overview. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 162
+Ethanol production. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 163
+Process overview(cid:1)dry-milling . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 163
+3.4.9.1.
+Process overview(cid:1)wet-milling. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 163
+3.4.9.2.
+Process conditions and cost . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 164
+3.4.9.3.
+4. Why country-level emissions? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 164
+4.1.
+Process versus combustion CO2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 165
+4.2. CO2 sources by purity . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 165
+4.3. A note on CO2 utilization . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 167
+Conclusions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 167
+
+3.4.6.1.
+
+3.4.7.1.
+
+3.4.9.
+
+5.
+
+1. Introduction
+
+PClimate change has been a topic of much debate over the past
+several decades.
+Increased levels of carbon dioxide (CO2) and
+other greenhouse gases (GHG) are responsible for the global
+warming that fuels climate change. As the acceptance of climate
+change has increased, so too has the related discussion on ways
+to adapt to and mitigate its existence. The most recent example
+is the 21st Conference of Parties (COP21), held in Paris, France in
+December 2015. Since 1992, the Conference of Parties has been
+held annually to revisit ideas and plans set by the United Nations
+Convention on Climate Change (UNFCCC) [1]. COP21 represented
+an unprecedented moment for climate change action, as over
+190 countries agreed to curb GHG emissions to limit the global
+temperature rise to below 2 °C [2]. Within the U.S., further action
+to cut carbon emissions has taken place. In August of 2015, Pres-
+ident Obama and the EPA announced the Clean Power Plan,
+which places carbon emission limits on existing and future
+power plants. Although it is under review by the Supreme Court,
+it could be a historic moment for the U.S. as the first ever
+national emissions standards [3,4].
+
+PCarbon dioxide makes up the majority of GHG emissions,
+accounting for 65% of global and 82% of U.S. emissions [4,5]. The U.S.
+alone emits approximately 16% of the global CO2 emissions, second
+only to China's 30% [6]. Given the country's contribution to CO2
+emissions, the U.S. must lead the charge to reduce these emissions.
+Carbon capture and storage provides one possible solution.
+
+PCarbon capture and storage (CCS) is considered a critical part
+of many climate change mitigation plans, as it provides a bridge
+between our current fossil-fuel based economy and a renewable
+energy future [7(cid:1)14]. To achieve CCS on a wide-scale within sta-
+tionary sources, a way to reduce implementation costs could be
+application at a smaller scale. This opportunity exists when con-
+sidering the industrial sector of CO2 emissions. Identifying areas
+of lowest carbon capture (CC) cost will help to offset additional
+
+Pcosts associated with installing and demonstrating first-of-a-kind
+technology.
+
+PThere have been many studies that have focused on the top four
+emitting industries (i.e., iron and steel, cement, petroleum refining
+and petrochemical). Farla et al. published one of the first industrial
+assessments of CCS in 1995, focusing on the Netherlands, while Van-
+sant published a chapter dedicated to characterizing the top-emit-
+ting industries within the European Union [15,16]. In 2005, the
+Intergovernmental Panel on Climate Change (IPCC) released its Spe-
+cial Report on Carbon Dioxide Capture and Storage, discussing the
+emissions and CO2 purity from the industries already mentioned as
+well as natural gas processing [7]. The United Nations Industrial
+Development Organization (UNIDO) offers several CCS industrial
+sectoral reports (biomass, high-purity, iron and steel, refineries and
+cement) and collaborated with the International Energy Agency
+(IEA) on a CCS technology roadmap [17(cid:1)22]. The IEA also published
+a few sectoral reports of its own, as well as a comprehensive look at
+reducing emissions from a multitude of industries [10,23,24]. A
+more recent techno-economic assessment of the top four emitting
+industries can be found in Kuramochi et al. [25].
+
+PThe global CCS Institute published a report on CCS for iron and
+steel production, as did Gielen [26,27]. The European Cement
+Research Academy (ECRA) released a report on the potential for CCS
+within the cement industry [28], while the U.S. EPA published a
+report on reducing GHG emissions from the petroleum refining
+industry and hydrogen production [29,30]. The National Energy
+Technology Laboratory (NETL) examined several high and low purity
+sources of CO2 and performed capture cost estimates for both retro-
+fit and greenfield sites [31]. Xu et al., and Kheshgi and Prince have
+discussed the value and sequestration potential of CO2 emitted dur-
+ing ethanol fermentation [32,33]. Finally, Wilcox summarized vari-
+ous industrial and power plant sources of CO2, as well as potential
+geological sequestration and utilization opportunities. She then out-
+lined the theory and calculation of thermodynamic minimum work
+for separating CO2 from gaseous streams [34].
+
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+
+148
+
+P. Bains et al. / Progress in Energy and Combustion Science 63 (2017) 146(cid:1)172
+
+PAll of these documents briefly describe the industrial process and
+summarize the techno-economic feasibility of capturing the CO2
+emitted from the process. While each document provides salient
+information on the top CO2-emitting industries, none of them con-
+tain all of the information necessary to fully analyze industries for
+their CCS potential or tie the CCS potential to geographical regions.
+This work intends to provide an updated compendium of CCS oppor-
+tunities for the United States.
+
+PFinally, several papers have tied together CO2 sources and sinks to
+create CO2 supply chain networks. For instance, Hasan et al. opti-
+mized the CO2 supply chain network between all major CO2-emitting
+sources and potential sequestration sites identified by the National
+Carbon Sequestration Database and Geographic Information System
+(NATCARB) [35]. Their spatial analysis considered different types of
+CO2 sources, capture technologies, capture materials, CO2 pipelines,
+and locations of storage sites. The resulting optimization estimated a
+total annual cost of $58.1(cid:1)$106.6 billion to reduce 50(cid:1)80% of the
+current stationary sourced CO2. While very comprehensive, the study
+only includes CO2 emitted from the flue gas of fossil fuel combustion
+and therefore omits the potential for capture of higher purity sources
+of CO2, which would inevitably result in lower capture costs.
+
+PMiddleton et al. examined high-purity CO2 sources (e.g., acid gas
+removal, ammonia, ethanol, hydrogen and natural CO2 formations)
+currently supplying CO2 for enhanced oil-recovery (EOR), and per-
+formed a spatial and life-cycle assessment on potential supply sites
+[36]. They found that much of the U.S. lies in a “CO2 desert”, or
+greater than 500 km from the nearest high-purity CO2 source. They
+also found that CO2 from natural formations have the largest carbon
+footprint, suggesting that capturing CO2 from high-purity industry
+sources have an even greater benefit for CO2 reduction since it would
+leave naturally occurring CO2 in the ground, and limit CO2 emitted
+from the extraction phase. This study, however, only includes certain
+industries and restricts CO2 storage opportunities to EOR.
+
+PThis review aims to collect all CC-relevant data into a single study
+to enable an in-depth analysis of the CCS potential with a focus on
+the contiguous U.S. The analysis includes a two-level perspective:
+nationally across the U.S. and within individual facilities. The facil-
+ity-level details include CO2-emitting process units and process
+
+Pconditions (i.e., temperature, pressure and CO2 concentration),
+which are required to understand how best to capture CO2 from dif-
+ferent industries and to calculate the minimum capture work and
+Sherwood cost estimation. A Sherwood plot correlates the relation-
+ship between concentrations of a target substance with the cost to
+separate it from the remaining components, as outlined by House
+et al [37]. Top-emitting industries are considered, encompassing
+dilute, high-purity, combustion, and process emissions. Spatial anal-
+ysis in the form of geographic information systems (GIS) is then
+used to bring together key CCS data within the U.S. to determine the
+“low-hanging fruit” of CCS and to identify the facilities that have the
+lowest CO2 capture cost.
+
+2. Process CO2 versus combustion CO2
+
+PWhen discussing CO2 emissions from industrial point sources, a
+distinction can be made between “combustion” and “process” CO2.
+Combustion emissions occur from burning carbonaceous fuels, such
+as natural gas, coal and petroleum, while process emissions account
+for all other CO2 released, usually from chemical reactions that are
+required to produce a desired product. Reduction of iron ore into
+iron, limestone into lime and water-gas shift reactions are examples
+of such process reactions. In several instances, process and combus-
+tion emissions can occur within the same unit. When process and
+combustion emissions are mixed, there is the potential for higher
+purity CO2 streams if new and innovative unit designs can separate
+the process reactions from the heat requirements. These two types
+of emissions will be discussed in greater detail as each industry is
+considered.
+
+PThe industries are ordered from the least concentrated source of
+CO2 to the most concentrated. For each industry, a base case facility
+is discussed. The base case was chosen to be the largest U.S. emitter
+within that industry. Annual emission numbers for 2014 are taken
+from the EPA's online FLIGHT database [38]. The process conditions
+(i.e., temperature, pressure, CO2 concentration) for CC-relevant gas
+streams are also provided.
+
+PTable 1 displays a breakdown of CO2 emissions by the top-emit-
+ting industries. Fossil fuel combustion makes up the core of U.S. CO2
+
+Table 1
+2014 U.S. CO2 emissions from the top-emitting industries.
+
+Stationary source
+
+2014 emissions (MMT CO2)a
+
+% of total CO2 emissions
+
+% of total stationary CO2 emissionsb
+
+Fossil fuel combustion
+Coal
+Petroleum
+Natural gas
+Electricity generation (fossil fuel)
+Refineriesc
+Natural gas processingc
+Iron and steel production
+Petrochemical productiond
+Ethylene production
+Ethylene oxide production
+Hydrogen productionc
+Ethanol (Fermentation)e
+Cement production(c)
+Lime production
+Ammonia production(c)
+
+5208.2
+1653.7
+2127.5
+1426.6
+2039.3
+53.6
+17.2
+55.4
+26.5
+18.8
+1.3
+42.5
+40.1
+38.8 (64.3)
+17.4
+9.4 (14.6)
+
+93.74%
+29.76%
+38.29%
+25.68%
+36.70%
+0.96%
+0.31%
+1.00%
+0.48%
+0.34%
+0.02%
+0.77%
+0.72%
+0.70% (1.16%)
+0.31%
+0.17% (0.26%)
+
+90.89%
+43.31%
+11.46%
+36.11%
+53.41%
+1.40%
+0.45%
+1.45%
+0.69%
+0.49%
+0.03%
+1.11%
+1.05%
+1.02% (1.68%)
+0.45%
+0.25% (0.38%)
+
+All other data was obtained from the US Greenhouse Gas Inventory: 1990 (cid:1) 2014 (EPA). For cement production, only CO2 produced from
+the calcination reaction is included. For ammonia production, emissions were adjusted to remove CO2 captured for urea production.
+
+a Include emissions from transportation sector (mobile emissions) within fossil fuel combustion.
+b Does not include emissions from transportation sector (mobile emissions).
+c Data obtained from US GHGRP 2014 FLIGHT database. For these industries, both process and combustion emissions are reported
+when emitted through a common stack; otherwise combustion emissions are not included. For ammonia production, emission data
+includes captive H2 production emissions (which are excluded from H2 production emissions) and CO2 captured for urea production.
+
+d Petrochemical Production includes ethylene oxide and ethylene production emissions.
+e Ethanol (Fermentation) was estimated using an emission factor of 6.29 lbs CO2/gallon ethanol (Xu et al, 2010), and EIA ethanol pro-
+
+duction data without denaturant for 2014.
+
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+
+P. Bains et al. / Progress in Energy and Combustion Science 63 (2017) 146(cid:1)172
+
+149
+
+Pemissions, with petroleum combustion producing the most emis-
+sions. However, petroleum combustion is mainly used in transporta-
+tion (gasoline), which leaves coal as the greatest contributor to
+stationary national emissions. In general, fossil-fueled electricity
+generation is the greatest emitter of CO2, contributing over 55% to
+total stationary emissions. Just under 75% of these emissions origi-
+nate from coal, with most of the balance made up by natural gas.
+
+PThe remaining emitters as shown in Table 1 account for approxi-
+mately 19% of stationary emissions. Petroleum refining, which is the
+second largest U.S. industry emitter, still emits 11 times less CO2
+than power plants. With such a great disparity between power
+plants and other industries, it can be easy to overlook the potential
+of capturing industrial process CO2. Industrial process CO2 (also
+referred to as “industry CO2” in this review) may be relatively small,
+but it is unavoidable. As renewable energy generation continues to
+increase and displace fossil fuel electricity generation, industry CO2
+will constitute an increasingly larger portion of global emissions.
+Moreover, unlike fossil fuel-fired power plants, many industries
+have few or no CO2-free alternatives for manufacturing their prod-
+ucts. While some research is underway to investigate novel produc-
+tion pathways for some industries, they are highly unlikely to be
+ready for commercialization on a time scale required to prevent cat-
+astrophic climate change.
+
+PFurthermore, many industries produce CO2 streams at much
+greater purity than power plant flue gas. For example, natural gas
+processing and ethanol fermentation can produce near pure streams
+of CO2. Higher purity translates into lower capture costs, as will be
+discussed in the following section. Low capture costs are important
+for promoting first-of-a-kind CCS technology, whose costs can be fur-
+ther reduced through learning and iterating until it is feasible to use
+on larger, more dilute sources of CO2 such as power plants. There-
+fore, industrial facilities may be the first adopters of CCS technology.
+
+3. The cost of capture: minimum work and economic cost
+
+3.1. Minimum work of separation
+
+PA simplified CO2 separation schematic is shown in Fig. 1. The CO2
+is removed from feed stream A, resulting in two product streams, i.
+e., stream B with mostly CO2, and stream C with very little CO2.
+
+PThe derivation of the minimum work is provided by House, et al
+[37]. The minimum work for separation is achieved at isothermal,
+isobaric conditions, reducing the minimum work equation into the
+Gibb's Free Energy difference between the product and feed streams.
+The streams are assumed to behave as ideal gases, since the gas
+interactions are negligible in the streams considered [39].
+
+PThe thermodynamic minimum work to separate CO2 from a gas
+
+stream was calculated using Eq. (1):
+
+W min 1⁄4 RT nCO2
+
+(cid:4)
+
+B
+(cid:1)
+
+(cid:3)
+
+(cid:1)
+ln yCO2
+B
+(cid:3)
+
+þ nB(cid:1)CO2
+B
+
+(cid:4)
+(cid:1)RT nCO2
+
+A
+
+(cid:1)
+
+ln yB(cid:1)CO2
+B
+(cid:1)
+ln yCO2
+A
+
+(cid:3)
+
+þnC(cid:1)CO2
+C
+
+ln yC(cid:1)CO2
+C
+
+(cid:5)
+(cid:3)
+
+(cid:4)
+þ RT nCO2
+
+C
+
+(cid:1)
+
+þ nA(cid:1)CO2
+A
+
+ln yA(cid:1)CO2
+A
+
+(cid:1)
+ln yCO2
+C
+(cid:5)
+(cid:3)
+(cid:3)
+
+(cid:3)
+
+ð1Þ
+
+PCO2. A 90% CO2 capture rate at 95% CO2 purity was assumed for all
+CO2-relevant gas streams, except for those with initial (feed) stream
+purities greater than 95%. In this case, CO2 purity that matched the
+initial feed stream's purity were assumed, resulting in zero theoreti-
+cal minimum work required for separation.
+
+3.2. Sherwood analysis
+
+PA Sherwood analysis was performed to estimate the cost of cap-
+turing CO2 from the capture-relevant industrial gas streams. The
+Sherwood plot (Fig. 2) illustrates that as concentration of a target
+its separation costs
+substance within a gas stream decreases,
+increase. This relationship was developed by Thomas K. Sherwood in
+1959 when he investigated how the market prices of a metal varied
+with the initial concentration of the ore in the raw material. House,
+et al extended this idea to the amount of CO2 present in a gas stream
+that undergoes separation [37]. Fig. 2 displays various gas separation
+technologies available today and the relationship between initial tar-
+get concentrations and the separation (capture) costs. The data points
+shown were calculated from Dr. Ed Rubin's Integrated Environmental
+Control Model (IECM), which simulates gaseous capture technology
+for power plant flue gas [40]. These costs are for Nth-of-a-kind tech-
+nology, and only include capital cost. In the case of the CO2 data
+points, this means compression costs are not included. The data
+points represent the following separation technologies: selective cat-
+alytic reduction (SCR) to remove parts per million (ppm)-level NOx;
+wet flue gas desulfurization (WFGD) and lime spray drying (LSD) to
+remove ppm-levels of SOx (corresponding to the high and low prices
+of SOx separation, respectively); chemical absorption with MEA CO2
+scrubbing for pulverized coal combustion (PCC) plant with 13% CO2
+in the flue gas; and physical absorption with Selexol CO2 scrubbing
+for the integrated combined cycle (IGCC) power plant with 36% CO2
+in the flue gas. Due to the variety of separation technologies included
+in the Sherwood plot, the subsequent capture cost estimates are
+technology agnostic. Eq. (2) enumerates the linear fit between the
+logarithmic prices of capture and the logarithmic target substance
+concentration (in molar concentration).
+
+PEq. (2) was used to calculate estimated CO2 capture costs for cap-
+ture-relevant gas streams. Once again, these capture costs only
+encompass capital costs, not compression costs for CCS.
+
+(cid:8)
+
+log Price
+
+(cid:9)
+
+(cid:6) (cid:7)
+$
+kg
+
+1⁄4 (cid:1)0:5558 (cid:4) log mole fraction of CO2 %1⁄2
+(cid:3)
+
+ð
+
+Þ(cid:1)1:8462
+
+ð2Þ
+
+PWhere Wmin is the minimum separation work in kJ/mol, R is the
+universal gas constant 8.314 J/(mol K), T is the temperature in Kelvin,
+ni
+2 are the remaining moles
+CO2 is the mole fraction of CO2 in gas
+in stream i without CO2, yi
+i-CO2 is the mole fraction of the remaining gas without
+stream i, and yi
+
+CO2 is the moles of CO2 in stream i, ni
+
+i-CO
+
+Fig. 1. Simplified CO2 separation diagram, where CO2 in feed stream A is removed,
+resulting in a mostly CO2 product stream B, and a product stream C with very little
+CO2.
+
+Fig. 2. Sherwood plot for gas separation technologies. Separation technologies
+include selective catalytic reduction (SCR) for both NOx values, wet flue gas desulfuri-
+zation (WFGD) for the higher SOx value, lime spray drying (LSD) for the lower SOx
+value, MEA scrubbing for the CO2 PCC value, and Selexol scrubbing for the CO2 IGCC
+value [40]. R2 value is 0.990.
+
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+
+150
+
+P. Bains et al. / Progress in Energy and Combustion Science 63 (2017) 146(cid:1)172
+
+Table 2
+Summary of process conditions used in the minimum work and Sherwood cost estimates for the U.S.’s top CO2 emitting industries. The percent of total U.S. emissions reflects
+the entire industry, and use 2014 numbers. The emissions numbers for each power plant reflect fossil fuel combusted solely for electricity generation purposes.
+
+CO2 source
+
+CO2 content
+
+CO2 process unit
+
+Temperature ( °C)
+
+Flue gas component
+
+% of U.S. emissions
+
+Petroleum power plant
+Natural gas power plant
+
+3(cid:1)8%
+3(cid:1)5%
+
+Furnace
+Gas turbine
+
+40 (cid:1) 65
+93(cid:1)106 (after HRSG)
+
+Coal power plant
+
+10(cid:1)15%
+
+Steam boiler furnace
+
+40 (cid:1) 65
+
+Cement production
+
+30%
+
+Precalciner
+
+150 (cid:1) 350
+
+Petroleum refineries
+
+14(cid:1)33%
+
+8(cid:1)10%
+3 (cid:1) 5%
+10(cid:1)20%
+
+High T Kiln (calcination)
+
+150 (cid:1) 350
+
+Process heaters
+Utilities (steam, electricity)
+Fluid catalytic cracker (FCC)
+(regeneration of catalyst)
+
+160(cid:1)190
+160(cid:1)190
+160(cid:1)190
+
+30 (cid:1) 45%, 98(cid:1)100%
+
+H2 purification
+
+20-40 (for PSA), 100(cid:1)120
+(for chemisorption)
+
+CO2, NOx, SOx, O2, N2
+CO2, NOx, SOx, CO, O2, N2,
+
+0.5
+8.0
+
+Hg, As, Se
+
+CO2, NOx, SOx, CO, O2, N2,
+
+28.3
+
+Hg, As, Se
+
+CO2, H2O, N2, hydrocarbons,
+volatiles (K2O, Na2O, S, Cl)
+CO2, H2O, N2, hydrocarbons,
+volatiles (K2O, Na2O, S, Cl)
+
+Depends on fuel used
+Depends on fuel used
+O2, CO2, H2O, N2, Ar, CO,
+
+1.2
+
+3.1
+
+NOx,SOx
+
+CO2, H2, CO, CH4
+
+Iron and steel
+
+manufacturing
+
+20 - 27%
+
+16 (cid:1) 42%
+
+Ethylene production
+
+7(cid:1)12%
+
+Ethylene oxide production »30%, 98(cid:1)100%
+
+Ammonia processing
+Natural gas processing
+
+98(cid:1)100%
+96(cid:1)99%
+
+Blast furnace (high CO2 if
+
+100
+
+H2, N2, CO, CO2, H2S
+
+1.0
+
+BFG is burned)
+
+Basic oxygen Furnace (high
+CO2 from burning BOF
+gas)
+
+Steam cracking
+
+»100
+
+160(cid:1)215
+
+H2, N2, CO, CO2, H2S
+
+H2O, CO, NOx, SOx, O2, N2,
+
+0.3
+
+CO2
+
+Absorption unit to purify EO
+(lower end is air oxida-
+tion, higher end is oxygen
+oxidation)
+H2 purification
+Acid gas removal/CO2
+absorption (low P
+stripper)
+
+16(cid:1)32 (for water adsorp-
+
+Mainly CO2, H2O, N2, (air
+
+0.02
+
+tion), 100 ¡120
+(chemisorption)
+
+oxidation) some CH4, eth-
+ylene, EO
+
+100(cid:1)120 (chemisorption)
+100(cid:1)120
+
+CO2, H2, O2, CH4
+96 - 99% CO2, 1-4% CHx
+
+Hydrogen production
+
+30 (cid:1) 45%, 98(cid:1)100%
+
+(15(cid:1)20% in stream before
+purification)
+
+H2 purification (lower end is
+PSA, higher end for CO2
+specific separation)
+
+20(cid:1)40 (for PSA), 100(cid:1)120
+(for chemisorption)
+
+Ethanol production
+
+98 (cid:1) 99%
+
+Fermentation
+
+35
+
+0.3
+0.3
+
+0.8
+
+0.7
+
+(mainly methane, trace
+amounts ethane, propane,
+butane), H2O, N2
+CO2, H2, CO, CH4, After
+
+chemisorption: »100%
+CO2
+
+CO2, ethanol, methanol, H2S,
+dimethyl sulphide, acetal-
+dehyde, ethyl acetate
+
+3.3. The cost of CO2 capture
+
+PA summary of the process conditions (i.e., CO2 concentration,
+CO2-emitting process unit and temperature) are listed in Table 2.
+These values were used to calculate the minimum work and esti-
+mated financial costs for capturing CO2 from the top-emitting indus-
+tries, with the results shown in Table 3. It is apparent that as the CO2
+purity in the capture-relevant stream decreases, the associated mini-
+mum work and capture costs increase. For any industrial process
+that produces a stream with greater than 95% CO2 purity, the theo-
+retical minimum work to capture it is near zero (given the
+
+Passumption of 95% capture purity). Such industries include ethylene
+oxide, hydrogen, ammonia, and ethanol production, as well as natu-
+ral gas processing. Such pure streams of CO2 may only require dehy-
+dration and compression. There is still an associated capital cost for
+building the capture system in addition to operational and mainte-
+nance costs, resulting in $14 per metric ton of CO2 capture on aver-
+age. For comparison, the National Energy Technology Laboratory
+(NETL) recently estimated carbon capture costs for high purity
+industrial sources, resulting in costs of $11.68(cid:1)$23.09 per metric
+ton of CO2 captured [31].
+
+Table 3
+The minimum work and Sherwood capture cost estimates for top CO2 emitting industries in the U.S.
+
+Source
+
+CO2 content (mol %)
+
+% of US emissions
+
+Minimum work (kJ/mol CO2 capt)
+
+Cost ($/tonne CO2 captured)
+
+Natural gasa
+Petroleuma
+Coala
+Refineries
+Ethylene production
+Cement production
+Iron and steel production (BOF)b
+Ethylene oxide productionc
+Hydrogen productionc
+Ammonia processing
+Natural gas processing
+Ethanol (Fermentation)
+
+3(cid:1)5
+3(cid:1)8
+10(cid:1)15
+3(cid:1)20
+7(cid:1)12
+14(cid:1)33
+20(cid:1)27 (16(cid:1)42)
+30, 98(cid:1)100
+30(cid:1)45, 98(cid:1)100
+98(cid:1)100
+96(cid:1)99
+98(cid:1)99
+
+24.8
+7.9
+29.8
+1.0
+0.3
+1.2
+1.0
+0.02
+0.8
+0.4
+0.3
+0.7
+
+10.7(cid:1)12.7
+7.8(cid:1)11.3
+6.2(cid:1)7.9
+7.4(cid:1)15.5
+9.4 (cid:1) 12.8
+5.2(cid:1)12.6
+5.3(cid:1)6.4 (3.7(cid:1)7.1)
+0(cid:1)4.0
+0(cid:1)4.0
+0
+0
+0
+
+75(cid:1)100
+58(cid:1)100
+41(cid:1)51
+35(cid:1)100
+46(cid:1)62
+26(cid:1)42
+31(cid:1)35 (23(cid:1)39)
+14(cid:1)28
+14(cid:1)28
+14
+14
+14
+
+a Only includes stationary fossil fuel combustion as percentage of total U.S. emissions.
+b For iron and steel production, numbers in parenthesis specifically refer to the basic oxygen furnace (BOF) process unit.
+c Multiple CO2 content ranges occur due to multiple process pathways available. See industry section for more detail.
+
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+
+P. Bains et al. / Progress in Energy and Combustion Science 63 (2017) 146(cid:1)172
+
+151
+
+PIt should be emphasized that the Sherwood plot estimates Nth-
+of-a-kind capture costs; therefore, as capture technology matures
+for each industry, we should see greater convergence of costs. For
+example, while amine-based post-combustion carbon capture at
+cement plants currently have capture costs averaging around $110
+per metric ton of CO2, it has been shown that chemical looping can
+reduce costs to the $20(cid:1)$45 per metric ton of CO2 [41]. These
+reduced costs align well with the $26(cid:1)$42 per metric ton of CO2
+estimated by Sherwood analysis.
+
+POn the other end, for a CO2 concentration of only 3% in the flue
+gas stream, the minimum work required increases to 13 kJ per mole
+of CO2 captured. The cost increases to $100 per metric ton of CO2
+captured; in other words, there is about a 5-fold increase in capture
+cost when the concentration decreases by a factor of approximately
+30. The highest capture costs are associated with natural gas and
+petroleum-fired power plants. Coal-fired power plants, the largest
+emitter of stationary CO2, require on average 6(cid:1)8 kJ per mole of CO2
+captured, about 25%(cid:1)50% less energy than capturing from natural
+gas-fired power plants. Capturing CO2 from coal-fired power plants
+costs between 30% and 56% less than capturing from natural gas-
+fired plants.
+
+POverall, the minimum work ranges from near zero up to approxi-
+mately 13 kJ per mole of CO2 captured, with costs ranging from $14
+to $100 per metric ton of CO2 captured. Industrial facilities have the
+potential to demonstrate CCS technology at about one fifth of power
+plant's capture costs, once again underscoring industrial process
+CO2’s role in assisting the implementation of CCS technology.
+
+3.4. Top CO2 emitters from the industrial sector
+
+PMajor industrial emitters of CO2 are summarized in Figs. 3 and 4
+according to CO2 purities, total emissions (MMT per annum) and
+number of U.S. facilities reporting to the EPA GHGRP. These emission
+sources remain promising targets for capture uptake due to the
+
+Pgreater fraction of CO2 in their corresponding process exhaust
+streams. Here, a thorough analysis of process design is presented,
+with special consideration to process features that would lend to the
+facile accommodation of capture technology. For each industry
+described, a representative facility was chosen to illustrate the allo-
+cation of CO2 emissions on-site. These base cases were chosen to be
+the largest emitters reported in the EPA GHGRP. Emissions at other
+facilities will vary.
+
+P3.4.1. Petroleum refining
+
+PThe U.S. is the world's largest refiner of crude oil. In 2012, around
+144 U.S. refineries produced 803 MMT of petroleum products, net-
+ting around 22% of global production's 3580 MMT of petroleum
+products [42]. Around 170 MMT CO2 were emitted by the U.S refin-
+ing industry in 2014, with 53.6 MMT CO2 of these emissions from
+process reactions only [43]. In 2008, roughly 818 MMT CO2 were
+emitted globally [21].
+
+PPetroleum refineries produce various fuels and chemical feed-
+stock through the distillation of crude oil followed by reforming and
+cracking. While there are many sources of GHG emissions on site, as
+seen in Fig. 5, the majority originate from combustion of fuels, and
+almost all (over 97%) of the emissions are CO2 [21]. The four largest
+sources of CO2 in a refinery are process heaters, utilities, fluid cata-
+lytic cracker (FCC) and hydrogen production, though a given site
+may not have all of these units [21].
+
+P3.4.1.1. Process heaters.
+PBetween 30(cid:1)60% of total refinery emissions
+come from process heaters. Major units include steam reforming,
+steam cracking, catalytic reforming and the distillation column
+preheater. Steam reforming and steam cracking will be explored fur-
+ther in the sections on hydrogen production and ethylene produc-
+tion. In general, the CO2 content in the flue gases range from 8(cid:1)10%.
+The CO2 content depends on which fuels are being combusted. In the
+U.S., refineries mainly use natural gas and refinery fuel gas. Refinery
+
+Fig. 3. Summary of CO2 purities of major U.S. industrial emitters of CO2. *BF = blast furnace, BOF = basic oxygen furnace, PSA = pressure swing absorption.
+
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+
+152
+
+P. Bains et al. / Progress in Energy and Combustion Science 63 (2017) 146(cid:1)172
+
+Fig. 4. Summary of major U.S. industrial emitters of CO2. Number in parentheses indicates the number of U.S. facilities reporting to the EPA GHGRP. *Petrochemicals includes eth-
+ylene production (28.1 (cid:1) 33.7 MMT) and ethylene oxide production (3.5 (cid:1) 3.7 MMT).
+
+Pfuel gas (RFG) is roughly composed of 30% H2, 35% C1, and 35% C2 by
+volume. CO2-emitting combustion reactions could then look like:
+CH4 þ 2O2 ! CO2 þ 2H2O
+
+ð3Þ
+
+C2H6 þ 3:5O2 ! 2CO2 þ 3H2O
+
+ð4Þ
+
+PThe exhaust temperature will also depend on the process type,
+though the convection section of fired heaters can significantly
+reduce the flue gas temperature [44]. For distillation, exit tempera-
+tures are around 400 °C; for catalytic reformers, 495(cid:1)525 °C; for
+steam methane reformers, 180(cid:1)200 °C at the stack; and for steam
+
+Fig. 5. Breakdown of GHG emissions for petroleum refineries across the U.S. Over 97% of the GHG emissions are CO2.
+
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+
+P. Bains et al. / Progress in Energy and Combustion Science 63 (2017) 146(cid:1)172
+
+153
+
+Fig. 6. Process diagram for petroleum refining. 2014 emissions numbers provided by U.S. GHGRP for ExxonMobil Bt Site in Baytown, TX.
+
+Pcracking, 800(cid:1)850 °C at the unit's exit [45]. At the exhaust stack,
+temperatures range from 160(cid:1)200 °C for all process heaters [45,46].
+
+P3.4.1.2. Utilities (Electricity and steam generation).
+POn-site electricity
+and steam generation can account for 20(cid:1)50% of refinery CO2 emis-
+sions [21]. Coupled electricity and steam generation is called com-
+bined heat and power (CHP). In refineries, RFG and supplemental
+natural gas are combusted in air and sent to a gas turbine to create
+electricity. The exhaust gases then pass through heat exchangers to
+produce steam [47]. The exhaust gas contains approximately 4% CO2
+by volume and exits between 160 °C and 190 °C [21,46].
+
+P3.4.1.3. Fluid catalytic cracker (FCC).
+PA fluid catalytic Cracker (FCC)
+can account for 20(cid:1)50% of a refineries CO2 emissions. The FCC uses
+heat, pressure and catalysts to break down large hydrocarbons into
+more valuable products. During the reaction, carbon is deposited on
+the catalyst, deactivating it. The catalyst is sent to regenerator for
+decoking. The catalyst coke is combusted in air, producing CO and
+CO2, the CO in the flue gas stream is converted to CO2 in a CO boiler,
+and the boiler captures the heat released for steam production [21].
+The stream exits the boiler at 160(cid:1)190 °C and contains 10(cid:1)20% CO2
+by volume [46,21].
+
+P3.4.1.4. Hydrogen production.
+PHydrogen production can account for
+5(cid:1)20% of total refinery CO2 emissions [21]. Roughly one third of all
+U.S. refineries have on-site hydrogen production [29]. The relevant
+process step is the purification of hydrogen. Hydrogen purification
+may be completed either using CO2 scrubbing or pressure swing
+absorption (PSA), though PSA has been the dominant technology
+since the mid-1980s [48]. When CO2 scrubbing is used, an absorp-
+tion column using an amine solution is used to specifically remove
+CO2 from the product stream. The CO2 is then released from the
+stripping column at high purities (»99%) and temperatures between
+100(cid:1)120 °C [49,50]. PSA targets hydrogen specifically, with all other
+including CO2, exiting as off-gas. Subsequently, PSA
+impurities,
+results in a lower concentration of CO2 in the gas stream, between
+
+P30(cid:1)45% [51,18,16]. The gas stream exits at a temperature of 20(cid:1)40 °
+C [49]. Refineries are more likely to employ PSA units due to greater
+impurities in the feedstock.
+
+PThe CO2 producing reaction occurs in two steps: steam methane
+reformation (SMR) and water gas shift (WGS), as shown in Eqs. (5)
+and (6), respectively.
+CH4 þ H2O ! 3H2 þ CO
+
+ð5Þ
+
+CO þ H2O ! CO2 þ H2
+
+ð6Þ
+PFig. 6 depicts a potential process configuration for petroleum
+refining, based on ExxonMobil's Bt Site in Baytown, TX. Table 4 dis-
+plays the CO2 emissions from the different various processes of the
+plant. Process heating accounts for the greater number of emissions,
+though the FCC is the largest single emitter of CO2. There was no
+hydrogen production associated with this site in particular, though
+there is a petrochemical plant located at the site. In this specific case
+the process heating emissions were taken to be the stationary com-
+bustion emissions listed for this facility under the U.S. GHGRP
+reporting. These emissions likely include steam generation, though
+data was not available to confirm this, and includes stationary com-
+bustion that occurs for the petrochemical plant. The combination of
+stationary combustion emissions skews the breakdown of emissions
+at the base case facility, though it is likely that process heating would
+
+Table 4
+Breakdown of 2014 CO2 emissions from ExxonMobil's petroleum refinery in Bay-
+town, TX [38].
+
+CO2 source
+
+CO2 emissions (metric tons)
+
+% of facility emissions
+
+Process heaters
+Fluid catalytic cracking
+Sulfur recovery
+Flares
+Catalytic reforming
+Process vents
+TOTAL
+
+8359,658
+1849,208
+140,722
+52,751
+2046
+1693
+10,406,077
+
+80.30%
+17.80%
+1.40%
+0.51%
+0.02%
+0.02%
+100%
+
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+
+154
+
+P. Bains et al. / Progress in Energy and Combustion Science 63 (2017) 146(cid:1)172
+
+Pproduce the majority of emissions even with adjusted numbers. As
+stated previously, petroleum refineries located in the U.S. mainly
+burn natural gas and RFG in process heaters. RFG consist of light C1
+to C4 hydrocarbons, H2, H2S and other light top gases from distilla-
+tion columns that are not condensed in the overhead condenser
+[29].
+
+PPetroleum refineries are distinctive among the CO2-intensive
+industries in that there are numerous CO2-producing units. The dis-
+perse nature of these units can make it difficult to implement CCS
+without a common stack. For example, instead of trying to place CC
+devices at each process heater exhaust stack, it may be best to focus
+on the largest single CO2 emitters. Additionally, each refinery is
+uniquely configured to produce a distinctive portfolio of products,
+which depend on the petroleum feedstock used; therefore, a CC
+design for one refinery will not likely fit another refinery.
+
+PGiven the variety of CO2 emitting units in refineries, there is also
+a wide range of minimum work for separation and capture costs.
+The minimum work for separation ranges from 7.4 to 15.5 kJ/mol
+CO2 captured excluding hydrogen production, and less than 4.0 kJ/
+mol CO2 captured for hydrogen. The Sherwood analysis yielded a
+capture cost ranging from $35 to $100 per MT of CO2 captured,
+excluding H2 production. Hydrogen production capture costs range
+between $14 and $28 per MT of CO2 captured; oil refineries would
+likely incur the higher end of the H2 production capture cost range
+due to the prevalence of PSA purification, which results in a more
+dilute stream of CO2.
+
+P3.4.2. Ethylene production
+
+PThe U.S. ranks as the top producer of ethylene (C2H4), a feedstock
+widely used to produce chemicals, such as polyethylene, ethylene
+oxide and ethylene chloride [52]. In 2013, the U.S. produced 28.1
+MMT of ethylene, capturing about 19.7% of world production [53].
+Many ethylene production sites are co-located at petroleum refiner-
+ies, since petroleum products serve as a feedstock for ethylene.
+Around 18.8 MMT CO2 were emitted by U.S. ethylene production in
+2014 [38].
+
+P3.4.2.1. Process overview.
+PFractional distillation is performed on nat-
+ural gas and other feedstocks to obtain ethane (C2H6), propane
+(C3H8) and/or butane (C4H10). The hydrocarbon feed (e.g., ethane
+and propane) each undergo steam cracking, also known as pyrolysis,
+at high temperatures. Steam crackers consist of furnaces which heat
+the feedstock in tubes running through the combustion chamber. At
+high temperatures, hydrocarbon chains break down, forming dou-
+ble-bonded and lighter single-bonded hydrocarbons (Eqs. (7) and
+(8)). For an ethane and propane mixture, the temperatures range
+between 650 and 815 °C, while an ethane-only feed is cracked at
+800(cid:1)850 °C [49].
+C2H6 ! C2H4 þ H2
+
+ð7Þ
+
+C3H8 ! C2H4 þ CH4
+
+ð8Þ
+PThe cracked gaseous products, ranging from hydrogen to heavy
+fuel oil are immediately quenched at 400 °C in a heat exchanger to
+prevent the reactions from breaking down all hydrocarbons to meth-
+ane, CH4 [54,55]. Further water injection into the product stream
+cools it down to 40(cid:1)50 °C. The product stream is compressed and
+fractionated to yield purer streams of ethylene, propylene, butadi-
+ene, etc. The liquid stream leaves at the bottom of the column and
+undergoes further processing and distillation. The ethane and pro-
+pane streams are recycled back to the steam cracking unit. For
+heavier feedstock such as naptha, an additional separation step is
+required (e.g., cryogenic unit) to isolate the ethylene [56]. The light-
+est off-gases (CH4, H2 and by-product propane, ethane) are com-
+busted with natural gas to provide heat for the steam cracker or
+
+Pother process heaters. The flue gas is then vented, releasing CO2 into
+the atmosphere [15].
+
+PThe light method of ethylene production prevails in the U.S.,
+using natural gas, ethane, propane and butane as feedstock rather
+than heavier hydrocarbons like naphtha. The latter three feedstocks
+are known as liquefied petroleum gas (LPG), and comprised around
+90% of fresh feed in the U.S. in 2013. Of this, over 65% consisted of
+ethane [15,56(cid:1)58].
+
+PFig. 7 shows a process diagram for ethylene production, and
+includes emissions numbers from the Westlake Petrochemical LP in
+Sulphur, LA. The breakdown of CO2 emissions at this site is given in
+Table 5. For the base case, there are ethylene production units and it
+was assumed that all furnaces labeled with a reference to one of the
+production units was part of the steam cracker for that production
+unit. The facility is required by the U.S. GHGRP to report the fraction
+of CO2 emitted that comes from burning ethylene off-gas. Overall,
+about 12.4% of combustion emissions from the steam crackers were
+attributed to ethylene off-gas. While ethylene off-gas only contrib-
+utes 5.5% to total facility CO2 emissions, the steam crackers account
+for 44.1% of total facility emissions. Flares associated with each of
+the ethylene production units emit 49.3% of total facility CO2.
+
+PCombustion of the off-gas and natural gas and other fossil fuels
+leads to CO2 emissions. Steam cracking consumes the greatest
+amount of energy at refineries and petrochemical plants, A negligi-
+ble amount of CO2 is emitted during decoking of the furnace, in
+which steam or a steam and air mixture react with carbon to pro-
+duce CO and CO2 [59]. The concentration of CO2 in the flue gases
+ranges from 7(cid:1)12% CO2, though it depends on the ratio of off-gas
+(CH4, H2) to primary fuel and the exact composition of the off-gas
+[7]. The flue gas temperature ranges between 160 °C to 215 °C [46].
+
+PFarla et al. estimated that the cost of capturing and transporting
+(by train) CO2 from a 10% CO2 flue gas stream is $45 per metric ton
+of CO2 avoided [15]. Given that costs for avoided emissions are
+higher than costs for captured CO2, and transportation was included
+in Farla et al.’s analysis, the Sherwood cost estimations are slightly
+higher at $46(cid:1)$62 per metric ton of CO2 captured.
+
+PFinally, there are a couple of CC projects involving ethylene pro-
+duction. Mitsui Chemicals in Japan are capturing the CO2 and using
+it to make methanol while at least one ethylene plant is capturing
+their CO2 and sending it for sequestration in Denmark's, Sweden's,
+and Norway's Kattegat(cid:1)Skagerrak project [60,22,61].
+
+P3.4.3. Cement production
+
+PCement production is one of the largest CO2-emitting industries
+globally, with the U.S. contributing 64.3 MMT of CO2 in 2014 [38]. In
+2014, the U.S. produced 82.6 MMT of cement while the world pro-
+duced a total of 4180 MMT. China accounts for the majority of pro-
+duction, claiming 59.6% of global cement production. The runner-up,
+India, only captured 6.6% of the production [62]. Although the U.S.
+only makes up 1.9% of world production, any technology improve-
+ments that occur from implementing CC in the U.S. can be extended
+to countries like China.
+
+P3.4.3.1. Process overview.
+PCement is produced from calcium carbon-
+ate (CaCO3), also known as limestone. Raw materials such as lime-
+stone and the oxides of aluminum, silicon and iron are first grinded
+and then travel to the preheater and the precalciner, where it is pre-
+heated using flue gas from the rotary kiln. The limestone undergoes
+its initial calcination, or reduction, in the precalciner, where addi-
+tional heat is provided via fuel combustion (Eq. (9)). After these pre-
+liminary processes, the limestone and other components enter the
+rotary kiln to undergo further reduction into lime (CaO). Pulverized
+coal or another fuel is blown into the kiln and combusted, providing
+the heat required for the reactions. Different chemical reactions
+occur within the temperature zones in the kiln. The first zone dehy-
+drates the incoming material at 20(cid:1)900 °C. Calcination occurs at
+
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+
+P. Bains et al. / Progress in Energy and Combustion Science 63 (2017) 146(cid:1)172
+
+155
+
+Fig. 7. Process diagram for an ethylene production plant. Emission numbers taken from U.S. GHGRP for Westlake Petrochemicals LP in Sulphur, LA for 2014.
+
+Ptemperatures between 850 °C and 950 °C. Clinkerization occurs at
+the highest temperatures in the kiln, between 1200 °C and 1450 °C
+[23].
+CaCO3 þ heat ! CaO þ CO2
+
+ð9Þ
+PThe clinker pellets enter another grinder or mill where it is
+
+grinded and mixed with gypsum, forming cement [63].
+
+PThe major emitter of CO2 in cement production is the rotary kiln.
+In the kiln, CO2 is emitted from both fuel combustion (usually coal)
+and limestone calcination. In the U.S., coal is the primary fuel used in
+the kiln, accounting for 59% of the heat consumed. Petroleum coke
+and waste fuels make up the remainder of heat input [62]. Cement
+production illustrates how process and combustion emissions can
+be combined in a single unit. Just over half of the CO2 originates for
+the calcination, while just under half of the emissions originate from
+the combustion of fuel [64,65].
+
+PThe kiln flue gas takes one of several paths. The flue gas may exit
+at the end of the kiln, where it travels through an air quenching
+cooler and an electrostatic precipitator before being vented, or it
+may flow through the precalciner and preheater, where further CO2
+is added during calcination of incoming limestone and the fuel
+
+Table 5
+CO2 emissions breakdown for the base case ethylene production facility, Westlake
+Petrochemicals LP in Sulphur, LA. Numbers taken from U.S. GHGRP for 2014.
+
+Unit
+
+CO2 emissions (metric ton)
+
+Percent of total CO2
+
+Steam crackers
+Off-gas combustion
+Process heaters (boilers)
+Flares
+Associated with ethylene pro-
+
+870,607.60
+107,669.40
+124,551.50
+977,318.50
+973,103.10
+
+44.14%
+5.46%
+6.31%
+49.55%
+49.33%
+
+duction unit
+
+TOTAL
+
+1972,477.60
+
+100.00%
+
+Pcombustion in the precalciner. A stream of flue gas and air may also
+be siphoned off of the air quencher, bypass the kiln and flow directly
+to the preheater as combustion air. Fig. 8 shows that the majority of
+emissions come from the preheater exhaust stack rather than the air
+quencher stack after the rotary kiln. The flue gas then continues to
+an electrostatic precipitator before being vented. The CO2 content in
+the flue gas ranges from 14% to 33% CO2, and exits at a temperature
+between 150 °C and 350 °C. [64(cid:1)66]. The higher CO2 content is likely
+associated with the additional calcination CO2 in the precalciner and
+preheater.
+
+PThe vast majority of U.S. cement plants, about 90%, use the more
+energy efficient “dry process” [62]. The dry process uses less water
+during the raw material grinding and crushing, requiring less heat
+input for the dehydration stage.
+
+PThe U.S. is home to one of the first cement plants with CC tech-
+nology. Skyonic has retrofitted a cement plant in Texas with CC. The
+CO2 is then converted into baking soda, creating an additional reve-
+nue stream [67]. Other projects worldwide are also underway(cid:1)at
+the European Cement Research Academy (ECRA), they are using oxy-
+fuel configurations to capture the CO2 before the heat generation,
+and in Norway and Taiwan, post-combustion CC projects are under-
+way [23].
+
+PFinally, the International Energy Agency's Greenhouse Gas pro-
+gram (IEA GHG) estimated post-combustion captures costs of $161
+per metric ton of CO2 avoided [23]. Their configuration included a
+CHP plant to generate steam for regenerating the amine solution
+used to capture the CO2. The Sherwood analysis yielded a capture
+cost of $26 - $42 per metric ton of CO2 captured. However, as dis-
+cussed earlier, chemical
+looping produces carbon capture costs
+between $20 and $45 per metric ton of CO2. Once again, the technol-
+ogy agnostic and Nth-of-a-kind qualities of the Sherwood analysis
+can produce estimates that may be lower than those from initial
+technology options.
+
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+
+156
+
+P. Bains et al. / Progress in Energy and Combustion Science 63 (2017) 146(cid:1)172
+
+Fig. 8. Process diagram for cement production. 2014 emission numbers taken from U.S. GHGRP for Holcim Inc. Genevieve Plant in Bloomsdale, MO.
+
+P3.4.4. Iron and steel production
+
+PThe U.S. is the fourth largest producer of iron and steel in the
+world at 5.3% of global production in 2014. China is the largest pro-
+ducer, capturing 49.4% of the 1665.2 MMT global production, fol-
+lowed by the EU at 10.1% and Japan at 6.6% [68]. Within iron and
+steelmaking, iron production accounts for 70-80% of CO2 emissions
+[26]. The U.S. emitted 55.4 MMT CO2 from iron and steel production
+in 2014.
+
+PThere are several routes for iron and steelmaking. Primary steel
+production uses mostly iron to produce steel, while secondary steel
+production uses mostly recycled scrap steel. Within primary steel
+production, there are two major pathways: the blast furnace with
+basic oxygen furnace (BF/BOF) and the direct-reduced iron with the
+electric arc furnace (DRI/EAF). The CO2 is already captured at DRI/
+EAF plants to improve the quality of the recycled reduction gas [27].
+Secondary steel production always uses an electric arc furnace
+(EAF). Within the U.S., about 40% of iron and steel industry uses the
+BF/BOF process, while the remaining 60% uses the secondary EAF
+process. Since the DRI/EAF process is not used in the U.S., it will not
+be discussed here. Furthermore, the secondary EAF process emits
+much less CO2 than the primary BOF process due to reduced energy
+requirements by using recycled scrap steel instead of manufacturing
+iron. Additionally, the recycled steel enters the process already
+reduced, so the emissions-intensive iron-making stage is bypassed
+and between 70(cid:1)80% of emissions are avoided [26]. While EAF con-
+sume large amounts of electrical energy, fossil fuel combustion may
+be off-set using alternative electricity generation sources.
+
+PIn the case of CCS, the blast furnace in the BF/BOF process is the
+largest single emitter of CO2 in the iron and steelmaking process;
+therefore, the BF/BOF process will be the focus of this section.
+
+P3.4.4.1. Process overview(cid:1)primary BF/BOF.
+PPrimary iron and steel-
+making facilities utilizing the blast furnace and basic oxygen furnace
+pathway are known as “integrated steel mills”. First, coke is pro-
+duced in a coke oven. There are two coke production configurations:
+by-product and nonrecovery. Coal is carbonized in an almost oxy-
+gen-free environment at high temperatures to create coke. Coke pro-
+duction allows the carbon content to become concentrated [69]. In
+by-product coke ovens, the off-gases are collected from the top of
+
+Pthe oven. The tar, ammonia and light oil are removed, leaving light
+hydrocarbons such as methane and hydrogen. This cleaned coke
+oven gas (COG) can be combusted for heating the coke oven or other
+processes or simply flared. In nonrecovery coke ovens, the off-gases
+are not sent to a separation process; instead, the COG gas is burned
+as-is, with heat recovered for steam or electricity generation [70].
+
+PSinter production occurs in a separate unit as coke is produced. In
+sintering, iron ore fines are heated to melt into pellets for the blast
+furnace. Coke breeze (fine particles of coke) are used as the fuel
+source [69]. Next, iron ore, sintered iron ore, limestone flux and coke
+enter the blast furnace. The blast furnace transforms the iron ore
+into pig iron, the precursor to steel. Hot air is blasted from the bot-
+tom of the furnace, combusting with the coke to create carbon mon-
+oxide (CO). The CO reacts with the iron ore to remove the oxygen,
+reducing it to iron. The overall reduction reactions as well as individ-
+ual reactions are shown in Fig. 9 [71]. The blast furnace is another
+example of process and combustion emissions combined into a sin-
+gle unit. The blast furnace gas (BFG) is the collected and combusted
+to Cowper heaters to preheat the incoming blast air before being
+vented.
+
+PThe molten iron, also known as pig iron, is siphoned out of the
+bottom of the BF and sent to the basic oxygen furnace (BOF) for
+steelmaking. In the BOF, pig iron and steel scraps react with pure
+oxygen to remove the remaining carbon and other impurities [72].
+Around 80% of the BOF input material is pig iron, with scrap steel
+making up the balance. The reduction reactions create mostly CO
+with some CO2; initially, the BOF gas composition is 16% CO2 and
+70% CO. The CO is combusted at the top of the furnace before being
+vented, increasing the CO2 content to up to 42% [15]. The heat from
+combustion can be used in a HRSG, or it can simply be cooled before
+being cleaned. If needed, an extra decarburization step may occur to
+further purify the steel and remove carbon.
+
+P3.4.4.2. Process overview(cid:1)secondary EAF.
+PSecondary EAF facilities are
+known as “mini-mills”. The majority of their feedstock is recycled
+steel in the form of scraps, while up to 10% of the feedstock can be
+pig iron. The scrap steel is sent to an electric arc furnace (EAF), which
+charges the metal and creates an electrical arc which melts the steel,
+removing carbon and impurities. Alloying reagents and slag material
+
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+
+P. Bains et al. / Progress in Energy and Combustion Science 63 (2017) 146(cid:1)172
+
+157
+
+Fig. 9. Blast furnace diagram and associated reactions.
+
+Pare included in the EAF for further refining [72]. Since coke produc-
+tion, sintering and iron ore reduction are avoided, and fuels are not
+necessarily combusted on-site for electricity needs, much less CO2 is
+emitted at mini-mills.
+
+Pand capture cost than if only natural gas had been used. The theoret-
+ical minimum work to capture the CO2 from the blast furnace is
+5.3(cid:1)6.4 kJ per mole CO2 captured, while the Sherwood capture cost
+is $31(cid:1)$35 per MT of CO2 captured.
+
+P3.4.4.3. Process conditions(cid:1)BF/BOF.
+PCarbon dioxide is emitted from
+the combustion of coke breeze in the sintering plant, the combustion
+of coke oven gas in the coke oven, the blast furnace, and the basic
+oxygen furnace, in addition to other process heating and flaring. The
+CO2 concentrations are as follows: 5(cid:1)10% in the sintering plant
+exhaust gas, 25% in the coke oven exhaust, 20(cid:1)27% from the blast
+furnace (latter concentration from combustion of BFG), and 16(cid:1)42%
+from the BOF (latter concentration from combustion of BOF gas).
+Although exact exhaust temperatures were not found for coke oven
+or sintering plants, it is reasonable to assume exhaust from all four
+processes have temperatures around 100 °C, as most streams are
+cleaned and cooled before being vented [25,27]. All exhaust streams
+are at 1 bar.
+
+PAs mentioned previously and confirmed by the emissions break-
+down for the iron and steel base case (Fig. 10), the blast furnace is
+the greatest single source of CO2 at iron and steel plants. Though
+process heaters combined account for 59% of the base case's emis-
+sions (Fig. 11), they are dispersed throughout the plant without a
+common stack, making CC difficult. In the blast furnace, it is impor-
+tant to note once more that both process and combustion CO2 are
+combined into one vessel. Although it is unclear how much of the
+CO2 emitted from the blast furnace are process versus combusted,
+determining a way to separate the combustion from the reduction
+reactions could lead to a purer stream of CO2 from the blast furnace
+and reduced cost for CO2 capture.
+
+PTable 6 shows the breakdown of the CO2 emissions by fuel at the
+base case plant. BFG accounts for 78% of the CO2 emissions from
+combustion, while natural gas (primary fuel) only accounts for 17%.
+The combustion of BFG produces CO2 concentrations at 20(cid:1)27%,
+higher than the typical natural gas CO2 concentration of 3(cid:1)5% for
+gas turbines or 7(cid:1)10% for boilers, resulting in lower minimum work
+
+P3.4.5. Ethylene oxide production
+
+PThe U.S. is one of the world's largest producer of ethylene oxide
+(EO), along with China and Saudi Arabia. The U.S. alone is responsible
+for approximately 15% of global production in 2013 [73]. [74] Like
+ethylene, EO is widely used in the chemical industry, and is often
+produced at petrochemical plants located at or near refineries. CO2
+emissions from EO production numbered at 1.3 MMT CO2 in 2014;
+while this is small compared to other industries, the purity of EO's
+process streams still make it an attractive option for carbon capture
+[73].
+
+PThere are two types of EO production pathways: air oxidation or
+direct oxygen oxidation. In both cases, ethylene is oxidized into eth-
+ylene oxide. The majority of U.S. production uses the direct oxidation
+pathway [75]. Both pathways are described in this section.
+
+P3.4.5.1. Process overview(cid:1)air oxidation.
+PEthylene, the feedstock for
+EO, and air enter a reactor with a silver catalyst at a temperature
+between 200 °C to 300 °C and pressure between 10 to 30 bar and
+undergoes oxidation. The reactor product stream flows to the pri-
+mary absorber, where water adsorbs the EO, and the dissolved EO
+stream travels to the desorber unit, while a portion of the overhead
+stream is sent back to the reactor as recycle. The remaining overhead
+gases pass through another coupled secondary, or purge, reactor and
+EO water absorber. Nitrogen (N2) and CO2 are vented from the purge
+absorber, resulting in a 30% CO2 content stream. The EO then enters
+a desorption unit to recycle the water, and finally enters a stripper
+distillation column to remove any remaining N2, CO2, and other
+impurities. Due to the N2, the CO2 concentration is once again
+diluted to 30% by volume in the exit stream [76]. The purified EO
+stream continues to further processing to create ethylene glycol and
+
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+
+158
+
+P. Bains et al. / Progress in Energy and Combustion Science 63 (2017) 146(cid:1)172
+
+Fig. 10. Process diagram for blast furnace and basic oxygen furnace primary iron and steel production. 2014 emission numbers taken from U.S. GHGRP for U.S. Steel Corps plant in
+Gary, IN.
+
+Pother products [17]. Fig. 12 provides a pictorial representation of the
+air oxidation pathway.
+
+PIn direct oxidation
+P3.4.5.2. Process overview(cid:1)direct oxygen oxidation.
+via near-pure oxygen, ethylene and oxygen similarly enter a reactor
+with silver catalyst. The reaction temperature and pressure are
+slightly different than in the air oxidation pathway; temperatures
+range from 200 °C to 300 °C, with pressures between 10 to 30 bar
+[18]. The reactor product stream enters a primary absorber column,
+where once again water physically adsorbs EO. The overhead gases,
+including CO2, enter a CO2-specific absorber column using the hot
+potassium carbonate process (HPCP). The potassium carbonate
+absorbs the CO2, and travels to the desorption column to recycle the
+absorbent and release the CO2, and an almost pure stream (»99%) of
+CO2 is vented.
+
+PThe EO-rich product stream, dissolved in water, enters a desorp-
+tion unit for regeneration. The EO stream then heads to the final
+
+Ppurification step, the stripper unit, where the stripper removes any
+remaining light inert gases such as CO2, though only a small amount
+is released. The EO stream continues on for further processing [76].
+
+PFig. 13 shows the process diagram for ethylene oxide production
+for the Equistar Chemical plant in Pasadena, TX, where over 95% of
+on-site emissions come from the purification of ethylene oxide.
+
+P3.4.5.3. Process conditions.
+PIn the air oxidation pathway, CO2 is emit-
+ted from a secondary reactor and the stripper column at a concentra-
+tion of 30%. The oxygen oxidation pathway releases CO2 from the
+CO2-desportion unit and the stripper, resulting in »99% purity CO2
+[17,15]. In all cases, the exit CO2 stream has a temperature between
+100 °C to 120 °C after chemisorption [49].
+
+PEO production and the following sections illustrate high purity
+sources of CO2. CO2 capture is actually already built into the EO
+industry through the purification steps. The only steps needed for an
+almost pure stream of CO2 is dehydration and compression. EO
+
+Fig. 11. Breakdown of 2014 CO2 emissions from the base case facility, U.S. Steel Corps at Gary, IN.
+
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+
+P. Bains et al. / Progress in Energy and Combustion Science 63 (2017) 146(cid:1)172
+
+159
+
+Table 6
+Breakdown of 2014 CO2 emissions by fuel type at the U.S. Steel
+Corps iron and steel plant in Gary, IN.
+
+Fuel type
+
+Emissions (MT CO2)
+
+% of Total
+
+Blast furnace gas
+Coke oven gas
+Natural gas
+Residual fuel oil no. 6
+TOTAL
+
+6677,544.70
+402,759.00
+1455,276.70
+17,763.00
+8553,343.40
+
+78.07%
+4.71%
+17.01%
+0.21%
+100.00%
+
+Pproduction is an excellent candidate for implement CCS technology,
+since direct oxygen oxidation is prevalent in the U.S. and results in a
+low-cost opportunity.
+
+PFarla et al. estimated that CO2 capture from EO production would
+only cost $9 per metric ton of CO2 avoided in 1995, which would
+translate to about $14 in 2014 dollars [15]. The Sherwood analysis
+estimated costs to be between $14 and $28 per metric ton of CO2
+captured. Since CO2 avoided costs are generally higher than its corre-
+sponding CO2 captured costs, Farla's cost estimate is quite a bit lower
+than the Sherwood estimate.
+
+P3.4.6. Hydrogen production
+
+PIn 2008, the U.S. produced 10(cid:1)11 MMT of hydrogen (H2), captur-
+ing between 25 and 27% of global production. The majority of H2
+production is for captive use in the chemical and refinery industries,
+indicating that H2 production occurs at the same site as or very close
+to other major sources of CO2. “Captive” use refers to H2 produced
+and consumed on-site, while “merchant” H2 is produced on-site and
+sold to other companies. Furthermore, H2 production may be “on-
+purpose” or produced as a “byproduct” of another process. On-pur-
+pose merchant production accounted for 15.3% of 2006 production,
+while on-purpose captive accounted for 48.7% of production.
+Byproduct production accounted for around 36% of total U.S. produc-
+tion in 2006. The majority of byproduct H2 come from catalytic
+reforming at petroleum refineries and chlorine-alkali production,
+
+Pwhich do not emit process CO2 [77]. Approximately 60 MMT of CO2
+were emitted from H2 production in 2008, with over 70% of emission
+coming from on-purpose captive applications such as petroleum
+refineries and ammonia plants. Merchant H2 outside of these indus-
+tries accounted for almost all of the remaining CO2 (Table 7). The U.
+S. GHGRP reported 42.5 MMT CO2 from H2 production in 2014,
+though these emissions exclude captive H2 production in the ammo-
+nia industry. The U.S. GHGRP includes emissions from refinery H2
+production within the H2 industry tally.
+
+PIn the U.S., around 95% of H2 production uses natural gas reform-
+ing, also called steam methane reforming (SMR); this section will
+focus on SMR as the main production process [78]. Finally, although
+an increasing amount of H2 production is purified using PSA rather
+than CO2 scrubbing with an amine solution, both processes will be
+discussed.
+
+PNatural gas is the feedstock of H2 produc-
+P3.4.6.1. Process overview.
+tion using the steam methane reformation (SMR) technique. Before
+entering the reactor, the natural gas undergoes hydrodesulphuriza-
+tion to remove any H2S that could poison the catalysts in the
+reformer [79]. The natural gas then enters the SMR unit, where it
+reacts with steam at high temperatures (700 °C(cid:1)1000 °C) at pres-
+sures of 3(cid:1)25 bar [78]. At this point, CO2 is produced through the
+combustion of methane and through the SMR reaction (Eqs. (10) and
+(11)). However, unlike in the cement rotary kiln or the iron blast fur-
+nace, the combustion and process reactions are separate. The com-
+bustion occurs in the furnace, while the reaction takes place in
+reactor within the SMR furnace (Fig. 14). The combustion flue gases
+contain CO2 concentrations around 7(cid:1)10%, and exit at temperatures
+between 160 °C and 200 °C [7]. After the SMR reactor, the CO2 con-
+centration is around 7(cid:1)12% by volume, while H2 makes up 69(cid:1)78%
+[49].
+CH4 þ H2O þ heat ! CO þ 3H2
+
+ð10Þ
+
+CO þ H2O ! CO2 þ H2 þ heat
+
+ð11Þ
+
+Fig. 12. Process diagram for ethylene oxide air oxidation pathway.
+
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+
+160
+
+P. Bains et al. / Progress in Energy and Combustion Science 63 (2017) 146(cid:1)172
+
+Fig. 13. Process diagram of ethylene oxide production using the direct oxygen oxidation pathway. 2014 emission numbers are taken from the U.S. GHGRP for Equistar Chemicals
+Limited Partnership Bayport Plant in Pasadena, TX. Note that emissions are in metric tons of CO2.
+
+Pat a temperature between 100 °C and 120 °C [49]. In both cases, car-
+bon capture systems would be placed after the H2 purification step.
+
+PDue to the range in CO2 purity in target streams, the Sherwood
+analysis cost for capture ranges from $14 per MT of CO2 captured for
+high purity to $28 per MT of CO2 captured for lower purities. The lit-
+erature estimates a cost of $5 to $70 per MT of CO2 net captured,
+which is equivalent to CO2 avoided; the extremes are quite a bit
+lower and higher than the Sherwood costs [82].
+
+PWhile PSA is becoming more prevalent in the H2 production
+industry, a simple way to promote CCS is to encourage new facilities
+to use the CO2 scrubbing purification method instead. The PSA train
+could also be expanded to include CO2 removal. The hydrogen pro-
+duction industry may also prove useful in providing experience for
+pre-combustion CC technology, as both require SMR and WGS units
+to produce H2 as fuel while capturing CO2.
+
+P3.4.7. Ammonia processing
+
+PThe U.S. produced 11.3 MMT of ammonia (NH3) in 2014, captur-
+ing 6% of the world's 176.3 MMT of production, and trailing China,
+
+PThe H2 product stream then enters a two-stage water-gas shift
+(WGS) converter to produce more H2 and the high temperature
+WGS reactor contains iron oxide catalysts at 300 °C(cid:1)450 °C, while
+the low temperature WGS reactor contains copper and zinc oxide
+catalysts are 200 °C(cid:1)250 °C. The CO2 content in the stream after the
+WGS converter is 15(cid:1)20% by volume, while the H2 content is 77 to
+79% [49,18].
+
+PThe final step in H2 production is purification. Hydrogen may be
+purified in several ways. The most common are by pressure swing
+absorption (PSA) and chemical absorption of CO2 followed by metha-
+nation. Fig. 15 shows the process overview for hydrogen production,
+and displays emission numbers from Air Products Port Arthur Facil-
+ity, where the hydrogen purification produces 74% of the total on-
+site CO2 emission.
+
+PIn PSA, as shown in Fig. 16, H2 is targeted for removal, with all
+remaining impurities being vented. This method is popular amongst
+petroleum refineries, as there are many impurities in the syngas
+stream. The CO2 is diluted by the other gases, resulting in a CO2 con-
+tent between 30 to 45% CO2 [18,16]. The gas is vented at 20 °C to 40 °
+C and 1 bar [50,80]. The H2 stream then undergoes methanation to
+remove any remaining CO2 and CO as CH4.
+
+PWhen CO2 amine scrubbing is used, a much higher purity of CO2
+is released. During desorption, the CO2 exits at 98.5 to 100% [81,18]
+
+Table 7
+Estimated 2008 CO2 emissions from hydrogen production [30]. Production type from
+[77].
+
+Hydrogen
+production type
+
+Business sector
+
+Estimated CO2
+emissions (MMT per
+year)
+
+CO2 breakdown
+
+On-purpose
+merchant
+
+Merchant H2
+
+17
+
+25
+Ammonia plants 18
+
+On-purpose captive Oil refineries
+On-purpose captive
+On-purpose captive Methanol plants None
+None
+Byproduct
+< 1
+60
+
+Chlorine plants
+Other
+TOTAL
+
+(cid:1)
+
+28.3%
+
+41.7%
+30.0%
+0.0%
+0.0%
+< 1%
+100%
+
+Fig. 14. Steam methane reformer unit used in hydrogen production. Process and
+combustion CO2 are produced in separate parts of the unit.
+
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+
+P. Bains et al. / Progress in Energy and Combustion Science 63 (2017) 146(cid:1)172
+
+161
+
+Fig. 15. Process diagram for hydrogen production using a CO2 scrubbing technology. 2014 emission numbers taken from U.S. GHGRP for Air Products Port Arthur Facility in Port
+Arthur, TX.
+
+PRussia and India. China led with 33% of global production [83]. In the
+U.S., around 88% of ammonia went into fertilization production [84].
+About 9.4 MMT of CO2 were released in the U.S. in the same year,
+according to the U.S. GHGRP. The emissions include captive hydro-
+gen production emissions, but do not include CO2 captured for urea
+production.
+
+PHydrogen production and ammonia have many process similari-
+ties. To produce ammonia, hydrogen must first be produced and
+then reacted with nitrogen, usually sourced from air. Two-stage
+steam methane reforming (SMR) is the main ammonia production
+pathway used in the U.S. In 2011, around 92.5% of ammonia was pro-
+duced using natural gas feedstock [85]. Partial oxidation is another
+potential pathway, but will not be discussed further in this section.
+The process CO2, formed during SMR and WGS, is emitted during the
+H2 purification step. However, within the ammonia industry, most
+
+Phydrogen is purified using CO2 amine absorption or HPCP producing
+high purity CO2 streams for carbon capture [86].
+
+P3.4.7.1. Process overview.
+PNatural gas first undergoes desulfurization
+to remove any H2S that can contaminate the catalysts in the reactors.
+The natural gas and steam enter the primary reformer, which produ-
+ces CO and H2 at temperatures of 730 °C (Eq. (10)) [87]. The product
+stream, containing 7(cid:1)12% CO2, 69(cid:1)78% H2 and 9(cid:1)13% CO by vol-
+ume, then enters the secondary reformer. Compressed air is injected
+into the secondary reformer reactor to obtain a 3:1 ratio of H:N
+atoms for ammonia synthesis [88]. Partial oxidation of CH4 also
+occurs, yielding CO, H2, and H2O (Eq. (12)) [15]. After the secondary
+reformation, the product stream contains 7(cid:1)12% CO2, 55(cid:1)57% H2,
+22(cid:1)24% N2, and 12(cid:1)15% CO by volume [49].
+CH4 þ O2 ! CO þ H2 þ H2O
+
+ð12Þ
+
+Fig. 16. Process diagram for hydrogen production using pressure-swing absorption.
+
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+
+162
+
+P. Bains et al. / Progress in Energy and Combustion Science 63 (2017) 146(cid:1)172
+
+PThe product stream then enters a high temperature and lower
+temperature WGS reactor, while the H2 and N2 streams are then
+purified using CO2 scrubbing, as PSA would also remove the N2
+needed for ammonia synthesis. The CO2 absorption may be per-
+formed using an amine solution or potassium carbonate (HPCP).
+CO2 is released at purities of 98.5 to 100% and a temperature
+between 100 °C and 120 °C [49]. The H2 and N2 product stream
+then undergoes methanation to remove any residual CO and CO2
+as CH4 [87].
+
+PThe N2 and H2 are then reacted together to produce ammonia,
+and the ammonia undergoes further separation. If urea is produced
+on-site, the CO2 from the absorber column is sent to reactor so that
+it may react with the ammonia to form urea (NH2CONH2) in a two-
+step reaction (Eqs. (13) and (14)).
+2NH3 þ CO2 ! NH2COONH4
+
+ð13Þ
+
+NH2COONH4 ! H2O þ NH2CONH2
+
+ð14Þ
+PThe two main points of divergence from the hydrogen production
+process described previously are the secondary reformer and the
+CO2-specific removal step using either amine or potassium carbon-
+ate. As with hydrogen production, CO2 is released from two main
+locations: the amine desorption unit and the steam reformer flue
+gas. The amine absorption unit, which contains process CO2, exits at
+purities of 98.5% to 100% CO2 and a temperature between 100 °C and
+120 °C. The flue gas, containing combustion CO2, exits with a CO2
+concentration between 7 and 10% CO2 at a temperature between
+160 °C and 200 °C.
+
+PFig. 17 shows the base case ammonia plant located in Donalds-
+ville, LA. Just under 60% of the 5.32 total MMT CO2 come from the
+CO2 desorption, though some of this CO2 is used for urea production
+and sold to other companies. The combustion CO2 from the reform-
+ers account for around 19% of the CO2 emitted, with the urea boiler
+making up the balance.
+
+PThe high purity CO2 stream results in a Sherwood cost of $14 per
+MT of CO2 captured. Rubin estimated capture costs of $5 to $70 per
+ton of net CO2 captured for ammonia, hydrogen and natural gas
+processing plants [82]. Once again, while these estimates are for
+avoided CO2, the extremes are much lower and higher than the Sher-
+wood estimates.
+
+P3.4.8. Natural gas processing
+
+PThe U.S. is the world leader in natural gas production and subse-
+quently natural gas processing. In 2014, the U.S. produced 20.7% of
+the world's supply [89]. In 2014, 56 MMT CO2 were emitted in the U.
+S. Combustion CO2 from process heaters comprised 65% of total
+emissions, while process emissions from venting and flaring made
+up the balance. Within process emissions, 62% of CO2, or 22% of total
+CO2, came from acid gas removal (AGR). AGR mainly consists of
+removing CO2 from natural gas produced at the well [90,91].
+
+P3.4.8.1. Process overview.
+PNatural gas produced at a wellhead con-
+tains mainly methane (CH4), but also smaller amounts of ethane,
+butane, propane and pentane as well as undesirables such as water,
+H2S, CO2, He and N2 [92]. The acid gases H2S and CO2 “sour” the gas
+mixture; removing these gases “sweetens” the natural gas and con-
+stitutes one part of the cleaning process [18].
+
+PThere are four main natural gas processing steps: oil and conden-
+sate removal, water removal (dehydration), acid gas removal (sweet-
+ening), and separation of natural gas liquids. The oil and condensate
+removal occurs at the wellhead. Condensate, also known as natural
+gasoline, consists of heavier hydrocarbons (C5 and heavier) that are
+liquid at ambient T [92]. The product stream is then dehydrated,
+either at the wellhead or further downstream.
+
+PThe raw natural gas travels from the wellhead to the processing
+plant to undergo AGR. Initial CO2 content in raw natural gas can vary
+from 2% to 70% by volume [18]. In AGR, H2S and CO2 impurities are
+removed to meet natural gas pipeline specifications, usually less
+than 2% CO2 by volume. An amine absorption system or membrane
+separate the H2S and CO2 from the natural gas stream. Over 95% of
+AGR processes use amine absorption [92,93]. The acid gas stream
+then enters a Claus process unit, where the H2S is converted to ele-
+mental sulfur and recovered. A relatively pure stream of CO2
+(96(cid:1)99% by volume) exits the Claus unit. The CO2 stream is either
+incinerated, vented or captured for enhanced oil recovery (EOR)
+[18,94].
+
+PThe final processing step is to separate the natural gas liquids.
+The stream is fractionated into valuable hydrocarbon streams
+including methane, ethane, propane, butane and pentane and
+heavier. Fig. 18 depicts the natural gas processing system. Acid gas
+removal accounted for over 58% of on-site CO2 emissions. The
+
+Fig. 17. Process diagram for ammonia manufacturing. 2014 emission numbers taken from U.S. GHGRP for CF Industries Nitrogen LLC in Donaldsville, LA.
+
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+
+P. Bains et al. / Progress in Energy and Combustion Science 63 (2017) 146(cid:1)172
+
+163
+
+Fig. 18. Process diagram for natural gas processing. 2014 emission numbers were taken from U.S. GHGRP for the Shute Creek Facility near Kemmerer, WY. Total facility CO2 emis-
+sions were 3.02 MMT.
+
+Premaining CO2 comes almost exclusively from stationary combus-
+tion, though a fraction of CO2 is emitted from flaring.
+
+PCarbon dioxide is emitted from process heaters and the AGR unit.
+Carbon capture technology would be best placed after the Claus
+unit, due to a high purity of CO2, between 96(cid:1)99% by volume [18].
+The temperature of the exit stream is between 100 °C and 120 °C at a
+pressure of 1 bar [95(cid:1)97]
+
+PCapturing CO2 at natural gas processing is relatively low cost, as
+the amine system already performs the most energy and economi-
+cally expensive step in CCS. Some natural gas processing sites
+already capture their CO2 for EOR purposes, indicating that experi-
+ence in CC already exists. The Sherwood analysis estimates a cost of
+$14 per MT of CO2 captured, while Rubin once again estimates a cost
+of $5 to $70 per MT of CO2 avoided [82].
+
+P3.4.9. Ethanol production
+
+PThe majority of ethanol is produced in the U.S. and Brazil. In
+2013, the U.S. produced 13,321 millions of gallons of corn-based eth-
+anol, capturing 57% of global production. Brazil produced 6267 mil-
+lions of gallons of sugar cane-based ethanol in the same year [98].
+More than 30% of the U.S. merchant CO2 market is sourced from eth-
+anol plants due to the almost pure stream of CO2 that is released
+during fermentation [99]. In 2014, around 40.1 MMT of CO2 were
+released from fermentation alone (see Table 1 footnotes).
+
+PEthanol may be produced from corn or sugar cane. Since the vast
+majority of U.S. ethanol production uses corn feedstock, the corn
+ethanol process will be the focus of this section [32,100]. Further-
+more, ethanol production may use dry-milling or wet-milling. More
+than 80% of U.S. production uses dry-milling, though both will be
+described [101].
+
+PMilling is the first step in eth-
+P3.4.9.1. Process overview(cid:1)dry-milling.
+anol production. Entire corn kernels are ground into a flour called
+“meal”, keeping all grain components together. Water is added in
+the slurry stage, creating “mash”. Enzymes are added to convert
+starch to simple sugars, and ammonia is added for pH control and
+yeast nutrient. The mash is next sent to a high temperature cooker
+to kill off bacteria. The mash is then cooled before traveling to the
+fermenters, where yeast is introduced. The fermentation step can
+take from 40 to 50 hours. During this, the glucose in the simple sug-
+ars is converted to ethanol and CO2 (Eq. (15)).
+C6H12O6 ! 2CO2 þ 2C2H5OH
+
+ð15Þ
+POnce fermentation is complete, the ethanol is separated from the
+solid grain residue “stillage” in a distillation column. The ethanol is
+then dehydrated to 200 proof using molecular sieves. Finally, a dena-
+turant is added to the ethanol to make it undrinkable. The product is
+stored until shipment [99]. Fig. 19 visualizes the dry-milling process,
+and includes emission numbers from the ADM Corn Processing facil-
+ity in Cedar Rapids, IA.
+
+POn average within the U.S., about 35% of the CO2 emitted from
+ethanol plants comes from combustion, while the remaining 65%
+comes from fermentation. Although biogenic CO2 is not recorded
+under the U.S. GHGRP, ethanol plants nonetheless emit a significant
+amount of CO2 and should be considered candidates for CCS. CCS
+combined with biofuels allow for “carbon negative” fuels, or fuels
+that sequester more CO2 during production than is released upon
+combustion.
+
+P3.4.9.2. Process overview(cid:1)wet-milling.
+PThe main difference between
+wet-milling and dry-milling is the separation of grain components
+in the first step. In wet-milling, the corn kernels are soaked in water
+
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+
+164
+
+P. Bains et al. / Progress in Energy and Combustion Science 63 (2017) 146(cid:1)172
+
+Fig. 19. Process diagram for dry-milling ethanol production. 2014 process heating emission numbers taken from U.S. GHGRP and fermentation emissions estimated using 2014
+EIA production capacity data for ADM Corn Processing facility in Cedar Rapids, IA.
+
+Pand dilute sulfurous acid to separate the grain into starch, protein
+and fiber components. The components are then isolated from each
+other as they travel through a set of grinders and separators. The
+fiber and steeping liquor from the first step are dried to produce
+corn gluten feed. The feed is sold to the livestock industry. The pro-
+tein, in the form of gluten, is filtered and dried to make corn gluten
+meal for feed. The remaining starch and water may then be pro-
+cesses in one of three ways: fermented into ethanol, dried and sold
+as modified corn starch, or processed into corn syrup. If ethanol is
+made, it follows the same steps as discussed in the dry-milling pro-
+cess [99].
+
+PCarbon dioxide is emitted from
+P3.4.9.3. Process conditions and cost.
+the fermenter at purities of 98(cid:1)99% by volume, and almost ambient
+conditions of 35 °C and 1 bar [33,102]. At such high CO2 purity, Xu
+et al. estimated a cost of $6 to $12 per MT of CO2 captured, a bit
+lower than the Sherwood estimates of $14 per MT of CO2 captured
+[33]. The low cost of capture coupled with industry experience in
+capturing CO2 for the merchant market create a very favorable situa-
+tion for CC. Adding CC to ethanol plants appear to be one of the most
+viable options explored in this work [17,60].
+
+4. Why country-level emissions?
+
+PAlthough the focus in this review is on opportunities to apply CCS
+to U.S.-based industries, it is equally important to investigate CO2
+emissions on a global scale to develop a broader understanding and
+complete the picture of CC's potential. This is considered a first step
+toward developing a clear pathway, with the hope that the U.S. will
+take the lead on some of these projects. Combining facility locations
+with the costs of carbon capture allows for outlining the “low-hang-
+ing fruit” of CC. Once these facilities have been identified, spatial
+analysis is further used to match CO2 sources with potential sinks.
+Only by zooming out from a facility to a national perspective can we
+truly realize the impact of CCS and create project pathways for
+implementation. Fig. 20 provides a nationwide visualization of CO2
+industrial process-only
+emissions, while Fig. 21 showcases
+
+Pemissions. With these in hand, we can begin to regionally character-
+ize emissions and CCS opportunities.
+
+PPetrochemical plants (ethylene, ethylene oxide) and petroleum
+refineries are grouped along the Texan and Louisianan Gulf Coast, as
+well as near New Jersey ports. California (Bay Area and Los Angeles)
+and Washington (Seattle) also house refineries, in addition to hydro-
+gen plants. Many hydrogen facilities are located near or at refineries,
+or are scattered throughout the Midwest. Similarly, ammonia plants,
+which use hydrogen feedstock, are located near hydrogen sites, pre-
+dominantly in the Midwest and Louisiana.
+
+PNatural gas processing and ethanol production produce nearly
+pure streams of CO2. Though these sources tend to emit smaller
+amounts of CO2, there are many of them and they tend to be near
+one another. Clusters of natural gas processing operations are found
+in North Dakota, down through Wyoming, Colorado and New Mex-
+ico, with the majority of natural gas processing occurring in Okla-
+homa, Texas and Louisiana. Ethanol production is prevalent in the
+Indiana and
+Midwest, particularly Iowa, Minnesota,
+Nebraska. Several facilities produce a significant amount of CO2, on
+par with larger emitters like cement.
+
+Illinois,
+
+PCement production, lime production, hydrogen production and
+iron and steel manufacturing tend to emit large amounts of CO2
+from single facilities, making them attractive for CC technology. Iron
+and steel plants are generally aggregated along the north and east-
+ern parts of the Midwest (northern Minnesota, Michigan, Illinois,
+Indiana, Ohio) and parts of the East Coast (Pennsylvania and New
+Jersey to South Carolina). Cement production facilities, which consis-
+tently emit large amounts of process CO2, are scattered fairly evenly
+across the U.S. Finally, lime production is located primarily in the
+interior of the U.S., within the Midwest and the West.
+
+POverall, ethanol and ammonia production and natural gas proc-
+essing produce the purest streams of CO2. Hydrogen, cement and
+lime production consistently produce the greatest amount of process
+CO2, followed by iron and steel manufacturing. Table 8 lists the top
+ten CO2 emitters by state for each category of emissions, while
+Fig. 21 visualizes process-only CO2 emissions on a state level. Texas
+trumps all other states, and electricity generation CO2 greatly influ-
+ences the top capture-relevant CO2 emitters.
+
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+
+P. Bains et al. / Progress in Energy and Combustion Science 63 (2017) 146(cid:1)172
+
+165
+
+Fig. 20. Total CO2 emissions from the top stationary sources for 2014. Include combustion and process emissions. Emission data sourced from the U.S. GHGRP.
+
+4.1. Process versus combustion CO2
+
+PProcess CO2 has been the main focus of the discussion thus far,
+but many facilities emit significant amounts of combustion CO2 for
+process heating and other thermal needs. Fig. 22 depicts and com-
+pares process emissions to combustion emissions at each facility. On
+the whole, it appears that combustion emissions are fairly balanced
+with process CO2. Cement and lime production facilities tend to
+have significantly more process CO2 to combustion. The same is true
+for a few ammonia, iron and steel plants and ethanol plants, though
+the difference is not nearly as large for ethanol plants. The opposite
+is true for refineries, petrochemical and hydrogen plants, with com-
+bustion emissions only slightly greater than process emissions.
+
+4.2. CO2 sources by purity
+
+PCombining data on location, quantity and purity of the CO2 point
+sources creates a picture of the CC potential within the U.S. and iden-
+tifies the “low-hanging fruit”. Fig. 23 shows such an image, with the
+CO2 quantities and qualities visualized. Each color corresponds to
+the CO2 purity of the capture-relevant stream, with darker colors
+indicating higher purity. In this case, petroleum refineries were con-
+sidered more concentrated than coal power plants since the cap-
+ture-relevant process CO2 neglected process heating. Process
+heating is the lower end of the refining CO2 concentration range;
+although the 3(cid:1)20% range is shown for consistency in this work, in
+reality the CO2 sources shown are likely to have concentrations
+between 10(cid:1)20%.
+
+PHydrogen production was considered to be within the 30(cid:1)45%
+purity range, since this is associated with the PSA purification pro-
+cess, which is increasingly used in industry. However, it should be
+noted that some of these hydrogen plants could also be in the
+96(cid:1)99% CO2 range.
+
+PThe largest pure CO2 emitters (96(cid:1)100% CO2) are ammonia and
+ethanol, with a few natural gas processing plants included. Hydrogen
+is the next purest stream of CO2, but is already potentially more than
+half the concentration of CO2 as the pure streams (30(cid:1)45% CO2). For-
+tunately, this does not correspond to a tripling of capture costs at the
+lower concentration end; costs only increase from $14 to $28 per ton
+of CO2 captured.
+
+PSince many of these high purity sources are located in the Mid-
+west and along the Gulf Coast, these are the regions of the U.S. that
+have the greatest potential for first-of-a-kind CC technology. In other
+words, the Midwest and the Gulf Coast hold the “low-hanging fruit”
+of CCS. More specifically, the central and southern Midwest, and
+Gulf Coast are the regions that CCS pilot plants and demonstration
+projects should target, as they will result in the cheapest initial cap-
+ture costs, and are co-located with potential sequestration sites
+(Fig. 25). If all of these high purity sources (pure sources plus hydro-
+gen) were captured, it would account for about 5% of total U.S. car-
+bon emissions. While this is small relative to the CO2 reduction
+required to mitigate climate change, it is nonetheless a first step to
+deploying CCS on a wider scale.
+
+PA few facilities also already appear to use CC technology to pro-
+vide CO2 for injection into enhanced oil recovery (EOR) sites
+(Fig. 24). Ammonia plants in Louisiana, northern Texas and North
+Dakota are connected via CO2 pipelines to nearby EOR fields. There
+are other numerous industrial CO2 sources by these pipelines,
+including natural gas processing, hydrogen, lime, and petrochemical
+production plants and petroleum refineries. While it is unclear
+whether any of these facilities are used to provide CO2 to the fields,
+it nevertheless shows the potential of tapping into these existing
+CO2 resources for utilization and leaving natural CO2 in the ground.
+Despite the fact that EOR is a CO2 utilization rather than sequestra-
+tion, as the CO2 is not monitored or verified to remain underground,
+it still provides an economic incentive for capturing CO2 from nearby
+
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+
+166
+
+P. Bains et al. / Progress in Energy and Combustion Science 63 (2017) 146(cid:1)172
+
+Fig. 21. Industrial process-only (no electricity generation) CO2 emissions for the U.S. by (a, top) facility and by (b, bottom) state. Emission data sourced from the U.S. GHGRP.
+
+Table 8
+Top ten CO2 emitting states for (a) (left) capture-relevant CO2, (b) (center) electricity generation CO2, and (c) (right) indus-
+trial process CO2.
+
+Total capture-relevant CO2
+State
+
+Quantity (MMT CO2)
+
+Electricity generation CO2
+State
+
+Quantity (MMT CO2)
+
+Industrial process CO2
+State
+
+Quantity (MMT CO2)
+
+Texas
+Indiana
+Florida
+Ohio
+Pennsylvania
+Illinois
+Kentucky
+Missouri
+Alabama
+Louisiana
+
+283.17
+120.28
+114.15
+107.85
+102.34
+92.06
+88.94
+80.08
+76.79
+74.88
+
+Texas
+Florida
+Indiana
+Ohio
+Pennsylvania
+Kentucky
+Illinois
+West Virginia
+Missouri
+Alabama
+
+231.98
+109.95
+101.88
+95.92
+94.75
+84.53
+79.96
+69.98
+69.09
+68.18
+
+Texas
+Louisiana
+California
+Indiana
+Iowa
+Illinois
+Ohio
+Missouri
+Alabama
+Michigan
+
+51.20
+27.14
+25.34
+18.40
+12.35
+12.10
+11.93
+10.99
+8.61
+8.47
+
+P. Bains et al. / Progress in Energy and Combustion Science 63 (2017) 146(cid:1)172
+
+167
+
+Fig. 22. Process CO2 and combustion CO2 for industrial facilities only (non-electricity generating facilities). Emission data sourced from the U.S. GHGRP.
+
+Pfacilities. The EOR market can further to help offset the capture costs
+for building the initial CC fleet.
+
+4.3. A note on CO2 utilization
+
+PIn addition to reliable storage, carbon dioxide utilization (CCU)
+and reuse has gained traction as an alternative fate for captured CO2.
+This route has the advantage of creating revenue from a waste prod-
+uct, which in theory could be applied to offset capture, compression
+and transport costs. Additionally, this route may be advantageous or
+desirable in areas where reliable storage opportunities do not exist,
+or exist at distances which are cost prohibitive from a transportation
+perspective. Carbon dioxide utilization opportunities include, but
+are not limited to, EOR, mineral carbonation, food and beverage
+processing, urea production and yield boosting, liquid fuel produc-
+tion, and many other avenues using CO2 as a chemical feedstock.
+Several reviews have presented these opportunities in great detail
+[103(cid:1)107].
+
+PIt is important to consider several factors when weighing the
+potential benefits of CCU. First, very few utilization opportunities
+exist at the scale to make a direct impact on climate. Of current
+opportunities, EOR owns the significant majority of the CO2 utiliza-
+tion market. Even with this large share [108], US demand (ca. 70 Mt/
+a) would only offset 1% of annual US CO2 emissions. One utilization
+opportunity with sufficient scalability to impact climate is CO2 to
+fuels, with future potential cited at the gigatonne scale [109]. How-
+ever, oxidized fuels immediately recommit CO2 to the atmosphere;
+thus, it is important to consider the period of carbon fixation if such
+utilized CO2 is to be counted against climate change.
+
+PCO2 conversions are often energy-intensive due to the thermody-
+namic stability of fully oxidized carbon. Hence, full life-cycle assess-
+ments will often reveal that carbon utilization is carbon positive
+using traditional grid power and conventional routes for H2 produc-
+tion, emitting more CO2 than is consumed during utilization
+[110,111]. Coupling of these opportunities to renewable energy is
+often a knee-jerk solution to this unfavorable carbon balance; how-
+ever, detailed analyses must be performed at the regional level to
+determine if it is not more efficient to place such renewable energy
+directly into the power grid. Even in the face of carbon-positive utili-
+zation, in some cases, CO2-based processing is less carbon intensive
+than the incumbent process. For example, an industrial case study
+shows CO2 emissions reductions on the order of 11(cid:1)19% when CO2
+is employed in polyurethane production [112]. Nevertheless, these
+collective points serve to highlight the complexities in considering
+CCU, and the necessity for reliable LCA data for gaining proper
+insights; thus, such opportunities are not explored in this review.
+
+5. Conclusions
+
+PFacility-level analysis of the top CO2-emitting industries is
+required to fully understand the potential for CCS in the United
+States. Capture costs and minimum separation work can be calcu-
+lated when the process conditions of capture-relevant CO2 streams
+are known. Although fossil-fueled power plants dominate stationary
+CO2 emissions, other industries may provide a cheaper pathway
+toward CCS deployment. Many industrial processes also lack CO2-
+free alternatives, making CCS necessary for their future success.
+
+PIt is useful to know which process unit is the largest CO2 emitter
+within an industry. Capture technology implemented at that one
+
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+
+168
+
+P. Bains et al. / Progress in Energy and Combustion Science 63 (2017) 146(cid:1)172
+
+Fig. 23. Capture-relevant CO2 emissions by size and purity. Purity corresponds to capture cost, with higher purity CO2 sources costing less on a per mole CO2 captured basis.
+Emission data sourced from the U.S. GHGRP.
+
+Punit will maximize emissions reduction for a minimal cost. Indus-
+tries with a single large CO2 source unit, such as cement production
+and iron and steel manufacturing, are therefore attractive CCS candi-
+dates. However, even in these cases, process heating emissions can
+still account for more than half of all on-site CO2. Process heaters
+tend to be comprised of multiple units, further exacerbating CCS
+installation challenges.
+
+PPetroleum refineries face a unique challenge with their myriad
+processes. It would be very problematic to retrofit CCS technology
+
+Ponto many individual emitting units, and choosing a single unit may
+not have as much of an impact as in other industries. Additionally,
+refineries’ distinct site configurations make it difficult to determine
+a CC implementation standard across the industry. Several indus-
+tries, including hydrogen production, ammonia production, and nat-
+ural gas processing, already have CC technology built into their
+purification steps in the form of amine absorption. These three
+industries and ethanol production form the high-purity set of indus-
+tries, or industries that produce CO2 streams pure enough that no
+
+Fig. 24. Capture-relevant CO2 sources by size and purity, with EOR sites and existing and future CO2 pipelines. Emission data sourced from the U.S. GHGRP.
+
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+
+P. Bains et al. / Progress in Energy and Combustion Science 63 (2017) 146(cid:1)172
+
+169
+
+Fig. 25. CO2 top-emitting sources and potential sinks and utilization sites (EOR), with current and proposed CO2 pipelines included. Emission data sourced from the U.S. GHGRP.
+
+Padditional CO2 separation is required. Existing CC paves the way for
+easily completing a CCS retrofit by only adding processing units such
+as dehydration and compression.
+
+PTable 9 summarizes several salient features for choosing a path-
+way forward for implementing CC. For instance, industries where
+process CO2 and combustion CO2 are combined could indicate an
+increased complexity in designing a capture system if only process
+CO2 is targeted. However, if the industry accounts for a large portion
+of process emissions across many industries, prioritizing it for car-
+bon capture could produce a greater mitigation impact than other
+industries. Considering these factors, a possible implementation
+pathway would focus on ethanol production facilities first, as they
+produce high purity streams which make up 65% of on-site emis-
+sions and account for sizable portion of total industrial process CO2
+considered in this review. The cement industry would be the next
+contender, given a large percentage of on-site emissions emanate
+from the cement kiln, and cement accounts for almost a quarter of
+total industrial process CO2.
+
+PThe ammonia industry would make an attractive third choice,
+due to its high purity stream of CO2 that accounts for 63% of on-site
+CO2 emissions. Hydrogen production could be considered next, as it
+produces a relatively high purity CO2 stream which accounts for a
+majority of on-site emissions. Iron and steel manufacturing produces
+several low to moderately concentrated CO2 streams, and the blast
+furnace produces a mixed process and combustion stream of CO2.
+The division between process and combustion within the blast fur-
+nace is a complicated one. The combustion of coke produces CO,
+which then reduces iron ore and creates CO2. Extricating process
+CO2 from combustion CO2 is therefore a tricky task, and may further
+complicate the capture process if a redesign if desired. These factors
+push iron and steel manufacturing further down the CC pathway.
+
+PNatural gas processing and ethylene oxide, while they produce
+high purity streams, only account for relatively small portions of
+industrial process CO2. On the other hand, petroleum refineries
+account for almost a fifth of industrial process CO2, but are com-
+prised of numerous lower purity CO2 streams. These qualities make
+these three industries less attractive for initial CC implementation,
+and better suited for consideration towards the end of the industrial
+CC pathway. Finally, ethylene production emits relatively small
+amounts of dilute CO2, making it the last industry to be considered
+on the CC pathway.
+
+PIt is also important to consider the largest single emitters of CO2:
+power plants. Fossil-fuel power plants are unlikely to disappear on a
+time scale necessary to mitigate climate change. CCS provides a
+pathway for fossil-fueled power plants to act as a bridge between
+today and a low-carbon, renewable energy future. Though power
+plant flue gas is relatively dilute in CO2 and therefore expensive to
+separate, capture costs may be reduced by using the knowledge
+gained from first implementing the technology on industrial sour-
+ces.
+
+PThe picture of CCS potential within the U.S. is completed by tak-
+ing facility-level data and combining it with geographic CO2 point
+source data. Emerging trends create a deeper understanding of
+nationwide emissions, and allow areas of lowest capture cost to be
+identified. Overall, Texas emits the most CO2 from both electricity
+generation and industrial processes. In addition to Texas, Louisiana
+and the Midwest emit the most process CO2, while the eastern Mid-
+west (stretching from Missouri to Pennsylvania) and Florida emit
+the most electricity generation CO2. Capturing all of the capture-rel-
+evant process CO2 could cost between $6.17 and $11.13 billion U.S.
+per year, and would offset roughly 5% of total 2014 U.S. CO2 emis-
+sions. Capturing all capture-relevant CO2 (from both process and
+
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+
+Number of medium
+purity streams
+(10%(cid:1)50% CO2)a
+
+Number of high
+purity streams
+(50%(cid:1)100% CO2)a
+
+Percentage of CO2
+from processc,d
+
+Percentage of CO2
+from combustiond
+
+Percentage of total
+industry process
+CO2
+
+Percentage of total
+industry CO2
+
+Table 9
+Characteristics of industries to help identify the low-hanging fruit of CCS.
+
+Industry
+
+Process and
+combustion CO2
+combined?
+
+Ethanol Production No
+No
+Ammonia
+
+Processing
+
+Natural gas
+
+processing
+
+Hydrogen
+
+Productione
+Iron and Steel
+Production
+
+No
+
+No
+
+Yes
+
+Number of low
+purity streams
+(0%(cid:1)10% CO2)a,b
+
+(cid:1)
+
+1 (SMR heater)
+
+1 (flares)
+
+Cement Production
+
+Yes (»50% process)
+
+(cid:1)
+
+Petroleum Refininge No
+
+1 (flares)
+
+[64]
+
+(cid:1)
+(cid:1)
+
+(cid:1)
+
+1 (fermentation)
+64.87%
+1 (amine scrubbing) 62.55%
+
+1 (acid gas removal) 25.97%
+
+1 (SMR heater)
+
+1 (PSA tail gas)
+
+1 (amine scrubbing) 92.79%
+
+2 (sinter plant,
+
+3 (BF, BOF, coke
+
+flares)
+
+oven)
+
+2 (precalciner,
+cement kiln)
+2 (FCC, catalytic
+reforming)
+
+(cid:1)
+
+(cid:1)
+
+45.33%
+
+93.19%
+
+1 (H2 production)
+
+25.63%
+
+Ethylene
+
+Productione
+Ethylene Oxidef
+
+No
+
+No
+
+2 (steam cracker,
+
+(cid:1)
+
+(cid:1)
+
+13.32%
+
+flares)
+1 (flares)
+
+1 (air oxidation
+pathway)
+
+1 (oxygen oxidation
+
+(cid:1)
+
+pathway)
+
+35.13%
+37.45%
+
+74.03%
+
+7.21%
+
+54.67%
+
+6.81%
+
+74.37%
+
+86.68%
+
+(cid:1)
+
+14.5%
+5.5%
+
+6.5%
+
+15.9%
+
+11.4%
+
+24.3%
+
+20.1%
+
+1.2%
+
+0.5%
+
+11.1%
+3.9%
+
+9.4%
+
+15.2%
+
+13.5%
+
+11.0%
+
+29.3%
+
+6.4%
+
+0.2%
+
+a by volume.
+b All industries can count process heating as a low purity stream.
+c When process and combustion CO2 are emitted from the same stack, the U.S. Greenhouse Gas Reporting Program counts all of the CO2 as process CO2, which may lead to some artificially higher aver-
+age percentage of CO2 considered Process. This is especially true for cement production and iron and steel production, as process and combustion CO2 are created from within the same chamber for cer-
+tain process units. Hydrogen production's high percentage of CO2 considered process is likely due to PSA tail gas being combusted for heat in combination with other fuels.
+
+d Facility averages across each industry.
+e The vast majority of facilities that containted more than one industry were petroleum refineries pair with either hydrogen production or ethylene production. As combustion emissions are reported
+in aggregate for each facility, the following method was used to assign combustion CO2 emissions to each industry: the average percentage of CO2 considered process was taken over all single-industry
+hydrogen and ethylene production facilities, and used to allocate combustion CO2 to their industry. The remaining combustion CO2 was then allocated to the petroleum refining industry.
+
+f Ethylene oxide total process CO2 taken from U.S. Inventory of Greenhouse Gases: 1990(cid:1)2014 [73].
+
+1
+7
+0
+
+P
+
+.
+
+B
+a
+i
+n
+s
+
+e
+t
+a
+l
+.
+
+/
+P
+r
+o
+g
+r
+e
+s
+s
+
+i
+
+n
+E
+n
+e
+r
+g
+y
+a
+n
+d
+C
+o
+m
+b
+u
+s
+t
+i
+o
+n
+S
+c
+i
+e
+n
+c
+e
+6
+3
+(
+2
+0
+1
+7
+)
+1
+4
+6
+(cid:1)
+1
+7
+2
+
+P. Bains et al. / Progress in Energy and Combustion Science 63 (2017) 146(cid:1)172
+
+171
+
+Pelectricity generation) could cost between $93.35 to $122.53 billion
+U.S. per year, and could displace around 41% of CO2 emissions.
+
+PThe minimum work of separation and Sherwood cost analysis
+show that as the CO2 purity in a capture stream increases, the work
+and capture cost on a molar basis decrease. This is critical to finding
+the lowest cost opportunities for CCS pilot plant deployment. The
+GIS analysis also shows that higher-purity point sources also tend to
+emit less CO2 than dilute sources. By combining capture cost data
+with the geographical locations of different industrial point sources,
+the “low-hanging fruit” of CCS have been located in the Midwest and
+along the Gulf Coast. These regions have many high-purity CO2
+industries, such as ethanol production, natural gas processing,
+ammonia production and hydrogen production. The southern Mid-
+west and Gulf Coast are also co-located with potential geological
+sequestration sites, another important piece to the CCS puzzle.
+Therefore, southern Midwest and Gulf Coast are the regions in the
+United States that should be targeted for implementing CCS pilot
+plants and demonstration projects.
+
+References
+
+[1] United Nations Framework Convention on Climate Change (UNFCCC). What
+was COP21? http://www.epa.gov/cleanpowerplan/clean-power-plan-existing-
+power-plants; 2015 [Accessed 16.02.20].
+
+[2] Webb J, McGrath M, Brigg H, Kinver M. COP21 as it happened: climate deal
+http://www.bbc.com/news/live/science-environment-
+
+adopted in Paris.
+34922775; 2015 [Accessed 16.02.20].
+
+[3] U.S. Environmental Protection Agency. Clean power plan for existing power
+http://www.epa.gov/cleanpowerplan/clean-power-plan-existing-
+
+plants.
+power-plants; 2016 [Accessed 16.02.20].
+
+[4] U.S. Environmental Protection Agency. FACT SHEET: overview of the clean
+power plan. http://www.epa.gov/cleanpowerplan/fact-sheet-overview-clean-
+power-plan; 2015 [Accessed 16.02.20].
+
+[5] U.S. Environmental Protection Agency. Global greenhouse gas emissions
+http://www3.epa.gov/climatechange/ghgemissions/global.html; 2016
+
+data.
+[Accessed 16.02.25].
+
+[6] Olivier J, Janssens-Maenhout G, Muntean M, Peters J. Trends in global CO2
+emissions: 2015 Report. The Hague: PBL netherlands environmental assess-
+ment agency, Ispra: European Commission, Joint Research Center; PBL Publica-
+tion No. 1803, JRC Technical Note No. JRC98184 2015.
+
+[7] Intergovernmental Panel on Climate Change (IPCC). IPCC special report on carbon
+dioxide capture ad storage. New York (NY): Cambridge University Press; 2005.
+[8] Intergovernmental Panel on Climate Change (IPCC). Summary for policy makers
+in: climate change 2014: mitigation of climate change. Cambridge UK NY
+(USA): Cambridge University Press; 2014.
+
+[9] Burns E. Promoting CCS at COP21. http://www.thirdway.org/memo/promot-
+
+ing-ccs-at-cop21; 2015 [Accessed 16.02.20].
+
+P [10] International Energy Agency. Technology roadmap: carbon capture and storage
+
+2013 edition. Paris: International Energy Agency; 2013.
+
+P [11] Global CCS Institute. The critical role of CCS - there cannot be an effective miti-
+gation response to climate change without CCS. https://hub.globalccsinstitute.
+com/publications/global-status-ccs-2014/critical-role-ccs-there-cannot-be-
+effective-mitigation-response-climate-change-without-ccs; 2014 [Accessed
+16.02.20].
+
+P [12] Global CCS Institute. The value of CCS is increasingly acknowledged by
+independent studies. https://hub.globalccsinstitute.com/publications/global-
+status-ccs-2014/value-ccs-increasingly-acknowledged-independent-studies;
+2014 [Accessed 16.02.20].
+
+P [13] University Corporation for Atmospheric Research (UCAR). Climate mitigation
+http://scied.ucar.edu/longcontent/climate-mitigation-and-
+
+and adaptation.
+adaptation; 2011 [Accessed 16.02.20].
+
+P [14] Center for Climate and Energy Solutions (C2ES). Quick facts and background.
+http://www.c2es.org/technology/factsheet/CCS; 2013 [Accessed 16.02.20].
+P [15] Farla J, Hendriks C, Block K. Carbon dioxide recovery from industrial processes.
+
+Climatic Change 1995;29:439–61.
+
+P [16] Vansant J. Chapter 1: carbon dioxide emission and the merchant market in the
+European union. Carbon dioxide recovery and utilization. Kluwer Academic
+Publishers; 2003.
+
+P [17] United Nations International Development Organization (UNIDO). Carbon cap-
+ture and storage in industrial Applications: technology synthesis reports work-
+ing paper. Vienna: UNIDO; November 2010.
+
+P [18] Zakkour P, Cook G. CCS roadmap for industry: High-purity CO2 sources: sectoral
+
+assessment - final draft. UK: Carbon Counts; 2010.
+
+P [19] Birat J, Maizieres-les-Metz D. Steel sectoral report - contribution to the UNIDO
+
+roadmap on CCS - fifth draft. Amsterdam: UNIDO; September 2010.
+
+P [20] MacDonald M. Global technology roadmap for CCS in industry sectoral assess-
+
+ment: cement. Brighton (UK): The Global CCS Institute; August 2010.
+
+P [21] Det Norske Veritas Ltd. Global technology roadmap for CCS in industry sectoral
+assessment: refineries. Vienna: United Nations International Development
+Organization; 2010.
+
+P [22] International Energy Agency (IEA) & United Nations International Development
+Organization (UNIDO). Technology roadmap: carbon capture and storage in
+industrial applications. International Energy Agency; 2011.
+
+P [23] International Energy Agency Greenhouse Gas R&D Programme (IEA GHG). CO2
+
+capture in the cement industry. UK: IEA GHG; 2008.
+
+P [24] International Energy Agency (IEA). Energy technology transitions for industry:
+strategies for the next industrial revolution. Paris: International Energy Agency;
+2009.
+
+P [25] Kuramochi T, Ramirez A, Turkenburg W, Faaij A. Comparative assessment of
+CO2 capture technologies for carbon-intensive industrial processes. Prog Energ
+Combust 2012;38:87–112.
+
+P [26] Ultra-Low CO Steelmaking (ULCOS). CCS for iron and steel production. http://
+www.globalccsinstitute.com/insights/authors/dennisvanpuyvelde/2013/08/23/
+ccs-iron-and-steel-production;; 2013 [Accessed 14.06.10].
+
+P [27] Gielen D. CO2 removal in the iron and steel industry. Energ Convers Manage
+
+2002;44:1027–37.
+
+P [28] Hoenigg V, Hoppe H, Emberger B. Carbon capture technology - options and
+potentials for the cement industry. Duesseldorf: European Cement Research
+Academy; Report No. PCA R&D Serial No. 3022 2007.
+
+P [29] U.S. Environmental Protection Agency. Available and emerging technologies for
+reducing greenhouse gas emissions from the petroleum refining industry.
+Research Triangle Park (NC): U.S. Environmental Protection Agency; 2010.
+P [30] U.S. Environmental Protection Agency. Technical support document for hydro-
+gen Production: proposed rule for mandatory reporting of greenhouse gases.
+Washington, D.C: U.S. Environmental Protection Agency; 2008.
+
+P [31] National Energy Technology Laboratory (NETL). Cost of capturing CO2 from
+industrial sources. Washington, D.C: U.S. Department of Energy; January.
+Report No. DOE/NETL-2013/1602. Contract No. DE-FE0004001 2014.
+
+P [32] Kheshgi H, Prince R. Sequestration of fermentation CO2 from ethanol produc-
+
+tion. Energy 2005;30:1865–71.
+
+P [33] Xu Y, Isom L, Hanna M. Adding value to carbon dioxide from ethanol fermenta-
+
+tions. Bioresource Technol 2010;101:3311–9.
+
+P [34] Wilcox J. Carbon capture. 1st ed. Springer; 2012.
+P [35] Hasan M, Boukouvala F, First E, Flouda C. Nationwide, regional, and statewide
+CO2 capture, utilization and sequestration supply chain network optimization.
+Ind Eng Chem Res 2014;53:7489–506.
+
+P [36] Middleton R, Clarens A, Liu X, Bielicki JLJ. CO2 deserts: implications of existing
+for carbon management. Environ Sci Technol
+
+supply limitations
+
+CO2
+2014;48:11713–20.
+
+P [37] House KZ, Baclig AC, Ranjan M, van Nierop EA, Wilcox J, Herzog HJ. Economic
+and energetic analysis of capturing CO2 from ambient air. Proc Natl Acad Sci U
+S A 2011;108:20428–33.
+
+P [38] U.S. Environmental Protection Agency. 2014 Greenhouse gas emissions
+from large facilities. http://ghgdata.epa.gov/ghgp/main.do; 2015 [Accessed
+15.11.02].
+
+P [39] House KZ, Baclig AC, Ranjan M, van Nierop EA, Wilcox J, Herzog HJ. Supplemen-
+tary information for economic and energetic analysis of capturing CO2 from
+ambient air. Proc Natl Acad Sci U S A 2011;108:20428–33.
+
+P [40] Rubin ES. Integrated environmental control model (IECM). Carnegie Mellon
+
+University; 2015.
+
+P [41] Leeson D, Fairclough J, Petit C, Fennell P. A systematic review of current tech-
+nology and cost for industrial carbon capture. London: Grantham Institute,
+Imperial College London. Report No. GR7.
+
+P [42] Eni. World oil and gas review 2013. Rome: Eni; 2013.
+P [43] U.S. Environmental Protection Agency. Inventory of U.S. greenhouse gas emis-
+sions and Sinks: 1990(cid:1)2012. Washington, D.C.: National Service Center for
+Environmental Publications; Report No. EPA 430-R-14-003 2014.
+
+P [44] Ametek Process Instruments. Process heaters, furnaces and fired heaters:
+improving efficiency and reducing NOx. www.ametekpi.com/download/pro-
+cess-heaters-furnaces-and-fired-heaters.pdf; 2015 [Accessed 15.12.21].
+P [45] Beychok M. Petroleum refining processes. https://upload.wikimedia.org/wiki-
+[Accessed
+
+pedia/commons/9/94/Crude_Oil_Distillation_Unit.png;
+15.11.12].
+
+2012
+
+P [46] Brundrett P, Miggelbrink M, Woldhuis A, Morello B. Retrofit application and
+operation of the shell low temperature SCR technology on gas turbines. Ethyl-
+ene cracker furnaces and process heaters. Houston (TX): Shell; 2002.
+
+P [47] U.S. Environmental Protection Agency. GHGRP 2014: refineries. http://www.
+epa.gov/ghgreporting/ghgrp-2014-refineries; 2015 [Accessed 15.11.19].
+P [48] Fleshman J. Chapter 6.1 FW hydrogen production. In: Meyers RA, editor. Hand-
+book of petroleum refining processes. 3rd ed. McGraw-Hill; 2004. p. 6.7.
+P [49] Chauvel A, Lefebvre G. Petrochemical processes volume 1: synthesis gas deriva-
+
+tives and major hydrocarbons. Paris: Editions Technip; 1989.
+
+P [50] Rochelle G. Amine Scrubbing for CO2 Capture. Science 2009;325:1652–4.
+P [51] Mintern B. Cogeneration flexibility for refinery steam management. Banff
+
+(Alberta): Industrial Application of Gas Turbines Committee; 2009.
+
+P [52] ICIS. Ethylene Uses and Market Data. http://www.icis.com/resources/news/
+[Accessed
+
+2007/11/05/9075777/ethylene-uses-and-market-data;
+16.11.20].
+
+2007
+
+P [53] True W. Global ethylene capacity poised for major expansion. http://www.ogj.
+com/articles/print/volume-111/issue-7/special-report-ethylene-report/global-
+ethylene-capacity-poised-for-major.html; 2013 [Accessed 14.07.05].
+
+P [54] Worrell E, Phylipsen D, Einstein D, Martin N. Energy use and energy intensity of
+the U.S. chemical industry. Berkeley (CA): Lawrence Berkeley National Labora-
+tory; Report No. LBNL-44314 2000.
+
+P [55] Emerson Process Management. Chapter 1: ethylene production. Marshalltown
+
+(IA): Fisher Controls International; Report No. D103417£012 2010.
+
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+P
+T
+a
+g
+g
+e
+d
+P
+T
+a
+g
+g
+e
+d
+P
+T
+a
+g
+g
+e
+d
+P
+T
+a
+g
+g
+e
+d
+P
+T
+a
+g
+g
+e
+d
+P
+T
+a
+g
+g
+e
+d
+P
+T
+a
+g
+g
+e
+d
+P
+T
+a
+g
+g
+e
+d
+P
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+
+172
+
+P. Bains et al. / Progress in Energy and Combustion Science 63 (2017) 146(cid:1)172
+
+P [56] Leffler W. Petroleum refining in nontechnical language. 4th ed. Tulsa (OK):
+
+P [92] NaturalGas.org. Processing natural gas. http://naturalgas.org/naturalgas/proc-
+
+PennWell Corporation; 2008.
+
+P [57] AUS-e-TUTE. Chemistry tutorial: properties, uses & production of ethene.
+
+http://www.ausetute.com.au/ethene.html; 2014 [Accessed 14.07.03].
+
+P [58] Oil & Gas Journal. 2013 ethylene output rises; growth to continue in early 2014.
+
+http://www.ogj.com/articles/print/volume-112/issue-3/processing/2013-eth-
+ylene-output-rises-growth-to-continue-in-early-2014.html; 2014 [Accessed
+14.07.05].
+
+P [59] Siemens. Process analytics in ethylene production plants. www.usa.siemens.
+
+com/processanalytics; 2013 [Accessed 15.12.11].
+
+P [60] Armstrong K. Explainer: what is carbon capture and utilisation? http://thecon-
+versation.com/explainer-what-is-carbon-capture-and-utilisation-19311; 2013
+[Accessed 14.07.02].
+
+P [61] Tel-Tek_Kjolnes. What is CCS - Skagerrak-Kattegat-Oresund. http://www.ccs-
+
+skagerrakkattegat.eu/Home/tabid/38/Default.aspx; 2010 [Accessed 14.07.02].
+
+P [62] van Oss H. Minerals yearbook: cement (Advanced release). .
+P [74] Levdikova T. Global ethylene oxide supply to amount to 24.2 Mln tonnes in
+2016. According to new report by merchant research & consulting; http://
+www.prweb.com/releases/2014/02/prweb11543300.htm [Accessed 29 06 17];
+2014.
+
+P [75] Tang Z, Fei W, Oli Y. CO2 Capture by improved hot potash process. Energy Pro-
+
+cedia 2011;4:307–17.
+
+P [76] U.S. Environmental Protection Agency. Locating and estimating air emissions
+from sources of ethylene oxide. Research Triangle Park (NC): U.S. Environmen-
+tal Protection Agency; Report No. EPA-450/4-84-007L; 1986.
+
+P [77] Energy Information Administration. The impact of increased use of hydrogen
+on petroleum consumption and carbon dioxide emissions - Appendix C. Wash-
+ington, D.C: Energy Information Administration; 2008 August. Report No. SR-
+OIAF-CNEAF/2008-04.
+
+P [78] U.S. Office of Energy Efficiency and Renewable Energy (EERE). Hydrogen pro-
+duction: natural gas reforming, http://energy.gov/eere/fuelcells/hydrogen-pro-
+duction-natural-gas-reforming [Accessed 14.08.15].
+
+P [79] Gumilar A. Hydrogen production by steam reforming. http://chemeng-proc-
+essing.blogspot.com/2010/05/hydrogen-production-by-steam-reforming.html;
+2010 [Accessed 14.08.15].
+
+P [80] The Linde Group. Hydrogen recovery by pressure swing absorption, http://
+www.linde-engineering.com/internet.global.lindeengineering.global/en/
+images/HA_H_1_1_e_12_150dpi19_6130.pdf [Accessed 14.08.17].
+
+P [81] International Energy Agency - Hydrogen Coordination Group. Hydrogen pro-
+duction and Storage: R&D priorities and gaps. Paris: Stedi Media; January 2006.
+
+P [82] Rubin E. CO2 capture and transport. Elements 2008;4:311–7.
+P [83] U.S. Geologic Survey (USGS). Mineral commodity summary: nitrogen (fixed)(cid:1)
+
+ammonia. USGS; 2015.
+
+essing-ng/#sulphur; 2013 [Accessed 14.08.20].
+
+P [93] Norrie. Natural gas sweetening by amine solution. http://articles.compression-
+jobs.com/articles/oilfield-101/2711-gas-dehydration-lts-hydrates-sweetening-
+amine?start=3; 2010 [Accessed 14.08.20].
+
+P [94] Energy Information Administration (EIA). Natural gas processing: the crucial
+link between natural gas production and its transportation to market. Wash-
+ington, D.C.: EIA Office of Oil and Gas; January 2006.
+
+P [95] Norrie. Gas sweetening equipment and operating conditions. http://articles.
+compressionjobs.com/articles/oilfield-101/2711-gas-dehydration-lts-hydrates-
+sweetening-amine?start=6; 2010 [Accessed 14.08.20].
+
+P [96] Norrie. Gas dehydration by low temperature separation - D. Amine Regener
+2008 http://articles.compressionjobs.com/articles/oilfield-101/2711-gas-dehy-
+dration-lts-hydrates-sweetening-amine?start=8; [Accessed 17.06.29].
+
+P [97] Yu CH, Huang CH, Tan CS. A review of CO2 capture by absorption and adsorp-
+
+tion. Aerosol Air Qual Res 2012;12:745–69.
+P [98] Renewable Fuels Association (RFA). Annual U.S.
+
+fuel ethanol production.
+http://www.ethanolrfa.org/resources/industry/statistics/#A; 2015 [Accessed
+15.10.02].
+
+P [99] Renewable Fuels Association (RFA). The ethanol production process. http://
+ethanolrfa.org/how-ethanol-is-made/; 2015 [Online]. [Accessed 15.10.03].
+P[100] Alternative Fuels Data Center. Ethanol feedstocks. https://www.afdc.energy.
+
+gov/fuels/ethanol_feedstocks.html; 2017 [Accessed 17.06.29].
+
+P[101] U.S. Office of Energy Efficiency and Renewable Energy (EERE). Ethanol produc-
+tion and distribution. http://www.afdc.energy.gov/fuels/ethanol_production.
+html; 2014 [Accessed 15.10.05].
+
+P[102] Rushing S. Carbon dioxide process recovery description for typical by-product
+streams. http://www.biofuelsdigest.com/bdigest/2010/03/23/carbon-dioxide-
+process-recovery-description-for-typical-by-product-streams/; 2010 [Accessed
+14.09.02].
+
+P[103] Parsons Brinckerhoff. Accelerating the uptake of CCS: industrial use of captured
+carbon dioxide. https://www.globalccsinstitute.com/sites/www.globalccsinsti-
+tute.com/files/publications/14026/accelerating-uptake-ccs-industrial-use-cap-
+tured-carbon-dioxide.pdf; 2011 [Accessed 17.06.23].
+
+P[104] Mikkelsen M, Jorgensen M, Krebs FC. The teraton challenge. A review of fixation
+and transformation of carbon dioxide. Energy Environ Sci 2010;3:43–81.
+P[105] Peters M, K€ohler B, Kuckshinrichs W, Leitner W, Markewitz P, M€uller TE. Chem-
+ical technologies for exploiting and recycling carbon dioxide into the value
+chain. Chem Sus Chem 2011;4:1216–40.
+
+P[106] Andrei BD, Maria Del Mar PF, Evangelos T, Thea S. Carbon capture and utilisa-
+tion workshop: background and proceedings, Luxembourg: Publications Office
+of the European Union; Report No. JRC86324; 2013.
+
+P[107] Aresta M, Dibenedetto A. Utilisation of CO2 as a chemical feedstock: opportuni-
+
+P [84] Apodaca LE. 2014 Minerals yearbook: nitrogen (advanced release). United
+
+ties and challenges. Dalton Trans 2007;28:2975–92.
+
+States Geological Survey; 2016.
+
+P [85] Brown T. The ammonia monitor. http://ammoniaindustry.com/ammonia-mon-
+
+itor/; 2015 [accessed 16.03.01].
+
+P [86] Katheria S. Ammonia II: CO2 removal section. http://home.iitk.ac.in/»katheria/
+
+CO2%20Recovery.pdf; 2011 [Accessed 17.06.29].
+
+P [87] Centre for Industry Education Collaboration. Ammonia. http://www.essential-
+chemicalindustry.org/chemicals/ammonia.html; 2016 [Accessed 17.06.29].
+P [88] New Zealand Institute of Chemistry. Ammonia and urea production. https://
+nzic.org.nz/ChemProcesses/production/1A.pdf; 2008 [Accessed 17.06.29].
+
+P [89] Eni. World oil and gas review 2015. Rome: Eni; 2015.
+P [90] U.S. Environmental Protection Agency. 2011-2014 GHGRP industrial profi-
+les(cid:1)Petroleum and natural gas systems. Washington, D.C: U.S. Greenhouse Gas
+Reporting Program; October 2015.
+
+P [91] U.S. Environmental Protection Agency. Petroleum and natural gas systems 2012
+data summary. Washington, D.C: U.S. Greenhouse Gas Reporting Program;
+October 2013.
+
+P[108] Charoensawadpong P. Building a GIS map to accelerate CO2 utilization for
+enhaced oil recovery. Thesis submitted for M.S. degree under advisement of Dr.
+Jennifer Wilcox. Stanford, CA: Stanford University; 2016.
+
+P[109] Global CO2 Initiative. Carbon dioxide utilization (CO2U)(cid:1)ICEF roadmap 1.0.
+
+https://www.icef-forum.org/platform/upload/CO2U_Roadmap_ICEF2016.pdf;
+2016 [Accessed 6/22/17].
+
+P[110] von der Assen N, Voll P, Peters M, Bardow A. Life cycle assessment of CO2
+capture and utilization: a tutorial review. Chem Soc Rev 2014;43:7982–94.
+P[111] von der Assen N, Sternberg A, Katelhon A, Bardow A. Environmental potential
+of carbon dioxide utilization in the polyurethane supply chain. Faraday Discuss
+2015;183:291–307.
+
+P[112] von der Assen N, Bardow A. Life cycle assessment of polyols for polyurethane
+production using CO2 as feedstock: insights from an industrial case study.
+Green Chem 2014;16:3272–80.
+
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d
+T
+a
+g
+g
+e
+d

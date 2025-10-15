@@ -1,0 +1,3790 @@
+Progress in Energy and Combustion Science 70 (2019) 119–144
+
+Contents lists available at ScienceDirect
+
+Progress  in  Energy  and  Combustion  Science
+
+journal homepage: www.elsevier.com/locate/pecs
+
+A  current  perspective  on  the  accuracy  of  incoming  solar  energy
+forecasting
+
+Robert Blaga a , Andreea Sabadus a , Nicoleta Stefu a , Ciprian Dughir b , Marius Paulescu a , ∗,
+Viorel Badescu c
+a
+Faculty of Physics, West University of Timisoara, V Parvan 4, 300223 Timisoara, Romania
+b
+Electronics and Telecommunications Faculty, Politehnica University Timisoara, V Parvan 2, 300223 Timisoara, Romania
+c
+Candida Oancea Institute, Polytechnic University of Bucharest, Spl. Independentei 313, 060042 Bucharest, Romania
+
+a r t i c l e
+
+i n f o
+
+a b s t r a c t
+
+Article history:
+Received 1 March 2018
+Accepted 11 October 2018
+Available online 22 October 2018
+
+Keywords:
+Solar energy
+Forecasting accuracy
+Normalized statistical indicators
+
+The state-of-the-art in the accuracy of solar resources forecasting is obtained by using results reported
+in 1705 accuracy tests reported in several geographic regions (North America, Europe, Asia, Australia).
+There is a tendency in literature to avoid reporting model performance assessments in places, or on time-
+horizons, where it is known that the models have low performance. Usual bias and spreading statistical
+indicators are useful tools but taking proper decision by managers of funding agencies and policy makers
+requires usage of additional error measures. Several classes of forecasting models have been compared:
+persistence, classical statistics, machine learning, cloud-motion tracking, numerical weather prediction
+and hybrid models (combining classical statistics with machine learning approach and/or exogenous in-
+puts). Forecasting errors increase by increasing the time-horizon. Forecasting model performance depends
+on time-horizon and climate. Machine learning and hybrid models have the best performance for intra-
+hour performance in all climates. The best intra-hour forecasts are provided in all climates by machine
+learning and classical statistics models while the hybrid models perform well in tropical and snow cli-
+mates. For day-ahead forecasts the hybrid models have very good performance in all climates. Generally,
+the hybrid models have the best performance. The accuracy of the forecasting models significantly in-
+creased in the last decade. The normalized MBE and RMSE have been reduced by two thirds and one
+third, respectively.
+
+© 2018 Elsevier Ltd. All rights reserved.
+
+Contents
+
+1.
+
+Introduction  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  120
+1.1.  Objectives and motivation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  121
+1.2.  Solar resource variability in brief . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  121
+1.3.  Classes of forecasting models . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  122
+1.3.1.  Persistence . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  122
+1.3.2.  Classical statistical models . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  122
+1.3.3.  Machine learning . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  122
+1.3.4.  Cloud motion tracking . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  123
+1.3.5.  Numerical weather predictions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  123
+1.3.6.  Hybrid models. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  124
+2.  Methodology and data . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  124
+2.1.  Statistical indicators of accuracy in solar energy forecasting . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  124
+2.2.  Selection criteria . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  125
+2.3.  Summary of the articles included in this study  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  126
+
+∗ Corresponding author.
+
+E-mail addresses: marius.paulescu@e-uvt.ro , marius@physics.uvt.ro
+
+(M. Paulescu).
+
+https://doi.org/10.1016/j.pecs.2018.10.003
+0360-1285/© 2018 Elsevier Ltd. All rights reserved.
+
+120
+
+R. Blaga et al. / Progress in Energy and Combustion Science 70 (2019) 119–144
+
+2.3.1.  Classical statistical models . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  126
+2.3.2.  Machine learning . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  129
+2.3.3.  Cloud motion tracking . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  129
+2.3.4.  Numerical weather prediction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  129
+2.3.5.  Hybrid models . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  129
+2.4.  Description of the dataset . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  130
+3.  Performance analysis of the forecasting models . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  131
+3.1.  Classes of forecasting models . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  131
+3.2.  Forecasting horizon . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  132
+3.3.  Climate influence . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  135
+3.4.  Trend over time . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  136
+4.  Conclusions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  137
+Acknowledgements . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  137
+Appendix A. Radiometric parameters used in this study . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  137
+Appendix B. Taxonomy tree diagrams for each class of models. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  138
+References  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  140
+
+1. Introduction
+
+Fossil fuels have been used from ancient times. This is under-
+standable by the conjunction of three facts: (1) fossil fuels are easy
+to exploit, (2) some primary sources (coal) can be used in practice
+as they are, and (3) increasing the volumetric density of energy
+(e.g. oil refinement) can be obtained by relatively simple technolo-
+gies. Currently, fossil fuels still supply over 80% of the world’s en-
+ergy consumption. According to the IEA statistics a slowly decreas-
+ing trend in the world total primary energy supply by fossil fuels
+is noted, from about 86% in 1973 to 81% in 2016 [1] .
+
+Events like the oil crisis in 1973, the Chernobyl catastrophic nu-
+clear accident in 1986 and especially the awareness of the ever-
+increasing degradation of the environment have led to global sus-
+tainable development policies. Starting with the Kyoto Protocol, the
+world entered in a new developing stage with new targets cov-
+ering sustainable living supported by renewable energies. Within
+this stage, the climate change represents a major challenge, global
+communities trying to find different energy saving strategies along
+with the increasing use of renewable energy. Irrefutably, the mix of
+the energy systems will play a significant role in designing a sus-
+tainable society [2] . Currently there are many concerns regarding
+energy sources and consumption patterns, including: (1) the grow-
+ing needs of a rising worldwide population that makes effort s f or
+better living standards and (2) the strong evidence that continuing
+use of fossil fuels without actions to reduce the greenhouse gas
+emissions may lead to irreversible environmental damage. With re-
+gards to these concerns, Ref. [3] concludes that conservation is of
+the highest priority. While targeting significantly better conversion
+and end-use efficiencies, conservation preserves energy resources
+and reduces the environmental impact. It is generally accepted that
+in the future solar energy will have a substantial contribution in
+the conservation of the energy resources concurrently with meet-
+ing the global energy demand.
+
+On  the  other  hand,  closely  related  to  our  high-tech  lifestyle,
+among our energy options electricity has won a privileged place.
+Even if some primary sources can be used directly in thermal or
+mechanical applications, the preoccupation to get electricity from
+them remains at forefront, both for research and industry. In this
+context, no wonder that the weight of solar electricity in the en-
+ergy mix experienced an impressive augment and this trend is ex-
+pected to continue. The total installed solar power capacity in the
+world has multiplied in ten years by 46 times, from 6.6 GWp in
+200 6  to  30 6.5  GWp  by  the  end  of  2016  [4] .  The  global  market
+was by far dominated by China with 34.5 GWp connected to the
+grid in 2016, which means an advance of 128% over the capacity
+installed in 2015. Solar power in the EU continued its downward
+trend in 2016, adding 6.7 GWp, a 21% decrease compared to the
+
+8.6 GWp installed in 2015. Sometimes, aided by favorable policies,
+reality exceeds the most optimistic predictions. A good example is
+the amazing growth of the solar power capacity installed in Ro-
+mania, where at the end of 2011 the installed capacity was less
+than 2 MWp, while the Governmental PV Systems Strategy has a
+target of 260 MWp by 2020 [5] . Remarkably, in May 2014 the in-
+stalled PV capacity in Romania has exceeded 1.1 GWp (According to
+Ref. [6] , quoting the Romanian Transmission and System Operator
+- Transelectrica). However, after this success story, the PV sector
+in Romania experienced a decline in state subsidy, the growth rate
+decreased and currently, June 2018, the total installed PV capacity
+in Romania is 1.37 GWp. It is worth noting that in addition to the
+grid-connected applications, there is enough room for using solar
+energy in many other off-grid domestic and industrial applications.
+For example, solar electricity may have a notable potential of use
+in the global petroleum sector, ranging from 6 to 11 GW in ex-
+traction and transport operations and 17 to 91 GW in refining [7] .
+Solar-thermal conversion is another facet of domestic solar energy
+use. An outstanding review on exergy analysis of solar-thermal col-
+lectors and processes is presented in [8] .
+
+However, a challenge standing against the growth of the share
+of solar electricity in the energy mix stems from the stochastic na-
+ture of solar energy. Unlike the power generated by the traditional
+power plants based on fossil or nuclear fuels, the output power of
+the wind and photovoltaic plants is highly variable to erratic. This
+variability is quantified in [9] based on measured time series in the
+year 2014. Data were collected from the EU transmission system
+operators. Solar thermal systems react to solar irradiance changes
+in  minutes  or  more  while  the  PV  systems  react  in  milliseconds.
+The thermal inertia smooths the output power of the solar-thermal
+plants. Even so, due to the potential to provide cost-effective CO
+2
+mitigation  and  firm  supply,  the  development  of  technologies  for
+hybridizing  concentrating  solar-thermal  and  combustion  are  cur-
+rently considered [10] . In order to reduce the effective-costs of in-
+tegrating  the  PV  plants  into  the  existing  power  grid,  forecasting
+the energy production of the PV plants is a key issue. High-quality
+forecasting will enable grid operators to schedule non-renewable
+traditional capacities (e.g. gas power plants) to compensate for the
+PV power output variation.
+
+Inherently,  forecasting  the  output  power  of  a  solar  plant  in-
+volves  two  interrelated  issues  [11] :  (1)  forecasting  the  solar  re-
+source and (2) realistic modeling of the photovoltaic converter re-
+sponse. Certainly, the accuracy of forecasting the energy produc-
+tion of a PV plant is mainly conditioned by the accuracy of fore-
+casting the solar resources. This motivates the focus of this study
+on reviewing the methods of solar resources forecasting.
+
+This introductory section continues by outlining and motivating
+the objectives of this study, followed by a brief overview of so-
+
+R. Blaga et al. / Progress in Energy and Combustion Science 70 (2019) 119–144
+
+121
+
+Fig. 1.  Number of articles published per year in the field of forecasting solar re-
+sources and solar energy production retrived by SCOPUS according to the follow-
+ing criteria: (1) SEARCH (TITLE, ABSTRACT, KEYWORDS for „ forecasting”) AND (2)
+SEARCH (WITHIN RESULTS for „solar” AND „radiation”) AND (3) LIMIT TO (DOCU-
+MENT TYPE "article") AND (4) LIMIT TO (EXACTKEYWORD "Forecasting"). The line
+represents an exponential fit, highlighting the yearly growth trend. The publications
+from 2017 are excluded since only partial data are available.
+
+lar radiation variability and ends with a description from a broad
+perspective of the solar resources forecasting models. The specific
+radiometric quantities referred in this study are briefly defined in
+Appendix A .
+
+1.1. Objectives and motivation
+
+The number of papers published on the topic of forecasting so-
+lar resource has been growing at an exponential rate throughout
+the  last  decade,  as  Fig.  1  shows.  Generally,  the  studies  are  site-
+specific, the results strongly depending on the model nature, the
+time horizon of the forecast and the local climate, along with a
+large number of  other  characteristics  pertaining to  the  data and
+models. This is a major limitation, which makes the generalization
+of  the  results  difficult. What  is  needed  is  to  test  a  given  model
+over all different mentioned factors, so that their effect can be av-
+eraged out. Furthermore, in order to draw clear conclusions about
+the performance of a given forecasting model, applied in a particu-
+lar scenario (time horizon, local climate, etc.), it would be ideal to
+test the model independently in as many locations as possible pre-
+serving the scenario. These views apply to our study too, where the
+investigated dataset consists of a sample of statistical indicators of
+solar irradiance forecasting accuracy. The dataset, built with statis-
+tical indicators reported by different studies (see Section 2.4 ), must
+be large enough so that it can be assumed statistically significant.
+In other words, the conclusions of this study disclose a global pic-
+ture about the current performance of solar irradiance forecasting
+models and its trend. Fig. 1 shows that such an analysis as we pro-
+pose here could never have been performed a few (4-5) years ago,
+simply because of the lack of published papers. Even though sev-
+eral of the previously published review papers warn about paying
+attention to influential factors when comparing results from differ-
+ent publications [12,13] , none has actually performed such a study.
+This study presents an in-depth analysis of the performance of
+solar irradiance forecasting models aiming to chart out the exist-
+ing gaps in the scientific literature. A large number of papers pub-
+lished between 2006–2017 were analyzed. The studied dataset was
+collected from forty papers selected on the following criteria: the
+
+Fig. 2.  Variation of global solar irradiance at different time scales: (a) in the first
+10 days of June 2016; (b) in June 3, 2016 and (c) between 11:00 and 12:00 local
+time, June 3, 2016. The graphs are built by using data recorded at high frequency of
+four samples per minute, on the Solar Platform of the West University of Timisoara,
+Romania (45 °46 (cid:3)
+
+E, 85 m asl) [ http://solar.physics.uvt.ro/srms ].
+
+N, 21 °25 (cid:3)
+
+accuracy of the results reported by the selected papers are pre-
+sented  in  terms  of  normalized  root  mean  square  error  ( nRMSE )
+and normalized mean bias error ( nMBE ) (see Section 2.1 for def-
+initions). This allows comparing samples of different sizes includ-
+ing data of different magnitudes, thus ensuring a common basis
+for inter-comparison analyses. The selection according to this cri-
+terion leads to an arbitrary sampling, and thus this review gener-
+ates a reliable picture of the state-of-the-art in the accuracy of so-
+lar resources forecasting. A number of 1705 tests reported by the
+selected  papers  in  terms  of  nRMSE  and  nMBE  were  analyzed.  In
+other words, the dataset analyzed in this paper contains a num-
+ber of 1705 entries, each entry consisting of a pair of nRMSE and
+nMBE along with stamps for the class of the tested model, climate
+zone of the location from where the testing data were collected,
+recording  period  and  forecasting  horizon.  The  analysis  was  per-
+formed from four perspectives: classes of forecasting models (clas-
+sical statistics CS, machine learning ML, cloud motion tracking CM,
+numerical weather prediction models NW and hybrid models HY),
+time-horizon (intra-hour, intra-day and day ahead), climate (tropi-
+cal, arid, temperate and snow) and performance trend over time.
+
+1.2. Solar resource variability in brief
+
+Fig. 2 illustrates the variation of global solar irradiance at dif-
+ferent time scales. There are two major causes of the global solar
+irradiance variability:
+
+(1) The apparent movement of the Sun on the sky. The solar ir-
+radiance varies continuously  at different time scales along
+the  year,  during  the  seasons  and  throughout  the  day  (see
+the nice bell shape in day 7 from Fig. 2 a) and drops to zero
+at night. This is a deterministic component in solar irradi-
+ance variability, which is accurately accounted by the clear-
+sky models [14] .
+
+122
+
+R. Blaga et al. / Progress in Energy and Combustion Science 70 (2019) 119–144
+
+(2) Passing  clouds  on  the  sky.  The  solar  irradiance  fluctuates,
+many times in an erratic way ( Fig. 2 b, c). On smaller time
+scale,  the  predominant  concern  is  the  variability  induced
+by the wandering clouds. Fast variation of solar irradiance,
+called  solar  ramp ,  is  an  extreme  obstacle  in  operating  the
+power grid. The motion of a cloud shadow across a small
+PV capacity can cause the output power to fall down to al-
+most zero and then back to full capacity over the span of
+a few seconds. Indeed, the change in solar irradiance at a
+point due to a passing cloud can exceed 60% of the peak of
+solar irradiance in seconds [15] . The time it takes for a pass-
+ing cloud to shade an entire PV plant depends on various
+factors, namely the PV plant size and cloud speed. As exam-
+ple, in case of a 13.2 MWp PV plant in Nevada, an 80% ramp
+measured by a pyranometer in 60 seconds is associated with
+50% ramp in the power output measured in the same time
+[15] . It was shown that the geographical distribution of PV
+plants connected to the same grid has a smoothing effect on
+the aggregate amount of fluctuations [16] .
+
+Quantification of the solar irradiance variability is a hot topic in
+solar  energy  research field  [17,18] . Different proposed  quantifiers
+capture different facets of the variability in solar irradiance series
+and currently there is no general consensus on which particular
+quantifier is the most suitable for classifying different intervals of
+time according to the variability of the solar radiative regime.
+
+To conclude, the solar irradiance may fluctuate with high am-
+plitude at different time scale. Thus, the development of tools for
+both  nowcasting  and  forecasting  solar  irradiance  is  a  timely  re-
+search  area  for  safely  operating  the  power  grid  partially  fed  by
+solar plants. The next section introduces the main classes of the
+existing solar irradiance forecasting models.
+
+1.3. Classes of forecasting models
+
+In this section, different models for forecasting solar radiation
+are  briefly  discussed  from  a  formal  perspective.  The  models  are
+stratified into six classes depending on their nature: classical sta-
+tistical models (CS), models based on machine learning techniques
+(ML),  cloud  motion  tracking  models  based  on  either  ground  or
+satellite data (CM), numerical weather prediction models (NW) and
+hybrid  models  (HY).  The  sixth  class  comprises  various  types  of
+persistence models (PS), which commonly provide the benchmark
+forecasts against which the performance of other models is tested.
+For each class, a taxonomy tree diagram is presented (see [19] for
+an introduction in taxonomy). It is worth to note that such taxon-
+omy diagrams are not unique (different authors may classify differ-
+ent models differently). An illustration of each class is performed
+in Section 2.3 where the papers included in this study are inven-
+toried.
+
+In the following u denotes a generic variable, which can be as-
+
+sociated with any radiometric quantity.
+
+1.3.1. Persistence
+
+The persistence method is the simplest way to produce a fore-
+cast. It assumes that the state of a system at time index t − 1,
+given by the observation u t- 1, will not change in the future. Thus,
+the forecast generated at the time t − 1 for the next time t is:
+
+1.3.2. Classical statistical models
+
+Time series forecasting is a popular technique in many domains
+such as economics [20] , sociology [21] , engineering [22] and so on.
+In solar energy field, the classical statistical analysis of time series
+is applied to generate forecasts at short-time scale, usually intra-
+hour, but sometimes even up to three hours ahead [23] . Time se-
+ries models make use of the high autocorrelation for short lags in
+time series of solar irradiance and provide solar irradiance fore-
+casts using only past measured values of solar irradiance as input.
+From the multitude of the methods that have been tested and eval-
+uated in this class, Markov processes, ARMA and ARIMA modeling
+seem to be the main competitors.
+
+A Markov process (see e.g. [24] ) is a stochastic process where
+the present state encapsulates the process history, but also con-
+tains information about its evolution in the future. Both defined by
+the present state of the system, future and past are however inde-
+pendent; the Markov process being a memoryless process. Future
+states are reached through a probabilistic process instead of a de-
+terministic one. Currently, various radiometric quantities are being
+modeled on basis of the Markov processes [25] .
+
+The acronym ARMA refers to an auto-regressive moving aver-
+age model, a combination of autoregressive (AR) and moving aver-
+age (MA) models [26] . These models are fitted to time series data
+either aiming to better understand the data or to predict future
+points in the series. ARMA provide a parsimonious description of
+a stationary stochastic process in terms of two polynomials. The
+general equation of an auto-regressive moving average model, de-
+noted ARMA( p, q ), evaluates the variable u at the discrete time t as
+a function of its values at previous time moments (see [26] for a
+detailed presentation):
+
+(cid:2)
+
+(cid:3)
+1 − φ1 B − φ2 B 2 − ... − φp B p
+(cid:2)
+c +
+
+u t =
+(cid:3)
+1 − θ1 B − θ2 B 2 − ... − θq B q
+ε t
+
+(2)
+
+i  ( i = 1, 2, ..., p ), the moving average coefficients θ
+
+where  B  is  the  backshift  operator  Bu t = u
+t − 1 .  The  autoregressive
+coefficients φ
+i
+( i = 1, 2, ..., q ) and the standard deviation of the white noise εt are
+usually obtained by using the maximum likelihood method (Ch. 3
+from [27] ).
+
+In case of solar energy forecasting, the stationarity of the so-
+lar irradiance series is ensured by removing the deterministic com-
+ponent. This is generally obtained by dividing the measured value
+of the solar irradiance at ground G to the corresponding quantity
+evaluated at the top of the atmosphere G ext :
+k t = G/ G ext
+
+(3)
+
+Eq. (3) defines the clearness index [28] , which isolates the stochas-
+tic component of the solar irradiance time series. In general, the
+clearness index is the radiometric quantity forecasted by the ARMA
+models. The readers are encouraged to consult Refs. [29–31] for ap-
+plications of the ARMA models in solar energy field.
+
+The  acronym  ARIMA  refers  to  an  auto-regressive  integrated
+moving  average  model.  ARIMA  models  can  be  applied  to  non-
+stationary data. In this case, an initial differencing step should be
+applied to remove the non-stationarity. This step corresponds to
+the integrated part (I) of the model. A typical ARIMA( p,d,q ) model
+is expressed by Eq. (2) where the variable u t is replaced by a new
+variable w t obtained by differencing u t of d times:
+w t = ( 1 − B ) d
+
+(4)
+
+u t
+
+ˆ u t = u t−1
+
+(1)
+
+Fig. B1 from Appendix B shows a classification of the statistical
+
+models in terms of taxonomy diagram.
+
+In the field of solar energy, the extent to which a model im-
+proves the forecasting accuracy over the persistence is frequently
+used to quantify the model quality. For this reason, in this study
+the persistence-based models are treated as a separate class.
+
+1.3.3. Machine learning
+
+Machine  learning,  as  part  of  the  artificial  intelligence  theory,
+studies the algorithms that can learn from and make predictions
+
+R. Blaga et al. / Progress in Energy and Combustion Science 70 (2019) 119–144
+
+123
+
+Fig. 3.  (a) Schematic of an artificial neuron: x i is the input amount from the synapse i, w i is the weight for the specific input x i , u is the output amount, b is the bias and
+f stands for the activation function; (b) Example of a four layer ANN [11] .
+
+on data. Different from traditional statistics, machine learning algo-
+rithms are highly successful in dealing with incomplete and/or un-
+certain data sets. Machine learning algorithms seem to be capable
+to solve problems where the existing dependencies are non-linear
+relationships between inputs and outputs or insufficiently known
+to be programmed in a traditional, rigid manner. These qualities of
+the machine learning theory are highly significant in the field of
+weather and solar energy modeling and forecasting [32] as well as
+in many other fields (e.g. medical field [33] ).
+
+There  are  several  approaches  developed  under  the  machine
+learning  theory  such  as:  Artificial  Neural  Networks  (ANN),  Ge-
+netic  Algorithms  (GA),  Expert  Systems  (ES),  Support  Vector  Ma-
+chine (SVM), Gaussian Process (GP), Decision trees (DT), Extreme
+Learning Machine (ELM) and some hybrid systems that combine
+the  above  algorithms  (see  the  taxonomy  diagram  from  Fig.  B2 ,
+Appendix B ). Each of these approaches comes with advantages and
+disadvantages. For example, ELM is quoted as learning faster than
+other conventional algorithms [34] . The most popular method used
+in solar energy forecasting is ANN, and this is the reason why it is
+briefly described below.
+
+The key element of any ANN is an artificial representation of
+the biological neuron, as Fig 3 a illustrates schematically. The com-
+putational implementation of an artificial neuron resides in an al-
+gorithm in four steps [11] : (1) The inputs are multiplied by a pre-
+determined weight and summed-up; (2) A bias is added to the re-
+sult; (3) The sum is subjected to the activation (or transfer) func-
+tion and is modulated accordingly; (4) The signal flows to the next
+neuron. The bias input is an offset value that regulates the signal.
+The common activation functions are logistic and Gaussian, respec-
+tively, but, in principle, they may take any form. Mathematically,
+the output u of an artificial neuron may be written as:
+
+(cid:4)
+
+(cid:6)
+
+(cid:5)
+
+u = f
+
+b +
+
+w i x i
+
+i
+
+(5)
+
+ANN is a collective set of such neural units, in which the in-
+dividual  neurons  are  connected  through  complex  synaptic  joints
+characterized  by  weight  coefficients  and  every  single  neuron
+makes its contribution towards the computational properties of the
+whole  system.  In  solar  energy applications, a  typical  ANN  has  a
+three layers feed-forward topology: input, hidden and output lay-
+ers.  An  example  of  such  a  network,  the  Multi-Layer  Perceptron
+(MLP) is given in Fig. 3 b. An ANN is not a priori programmed to
+perform specific tasks, but instead it is trained using a backpropa-
+gation procedure until patterns in input data are learned. The ANN
+is typically initialized with random weights on its synapses, then
+being trained in four steps: (1) forward propagation of the training
+pattern input, (2) calculating the error function by comparing the
+output with the target value; (3) backpropagation of the error in
+order to generate the change in each weight (cid:6)w
+ij  for all neurons
+
+i j
+
++ λ(cid:6)w
+
+= w old
+i j
+
+ij using a rule like w new
+
+from the output and hidden layers and (4) updating the weights
+i j , where λ is a learning pa-
+w
+rameter. As the training proceeds, the network’s response to the
+input data becomes better and better. Once the network is trained,
+all the synaptic weights are frozen (i.e. only the step (1), forward
+propagation, remains enabled) and the network is ready to use. As
+far as the number of hidden layers is concerned, two layers are
+sufficient for almost any application since one layer can approx-
+imate any kind of function. The number of hidden neurons in a
+layer is established empirically between one and the number of
+input variables.
+
+Definitely  the  artificial  intelligence  techniques  have  gained
+more and more ground in renewable energy modeling. The follow-
+ing works outline a picture of the breadth and diversity of the ap-
+plication of the technique. The book by Kalogirou [35] includes a
+comprehensive review of the artificial intelligence techniques re-
+lated to the renewable energy field, Ref. [36] reviews the artificial
+intelligence methods in modeling the hydrogen production while
+Ref. [37] reviews the artificial intelligence methods related to fore-
+casting solar radiation data.
+
+1.3.4. Cloud motion tracking
+
+The  most  important  and  at  the  same  time  the  most  variable
+attenuating factor for solar radiation at ground level is the cloud
+cover.  Models  from  this  class  forecast  cloud  cover  from  full-sky
+images  obtained  from  either  ground-based  cameras  or  satellites.
+The approach uses various algorithms that identify cloud patterns
+from  subsequent  images.  The  information  collected  from  subse-
+quent images is converted into cloud motion vectors (CMV), which
+encapsulate  the  magnitude  and  direction  of  the  displacement  of
+individual clouds. CMV is used to forecast cloud cover, usually by
+assuming persistence in cloud shape, velocity and transparency. Fi-
+nally, a semi-empirical model is applied in order to obtain the so-
+lar irradiance at ground level, from the predicted cloud cover.
+
+CMVs  derived  from  ground-based  sky  imagers  are  useful  for
+nowcasting or very short term forecasts, on time horizons of up
+to a few hours. Over larger time intervals, the clouds can pass out
+of the field of view of the camera. The satellite-based images on
+the  other  hand,  are  images  with  a  wide  field  of  view,  but  with
+lower space and time resolution, making them adequate for longer
+term forecasts (day ahead or longer). Ref. [16] presents a compre-
+hensive review of sky-imaging hardware and analysis techniques.
+Fig. B3 from Appendix B shows a classification of the cloud motion
+approaches in terms of taxonomy diagram.
+
+1.3.5. Numerical weather predictions
+
+Numerical Weather Prediction (NWP) uses the current weather
+conditions as input into mathematical models describing the pro-
+cesses  occurring  in  the  atmosphere,  aiming  to  forecast  weather
+in  a  future  period.  A  short  history  of  NWP  models  and  their
+
+124
+
+R. Blaga et al. / Progress in Energy and Combustion Science 70 (2019) 119–144
+
+evolution  followed  by  a  step-by-step  description  of  the  various
+model  equations  and  how  to  solve  them  numerically  can  be
+found  in  Ref.  [38] .  The  NWP  models  may  be  classified  in  two
+groups  ( Fig.  B4  from  Appendix  B ):  (1)  General  Circulation  Mod-
+els  (GCM),  which  describe  the  processes  at  global  scale  and  (2)
+mesoscale  models,  whose  application  is  restricted  to  a  regional
+area. Generally, the mesoscale models use boundary conditions ob-
+tained  by  running  GCMs.  Among  GCMs,  the  most  popular  mod-
+els are GFS – Global Forecast System [ http://www.emc.ncep.noaa.
+gov/GFS/.php ] and - IFS, a model developed by the European Cen-
+tre for Medium-Range Weather Forecasts (ECMWF) [ https://www.
+ecmwf.int/ ]  while  among  the  mesoscale  models  one  may  quote
+WRF  – Weather  Research  and  Forecasting  Model  [ https://www.
+mmm.ucar.edu/weather-research-and-forecasting-model ]. WRF has
+a wide range of physical parameterizations, which allow setting the
+model for better capturing the physical processes peculiarities for
+a given location, resolution and application.
+
+NWP models are the basis of solar resources forecasts in time
+horizon  ranging  between  6  and  72  h.  The  forecast  horizon  of
+24 h. ahead is of particular interest for decision making in the en-
+ergy market.
+
+1.3.6. Hybrid models
+
+The models from this class are built by combining two or more
+methods  from  the  other  classes  (see  Fig.  B5  from  Appendix  B ).
+Such a  model can compensate some of  the shortcomings of the
+individual models, at the expense of added complexity. The hybrid
+models fall into two broad categories.
+
+The  first  category  includes  models  that  combine  CS  and  ML
+models, either successively or in parallel on different components
+of the solar irradiance series [39] . Studies on such combination of
+forecasting models have been proposed by many researchers (e.g.
+[40,41] ), indicating that the hybrid forecasting methods outperform
+the individual forecasts. The parallel approach requires the a pri-
+ori spectral decomposition of the measurements series, performed
+commonly with Fourier or wavelet transform [42–44] .
+
+The second category contains models that apply different post-
+processing techniques (algorithms from CS or ML classes) to the
+output of either a model from CM or NW class [23] . This is par-
+ticularly useful for adjusting the NWP outputs to account for site-
+specific sub-grid effects induced by the local climate or geography.
+Forecast improvements are performed by comparing NWP output
+to measured data during a training period, the results being used
+subsequently to develop corrected forecasts. This type of approach
+is  often  referred  to  as  MOS,  Model  Output  Statistics.  In  the  last
+years different MOS approaches have been proposed. The simplest
+but powerful types of MOS are bias removal and spatial averag-
+ing, in other words adjusting the systematic forecast errors [45] .
+Since these approaches do not combine two models from different
+classes (as we defined the HY class), in this work we assigned such
+models to NW class. The genuine hybrid MOS approaches (in sense
+of the HY class definition) forecast global solar irradiance by com-
+bining NWP outputs with CS and ML post-processing techniques.
+For example, Ref. [46] deals with day ahead solar irradiance fore-
+casts covering Reunion Island with a horizontal resolution of 3 km.
+The WRF forecasts are refined with a Kalman filter using high qual-
+ity ground measurements. The main feature of the post-processing
+method is that it removes the bias in the global solar irradiance
+forecasts  without  need  for  a  long-term  historical  data  database.
+Ref. [47] explores a Principal Component Analysis (PCA) in combi-
+nation with two post-processing techniques (Neural Network and
+Analog  Ensemble)  for  the  forecasting  of  wind  and  solar  irradi-
+ance.  The  PCA  is  applied  to  reduce  the  datasets  dimension.  The
+study  shows  that  combining  PCA  with  the  post-processing  tech-
+niques leads to better results when compared to the implementa-
+tion without the PCA reduction. The work [48] aims at combining
+
+state-of-the-art  implementations  of  the  WRF  model  with  multi-
+variate statistical learning techniques to provide accurate forecasts
+of day-ahead hourly irradiance in Singapore. The authors show that
+WRF-solar combined with the statistical learning method outper-
+formed GFS for day-ahead forecasts of solar irradiance.
+
+2. Methodology and data
+
+2.1. Statistical indicators of accuracy in solar energy forecasting
+
+A thorough description and discussion of the performance in-
+dicators used in the solar energy modeling is presented in [49] .
+The study emphasizes three basic features of the performance in-
+dicators: (1) Most indicators are summary statistics that attempt to
+synthesize the overall performance of a model with only one num-
+ber,  (2)  There  is  a  strong  motivation  for  more  elaborate  metrics
+(particularly those derived from the Kolmogorov–Smirnov test) and
+(3) The major potential of visual indicators. Ref. [50] points out the
+unavailability of a consistent and robust set of metrics to measure
+the accuracy of a solar forecast and propose a suite of generally
+applicable and value-based metrics for solar forecasting in a com-
+prehensive set of scenarios (i.e., different time horizons, geographic
+locations, and applications). In a subsequent paper [51] the same
+research group reported the framework for deriving the target val-
+ues for the suite of solar forecasting metrics. On the whole, the
+methodology represents a reasonable approach that can be used
+to assess the economic benefits gained from improvements in ac-
+curacy of solar forecasting. The quality metric proposed in [52] , de-
+fined as the ratio of solar uncertainty to solar variability, compares
+the forecasting error with the solar variability directly. Unlike the
+traditional statistical indicators (root mean square error, the deter-
+mination coefficient, etc.) the proposed metric in [52] conveys a
+measure of the variability of the time-series for the solar irradiance
+data. From a different perspective there are proposals of metrics
+very relevant in the context of ramp prediction such as prediction
+interval coverage probabilities and prediction interval normalized
+average widths.
+
+Despite of the above observations a significant part of the pa-
+pers  dealing  with  solar  resources  forecasting,  assess  the  results
+only in terms of traditional statistical indicators of accuracy: mean
+bias error MBE , root mean square error RMSE and mean absolute
+error MAE. They are defined as [49] :
+
+MBE ≡ 1
+M
+
+M (cid:5)
+
+i =1
+
+( c i − m i )
+
+RMSE ≡
+
+( c i − m i ) 2
+
+(cid:7)
+
+1
+M
+
+M (cid:5)
+
+i =1
+
+(cid:8)
+
+1 / 2
+
+MAE ≡ 1
+M
+
+M (cid:5)
+
+i =1
+
+| c i − m i |
+
+(6)
+
+(7)
+
+(8)
+
+In order to compare the quality of models applied to samples
+with different size, these indicators are usually normalized to the
+mean μ =  1
+i of measured data: nM BE = M BE /μ, nRM SE =
+M
+RMSE /μ and nM AE = M AE /μ respectively.
+
+M
+i =1 m
+
+(cid:9)
+
+that
+
+signifies
+
+MBE  captures  overall  trends  or  biases  in  the  data.  A
+positive/negative  value
+the  model  overall
+over/underestimates  the  predicted  quantity.  On  the  other  hand,
+RMSE is very sensitive to large individual errors, since it contains
+squared values. As such, it captures variability rather than overall
+trends. MAE is somewhere in between, quantifying the prediction
+errors with more emphasis on mean error and less on individual
+extreme events.
+
+R. Blaga et al. / Progress in Energy and Combustion Science 70 (2019) 119–144
+
+125
+
+Ref. [53] gives an assessment of the usefulness of these three
+statistical  indicators  for  quantifying  forecast  errors  and  makes  a
+set  of  recommendations  for  PV  industry  standards.  The  authors
+define three time scales: a) operational (from minutes to hours),
+b) management (from hours to days) and c) planning (from days
+to weeks). The first two time scales broadly overlap the forecast
+horizons classes used in this study: intra-hour (IH), intra-day (ID)
+and day-ahead (DA). Ref. [53] outlines that for short-time scales,
+forecasting extreme events (severe solar ramps) is the key require-
+ment. Therefore, in order to assess the model performance, an ap-
+propriate statistical indicator of accuracy is to be used. This means
+that the indicator should be able to capture the model’s perfor-
+mance in forecasting such events. Therefore, the most suitable in-
+dicator is RMSE . Ref. [53] notes that the performance of a model
+estimated in terms of MAE would be most appropriate for man-
+agement purposes, while for long-term predictions and planning
+the MBE should be used, because it captures overall trends rather
+than variability.
+
+There are numerous difficulties in comparing the results of dif-
+ferent studies amongst themselves. The most often used quantifier
+of forecast errors is the RMSE . It is sometimes accompanied by an-
+other indicator, either MAE or MBE , and seldom by some others.
+The indicators are regularly reported in absolute values, not in a
+normalized form, which excludes inter-comparison from the out-
+set. Furthermore, where normalized values are given, it is not al-
+ways stated what the reference quantity is. Most of the time this is
+the average value of the solar irradiance measurements at ground.
+For example, another choice is the normalization to the maximum
+−2
+of the measured values or the peak nominal irradiance 10 0 0 Wm
+used to rate the capacity of PV plants [54] . This choice has become
+benchmark in the wind energy industry [55] . Occasionally also the
+difference between the maximum and minimum measured values
+is  used.  Ref.  [54]  also  shows  that  different  normalization  proce-
+dures may lead to deviations as high as 50% for the same statistical
+indicator. Based on the observations made in [54] , Ref. [12] pro-
+poses the usage of the average value of measurements and peak
+nominal irradiance for normalizing MBE and RMSE , respectively. In
+our opinion, the average value of the measurements should be the
+standard  for  normalizing  all  statistical  indicators  in  solar  energy
+forecasting.
+
+Another ambiguity arises from the choice of considering only
+daylight measurements or considering the full 24-h. interval. Al-
+though the solar irradiance is zero during nighttime, the inclusion
+of these measurements in the dataset, changes the total number
+of  data  entries  and  the  average  values  of  the  considered  quan-
+tities. When the former choice is made, there is also a problem
+with  the  threshold  value  below  which  solar  irradiance  data  are
+excluded. However, this has been shown not to have a consider-
+able  influence,  given  a  reasonable  choice  for  the  threshold.  Ref.
+[54] shows that the inclusion of nighttime values increases nRMSE ,
+leaves nMBE and nMAE unchanged, and decreases all other error
+indicators. If the reported error indicators are normalized to the
+average measured values, it would thus be counter-productive to
+consider night-time values.
+
+In  this  study,  we  have  included  all  choices  of  normalization.
+The overwhelming majority of studies uses the average value of
+measurements. Where it is not stated explicitly we assume this is
+the case. As we consider papers reporting forecast performances
+in terms of RMSE and MBE , normalized with average values, we
+assume  that  daylight  values  have  been  considered  in  all  studies
+where it is not stated explicitly.
+
+Ref.  [13]  highlights  that  the  granularity  and  spatial  aggrega-
+tion of the datasets on one hand and the testing periods on other
+hand, play important roles, hindering the objective comparison of
+the different models performance. Ideally, the scientific literature
+should be extensive and comprehensive enough, such that all these
+
+attributes can be averaged over, allowing statistically relevant con-
+clusions to be drawn.
+
+2.2. Selection criteria
+
+At the first stage of the review process we have used Google
+Scholar search engine. A concise introduction to scientific reviews
+using Google Scholar along with a comprehensive review on his-
+tory and trends in solar irradiance and PV power forecasting us-
+ing  text  mining  can  be  read  in  Ref.  [56] .  The  study  reported  in
+the current paper started with Google Scholar search. We searched
+for “solar radiation forecasting” and the results (limited by default
+in Google Scholar to one thousand) were ranked according to the
+degree of overlap in the title and abstract of the papers with the
+search terms and further prioritized according to the number of ci-
+tations. We have included in our study only regular journal articles
+and conference papers dealing with solar irradiance forecasting (as
+opposed to output power forecasting). Only results published dur-
+ing  the  period 2006–2017 have been considered.  This  procedure
+has resulted in 162 papers, which were subjected to a further se-
+lection as described below.
+
+The criteria for a paper to be selected for this study are the
+
+following:
+
+(1) The paper has been published during the last decade.
+(2) The subject of the paper is the forecasting of global solar irra-
+diance or direct normal irradiance over time horizons between
+minutes and several days.
+
+(3) The  results  have  been  assessed  in  terms  of  both  nRMSE  and
+nMBE,  or  equivalently,  these  indicators  can  be  obtained  from
+the information that is provided.
+
+The number of papers from the publications studied by us that
+are  eligible  according  to  the  first  two  criteria  is  162  ([29,30,40–
+47] and [57–207] ) and out of these 40 ([6,29,30,40,41,45,144–177])
+satisfy the third criterion, and were thus included in our analysis.
+From the 40 selected papers, we have collected the statistical in-
+dicators of accuracy nRMSE and nMBE . The final quality-controlled
+database contains 1705 entries (pairs of nRMSE and nMBE ), with
+data from 88 locations spread across 18 countries (which includes
+French off-seas territories and the US state of Hawaii, which have
+been  classified  separately  to  highlight  their  remote  insular  loca-
+tion). The locations are represented on the world map in Fig. 4 ,
+along with the locations from the remaining 122 papers. We can
+see that the studied publications cover all continents and climate
+zones. The papers that are eligible according to the third criterion
+are predominantly concentrated in Europe and the USA, along with
+a number of locations spread throughout the rest of the world.
+
+In  Fig.  4  and  consistently  throughout  this  paper,  the  Geiger-
+Köppen  climate  classification  system  is  used  for  ascribing  the
+climate  zones  to  land  surfaces.  The  Geiger-Köppen  data  down-
+loaded from http://koeppen- geiger.vu- wien.ac.at/were plotted onto
+the world map, from the maps library of the R programming lan-
+guage. Only the main climate groups are considered: tropical (A),
+dry/arid (B), temperate (C), continental/snow (D) and polar (E). As
+none  of  the  forecasting  tests  refers  to  polar  climates,  we  effec-
+tively work with the first four groups in our study. The data are
+evenly distributed among the four climate groups: A–390, B–374,
+C–647  and  D–294.  The  temperate  climate  group  is  naturally  the
+most populated as most developed countries are situated in this
+zone (western European countries, Japan, parts of the USA and of
+Australia) and it is the most suitable for current PV applications.
+On the other hand, some of the newly industrialized and devel-
+oping countries, like China, India, Brazil, Mexico, Chile, are some
+of the largest investors in renewable energies in the present [209] .
+These countries reside mostly in tropical and arid climate regions.
+As PV applications become more effective when operating under
+
+126
+
+R. Blaga et al. / Progress in Energy and Combustion Science 70 (2019) 119–144
+
+Fig. 4.  Climate regions, as classified by the Köppen-Geiger classification system [208] . Triangles represent all locations where the solar irradiance forecasting models have
+been tested. Yellow triangles indicate the locations where the results are eligible according to the first two criteria, while the white colored ones pass also the third criterion.
+
+and persistence (PS). According to the forecast horizon the data are
+categorized into three classes: intra-hour (IH), intra-day (ID) and
+day-ahead (DA) forecasts.
+
+Table 1 shows a large diversity of the models’ nature. For moti-
+vating our classification in respect to this criterion, a brief descrip-
+tion of the papers follows, with focus on the forecasting models’
+nature.
+
+2.3.1. Classical statistical models
+
+Keywords: autoregression, removing seasonality/detrending, in-
+sular  vs.  continental  site,  AR/ARMA/ARIMA,  state  space  models,
+nonparametric  bootstrap,  vector  autoregressive  model,  prediction
+filters.
+
+2.3.1.1. ARIMA.  Ref. [6] introduces four new tailored models, based
+on  ARIMA  type  regression,  upgraded  with  different  physically
+motivated  features.  A  combined  model  (ARMA  and  GARCH)  for
+solar  irradiance  forecasting  at  IH  and  ID  time  horizons  is  re-
+ported  by  [29] .  GARCH  (Generalized  AutoRegressive  Conditional
+Heteroskedasticity),  typically  used  in  financial  series,  is  proved
+suitable for modeling the variability of high-frequency data [29] .
+The performances of ARMA and ANN models at continental and
+coastal versus insular sites are compared in [30] .
+
+The data from insular sites prove to be more difficult to fore-
+cast, independently of the model used [30] . Ref. [144] proposes an
+innovative  method  for  short-term  forecasting  of  solar  irradiance.
+The method is based on forecasting the sunshine number, a binary
+variable stating if the sun shining or not on the sky, from which
+the solar irradiance is reconstructed using a clear sky model and
+information about cloud transmittance.
+
+2.3.1.2. Other autoregressive (AR) models.  Ref. [145] deals with solar
+irradiance  forecasts  using  an  Exponential  Smoothing  State  Space
+model and report good results for high-resolution data. A model
+based on Nonparametric Bootstrap for probabilistic forecasting of
+solar irradiance is introduced in [146] . The method gives good re-
+sults and, at the same time, it is computationally very efficient. Ref.
+[147] proposes a Vector Autoregressive Model suitable for forecast-
+ing on sparse spatio-temporal data. A comparative study about the
+
+Fig. 5.  The performance of the models tested in the papers that passed the selec-
+tion criteria. The statistical indicators of accuracy have been averaged over all data
+from a given paper. The index of the papers (see Table 1 ) is written inside a circle
+whose diameter is weighted according to the number of data entries and color-
+coded according to the year of publication.
+
+the  increased  solar  output  conditions  around  the  equator  (espe-
+cially in the cloudless desert areas), without drastically losing con-
+version efficiency, it is expected that these countries’ share in the
+renewable energy market will increase. It is thus prescient to study
+the climate-sensibility of forecasting models.
+
+2.3. Summary of the articles included in this study
+
+We proceed with a brief review of the forty papers included in
+this study. A summary showing the forecasted variable, the time
+horizon, the forecasting models nature and the locations where the
+models were tested, is presented in Table 1 . The papers are listed
+in chronological order according to the publication date.
+
+From the point of view of the forecasting method, the data are
+categorized in the six classes described in Section 1.3 : classical sta-
+tistical methods (CS), machine learning (ML), cloud motion track-
+ing (CM), numerical weather prediction (NW), hybrid models (HY)
+
+Table 1
+Summary of the papers included in this study. The abbreviations are explained in the taxonomy diagrams from Appendix B .
+
+Authors
+
+Reference
+
+Forecasted
+variable
+
+Forecasting
+horizon
+
+Method
+
+Index
+
+1
+2
+3
+
+4
+
+5
+
+6
+
+7
+
+8
+9
+
+10
+11
+12
+
+13
+
+14
+15
+16
+
+17
+
+18
+
+Year
+
+2006
+2008
+
+Heinemann et al.
+Chaabene et al.
+Remund et al.
+
+2010
+
+Mellit et al.
+
+Paoli et al.
+
+Perez et al.
+
+[175]
+[156]
+[164]
+
+[153]
+
+[154]
+
+[163]
+
+2011
+
+Marquez and Coimbra
+
+[151]
+
+2012
+
+2013
+
+Mathiesen and Kleissl
+Lara-Fanego et al.
+
+Lara-Fanego et al.
+Dong et al.
+Fu and Cheng
+
+Mathiesen et al.
+
+Pacurar et al.
+Pelland et al.
+Perez et al.
+
+2014
+
+Akarslan et al.
+
+Dong et al.
+
+[165]
+[169]
+
+[166]
+[145]
+[159]
+
+[168]
+
+[148]
+[45]
+[167]
+
+[149]
+
+[174]
+
+GHI
+GHI
+GHI
+
+GHI
+
+GHI
+
+GHI
+
+GHI
+
+GHI
+DNI
+
+DNI,GHI
+GHI
+GHI
+
+GHI
+
+GHI
+GHI
+GHI
+
+GHI
+
+GHI
+
+IH, ID
+IH
+ID
+
+ID
+
+ID
+
+HY (MM5)
+ML (NF, KF)
+NW (ECMWF, NDFD and GFS/WRF)
+
+ML (MLP)
+
+ML (MLP)
+
+ID, DA
+
+CM (geostationary satellite images)
+
+ID
+
+ID
+ID
+
+ID, DA
+IH
+IH
+
+ID, DA
+
+IH
+ID
+DA
+
+IH
+
+IH
+
+ML (ANN)
+
+NW (NAM, GFS, ECMWF)
+NW (WRF)
+
+NW (WRF)
+CS (ARIMA, LES, SES, RW)
+CM (all-sky images)
+
+NW (WRF-CLDDA)
+
+CS (RW, LES, SES)
+NW (GEM with post-processing)
+NW (ECMWF, GFS/WRF))
+
+CS (LPF)
+
+HY (geostationary satellite images with
+ES/MLP)
+
+Data summary
+
+1 location, Germany
+1 location, Tunisia
+3 locations, USA, data measured from April to
+September 2007
+1 location, Italy, data measured from July 1st 2008 to
+May 23rd 2009 with an hourly and daily time scale
+1 location, France, GHI recorded an hourly basis from
+January 1971 to December 1989
+7 locations, USA„ data collected over period a little
+over 1-year (from August 23, 2008 to August 31, 2009)
+1 location, USA, the set of input variables consists of
+meteorological variables
+7 locations, USA
+2 locations, Spain, hourly values measured during 2007
+and 2008 at four ground station
+1 location, Spain, data from 12-month period
+1 location, Singapore
+1 location, Taiwan, one all-sky image captured per
+minute
+1 location, USA, the time step size is 30 s and output is
+available hourly to a maximum forecast horizon of 36
+h
+1 location, Romania, high rate (15 s) recorded data
+10 locations, USA, Canada, averaged hourly data
+18 locations, USA, Germany, Austria, Spain, Canada,
+data collected over period of 1-year in all locations
+1 location, Turkey, data collected over a period of
+1-year, measured every 10 min
+1 location, Singapore
+
+( continued on next page )
+
+R
+
+.
+
+B
+l
+a
+g
+a
+
+e
+t
+
+a
+l
+.
+ /
+ P
+r
+o
+g
+r
+e
+s
+s
+ i
+n
+
+E
+n
+e
+r
+g
+y
+
+a
+n
+d
+
+C
+o
+m
+b
+u
+s
+t
+i
+o
+n
+
+S
+c
+i
+e
+n
+c
+e
+
+7
+0
+
+(
+2
+0
+1
+9
+)
+
+1
+1
+9
+–
+1
+4
+4
+
+1
+2
+7
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Table 1 ( continued )
+
+Index
+
+Year
+
+Authors
+
+Reference
+
+Forecasted
+variable
+
+Forecasting
+horizon
+
+Method
+
+Data summary
+
+19
+
+20
+21
+
+22
+
+23
+
+24
+
+25
+26
+
+27
+28
+
+29
+30
+31
+32
+
+33
+
+34
+
+35
+36
+37
+
+38
+
+39
+
+40
+
+Nonnenmacher et al.
+
+Paulescu et al.
+Yang et. al
+
+2015
+
+Alonso-Montesinos and
+Batlles
+Alonso-Montesinos et al.
+
+2016
+
+Brabec et al.
+
+Dong et al.
+Lauret et al.
+
+Pedro and Coimbra
+Pierro et al.
+
+Trapero et al.
+Verzijlbergh et al.
+Akarslan et al.
+Andre et al.
+
+Boland et al.
+
+David et al.
+
+Grantham et al.
+Nonnenmacher et al.
+Urraca et al.
+
+[162]
+
+[144]
+[158]
+
+[160]
+
+[161]
+
+[6]
+
+[40]
+[157]
+
+[152]
+[177]
+
+[150]
+[176]
+[172]
+[147]
+
+[30]
+
+[29]
+
+[146]
+[170]
+[155]
+
+2017
+
+Hocaoglu and Serttas
+
+[41]
+
+Monjoly et al.
+
+Zhu et al.
+
+[171]
+
+[173]
+
+GHI
+
+GHI
+GHI
+
+GHI
+
+GHI
+
+GHI
+
+GHI
+GHI
+
+GHI
+GHI
+
+GHI
+GHI
+GHI
+GHI
+
+GHI
+
+GHI
+
+GHI
+DNI
+GHI
+
+GHI
+
+GHI
+
+DNI
+
+IH. ID
+
+IH
+IH
+
+IH, ID
+
+IH
+
+IH
+
+IH
+ID
+
+IH, ID
+ID, DA
+
+ID
+DA
+IH
+IH
+
+IH
+
+ID
+
+IH
+ID
+IH
+
+IH
+
+IH
+
+IH
+
+CM (cloud tracking with optical flow
+algorithm)
+CS (ARIMA)
+CM (frozen cloud advection forecast)
+
+CM (CMV from satellite images.
+maximum cross-correlation method)
+CM (CMV from sky imager, maximum
+cross-correlation method)
+CS (sARIMA)
+
+HY (SOM, SVR, PSO)
+ML (ANN,GP,SPM)
+
+ML (kNN, ANN)
+HY (WRF with MOS cascade
+post-processing,)
+CS (DHR)
+HY (GFS with MOS post-processing)
+HY (LF, adaptive approach)
+CS (VAR)
+
+CS (ARMA, ANN)
+
+CS (ARMA and GARCH)
+
+CS (NB)
+NW (RDPS)
+ML (SVR, RF)
+
+HY (Mycielski – Markov model)
+
+HY (EMD, AR, ANN)
+
+HY (wavelet decomposition, AR, SVM)
+
+1 location, USA, data sets were collected on a 1 min
+sample rate and averaged to provide 15 min values
+1 location, Romania, high rate (15 s) recorded data
+1 location, USA, locally developed ground based
+sky-imaging system
+1 location, Spain, satellite data from 2010 to 2014
+
+1 location, Spain
+
+1 location, Romania, measurements are performed 24 h
+a day, at equidistant time intervals of 15s
+2 locations, USA, Singapore
+3 locations, France, clear sky models are used to obtain
+a stationary hourly solar series
+5 locations, USA, covering different microclimates
+2 locations, Italy, Switzerland, five years (2008–2012)
+of GHI and air temperature measurements were used
+1 location, Spain, solar irradiance recorded every 1 min
+1 location, Netherlands
+3 locations, Turkey, data separated into seasons
+3 locations, Guadalupe Island, 5-min to 1 h sampling
+rate
+4 locations, USA, Australia, Guadalupe Island, data from
+a variety of locations, islands and coast
+3 locations, USA, Reunion Island, continuous data
+samples
+1 location, Australia, 10-year data set
+23 locations, USA
+1 location, Spain, variables recorded and used: GHI,
+rainfall, wind speed, temperature and relative humidity
+2 locations, Turkey, good solar potential with less
+randomness
+1 location, Guadalupe Island, highly time-variable
+tropical climate
+4 locations, USA, 1-min sampling rate
+
+1
+2
+8
+
+R
+
+.
+
+B
+l
+a
+g
+a
+
+e
+t
+
+a
+l
+.
+ /
+ P
+r
+o
+g
+r
+e
+s
+s
+ i
+n
+
+E
+n
+e
+r
+g
+y
+
+a
+n
+d
+
+C
+o
+m
+b
+u
+s
+t
+i
+o
+n
+
+S
+c
+i
+e
+n
+c
+e
+
+7
+0
+
+(
+2
+0
+1
+9
+)
+
+1
+1
+9
+–
+1
+4
+4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+R. Blaga et al. / Progress in Energy and Combustion Science 70 (2019) 119–144
+
+129
+
+effect on solar irradiance forecasts of the time-series seasonal ad-
+justment is reported by [148] . Various types of statistical models
+are tested at 1-h. time horizon and a time-adaptive procedure for
+fitting the models parameters is proposed.
+
+2.3.1.3. Prediction  filter.  2-D  linear  prediction  filter  approach  for
+predicting  hourly  solar  irradiance  is  used  in  Ref.  [149] .  Differ-
+ent multi-dimensional filters are applied to data, from which the
+forecasted  values  of  the  solar  irradiance  are  extracted.  The  per-
+formance  of  dynamic  harmonic  regression  model  for  predicting
+hourly  global  horizontal  irradiance  is  investigated  by  [150] .  The
+proposed model, based on Kalman filter and fixed interval smooth-
+ing algorithm, operates in the frequency domain.
+
+2.3.2. Machine learning
+
+Keywords:  Artificial  Neural  Networks,  Muti  Layer  Perceptron,
+Support  Vector  Machine,  Random  Forest,  Neuro-Fuzzy  Estimator,
+Gaussian Processes
+
+2.3.2.1. Artificial neural network.  Ref. [151] reports an artificial neu-
+ral network using as input predicted meteorological variables from
+a weather forecasting database. Two models, a k-nearest neighbor
+and an artificial neural network model for forecasting global solar
+irradiance on IH intervals, are proposed by [152] . The performance
+of the models is found to be good in general, but varying strongly
+with the local climate [152] . A Multilayer Perceptron Neural Net-
+work model is introduced by [153] , which takes as input past ir-
+radiance and temperature measurements. The model is applied for
+day ahead forecasts with good results [153] . Sometimes the Multi-
+layer Perceptron models for day ahead forecasts of solar irradiance
+are found to outperform CS class models [154] .
+
+2.3.2.2. Other  ML  techniques.  Ref  [155]  introduces  two  machine
+learning  models,  Support  Vector  Regression  and  Random  Forest,
+respectively, which take as input meteorological records. The mod-
+els, show significant improvement over persistence and other refer-
+ence models [155] . A neuro-fuzzy estimator based on meteorolog-
+ical input for medium term forecasting is reported by [156] . Ref.
+[157] performs a thorough analysis of ML forecasting techniques
+(NNs,  Gaussian  Processes  and  SVM).  The  authors  concluded  that
+the ML models perform comparably to the simpler AR models at
+IH intervals, while for larger horizons the former show much bet-
+ter results than the latter.
+
+2.3.3. Cloud motion tracking
+
+Keywords: all-sky camera, satellite images, cloud tracking; max-
+
+imum cross-correlation method
+
+2.3.3.1. Ground based sky imagers.  A study on the use of ground
+based  sky-images  for  predicting  solar  irradiance  over  IH  periods
+was presented in [158] . A frozen cloud advection model was used
+to extrapolate the location of clouds. Differently, [159] use a regres-
+sion technique to predict the clearness index from all-sky images,
+from which solar irradiance is subsequently derived.
+
+2.3.3.2. Satellite based sky imagers Refs.  [160] and [161] reports a
+forecast model based on cloud motion vectors extracted from se-
+quences  of  satellite  images.  Beam,  diffuse  and  global  irradiance
+are  forecasted  separately  on  IH  horizons.  For  beam  and  global
+radiation,  the  nRMSE  value  is  lower  than  10%  under  clear  skies.
+Ref. [162] proposes a satellite-to-irradiance model, which relies on
+cloud motion vectors generated from sequences of satellite images
+and improved with ground data. An extensive validation of vari-
+ous models for both ID and DA horizons is reported in [163] . The
+models used for ID horizons are based on cloud motion vectors
+
+derived from satellite images, while the model used for DA hori-
+zons rely on gridded cloud cover data from a public database. The
+authors use the maximum cross-correlation method to obtain the
+cloud motion vectors. The models are tested against ground mea-
+surements [163] .
+
+2.3.4. Numerical weather prediction
+
+Keywords: Numerical Weather Prediction (NWP), Weather Re-
+search  and  Forecasting  (WRF),  Global  Environmental  and  Multi-
+scale Model (GEM), post-processing data
+
+2.3.4.1. Numerical weather prediction.  Ref. [164] compares the per-
+formance  of  three  NWP  models  for  ID  forecasts.  A  thorough  as-
+sessment of some of the well-established NWP models is reported
+by [165] . Ref. [166] results of testing a WRF-based model for DA
+predictions at a location in Spain. Both global horizontal and di-
+rect normal irradiance are forecasted. The model presents signifi-
+cant improvement over persistence [166] . A comprehensive anal-
+ysis,  comprising  independent  validations  of  different  NWP  mod-
+els, with a focus on post-processing for site-specific forecasts, is
+reported in [167] . A simple averaging of the outputs of all NWP
+models proves to be significantly more accurate than the indepen-
+dent results of each model. A WRF-based model was developed in
+[168] . The model performance was assessed for both ID and DA
+forecasting.
+
+2.3.4.2. NWP  with  post-processing.  The  performance  of  DNI  fore-
+casts based on a WRF model is evaluated in Ref. [169] . The authors
+show  that  spatial  averaging  of  the  predictions  significantly  im-
+proves the forecasts accuracy by reducing the errors. Ref. [45] ap-
+plies  two  post-processing  techniques  (spatial  averaging  and  bias
+removal) to forecasts obtained using the Global Environmental and
+Multiscale model. DA forecasts of DNI using different NWP-based
+models, to which re-forecasting methods are applied to improve
+accuracy, is reported by [170] .
+
+2.3.5. Hybrid models
+
+Keywords:  Classical  statistics,  Mycielsky  algorithm,  Support
+Vector Machine with Particle Swarm Optimization, combination AR
+with ANN, hybrid exponential smoothing, decomposition methods,
+Markov chain.
+
+2.3.5.1. Classical statistics and machine learning hybrid models.  Ref.
+[41] introduces a model based on the Mycielsky algorithm, which
+looks  for  sub-patterns  in  time  series,  combined  with  Markov
+chains  to  forecast  hourly  solar  irradiance.  Ref.  [40]  proposes  a
+model that combines Self-Organizing Maps, used for the decompo-
+sition of the time series, and Support Vector Machine with Particle
+Swarm Optimization for forecasting solar irradiance.
+
+2.3.5.2. Adaptive  models.  Ref.  [171]  introduces  a  model  based  on
+a combination of a linear autoregressive process and an artificial
+neural network. The data series is decomposed using various meth-
+ods,  and  different  models  are  applied  adaptively  on  each  com-
+ponent, resulting in a hybrid model that shows improved perfor-
+mance as compared to the simple models. A novel adaptive ap-
+proach, which alternates between forecasting with linear predic-
+tion filter and using an empirical statistical model, is reported by
+[172] . The choice between the two approaches is made according
+to whether the clearness index is below or above a given thresh-
+old value. A method of forecasting DNI that uses wavelet decom-
+position on clear-sky index time series is reported by [173] . The
+proposed model applies a regression model on the longer wave-
+length components and a SVM algorithm on the rapidly varying
+components of the solar irradiance. The results show that the hy-
+brid model performs significantly better than the reference AR and
+ML models separately [173] .
+
+130
+
+R. Blaga et al. / Progress in Energy and Combustion Science 70 (2019) 119–144
+
+Table 2
+Data distribution into the models classes.
+
+Class
+
+Persistence (PS)
+
+Classical
+statistics (CS)
+
+Machine
+learning (ML)
+
+Cloud motion
+(CM)
+
+Numerical weather
+prediction (NW)
+
+Number of data
+
+266
+
+512
+
+138
+
+172
+
+485
+
+Hybrid models
+(HY)
+
+132
+
+Table 3
+Data distribution into the forecast horizon classes. Data granularity in different subsets is indicated
+(s – second, m – minute, h – hour and d – day).
+
+Class
+
+Intra-hour (IH)
+
+Intra-day (ID)  Day ahead (DA)
+
+Number of data
+Data granularity
+
+344
+15 s, 30 s, 1 m, 5 m, 10 m, 15 m, 30 m, 60 m
+
+677
+1 m, 15 m, 1h
+
+684
+1d, 1h
+
+2.3.5.3. Other hybrid models.  Ref. [174] introduces a model that re-
+lies on satellite images, to which a hybrid exponential smoothing
+state space combined with an artificial neural network model is
+applied. A post-processing technique, called Model Output Statis-
+tics, applied to Meteosat NWP predictions is reported by [175] . Ref.
+[176] presents an improved MOS routine based on a linear regres-
+sion  algorithm,  which  takes  as  input  a  large  number  of  meteo-
+rological variables resulting from NWP simulations. Correction of
+the NWP results with the introduced method shows a significant
+improvement over both the raw output and the correction with a
+simpler equation based on solar zenith angle and clearness index.
+Ref. [177] introduces an algorithm called MOS cascade, which ap-
+plies two different types of MOS to outputs of the WRF model.
+
+2.4. Description of the dataset
+
+The dataset analyzed in this study consists of pairs of nRMSE
+and nMBE collected from all the selected 40 papers discussed in
+Section 2.3 .
+
+Fig. 5 summarizes the performance of the forecasting models,
+as it has been reported by the selected papers, in terms of average
+quality of the forecasts. The averages are calculated over all values
+of nRMSE and nMBE , respectively, reported by a given paper. The
+plot is per se illustrative, not quantitative. The size of the circles is
+related to the number of entries in the dataset from a given paper,
+and as such, the plot highlights which ones have the largest weight
+in terms of number of data entries. It can be observed from the fig-
+ure, that from the 40 papers, some contain only a handful of data
+entries while others comprise a significant fraction of the whole
+dataset. The results are distributed randomly throughout the do-
+main of nRMSE and nMBE values, including ones with small nRMSE
+but large nMBE and vice-versa. This is a good indication that the
+application of the selection criteria results in a random sample.
+
+In our study, we divide the dataset according to various crite-
+ria, such as the model class, forecast horizon, climate zone and the
+year of publication, both in detailed and coarse categories. Most
+of the analysis are performed on classes broken down over one or
+two criteria. If we would further sub-divide the dataset, the result-
+ing subsets may be too small to draw statistically sound conclu-
+sions from them. This limitation is due to the scarcity of the sci-
+entific literature in the field of solar resources forecasting. Thus, in
+this study, we aim for soft conclusions, which can be drawn from
+the available data.
+
+According to their nature, the analyzed models are categorized
+into six classes (see Section 1.3 ). Table 2 shows the dataset dis-
+tributed into the six classes.
+
+According  to  the  forecast  horizon  (cid:6)t ,  the  data  are  catego-
+rized into three classes of forecasts: IH intra-hour ( (cid:6)t ≤ 1 hour),
+ID  intra-day  (1 hour  <  (cid:6)t  <  6 hours)  and  DA  day-ahead  ( (cid:6)t  >
+12 hours).  Table  3  shows  the  dataset  distributed  into  the  three
+classes. The data are reasonably well distributed, with none of the
+
+Fig. 6.  Two-dimensional histogram of the dataset, broken down by class of models
+and time horizon of the forecast. The relative height and width of the bars represent
+the relative sizes of the different data subsets. For example, looking on the vertical
+axis, 60% of the data from the cloud motion class (CM) falls roughly into the intra-
+hour class (IH), 40% into intra-day class (ID) and the day ahead class (DA) is not
+populated. Looking on the horizontal axis, roughly 10% of the entire dataset falls
+into the cloud motion class (CM).
+
+data subsets too small. Overall the granularity of the data ranges
+between 15 seconds and 1 h The subset IH contains the greatest
+diversity in both data granularity and forecast horizons. The gran-
+ularity takes values from 15 sec. to one hour ( Table 3 ), with a quite
+uniform distribution. ID forecasts and DA forecasts are (almost) ex-
+clusively performed on hourly solar irradiance data series.
+
+The  2-dimensional  histogram  presented  in  Fig.  6  displays  a
+qualitative picture of the relative sizes of the different data sub-
+sets, i.e. the number of entries in different subsets. Visual inspec-
+tion shows that the data is reasonably well distributed. The most
+significant bias, recognizable with the naked eye, is the fact that
+the models from CS and CM are rarely used for DA forecasts, while
+models from NW are predominantly applied for DA forecasts, and
+seldom for ID and IH forecasts. The number of entries in the CS
+and NW classes is visible larger than the dimension of the others,
+however, the ratio between the largest and smallest class is around
+4, which is reasonable for performing statistical analysis.
+
+From a different perspective, Fig. 7 presents the forecast accu-
+racy per model classes and per forecast horizon classes. Visual in-
+spection shows that the models from the CS class have on aver-
+age the smallest nMBE , followed closely by those of the PS and HY
+models, then the ML and CM classes, and finally, with significantly
+
+R. Blaga et al. / Progress in Energy and Combustion Science 70 (2019) 119–144
+
+131
+
+Fig. 7.  Forecast errors averaged over (a) classes of models and (b) forecast horizon. The size of the symbols is weighted according to the number of data entries in each
+class.
+
+larger errors, the NW models. In terms of nRMSE , the models from
+the CM and ML class perform best, followed in order by those from
+the HY, CS, NW and PS class. Apparently, Fig. 7 suggests that the
+NW models on average perform poorly, having large systematic bi-
+ases; however in order to obtain in depth understanding one needs
+to look at the interdependence of model class and forecast horizon,
+and the relative number of entries in each subset of the dataset. In
+this case, the large errors are because NW models are applied pre-
+dominantly for DA forecasts. Furthermore, the average values hide
+information about the spreading of the errors (quantified in terms
+of the standard deviation) at which we look in more detail below.
+In addition, it is interesting to note the relatively small bias errors
+introduced by the PS models, which sets quite high standards for
+newly developed forecast models. The CS, HY and ML models have
+comparable biases with the PS ones, but the CM models have con-
+siderably larger errors, and the ones from the NW class have very
+high errors compared to it. On the other hand, in terms of nRMSE
+the PS models perform the poorest, as expected. This observation
+draws attention, from the outset, to the need for having several dif-
+ferent types of indicators for the performance of forecast models.
+This is particularly important to note, as most studies emphasize
+the nRMSE of the forecasts, but this is only sometimes accompa-
+nied by another indicator ( nMBE, nMAE , skill of improvement over
+persistence), and very rarely by several. From Fig. 7 b we can ob-
+serve that, as expected, the IH predictions are the most accurate in
+terms of nRMS E, followed by those of the ID and the DA forecasts.
+In terms of nMBE , surprisingly, the forecasts over ID time scales
+perform slightly better than the IH ones. Forecasts over DA time
+scales are encountered by significantly larger errors than the IDs
+and IHs.
+
+3. Performance analysis of the forecasting models
+
+In this section, the data series of nMBE and nRMSE, collected
+from  the  papers included in  this  study,  are  assessed statistically
+in  terms  of  box  plot  (graphically  depicting  groups  of  numerical
+data through their quartiles) and standard deviation (quantifying
+the amount of variation in a dataset):
+
+(cid:10)
+
+σ =
+
+1
+M
+
+M (cid:5)
+
+i =1
+
+( m i − μ) 2
+
+(9)
+
+The  analysis  is  performed  from  four  perspectives:  classes  of
+forecasting models, time-horizon, climate and performance trend
+over time.
+
+3.1. Classes of forecasting models
+
+The variation in nMBE and nRMSE data is presented in Fig. 8 in
+terms of box plot. The distribution is qualitatively quite different in
+the six classes of forecasting models:
+
+- PS: The models from this class represent the simplest type of
+forecasts, used generally as benchmarks for other models and
+as  such  are  expected  to  perform  poorly.  This  is  indeed  the
+case if one looks at the forecast errors quantified in terms of
+nRMSE , for which it presents both the highest values among all
+classes (mean nRMSE = 43.1%) and the highest volatility of er-
+rors ( σ nRMSE = 21.9). In terms of mean bias error, the average
+error  is  in  fact  quite  small  (mean  nMBE = −0.14%),  similar  to
+those  from  the  CS,  ML  and  HY  classes,  and  significantly  bet-
+ter than the CM and NW models. The volatility of the mean
+bias  errors  is  also  good  ( σ nMBE = 3.23),  with  even  the  larger
+over/undercasts being consistently below 15%. This shows that
+persistence forecasts have in general low systematic biases, but
+can have very large singular errors. Considering that persistence
+models make predictions based on the last measurements, we
+can  assume  that  the  large  errors  happen  when  the  radiative
+regime is unstable, i.e. fast moving broken clouds on the sky.
+
+• CS: Models from this class have the smallest average mean
+bias errors, and also the volatility of the bias errors is the
+smallest ( σ nMBE = 1.89). Overall the CS models perform qual-
+itatively similarly with the PS models, having very small sys-
+tematic biases, but considerably large nRMSE . The CS mod-
+els however, outperform the latter on every account, most
+considerably in terms of the volatility of the nRMSE errors,
+which is small ( σ nRMSE = 12.92).
+
+• ML : Models from this class have relatively small mean biases
+on average. The volatility of the bias errors however, is quite
+large( σ nMBE = 8.52). This comes from large positive outliers
+which represents significant overcasts, some larger than 15%,
+while  the  undercasts  are  all  below  10%.  As  we  shall  see
+later, these large errors arise when applying ML models to
+large horizons forecasts. In terms of nRMSE , the errors are
+very small, with the average error being nRMSE = 23.3%. The
+volatility of the nRMSE s is similar to that of the CS class.
+
+132
+
+R. Blaga et al. / Progress in Energy and Combustion Science 70 (2019) 119–144
+
+Fig. 8.  Forecasting accuracy (a) nMBE and (b) nRMSE for each class of models.
+
+• CM : Models from this class have notably larger bias errors
+than PS, with a clear tendency for overcasting. The volatil-
+ity  of  the  bias  errors  is  also  quite  large  at  ( σ nMBE = 5.46).
+The performance in terms of nRMSE on the other hand, is
+the best among all classes, with an average error of (mean
+nRMSE = 22.8%) and volatility of errors just a bit larger than
+that of the CS models.
+
+• NW:  At  first  glance,  the  models  from  this  class  seem  to
+have the poorest performance. They have large bias errors,
+with volatility ( σ nMBE = 8.88). There is significant tendency
+of overestimating, however outliers are larger than 20% for
+both  over-  and  under-estimation.  In  terms  of  nRMSE  the
+situation  is very interesting.  The average error  is large, at
+nRMSE = 40.4%, but the volatility is comparable to the mod-
+els from the CS, ML and CM class and significantly smaller
+than  that  of  the  PS  class.  As  we  shall  see  later,  part  of
+the explanation for the large errors is that the NW models
+are predominantly used for large horizon forecasts (mainly
+DA). The large nRMSE with small volatility means that these
+models  produce  large  errors  systematically,  not  stochasti-
+cally, which gives hope that the models accuracy might be
+improved by post-processing of the outputs.
+
+• HY : The models from this class combine the best that the
+other  classes  have  to  offer.  Consequently,  they  have  small
+nMBE s and reasonable nRMSE s, both with small volatilities.
+Actually, the performance of these models is obscured partly
+by the fact that HY class encompasses forecasts on the en-
+tire  range  of  time  scales,  from  models  tailored  for  IH  to
+those  tailored  for  DA.  When  we  perform  the  analysis  of
+HY models per classes of forecast horizon, we shall see in
+Section 3.2 that these models have excellent performance on
+each class.
+
+3.2. Forecasting horizon
+
+Before  moving  further  with  the  forecasting  horizon  analysis,
+some comments about data granularity and its impact on the fore-
+casts  accuracy  are  presented.  While  most  studies  from  IH  class
+perform  one-step-ahead  forecasts,  there  are  some  studies  where
+minute (or smaller) granularity data are used for predictions at one
+hour ahead. This probably accounts for a significant amount of the
+volatility within the IH data subset. Roughly half of the ID fore-
+casts are one-step-ahead, with the other half being several steps
+(most studies of this type include time horizons between 1 and ei-
+ther 6 or 12 h.). The DA forecasts entail a large number of time
+
+steps. Some volatility is clearly induced by the multi-step forecasts
+for both ID and DA classes. The universally used (hourly) granu-
+larity makes the comparison between results within each forecast
+horizon quite robust. However, taking into account the broad range
+of data granularity, the inter-comparison of models from different
+forecast horizon classes is sometimes questionable. The diversity
+within  classes  is  expected  to  be  averaged  out,  as  the  literature
+grows in bulk, while the inter-class differences are systemic and
+pertain to the nature of the forecasting models.
+
+Generally, the dataset considered in this study shows that the
+forecast accuracy decreases with increasing ratio of forecast hori-
+zon to data granularity. This behavior is most predominant within
+the IH class, taking into account that this class has the largest di-
+versity in granularity and forecast horizons. For example, for the
+same 5 min. forecast horizon, the forecast error depends signifi-
+cantly on the granularity as follows: (1) Ref. [156] reports nRMSE
+below 10% for one-step-ahead forecasts (i.e. 5 m granularity data);
+(2)  Ref.  [159]  reports  results  for  1-minute  data,  with  nRMSE  of
+around 25%; (3) Ref. [158] reports results for 30 s data, with a large
+volatility in results. nRMSE values are of 20% on average, and occa-
+sionally take values higher than 40%; (4) Ref. [144] reports results
+for 15 s data, with nRMSE often above 30% .
+
+Fig. 9 displays the dataset broken down by categories of fore-
+cast horizon. The plot confirms our previous observations that IH
+and ID forecasts, performed mainly with CS and ML methods, have
+good performance in terms of nMBE and nRMSE . IH forecasts reach-
+ing on average smaller values of nRMSE than the ID forecasts. The
+DA forecasts are less reliable. As we have seen earlier, the nRMSE
+increases with the increase of the time scale of the forecast. This
+can be seen from the mean and medians, and also from the first
+and third quartiles of the nRMSE distribution ( Table 4 ).
+
+Fig. 10 presents in detail the dependence of nRMSE and nMBE
+on time horizon. The forecast horizon values have not been strat-
+ified into coarse categories. Note that the forecast horizon values
+on the x axis are not equidistant. The time horizons for which data
+were available are as follows: 15 sec., 5, 10, 15, 20, 30, 40, 50 min.,
+1 h, 1 h15 min., 1 h30 min., 1 h45 min., 2 h, 2 h15 min., 2 h30 min.,
+2 h45 min., 3 h, 4 h, 5 h, 6 h and 1, 2, d, 4, 5, 6, 7 days ahead.
+
+The values of nMBE s presented in Fig. 10 a have an interesting
+behavior. The PS errors increase from very small values for IH time
+horizons, stabilize at ID values and slightly decrease for larger DA
+forecasts. The behavior of the CS, ML and HY models mimics the
+PS behavior, with similar variation as a function of forecast hori-
+zons and overall comparable magnitudes. The models from the CM
+class are studied for IH and ID forecasts only, while the NW mod-
+
+R. Blaga et al. / Progress in Energy and Combustion Science 70 (2019) 119–144
+
+133
+
+Table 4
+Statistical characterizing of datasets obtained by broken down the database by cate-
+gories of forecast horizon.
+
+Time horizon
+
+Intra-hour (IH)
+
+Intra-day (ID)
+
+Day ahead (DA)
+
+Statistical indicator
+
+nMBE
+
+nRMSE
+
+nMBE
+
+nRMSE
+
+nMBE
+
+nRMSE
+
+Min.
+1st Quartile
+Median
+Mean
+3rd Quartile
+Max.
+
+−12.60
+−0.59
+−0.16
+0.36
+0.82
+43.7
+
+0.40
+13.29
+22.73
+23.8
+30.56
+91.70
+
+−10.26
+−1.50
+−0.38
+0.07
+1.08
+38.14
+
+6.51
+23.48
+31.90
+33.21
+40.28
+94.80
+
+−45.55
+−2.00
+0.20
+3.09
+6.54
+53.67
+
+12.10
+32.00
+40.00
+42.22
+51.00
+127.30
+
+forecasts. The CS models show a much slower time variation, hav-
+ing larger errors than PS at IH forecasts and smaller ones at DA
+times. The ML models show a very similar behavior with the PS
+ones, but with much lighter increase in errors at ID times. No val-
+ues are available for DA forecasts. The CM models perform remark-
+ably well for ID forecasts. The NW models are used mainly for DA
+forecasts,  where  they  have  smaller  errors  than  PS,  which  slowly
+grow with the forecast horizon.
+
+The interpretation of Fig. 10 has to be considered with care, as
+the different subsets may have very small number of data entries.
+The ones that do have large number of data entries are the 1 h
+and 1d horizons, which may be considered representative ID and
+DA forecasts. It is thus expected that the performance of the mod-
+els for these horizons to be statistically representative. For IH fore-
+casts, no single time horizon is representative enough and, thus,
+we chose to average over the whole class. Results are presented in
+Fig. 11 .
+
+- IH horizon: The PS models represent a good reference bench-
+mark for newly developed models. Only the models from the
+ML  and  HY  class  show  better  performance,  both  in  terms  of
+nMBE  and  nRMSE .  The  HY  class  consists  of  only  one  model
+reported  by  [159] .  They  introduce  a  wavelet  forecast  model
+and study its performance for DNI forecasting. The model con-
+sists in decomposing the DNI time series using a wavelet tech-
+nique  and  applying  various  AR  and  SVM  models  on  the  low
+and high frequency components, respectively. The ML class, al-
+though not showing a performance as good as the HY model, it
+still contains a larger dataset and the forecasts are performed
+on  GHI.  The  CM  models  show  good  enough  performance  in
+
+Fig. 9.  Plot of nMBE vs. nRMSE , separately for each forecast horizon class.
+
+els are used for DA forecasts (also some data exist for 1h-ahead
+predictions). Both classes have mean bias errors much larger than
+the ones from all the other classes.
+
+In  terms  of  nRMSE  the  PS  forecasts  have  small  errors  for  IH
+prediction. The errors slowly grow with time, then start growing
+rapidly for ID forecasts and finally flatten at a large value for DA
+
+Fig. 10.  Prediction accuracy in respect to the forecast horizon for the six classes of models (PS – persistence, CS – classical statistics, ML – machine learning, CM – cloud
+motion, NW – numerical weather predictions, HY – hybrid models).
+
+134
+
+R. Blaga et al. / Progress in Energy and Combustion Science 70 (2019) 119–144
+
+Fig. 11.  Average performance of the models at three representative forecast horizons.
+
+Fig. 12.  Box plots of a) nMBE and b) nRMSE for each climate region (A – tropical; B – arid; C – temperate and D – snow).
+
+Fig. 13.  Prediction errors for intra-hour (IH) forecasts in each climate zone (A – tropical; B – arid; C – temperate and D – snow).
+
+terms of nRMSE ; however it introduces large mean biases. By
+contrast, the CS models have small bias errors, but introduce
+large nRMSE values. This latter observation is unexpected and
+it may be due to the large number of data points. This does
+not  exclude  the  possibility  that  any  singular  CS  model  per-
+forms well on this horizon. Overall, we recommend using mod-
+els from the ML class for forecasting at IH.
+
+- 1 h  horizon:  The  models  from  the  CS,  ML,  CM  and  HY  show
+a bias comparable with the models from PS class. In terms of
+nRMSE , both CM and ML models present improvements over PS,
+while the performance of the CS and HY models is considerably
+
+weaker. The NW performs poorly as compared to all other mod-
+els. We recommend the CM models for performing ID forecasts.
+- 1d horizon: In this case,  even if  all the PS  models introduce
+very small mean biases, their performance is poor, having the
+largest nRMSE . The CS and HY models present the smallest er-
+rors. The CS class contains very few entries and the very low
+errors may not be representative. The HY models are all NWP-
+type models, to the output of which post-processing techniques
+where applied. Similarly, the NW models are NWP models, but
+without post-processing and show significantly weaker results.
+Finally, the ML models seem completely inappropriate for pre-
+
+R. Blaga et al. / Progress in Energy and Combustion Science 70 (2019) 119–144
+
+135
+
+Fig. 14.  Prediction errors for intra-day (ID) forecasts in each climate zone (A – tropical; B – arid; C – temperate and D – snow).
+
+Table 5
+Distribution of the dataset in model classes for each climate zone.
+
+Climate /
+Model class
+
+Tropical (A)
+Arid (B)
+Temperate (C)
+Snow (D)
+
+Persistence
+(PS)
+
+Classical statistics
+(CS)
+
+Machine
+learning (ML)
+
+Cloud motion (CM)
+
+Numerical weather
+prediction (NW)
+
+Hybrid models (HY)
+
+43
+69
+101
+53
+
+230
+35
+206
+41
+
+47
+17
+73
+1
+
+0
+133
+15
+24
+
+28
+111
+196
+150
+
+42
+9
+56
+25
+
+dictions  at  this  time  scale.  Overall,  we  recommend  using  HY
+(NWP + MOS) models for performing DA forecasts.
+
+3.3. Climate influence
+
+Fig.  12  shows  the  dataset  in  terms  of  box  plot  broken  down
+over climate zone. The models are assessed in terms of the mean
+and standard deviation of nMBE and nRMSE. The mean and stan-
+dard deviation were calculated over all available data in a climate
+zone. In the case of nMBE a large positive or negative mean value is
+a sign that the measurements has been over- or under-estimated,
+while the standard deviation quantifies the amplitude of the fore-
+cast errors. Forecasts in the tropical zone have very good perfor-
+mances, both in terms of nMBE and nRMSE values. In fact, it has
+the lowest average bias error (mean nMBE = −0.64%) and volatil-
+ity of errors ( σ A
+nMBE = 2 . 06 ) . The models performance in terms of
+nRMSE is also good, and has the lowest volatility ( σ A
+nRMSE = 11 . 96 ) .
+The forecasts in the arid climate tend to overestimate the measure-
+ments with a mean bias of nMBE = 2.1%, but achieving the smallest
+mean nRMSE of 2.1%, with low volatility. In the temperate regions
+the forecasts have large errors in terms of both nMBE and nRMSE
+(mean nMBE = 1.7% and mean nRMSE = 26.4%).
+
+nMBE = 9 . 55 ,  σ A
+
+Also, they are very volatile ( σ A
+
+nRMSE = 17 . 7 ) . The
+errors for snow climate zones are the largest on average, but have
+smaller volatility than those performed in the moderate climates.
+From the above observations, we can conclude that the available
+solar resource may be forecasted in a reliable way in regions with
+tropical and arid climate, with accuracy greater than in moderate
+climates.
+
+Next,  we  look  at  the  distribution  of  data  into  model  classes
+and forecast horizon classes for each climate group. The subsets of
+data are well equilibrated in any of the four climate groups, with
+the partition given in Tables 5 and 6 . Among the studies included
+in  this  analysis,  very  few  use  CM  and  NW  models  in  the  tropi-
+cal climate-zone. This may be explained by the fact that the ra-
+diative regime is often unstable in tropical regions, especially con-
+sidering that the most locations from our study are insular. This
+
+makes forecasting difficult in general and long-term forecasts par-
+ticularly unreliable. Considering that, as we have seen from Fig. 10 ,
+the  studies  that  use  models  from  the  NW  class  perform  mainly
+day-ahead forecasts, thus the low number of such studies applied
+to stations in tropical areas is understandable. The reluctance in
+performing day-ahead forecasts for tropical regions is confirmed in
+Table 5 . The other notable aspect found in Table 5 is that very few
+ML models are applied in locations with snow climate. Also, from
+Table 6 , we note that IH forecasts are rarely performed in location
+with snow climate. We conjecture that this may be related with
+the more stable radiative regimes in snow climates, which allows
+relatively accurate day-ahead forecasts
+
+In order to see the influence of the climate on the performance
+of the forecast models, we must look at the way in which the rela-
+tive performance of the models from different classes changes per
+each category of forecast horizon.
+
+Fig. 13 shows the values nMBE and nRMSE from IH class per
+each climate region. The PS, CS and ML models have comparable
+errors in terms of nMBE over all climates, with the exception of C,
+where the CS models have very high errors. The HY models have
+similar performance as the first three classes as indicated by the
+nMBE values, and represent significant improvements over them in
+terms of nRMSE . The HY class contains only one model, reported
+by [173] and tested for all climates. The CM models have large bi-
+ases and root mean square errors for both arid and temperate cli-
+mates where data are available. According to [53] , the nRMSE er-
+ror is the most relevant at IH horizons. Based on the performance
+assessment  presented  in  Fig.  13 ,  the  ML  or  HY  models  are  thus
+recommended for such short-term forecasts. Note that individual
+ARIMA-type models might also perform very well [210] , in spite of
+the CS class, which as a whole has only limited performance.
+
+The  ID  forecast  errors  for  each  climate  zone  are  represented
+in Fig. 14 . The situation is interesting, as the PS mean bias errors
+seem to jump around, being the lowest out of all models for trop-
+ical and temperate climates and the largest for arid and snow cli-
+mates. The ML and CS models show low errors consistently over
+all climate types. The HY models perform well at sites locates in
+
+136
+
+R. Blaga et al. / Progress in Energy and Combustion Science 70 (2019) 119–144
+
+Table 6
+Distribution of the dataset in time horizon classes for each climate zone.
+
+Climate / Time horizon class
+
+Intra-hour (IH)
+
+Intra-day (ID)  Day-ahead (DA)
+
+Tropical (A)
+Arid (B)
+Temperate (C)
+Snow (D)
+
+101
+125
+113
+5
+
+245
+100
+234
+98
+
+44
+149
+300
+191
+
+Fig. 15.  Prediction errors for day-ahead (DA) forecasts in each climate zone (A – tropical; B – arid; C – temperate and D – snow).
+
+tropical and snow local climates, and poorly in temperate climate.
+The CM and NW models perform less well overall than the other
+models. In terms of nRMSE the picture is a little bit clearer. The
+PS models have quite large errors over all climate regions. The CS
+shows a small improvement over PS, while the HY and ML mod-
+els perform much better than PS, in all climates but the temperate
+zone. In the temperate climate only the ML models show an im-
+provement over PS, while the models from the CS and HY class
+perform  worse.  CM  models  consistently  perform  better  than  PS,
+with  a  larger  improvement  in  the  arid  and  snow  climates,  and
+a  smaller  one  in  the  temperate  climate  (data  are  not  available
+in tropical regions). The NW models have a weaker performance
+than PS, for the B and C climates, where data are available. Ref.
+[3]  suggests  that  the  nMAE  is  the  most  relevant  error  metric  at
+this  time  scale.  In  its  absence,  we  look  at  nRMSE  for  classifying
+the model performances. The situation is very interesting as most
+models  present  improvements over  PS,  but  none  of  them  is  the
+best in all climate zones. In fact, based on the results included in
+our study and presented in Fig. 14 a, the ML and HY models are
+recommended  for  tropical  climate  (A),  ML  and  CM  for  arid  and
+temperate climates (C), and CS and HY for csnow climate (D), re-
+spectively.
+
+The DA forecasts are mainly performed with models from the
+PS,  NW  and  HY  classes  ( Fig.  15 ).  The  latter  ones  are  NWP-type
+models, with and without post-processing techniques. Surprisingly,
+the  PS  models  have  very  small  mean  biases  for  all  climate  re-
+gions. The HY models show an improvement over PS for the trop-
+ical and snow climate, while for the arid and temperate climate
+they have larger errors. The NW models are weaker than the HY
+models  for  all  climates.  In  terms  of  nRMSE ,  the  PS  models  have
+large errors, over which the NW models show a slight improve-
+ment, and the HY models perform much better. The relative per-
+formances maintain over all climate regions. For the temperate cli-
+mate, data are available also for ML and CS models. The former
+performs poorly, while the latter seems to perform much better
+than  all  other  models.  The  CS  class  contains  a  single  model  re-
+ported in [154] . Note that most of the data are from [167] , which
+despite being a very rigorous study, is restricted to locations across
+
+the  USA.  Also  note  the  lack  of  validation  of  models  from  other
+classes, although these are expected to perform poorly for DA fore-
+casts.  The  HY  models  have  very  good  performance  overall  both
+in  terms  of  nMBE  and  nRMSE  and  we  recommend  them  for  us-
+age  over  all  climate  regions.  However,  more  studies  are  needed,
+including testing models from other classes and sites around the
+globe,  to  see  whether  such  forecasting  models  show  an  actual
+improvement  over  persistence  (especially  in  arid  and  temperate
+climates).
+
+3.4. Trend over time
+
+As seen in Fig. 1 , the number of publications concerning fore-
+casting solar irradiance has increased exponentially during the last
+decade. It is worth checking whether the increased interest in the
+subject materializes into quantifiable overall improvement of fore-
+casts accuracy. In order to analyze this, we look at our dataset of
+forecast errors with respect to the year of publication of each en-
+try.
+
+Fig. 16 presents the nMBE and nRMSE with respect to the year
+of publication of the studies, in semi-logarithmic scale. The fore-
+casting errors can never be reduced to zero. This would only be
+possible if we had a complete physical model, together with suffi-
+ciently high-resolution initial conditions, for exactly simulating the
+entire atmosphere. Therefore, it is natural for new researches to
+provide  progressively  smaller  improvements  in  forecasting  accu-
+racy over time. A decreasing exponential fit is then most suited
+for estimating the yearly trend of the forecasts errors.
+
+The  linear  fit  with  slope α on  the  logarithmic  quantities  de-
+picted in Fig. 16 , translates into a variation with a factor of exp ( α)
+in the value of the errors. The linear fit for log | nMBE | as a function
+of publication year is α = −0.12, which means that the mean bias
+error decreases with a factor of exp ( − 0.12) = 0.89 per year. This
+means that under a five-year period, the bias error reduces with
+a factor of 0.89 5 = 0.55 (to almost half of its value), and under 10
+years it reduces to roughly a third from its initial value. The slope
+of the linear fit of log( nRMSE) as a function of publication year is
+α = −0.05, which means that the root mean square error decreases
+
+R. Blaga et al. / Progress in Energy and Combustion Science 70 (2019) 119–144
+
+137
+
+Fig. 16.  Performance of models developed between 2006 and 2017.
+
+with a factor of 0.95 each year, with 0.78 under a 5 year period,
+and 0.61 under a 10 year period (i.e. roughly two thirds from its
+initial value).
+
+Finally, we want to mention that the progress experienced in
+forecasting  the  solar  energy  production  is  one  of  the  facets  of
+maintaining the stability of the power grid partly fed by PV plants.
+On a different perspective a huge effort is paid for accurately fore-
+casting the load [211] of a power grid. The increase of photovoltaics
+weight in the energy may be a result of the progress in both fields.
+
+hybrid models have very good performance and we recom-
+mend them for usage over all climate regions.
+
+(4) Performance trend over time. Generally, the accuracy of the
+forecasting  models  increased  in  time.  Our  analysis  shows
+that over the last ten years the forecasting errors decreased
+significantly,  on  average  nMBE  being  reduced  with  two
+thirds  and  nRMSE  being  reduced  with  one  third,  as  com-
+pared to the values at the beginning of the considered pe-
+riod.
+
+4. Conclusions
+
+This study presented an in-depth analysis of the performance
+of solar irradiance forecasting models. The study has gone beyond
+the  main  limitations  of  previous  works,  namely  the  difficulty  of
+comparing different forecasting models due to the large number
+of different metrics used for assessing the models’ performance. A
+rigorous framework for comparing different classes of models was
+introduced, thus generating a reliable picture of the state-of-the-
+art in the accuracy of solar resources forecasting. The results can
+be stratified from four perspectives:
+
+(1) Classes of forecasting models (persistence, classical statistics,
+machine learning, cloud-motion tracking, numerical weather
+prediction and hybrid models). The forecasting models from
+the hybrid class (combining classical statistics with machine
+learning approach and/or exogenous inputs) demonstrate the
+best performance, which is not expected at first sight.
+
+(2) Time-horizon  (intra-hour,  intra-day  and  day  ahead).  The
+forecasting error measured by nRMSE increases with the in-
+crease of the time scale of the forecast. Intra-hour forecasts
+reach on average smaller values of nRMSE than the intra-day
+forecasts while the day-ahead forecasts are less reliable.
+(3) Climate influence (tropical, arid, temperate and snow). For
+all climate regions, the models from the machine learning
+and  hybrid  classes  are  recommended  for  intra-hour  fore-
+casts. The individual ARIMA-type models may also perform
+well,  in  spite  of  the  classical  statistics  class,  which  as  a
+whole has only limited performance. For intra-day forecasts,
+the models from the machine learning and classical statistics
+classes show low errors consistently over all climate types.
+The  hybrid  models  perform  well  at  sites  located  in  trop-
+ical  and  snow  local  climates.  For  day-ahead  forecasts,  the
+
+At a general level, it can be concluded that there are currently
+still significant gaps in the literature. This is partially due to the
+scientific paradigm, which does not encourage the publication of
+negative results. In the context of our study, this would entail re-
+porting performance assessments of models in places where these
+models are expected to have low performance or on time-horizons
+which are not practically useful. In order for a study to contribute
+significantly to our shared body of knowledge, authors are strongly
+encouraged to report forecast performances using a larger set of
+statistical indicators of accuracy, thus providing a more complete
+perspective on the models’ potential. Usage of the traditional indi-
+cators MBE and RMSE , preferably normalized to mean values, still
+is  mandatory.  But,  additional  statistical  error  measures,  like  the
+Kolmogorov-Smirnoff Integral [212] or the quality metric proposed
+in [52] , are highly recommended. This would help program man-
+agers of funding agencies and policy makers in taking appropriate
+decisions.
+
+Acknowledgements
+
+The authors thank the reviewers for useful comments and sug-
+gestions. This work was supported by a grant of the Romanian Na-
+tional Authority for Scientific Research and Innovation, CNCS/CCCDI
+– UEFISCDI, project number PN-III-P2-2.1-PED-2016-0592 .
+
+Appendix A. Radiometric parameters used in this study
+
+Solar  resource  is  quantified  by  several  physical  quantities,
+
+briefly described here (see Fig. A1 for angles definition):
+- G n [W/m 2 ] – Direct-normal irradiance (DNI), the density of the
+solar energy flux incoming from the solid angle subtended by
+the Sun’s disc, on a unitary surface normal to the rays.
+
+138
+
+R. Blaga et al. / Progress in Energy and Combustion Science 70 (2019) 119–144
+
+- G
+
+d [W/m 2 ] – Diffuse irradiance represents the density of the so-
+lar energy flux incoming on a horizontal surface from the entire
+sky hemisphere, excluding the Sun’s disc.
+
+- G [W/m 2 ] – Global horizontal irradiance (GHI) is the sum of the
+
+direct-horizontal and diffuse components, given by:
+
+G = G
+
+b + G
+
+d = G n cos θz + G
+d
+
+(A2)
+
+The  term  “global” is  associated  to  the  fact  that  solar  radiation
+comes from the entire celestial vault.
+- G t  [W/m 2 ]  – Total  solar  irradiance  (TSI)  received  by  a  sur-
+face tilted with an angle β in respect to the horizontal plane
+( Fig. A1 ) is the sum of three solar energy fluxes beam, diffuse
+and reflected by ground G r :
+G t = G n cos θ + R
+
+(A3)
+
+d + G r
+
+d G
+where θ is the incidence angle ( Fig. 1 ), R
+(for details see e.g. Ch. 5 from [11] ).
+
+d  is a conversion factor
+
+By summing up over a finite time period (cid:6)t one obtains the
+
+Fig. A1.  A flat-plate solar collector. The following angles are indicated on the graph:
+θ z – sun zenith angle, describing the position of the Sun with respect to Zenith; β
+- tilt angle of the collector with respect to the horizontal plane; θ - the incidence
+angle, the angle between the Sun direction and the normal (cid:2) n to the surface.
+
+solar irradiation components:
+
+(cid:11)
+
+H =
+
+G ( t ) dt
+
+(cid:6)t
+
+(A4)
+
+- G
+
+b  [W/m 2 ]  – Direct-horizontal  irradiance,  which  differs  from
+the direct-normal irradiance in that it is measured on a hori-
+zontal plane. The two quantities are related by the Lambert’s
+cosine law:
+b = G n cos θz
+G
+
+(A1)
+
+where the role of the incidence angle is played by the sun zenithal
+angle θ z (see Fig. A1 ).
+
+usually  measured  in  J/m 2  or  Wh/m 2 .  G ( t )  in  Eq.  A(4)  stands  for
+any of the above solar irradiance components and, consequently, H
+refers to the corresponding solar irradiation component.
+
+Appendix B. Taxonomy tree diagrams for each class of models
+
+Such  classifications  are  not  unique.  Sometimes  the  difference
+between adjacent classes is very fuzzy. Therefore, the diagrams be-
+low summarize the vision of the authors of this paper on the clas-
+sification of the models in solar energy forecasting.
+
+Fig. B1.  Classification of the classical statistics forecasting models.
+
+R. Blaga et al. / Progress in Energy and Combustion Science 70 (2019) 119–144
+
+139
+
+Fig. B2.  Classification of the machine learning models.
+
+Fig. B3.  Classification of the cloud motion models.
+
+140
+
+R. Blaga et al. / Progress in Energy and Combustion Science 70 (2019) 119–144
+
+Fig. B4.  Classification of the numerical weather prediction models.
+
+[16] Kleissl J, editor. Solar energy forecasting and resources assessment . Elsevier;
+
+2013 .
+
+[17] Perez R , David M , Hoff TE , Jamaly M , Kivalov S , Kleissl J , Lauret P , Perez M .
+Spatial and temporal variability of solar energy. Foundations and Trends® in
+Renewable Energy 2016; 1 (1):1–44 .
+
+[18] Schroedter-Homscheidt M, Kosmale M, Jung S, Kleissl J. Classifying ground-
+measured 1-minute temporal variability within hourly intervals for direct
+normal irradiances. Meteorologische Zeitschrift, PrePub 2018. doi: 10.1127/metz/
+2018/0875 .
+
+[19] Gani A , Siddiqa A , Shamshirband S , Hanum F . A survey on indexing tech-
+niques for big data: taxonomy and performance evaluation. Knowl Inf Syst
+2016; 46 :241–84 .
+
+[20] Franses PH , Van Dijk D , Opschoo A . Time series models for business and eco-
+nomic forecasting . 2nd ed. Cambridge: Cambridge University Press; 2014 .
+[21] Box-Steffensmeier J, Freeman J, Hitt M, Pevehouse J. Time series analysis for
+the social sciences (Analytical methods for social research) . Cambridge: Cam-
+bridge University Press; 2014. doi: 10.1017/CBO9781139025287 .
+
+[22] Ho SL , Xie M . The use of ARIMA models for reliability forecasting and analy-
+
+sis. Comput Ind Eng 1998; 35 :213–16 .
+
+[23] Paulescu M , Brabec M , Boata R , Badescu V . Structured, physically inspired
+(gray  box) models versus black box modeling for forecasting the output
+power of photovoltaic. Energy 2017; 121 :792–802 .
+
+[24] Gillespie DT . Markov Processes: an introduction for physical scientists . Academic
+
+Press; 1991 .
+
+[25] Morf H . Sunshine and cloud cover prediction based on Markov processes. Sol
+
+Energy 2014; 110 :615–26 .
+
+[26] Box GEP , Jenkins GM . Time series analysis. Forecasting and control . San Fran-
+
+cisco: Holden-Day; 1970 .
+
+[27] Brockwell PJ . Davis RA introduction to time series and forecasting . 2nd ed.
+
+Berlin: Springer; 2002 .
+
+[28] Liu BYH , Jordan RC . The interrelationship and characteristic distribution of
+
+direct, diffuse and total solar radiation. Sol Energy 1960; 4 :1–19 .
+
+[29] David M , Ramahatana F , Trombe PJ , Lauret P . Probabilistic forecasting of
+the solar irradiance with recursive ARMA and GARCH models. Sol Energy
+2016; 133 :55–72 .
+
+[30] Boland J , David M , Lauret P . Short term solar radiation forecasting: Island
+
+versus continental sites. Energy 2016; 113 :186–92 .
+
+[31] Boland J . Times Series Modeling of Solar Radiation. Modeling solar radiation
+
+at the earth surface . Badescu V, editor. Berlin: Springer; 2008 .
+
+[32] Tymvios FS , Jacovides CP , Michaelides SC , Scouteli C . Comparative study of
+ ̊Angström’s and artificial neural networks’ methodologies in estimating global
+solar radiation. Sol Energy 2005; 78 (6):752–62 .
+
+[33] Kalantari  A ,  Kamsin  A ,  Shamshirband  S ,  Gani  A ,  Alinejad-Rokny  H ,
+Chronopoulos AT . Computational intelligence approaches for classification of
+medical data: State-of-the-art, future challenges and research directions. Neu-
+rocomputing 2018; 276 :2–22 .
+
+[34] Mojumder JC , Ong HC , Chong WT , Izadyar N , Shamshirband S . The intelligent
+forecasting of the performances in PV/T collectors based on soft computing
+method. Renewable and Sustainable Energy Reviews 2017; 72 :1366–78 .
+
+[35] Kalogirou S . Artificial intelligence in energy and renewable energy systems . New
+
+York: Nova Science; 2007 .
+
+[36] Ardabili SF , Najafi B , Shamshirband S , Bidgoli BM , Deo RC , Chau K . Compu-
+tational intelligence approach for modeling hydrogen production: a review.
+Engineering Applications of Computational Fluid Mechanics 2018; 12 (1):438–58 .
+[37] Mellit A . Artificial Intelligence technique for modelling and forecasting of so-
+lar radiation data: a review. International Journal of Artificial Intelligence and
+Soft Computing 2008; 1 (1):52–76 .
+
+[38] Coiffier  J ,  Sutcliffe C .  Fundamentals  of numerical  weather prediction .  Cam-
+
+bridge: Cambridge University Press; 2012 .
+
+Fig. B5.  Classification of hybrid models.
+
+References
+
+[1] International  Energy  Agency.  Key  World  Energy  Statistics  2018 .  accessed
+
+10/2018  https://webstore.iea.org/statistics-data .
+
+[2] Nakata T , Silva D , Rodionov M . Application of energy system models for de-
+signing a low-carbon society. Prog Energ Combust Sci 2011; 37 :462–502 .
+[3] Ghoniem AF . Needs, resources and climate change: Clean and efficient con-
+
+version technologies. Prog Energ Combust Sci 2017; 37 :15–51 .
+
+[4] Schmela  Michael,  et  al.  Global  Market  Outlook  for  Solar  Power.  So-
+http://www.solarpowereurope.org/reports/
+
+lar
+global- market- outlook- 2017/ accessed 11/2017 .
+
+Europe
+
+Power
+
+2017.
+
+[5] Iacobescu F , Badescu V . The potential of the local administration as driving
+force for the implementation of the National PV systems Strategy in Romania.
+Renew Energy 2012; 30 :117–25 .
+
+[6] Brabec M , Paulescu M , Badescu V . Tailored vs. black-box models for forecast-
+
+ing hourly average solar irradiance. Sol Energy 2015; 111 :320–31 .
+
+[7] Wang J , O’Donnell J , Brandt AR . Potential solar energy use in the global
+
+petroleum sector. Energy 2017; 118 :884–92 .
+
+[8] Kalogirou SA , Karellas S , Braimakis K , Stanciu C , Badescu V . Exergy anal-
+ysis  of  solar  thermal  collectors  and  processes.  Prog  Energ  Combust  Sci
+2016; 56 :106–37 .
+
+[9] Buttler A , Dinkel F , Franz S , Spliethoff H . Variability of wind and solar power
+- An assessment of the current situation in the European Union based on the
+year 2014. Energy 2016; 106 :147–61 .
+
+[10] Nathan GJ, Jafarian M, Dally BB, Saw WL, Ashman PL, Hu E, Steinfeld A. Solar
+thermal hybrids for combustion power plant: A growing opportunity. Prog
+Energ Combust Sci 2017. http://dx.doi.org/10.1016/j.pecs.2017.08.002 .
+
+[11] Paulescu M , Paulescu E , Gravila P , Badescu V . Weather modeling and forecast-
+
+ing of PV systems operation . London: Springer; 2013 .
+
+[12] Inman RH , Pedro HT , Coimbra CF . Solar forecasting methods for renewable
+
+energy integration. Prog Energ Combust Sci 2013; 39 (6):535–76 .
+
+[13] Antonanzas  J ,  Osorio  N ,  Escobar  R ,  Urraca  R ,  Martinez-de-Pison  FJ ,  An-
+tonanzas-Torres  F .  Review  of  photovoltaic  power  forecasting.  Sol  Energy
+2016; 136 :78–111 .
+
+[14] Badescu V , Gueymard CA , Cheval S , Oprea C , Baciu M , Dumitrescu A , Ia-
+cobescu F , Milos I , Rada C . Computing global and diffuse solar hourly irra-
+diation on clear sky. Review and testing of 54 models. Renew Sust Energ Rev
+2012; 16 :1636–56 .
+
+[15] Mills A , Ahlstrom M , Brower M , Ellis A , George R , Hoff T , Kroposki B , Lenox C ,
+Miller N , Milligan M , Stein J , Wan Y-h . Understanding Variability and Uncer-
+tainty of Photovoltaics for Integration with the Electric Power System. IEEE
+Power Energy Mag 2011; 9 (3):33–41 .
+
+R. Blaga et al. / Progress in Energy and Combustion Science 70 (2019) 119–144
+
+141
+
+[39] Mora-Lopez L , Martínez-Marchena I , Piliougine M , Sidrach-de-Cardona M .
+Binding Statistical and Machine Learning Models for Short-Term Forecasting
+of Global Solar Radiation. Advances in intelligent data analysis X IDA 2011 Lec-
+ture notes in computer science , 7014. Berlin, Heidelberg: Springer; 2011 .
+[40] Dong Z , Yang D , Reindl T , Walsh WM . A novel hybrid approach based on self-
+-organizing maps, support vector regression and particle swarm optimization
+to forecast solar irradiance. Energy 2015; 82 :570–7 .
+
+[41] Hocaoglu FO , Serttas F . A novel hybrid (Mycielski-Markov) model for hourly
+
+solar radiation forecasting. Renew Energy 2017; 108 :635–64 .
+
+[42] Mellit A , Benghanem M , Kalogirou SA . An adaptive wavelet-network model
+for forecasting daily total solar-radiation. Appl Energy 2006; 83 :705–22 .
+[43] Cao  J ,  Lin  X .  Study  of  hourly  and  daily  solar  irradiation  forecast  us-
+ing  diagonal  recurrent  wavelet  neural  networks.  Energy  Convers  Manage
+2008; 49 :1396–406 .
+
+[44] Deo RC , Wen X , Qi F . A wavelet-coupled support vector machine model
+for forecasting global incident solar radiation using limited meteorological
+dataset. Appl Energy 2016; 16 8 :56 8–93 .
+
+[45] Pelland S , Galanis G , Kallos G . Solar and photovoltaic forecasting through
+post-processing of the Global Environmental Multiscale numerical weather
+prediction model. Progr Photovolt Res Appl 2013; 21 :284–96 .
+
+[46] Diagne  M ,  David  M ,  Boland  J ,  Schmutz  N ,  Lauret  P .  Post-processing  of
+solar irradiance forecasts from WRF model at Reunion Island. Sol Energy
+2014; 105 :99–108 .
+
+[47] Davo F , Alessandrini S , Sperati S , Delle Monache L , Airoldi D , Vespucci MT .
+Post-processing techniques and principal component analysis for regional
+wind power and solar irradiance forecasting. Sol Energy 2016; 134 :327–38 .
+[48] Verbois H , Huva R , Rusydi A , Walsh W . Solar irradiance forecasting in the
+tropics using numerical weather prediction and statistical learning. Solar En-
+ergy 2018; 162 :265–77 .
+
+[49] Gueymard  CA .  A  review  of  validation  methodologies  and  statistical  per-
+formance  indicators  for  modeled  solar  radiation  data:  Towards  a  better
+bankability  of  solar  projects.  Renewable  and  Sustainable  Energy  Reviews
+2014; 39 :1024–34 .
+
+[50] Zhang J , Florita A , Hodge B-M , Lu S , Hamann HF , Banunarayanan V , Brock-
+way BM . A suite of metrics for assessing the performance of solar power
+forecasting. Sol Energy 2015; 111 :157–75 .
+
+[51] Zhang J , Hodge B-H , Lu S , Hamann HF , Lehman B , Simmons J , Campos E ,
+Banunarayanan V , Black J , Tedesco J . Baseline and target values for regional
+and point PV power forecasts: Toward improved solar forecasting. Sol Energy
+2015; 122 :804–19 .
+
+[52] Marquez  R , Coimbra  CFM .  Proposed Metric for  Evaluation of  Solar Fore-
+casting Models. Journal of Solar Energy Engineering Transactions of the ASME
+2013; 135 (1) Article Number 011016 .
+
+[53] Kostylev V , Pavlovski A . Solar power forecasting performance towards indus-
+try standards. 1st International Workshop on the Integration of Solar Power into
+Power Systems ; 2011. October .
+
+[54] Hoff TE , Perez R , Kleissl J , Renne D , Stein J . Reporting of irradiance modeling
+relative prediction errors. Progr Photovolt Res Appl 2013; 21 (7):1514–19 .
+[55] Tastu J , Pinson P , Kotwa E , Madsen H , Nielsen HA . Spatio-temporal anal-
+ysis and modeling of short-term wind power forecast errors. Wind Energy
+2011; 14 (1):43–60 .
+
+[56] Yang D , Kleissl J , Gueymard CA , Pedro HTC , Coimbra CFM . History and trends
+in solar irradiance and PV power forecasting: A preliminary assessment and
+review using text mining. Sol Energy 2018; 168 :60 10 .
+
+[57] Orjuela-Cañón AD , Hernández J , Rivero CR . Very short-term forecasting in
+global solar irradiance using linear and nonlinear models. IEEE Workshop on
+Power Electronics and Power Quality Applications ; 2017 .
+
+[58] Breitkreuz H , Schroedter-Homscheidt M , Holzer-Popp T , Dech S . Short-Range
+Direct and Diffuse Irradiance Forecasts for Solar Energy Applications Based on
+Aerosol Chemical Transport and Numerical Weather Modeling. J Appl Meteorol
+Climatol 2009; 48 :1776–9 .
+
+[59] Jiang Y , Long H , Zhang Z , Song Z . Day-ahead Prediction of Bi-hourly Solar
+Radiance with a Markov Switch Approach. IEEE Trans Sustain Energy 2017 in
+press .
+
+[60] Kim JY , Yun CY , Kim CK , Kang YH , Kim HG , Lee SN , Kim SY . Evaluation of
+WRF model-derived direct irradiance for solar thermal resource assessment
+over South Korea. AIP Conf Proc 2017; 1850 :140013 .
+
+[61] Perez R , Moore K , Wilcox S , Renne D , Zelenka A . Forecasting solar radiation
+– Preliminary evaluation of an approach based upon the national forecast
+database. Sol Energy 2007; 81 :809–12 .
+
+[62] Lorenz  E ,  Remund  J ,  Müller  SC ,  Traunmüller  W ,  Steinmaurer  G ,  Pozo  D ,
+Ruiz-Arias JA , Fanego VL , Ramirez L , Romeo MG , Kurz C , Pomares LM , Guer-
+rero  CG .  Benchmarking  of  Different  Approaches  to  Forecast  Solar  Irradi-
+ance. In: Proc of 24th European Photovoltaic Solar Energy Conference ; 2009.
+p. 4199–208 .
+
+[63] Wang Z , Wang F , Su S . Solar Irradiance Short-Term Prediction Model Based
+
+on BP Neural Network. Energy Procedia 2011; 12 :488–94 .
+
+[64] Brabec M , Badescu V , Paulescu M . Nowcasting sunshine number using logistic
+
+modeling. Meteorol Atmos Phys 2013; 120 :61–71 .
+
+[65] Marquez  R ,  Pedro  HTC ,  Coimbra  CFM .  Hybrid  solar  forecasting  method
+uses satellite imaging and ground telemetry as inputs to ANNs. Sol Energy
+2013; 92 :176–88 .
+
+[66] Marquez R , Coimbra CFM . Intra-hour DNI forecasting based on cloud tracking
+
+image analysis. Sol Energy 2013; 91 :327–36 .
+
+[67] Voyant C , Paoli C , Muselli M , Nivet ML . Multi-horizon solar radiation forecast-
+ing for Mediterranean locations using time series models. Renew Sust Energ
+Rev 2013; 28 :44–52 .
+
+[68] Yang D , Dong Z , Reindl T , Jirutitijaroen P , Walsh WM . Solar irradiance fore-
+casting  using  spatio-temporal empirical kriging  and  vector  autoregressive
+models with parameter shrinkage. Sol Energy 2014; 103 :550–62 .
+
+[69] Boland  J .  Spatial-temporal  forecasting  of  solar  radiation.  Renew  Energy
+
+2015; 75 :607–16 .
+
+[70] Voyant C , Soubdhan T , Lauret P , David M , Muselli M . Statistical parameters
+as a means to a priori assess the accuracy of solar forecasting models. Energy
+2015; 90 :671–9 .
+
+[71] Wang J , Jiang H , Wu Y , Dong Y . Forecasting solar radiation using an optimized
+
+hybrid model by Cuckoo Search algorithm. Energy 2015; 81 :627–44 .
+
+[72] Yang D , Ye Z , Lim LHI , Dong Z . Very short term irradiance forecasting using
+
+the lasso. Sol Energy 2015; 114 :314–26 .
+
+[73] Aguiar LM , Pereira B , Lauret P , Díaz F , David M . Combining solar irradiance
+measurements, satellite-derived data and a numerical weather prediction
+model to improve intra-day solar forecasting. Renew Energy 2016; 97 :599–610 .
+[74] Azimi R , Ghayekhloo M , Ghofrani M . A hybrid method based on a new clus-
+tering technique and multilayer perceptron neural networks for hourly solar
+radiation forecasting. Energy Convers Manage 2016; 118 :331–44 .
+
+[75] Baharin KA , Rahman HA , Hassan MY , Gan CK . Short-term forecasting of solar
+photovoltaic output power for tropical climate using ground-based measure-
+ment data. J. Renew Sustain Energy 2016; 8 :053701 1 – 19 .
+
+[76] Benmouiza  K ,  Cheknane  A .  Small-scale  solar  radiation  forecasting  using
+ARMA and nonlinear autoregressive neural network models. Theor Appl Cli-
+matol 2016; 124 :945–58 .
+
+[77] Mellit A , Eleuch H , Benghanem M , Elaoun C , Massi Pavan A . An adaptive
+model for predicting of global, direct and diffuse hourly solar irradiance. En-
+ergy Convers Manage 2010; 51 :771–82 .
+
+[78] Chow CW , Urquhart B , Lave M , Dominguez A , Kleissl J , Shields J , Washom B .
+Intra-hour forecasting with a total sky imager at the UC San Diego solar en-
+ergy testbed. Sol Energy 2011; 85 :2881–93 .
+
+[79] Wu J , Chan CK . Prediction of hourly solar radiation using a novel hybrid
+
+model of ARMA and TDNN. Sol Energy 2011; 85 :808–17 .
+
+[80] Boata RS , Gravila P . Functional fuzzy approach for forecasting daily global so-
+
+lar irradiation. Atmos Res 2012; 112 :79–88 .
+
+[81] Almonacid F , Pérez-Higueras PJ , Fernández EF , Hontoria L . A methodology
+based on dynamic artificial neural network for short-term forecasting of the
+power output of a PV generator. Energy Convers Manage 2014; 85 :389–98 .
+[82] Cheng HY . Hybrid solar irradiance now-casting by fusing Kalman filter and
+
+regressor. Renew Energy 2016; 91 :434–41 .
+
+[83] Li J , Ward JK , Tong J , Collins L , Platt G . Machine learning for solar irradiance
+
+forecasting of photovoltaic system. Renew Energy 2016; 90 :542–53 .
+
+[84] Sanfilippo A , Martin-Pomares L , Mohandes N , Perez-Astudillo D , Bachour D .
+An  adaptive  multi-modeling  approach  to  solar  nowcasting.  Sol  Energy
+2016; 125 :77–85 .
+
+[85] Sharma V , Yang D , Walsh W , Reindl T . Short term solar irradiance forecasting
+using a mixed wavelet neural network. Renew Energy 2016; 90 :481–92 .
+[86] Voyant C , Notton G , Darras C , Fouilloy A , Motte F . Uncertainties in global ra-
+diation time series forecasting using machine learning: The multilayer per-
+ceptron case. Energy 2017; 125 :248–57 .
+
+[87] Kaplanis S , Kaplani E . Stochastic prediction of hourly global solar radiation
+
+for Patra, Greece. Appl Energy 2010; 87 :3748–58 .
+
+[88] Huang J , Korolkiewicz M , Agrawal M , Boland J . Forecasting solar radiation on
+an hourly time scale using a Coupled AutoRegressive and Dynamical System
+(CARDS) model. Sol Energy 2013; 87 :136–49 .
+
+[89] Voyant C , Muselli M , Paoli C , Nivet ML . Hybrid methodology for hourly global
+radiation forecasting in Mediterranean area. Renew Energy 2013; 53 :1–11 .
+[90] Voyant  C ,  Muselli  M ,  Paoli  C ,  Nivet  ML .  Numerical  weather  prediction
+(NWP)  and  hybrid  ARMA/ANN  model  to  predict  global  radiation.  Energy
+2012; 39 :341–55 .
+
+[91] Chu Y , Pedro HTC , Coimbra CFM . Hybrid intr-hour DNI forecasts with sky im-
+age processing enhanced by stochastic learning. Sol Energy 2013; 98 :592–603 .
+[92] Dambreville R , Blanc P , Chanussot J , Boldo D . Very short term forecasting
+of the Global Horizontal Irradiance using a spatio-temporal autoregressive
+model. Renew Energy 2014; 72 :291–300 .
+
+[93] Quesada-Ruiz  S ,  Chu  Y ,  Tovar-Pescador  J ,  Pedro  HTC ,  Coimbra  CFM .
+Cloud-tracking  methodology  for  intra-hour  DNI  forecasting.  Sol  Energy
+2014; 102 :267–75 .
+
+[94] Yang D , Sharma V , Ye Z , Lim LI , Zhao L , Aryaputera AW . Forecasting of global
+horizontal irradiance by exponential smoothing, using decompositions. En-
+ergy 2015; 81 :111–19 .
+
+[95] Chu Y , Coimbra CFM . Short-tern probabilistic forecasts for Direct Normal Ir-
+
+radiance. Renew Energy 2017; 101 :526–36 .
+
+[96] Abdourazak AK , Souad A , Driss Z , Ibrahim IA . Forecasting Direct Normal Ir-
+radiation at Djibouti Using Artificial Neural Network. Int J Elect Comput Ener-
+getic Elect Commun Eng 2017; 11 :380–3 .
+
+[97] Wu Y , Wang J . A novel hybrid model based on artificial neural networks for
+
+solar radiation prediction. Renew Energy 2016; 89 :268–84 .
+
+[98] Bigdeli N , Salehi Borujeni M , Afshar K . Time series analysis and short-term
+forecasting of solar irradiation, a new hybrid approach. Swarm Evol Comput
+2017; 34 :75–88 .
+
+[99] Wang F , Mi Z , Su S , Zhao H . Short-Term Solar Irradiance Forecasting Model
+Based on Artificial Neural Network Using Statistical Feature Parameters. Ener-
+gies 2012; 5 :1355–70 .
+
+142
+
+R. Blaga et al. / Progress in Energy and Combustion Science 70 (2019) 119–144
+
+[100] Ahmad A , Anderson T . Global Solar Radiation Prediction using Artificial Neu-
+ral Network Models for New Zealand. The 52nd Annual Conference of the Aus-
+tralian Solar Council ; 2014 .
+
+[101] Reikard G . Predicting solar radiation at high resolutions: A comparison of
+
+time series forecasts. Sol Energy 2009; 83 :342–9 .
+
+[102] Tobiska WK , Woods T , Eparvier F , Viereck R , Floyd L , Bouwer D , Rottman G ,
+White OR . The SOLAR20 0 0 empirical solar irradiance model and forecast tool.
+J Atmos Sol-Terr Phys 20 0 0; 62 :1233–50 .
+
+[103] Hammer  A ,  Heinemann  D ,  Lorenz  E ,  Lückehe  B .  Short-term  forecasting
+of  solar  radiation:  A  statistical  approach  using  satellite  data.  Sol  Energy
+1999; 67 :139–50 .
+
+[104] Benmouiza K , Cheknane A . Forecasting hourly global solar radiation using hy-
+brid k-means and nonlinear autoregressive neural network models. Energy
+Convers Manage 2013; 75 :561–9 .
+
+[105] Capizzi G , Napoli C , Bonanno F . Innovative second-generation wavelets con-
+struction with recurrent neural networks for solar radiation forecasting. IEEE
+Trans Neural Netw Learn Syst 2012; 23 :1805–15 .
+
+[106] Hocaoglu FO , Gerek ON , Kurban M . Hourly solar radiation forecasting using
+optimal coefficient 2-D linear filters and feed-forward neural networks. Sol
+Energy 2008; 82 :714–26 .
+
+[107] Moreno-Munoz A , de la Rosa JJG , Posadillo R , Bellido F . Very short term fore-
+casting of solar radiation. 33rd IEEE Photovoltaic Specialists Conference ; 2008 .
+[108] Wittmann M , Breitkreuz H , Schroedter-Homscheidt M , Eck M . Case studies
+on the use of solar irradiance forecast for optimized operation strategies of
+solar thermal power plants. IEEE J Sel Top Appl Earth Observ Remote Sens
+2008; 1 :18–27 .
+
+[109] Traunmüller W , Steinmaurer G . Solar Irradiance Forecasting, Benchmarking of
+Different Techniques and Applications to Energy Meteorology. In: 3rd Inter-
+national Conference on Solar Heating, Cooling and Buildings (EuroSun 2010)
+Proceedings; 2010 .
+
+[110] Perez R , Beauharnois M , Hemker K , Kivalov S , Lorenz E , Pelland S , et al. Eval-
+uation of numerical weather prediction solar irradiance forecasts in the US.
+In: Proc. solar 2011, American solar energy society’s annual conference; 2011 .
+[111] Boland J , Korolkiewicz M , Agrawal M , Huang J . Forecasting solar radiation
+on short time scales using a coupled autoregressive and dynamical system
+(CARDS) model. In: Proc. of the Australian Solar Energy Conference; 2012 .
+
+[112] Ciabattoni L , Ippoliti G , Longhi S , Cavalletti M , Rocchetti M . Solar irradiation
+forecasting using RBF networks for PV systems with storage. IEEE ICIT Confer-
+ence ; 2012 .
+
+[113] Marquez R , Gueorguiev VG , Coimbra CFM . Forecasting of Global Horizontal Ir-
+radiance Using Sky Cover Indices. ASME J Sol Energy Eng 2013; 135 011017-1-5 .
+[114] Martins FR , Pereira EB , Guarnieri RA . Solar Radiation Forecast Using Artificial
+
+Neural Networks. Int J Energy Res 2012; 2 :217–27 .
+
+[115] Ruiz-Arias JA , Gueymard CA , Dudhia J , Pozo-Vazquez D . Improvement of the
+weather research and forecasting (WRF) model for solar resource assessments
+and forecasts under clear skies. Proc Amer Sol Energy Soc 2012 .
+
+[116] Gala Y , Fernandez A , Diaz J , Dorronsoro J . Support vector forecasting of solar
+radiation values. In: Pan J-S, Polycarpou M, Wozniak M, Carvalho APLF, Quin-
+tian H, Corchado E, editors. Hybrid artificial intelligent systems . Berlin Heidel-
+berg: Springer; 2013. p. 51–60 .
+
+[117] Ioakimidis CS , Lopez C , Genikomsakis CN , Rycerski P , Simic D . Solar produc-
+tion forecasting based on irradiance forecasting using artificial neural net-
+works. In: Proc. 39th Annual Conf. IEEE Industrial Electronics Society (IECON
+2013) ; 2013. p. 8121–6 .
+
+[118] Kraas  B ,  Schroedter-Homscheidt  M ,  Madlener  R .  Economic  merits  of  a
+state-of-the-art concentrating solar power forecasting system for participa-
+tion in the Spanish electricity market. Sol Energy 2013; 93 :244–55 .
+
+[119] Peng Z , Yoo S , Yu D , Huang D . Solar Irradiance Forecast System Based on
+Geostationary Satellite. In: IEEE SmartGridComm 2013 Symposium - Support for
+Storage, Renewable Resources and Micro-grids ; 2013. p. 708–13 .
+
+[120] Amrouche B , Le Pivert X . Artificial neural network based daily local forecast-
+
+ing for global solar radiation. Appl Energy 2014; 130 :333–41 .
+
+[121] Assasa O , Bouzgou H , Fetah S , Salmi M , Boursas A . Use of the artificial neural
+network and meteorological data for predicting daily global solar radiation
+in Djelfa, Algeria. International Conference on Composite Materials & Renewable
+Energy Applications (ICCMREA) ; 2014 .
+
+[122] Bilionis I , Constantinescu EM , Anitescu M . Data-driven model for solar irradi-
+
+ation based on satellite observations. Sol Energy 2014; 110 :22–38 .
+
+[123] Hassan J . ARIMA and regression models for prediction of daily and monthly
+
+clearness index. Renew Energy 2014; 68 :421–7 .
+
+[124] Krömer P , Musilek P , Pelikan E , Kr ˇc P , Juruš P , Eben K . Support Vector Regres-
+sion of Multiple Predictive Models of Downward Short-wave Radiation. In:
+2014 International Joint Conference on Neural Networks (IJCNN) ; 2014. p. 651–7 .
+[125] Salcedo-Sanz S , Casanova-Mateo C , Pastor-Sanchez A , Sanchez-Giron M . Daily
+global solar radiation prediction based on a hybrid Coral Reefs Optimization
+– Extreme Learning Machine approach. Sol Energy 2014; 105 :91–8 .
+
+[126] Wu J , Chan CK , Zhang Y , Xiong BY , Zhang QH . Prediction of solar radia-
+tion with genetic approach combing multi-model framework. Renew Energy
+2014; 66 :132–9 .
+
+[127] Ahmad A , Anderson TN , Lie TT . Hourly global solar irradiation forecasting for
+
+New Zealand. Sol Energy 2015; 122 :1398–408 .
+
+[128] Colak I , Yesilbudak M , Genc N , Bayindir R . Multi-Period Prediction of Solar
+Radiation Using ARMA and ARIMA Models. In: IEEE 14th International Confer-
+ence on Machine Learning and Applications ; 2015. p. 1045–9 .
+
+[129] Lazzaroni M , Ferrari S , Piuri V , Salman A , Cristaldi L , Faifer M . Models for So-
+lar Radiation Prediction based on Different Measurement Sites. Measurement
+2015; 63 :346–63 .
+
+[130] Pedro HTC , Coimbra CFM . Nearest-neighbor methodology for prediction of
+intra-hour  global  horizontal  and  direct  normal  irradiances.  Renew  Energy
+2015; 80 :770–82 .
+
+[131] Bin Mohd Shah AS , Yokoyama H , Kakimoto N . High-Precision Forecasting
+Model of Solar Irradiance Based on Grid Point Value Data Analysis for an
+Efficient Photovoltaic System. IEEE Trans Sustain Energy 2015; 6 :474–81 .
+[132] Bigdeli N , Salehi Borujeni M , Afshar K . Time series analysis and short-term
+forecasting of solar irradiation, a new hybrid approach. Swarm Evol Comput
+2017; 34 :75–88 .
+
+[133] Gala Y , Fernández A , Díaz J , Dorronsoro JR . Hybrid machine learning forecast-
+
+ing of solar radiation values. Neurocomputing 2016; 176 :48–59 .
+
+[134] McCandless TC , Haupt SE , Young GS . A regime-dependent artificial neural
+network technique for shortrange solar irradiance forecasting. Renew Energy
+2016; 89 :351–9 .
+
+[135] Neelamegam P , Amirtham VA . Prediction of solar radiation for solar systems
+by using ANN models withdifferent back propagation algorithms. J Appl Res
+Technol 2016; 14 :206–14 .
+
+[136] Sreekumar S , Gupta A , Sushila , Agarwal V , Bhakar R . Matrix Based Univari-
+ate And Multivariate Linear Similar Day Approach Towards Short Term Solar
+Radiation Forecasting. IEEE National Power Systems Conference ; 2016 .
+
+[137] Gerstmaier T , Bührer M , Röttger M , Gombert A , Hansen CW , Stein JS . How
+predictable is DNI? An evaluation of day ahead DNI forecasts from four dif-
+ferent providers. In: AIP Conf Proc , 1477; 2012. p. 305–8 .
+
+[138] Anvari-Moghaddam A , Monsef H , Rahimi-Kian A , Nance H . Feasibility study
+of a novel methodology for solar radiation prediction on an hourly time
+scale: A case study in Plymouth, United Kingdom. J Renew Sustain Enery
+2014; 6 :033107 .
+
+[139] Reikard G , Haupt SE , Jensen T . Forecasting ground-level irradiance over short
+horizons: Time series, meteorological, and time-varying parameter models.
+Renew Energy 2017; 112 :474–85 .
+
+[140] Martin  L ,  Zarzalejo  LF ,  Polo  J ,  Navarro  A ,  Marchante  R ,  Cony  M .  Pre-
+diction of global solar irradiance based on time series analysis: Applica-
+tion to solar thermal power plants energy production planning. Sol Energy
+2010; 84 :1772–81 .
+
+[141] Voyant C , Motte F , Fouilloy A , Notton G , Paoli C , Nivet ML . Forecasting method
+for global radiation time series without training phase: Comparison with
+other well-known prediction methodologies. Energy 2017; 120 :199–208 .
+[142] Mazorra Aguiar L , Pereira B , David M , Diaz F , Lauret P . Use of satellite data to
+improve solar radiation forecasting with Bayesian Artificial Neural Networks.
+Sol Energy 2015; 122 :1309–24 .
+
+[143] Gutierrez-Corea FV , Manso-Callejo MA , Moreno-Regidor MP , Manrique-San-
+cho  MT .  Forecasting  short-term  solar  irradiance  based  on  artificial  neu-
+ral networks and data from neighboring meteorological stations. Sol Energy
+2016; 134 :119–31 .
+
+[144] Paulescu M , Mares O , Paulescu E , Stefu N , Pacurar A , Calinoiu D , Gravila P ,
+Pop N , Boata R . Nowcasting solar irradiance using the sunshine number. En-
+ergy Convers Manage 2014; 79 :690–7 .
+
+[145] Dong Z , Yang D , Reindl T , Walsh WM . Short-term solar irradiance forecasting
+
+using exponential smoothing state space model. Energy 2013; 55 :1104–13 .
+
+[146] Grantham A , Gel YR , Boland J . Nonparametric short-term probabilistic fore-
+
+casting for solar radiation. Sol Energy 2016; 133 :465–75 .
+
+[147] Andre  M ,  Dabo-Niang  S ,  Soubdhan  T ,  Ould-Baba  H .  Predictive  spa-
+tio-temporal model for spatially sparse global solar radiation data. Energy
+2016; 111 :599–608 .
+
+[148] Pacurar A , Stefu N , Mares O , Paulescu E , Calinoiu D , Pop N , Boata R , Gravila P ,
+Paulescu M . Forecasting hourly global solar irradiation using simple non-sea-
+sonal models. J Renew Sustain Energy 2013; 5 :063140 .
+
+[149] Akarslan E , Hocaoglu FO , Edizkan R . A novel M-D (multi-dimensional) lin-
+ear prediction filter approach for hourly solar radiation forecasting. Energy
+2014; 73 :978–86 .
+
+[150] Trapero JR , Kourentzes N , Martin A . Short-term solar irradiation forecasting
+
+based on dynamic harmonic regression. Energy 2015; 84 :289–95 .
+
+[151] Marquez R , Coimbra CFM . Forecasting of global and direct solar irradiance us-
+ing stochastic learning methods, ground experiments and the NWS database.
+Sol Energy 2011; 85 :746–56 .
+
+[152] Pedro HTC , Coimbra CFM . Short-term irradiance forecastability for various so-
+
+lar micro-climates. Sol Energy 2015; 122 :587–602 .
+
+[153] Mellit A , Massi Pavan A . A 24-h forecast of solar irradiance using artificial
+neural network: Application for performance prediction of a grid-connected
+PV plant at Trieste, Italy. Sol Energy 2010; 84 :807–21 .
+
+[154] Paoli C , Voyant C , Muselli M , Nivet ML . Forecasting of preprocessed daily so-
+lar radiation time series using neural networks. Sol Energy 2010; 84 :2146–60 .
+[155] Urraca R , Antonanzas J , Alia-Martinez M , Martinez-de-Pison FJ , Antonanzas–
+Torres F . Smart baseline models for solar irradiation forecasting. Energy Con-
+vers Manage 2016; 108 :539–48 .
+
+[156] Chaabene M , Ammar MB . Neuro-fuzzy dynamic model with Kalman filter to
+forecast irradiance and temperature for solar energy systems. Renew Energy
+2008; 33 :1435–43 .
+
+[157] Lauret P , Voyant C , Soubdhan T , David M , Poggi P . A benchmarking of ma-
+chine learning techniques for solar radiation forecasting in an insular context.
+Sol Energy 2015; 112 :446–57 .
+
+R. Blaga et al. / Progress in Energy and Combustion Science 70 (2019) 119–144
+
+143
+
+[158] Yang H , Kurtz B , Nguyen D , Urquhart B , Chow CW , Ghonima M , Kleissl J . Solar
+irradiance forecasting using a ground-based sky imager developed at UC San
+Diego. Sol Energy 2014; 103 :502–24 .
+
+[159] Fu CL , Cheng HY . Predicting solar irradiance with all-sky image features via
+
+regression. Sol Energy 2013; 97 :537–50 .
+
+[160] Alonso-Montesinos J , Batlles FJ . Solar radiation forecasting in the short- and
+
+medium-term under all sky conditions. Energy 2015; 83 :387–93 .
+
+[161] Alonso-Montesinos  J ,  Batlles  FJ ,  Portillo C .  Solar  irradiance  forecasting  at
+one-minute intervals for different sky conditions using sky camera images.
+Energy Convers Manage 2015; 105 :1166–77 .
+
+[162] Nonnenmacher L , Coimbra CFM . Streamline-based method for intra-day solar
+
+forecasting through remote sensing. Sol Energy 2014; 108 :447–59 .
+
+[163] Perez R , Kivalov S , Schlemmer J , Hemker K Jr , Renne D , Hoff TE . Validation
+of short and medium term operational solar radiation forecasts in the US. Sol
+Energy 2010; 84 :2161–72 .
+
+[164] Remund J , Perez R , Lorenz E . Comparison of solar radiation forecasts for the
+USA. In: 23rd European Photovoltaic Solar Energy Conference and Exhibition ;
+2008. p. 3141–3 .
+
+[165] Mathiesen  P ,  Kleissl  J .  Evaluation  of  numerical  weather  prediction  for
+intra-day  solar  forecasting  in  the  continental  United  States.  Sol  Energy
+2011; 85 :967–77 .
+
+[166] Lara-Fanego  V ,  Ruiz-Arias  JA ,  Pozo-Vazquez  D ,  Santos-Alamillos  FJ ,  To-
+var-Pescador J . Evaluation of the WRF model solar irradiance forecasts in An-
+dalusia (southern Spain). Sol Energy 2012; 86 :2200–17 .
+
+[167] Perez R , Lorenz E , Pelland S , Beauharnois M , Van Knowe G , KJr Hemker ,
+Heinemann D , Remund J , Muller SC , Traunmuller W , Steinmauer G , Pozo D ,
+Ruiz-Arias JA , Lara-Fanego V , Ramirez-Santigosa L , Gaston-Romero M , Po-
+mares LM . Comparison of numerical weather prediction solar irradiance fore-
+casts in the US, Canada and Europe. Sol Energy 2013; 94 :305–26 .
+
+[168] Mathiesen P , Collier C , Kleissl J . A high-resolution, cloud-assimilating nu-
+merical weather prediction model for solar irradiance forecasting. Sol Energy
+2013; 92 :47–61 .
+
+[169] Lara-Fanego  V ,  Ruiz-Arias  JA ,  Pozo-Vázquez  AD ,  Gueymard  CA ,  To-
+var-Pescador J . Evaluation of DNI forecast based on the WRF mesoscale at-
+mospheric model for CPV Applications. AIP Conf Proc 2012; 1477 :317–22 .
+[170] Nonnenmacher L , Kaur A , Coimbra CFM . Day-ahead resource forecasting for
+concentrated solar power integration. Renew Energy 2016; 86 :866–76 .
+[171] Monjoly S , Andre M , Calif R , Soubdhan T . Hourly forecasting of global solar
+radiation based on multiscale decomposition methods: A hybrid approach.
+Energy 2017; 119 :288–98 .
+
+[172] Akarslan E , Hocaoglu FO . A novel adaptive approach for hourly solar radiation
+
+forecasting. Renew Energy 2016; 87 :628–33 .
+
+[173] Zhu T , Wei H , Zhao X , Zhang C , Zhang K . Clear-sky model for wavelet forecast
+
+of direct normal irradiance. Renew Energy 2017; 104 :1–8 .
+
+[174] Dong Z , Yang D , Reindl T , Walsh WM . Satellite image analysis and a hybrid
+ESSS/ANN model to forecast solar irradiance in the tropics. Energy Convers
+Manage 2014; 79 :66–73 .
+
+[175] Heinemann D , Lorenz E , Girodo M . Forecasting of Solar Radiation. In: Dun-
+lop ED, Wald L, Suri M, editors. Solar resource management for electricity gen-
+eration from local level to global scale . New York: Nova Science Publishers;
+2006. p. 83–94 .
+
+[176] Verzijlbergh RA , Heijnen PW , de Roode SR , Los A , Jonker HJJ . Improved model
+output statistics of numerical weather prediction based irradiance forecasts
+for solar power applications. Sol Energy 2015; 118 :634–45 .
+
+[177] Pierro M , Bucci F , Cornaro C , Maggioni E , Perotto A , Pravettoni M , Spada F .
+Model output statistics cascade to improve day ahead solar irradiance fore-
+cast. Sol Energy 2015; 117 :99–113 .
+
+[178] Ghayekhloo M , Ghofrani M , Menhaj MB , Azimi R . A novel clustering approach
+for short-term solar radiation forecasting. Sol Energy 2015; 122 :1371–83 .
+[179] McCandless TC , Haupt SE , Young GS . A model tree approach to forecasting
+
+solar irradiance variability. Sol Energy 2015; 120 :514–24 .
+
+[180] Jiang  H ,  Dong  Y .  A  nonlinear  support  vector  machine  model  with  hard
+penalty function based on glowworm swarm optimization for forecasting
+daily global solar radiation. Energy Convers Manage 2016; 126 :991–1002 .
+[181] Dong Z , Yang D , Reindl T , Walsh WM . Short-term solar irradiance forecasting
+
+using exponential smoothing state space model. Energy 2013; 55 :1104–13 .
+
+[182] Cao J , Lin X . Application of the diagonal recurrent wavelet neural network to
+solar irradiation forecast assisted with fuzzy technique. Eng Appl Artif Intell
+2008; 21 :1255–63 .
+
+[183] Yang D , Gu C , Dong Z , Jirutitijaroen P , Chen N , Walsh WM . Solar irradi-
+ance forecasting using spatial-temporal covariance structures and time-for-
+ward kriging. Renew Energy 2013; 60 :235–45 .
+
+[184] Deo  RC ,   ̧S ahin  M .  Forecasting  long-term  global  solar  radiation  with  an
+ANN algorithm coupled with satellite-derived (MODIS) land surface tem-
+perature (LST) for regional locations in Queensland. Renew Sust Energ Rev
+2017; 72 :828–48 .
+
+[185] Ghofrani M , Ghayekhloo M , Azimi R . A novel soft computing framework for
+
+solar radiation forecasting. Appl Soft Comput 2016; 8 :207–16 .
+
+[186] Moghaddam AA , Seifi AR . Study of forecasting renewable energies in smart
+grids using linear predictive filters and neural networks. IET Renew Power
+Gener 2011; 5 :470–80 .
+
+[187] Aryaputera AW , Yang D , Walsh WM . Day-Ahead Solar Irradiance Forecasting
+
+in a Tropical Environment. J Sol Energy Eng 2015; 137 :051009 1 .
+
+[188] Chu Y , Pedro HTC , Li M , Coimbra CFM . Real-time forecasting of solar irradi-
+ance ramps with smart image processing. Sol Energy 2015; 114 :91–104 .
+[189] Fara L , Bartok B , Galbeaza Moraru A , Oprea C , Sterian P , Diaconu A , Fara S .
+New results in forecasting of photovoltaic systems output based on solar ra-
+diation forecasting. J Renew Sustain Energy 2013; 5 :041821 .
+
+[190] Fatemi SA , Kuh A . Solar Radiation Forecasting Using Zenith Angle. Global Con-
+
+ference on Signal and Information Processing (GlobalSIP) . IEEE; 2013 .
+
+[191] Fidan M , Hocaog  ̆lu FO , Gerek ÖN . Harmonic analysis based hourly solar radi-
+
+ation forecasting model. IET Renew Power Gener 2015; 9 :218–27 .
+
+[192] Gairaa K , Chellali F , Benkaciali S , Abdallah K , Messlem Y . Daily Global Solar
+Radiation Forecasting Over a Desert Area Using NAR Neural Networks. In: 4th
+International Conference on Renewable Energy Research and Applications (ICR-
+ERA) ; 2015. p. 22–5. Nov .
+
+[193] Licciardi GA , Dambreville R , Chanussot J , Dubost S . Spatiotemporal Pattern
+Recognition and Nonlinear PCA for Global Horizontal Irradiance Forecasting.
+IEEE Geosci Remote Sens Lett 2015; 12 :284–8 .
+
+[194] Lorenz E , Kühnert J , Heinemann D . Short Term Forecasting of Solar Irradiance
+by Combining Satellite Data and Numerical Weather Predictions. 27th Euro-
+pean Photovoltaic Solar Energy Conference and Exhibition ; 2012 .
+
+[195] Nomiyama F , Asai J , Murakami T , Takano H , Murata J . A Study on Global So-
+lar Radiation Forecasting Models Using Meteorological Data and their Appli-
+cation to Wide Area Forecast. IEEE International Conference on Power System
+Technology (POWERCON) Auckland, New Zealand ; 2012 .
+
+[196] Sáez D , Ávila F , Olivares D , Cañizares C , Marín L . Fuzzy Prediction Interval
+Models for Forecasting Renewable Resources and Loads in Microgrids. IEEE
+Transactions on Smart Grid 2015; 6 :548–56 .
+
+[197] Voyant C , Randimbivololona P , Nivet ML , Paoli C , Muselli M . Twenty four
+hours ahead global irradiation forecasting using multi-layer Perceptron. Me-
+teorol Appl 2014; 21 :644–55 .
+
+[198] Voyant  C , Notton  G , Paoli C , Nivet ML , Muselli M , Dahmani K . Numeri-
+cal  weather  prediction  or  stochastic  modelling:  an  objective  criterion  of
+choice for the global radiation forecasting. Int. J. Energy Technology and Pol-
+icy 2016; 12 :209–19 .
+
+[199] Watetakarn S , Premrudeepreechacharn S . Forecasting of solar irradiance for
+solar power plants by artificial neural network. Innovative Smart Grid Tech-
+nologies - Asia (ISGT ASIA) Bangkok, Thailand . IEEE; 2015. 3-6 Nov. 2015 .
+[200] Quaiyum  S ,  Rahman  S ,  Rahman  S .  Application  of  artificial  neural  net-
+work  in  forecasting  solar  irradiance  and  sizing  of  photovoltaic  cell
+for  standalone  systems  in  Bangladesh.  Int  J  Comput  Appl  2011; 32 :
+51–56 .
+
+[201] Cao  JC ,  Cao  SH .  Study  of  forecasting  solar  irradiance  using  neural
+networks  with  preprocessing  sample  data  by  wavelet  analysis.  Energy
+2006; 31 :3435–45 .
+
+[202] Chen SX , Gooi HB , Wang MQ . Solar radiation forecast based on fuzzy logic
+
+and neural networks. Renew Energ 2013; 60 :195–201 .
+
+[203] Kashyap  Y ,  Bansal  A ,  Sao  AK .  Solar  radiation  forecasting  with  mul-
+tiple  parameters  neural  networks.  Renew  Sust  Energ  Rev  2015; 49 :
+825–835 .
+
+[204] Voyant C , Haurant P , Muselli M , Paoli C , Nivet ML . Time series modeling
+and large scale global solar radiation forecasting from geostationary satellites
+data. Solar Energy 2014; 102 :131–42 .
+
+[205] Yang  D ,  Jirutitijaroen  P ,  Walsh  WM .  Hourly  solar  irradiance  time
+series  forecasting  using  cloud  cover  index.  Solar  Energy  2012; 86 :
+3531–3543 .
+
+[206] Ciabattoni L , Longhi S . On line solar irradiation forecasting by minimal re-
+source allocating networks. In: 20th Mediterranean Conference on Control &
+Automation (MED) Barcelona ; 2012. p. 3–6. July .
+
+[207] Hossain M, Mekhilef S, Danesh M, Olatomiwa L, Shamshirband S. Application
+of extreme learning machine for short term output power forecasting of three
+grid-connected PV systems.
+
+[208] Kottek  M ,  Grieser  J ,  Beck  C ,  Rudolf  B ,  Rubel  F .  World  Map  of  the
+Köppen-Geiger  climate  classification  updated.  Meteorologische  Zeitschrift
+2006; 15 :259–63 .
+
+[209] REN21.  Renewables  2017  Global  Status  Report  (Paris:  REN21  Secretariat)
+http://www.ren21.net/status-of-
+
+Accessed  February.  Accessed  February
+renewables/global- status- report/ .
+
+[210] Diagne M , David M , Lauret P , Boland J , Schmutz N . Review of solar irradiance
+forecasting methods and a proposition for small-scale insular grids. Renew
+Sust Energ Rev 2013; 27 :65–76 .
+
+[211] Fallah SN , Deo RC , Shojafar M , Conti M , Shamshirband S . Computational Intel-
+ligence Approaches for Energy Load Forecasting in Smart Energy Management
+Grids: State of the Art, Future Challenges, and Research Directions. Energies
+2018; 11 (3):596 .
+
+[212] Espinar B , Ramírez L , Drews A , Beyer HG , Zarzalejo LF , Polo J , Martín L .
+Analysis  of  different  comparison  parameters  applied  to  solar  radiation
+data from satellite and German radiometric stations. Sol Energy 2009; 83 :
+118–125 .
+
+144
+
+R. Blaga et al. / Progress in Energy and Combustion Science 70 (2019) 119–144
+
+MARIUS  PAULESCU  is  a  professor  at  the  Faculty  of
+Physics, West University of Timisoara. He completed his
+habilitation  in  2016  with  the  thesis:  Estimation  and
+forecasting  the  output  power  of  PV  systems.  His  sci-
+entific contribution consists of over 100 scientific peer-
+reviewed  papers  ( h- index = 13),  a  book  and  six  chap-
+ters in edited books, all in the fields of solar radiation
+and photovoltaics. A full list of publications is available
+on his homepage: http://www.physics.uvt.ro/ ∼marius . In
+2015, M Paulescu received the Romanian Academy Prize
+“Anghel  Saligny”.  He  is  member  of  Renewable  Energy
+Committee of the Romanian Academy. He was the direc-
+tor of the Romanian project PN-III-P2-2.1-PED-2016-0592
+entitled “PV Power Forecasting for Smart-Grid Management”. M Paulescu is a mem-
+ber of the International Solar Energy Society.
+
+VIOREL BADESCU is Professor of Engineering Thermody-
+namics and affiliated with Candida Oancea Institute at
+Polytechnic University of Bucharest. His mainstream sci-
+entific contributions consist of more than 250 papers and
+30 books related to various fields in science and engi-
+neering (h- index = 30). Most of his research areas refer to
+terrestrial and space solar energy applications. Presently
+he is director of a Romanian project dealing with so-
+lar energy forecasting PN-II-ID-PCE-2011-3-0089. He was
+Romanian Coordinator and member in the Management
+Committee of European COST Action ES1002, Weather In-
+telligence for Renewable Energies, 2010–2014. He is As-
+sociate editor of the international journal Renewable En-
+ergy published by Elsevier. He is member of 8 scientific societies including the
+International Solar Energy Society. He received four awards including the Roma-
+nian Academy Prize for Physics in 1979. Viorel Badescu is member of the Romanian
+Academy.
+
+ROBERT BLAGA is a research assistant at the Faculty of
+Physics, West University of Timisoara. He earned his PhD
+in 2017, with a thesis in the domain of theoretical physics.
+He comes with a strong analytical background and cross-
+disciplinary approach to the field of solar radiation mod-
+eling. His current research interest lies in solar resources
+assessment and forecasting, and in particular, the way in
+which the applicability of models is conditioned by local
+climate and other influential factors.
+
+ANDREEA SABADUS is a PhD student at the Faculty of
+Physics, West University of Timisoara. She is an entrant
+in the solar energy field. Her research is focused on com-
+putational physics and solar cell modeling.
+
+NICOLETA  STEFU  is lecturer at the Faculty of Physics,
+West  University  of  Timisoara.  Her  scientific  contribu-
+tion  consists  of  one  chapter  in  an  edited  book  and
+over 30 scientific peer-reviewed papers, from which 13
+are  in  the  fields  of  solar  radiation,  physics  of  solar
+cells, photovoltaics and aerosols. A full list of publica-
+tions is available on her homepage: https://physics.uvt.ro/
+lect- dr- stefu- nicoleta/ .
+
+CIPRIAN DUGHIR is lecturer at the Faculty of Electronics
+and Telecommunication, Politehnica University Timisoara.
+He  completed  his  PhD  2010  with  the  thesis  Electrical
+Power Network Quality Monitoring. His scientific contri-
+bution consists in over 20 scientific papers in the fields
+of electrical measurements and solar radiation. His work
+is focused on Renewable Energy, Drones and Photography.

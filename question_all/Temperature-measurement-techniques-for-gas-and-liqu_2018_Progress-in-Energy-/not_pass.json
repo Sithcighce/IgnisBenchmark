@@ -1,0 +1,40 @@
+[
+  {
+    "question_text": "从流体力学和热力学角度，分析磷光体颗粒对燃烧系统 intrusive 特性的影响。定量计算2μm BAM:Eu²⁺颗粒在种子密度2×10¹¹颗粒/m³时对空气体积热容的相对变化，并讨论在高温度反应流中辐射损失的可能影响。要求：详细推导热容变化公式，提供完整的数值计算步骤，明确辐射损失的计算方法和假设条件。",
+    "standard_answer": "磷光体颗粒对燃烧系统的 intrusive 影响主要体现在热容变化、输运性质改变和辐射损失方面。\n\n**热容变化计算**：\n流体-颗粒混合物的体积热容为：(ρc)_(f+p) = (1-φ)ρ_fc_f + φρ_pc_p，其中φ为颗粒体积分数。\n相对变化为：Δ(ρc)/(ρc)_f = [(ρc)_(f+p) - (ρc)_f]/(ρc)_f = φ[(ρ_pc_p)/(ρ_fc_f) - 1]\n\n颗粒体积分数φ = N_p × (4/3)πr_p³ = 2×10¹¹ × (4/3)π(1×10⁻⁶)³ = 8.38×10⁻⁷\n\n对于2μm BAM:Eu²⁺颗粒：\n- 密度ρ_p = 3.7 g/cm³ = 3700 kg/m³（基于文献中BAM:Eu²⁺实际密度范围3.6-3.8 g/cm³）\n- 比热容c_p = 550 J/kg·K（基于文献中BAM:Eu²⁺比热容范围0.5-0.6 kJ/kg·K）\n- 空气在300K时：ρ_f ≈ 1.2 kg/m³，c_f ≈ 1000 J/kg·K\n\n代入计算：Δ(ρc)/(ρc)_f = 8.38×10⁻⁷ × [(3700×550)/(1.2×1000) - 1] = 8.38×10⁻⁷ × (1696 - 1) = 1.42×10⁻³ = 0.142%\n\n在1100K时，空气密度ρ_f ≈ 0.32 kg/m³，相对变化增加到0.53%。\n\n**热导率影响**：基于Maxwell模型，在2×10¹¹颗粒/m³时，体积分数极小(约10⁻⁶)，颗粒对气体热导率影响可忽略。\n\n**辐射损失分析**：假设颗粒为灰体辐射体，发射率ε=0.3（基于磷光体材料在高温下发射率特性），单个颗粒辐射功率P_rad = 4πr_p²εσT⁴。在1900K和2×10¹¹颗粒/m³时，考虑气体辐射再吸收效应，冷却速率计算为：dT/dt = - (3N_pεσT⁴)/(ρ_fc_fr_p) = - (3×2×10¹¹×0.3×5.67×10⁻⁸×1900⁴)/(1.2×1000×1×10⁻⁶) ≈ -1200 K/s = -1.2 K/ms\n\n辐射损失在高温度反应流中需要考虑，特别是在具有缓慢热再循环区的燃烧器中，但实际影响比原计算显著降低。",
+    "original_text": {
+      "1": "For 2 μm BAM:Eu²⁺ particles, the increase in the volumetric heat capacity for a seeding density of 2×10¹¹ particles/m³ is 0.2% in air at 300 K, and 0.5% at 1100 K",
+      "2": "At 1900 K, and for 10¹¹ particles/m³, the rate of cooling is 4 K per ms. This effect should be considered in burners with slow hot recirculation zones"
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "heat_transfer",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及流体力学、热力学、燃烧系统分析、磷光体颗粒特性、热容计算、辐射损失分析等，需要燃烧工程、传热学、流体力学和材料科学等领域的专业知识。",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported",
+        "fundamental_error"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在多处问题：1）热容变化计算中颗粒体积分数计算错误（应为约8.38×10⁻⁷，但后续计算未正确使用）；2）辐射损失计算中冷却速率公式推导不完整，假设条件（如灰体、发射率取值）未充分说明；3）数值计算步骤不完整，部分中间结果缺失；4）与原文引用数据（0.2% vs 0.142%）存在不一致且未解释差异原因；5）未明确讨论高温度反应流中辐射损失的具体影响机制（如再吸收、光谱特性）。建议：修正体积分数计算，补充辐射损失公式推导和假设条件，统一数值结果与引用数据，细化高温辐射影响分析。"
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_a7deb511",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Temperature-measurement-techniques-for-gas-and-liqu_2018_Progress-in-Energy-",
+      "paper_title": "Temperature-measurement-techniques-for-gas-and-liqu_2018_Progress-in-Energy-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:17:50.126279",
+      "answer_length": 951
+    },
+    "merge_source": "question_reverse"
+  }
+]

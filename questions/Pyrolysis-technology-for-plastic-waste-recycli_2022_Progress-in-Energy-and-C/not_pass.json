@@ -1,0 +1,206 @@
+[
+  {
+    "question_text": "在催化热解聚乙烯（PE）过程中，HZSM-5沸石催化剂通过碳正离子机制促进裂解反应。请推导PE分子在HZSM-5酸性位点上的裂解路径，包括：(1) 质子化生成碳正离子；(2) β-裂解生成轻质烯烃；(3) 氢转移反应生成芳烃。详细说明裂解活性与沸石孔径、酸强度及位点可及性的关联机制。",
+    "standard_answer": "在HZSM-5沸石催化下，PE裂解遵循碳正离子机制。首先，PE链在Brønsted酸位点上发生质子化，形成碳正离子：R–CH₂–CH₃ + H⁺ → R–CH₂–C⁺H₂。随后，碳正离子经历β-裂解（C–C键断裂），生成短链烯烃（如C₂–C₄）和更小的自由基。β-裂解反应可表示为：R–C⁺H–CH₂–R′ → R–C⁺H=CH₂ + C⁺H₃⁺。例如，C₁₂H₂₅⁺在β-裂解中生成C₆H₁₂和C₆H₁₃自由基。氢转移反应使烯烃饱和并生成芳烃，例如通过Diels–Alder反应：丁二烯 + 乙烯 → 环己烯 → 苯 + 3H₂。HZSM-5的微孔尺寸（~0.56 nm）限制了PE分子（动力学直径>0.8 nm）进入内部酸性位点，导致初始裂解主要发生在催化剂外表面或孔口处。此外，HZSM-5的强酸位点促进氢转移，生成芳烃（如甲苯、乙苯）和烷烃。裂解活性与酸性位点密度和可及性正相关；而介孔或分级沸石（如分级ZSM-5）通过提高外比表面积和介孔率增强了PE分子对内部酸性位点的可及性，从而提升催化剂性能。",
+    "original_text": {
+      "1": "the presence of catalyst can effectively lower the required energy for cracking the C–C and the C–H bonds, thereby generating more carbonium ions [63].",
+      "2": "catalyst can also facilitate the degradation of long chain polymers, and reduce or avoid wax formation [62]. In the above-mentioned polyethylene pyrolysis process, the presence of catalyst can effectively lower the required energy for cracking the C–C and the C–H bonds, thereby generating more carbonium ions [63]."
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "question_id": "batch_detail_q_195b5104",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Pyrolysis-technology-for-plastic-waste-recycli_2022_Progress-in-Energy-and-C",
+      "paper_title": "Pyrolysis-technology-for-plastic-waste-recycli_2022_Progress-in-Energy-and-C"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T16:56:38.343450",
+      "batch_processing": true,
+      "answer_length": 454
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题需要深入的催化化学、沸石催化剂特性、碳正离子反应机理等燃烧/能源领域的专业知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "fundamental_error",
+        "unsupported"
+      ],
+      "other_compliant": false,
+      "other_issues": [
+        "has_meta_info"
+      ],
+      "overall_verdict": "fail",
+      "recommendation": "修正反应机理错误，确保所有关键声明都有原文引用支持，并去除元信息表述"
+    }
+  },
+  {
+    "question_text": "在锥形喷动床反应器（CSBR）中进行塑料热解时，传热和传质过程对产物分布有显著影响。请根据无量纲数（如Py、Bi、Pe和Le）分析CSBR如何通过其流体动力学特性（如极短停留时间~20 ms）避免结焦和二次反应。推导Py≫1和Bi≫1条件下反应动力学和传热的竞争关系，并解释其对液态油中芳烃选择性的影响。",
+    "standard_answer": "在CSBR中，无量纲数用于评估反应器性能限制。Py数定义为Py=λ/(ρCpL²k），当Py≫1时，裂解由反应动力学控制；而Bi数（Bi=hL/λ）≫1表示外部对流传热主导，内部导热较慢。具体推导：Py≫1表示反应速率远大于传热速率，因此反应受本征动力学主导。然而，塑料热解涉及固-液-气三相，传热和传质限制会改变降解行为。Pe数（Pe=PK/Dμ）≫1表示对流传质远快于扩散，导致产物在反应器中分布不均。例如，在PE热解中，若Py≪1且Bi≫1同时成立，则颗粒内部存在温度梯度，导致反应速率降低，并可能促进芳烃形成（通过二次反应如Diels–Alder反应）。Le数（Le=μλ/(PKρCp）≫1表示内部传热远快于传质，这会增加芳烃选择性，因为长链烃在高温区域更易发生环化和脱氢反应。CSBR的极短停留时间（~20 ms）有效最小化二次反应，从而生成更多初级产物（如轻质烯烃）。CSBR的环形-喷动-喷泉区结构通过高气固接触效率减少了传质限制。",
+    "original_text": {
+      "1": "CSBR is divided into three regions, including the spout, annulus, and fountain. The extremely vigorous mixing regime of particles inside the CSBR enables catalysts to be easily and effectively utilized in the in-situ catalytic pyrolysis of PSW.",
+      "2": "Dimensionless numbers such as pyrolysis numbers (Py), Biot number (Bi), Péclet number (Pe), and Lewis number (Le) [212–215]."
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "CFD_modeling",
+    "question_id": "batch_detail_q_1603f8f9",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Pyrolysis-technology-for-plastic-waste-recycli_2022_Progress-in-Energy-and-C",
+      "paper_title": "Pyrolysis-technology-for-plastic-waste-recycli_2022_Progress-in-Energy-and-C"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T16:56:52.418508",
+      "batch_processing": true,
+      "answer_length": 424
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "该问题需要燃烧/传热/流体/化学反应工程领域的专业知识，涉及锥形喷动床反应器的流体动力学特性、无量纲数分析、反应动力学与传热传质的竞争关系，以及塑料热解产物分布的影响机制",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "fundamental_error",
+        "unsupported"
+      ],
+      "other_compliant": false,
+      "other_issues": [
+        "has_meta_info",
+        "too_general"
+      ],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在严重概念错误和未经验证的声明，建议重新检查无量纲数的定义和推导过程，确保与原文引用和基础知识一致"
+    }
+  },
+  {
+    "question_text": "塑料热解油中重质烃（如蜡，C20+）的分布对下游应用至关重要。请结合蒸馏、GC×GC-TOFMS、FTIR、NMR和SEC技术，详细说明如何通过综合表征方法获取C5–C12正构烷烃的高选择性，并推导如何通过催化剂设计（如酸性调控和孔径工程）实现从蜡到石脑油区段烃的定向转化。",
+    "standard_answer": "塑料热解油的表征需结合多种技术。首先，通过模拟蒸馏将油分成石脑油区段（沸点<170°C）、煤油区段（170°C<沸点<280°C）和蜡（沸点>400°C）。对于石脑油区段烃，GC-FID/MS可分析化学组成和碳收率。对于重质化合物，FTIR可检测C–H伸缩振动（2800–3000 cm⁻¹）和芳烃（3000–3100 cm⁻¹）。SEC提供分子量分布信息，例如在PE热解中，低沸点馏分的平均分子量低于高沸点馏分。通过1H NMR光谱，可确定与烷烃、烯烃和芳烃相连的质子百分比。化学位移在4.5–6.5 ppm（烯烃）和0.5–2.7 ppm（烷烃），从而量化不同化学基团。GC×GC-TOFMS具有更高分辨率，可识别GC–MS中存在的共洗脱物。例如，在PE热解油中，若55.5%为芳烃，43.1%为脂肪烃。对于蜡的转化，需开发具有介孔结构的催化剂（如Al-SBA-15），以增强长链烃的扩散和裂解，例如通过中孔MCM-41促进蜡裂解为石脑油区段烃。",
+    "original_text": {
+      "1": "GC × GC-TOFMS analysis of bio-oil in biomass pyrolysis has been developed, its application in analyzing plastic pyrolysis oil is lacking.",
+      "2": "The chemical profile of PSW derived oils can determine if the liquid oil can be used as gasoline, diesel, other fuels, or as chemicals.",
+      "3": "For those naphtha-range and kerosene-range hydrocarbons, GC-FID/MS can play a key role in analyzing the chemical compositions and determining the corresponding carbon yield."
+    },
+    "type": "concept",
+    "difficulty": 5,
+    "topic": "energy_systems",
+    "question_id": "batch_detail_q_cdf979ec",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Pyrolysis-technology-for-plastic-waste-recycli_2022_Progress-in-Energy-and-C",
+      "paper_title": "Pyrolysis-technology-for-plastic-waste-recycli_2022_Progress-in-Energy-and-C"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T16:57:04.050823",
+      "batch_processing": true,
+      "answer_length": 425
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及塑料热解油表征、催化剂设计等化学工程和能源转化领域的专业知识，需要燃烧/传热/流体/能源领域的专业知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported"
+      ],
+      "other_compliant": false,
+      "other_issues": [
+        "has_meta_info",
+        "factual_error"
+      ],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在事实错误和未支持的声明，且包含元信息，需要修正数据和确保所有技术声明有原文支持"
+    }
+  },
+  {
+    "question_text": "在微波辅助热解塑料过程中，SiC球作为微波吸收剂通过传导加热塑料。请推导微波热解的传热方程，并解释为何微波热解能通过体积加热和选择性加热最小化副反应，从而提高轻质烯烃和氢气的产率。结合热传导和微波电磁场分布，分析这种加热方式对产物选择性的影响。",
+    "standard_answer": "微波热解利用介电加热，其中微波吸收剂（如SiC球）优先被加热，而不升高周围温度。微波热解的传热方程可表示为：∂T/∂t = α∇²T + Q_microwave / (ρCp）), 其中α为热扩散率，Q_microwave为微波热源项。在微波反应器中，热通量Q可计算为Q = P_microwave / V_reactor，其中P_microwave为微波功率，V_reactor为反应器体积。微波的穿透深度δ = c / (2πf √(ε′²+ε″²）），其中ε′和ε″分别为塑料的介电常数和损耗因子。例如，在HDPE微波热解中，能量平衡为：ρCp ∂T/∂t = k∇²T + P_absorbed / V。由于塑料对微波透明，需添加吸收剂。微波热解的优点包括快速、选择性和体积加热，这减少了传热限制。实验表明，微波热解可比传统热解减少结焦，因为均匀加热最小化了局部过热导致的聚合反应。此外，微波热解可通过调节吸收剂分布优化温度场，从而提高目标产物（如乙烯和丙烯）的选择性。",
+    "original_text": {
+      "1": "microwave irradiation to be a fast and selective heating method, which has been widely applied in solid waste pyrolysis [85–87]. Unlike the conventional pyrolysis process, in this alternative approach, microwave-absorbing materials are preferentially heated without initially increasing the temperature of the surrounding pieces of the HDPE because plastics are transparent to microwave irradiation.",
+      "2": "Plastic feedstock is heated by heat conduction from the high temperature SiC balls which are stirred by a shaft, effectively increasing the heat transfer efficiency and achieving fast pyrolysis.",
+      "3": "A few studies have also confirmed the application potential in plastic pyrolysis [87,89]."
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "heat_transfer",
+    "question_id": "batch_detail_q_19897ddc",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Pyrolysis-technology-for-plastic-waste-recycli_2022_Progress-in-Energy-and-C",
+      "paper_title": "Pyrolysis-technology-for-plastic-waste-recycli_2022_Progress-in-Energy-and-C"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T16:57:15.562709",
+      "batch_processing": true,
+      "answer_length": 439
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及微波热解过程的传热方程推导、微波电磁场分布、热传导机理以及产物选择性分析，需要燃烧工程、传热学、微波技术和化学反应工程等领域的专业知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported"
+      ],
+      "other_compliant": false,
+      "other_issues": [
+        "has_meta_info",
+        "too_general"
+      ],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在多处事实错误和未支持的声明，需基于原文引用重新构建准确解释"
+    }
+  },
+  {
+    "question_text": "在塑料热解制氢过程中，Ni基催化剂常因结焦而失活。请推导结焦形成的动力学模型，包括：(1) 烯烃低聚和缩合反应；(2) 焦炭在催化剂表面以单层或多层形式沉积，阻碍反应物接近活性位点。请分析结焦类型（如焦炭I和焦炭II）及其对催化活性的影响机制。",
+    "standard_answer": "结焦形成主要由烯烃低聚和缩合反应引起。在Ni/Al₂O₃催化剂上，结焦通过强化学吸附或物理吸附形成。温度程序氧化（TPO）可量化结焦量，例如在HDPE热解-重整中，结焦率在0.1至6.1 mg_coke g_cat⁻¹范围内变化，取决于催化温度和蒸汽注入速率。结焦I为脂肪烃，位于中孔和微孔外部；结焦II为芳烃，位于沸石孔内或外部。TG-TPO分析可识别两种结焦：焦炭I是初级焦炭，生成于引发期；焦炭II由焦炭I降解或轻质烯烃低聚和缩合形成。例如，在600°C重整温度下，结焦量可达15 wt%。结焦导致催化剂失活的机制包括：(1) 活性位点被覆盖；(2) 孔道堵塞；(3) 催化剂结构降解。通过拉曼光谱，可分析结焦的石墨化程度。UV-vis光谱和13C CP-MAS NMR可进一步表征焦炭的化学结构，如单环芳烃带两个或多个链。UV-vis光谱可检测不同芳烃家族，如单环芳烃、茚满和茚。",
+    "original_text": {
+      "1": "coke deposition means that large-molecular-weight carbonaceous species polymerized from the pyrolytic volatiles accumulate on the catalyst surface, thereby covering the active sites and resulting in catalytic activity loss [190].",
+      "2": "coke deposited on the HZSM-5 catalyst, with larger external surface area, is less aggressive and easier to remove than the conventional microporous nano-crystalline HZSM-5.",
+      "3": "coke I was aliphatic hydrocarbons generated from the degradation of waxes and located on the outside of mesoporous and microporous pores [192]."
+    },
+    "type": "calculation",
+    "difficulty": 5,
+    "topic": "fluid_mechanics",
+    "question_id": "batch_detail_q_92d1ea3f",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Pyrolysis-technology-for-plastic-waste-recycli_2022_Progress-in-Energy-and-C",
+      "paper_title": "Pyrolysis-technology-for-plastic-waste-recycli_2022_Progress-in-Energy-and-C"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T16:57:28.426285",
+      "batch_processing": true,
+      "answer_length": 394
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及Ni基催化剂结焦动力学、反应机理、焦炭类型分析及失活机制，需要催化反应工程、反应动力学、催化剂表征等专业领域的深入知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "too_brief",
+        "unsupported",
+        "fundamental_error"
+      ],
+      "other_compliant": false,
+      "other_issues": [
+        "has_meta_info"
+      ],
+      "overall_verdict": "fail",
+      "recommendation": "答案缺乏动力学模型推导，焦炭类型描述与原文引用存在矛盾，应补充详细的反应动力学方程和机理解释，避免简单罗列实验数据"
+    }
+  }
+]

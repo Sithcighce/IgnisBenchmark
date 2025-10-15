@@ -1,0 +1,167 @@
+[
+  {
+    "question_text": "Using the Arrhenius expression k = A T^n exp(-E/RT), derive the sensitivity of the rate coefficient k to changes in the activation energy E, and explain how this sensitivity affects uncertainty propagation in combustion models.",
+    "standard_answer": "The sensitivity of the rate coefficient k to the activation energy E is derived by taking the partial derivative of the Arrhenius expression with respect to E: ∂k/∂E = - (1/RT) * A T^n exp(-E/RT) = -k/(RT). This shows that the sensitivity is proportional to the rate coefficient itself and inversely proportional to temperature. The relative sensitivity, (∂k/k)/∂E = -1/(RT), indicates that a small change in E causes a fractional change in k that depends on temperature. At typical combustion temperatures (e.g., 1000 K, RT ≈ 2 kcal/mol), a 1 kcal/mol error in E leads to roughly a 50% error in k. This high sensitivity means that uncertainties in activation energies propagate nonlinearly into rate coefficients and, consequently, into model predictions like ignition delays and flame speeds. In uncertainty quantification, this requires careful treatment of correlated parameters and temperature-dependent uncertainties. For complex reactions with pressure dependence, the Arrhenius parameters may not be independent, and errors in E can be compensated by adjustments in A or n, leading to correlated uncertainties. Theoretical kinetics helps by providing more fundamental parameters (e.g., barrier heights, vibrational frequencies) with better-understood uncertainties, enabling more robust uncertainty propagation through master equation calculations or response surface methods.",
+    "original_text": {
+      "1": "Chemical mechanisms typically contain rate coefficients in an Arrhenius form, suggesting that both the pre-exponential factor (A) and temperature-dependence (encoded in E and n) can carry uncertainty; however, chemical data evaluations often just provide temperature-independent uncertainties for the total rate coefficient.",
+      "2": "Theoretical kinetics provides a relatively straightforward solution for the evaluation of the potentially 2-D (pressure and temperature) and correlated PDFs of the elementary rate coefficients."
+    },
+    "type": "calculation",
+    "difficulty": 3,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question requires deep knowledge of combustion kinetics, specifically the Arrhenius rate expression and sensitivity analysis in chemical mechanisms. It directly addresses uncertainty propagation in combustion models, which is a core topic in combustion science and chemical kinetics modeling.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "The question is well-focused on combustion kinetics and the answer provides a thorough derivation with appropriate domain context and uncertainty quantification discussion."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_53d7bec5",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Combustion-chemistry-in-the-twenty-first-century--_2021_Progress-in-Energy-a",
+      "paper_title": "Combustion-chemistry-in-the-twenty-first-century--_2021_Progress-in-Energy-a"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:17:41.092493",
+      "answer_length": 1384
+    }
+  },
+  {
+    "question_text": "How do chemically termolecular reactions mediated by ephemeral radical complexes influence hydrogen flame simulations, and what general criteria determine their significance in combustion systems?",
+    "standard_answer": "Chemically termolecular reactions involve ephemeral radical complexes formed from exothermic associations that undergo reactive collisions before thermalization, effectively acting as termolecular processes. In hydrogen flames, the reaction H + O2 → HO2** produces an energized HO2 radical that can react with other species like H, O, or OH before energy relaxation. For instance, H + O2 + H → H2 + HO2 and H + O2 + O → OH + O2 are chemically termolecular reactions that alter radical concentrations and reaction fluxes. These reactions impact flame simulations by enhancing chain-termination pathways, reducing H atom concentrations, and thus decreasing flame speeds and altering ignition behavior. The significance of chemically termolecular reactions is determined by several criteria: (1) the exothermicity of the initial association must be sufficient to produce highly energized complexes, (2) the lifetime of the ephemeral complex must be comparable to or longer than the time between collisions, allowing reactive encounters, (3) the collision frequency with reactive partners must be high enough to compete with energy relaxation, and (4) the reaction rates with external agents must be significantly faster than the corresponding thermal reactions. These conditions are often met in high-temperature, high-pressure combustion environments where radical densities and collision frequencies are elevated.",
+    "original_text": {
+      "1": "Burke and Klippenstein posit the importance of chemically termolecular reactions mediated by ephemeral HO2** formed from exothermic H + O2 association. In particular, master equation calculations by Burke and Klippenstein predict that a substantial fraction of the ephemeral energized HO2 radical undergoes reactive collisions with flame radicals (H-atoms, O-atoms, OH-radicals).",
+      "2": "Inclusion of these chemically termolecular reactions such as H + O2 + H → H2 + HO2 was shown to impact simulations of hydrogen flames."
+    },
+    "type": "application",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question specifically addresses chemically termolecular reactions in hydrogen flame simulations, requiring deep knowledge of combustion kinetics, radical chemistry, flame behavior, and simulation methodologies - all core combustion science domain expertise.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer are both high quality - question requires domain expertise and answer is comprehensive and factually correct based on the provided citations and paper content."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_b6061afa",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Combustion-chemistry-in-the-twenty-first-century--_2021_Progress-in-Energy-a",
+      "paper_title": "Combustion-chemistry-in-the-twenty-first-century--_2021_Progress-in-Energy-a"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:17:41.373944",
+      "answer_length": 1412
+    }
+  },
+  {
+    "question_text": "What physical mechanisms underlie 'prompt dissociation' of weakly-bound free radicals at combustion temperatures, and how does the coupling between radical formation and decomposition affect global combustion observables?",
+    "standard_answer": "Prompt dissociation of weakly-bound free radicals occurs when the timescale for radical dissociation is comparable to or faster than the timescale for internal energy relaxation, leading to non-thermal reaction behavior. At combustion temperatures (typically 1000-2500 K), radicals formed with high internal energy from exothermic reactions may dissociate before achieving thermal equilibrium. This coupling between formation and decomposition arises because the initial energy distribution of the radical is not thermal, and dissociation depends on this distribution. For example, the HCO radical dissociates promptly due to its low bond energy and the high exothermicity of its formation reactions. The kinetics are governed by the master equation, which accounts for collisional energy transfer and dissociation rates across energy levels. This phenomenon impacts global combustion observables such as flame speeds and ignition delays by altering radical pool concentrations and reaction pathways. In hydrogen combustion, prompt dissociation can enhance H atom production, accelerating chain-branching reactions. Similarly, in hydrocarbon oxidation, it affects the balance between chain-propagation and chain-termination steps, influencing reactivity and pollutant formation.",
+    "original_text": {
+      "1": "Reactions of weakly-bound free radicals represent one such example where non-thermal effects are important under combustion conditions. Reactions involving free radicals play a central role in driving reactivity in combustion, and consequently the kinetics of radical decomposition assumes importance in understanding and predicting this reactivity.",
+      "2": "The kinetics of radical decomposition is complicated by the fact that they are weakly bound, and at combustion temperatures, these radicals can dissociate on the same timescale as internal energy relaxation."
+    },
+    "type": "reasoning",
+    "difficulty": 5,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires deep knowledge of combustion kinetics, specifically addressing prompt dissociation mechanisms of free radicals, timescale comparisons between dissociation and energy relaxation, and impacts on combustion observables - all requiring specialized combustion science expertise.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer are both high quality - domain-focused with correct technical content and appropriate depth."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_4c48aadc",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Combustion-chemistry-in-the-twenty-first-century--_2021_Progress-in-Energy-a",
+      "paper_title": "Combustion-chemistry-in-the-twenty-first-century--_2021_Progress-in-Energy-a"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:17:41.529904",
+      "answer_length": 1278
+    }
+  },
+  {
+    "question_text": "How does the master equation approach provide quantitative resolution for multi-well, multi-channel reactions in combustion chemistry, and what are the theoretical precepts distinguishing phenomenological rate coefficients from flux coefficients?",
+    "standard_answer": "The master equation approach provides quantitative resolution for complex multi-well, multi-channel reactions by solving a time-dependent, multiple-well master equation that tracks population distributions across interconnected potential energy surfaces. This method is particularly important for reactions like benzene formation from aliphatic fuels, where reactions proceed over multiple wells leading to multiple products. The theoretical framework distinguishes between phenomenological rate coefficients, which represent net species conversion rates in thermal ensembles, and flux coefficients, which describe microscopic reaction fluxes between specific quantum states or wells. These coefficients become equivalent only under specific conditions, typically when the system reaches steady state and energy distributions are fully thermalized. The master equation methodology allows calculation of both coefficient types by modeling the competition between reaction pathways and energy transfer processes, providing a more fundamental description than empirical approaches.",
+    "original_text": {
+      "1": "The problem of benzene formation from aliphatic fuels is a prime example that involves reactions over multiple wells leading to multiple products. The importance of a master equation approach was alluded to by one of us in a review as a means to obtain quantitative resolution of this problem.",
+      "2": "We would like to highlight here again the theoretical precepts relevant to these methods, as well as the distinctions between phenomenological rate coefficients and flux coefficients and conditions under which they become equivalent."
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question requires deep expertise in combustion chemistry, specifically master equation approaches for multi-well, multi-channel reactions and theoretical distinctions between rate coefficients - core topics in theoretical chemical kinetics for combustion systems.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on paper content, and compliant with other requirements."
+    },
+    "retry_count": 1,
+    "question_id": "deepseek_q_8c3b02a9",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Combustion-chemistry-in-the-twenty-first-century--_2021_Progress-in-Energy-a",
+      "paper_title": "Combustion-chemistry-in-the-twenty-first-century--_2021_Progress-in-Energy-a"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:18:13.012789",
+      "answer_length": 1078
+    }
+  },
+  {
+    "question_text": "In the context of automated mechanism generation for combustion chemistry, how do single-conformer treatments with 1-D hindered rotor approximations introduce uncertainties in calculated rate coefficients, and what are the implications for developing accurate chemical kinetics models?",
+    "standard_answer": "Single-conformer treatments with 1-D hindered rotor approximations introduce significant uncertainties in calculated rate coefficients by neglecting important physical effects. These approximations fail to account for conformational diversity and anharmonicity in molecular systems, which are crucial for accurate partition function calculations. When only a single conformer is considered, the entropy and enthalpy calculations become incomplete, as multiple conformers typically contribute to the overall partition function and reaction rates. The 1-D hindered rotor model treats torsional modes as independent entities, but this simplification ignores coupling between modes and multidimensional effects that are present in real molecular systems. As stated in the paper, 'It is important to note that single-conformer treatments with 1-D hindered rotor approximations, routinely used in the frameworks of for instance KinBot or AutoTST and in kinetics calculations in general, can lead to non-negligible uncertainties in the calculated rate coefficients.' These uncertainties become particularly problematic when developing comprehensive chemical kinetics models for combustion applications, where accurate rate coefficients are essential for predicting flame speeds, ignition delays, and pollutant formation. The limitations of these approximations highlight the need for more advanced treatments that can properly account for conformational entropy and anharmonic effects, especially for larger molecules where these factors become increasingly important.",
+    "original_text": {
+      "1": "It is important to note that single-conformer treatments with 1-D hindered rotor approximations, routinely used in the frameworks of for instance KinBot or AutoTST and in kinetics calculations in general, can lead to non-negligible uncertainties in the calculated rate coefficients.",
+      "2": "An important goal and a current challenge in the present century is the development of (automated) methods that can treat anharmonicity and conformational entropy routinely and are applicable to relatively large molecules as well."
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question requires deep expertise in combustion chemistry, specifically automated mechanism generation, chemical kinetics modeling, and the physical approximations used in rate coefficient calculations. It deals with conformational entropy, hindered rotor approximations, and their impact on combustion model accuracy - all specialized combustion science topics.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+    },
+    "retry_count": 1,
+    "question_id": "deepseek_q_7fa4ec8e",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Combustion-chemistry-in-the-twenty-first-century--_2021_Progress-in-Energy-a",
+      "paper_title": "Combustion-chemistry-in-the-twenty-first-century--_2021_Progress-in-Energy-a"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:18:20.064149",
+      "answer_length": 1561
+    }
+  }
+]

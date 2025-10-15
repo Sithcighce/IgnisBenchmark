@@ -1,0 +1,41 @@
+[
+  {
+    "question_text": "从热力学和流体动力学的角度，解释为什么在微藻光自养生长中，光强从200 μmol photons m⁻² s⁻¹增加到400 μmol photons m⁻² s⁻¹会导致中性脂质比例增加。请分析涉及的光合作用机制、能量分配以及相关化学动力学过程。",
+    "standard_answer": "从热力学和流体动力学的角度分析，光强增加会引发光合系统I和II的电子传递速率提高。当光强超过饱和点（约200 μmol photons m⁻² s⁻¹），微藻细胞会经历光抑制，导致活性氧（ROS）生成增加。这促使细胞将碳流从淀粉合成转向脂质合成以应对氧化应激。具体机理如下：\n1. 光强增加导致光系统II（PSII）的激发能过剩，引发非光化学淬灭机制，将多余能量以热形式耗散。\n2. 在强光下，PSII反应中心可能受损，促使细胞合成更多饱和及单不饱和脂肪酸，这些脂肪酸在高温下具有更好的稳定性。\n2. 在光强从200增加到400 μmol photons m⁻² s⁻¹时，光反应速率超过暗反应（卡尔文循环）的碳固定能力，导致乙酰-CoA羧化酶（ACC）活性上调，促进丙二酰-CoA合成，这是脂肪酸合成的关键前体。\n3. 从化学动力学角度看，光强影响酶促反应速率，如ACC酶和脂肪酸合成酶（FAS）的活性增强，从而增加中性脂质（如TAG）的积累。\n3. 从能量平衡角度，光合作用产生的ATP和NADPH增加，为脂肪酸合成提供更多还原力。\n4. 在CFD模拟中，光强分布影响微藻培养器中的光衰减和辐照度分布，进而影响整体脂质生产率。",
+    "original_text": {
+      "1": "Light penetration and angle of incidence also has a strong effect on microalgal cells。 Generally, only 7–10 cm of water at the top level of the water column experiences enough light penetration for efficient photosynthesis。",
+      "2": "Increasing light intensity will promote the synthesis of oxidizing agents (i.e., reactive oxygen species (ROS)) which damage polyunsaturated fatty acids.",
+      "type": "reasoning",
+      "difficulty": 4,
+      "topic": "combustion_kinetics"
+    },
+    "Thermal efficiency plays a crucial role in microalgal lipid accumulation。 Under low light intensity, polar lipids content is reduced to protect the photosystem。": "question_text",
+    "question_id": "batch_detail_q_a3f53ade",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Enhanced-microalgal-lipid-production-for-biofuel-using_2023_Progress-in-Ener",
+      "paper_title": "Enhanced-microalgal-lipid-production-for-biofuel-using_2023_Progress-in-Ener"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T10:19:58.079862",
+      "batch_processing": true,
+      "answer_length": 515
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题需要热力学、流体动力学、光合作用机制、能量分配和化学动力学等多领域专业知识，属于燃烧/传热/流体/能源领域的交叉学科问题",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "fundamental_error",
+        "unsupported"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在多处科学错误：1）光抑制通常发生在远高于400 μmol photons m⁻² s⁻¹的光强下；2）脂肪酸稳定性与高温关系不适用于常温培养；3）编号重复且逻辑混乱；4）CFD模拟内容与问题无关。建议基于光合作用饱和机制、碳代谢重编程和能量分配平衡重新组织答案。"
+    }
+  }
+]

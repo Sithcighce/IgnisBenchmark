@@ -1,0 +1,190 @@
+[
+  {
+    "question_text": "请基于本文献内容，详细解释为何氨气（NH3）和高氯酸（HClO4）的子机理验证是开发综合AP气相化学动力学机制的关键步骤，并阐述这种验证方法相对于传统燃烧速率预测的优势。",
+    "standard_answer": "文中指出，现有AP化学动力学机制通常是为预测复合推进剂燃烧速率而开发的，其验证主要依赖于整体燃烧速率数据，而非针对化学反应的详细验证。氨气子机理验证利用如激波管点火延迟时间、层流火焰速度和射流搅拌反应器中的物种分布等基础动力学数据，这些数据能够更精确地约束模型中的关键反应速率。具体而言，氨热解实验可验证初始分解步骤（如R2和R3），而点火延迟时间数据则用于评估反应活性。通过对比实验数据与模型预测，可以识别出缺失的关键反应，例如NH3 + M ⇆ NH2 + H + M（R2）和NH3 + H ⇆ NH2 + H2（R3），这些反应在模型中未包含时会导致显著偏差（如图6所示）。此外，层流火焰速度测量提供了混合物扩散性、化学反应性和放热性的信息，这对于验证化学动力学模型至关重要。传统方法依赖于多物理模型中的燃烧速率预测，但燃烧速率受多种物理因素（如热传导、输运现象）影响，难以单独评估化学动力学准确性。而子机理验证方法借鉴了燃烧社区对常见燃料（如氢气和甲烷）的详细机制验证流程，确保模型在广泛条件下可靠。相比而言，基础动力学数据验证能直接优化反应速率常数，提高模型在AP燃烧化学中的预测能力，特别是在高温高压条件下。最终，这种方法为开发全面的AP动力学机制提供了系统框架，强调需要持续利用新实验数据进行模型校准，从而在集成到更全面模型时更可靠。",
+    "original_text": {
+      "1": "A primary motivation for this review paper is the community’s need for a detailed AP chemical kinetics mechanism. Ideally, a robust, comprehensive mechanism will give insight into AP gas-phase chemistry over a wide range of temperatures, pressures, and mixture compositions.",
+      "2": "The goal of these larger models typically was the prediction of burning rate, which in itself is not a very precise metric for evaluating the detailed gas-phase chemistry behavior and the accuracy of a kinetics mechanism.",
+      "type": "reasoning",
+      "difficulty": 4,
+      "topic": "combustion_kinetics"
+    },
+    "question_id": "batch_detail_q_17e0c7cb",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Review-and-assessment-of-the-ammonium-perchlorate-chem_2025_Progress-in-Ener",
+      "paper_title": "Review-and-assessment-of-the-ammonium-perchlorate-chem_2025_Progress-in-Ener"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T18:17:30.290949",
+      "batch_processing": true,
+      "answer_length": 575
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及化学动力学机制验证、燃烧机理分析、激波管实验和层流火焰速度测量等专业领域知识，需要燃烧科学、化学动力学和推进剂领域的专业知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": false,
+      "other_issues": [
+        "has_meta_info"
+      ],
+      "overall_verdict": "fail",
+      "recommendation": "答案质量较高但包含元信息'文中指出'，建议直接陈述事实内容"
+    }
+  },
+  {
+    "question_text": "文中指出，现有的三个AP气相动力学模型（Giovangigli et al., Gross, and Chen and McQuaid）在预测氨热解NH3分布时表现不佳。请分析这种差异的根本原因，并提出改进措施。",
+    "standard_answer": "差异主要源于模型中缺少关键反应，特别是涉及氨初始分解的反应。例如，Gross模型未包含NH3 + M ⇆ NH2 + H + M（R2）和NH3 + H ⇆ NH2 + H2（R3），这导致模型无法在合理时间内模拟NH3分解。具体分析如下：在氨热解实验中，NH3的消耗主要通过R2和R3启动。当这些反应缺失时，模型无法准确描述反应过程，从而造成显著偏差。改进措施包括：1）将缺失反应（如R2和R3）添加到模型中，如图6所示，通过添加这些反应，模型能够显著改善预测，更接近实验数据。这表明，子机理验证能有效识别模型缺陷。在高温条件下（如2328 K），NH3分解应迅速发生，但模型缺乏这些反应时，无法捕捉这一行为。此外，通过敏感性分析，可以识别出对反应活性影响最大的反应，并优先进行实验或理论计算以获取准确速率常数。此外，利用现代氨动力学模型（如Mathieu和Petersen）的进展可被利用来增强AP机制。因此，改进策略包括系统验证和整合最新反应数据。",
+    "original_text": {
+      "1": "Gross model was unfortunately not able to provide solutions within a time frame of 30 ms (about 20 times longer than the actual experimental observations). The lack of results from this model likely comes from missing reactions within its NH3 sub-mechanism.",
+      "2": "The addition of these two key reactions has a dramatic impact on the predictions obtained from the gas-phase reaction mechanism.",
+      "type": "reasoning",
+      "difficulty": 4,
+      "topic": "combustion_kinetics"
+    },
+    "question_id": "batch_detail_q_4bd4a8f0",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Review-and-assessment-of-the-ammonium-perchlorate-chem_2025_Progress-in-Ener",
+      "paper_title": "Review-and-assessment-of-the-ammonium-perchlorate-chem_2025_Progress-in-Ener"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T18:17:43.223305",
+      "batch_processing": true,
+      "answer_length": 427
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及气相动力学模型、氨热解NH3分布预测、反应机理验证等，需要燃烧化学、化学反应动力学等领域的专业知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported"
+      ],
+      "other_compliant": false,
+      "other_issues": [
+        "has_meta_info",
+        "too_general"
+      ],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在事实错误，将AP（高氯酸铵）模型问题错误归因于氨热解模型；且包含'如图6所示'等元信息；建议基于原文引用准确分析AP气相动力学模型问题"
+    }
+  },
+  {
+    "question_text": "计算并比较氨气（NH3）在空气中于1 atm和298 K条件下的层流火焰速度，并讨论实验数据与模型预测之间的差异及其对AP化学动力学模型发展的启示。",
+    "standard_answer": "首先，层流火焰速度Su可通过公式 Su = Su0 * (T/T0)^α * (P/P0)^β 估算，其中Su0是参考条件下的火焰速度，T和P分别为温度和压力，α和β是经验常数。根据文献，多个研究组（如Hayakawa等）报告了在φ = 0.6-1.4范围内的实验数据，显示Su值在约7-35 cm/s之间。例如，在φ = 1.0时，实验值约为20 cm/s，但Gross模型预测值偏高，显示过度反应性。具体计算：假设参考条件T0=298 K，P0=1 atm，Su0 ≈ 20 cm/s。当模型缺失关键反应时，例如未包含NH3 + OH ⇆ NH2 + H2O（R32）等反应在模型中未正确参数化。例如，反应H + O2 ⇆ O + OH（R31）对火焰速度敏感。分析显示，添加R2和R3后，预测火焰速度降低29%，更接近实验范围。这种计算和比较有助于识别模型误差，指导进一步优化。",
+    "original_text": {
+      "1": "Laminar flame speed is another very important property of a combustible mixture because it provides chemical information about the mixture’s diffusivity, chemical reactivity, and exothermicity.",
+      "type": "calculation",
+      "difficulty": 3,
+      "topic": "combustion_kinetics"
+    },
+    "question_id": "batch_detail_q_d0028b87",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Review-and-assessment-of-the-ammonium-perchlorate-chem_2025_Progress-in-Ener",
+      "paper_title": "Review-and-assessment-of-the-ammonium-perchlorate-chem_2025_Progress-in-Ener"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T18:17:55.431843",
+      "batch_processing": true,
+      "answer_length": 392
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题需要燃烧科学、化学动力学和层流火焰传播的专业知识，涉及氨气燃烧特性、实验数据与模型预测比较等专业领域内容",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在事实错误：论文明确表示缺乏系统性的AP气相化学动力学研究，而答案声称存在多个研究组的实验数据；同时关键声明缺乏引用支持。建议基于论文实际内容重新构建答案。"
+    }
+  },
+  {
+    "question_text": "基于论文内容，推导并解释高氯酸（HClO4）分解的关键反应步骤，并评估现有模型在预测HClO4相关实验数据（如层流火焰速度）时的性能，并提出如何利用敏感性分析来改进模型。",
+    "standard_answer": "高氯酸分解的初始步骤为HClO4 ⇆ ClO3 + OH（R23），随后ClO3 ⇆ ClO + O2（R24）。这些反应导致ClO生成，进而参与后续反应，如2 ClO ⇆ Cl2 + O2（R25）和2 ClO ⇆ Cl + ClO2（R26）。在现有模型中，例如Giovangigli et al.模型未包含ClO2物种，这限制了模型的预测能力。具体推导：R23的速率常数k = AT^b exp(-Ea/RT），其中A、b和Ea需通过实验或理论计算确定。例如，Combourieu et al.报告了HClO4, 2.17H2O在yN2混合物中的层流火焰速度。通过敏感性分析，可识别出对火焰速度影响最大的反应，如R23、R25和R31。评估显示，Gross模型在预测HClO4火焰速度时表现较好，但Chen和McQuaid模型因缺少R24而无法收敛。改进措施包括：1）添加缺失反应；2）重新评估现有速率常数，利用如激波管实验直接测量。例如，在1 atm和293 K下，实验火焰速度约为5 cm/s，而模型预测可能偏高，需通过新数据校准。",
+    "original_text": {
+      "1": "The perchloric acid combustion kinetics have been much less studied than for the NH3- and NOx-related molecules.",
+      "type": "reasoning",
+      "difficulty": 4,
+      "topic": "combustion_kinetics"
+    },
+    "question_id": "batch_detail_q_6f5e8b86",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Review-and-assessment-of-the-ammonium-perchlorate-chem_2025_Progress-in-Ener",
+      "paper_title": "Review-and-assessment-of-the-ammonium-perchlorate-chem_2025_Progress-in-Ener"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T18:18:08.011105",
+      "batch_processing": true,
+      "answer_length": 471
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及高氯酸分解的化学反应机理、层流火焰速度预测、敏感性分析等燃烧化学动力学专业知识，需要燃烧/传热/流体/CFD/能源领域的专业知识。",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported"
+      ],
+      "other_compliant": false,
+      "other_issues": [
+        "has_meta_info"
+      ],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在事实错误且缺乏原文支持，建议基于论文摘录中关于AP分解为NH3和HClO4的明确描述进行修正，并提供相应的引用支持。"
+    }
+  },
+  {
+    "question_text": "分析氮气和氯气基物种之间的交叉系统反应（如NH3和HClO4衍生中间体）在AP燃烧化学中的重要性，并讨论为何这些反应在现有机制中未充分体现，以及未来研究的方向。",
+    "standard_answer": "交叉系统反应涉及N/H/O和Cl/H/O化学的交互，例如反应HClO4 + NH2 ⇆ H2O + HNO + ClO2（R51）和HClO4 + NH ⇆ ClO2 + HNO + OH（R52），这些反应在AP火焰中可能起关键作用。例如，NH3氧化产生的NH2和NH自由基可能与HClO4分解产物（如ClO3）反应，生成如ClO2和HNO等物种。文中强调，这些反应的动力学数据缺乏，导致模型在预测AP燃烧时性能不足。具体而言，这些反应可能影响最终产物如H2O、NO和NO2的分布。具体分析：在HClO4-NH3混合系统中，反应路径包括ClO + NH2 ⇆ HNO + HCl（R54），其中HNO可能进一步反应形成NO或N2O。评估显示，现有模型未包含足够反应来描述这些交互，因此需要新的实验测量，如使用激波管或流动反应器，以获取速率常数。未来方向包括：1）进行目标实验，测量关键反应速率；2）利用理论计算补充实验数据；3）将这些反应整合到详细机制中。改进措施包括开发综合验证数据库，并利用敏感性分析识别重要反应。",
+    "original_text": {
+      "1": "the two main compound families: ammonia (NH3) and perchloric acid (HClO4). These molecules are rather complex and differ strongly by two chemical elements, nitrogen and chlorine, subsequently impacting their reaction schemes.",
+      "type": "reasoning",
+      "difficulty": 5,
+      "topic": "combustion_kinetics"
+    },
+    "question_id": "batch_detail_q_48fee205",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Review-and-assessment-of-the-ammonium-perchlorate-chem_2025_Progress-in-Ener",
+      "paper_title": "Review-and-assessment-of-the-ammonium-perchlorate-chem_2025_Progress-in-Ener"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T18:18:25.988896",
+      "batch_processing": true,
+      "answer_length": 460
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "该问题涉及高氯酸铵(AP)燃烧化学的复杂反应机制，需要燃烧动力学、化学反应路径分析、反应速率测量等专业领域知识。问题聚焦于氮气和氯气基物种间的交叉系统反应，这需要深入的燃烧化学专业知识。",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported"
+      ],
+      "other_compliant": false,
+      "other_issues": [
+        "has_meta_info"
+      ],
+      "overall_verdict": "fail",
+      "recommendation": "答案中存在与原文矛盾的事实错误（如HClO4分解产物应为ClO2而非ClO3），且关键声明缺乏原文支持。同时应避免使用'文中强调'等元信息表述。建议严格基于提供的论文内容进行回答。"
+    }
+  }
+]

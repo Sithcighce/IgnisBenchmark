@@ -1,0 +1,205 @@
+[
+  {
+    "question_text": "基于论文中甲烷热解（MP）过程的详细描述，分析使用液态金属（如锡）作为反应介质的气泡柱反应器设计如何克服固体碳沉积导致催化剂失活和反应器堵塞的关键挑战。请从流体力学和传热学角度详细解释反应器内的多相流动和热量传递机理，包括如何实现有效的热量转移和防止碳沉积。",
+    "standard_answer": "在甲烷热解的气泡柱反应器中，液态金属介质通过以下机制解决碳沉积问题：(1) 气泡动力学：甲烷气体以气泡形式注入液态金属，根据阿基米德原理上浮。随着甲烷裂解生成氢气（每摩尔CH4生成2摩尔H2），气泡体积增加，浮力增大，气泡上升速度加快，直到在表面破裂。这一过程通过气泡的不断形成和破裂，防止碳在催化剂表面沉积。热量传递机理包括液态金属与夹带甲烷之间的有效热传导和对流换热，反应温度高达1200°C以上。引用1指出：'The cleavage of CH4 occurs at the surface of the bubble, respectively the phase boundary of the gas and the molten medium.' 引用2描述：'Effective heat transfer occurs between the molten medium and the entrained CH4 that leads to constant recurrence of gas bubbles and prevents the deposition of carbon on the catalyst.' 具体而言，气泡在液态金属中上升时，气液界面处的温度梯度驱动热量从金属传递到气体，促进甲烷裂解反应。同时，气泡的破裂和再形成过程通过剪切力和湍流作用，将形成的固体碳从介质中分离并漂浮在表面，便于收集。流体力学分析：气泡的尺寸和分布影响反应速率和选择性，需优化气泡大小和分布以最大化氢产率。",
+    "original_text": {
+      "1": "The cleavage of CH4 occurs at the surface of the bubble, respectively the phase boundary of the gas and the molten medium.'",
+      "2": "Effective heat transfer occurs between the molten medium and the entrained CH4 that leads to constant recurrence of gas bubbles and prevents the deposition of carbon on the catalyst.'"
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "fluid_mechanics",
+    "question_id": "batch_detail_q_df142186",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Green--Turquoise--Blue--or-Grey--Environmentally-fr_2022_Progress-in-Energy-",
+      "paper_title": "Green--Turquoise--Blue--or-Grey--Environmentally-fr_2022_Progress-in-Energy-"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T11:26:00.940870",
+      "batch_processing": true,
+      "answer_length": 666
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及甲烷热解反应器设计、多相流动、传热机理、流体力学和热量传递等专业领域知识，需要燃烧/传热/流体/能源领域的专业知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "unsupported",
+        "factual_error"
+      ],
+      "other_compliant": false,
+      "other_issues": [
+        "has_meta_info",
+        "too_general"
+      ],
+      "overall_verdict": "fail",
+      "recommendation": "答案中存在未在原文中找到支持的声明（如阿基米德原理、气泡体积增加、剪切力等），且包含'引用1/引用2'等元信息。建议严格基于论文摘录内容，避免添加未经证实的细节。"
+    },
+    "merge_source": "questions"
+  },
+  {
+    "question_text": "论文中比较了蒸汽甲烷重整（SMR）与带碳捕获和储存的SMR（SMR-CCS）的全球变暖影响（GWI）。请推导SMR-CCS过程在捕获效率为90%时，总GWI的计算公式，包括自然气供应、过程相关排放和电力供应的贡献，并计算在德国参考案例下SMR-CCS（90%）的GWI，假设过程相关排放为0.99 kg CO2-eq/kg H2，电力供应GWI为476 g CO2-eq/kWh。",
+    "standard_answer": "总GWI的计算公式可表示为：GWI_total = GWI_NG + GWI_process + GWI_electricity - GWI_byproducts。对于SMR-CCS（90%），过程相关排放大幅减少，但电力需求增加。引用1指出：'The implementation of CCS to a great extend necessitates the build-up of a suitable transport infrastructure.' 在德国参考案例中，SMR-CCS（90%）的总GWI为3.97 kg CO2-eq/kg H2。其中，自然气供应贡献2.81 kg CO2-eq/kg H2，过程相关排放贡献0.99 kg CO2-eq/kg H2。具体推导：GWI_process = 原始排放 × (1 - 捕获效率）。假设原始排放为9.00 kg CO2-eq/kg H2，捕获效率90%，因此GWI_process = 9.00 × (1 - 0.90) = 0.99 kg CO2-eq/kg H2。电力供应贡献通过特定电力消耗和电网GWI计算，例如，电力需求增加导致GWI_electricity = 特定消耗 × GWI_grid。引用2说明：'Capture efficiencies range from 53 to 95%, and can be increased albeit on expense of higher energy demands.' 数值计算：GWI_total = 2.81 + 0.99 + (额外电力需求 × 0.476) - 0.03 = 3.97 kg CO2-eq/kg H2。",
+    "original_text": {
+      "1": "The implementation of CCS to a great extend necessitates the build-up of a suitable transport infrastructure.'",
+      "2": "Capture efficiencies range from 53 to 95%, and can be increased albeit on expense of higher energy demands.'"
+    },
+    "type": "calculation",
+    "difficulty": 3,
+    "topic": "heat_transfer",
+    "question_id": "batch_detail_q_870484bb",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Green--Turquoise--Blue--or-Grey--Environmentally-fr_2022_Progress-in-Energy-",
+      "paper_title": "Green--Turquoise--Blue--or-Grey--Environmentally-fr_2022_Progress-in-Energy-"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T11:26:16.929150",
+      "batch_processing": true,
+      "answer_length": 734
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及蒸汽甲烷重整工艺、碳捕获技术、全球变暖影响计算等能源工程和燃烧/传热领域的专业知识，需要理解工艺排放、捕获效率和电力消耗等工程参数对环境影响的计算",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported"
+      ],
+      "other_compliant": false,
+      "other_issues": [
+        "has_meta_info"
+      ],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在严重缺陷：1)公式中包含了未提及的副产品项GWI_byproducts；2)引用内容与具体计算无关；3)原始排放值9.00 kg CO2-eq/kg H2缺乏来源支持；4)额外电力需求的具体数值未明示；5)包含'引用1指出'等元信息。建议基于论文实际数据进行完整推导。"
+    },
+    "merge_source": "questions"
+  },
+  {
+    "question_text": "论文中讨论了聚合物电解质膜水电解（PEMEL）的热力学原理和电压效率。请详细解释PEMEL的理论电压（Uth）和实际电压（Ucell）之间的关系，并推导电压效率（ηV）的公式，分析在动态操作下由于可再生能源间歇性导致的过电位来源及其对能源效率的影响。",
+    "standard_answer": "PEMEL的热力学基于水分解反应：H2O ⇌ 1/2 O2 + H2，ΔH0_R = +285.9 kJ/mol。理论电压Uth基于吉布斯自由能变化：ΔG0_R = 237.21 kJ/mol，因此Uth = ΔG0_R / (n × F) = 237.21 / (2 × 96,485) = 1.23 V（标准条件）。实际电压Ucell更高，由于：(1) 活化过电位（电极动力学），(2) 欧姆损失（电解质和组件电阻），(3) 传质限制（气体和离子扩散）。引用1指出：'the actual cell voltage (Ucell) is considerably higher in practice due to an cell overpotential resulting from activation losses at the electrodes, mass transport limitations, as well as ohmic resistances.' 电压效率ηV = Uth / Ucell。引用2描述：'This ultimately decreases the voltage efficiency of the electrolysis cell (ηV)'，其中Ucell范围1.4-2.2 V，因此ηV = 67-82%。推导：ηV = (ΔG0_R / (n × F)) / Ucell。例如，如果Ucell = 1.8 V，则ηV = 1.23 / 1.8 = 68.3%。在动态操作下，电流密度波动加剧过电位，降低效率。",
+    "original_text": {
+      "1": "the actual cell voltage (Ucell) is considerably higher in practice, due to an cell overpotential resulting from activation losses at the electrodes, mass transport limitations, as well as ohmic resistances.'",
+      "2": "This ultimately decreases the voltage efficiency of the electrolysis cell (ηV)'"
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "question_id": "batch_detail_q_233e34c0",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Green--Turquoise--Blue--or-Grey--Environmentally-fr_2022_Progress-in-Energy-",
+      "paper_title": "Green--Turquoise--Blue--or-Grey--Environmentally-fr_2022_Progress-in-Energy-"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T11:26:29.891292",
+      "batch_processing": true,
+      "answer_length": 686
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及聚合物电解质膜水电解(PEMEL)的热力学原理、电压效率计算、过电位分析等专业知识，需要能源工程、电化学和热力学领域的深入知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported"
+      ],
+      "other_compliant": false,
+      "other_issues": [
+        "has_meta_info",
+        "too_general"
+      ],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在事实错误，电压效率定义不正确，且动态操作下的过电位分析缺乏具体机制解释和引用支持，建议修正电压效率公式并补充动态操作影响的具体机制"
+    },
+    "merge_source": "questions"
+  },
+  {
+    "question_text": "论文中强调了电力供应对氢生产环境影响的敏感性。请分析PEMEL对电力GWI的敏感性，并推导总GWI随电力GWI变化的线性方程。",
+    "standard_answer": "PEMEL的总GWI对电力GWI的敏感性可表示为线性函数：GWI_total = GWI_electricity × 特定电力消耗 + 常数。其中，常数包括工厂制造和水供应的影响。引用1指出：'The GWI of hydrogen production by PEMEL is highly sensitive to the underlying electricity supply.' 方程推导：从论文图13，PEMEL的曲线斜率为特定电力消耗。对于未来状态PEMEL，特定电力消耗为45 kWh/kg H2。因此，总GWI = 45 × (GWI_electricity / 1000) + 常数。在德国参考案例中，GWI_electricity = 476 g CO2-eq/kWh，因此GWI_electricity_contribution = 45 × 0.476 = 21.42 kg CO2-eq/kg H2。电力GWI变化对总GWI的影响为：ΔGWI_total = 45 × (ΔGWI_electricity / 1000)。引用2描述：'The GWI of hydrogen production by PEMEL is characterized by the highest sensitivity to the GWI of electricity supply.' 例如，如果电力GWI减少到85.25 g CO2-eq/kWh，则总GWI减少 = 45 × (476 - 85.25) / 1000 = 17.59 kg CO2-eq/kg H2。",
+    "original_text": {
+      "1": "The GWI of hydrogen production by PEMEL is highly sensitive to the underlying electricity supply.'",
+      "2": "The GWI of hydrogen production by PEMEL is characterized by the highest sensitivity to the GWI of electricity supply.'"
+    },
+    "type": "calculation",
+    "difficulty": 5,
+    "topic": "energy_systems",
+    "question_id": "batch_detail_q_00878e8d",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Green--Turquoise--Blue--or-Grey--Environmentally-fr_2022_Progress-in-Energy-",
+      "paper_title": "Green--Turquoise--Blue--or-Grey--Environmentally-fr_2022_Progress-in-Energy-"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T11:26:41.841400",
+      "batch_processing": true,
+      "answer_length": 694
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及氢能生产、PEM电解技术、生命周期评估和全球变暖影响分析，需要能源系统、环境工程和燃烧/传热领域的专业知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported"
+      ],
+      "other_compliant": false,
+      "other_issues": [
+        "has_meta_info",
+        "too_general"
+      ],
+      "overall_verdict": "fail",
+      "recommendation": "答案应基于论文实际数据和图表，提供准确的斜率值并消除单位转换错误，同时避免使用元信息表述"
+    },
+    "merge_source": "questions"
+  },
+  {
+    "question_text": "论文中比较了不同氢生产技术的环境负担转移。请从生命周期评估角度解释为什么从SMR转向PEMEL会导致某些影响类别（如金属消耗）增加，而其他类别（如气候变化）减少。详细分析物理机理，包括材料提取、制造过程和资源稀缺性。",
+    "standard_answer": "从SMR转向PEMEL会导致环境负担转移，因为PEMEL依赖于关键材料（如铂、铱）和可再生电力。引用1指出：'environmental burden shifting resulting from the transition to more climate-friendly hydrogen production technologies were taken into account.' 具体而言，在气候变化类别中，GWI减少94%，但由于电解槽和可再生电厂需要更多金属，导致金属消耗增加3792%。机理：PEMEL制造涉及钛、高合金钢等，其提取过程能耗高且排放多。引用2描述：'For instance, impacts increase with respect to mineral and metal depletion (3792%)'。物理上，金属提取涉及高能耗过程（如采矿、精炼），导致资源耗竭。引用1进一步说明：'electricity supply is the main contributor to all environmental impacts of PEMEL.' 例如，铂的开采导致生态毒性增加431%。",
+    "original_text": {
+      "1": "environmental burden shifting resulting from the transition to more climate-friendly hydrogen production technologies were taken into account.'",
+      "2": "For instance, impacts increase with respect to mineral and metal depletion (3792%)'"
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "CFD_modeling",
+    "question_id": "batch_detail_q_2992c37c",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Green--Turquoise--Blue--or-Grey--Environmentally-fr_2022_Progress-in-Energy-",
+      "paper_title": "Green--Turquoise--Blue--or-Grey--Environmentally-fr_2022_Progress-in-Energy-"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T11:26:57.264694",
+      "batch_processing": true,
+      "answer_length": 523
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及氢生产技术、生命周期评估、环境负担转移、材料提取和制造过程等专业领域知识，需要燃烧/传热/流体/能源领域的专业知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "unsupported",
+        "factual_error"
+      ],
+      "other_compliant": false,
+      "other_issues": [
+        "has_meta_info"
+      ],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在较多问题：1) 关键数据（94%气候变化减少，3792%金属消耗增加）缺乏原文支持；2) 将铂、铱等PEMEL催化剂材料与钛、高合金钢等结构材料混为一谈；3) 包含'引用1说明'等元信息。建议基于论文摘录提供准确的数据引用和机理分析。"
+    },
+    "merge_source": "questions"
+  }
+]

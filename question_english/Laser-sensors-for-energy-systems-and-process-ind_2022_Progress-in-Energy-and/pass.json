@@ -1,0 +1,167 @@
+[
+  {
+    "question_text": "In laser absorption tomography (LAT) for combustion diagnostics, how do reconstruction algorithms handle sparse projection data to recover 2D temperature and species distributions, and what are the key challenges in ensuring accuracy?",
+    "standard_answer": "Reconstruction algorithms in LAT, such as algebraic reconstruction technique (ART) or frequency-agile tomographic (FAT) methods, solve inverse problems to recover 2D distributions from sparse line-of-sight projections. These algorithms discretize the domain into pixels/voxels and relate measured absorbances to unknown species concentrations or temperatures via a system of linear equations A*x = b, where A is the projection matrix. With sparse data (e.g., 10-100 projections vs. 1000+ in medical CT), the system is underdetermined, requiring regularization (e.g., Tikhonov) or a priori assumptions (e.g., smoothness) to obtain stable solutions. Iterative methods like ART update estimates by minimizing residuals between measured and computed projections. Key challenges include: (1) Ill-posedness—small errors in absorbance measurements amplify into large reconstruction errors, necessitating high SNR and precise beam alignment. (2) Limited spatial resolution—sparse projections cannot resolve fine structures, leading to blurring. (3) Non-uniformity—temperature and concentration gradients along paths complicate absorbance integrals, requiring multispectral data or model-based constraints. (4) Computational cost—real-time applications demand efficient algorithms. Accuracy improves with more projections, optimal beam arrangements (e.g., fan-beam), and multispecies measurements to decouple T and X effects.",
+    "original_text": {
+      "1": "Laser absorption tomography (LAT) can be used to recover the complete 2D/3D information of the species concentration and temperature in a given gas-phase environment [118]. LAT involves the measurement of multiple projections, where each projection is a conventional line-of-sight absorption measurement.",
+      "2": "The reconstruction algorithms for LAT experiments must be modified according to the beam arrangement, typically affording sparser projections (10–100) compared with medical tomography applications."
+    },
+    "type": "reasoning",
+    "difficulty": 5,
+    "topic": "cfd",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question specifically addresses laser absorption tomography (LAT) for combustion diagnostics, requiring knowledge of optical diagnostics, inverse problems in tomography, reconstruction algorithms, and combustion-specific challenges like temperature/species distribution recovery. This falls squarely within combustion science and diagnostic expertise.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question is well-focused on combustion diagnostics and answer provides comprehensive, accurate technical details about LAT reconstruction challenges."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_1c49cec9",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Laser-sensors-for-energy-systems-and-process-ind_2022_Progress-in-Energy-and",
+      "paper_title": "Laser-sensors-for-energy-systems-and-process-ind_2022_Progress-in-Energy-and"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:21:57.288863",
+      "answer_length": 1416
+    }
+  },
+  {
+    "question_text": "Why does collisional broadening dominate over Doppler broadening in high-pressure combustion systems, and how does this affect the lineshape function and measurement accuracy in laser absorption spectroscopy?",
+    "standard_answer": "Collisional broadening dominates at high pressures due to its linear dependence on pressure (ΔνC = 2P Σχkγk(T)), while Doppler broadening (ΔνD = ν0 √(7.1623×10^-7 T/M)) is pressure-independent. In combustion systems above ~10 bar, collisional linewidths typically exceed 0.1 cm^-1, whereas Doppler linewidths remain below 0.01 cm^-1. This dominance occurs because increased molecular number density at high pressure enhances collision frequency, perturbing energy levels through intermolecular interactions and shortening the lifetime of excited states. The resulting lineshape becomes predominantly Lorentzian, characterized by broader wings compared to the Gaussian Doppler profile. This affects measurement accuracy by simplifying lineshape modeling to Voigt profiles with strong Lorentzian character, but introduces challenges: pressure broadening coefficients γk(T) must be accurately known, as they vary with temperature and collider species. At very high pressures, line mixing and breakdown of the impact approximation may require advanced lineshape models. For LAS, the broadened lines can overlap, complicating multispecies detection, while the increased linewidth reduces peak absorbance, potentially lowering SNR unless compensated by longer path lengths or higher laser power.",
+    "original_text": {
+      "1": "Under high-pressure conditions (>10 bar) found in practical combustion systems, the Lorentzian lineshape is expected to dominate because of the strong gas pressure dependence of the collisional linewidth and the smaller magnitude of the Doppler linewidth.",
+      "2": "ΔνC = 2P Σ χkγk(T), where Xk represents the mole fraction of every kth component within the gas mixture and γik denotes the collisional broadening coefficient of the ith absorbing species with respect to the jth component."
+    },
+    "type": "concept",
+    "difficulty": 5,
+    "topic": "combustion_science",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question requires deep expertise in combustion science, spectroscopy, and laser diagnostics. It specifically addresses collisional vs. Doppler broadening mechanisms in high-pressure combustion environments, lineshape functions, and measurement accuracy in laser absorption spectroscopy - all core topics in combustion diagnostics and spectroscopy.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Excellent question that demonstrates deep domain knowledge and the answer is comprehensive and factually correct based on the provided citations and paper content."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_3540b70b",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Laser-sensors-for-energy-systems-and-process-ind_2022_Progress-in-Energy-and",
+      "paper_title": "Laser-sensors-for-energy-systems-and-process-ind_2022_Progress-in-Energy-and"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:21:57.323772",
+      "answer_length": 1289
+    }
+  },
+  {
+    "question_text": "How does the temperature dependence of linestrength in laser absorption spectroscopy enable accurate temperature measurements in combustion systems, and what physical principles govern this relationship?",
+    "standard_answer": "The temperature dependence of linestrength enables temperature measurements through the two-line thermometric technique, which exploits the Boltzmann population distribution of molecular energy states. According to Eq. (3), linestrength S(T) depends on temperature via the partition function Q(T) and the lower energy state E''. For two transitions with different lower-state energies, the ratio of their integrated absorbances R = A1/A2 = S1(T)/S2(T) becomes a unique function of temperature. The sensitivity of this measurement, given by dR/R / dT/T ≈ - (hc/k)(E''2 - E''1)/T, increases with the difference in lower-state energies (E''2 - E''1). This occurs because molecules redistribute among rotational-vibrational states according to Boltzmann statistics: at higher temperatures, higher-energy states become more populated, enhancing transitions from these states. The partition function Q(T) accounts for the number of accessible states, growing with temperature and further modulating linestrength. In combustion applications, selecting lines with large ΔE'' ensures measurable absorbance changes with temperature, while the method's path-averaged nature requires careful line selection to minimize errors from non-uniform temperature fields.",
+    "original_text": {
+      "1": "S(T) = S(T0) [ Q(T0)/Q(T) ] [ exp( -hcE''/k (1/T - 1/T0) ) ] [ (1 - exp(-hcν/kT)) / (1 - exp(-hcν/kT0)) ]^-1",
+      "2": "The sensitivity of the measurement is determined by differentiating Eq. (11) with respect to T and obtaining the following approximate expression [70]: dR/R / dT/T = - (hc/k) (E''2 - E''1)/T"
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "heat_transfer",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires specific knowledge of laser absorption spectroscopy principles applied to combustion systems, including temperature dependence of linestrength, Boltzmann population distribution, and two-line thermometric techniques - all of which are specialized combustion diagnostics concepts.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_24de8c24",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Laser-sensors-for-energy-systems-and-process-ind_2022_Progress-in-Energy-and",
+      "paper_title": "Laser-sensors-for-energy-systems-and-process-ind_2022_Progress-in-Energy-and"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:21:57.375909",
+      "answer_length": 1250
+    }
+  },
+  {
+    "question_text": "How does the Doppler shift in laser absorption spectroscopy enable flow velocity measurements, and what are the practical limitations in achieving high precision for high-speed flows?",
+    "standard_answer": "The Doppler shift enables velocity measurements through the frequency shift Δν = (U/c) ν0 cosθ of absorption lines when gas flows relative to the laser beam. This shift arises from the motion of absorbing molecules altering the apparent laser frequency in their rest frame. For accurate velocity determination, the beam must propagate at an angle θ ≠ 90° to the flow direction. Practical limitations stem from the small magnitude of Δν: even at 300 m/s, Δν ≈ 0.003 cm^-1 for a 3000 cm^-1 line, requiring high-frequency-resolution techniques like frequency modulation spectroscopy (FMS) or dual-comb spectroscopy to resolve shifts smaller than the absorption linewidth. Beam steering due to density gradients and mechanical vibrations introduces noise, while temperature and pressure variations affect line position and width, complicating shift detection. Additionally, the path-averaged nature of LAS means velocity measurements represent an integrated value along the beam, limiting spatial resolution. Achieving high precision demands stable laser frequencies, precise angle alignment, and compensation for thermodynamic changes, often necessitating calibration under known conditions or simultaneous T/P measurements to decouple effects.",
+    "original_text": {
+      "1": "If the beam propagates at an angle θ relative to the bulk velocity [72], the Doppler shift can be calculated as Δν = (U/c) ν0 cosθ, where U represents the mean bulk flow velocity and ν0 denotes the center frequency of the absorption line.",
+      "2": "Because of the division by c in Eq. (13), the Doppler shift value of the absorption line is very small, even for velocities close to the speed of sound in ambient air."
+    },
+    "type": "application",
+    "difficulty": 4,
+    "topic": "fluid_mechanics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question requires specific knowledge of laser absorption spectroscopy, Doppler shift physics, and practical limitations in fluid velocity measurements - all core concepts in fluid mechanics and combustion diagnostics that cannot be answered with general ML knowledge.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_f4c0421c",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Laser-sensors-for-energy-systems-and-process-ind_2022_Progress-in-Energy-and",
+      "paper_title": "Laser-sensors-for-energy-systems-and-process-ind_2022_Progress-in-Energy-and"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:21:57.447516",
+      "answer_length": 1241
+    }
+  },
+  {
+    "question_text": "Calculate the collisional linewidth for CO in air at 10 atm and 1000 K, given a collisional broadening coefficient γ_CO-air = 0.046 cm⁻¹/atm at 296 K and a temperature exponent N = 0.75. How does this compare to the Doppler linewidth for a CO transition at 2200 cm⁻¹, and what implications does this have for lineshape modeling in high-pressure combustion systems? Consider the actual composition of air (79% N₂, 21% O₂) and justify your choice of transition frequency.",
+    "standard_answer": "First, calculate the temperature-adjusted collisional broadening coefficient using γ(T) = γ(T₀) × (T₀/T)^N. With T₀ = 296 K, T = 1000 K, N = 0.75, γ_CO-air(1000 K) = 0.046 × (296/1000)^0.75 = 0.046 × (0.296)^0.75 ≈ 0.046 × 0.405 = 0.01863 cm⁻¹/atm. For air composition, we must consider both major components: N₂ (79%) and O₂ (21%). Assuming similar broadening coefficients for simplicity (γ_CO-N₂ ≈ γ_CO-O₂ ≈ γ_CO-air), the collisional linewidth ΔνC = 2P Σ χkγk = 2 × 10 atm × (0.79 × 0.01863 + 0.21 × 0.01863) = 20 × 1.00 × 0.01863 ≈ 0.3726 cm⁻¹. For Doppler linewidth, ΔνD = ν₀ √(7.1623×10⁻⁷ T/M). For CO, M = 28 g/mol, ν₀ = 2200 cm⁻¹ (typical for fundamental vibrational band), so ΔνD = 2200 × √(7.1623×10⁻⁷ × 1000 / 28) = 2200 × √(2.558×10⁻⁵) ≈ 2200 × 0.005058 = 0.1113 cm⁻¹. Comparing ΔνC ≈ 0.3726 cm⁻¹ and ΔνD ≈ 0.1113 cm⁻¹, collisional broadening dominates by approximately 3.35 times. Implications: At high pressure (10 atm), collisional broadening is significant, requiring Voigt profiles that combine Lorentzian (collisional) and Gaussian (Doppler) components. The lineshape is primarily Lorentzian-dominated, necessitating accurate temperature-dependent γ and pressure measurements. For modeling, line mixing may occur at high pressures, and laser linewidth must be much smaller than ΔνC for accurate Beer-Lambert application. In combustion systems, these factors are critical for precise species concentration and temperature measurements using laser absorption spectroscopy, particularly in engines, turbines, and industrial furnaces where pressure effects significantly alter spectral lineshapes.",
+    "original_text": {
+      "1": "The collisional linewidth ΔνC is a strong function of the gas pressure: ΔνC = 2P Σ χkγk(T), where Xk represents the mole fraction of every kth component within the gas mixture and γik denotes the collisional broadening coefficient of the ith absorbing species with respect to the jth component.",
+      "2": "The temperature dependence of the collisional broadening coefficient may be expressed using the power law: γ(T) = γ(T0)⋅ (T0/T)^N, where N represents a temperature exponent."
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question requires specialized knowledge in combustion spectroscopy, specifically laser absorption spectroscopy for high-pressure combustion systems. It involves calculating collisional and Doppler linewidths using spectroscopic principles, understanding temperature and pressure effects on spectral lineshapes, and applying this to combustion diagnostics - all requiring domain expertise in combustion science and optical diagnostics.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question is well-structured and domain-focused. Answer provides comprehensive calculations and implications that align with spectroscopic principles and combustion applications."
+    },
+    "retry_count": 2,
+    "question_id": "deepseek_q_a1c337a8",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Laser-sensors-for-energy-systems-and-process-ind_2022_Progress-in-Energy-and",
+      "paper_title": "Laser-sensors-for-energy-systems-and-process-ind_2022_Progress-in-Energy-and"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:23:42.627653",
+      "answer_length": 1611
+    }
+  }
+]

@@ -1,0 +1,138 @@
+[
+  {
+    "question_text": "从燃烧科学角度分析微藻生物柴油与传统化石柴油在燃烧特性和排放特性上的主要差异，并解释这些差异对燃烧效率和污染物形成的影响机理。",
+    "standard_answer": "微藻生物柴油与传统化石柴油在燃烧特性和排放特性上存在显著差异。从燃烧特性看，微藻生物柴油含有较高氧含量（约10-12%），这促进了燃烧过程中的氧化反应，提高了燃烧效率，但同时也降低了燃料的热值（约37-41 MJ/kg vs 化石柴油的42-45 MJ/kg）。在排放特性方面，微藻生物柴油几乎不含硫，因此SOx排放可忽略不计；其较高的十六烷值（约50-60 vs 化石柴油的40-50）改善了点火性能，减少了不完全燃烧产物的形成。然而，由于生物柴油中不饱和脂肪酸甲酯的存在，可能导致NOx排放略有增加，这主要归因于火焰温度分布变化和燃烧过程中自由基化学的差异。从燃烧机理分析，生物柴油中酯基团的存在改变了燃料的裂解路径，影响了中间产物的形成动力学。在CFD模拟中，这些差异需要通过修改燃料组分、反应机理和物性参数来准确预测燃烧过程和排放特性。具体而言，需要采用详细的化学反应机理（如包含脂肪酸甲酯氧化的详细机理）来模拟污染物形成路径，同时考虑燃料喷雾、蒸发和混合过程对燃烧效率的影响。",
+    "original_text": {
+      "1": "Biodiesel has similar engine performance compared to petroleum diesel with provided advantageous such as lower sulphur and particulate matter emissions",
+      "2": "Microalgae-derived biodiesel exhibits several characteristics similar to petroleum-derived diesel, including flash point, density, viscosity, solidifying point, cold filter plugging point, and heating value"
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及燃烧科学、燃料特性、排放机理、燃烧效率分析，需要燃烧动力学、燃料化学、污染物形成机理等专业领域知识，属于典型的燃烧/能源工程领域问题",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量较高，涵盖了燃烧特性差异（氧含量、热值、十六烷值）、排放特性差异（SOx、NOx、不完全燃烧产物）以及机理分析（氧化反应、裂解路径、自由基化学），并提及了CFD模拟中的关键技术要点，符合燃烧科学领域的专业要求"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_194e9508",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Enhanced-microalgal-lipid-production-for-biofuel-using_2023_Progress-in-Ener",
+      "paper_title": "Enhanced-microalgal-lipid-production-for-biofuel-using_2023_Progress-in-Ener"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:49:50.371681",
+      "answer_length": 443
+    },
+    "merge_source": "question_reverse"
+  },
+  {
+    "question_text": "分析超临界CO₂萃取微藻脂质过程中的流体动力学行为，包括相变特性、传质机理和流动不稳定性，并推导萃取效率与操作参数的关系式。",
+    "standard_answer": "超临界CO₂萃取微藻脂质过程涉及复杂的流体动力学行为。在相变特性方面，CO₂在临界点（T_c=31.1°C, P_c=7.38MPa）附近经历连续相变，密度从气体态（~200kg/m³）连续变化到类液体态（~800kg/m³）。传质机理遵循Fick扩散定律结合对流增强：J = -D_eff∇C + uC，其中D_eff为有效扩散系数，在超临界状态下可比液体扩散系数高1-2个数量级。流动不稳定性主要源于密度变化引起的Rayleigh-Taylor和Kelvin-Helmholtz不稳定性，特别是在压力波动时。萃取效率可建模为：η = 1 - exp(-kτ)，其中k为表观速率常数，τ为停留时间。k与操作参数的关系为：k = k₀(P/P_c)^α(T/T_c)^βexp(-E_a/RT)，其中α≈1.5-2.0, β≈-0.5-0.5，E_a为表观活化能。在CFD模拟中，需要求解多相流方程结合组分输运方程，考虑SC-CO₂的变物性（密度、粘度、扩散系数随P,T变化）。实际应用中，在120bar、20°C条件下对Scenedesmus obliquus可获得92%的脂质回收率，而在450bar、50°C加10%乙醇共溶剂时对Chlorella vulgaris回收率可达97%。优化操作需在传质速率和能耗间平衡，通常压力在200-400bar，温度在40-60°C为佳。",
+    "original_text": {
+      "1": "Lorenzen et al. obtained 92% of the total lipids from Scenedesmus obliquus with CO2 at 120 bar and 20°C",
+      "2": "The yield obtained by Obeid et al. from Chlorella vulgaris was up to 97% when treated with supercritical CO2 at 450 bar and 50°C, with the addition of co-solvent ethanol (10% v/v)"
+    },
+    "type": "calculation",
+    "difficulty": 5,
+    "topic": "fluid_mechanics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及超临界CO₂萃取微藻脂质过程中的流体动力学行为、相变特性、传质机理和流动不稳定性分析，以及萃取效率与操作参数的关系式推导，这需要燃烧/传热/流体/CFD/能源领域的专业知识，包括多相流、传质、热力学和化学反应工程等知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "无需改进，问题和答案质量均较高。答案全面覆盖了问题要求的各个方面，提供了详细的机理分析、数学模型和实际应用数据，且与提供的论文摘录内容一致"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_115be0fe",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Enhanced-microalgal-lipid-production-for-biofuel-using_2023_Progress-in-Ener",
+      "paper_title": "Enhanced-microalgal-lipid-production-for-biofuel-using_2023_Progress-in-Ener"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:49:50.921424",
+      "answer_length": 591
+    },
+    "merge_source": "question_reverse"
+  },
+  {
+    "question_text": "在微藻光生物反应器设计中，传热和流体力学特性如何影响光合作用效率和脂质生产力？请建立数学模型描述光强分布、温度梯度和流体混合之间的耦合关系。",
+    "standard_answer": "在微藻光生物反应器中，传热和流体力学特性对光合作用效率和脂质生产力具有决定性影响。首先，光强分布遵循Beer-Lambert定律：I(z) = I₀exp(-αCz)，其中I₀为表面光强，α为消光系数，C为细胞浓度，z为深度。温度梯度影响酶活性，光合作用速率可表示为：P = P_max[1 - exp(-I/I_s)]f(T)，其中f(T)是温度依赖函数，通常在20-30°C达到最优。流体混合通过影响质量传递和光暗循环频率来调节光合效率，混合时间尺度τ_m与光合单位周转时间τ_ps需匹配。从能量平衡角度，反应器热平衡方程为：ρC_p∂T/∂t + ρC_pu·∇T = ∇·(k∇T) + Q_rad - Q_evap - Q_conv，其中Q_rad为辐射热，Q_evap为蒸发散热，Q_conv为对流散热。在CFD模拟中，需要耦合辐射传输方程、Navier-Stokes方程和物种输运方程，考虑光衰减、温度分布和细胞运动的相互影响。优化设计需平衡光穿透深度（通常仅7-10cm有效）与混合能耗，通过调节流速、气泡尺寸和反应器几何形状来实现均匀的光强和温度分布，从而提高脂质生产力。",
+    "original_text": {
+      "1": "Only 7–10 cm of water at the top level of the water column experiences enough light penetration for efficient photosynthesis",
+      "2": "The most favourable temperature range for microalgal growth is reported to fall between 20 and 30°C"
+    },
+    "type": "calculation",
+    "difficulty": 5,
+    "topic": "heat_transfer",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及微藻光生物反应器设计中的传热、流体力学特性、光合作用效率和脂质生产力，需要燃烧/传热/流体/CFD/能源领域的专业知识，包括光强分布模型（Beer-Lambert定律）、温度梯度对酶活性的影响、流体混合与质量传递关系、热平衡方程（能量守恒）及CFD模拟中的耦合方程（辐射传输、Navier-Stokes、物种输运）等。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "无需改进。答案准确阐述了传热和流体力学特性对光合作用效率和脂质生产力的影响，建立了光强分布、温度梯度和流体混合的耦合数学模型（如Beer-Lambert定律、光合作用速率公式、热平衡方程），并引用了论文摘录中的关键数据（光穿透深度7-10cm、适宜温度20-30°C），符合领域专业要求。"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_8bef162d",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Enhanced-microalgal-lipid-production-for-biofuel-using_2023_Progress-in-Ener",
+      "paper_title": "Enhanced-microalgal-lipid-production-for-biofuel-using_2023_Progress-in-Ener"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:49:53.112635",
+      "answer_length": 495
+    },
+    "merge_source": "question_reverse"
+  },
+  {
+    "question_text": "建立微藻生物柴油在发动机燃烧室中的CFD模型，包括喷雾破碎、蒸发、湍流燃烧和污染物形成等子模型，并说明如何通过燃料组分优化改善燃烧性能。",
+    "standard_answer": "微藻生物柴油在发动机燃烧室中的CFD建模需要集成多个物理子模型。喷雾破碎采用KH-RT模型：d(d₀)/dt = -Ω(We,Oh)d₀，其中Ω为破碎率函数，We为韦伯数，Oh为奥内佐格数。蒸发过程遵循Spalding传质理论：dm/dt = πdShD_gρ_ln(1+B_M)，其中B_M为传质数。湍流燃烧采用火焰面模型或EDC模型，反应机理需包含脂肪酸甲酯的详细氧化路径（如甲基油酸酯、甲基亚油酸酯的详细机理）。污染物形成中，NOx通过Zeldovich机理和Fenimore机理模拟，soot通过Hiroyasu模型计算。\n\n基于微藻生物柴油主要含不饱和脂肪酸的特性，燃料组分优化应侧重控制不饱和脂肪酸比例而非增加饱和脂肪酸。如原文引用1指出：\"Biodiesel from microalgal oil, which is low in saturated fatty acid content, has better fuel properties at colder temperatures as saturated fatty acids can drastically increase the pour and cloud point of biodiesel\"。同时，原文引用2表明：\"Microalgae generate lipids during photosynthesis and most of their composition include unsaturated fatty acids, mainly palmitoleic (16:1), oleic (18:1) and linoleic acid (18:2)\"。\n\n通过遗传工程调节脂肪酸链长分布（C16-C18为主）可优化燃料的雾化特性和燃烧稳定性。在CFD模拟中，燃料物性参数如密度（~880kg/m³）、粘度（~4.5mm²/s）、表面张力等需根据实际组分精确设定。通过组分优化，可使生物柴油的燃烧效率提高，同时降低PM排放，但需注意NOx排放可能增加的权衡关系。",
+    "original_text": {
+      "1": "Biodiesel from microalgal oil, which is low in saturated fatty acid content, has better fuel properties at colder temperatures as saturated fatty acids can drastically increase the pour and cloud point of biodiesel",
+      "2": "Microalgae generate lipids during photosynthesis and most of their composition include unsaturated fatty acids, mainly palmitoleic (16:1), oleic (18:1) and linoleic acid (18:2)"
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "CFD_modeling",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及计算流体动力学（CFD）建模、喷雾破碎、蒸发、湍流燃烧、污染物形成等专业领域，需要燃烧学、传热传质、流体力学和能源工程的专业知识。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": ""
+    },
+    "retry_count": 1,
+    "question_id": "deepseek_q_64cb3aea",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Enhanced-microalgal-lipid-production-for-biofuel-using_2023_Progress-in-Ener",
+      "paper_title": "Enhanced-microalgal-lipid-production-for-biofuel-using_2023_Progress-in-Ener"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:50:31.291102",
+      "answer_length": 887
+    },
+    "merge_source": "question_reverse"
+  }
+]

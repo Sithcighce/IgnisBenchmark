@@ -1,0 +1,138 @@
+[
+  {
+    "question_text": "基于能量密度和功率密度分析，比较金属燃料系统与现有清洁能源技术（氢燃料、电池、燃料电池）的性能特点。推导功率密度的一般表达式，并定量分析为什么金属燃烧系统能够达到与化石燃料内燃机相当的性能水平。",
+    "standard_answer": "能量系统的性能评估需要同时考虑能量密度和功率密度两个关键指标。根据论文提出的功率密度一般表达式：P_V ∝ η ρ_m q_m ν̇，其中η为效率，ρ_m为燃料-氧化剂混合物密度，q_m为比能量，ν̇为特征反应速率。\n\n对于不同能源技术的比较分析：\n\n1. 金属燃料系统：\n以铝为例，体积能量密度约23.5 kW·h/L，质量能量密度约8.2 kW·h/kg\n采用空气作为氧化剂，ρ_m ≈ 1.2 kg/m³（气体密度），但考虑金属颗粒的高密度，实际ρ_m较高\n燃烧反应在高温下进行，ν̇由Arrhenius动力学控制：ν̇ ∝ exp(-E_a/RT)\n\n2. 氢燃料系统：\n质量能量密度高（33.3 kW·h/kg），但体积能量密度极低\n即使作为低温液体，体积能量密度仅2.4 kW·h/L\n存储系统重量大，实际系统能量密度大幅降低\n\n3. 电池系统：\n锂离子电池：能量密度0.1-0.2 kW·h/kg，0.2-0.5 kW·h/L\n必须携带所有反应物，q_m受限制\n反应在低温下进行，ν̇受电化学动力学限制\n\n4. 燃料电池：\n类似电池，但使用大气氧，改善q_m\n低温反应需要大表面积电极，增加体积\n\n金属燃烧系统达到高性能的定量分析：\n- 高能量密度：金属本身能量密度高，且使用大气氧\n- 高功率密度：燃烧反应在高温高压下进行，反应速率ν̇比电化学反应高数个数量级\n- 高混合物密度：金属颗粒密度远高于气体燃料\n\n具体计算：假设铝-空气燃烧在10atm、2500K下进行，反应速率比室温电化学反应快约exp(2500/300) ≈ 3000倍。结合金属的高密度特性，使得P_V可达10^6 W/m³量级，与化石燃料发动机相当。\n\nRagone图分析显示，金属燃料系统在比能量-比功率空间中位于化石燃料发动机区域，显著优于电池和燃料电池系统。",
+    "original_text": {
+      "1": "The power density of an aluminum-fuelled engine is estimated and compared to the hydrocarbon-fuelled engines, batteries, and hydrogen-fuelled fuel cells... The metal-fuelled system achieves values close to that of our current fossil-fuelled machines",
+      "2": "In order to achieve high power densities, the efficiency, specific energy of the fuel-oxidizer mixture, density of the mixture, and reaction rate must be maximized"
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及能量密度、功率密度分析、金属燃料系统性能比较、功率密度表达式推导，以及燃烧系统与化石燃料内燃机的性能对比，这些都需要燃烧学、热力学、能源系统和化学反应动力学等领域的专业知识。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "无需修改，问题和答案均符合质量要求。"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_7bab1081",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Recyclable-metal-fuels-for-clean-and-compac_2018_Progress-in-Energy-and-Comb",
+      "paper_title": "Recyclable-metal-fuels-for-clean-and-compac_2018_Progress-in-Energy-and-Comb"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:21:39.396671",
+      "answer_length": 776
+    },
+    "merge_source": "question_reverse"
+  },
+  {
+    "question_text": "从计算流体力学角度，建立金属颗粒悬浮燃烧的多相流模型框架。详细说明需要包含的物理子模型，包括颗粒动力学、异相反应、辐射传热和湍流-颗粒相互作用，并给出关键控制方程。",
+    "standard_answer": "金属颗粒悬浮燃烧的CFD建模需要建立完整的多相流框架，主要包含以下物理子模型：\n\n1. 连续相（气体）控制方程：\n连续性方程：∂ρ/∂t + ∇·(ρu) = 0\n动量方程：∂(ρu)/∂t + ∇·(ρuu) = -∇p + ∇·τ + S_p + ρg\n能量方程：∂(ρh)/∂t + ∇·(ρuh) = ∇·(k∇T) + S_h + Q_rad\n物种输运方程：∂(ρY_i)/∂t + ∇·(ρuY_i) = ∇·(ρD_i∇Y_i) + ω_i + S_Yi\n\n2. 离散相（金属颗粒）模型：\n颗粒运动方程：m_p du_p/dt = F_drag + F_gravity + F_other\n其中F_drag = (π/8)C_d ρ d_p²|u - u_p|(u - u_p)，C_d为阻力系数\n\n3. 异相反应模型：\n对于扩散限制燃烧：dm_p/dt = -πd_p² ρ_g Y_ox Sh D / d_p\n对于动力学限制燃烧：dm_p/dt = -πd_p² k_s Y_ox ρ_g\n其中k_s = A exp(-E_a/RT_p)，Sh为Sherwood数\n\n4. 辐射传热模型：\n采用离散坐标法（DOM）或P1模型求解辐射传递方程：\ndI/ds = -κI + κσT⁴/π\n金属颗粒悬浮体具有高辐射发射率，辐射热通量：q_rad = εσ(T⁴ - T_∞⁴)\n\n5. 湍流-颗粒相互作用：\n采用k-ε或更高级的湍流模型，考虑颗粒对湍流的调制作用。颗粒脉动速度可通过随机游走模型模拟。\n\n6. 点火和燃烧状态转换模型：\n需要包含从动力学控制向扩散控制转变的判据，基于Damköhler数：Da = τ_diff/τ_chem\n当Da >> 1时系统处于扩散控制，Da << 1时处于动力学控制。\n\n该模型框架能够预测火焰传播速度、温度分布、燃烧效率和污染物形成等关键参数。",
+    "original_text": {
+      "1": "Future modeling efforts for specific metal fuels must recognize the need to model both the overall flame structure and the local micro-flame structures simultaneously",
+      "2": "A modeling framework that includes both the diffusion and kinetic rates in determining the reaction rate of the particles in suspension has been recently re-introduced, based on the seminal works of Frank-Kamenetskii and Vulis"
+    },
+    "type": "concept",
+    "difficulty": 5,
+    "topic": "CFD_modeling",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及计算流体力学、多相流建模、金属颗粒燃烧、异相反应、辐射传热和湍流-颗粒相互作用等专业领域，需要燃烧学、传热学、流体力学和CFD建模的深度专业知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量优秀，涵盖了所有要求的物理子模型，提供了准确的控制方程和机理解释，与论文摘录中关于金属燃料燃烧建模的要求一致"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_066624b8",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Recyclable-metal-fuels-for-clean-and-compac_2018_Progress-in-Energy-and-Comb",
+      "paper_title": "Recyclable-metal-fuels-for-clean-and-compac_2018_Progress-in-Energy-and-Comb"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:21:40.142180",
+      "answer_length": 801
+    },
+    "merge_source": "question_reverse"
+  },
+  {
+    "question_text": "分析金属燃料在湿循环中与水反应的传质限制机制，特别是铝颗粒表面氧化层的水合过程和羟基离子扩散过程。推导渗透厚度与反应温度和颗粒尺寸的关系，并解释为什么高温条件下能够实现接近100%的反应产率。",
+    "standard_answer": "金属燃料在湿循环中与水反应的传质限制机制主要涉及铝颗粒表面氧化层的水合过程和羟基离子扩散过程。根据论文描述，该过程分为三个阶段：\n\n1. 氧化铝涂层水合形成氢氧化物凝胶\n2. 氢氧化物与未反应的铝核反应生成氢气和氧化铝\n3. 由于氧化物/氢氧化物壳的不渗透性或颗粒间氢氧化物桥接导致反应淬灭\n\n速率限制步骤被认为是羟基离子通过氧化铝层的扩散过程。根据Fick扩散定律，扩散通量可表示为：J = -D_eff (dc/dx)，其中D_eff为有效扩散系数，遵循Arrhenius关系：D_eff = D_0 exp(-E_D/RT)。\n\n渗透厚度δ是反应能够传播到金属颗粒内部的深度，在反应淬灭前。从氢产率数据可以估算渗透厚度：δ = (m_reacted/ρ_Al) / A_surface，其中m_reacted为反应金属质量，ρ_Al为铝密度，A_surface为表面积。\n\n实验数据显示，对于平均直径6μm的粉末，在175°C以上可获得接近100%的产率；对于14μm粉末，需要200°C以上；对于70μm粉末，需要350°C以上才能在几分钟内完全消耗。这表明渗透厚度与温度呈强相关关系。\n\n高温条件下实现高反应产率的机理分析：\n1. 扩散系数随温度指数增长：D_eff ∝ exp(-E_D/RT)，高温显著加速羟基离子扩散\n2. 水合反应速率增加：水合反应本身也遵循Arrhenius动力学\n3. 氧化物层性质改变：高温可能改变氧化铝层的晶体结构和孔隙率\n4. 对流增强：高温可能增强溶液中的自然对流，改善传质\n\n从传质角度，反应完全性条件可表示为：δ(T) ≥ R_p，其中R_p为颗粒半径。这解释了为什么在给定温度下，较小颗粒能达到较高氢产率，而较高温度可使较大颗粒实现完全反应。",
+    "original_text": {
+      "1": "It is believed that the rate-limiting step in the reaction is the diffusion of hydroxyl ions through the aluminum-oxide layer into boehmite (AlOOH), or pseudo-boehmite",
+      "2": "The limited reaction yield at low temperatures is thought to be a result of the blocking, or healing, of the porous aluminum hydroxide layer in time, eventually stopping the reaction before it consumes all of the metal within the particle cores"
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "fluid_mechanics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及金属燃料在湿循环中的反应机制、传质限制、氧化层水合过程、羟基离子扩散、渗透厚度与温度/颗粒尺寸关系等，需要燃烧学、传热传质、化学反应工程、材料科学等领域的专业知识。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "无需修改。答案准确阐述了金属燃料与水反应的传质限制机制，正确引用了扩散定律和Arrhenius关系，合理推导了渗透厚度与温度/颗粒尺寸的关系，并基于实验数据解释了高温下高反应产率的原因，与论文内容一致。"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_41e800ab",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Recyclable-metal-fuels-for-clean-and-compac_2018_Progress-in-Energy-and-Comb",
+      "paper_title": "Recyclable-metal-fuels-for-clean-and-compac_2018_Progress-in-Energy-and-Comb"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:21:41.809016",
+      "answer_length": 747
+    },
+    "merge_source": "question_reverse"
+  },
+  {
+    "question_text": "从燃烧科学和流体力学角度，详细分析金属燃料在干循环（直接金属-空气燃烧）中火焰传播的物理机制，包括热传递、质量传递和化学反应速率的耦合作用。特别解释为什么金属悬浮火焰的燃烧速度在富燃料条件下不会像碳氢燃料那样显著下降。",
+    "standard_answer": "金属燃料在干循环中的火焰传播机制涉及复杂的热-质-化耦合过程。从热传递角度看，金属颗粒悬浮火焰主要依靠分子热传导进行热量传递，这可以从干涉测量显示的约1mm窄预热区得到证实。对于典型的微米级金属颗粒，燃烧过程可能同时受动力学控制和扩散控制。当反应动力学足够快时，颗粒会点燃并过渡到扩散限制状态，此时氧化剂向反应表面的扩散成为速率限制步骤。\n\n在质量传递方面，金属颗粒的高密度特性是关键因素。与碳氢燃料不同，增加固体金属燃料颗粒不会显著降低混合物中的氧气浓度，因为金属颗粒的比容很低。这导致在富燃料条件下，金属火焰的燃烧速度下降较慢。具体而言，燃烧速度可表示为：u_b ∝ √(αD)，其中α为热扩散率，D为质量扩散率。\n\n从化学反应角度，金属燃烧存在两种基本模式：异相表面反应和气相反应。对于铁等金属，燃烧主要在颗粒表面进行（模式C），形成微火焰结构。燃烧速率受Arrhenius动力学控制：k = A exp(-E_a/RT)。当系统压力增加时，气体密度和氧化剂浓度增加，推动系统向扩散限制燃烧状态转变。\n\n辐射热传递在大尺度火焰中起重要作用，能有效预热金属-空气混合物，但在实验室尺度主要作为热损失机制。湍流通过增加火焰表面积和混合速率来增强燃烧速率，这与碳氢燃料火焰类似。",
+    "original_text": {
+      "1": "Measurements of laminar metal flame temperature profiles with interferometry show a narrow preheat zone, (cid:3) 1 mm thick, as is typical of gaseous flames that rely upon molecular heat transfer",
+      "2": "For rich metal flames, the burning velocity is not very sensitive to fuel concentration for rich equivalence ratios, because the metal particles do not displace the oxygen in the mixture and, thereby, do not significantly dilute the chemical energy per unit volume"
+    },
+    "type": "reasoning",
+    "difficulty": 5,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及燃烧科学、流体力学、热传递、质量传递和化学反应速率的耦合作用，需要燃烧学、传热传质、流体力学和化学反应动力学等专业领域的深入知识，属于典型的燃烧工程和能源领域专业问题",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量良好，无需修改。答案准确解释了金属燃料在干循环中火焰传播的物理机制，正确分析了热传递、质量传递和化学反应速率的耦合作用，并基于金属颗粒的高密度特性合理解释了富燃料条件下燃烧速度不显著下降的原因，与论文摘录中的相关论述一致"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_d9192139",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Recyclable-metal-fuels-for-clean-and-compac_2018_Progress-in-Energy-and-Comb",
+      "paper_title": "Recyclable-metal-fuels-for-clean-and-compac_2018_Progress-in-Energy-and-Comb"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:21:42.589560",
+      "answer_length": 539
+    },
+    "merge_source": "question_reverse"
+  }
+]

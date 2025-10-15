@@ -1,0 +1,167 @@
+[
+  {
+    "question_text": "基于论文中的LES数据和实验验证，详细分析湍流脉动项（uθux和ux^2）对旋流数计算的贡献，说明在什么条件下这些项不可忽略，并讨论不同测量技术（LDV、PIV、热线）获取这些脉动项的可行性。",
+    "standard_answer": "论文通过LES数据详细量化了湍流脉动项对旋流数计算的贡献。从图13可以看出，在旋流喷射的近场区域（0<x<35mm），脉动项2π∫ρux^2rdr与平均项G0_x,P具有相同的量级，而角动量通量中的脉动项2π∫ρuθuxr^2dr贡献达到Gf_θ的25%。这种显著的贡献源于旋流流动中强烈的湍流结构和PVC（进动涡核）的存在。在以下条件下脉动项不可忽略：1）高雷诺数流动（Re>10^4）；2）强旋流条件（S>0.6）；3）靠近喷射出口的区域；4）存在流动不稳定性如PVC。不同测量技术获取这些项的可行性各异：两分量LDV可以精确测量ux^2和uθux，但需要良好的统计收敛；三维立体PIV可以获取所有雷诺应力分量，但近壁分辨率受限；热线风速仪可以测量ux^2但难以准确获取uθux。论文特别指出，标准的2D-PIV无法确定uθux相关项，而用urux替代uθux的做法（如文献[49]建议）会导致显著误差，如图14所示直接忽略uθux比错误替代更为可取。因此，对于精确的旋流数计算，推荐使用可以同时测量三个速度分量和相应雷诺应力的先进诊断技术。",
+    "original_text": {
+      "1": "For the axial component of the flow rate of angular momentum, the fluctuating term represents up to 25% of Gf_θ. In view of their importance in the computation of the swirl number and the fact that hot wires or laser velocimetry give access to fluctuating velocities it appears advisable to include the corresponding terms in swirl number calculations.",
+      "2": "The standard 2D-PIV cannot be used to determine this cross-correlation. To overcome this difficulty with this last technique it is suggested in [49] to simply replace uθux by urux. This possibility is assessed in Fig. 14, which compares 2π∫ρ[UθUx+uθux]rdr and 2π∫ρ[UθUx+urux]rdr. This plot indicates that it is clearly preferable to drop the correlation uθux than to try to replace it by urux."
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "CFD_modeling",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及湍流脉动项对旋流数计算的贡献分析、不同测量技术可行性评估，需要燃烧/流体力学/CFD领域的专业知识，包括LES模拟、湍流理论、旋流流动特性及LDV/PIV/热线等实验测量技术",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "无需改进，问题和答案均符合质量要求"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_6adb4516",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "The-suitability-of-different-swirl-number-definitions-_2022_Progress-in-Ener",
+      "paper_title": "The-suitability-of-different-swirl-number-definitions-_2022_Progress-in-Ener"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:12:25.771719",
+      "answer_length": 473
+    }
+  },
+  {
+    "question_text": "详细解释限制性流动中积分限选择对旋流数计算的影响，基于论文图15的分析，说明为什么在存在外再循环区的情况下必须对整个截面进行积分，并推导确定合适积分限Rlim的准则。",
+    "standard_answer": "在限制性流动中，积分限的选择对旋流数计算具有重要影响，特别是在存在外再循环区的情况下。论文图15展示了在不同轴向位置Gf_x,P和Gf_θ随积分半径Rlim的变化。在靠近喷射口的区域（x=2.5,5,10mm），流动呈现射流特征并伴有外再循环区，此时Gf_x,P初始为负值，在射流位置急剧增加，随后衰减，最后在近壁区域再次增加至最终值。Gf_θ表现出类似行为，在射流位置急剧增加后出现平台，最后在外再循环区衰减至最终值。这种复杂的变化模式表明，如果积分过早终止，将无法准确捕捉流动的完整动量特性。确定合适积分限Rlim的准则包括：1）所有速度分量和静压在该位置应接近其在壁面或无穷远处的值；2）剩余贡献2πRrefRlim[ρ(Ux^2(Rlim)+ux^2(Rlim))+(p(Rlim)-p∞)]应远小于Gf_x,P；3）剩余角动量贡献2πRrefRlim^2ρ(Uθ(Rlim)Ux(Rlim)+uθux(Rlim))应远小于Gf_θ。对于常规旋流数Sconv，论文建议Rlim≥2Rinj，如图17所示，当Rlim>2Rinj时Sconv趋于稳定。但在精确的旋流数计算中，特别是在存在显著外再循环的情况下，必须对整个截面进行积分以确保所有流动特征的完整考虑。",
+    "original_text": {
+      "1": "At x = 2.5, 5 and 10mm, the flow rate of axial momentum Gf_x,P is initially negative before strongly increasing at the radial position of the jet. It then decays again before increasing to its final value near the wall. Gf_θ has a similar behavior, with a strong increase at the radial position of the jet, followed by a plateau and a decay to its final value in the outer recirculation zone.",
+      "2": "These calculations indicate that in the case of a confined configuration, especially when an outer recirculation zone is established, the computation of the swirl number Sf_P needs to be carried out by integrating over the entire cross-section."
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "fluid_mechanics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及限制性流动、旋流数计算、积分限选择、外再循环区等专业流体力学概念，需要燃烧/传热/流体/CFD领域的专业知识进行准确分析和推导。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量优秀，准确解释了积分限选择对旋流数计算的影响，基于论文图15分析了外再循环区的影响，并正确推导了确定合适积分限Rlim的准则。答案与原文引用和论文摘录内容一致，无需修改。"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_8db56f66",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "The-suitability-of-different-swirl-number-definitions-_2022_Progress-in-Ener",
+      "paper_title": "The-suitability-of-different-swirl-number-definitions-_2022_Progress-in-Ener"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:12:26.386791",
+      "answer_length": 533
+    }
+  },
+  {
+    "question_text": "基于论文中关于旋流数守恒性质的讨论，详细解释为什么在恒定截面的管道中，当壁面粘性力可忽略时，旋流数Sf_P应保持恒定。请分析Gf_θ和Gf_x,P的守恒条件，并说明在实际应用中哪些简化会导致旋流数在轴向发生变化。",
+    "standard_answer": "根据论文第2节的理论推导，在恒定截面的管道中，当壁面粘性力可忽略时，轴向角动量通量Gf_θ和轴向动量通量Gf_x,P应保持守恒。Gf_θ的守恒来源于式(22)：∫∞0 d/dx[r^2(UθUx+uθux)]dr=0，表明角动量通量沿轴向不变。Gf_x,P的守恒来源于式(12)：dGf_x,P/dx=2π∫∞0 d/dx[r((p-p∞)+ρ(Ux^2+ux^2))]dr=0。由于旋流数Sf_P定义为Gf_θ/(R·Gf_x,P)，当分子分母都守恒时，Sf_P自然保持恒定。但在实际应用中，多种简化会导致旋流数变化：1）忽略压力项(p-p∞)，如S0_0公式；2）忽略湍流脉动项uθux和ux^2；3）使用边界层近似替代精确的压力表达式；4）不恰当的积分限选择。论文图10显示，即使在恒定截面区域，由于壁面剪切应力的影响，Gf_θ和Gf_x,P仍有缓慢衰减，导致Sf_P略微减小。这些因素共同造成了不同简化公式计算得到的旋流数在轴向的显著差异。",
+    "original_text": {
+      "1": "Although the swirl number is in principle constant when the flow is established in a duct with a constant cross-section, provided that viscous forces at the wall are negligible, one finds that this quantity varies substantially if inadequate approximations are made.",
+      "2": "Equations (11), (16) and (17) correspond to conservation relations for Gx under various simplifying assumptions and similarly, Eqs. (22) and (23) to conservation relations for Gθ. These results may then be combined in various ways to yield a set of expressions for the swirl number defined by Eq. (2)."
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "fluid_mechanics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及旋流数守恒性质、管道流体力学、壁面粘性力影响、角动量通量和轴向动量通量分析，需要燃烧工程、流体力学、CFD等领域的专业知识来理解和评估",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量优秀，准确解释了旋流数守恒的理论基础（Gf_θ和Gf_x,P的守恒），详细分析了实际应用中导致旋流数变化的简化因素，并与论文内容高度一致"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_179cdc85",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "The-suitability-of-different-swirl-number-definitions-_2022_Progress-in-Ener",
+      "paper_title": "The-suitability-of-different-swirl-number-definitions-_2022_Progress-in-Ener"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:12:26.438683",
+      "answer_length": 424
+    }
+  },
+  {
+    "question_text": "分析限制性流动中参考压力pref的选择对旋流数计算的影响，详细说明论文推荐的pref = ⟨p⟩方法的理论基础，并解释为什么选择壁面压力作为参考压力会导致不合理的旋流数结果。",
+    "standard_answer": "在限制性流动中，参考压力pref的选择对旋流数计算具有决定性影响。论文推荐使用截面平均压力pref = ⟨p⟩ = 1/Σ∫pdA，这一选择基于四个理想特性：P1）与非限制性流动定义一致（当Σ→∞时，pref→p∞）；P2）在恒定截面区域保持恒定；P3）易于通过常规测量技术确定；P4）在流动充分发展区域使得Gf_x,P ≃ Gf_x,0。选择⟨p⟩作为参考压力的理论基础在于：它确保了压力项∫(p-pref)dS在充分发展流动中接近于零，从而简化了旋流数计算。相比之下，选择壁面压力作为参考压力会导致问题：从图6可见，壁面压力p(r=Rc)与截面平均压力⟨p⟩的差值约为9Pa，这比ρ(⟨Ux⟩^2+⟨ux^2⟩) ≈ 0.5Pa大一个数量级。这种差异在靠近面积突变的区域更为显著，导致计算得到的旋流数出现剧烈变化甚至负值。如论文所述，采用壁面压力参考的S0_U公式在某些轴向截面变为负值，这表明参考压力选择不当。本质上，⟨p⟩提供了与流动整体动量特性相协调的参考基准，而壁面压力受到局部流动特征的过度影响，不适合作为全局参考。",
+    "original_text": {
+      "1": "The reference pressure must be defined as the sectional average of the static pressure pref = ⟨p⟩ = 1/Σ∫pdA. In this expression, if Σ becomes infinitely large, for example if an unconfined swirling jet is considered, the reference pressure will simply tend to the pressure at infinity p∞.",
+      "2": "The practice of taking the reference pressure as a wall pressure without selecting a suitable section in the flow is inadequate, in particular for flows with changes in cross-section. This leads to variable or even sometimes negative swirl number values depending on the position adopted to infer the reference pressure."
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "fluid_mechanics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及限制性流动、旋流数计算、参考压力选择等流体力学专业概念，需要燃烧工程、流体力学、CFD等领域的专业知识来准确理解和分析",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量优秀，准确阐述了参考压力选择对旋流数计算的影响，详细说明了⟨p⟩方法的理论基础，并基于论文数据解释了壁面压力作为参考的不合理性，与原文引用内容完全一致"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_7be26a53",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "The-suitability-of-different-swirl-number-definitions-_2022_Progress-in-Ener",
+      "paper_title": "The-suitability-of-different-swirl-number-definitions-_2022_Progress-in-Ener"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:12:26.557325",
+      "answer_length": 465
+    }
+  },
+  {
+    "question_text": "从轴对称RANS方程出发，详细推导旋流数Sf_U,BL表达式的完整数学过程，明确边界层近似在其中起的关键作用，并定量分析这种近似的适用范围和局限性。",
+    "standard_answer": "从轴对称RANS方程(6)-(9)出发，推导旋流数Sf_U,BL表达式需经过以下完整数学过程：首先，在高雷诺数条件下忽略粘性项，并采用边界层近似。边界层近似的关键假设包括：径向速度梯度远小于轴向梯度（∂/∂r ≪ ∂/∂x），周向速度主导径向压力分布，粘性效应仅限于近壁区域。关键简化出现在径向动量方程(7)，在边界层近似下简化为式(13)：-Uθ²/r = -1/ρ ∂p/∂r - [∂ur²/∂r + (ur²-uθ²)/r]。将该式乘以r²并从0到∞积分，得到压力项的替代表达式(14)：∫∞₀ r(p-p∞)dr = -1/2∫∞₀ ρr(Uθ²+ur²+uθ²)dr。如果进一步忽略脉动项，得到简化形式∂p/∂r ≃ ρUθ²/r。将这一结果代入轴向动量通量表达式，结合式(11)和(14)，得到守恒关系(16)：∫∞₀ d/dx[ρr(Ux² - Uθ²/2 + ux² - (ur²+uθ²)/2)]dr = 0。忽略脉动项后得到式(17)，最终导出G0_x,U,BL表达式(18)。边界层近似的适用范围：在充分发展的旋流区域（远离面积突变处）有效，要求雷诺数Re > 10⁴，径向位置r/R < 0.8（避免近壁区域），轴向位置x/D > 2（下游充分发展区）。局限性：在靠近面积突变的区域（如x=5-30mm）失效，此时径向速度梯度与轴向梯度相当，边界层近似预测的压力项与真实值存在显著差异（误差可达20-30%）。此外，在强旋流区域（S > 1.0）或存在显著径向流动时，边界层近似也会失效。",
+    "original_text": {
+      "1": "Equation (7) simplifies into -Uθ²/r = -1/ρ ∂p/∂r - [∂ur²/∂r + (ur²-uθ²)/r]. Multiplying Eq. (13) by r² and integrating the result between r = 0 and r = ∞ yields ∫∞₀ r(p-p∞)dr = -1/2∫∞₀ ρr(Uθ²+ur²+uθ²)dr.",
+      "2": "The simplified expressions (18) and (19) account for effects of static pressure within the swirling flow without direct measurements of the corresponding term. These expressions however assume a high Reynolds number and use an approximation of the radial pressure gradient in terms of the mean azimuthal velocity."
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "fluid_mechanics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及轴对称RANS方程、边界层近似、旋流数推导等专业流体力学和燃烧工程概念，需要燃烧/传热/流体/CFD领域的专业知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量良好，提供了完整的数学推导过程，明确了边界层近似的关键作用，并定量分析了适用范围和局限性，与论文摘录中的相关内容一致"
+    },
+    "retry_count": 2,
+    "question_id": "deepseek_q_11cc19e2",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "The-suitability-of-different-swirl-number-definitions-_2022_Progress-in-Ener",
+      "paper_title": "The-suitability-of-different-swirl-number-definitions-_2022_Progress-in-Ener"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:14:04.583421",
+      "answer_length": 657
+    }
+  }
+]

@@ -1,0 +1,134 @@
+[
+  {
+    "question_text": "在发动机诊断应用中，光束排列优化对层析成像质量至关重要。请基于分辨率矩阵理论：(1) 推导正则化最小二乘解与分辨率矩阵的关系；(2) 解释如何通过Frobenius范数最小化来优化光束排列；(3) 分析在有限光学访问条件下，正则化误差和扰动误差对重建质量的相对影响。",
+    "standard_answer": "基于分辨率矩阵理论的光束排列优化推导如下：正则化最小二乘问题为min(||Ax-p||^2+γ||Lx||^2)，对应的欧拉方程为(A^TA+γL^TL)x_LS=A^Tp。解可表示为x_LS=(A^TA+γL^TL)^{-1}A^Tp= A#p = A#Ax_exact + A#Δk = Rx_exact + A#Δk，其中R=A#A为分辨率矩阵，I为单位矩阵。重建误差包含两部分：正则化误差(R-I)x_exact和扰动误差A#Δk。在有限光学访问条件下，方程系统不完整，正则化作为滤波器选择同时满足测量和先验信息的解。研究表明，在宽γ范围内扰动误差可忽略，正则化误差占主导。光束排列优化通过最小化正则化误差实现，误差量化為F(C)=||R(C)-I||_F^2，其中C为复数向量，实部表示光束位置，虚部表示方向。Frobenius范数最小化将光束排列优化转化为最小化问题，可通过遗传算法等全局优化器求解。当光束数量不同时，F需用光束数归一化以比较排列效率。在发动机诊断等光学访问严重受限的应用中，正则化误差主导重建质量，因此通过分辨率矩阵优化光束排列可显著改善成像性能。",
+    "original_text": {
+      "1": "The reconstruction error contains two parts, which are the regularization error (R-I)x_exact and the perturbation error A#Δk, respectively. For applications with limited optically access, the equation system would not be complete and the regularization is used as a filter.",
+      "2": "The beam arrangement optimization can now be converted into a minimization problem, which can be solved with a global minimizer such as the genetic algorithm."
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "fluid_mechanics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及发动机诊断、层析成像、分辨率矩阵理论、正则化最小二乘解、光束排列优化等，需要燃烧诊断、光学测量、计算流体力学和反问题求解等领域的专业知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": ""
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_7a09c4bc",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Tomographic-absorption-spectroscopy-for-the-stud_2017_Progress-in-Energy-and",
+      "paper_title": "Tomographic-absorption-spectroscopy-for-the-stud_2017_Progress-in-Energy-and"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:07:10.708332",
+      "answer_length": 489
+    }
+  },
+  {
+    "question_text": "双线成像测温法是吸收层析中的关键技术。请基于Beer定律和光谱学原理：(1) 推导温度与两条吸收线积分吸光度比值的解析关系；(2) 分析低态能量差对温度测量灵敏度的影响；(3) 解释在已知温度分布后，如何通过线性反演获得物种浓度分布。",
+    "standard_answer": "双线成像测温法的理论基础推导：根据Beer定律，第j像素在频率ν处的积分吸光度为∫a_ν,j·L·dν=∫P·F(ν)·S(T)·X·L·dν=P·S(T)·X·L。选择两条吸收线ν1和ν2，其积分吸光度比值R_j=[∫a_ν1,j·L·dν]/[∫a_ν2,j·L·dν]=S_1(T_j)/S_2(T_j)。线强度与温度的关系为S(T)=S(T_0)exp[-hc(E''-E_0'')/k(1/T-1/T_0)]，其中T_0为参考温度，E''为低态能量。因此R_j=[S_1(T_0)/S_2(T_0)]exp{-(hc/k)[(E_1''-E_2'')/k](1/T_j-1/T_0)}。温度T_j可解析求得：T_j=(hc/k)(E_1''-E_2'')/{lnR_j+ln[S_2(T_0)/S_1(T_0)]+(hc/k)(E_1''-E_2'')/T_0}。低态能量差(E_1''-E_2'')对温度测量灵敏度有决定性影响：能量差越大，比值R_j对温度变化越敏感，测温精度越高。这是因为不同低态能级的粒子数分布随温度变化差异更显著。在获得温度分布T_rec后，物种浓度重建转化为线性反演问题：p_m=S(T_rec,λ)·X，其中p_m为视线测量向量，S为基于T_rec计算的吸收系数矩阵。该线性系统通常病态，需采用Tikhonov正则化求解：min(||S(T_rec,λ)X-p_m||+γ||LX||)，通过L曲线法确定最优正则化参数γ，获得稳定的浓度分布重建。",
+    "original_text": {
+      "1": "The ratio between the integrated absorbance at ν1 and ν2 for the jth pixel can be calculated as R_j = [∫a_ν1,j·L·dν]/[∫a_ν2,j·L·dν] = S_1(T_j)/S_2(T_j).",
+      "2": "With the T distribution obtained from the previous discussion (denoted as T_rec), the reconstruction of species concentration becomes a linear inversion problem."
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及吸收光谱学、Beer定律、温度测量原理、线性反演等燃烧诊断和光学测量领域的专业知识，需要燃烧/传热/流体/CFD/能源领域的专业知识来理解和评估",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量优秀，无需修改。推导完整准确，机理解释清晰，反演方法描述恰当，与论文摘录内容一致"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_5559ec2a",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Tomographic-absorption-spectroscopy-for-the-stud_2017_Progress-in-Energy-and",
+      "paper_title": "Tomographic-absorption-spectroscopy-for-the-stud_2017_Progress-in-Energy-and"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:07:12.395500",
+      "answer_length": 642
+    }
+  },
+  {
+    "question_text": "在吸收层析成像中，正则化对于解决病态问题至关重要。请详细解释：(1) 离散病态问题和秩亏缺问题的数学本质区别；(2) 截断奇异值分解正则化和标准Tikhonov正则化的工作原理及其在吸收层析中的适用场景；(3) 贝叶斯公式如何整合先验信息改善重建质量。",
+    "standard_answer": "在吸收层析成像中，正则化处理病态问题的数学本质区别在于：离散病态问题出现在投影数据充足但测量噪声主导的情况下，此时方程系统超定但系数矩阵条件数很大，小扰动会导致解的巨大误差。秩亏缺问题则出现在光学访问受限、投影数据不足的情况下，方程系统欠定，解不唯一。截断奇异值分解正则化通过移除奇异值最小的分量来抑制噪声放大，其工作原理是：对系数矩阵A进行SVD分解A=USV^T，最小二乘解为x_LS=∑(u_j^Tp)v_j/s_j，当测量噪声存在时，重建误差与1/s_j成正比，通过截断小奇异值项可减小误差。标准Tikhonov正则化则通过引入正则化参数γ来加权正则项，目标函数为min(||Ax-p||^2+γ^2||x||^2)，解为x_Tik=∑[s_j^2/(s_j^2+γ^2)](u_j^Tp)v_j/s_j，通过权重因子抑制小奇异值分量的影响。贝叶斯公式通过最大后验估计整合先验信息：prob(x|p)=prob(p|x)prob_NN(x)prob_S(x)/prob(p)，其中prob(p|x)描述测量数据的似然性，prob_NN(x)实施非负性约束，prob_S(x)实施平滑性约束。这种框架可灵活纳入各种先验知识，如空间平滑性、非负性、时间相关性等，通过最大化后验概率获得物理上更合理的解，在低信噪比测量情况下显著改善重建质量。",
+    "original_text": {
+      "1": "For discrete ill-posed problems, two regularization methods are commonly used: The truncated singular value decomposition method and standard Tikhonov regularization.",
+      "2": "The Bayesian formulation provides a versatile tool to integrate a variety of prior information in the inversion process. This can then be solved via maximum a posterior (MAP) estimation."
+    },
+    "type": "reasoning",
+    "difficulty": 5,
+    "topic": "CFD_modeling",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及吸收层析成像中的正则化方法，这是燃烧诊断、气体流动测量和反应流研究中的核心技术，需要燃烧科学、光学诊断和计算层析成像等领域的专业知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量优秀，无需修改。答案准确解释了离散病态问题与秩亏缺问题的数学本质区别，详细说明了TSVD和Tikhonov正则化的工作原理，并正确阐述了贝叶斯框架如何整合先验信息，与论文摘录内容一致"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_87e0b4e3",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Tomographic-absorption-spectroscopy-for-the-stud_2017_Progress-in-Energy-and",
+      "paper_title": "Tomographic-absorption-spectroscopy-for-the-stud_2017_Progress-in-Energy-and"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:07:13.050942",
+      "answer_length": 572
+    }
+  },
+  {
+    "question_text": "模拟退火算法在求解非线性层析优化问题中具有独特优势。请详细分析：(1) Metropolis准则的数学原理及其在逃离局部极小值中的作用；(2) 退火速率ξ对算法收敛性和计算成本的影响；(3) 如何通过适当正交分解(POD)降低优化问题规模并改善噪声免疫性。",
+    "standard_answer": "模拟退火算法求解非线性层析优化问题的机制分析：Metropolis准则是算法的核心，数学表述为：如果ΔF=F(x_new)-F(x_old)≤0，接受x_new；否则以概率p_SA=exp(-ΔF/T_SA)接受x_new。该准则模拟液体退火过程中的随机热涨落，允许算法以一定概率接受劣化解，从而逃离局部极小值。与传统确定性优化算法不同，Metropolis准则在高温阶段有较高概率接受劣化解，实现全局探索；随着温度降低，接受概率减小，算法逐渐收敛到全局最优解附近。退火速率ξ控制温度下降速度：T_SA=T_SA×ξ，其中0≤ξ≤1。ξ接近1时退火缓慢，算法有更多机会探索解空间，更可能找到全局最优，但计算成本显著增加；ξ较小时退火快速，计算成本低但可能陷入局部最优。适当正交分解(POD)通过利用训练集提取本征函数来降低优化问题规模：x=∑z_kΦ_k，其中Φ_k为本征函数，z_k为权重系数。将T和X分布用少数本征函数近似后，代价函数F变为权重系数的函数，变量数从N^2减少到K，计算成本按N^2/K比例降低。POD本征函数本身平滑，无需额外正则化，同时通过减少变量数改善对测量噪声的免疫性。",
+    "original_text": {
+      "1": "The random 'thermal fluctuations' are simulated mathematically by the so-called Metropolis criterion, whose algorithm is defined as if ΔF = F(x_new) - F(x_old) ≤ 0, accept x_new; else accept x_new with probability p_SA = exp(-ΔF/T_SA).",
+      "2": "By utilizing both the a priori (the training set) and posterior (the measured projections) information, the eigenvalues can be obtained by optimizing the following least-square problem."
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "CFD_modeling",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及非线性层析优化问题，结合了模拟退火算法和适当正交分解(POD)在层析成像中的应用，这需要燃烧诊断、光学层析成像、计算流体力学等领域的专业知识，特别是关于如何将优化算法应用于实际物理测量问题的理解。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量优秀，无需修改。准确阐述了Metropolis准则的数学原理和作用机制，清晰分析了退火速率对收敛性和计算成本的影响，正确解释了POD降维原理及其对噪声免疫性的改善。"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_61f19753",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Tomographic-absorption-spectroscopy-for-the-stud_2017_Progress-in-Energy-and",
+      "paper_title": "Tomographic-absorption-spectroscopy-for-the-stud_2017_Progress-in-Energy-and"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:07:13.316275",
+      "answer_length": 498
+    }
+  }
+]

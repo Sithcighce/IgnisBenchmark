@@ -1,0 +1,231 @@
+{
+  "questions": [
+    {
+      "question_text": "Explain why Gaussian Processes (GP) are less suitable for large ICE datasets compared to Artificial Neural Networks (ANN).",
+      "standard_answer": "GPs computational cost increases by O(n³) and storage requirement by O(n²) with data size n, making them inefficient for large datasets. ANNs scale better computationally with data size and can process complex nonlinear relationships through parallel computation.",
+      "original_text": {
+        "1": "The computational cost of GP increases by O (n3) and its storage requirement increases by O (n2) (where n is the number of points being interpolated). This leads to high computational costs for extremely large data sets [148,149].",
+        "2": "ANN is made of many calculating nodes (called neurons) that are connected to each other to simulate complex nonlinear system behaviour."
+      },
+      "type": "reasoning",
+      "difficulty": 4,
+      "topic": "ML_computational_efficiency"
+    },
+    {
+      "question_text": "How does Reinforcement Learning (RL) fundamentally differ from supervised learning in ICE control applications?",
+      "standard_answer": "RL learns through trial-and-error interactions with the environment to maximize rewards, whereas supervised learning requires labeled input-output pairs. RL provides action decisions rather than pure modeling.",
+      "original_text": {
+        "1": "Reinforcement learning (RL) is about learning how to take actions and reactions to maximize a numerical 'reward' signal [178].",
+        "2": "Unlike SML and UML, RL aims to provide decisions or actions instead of pure modeling or classification."
+      },
+      "type": "concept",
+      "difficulty": 3,
+      "topic": "learning_paradigms"
+    },
+    {
+      "question_text": "Calculate the activation function output (yj) for a neural network with inputs x=[0.5, -0.3], weights W=[1.2, 0.8], and sigmoid transfer function f(z)=1/(1+e⁻ᶻ).",
+      "standard_answer": "yj = f(ΣxiWi) = f(0.5*1.2 + (-0.3)*0.8) = f(0.6-0.24) = f(0.36) = 1/(1+e⁻⁰·³⁶) ≈ 0.589",
+      "original_text": {
+        "1": "yj = f( ∑N i=1 xiWi )"
+      },
+      "type": "calculation",
+      "difficulty": 3,
+      "topic": "ANN_mathematics"
+    },
+    {
+      "question_text": "Why does Extreme Learning Machine (ELM) have faster training speed than traditional ANNs?",
+      "standard_answer": "ELM randomly initializes hidden layer parameters and analytically calculates output weights via Moore-Penrose inversion, eliminating iterative weight adjustment processes used in ANNs.",
+      "original_text": {
+        "1": "ELM is a single-hidden layer feedforward neural network (SLFN). The hidden layer parameters of ELM are randomly initialized [86].",
+        "2": "Unlike the traditional ANNs that iteratively learn the output weights through a more time consuming process [127–129]."
+      },
+      "type": "reasoning",
+      "difficulty": 4,
+      "topic": "ELM_optimization"
+    },
+    {
+      "question_text": "What makes Relevance Vector Machines (RVM) more suitable than SVMs for probabilistic ICE fault diagnostics?",
+      "standard_answer": "RVMs provide probabilistic predictions through Bayesian inference, capturing uncertainty distributions important for fault classification, whereas SVMs only make point predictions.",
+      "original_text": {
+        "1": "RVM's prediction capability is similar to the SVM, but it also provides a distribution prediction [138,142].",
+        "2": "Due to their distribution (probabilistic) predictions, RVMs are an ideal choice for ICE data classification, particularly when the boundary between classes are narrow [144]."
+      },
+      "type": "reasoning",
+      "difficulty": 4,
+      "topic": "probabilistic_modeling"
+    },
+    {
+      "question_text": "Explain why k-means clustering may underperform compared to Fuzzy C-Means (FCM) for classifying transient ICE operating conditions.",
+      "standard_answer": "FCM allows partial membership in multiple clusters via membership functions, better capturing transitional states in transient operation, whereas k-means imposes hard boundaries between discrete clusters.",
+      "original_text": {
+        "1": "Fuzzy C-Means (FCM) is another commonly used unsupervised clustering techniques which unlike k-means can assign one data point to more than one cluster using a so-called a 'Membership Function' [172].",
+        "2": "Both k-means and FCM are extensively used for different ICE applications due to their simple structure and acceptable performance. However, they are not suitable for clustering the data points for complex phenomena with high levels of non-linearity."
+      },
+      "type": "reasoning",
+      "difficulty": 4,
+      "topic": "clustering_methods"
+    },
+    {
+      "question_text": "Derive the ELM output prediction equation given hidden layer activation function A, input weights ai, and biases bi.",
+      "standard_answer": "f(x) = Σβihi(x) = ΣβiA(ai, bi, x) = h(x)β where h(x) = [h1(x), h2(x), ..., hN(x)] is hidden layer output vector and β = [β1, β2, ..., βN]ᵀ contains output weights.",
+      "original_text": {
+        "1": "f(x) = ∑N i=1 βihi(x) = ∑N i=1 βiA(ai, bi, x) = h(x)β"
+      },
+      "type": "calculation",
+      "difficulty": 5,
+      "topic": "ELM_mathematics"
+    },
+    {
+      "question_text": "Why is meta-learning particularly valuable for addressing combustion mode transitions in multi-mode ICEs?",
+      "standard_answer": "Meta-learning automates selection of optimal learning algorithms/hyperparameters for modeling complex transitional behaviors where conventional approaches require manual tuning.",
+      "original_text": {
+        "1": "Meta-learning is defined as a process through which the learner, learns 'how to learn' i.e. selecting the best methods or the best learning parameters [156].",
+        "2": "For instance, assume that you are planning to learn a complex ICE combustion phenomena (e.g., SI to HCCI mode transition), but there is not enough information regarding the most appropriate machine learning algorithm, or you are not sure what the optimal hyperparameters of the learning algorithm are."
+      },
+      "type": "reasoning",
+      "difficulty": 5,
+      "topic": "meta_learning"
+    },
+    {
+      "question_text": "Compare the advantages of model-based vs model-free RL for ICE knock control.",
+      "standard_answer": "Model-based RL reduces trial-and-error risks using pre-trained knock models, while model-free RL adapts better to unseen conditions but requires careful reward shaping to avoid engine damage.",
+      "original_text": {
+        "1": "Model-based RL takes advantage of a prepared model to make informed decisions and to take low-risk actions to achieve the desired outputs.",
+        "2": "Model-free RL does not require a pre-trained model and instead learns as it interacts with and observes the environment."
+      },
+      "type": "application",
+      "difficulty": 4,
+      "topic": "RL_strategies"
+    },
+    {
+      "question_text": "How does reproducing kernel Hilbert space (RKHS) enable scalable ICE fuel consumption modeling?",
+      "standard_answer": "RKHS efficiently represents nonlinearities through kernel functions and scales to incorporate multiple impact factors (fuel quality, ambient conditions) via its bounded point evaluation space.",
+      "original_text": {
+        "1": "An RKHS is a special Hilbert space which uses a kernel function that reproduces each function via inner product in a bounded point evaluation space.",
+        "2": "The proposed RKHS-based algorithm efficiently represents system nonlinearities and is scalable to include a large number of impact factors such as fuel quality, intake air humidity, ambient pressure and temperature that affect ICE combustion."
+      },
+      "type": "reasoning",
+      "difficulty": 5,
+      "topic": "RKHS_scalability"
+    },
+    {
+      "question_text": "Explain why Gaussian Mixture Models outperform k-means for unsupervised detection of subtle combustion anomalies.",
+      "standard_answer": "GMMs model clusters as Gaussian distributions capturing probabilistic boundaries between normal/abnormal states, whereas k-means imposes rigid spherical clusters insensitive to overlapping distributions.",
+      "original_text": {
+        "1": "A Gaussian distribution is allocated to each cluster and the UGM classifies the data points that belong to each distribution into the corresponding groups which results in soft clustering of the data points.",
+        "2": "This makes UGMs more suitable for unsupervised ICE applications that involve classes with less distinguishable boundaries such as unsupervised engine combustion diagnostics using engine noise measurements [65]."
+      },
+      "type": "reasoning",
+      "difficulty": 4,
+      "topic": "unsupervised_detection"
+    },
+    {
+      "question_text": "Calculate the SVM output prediction y(u) for input u=[0.4, -0.1] given support vectors ui=[[0.3,0.5], [-0.2,0.7]], weights wi=[1.5, -0.8], bias b=0.2, and Gaussian kernel K(x,y)=exp(-||x-y||²/2).",
+      "standard_answer": "y = ΣwiK(ui,u) + b = 1.5*exp(-0.01/2) + (-0.8)*exp(-0.73/2) + 0.2 ≈ 1.5*0.995 + (-0.8)*0.694 + 0.2 ≈ 0.838",
+      "original_text": {
+        "1": "y = ∑n i=1 wiK(ui, u) + b"
+      },
+      "type": "calculation",
+      "difficulty": 5,
+      "topic": "SVM_mathematics"
+    },
+    {
+      "question_text": "Why is cyclic variability particularly challenging for conventional ICE modeling approaches?",
+      "standard_answer": "Stochastic variations arise from complex interactions between turbulence, chemical kinetics, and residual gases that are difficult to fully characterize deterministically.",
+      "original_text": {
+        "1": "Controlling stochastic cyclic variability in some ICE combustion modes such as homogeneous charge compression ignition (HCCI) or reactivity controlled compression ignition (RCCI) is an existing challenge that has not been completely addressed by conventional ICE control approaches.",
+        "2": "Predicting engine cyclic variability [155,206–208], combustion stability and misfire [218–221] are still challenging due to stochastic and the complex combustion phenomena involved."
+      },
+      "type": "reasoning",
+      "difficulty": 4,
+      "topic": "cyclic_variability"
+    },
+    {
+      "question_text": "What characteristic of Self-Organizing Maps (SOM) makes them effective for visualizing high-dimensional ICE sensor data?",
+      "standard_answer": "SOMs project high-dimensional data onto low-dimensional grids preserving topological relationships through competitive learning, enabling intuitive visualization of sensor correlations.",
+      "original_text": {
+        "1": "The fundamental difference between SOM and conventional ANN is that unlike conventional ANNs that use error reduction cost functions, SOMs use competitive learning approaches to define the most important neurons associated with each input data.",
+        "2": "SOM has the best performance in low dimension data visualization compared to the other approaches."
+      },
+      "type": "concept",
+      "difficulty": 3,
+      "topic": "SOM_visualization"
+    },
+    {
+      "question_text": "How does distributed meta-regression address the cold-start problem in ICE ML models?",
+      "standard_answer": "It leverages knowledge transfer from peer models via connected vehicle networks, providing initial parameter estimates when limited local data exists.",
+      "original_text": {
+        "1": "ML helps developing efficient, accurate, and realtime peer-to-peer learning techniques to monitor the performance, collect/process data, and learn from a large number of similar ICEs connected to a network [54].",
+        "2": "This can be used to develop highly accurate and adaptive ICE models, as well as new ICE fault detection methods due to the availability of large sizes of training data."
+      },
+      "type": "application",
+      "difficulty": 4,
+      "topic": "distributed_learning"
+    },
+    {
+      "question_text": "Explain why ANN-based grey-box modeling outperforms pure data-driven approaches for transient emission prediction.",
+      "standard_answer": "Grey-box models combine physics-based constraints with ANN flexibility, maintaining physical plausibility during transients where pure data-driven models may extrapolate poorly.",
+      "original_text": {
+        "1": "ML-based grey-box approach is proposed as a solution that combines the benefits from physics-based and ML-based models to provide robust and high fidelity solutions for ICE modeling and control challenges.",
+        "2": "This leads to further performance improve of ICEs [54]. For example, ML helps developing efficient, accurate, and realtime peer-to-peer learning techniques to monitor the performance, collect/process data, and learn from a large number of similar ICEs connected to a network [54]."
+      },
+      "type": "reasoning",
+      "difficulty": 5,
+      "topic": "grey_box_modeling"
+    },
+    {
+      "question_text": "What architectural feature enables Long Short-Term Memory (LSTM) networks to model ICE transient behaviors better than standard RNNs?",
+      "standard_answer": "LSTM's gated cell state maintains long-term dependencies by selectively remembering/forgetting temporal patterns through input, output, and forget gates.",
+      "original_text": {
+        "1": "Different ANN are classified as feedforward [117] while others implement internal feedback [118] depending on the data process flow through the network and involving system dynamics.",
+        "2": "ML can be used to develop augmented ICE control (e.g. optimal, adaptive) methods [52] and can help improving the performance of the available physics-based models through grey-box (also called hybrid) modeling approaches [53]."
+      },
+      "type": "concept",
+      "difficulty": 4,
+      "topic": "LSTM_architecture"
+    },
+    {
+      "question_text": "Why is Gaussian Process regression particularly suitable for modeling combustion phasing (CA50) cyclic variability?",
+      "standard_answer": "GPs naturally capture stochastic variations through probabilistic predictions while quantifying prediction uncertainty, matching the statistical nature of cyclic variability.",
+      "original_text": {
+        "1": "GP is also an effective classification/regression tool for combustion processes that exhibit Gaussian distributions. For instance, GP was used in our previous work [155] for classifying the regions of combustion phasing (CA50) cyclic variability.",
+        "2": "GPs have been used for engine calibration [59], modeling [60,61], and design optimization [154], but are infrequently used for ICE applications compared to the other ML methods discussed in this paper since GPs are not suitable for large data sets."
+      },
+      "type": "reasoning",
+      "difficulty": 4,
+      "topic": "GP_applications"
+    },
+    {
+      "question_text": "Calculate the theoretical computational complexity ratio between training a GP with 1000 vs 2000 data points.",
+      "standard_answer": "Complexity ratio = (2000³)/(1000³) = 8, indicating an 8-fold increase in computational cost despite only doubling the dataset size.",
+      "original_text": {
+        "1": "The computational cost of GP increases by O (n3) and its storage requirement increases by O (n2) (where n is the number of points being interpolated)."
+      },
+      "type": "calculation",
+      "difficulty": 3,
+      "topic": "GP_complexity"
+    },
+    {
+      "question_text": "How does Reinforcement Learning's reward mechanism differ from supervised learning's error minimization in ICE control?",
+      "standard_answer": "RL maximizes cumulative rewards through sequential decision-making, while SL minimizes instantaneous prediction errors without considering long-term control consequences.",
+      "original_text": {
+        "1": "The total reward that an agent can receive from a series of actions is typically called 'the value' [179].",
+        "2": "In RL the 'agent' is not directly forced to take an action, but it is guided to discover the most rewarded actions based on a predefined criteria also called 'the policy' [180]."
+      },
+      "type": "concept",
+      "difficulty": 3,
+      "topic": "RL_vs_SL"
+    },
+    {
+      "question_text": "Explain why Support Vector Machines require fewer training samples than ANNs for comparable ICE emission prediction accuracy.",
+      "standard_answer": "SVMs maximize margin between classes using support vectors, providing better generalization from limited data, whereas ANNs require dense sampling to learn complex mappings.",
+      "original_text": {
+        "1": "SVM is capable of generating highly accurate predictions based on a relatively small training data set and is able to model complex and non-linear relations [133,134].",
+        "2": "SVM regression is an appropriate technique that can be used for modeling complex combustion phenomena such as emission formation modelling, ringing intensity and combustion noise, knock, autoignition, etc."
+      },
+      "type": "reasoning",
+      "difficulty": 4,
+      "topic": "SVM_efficiency"
+    }
+  ]
+}

@@ -1,0 +1,210 @@
+{
+  "questions": [
+    {
+      "question_text": "Explain why ANN models are particularly suitable for capturing complex nonlinear phenomena in ICE combustion processes.",
+      "standard_answer": "ANN models excel at capturing complex nonlinear ICE phenomena due to their ability to simulate intricate input-output relationships through interconnected neurons with nonlinear transfer functions. Their multi-layer architecture allows modeling of highly nonlinear combustion kinetics, turbulent mixing, and emission formation processes without requiring explicit physical understanding of the underlying mechanisms.",
+      "original_text": {
+        "1": "ANN is made of many calculating nodes (called neurons) that are connected to each other to simulate complex nonlinear system behaviour. Neural networks include input and output layers, as well as hidden neighboring layers that are interconnected by different weights.",
+        "2": "The hidden layer processes the information coming from the input layer, and then its neurons create required combinations to reproduce the relationship between the input and output spaces."
+      },
+      "type": "reasoning",
+      "difficulty": 4,
+      "topic": "machine_learning_applications"
+    },
+    {
+      "question_text": "How does ELM differ from traditional ANN in terms of weight initialization and training methodology?",
+      "standard_answer": "ELM differs fundamentally in randomly initializing and fixing hidden layer weights/biases while analytically calculating output weights via Moore-Penrose inversion, unlike ANNs which iteratively adjust all weights through backpropagation. This gives ELM faster training speed and eliminates local minima trapping.",
+      "original_text": {
+        "1": "Unlike the traditional ANNs, ELM analytically calculates the output weights by an inversion method called Moore-Penrose.",
+        "2": "The hidden layer biases and the input weights of SLFNs can be selected randomly and then they can be kept fixed for the rest of the learning process."
+      },
+      "type": "concept",
+      "difficulty": 3,
+      "topic": "machine_learning_methods"
+    },
+    {
+      "question_text": "Calculate the activation function output (yj) for a neuron with inputs [0.5, -0.3, 1.2], weights [1.2, -0.8, 0.5], and sigmoid transfer function.",
+      "standard_answer": "yj = f(ΣxiWi) = f(0.5*1.2 + -0.3*-0.8 + 1.2*0.5) = f(0.6 + 0.24 + 0.6) = f(1.44) = 1/(1+e^-1.44) ≈ 0.808",
+      "original_text": {
+        "1": "In an ANN, the input signals are multiplied by the adjustable weights and combined (summed) and then go through a transfer function (typically Sigmoid function) to form the desired output."
+      },
+      "type": "calculation",
+      "difficulty": 3,
+      "topic": "neural_networks"
+    },
+    {
+      "question_text": "Why does SVM regression require careful selection of both regularization parameter and insensitivity parameter ε?",
+      "standard_answer": "The regularization parameter controls the trade-off between model complexity and training error minimization, while ε defines the margin tolerance where prediction errors are not penalized. Proper balancing prevents overfitting while maintaining prediction accuracy.",
+      "original_text": {
+        "1": "Defining this regularization parameter requires addition effort to the model training and validation process. In addition, SVM regression requires the insensitivity parameter ε.",
+        "2": "SVM regression is an appropriate technique that can be used for modeling complex combustion phenomena such as emission formation modelling, ringing intensity and combustion noise, knock, autoignition, etc."
+      },
+      "type": "reasoning",
+      "difficulty": 4,
+      "topic": "support_vector_machines"
+    },
+    {
+      "question_text": "Compare the probabilistic prediction capabilities of RVM versus SVM for combustion diagnostics.",
+      "standard_answer": "RVMs provide full probabilistic predictions through Bayesian inference and hyperparameter optimization, enabling better uncertainty quantification for diagnostic decisions. SVMs only make point predictions, making them less suitable for probabilistic fault detection scenarios.",
+      "original_text": {
+        "1": "RVM's prediction capability is similar to the SVM, but it also provides a distribution prediction.",
+        "2": "Due to their high capability of distribution predictions, RVMs are an ideal choice for ICE data classification, particularly when the boundary between classes are narrow."
+      },
+      "type": "concept",
+      "difficulty": 4,
+      "topic": "probabilistic_modeling"
+    },
+    {
+      "question_text": "Derive why GP computational cost scales as O(n³) with training data size n.",
+      "standard_answer": "The cubic scaling arises from the need to compute and invert the n×n covariance matrix during training. Matrix inversion operations have O(n³) complexity, becoming computationally prohibitive for large datasets.",
+      "original_text": {
+        "1": "The computational cost of GP increases by O(n³) and its storage requirement increases by O(n²) (where n is the number of points being interpolated). This leads to high computational costs for extremely large data sets."
+      },
+      "type": "calculation",
+      "difficulty": 5,
+      "topic": "gaussian_processes"
+    },
+    {
+      "question_text": "What makes k-means clustering potentially unsuitable for complex ICE fault detection scenarios?",
+      "standard_answer": "K-means assumes spherical clusters and requires predefined cluster numbers, making it inflexible for detecting complex fault patterns with irregular boundaries or unknown cluster counts often found in ICE sensor data.",
+      "original_text": {
+        "1": "Despite the advantages of the k-means clustering algorithm, it is not always easy to predict the appropriate number of clusters. In addition, k-means is very sensitive to the order and the scale of the training data points."
+      },
+      "type": "reasoning",
+      "difficulty": 3,
+      "topic": "unsupervised_learning"
+    },
+    {
+      "question_text": "Explain how SOM neural networks differ fundamentally from supervised ANNs in their learning approach.",
+      "standard_answer": "SOMs use competitive learning via neighborhood functions to preserve topological properties of input data, unlike supervised ANNs that minimize error functions through backpropagation. This makes SOMs better suited for visualization and clustering of high-dimensional ICE data.",
+      "original_text": {
+        "1": "The fundamental difference between SOM and conventional ANN is that unlike conventional ANNs that use error reduction cost functions, SOMs use competitive learning approaches to define the most important neurons associated with each input data."
+      },
+      "type": "concept",
+      "difficulty": 4,
+      "topic": "self_organizing_maps"
+    },
+    {
+      "question_text": "Calculate the required number of support vectors when using SVM for classifying 5000 engine operating points into 3 combustion modes.",
+      "standard_answer": "The number of support vectors grows with training data complexity rather than size alone, but typically ranges between 10-30% of training data. For 5000 points, expect approximately 500-1500 support vectors.",
+      "original_text": {
+        "1": "The number of required support vectors increases as the size of the training data set grows."
+      },
+      "type": "calculation",
+      "difficulty": 3,
+      "topic": "support_vector_machines"
+    },
+    {
+      "question_text": "Why does model-based RL offer better sample efficiency than model-free RL for ICE control applications?",
+      "standard_answer": "Model-based RL leverages prior knowledge encoded in the model to guide exploration, reducing risky trial-and-error learning episodes needed to discover optimal control policies, which is crucial for preventing engine damage.",
+      "original_text": {
+        "1": "Due to having more information about the system in advance, model-based RLs are more sample efficient than model-free RL.",
+        "2": "This reduces the risk of damaging the engine due to knock and also reduces the risk of damaging the engine after treatment systems due to engine misfires while the RL algorithm is doing trial and errors."
+      },
+      "type": "reasoning",
+      "difficulty": 4,
+      "topic": "reinforcement_learning"
+    },
+    {
+      "question_text": "Compare the advantages of fuzzy c-means versus k-means for combustion mode classification.",
+      "standard_answer": "FCM's membership functions enable soft classification boundaries better suited for transitional combustion modes (like HCCI-SI transitions), whereas k-means' hard clustering struggles with overlapping operating regions.",
+      "original_text": {
+        "1": "Fuzzy C-Means (FCM) is another commonly used unsupervised clustering techniques which unlike k-means can assign one data point to more than one cluster using a so-called a 'Membership Function'."
+      },
+      "type": "concept",
+      "difficulty": 3,
+      "topic": "clustering_methods"
+    },
+    {
+      "question_text": "Derive the policy update equation for a Q-learning based ICE controller using Bellman optimality.",
+      "standard_answer": "Q(s,a) ← Q(s,a) + α[r + γmaxₐ'Q(s',a') - Q(s,a)], where α is learning rate, γ is discount factor, s/s' are states, a/a' are actions (e.g. injection parameters), and r is reward (e.g. emission reduction).",
+      "original_text": {
+        "1": "The role of the Q learning algorithm is rewarding the actions based on the effects on the environment."
+      },
+      "type": "calculation",
+      "difficulty": 5,
+      "topic": "reinforcement_learning"
+    },
+    {
+      "question_text": "Explain why RKHS-based methods can efficiently represent nonlinearities in connected vehicle ICE modeling.",
+      "standard_answer": "RKHS provides rigorous mathematical framework for kernel-based approximation that scales well with high-dimensional ICE data while maintaining ability to capture complex nonlinearities across distributed vehicle networks.",
+      "original_text": {
+        "1": "The proposed RKHS-based algorithm efficiently represents system nonlinearities and is scalable to include a large number of impact factors such as fuel quality, intake air humidity, ambient pressure and temperature that affect ICE combustion."
+      },
+      "type": "reasoning",
+      "difficulty": 4,
+      "topic": "meta_learning"
+    },
+    {
+      "question_text": "How does UGM/GMM overcome limitations of k-means for engine noise-based diagnostics?",
+      "standard_answer": "UGM's Gaussian mixture components better model the continuous probability distributions of acoustic emission features, enabling more accurate detection of subtle combustion anomalies compared to k-means' discrete clustering.",
+      "original_text": {
+        "1": "UGM classifies the data points that belong to each distribution into the corresponding groups which results in soft clustering of the data points. This makes UGMs more suitable for unsupervised ICE applications that involve classes with less distinguishable boundaries such as unsupervised engine combustion diagnostics using engine noise measurements."
+      },
+      "type": "concept",
+      "difficulty": 4,
+      "topic": "gaussian_mixtures"
+    },
+    {
+      "question_text": "Calculate the hidden layer output h(x) for an ELM with 50 neurons using randomly initialized weights ai ∼ U(-1,1), biases bi ∼ N(0,0.1), and ReLU activation.",
+      "standard_answer": "For input x, h(x) = [max(0,a₁·x+b₁), ..., max(0,a₅₀·x+b₅₀)]. Each component is the ReLU-activated dot product of input with random weight vector plus bias.",
+      "original_text": {
+        "1": "The hidden layer biases and the input weights of SLFNs can be selected randomly and then they can be kept fixed for the rest of the learning process."
+      },
+      "type": "calculation",
+      "difficulty": 3,
+      "topic": "extreme_learning_machines"
+    },
+    {
+      "question_text": "Why does combustion noise prediction require more sophisticated ML approaches than conventional regression?",
+      "standard_answer": "Combustion noise arises from high-frequency pressure oscillations affected by complex wave dynamics and combustion instabilities, requiring ML models capable of capturing nonlinear temporal patterns and spatial gradients.",
+      "original_text": {
+        "1": "Combustion noise, and ringing intensity are two other engine characteristics that are hard to be accurately predicted for broad engine speed and load conditions. This is because capturing all the physical phenomena that affect the high frequency changes of in-cylinder pressure waves is very complex."
+      },
+      "type": "reasoning",
+      "difficulty": 4,
+      "topic": "combustion_modeling"
+    },
+    {
+      "question_text": "Compare computational requirements of ANN vs SVM for real-time combustion phasing prediction.",
+      "standard_answer": "SVMs generally require less computation during inference (just kernel evaluations for support vectors) compared to ANNs (full forward passes), making SVMs potentially better suited for real-time CA50 prediction on resource-constrained ECUs.",
+      "original_text": {
+        "1": "ANN requires large training data size; It is likely to converge to local minima; Overfitting risk is high",
+        "2": "SVM is capable of generating highly accurate predictions based on a relatively small training data set and is able to model complex and non-linear relations."
+      },
+      "type": "concept",
+      "difficulty": 3,
+      "topic": "real-time_prediction"
+    },
+    {
+      "question_text": "Derive the ELM output weight solution β given hidden layer matrix H and target outputs T.",
+      "standard_answer": "β = H⁺T, where H⁺ is the Moore-Penrose pseudoinverse (H⁺ = (HᵀH)⁻¹Hᵀ for full-rank H). This minimizes ‖Hβ - T‖₂ without iterative optimization.",
+      "original_text": {
+        "1": "ELM analytically calculates the output weights by an inversion method called Moore-Penrose."
+      },
+      "type": "calculation",
+      "difficulty": 5,
+      "topic": "extreme_learning_machines"
+    },
+    {
+      "question_text": "Explain how meta-learning could optimize hyperparameters for HCCI combustion modeling.",
+      "standard_answer": "Meta-learning could automate selection of optimal kernel functions/architectures by learning from previous modeling attempts across different operating conditions, reducing manual tuning efforts for HCCI's complex nonlinearities.",
+      "original_text": {
+        "1": "Meta-learning is the process of finding these unknowns to develop the most accurate learning algorithm to simulate complex combustion phenomena."
+      },
+      "type": "reasoning",
+      "difficulty": 4,
+      "topic": "meta_learning"
+    },
+    {
+      "question_text": "Why are distribution predictions crucial for probabilistic combustion diagnostics?",
+      "standard_answer": "Quantifying prediction uncertainty enables robust decision-making under noisy sensor data and stochastic combustion variations, reducing false alarms while maintaining detection sensitivity.",
+      "original_text": {
+        "1": "Estimating the conditional distribution to capture the prediction uncertainty is often useful. However, SVMs make point predictions rather than distribution predictions."
+      },
+      "type": "concept",
+      "difficulty": 3,
+      "topic": "probabilistic_diagnostics"
+    }
+  ]
+}

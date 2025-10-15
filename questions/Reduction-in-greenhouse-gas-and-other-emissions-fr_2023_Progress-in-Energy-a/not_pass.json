@@ -1,0 +1,38 @@
+[
+  {
+    "question_text": "Using the concept of Well-to-Wake (WtW) emissions, compare the lifecycle GHG impact of e-methanol versus fossil marine diesel. Include the role of renewable electricity in hydrogen production and the implications for carbon neutrality based on the WtW GHG emissions factors provided in the paper.",
+    "standard_answer": "The WtW GHG emissions for e-methanol and fossil marine diesel are calculated as: WtW = upstream (WtT) + downstream (TtW). For e-methanol, upstream includes electrolysis for H2 and CO2 capture. The efficiency η_electrolysis ≈ 60–70%, so H2 production energy = 55 MJ/kg H2. For e-methanol synthesis: CO2 + 3H2 → CH3OH + H2O. With wind electricity (7–56 gCO2eq/kWh), WtW ≈ 5–20 gCO2eq/MJ (Table 1). Fossil marine diesel (HFO) WtW ≈ 99 gCO2eq/MJ. E-methanol WtW ≈ 18 gCO2eq/MJ [1]. Fossil diesel WtW ≈ 73 gCO2eq/MJ for road transport [72,73], but for marine HFO ≈ 99 gCO2eq/MJ. Carbon neutrality requires WtW ≈ 0. E-methanol's upstream dominates: if renewable electricity has 7 gCO2eq/kWh, CO2eq for e-methanol ≈ 7 × (55/3.6) ≈ 107 gCO2eq/MJ without CCS. For renewable H2 (green), upstream ≈ 4.9 gCO2/MJ [78]. Thus, e-methanol can achieve carbon neutrality only if the electricity carbon intensity is negligible. E-methanol's downstream TtW emissions are similar to fossil methanol but with zero upstream fossil carbon. The carbon emitted was captured from air (CCU), closing the carbon loop. The calculation: CO2eq_e-methanol = (E_H2 × CI_elec) + CO2_capture_energy). Total: WtW = 18 + (captured CO2 emission). The synthesis reaction's thermodynamic efficiency η_synthesis ≈ 70%. Thus, lifecycle GHG = Σ(stages energy × emission factor). For fossil diesel, upstream ≈ 87 gCO2eq/MJ. The difference highlights the importance of using renewable electricity to achieve true carbon neutrality, as fossil diesel emits 99 gCO2eq/MJ, so e-methanol reduces emissions by ≈80%.",
+    "original_text": {
+      "1": "Carbon-neutral fuels, including low-carbon and carbon-negative fuels, from biogenic or non-biogenic origin (biomass, waste, renewable hydrogen) could resemble current marine fuels (diesel-type, methane and methanol).",
+      "type": "calculation",
+      "difficulty": 4,
+      "topic": "energy_systems"
+    },
+    "question_id": "batch_detail_q_ac6aee09",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Reduction-in-greenhouse-gas-and-other-emissions-fr_2023_Progress-in-Energy-a",
+      "paper_title": "Reduction-in-greenhouse-gas-and-other-emissions-fr_2023_Progress-in-Energy-a"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T17:59:55.737563",
+      "batch_processing": true,
+      "answer_length": 1563
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "该问题涉及船用燃料的Well-to-Wake排放分析、e-methanol生命周期碳排放计算、电解效率、可再生能源制氢等，需要能源系统、燃烧工程和温室气体核算等专业领域知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在数据不一致和缺乏引用支持的问题：e-methanol的WtW排放值出现多个矛盾数据（5-20、18、107 gCO2eq/MJ），且关键的电解效率和排放因子计算缺乏原文引用支持。建议统一数据并确保所有关键参数都有明确的引用来源"
+    }
+  }
+]

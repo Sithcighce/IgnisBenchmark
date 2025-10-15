@@ -1,0 +1,38 @@
+[
+  {
+    "question_text": "基于多孔介质传输理论，推导生物质颗粒热解过程中的质量守恒方程，并解释为什么达西对流比分子扩散快几个数量级。",
+    "standard_answer": "在生物质颗粒热解过程中，质量传输由达西对流和分子扩散控制。达西定律：v = -κ/μ·∇p，其中κ为渗透率。对流通量远大于扩散通量。具体计算：特征扩散时间 τ_diff = H²/D，特征对流时间 τ_conv = μgH²/(κsρp0）和 Courant 对流时间 τ_c = H/v_max。如表4所示，对于典型固定床条件，τ_conv ≈ 10⁻⁷ s，而τ_diff ≈ 10⁻¹ s（假设H=1 mm, D=10⁻⁵ m²/s）。由于生物质颗粒的典型孔尺寸（~10 μm）大于气体分子平均自由程，因此 Knudsen 扩散可忽略。佩克莱特数 Pe = vH/D >> 1，证实对流主导。这解释了为什么在快速热解条件下，挥发物能迅速从颗粒中逸出，从而抑制二次反应。",
+    "original_text": {
+      "1": "The characteristic time of Courant convection arises solely from the continuity equation...characteristic time of Darcy convection is many orders of magnitude lower than the one for diffusion.",
+      "type": "calculation",
+      "difficulty": 5,
+      "topic": "fluid_mechanics"
+    },
+    "question_id": "batch_detail_q_08ddcbd7",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Reaction-mechanisms-and-multi-scale-modelling-o_2016_Progress-in-Energy-and-",
+      "paper_title": "Reaction-mechanisms-and-multi-scale-modelling-o_2016_Progress-in-Energy-and-"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T17:04:25.152046",
+      "batch_processing": true,
+      "answer_length": 337
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及多孔介质传输理论、达西对流、分子扩散、佩克莱特数等概念，需要燃烧、传热、流体力学和能源工程领域的专业知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "unsupported",
+        "factual_error"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案缺少质量守恒方程的推导，τ_conv公式和数值计算缺乏来源支持，且时间尺度对比与原文引用存在矛盾，需要补充推导过程和验证计算准确性"
+    }
+  }
+]

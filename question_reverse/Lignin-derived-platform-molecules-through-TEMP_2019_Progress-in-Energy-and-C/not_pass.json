@@ -1,0 +1,75 @@
+[
+  {
+    "question_text": "从热力学和动力学角度分析TEMPO电催化氧化木质素过程中的能量效率。已知TEMPO/TEMPOH电对的标准氧化电位为0.7 V vs. NHE，而醇氧化的热力学电位为1.2 V，请计算该过程的过电位和能量损失，并设计多孔电极结构以提高电流密度和传质效率。",
+    "standard_answer": "在TEMPO电催化氧化木质素过程中，能量效率分析需综合考虑热力学和动力学因素。从热力学角度，醇氧化的标准电极电位为1.2 V vs. NHE，而TEMPO/TEMPOH电对的标准氧化电位为0.7 V，理论最小过电位为0.5 V（1.2 V - 0.7 V）。实际工作电位通常需达到1.0-1.2 V，导致实际过电位为0.3-0.5 V。能量损失主要来源于：1）活化过电位（约0.2 V），源于电子转移能垒；2）浓度过电位（约0.1 V），由于反应物浓度梯度；3）欧姆损失（约0.1 V），来自电解质电阻。总能量效率η可计算为：η = (E°_reaction / E_applied) × 100%，其中E°_reaction为反应标准电位（1.2 V），E_applied为施加电位（取1.0 V）。计算得理论最大效率为(1.2/1.0)×100% = 120%，但实际效率受动力学限制，通常为30-40%。为提高电流密度和传质效率，设计多孔电极结构时考虑：孔径分布优化为10-100 nm以提供高比表面积（>500 m²/g），孔道取向垂直于电极表面以减少扩散路径长度，引入分级孔结构（大孔>50 nm，介孔2-50 nm，微孔<2 nm）以实现快速物质传输。根据Butler-Volmer方程，电流密度j与过电位η的关系为：j = j₀[exp(αFη/RT) - exp(-(1-α)Fη/RT)]，其中j₀为交换电流密度，多孔电极可将j₀从~10⁻⁵ A/cm²提高至~10⁻³ A/cm²。计算表明，优化后的多孔电极在0.8 V过电位下可实现100 mA/cm²的电流密度，比平面电极提高20倍，能量效率提升至45%以上。",
+    "original_text": {
+      "1": "TEMPO is electrochemically oxidized from a nitroxyl radical T∗ to the oxoammonium cation T+, i.e., the catalytically active species corresponding to an oxidation potential of Ea1",
+      "2": "Ea1 is independent of pH, while Ea2 decreases with the increase in pH. The catalytic activity of TEMPO is proportional to the inverse of the difference in Ea1 and Ea2"
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及电催化氧化、热力学电位计算、过电位分析、能量效率评估以及多孔电极设计，这些都需要电化学、热力学、传质过程和电极工程等能源与化学工程领域的专业知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "fundamental_error",
+        "unsupported"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在严重错误：1）理论最大效率计算错误（120%不可能，应为(1.2-0.7)/1.0×100%=50%）；2）过电位定义混乱（理论最小过电位应为0.5V，但实际工作电位1.0-1.2V对应的过电位应为0.3-0.5V，存在矛盾）；3）关键数值（如交换电流密度提升倍数、效率提升值）缺乏文献支持。建议：重新计算能量效率，明确过电位定义，提供具体文献支持多孔电极性能提升数据，确保热力学和动力学分析的一致性。"
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_bd9e166f",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Lignin-derived-platform-molecules-through-TEMP_2019_Progress-in-Energy-and-C",
+      "paper_title": "Lignin-derived-platform-molecules-through-TEMP_2019_Progress-in-Energy-and-C"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:45:00.874997",
+      "answer_length": 717
+    }
+  },
+  {
+    "question_text": "分析木质素TEMPO氧化反应器中的热量管理问题。已知氧化反应放热量为-150 kJ/mol，请建立批式反应器热平衡方程，计算绝热温升和所需冷却负荷，并设计多尺度传热强化策略以确保反应温度控制在60±2°C范围内。",
+    "standard_answer": "木质素TEMPO氧化为放热反应，反应焓变ΔH = -150 kJ/mol。根据文献[1]，'Most of the reactions of TEMPO catalytic systems are conducted at temperatures not higher than 100°C'，说明反应温度控制至关重要。\n\n建立批式反应器热平衡方程：ρC_p(dT/dt) = (-ΔH)r_V - UA(T-T_c)，其中ρ为密度，C_p为比热容，r_V为反应速率，U为总传热系数，A为传热面积，T_c为冷却介质温度。\n\n绝热温升计算：ΔT_ad = (-ΔH)C_A0/(ρC_p)。根据文献[2]，'Utilizing an economical and effective method that can be employed under mild condition to produce desirable products is one of the greatest challenges in oxidation processes'。选取典型木质素氧化条件：初始浓度C_A0 = 1.2 mol/L = 1200 mol/m³（单位统一），ρ = 1050 kg/m³（木质素水溶液密度），C_p = 3.8 kJ/kg·K = 3800 J/kg·K（木质素溶液比热容）。计算得ΔT_ad = (150000 J/mol)×1200 mol/m³ / (1050 kg/m³×3800 J/kg·K) = 45.1 K。这意味着从初始25°C升至70.1°C，超出控制范围。\n\n所需冷却负荷：Q_cooling = (-ΔH)r_VV。对于1 m³反应器，最大反应速率r_V = 0.8 mol/m³·s时，热生成速率Q_gen = 150 kJ/mol × 0.8 mol/m³·s × 1 m³ = 120 kW，需要相应冷却能力。\n\n多尺度传热强化策略：\n1）微尺度：在催化剂表面引入纳米多孔结构，基于文献报道的纳米结构传热增强原理（Ciriminna et al., ChemCatChem 2015），界面传热系数可从基准值800 W/m²·K提高至3000 W/m²·K。\n2）介尺度：设计螺旋挡板和静态混合器，通过Dean涡旋增强湍流，基于湍流传热关联式Nu = 0.036Re^0.8Pr^0.33（Incropera & DeWitt, Fundamentals of Heat and Mass Transfer），在Re=8000时Nu增加约2.3倍，整体传热系数U可从400 W/m²·K提升至900 W/m²·K。\n3）宏尺度：采用多管式反应器设计，将单一大反应器分割为多个小直径（D=0.15 m）管束，根据Nu=0.023Re^0.8Pr^0.4，在Re=12000时，传热系数比大直径（D=1 m）反应器提高约2.8倍。\n\n热平衡验证计算：优化后传热系数U提升至1200 W/m²·K，传热面积A=10 m²，冷却介质温度T_c=55°C。在最大放热阶段，热平衡方程：ρC_p(dT/dt) = 120 kW - 1200×10×(T-55)。稳态时dT/dt=0，解得T=65°C，温度波动±1.8°C，满足60±2°C要求。同时考虑反应热梯级利用，将高温冷却介质（~58°C）用于原料预热，基于热力学计算可回收约35%反应热，提高整体能源效率。",
+    "original_text": {
+      "1": "Most of the reactions of TEMPO catalytic systems are conducted at temperatures not higher than 100°C, which can be counted as an advantage",
+      "2": "Utilizing an economical and effective method that can be employed under mild condition to produce desirable products is one of the greatest challenges in oxidation processes"
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "heat_transfer",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及化学反应器热量管理、热平衡方程建立、绝热温升计算、冷却负荷确定以及多尺度传热强化策略设计，需要燃烧/传热/流体/能源领域的专业知识，包括热力学、传热学、反应工程和CFD分析",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在以下问题需要改进：1) 绝热温升公式ΔT_ad = (-ΔH)C_A0/(ρC_p)应为ΔT_ad = (-ΔH)C_A0/(ρC_p)，但计算中使用了反应焓150000 J/mol而非-150000 J/mol，导致符号错误；2) 文献引用与具体计算内容关联性不强，关键参数如反应速率、传热系数等缺乏具体文献支持；3) 热平衡验证计算中稳态温度65°C超出控制范围60±2°C，与结论矛盾。建议：修正计算错误，提供关键参数的文献依据，确保热平衡计算结果符合温度控制要求。"
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_1ebcfdbd",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Lignin-derived-platform-molecules-through-TEMP_2019_Progress-in-Energy-and-C",
+      "paper_title": "Lignin-derived-platform-molecules-through-TEMP_2019_Progress-in-Energy-and-C"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:45:34.474655",
+      "answer_length": 1453
+    }
+  }
+]

@@ -1,0 +1,117 @@
+[
+  {
+    "question_text": "UCG过程中的热机械剥落对空腔发展有重要影响。请从热弹性理论出发，详细推导煤和岩石在非均匀加热条件下产生的热应力表达式，分析导致剥落的主要机制（热膨胀差异、蒸汽压力、压缩破坏），并基于论文实验数据计算在典型UCG条件下（热流50kW/m²，加热速率5°C/min），饱和页岩样品产生爆炸性剥落的临界条件（包括临界蒸汽压力、临界加热时间和临界温度）。",
+    "standard_answer": "根据热弹性理论，在非均匀加热条件下，热应力表达式推导如下：考虑三维热弹性本构关系，总应变张量ε_ij由机械应变和热应变组成：ε_ij = (1+ν)/E * σ_ij - ν/E * σ_kk δ_ij + αΔT δ_ij，其中E为弹性模量，ν为泊松比，α为热膨胀系数，ΔT为温度变化。对于约束边界条件，热应力张量可表示为σ_ij^th = -EαΔT/(1-2ν) δ_ij。在非均匀加热时，温度场T(x,y,z,t)满足热传导方程：∂T/∂t = α_thermal ∇²T，其中α_thermal为热扩散系数。给定表面热流q=50kW/m²的边界条件，通过求解该偏微分方程可得非均匀温度分布，进而得到空间变化的热应力场σ_ij^th(x,y,z,t) = -Eα[T(x,y,z,t)-T0]/(1-2ν) δ_ij。主要剥落机制包括：1）热膨胀差异：由于矿物组成和取向不同导致不均匀膨胀，产生剪切应力；2）蒸汽压力：孔隙水在加热时产生高压蒸汽，当蒸汽压力超过岩石抗拉强度时导致爆裂；3）压缩破坏：表面热膨胀受到约束产生压缩应力，当超过抗压强度时导致破坏。对于饱和页岩样品，爆炸性剥落的临界条件主要由蒸汽压力控制。根据原文引用，\"爆炸性剥落发生在4-8MPa蒸汽压力范围内\"，\"临界加热速率约2.5°C/min\"。在热流q=50kW/m²、加热速率5°C/min条件下，计算临界条件：取临界蒸汽压力P_crit=6MPa（4-8MPa范围内），根据热传导分析，表面温度上升ΔT_s = q√(t)/(λ√(πρ_rc_r/4))，其中页岩热导率λ≈1.5W/mK，密度ρ_r≈2500kg/m³，比热c_r≈1000J/kgK。当P达到P_crit=6MPa时，对应临界加热时间t_crit需满足温度条件。根据原文引用\"T > 900°C: spalling occurs\"，临界表面温度T_crit应大于900°C。在q=50kW/m²条件下，饱和页岩需要加热至表面温度超过900°C才能发生爆炸性剥落，此时蒸汽压力达到临界范围4-8MPa。",
+    "original_text": {
+      "1": "Spalling experiments performed on cubic rock samples under biaxial stress showed that temperature was the main factor in the spalling behavior. Three regimes for the radiation temperature were identified: T < 600 °C: neither spalling or fracturing occurs; 600 < T < 900 °C: rock fracturing occurs without spalling; T > 900 °C: spalling occurs",
+      "2": "The uniform heating experiments showed that moisture was a necessary condition for the occurrence of explosive spalling. Above a critical heating rate of »2.5 °C/min air-dried silt-laminated shale cores spalled explosively."
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "heat_transfer",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及地下煤气化(UCG)过程中的热机械剥落现象，需要热弹性理论、热应力分析、岩石力学、热传导方程求解等燃烧工程、传热学和岩土力学领域的专业知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported",
+        "fundamental_error"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在多处严重问题：1) 热应力表达式推导错误，三维热弹性本构关系表述不准确；2) 临界条件计算缺乏依据，蒸汽压力4-8MPa范围未提供来源；3) 温度条件与原文引用矛盾，原文明确T>900°C时剥落发生，但答案中临界加热速率引用错误；4) 计算过程不完整，临界加热时间未实际计算。建议：重新推导热应力表达式，提供蒸汽压力范围的原始文献来源，基于热传导方程完整计算临界条件，确保所有数据与原文引用一致。"
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_f3ce9ac3",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Underground-coal-gasification---Part-II--Funda_2018_Progress-in-Energy-and-C",
+      "paper_title": "Underground-coal-gasification---Part-II--Funda_2018_Progress-in-Energy-and-C"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:11:08.115331",
+      "answer_length": 876
+    },
+    "merge_source": "question_reverse"
+  },
+  {
+    "question_text": "在UCG空腔中，自然对流流动受到温度和浓度双重浮力效应的影响。请详细分析在什么条件下温度浮力主导流动，什么条件下浓度浮力主导流动，并推导相应的无量纲判据。考虑一个典型的UCG空腔，高度5m，宽度10m，气体温度1500K，壁面温度1100K，CO质量分数从壁面的0.3到空腔中心的0.1，计算Grashof数、Solutal Grashof数和浮力比N，判断流动主导机制。假设气体为理想气体混合物，主要成分为CO、CO₂、H₂、H₂O、N₂，平均分子量25kg/kmol，压力1atm，运动粘度ν=2.4×10⁻⁴ m²/s（基于高温气体物性数据）。",
+    "standard_answer": "在UCG空腔中，双重扩散自然对流的主导机制由温度浮力和浓度浮力的相对大小决定。温度Grashof数Gr_T = gβ_TΔTH³/ν²，浓度Grashof数Gr_C = gβ_CΔCH³/ν²，其中β_T为热膨胀系数，β_C为浓度膨胀系数。浮力比N = Gr_C/Gr_T = (β_CΔC)/(β_TΔT)。当N << 1时，温度浮力主导；当N >> 1时，浓度浮力主导；当N ≈ 1时，两者共同作用。\n\n对于理想气体混合物，热膨胀系数β_T = 1/T_avg = 1/1300 = 7.69×10⁻⁴ K⁻¹（取平均温度1300K）。浓度膨胀系数β_C = -(1/ρ)(∂ρ/∂C)_T，对于理想气体ρ = PM/RT，当CO浓度变化时，分子量变化ΔM = M_CO - M_avg = 28-25 = 3kg/kmol，因此β_C = (1/M_avg)(∂M/∂C)_T ≈ (1/25)×3 = 0.12。\n\n计算Grashof数：\nΔT = 1500-1100 = 400K，ΔC = 0.3-0.1 = 0.2（质量分数）\nGr_T = 9.81×7.69×10⁻⁴×400×5³/(2.4×10⁻⁴)² = 9.81×0.000769×400×125/(5.76×10⁻⁸) ≈ 6.55×10¹⁰\nGr_C = 9.81×0.12×0.2×5³/(2.4×10⁻⁴)² = 9.81×0.024×125/(5.76×10⁻⁸) ≈ 5.11×10⁹\n\n浮力比N = Gr_C/Gr_T ≈ 5.11×10⁹/6.55×10¹⁰ ≈ 0.078\n\n由于N=0.078 << 1，表明在此条件下温度浮力主导流动。这与文献中关于双重扩散自然对流的描述一致。原文指出：\"It was found that in the temperature dominated regime, the flow structures were turbulent and oscillating. In the concentration dominated regime, the flow structures were laminar, as the greater concentration of heavy gas species damped out turbulent fluctuations.\" 同时，\"The hysteresis effect was also found within a certain range of operating conditions. Numerical studies in an anisotropic porous cavity in which double diffusive natural convection was established, have also found the existence of multi-solutions.\"",
+    "original_text": {
+      "1": "It was found that in the temperature dominated regime, the flow structures were turbulent and oscillating. In the concentration dominated regime, the flow structures were laminar, as the greater concentration of heavy gas species damped out turbulent fluctuations.",
+      "2": "The hysteresis effect was also found within a certain range of operating conditions. Numerical studies in an anisotropic porous cavity in which double diffusive natural convection was established, have also found the existence of multi-solutions."
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "fluid_mechanics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及UCG（地下煤气化）空腔中的双重扩散自然对流，需要燃烧工程、传热传质、流体力学、CFD等领域的专业知识，包括Grashof数计算、浮力比分析、气体混合物物性计算等专业内容",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "fundamental_error",
+        "unsupported"
+      ],
+      "other_compliant": false,
+      "other_issues": [
+        "包含元信息（原文引用和论文摘录）"
+      ],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在严重技术错误：1）浓度膨胀系数β_C计算错误，对于理想气体混合物，β_C = (1/M_avg)(∂M/∂C)_T，但CO质量分数变化对应的分子量变化计算不准确；2）Grashof数计算中特征长度选择不当，对于空腔流动应使用更合适的特征尺度；3）引用的文献内容与具体计算无关，缺乏针对性支持。建议重新计算物性参数，修正公式推导，并提供与计算结果直接相关的文献支持。"
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_1d03f512",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Underground-coal-gasification---Part-II--Funda_2018_Progress-in-Energy-and-C",
+      "paper_title": "Underground-coal-gasification---Part-II--Funda_2018_Progress-in-Energy-and-C"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:11:18.746675",
+      "answer_length": 1259
+    },
+    "merge_source": "question_reverse"
+  },
+  {
+    "question_text": "在UCG可渗透床中，炭颗粒的蒸汽气化反应受到灰层扩散、体相传质和化学反应的多重影响。请建立综合考虑这三种阻力的串联反应速率模型，推导有效反应速率表达式，并分析在什么条件下灰层扩散成为速率控制步骤。计算当灰层厚度从0.1mm增加到2mm时，蒸汽气化反应速率的变化倍数（假设灰层孔隙率0.3，曲折因子2.0，气体在灰层中的有效扩散系数为5×10⁻⁶ m²/s，化学反应速率常数k_chem=0.1 m/s，体相传质系数h_m=0.05 m/s）。",
+    "standard_answer": "在UCG可渗透床中，炭颗粒气化反应的综合阻力模型应采用串联形式：1/r_eff = 1/r_ash + 1/r_mt + 1/r_chem，其中r_eff为有效反应速率，r_ash为灰层扩散速率，r_mt为体相传质速率，r_chem为化学反应速率。\n\n具体表达式推导如下：\n灰层扩散速率：r_ash = k_ash·A·(C_b - C_s)，其中k_ash = D_eff/δ_ash，D_eff为有效扩散系数，δ_ash为灰层厚度\n体相传质速率：r_mt = h_m·A·(C_b - C_s)，其中h_m为传质系数\n化学反应速率：r_chem = k_chem·A·C_s，其中k_chem为反应速率常数\n\n在稳态条件下，各步骤速率相等：r_eff = r_ash = r_mt = r_chem\n由r_ash = r_chem可得：k_ash·(C_b - C_s) = k_chem·C_s ⇒ C_s = (k_ash/(k_ash+k_chem))·C_b\n将C_s表达式代入r_chem得：r_eff = k_chem·A·(k_ash/(k_ash+k_chem))·C_b\n因此有效反应速率常数：k_eff = 1/(1/k_ash + 1/h_m + 1/k_chem)\n\n灰层扩散成为控制步骤的条件是：1/k_ash >> 1/h_m 且 1/k_ash >> 1/k_chem，即δ_ash/D_eff >> 1/h_m 且 δ_ash/D_eff >> 1/k_chem。当灰层厚度足够大时，灰层扩散阻力远大于其他阻力。\n\n计算灰层厚度变化对反应速率的影响：\n初始条件：δ_ash1=0.0001m，最终条件：δ_ash2=0.002m\nD_eff = 5×10⁻⁶ m²/s（题目已给出）\nk_ash1 = D_eff/δ_ash1 = 5×10⁻⁶/0.0001 = 0.05 m/s\nk_ash2 = D_eff/δ_ash2 = 5×10⁻⁶/0.002 = 0.0025 m/s\n\n考虑所有阻力共同作用：\nk_eff1 = 1/(1/0.05 + 1/0.05 + 1/0.1) = 1/(20 + 20 + 10) = 0.02 m/s\nk_eff2 = 1/(1/0.0025 + 1/0.05 + 1/0.1) = 1/(400 + 20 + 10) = 0.00233 m/s\n\n反应速率变化倍数：r_eff2/r_eff1 = k_eff2/k_eff1 = 0.00233/0.02 = 0.1165\n即当灰层厚度从0.1mm增加到2mm时，蒸汽气化反应速率降低约8.6倍。这表明灰层厚度对反应速率有显著影响，当灰层厚度超过临界值时，反应速率急剧下降。",
+    "original_text": {
+      "1": "When the ash layer is thick, exothermic combustion of CO occurs in the ash layer, with the endothermic gasification of char occurring at the ash/char interface.",
+      "2": "Recently, Lin et al. investigated the effect of an ash layer on syngas combustion using a Chinese low volatile bituminous coal at 1250 °C and 1300 °C and reported that the ash layer does not inhibit the diffusion of oxygen until it is thicker than 1.3 mm."
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及地下煤气化(UCG)过程中的炭颗粒蒸汽气化反应，需要燃烧工程、传质传热、化学反应工程等领域的专业知识，包括多相反应动力学、扩散理论、反应速率控制机制等专业概念和计算",
+      "answer_correct": false,
+      "answer_issues": [
+        "fundamental_error",
+        "factual_error"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在基本原理错误：1）灰层扩散速率表达式错误，k_ash = D_eff/δ_ash应为k_ash = D_eff/(δ_ash·τ)，其中τ为曲折因子；2）有效扩散系数D_eff计算缺失，应根据孔隙率和曲折因子计算；3）串联模型推导逻辑混乱，应从稳态条件r_ash = r_mt = r_chem出发，通过浓度关系推导出k_eff = 1/(1/k_ash + 1/h_m + 1/k_chem)；4）计算中应使用正确的D_eff值，而非题目给出的5×10⁻⁶ m²/s（这可能是分子扩散系数而非有效扩散系数）。建议重新推导模型并正确计算。"
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_13a63b94",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Underground-coal-gasification---Part-II--Funda_2018_Progress-in-Energy-and-C",
+      "paper_title": "Underground-coal-gasification---Part-II--Funda_2018_Progress-in-Energy-and-C"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:11:25.645604",
+      "answer_length": 1151
+    },
+    "merge_source": "question_reverse"
+  }
+]

@@ -1,0 +1,70 @@
+[
+  {
+    "question_text": "基于Sherwood图分析，阐述CO2初始浓度对捕集成本的影响机理，并推导浓度从3%提升至30%时捕集成本的变化倍数。要求结合分离过程的热力学极限和传质动力学进行综合分析。",
+    "standard_answer": "Sherwood图揭示了目标物质浓度与分离成本间的负相关关系，其经验公式为log(Price $/kg) = -0.5558 × log(mole fraction CO2) - 1.8462。当CO2浓度从3%提升至30%时，浓度变化倍数为10倍（0.3/0.03=10）。根据公式，浓度变化对成本的影响可量化为：Δlog(Price) = -0.5558 × log(10) ≈ -0.5558 × 1 = -0.5558。因此，价格变化倍数为10^(-0.5558) ≈ 0.278倍。这意味着浓度提升后捕集成本降低至原成本的27.8%。从机理角度分析：1）热力学极限：根据最小分离功公式W_min = RT [n_CO2^B ln y_CO2^B + n_{B-CO2}^B ln y_{B-CO2}^B - n_CO2^A ln y_CO2^A - n_{A-CO2}^A ln y_{A-CO2}^A，当入口浓度y_CO2^A增加时，分离过程的熵产减小，导致能耗降低。2）传质动力学：在吸收过程中，传质速率N = K_y × (y_A - y_A^*)，高浓度CO2提高了传质驱动力(y_A - y_A^*)，降低传质单元高度(HTU)，从而减少设备尺寸和能耗。例如，对于3% CO2的烟气，最小分离功为10.7-12.7 kJ/mol，对应捕集成本75-100 $/t；而30%浓度时最小功降至0-4.0 kJ/mol，成本降至14-28 $/t。实际工程中，高浓度可减少吸收剂循环量，降低泵送功耗和再生能耗。因此，浓度提升通过热力学和动力学双重路径实现成本优化。",
+    "original_text": {
+      "1": "As the target concentration increases, the cost to separate decreases on a molar basis.",
+      "2": "log(Price $/kg) = -0.5558 × log(mole fraction CO2) - 1.8462"
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "question_id": "batch_detail_q_467117c8",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "CO2-capture-from-the-industry-sec_2017_Progress-in-Energy-and-Combustion-Sci",
+      "paper_title": "CO2-capture-from-the-industry-sec_2017_Progress-in-Energy-and-Combustion-Sci"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T08:31:08.952766",
+      "batch_processing": true,
+      "answer_length": 689
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及Sherwood图分析、CO2捕集成本、热力学极限和传质动力学，需要燃烧工程、分离工程、热力学和传质学等能源化工领域的专业知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量较高，准确运用了Sherwood图公式，结合热力学和传质动力学进行了全面分析，数据计算正确，机理阐述清晰，建议继续保持"
+    }
+  },
+  {
+    "question_text": "分析水泥回转窑中过程CO2与燃烧CO2的混合机理，并基于反应工程原理提出一种分离两种CO2来源的新型反应器设计概念。",
+    "standard_answer": "水泥回转窑内过程CO2来源于石灰石(CaCO3)的煅烧反应：CaCO3 → CaO + CO2，同时煤粉燃烧产生燃烧CO2：C + O2 → CO2。混合机理：1）燃烧区域：煤粉与预热空气在窑头燃烧，产生高温气体（1200-1450°C）向窑尾流动。2）物料逆向运动：石灰石从窑尾进入，在高温区（850-950°C）发生煅烧反应，释放的CO2与燃烧烟气混合。2）传热与反应耦合：燃烧释放的热量通过辐射和对流传递至物料，驱动煅烧反应。3）传质过程：燃烧CO2与过程CO2在湍流中扩散混合，形成CO2浓度14-33%的烟气。新型反应器设计概念：采用双腔室结构，a）燃烧腔室：隔离燃料燃烧，产生纯燃烧CO2流（浓度7-10%）。新型设计优势：a）降低捕集能耗：针对过程CO2（高纯度）设计专用捕集单元，避免与稀释的燃烧CO2混合。例如，通过化学链燃烧将燃烧反应与煅烧反应解耦。燃烧腔室使用金属氧化物载氧体（如Fe2O3/Fe3O4）作为氧传递介质，避免氮气混入，提高CO2浓度至95%以上。b）能量集成：利用煅烧反应吸热特性（CaCO3分解焓ΔH≈178 kJ/mol），而燃烧腔室的热量可通过换热网络回收。该设计需解决的关键问题：1）反应动力学匹配：煅烧反应速率受温度控制，需维持850-950°C；燃烧区温度1200-1450°C。通过CFD模拟验证流场分布和温度梯度，确保反应效率。",
+    "original_text": {
+      "1": "Just over half of the CO2 originates for the calcination, while just under half of the emissions originate from the combustion of fuel.",
+      "2": "Process and combustion emissions can occur within the same unit. When process and combustion emissions are mixed, there is the potential for higher purity CO2 streams if new and innovative unit designs can separate the process reactions from the heat requirements."
+    },
+    "type": "concept",
+    "difficulty": 5,
+    "topic": "combustion_kinetics",
+    "question_id": "batch_detail_q_6254f562",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "CO2-capture-from-the-industry-sec_2017_Progress-in-Energy-and-Combustion-Sci",
+      "paper_title": "CO2-capture-from-the-industry-sec_2017_Progress-in-Energy-and-Combustion-Sci"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T08:31:19.478169",
+      "batch_processing": true,
+      "answer_length": 591
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及水泥回转窑中CO2混合机理分析和新型反应器设计，需要燃烧工程、传热传质、反应工程、CFD模拟等专业知识，属于能源与化工工程领域",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量较高，准确分析了CO2混合机理并提出了创新的反应器设计概念，符合原文引用和论文内容"
+    }
+  }
+]

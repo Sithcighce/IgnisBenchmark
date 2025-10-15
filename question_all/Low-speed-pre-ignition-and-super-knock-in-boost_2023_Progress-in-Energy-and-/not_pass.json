@@ -1,0 +1,80 @@
+[
+  {
+    "question_text": "根据论文中关于燃料芳香烃含量和蒸馏特性对LSPI的影响，推导并解释T50–T90蒸馏温度与LSPI频率之间的定量关系，并解释燃料组分在活塞环隙区的滞留机制。",
+    "standard_answer": "燃料的化学组成，特别是芳香烃含量，对LSPI有显著影响。根据论文第13页图13所示，当芳香烃体积分数超过30%时，LSPI频率显著增加。根据论文第13页：'The highest relative frequencies were found for volume fractions above 30%'。此外，'The importance of the upper half of the distillation range was also visible in a comparison between pure toluene (110 °C) and a premium certification gasoline'，表明高沸点组分（如C9+芳香烃）在气缸壁油膜上的滞留量增加。根据Fick扩散定律，芳香烃在油膜中的扩散系数较低，导致其在环隙区累积。同时，'The substitution shifts the distillation curve of the gasoline and in the case of an aromatic substance with a single ethyl or propyl group or multiple methyl groups (such as ethylbenzene, cumene and trimethylbenzene'，这些组分通过促进沉积物形成和液滴反应性，成为LSPI的关键促进因素。",
+    "original_text": {
+      "1": "The general view in literature is that high aromatic content and less volatile gasoline composition (i.e., the end third of the distillation curve) are the key properties in gasoline that increase LSPI'。",
+      "type": "concept",
+      "difficulty": 4,
+      "topic": "combustion_kinetics"
+    },
+    "question_id": "batch_detail_q_751affb3",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Low-speed-pre-ignition-and-super-knock-in-boost_2023_Progress-in-Energy-and-",
+      "paper_title": "Low-speed-pre-ignition-and-super-knock-in-boost_2023_Progress-in-Energy-and-"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T12:29:20.489072",
+      "batch_processing": true,
+      "answer_length": 640
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及燃料芳香烃含量、蒸馏特性与LSPI的定量关系，以及燃料组分在活塞环隙区的滞留机制，需要燃烧学、热力学、传质过程等专业领域的深入知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "unsupported",
+        "too_brief"
+      ],
+      "other_compliant": false,
+      "other_issues": [
+        "has_meta_info",
+        "too_general"
+      ],
+      "overall_verdict": "fail",
+      "recommendation": "答案未完成推导T50–T90与LSPI的定量关系，缺乏对滞留机制的系统解释，且包含元信息引用"
+    },
+    "merge_source": "questions"
+  },
+  {
+    "question_text": "使用论文中提供的临界半径公式，推导并解释临界半径r_c和r_f对于从自燃热点initiating稳定火焰的物理意义。给定环境温度T_a=700K，热导率k=0.05 W/(m·K)，预指数因子A=10^11 s^-1，活化能E=150 kJ/mol，反应焓Q=40 MJ/kg，燃料密度ρ=10 kg/m³，计算r_c。并讨论层流火焰速度S_L和路易斯数Le如何通过公式(4)影响r_f。",
+    "standard_answer": "临界半径r_c和r_f对于从自燃热点initiating稳定火焰至关重要。r_c是自燃热点达到的临界半径，以克服通过传导向周围气体的热损失，并具有足够的热释放。r_f是启动稳定火焰所需的临界半径，通过扩散和热传导生成。r_c由公式给出：r_c = (δ_c k T_a / (A ρ Q E_n exp(-E_n)))^{1/2}，其中δ_c是点火前的临界Frank-Kamenetskii参数，E_n = E/(R T_a)，R是通用气体常数。r_f与层流火焰速度S_L和路易斯数Le相关，通过公式：r_f/δ = exp(β/(2 Le)) / (1 - 1/β)，其中δ是层流火焰厚度（δ = α/S_L，α是热扩散率），β是Zeldovich数（β = E(T_b - T_u)/(R T_b^2)，T_b和T_u是已燃和未燃气体温度）。给定参数：T_a=700K, k=0.05 W/(m·K), A=10^11 s^-1, E=150000 J/mol, Q=40e6 J/kg, ρ=10 kg/m³。首先计算E_n = 150000 / (8.314 * 700) ≈ 25.75。假设δ_c≈1（典型值），则r_c = (1 * 0.05 * 700 / (10^11 * 10 * 40e6 * 25.75 * exp(-25.75)))^{1/2}。计算exp(-25.75) ≈ 1.4e-12，分母≈ 10^11 × 10 × 40e6 × 25.75 × 1.4e-12 ≈ 10^11 × 10 × 40e6 × 3.61e-11 ≈ 1.44，因此r_c ≈ (35 / 1.44)^{1/2} ≈ (24.31)^{1/2} ≈ 4.93 m。层流火焰速度S_L增加会减小火焰厚度δ，从而降低r_f，使燃料更容易从热点initiating火焰。路易斯数Le（热扩散率与质扩散率的比值）影响火焰稳定性；Le < 1（常见于轻质燃料）通常促进火焰传播，降低r_f，而Le > 1可能增加热损失，增加r_f。因此，高S_L和合适的Le（如Le略小于1）有利于减少r_f，降低LSPI倾向。",
+    "original_text": {
+      "1": "Secondly, the autoignition hotspot must reach a critical radius r_c for counteracting the heat transfer through conduction to surrounding gases with a sufficient heat release. Thirdly, the radius of the autoignited hot spot must be large enough to initiate a stable flame by reaching the critical radius r_f.",
+      "2": "The critical radius r_c is given as: r_c = (δ_c k T_a / (A Q E_n exp(-E_n)))^{1/2} where δ_c is the critical Frank–Kamenetskii parameter before ignition. T_a is the ambient temperature, k is the thermal conductivity, A is the pre-exponential factor in the Arrhenius equation and Q is the fuel mass per volume multiplied with the reaction enthalpy. E_n is expressed as: E_n = E/(R T_a) where E is the activation energy."
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "该问题涉及燃烧学、热力学和化学反应动力学领域的专业知识，需要理解临界半径概念、自燃热点理论、Frank-Kamenetskii参数、层流火焰速度、路易斯数等专业概念，以及复杂的公式推导和参数计算。",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "fundamental_error",
+        "unsupported"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在多处严重错误：1）r_c公式分母中缺少密度ρ，正确应为r_c = (δ_c k T_a / (A ρ Q E_n exp(-E_n)))^{1/2}；2）计算过程中exp(-25.75) ≈ 1.4e-12错误，实际应为exp(-25.75) ≈ 6.9e-12；3）分母计算错误，正确计算应为10^11 × 10 × 40e6 × 25.75 × 6.9e-12 ≈ 7.1，r_c ≈ (35/7.1)^{1/2} ≈ 2.22 m；4）r_f公式表述不准确，应明确β和Le的具体定义和影响机制。建议重新推导公式并正确计算数值结果。"
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_8f74f840",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Low-speed-pre-ignition-and-super-knock-in-boost_2023_Progress-in-Energy-and-",
+      "paper_title": "Low-speed-pre-ignition-and-super-knock-in-boost_2023_Progress-in-Energy-and-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:44:49.999209",
+      "answer_length": 908
+    },
+    "merge_source": "question_reverse"
+  }
+]

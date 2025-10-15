@@ -1,0 +1,183 @@
+# Numerical-models-for-thermochemical-degradation-of-therm_2017_Progress-in-En - Passed Questions
+
+**生成时间**: 2025-10-15 15:46:06  
+**通过问题数**: 4
+
+---
+
+## Question 1
+
+### 问题
+
+基于Darcy定律和多孔介质传输理论，推导木质颗粒内部气体流动的动量方程，分析各向异性对渗透率的影响，并计算当径向渗透率比轴向渗透率低两个数量级时，气体在颗粒内部的流动分布会发生什么变化。
+
+### 标准答案
+
+木质颗粒内部气体流动遵循Darcy定律：V_g = -（K_g·K_rg/μ_g）·∇P_g，其中V_g为气体速度，K_g为固有渗透率，K_rg为相对渗透率，μ_g为气体粘度，∇P_g为压力梯度。对于各向异性木材，渗透率张量可表示为：K = [K_parallel 0 0; 0 K_perp 0; 0 0 K_perp]，其中K_parallel为顺纹方向渗透率，K_perp为横纹方向渗透率。当径向渗透率比轴向渗透率低两个数量级时，即K_perp = 0.01·K_parallel，气体流动呈现强烈各向异性。速度分量可表示为：V_x = -（K_parallel/μ）·∂P/∂x，V_y = -（0.01K_parallel/μ）·∂P/∂y，V_z = -（0.01K_parallel/μ）·∂P/∂z。计算表明，在相同压力梯度下，顺纹方向流速是横纹方向的100倍。这种各向异性导致：1）气体优先沿顺纹方向流动，形成通道效应；2）横纹方向质量传输严重受限，可能造成局部压力积聚；3）热解产物在颗粒内部停留时间延长，增强二次反应。实际应用中，这种强烈的各向异性需要通过多维模型准确捕捉，一维模型会严重高估横纹方向的传质速率。
+
+### 元数据
+
+- **类型**: calculation
+- **难度**: 4
+- **主题**: fluid_mechanics
+- **答案长度**: 517 字符
+
+### 原文引用
+
+**引用 1**:
+> The velocity of the gas phase is calculated such that V_g = -K_gK_rg/μ_g ∇ P_g, where the effective permeability again is a combination of intrinsic, K_g and relative permeability, K_rg.
+
+**引用 2**:
+> The permeability is much lower in radial and tangential directions than along the wood grain. One expects differences in permeability, not only between virgin wood and char, but also between hardwood and softwood.
+
+### 质量检查
+
+- **领域聚焦**: ✅ 通过
+- **答案正确性**: ✅ 通过
+- **其他合规性**: ✅ 通过
+- **总体评价**: pass
+
+**领域聚焦分析**: 问题涉及Darcy定律、多孔介质传输理论、木质颗粒内部气体流动、渗透率各向异性分析以及流动分布计算，需要燃烧、传热、流体力学、多孔介质传输和CFD领域的专业知识
+
+**改进建议**: 答案质量良好，无需修改。答案正确应用了Darcy定律，合理分析了各向异性渗透率的影响，准确计算了流动分布变化，并给出了实际应用意义，与提供的原文引用和论文背景一致
+
+### 来源
+
+- **论文**: Numerical-models-for-thermochemical-degradation-of-therm_2017_Progress-in-En
+- **生成类型**: deepseek_generation
+- **合并来源**: question_reverse
+
+---
+
+## Question 2
+
+### 问题
+
+详细分析三组独立竞争反应模型与三组独立平行反应模型在木质生物质热解模拟中的机理差异，比较它们在预测焦炭、焦油和永久气体产率方面的准确性，并解释为什么操作条件（特别是加热速率）会影响模型的选择。
+
+### 标准答案
+
+三组独立竞争反应模型将干燥木材视为单一反应物，通过三个竞争反应分别生成永久气体、焦油和焦炭：干燥木材 → 永久气体（k1），干燥木材 → 焦油（k2），干燥木材 → 焦炭（k3）。该模型假设木材组分降解行为反映其组分总和而非单个组分响应。三组独立平行反应模型则将木材分解为木质素、纤维素和半纤维素三个伪组分，每个组分独立降解：木质素 → 产物（kL），纤维素 → 产物（kC），半纤维素 → 产物（kH）。机理差异：竞争模型忽略组分间相互作用，而平行模型能考虑不同木材物种的组分差异。在预测准确性方面：竞争模型在中等加热速率下能合理预测总产物产率，但无法准确反映温度对焦炭产率的影响；平行模型能更好预测不同木材物种的产物分布，但忽略组分间交叉反应。加热速率的影响：低加热速率（<10 K/s）下，平行模型更准确，因为各组分有足够时间独立降解；高加热速率（>100 K/s）下，竞争模型足够准确，因为快速加热使组分降解行为趋于一致。实际操作中，对于大型木质颗粒（低加热速率）推荐平行模型，对于颗粒状生物质（高加热速率）竞争模型即可满足工程需求。
+
+### 元数据
+
+- **类型**: concept
+- **难度**: 5
+- **主题**: combustion_kinetics
+- **答案长度**: 471 字符
+
+### 原文引用
+
+**引用 1**:
+> In the three independent competitive reactions model, the solid input material degrades competitively to char, tar and permanent gases. The only linkage between the product yields is through the mass fraction (the sum of all mass fractions at a certain time equal unity).
+
+**引用 2**:
+> The basic assumption for the three independent parallel reactions mechanism is that components in the mixture degrade the same way they would if they were decomposing separately. Many authors have claimed that the degradation processes for hemicellulose and cellulose should be modeled as first-order reactions, whereas lignin degradation is modeled as a higher order reaction.
+
+### 质量检查
+
+- **领域聚焦**: ✅ 通过
+- **答案正确性**: ✅ 通过
+- **其他合规性**: ✅ 通过
+- **总体评价**: pass
+
+**领域聚焦分析**: 问题涉及木质生物质热解模拟中的化学反应模型机理、产物预测准确性和操作条件影响分析，需要燃烧科学、热化学转化、反应工程和生物质能领域的专业知识
+
+**改进建议**: 答案质量良好，无需修改。答案准确描述了两种模型的机理差异，正确比较了预测准确性，并合理解释了加热速率对模型选择的影响，与提供的原文引用和论文背景一致
+
+### 来源
+
+- **论文**: Numerical-models-for-thermochemical-degradation-of-therm_2017_Progress-in-En
+- **生成类型**: deepseek_generation
+- **合并来源**: question_reverse
+
+---
+
+## Question 3
+
+### 问题
+
+基于论文中讨论的Biot数定义和热厚颗粒特性，详细分析在木质颗粒热化学降解过程中，当颗粒尺寸从5mm增加到50mm时，热传递机制如何变化，并解释这种变化对干燥、热解和炭转化阶段时间尺度的影响。
+
+### 标准答案
+
+根据Biot数定义Bi = heff·d/λ，当颗粒尺寸d从5mm增加到50mm（增加10倍）时，Biot数相应增加10倍。对于小颗粒（5mm），Bi数可能小于0.1，属于热薄区域，颗粒内部温度分布均匀，各转化阶段依次发生。而对于大颗粒（50mm），Bi数显著大于0.1，属于热厚区域，颗粒内部存在明显的温度梯度。这种变化导致：1）干燥阶段：大颗粒内部水分蒸发需要更长时间，因为热量必须通过传导穿透整个颗粒厚度，形成从表面向中心的干燥前沿；2）热解阶段：大颗粒中不同区域同时处于不同转化阶段，表面区域可能正在进行剧烈热解而中心仍处于干燥阶段，热解产物在穿过热炭层时经历更长的停留时间，增强了二次反应；3）炭转化阶段：大颗粒的炭层更厚，氧气扩散阻力增加，炭转化可能从动力学控制转变为扩散控制。总体转化时间随尺寸增加呈非线性增长，对于50mm颗粒，总转化时间可能比5mm颗粒长5-10倍。
+
+### 元数据
+
+- **类型**: reasoning
+- **难度**: 4
+- **主题**: heat_transfer
+- **答案长度**: 392 字符
+
+### 原文引用
+
+**引用 1**:
+> The Biot number defines the ratio between heat transfer resistance in the interior of the particle and at the surface of the particle. For low Biot numbers (< 0.1), a thermally thin regime is present, whereas large Biot numbers (> 0.1) indicate the presence of a thermally thick regime.
+
+**引用 2**:
+> In thermally thick particles, intra-particle gradients of temperature are important. Due to varying temperatures, different conversion stages occur simultaneously within the wood log or particle, and intra-particle transport phenomena also have to be considered.
+
+### 质量检查
+
+- **领域聚焦**: ✅ 通过
+- **答案正确性**: ✅ 通过
+- **其他合规性**: ✅ 通过
+- **总体评价**: pass
+
+**领域聚焦分析**: 问题涉及Biot数定义、热厚颗粒特性、木质颗粒热化学降解过程中的热传递机制变化，以及干燥、热解和炭转化阶段的时间尺度影响，这需要燃烧、传热、热化学转化、能源工程等领域的专业知识。
+
+**改进建议**: 无需改进，答案质量高，准确解释了Biot数变化对热传递机制及各转化阶段的影响，与论文内容一致。
+
+### 来源
+
+- **论文**: Numerical-models-for-thermochemical-degradation-of-therm_2017_Progress-in-En
+- **生成类型**: deepseek_generation
+- **合并来源**: question_reverse
+
+---
+
+## Question 4
+
+### 问题
+
+分析界面基模型与网格基模型在热厚木质颗粒热化学降解模拟中的根本区别，从数学离散方法、计算效率和物理精度角度比较两者的优缺点，并说明在什么工程应用场景下应选择哪种模型。
+
+### 标准答案
+
+界面基模型与网格基模型的核心区别在于数学离散方法和物理过程描述：界面基模型假设化学反应和相变发生在不同层之间的边界上，层由湿原始木材、干木材、焦炭或灰烬组成，层厚度由可用固体化合物质量定义。数学上只求解能量和质量方程，采用欧拉离散化。网格基模型则在网格点上求解热转化方程，颗粒完全离散，求解更多控制方程包括液体和气体相详细描述。计算效率比较：界面基模型显著更高效，Mehrabian等人发现其能达到与Lu等人14个控制方程模型相同的精度，但计算速度快得多。物理精度比较：网格基模型能提供更详细信息，如孔隙内液体和气体相行为、压力场演化、二次反应等；界面基模型无法准确预测裂纹形成和物种在孔隙内的传输。应用场景选择：1）当模型目的是与大型炉床CFD模拟耦合时，计算成本是关键，界面基模型是合适选择；2）当需要预测裂纹形成和孔隙内物种传输时，网格基模型是唯一选择；3）对于工程设计和优化应用，界面基模型提供足够的质量能量通量预测；4）基础研究需要详细物理机理理解时，网格基模型更合适。实际工程中常采用折中方案，在关键区域使用网格基模型，其他区域使用界面基模型。
+
+### 元数据
+
+- **类型**: concept
+- **难度**: 4
+- **主题**: CFD_modeling
+- **答案长度**: 478 字符
+
+### 原文引用
+
+**引用 1**:
+> In so-called interface-based models, the chemical reactions and phase changes take place at the boundaries between different layers in the particle. The layers are composed of either wet virgin wood, dry wood, char or ash, and the thickness of these layers is defined by the available mass of these solid compounds.
+
+**引用 2**:
+> In a mesh-based model, the equations for thermal conversion are related to grid points. The particle is therefore fully discretized. One-dimensional mesh-based models solve a higher number of governing equations than the layer model, which inevitably leads to higher computational costs.
+
+### 质量检查
+
+- **领域聚焦**: ✅ 通过
+- **答案正确性**: ✅ 通过
+- **其他合规性**: ✅ 通过
+- **总体评价**: pass
+
+**领域聚焦分析**: 问题涉及热厚木质颗粒热化学降解模拟，需要燃烧学、传热传质、计算流体力学（CFD）、数值方法和生物质能领域的专业知识，特别是对界面基模型和网格基模型的数学离散方法、计算效率和物理精度的深入理解。
+
+**改进建议**: 无需改进。答案准确比较了界面基模型和网格基模型在数学离散方法、计算效率和物理精度方面的区别，并基于工程应用场景提供了合理的选择建议，内容详实且符合领域知识。
+
+### 来源
+
+- **论文**: Numerical-models-for-thermochemical-degradation-of-therm_2017_Progress-in-En
+- **生成类型**: deepseek_generation
+- **合并来源**: question_reverse
+
+---
+

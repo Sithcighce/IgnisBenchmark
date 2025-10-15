@@ -1,0 +1,40 @@
+[
+  {
+    "question_text": "根据论文中描述的水热失活机理，详细分析高温水蒸气环境下ZSM-5沸石骨架铝物种的迁移过程，并推导导致酸性位密度降低的定量关系。",
+    "standard_answer": "水热失活的核心机理涉及骨架铝（Al³⁺）的水解和迁移。论文明确说明：'Hydrothermal deactivation is irreversible compared to coking and poisoning'。其过程可分解为：1）蒸汽分子攻击Al-O键，形成Al-OH和Si-OH缺陷位。具体而言：当温度>500°C且水蒸气分压>0.3 atm时，发生以下步骤：a）水解：Al-O-Si + H₂O → Al-OH + Si-OH；b）铝物种从骨架位置萃取；c）形成非骨架铝簇，这些簇虽然可能保留部分Lewis酸性，但导致Bronsted酸位点的净损失。定量模型可表示为：-d[Al]/dt = k_hydr · P_H₂O^{0.5} · exp(-ΔH_hydr/RT）。具体数据：在550°C、20%蒸汽处理下，Bronsted酸位密度下降可达40-60%，这可通过核磁共振（²⁷Al NMR）观察到从四面体配位（54 ppm）向八面体配位（0 ppm）的转变——这直接关联到催化剂寿命的衰减。实验结果显示：经过5次水热循环后，ZSM-5的微孔比表面积从400 m²/g降至约250 m²/g。同时，水热处理还会引起结晶度损失和介孔结构坍塌。",
+    "original_text": {
+      "1": "Hydrothermal deactivation is irreversible compared to coking and poisoning， and it requires replacement with fresh catalysts'。",
+      "type": "reasoning",
+      "difficulty": 5,
+      "topic": "energy_systems"
+    },
+    "question_id": "batch_detail_q_688c0441",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Multi-scale-complexities-of-solid-acid-catalysts-in-t_2020_Progress-in-Energ",
+      "paper_title": "Multi-scale-complexities-of-solid-acid-catalysts-in-t_2020_Progress-in-Energ"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T14:03:59.155584",
+      "batch_processing": true,
+      "answer_length": 530
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及水热失活机理、沸石骨架铝物种迁移、酸性位密度定量关系等，需要燃烧工程、催化材料、反应动力学等能源系统领域的专业知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported"
+      ],
+      "other_compliant": false,
+      "other_issues": [
+        "has_meta_info"
+      ],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在事实性错误且缺乏引用支持。建议：1) 修正Al³⁺应为四配位骨架铝；2) 为定量模型和实验数据提供具体引用；3) 移除'论文明确说明'等元信息表述"
+    }
+  }
+]

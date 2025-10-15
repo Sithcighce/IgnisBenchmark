@@ -1,0 +1,167 @@
+[
+  {
+    "question_text": "Calculate the diffusion length for solid-state diffusion during shock compression given a diffusion coefficient of 10^-9 cm²/s at 1000 K and a characteristic compression time of 10^-5 s, and explain why this is insufficient for the observed phase growth, necessitating alternative mass transport mechanisms.",
+    "standard_answer": "The diffusion length L can be calculated using the relation L = √(D*t), where D is the diffusion coefficient (10^-9 cm²/s) and t is the time (10^-5 s). Substituting the values: L = √(10^-9 cm²/s * 10^-5 s) = √(10^-14 cm²) = 10^-7 cm = 1 nm. This 1 nm diffusion length is far smaller than the experimentally observed phase dimensions of up to ~3 μm (3 × 10^-4 cm), indicating that conventional solid-state diffusion cannot account for the rapid mass transport during shock compression. The discrepancy arises because diffusion relies on thermal atomic motion, which is too slow for the microsecond timescales involved. Instead, mechanisms like shear-induced plastic flow dominate, where atomic layers displace relative to each other, enabling 'rolling' nuclei to gather atoms directly. For example, with a plastic displacement of 1 mm and atomic dimensions of ~2 Å, the contact time between atoms is ~10^-12 s, allowing comprehensive interaction within the 10^-5 s compression window. Thus, shock compression leverages mechanical forcing rather than thermal kinetics to achieve the necessary mass transport for ultra-fast reactions.",
+    "original_text": {
+      "1": "The typical solid-state diffusion coefficient at ~1000 K is about 10^-9 cm²/s. Given the characteristic time of dynamic compression (10^-5 s), the diffusion length is up to 10 Å. This estimation suggests that the diffusion mechanism may form nuclei with a diameter of about 10 Å.",
+      "2": "However, when considering the much larger sizes of new phases observed experimentally, it becomes necessary to account for some other mass transport mechanism. In this context, the role of shear stress becomes critical."
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "heat_transfer",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires knowledge of solid-state diffusion, shock compression physics, phase growth mechanisms, and mass transport in materials under extreme conditions - all falling under heat transfer, materials science, and combustion/energy domain expertise.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct, and compliant with other requirements."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_013eccef",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Mechanical-stimulation-of-gasless-reaction-in-_2023_Progress-in-Energy-and-C",
+      "paper_title": "Mechanical-stimulation-of-gasless-reaction-in-_2023_Progress-in-Energy-and-C"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:22:46.538329",
+      "answer_length": 1131
+    }
+  },
+  {
+    "question_text": "How do changes in the Hugoniot curve during shock compression indicate chemical reactions, and what do deviations in shock adiabats reveal about energy release and reaction completeness?",
+    "standard_answer": "Deviations in the Hugoniot curve from the inert media response provide direct evidence of chemical reactions during shock compression. For substances without transformations, the P-V curve follows the inert Hugoniot. When a reaction occurs, the curve exhibits a slope change: a deviation to the right (lower compressibility) indicates volume increase and energy release, as seen in Sn+S systems, while a left deviation signifies volume decrease. In reactive mixtures like Sn+S, the experimental shock adiabat shifts rightward relative to calculated inert adiabats above 15 GPa due to 'thermal back pressure' from exothermic heat release, confirming reactions adjacent to the shock front. The degree of deviation correlates with reaction completeness; for example, in Sn+S, ~30% conversion was estimated from heat release calculations. These Hugoniot anomalies result from the finite reaction time broadening the shock front, with the curve's shape depending on whether the transformation increases or decreases volume. Thus, Hugoniot analysis serves as an in-situ diagnostic for ultra-fast reactions, linking mechanical equilibration to chemical energy deposition.",
+    "original_text": {
+      "1": "However, when the substance undergoes a transformation, the Hugoniot curve exhibits a slope change in the direction depending on the nature of the transformation. And the shock wave front then becomes diffuse and broadens since the transformation requires a finite time.",
+      "2": "The experimental points of shock compressibility were shown to deviate to the right relative to the calculated adiabats for SnS and 'inert' Sn + S mixtures at pressures above 15 GPa. The conclusion drawn from this observation is that it provides evidence of energy release from a reaction in the shock-compressed mixture immediately adjacent to the shock front."
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires specialized knowledge of shock compression physics, Hugoniot curves, chemical reactions under high-pressure conditions, and energy release mechanisms - all core concepts in combustion science, fluid mechanics, and energy systems research.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_3205868e",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Mechanical-stimulation-of-gasless-reaction-in-_2023_Progress-in-Energy-and-C",
+      "paper_title": "Mechanical-stimulation-of-gasless-reaction-in-_2023_Progress-in-Energy-and-C"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:22:46.703439",
+      "answer_length": 1164
+    }
+  },
+  {
+    "question_text": "What role does powder morphology and porosity play in enhancing shock-induced reactions in Ni-Al systems, and how do these factors influence reaction yield and initiation mechanisms?",
+    "standard_answer": "Powder morphology and porosity critically enhance shock-induced reactions by optimizing contact surface area, plastic deformation, and hot spot formation. Flake Ni powders (~0.3 mm thick) or fine spherical particles (~1 μm) provide higher surface area and thinner diffusion scales compared to coarse spherical powders, leading to increased reaction yields. For instance, flake Ni with coarse Al achieves complete conversion, whereas spherical Ni with coarse Al reacts only partially. Porosity (void volume) facilitates reaction by allowing greater plastic flow and pore collapse during shock compression. Higher porosity (e.g., >50% TMD) promotes turbulent particle flow, cleansing surfaces, introducing defects, and generating localized temperatures through visco-plastic heating. This enhances mass mixing and reduces ignition thresholds. Conversely, low porosity (<40% TMD) retards reactions due to reduced deformation and higher thermal diffusivity, which dissipates heat more efficiently. The CONMAH model conceptualizes this, where configuration, mixing, activation, and heating in the transition zone during shock compression drive synthesis. Thus, tailored morphology and porosity maximize mechanical activation, enabling reactions at lower shock parameters by improving interparticle contact and energy localization.",
+    "original_text": {
+      "1": "It was shown that reaction yield strongly depends on the morphology of the particles used. For example, mixture 4 with flake Ni (45 μm in width) and coarse spherical Al (45 μm) possessed the complete reaction yield, in contrast to the spherical Ni (45 μm) and coarse spherical Al (45 μm), which reacted only partially.",
+      "2": "The porosity of the initial media: absence of voids retards the reaction. For example, it was shown that for flake Ni-Spherical Al powder mixture, only traces of the Ni3Al phase were observed when the initial porosity of the media was below 40%, and complete conversion was achieved with porosity above 50%."
+    },
+    "type": "application",
+    "difficulty": 4,
+    "topic": "cfd",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires expertise in shock-induced reactions in inorganic powder systems (Ni-Al), including knowledge of powder morphology effects, porosity, reaction mechanisms, and yield optimization - all specific to combustion science and materials synthesis under mechanical stimulation.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question is well-focused on domain-specific shock-induced reactions, and answer provides comprehensive, accurate explanation supported by citations about morphology and porosity effects."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_6d4781f5",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Mechanical-stimulation-of-gasless-reaction-in-_2023_Progress-in-Energy-and-C",
+      "paper_title": "Mechanical-stimulation-of-gasless-reaction-in-_2023_Progress-in-Energy-and-C"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:22:46.996297",
+      "answer_length": 1325
+    }
+  },
+  {
+    "question_text": "Why do shock-induced reactions in Ni-Al systems exhibit a pressure threshold and phase selectivity (e.g., Ni3Al vs. NiAl formation), and how do hot spot thermodynamics and melting phenomena influence these outcomes?",
+    "standard_answer": "Shock-induced reactions in Ni-Al systems require a pressure threshold (~20-30 GPa for Ni3Al, higher for NiAl) due to the need to overcome energy barriers for reaction initiation through mechanisms like pore collapse, plastic deformation, and defect generation. Phase selectivity arises from localized temperature variations in hot spots. For the 3Ni-Al system, equilibrium dictates Ni3Al as the product, but NiAl forms at higher impact velocities (>1.6 km/s) due to hot spots exceeding aluminum's melting point (933 K) but below nickel's (1728 K). This allows nickel dissolution into molten aluminum, with rapid cooling favoring NiAl crystallization over Ni3Al. At lower pressures, hot spots remain below aluminum's melting point, favoring solid-state diffusion and Ni3Al formation. The unexpected NiAl phase in Ni-rich systems indicates incomplete reaction, leaving unreacted nickel, as full conversion to Ni3Al isn't achieved. The pressure threshold ensures sufficient thermal energy from shock compression to initiate reactions, while phase outcomes are dictated by hot spot temperatures, melting behavior, and cooling rates, reflecting competition between kinetic pathways and thermodynamic stability.",
+    "original_text": {
+      "1": "It was shown that chemical reactions after shock stimulation are influenced by: The intensity of shock-loading conditions: typical threshold 20–30 GPa, impact velocity above 1 km/s for the formation of the Ni3Al phase and 1.6 km/s for the formation of the NiAl phase.",
+      "2": "The only logical explanation for the obtained result within the framework of classical theory is that hot spots with temperatures above the melting point of Al (913 K) and below that of Ni (1728 K) are formed under considered conditions. Some Ni dissolves in the melt, and rapid cooling leads to the crystallization of the most refractory NiAl phase."
+    },
+    "type": "reasoning",
+    "difficulty": 5,
+    "topic": "combustion_science",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires deep knowledge of shock-induced reactions in material systems, including pressure thresholds, phase selectivity mechanisms, hot spot thermodynamics, and melting phenomena in Ni-Al systems. This falls under combustion science and materials reaction dynamics, requiring specialized domain expertise in shock physics and reactive material systems.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_9ee638b7",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Mechanical-stimulation-of-gasless-reaction-in-_2023_Progress-in-Energy-and-C",
+      "paper_title": "Mechanical-stimulation-of-gasless-reaction-in-_2023_Progress-in-Energy-and-C"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:22:47.036261",
+      "answer_length": 1205
+    }
+  },
+  {
+    "question_text": "How does the combination of shear stress and high pressure in shock waves enable ultra-fast chemical reactions in gasless inorganic systems, and what atomic-level mechanisms facilitate mass transport beyond conventional diffusion?",
+    "standard_answer": "The ultra-fast chemical reactions in shock-compressed gasless inorganic systems are enabled by the synergistic effects of high pressure and shear stress, which induce plastic flow and atomic displacement beyond thermal diffusion limits. Under shock compression exceeding the dynamic yield point, tangential stresses cause material flow, displacing atoms from their original sites into thermodynamically favorable coordination environments. This plastic displacement, estimated at ~1 mm in shock structures, allows atoms to interact rapidly with nucleation centers. The mechanism involves nuclei of the new phase 'rolling' along grain boundaries, gathering atoms from both reactants due to stronger A-B bonds compared to A-A or B-B bonds. This process occurs in ~10^-12 s per atomic contact, far shorter than the ~10^-5 s compression duration, enabling complete reactant interaction. Unlike conventional diffusion (D ~10^-9 cm²/s at 1000 K, yielding ~10 Å diffusion length), this shear-driven mass transport facilitates nuclei growth to ~3 μm sizes, as atomic layers slide past each other, exposing fresh surfaces and enhancing reaction rates without relying on thermal motion.",
+    "original_text": {
+      "1": "On the atomic level, the displacement of atoms in the shock wave front becomes significant, allowing atoms to acquire a certain freedom and no longer return to the previous site but remain in the coordination environment corresponding to the thermodynamically favorable conditions (Р, Τ) created during compression.",
+      "2": "Dremin et al. [2] estimated that for a plastic displacement of 1 mm (achievable in the shock wave structure), and the dimension of a single atom as ~2 Å, the time required for the contact between two atoms is ~10^-12 s. This time is much shorter than the duration of the dynamic compression stage (10^-5 s), allowing all A and B atoms 'passing' in the vicinity of 'rolling' AB nuclei to have sufficient time to combine with the nuclei."
+    },
+    "type": "reasoning",
+    "difficulty": 5,
+    "topic": "fluid_mechanics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires deep expertise in shock wave physics, high-pressure material behavior, atomic-level mass transport mechanisms, and chemical kinetics in gasless inorganic systems - all core topics in combustion science, fluid mechanics, and energy systems research.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_e19cb8e2",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Mechanical-stimulation-of-gasless-reaction-in-_2023_Progress-in-Energy-and-C",
+      "paper_title": "Mechanical-stimulation-of-gasless-reaction-in-_2023_Progress-in-Energy-and-C"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:22:47.118802",
+      "answer_length": 1176
+    }
+  }
+]

@@ -1,0 +1,134 @@
+[
+  {
+    "question_text": "根据论文中关于自燃反应波传播模式和爆震半岛的描述，推导参数ξ和ε的物理意义，并解释它们如何影响从自燃到爆震的转变。使用二甲醚（DME）在982K和40.5bar条件下的爆震半岛图，分析初始热点半径r0和激发时间τe对传播模式边界的影响，并讨论燃料特性（如化学动力学）如何改变爆震半岛的形状。",
+    "standard_answer": "参数ξ和ε是描述自燃反应波传播模式的关键无量纲参数。ξ定义为声速a与反应波速度u的比值（ξ = a/u），其中反应波速度u与点火延迟时间（IDT）对距离的梯度成反比（u = (∂τi/∂r)^-1）。这可以重写为IDT对温度的敏感度和温度梯度的函数：u = (∂τi/∂T)^-1 × (∂T/∂r)。因此，ξ反映了反应波传播的相对速度，较小的ξ值表示更快的传播，接近热爆炸模式。参数ε定义为初始热点半径r0与声速和激发时间τe的乘积的比值（ε = r0/(a × τe)），其中激发时间τe是化学能量大部分释放的时间段，通常在微秒量级。ε接近零表示燃烧过程接近等压，而趋近无穷大表示等容燃烧导致等熵膨胀。在爆震半岛中，ξ的下限和上限（ξl和ξu）定义了发展爆震的区域，该区域通常随着ε的增加而变宽，意味着较大的初始热点尺寸和较短的激发时间有利于爆震。对于DME在982K和40.5bar的条件，爆震半岛呈C形曲线，随着热点温度从802K（NTC前）增加到982K（NTC）和1035K（NTC后），半岛变窄。初始热点半径r0的增加（从而ε增加）会扩大爆震区域，因为声波在激发时间内传播的距离相对于热点的恒定温度梯度距离更大，促进了反应波和声波的耦合。激发时间τe的缩短（例如，通过提高压力或温度）也会增加ε，扩大爆震区域。燃料特性如化学动力学通过影响IDT对温度的敏感度和激发时间来改变爆震半岛的形状；例如，具有缓慢热释放上升的燃料（如某些掺混物）具有较长的激发时间，从而缩小爆震区域，提高抗爆性。",
+    "original_text": {
+      "1": "ξ expresses the inverse ratio of reaction wave velocity u to the acoustic velocity a. ξ = a∕u. The reaction wave velocity is inversely proportional to the gradient of IDT with respect to the distance r from the center of a hotspot. u = (∂τi/∂r)^-1. This can be rewritten with the IDT sensitivity and temperature gradient: u = (∂τi/∂T)^-1 × ∂T/∂r.",
+      "2": "The parameter ε is expressed as: ε = r0/(a × τe) where r0 denotes the initial hotspot radius and τe is the excitation time. The excitation time refers to the period, during which the chemical energy in the hotspot is mostly released. This time, often calculated as the period when the heat release rises from 5% to its maximum is very short, generally in the order of microseconds."
+    },
+    "type": "calculation",
+    "difficulty": 5,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及燃烧学、爆震物理、化学动力学、无量纲参数分析、燃料特性影响等专业领域知识，需要燃烧/传热/流体/CFD/能源领域的专业知识来理解和分析",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量优秀，无需修改。参数ξ和ε的物理意义解释准确，对DME爆震半岛的分析深入，燃料特性影响的讨论全面，与原文引用内容一致"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_4fea33b8",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Low-speed-pre-ignition-and-super-knock-in-boost_2023_Progress-in-Energy-and-",
+      "paper_title": "Low-speed-pre-ignition-and-super-knock-in-boost_2023_Progress-in-Energy-and-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:42:09.888294",
+      "answer_length": 650
+    }
+  },
+  {
+    "question_text": "基于论文中关于燃料参数对LSPI影响的讨论，详细分析高芳香烃含量和低挥发性（高T50-T90蒸馏温度）如何通过燃料-油相互作用促进LSPI。从热质传递角度，使用公式(1)描述燃料薄膜在缸套上的能量平衡，并解释壁温（如通过冷却液温度控制）如何影响燃料附着和蒸发，进而影响LSPI频率。",
+    "standard_answer": "高芳香烃含量和低挥发性（高T50-T90蒸馏温度）通过增强燃料-油相互作用促进LSPI。芳香烃，特别是C9+重质芳香烃，具有高沸点（如4-叔丁基甲苯高达193°C），易于在缸套上形成沉积物并减少蒸发，导致更多燃料保留在油膜和顶部环岸区域。低挥发性燃料在喷射后不易蒸发，增加壁面润湿，使更多燃料进入油膜，从而在活塞环刮擦时释放富含燃料的液滴。从热质传递角度，燃料薄膜在缸套上的能量平衡由公式(1)描述：k(dT/dx) = ṁ × H_v + h(T_int - T_∞)，其中k是热导率，ṁ是蒸发质量速率，H_v是汽化热，h是对流换热系数，T_int是界面温度，T_∞是气体温度。该方程表明，蒸发速率ṁ受热传导和对流换热的驱动。壁温（通过冷却液温度控制）显著影响燃料附着和蒸发：较高壁温（如95°C）通过莱顿弗罗斯特效应和增强挥发组分的蒸发，减少燃料在油膜上的附着。例如，LIF测量显示，在100 bar喷射压力下，壁温从低温增加到高温，燃料附着量明显减少。数值模拟表明，对于20μm初始薄膜厚度，壁温在400K到500K之间对最终薄膜厚度有强敏感性。因此，提高冷却液温度可以促进燃料蒸发，减少油膜稀释和液滴释放，从而降低LSPI频率。实验数据支持这一点，显示冷却液温度从较低值增加到95°C时，LSPI频率显著下降。",
+    "original_text": {
+      "1": "The general view in literature is that high aromatic content and less volatile gasoline composition (i.e., the end third of the distillation curve) are the key properties in gasoline that increase LSPI. Aromatics promote deposit buildup and the number of side chains increased the deposit formation.",
+      "2": "The energy balance at the interface becomes: k dT/dx = ṁ × H_v + h(T_int − T_∞) where k is the heat conductivity (W/(mK)), ṁ is the evaporation mass rate (kg/(m2s)), H_v is the heat of vaporization (J/kg) and h is the convective heat transfer coefficient at the fuel film–gas interface (W/(m2K))."
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "heat_transfer",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及燃烧学、热力学、传热传质学、燃料化学和发动机工程等专业领域，需要深入理解LSPI机理、燃料特性、热质传递方程和发动机运行参数之间的复杂相互作用",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量优秀，无需修改。答案准确阐述了高芳香烃含量和低挥发性对LSPI的影响机制，正确应用了热质传递方程，详细解释了壁温对燃料附着和蒸发的影响，并提供了实验数据支持，完全符合问题的技术要求"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_af68fd68",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Low-speed-pre-ignition-and-super-knock-in-boost_2023_Progress-in-Energy-and-",
+      "paper_title": "Low-speed-pre-ignition-and-super-knock-in-boost_2023_Progress-in-Energy-and-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:42:10.285593",
+      "answer_length": 559
+    }
+  },
+  {
+    "question_text": "基于论文中关于LSPI发展成超级爆震的四个阶段，详细分析油-燃料液滴作为LSPI前驱体的物理化学过程，包括燃料喷雾撞击缸套、油膜稀释、液滴释放、蒸发和自燃的完整机理。特别关注液滴总点火延迟时间中物理延迟和化学延迟的贡献，并解释为什么润滑剂组分（如C16-C18）的添加会显著缩短总点火延迟时间。",
+    "standard_answer": "油-燃料液滴作为LSPI前驱体的完整机理涉及多个物理化学过程：首先，燃料喷雾撞击缸套，在油膜上形成燃料层，通过热传导和质扩散改变混合物的组成和性质。燃料挥发组分在进气冲程后期快速蒸发，而重质组分则保留在油膜中。活塞环的刮擦作用将这种油-燃料混合物从顶部环岸区域释放到燃烧室中。释放的液滴随后经历蒸发、与充量混合和自燃过程。总点火延迟时间（IDT）由物理延迟（蒸发和混合时间）和化学延迟（化学反应时间）组成。润滑剂组分如C16-C18的添加显著缩短总IDT的原因在于：在较低温度下（如680-873K），这些长链烷烃表现出更强的低温放热（LTHR），这增强了蒸发过程（降低物理IDT），特别是在环境温度高于800K时；而在温度低于750K时，化学IDT有效降低，因为异辛烷点火中的中间阶段减弱。CFD模拟显示，即使1%体积分数的C16-C18润滑剂替代物与异辛烷混合，在15 bar和680-873K条件下，总IDT缩短了15%，而10%体积分数的添加导致更显著的减少。这种减少归因于润滑剂物种比异辛烷具有更大的LTHR，增强了蒸发并改变了化学动力学路径。",
+    "original_text": {
+      "1": "The fuel spray impinges on the cylinder liner before complete vaporization, dilutes the oil and changes the chemical and physical properties, including composition, viscosity and surface tension. The impinged fuel creates a layer on the oil film, after which fuel vaporization, heat transfer and mass diffusion dictate the composition of the mixture that forms before the top ring scrapes it off.",
+      "2": "As shown by Kuti et al. [29], already a 1% volume fraction of C16 − C18 lubricant surrogates blended into iso-octane showed 15% shorter total IDTs in an Ignition Quality Tester (IQT) at 15 bar and 680–873 K. A 10% volume fraction of these species showed a much more significant reduction in total IDTs. The reduction with 10% addition was even stronger for base oils and a commercial lubricant with an additive package at the lower temperatures."
+    },
+    "type": "reasoning",
+    "difficulty": 5,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及燃烧学、热力学、流体力学和化学反应动力学等专业领域，需要深入理解燃料喷雾撞击、油膜稀释、液滴蒸发、自燃机理、点火延迟时间分析以及润滑剂组分对化学动力学的影响，这些都是燃烧工程和能源转换领域的核心专业知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量优秀，准确描述了油-燃料液滴作为LSPI前驱体的完整物理化学过程，正确分析了物理延迟和化学延迟的贡献，并基于实验数据合理解释了润滑剂组分缩短点火延迟时间的机理。答案与原文引用和论文摘录内容高度一致，无需修改"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_6c47f597",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Low-speed-pre-ignition-and-super-knock-in-boost_2023_Progress-in-Energy-and-",
+      "paper_title": "Low-speed-pre-ignition-and-super-knock-in-boost_2023_Progress-in-Energy-and-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:42:11.587470",
+      "answer_length": 477
+    }
+  },
+  {
+    "question_text": "基于论文中关于CFD和LES在模拟超级爆震中应用的讨论，解释为什么RANS模拟在预测超级爆震循环中面临挑战，而LES更合适。详细分析局部现象（如湍流、温度和混合物不均匀性）如何通过影响自燃反应波传播和压力波耦合导致爆震，并讨论Robert等人[89]的LES模拟结果，其中不同点火正时如何导致爆震转变。",
+    "standard_answer": "RANS模拟在预测超级爆震循环中面临挑战，因为它基于时间平均，无法充分解析循环间变异和局部瞬时现象，而超级爆震具有强烈的随机性和局部性。原文引用[1]明确指出：'The combination of these global and local phenomena lead to cyclic combustion variability... Robert et al. [89] used a reactive and compressible Large Eddy Simulation (LES) solver for simulating knock formation for 15 cycles of different spark timings. They highlight that the use of Reynolds-averaged Navier–Stokes (RANS) simulations poses a challenge due to the sporadic nature of super-knock cycles.' 相反，LES通过直接解析大尺度涡结构并模拟小尺度涡，能够捕捉局部现象的空间和时间变化，这些现象在超级爆震中至关重要。局部现象包括湍流流动、温度梯度、压力波动和混合物不均匀性，其尺度可从微米到毫米，时间尺度从微秒到几个曲轴转角度。这些现象影响自燃反应波的传播和压力波耦合：例如，温度梯度通过改变IDT梯度影响反应波速度（u = (∂τi/∂T)^-1 × (∂T/∂r)），而湍流可以耗散自由基和热不均匀性，延缓自燃，但也可以增强混合和热传递，促进爆震。压力波从其他热点或壁面反射可以触发爆震，如Zhang等人[109]在二维模拟中所示。Robert等人[89]使用反应性和可压缩LES求解器模拟了15个不同点火正时的循环。原文引用[2]详细描述：'At the earliest spark timings at TDC and 4 CAD BTDC, a transition to detonation would begin, leading to a much higher knock intensity.' 他们发现，当点火正时从上止点后8度提前时，爆震强度最初与自燃燃烧的质量成比例增加。在最早点火正时（上止点和上止点前4度），开始向爆震转变，导致爆震强度显著升高。这种转变归因于局部热点的合并和压力波的相互作用，如Pan等人[111]的LES模拟显示多个相邻自燃热点合并产生发展爆震。LES能够解析这些局部相互作用，而RANS由于平均化而平滑了这些效应，因此难以可靠预测超级爆震的偶发性质。",
+    "original_text": {
+      "1": "The combination of these global and local phenomena lead to cyclic combustion variability. Unlike experimental setups, certain modeling approaches capture the impact of local phenomena. Robert et al. [89] used a reactive and compressible Large Eddy Simulation (LES) solver for simulating knock formation for 15 cycles of different spark timings. They highlight that the use of Reynolds-averaged Navier–Stokes (RANS) simulations poses a challenge due to the sporadic nature of super-knock cycles.",
+      "2": "At the earliest spark timings at TDC and 4 CAD BTDC, a transition to detonation would begin, leading to a much higher knock intensity."
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "CFD_modeling",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及计算流体动力学（CFD）、大涡模拟（LES）、雷诺平均纳维-斯托克斯（RANS）、湍流、自燃反应波传播、压力波耦合等燃烧学和流体力学专业概念，需要燃烧/传热/流体/CFD/能源领域的专业知识。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "无需改进，问题和答案均符合质量要求。"
+    },
+    "retry_count": 2,
+    "question_id": "deepseek_q_86820c13",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Low-speed-pre-ignition-and-super-knock-in-boost_2023_Progress-in-Energy-and-",
+      "paper_title": "Low-speed-pre-ignition-and-super-knock-in-boost_2023_Progress-in-Energy-and-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:43:45.429035",
+      "answer_length": 1138
+    }
+  }
+]

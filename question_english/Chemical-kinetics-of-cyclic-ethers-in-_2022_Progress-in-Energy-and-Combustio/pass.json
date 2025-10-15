@@ -1,0 +1,168 @@
+[
+  {
+    "question_text": "In the context of computational chemistry methods for CE kinetics, why do single-reference methods like CCSD(T) potentially fail for certain transition states in low-temperature oxidation, and what multi-reference alternatives should be considered?",
+    "standard_answer": "Single-reference methods like CCSD(T) can fail for transition states in low-temperature oxidation due to multi-reference character, where the electronic wavefunction cannot be adequately described by a single determinant. This occurs when near-degenerate electronic configurations contribute significantly, particularly in radical-radical reactions and certain transition states. The T1 diagnostic provides a quantitative measure: values >0.02 indicate potential multi-reference issues, with values >0.03-0.04 suggesting severe problems. For the C₂H₅ + O₂ system, the transition state for CE formation shows T1=0.041, indicating strong multi-reference character. In such cases, single-reference methods may yield inaccurate barrier heights and reaction rates. Multi-reference methods like CASPT2 (Complete Active Space second order Perturbation Theory) are recommended, as they explicitly treat multiple electronic configurations through an active space of electrons and orbitals. However, CASPT2 requires careful selection of the active space, which can be challenging. For geometry optimizations and frequency calculations, DFT methods like B3LYP are commonly used but must include diffuse functions in the basis set to avoid errors in conformational energies, as demonstrated by ethanol conformer calculations where improper basis sets predicted incorrect energy ordering.",
+    "original_text": {
+      "1": "If the dimensionless T1 value is larger than 0.02, then treating the species with single-reference methods might lead to severe errors, but often values up to 0.03 or 0.04 are considered to be safely treatable by single reference methods",
+      "2": "The T1 value for the TS for CE formation is the second highest reported value suggesting that results obtained with single reference methods without additional corrections might be highly inaccurate"
+    },
+    "type": "reasoning",
+    "difficulty": 5,
+    "topic": "CFD",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires deep knowledge of computational chemistry methods applied to combustion kinetics, specifically addressing limitations of single-reference methods for transition states in low-temperature oxidation chemistry. It demands expertise in electronic structure theory, multi-reference character in chemical reactions, and computational methods for combustion applications.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer are both high quality - domain-focused, factually correct based on citations, and compliant with all quality requirements."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_82bb8e80",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Chemical-kinetics-of-cyclic-ethers-in-_2022_Progress-in-Energy-and-Combustio",
+      "paper_title": "Chemical-kinetics-of-cyclic-ethers-in-_2022_Progress-in-Energy-and-Combustio"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:17:13.158515",
+      "answer_length": 1375
+    }
+  },
+  {
+    "question_text": "How does the formation of cyclic ethers (CEs) compete with ketohydroperoxide (KHP) formation during low-temperature hydrocarbon oxidation, and what are the implications for ignition delay and negative temperature coefficient (NTC) behavior?",
+    "standard_answer": "The competition between CE and KHP formation pathways during low-temperature oxidation (500-900 K) critically influences ignition delay and NTC behavior. Alkyl radicals (Ṙ) react with O₂ to form alkylperoxy radicals (ṘO₂), which undergo intramolecular H-abstraction to produce hydroperoxyalkyl radicals (Q̇OOH). These Q̇OOH radicals have two competing fates: (1) decomposition to form stable CEs + OH radicals, or (2) second O₂ addition to form dihydroperoxyalkyl radicals (Ṗ(OOH)₂), which decompose to KHPs + OH radicals. The CE pathway represents chain propagation without branching, while the KHP pathway leads to chain branching since KHPs contain fragile O-O bonds that readily decompose to produce two radicals. As temperature increases within the NTC region, the reversibility of Ṙ + O₂ and Q̇OOH + O₂ reactions increases, favoring CE formation over KHP formation. This reduces overall reactivity since CE formation consumes radicals without generating new chain carriers, while KHP decomposition produces additional radicals that accelerate ignition. The shift in Q̇OOH consumption from KHP to CE formation with increasing temperature creates the NTC regime where reactivity paradoxically decreases despite higher temperatures.",
+    "original_text": {
+      "1": "The pathways leading to CEs have an important impact on fuel ignition and they explain the particular behavior observed during fuel low-temperature oxidation, such as the presence of a negative temperature coefficient zone and related cool flames",
+      "2": "The reason for that the competition for Q̇OOH radical consumption turns in favor of CE formation instead of 2nd O₂ addition when increasing temperature"
+    },
+    "type": "reasoning",
+    "difficulty": 5,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires deep knowledge of combustion kinetics, specifically low-temperature hydrocarbon oxidation mechanisms, cyclic ether formation pathways, ketohydroperoxide chemistry, and their impact on ignition delay and negative temperature coefficient behavior. This is specialized combustion science knowledge beyond general ML/CS.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on paper content, and no other compliance issues"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_d3a5a8ad",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Chemical-kinetics-of-cyclic-ethers-in-_2022_Progress-in-Energy-and-Combustio",
+      "paper_title": "Chemical-kinetics-of-cyclic-ethers-in-_2022_Progress-in-Energy-and-Combustio"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:17:13.399587",
+      "answer_length": 1235
+    }
+  },
+  {
+    "question_text": "How do the different reaction pathways in furan derivative combustion affect soot precursor formation, and why does 2-methylfuran (2-MF) produce significantly less soot precursors than 2,5-dimethylfuran (2,5-DMF) despite similar molecular structures?",
+    "standard_answer": "The combustion chemistry of furan derivatives leads to different soot precursor formation pathways due to variations in molecular structure and subsequent decomposition mechanisms. 2,5-DMF's symmetrical structure with methyl groups at both 2 and 5 positions promotes formation of resonance-stabilized radicals that readily undergo ring-opening reactions to produce propargyl radicals and other C₃-C₄ species. These can combine to form first-ring aromatics like benzene and further react to form polycyclic aromatic hydrocarbons (PAHs) such as naphthalene, indene, and pyrene. The methyl groups provide additional carbon atoms that facilitate growth to larger PAHs. In contrast, 2-MF has only one methyl group, which leads to different decomposition pathways. The unsymmetrical structure favors formation of smaller fragments like acetylene and C₁-C₂ species that are less prone to PAH formation. The single methyl group position directs chemistry toward fragmentation rather than ring-growth pathways. Additionally, 2-MF's lower carbon content (C₅H₆O vs C₆H₈O for 2,5-DMF) reduces the potential for carbon clustering. Kinetic modeling shows 2,5-DMF flames produce soot precursor mole fractions comparable to toluene, while 2-MF produces levels similar to alkanes, demonstrating how subtle structural differences dramatically affect pollutant formation pathways in cyclic ether combustion.",
+    "original_text": {
+      "1": "The model of Tran et al. [101] predicts that the 2,5-DMF flame produces significantly higher quantities of the three soot precursors than gasoline surrogate",
+      "2": "In contrast, the 2-MF flame produces very low levels of soot precursors, close to those of the alkanes"
+    },
+    "type": "application",
+    "difficulty": 4,
+    "topic": "combustion_science",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question requires deep combustion science expertise, specifically knowledge of furan derivative combustion chemistry, reaction pathways, soot precursor formation mechanisms, and how molecular structure differences (2-MF vs 2,5-DMF) affect pollutant formation. It demands understanding of combustion kinetics, aromatic formation pathways, and structural effects on decomposition mechanisms.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Excellent question and answer - well-focused on combustion chemistry with detailed mechanistic explanation that aligns with the paper's findings about soot precursor differences between 2-MF and 2,5-DMF."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_dcbb9804",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Chemical-kinetics-of-cyclic-ethers-in-_2022_Progress-in-Energy-and-Combustio",
+      "paper_title": "Chemical-kinetics-of-cyclic-ethers-in-_2022_Progress-in-Energy-and-Combustio"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:17:14.116886",
+      "answer_length": 1388
+    }
+  },
+  {
+    "question_text": "Based on the provided paper content, explain the combustion performance characteristics of 2-methylfuran (2-MF) and 2,5-dimethylfuran (2,5-DMF) as potential biofuels for gasoline engines, focusing specifically on their boiling points, lower heating values, and octane numbers compared to conventional fuels and other biofuels. Include the chemical reasoning behind why these properties make them suitable as octane-boosting additives.",
+    "standard_answer": "According to the paper, 2-MF and 2,5-DMF exhibit specific combustion performance characteristics that make them promising biofuel candidates for gasoline engines. Their boiling points fall below 370 K, which places them within the typical gasoline boiling range (303-473 K), ensuring proper vaporization in spark-ignition engines. The mass lower heating values (LHV) of both furan derivatives are above that of n-butanol (26.8 MJ/kg), making them competitive despite their oxygen content. Most importantly, both compounds have Research Octane Numbers (RON) above 100, with 2,5-DMF specifically having a RON of 119, which is very close to ethanol's RON of 120. This indicates similar resistance to auto-ignition as ethanol. The high RON values result from their molecular structure as furan derivatives, which provides excellent anti-knock properties. These combined properties - appropriate boiling range, competitive energy density, and superior octane ratings - make 2-MF and 2,5-DMF particularly interesting as potential octane-boosting additives in gasoline blends, offering performance comparable to established oxygenated biofuels like ethanol while being derived from lignocellulosic biomass.",
+    "original_text": {
+      "1": "Amongst all these CEs, 2-MF and 2,5-DMF have a BP below 370 K, a mass LHV above that of n-butanol (26.8), and a RON above 100, which makes these two CE particularly interesting as potential octane boosting additives in gasoline blends",
+      "2": "The RON of 2,5-DMF (119) is very close to that of ethanol (120) indicating similar resistance to auto-ignition"
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question requires specific knowledge of biofuel combustion properties, including boiling points, heating values, and octane numbers in the context of gasoline engines. It focuses on combustion performance characteristics of specific furan derivatives (2-MF and 2,5-DMF) and their chemical properties as biofuels, which falls squarely within combustion science and energy systems expertise.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "The question is well-focused on combustion science domain and the answer accurately reflects the paper's content with proper citations. No issues detected."
+    },
+    "retry_count": 1,
+    "question_id": "deepseek_q_7ebe6bc3",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Chemical-kinetics-of-cyclic-ethers-in-_2022_Progress-in-Energy-and-Combustio",
+      "paper_title": "Chemical-kinetics-of-cyclic-ethers-in-_2022_Progress-in-Energy-and-Combustio"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:17:58.323727",
+      "answer_length": 1199
+    }
+  },
+  {
+    "question_text": "Using the provided paper content, analyze the combustion performance characteristics of 2,5-dimethylfuran (2,5-DMF) and ethanol as potential biofuels, focusing on their auto-ignition properties, energy density, and pollutant formation tendencies. Support your analysis with specific data from the paper regarding research octane numbers, lower heating values, and formaldehyde emissions, ensuring all claims are directly supported by the provided citations.",
+    "standard_answer": "The combustion performance comparison between 2,5-DMF and ethanol reveals important differences in their characteristics as biofuel candidates. According to the paper, the Research Octane Number (RON) data shows that 'The RON of 2,5-DMF (119) is very close to that of ethanol (120) indicating similar resistance to auto-ignition.' This near-identical RON value demonstrates both fuels provide excellent knock resistance in spark-ignition engines, making them suitable for gasoline applications where high octane numbers are required to prevent premature ignition. Regarding energy density, the paper states that 'The LHV per mass of all the CEs listed in Table 1 are above that of n-butanol except that of GVL,' and specifically for 2,5-DMF, the lower heating value is 30.0 MJ/L (33.7 MJ/kg) compared to ethanol's 21.3 MJ/L (26.8 MJ/kg). This represents a significant advantage for 2,5-DMF in terms of volumetric energy density, which is particularly important for vehicle range considerations. For pollutant formation, the paper provides experimental evidence that '2,5-DMF led to the lowest formaldehyde emission amongst the tested fuels.' This reduced formaldehyde emission is particularly significant given that carbonyl compounds are regulated pollutants in engine exhaust. The comparison demonstrates that while both fuels exhibit similar auto-ignition resistance characteristics, 2,5-DMF offers superior energy density and reduced formaldehyde emissions compared to ethanol, making it an attractive biofuel candidate despite potential concerns about soot precursor formation noted in other sections of the paper.",
+    "original_text": {
+      "1": "The LHV per mass of all the CEs listed in Table 1 are above that of n-butanol except that of GVL",
+      "2": "2,5-DMF led to the lowest formaldehyde emission amongst the tested fuels",
+      "3": "The RON of 2,5-DMF (119) is very close to that of ethanol (120) indicating similar resistance to auto-ignition"
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires deep expertise in combustion science, specifically analyzing biofuel combustion performance characteristics including auto-ignition properties (Research Octane Number), energy density (lower heating values), and pollutant formation (formaldehyde emissions) - all core combustion science concepts that cannot be answered with general ML knowledge.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct with proper citations, and no other compliance issues."
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_f46adc54",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Chemical-kinetics-of-cyclic-ethers-in-_2022_Progress-in-Energy-and-Combustio",
+      "paper_title": "Chemical-kinetics-of-cyclic-ethers-in-_2022_Progress-in-Energy-and-Combustio"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:19:19.460044",
+      "answer_length": 1619
+    }
+  }
+]

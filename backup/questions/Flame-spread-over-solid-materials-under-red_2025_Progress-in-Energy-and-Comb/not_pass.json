@@ -1,0 +1,191 @@
+[
+  {
+    "question_text": "在微重力条件下，自然对流被显著抑制，这导致了'窒息效应'和辐射热损失重要性的增加，从而驱动火焰结构从二维向三维转变。请从传热学和流体力学角度详细解释：在相同的低速强迫流（例如5 cm/s）下，与正常重力相比，为什么热厚PMMA材料在微重力静止环境中即使处于纯氧气氛下最终也会熄灭？请结合能量平衡方程和特征时间尺度分析其物理机理。",
+    "standard_answer": "在正常重力条件下，火焰前缘的稳定主要依赖于由浮力诱导的对流（自然对流）。在微重力静止环境中（Vg=0），燃烧产物（如CO2和H2O）会通过分子扩散和微弱残留浮力在预热区前累积，形成显著的'氧影区'，限制了氧气向火焰反应区的扩散输运速率。根据论文第2.1节中定义的特征时间尺度，固体相的弛豫时间（ts,res = Lpr / Vf）会显著延长。对于热厚材料（τ > τh），其固体相热扩散长度（Lsx = √(αs * ts,res) 会增大，导致更大的表面再辐射热损失（Rrad,s = σεs(Tp⁴ - T∞⁴)Lgy / [λg(Tf - Tp)]。当火焰传播速度Vf降低时，ts,res增大，Lsx随之增大，表面再辐射热通量（∝ Lsx）增强。同时，由于缺乏对流，气相反应物在预热区的停留时间（tg,res = Lgx / Vr）也增加，增强了气相辐射热损失（Rrad,g = tg,res/tg,rad）。这形成了一个负反馈循环：Vf降低 → ts,res增大 → Lsx增大 → 表面再辐射增强 → 净火焰热输入减少 → Vf进一步降低，最终导致火焰无法持续传播而熄灭。具体而言，当样品厚度超过由式(3.1)定义的临界值τcr时，火焰接收到的总热通量不足以抵消固体相的热损失和预热未燃区所需的显热，最终达到热平衡的临界点而熄灭。",
+    "original_text": {
+      "1": "The unique low-gravity, reduced-buoyancy environments of spacecraft and extraterrestrial habitats profoundly alter fluid dynamics, chemical reactions, and heat-mass transfer, leading to drastic changes in fire behavior。",
+      "2": "In the gravitational field, this large density difference can induce a strong buoyant flow (natural convection), whereas in microgravity, this buoyancy is almost absent。"
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "heat_transfer",
+    "question_id": "batch_detail_q_fd6351e4",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Flame-spread-over-solid-materials-under-red_2025_Progress-in-Energy-and-Comb",
+      "paper_title": "Flame-spread-over-solid-materials-under-red_2025_Progress-in-Energy-and-Comb"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T10:50:53.526803",
+      "batch_processing": true,
+      "answer_length": 570
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及微重力条件下的燃烧现象、传热学和流体力学机理、能量平衡方程和特征时间尺度分析，需要燃烧科学、传热学、流体力学等领域的专业知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported"
+      ],
+      "other_compliant": false,
+      "other_issues": [
+        "has_meta_info",
+        "too_general"
+      ],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在与原文矛盾的事实错误（氧影区形成机制），关键机理声明缺乏引用支持，且包含元信息'根据论文第2.1节'。建议修正机理描述，删除元信息，确保所有关键声明有原文依据。"
+    }
+  },
+  {
+    "question_text": "根据格拉晓夫相似律，通过降低环境压力可以模拟微重力条件下的火焰传播。已知在正常重力（1g）下，环境压力为101 kPa。请计算：为了模拟月球重力（0.16g）和火星重力（0.38g）的浮力效应，在地面低压实验中需要达到的环境压力分别是多少？请给出详细推导过程，并说明在低压环境下模拟微重力火焰传播的主要局限性。",
+    "standard_answer": "根据格拉晓夫相似律，为了保持流动相似性，需要维持格拉晓夫数（Gr）不变。Gr定义为 Gr = (gβΔT L³)/ν²，其中g为重力水平，ρ为气体密度（ρ ∝ P）。相似准则要求 P²g = 常数。在正常重力（1g）和环境压力101 kPa下，Gr值为基准。当重力水平降至g'时，需要调整压力P'以满足 P'²g' = P²g。设P=101 kPa，g=1。对于月球重力（0.16g），P'² * 0.16 = 101² * 1，因此 P' = 101 * √(1/0.16) ≈ 40 kPa。对于火星重力（0.38g），同理 P' = 101 * √(1/0.38) ≈ 62 kPa。推导过程：由Gr相似律，P²g = 常数，所以 P' = P * √(g/g')。因此，模拟月球重力需约40 kPa，模拟火星重力需约62 kPa。然而，这种模拟方法存在局限性：1）流动场在低压下可能不完全满足自相似边界层预测，特别是在火焰稳定区；2）燃料-空气混合机制在层流和湍流状态下不同，低压模拟无法准确再现由热塑性材料的熔融滴落或高导热基体引起的固体相热传导等重力响应效应。此外，烟尘相关的辐射在低压下会受到抑制，因为烟尘生成率与压力成三次方关系（P³）[161]。在微重力下，烟尘生成有更长的停留时间，可能导致微重力火焰在高压下因辐射淬火而缩短长度，与正常重力下的趋势相反。",
+    "original_text": {
+      "1": "Reducing the ambient pressure reduces the gas density, which in turn increases the kinematic viscosity and effectively reduces the Grashof number of the system. This has the effect of suppressing buoyancy, similar to reducing the gravity level。",
+      "2": "As long as the Gr number remains constant, there is a similarity in the velocity field for natural convection。"
+    },
+    "type": "calculation",
+    "difficulty": 3,
+    "topic": "fluid_mechanics",
+    "question_id": "batch_detail_q_dc5e3304",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Flame-spread-over-solid-materials-under-red_2025_Progress-in-Energy-and-Comb",
+      "paper_title": "Flame-spread-over-solid-materials-under-red_2025_Progress-in-Energy-and-Comb"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T10:51:06.879623",
+      "batch_processing": true,
+      "answer_length": 587
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "该问题涉及格拉晓夫相似律、微重力条件下的火焰传播、浮力效应模拟等专业概念，需要燃烧科学、流体力学、传热传质等领域的专业知识来正确理解和解答",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "fundamental_error"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在根本性错误，格拉晓夫数应保持常数时，相似准则应为P²/g = 常数，而非P²g = 常数。需要重新推导计算月球和火星重力的模拟压力"
+    }
+  },
+  {
+    "question_text": "在狭窄通道装置（NCA）中模拟微重力火焰传播时，存在明显的'围蔽效应'。请从流动场、全局化学当量比和壁面热损失三个角度，详细分析这些效应对火焰传播速率和可燃极限的影响。",
+    "standard_answer": "狭窄通道装置通过限制垂直方向上的浮力发展长度来抑制自然对流。然而，这种几何约束引入了显著的围蔽效应：1）流动场：在NCA中，流动是Hagen-Poiseuille抛物线型速度分布，这与开放空间中材料表面的边界层流动不同。在NCA中，浮力诱导的流动受到通道顶部和底部的限制，导致流线在围蔽壁面附近更密集，从而增强了氧气向火焰的输运。然而，这种增强可能导致下游火焰因上游火焰作为柔性屏障产生'氧影效应'，限制了氧气供应。2）全局化学当量比（Ψ）：定义为单位时间内燃料热解率与 inflow氧气带入率的比值。在NCA中，由于通道壁面的限制，气体膨胀效应被约束，导致火焰尺寸增大，总热释放率（HRR）增加，从而可能提高火焰传播速率。但同时，壁面热损失也会增加，特别是在低流速条件下，由于火焰与壁面之间的热交换增强。根据论文式(5.6)，Ψ = ψ (ρs/ρg)(δs/(2H))(Vf/(Vf+Vg))。当通道高度（H）减小时，壁面热损失（无量纲热损失）通常随H减小而增加，并在中等流速下达到最小值。3）热损失：NCA中壁面热损失与通道高度（H）密切相关。H减小会增加单位体积的火焰表面积，导致热损失增加。这种固有的较高热损失使得火焰在比微重力更大的流速下就可能熄灭。因此，虽然NCA可以部分模拟微重力火焰传播行为，但由于围蔽效应，在准确再现可燃极限方面存在持续挑战。",
+    "original_text": {
+      "1": "The enclosure effect can be understood from three aspects: flow field, global stoichiometry, and heat loss。"
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "CFD_modeling",
+    "question_id": "batch_detail_q_52816d17",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Flame-spread-over-solid-materials-under-red_2025_Progress-in-Energy-and-Comb",
+      "paper_title": "Flame-spread-over-solid-materials-under-red_2025_Progress-in-Energy-and-Comb"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T10:51:18.866755",
+      "batch_processing": true,
+      "answer_length": 581
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及狭窄通道装置中的微重力火焰传播，需要燃烧科学、流体力学、传热传质和化学反应工程等专业领域知识来理解流动场、化学当量比和热损失对火焰行为的影响",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": false,
+      "other_issues": [
+        "has_meta_info"
+      ],
+      "overall_verdict": "fail",
+      "recommendation": "删除'根据论文式(5.6)'等元信息引用，直接呈现公式内容"
+    }
+  },
+  {
+    "question_text": "在停滞点低拉伸扩散火焰中，火焰拉伸率（a）如何影响火焰驻留距离（yf）和无量纲质量燃烧率（f̃w）？请结合达姆科勒数（Da）和辐射数（Rrad,g）的表达式，详细分析在低拉伸率下，辐射热损失如何促使火焰从均匀的二维结构转变为指状火焰细胞（flamelets）？请从热扩散不稳定性机理角度进行解释。",
+    "standard_answer": "在停滞点扩散火焰几何中，等效拉伸率（a）由式(6.5)定义为 a = aF(1 + Fr*)^(1/2)，其中Fr*为混合对流参数。火焰驻留距离（yf）与拉伸率的关系为 yf ∝ 1/a^(1/2），这是因为拉伸率低时，气体停留时间（tg,res = Lgx/Vr）增加，导致气相辐射热损失（Rrad,g = tg,res/tg,rad），而气相辐射热损失在低拉伸率下增强。根据经典理论，无量纲质量燃烧率 f̃w = ̇m'' / (ρgμga)^(1/2)。同时，无量纲质量燃烧率（f̃w）在低拉伸率下非线性下降（图45b）[291]），表明均匀火焰无法维持。此外，根据论文第6.3节，在降低氧浓度或降低压力时，低拉伸火焰更易熄灭。当拉伸率低于约3 s⁻¹时，均匀的二维火焰结构会分裂成多个单独的火焰细胞（flamelets）。这种转变是由于在低拉伸率下，辐射驱动的淬火机制占主导。当拉伸率减小到临界值以下时，火焰细胞通过增加局部曲率（拉伸）来增强氧气供应。这种指状火焰细胞的形成增加了火焰的比表面积，将热释放集中到更小的体积中，从而有助于维持向前传播。",
+    "original_text": {
+      "1": "The absence of buoyancy-induced convection in microgravity leads to unique phenomena, including the 'smothering' effects and enhanced radiative heat loss importance, which together drive the transition from two-dimensional to three-dimensional flame structures。",
+      "2": "These flamelets emerged when the opposed flow speed decreased to the same magnitude of the speed for thermal expansion, molecular diffusion, residual buoyancy, and fuel vapor blowing from the sample (1–1.5 cm/s）。"
+    },
+    "type": "concept",
+    "difficulty": 5,
+    "topic": "combustion_kinetics",
+    "question_id": "batch_detail_q_d025d313",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Flame-spread-over-solid-materials-under-red_2025_Progress-in-Energy-and-Comb",
+      "paper_title": "Flame-spread-over-solid-materials-under-red_2025_Progress-in-Energy-and-Comb"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T10:51:32.304836",
+      "batch_processing": true,
+      "answer_length": 478
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及停滞点扩散火焰、火焰拉伸率、达姆科勒数、辐射热损失、热扩散不稳定性等专业概念，需要燃烧科学、流体力学和传热传质领域的专业知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "unsupported",
+        "fundamental_error"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在关键问题：1)缺乏对Da数和Rrad,g表达式的具体分析；2)热扩散不稳定性机理解释不足；3)部分关键声明未被原文引用支持；4)火焰驻留距离与拉伸率的关系推导不严谨"
+    }
+  },
+  {
+    "question_text": "对于热薄材料（如滤纸）的逆流火焰传播，火焰拉伸率（a）对火焰传播速率（Vf）的影响呈现出典型的U形曲线：在低流速下的淬火分支和高流速下的吹熄分支。请详细解释：为什么在低拉伸率下，辐射热损失会导致火焰淬火，而在高拉伸率下，不完全的化学反应（低Da数效应）会导致火焰吹熄？请结合Da数定义（式(2.12））和临界Da数（Dacr），从化学动力学和热损失耦合角度分析这两种熄灭机制。",
+    "standard_answer": "在逆流火焰传播中，火焰拉伸率（a）通过影响气体停留时间（tg,res ∝ 1/a）和化学反应时间（tg,chem）的相对重要性变化。在低拉伸率下，tg,res增大，导致：1）气相辐射热损失增加，因为辐射时间（tg,rad）恒定，而tg,res增大，因此Rrad,g增大。同时，Da数定义为 Da = tg,res/tg,chem = [αgρgYO2Zg exp(-E/RTf)] / Vr²）。当Da数低于临界值（Dacr ≈ 1）时，火焰无法维持。具体而言，淬火机制主要由热损失对火焰传播的抑制作用驱动。根据论文第2.4节，淬火分支主要由气相辐射热损失和表面再辐射控制。根据式(2.24)，能量平衡方程为：η + Rrad,s + 1/Da = 1。在低拉伸率下，由于火焰拉伸减小，气体停留时间增加，这不仅增强了气相辐射热损失，还增加了固体相的热扩散长度，从而增强了表面再辐射。这种负反馈循环可表述为：Vf降低 → ts,res增大 → Lsx增大 → 表面再辐射增强 → 净热输入减少 → Vf进一步降低，最终导致火焰熄灭。相反，在高拉伸率下，吹熄机制占主导，此时Da数减小，化学反应无法在有限的气体停留时间内完成，导致局部低温区和火焰熄灭。这两种机制共同作用，形成了U形的可燃极限曲线。",
+    "original_text": {
+      "1": "The quenching branch can be described by Da [57,65,132], whereas predicting the quenching branch requires a clear understanding of the various sources of heat losses。"
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "question_id": "batch_detail_q_81b0c675",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Flame-spread-over-solid-materials-under-red_2025_Progress-in-Energy-and-Comb",
+      "paper_title": "Flame-spread-over-solid-materials-under-red_2025_Progress-in-Energy-and-Comb"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T10:51:45.908368",
+      "batch_processing": true,
+      "answer_length": 547
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "该问题涉及逆流火焰传播、火焰拉伸率、达姆科勒数(Da)、辐射热损失、化学反应动力学等燃烧学核心概念，需要燃烧科学、传热学和流体力学领域的专业知识来准确解释这些复杂机制",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "fundamental_error",
+        "unsupported"
+      ],
+      "other_compliant": false,
+      "other_issues": [
+        "has_meta_info",
+        "too_general"
+      ],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在多处事实错误和基本原理混淆，建议重新梳理Da数定义、临界Da数概念，并清晰区分淬火和吹熄机制的根本物理原因"
+    }
+  }
+]

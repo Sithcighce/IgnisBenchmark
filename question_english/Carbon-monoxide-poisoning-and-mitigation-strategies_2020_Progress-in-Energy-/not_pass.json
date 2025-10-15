@@ -1,0 +1,48 @@
+[
+  {
+    "question_text": "Using the Temkin isotherm relationship for CO coverage on Pt/C anode catalysts presented in the paper, calculate the expected CO coverage at 80°C with 10 ppm CO in H₂ at 1.5 bar total pressure, given ΔG°_ads = -45 kJ/mol, r = 15 kJ/mol, and H = 0.8 atm L/mol for CO solubility. Explain the physical significance of each term in the isotherm equation and discuss how this coverage affects hydrogen oxidation reaction kinetics according to the mechanisms described in the paper. Ensure your calculation yields physically plausible coverage values (0 ≤ θ_CO ≤ 1) by properly interpreting the isotherm form.",
+    "standard_answer": "The Temkin isotherm for CO coverage on Pt/C anode catalysts is properly expressed as: θ_CO = exp[-(ΔG°_ads)/r - (RT/r)ln(H[CO]/[H₂])]. First, calculate the necessary parameters: T = 80°C = 353 K, R = 8.314 J/mol·K = 0.008314 kJ/mol·K. RT = 0.008314 × 353 = 2.935 kJ/mol. Convert concentrations: Total gas concentration = P/RT = 1.5/(0.082 × 353) = 0.0518 mol/L. [CO] = 10 ppm = 10 × 10⁻⁶ × 0.0518 = 5.18 × 10⁻⁷ mol/L. [H₂] ≈ 0.0518 mol/L (since H₂ dominates). Now calculate the exponent: -(ΔG°_ads)/r - (RT/r)ln(H[CO]/[H₂]) = [-(-45)/15 - (2.935/15)ln(0.8 × 5.18×10⁻⁷/0.0518)] = [3 - 0.1957 × ln(8.0×10⁻⁶)] = [3 - 0.1957 × (-11.73)] = [3 + 2.295] = 5.295. Therefore, θ_CO = exp(5.295) = 199.3. This value exceeds 1, indicating the given parameters may not be consistent with the experimental conditions in the paper. For physically plausible coverage, we should expect θ_CO ≈ 1 given the strong adsorption affinity of CO on Pt. The term -(ΔG°_ads)/r represents the thermodynamic driving force for adsorption, while (RT/r)ln(H[CO]/[H₂]) accounts for the concentration-dependent competitive adsorption between CO and H₂. According to the paper, 'CO competes with hydrogen for the active sites on the platinum under normal anode operating potentials' and 'at 25°C, the CO contained in 1% CO/hydrogen mixture blocks 98% of the active sites.' The high CO coverage dramatically reduces available surface area for hydrogen oxidation reaction (HOR), which proceeds through Tafel-Volmer and Heyrovsky-Volmer mechanisms involving Pt-H formation. The blocking of active sites increases anode activation overpotential and can lead to performance degradation through reduced available Pt-H sites for the HOR mechanism.",
+    "original_text": {
+      "1": "CO competes with hydrogen for the active sites on the platinum under normal anode operating potentials. CO adsorbs on the Pt surface more easily than H₂ (heat of adsorption of CO on Pt is 134 kJ mol⁻¹, and for H₂ is 87.9 kJ mol⁻¹).",
+      "2": "At 25°C, the CO contained in 1% CO/hydrogen mixture blocks 98% of the active sites. The CO coverage follows a Temkin isotherm at a fixed current density, which can be written in the form: θ_CO = [-(ΔG°_ads)/r - (RT/r)ln(H[CO]/[H₂])] where θ_CO is the CO coverage, ΔG°_ads is the standard free energy of adsorption, r is the interaction parameter, and H Henry's law constant for CO solubility."
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question requires deep domain expertise in energy systems, specifically PEM fuel cell electrochemistry, CO poisoning mechanisms, adsorption isotherms, and hydrogen oxidation reaction kinetics. It involves specialized knowledge of catalyst surface chemistry, thermodynamic relationships, and fuel cell operational principles that cannot be answered with general ML or CS knowledge.",
+      "answer_correct": false,
+      "answer_issues": [
+        {
+          "type": "fundamental_error",
+          "description": "The answer incorrectly applies the Temkin isotherm equation. The paper citation shows θ_CO = [-(ΔG°_ads)/r - (RT/r)ln(H[CO]/[H₂])] but the answer treats this as θ_CO = exp[-(ΔG°_ads)/r - (RT/r)ln(H[CO]/[H₂])], adding an exponential function not present in the original equation. This fundamental mathematical error leads to physically impossible coverage values > 1."
+        },
+        {
+          "type": "factual_error",
+          "description": "The answer states θ_CO = 199.3, which is physically impossible since coverage must be between 0 and 1. The correct application of the given equation should yield θ_CO = 5.295, which is still >1, indicating either incorrect parameter values or missing normalization in the isotherm form."
+        },
+        {
+          "type": "unsupported",
+          "description": "The answer makes claims about 'Tafel-Volmer and Heyrovsky-Volmer mechanisms' but these specific mechanisms are not mentioned in the provided citations. The paper discusses CO poisoning effects generally but does not specify these particular HOR mechanisms."
+        }
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "Fix the fundamental mathematical error in applying the Temkin isotherm equation and ensure coverage values remain physically plausible (0 ≤ θ_CO ≤ 1). Verify all mechanistic claims against the actual paper content."
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_2a05af57",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Carbon-monoxide-poisoning-and-mitigation-strategies_2020_Progress-in-Energy-",
+      "paper_title": "Carbon-monoxide-poisoning-and-mitigation-strategies_2020_Progress-in-Energy-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:19:42.400967",
+      "answer_length": 1705
+    }
+  }
+]

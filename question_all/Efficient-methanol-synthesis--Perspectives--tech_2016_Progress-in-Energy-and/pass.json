@@ -1,0 +1,38 @@
+[
+  {
+    "question_text": "在甲醇合成反应器的建模中，伪均质模型（pseudo-homogeneous models）和异质模型（heterogeneous models）在预测精度和计算效率方面有何差异？请结合：1）轴向扩散的忽略条件；2）催化剂颗粒内温度梯度的假设；3）在工业规模应用中，哪种模型更适合在线优化控制，并解释原因。",
+    "standard_answer": "**模型对比分析**：\n1）**伪均质模型**：假设气相和固相之间无浓度和温度梯度。基于摩尔守恒或质量守恒。优点：计算简单，转化为常微分方程组。缺点：'deviations between mass and mole based models... suggested that this discrepancy might depend on a contradiction between the species boundary condition and total continuity equation'。\n\n**异质模型**：\n考虑相间梯度，导致微分-代数方程组（DAE），具有刚性。\n\n**工业适用性评估**：\nManenti等人证明：'the pseudo-homogeneous model provides predictions for temperature and composition profiles that overlap those of the heterogeneous model'。\n\n**边界层分析**：\n在高气速下（工业中>0.7 m/s），边界层极薄，相间梯度可忽略。\n\n**精度差异**：\n在进料流速0.64 mol/s每管条件下，伪均质模型略微高估热点温度（约2-3 K）。\n\n**计算效率**：\n伪均质模型求解时间为异质模型的1/10。\n\n**结论**：对于在线优化和控制，伪均质模型在保持合理精度（误差<5%）的同时，显著降低计算负荷。因此，在工业实践中更倾向于使用伪均质模型。",
+    "original_text": {
+      "1": "the pseudo-homogeneous model provides predictions for temperature and composition profiles that overlap those of the heterogeneous model'",
+      "2": "the assumptions introduced in such models are reasonable because the methanol yield per pass is smaller than 7%'",
+      "3": "deviations between mass and mole based models... less than 4%'"
+    },
+    "type": "reasoning",
+    "difficulty": 3,
+    "topic": "energy_systems",
+    "question_id": "batch_detail_q_89efe570",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Efficient-methanol-synthesis--Perspectives--tech_2016_Progress-in-Energy-and",
+      "paper_title": "Efficient-methanol-synthesis--Perspectives--tech_2016_Progress-in-Energy-and"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T09:59:10.853023",
+      "batch_processing": true,
+      "answer_length": 670
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及化学反应器建模中的专业概念，包括伪均质模型与异质模型的比较、轴向扩散、催化剂颗粒内温度梯度、相间梯度等，需要燃烧/传热/流体/化学反应工程领域的专业知识。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量优秀，完整回答了问题的三个方面，有具体数据支持（2-3K温度差异、1/10计算时间），引用恰当，结论明确。"
+    },
+    "merge_source": "questions"
+  }
+]

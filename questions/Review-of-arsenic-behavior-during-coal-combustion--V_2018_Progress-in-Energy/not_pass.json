@@ -1,0 +1,151 @@
+[
+  {
+    "question_text": "基于论文中关于砷在不同温度区间的挥发特性，请从燃烧动力学和热力学角度详细解释为何在600-1000°C和>1000°C会出现两个砷质量损失峰，并阐明煤中砷赋存形态与温度分区的关联机制。",
+    "standard_answer": "砷的挥发行为与温度密切相关，可分为三个温度区间：<600°C、600-1000°C和>1000°C。在低温区（<600°C），砷的挥发主要来源于有机结合态砷的释放，其反应路径为As-Org → As2O3(g)。在600-1000°C区间，砷的挥发主要由硫化物的分解或氧化驱动，如黄铁矿（FeS2）在氧化气氛下分解为Fe2O3和SO2，同时释放出砷：FeS2(As) + O2 → Fe2O3 + SO2 + As2O3(g)。此阶段砷的挥发速率最快，因黄铁矿在700-900°C发生剧烈分解。在>1000°C高温区，砷酸盐（如Ca3(AsO4)2）的热分解占主导，其反应式为：Ca3(AsO4)2 → 3CaO + As4O6(g)。砷的二次挥发峰可能源于高温下形成的亚稳态砷化合物（如Ca2As2O7）的进一步分解。动力学上，砷挥发受扩散控制和反应速率共同影响，可用阿伦尼乌斯方程描述：k = A exp(-Ea/RT)，其中Ea为活化能，k为速率常数。砷赋存形态与温度分区的关联表现为：有机态砷在低温挥发，硫化物结合态砷在中温区释放，残留态砷在高温下进一步分解。不同煤种因砷赋存形态差异（如云南煤以砷黄铁矿为主），导致砷在特定温度区间的挥发比例不同。",
+    "original_text": {
+      "1": "For all the coals in Fig. 2, two mass loss peaks of arsenic loss and three temperature zones were observed to be important: <600 °C, 600(cid:1)1000 °C, and >1000 °C。",
+      "2": "Liu et al. [62] concluded that arsenic that vaporized at lower than 600 °C was mainly organically bound, while arsenic vaporized at 800(cid:1)900 °C was mainly due to the decomposition or oxidation of arsenic in sulfide forms。"
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "question_id": "batch_detail_q_dbf30d8c",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Review-of-arsenic-behavior-during-coal-combustion--V_2018_Progress-in-Energy",
+      "paper_title": "Review-of-arsenic-behavior-during-coal-combustion--V_2018_Progress-in-Energy"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T18:21:08.188352",
+      "batch_processing": true,
+      "answer_length": 528
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及煤燃烧过程中砷的挥发特性，需要热力学、燃烧动力学、化学反应机理等能源与燃烧工程领域的专业知识，包括温度分区、反应路径、赋存形态转变等专业概念",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported"
+      ],
+      "other_compliant": false,
+      "other_issues": [
+        "has_meta_info",
+        "too_general"
+      ],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在事实错误（高温区砷化合物）和未引用支持的内容（动力学方程、云南煤案例），且包含元信息。建议严格基于原文引用，修正错误表述，删除未授权扩展内容"
+    }
+  },
+  {
+    "question_text": "论文指出氧燃料燃烧（oxy-fuel combustion）中高CO2浓度会改变砷的挥发特性，请结合气固反应动力学理论，分析CO2对砷在煤燃烧过程中挥发的双重影响机制。",
+    "standard_answer": "在氧燃料燃烧中，CO2浓度升高会通过两种竞争机制影响砷的挥发：(1) CO2作为三原子分子，其热容（Cp）高于N2，导致火焰温度降低，抑制砷挥发；另一方面，高CO2在碳颗粒表面形成局部还原气氛，促进砷氧化物还原为挥发性更强的亚氧化物（如AsO(g)），反应式为：As2O3(g) + CO → 2AsO(g) + CO2。根据质量作用定律，CO2分压增加会推动反应平衡向生成气态砷的方向移动，如As4O6(g) → As(g) + As2O3(g)。热力学计算表明，在>1450°C时As(g)成为主要物种。同时，CO2会抑制碳酸盐矿物的破碎，减少细颗粒飞灰的生成，从而降低砷在细颗粒上的富集。流体力学上，CO2的高密度（约1.98 kg/m³ at 25°C）会降低传质速率，从而影响砷的挥发动力学。",
+    "original_text": {
+      "1": "Due to the large difference between oxy- and air-combustion atmospheres, arsenic volatility during oxy-fuel combustion is strongly affected by the elevated concentrations of various gases in the boiler atmosphere, such as O2, CO2, SO2 and H2O(g)。",
+      "2": "Liu et al. [68] reported that the form of gaseous arsenic was mainly AsO(g) in oxidizing atmosphere at relatively high temperatures, but in reducing atmosphere As(g) became the primary species above 1450 °C。"
+    },
+    "type": "reasoning",
+    "difficulty": 5,
+    "topic": "combustion_kinetics",
+    "question_id": "batch_detail_q_25a68e10",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Review-of-arsenic-behavior-during-coal-combustion--V_2018_Progress-in-Energy",
+      "paper_title": "Review-of-arsenic-behavior-during-coal-combustion--V_2018_Progress-in-Energy"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T18:21:21.932022",
+      "batch_processing": true,
+      "answer_length": 351
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及氧燃料燃烧、气固反应动力学、CO2对砷挥发的影响机制等，需要燃烧工程、传热传质、化学反应动力学和能源工程等领域的专业知识。",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案中关于质量作用定律的表述存在事实错误（CO2分压增加会抑制而非推动反应向生成AsO方向移动），且部分机理（如传质速率影响）缺乏引用支持。建议修正热力学平衡表述，并补充相关引用。"
+    }
+  },
+  {
+    "question_text": "论文中讨论了钙基吸附剂（如CaO）对气态砷的吸附过程，请推导该气固反应的动力学方程，并解释温度对吸附效率的非单调性影响。",
+    "standard_answer": "CaO与As2O3(g)的吸附反应为：3CaO(s) + 1/2 As4O6(g) + O2(g) → Ca3(AsO4)2(s)，其动力学可用缩核模型描述：dx/dt = k Cg^m S0 (1-x)，其中x为CaO转化率，k为速率常数，Cg为气态砷浓度，m为反应级数（通常≈1）。积分形式为：1 - (1-x)^{1/3} = (k Cg^m / (ρ rp)) t。在300-600°C区间，升高温度促进反应速率，因活化能Ea≈25-30 kJ/mol，属表面反应控制。当温度>600°C时，吸附效率下降，原因包括：(1) Ca3(AsO4)2在高温下热稳定性降低，分解反应：Ca3(AsO4)2 → 3CaO + As4O6(g)在热力学上变得显著。高温下Ca2As2O7可能生成并分解。在700-900°C，反应产物可能为Ca2As2O7，其稳定性较差。此外，高温导致吸附剂表面烧结，比表面积减小，进一步降低吸附容量。",
+    "original_text": {
+      "1": "The reaction can be described as: dx/dt = -k Cg^m A_CaO。"
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "heat_transfer",
+    "question_id": "batch_detail_q_d36303f1",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Review-of-arsenic-behavior-during-coal-combustion--V_2018_Progress-in-Energy",
+      "paper_title": "Review-of-arsenic-behavior-during-coal-combustion--V_2018_Progress-in-Energy"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T18:21:33.419933",
+      "batch_processing": true,
+      "answer_length": 415
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及气固反应动力学、缩核模型推导、温度对吸附效率的影响机制，需要燃烧工程、化学反应工程和热力学等能源与化工领域的专业知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在关键事实错误：动力学方程与原文引用矛盾，且反应机理和产物稳定性解释缺乏论文支持，建议修正公式并补充可靠引用"
+    }
+  },
+  {
+    "question_text": "论文指出砷在飞灰细颗粒（尤其是亚微米级）上显著富集，请从气溶胶动力学和传热学角度分析影响砷在细颗粒上富集的关键因素，包括矿物质组成、硫含量和燃烧环境的影响。",
+    "standard_answer": "砷在细颗粒上的富集受多种因素影响：(1) 矿物质组成：钙和铁可与砷形成稳定砷酸盐（Ca3(AsO4)2和FeAsO4），反应式为：3CaO + As2O3 + O2 → Ca3(AsO4)2。根据气溶胶动力学理论，均相成核和异相冷凝是主要机制。当局部过饱和条件存在时，气态砷通过均相成核形成纳米颗粒，或通过异相冷凝在现有飞灰表面。热力学上，砷蒸气在冷却过程中发生冷凝，其冷凝速率由饱和蒸汽压差驱动，遵循开尔文方程：ln(S) = 2σMw / (ρ RT r))，其中S为过饱和度，σ为表面张力。硫含量的影响表现为竞争吸附：SO2与As2O3竞争CaO表面活性位点，反应竞争系数可表示为：k_As / k_SO2 = A exp(-ΔE/RT)。在还原性气氛下（如oxy-fuel燃烧），砷更易生成挥发性亚氧化物。",
+    "original_text": {
+      "1": "The enrichment factors of arsenic in fly ash collected from four hoppers at the LH#1 boiler [148]。",
+      "type": "concept",
+      "difficulty": 3,
+      "topic": "energy_systems"
+    },
+    "question_id": "batch_detail_q_32a5dfc9",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Review-of-arsenic-behavior-during-coal-combustion--V_2018_Progress-in-Energy",
+      "paper_title": "Review-of-arsenic-behavior-during-coal-combustion--V_2018_Progress-in-Energy"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T18:21:46.416268",
+      "batch_processing": true,
+      "answer_length": 357
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及气溶胶动力学、传热学、燃烧环境等专业知识，需要燃烧工程、热力学和流体力学等领域的专业知识来深入分析砷在飞灰细颗粒上的富集机制。",
+      "answer_correct": false,
+      "answer_issues": [
+        "unsupported",
+        "too_brief"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案虽包含相关机制，但缺乏对矿物质组成、硫含量和燃烧环境影响的详细分析，且关键声明未得到论文摘录的充分支持。建议补充具体的影响机制和实验数据支持。"
+    }
+  }
+]

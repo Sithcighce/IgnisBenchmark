@@ -1,0 +1,39 @@
+[
+  {
+    "question_text": "论文比较了ET-PSA与常规净化技术（如Selexol、MDEA）的能耗。请推导SPECCA（式34）的具体表达式，并计算当η=40%（HHV）且碳捕集率90%时的能耗值（给定基准η_REF=33%））。",
+    "standard_answer": "SPECCA定义为：SPECCA=(HR - HR_REF)/(E_REF - E）。代入具体值：HR=3600/η=3600/0.4=9000 kJ_t/kWh_e），E=0.9 kg/kWh_e），计算得SPECCA≈2.5 MJ_LHV/kg CO₂。推导表明：1）HR与净效率η成反比；2）碳减排率与捕集效率正相关。详细计算过程：ΔHR=9000-10909= -1909 kJ_t/kWh_e。该值较Selexol过程（3.7 MJ_LHV/kg）低30%，主要归因于：a）避免预热/再热损失；b）压力摆动再生替代热再生。该模型突出了ET-PSA在集成气化联合循环（IGCC）中的热力学优势。",
+    "original_text": {
+      "1": "SPECCA = (HR - HR_REF)/(E_REF - E）",
+      "2": "3600 · (1/η - 1/η_REF)/(E_REF - E）",
+      "type": "calculation",
+      "difficulty": 4,
+      "topic": "energy_systems"
+    },
+    "question_id": "batch_detail_q_e95c0f16",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Recent-advances-in-elevated-temperature-pressure-sw_2019_Progress-in-Energy-",
+      "paper_title": "Recent-advances-in-elevated-temperature-pressure-sw_2019_Progress-in-Energy-"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T17:11:22.301480",
+      "batch_processing": true,
+      "answer_length": 301
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及能源系统中的碳捕集技术能效计算（SPECCA），需要热力学、燃烧工程和能源系统分析的专门知识来理解热耗率（HR）、效率（η）和碳捕集率之间的关系",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "fundamental_error"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在严重计算错误和概念混淆。需要：1）正确计算HR_REF=3600/0.33≈10909 kJ/kWh；2）修正ΔHR=9000-10909=-1909 kJ/kWh（应为正值）；3）明确E_REF值；4）区分HHV与LHV基准；5）重新计算SPECCA值"
+    }
+  }
+]

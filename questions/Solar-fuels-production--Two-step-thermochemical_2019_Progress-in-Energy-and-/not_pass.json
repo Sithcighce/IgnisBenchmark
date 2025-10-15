@@ -1,0 +1,42 @@
+[
+  {
+    "question_text": "基于论文第7.6节，推导在温度波动循环中，固体相显热需求的计算公式，并详细解释如何通过固体-固体热回收策略将系统效率从基础值提升至理论最大值的具体路径与关键参数。",
+    "standard_answer": "在非等温循环中，固体相显热指由于在两个步骤之间存在温度波动，固体氧化物连续加热和冷却导致的能量消耗。通常计算考虑固体-固体热回收效率η_solid：Q_solid = (1 - η_solid) * n_solid * ∫(T_ox to T_red) c_p,solid(T) dT。其中n_solid和c_p,solid分别为氧化还原材料的量和热容。二氧化铈的热容约为80 J mol^-1 K^-1），依赖于温度和氧非化学计量学。然而，这种变化对效率的影响可以忽略。根据Dulong-Petit定律，任何材料的摩尔热容高温极限为3R * n_A，其中n_A表示晶胞中的原子数。对于具有三个原子的CeO_2晶胞（无氧空位），我们得到每个CeO_2单位电池的结果为75 J mol^-1 K^-1），接近上述值。例如，如Li等估计，通过引入90%的固体相热回收，系统效率可从~8%提升至20%以上。为实现此目标，需通过工程化简单有效的陶瓷套管实现直接固体-固体换热。例如，在旋转环反应器中，通过反向旋转的惰性固体气缸实现辐射传热。然而，在所需温度水平下该概念的可行性仍需实验验证。",
+    "original_text": {
+      "1": "因此，直接回收固体相热量需要固体-固体热传递。",
+      "2": "固体相热回收呼吁固体-固体热传递。",
+      "type": "calculation",
+      "difficulty": 5,
+      "topic": "heat_transfer"
+    },
+    "question_id": "batch_detail_q_64a21676",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Solar-fuels-production--Two-step-thermochemical_2019_Progress-in-Energy-and-",
+      "paper_title": "Solar-fuels-production--Two-step-thermochemical_2019_Progress-in-Energy-and-"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T18:47:54.923461",
+      "batch_processing": true,
+      "answer_length": 491
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及固体相显热计算、热回收策略和系统效率提升，需要燃烧、传热、能源系统等领域的专业知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported"
+      ],
+      "other_compliant": false,
+      "other_issues": [
+        "has_meta_info",
+        "too_general"
+      ],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在事实错误和缺乏支持证据，需基于论文第7.6节提供准确的显热需求推导和效率提升路径，避免使用'例如'等元信息"
+    }
+  }
+]

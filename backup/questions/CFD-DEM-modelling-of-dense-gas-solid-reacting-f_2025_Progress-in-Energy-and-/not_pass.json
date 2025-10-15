@@ -1,0 +1,103 @@
+[
+  {
+    "question_text": "在CFD-DEM模拟稠密气固反应流时，如何根据Damköhler数Da和Thiele模数Th选择适当的颗粒转化模型？请详细分析Da和Th的物理意义，并解释在不同Da-Th组合下应选择的核心反应模型还是收缩核模型的物理机理。",
+    "standard_answer": "Damköhler数Da定义为反应时间尺度与扩散时间尺度之比（Da = klB/DB），Thiele模数Th定义为颗粒内部反应速率与扩散速率之比（Th = kcSτPl2P/D0,P）。当Da < 1时，系统为输运控制，反应速率远低于扩散速率，因此反应物可渗透至颗粒内部，此时应采用核心反应模型（reacting core model），此时颗粒密度逐渐减小而直径保持不变。当Da > 1且Th > 1时，反应速率远高于扩散速率，反应仅发生在颗粒外表面，此时应采用收缩核模型（shrinking core model）。具体而言：1）当Da < 1且Th < 1时，反应发生在整个颗粒体积内，符合核心反应模型（ρp = 6mp/πdp3）。当Da > 1且Th < 1时，为过滤燃烧区（filtration combustion regime），此时颗粒内部无浓度梯度；2）当Da > 1且Th > 1时，反应前沿将颗粒分为已反应和未反应部分，此时收缩核模型更适用。论文第13页指出：'当Da <1时...整个颗粒反应'，而第14页说明：'对于Th > 1，颗粒从外部逐渐消耗，形成灰壳层。此时需根据反应速率主导还是扩散速率主导选择模型：当Th > 1时，收缩核模型占主导；当Th < 1时，核心反应模型更合适。这种选择确保了模型能准确捕捉化学反应与输运过程的竞争机制。",
+    "original_text": {
+      "1": "Da <1 represents the well-stirred reactor in which each particle emerges with sufficient gaseous agents due to the transport-dominating property of the system' (第13页)",
+      "2": "'收缩核模型假设在反应过程中形成灰壳层，并保持直径恒定，而密度减小'",
+      "3": "'For high reaction rates (Da >1), the mass transfer rate from the gaseous agents to a particle is larger compared to the transport rate, thus only a small number of particles in the packed bed are supplied with an oxidizer'",
+      "4": "这种物理机理的差异直接影响CFD-DEM模拟的精度。"
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "question_id": "batch_detail_q_f4fc27cc",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "CFD-DEM-modelling-of-dense-gas-solid-reacting-f_2025_Progress-in-Energy-and-",
+      "paper_title": "CFD-DEM-modelling-of-dense-gas-solid-reacting-f_2025_Progress-in-Energy-and-"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T07:48:36.985654",
+      "batch_processing": true,
+      "answer_length": 585
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "该问题涉及CFD-DEM模拟、稠密气固反应流、Damköhler数和Thiele模数等专业概念，需要燃烧、传热、流体力学、化学反应工程等领域的专业知识来正确理解和回答",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "fundamental_error",
+        "unsupported"
+      ],
+      "other_compliant": false,
+      "other_issues": [
+        "has_meta_info"
+      ],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在多处事实和概念错误：1) Da和Th的定义混淆了系统尺度和颗粒尺度；2) Da<1时模型选择逻辑混乱；3) 收缩核模型特性描述错误。建议重新梳理Da和Th的物理意义，明确系统尺度与颗粒尺度的区分"
+    }
+  },
+  {
+    "question_text": "在CFD-DEM框架中，统计核映射方法通过求解扩散方程实现离散量到连续场的平滑。请推导各向同性扩散方程 ∂ξ/∂t = ∇²(λ²/ΔtCFD)ξ 的数值稳定性条件，并解释平滑长度λ的选择如何影响流动结构的解析度？",
+    "standard_answer": "统计核映射方法通过求解扩散方程 ∂ξ/∂t = ∇²(λ²/ΔtCFD)ξ 实现拉格朗日-欧拉变量的耦合。该方程需离散求解，显式格式的稳定性要求时间步长满足 Δt < (Δx)²/(4D) 其中 D = λ²/ΔtCFD。稳定性分析基于傅里叶数：对于显式差分格式，稳定性条件为 ΔtCFD ≤ (Δx)²/(4D)。其中扩散系数D与平滑长度λ的关系为 D = λ²/ΔtCFD。当选择λ = 2dp~3dp时，能有效解析介观尺度结构（如气泡和团簇）。论文第18页给出：'λ is the smoothing length, which is commonly chosen as several times the particle diameter (λ = 2dp ~ 3dp）可捕获典型介观特征。当λ过小时，可能导致欠平滑，无法准确描述介观结构；当λ过大时，会过度平滑而损失细节。例如，在模拟流化床气化时，λ的选择直接影响计算效率与精度。",
+    "original_text": {
+      "1": "λ is the smoothing length, which is commonly chosen as several times the particle diameter (λ = 2dp ~ 3dp' (第18页)，以及'对于多分散系统，λ取最大颗粒直径max(dp)可保证守恒性。",
+      "type": "calculation",
+      "difficulty": 4,
+      "topic": "CFD_modeling"
+    },
+    "2": {
+      "question_text": "在CFD-DEM模拟中，如何通过EMMS（能量最小化多尺度）模型准确捕捉局部非均匀气固流动结构？请推导EMMS模型中稀相、密相和悬浮团簇相之间的曳力分配公式？",
+      "standard_answer": "EMMS模型将流动分解为三个拟相：稀相（dilute phase）、密相（dense phase）和悬浮团簇相（suspended clusters phase）的曳力计算。对于稀相和密相，采用传统Wen-Yu曳力模型，其中稀相和密相的曳力计算使用颗粒直径，而悬浮团簇相使用团簇直径。稀相曳力：Fdilute = βdilute(uf - vp) 其中 βdilute = (3/4)(CDε²fρf|uf - vp|/dp。而悬浮团簇相的曳力为 Fcluster = βcluster(uf - vcluster) 其中团簇直径dcluster通过关联实验数据获得。论文第8页指出：'EMMS模型通过流动分解和能量最小化表示局部非均匀气固流'。具体公式为：总曳力 Ftotal = Fdilute + Fdense + Fcluster。论文第8页具体描述：'Drag forces in each of these pseudo-phases are calculated using the conventional Wen-Yu drag model'。该模型能准确预测循环流化床上升管内的流动结构。",
+      "original_text": {
+        "1": "EMMS drag model represents local heterogeneous gas-solid flows through flow field decomposition and energy minimization' (第8页)",
+        "2": "例如，EMMS-Matrix模型进一步考虑了稀相和密相的加速度项。"
+      },
+      "3": {
+        "question_text": "在颗粒-颗粒传导传热模型中，Sun和Chen基于Hertz接触理论推导出接触半径公式，但该模型在大Fourier数下存在过估计问题。请推导修正因子c的解析表达式，并分析其对数值精度的影响。"
+      },
+      "4": {
+        "question_text": "在稠密气固反应系统中，辐射传热常通过定义环境温度Tenv来简化计算。请比较三种Tenv定义（全局平均、局部子域平均、仅周围颗粒平均）的优缺点，并给出每种定义适用的具体工况？",
+        "standard_answer": "第一种定义：Tenv = (1/Np)∑Tp,j（全局平均），适用于温度分布均匀的系统，但会忽略局部温度差异。第二种定义：Tenv = εfTf,Ω + (1-εf)(1/Np,Ω)∑Tp,j。这种定义假设所有颗粒暴露于相同的辐射热流，但可能导致在颗粒温度与平均温度偏差较大时产生误差。第三种定义：Tenv = (1/Np,Ω)∑Tp,j（仅周围颗粒平均）。论文第12页明确说明：'该定义考虑周围颗粒和气体的温度，但实际中常忽略气固辐射。论文第12页指出：'One definition of environment temperature is obtained by averaging the temperature of all particles in a system' (第12页)。",
+        "type": "concept",
+        "difficulty": 3,
+        "topic": "heat_transfer"
+      },
+      "5": {
+        "question_text": "在CFD-DEM模拟生物质热解时，单组分单步（SCSS）、单组分多步（SCMS）和多组分多步（MCMS）动力学模型的根本区别是什么？请从物理机理和数值实现角度分析各自的优缺点？"
+      }
+    },
+    "question_id": "batch_detail_q_f1ba0dc9",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "CFD-DEM-modelling-of-dense-gas-solid-reacting-f_2025_Progress-in-Energy-and-",
+      "paper_title": "CFD-DEM-modelling-of-dense-gas-solid-reacting-f_2025_Progress-in-Energy-and-"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T07:48:49.994072",
+      "batch_processing": true,
+      "answer_length": 422
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及CFD-DEM框架中的统计核映射方法、扩散方程稳定性分析和平滑长度选择，需要计算流体力学、数值方法和多相流领域的专业知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "fundamental_error"
+      ],
+      "other_compliant": false,
+      "other_issues": [
+        "has_meta_info"
+      ],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在关键错误：扩散系数D定义错误（应为D=λ²/2而非λ²/ΔtCFD），稳定性条件表述混乱。建议修正基本概念错误，删除'论文第18页'等元信息，重新推导稳定性条件"
+    }
+  }
+]

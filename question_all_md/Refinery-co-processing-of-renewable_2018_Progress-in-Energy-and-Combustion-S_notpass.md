@@ -1,0 +1,113 @@
+# Refinery-co-processing-of-renewable_2018_Progress-in-Energy-and-Combustion-S - Not Passed Questions
+
+**生成时间**: 2025-10-15 15:46:06  
+**未通过问题数**: 2
+
+---
+
+## Question 1
+
+### 问题
+
+在生物质与石油馏分共加氢处理过程中，氢消耗量显著增加。请从化学反应机理和热力学角度分析：(1) 以典型甘油三酯（如C55H98O6）为例，定量分析脂质脱氧反应路径（加氢脱氧、脱羧、脱羰）对氢消耗的影响，给出详细的化学计量学计算过程；(2) 操作压力如何通过改变反应平衡和选择性来调节氢消耗，包括对H2溶解度、反应平衡移动及副反应的影响；(3) 如何通过催化剂选择（如NiMo vs NiW）优化氢利用效率，结合具体实验数据或文献支持。
+
+### 标准答案
+
+在共加氢处理过程中，氢消耗主要由脂质脱氧反应路径决定。以典型甘油三酯（C55H98O6）为例，从化学计量学分析：加氢脱氧路径（HDO）中，1分子甘油三酯消耗12分子氢气生成3个C18正构烷烃（n-C18H38），反应式为：C55H98O6 + 12H2 → 3C18H38 + C3H8 + 6H2O。脱羧路径（DCO2）消耗3分子氢气生成3个C17正构烷烃：C55H98O6 + 3H2 → 3C17H36 + C3H8 + 3CO2 + 2H2O。脱羰路径（DCO）消耗3分子氢气生成3个C17正构烷烃：C55H98O6 + 3H2 → 3C17H36 + C3H8 + 3CO + 3H2O。热力学上，压力升高通过提高H2在液相中的溶解度（亨利定律）和Le Chatelier原理促进反应平衡向加氢方向移动，增加HDO路径选择性，但同时也可能促进CO2加氢生成甲烷的副反应：CO2 + 4H2 → CH4 + 2H2O，额外消耗氢气。实验表明，在50-80 bar压力范围内，HDO选择性随压力增加而提高，但需控制压力以避免过度副反应。催化剂选择方面，NiMo催化剂主要促进HDO路径（较高氢耗），而NiW催化剂倾向于DCO/DCO2路径（较低氢耗）。文献数据支持：在相同条件下，NiMo催化剂上HDO路径占主导，氢消耗约为12 mol H2/mol甘油三酯，而NiW催化剂上脱羧和脱羰路径更受青睐，氢消耗降至8-9 mol H2/mol甘油三酯。例如，Rana等人研究表明，NiW催化剂使氢消耗从12 mol H2/mol甘油三酯降至8-9 mol H2/mol。优化策略包括：在中等压力（如50-80 bar）下使用NiW催化剂，通过控制反应条件抑制CO2加氢，并利用废油脂等饱和原料减少不饱和键加氢的氢耗。
+
+### 元数据
+
+- **类型**: calculation
+- **难度**: 4
+- **主题**: energy_systems
+- **答案长度**: 759 字符
+
+### 原文引用
+
+**引用 1**:
+> In general, there are two pathways during biomass hydroprocessing, the first one is hydrodeoxygenation in which 1 triglyceride molecule consumes 12 hydrogen molecules to form 3 normal hydrocarbons with an even number of carbon atoms in their molecules, e.g., n-octadecane (n-C18H38), and the second one is hydrodecarboxylation in which 1 triglyceride molecule consumes 3 hydrogen molecules to form 3 normal hydrocarbons with an odd number of carbon atoms in their molecules, e.g., n-heptadecane (n-C17H36)
+
+**引用 2**:
+> Hydrodeoxygenation is favored by NiMo while decarboxylation and decarbonylation are favored over NiW. Furthermore, different support materials for NiMo as well as NiW catalyst were also investigated, such as Al2O3, TiO2, NaY and ZrO2
+
+### 质量检查
+
+- **领域聚焦**: ✅ 通过
+- **答案正确性**: ❌ 未通过
+- **其他合规性**: ✅ 通过
+- **总体评价**: fail
+
+**领域聚焦分析**: 问题涉及生物质与石油馏分共加氢处理过程中的化学反应机理、热力学分析、化学计量学计算、操作压力影响和催化剂选择优化，需要燃烧/能源/化学反应工程领域的专业知识，包括氢消耗定量分析、反应平衡、催化剂性能等核心内容。
+
+**答案问题**: factual_error, unsupported
+
+**改进建议**: 答案存在事实错误和关键声明缺乏支持的问题。具体改进建议：1）修正化学计量学计算：甘油三酯C55H98O6的HDO路径应消耗15分子H2（生成3个C18H38、C3H8和6H2O），而非12分子；DCO2路径应消耗4分子H2（生成3个C17H36、C3H8、3CO2和2H2O），而非3分子；DCO路径应消耗6分子H2（生成3个C17H36、C3H8、3CO和3H2O），而非3分子。2）补充具体文献支持：明确引用Rana等人的研究细节（如期刊、年份、实验条件），并验证氢消耗数据（12 vs 8-9 mol H2/mol甘油三酯）的准确性；提供压力影响（50-80 bar范围内HDO选择性变化）和催化剂性能（NiMo vs NiW）的具体实验数据来源。
+
+### 来源
+
+- **论文**: Refinery-co-processing-of-renewable_2018_Progress-in-Energy-and-Combustion-S
+- **生成类型**: deepseek_generation
+- **合并来源**: question_reverse
+
+---
+
+## Question 2
+
+### 问题
+
+在共加氢处理系统中，反应放热和氢耗对反应器热管理提出挑战。请基于文献数据：(1) 计算典型条件下（10%废烹饪油+90% HAGO，350°C，50 bar）的总反应热和氢耗，考虑三油酸甘油酯（C57H104O6）的不同脱氧路径（HDO、DCO、DCO2）及其化学计量关系；(2) 分析不同脱氧路径对反应器温升的贡献，考虑反应器热损失和流体流动效应；(3) 设计多床层反应器系统和急冷策略以控制温度分布，基于文献中催化剂选择原则。
+
+### 标准答案
+
+基于文献数据，三油酸甘油酯（C57H104O6，分子量885.4 g/mol）的脱氧反应热和氢耗计算如下：
+
+(1) 反应热和氢耗计算：
+- HDO路径：C57H104O6 + 12H2 → 3C18H38 + 6H2O，ΔH ≈ -800 kJ/mol（文献报道范围-800至-1000 kJ/mol），氢耗12 mol H2/mol triglyceride
+- DCO路径：C57H104O6 + 3H2 → 3C17H34 + 3CO + 3H2O，ΔH ≈ -300 kJ/mol，氢耗3 mol H2/mol triglyceride  
+- DCO2路径：C57H104O6 → 3C17H34 + 3CO2 + 3H2O，ΔH ≈ -200 kJ/mol，氢耗0 mol H2/mol triglyceride
+
+对于10%废烹饪油+90% HAGO系统（进料率10 t/h，生物油含量1 t/h = 1000 kg/h）：
+三油酸甘油酯摩尔流量 = 1000/885.4 = 1.13 kmol/h
+若全部按HDO路径：总放热 = 1.13 × (-800) = -904 MJ/h，氢耗 = 1.13 × 12 × 22.4 = 304 Nm³/h
+实际系统中各路径并存，假设HDO:DCO:DCO2 = 60:30:10，则总放热 ≈ 1.13 × (0.6×(-800)+0.3×(-300)+0.1×(-200)) = -654 MJ/h，氢耗 ≈ 1.13 × (0.6×12+0.3×3+0.1×0) × 22.4 = 198 Nm³/h
+
+(2) 温升分析：考虑完整能量平衡方程 dT/dt = (Σṅ_iΔH_i - ṁCp(T-T_in) - UA(T-T_amb))/(ṁCp)，其中ṁ为质量流量，Cp ≈ 2.5 kJ/kg·K（考虑流体混合物），UA为反应器热损失项。对于典型床层（催化剂50 ton，流体流量10 t/h），稳态下ΔT = Q/(ṁCp + UA)。若不考虑热损失，温升可达ΔT = 654000/(10000×2.5) = 26°C；实际考虑热损失（UA ≈ 50 kW/K）后，温升降至约15°C。HDO路径贡献主要放热（约75%），DCO和DCO2路径贡献较小。
+
+(3) 多床层设计：基于文献"the HDS efficiency of a NiMo-type catalyst was not affected by the addition of WCO, while the efficiency of the CoMo-type catalyst was severely hindered"，第一床层使用NiMo催化剂在较低温度（320-340°C）进行初步脱氧和脱硫；层间注入冷氢急冷，控制温升<15°C；第二床层使用NiMo催化剂在340-360°C完成深度脱氧。急冷氢流量通过能量平衡Q_quench = ΣΔH_reaction - UAΔT - ṁCpΔT计算，确保床层温度梯度<25°C，防止局部过热导致催化剂烧结。催化剂选择需考虑"an amount of vegetable oil higher than 15% reduced the desulphurization efficiency, indicating that the removal of both heteroatoms (S and O) took place on the same active sites"，因此生物油含量控制在10%以内。
+
+### 元数据
+
+- **类型**: calculation
+- **难度**: 4
+- **主题**: energy_systems
+- **答案长度**: 1507 字符
+
+### 原文引用
+
+**引用 1**:
+> Their findings have shown that the HDS efficiency of a NiMo-type catalyst was not affected by the addition of WCO, while the efficiency of the CoMo-type catalyst was severely hindered
+
+**引用 2**:
+> An amount of vegetable oil higher than 15% reduced the desulphurization efficiency, indicating that the removal of both heteroatoms (S and O) took place on the same active sites of the catalyst. Hence, the deoxygenation reactions restricted the desulphurization reactions
+
+### 质量检查
+
+- **领域聚焦**: ✅ 通过
+- **答案正确性**: ❌ 未通过
+- **其他合规性**: ✅ 通过
+- **总体评价**: fail
+
+**领域聚焦分析**: 问题涉及共加氢处理系统的反应热力学、反应器热管理、多床层设计和急冷策略，需要燃烧/传热/流体/能源领域的专业知识，包括反应热计算、能量平衡分析、催化剂选择和反应器设计等专业内容
+
+**答案问题**: factual_error, unsupported
+
+**改进建议**: 答案存在以下问题需要改进：1) 反应热数据缺乏具体文献来源支持，ΔH值范围过大且未说明出处；2) 脱氧路径比例假设(HDO:DCO:DCO2=60:30:10)未提供文献依据；3) 热损失系数UA=50 kW/K未说明计算依据；4) 催化剂选择引用与论文摘录内容不完全匹配，应更准确引用原文数据。建议补充具体文献引用，明确计算假设的来源，确保所有关键数据都有可靠文献支持。
+
+### 来源
+
+- **论文**: Refinery-co-processing-of-renewable_2018_Progress-in-Energy-and-Combustion-S
+- **生成类型**: deepseek_generation
+- **合并来源**: question_reverse
+
+---
+

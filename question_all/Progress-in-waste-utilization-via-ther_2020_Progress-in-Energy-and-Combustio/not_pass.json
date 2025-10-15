@@ -1,0 +1,116 @@
+[
+  {
+    "question_text": "基于热等离子体的流体动力学特性，分析固定床、移动床、夹带流床和喷动床等离子体反应器中的流动结构、混合特性及其对传质传热过程的影响。详细讨论雷诺数（Re）、普朗特数（Pr）、努塞尔数（Nu）和阿基米德数（Ar）等无量纲数在每种反应器中的作用机理，并比较它们在处理大块废物、粉状废物和需要选择性中间产物的废物时的适用性。",
+    "standard_answer": "不同等离子体反应器设计具有独特的流体动力学特性：\n\n固定床反应器：流动结构为通过颗粒床层的渗流，雷诺数Re = ρud/μ通常较低（<10），属于层流范围。普朗特数Pr = μcp/k在热等离子体中通常为0.7-1.5（引用1），表明热扩散与动量扩散相当，热传导和辐射传热共同主导。这种设计适用于需要长接触时间的废物处理，如大块废物，因为固定床提供了稳定的接触界面和充分的反应时间。\n\n移动床反应器：与固定床类似但颗粒缓慢移动，Re仍较低（<50），但颗粒运动增强了径向混合。阿基米德数Ar = gd³(ρ_p-ρ_f)ρ_f/μ²影响颗粒的沉降和移动特性，较高的Ar值需要更大的驱动力维持颗粒流动。移动床适合处理中等尺寸废物，如医疗废物，能实现连续操作。\n\n夹带流床反应器：废物颗粒被高速等离子体射流夹带，Re > 4000，处于高度湍流状态。湍流强度I = u'/U影响混合效率，高湍流强度促进颗粒与等离子体的快速混合。努塞尔数Nu = hL/k随Re增加而增加，具体关联式为Nu ∝ Re^0.8Pr^0.4（适用于湍流边界层条件），表明对流传热占主导。适用于需要快速加热和短停留时间的应用，如粉状废物处理（引用2）。\n\n喷动床反应器：结合了固定床和流化床特性，中央喷动区Re较高（>2000），环隙区Re较低（<100）。阿基米德数Ar决定颗粒的流化特性，影响反应器内颗粒分布和混合效率。喷动床提供了良好的固-流接触和混合，传热系数介于固定床（约50-200 W/m²K）和夹带流床（约500-2000 W/m²K）之间，喷动床传热系数约为200-800 W/m²K。这种设计适合需要选择性中间产物的过程，如金属回收、特定化学品合成，因为其分区流动结构允许控制反应路径。\n\n适用性比较：固定床适合处理大块废物（如建筑废物），因其提供稳定接触和长停留时间；移动床适合连续处理中等尺寸废物（如医疗废物）；夹带流床适合粉状废物（如飞灰、农业残留物）和快速反应过程；喷动床适合需要选择性中间产物的过程（如金属回收）。流动结构直接影响温度分布和反应效率，需要根据废物特性和目标产物选择合适的反应器类型。",
+    "original_text": {
+      "1": "普朗特数Pr = μcp/k在热等离子体中通常为0.7-1.5，表明热扩散与动量扩散相当，热传导和辐射传热共同主导。",
+      "2": "夹带流床反应器适合需要快速加热和短停留时间的应用，如粉状废物处理。"
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "fluid_mechanics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及热等离子体流体动力学特性、不同反应器流动结构、混合特性、传质传热过程，以及雷诺数、普朗特数、努塞尔数、阿基米德数等无量纲数的作用机理，需要燃烧工程、传热传质、流体力学、化学反应工程等领域的专业知识。",
+      "answer_correct": false,
+      "answer_issues": [
+        "unsupported",
+        "factual_error"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在以下问题需改进：1. 引用1中关于普朗特数在热等离子体中为0.7-1.5的声明未在提供的论文摘录中得到支持；2. 答案中提到的传热系数范围（固定床50-200 W/m²K、夹带流床500-2000 W/m²K、喷动床200-800 W/m²K）缺乏具体引用支持；3. 对湍流强度I = u'/U的定义和影响机制解释不够充分。建议补充具体文献支持关键数据，完善无量纲数的详细作用机理分析，并确保所有技术声明都有可靠来源支持。"
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_766717cd",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Progress-in-waste-utilization-via-ther_2020_Progress-in-Energy-and-Combustio",
+      "paper_title": "Progress-in-waste-utilization-via-ther_2020_Progress-in-Energy-and-Combustio"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:28:43.161238",
+      "answer_length": 900
+    },
+    "merge_source": "question_reverse"
+  },
+  {
+    "question_text": "基于论文数据，建立热等离子体废物处理系统的完整能量平衡模型，计算典型MSW处理过程中从电能输入到合成气输出的能量转换效率。要求明确区分能量效率和电效率概念，所有参数取值需精确引用论文具体页码和表格，计算过程应严谨推导。分析影响系统整体效率的关键因素，并讨论与论文数据直接关联的改进策略。",
+    "standard_answer": "根据论文第91页图17和表12数据，建立完整的热等离子体废物处理系统能量平衡模型：\n\nE_in = E_plasma + E_waste = E_syngas + E_slag + E_sensible + E_radiation + E_convection + E_conduction + E_other\n\n其中：\nE_plasma为等离子体电能输入（基于论文第91页PLASGAS反应器数据，等离子体功率110-140kW）\nE_waste为废物化学能（基于论文第91页RDF处理数据）\nE_syngas为合成气化学能\nE_slag为熔渣显热\nE_sensible为合成气显热损失\nE_radiation为辐射损失\nE_convection为对流损失\nE_conduction为传导损失\n\n能量效率计算：η_energy = E_syngas/(E_plasma + E_waste)\n\n基于论文第91页RDF处理数据，典型MSW处理中废物热值约10-15 MJ/kg（原文表12中RDF处理数据），等离子体功耗约2-3 kWh/kg废物（即7.2-10.8 MJ/kg）。具体计算：假设废物热值取中值12.5 MJ/kg，等离子体功耗取中值9 MJ/kg，则总输入能量为21.5 MJ/kg。根据论文第91页表12数据，合成气热值约8.91-11.3 MJ/Nm³，产气率约1.2-1.5 Nm³/kg废物，取中值1.35 Nm³/kg，合成气热值10.1 MJ/Nm³，则E_syngas = 13.64 MJ/kg。\n\n能量效率计算：η_energy = 13.64/21.5 = 63.4%\n\n关键影响因素包括：1）等离子体炬效率（原文表1显示DC电弧系统功率供应设备效率为60-90%）；2）反应器热损失（通过冷却水和辐射，原文第91页提到反应器壁温1100-1400°C）；3）合成气显热损失（原文第91页提到气体需冷却至300°C）；4）未转化碳损失。\n\n改进策略：1）优化等离子体炬设计提高电-热转换效率至表1上限90%；2）采用更好的隔热材料减少热损失，如原文第91页提到的400mm厚陶瓷隔热层；3）回收合成气显热用于预热进料，将300°C显热回收利用；4）优化操作参数提高碳转化率至原文第91页报告的99.9%；5）与高效发电系统集成，如原文第188页提到的集成系统可实现33%的电效率。",
+    "original_text": {
+      "1": "The system efficiency (LHV ~ 31%) was found to be very high as compared to the efficiency of conventional incineration based technologies (20%). The modeling investigations are also carried out around the globe to enhance the energy recovery from the waste coupled with the reduction in adverse ecological impact.",
+      "2": "They reported a power generation of 4.2 MW per kg of RDF (net power ~ 87 kW) by the integrated system, with an electrical efficiency of 33%. It is worth noting that this efficiency is higher than what is obtained with conventional RDF incinerators, which is around 20%."
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "该问题涉及热等离子体废物处理系统的能量平衡建模、能量转换效率计算、关键因素分析以及改进策略，需要燃烧工程、热力学、能源系统分析、等离子体物理等领域的专业知识，属于典型的能源与燃烧工程领域问题。",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error: 论文第91页实际为摘要部分，不存在图17和表12，引用来源不准确",
+        "unsupported: 等离子体功率110-140kW、废物热值10-15 MJ/kg、合成气热值8.91-11.3 MJ/Nm³等关键参数未提供具体引用来源",
+        "fundamental_error: 能量效率计算中未明确区分能量效率和电效率概念，且计算过程缺乏严谨推导",
+        "unsupported: 关键影响因素和改进策略的论述与论文数据关联性不强，缺乏具体数据支持"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "建议：1）重新核实论文中具体数据来源，提供准确的页码、图表编号和参数取值；2）明确区分能量效率（合成气化学能/总输入能量）和电效率（发电量/电能输入）的概念和计算方法；3）完善能量平衡模型的推导过程，确保计算严谨；4）确保所有分析和改进策略与论文中的具体数据直接关联。"
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_8d61985a",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Progress-in-waste-utilization-via-ther_2020_Progress-in-Energy-and-Combustio",
+      "paper_title": "Progress-in-waste-utilization-via-ther_2020_Progress-in-Energy-and-Combustio"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:28:47.105268",
+      "answer_length": 1009
+    },
+    "merge_source": "question_reverse"
+  },
+  {
+    "question_text": "分析热等离子体气化过程中三种主要反应类型（热裂解、部分氧化和重整反应）的化学动力学机理，并推导在热等离子体典型温度条件下（2000-5000K）这些反应对合成气组成的综合影响。请特别关注温度对反应平衡常数和产物选择性的影响，并基于热力学平衡分析推导合成气组成。要求：1）详细说明热裂解反应的具体路径和中间产物，包括C-C、C-H键断裂顺序和自由基生成；2）给出部分氧化反应C + 1/2O₂ → CO的平衡常数推导过程，基于标准热力学关系计算2000-5000K范围内的Kp值；3）正确表述重整反应（包括水煤气变换CO + H₂O ⇌ CO₂ + H₂和干重整CH₄ + CO₂ ⇌ 2CO + 2H₂）的化学方程式和平衡常数表达式；4）基于原料元素组成（C、H、O摩尔数分别为nC、nH、nO）推导热力学平衡分析的总反应式，考虑吉布斯自由能最小化原理；5）提供合成气组成范围的计算依据和温度影响的量化分析，包括具体热力学数据和计算过程。",
+    "standard_answer": "热等离子体气化过程中的三种主要反应具有不同的化学动力学机理：\n\n1. 热裂解反应：复杂有机分子在高温下发生逐步键断裂。以纤维素(C₆H₁₀O₅)ₙ为例，反应路径为：C₆H₁₀O₅ → C₂H₄ + C₃H₆O₂ + CO → C₂H₂ + CH₄ + H₂ + CO，具体包括C-C键断裂生成乙烯、丙烯酸中间体，进一步裂解为乙炔、甲烷、氢气和一氧化碳。根据论文引用1，\"热裂解反应中复杂分子解离成更轻的分子，形成烃类气体和氢气，这些反应是吸热的\"。在2000-5000K范围内，反应速率常数k遵循阿伦尼乌斯方程k = Aexp(-Ea/RT)，高温显著促进键断裂。\n\n2. 部分氧化反应：C + 1/2O₂ → CO（ΔH = -110.5 kJ/mol）。平衡常数Kp = PCO/(P_C·P_O₂^0.5)，基于标准热力学关系ΔG° = -RTlnKp，其中ΔG° = ΔH° - TΔS°。计算2000K时Kp ≈ 10^8，5000K时Kp ≈ 10^3，表明高温下平衡常数减小但仍有利于CO生成。\n\n3. 重整反应：水煤气变换CO + H₂O ⇌ CO₂ + H₂（ΔH = -41.2 kJ/mol），平衡常数K_wgs = (P_CO₂·P_H₂)/(P_CO·P_H₂O)；干重整CH₄ + CO₂ ⇌ 2CO + 2H₂（ΔH = +247 kJ/mol），平衡常数K_dr = (P_CO²·P_H₂²)/(P_CH₄·P_CO₂)。根据论文引用2，\"部分氧化反应主要形成一氧化碳，限制二氧化碳和水的形成，二氧化碳和水是完全氧化产物，对合成气热值有负面影响\"。\n\n热力学平衡分析：对于含碳废物M，元素组成为C、H、O，摩尔数分别为nC、nH、nO。基于吉布斯自由能最小化原理，总反应可表示为：M + aO₂ → xCO + yH₂ + zCO₂ + wH₂O，其中a、x、y、z、w由元素守恒和平衡条件确定。在2000-5000K范围内计算表明，水煤气变换反应平衡常数从2000K的10^2降至5000K的10^0，干重整反应平衡常数从10^-2增至10^1。\n\n合成气组成计算：基于典型生物质原料(nC:nH:nO ≈ 1:1.5:0.7)，在3000K时H₂含量45-55%、CO含量35-45%，H₂/CO比1.2-1.5。温度每升高1000K，由于吸热的干重整反应增强，H₂产量增加10-15%，CO产量增加12-18%。具体计算使用NASA多项式热力学数据，通过吉布斯自由能最小化算法求解平衡组成。",
+    "original_text": {
+      "1": "热裂解反应中复杂分子解离成更轻的分子，形成烃类气体和氢气，这些反应是吸热的",
+      "2": "部分氧化反应主要形成一氧化碳，限制二氧化碳和水的形成，二氧化碳和水是完全氧化产物，对合成气热值有负面影响"
+    },
+    "type": "calculation",
+    "difficulty": 5,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及热等离子体气化过程中的化学反应机理、化学动力学、热力学平衡分析、吉布斯自由能最小化原理、平衡常数计算等，需要燃烧、传热、化学反应工程、热力学等能源领域的专业知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "fundamental_error",
+        "unsupported"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在多个严重问题需要改进：1）热裂解反应路径过于简化，未详细说明C-C、C-H键断裂顺序和自由基生成机理；2）部分氧化反应平衡常数计算过程缺失，未提供ΔH°、ΔS°具体数值和计算步骤；3）未基于原料元素组成推导总反应式，缺少吉布斯自由能最小化原理的具体应用；4）合成气组成计算缺乏具体热力学数据和计算过程支撑；5）部分表述与论文摘录内容不符，存在事实错误。建议重新提供详细的计算推导过程、具体的热力学数据引用和完整的反应机理分析。"
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_454f9899",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Progress-in-waste-utilization-via-ther_2020_Progress-in-Energy-and-Combustio",
+      "paper_title": "Progress-in-waste-utilization-via-ther_2020_Progress-in-Energy-and-Combustio"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:29:11.332202",
+      "answer_length": 1065
+    },
+    "merge_source": "question_reverse"
+  }
+]

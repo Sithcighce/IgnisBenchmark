@@ -1,0 +1,104 @@
+[
+  {
+    "question_text": "基于论文中关于合成气层流火焰速度测量的讨论，推导压力对合成气层流火焰速度的影响关系式，并详细解释在高氢含量合成气中观察到的火焰不稳定性机理。需要包含热扩散不稳定性和流体动力学不稳定性的相对贡献分析，以及压力对这两种不稳定性的不同影响。",
+    "standard_answer": "合成气层流火焰速度与压力的关系可以表示为经验关系式：S_L ~ p^(n/2-1)，其中n为总反应级数。对于典型的H2/CO混合物，n通常小于2，因此层流火焰速度随压力增加而减小。这种压力依赖性源于第三体反应H + O2 + M → HO2 + M的促进作用，该反应在高压下更加显著，消耗了链分支反应所需的H原子，从而抑制了整体反应速率。\n\n在高氢含量合成气中观察到的火焰不稳定性主要源于两种机理：热扩散不稳定性和流体动力学不稳定性。热扩散不稳定性由路易斯数（Le）表征，定义为热扩散率与质量扩散率的比值。对于富氢混合物，Le < 1，因为氢气的质量扩散率远高于热扩散率，导致火焰前锋处出现局部富氢区域，这些区域具有更高的火焰速度，形成指状火焰结构。\n\n流体动力学不稳定性由火焰厚度（δ_L）和热膨胀比（σ）决定，遵循Darrieus-Landau不稳定性理论。火焰厚度随压力增加而减小（δ_L ~ 1/p），因为密度增加而火焰速度减小，这增强了流体动力学不稳定性。同时，热膨胀比σ = ρ_u/ρ_b，其中ρ_u和ρ_b分别为未燃和已燃气体密度，在高压下变化较小。\n\n在高压条件下（p > 10 atm），流体动力学不稳定性占主导地位，因为δ_L的减小显著增强了火焰前锋的皱褶。而对于高氢含量混合物（H2 > 50%），即使在中等压力下，热扩散不稳定性也很显著，因为氢气的极高质量扩散率（D_H2 ≈ 0.6 cm²/s）导致Le远小于1。这两种不稳定性的耦合作用导致火焰加速和细胞结构的形成，使得准确的层流火焰速度测量变得困难。",
+    "original_text": {
+      "1": "At elevated pressures and lean conditions but lower H2 content (35:65 H2:CO mixtures), syngas laminar flames were determined [209] to be extremely unstable, resulting in cellular structures in the spreading flame front surface, where SL ~p^(-0.15) having a fairly small reduction in pressure compared to lean methane flames where SL ~p^(-0.50).",
+      "2": "Both thermal-diffusive and hydrodynamic instabilities are involved in amplifying the flame front's destabilization by affecting the Lewis number and flame thickness, respectively. So, as compared with CO, H2 has a more dominant effect on flame stabilities [202]."
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及燃烧学中的层流火焰速度、压力影响关系、热扩散不稳定性、流体动力学不稳定性等专业概念，需要燃烧动力学、传热传质、流体力学等领域的专业知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量良好，无需修改。问题清晰聚焦，答案准确完整地回应了所有要求，包含压力关系推导、两种不稳定性机理分析及其相对贡献，并提供了原文引用支持"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_03d9c0b8",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Synthesis-gas-as-a-fuel-for-internal-combusti_2022_Progress-in-Energy-and-Co",
+      "paper_title": "Synthesis-gas-as-a-fuel-for-internal-combusti_2022_Progress-in-Energy-and-Co"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:14:32.814251",
+      "answer_length": 666
+    },
+    "merge_source": "question_reverse"
+  },
+  {
+    "question_text": "基于论文中关于合成气在HCCI发动机中应用的讨论，详细分析合成气作为添加剂对高辛烷值燃料（如异辛烷）和低辛烷值燃料（如正庚烷）HCCI燃烧相位控制的不同影响机理。需要解释热效应、化学效应和稀释效应的相对重要性，并推导这些效应如何影响燃烧相位和燃烧持续期。",
+    "standard_answer": "合成气作为添加剂在HCCI发动机中对不同辛烷值燃料的燃烧相位控制表现出显著不同的影响机理。对于高辛烷值燃料如异辛烷，合成气的添加主要通过稀释效应主导燃烧相位的延迟。合成气中的H2和CO替代部分空气，降低了氧气浓度和燃料浓度，从而抑制了混合气的反应活性。根据化学动力学分析，稀释效应减少了反应物浓度，降低了反应速率，导致燃烧相位延迟。对于低辛烷值燃料如正庚烷，合成气的添加主要通过化学效应主导燃烧相位的延迟。正庚烷具有明显的两阶段放热特性，包括低温放热阶段（LTHR）和高温放热阶段（HTHR）。合成气中的氢气会参与低温氧化反应，消耗OH自由基（H2 + OH = H2O + H），抑制低温放热阶段的反应活性，延长负温度系数（NTC）区域，从而延迟高温放热阶段的开始。热效应在两种情况下相对次要，因为合成气中H2的高比热比和CO的低比热比相互抵消，整体热效应复杂且不显著。相对重要性方面，对于高辛烷值燃料，稀释效应 > 化学效应 > 热效应；对于低辛烷值燃料，化学效应 > 稀释效应 > 热效应。燃烧持续期的变化也相应不同：高辛烷值燃料因稀释效应而燃烧延长，低辛烷值燃料因化学抑制而燃烧延长。推导过程基于化学动力学模型，通过反应速率方程和热释放率分析，量化了各效应对燃烧相位和持续期的影响。",
+    "original_text": {
+      "1": "For high PRF fuels, the dilution effect increases by increasing the PRF number [368]. For high PRF fuels, the dilution effect increases by increasing the PRF number [368].",
+      "2": "For n-heptane [370] and low-PRF fuels [368], the dominance of the chemical effect among other effects on retarding the SOC was confirmed, mostly due to H2 presence in low-temperature oxidation reactions during the negative coefficient temperature or NTC (period between LTHR and HTHR)."
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及HCCI发动机燃烧、合成气添加剂、辛烷值燃料特性、燃烧相位控制、热效应/化学效应/稀释效应分析、化学动力学机理等，需要燃烧学、内燃机工程、燃料化学和热力学等专业领域知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量优秀，无需修改。答案准确分析了合成气对不同辛烷值燃料的影响机理，正确区分了稀释效应和化学效应的主导作用，热效应分析合理，相对重要性排序正确，燃烧持续期变化解释清晰，且与提供的论文引用内容一致"
+    },
+    "retry_count": 1,
+    "question_id": "deepseek_q_7de75ccd",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Synthesis-gas-as-a-fuel-for-internal-combusti_2022_Progress-in-Energy-and-Co",
+      "paper_title": "Synthesis-gas-as-a-fuel-for-internal-combusti_2022_Progress-in-Energy-and-Co"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:15:38.716257",
+      "answer_length": 545
+    },
+    "merge_source": "question_reverse"
+  },
+  {
+    "question_text": "基于论文中关于专用废气再循环（D-EGR）技术的讨论，详细推导总惰性稀释比（TIDR）的物理意义和计算方法，包括基于化学平衡和热力学原理的推导步骤。分析重整气成分（H2和CO）如何通过化学平衡计算（如水煤气变换反应）和热力学分析（如绝热火焰温度计算）影响发动机的爆震倾向和燃烧稳定性。",
+    "standard_answer": "总惰性稀释比（TIDR）是D-EGR系统中量化进气稀释程度的关键参数，定义为进气中惰性气体（N2、CO2、H2O）摩尔分数与总进气（惰性气体+O2）摩尔分数之比：TIDR = (X_N2 + X_CO2 + X_H2O)/(X_N2 + X_CO2 + X_H2O + X_O2)。其物理意义在于表征实际稀释水平，与传统EGR率不同，D-EGR排气含活性组分H2和CO。推导基于质量守恒和化学平衡：在D-EGR专用气缸中，燃料（如汽油）在当量比φ_D-EGR > 1时发生部分氧化重整，产生重整气。假设燃料为C8H18，反应为C8H18 + aO2 → bCO + cH2 + dCO2 + eH2O + fN2，通过原子平衡（C、H、O、N）和当量比定义求解系数。例如，φ_D-EGR = 1.2时，O2不足导致不完全燃烧，生成H2和CO。水煤气变换反应CO + H2O ⇌ CO2 + H2的平衡常数K = [CO2][H2]/([CO][H2O])在典型温度（如500°C）下计算，影响H2/CO比。热力学分析中，绝热火焰温度T_ad通过能量平衡计算：∑n_i h_i = ∑n_j h_j，其中h为焓值，T_ad降低可抑制爆震。重整气中H2（高层流火焰速度~2.9 m/s，低最小点火能量~0.02 mJ）和CO通过提高混合气抗爆性（H2的RON约130）和降低T_ad影响爆震倾向；H2浓度1-2%即可降低循环变动（CoV of IMEP），CO参与反应路径稳定燃烧。优化φ_D-EGR在1.2-1.4可平衡爆震抑制和稳定性。",
+    "original_text": {
+      "1": "The total inert dilution ratio (TIDR) was empirically defined by Alger et al. [574] as a common basis for comparison EGR and D-EGR. The definition is: TIDR = (XN2 in + XCO2 in + XH2O in)/(XN2 in + XCO2 in + XH2O in + XO2 in)",
+      "2": "It was shown that the sufficient hydrogen concentration to stabilize the combustion at low loads was about just 1% by volume. Robertson et al. [599] tested the performance of the same converted D-EGR vehicle on the FTP-75 (for the city) and HWFET (for the highway); compared to the baseline vehicle, they observed that the fuel consumption was reduced by 13% and 9%"
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及专用废气再循环（D-EGR）技术、总惰性稀释比（TIDR）的物理意义和计算方法、化学平衡（如水煤气变换反应）、热力学分析（如绝热火焰温度计算）、发动机爆震倾向和燃烧稳定性分析，需要燃烧学、热力学、化学反应动力学和发动机原理等专业领域知识。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "无需改进，答案质量较高，准确阐述了TIDR的定义、物理意义、推导过程，并详细分析了重整气成分对发动机爆震倾向和燃烧稳定性的影响，符合问题要求。"
+    },
+    "retry_count": 1,
+    "question_id": "deepseek_q_2f342cdb",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Synthesis-gas-as-a-fuel-for-internal-combusti_2022_Progress-in-Energy-and-Co",
+      "paper_title": "Synthesis-gas-as-a-fuel-for-internal-combusti_2022_Progress-in-Energy-and-Co"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:15:52.903687",
+      "answer_length": 668
+    },
+    "merge_source": "question_reverse"
+  }
+]

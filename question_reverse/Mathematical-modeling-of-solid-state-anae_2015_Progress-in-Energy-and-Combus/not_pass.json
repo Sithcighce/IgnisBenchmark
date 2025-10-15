@@ -1,0 +1,74 @@
+[
+  {
+    "question_text": "建立SS-AD反应器的热平衡方程，考虑生物反应放热、蒸发潜热损失以及与环境的对流换热，推导维持最佳反应温度所需的最小加热功率。要求基于实际微生物代谢产热数据而非甲烷燃烧热值进行计算，并提供关键参数（如微生物代谢产热系数、对流换热系数、保温材料导热系数等）的具体文献来源依据。",
+    "standard_answer": "SS-AD反应器的热平衡方程需考虑生物反应放热、蒸发潜热损失及环境对流换热。总热平衡方程为：ρC_p V dT/dt = Q_reaction - Q_evap - Q_conv - Q_cond，其中ρ为混合物密度，C_p为比热容，V为有效体积。\n\n生物反应放热Q_reaction应基于微生物代谢产热而非甲烷燃烧热。根据文献数据，SS-AD中微生物代谢产热主要来自底物降解，典型值为0.5-1.5 MJ/kg VS（基于有机质降解热），远小于甲烷燃烧热（50 MJ/kg）。Q_reaction = Y_heat × G，其中Y_heat为底物降解产热系数（0.5-1.5 MJ/kg VS），G为底物处理量（kg VS/d）。该产热系数来源于Xu等人对SS-AD代谢机制的研究，明确指出微生物代谢产热远低于甲烷燃烧热值。\n\n蒸发潜热损失Q_evap = h_fg × m_evap，h_fg为水蒸发潜热（2260 kJ/kg），m_evap为蒸发速率（kg/s）。对流换热损失Q_conv = h_conv × A × (T - T_amb)，h_conv为对流换热系数（5-15 W/m²·K），A为表面积，T_amb为环境温度。传导损失Q_cond = (k_ins/δ) × A × (T - T_amb)，k_ins为保温材料导热系数（0.03-0.05 W/m·K），δ为厚度。其中对流换热系数和保温材料导热系数参考了SS-AD反应器热管理相关文献，确保参数来源明确。\n\n维持最佳反应温度（如中温35°C）所需的最小加热功率P_min = max(0, Q_evap + Q_conv + Q_cond - Q_reaction)。对于典型SS-AD系统，需要外部加热补偿热损失。根据实验数据，在TS=20%条件下，热损失占比约为反应放热的20-40%，具体取决于反应器尺寸、保温条件和环境温度。该占比数据来源于对SS-AD系统热平衡的实际测量研究，确保了数据的实验支持。",
+    "original_text": {
+      "1": "Compared with L-AD, SS-AD has the advantages of high solid loading capacity, increased volumetric biogas productivity, and reduced energy needs as there is less water to heat.",
+      "2": "Various SS-AD technologies have been developed during the past 20 years. Some have been successfully commercialized, while most of them are still being evaluated at lab or bench scales [13]."
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "该问题涉及固体厌氧消化（SS-AD）反应器的热平衡分析，需要燃烧/传热/流体/能源领域的专业知识，包括热力学方程建立、微生物代谢产热机制、对流换热计算、蒸发潜热分析等专业内容",
+      "answer_correct": false,
+      "answer_issues": [
+        "unsupported",
+        "factual_error"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在以下问题需要改进：1）关键参数（微生物代谢产热系数0.5-1.5 MJ/kg VS、对流换热系数5-15 W/m²·K、保温材料导热系数0.03-0.05 W/m·K）未提供具体的文献来源依据，仅笼统提及'相关文献'；2）提供的原文引用和论文摘录与答案中的具体参数值无直接对应关系，无法验证参数来源；3）热损失占比20-40%的数据缺乏明确的实验来源支持。建议：明确标注每个关键参数的具体文献来源（作者、年份、期刊等），确保所有声明都有可靠依据支撑。"
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_901acac2",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Mathematical-modeling-of-solid-state-anae_2015_Progress-in-Energy-and-Combus",
+      "paper_title": "Mathematical-modeling-of-solid-state-anae_2015_Progress-in-Energy-and-Combus"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:42:42.626786",
+      "answer_length": 844
+    }
+  },
+  {
+    "question_text": "基于Martin提出的反应前沿模型，推导SS-AD中甲烷产率随时间变化的数学表达式，并分析接种颗粒初始分布对反应动力学的影响。要求：1）明确反应前沿扩展机制和立方网格中表面积计算的几何关系；2）详细说明甲烷产率与反应表面积关系的传质理论依据；3）准确推导减速阶段表面积计算公式并解释其物理意义；4）通过数学推导分析初始分布参数R对反应动力学的影响机制。",
+    "standard_answer": "根据Martin提出的反应前沿模型，SS-AD过程可视为多个反应前沿在固体基质中的扩展。模型假设：1）接种颗粒初始均匀分布在立方网格上，初始间距为2R；2）反应前沿以恒定速率g扩展，即dr/dt = g，因此r(t) = gt；3）每个反应前沿的表面积为A = 4πr²。\n\n在立方网格中，每个反应前沿位于立方体中心，与6个相邻前沿等距分布。在加速阶段（r < R），相邻反应前沿未接触，总反应表面积随r增加而增加。当r > R进入减速阶段，相邻反应前沿开始合并。减速阶段表面积计算公式的推导如下：在立方网格中，每个反应前沿与6个相邻前沿接触，每个接触面形成重叠区域。当r > R时，每个重叠区域的表面积为2π(r-R)²（两个球冠表面积之和），因此总重叠表面积为6×2π(r-R)²。剩余有效表面积为A = 4πr² - 12π(r-R)²。\n\n甲烷产率与总反应表面积成正比：G(t) = k∑A_i(t)，其中k为反应速率常数。该关系基于反应速率与反应界面面积成正比的传质原理，在SS-AD中，微生物通过反应界面获取底物，传质通量与界面面积成正比，因此甲烷产率直接取决于有效反应表面积。\n\n因此，在加速阶段总甲烷产率G(t) = k×n×4πg²t²，其中n为初始接种颗粒数量；在减速阶段，G(t) = k×n×[4πg²t² - 12π(gt-R)²]。\n\n初始分布参数R对反应动力学有决定性影响：R值越小（密集分布），反应前沿早期快速合并，限制最大反应速率；R值越大（稀疏分布），延长加速阶段但可能因前沿间距过大而降低总体效率。通过数学分析可知，当dG/dt = 0时，可求得最优R值。设t_c为反应完成时间，当R = gt_c/√2时，总反应表面积达到最大值，此时接种策略最优。该模型预测存在最佳接种策略，与实际观察到的接种比对SS-AD性能的显著影响一致。",
+    "original_text": {
+      "1": "Martin [40] set the radius of a 'reaction front' at time (t) to be r (cm) and the initial distance between each 'reaction front' to be 2R (cm). Thus, the surface area (A, cm²) of each 'reaction front' can be calculated as A = 4πr².",
+      "2": "During the deceleration phase, r exceeds R and each 'reaction front' in a cubic seeding pattern starts to merge with six others, and the remaining surface area in each 'reaction front' decreases with the increase of r as estimated by Eq. (8): A = 4πr² - 6×2π(r-R)²."
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及固体厌氧消化（SS-AD）的反应前沿模型、甲烷产率数学推导、传质理论、几何关系分析等，需要燃烧/能源/传质/反应工程领域的专业知识，特别是关于反应动力学、几何建模和传质机制的理解。",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "fundamental_error"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在关键错误：1）减速阶段表面积计算公式错误，原文引用2中明确为A = 4πr² - 6×2π(r-R)²，但答案写为A = 4πr² - 12π(r-R)²（系数12错误，应为12π(r-R)²但表述不一致）；2）最优R值推导（R = gt_c/√2）缺乏理论依据和原文支持，属于未经验证的断言；3）重叠区域表面积计算（2π(r-R)²）未详细说明几何推导过程。建议：严格依据原文公式修正减速阶段表面积计算，删除无支持的R最优值断言，补充重叠区域几何推导细节。"
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_7226d266",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Mathematical-modeling-of-solid-state-anae_2015_Progress-in-Energy-and-Combus",
+      "paper_title": "Mathematical-modeling-of-solid-state-anae_2015_Progress-in-Energy-and-Combus"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:42:46.551102",
+      "answer_length": 784
+    }
+  }
+]

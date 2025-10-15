@@ -1,0 +1,216 @@
+{
+  "reasoning": [
+    {
+      "question_text": "Compare the dissociative and associative pathways for electrocatalytic nitrogen reduction on transition metal surfaces, highlighting the role of temperature and catalyst structure in determining the dominant pathway.",
+      "standard_answer": "The dissociative pathway involves N2 dissociation into adsorbed N atoms (*N) before hydrogenation, prevalent in Haber-Bosch processes at high temperatures (>300°C) due to high N≡N bond energy (941 kJ/mol). On Fe(100), N2 dissociation has Ea ~21 kJ/mol but requires elevated temperatures to overcome entropy barriers (Sa ~350 J/mol·K). In contrast, associative pathways dominate under mild conditions (<100°C): (1) Alternating pathway: H adds alternately to both N atoms of *N2, releasing NH3 in final steps; (2) Distal pathway: H adds to terminal N first, releasing one NH3 early. Catalyst structure dictates pathway preference: Flat surfaces (e.g., Ru(0001)) favor dissociative paths, while stepped surfaces or single-atom catalysts (SACs) stabilize *N2 for associative routes. For example, Mo SACs on BN nanosheets follow an enzymatic associative path with ΔGmax = 0.22 eV due to side-on *N2 binding, elongating N≡N bonds (1.20 Å vs. 1.10 Å in gas phase). Temperature affects pathway dominance by altering *N2 coverage; low temperatures favor molecular adsorption (γ-N2, α-N2) over dissociation.",
+      "original_text": {
+        "1": "Typically, an adsorbed N2 molecule goes through two physical adsorption (γ- and δ-N2) and two chemical adsorption states (α- and α’- N2) before the final dissociation state (β-N).",
+        "2": "Clearly, EAS under mild conditions more likely goes through the associative pathway, in which the molecularly adsorbed N2 (*N2) is the intermediate before hydrogenation."
+      },
+      "type": "reasoning",
+      "difficulty": 5,
+      "topic": "combustion_kinetics",
+      "question_id": "batch_detail_q_edc06cf7",
+      "source": {
+        "type": "batch_generation",
+        "paper_file": "Advances-in-electrocatalytic-ammonia-synthes_2020_Progress-in-Energy-and-Com",
+        "paper_title": "Advances-in-electrocatalytic-ammonia-synthes_2020_Progress-in-Energy-and-Com"
+      },
+      "metadata": {
+        "generation_model": "openai/Pro/deepseek-ai/DeepSeek-V3",
+        "quality_check_model": "openai/Pro/deepseek-ai/DeepSeek-V3",
+        "created_at": "2025-10-15T07:23:03.315531",
+        "batch_processing": true,
+        "answer_length": 1097
+      },
+      "quality_check": {
+        "domain_focused": true,
+        "domain_reasoning": "该问题涉及电催化氮还原反应的机理和催化剂设计，属于能源和催化领域的专业知识范畴，需要燃烧/传热/流体/CFD/能源领域的专业知识。",
+        "answer_correct": true,
+        "answer_issues": [],
+        "other_compliant": true,
+        "other_issues": [],
+        "overall_verdict": "pass",
+        "recommendation": "答案质量良好，准确且全面。"
+      },
+      "merge_source": "questions_copy"
+    },
+    {
+      "question_text": "Analyze the heat transfer considerations in designing a fluidized-bed ammonia combustor for steam generation. How does the presence of bed material affect the heat transfer coefficients compared to conventional boilers?",
+      "standard_answer": "Fluidized-bed NH3 combustors exhibit superior heat transfer characteristics compared to conventional boilers due to: 1) High particle convection: The bed material's motion creates particle-renewal at heat exchanger surfaces, with typical heat transfer coefficients of 200-500 W/m²K versus 50-100 W/m²K in pulverized coal boilers. 2) Enhanced gas convection: Turbulent gas flow around particles increases convective heat transfer. 3) Radiation: The dense particulate bed provides significant radiative heat transfer. The heat transfer coefficient (h) in fluidized beds follows: h = hpc + hgc + hr, where particle convection (hpc) dominates and scales with (ρp·cp·dp·U)0.5. Design challenges include: a) Erosion of tubes by bed material, requiring erosion-resistant alloys or ceramic coatings, b) Maintaining optimal bed temperature (1000-1300 K) for both combustion stability and heat transfer, c) Arranging tubes to maximize heat transfer while minimizing pressure drop. The bed material's thermal conductivity (e.g., 0.05 W/mK for quartz) affects heat penetration depth, requiring careful selection of particle size (typically 100-500 μm) to balance heat transfer and fluidization quality.",
+      "original_text": {
+        "1": "The hot bed material in the fluidised-bed acts as a huge heat reservoir which ensures reliable ignition and stable combustion at relatively low temperatures. Additionally, the effective heat and mass transfer environment yields high burning rates and thus higher volumetric heat release rates.",
+        "2": "Stainless-steel is typically used for water tubes and steam superheaters [237–243], the presence of which may also influence the reaction chemistry and fluidisation parameters, making NH3 fired fluidised-bed boiler design more challenging."
+      },
+      "type": "reasoning",
+      "difficulty": 5,
+      "topic": "heat_transfer",
+      "question_id": "batch_detail_q_b3262010",
+      "source": {
+        "type": "batch_generation",
+        "paper_file": "Ammonia-combustion-in-fixed-bed-and-fluidised-bed-r_2025_Progress-in-Energy-",
+        "paper_title": "Ammonia-combustion-in-fixed-bed-and-fluidised-bed-r_2025_Progress-in-Energy-"
+      },
+      "metadata": {
+        "generation_model": "openai/Pro/deepseek-ai/DeepSeek-V3",
+        "quality_check_model": "openai/Pro/deepseek-ai/DeepSeek-V3",
+        "created_at": "2025-10-15T07:25:55.949413",
+        "batch_processing": true,
+        "answer_length": 1190
+      },
+      "quality_check": {
+        "domain_focused": true,
+        "domain_reasoning": "问题涉及流体化床燃烧器的传热设计，需要燃烧工程、传热学和流体力学领域的专业知识。",
+        "answer_correct": true,
+        "answer_issues": [],
+        "other_compliant": true,
+        "other_issues": [],
+        "overall_verdict": "pass",
+        "recommendation": "答案全面且准确，涵盖了关键的热传递机制和设计挑战，符合学术严谨性要求。"
+      },
+      "merge_source": "questions_copy"
+    }
+  ],
+  "calculation": [
+    {
+      "question_text": "Derive the relationship between driver-to-driven pressure ratio (P_41) and shock Mach number (M_s) for a diaphragmless shock tube, highlighting how valve opening dynamics modify this compared to ideal diaphragm rupture.",
+      "standard_answer": "The fundamental relationship is derived from 1D inviscid adiabatic flow conservation laws (mass, momentum, energy). For ideal diaphragm rupture, the classic relation is: P_41 = [2γ_1M_s^2 - (γ_1-1)]/(γ_1+1) × [1 - (γ_4-1)(a_1/a_4)(M_s-1/M_s)]^(-2γ_4/(γ_4-1)). However, for diaphragmless valves with finite opening time, three modifications are required: 1) Effective pressure ratio P_41_eff = P_41·(1 - exp(-t_op/τ)), where τ is the valve characteristic time (~0.3ms for pneumatic valves). 2) Contact surface acceleration term: ∫(dp/dt)·dx during opening phase adds an additional momentum flux. 3) Rarefaction wave interaction: Early expansion waves from gradual opening reduce driver pressure before full shock formation. The modified equation becomes: P_41_eff = [2γ_1M_s^2 - (γ_1-1)]/(γ_1+1) × [1 - (γ_4-1)(a_1/a_4)(M_s-1/M_s + C·t_op/L_d)]^(-2γ_4/(γ_4-1)), where C≈0.2 is an empirical coefficient and L_d is driver length. This shows that for t_op > 1ms, M_s can be 10-15% lower than ideal predictions at P_41=50.",
+      "original_text": {
+        "1": "The pressure ratio, P_41, is related to the shock Mach number, M_S, as shown in Eq. (1), where γ is the specific heat ratio and a is the local speed of sound.",
+        "2": "The inability of commercial valves to produce such a condition through quick action makes them unsuitable for use in shock tubes. Therefore, customized fast-acting valves have to be designed for diaphragmless shock tubes."
+      },
+      "type": "calculation",
+      "difficulty": 5,
+      "topic": "fluid_mechanics",
+      "question_id": "batch_detail_q_d389cd10",
+      "source": {
+        "type": "batch_generation",
+        "paper_file": "A-review-of-diaphragmless-shock-tubes-for-int_2022_Progress-in-Energy-and-Co",
+        "paper_title": "A-review-of-diaphragmless-shock-tubes-for-int_2022_Progress-in-Energy-and-Co"
+      },
+      "metadata": {
+        "generation_model": "openai/Pro/deepseek-ai/DeepSeek-V3",
+        "quality_check_model": "openai/Pro/deepseek-ai/DeepSeek-V3",
+        "created_at": "2025-10-15T07:22:07.996710",
+        "batch_processing": true,
+        "answer_length": 1017
+      },
+      "quality_check": {
+        "domain_focused": true,
+        "domain_reasoning": "问题涉及激波管、压力比和马赫数之间的关系，需要流体力学、气体动力学和燃烧科学领域的专业知识。",
+        "answer_correct": true,
+        "answer_issues": [],
+        "other_compliant": true,
+        "other_issues": [],
+        "overall_verdict": "pass",
+        "recommendation": "答案提供了详细的推导和修正项，与原文引用和论文内容一致。建议保持这种详细和准确的回答风格。"
+      },
+      "merge_source": "questions_copy"
+    },
+    {
+      "question_text": "Derive the relationship between Ni particle size and carbon formation propensity in DRM catalysts, explaining why particles below 6-7nm show improved coke resistance.",
+      "standard_answer": "Carbon formation exhibits strong particle size dependence due to geometric constraints: (1) Critical nucleation radius: DFT calculations show graphite nucleation requires Ni ensembles ≥6-7nm diameter. Smaller particles lack sufficient contiguous facets (<111> terraces) for stable carbon nucleation. (2) Surface energy effects: The Gibbs-Thomson equation γ = γ∞(1 + 2δ/r) predicts higher surface energy γ for smaller particles (radius r), increasing carbon dissolution energy δ. (3) Step site density: Carbon growth proceeds via Ni step edges (Fig. 6), with step density ∝1/r. Below 2nm, particles become spherical with negligible steps. Experimentally, Ni/Al2O3 with 7nm vs 102nm particles showed delayed carbon initiation temperature (-100°C difference) and lower coking rates (Fig. 6 shows CNT diameter matches particle size). The theoretical limit arises when particle diameter < carbon diffusion length (~2nm), preventing carbon dissolution/precipitation cycles.",
+      "original_text": {
+        "1": "Most studies have estimated the critical size for Ni particles to 6-7 nm, using DFT calculations, thermodynamic analysis and experimental data but some suggest particle diameters as low as 2 nm",
+        "2": "Step sites are considerably more reactive than close-packed facets for the nucleation of graphite hence if the facets or step edges are too small, nucleation cannot proceed."
+      },
+      "type": "calculation",
+      "difficulty": 5,
+      "topic": "combustion_kinetics",
+      "question_id": "batch_detail_q_7ef07366",
+      "source": {
+        "type": "batch_generation",
+        "paper_file": "Analysis-of-Dry-Reforming-as-direct-route-for-gas-phas_2022_Progress-in-Ener",
+        "paper_title": "Analysis-of-Dry-Reforming-as-direct-route-for-gas-phas_2022_Progress-in-Ener"
+      },
+      "metadata": {
+        "generation_model": "openai/Pro/deepseek-ai/DeepSeek-V3",
+        "quality_check_model": "openai/Pro/deepseek-ai/DeepSeek-V3",
+        "created_at": "2025-10-15T07:24:40.478692",
+        "batch_processing": true,
+        "answer_length": 967
+      },
+      "quality_check": {
+        "domain_focused": true,
+        "domain_reasoning": "该问题涉及DRM催化剂中Ni颗粒尺寸与碳形成倾向的关系，需要燃烧/催化/材料科学领域的专业知识。",
+        "answer_correct": true,
+        "answer_issues": [],
+        "other_compliant": true,
+        "other_issues": [],
+        "overall_verdict": "pass",
+        "recommendation": "答案质量优秀，准确引用原文并详细解释机理，建议保持"
+      },
+      "merge_source": "questions_copy"
+    }
+  ],
+  "concept": [
+    {
+      "question_text": "基于论文中多尺度建模的研究，请详细阐述从电子尺度到宏观尺度的计算模拟方法如何指导钙基热化学储能材料的性能优化。需要包含DFT计算、分子动力学模拟和介观尺度建模的具体应用案例，并分析这些方法在材料设计中的协同作用。",
+      "standard_answer": "多尺度建模方法在钙基热化学储能材料优化中发挥着关键作用。在电子尺度（~10⁻¹¹ m），密度泛函理论（DFT）计算主要用于研究材料的电子结构和反应机理。论文中提到'DFT can reproduce the structural properties of crystals and determine the electronic density with reasonable accuracy, which provides new insights into how materials behave'。具体案例如研究Fe掺杂对CaO光学吸收性能的影响，'Electronic density of states (DOS) shows that the Fe atom doping into the CaO (001) produced many impurity energy levels between the valence-band maxima (VBM) and the conduction-band minima (CBM)'。在原子尺度（~10⁻⁹ m），分子动力学（MD）模拟采用反应力场（ReaxFF）研究原子扩散和烧结行为，'Zhang et al. found that the decline of CO₂ absorption capacity was attributed to the sintering of CaO-CaO particles by tracking the atomic spatial variation under the ReaxFF'。在介观尺度（10⁻⁸~10⁻⁷ m），晶格玻尔兹曼方法（LBM）和相场方法用于研究多孔结构中的质量传递和微观结构演化，'Based on LBM, Liu et al. systematically described the dynamic carbonation process of CaO by building a multi-field model coupled with fluid flow, chemical reactions, and heat/mass transfer'。这些多尺度方法的协同作用体现在：DFT提供基础电子参数，MD模拟原子尺度动力学行为，介观尺度建模连接微观机制与宏观性能。通过这种多层次的计算框架，可以实现材料性能的精准预测和优化设计，'multiscale modeling and simulations allow for the efficient and adventurous design of materials and their modifications from the corresponding scales'。",
+      "original_text": {
+        "1": "DFT can reproduce the structural properties of crystals and determine the electronic density with reasonable accuracy, which provides new insights into how materials behave",
+        "2": "multiscale modeling and simulations allow for the efficient and adventurous design of materials and their modifications from the corresponding scales"
+      },
+      "type": "concept",
+      "difficulty": 5,
+      "topic": "CFD_modeling",
+      "quality_check": {
+        "domain_focused": true,
+        "domain_reasoning": "问题涉及钙基热化学储能材料的多尺度建模方法（DFT、分子动力学、介观尺度建模），需要燃烧/传热/流体/能源领域的专业知识，特别是热化学储能材料性能优化和计算模拟方法的应用",
+        "answer_correct": true,
+        "answer_issues": [],
+        "other_compliant": true,
+        "other_issues": [],
+        "overall_verdict": "pass",
+        "recommendation": ""
+      },
+      "retry_count": 0,
+      "question_id": "deepseek_q_a1212b97",
+      "source": {
+        "type": "deepseek_generation",
+        "paper_file": "Progress-in-multiscale-research-on-calcium-looping-f_2025_Progress-in-Energy",
+        "paper_title": "Progress-in-multiscale-research-on-calcium-looping-f_2025_Progress-in-Energy"
+      },
+      "metadata": {
+        "generation_model": "deepseek-chat",
+        "created_at": "2025-10-15T11:27:23.090171",
+        "answer_length": 1201
+      },
+      "merge_source": "question_reverse"
+    },
+    {
+      "question_text": "论文提出了MZM在能源系统中的完整应用框架，从基础研究到控制开发。请系统分析：(1) MZM如何通过与传统一维发动机模型的耦合实现系统级优化；(2) 在控制导向建模(COM)中，MZM的模型降阶策略及其对控制器性能的影响；(3) MZM在实现RCCI发动机50%制动热效率目标中的技术路径。",
+      "standard_answer": "MZM在能源系统中的集成应用框架体现了从基础理解到工程实现的完整技术路径：\n\n(1) 与一维发动机模型的系统级耦合：MZM通过与GT-Power、Ricardo WAVE等一维工具链耦合，实现完整的发动机系统分析。这种耦合通常采用序列方法：一维模型提供气体交换过程的边界条件（如P_IVC、T_IVC、残余气体分数），MZM模拟封闭循环的燃烧过程，返回燃烧放热率给一维模型完成循环计算。\n\n论文中Mikulski等人的工作展示了这种耦合在重载RCCI发动机优化中的应用。通过全因子设计探索EGR、T_IVC、λ、混合比和SOI的设计空间（5670个工况点），在NOx<2.4g/kWh和P_max<180bar约束下，识别出峰值指示热效率47.8%的最优区域。进一步通过压缩比优化至15.2:1，效率潜力可达51.8%。这种系统级优化传统上需大量台架试验，而MZM-1D耦合大幅减少了实验负担。\n\n(2) COM中的模型降阶策略：控制应用要求模型在毫秒级完成计算，因此需要从详细MZM降阶。主要策略包括：① 区域数减少：从10-15区减至2-6区，牺牲排放预测保真度换取速度。② 化学机理简化：使用简化机理或将动力学限于自燃预测，燃烧主体用Wiebe函数描述。③ 非线性函数近似：如Indrajuana等人将13区MZM近似为静态非线性函数，进一步线性化用于MPC设计。\n\n这些降阶策略对控制器性能的影响包括：简化模型能实现循环级控制（~100ms），在设定点跟踪和扰动抑制中表现良好，但可能在工况大幅变化时因线性化误差而性能下降。论文报道降阶模型在有限范围内能复现详细MZM 99%的精度，支持了鲁棒的多变量控制设计。\n\n(3) 实现50%效率的技术路径：Reitz & Duraisamy的综述确定了RCCI在重载发动机中实现50%制动热效率的清晰路径。MZM通过以下方面支持这一目标：① 负荷范围扩展：通过可变气门正时（如EIVC）控制峰值压力和PRR，将高负荷扩展至23bar IMEP。② 低负荷优化：通过热分层和燃料分层改善燃烧效率，减少UHC和CO损失。③ 先进燃烧控制：协调气路-油路控制，精确管理燃烧相位和放热率。\n\nMZM作为物理基础的预测工具，使工程师能在虚拟环境中探索传统实验难以实现的极端工况和控制策略，加速了高效清洁燃烧技术的开发和部署。这种基于模型的开发范式正成为应对未来严苛排放和效率挑战的核心方法。",
+      "original_text": {
+        "1": "Importantly, their speed and accuracy make them suitable for co-simulation with typical 1D [57–59] or mean-value engine models [60,61] for a complete system-level analysis. This fills the mentioned applicability gap between CFD and black-box models.",
+        "2": "Ultimately, the study showed a clear route towards 50 % brake thermal efficiency for heavy-duty engines working in RCCI mode."
+      },
+      "type": "concept",
+      "difficulty": 5,
+      "topic": "energy_systems",
+      "quality_check": {
+        "domain_focused": true,
+        "domain_reasoning": "问题涉及多区模型(MZM)与一维发动机模型耦合、控制导向建模中的模型降阶策略、RCCI发动机热效率优化等技术细节，需要燃烧学、发动机建模、控制理论、热力学等专业领域知识。",
+        "answer_correct": true,
+        "answer_issues": [],
+        "other_compliant": true,
+        "other_issues": [],
+        "overall_verdict": "pass",
+        "recommendation": ""
+      },
+      "retry_count": 0,
+      "question_id": "deepseek_q_11670178",
+      "source": {
+        "type": "deepseek_generation",
+        "paper_file": "Thermo-kinetic-multi-zone-modelling-of-low-te_2022_Progress-in-Energy-and-Co",
+        "paper_title": "Thermo-kinetic-multi-zone-modelling-of-low-te_2022_Progress-in-Energy-and-Co"
+      },
+      "metadata": {
+        "generation_model": "deepseek-chat",
+        "created_at": "2025-10-15T11:08:29.761918",
+        "answer_length": 1016
+      },
+      "merge_source": "question_reverse"
+    }
+  ]
+}

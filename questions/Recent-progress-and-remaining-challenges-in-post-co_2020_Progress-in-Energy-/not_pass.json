@@ -1,0 +1,81 @@
+[
+  {
+    "question_text": "在论文中，MOFs的机械稳定性与其孔隙率密切相关。请推导孔隙率对弹性模量的影响，并解释为何UiO-66比MOF-5具有更高的机械稳定性。",
+    "standard_answer": "MOFs的机械稳定性可通过弹性模量（如体积模量K和剪切模量G）量化。根据表5，UiO-66的孔隙率为52.6%，体积模量为41.01 GPa，而MOF-5的孔隙率为76.5%，体积模量仅为18.2 GPa。孔隙率φ与模量的关系可近似为K = K0(1 - φ)^n，其中K0为完全致密材料的模量，n为经验指数（通常为2-3）。对于各向同性多孔材料，其有效模量可表示为E_eff = E0 * exp(-bφ），其中b为材料常数。对于UiO-66，其金属中心为Zr(IV)，配位数高达12，形成稳定的Zr6O4(OH)4节点。高配位数增强了网络刚性，因为更多配位键分担了外部载荷。而MOF-5（Zn4O节点）的配位数较低（6），且配体较短，导致骨架更易变形。此外，节点-配体键能越高（如Zr-O键强于Zn-O），进一步提高了抗压强度。此外，UiO-66的配位几何（十二面体）有利于应力均匀分布。相比之下，MOF-5的高孔隙率（76.5%）意味着更多的空腔，在机械载荷下易发生局部屈曲。因此，通过提高金属中心配位数和选择高键能配体可显著提升MOFs的机械稳定性，使其在工业应用中更耐用。",
+    "original_text": {
+      "1": "UiO-66 is more mechanically stable than other MOFs and ZIFs because of its less porosity",
+      "2": "the mechanical stability of the MOFs can be enhanced by increasing the coordination number of metal or shortening the linker。",
+      "3": "MOFs with a high coordination number of metal-center-linker and lower porosity have higher mechanical stabilities showing higher values of bulk and shear moduli。"
+    },
+    "type": "calculation",
+    "difficulty": 5,
+    "topic": "CFD_modeling",
+    "question_id": "batch_detail_q_fc1f8442",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Recent-progress-and-remaining-challenges-in-post-co_2020_Progress-in-Energy-",
+      "paper_title": "Recent-progress-and-remaining-challenges-in-post-co_2020_Progress-in-Energy-"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T17:32:35.636395",
+      "batch_processing": true,
+      "answer_length": 491
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及金属有机框架(MOFs)的机械稳定性、孔隙率和弹性模量的关系，需要材料科学和力学性能分析的专业知识，属于能源材料和力学工程交叉领域",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案中存在事实性错误和未引用支持的关键声明。UiO-66的体积模量被严重高估(实际应为约15-20GPa而非41GPa)，且未提供数据来源。建议修正数据并确保所有关键声明都有原文引用支持"
+    }
+  },
+  {
+    "question_text": "在燃烧后CO2捕集过程中，MOFs通常需要加热至约200°C进行再生。请分析此温度对MOFs热稳定性的要求，并推导节点-配体键能与热分解温度的关系。",
+    "standard_answer": "MOFs的热稳定性直接取决于金属节点与有机配体之间的配位键强度。论文中指出：'Generally, the thermal stability of MOF is related to the strength of the bond between node and linker'），并结合TGA曲线（图5b）解释为何Zr基MOFs（如UiO-66）能在>500°C下保持结构。根据阿伦尼乌斯方程，分解速率k = A * exp(-Ea/RT），其中Ea为活化能，与键能成正比。例如，UiO-66(Zr)-(COOH)2的残重为35.7%，而MOF-5在100–250°C和480°C时分别失重22%和44%。键能越高（如Zr-O键强于Zn-O），热稳定性越强。具体而言，Zr6O4(OH)4节点的配位数为12，形成高密度交联，从而延缓热降解。此外，节点-配体键的热容Cp可通过积分计算：Cp = ∫(dH/dT)dP，其中H为吸附焓。对于高键能MOFs，其热分解温度T_d可估算为T_d ∝ E_bond / R，其中E_bond为键离解能。因此，设计热稳定性高的MOFs需选择高电荷密度金属离子（如Zr(IV)）以承受再生高温。",
+    "original_text": {
+      "1": "The thermal stability of MOF-5 is illustrated in Fig. 5(b) by a typical TGA curve. It demonstrated the removal of DMF molecule and the collapse of frameworks by initial weight loss (22.0%) from 100 to 250°C followed by another weight loss (44.0%) at 480°C。",
+      "2": "the strength of the bond between Al–O in MIL-53 MOF requires heat energy of 520 kJ/mol, whereas the bond between Zn–O in MOF-5 requires heat energy of 365 kJ/mol），表明Zr基MOFs的热稳定性显著优于Zn基MOFs。"
+    },
+    "type": "reasoning",
+    "difficulty": 3,
+    "topic": "heat_transfer",
+    "question_id": "batch_detail_q_6c0b2f93",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Recent-progress-and-remaining-challenges-in-post-co_2020_Progress-in-Energy-",
+      "paper_title": "Recent-progress-and-remaining-challenges-in-post-co_2020_Progress-in-Energy-"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T17:32:59.846434",
+      "batch_processing": true,
+      "answer_length": 518
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及燃烧后CO2捕集过程中的MOFs材料热稳定性分析，需要材料科学、热力学、化学反应动力学和能源工程领域的专业知识，特别是关于金属-有机框架的热分解机理、键能计算和热稳定性评估",
+      "answer_correct": false,
+      "answer_issues": [
+        "fundamental_error",
+        "factual_error",
+        "unsupported"
+      ],
+      "other_compliant": false,
+      "other_issues": [
+        "has_meta_info",
+        "factual_error"
+      ],
+      "overall_verdict": "fail",
+      "recommendation": "建议修正热容公式的错误表述，确保引用数据与原文一致，避免使用'论文中指出'等元信息，并提供完整的键能与分解温度关系推导"
+    }
+  }
+]

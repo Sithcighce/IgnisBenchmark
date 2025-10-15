@@ -1,0 +1,140 @@
+[
+  {
+    "question_text": "请基于论文中关于煤灰颗粒粘附行为的讨论，分析临界粘度模型在预测硅酸盐灰颗粒沉积行为中的适用性和局限性。需要考虑温度、颗粒动能和碰撞角度的影响。",
+    "standard_answer": "临界粘度模型认为当灰颗粒粘度低于临界值时会发生粘附沉积。该模型适用于硅酸盐为主的煤灰，因为其粘度随温度变化明确。根据论文，临界粘度可表示为：η_crit = A·E_kin^B，其中E_kin为颗粒动能。温度通过Arrhenius方程影响粘度：η=η0exp(Ea/RT)。当碰撞角度θ减小时，有效动能E_kin,eff=E_kin·sinθ降低，导致临界粘度升高。局限性在于：(1)不适用于盐类灰分（如生物质灰）；(2)忽略表面粗糙度影响；(3)实际锅炉中多组分灰分的粘度计算存在偏差。实验表明10^5 Pa·s是典型临界值，但不同研究结果存在1-2个数量级差异。",
+    "original_text": {
+      "1": "The main properties affecting the particle stickiness are the viscosity and surface tension for silicate-rich ashes.",
+      "2": "A sticking criterion based on the work of Srinivasachar et al. shows the sticking threshold is a function of particle kinetic energy, angle of impaction, and particle viscosity."
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "question_id": "batch_detail_q_b22bacbf",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Ash-formation-and-deposition-in-coal-and-biomass-fired-c_2018_Progress-in-En",
+      "paper_title": "Ash-formation-and-deposition-in-coal-and-biomass-fired-c_2018_Progress-in-En"
+    },
+    "metadata": {
+      "generation_model": "openai/Pro/deepseek-ai/DeepSeek-V3",
+      "quality_check_model": "openai/Pro/deepseek-ai/DeepSeek-V3",
+      "created_at": "2025-10-15T07:25:35.332976",
+      "batch_processing": true,
+      "answer_length": 283
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及燃烧系统中煤灰颗粒的沉积行为，需要燃烧工程、流体力学和材料科学的专业知识。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": false,
+      "other_issues": [
+        "has_meta_info"
+      ],
+      "overall_verdict": "pass",
+      "recommendation": "移除答案中的元信息（如'根据论文'），直接陈述事实。"
+    }
+  },
+  {
+    "question_text": "分析生物质灰与煤灰在沉积行为上的本质差异，从灰分化学成分、熔融特性和粘附机理三个方面进行对比，并解释为什么传统的临界粘度模型不适用于生物质灰。",
+    "standard_answer": "生物质灰与煤灰的核心差异在于：(1)化学成分：生物质灰富含K/Na/Ca的氯化物和硫酸盐（占灰分65mol%），而煤灰以Si/Al/Fe氧化物为主；(2)熔融特性：生物质灰因低共熔混合物在800-900℃即出现液相，煤灰需1200℃以上；(3)粘附机理：生物质灰依赖盐类熔融膜的毛细作用，煤灰依赖硅酸盐粘性流动。传统临界粘度模型失效的原因：(a)盐类灰分粘度-温度关系不明确；(b)生物质灰中存在未熔晶体改变流变特性；(c)KCl等易挥发组分导致表面能动态变化。实验表明稻草灰的临界熔融分数模型（f_crit=15%）比粘度模型更准确。",
+    "original_text": {
+      "1": "Salt-rich particles and their stickiness are controlled by the amount of liquid phase, whereas silicate-rich ashes are governed by viscosity.",
+      "2": "Biomass ashes are more difficult due to different ash particle chemistry compared to coal ashes, particularly with high potassium and chlorine contents."
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "question_id": "batch_detail_q_f83551d2",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Ash-formation-and-deposition-in-coal-and-biomass-fired-c_2018_Progress-in-En",
+      "paper_title": "Ash-formation-and-deposition-in-coal-and-biomass-fired-c_2018_Progress-in-En"
+    },
+    "metadata": {
+      "generation_model": "openai/Pro/deepseek-ai/DeepSeek-V3",
+      "quality_check_model": "openai/Pro/deepseek-ai/DeepSeek-V3",
+      "created_at": "2025-10-15T07:26:05.888071",
+      "batch_processing": true,
+      "answer_length": 268
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及生物质灰与煤灰的沉积行为差异，需要燃烧、能源领域的专业知识来分析化学成分、熔融特性和粘附机理。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案准确且详细地解释了生物质灰与煤灰的差异及其机理，并引用了相关研究支持。"
+    }
+  },
+  {
+    "question_text": "计算直径50μm的煤灰颗粒在烟气温度1200K、流速10m/s条件下撞击600K管壁时的热泳力大小，已知颗粒导热系数2.5W/mK，烟气导热系数0.08W/mK，Knudsen数Kn=0.5。",
+    "standard_answer": "热泳力计算公式：F_th=6πμgdpCs(Kn)(k_g/k_p)(∇T_g/T_g)。步骤1：计算气体粘度μg≈4.5×10^-5 Pa·s（1200K）。步骤2：热滑移系数Cs=1.17(1+π/2)≈2.44（Kn=0.5时）。步骤3：温度梯度∇T_g≈(1200-600)/0.01=6×10^4 K/m（边界层厚度取10mm）。步骤4：代入各参数得F_th=6π×4.5×10^-5×50×10^-6×2.44×(0.08/2.5)×(6×10^4/1200)=1.24×10^-9 N。该力与重力F_g=π/6dp^3ρ_pg≈3.27×10^-11 N（ρ_p=2500kg/m³）相比大38倍，说明热泳效应对小颗粒沉积至关重要。",
+    "original_text": {
+      "1": "Thermophoresis describes a force on particles in a flow with non-uniform temperature field, acting opposite to the temperature gradient.",
+      "2": "For small particles (dp<5μm) in PF boilers, Knudsen number can exceed Kn>1 requiring corrections to Stokes drag law."
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "heat_transfer",
+    "question_id": "batch_detail_q_c3776d52",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Ash-formation-and-deposition-in-coal-and-biomass-fired-c_2018_Progress-in-En",
+      "paper_title": "Ash-formation-and-deposition-in-coal-and-biomass-fired-c_2018_Progress-in-En"
+    },
+    "metadata": {
+      "generation_model": "openai/Pro/deepseek-ai/DeepSeek-V3",
+      "quality_check_model": "openai/Pro/deepseek-ai/DeepSeek-V3",
+      "created_at": "2025-10-15T07:26:13.364496",
+      "batch_processing": true,
+      "answer_length": 323
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题需要燃烧/传热/流体/能源领域的专业知识，特别是涉及煤灰颗粒的热泳力计算、热力学性质和流体力学分析。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案计算步骤详细，公式和参数选择合理，结果分析符合热泳效应的基本原理。"
+    }
+  },
+  {
+    "question_text": "建立CFD模型中灰沉积子模型时需要耦合哪些关键物理场？详细说明灰分输运方程、能量方程和动量方程的修正项及其物理意义。",
+    "standard_answer": "CFD灰沉积模型需耦合三个物理场：(1)灰分输运方程：∂(ρY_ash)/∂t+∇·(ρvY_ash)=∇·(D_eff∇Y_ash)+S_ash，其中D_eff=D_m+D_t（分子+湍流扩散），S_ash包含惯性碰撞效率η=0.513Steff^0.514exp(-0.048Steff)。(2)能量方程增加沉积层热阻项：q''=(T_g-T_w)/(R_dep+R_cond)，R_dep=ln(r_o/r_i)/(2πk_depL)。(3)动量方程添加沉积粗糙度影响：k_s^+=k_su*/ν_g，当k_s^+>5时需修改壁函数。关键修正包括：在近壁区采用离散相模型(DPM)跟踪颗粒轨迹；使用用户定义函数(UDF)实现Srinivasachar粘附准则；考虑沉积层表面动态粗糙度对湍流特性的反馈（k-ε模型修正）。",
+    "original_text": {
+      "1": "Ash transport and deposition mechanisms as well as their mathematical description are given and discussed.",
+      "2": "Eight different sticking criteria are implemented in CFD code and compared against measurements from entrained flow reactor."
+    },
+    "type": "concept",
+    "difficulty": 5,
+    "topic": "CFD_modeling",
+    "question_id": "batch_detail_q_17c9f9ee",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Ash-formation-and-deposition-in-coal-and-biomass-fired-c_2018_Progress-in-En",
+      "paper_title": "Ash-formation-and-deposition-in-coal-and-biomass-fired-c_2018_Progress-in-En"
+    },
+    "metadata": {
+      "generation_model": "openai/Pro/deepseek-ai/DeepSeek-V3",
+      "quality_check_model": "openai/Pro/deepseek-ai/DeepSeek-V3",
+      "created_at": "2025-10-15T07:26:17.950613",
+      "batch_processing": true,
+      "answer_length": 363
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及CFD建模、灰沉积子模型、物理场耦合以及灰分输运、能量和动量方程的修正，需要燃烧、传热、流体力学和CFD领域的专业知识。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案内容准确且详尽，符合领域要求，无需修改。"
+    }
+  }
+]

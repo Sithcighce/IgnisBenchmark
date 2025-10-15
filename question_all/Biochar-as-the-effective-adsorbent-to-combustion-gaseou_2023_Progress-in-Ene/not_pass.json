@@ -1,0 +1,42 @@
+[
+  {
+    "question_text": "Derive the Langmuir isotherm model for SO2 adsorption on biochar considering both physisorption and chemisorption mechanisms, and explain how nitrogen functionalization alters the adsorption parameters.",
+    "standard_answer": "The Langmuir isotherm combines physisorption (θ_phy) and chemisorption (θ_chem) terms: θ_total = θ_phy + θ_chem = (b_phy·P)/(1+b_phy·P) + (b_chem·P)/(1+b_chem·P), where b represents adsorption affinity constants. For plain biochar, physisorption dominates (high b_phy from micropores) while chemisorption is negligible. Nitrogen functionalization introduces basic sites via reactions like R2CH3N + SO2 + ½O2 + H2O → (R2CH3NH)2·SO4, increasing b_chem dramatically. The modified isotherm becomes θ_total' = (b_phy·P)/(1+b_phy·P) + (b_chem'·P)/(1+b_chem'·P), where b_chem' >> b_chem. At high temperatures (>100°C), the physisorption term diminishes (exothermic), making chemisorption dominant as observed experimentally with MDEA-modified biochar showing 156.22 mg/g capacity at 100°C.",
+    "original_text": {
+      "1": "The adsorption capacity of SO2 by unmodified biochar is generally at a low amount of less than 20 mg_SO2/g_biochar",
+      "2": "The MDEA mass concentration was added to 1% and 4%, the deteriorated pore structure significantly destroyed the adsorption of SO2 compared with biocharCO2"
+    },
+    "type": "calculation",
+    "difficulty": 5,
+    "topic": "heat_transfer",
+    "question_id": "batch_detail_q_a125ce18",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Biochar-as-the-effective-adsorbent-to-combustion-gaseou_2023_Progress-in-Ene",
+      "paper_title": "Biochar-as-the-effective-adsorbent-to-combustion-gaseou_2023_Progress-in-Ene"
+    },
+    "metadata": {
+      "generation_model": "openai/Pro/deepseek-ai/DeepSeek-V3",
+      "quality_check_model": "openai/Pro/deepseek-ai/DeepSeek-V3",
+      "created_at": "2025-10-15T07:25:47.696507",
+      "batch_processing": true,
+      "answer_length": 782
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires expertise in adsorption mechanisms, surface chemistry, and biochar modification, which are core topics in combustion/energy research.",
+      "answer_correct": false,
+      "answer_issues": [
+        "fundamental_error",
+        "unsupported"
+      ],
+      "other_compliant": false,
+      "other_issues": [
+        "has_meta_info"
+      ],
+      "overall_verdict": "fail",
+      "recommendation": "Revise the Langmuir derivation to clarify that physisorption and chemisorption cannot be simply additive (they compete for sites). Replace speculative claims (e.g., '156.22 mg/g at 100°C') with explicitly cited data from the provided references."
+    },
+    "merge_source": "questions_copy"
+  }
+]

@@ -1,0 +1,101 @@
+[
+  {
+    "question_text": "基于论文中关于WPCBs燃烧动力学的描述，使用KAS、FWO和FRL方法计算并分析表观活化能Ea随转化率α的变化规律。当α从0增加到0.6时，Ea从125 kJ/mol上升到300 kJ/mol，而α>0.6后逐渐下降到50 kJ/mol。请详细推导这种Ea变化趋势背后的物理化学机理，并解释高斯峰拟合分析确定的三维扩散反应机制如何影响燃烧过程。",
+    "standard_answer": "根据论文中WPCBs燃烧动力学的实验数据，Ea随α的变化呈现先增后减的非单调趋势，这反映了燃烧过程中不同反应阶段的控制机制变化。当α<0.6时，Ea从125 kJ/mol上升到300 kJ/mol，表明反应从易分解组分转向难分解组分。初期低温阶段主要涉及聚合物链的断裂和挥发性物质的释放，所需活化能较低。随着温度升高，交联结构、芳香族化合物和溴化阻燃剂开始分解，这些组分具有更强的化学键，需要更高的活化能。当α>0.6时，Ea下降到50 kJ/mol，这对应于炭燃烧阶段，此时主要发生表面氧化反应，扩散控制占主导地位。高斯峰拟合确定的三维扩散机制意味着反应物需要通过产物层扩散到反应界面，扩散阻力成为速率控制步骤。具体机理可表示为：dα/dt = k(1-α)^n exp(-Ea/RT)，其中n为反应级数。在扩散控制区域，反应速率受Br2、HBr等气体产物在固体基质中扩散速率的影响，这与论文中观察到的溴化物释放行为一致。这种Ea变化规律对工业燃烧炉设计至关重要，需要分段控制温度和停留时间以确保完全燃烧同时控制污染物排放。",
+    "original_text": {
+      "1": "Ea values were determined by KAS, FWO and Friedman–Reich–Levi (FRL) methods, increasing from 125 to 300 kJ mol⁻¹ in the α range of 0–0.6, but gradually decreasing to 50 kJ mol⁻¹ above that range.",
+      "2": "The reaction mechanism was determined as three-dimensional diffusion using the Gaussian peak fitting analysis."
+    },
+    "type": "calculation",
+    "difficulty": 5,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及燃烧动力学、表观活化能计算、反应机理分析、三维扩散机制等，需要燃烧科学、化学反应工程、热化学转化等能源与化工领域的专业知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量良好，无需修改。答案准确解释了Ea变化趋势的物理化学机理，正确描述了不同反应阶段的控制机制变化，并合理分析了三维扩散反应机制对燃烧过程的影响，与论文内容一致"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_2a3d1101",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Thermochemical-conversion-of-waste-printed-circuit-board_2023_Progress-in-En",
+      "paper_title": "Thermochemical-conversion-of-waste-printed-circuit-board_2023_Progress-in-En"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:07:05.124848",
+      "answer_length": 463
+    }
+  },
+  {
+    "question_text": "在WPCBs的蒸汽气化过程中，熔融碳酸盐介质显著影响气化性能。论文提到颗粒尺寸小于0.15 mm时反应机理可用均相模型描述，而大于1.0 mm颗粒则遵循更复杂的机制。请从流体力学和传质角度分析不同粒径下熔融盐渗透、蒸汽扩散和气固反应的内在机理，并建立相应的质量传递和反应速率模型。",
+    "standard_answer": "不同粒径WPCBs在熔融碳酸盐中的气化行为差异主要源于熔融盐渗透深度和内部扩散阻力的变化。对于d<0.15 mm的小颗粒，比表面积大（~40,000 m²/m³），熔融盐可通过毛细作用完全渗透颗粒内部，形成准均相体系。此时反应速率受本征化学反应控制，可用均相模型描述：-dC/dt = kCⁿ，其中C为反应物浓度。对于d>1.0 mm的大颗粒，熔融盐仅能渗透表层（渗透深度δ~√Dt），内部存在明显的浓度梯度。此时反应受产物层扩散控制，适用缩核模型：t = ρR²/(6DeffC0)[1-3(1-X)^{2/3}+2(1-X)] + ρR/(3kC0)[1-(1-X)^{1/3}]。从流体力学角度，熔融盐在孔隙中的流动遵循达西定律：v = -K/μ·∇P，渗透率K与孔隙结构和颗粒尺寸相关。蒸汽在熔融盐中的扩散系数D_AB受温度、盐组成和局部流动状态影响。大颗粒内部的气固反应存在明显的传质限制，有效因子η<1，而小颗粒η≈1。这种尺寸效应对于工业气化反应器设计至关重要，需要优化进料颗粒分布以确保高效转化和金属回收。熔融盐的催化作用还通过降低活化能和提供反应界面进一步影响整体气化动力学。",
+    "original_text": {
+      "1": "Gasification performance was affected by the particle size and char properties due to the infiltration of molten salt into the char.",
+      "2": "The reaction mechanisms for particles less than 0.15 mm in size can best be described by the homogeneous model, while larger particles with a size of more than 1.0 mm reacted through a more complex mechanism."
+    },
+    "type": "calculation",
+    "difficulty": 5,
+    "topic": "fluid_mechanics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及WPCBs蒸汽气化过程中的流体力学、传质机理、熔融盐渗透、蒸汽扩散、气固反应动力学建模等，需要燃烧工程、化学反应工程、多相流、传质理论等能源化工领域的专业知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量优秀，无需修改。答案从流体力学和传质角度深入分析了不同粒径下的机理差异，正确建立了均相模型和缩核模型，并准确引用了原文内容，专业性强且解释清晰"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_14902788",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Thermochemical-conversion-of-waste-printed-circuit-board_2023_Progress-in-En",
+      "paper_title": "Thermochemical-conversion-of-waste-printed-circuit-board_2023_Progress-in-En"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:07:06.021380",
+      "answer_length": 497
+    }
+  },
+  {
+    "question_text": "论文指出铜对WPCBs热解具有催化作用，使表观活化能从175.6 kJ/mol降低到164.5 kJ/mol，初始温度从281.9°C降低到262.5°C。请从传热和反应动力学的角度详细分析铜的催化机理，特别是如何促进有机溴化物向Br2和HBr的转化，并推导催化作用对反应速率常数k和阿伦尼乌斯参数的影响。",
+    "standard_answer": "铜对WPCBs热解的催化作用主要体现在降低反应能垒和改变反应路径两个方面。从传热角度，铜的高导热系数（约400 W/m·K）促进了热量的快速传递，使局部温度分布更均匀，减少了热滞后现象。从反应动力学角度，铜表面提供了活性位点，通过形成铜-溴中间体降低了C-Br键断裂的活化能。具体机理可表示为：Cu + R-Br → Cu-Br + R•，随后Cu-Br可进一步反应生成Br2或与H•反应生成HBr。这种催化路径比直接热解路径（R-Br → R• + Br•）具有更低的能垒。根据阿伦尼乌斯方程k = A exp(-Ea/RT)，催化作用使Ea从175.6降至164.5 kJ/mol，相当于在500°C时反应速率提高约2.3倍。同时，铜的存在可能改变频率因子A，因为表面反应通常具有不同的空间构型因子。初始温度从281.9°C降至262.5°C表明在相同加热速率下，催化反应在更低温区即可达到显著转化率，这对工业热解过程的能耗优化具有重要意义。铜的催化作用还改变了溴的分布，促进了溴甲烷、溴乙烷、2-溴酚等有机溴化物向无机溴化物转化，有利于后续溴的回收和环境污染控制。",
+    "original_text": {
+      "1": "The presence of Cu can change the mechanism function, leading Ea to decrease from 175.6 to 164.5 kJ mol⁻¹ and the initial temperature to decrease from 281.9 to 262.5°C.",
+      "2": "In addition, the conversion of organic bromides such as bromomethane, bromoethane, 2-bromophenol and 2,4-dibromophenol into Br2 and HBr was promoted."
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "heat_transfer",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及传热学（热传导、温度分布）、反应动力学（活化能、阿伦尼乌斯方程、反应速率常数）、催化机理（铜的催化作用、反应路径）以及污染物转化（有机溴化物向Br2和HBr转化），这些均属于燃烧/能源/化学反应工程领域的核心专业知识。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "无需改进，答案已全面覆盖问题要求，从传热和反应动力学角度详细分析了铜的催化机理，包括热量传递、活化能降低、反应路径改变、阿伦尼乌斯参数影响及工业意义，且与论文摘录内容一致。"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_b5313eb4",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Thermochemical-conversion-of-waste-printed-circuit-board_2023_Progress-in-En",
+      "paper_title": "Thermochemical-conversion-of-waste-printed-circuit-board_2023_Progress-in-En"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:07:06.993889",
+      "answer_length": 485
+    }
+  }
+]

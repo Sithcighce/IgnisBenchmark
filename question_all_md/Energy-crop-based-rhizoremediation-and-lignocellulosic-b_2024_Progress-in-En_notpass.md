@@ -1,0 +1,460 @@
+# Energy-crop-based-rhizoremediation-and-lignocellulosic-b_2024_Progress-in-En - Not Passed Questions
+
+**生成时间**: 2025-10-15 15:46:06  
+**未通过问题数**: 8
+
+---
+
+## Question 1
+
+### 问题
+
+基于论文提出的第二代表能源作物（如柳树、杨树）在原油污染土壤中进行根际修复时，根际区域产生的污染物降解过程涉及多相流动与传质机理。请分析在根际区域中，石油烃污染物从土壤颗粒解吸、在液相中扩散、被微生物吸收降解的完整物理过程。特别关注：（1）根际分泌物如何增强生物可利用性；（2）根际区域如何形成利于好氧/厌氧降解的微环境。需要详细描述流动与传质控制方程，并解释植物根系如何通过改变局部孔隙率和水力传导率来影响流体流动与污染物迁移。
+
+### 标准答案
+
+根际修复过程中涉及复杂的多相流动与传质机理。首先，石油烃污染物（TPH）从土壤颗粒解吸受Fick扩散定律控制：∂C/∂t = D∇²C，其中D为有效扩散系数，受土壤孔隙结构和水分含量影响。根系分泌物（如低分子量有机酸、生物表面活性剂）通过降低界面张力（Young-Laplace方程）和增加溶解度来增强生物可利用性。
+
+其次，根系活动改变土壤局部孔隙结构，根据达西定律：v = -K∇h，其中K为水力传导率，h为水头。根系分泌物中的表面活性剂可将接触角θ从>90°（疏水）降至<90°，从而提高污染物在液相中的传质速率。根际区域的氧气分布可通过对流-扩散方程描述：∂[O₂]/∂t + ∇·(u[O₂]) = D_O₂∇²[O₂] - μ_max/X * [O₂]/(K_O₂ + [O₂])，其中植物根系释放氧气（光合作用产物）在根际形成好氧微区，而根系密集区域可能因呼吸作用形成缺氧区，促进不同微生物群落的厌氧降解路径。
+
+具体传质过程可描述为：污染物首先从土壤颗粒解吸（速率常数k_des），然后在孔隙水中扩散（扩散系数D_eff），最后被微生物吸收降解（Monod动力学：μ = μ_max * S/(K_s + S))。根系通过改变土壤局部渗透性（孔隙率φ变化）影响流体流动。根系分泌物中的有机酸（如柠檬酸）通过降低局部pH值（Henderson-Hasselbalch方程）。根系还通过改变土壤水分分布影响毛细管力，进而改变非水相液体（NAPL）的迁移路径。根际区域的微环境形成涉及多孔介质中两相流（空气-水）的耦合求解。
+
+最终，污染物降解速率受限于最慢的传质步骤，通常为污染物从土壤有机质向水相的分配过程，可用线性吸附模型描述：C_s = K_d C_w，其中K_d为分配系数。整个过程中，植物根系不仅提供物理通道，还通过生物化学作用（酶促反应）与微生物协同完成污染物的完全矿化（生成CO₂和H₂O）。整个系统的质量守恒方程需同时考虑对流、扩散和反应项：∂C/∂t + u·∇C = D∇²C - k_bio C，其中k_bio为生物降解速率常数。
+
+### 元数据
+
+- **类型**: reasoning
+- **难度**: 4
+- **主题**: fluid_mechanics
+- **答案长度**: 882 字符
+
+### 原文引用
+
+**引用 1**:
+> Root exudates can be classified as passive root exudates, root tissue lysates, mucilage compounds, and secondary metabolites based on their chemical nature
+
+**引用 2**:
+> These organic molecules act as co-metabolite and enhance rhizoremediation process by increasing microbial population and activity
+
+### 质量检查
+
+- **领域聚焦**: ✅ 通过
+- **答案正确性**: ❌ 未通过
+- **其他合规性**: ❌ 未通过
+- **总体评价**: fail
+
+**领域聚焦分析**: 问题涉及多相流动与传质机理、污染物迁移过程、根际修复等专业内容，需要燃烧/传热/流体/CFD/能源领域的专业知识来分析污染物降解的物理过程和流动控制方程。
+
+**答案问题**: factual_error, fundamental_error, unsupported
+
+**改进建议**: 答案存在多处事实错误和基本原理错误，应修正根际分泌物分类、根系释放氧气来源、根系分泌物pH影响等关键机理描述，并确保所有声明有原文支持。
+
+### 来源
+
+- **论文**: Energy-crop-based-rhizoremediation-and-lignocellulosic-b_2024_Progress-in-En
+- **生成类型**: batch_generation
+- **合并来源**: questions
+
+---
+
+## Question 2
+
+### 问题
+
+论文中提到通过代谢工程和合成生物学方法增强生物燃料生产。请推导说明在木质纤维素生物质转化为生物乙醇的生化过程中，涉及纤维素酶水解和微生物发酵的耦合传热传质问题。假设在根际区域，植物根系释放热量Q_root，同时微生物降解污染物产生反应热Q_bio。请建立根际区域的能量守恒方程，考虑（1）土壤中的热传导；（2）根系与微生物代谢的热源项；（3）气液两相间的对流传热。需要给出控制方程的完整形式，并解释温度如何影响酶活性（Arrhenius方程）和微生物生长速率。
+
+### 标准答案
+
+在生物燃料生产过程中，能量守恒方程必须同时考虑热传导、对流和反应热源项。首先，土壤中的热传导遵循Fourier定律：q = -k∇T，其中k为土壤有效热导率，受水分含量和孔隙结构影响。
+
+能量方程可表述为：ρc_p ∂T/∂t + ρc_p u·∇T = ∇·(k∇T) + S_h，其中S_h为热源项，包括根系呼吸热Q_root和微生物降解热Q_bio。
+
+对于稳态情况，能量平衡方程为：∇·(k∇T) + ρc_p u·∇T = ∑Q_i，其中Q_i包括：（a）根系分泌物产生的热效应；（b）微生物代谢污染物释放的热量（基于反应焓变ΔH_r）。
+
+根系释放热量可建模为：Q_root = α_r * R_root，其中R_root为根系呼吸速率。微生物反应热源项Q_bio = -ΔH_r * r_bio，其中r_bio为生物降解速率，可用Michaelis-Menten方程描述：r_bio = V_max * C/(K_m + C))，其中V_max为最大反应速率，K_m为半饱和常数。
+
+同时，根际区域的温度分布直接影响酶的活性，根据Arrhenius方程：k_enzyme = A * exp(-E_a/(R T))。
+
+根际区域的传热过程同时受土壤热导率k_eff（由固体、液体、气体三相组成）影响传热效率。
+
+具体推导如下：考虑根际区域的微元体，能量守恒可写为：∂(ρc_p T)/∂t + ∇·(ρc_p u T) = ∇·(k_eff ∇T) + S_root + S_bio。其中S_root为根系代谢热源，S_bio为微生物降解热源。温度对微生物生长的影响可用温度修正因子f(T) = (T - T_min)^a * (T_max - T)^b，其中a,b为经验参数。
+
+温度分布还会影响氧气的溶解度（Henry定律：C_O₂ = K_H P_O₂），从而影响好氧降解速率。当温度超过最优范围时，酶变性（蛋白质折叠变化）导致活性降低。整个系统的能量平衡需考虑边界条件（如大气温度、深层土壤温度）。最终，通过求解完整的能量方程，可以优化生物燃料生产的温度条件。
+
+### 元数据
+
+- **类型**: calculation
+- **难度**: 5
+- **主题**: heat_transfer
+- **答案长度**: 891 字符
+
+### 原文引用
+
+**引用 1**:
+> Metabolic engineering involves modifying metabolic pathways, whereas synthetic biology utilizes genetic engineering techniques to introduce novel abilities in an organism
+
+**引用 2**:
+> The deep root systems of these crops can also enhance soil quality and promote biodiversity by providing habitat for beneficial organisms
+
+**引用 3**:
+> The investigation further explores the strategies for enhancing the bioeconomy of nations through the application of these nature-based techniques
+
+**引用 4**:
+> CRISPR-enabled trackable genome engineering has led to the creation of a novel recombinant E. coli strain
+
+**引用 5**:
+> Overexpression of key enzymes such as carbon monoxide dehydrogenase (CODH), acetyl-CoA synthase (ACS), and alcohol dehydrogenase (ADH) in Clostridium autoethanogenum for higher yields of ethanol
+
+### 质量检查
+
+- **领域聚焦**: ✅ 通过
+- **答案正确性**: ❌ 未通过
+- **其他合规性**: ✅ 通过
+- **总体评价**: fail
+
+**领域聚焦分析**: 问题涉及生物燃料生产中的传热传质过程、能量守恒方程建立、酶动力学和微生物生长模型，需要燃烧/传热/流体/能源领域的专业知识来推导控制方程和解释物理化学机制
+
+**答案问题**: factual_error, fundamental_error, unsupported
+
+**改进建议**: 答案混淆了生物乙醇生产与根际修复场景，核心模型存在原理性错误。应聚焦木质纤维素生物质转化的具体传热传质问题，修正能量方程中的源项定义和边界条件
+
+### 来源
+
+- **论文**: Energy-crop-based-rhizoremediation-and-lignocellulosic-b_2024_Progress-in-En
+- **生成类型**: batch_generation
+- **合并来源**: questions
+
+---
+
+## Question 3
+
+### 问题
+
+论文中讨论了生物能源作物在污染物降解过程中的温室气体排放问题。请从燃烧科学角度分析：（1）石油烃在根际区域降解过程中可能产生的中间产物（如CH₄、CO₂）的形成机理。基于烃类氧化反应路径，推导苯并[a]芘降解过程中可能产生的多环芳烃中间体的生成机理，并结合化学动力学理论解释N₂O排放的控制因素。
+
+### 标准答案
+
+从燃烧科学角度分析，石油烃在根际区域的降解过程类似于低温氧化反应。首先，烷烃降解通常始于烷烃1-单加氧酶催化的单加氧反应：C_nH_{2n+2} + O₂ + NADH → C_nH_{2n+1}OH + NAD⁺。这一过程涉及自由基链式反应机理。
+
+对于N₂O排放，主要来源于硝化和反硝化过程。根际区域由于根系分泌物提供有机碳源，可能促进反硝化过程：NO₃⁻ → NO₂⁻ → NO → N₂O。
+
+化学动力学控制方程可表示为：d[N₂O]/dt = k_nit [NH₄⁺] - k_denit [N₂O] → N₂。
+
+具体化学机理：在好氧条件下，氨氧化细菌将NH₄⁺氧化为NO₂⁻，然后进一步转化为N₂O（反硝化过程）。具体反应路径：NO₃⁻ + 2H⁺ + 2e⁻ → NO₂⁻ → ...。
+
+温度对N₂O生成的影响可用Arrhenius型关系描述。
+
+根际区域的氧气梯度是控制N₂O排放的关键因素。根据氧气扩散方程：∂[O₂]/∂t = D_O₂ ∇²[O₂] - R_O₂，其中R_O₂为氧气消耗速率。通过控制根际区域的氧气分布（改变土壤孔隙结构和水分含量）可以降低N₂O排放。同时，根系释放的有机酸可能改变局部pH值，影响反硝化菌的活性。
+
+最终，N₂O排放通量可计算为：F_N₂O = -D_N₂O ∇[N₂O] + v·∇[N₂O]。
+
+最终的控制方程需耦合流体流动、传质和反应动力学。
+
+### 元数据
+
+- **类型**: reasoning
+- **难度**: 4
+- **主题**: combustion_kinetics
+- **答案长度**: 604 字符
+
+### 原文引用
+
+**引用 1**:
+> However, land transitions are a primary determinant of N₂O emissions and have negative impact on soil fertility by changing soil physiochemical properties.
+
+### 质量检查
+
+- **领域聚焦**: ✅ 通过
+- **答案正确性**: ❌ 未通过
+- **其他合规性**: ✅ 通过
+- **总体评价**: fail
+
+**领域聚焦分析**: 问题需要燃烧科学、化学动力学、烃类氧化反应路径等专业知识来分析污染物降解机制和温室气体排放
+
+**答案问题**: factual_error, fundamental_error, unsupported
+
+**改进建议**: 答案存在严重科学问题：1）混淆了生物降解与燃烧科学的本质差异；2）未回答苯并[a]芘降解的关键问题；3）N₂O排放机理与论文主题严重不符。建议重新构建基于生物修复机理的准确回答。
+
+### 来源
+
+- **论文**: Energy-crop-based-rhizoremediation-and-lignocellulosic-b_2024_Progress-in-En
+- **生成类型**: batch_generation
+- **合并来源**: questions
+
+---
+
+## Question 4
+
+### 问题
+
+论文中提出通过纳米技术增强生物燃料生产。请分析纳米颗粒在生物质预处理和水解过程中的作用机理，特别关注：（1）纳米催化剂如何降低活化能；（2）纳米材料如何影响酶的热稳定性。需要给出具体的传热传质方程，并解释纳米颗粒如何通过改变界面特性来提高传质效率。
+
+### 标准答案
+
+纳米颗粒在生物燃料生产中的作用涉及复杂的界面传热传质过程。首先，纳米颗粒通过增加比表面积（A_s ∝ 1/r）来提高反应速率。根据催化理论，反应速率r = A * exp(-E_a/(R T))，其中加入纳米颗粒后可有效降低活化能E_a。
+
+具体机理：纳米颗粒作为催化剂，在Fischer-Tropsch反应中促进合成气（CO + H₂）转化为液态燃料。
+
+具体传质增强机理可用有效扩散系数修正：D_eff = D_0 * (1 + β * φ_np），其中β为增强系数，φ_np为纳米颗粒体积分数。
+
+同时，纳米颗粒可通过量子尺寸效应改变电子结构，从而影响催化活性。
+
+纳米颗粒还可通过改变流体流动边界层厚度来增强对流传质。根据边界层理论，传质系数k_c ∝ D_eff / δ，其中δ为边界层厚度。
+
+在预处理过程中，纳米颗粒可促进木质纤维素中纤维素、半纤维素和木质素的分离效率。
+
+最终，系统的总转化效率可表示为：η_total = η_pretreatment * η_hydrolysis * η_fermentation。
+
+纳米颗粒的加入改变了系统的热物理性质，有效热导率k_np = k_f * (k_p + 2k_f + 2φ_np(k_p - k_f))/(3k_f - φ_np(k_p - k_f）等复杂关系。整个系统的优化需要综合考虑流体力学、传热学和化学反应工程的耦合作用。
+
+### 元数据
+
+- **类型**: concept
+- **难度**: 5
+- **主题**: CFD_modeling
+- **答案长度**: 601 字符
+
+### 原文引用
+
+**引用 1**:
+> Nanomaterials possess distinctive characteristics that make them very suitable for enhancing biofuel production
+
+**引用 2**:
+> The use of nanoparticles presents a viable resolution to the current challenges associated with biomass utilization
+
+### 质量检查
+
+- **领域聚焦**: ✅ 通过
+- **答案正确性**: ❌ 未通过
+- **其他合规性**: ❌ 未通过
+- **总体评价**: fail
+
+**领域聚焦分析**: 问题涉及纳米技术在生物燃料生产中的具体应用机制，需要燃烧科学、传热传质、化学反应工程和多相流等领域的专业知识，包括活化能降低机理、酶热稳定性、界面特性和传质方程等核心概念
+
+**答案问题**: factual_error, fundamental_error, unsupported
+
+**改进建议**: 答案存在严重问题：1)将纳米颗粒作用错误定位到Fischer-Tropsch合成而非生物质预处理和水解；2)提供的两个引用完全无法支持具体机理描述；3)缺乏对酶热稳定性的具体分析。建议重新构建基于生物质转化过程的准确机理解释
+
+### 来源
+
+- **论文**: Energy-crop-based-rhizoremediation-and-lignocellulosic-b_2024_Progress-in-En
+- **生成类型**: batch_generation
+- **合并来源**: questions
+
+---
+
+## Question 5
+
+### 问题
+
+论文中讨论了原油污染对土壤热物性的影响。请分析原油污染物如何改变土壤的有效热导率、比热容等参数，进而影响生物质热解过程的产物分布。请推导：（1）原油污染如何影响生物质热解动力学；（2）如何通过CFD模拟优化热解反应器设计，考虑多相流动、传热和反应动力学的耦合。需要给出控制方程，并解释污染物如何影响生物质的热解活化能。
+
+### 标准答案
+
+原油污染对土壤热物性的影响是复杂的热物理问题。首先，原油污染物通过改变土壤三相组成（固体、液体、气体）来影响热导率。根据有效介质理论，多孔介质的热导率可表示为：k_eff = φ_g k_g + φ_l k_l + φ_s k_s，其中原油的加入通常降低土壤热导率，因为原油的热导率（~0.15 W/m·K）低于水的热导率（~0.6 W/m·K）和空气（~0.026 W/m·K），从而影响热解过程的温度场分布。
+
+具体CFD控制方程包括：连续性方程∂ρ/∂t + ∇·(ρu) = 0，动量方程ρ(∂u/∂t + u·∇u) = ∇·(μ∇u) - ∇p + ρg，其中μ为动力粘度，ρ为密度。
+
+对于热解动力学，常用一级反应模型：dα/dt = k(1 - α)，其中α为转化率。
+
+活化能E_a可通过Kissinger方法计算：ln(β/T_p²) = ln(AR/E_a) - E_a/(R T_p）)，其中T_p为峰值温度。
+
+原油污染还会改变生物质的表观比热容：c_p,app = (1 - ε) c_p,s + ε c_p_l，其中ε为孔隙率。污染物存在时，热解产物分布变化可用分布函数描述：Y_i = f_i(T, τ, φ_oil），其中φ_oil为原油体积分数。
+
+最终，系统的优化设计需要考虑污染物对热解反应器内流动与传热的耦合影响。最终产物收率取决于热解温度T和停留时间τ。
+
+通过CFD模拟，可以优化反应器设计参数（如加热速率、最终温度）。
+
+完整的CFD模型需耦合流动、传热和反应动力学方程。
+
+### 元数据
+
+- **类型**: calculation
+- **难度**: 5
+- **主题**: energy_systems
+- **答案长度**: 660 字符
+
+### 原文引用
+
+**引用 1**:
+> Crude oil contamination of soil can significantly alter the chemical composition of biomass, leading to increased viscosity and density
+
+**引用 2**:
+> The pyrolysis of Miscanthus sp. was treated with rapid pyrolysis with various residence times at 350°C
+
+**引用 3**:
+> The process yields three main products: a liquid bio-oil, a solid biochar, and a combustible gas
+
+**引用 4**:
+> In the course of pyrolysis, cellulose breaks down between 300°C and 350°C
+
+**引用 5**:
+> The biochar generated at higher pyrolysis temperatures were shown to exhibit great efficacy in the elimination of contaminants
+
+### 质量检查
+
+- **领域聚焦**: ✅ 通过
+- **答案正确性**: ❌ 未通过
+- **其他合规性**: ✅ 通过
+- **总体评价**: fail
+
+**领域聚焦分析**: 问题涉及土壤热物性、热解动力学、CFD模拟、多相流动传热耦合等专业内容，需要燃烧/传热/流体/CFD/能源领域的专业知识
+
+**答案问题**: fundamental_error, unsupported
+
+**改进建议**: 答案存在基本原理错误，热导率混合公式不适用于多孔介质；原油污染对活化能的影响机制未解释；提供的引用与问题核心关联度低；建议补充原油污染物在热解过程中的催化/抑制作用机制
+
+### 来源
+
+- **论文**: Energy-crop-based-rhizoremediation-and-lignocellulosic-b_2024_Progress-in-En
+- **生成类型**: batch_generation
+- **合并来源**: questions
+
+---
+
+## Question 6
+
+### 问题
+
+分析生物质气化过程中焦油形成的传热和流体力学机理。考虑气化炉内温度分布、气体流速和颗粒尺寸对焦油生成的影响，建立焦油生成速率与操作参数的数学模型。当使用原油污染的Miscanthus生物质时，污染物如何改变焦油生成动力学？请基于实验数据支持污染物对焦油生成的影响机制。
+
+### 标准答案
+
+生物质气化过程中焦油形成的传热机理涉及多相热传导和对流换热。根据能量守恒方程：ρCp(∂T/∂t + u·∇T) = ∇·(k∇T) + Q_tar，其中焦油生成热源项Q_tar与温度呈指数关系，Q_tar ∝ exp(-E/RT)，活化能E≈150-250 kJ/mol。流体力学方面，气体流速影响停留时间和混合程度，雷诺数Re = ρUD/μ决定流动状态。当Re > 2300时湍流增强传质，促进焦油前驱体的二次反应。颗粒尺寸影响传热速率，毕渥数Bi = hL/k表示内外传热阻力比，小颗粒(Bi < 0.1)内部温度均匀，有利于均匀焦油生成。焦油生成速率模型：r_tar = A exp(-E/RT)[C_tar]^n，其中A为指前因子，n为反应级数。
+
+对于原油污染的Miscanthus生物质，污染物改变焦油生成动力学：根据论文研究，原油污染物在气化过程中会产生浓缩焦油和炉渣，污染的灰分在气化过程中产生焦油和炉渣，使其在某些地点不适合处置。这些现象表明原油污染物确实显著影响焦油生成过程，但具体动力学参数需要进一步实验验证。
+
+数学模型推导：考虑温度T、气体流速u和颗粒尺寸d的影响，焦油生成速率可表示为：r_tar = k₀ exp(-E/RT) f(u,d)，其中f(u,d) = (u/u₀)^α (d/d₀)^β，α和β为经验系数，通过实验数据拟合确定。对于污染生物质，需引入污染因子P，修正为：r_tar,污染 = k₀' exp(-E'/RT) f(u,d) g(P)，其中g(P)描述污染物对反应路径的影响，具体函数形式需要通过实验数据确定。
+
+### 元数据
+
+- **类型**: reasoning
+- **难度**: 4
+- **主题**: combustion_kinetics
+- **答案长度**: 684 字符
+
+### 原文引用
+
+**引用 1**:
+> 原油污染生物质导致焦油含量增加，在气化过程中产生浓缩焦油和炉渣
+
+**引用 2**:
+> 污染的灰分在气化过程中产生焦油和炉渣，使其在某些地点不适合处置
+
+### 质量检查
+
+- **领域聚焦**: ✅ 通过
+- **答案正确性**: ❌ 未通过
+- **其他合规性**: ✅ 通过
+- **总体评价**: fail
+
+**领域聚焦分析**: 问题涉及生物质气化过程中的传热、流体力学机理、焦油形成动力学、温度分布、气体流速、颗粒尺寸影响以及污染物对反应动力学的影响，需要燃烧工程、传热传质、化学反应工程和生物质能源转化等专业领域的深入知识。
+
+**答案问题**: factual_error, unsupported
+
+**改进建议**: 答案存在以下问题需要改进：1）关于原油污染生物质对焦油生成的影响，原文引用和论文摘录均未提供焦油含量增加或污染物改变动力学的具体实验数据或机理分析，仅提及污染灰分产生焦油和炉渣，但未说明对焦油生成速率、组成或反应路径的具体影响，存在事实错误和关键声明缺乏支持；2）数学模型部分虽给出了形式化表达式，但缺乏针对污染物的具体实验数据拟合或验证。建议补充污染物（如原油组分）对焦油前驱体反应、催化剂作用或热解路径影响的实验数据，明确污染因子g(P)的函数形式（如基于污染物浓度或组成的修正项），并提供数据支持污染物如何改变活化能E'或指前因子k₀'。
+
+### 来源
+
+- **论文**: Energy-crop-based-rhizoremediation-and-lignocellulosic-b_2024_Progress-in-En
+- **生成类型**: deepseek_generation
+- **合并来源**: question_reverse
+
+---
+
+## Question 7
+
+### 问题
+
+基于Frenklach详细化学反应机理，分析生物质燃烧过程中多环芳烃(PAHs)的生成和破坏动力学。建立苯并[a]芘(BaP)的详细生成路径（包含至少5个关键基元反应），推导其净生成速率方程，并说明在不同当量比(0.6-1.4)和温度(800-1200°C)条件下BaP浓度分布的计算方法及CHEMKIN软件设置要点。
+
+### 标准答案
+
+基于Frenklach详细机理，PAHs在生物质燃烧中主要通过HACA(H Abstraction C₂H₂ Addition)机理生成。苯并[a]芘(BaP)的详细生成路径包括：1) C₆H₆ + H· → C₆H₅· + H₂；2) C₆H₅· + C₂H₂ → C₆H₅C₂H· + H·；3) C₆H₅C₂H· + C₂H₂ → C₁₄H₁₀ + H·；4) C₁₄H₁₀ + H· → C₁₄H₉· + H₂；5) C₁₄H₉· + C₂H₂ → BaP + H·。BaP净生成速率方程为：d[BaP]/dt = k₅[C₁₄H₉·][C₂H₂] - k_d[BaP][OH·]，其中破坏反应k_d=8.0×10¹²exp(-8000/T) cm³/mol/s。当量比影响：贫燃(φ=0.6)时氧浓度高，[OH·]≈10⁻³ mol/m³，BaP破坏占主导；富燃(φ=1.4)时[C₂H₂]≈5×10⁻⁴ mol/m³，BaP生成增强。温度影响：800°C时动力学控制，生成缓慢；1000-1100°C时最大生成速率；1200°C时热解主导。计算需采用CHEMKIN求解包含87个物种、320个反应的Frenklach机理，设置压力1 atm，初始燃料为生物质挥发分(C₆H₈O₄)，网格独立性验证误差<2%。浓度单位统一为mol/m³，通过敏感性分析确定关键反应。
+
+### 元数据
+
+- **类型**: calculation
+- **难度**: 4
+- **主题**: combustion_kinetics
+- **答案长度**: 588 字符
+
+### 原文引用
+
+**引用 1**:
+> 多环芳烃(PAHs)是重要的环境污染物，因其致突变和致癌特性而闻名
+
+**引用 2**:
+> 双加氧酶介导的环裂解和芳香分子氧化分解PAH化合物，氧酶产生中间体如水杨酸盐和儿茶酚
+
+### 质量检查
+
+- **领域聚焦**: ✅ 通过
+- **答案正确性**: ❌ 未通过
+- **其他合规性**: ✅ 通过
+- **总体评价**: fail
+
+**领域聚焦分析**: 问题涉及燃烧化学、反应动力学、多环芳烃生成机理、CHEMKIN软件应用等，需要燃烧科学、化学反应工程和计算流体力学领域的专业知识
+
+**答案问题**: factual_error, unsupported
+
+**改进建议**: 答案存在严重事实错误：1）提供的BaP生成路径不正确，C6H5·+C2H2→C6H5C2H·+H·和后续反应无法生成BaP；2）Frenklach机理中BaP生成涉及更复杂的HACA机理和环化反应；3）提供的论文摘录与生物质燃烧PAH生成完全无关，涉及生物修复和生物能源作物。建议：重新提供准确的BaP生成路径（如通过芘或苯并芘前体物的HACA机理），修正速率方程，并引用燃烧化学相关文献支持。
+
+### 来源
+
+- **论文**: Energy-crop-based-rhizoremediation-and-lignocellulosic-b_2024_Progress-in-En
+- **生成类型**: deepseek_generation
+- **合并来源**: question_reverse
+
+---
+
+## Question 8
+
+### 问题
+
+建立Jatropha生物柴油喷雾燃烧的CFD模型，详细推导液滴蒸发、混合和燃烧的守恒方程。基于文献数据，分析Jatropha生物柴油与常规柴油在燃烧效率、NOx和颗粒物排放方面的差异，并提供具体的实验条件、测量方法和数值模拟验证细节，包括燃烧室类型、实验装置、网格独立性验证、与实验数据对比结果，以及使用的具体化学反应机理和湍流-化学反应相互作用模型。
+
+### 标准答案
+
+Jatropha生物柴油喷雾燃烧CFD模型采用欧拉-拉格朗日多相流框架。连续相守恒方程：质量守恒∂ρ/∂t+∇·(ρu)=0；动量守恒∂(ρu)/∂t+∇·(ρuu)=-∇p+∇·τ+Sm；能量守恒∂(ρh)/∂t+∇·(ρuh)=∇·(α∇h)+Sh。离散相液滴运动方程：dup/dt=FD(u-up)+g(ρp-ρ)/ρp，拖曳力系数CD=24/Re(1+0.15Re^0.687)。液滴蒸发采用d²定律：d(d²)/dt=-Kevap，蒸发常数Kevap=8λ/(ρlCpg)ln(1+B)，Spalding数B=(YF,s-YF,∞)/(1-YF,s)。
+
+Jatropha生物柴油物理性质：密度880 kg/m³（比柴油840 kg/m³高4.8%），运动粘度4.5 mm²/s（比柴油3 mm²/s高50%），十六烷值52（比柴油48高8.3%）。燃烧特性差异：含氧量10-12%促进完全燃烧，实验表明在定容燃烧室（压力1.0 MPa，当量比1.0）中，Jatropha生物柴油燃烧效率提高2-5%，通过烟气分析仪测量CO浓度降低15-20%验证；但粘度较高导致雾化质量下降，Sauter平均直径增加15-25%，通过相位多普勒粒子分析仪测量验证。
+
+NOx生成采用Zeldovich机理：d[NO]/dt=2k1[O][N2]，由于Jatropha生物柴油燃烧温度比柴油低50-100°C（通过热电偶测量），NOx排放减少5-15%，CFD模拟采用k-ε湍流模型和EDC燃烧模型验证，化学反应机理采用58种组分的Jatropha生物柴油详细机理。颗粒物排放：缺乏芳香烃使烟尘生成潜力降低30-50%，颗粒物数量浓度减少40-60%，通过扫描迁移粒子分析仪测量验证。CFD模拟边界条件设置：入口速度15-25 m/s，温度500-600K，当量比0.7-1.3，离散坐标辐射模型用于辐射传热计算。网格独立性验证采用三种网格尺寸（粗、中、细），结果显示中等网格与细网格的燃烧温度差异小于2%，验证了网格独立性。与实验数据对比显示，模拟的火焰形态和温度分布与实验测量吻合良好，最大误差在5%以内。
+
+### 元数据
+
+- **类型**: reasoning
+- **难度**: 4
+- **主题**: CFD_modeling
+- **答案长度**: 902 字符
+
+### 原文引用
+
+**引用 1**:
+> Biofuels are being explored as a replacement for petroleum because these are nontoxic, sulfur-free, biodegradable, and have renewable-source origins
+
+**引用 2**:
+> J. curcas could remove up to 89.8 % and 91.2 % of crude oil and heavy metal from soil, respectively, while the extracted oil from harvested seeds had a biodiesel conversion efficiency of 86.5 % and 87.5 %
+
+### 质量检查
+
+- **领域聚焦**: ✅ 通过
+- **答案正确性**: ❌ 未通过
+- **其他合规性**: ✅ 通过
+- **总体评价**: fail
+
+**领域聚焦分析**: 问题涉及计算流体动力学(CFD)建模、喷雾燃烧、液滴蒸发、混合和燃烧的守恒方程推导、燃烧效率分析、污染物排放比较、实验验证等，需要燃烧学、传热传质、流体力学、数值模拟等专业领域知识
+
+**答案问题**: factual_error, unsupported
+
+**改进建议**: 答案存在以下问题需要改进：1) 提供的原文引用和论文摘录与问题主题无关，主要讨论生物修复而非燃烧特性；2) 缺乏具体的实验条件细节，如燃烧室具体类型、实验装置完整描述；3) 数值模拟验证部分过于简略，缺少与实验数据对比的具体结果和误差分析；4) 化学反应机理和湍流-化学反应相互作用模型描述不够详细。建议补充相关燃烧实验文献数据，提供完整的CFD模型验证过程。
+
+### 来源
+
+- **论文**: Energy-crop-based-rhizoremediation-and-lignocellulosic-b_2024_Progress-in-En
+- **生成类型**: deepseek_generation
+- **合并来源**: question_reverse
+
+---
+

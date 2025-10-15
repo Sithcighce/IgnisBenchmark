@@ -1,0 +1,134 @@
+[
+  {
+    "question_text": "基于Zhang和Law的模型，详细分析二元液滴碰撞中气体薄膜动力学如何影响聚并-反弹-聚并转变的物理机制，并推导气体压力在稀薄流和连续流条件下的表达式差异。",
+    "standard_answer": "Zhang和Law模型通过三个耦合常微分方程描述液滴形状演化（a(t), R(t), h(t)），其中气体薄膜压力pg是关键参数。在连续流条件（Kn≪1）下，气体压力表达式简化为润滑压力：pg = 3μ∞/h³(r²-a²)(dh/dt + 2h/a da/dt)，这对应于传统流体力学中的润滑理论。当Kn≥1时，需要考虑稀薄气体效应，压力表达式变为pg = 3μ∞/Δ(Kn)h³(r²-a²)(dh/dt + 2h/a da/dt)，其中Δ(Kn) = 8.7583Kn^1.1551。这种差异源于气体分子平均自由程与薄膜厚度的比较，在稀薄条件下气体分子不能形成连续介质，导致压力分布改变。物理机制上，气体薄膜的排水时间τd与碰撞时间τc = D/U的竞争决定了碰撞结果。当τd < τc时，气体薄膜能够充分排出，范德华力在临界薄膜厚度hcr = (AHD/6πσ)^(1/3)时主导界面合并；当τd > τc时，气体薄膜无法及时排出，液滴动能通过内部流动耗散后发生反弹。气体压力的增加（通过密度或粘度）会延长τd，促进反弹现象，这解释了为什么在高压条件下水液滴也会出现反弹，而在低压条件下烃类液滴倾向于聚并。",
+    "original_text": {
+      "1": "The gas film drainage has also been considered in phenomenological models of the coalescence process [34], in which coalescence occurs if the characteristic collision time, τc = D/U, is larger than the characteristic film drainage time, τd; otherwise bouncing occurs.",
+      "2": "For Kn≪1, Eq. (1) degenerates to the lubrication pressure of the gas flow between two mobile flat interfaces with an approaching velocity dh/dt and a strain rate κ = a−1(da /dt). Consequently, the estimated pressure within the gas film is the sum of the corrected pressure by rarefied gas effects and the van der Waals negative pressure pvdW."
+    },
+    "type": "calculation",
+    "difficulty": 5,
+    "topic": "fluid_mechanics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及二元液滴碰撞、气体薄膜动力学、聚并-反弹转变机制、稀薄流与连续流条件下的气体压力表达式推导，这些都需要燃烧、传热、流体力学、CFD等领域的专业知识，特别是多尺度流动和界面动力学的深入理解。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量较高，无需修改。"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_2d6063e7",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Dynamics-of-binary-droplet-collisi_2025_Progress-in-Energy-and-Combustion-Sc",
+      "paper_title": "Dynamics-of-binary-droplet-collisi_2025_Progress-in-Energy-and-Combustion-Sc"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:51:13.708550",
+      "answer_length": 507
+    }
+  },
+  {
+    "question_text": "分析射流-射流碰撞与液滴-液滴碰撞的动力学相似性，推导射流碰撞角度α对气体薄膜排水和聚并-反弹转变的影响机制。",
+    "standard_answer": "射流-射流碰撞与液滴-液滴碰撞在动力学上具有深刻的相似性，都表现出非单调的聚并-反弹-聚并转变。关键相似参数包括有效韦伯数We_eff = ρU²D/σ和碰撞角度α。在射流碰撞中，射流速度U可分解为法向分量U sinα和切向分量U cosα，其中法向分量负责界面接近，切向分量不断夹带环境气体进入界面区域。气体薄膜排水机制与液滴碰撞类似，但几何形状从球形界面变为柱形界面。射流碰撞的聚并-反弹转变强烈依赖于α，因为有效碰撞惯性由U sinα控制。临界条件为τd(α) < τc时发生聚并，其中τc ~ D/(U sinα)为特征碰撞时间，τd(α)为角度相关的薄膜排水时间。实验观测显示，在小U时从软聚并到反弹的转变对α不敏感，而从反弹到硬聚并的转变强烈依赖于α，临界U随α增加而减小。这可以解释为：在较小α时，切向速度分量较大，增强了气体夹带和薄膜稳定性，促进反弹；在较大α时，法向速度分量主导，气体薄膜更容易排出，促进聚并。存在临界角度α_cr，超过该角度后气体薄膜不再形成，因为射流在α=90°的极限情况下总是合并。临界角度随奥内佐格数Oh减小而减小，因为较低粘度增强界面流动性，有利于气体排出。这种相似性验证了液滴碰撞基础物理在更复杂几何中的普适性。",
+    "original_text": {
+      "1": "Consequently, there is a complete analogy between droplet-droplet and jet-jet collision for the four major regimes of response.",
+      "2": "This is because the coalescence-versus-bouncing transition is attributed to the effective head-on impact inertia U sin α. A critical α beyond which there is no gas film exists since the two jets will always merge in the limit of head-on collision (α = 90◦)"
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "fluid_mechanics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及射流-射流碰撞与液滴-液滴碰撞的动力学相似性、气体薄膜排水机制、聚并-反弹转变等，需要燃烧/传热/流体力学/CFD领域的专业知识，特别是多相流、界面动力学和碰撞物理的专业知识。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "无需修改，答案质量高，内容专业、准确且完整。"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_fc4b4a8f",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Dynamics-of-binary-droplet-collisi_2025_Progress-in-Energy-and-Combustion-Sc",
+      "paper_title": "Dynamics-of-binary-droplet-collisi_2025_Progress-in-Energy-and-Combustion-Sc"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:51:14.126771",
+      "answer_length": 529
+    }
+  },
+  {
+    "question_text": "分析非牛顿液滴碰撞中剪切稀化效应对内部混合和分离行为的物理机制，并推导有效粘度模型。",
+    "standard_answer": "剪切稀化液滴碰撞的物理机制涉及粘度随剪切率变化的非线性响应。有效粘度模型基于局部剪切率˙γ，采用幂律模型：μ_eff = K˙γ^(n-1)，其中K为稠度系数，n为幂律指数（n<1表示剪切稀化）。在碰撞过程中，液滴内部经历复杂的剪切场，最大剪切率出现在界面接触区域和内部射流形成区域，可达˙γ ~ U/D ~ 10³-10⁴ s⁻¹。剪切稀化通过两个主要机制影响碰撞行为：首先，在初始碰撞阶段，高剪切率导致有效粘度显著降低，增强液滴变形和内部流动，促进质量混合；其次，在分离阶段，低有效粘度减少粘性耗散，增加可用于分离的过剩动能。对于内部混合，剪切稀化增强涡环的产生和演化，因为降低的粘度减小了涡量耗散，延长了涡环寿命。实验观测显示，剪切稀化液滴在韦伯数高达211时仍不发生分离或薄膜破裂，而牛顿流体在类似条件下早已发生飞溅。这种差异源于剪切稀化液滴在变形过程中形成的厚环形边缘，其有效粘度随变形增加而降低，允许更大的变形而不破裂。从能量角度，剪切稀化改变了能量耗散路径，更多的初始动能转化为变形能而非粘性耗散热，这解释了为什么剪切稀化液滴能够承受更高的韦伯数而不分离。",
+    "original_text": {
+      "1": "Motzigemba et al. [80] studied the collision between two identical droplets of water/carboxymethylcellulose aqueous solution and found that droplet deformation is enhanced by shear thinning",
+      "2": "Focke and Bothe [75] computationally showed that collision between two identical shear-thinning droplets can be reproduced with two Newtonian droplets of an equivalent effective viscosity."
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "fluid_mechanics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及非牛顿流体力学、液滴碰撞动力学、剪切稀化效应、粘度模型推导等，需要燃烧/传热/流体力学/CFD领域的专业知识，特别是非牛顿流体行为和液滴碰撞物理机制的专业知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量优秀，无需修改。答案准确描述了剪切稀化效应的物理机制，正确推导了幂律粘度模型，详细解释了剪切稀化对内部混合和分离行为的影响机制，并提供了具体的剪切率范围和实验观测对比，内容专业且完整。"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_554cdeb5",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Dynamics-of-binary-droplet-collisi_2025_Progress-in-Energy-and-Combustion-Sc",
+      "paper_title": "Dynamics-of-binary-droplet-collisi_2025_Progress-in-Energy-and-Combustion-Sc"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:51:14.528690",
+      "answer_length": 485
+    }
+  },
+  {
+    "question_text": "分析液滴碰撞诱导微爆炸的物理机制，并推导多组分燃料液滴内部浓度分层导致超热状态的热力学条件。",
+    "standard_answer": "碰撞诱导微爆炸的物理机制源于三个关键过程：气体泡夹带、浓度分层和均相成核。当两个不同挥发性组分的液滴碰撞时，气体薄膜在界面边缘破裂，导致中心气体泡被夹带进入合并液滴内部。在燃烧过程中，表面层的高沸点组分优先蒸发，建立内部浓度梯度：表面富集低挥发性组分（沸点Tb2），内部富集高挥发性组分（沸点Tb1）。由于液相质量扩散极慢（τdiff ~ D²/Dm，Dm~10⁻⁹ m²/s），这种浓度分层状态持续存在。液滴温度由表面高沸点组分控制，当T > Tb1时，内部高挥发性组分处于超热状态。热力学上，均相成核发生的临界过热度为ΔTsup = T - Tb1 = (2σvl)/(r⁺ρvhfg)，其中r⁺为临界核半径，σvl为液-汽界面张力，hfg为汽化潜热。对于正庚烷-正十六烷系统（Tb1=100°C, Tb2=256°C），当液滴温度达到150-200°C时，内部正庚烷经历50-100°C的过热度，远超过均相成核阈值（~10-20°C）。碰撞提供的气-液界面作为异质成核位点，显著降低成核能垒，触发剧烈的内部汽化，导致微爆炸。这种机制解释了为什么预混合双组分液滴很少发生微爆炸，而碰撞生成的液滴却表现出强烈的微爆炸现象。",
+    "original_text": {
+      "1": "Mechanistically, it is hypothesized that upon initiation of droplet gasification, say upon ignition, the more volatile components in the droplet’s surface layer are preferentially gasified. This subsequently sets up a concentration gradient within the droplet, with the surface layer becoming progressively more concentrated with the less volatile, higher boiling point components and the interior with the more volatile, lower boiling point components.",
+      "2": "This is because with collision an air bubble is trapped within the merged mass, whose interface would facilitate nucleation and hence rapid internal gasification of the superheated droplet mass, leading to explosion of the entire droplet."
+    },
+    "type": "reasoning",
+    "difficulty": 5,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及液滴碰撞、微爆炸物理机制、多组分燃料浓度分层、热力学条件推导等，需要燃烧科学、流体力学、传热传质、热力学等领域的专业知识，属于典型的能源与燃烧工程领域问题",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量优秀，无需修改。答案准确描述了液滴碰撞诱导微爆炸的物理机制，正确解释了气体泡夹带、浓度分层和均相成核三个关键过程，热力学条件推导合理，与提供的原文引用和论文摘录内容一致，且提供了具体的数值示例（正庚烷-正十六烷系统）增强说服力"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_96e863ee",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Dynamics-of-binary-droplet-collisi_2025_Progress-in-Energy-and-Combustion-Sc",
+      "paper_title": "Dynamics-of-binary-droplet-collisi_2025_Progress-in-Energy-and-Combustion-Sc"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:51:16.014779",
+      "answer_length": 512
+    }
+  }
+]

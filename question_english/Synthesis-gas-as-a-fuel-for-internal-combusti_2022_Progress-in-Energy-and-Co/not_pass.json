@@ -1,0 +1,44 @@
+[
+  {
+    "question_text": "How does the H2/CO ratio in syngas mixtures affect ignition delay times under engine-relevant conditions, and what are the underlying chemical kinetic mechanisms responsible for this behavior?",
+    "standard_answer": "The H2/CO ratio significantly influences ignition delay times through competing chemical kinetic pathways. For high H2 concentration (i.e., CO < 60%), adding CO to H2 did not lead to a significant increase in IDT, as hydrogen chemistry dominates the oxidation process. However, at higher CO concentrations, CO exhibits an inhibiting effect on ignition. The inhibition effect is much more prominent as pressure increases from ~15 to 30 bar; that is, the CO oxidation is retarded by increasing pressure. The complex interplay between H2's promoting effect through fast chain-branching reactions and CO's inhibiting effect through radical scavenging creates a non-linear relationship between H2/CO ratio and ignition delay under engine-relevant conditions. The observed discrepancies between measured and calculated IDTs at higher pressures are due to not considering the overall activation energy correctly and HO2/H2O2 chemistry dominance in the chain-propagation regime.",
+    "original_text": {
+      "1": "For high H2 concentration (i.e., CO < 60%), adding CO to H2 did not lead to a significant increase in IDT, as shown by Gersen et al. [166]",
+      "2": "The inhibition effect is much more prominent as pressure increases from ~15 to 30 bar; that is, the CO oxidation is retarded by increasing pressure"
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires specific knowledge of combustion kinetics, ignition delay times, syngas chemistry (H2/CO mixtures), and engine-relevant conditions, which are core topics in combustion science and energy systems.",
+      "answer_correct": false,
+      "answer_issues": [
+        {
+          "type": "unsupported",
+          "description": "The answer claims 'CO exhibits an inhibiting effect on ignition' and 'CO oxidation is retarded by increasing pressure' but the citations only support that CO addition does not significantly increase IDT at high H2 concentrations and that the inhibition effect is more prominent with pressure increase. The specific mechanisms (radical scavenging, HO2/H2O2 chemistry dominance) are not supported by the provided citations."
+        },
+        {
+          "type": "factual_error",
+          "description": "The answer states 'CO oxidation is retarded by increasing pressure' but citation 2 says 'the CO oxidation is retarded by increasing pressure' in the context of the inhibition effect being more prominent, which may imply a misinterpretation of the pressure effect on CO oxidation kinetics."
+        }
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "Revise the answer to align strictly with the provided citations and avoid unsupported mechanistic explanations."
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_b4deeb6f",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Synthesis-gas-as-a-fuel-for-internal-combusti_2022_Progress-in-Energy-and-Co",
+      "paper_title": "Synthesis-gas-as-a-fuel-for-internal-combusti_2022_Progress-in-Energy-and-Co"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:31:34.621002",
+      "answer_length": 970
+    }
+  }
+]

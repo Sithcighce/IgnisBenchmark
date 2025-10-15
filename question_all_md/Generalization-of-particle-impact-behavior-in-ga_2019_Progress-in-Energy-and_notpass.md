@@ -1,0 +1,71 @@
+# Generalization-of-particle-impact-behavior-in-ga_2019_Progress-in-Energy-and - Not Passed Questions
+
+**生成时间**: 2025-10-15 15:46:06  
+**未通过问题数**: 1
+
+---
+
+## Question 1
+
+### 问题
+
+基于论文提出的无量纲化方法，详细推导并解释如何通过粒子动能与表面能之比（K）和粒子温度与软化温度之比（(cid:14)）构建粒子碰撞行为图，并阐述该图中沉积区、侵蚀/反弹区和飞溅区的物理机制及其在燃气轮机污染预测中的应用。
+
+### 标准答案
+
+论文通过无量纲分析定义了两个关键参数：K = E_kin / E_surf 和 (cid:14) = T / T_soft。K代表粒子撞击时动能与表面张力能（毛细力）的竞争：若K < 1，表面能主导，粒子易粘附；若K > 1，则动能起主导作用，可能导致侵蚀或飞溅。具体推导如下：
+1. **粒子动能** E_kin = (1/2) m v² = (1/2) (ρ π d³/6) v²，简化后与Weber数（We = ρ v² d / γ）直接关联，即K ∝ We。
+2. **表面能** E_surf = γ A = γ (4 π r²) = γ π d²（假设最大铺展面积A ≈ π d²_max）。
+2. **表面张力计算**：γ = Σ(γ_i m_i)，其中γ_i为各氧化物的表面张力（见表2）。
+3. **无量纲温度比(cid:14)**：直接关联粒子黏度温度依赖性（如NPL模型：ln μ = ln A_NPL + B_NPL / T，其中A_NPL和B_NPL通过光学碱度（(cid:16)_C）计算，反映粒子软化状态。
+**行为图分区机制**：
+- **沉积区（(cid:14) > 1, K < 临界值）：此时粒子温度高于软化温度，黏度降低（μ/μ_c < 1），结合能量平衡模型（铺展因子ξ ≥ 0.4）。粒子撞击时黏性耗散主导，动能不足以引发反弹或破碎。
+- **侵蚀/反弹区（(cid:14) < 1, K > 临界值）：粒子刚性高，弹性恢复力导致反弹，同时高动能冲击表面造成材料去除（侵蚀）。
+- **飞溅区（高We和低Z））：惯性力克服表面张力，导致粒子碎裂。
+**应用价值**：该图通过统一参数预测不同材料（硅质、火山灰、煤灰）在特定温度-速度条件下的行为。例如，当K ≈ 40且(cid:14) ≈ 1.1时，粒子处于沉积与飞溅过渡区，需结合具体工况调整。
+
+### 元数据
+
+- **类型**: N/A
+- **难度**: N/A
+- **主题**: N/A
+- **答案长度**: 795 字符
+
+### 原文引用
+
+**引用 1**:
+> The relation between particle kinetic energy/surface energy and the particle temperature normalized by the softening temperature represents the original non-dimensional groups able to represent a basis of a promising adhesion criterion.
+
+**引用 2**:
+> The non-dimensional map clearly shows a number of different regimes, fitting very well with reported observations in terms of deposition and erosion phenomena.
+
+**引用 3**:
+> Sticking mechanisms and deposit formation mechanisms are based on the presences of a third substance or second phase at the particle/surface interface.
+
+**引用 4**:
+> The criterion E ∗ > 0 is determined mainly by the value of the spread factor ξ.
+
+**引用 5**:
+> Particle viscosity is directly related to particle temperature via its composition.
+
+### 质量检查
+
+- **领域聚焦**: ✅ 通过
+- **答案正确性**: ❌ 未通过
+- **其他合规性**: ❌ 未通过
+- **总体评价**: fail
+
+**领域聚焦分析**: 问题涉及燃气轮机中粒子碰撞行为的无量纲分析、能量平衡机制和相变理论，需要燃烧科学、多相流、热物理和流体力学等专业领域的深入知识
+
+**答案问题**: factual_error, unsupported
+
+**改进建议**: 修正温度参数定义错误，补充具体临界值和物理机制说明，删除元信息表述
+
+### 来源
+
+- **论文**: Generalization-of-particle-impact-behavior-in-ga_2019_Progress-in-Energy-and
+- **生成类型**: batch_generation
+- **合并来源**: questions
+
+---
+

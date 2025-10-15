@@ -1,0 +1,42 @@
+[
+  {
+    "question_text": "基于计算流体动力学（CFD）模拟，分析当MXene片层与聚苯胺（PANI）形成三维多孔网络时，电解质流动的Navier-Stokes方程如何修正以描述纳米尺度孔隙内的离子传输？请推导考虑表面电荷和电场力的修正动量方程：ρ (∂v/∂t + v·∇v) = -∇p + μ ∇²v + ρ_e E，其中ρ_e为空间电荷密度，E为电场强度。",
+    "standard_answer": "在3D PANI@M-Ti3C2Tx异质结构中，电解质流动需考虑电渗流效应。修正Navier-Stokes方程为：∂v/∂t + v·∇v) = -∇p + μ ∇²v + ρ_e E - Σ_i (F_drag,i），其中F_drag,i为离子在纳米孔隙中受到的粘性阻力F_drag,i = 6π μ r_i v（r_i为离子半径约0.1 nm）。当孔隙尺寸从2 nm增至5 nm时，流速可提升约80%，压力梯度∇p降低约35%。当施加1.4 V电压时，离子迁移率从10⁻⁸ cm² V⁻¹ s⁻¹提升至2×10⁻¹⁴ cm² V⁻¹ s⁻¹，离子扩散时间常数τ ∝ L²/D_i，其中L为特征长度，D_i为扩散系数。通过CFD模拟可优化电极的微结构设计，以提升体积能量密度至33.2 mWh cm⁻³。",
+    "original_text": {
+      "1": "3D interconnected networks of 1T-MoS2/Ti3C2 MXene异质结构中，孔隙率从60%增至85%时，质量传输边界层厚度δ_m从50 μm降至15 μm，从而降低浓差极化，提高功率密度至19,470 mW cm⁻³。",
+      "type": "calculation",
+      "difficulty": 5,
+      "topic": "CFD_modeling"
+    },
+    "question_id": "batch_detail_q_88a29f82",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "MXene-based-heterostructures--Current-trend-and-de_2023_Progress-in-Energy-a",
+      "paper_title": "MXene-based-heterostructures--Current-trend-and-de_2023_Progress-in-Energy-a"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T14:13:35.567256",
+      "batch_processing": true,
+      "answer_length": 353
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及计算流体动力学（CFD）、Navier-Stokes方程修正、纳米尺度离子传输、表面电荷效应等，需要深入的流体力学、电化学和纳米尺度传输专业知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "fundamental_error",
+        "unsupported"
+      ],
+      "other_compliant": false,
+      "other_issues": [
+        "has_meta_info",
+        "too_general"
+      ],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在严重的科学错误：1）Stokes阻力公式（6πμr_iv）不适用于纳米尺度离子传输；2）离子迁移率数值（10⁻⁸到2×10⁻¹⁴）存在量级错误；3）未正确引入电渗流相关的电场力修正。建议重新推导动量方程，重点考虑双电层效应和电动现象，并引用原文数据支持孔隙结构对传输的影响"
+    }
+  }
+]

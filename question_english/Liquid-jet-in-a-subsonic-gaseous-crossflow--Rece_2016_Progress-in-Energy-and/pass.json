@@ -1,0 +1,134 @@
+[
+  {
+    "question_text": "How do elevated pressure conditions affect the primary breakup regimes of a liquid jet in a gaseous crossflow, particularly in terms of transition boundaries and droplet formation mechanisms?",
+    "standard_answer": "Elevated pressure conditions significantly alter primary breakup by increasing gas density (ρ_g), which elevates the gas Weber number (We_g) and aerodynamic forces for a fixed crossflow velocity. This shifts the transition from column to surface breakup to higher q and We_g values, as observed in studies up to 15 bar. For instance, at STHP (standard temperature, high pressure), the column/surface breakup borderline moves upward on a We_g–q map, meaning higher momentum flux is needed to achieve surface breakup due to enhanced gas inertia. Mechanistically, increased pressure intensifies Kelvin–Helmholtz instabilities and boundary layer stripping, leading to finer atomization and smaller droplet sizes in the far-field. However, near-field droplet characteristics remain influenced by nozzle exit conditions. Additionally, elevated pressure reduces the liquid/gas density ratio, which can moderate jet penetration but amplify aerodynamic effects. In high-pressure environments, such as gas turbine combustors, these changes improve fuel–air mixing and combustion efficiency by promoting rapid secondary breakup and vaporization, though they may also increase the risk of wall impingement if penetration is not properly controlled.",
+    "original_text": {
+      "1": "Song et al. [50] remarked that the transition borderline between the column and surface breakup shifted towards higher q and We_g when increasing the pressure of air crossflow.",
+      "2": "Becker and Hassa [37] investigated the effect of elevated pressure at room/standard temperature (STHP; that is, up to 15 bar at 290 K) on the primary breakup regimes of a plain jet in an air crossflow."
+    },
+    "type": "application",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires specialized knowledge in fluid mechanics, multiphase flows, and combustion science, specifically addressing liquid jet breakup regimes, transition boundaries, and droplet formation mechanisms under elevated pressure conditions - all core topics in energy systems and combustion engineering.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_92e7024b",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Liquid-jet-in-a-subsonic-gaseous-crossflow--Rece_2016_Progress-in-Energy-and",
+      "paper_title": "Liquid-jet-in-a-subsonic-gaseous-crossflow--Rece_2016_Progress-in-Energy-and"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:22:02.468964",
+      "answer_length": 1236
+    }
+  },
+  {
+    "question_text": "How does the jet-to-crossflow momentum flux ratio (q) influence the trajectory and penetration of a liquid jet in a subsonic gaseous crossflow, and what physical mechanisms explain its dominant role over other parameters?",
+    "standard_answer": "The jet-to-crossflow momentum flux ratio, defined as q = (ρ_j v_j^2)/(ρ_g u_g^2), is the most critical parameter governing liquid jet trajectory and penetration due to its direct relation to the balance between jet inertia and crossflow aerodynamic forces. Higher q values increase jet penetration by enhancing the jet's momentum relative to the crossflow, allowing it to resist deflection and penetrate deeper. This occurs because the jet's initial momentum dictates its ability to overcome the dynamic pressure of the crossflow, which exerts a bending force. The trajectory scaling follows power-law correlations, such as z/d_j ∝ (q)^n (x/d_j)^m, where exponents n and m depend on the flow region (near-field jet-like or far-field wake-like). Mechanistically, increased q amplifies the counter-rotating vortex pair (CVP) strength, which entrains crossflow fluid and sustains jet coherence, thereby delaying breakup and enhancing penetration. Additionally, q encapsulates the effects of density and velocity ratios, making it a comprehensive parameter that outweighs individual Reynolds or Weber numbers in trajectory prediction.",
+    "original_text": {
+      "1": "Jet-to-crossflow momentum flux ratio is the most important parameter for predicting the trajectory, penetration, and breakup length of a liquid jet in a crossflow.",
+      "2": "The non-dimensional parameters used to define the features of a gaseous transverse jet, such as q, Re_j and Re_g, are equally important parameters in analyzing a liquid transverse jet as well."
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "fluid_mechanics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question requires specialized knowledge in fluid mechanics, specifically jet-in-crossflow phenomena, including momentum flux ratios, jet trajectory scaling, counter-rotating vortex pairs, and the interplay between jet inertia and aerodynamic forces - all core concepts in combustion and CFD applications.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no compliance issues."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_fcc24be8",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Liquid-jet-in-a-subsonic-gaseous-crossflow--Rece_2016_Progress-in-Energy-and",
+      "paper_title": "Liquid-jet-in-a-subsonic-gaseous-crossflow--Rece_2016_Progress-in-Energy-and"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:22:02.596664",
+      "answer_length": 1130
+    }
+  },
+  {
+    "question_text": "Explain the transition from column breakup to surface breakup in a non-turbulent liquid jet within a gaseous crossflow, focusing on the roles of gas Weber number (We_g) and the competing hydrodynamic instabilities, while ensuring all statements are supported by the provided paper content.",
+    "standard_answer": "The transition from column breakup to surface breakup in a non-turbulent liquid jet in a gaseous crossflow is governed by the gas Weber number (We_g = ρ_g u_g^2 d_j/σ), which represents the ratio of aerodynamic forces to surface tension forces. According to the paper, 'column breakup can be observed at low q and/or low We_g, and the surface breakup regime occurs at high q and/or high We_g.' This indicates that at lower We_g values, column breakup dominates, where the liquid column undergoes large-scale deformations and fractures. As We_g increases, surface breakup becomes prevalent, characterized by small-scale instabilities on the windward side of the jet leading to continuous stripping of ligaments and droplets. The paper states that 'both column and surface breakup mechanisms coexist but with the predominance of one over the other,' highlighting the competitive nature of these instabilities. The transition is gradual, and while We_g is a key parameter, the exact thresholds can vary with conditions like momentum flux ratio (q). The mechanisms involve aerodynamic forces similar to droplet breakup processes, where increased We_g enhances surface instabilities, reducing jet coherence and promoting atomization through surface stripping.",
+    "original_text": {
+      "1": "Wu et al. [27] asserted that since the breakup process of a liquid jet and a spherical droplet in an airflow are both caused by aerodynamic forces, the general understanding of the aerodynamic secondary breakup of drops could be applicable to the primary breakup of a liquid jet.",
+      "2": "They concluded that column breakup can be observed at low q and/or low We_g, and the surface breakup regime occurs at high q and/or high We_g."
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "fluid_mechanics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question requires specific expertise in fluid mechanics, particularly multiphase flows, jet breakup phenomena, and hydrodynamic instabilities. It focuses on the transition between breakup regimes in liquid jets within gaseous crossflows, which involves understanding aerodynamic forces, surface tension effects, Weber number dynamics, and competing instability mechanisms - all core concepts in combustion science and fluid dynamics.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "The question is well-focused on domain-specific fluid mechanics concepts, and the answer correctly cites and interprets the provided paper content regarding the role of gas Weber number in governing the transition between column and surface breakup regimes."
+    },
+    "retry_count": 1,
+    "question_id": "deepseek_q_978d029a",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Liquid-jet-in-a-subsonic-gaseous-crossflow--Rece_2016_Progress-in-Energy-and",
+      "paper_title": "Liquid-jet-in-a-subsonic-gaseous-crossflow--Rece_2016_Progress-in-Energy-and"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:22:41.870071",
+      "answer_length": 1254
+    }
+  },
+  {
+    "question_text": "Explain the empirical correlation for surface wavelength (λ_s) in the shear breakup regime of a non-turbulent liquid jet in a gaseous crossflow, including the specific conditions under which this correlation is valid according to the cited literature.",
+    "standard_answer": "The empirical correlation for surface wavelength in the shear breakup regime is given by λ_s/d_j = 3.4 We_g^(-0.45), where λ_s is the surface wavelength and d_j is the jet diameter. This correlation was developed based on experimental observations of liquid jet breakup in crossflow conditions. The correlation is specifically valid for gas Weber numbers greater than 4 (We_g > 4), Ohnesorge numbers less than 0.12 (Oh < 0.12), and jet-to-crossflow momentum flux ratios in the range of 3 to 8000 (q = 3-8000). The surface wavelength λ_s represents the wavelength of periodic disturbances along the sides of the liquid column where liquid stripping occurs during the breakup process. In the shear breakup regime, which occurs at higher Weber numbers, the surface wavelength becomes significantly smaller than the jet diameter, typically λ_s/d_j < 0.1, indicating the dominance of surface stripping mechanisms over column deformation. The correlation demonstrates that surface wavelength decreases with increasing gas Weber number, reflecting enhanced aerodynamic effects that promote finer-scale surface disturbances and more efficient liquid stripping from the jet surface.",
+    "original_text": {
+      "1": "Sallam et al. [29] proposed a correlation as follows: λ_s/d_j = 3.4 We_g^(-0.45); which is valid for 4 < We_g, Oh < 0.12, and q in the range of 3–8000.",
+      "2": "Mazallon et al. [28] concluded that these wavelengths are mainly a function of We_g, and there is a clear relationship between λ_c and λ_s and the properties of bag, bag/shear, and shear breakup of a liquid jet in a crossflow."
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "fluid_mechanics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question requires specific expertise in fluid mechanics and multiphase flow, particularly focusing on liquid jet breakup in crossflow, empirical correlations for surface wavelength, and the shear breakup regime. It demands knowledge of dimensionless parameters (Weber number, Ohnesorge number), breakup mechanisms, and the specific conditions under which correlations apply in crossflow scenarios.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "The question is well-focused on fluid mechanics domain knowledge, and the answer accurately reflects the empirical correlation and validity conditions from the cited literature without errors or unsupported claims."
+    },
+    "retry_count": 1,
+    "question_id": "deepseek_q_bc025138",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Liquid-jet-in-a-subsonic-gaseous-crossflow--Rece_2016_Progress-in-Energy-and",
+      "paper_title": "Liquid-jet-in-a-subsonic-gaseous-crossflow--Rece_2016_Progress-in-Energy-and"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:22:46.432556",
+      "answer_length": 1173
+    }
+  }
+]

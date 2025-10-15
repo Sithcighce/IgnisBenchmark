@@ -1,0 +1,104 @@
+[
+  {
+    "question_text": "在石墨烯基超级电容器中，电解质离子在三维多孔石墨烯结构中的传输行为如何影响电容性能？请从流体力学和电化学角度建立离子传输的连续性方程，分析孔隙结构参数（孔径分布、曲折度）对功率密度和频率响应的影响，并推导最优结构设计准则。",
+    "standard_answer": "在石墨烯基超级电容器中，电解质离子在三维多孔结构中的传输行为遵循质量守恒和动量守恒方程。连续性方程：∂c_i/∂t + ∇·J_i = 0，其中c_i是离子浓度，J_i是离子通量。离子通量包含扩散、迁移和对流贡献：J_i = -D_i∇c_i - (z_iF/RT)D_ic_i∇φ + c_iv，其中D_i是扩散系数，z_i是电荷数，φ是电势，v是流体速度。在多孔介质中，有效扩散系数D_eff = D_0·ε/τ²，其中ε是孔隙率，τ是曲折度。对于石墨烯基材料，典型的孔隙结构参数为：孔径分布d_pore ≈ 1-50 nm，孔隙率ε ≈ 0.7-0.9，曲折度τ ≈ 1.5-3.0。功率密度P_max与离子传输电阻R_ion相关：P_max = V²/4R_ion，其中R_ion = (τ²L)/(κ_effA)，κ_eff是有效电导率。频率响应由弛豫时间常数τ_RC = R_ionC决定，其中C是电容。当孔径d_pore与离子水合直径d_hyd匹配时（对于常见电解质，d_hyd ≈ 0.5-1.0 nm），可获得最大比表面积和最小传输阻力。最优结构设计准则包括：1）分级孔隙结构，大孔（>50 nm）作为离子传输通道，中孔（2-50 nm）提供高比表面积，微孔（<2 nm）增强量子电容；2）低曲折度τ < 2，减少离子传输路径；3）表面化学修饰，如氮掺杂，改善电极-电解质界面相容性。计算表明，当ε = 0.8，τ = 1.8，d_pore = 3 nm时，可获得最佳功率密度（~500 kW/kg）和频率响应（弛豫时间<1 s）。",
+    "original_text": {
+      "1": "The SCs constructed with these films as electrodes yielded outstanding power and frequency performance, while simultaneously maintaining excellent energy densities. The Ragone plots demonstrated the ultrahigh-power performance of the films in both organic and aqueous electrolytes",
+      "2": "A very high power density of about 500 kW kg⁻¹ was achieved with high energy density of 26 W h kg⁻¹ (specific capacitance of 120 F g⁻¹ at the current density of 10 A g⁻¹)"
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "fluid_mechanics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及石墨烯基超级电容器中的电解质离子传输行为，需要从流体力学和电化学角度建立连续性方程，分析孔隙结构参数对性能的影响，这需要燃烧/传热/流体/CFD/能源领域的专业知识，特别是多孔介质中的传输现象和电化学储能机制。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": ""
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_c5b52616",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Recent-advances-in-the-synthesis-and-modification-of-_2018_Progress-in-Energ",
+      "paper_title": "Recent-advances-in-the-synthesis-and-modification-of-_2018_Progress-in-Energ"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:24:13.857907",
+      "answer_length": 675
+    },
+    "merge_source": "question_reverse"
+  },
+  {
+    "question_text": "在石墨烯的CVD合成过程中，甲烷(CH4)在镍(Ni)和铜(Cu)催化剂上的生长机制有何本质区别？请从碳溶解度、扩散动力学和热力学角度详细分析这两种金属催化剂上石墨烯层数控制的物理机理，并解释为什么在Ni上容易形成多层石墨烯而在Cu上倾向于自限制的单层生长。",
+    "standard_answer": "镍和铜作为石墨烯CVD生长的催化剂，其生长机制的根本差异源于碳在金属中的溶解度和扩散动力学的不同。对于镍催化剂：镍在高温下（900-1000°C）具有较高的碳溶解度（约0.1-1 at%），碳原子可以溶解到镍体相中形成固溶体。在冷却过程中，碳原子通过扩散和偏析机制从体相析出到表面形成石墨烯。这个过程遵循公式：dC/dt = D·∇²C，其中D是碳在镍中的扩散系数（约10⁻⁷ cm²/s at 1000°C）。由于碳在镍中的高溶解度和快速扩散，冷却速率成为控制层数的关键参数，较慢的冷却速率（如16°C/min）允许更充分的碳偏析，但晶界等缺陷位置会成为多层石墨烯的成核位点。对于铜催化剂：铜的碳溶解度极低（<0.001 at%），生长主要通过表面催化机制进行。甲烷在铜表面分解产生的碳原子主要停留在表面，遵循Langmuir-Hinshelwood机理。生长过程受表面扩散控制，扩散系数D_surface ≈ 10⁻⁵ cm²/s。由于碳几乎不溶解到铜体相中，生长是自限制的，一旦表面被单层石墨烯覆盖，进一步的反应被抑制。热力学上，石墨烯在铜表面的形成能ΔG_formation更负，但碳的化学势μ_C在铜中远低于在镍中，这解释了为什么铜上倾向于单层生长而镍上容易形成多层结构。",
+    "original_text": {
+      "1": "Copper has low carbon solubility and thus even at high temperatures, graphene forms at the surface with negligible carbon dissolution into the bulk. This enables a self-terminating monolayer growth unlike, for example, on Ni where growth proceeds by carbon segregation from the bulk",
+      "2": "Carbon diffuses into bulk Ni, and then segregates and precipitates onto the Ni surface. In the carbon/Ni (111) system, uniform segregation of carbon on the surface was observed, thus forming single-layer graphene. In the carbon/polycrystalline Ni system, the Ni surface is heavily populated by grain boundaries, which allow the accumulation of carbon at these sites during the segregation phase and lead to the formation of multi-layer graphene"
+    },
+    "type": "reasoning",
+    "difficulty": 5,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "该问题涉及石墨烯CVD合成过程中的催化剂机制分析，需要燃烧工程、传热传质、材料科学和表面化学等能源与材料领域的专业知识，特别是关于碳在金属中的溶解度、扩散动力学和热力学平衡机制的分析",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量优秀，无需修改。答案准确阐述了镍和铜催化剂在碳溶解度、扩散动力学和热力学方面的本质区别，详细解释了层数控制的物理机理，并提供了具体的数值参数和理论公式支持，与提供的原文引用和论文背景相符"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_c8299d73",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Recent-advances-in-the-synthesis-and-modification-of-_2018_Progress-in-Energ",
+      "paper_title": "Recent-advances-in-the-synthesis-and-modification-of-_2018_Progress-in-Energ"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:24:16.874038",
+      "answer_length": 541
+    },
+    "merge_source": "question_reverse"
+  },
+  {
+    "question_text": "在激光辅助CVD合成石墨烯过程中，激光诱导的局部加热如何影响碳原子的扩散和成核动力学？请基于热传导方程建立激光-材料相互作用模型，推导Ni衬底在激光辐照下的温度场分布，并分析温度梯度对石墨烯层数和缺陷密度的影响机制。",
+    "standard_answer": "在激光辅助CVD中，激光与Ni衬底的相互作用遵循三维非稳态热传导方程：ρc_p(∂T/∂t) = ∇·(k∇T) + Q_laser，其中ρ为密度，c_p为比热容，k为热导率，Q_laser为激光热源项。对于连续激光，热源项可表示为Q_laser = αI_0exp(-αz)f(r)，α为吸收系数，I_0为激光强度，f(r)为高斯分布函数f(r) = exp(-2r²/R²)，R为光斑半径。\n\n在柱坐标系下，考虑半无限大衬底和表面热源，通过格林函数法求解得到温度场解析解：T(r,z,t) = T_0 + (αP/4πk)∫₀^t [1/(t-τ)]exp[-r²/(4κ(t-τ)) - αz - α²κ(t-τ)]dτ，其中P为激光功率，κ = k/(ρc_p)为热扩散系数。在典型参数下（P=600W，R=1mm，t=1s），表面中心温度可达1000-1500°C，径向温度梯度可达10⁶ K/m。\n\n这种陡峭的温度梯度显著影响碳原子扩散行为。碳原子扩散通量包含浓度梯度和温度梯度贡献：J = -D∇C - D_T∇T，其中D为扩散系数，D_T为热扩散系数。高温区域扩散系数D增大（D ∝ exp(-E_D/kT)，E_D≈1.5eV），促进快速成核；而温度梯度驱动碳原子从高温区向低温区迁移（Soret效应），影响石墨烯层数分布。\n\n根据原文引用，激光扫描速度是控制石墨烯层数和质量的关键参数。在最优扫描速度1.3 mm/s下，可获得宽度1.5 mm、长度16 mm的均匀石墨烯纳米带；当扫描速度较快时（>3 mm/s），热作用时间短，碳原子来不及充分排列，导致缺陷密度增加。温度梯度的空间分布决定了碳原子的迁移路径，高温区促进单层石墨烯成核，而温度梯度区域易形成多层结构，陡峭的温度变化还会引入晶格失配，增加缺陷密度。",
+    "original_text": {
+      "1": "Laser scanning speed was the most important parameter in the synthesis of FLG, whereas the quality of the films was controlled by varying the laser power. Uniform graphene nano-ribbons (GNR) (width = 1.5 mm, length = 16 mm) were obtained in a few seconds using a scan speed of 1.3 mm/s, and a laser power of 600 W",
+      "2": "The local heating generated graphene patterns on precisely controlled positions. In this process, patterns of 10 mm2 area grew in 0.2 s, a much shorter time than in the conventional thermal CVD method"
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "heat_transfer",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及激光辅助CVD合成石墨烯过程中的热传导方程、激光-材料相互作用模型、温度场分布推导以及温度梯度对碳原子扩散和成核动力学的影响机制，这需要燃烧/传热/流体/CFD/能源领域的专业知识，包括热传导理论、激光与材料相互作用、扩散动力学等",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量优秀，无需修改。答案正确建立了热传导模型，推导了温度场分布，准确分析了温度梯度对碳原子扩散和石墨烯成核的影响机制，并提供了具体的实验参数和结果验证"
+    },
+    "retry_count": 1,
+    "question_id": "deepseek_q_bbf29208",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Recent-advances-in-the-synthesis-and-modification-of-_2018_Progress-in-Energ",
+      "paper_title": "Recent-advances-in-the-synthesis-and-modification-of-_2018_Progress-in-Energ"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:25:21.303048",
+      "answer_length": 766
+    },
+    "merge_source": "question_reverse"
+  }
+]

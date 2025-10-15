@@ -1,0 +1,157 @@
+[
+  {
+    "question_text": "在燃煤烟气中，气态元素汞（Hg⁰）被HCl氧化生成HgCl₂，该过程主要依赖均相反应还是非均相反应？请基于论文中关于Hg/Cl反应机理的讨论，详细对比Hg⁰ + Cl + M = HgCl + M 这一关键基元反应在高温区（>900K）和低温区（<700K）的贡献，并解释为何在快速淬熄条件下（如-440 K/s）汞氧化效率显著提高的根本原因。",
+    "standard_answer": "在燃煤烟气中，汞的氧化同时涉及均相和非均相反应，但在实际燃烧系统中，非均相反应常占主导。论文明确指出：'Hg⁰ + Cl + M = HgCl + M'（第8页），以及 'The dominant channel of mercury transformation in coal-fired flue gas is a two-step process: Hg⁰ → HgCl → HgCl₂。在高温区（>900K），均相反应如Hg⁰ + Cl + M = HgCl + M 是主要的引发步骤。然而，在更真实的条件下，非均相反应更为关键，如论文所述：'Mercury oxidation process in different reaction stages is controlled by different elementary reactions. Homogeneous mercury oxidation process in the isothermal stage is mainly determined by the reaction rate of HgCl + Cl₂ = HgCl₂ + Cl'（第8页）。这表明尽管两步机理在概念上成立，但Hg⁰ + Cl + M = HgCl + M 在高温下是主要的引发途径。而在快速淬熄条件下（如-440 K/s），烟气快速冷却，延长了在低温区的停留时间，这有利于Cl自由基的生成和稳定。快速淬熄导致Cl自由基复合反应（2Cl + M = Cl₂ + M）的动力学限制减弱，从而产生超平衡浓度（superequilibrium）的Cl原子，这些Cl原子能更有效地与Hg⁰反应生成HgCl中间体。同时，淬熄速率影响了反应系统达到平衡的时间，快速冷却使得反应物有更长时间在较低温度下反应，此时HgCl + Cl = HgCl₂ 反应变得更加重要。因此，高淬熄速率通过增加Cl自由基浓度和延长低温反应时间，从而显著提升汞氧化效率。",
+    "original_text": {
+      "1": "Hg⁰ + Cl + M = HgCl + M",
+      "2": "The rapid quench rate of flue gas and the kinetic constraints of Cl radicals recombination lead to a significant superequilibirium concentration of Cl radicals（第8页）"
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "question_id": "batch_detail_q_c161c0cc",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Reaction-mechanisms-and-chemical-kinetics-of-merc_2020_Progress-in-Energy-an",
+      "paper_title": "Reaction-mechanisms-and-chemical-kinetics-of-merc_2020_Progress-in-Energy-an"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T17:00:47.970034",
+      "batch_processing": true,
+      "answer_length": 847
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及燃煤烟气中汞的氧化机理、化学反应动力学、温度区间影响等专业内容，需要燃烧学、化学反应工程、传热传质等能源与动力工程领域的专业知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported"
+      ],
+      "other_compliant": false,
+      "other_issues": [
+        "has_meta_info",
+        "too_general"
+      ],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在多处事实错误和引用不准确，建议重新核对原文数据，特别是关于高温区反应贡献和淬熄机制的具体描述"
+    }
+  },
+  {
+    "question_text": "针对Hg⁰与Br/Br₂/HBr的反应系统，基于论文中表3给出的Hg/Br机理的Arrhenius参数，推导在800K和1200K两个温度点下，反应Hg⁰ + Br + M = HgBr + M 的速率常数，并详细解释该反应在燃煤烟气汞转化中的具体作用，特别是在低温区（<800K）如何与Hg⁰ + Br₂ = HgBr + Br 反应竞争，并分析在烟气快速淬熄条件下，该反应对总汞氧化效率的贡献率。",
+    "standard_answer": "根据表3，反应Hg⁰ + Br + M = HgBr + M 的Arrhenius表达式为 k = ATⁿ exp(-E_a/RT)，其中A = 6.94×10¹⁴ cm⁶/mol²-s, n = 0.5, E_a = 0.0 kcal/mol。这是一个三体碰撞反应，其速率常数受压力影响。在800K时，k = 6.94×10¹⁴ × (800)^(0.5) × exp(0) = 6.94×10¹⁴ × 28.28 × 1 = 1.96×10¹⁶ cm³/mol-s。而在1200K时，k = 6.94×10¹⁴ × (1200)^(0.5) = 6.94×10¹⁴ × 34.64 = 2.40×10¹⁶ cm³/mol-s。这表明该反应在高温下速率更快。然而，在低温区（<800K），反应Hg⁰ + Br + M = HgBr + M 与 Hg⁰ + Br₂ = HgBr + Br 在动力学上存在竞争。在快速淬熄条件下，烟气在低温区停留时间更长，有利于HgBr的积累，从而通过后续反应如HgBr + Br = HgBr₂ 贡献于总氧化效率。具体而言，在低温下，Hg⁰ + Br + M = HgBr + M 是主要的引发路径，因为Br自由基的活性高于Br₂分子。通过速率常数比较，在相同温度下，Hg⁰ + Br 反应（k = 4.00×10¹¹ cm³/mol-s）比 Hg⁰ + Br₂ 反应更快，因此在高淬熄速率下，该反应路径的贡献率增加。",
+    "original_text": {
+      "1": "Hg⁰ + Br + M = HgBr + M b A 6.94 × 10¹⁴ n 0.5 E_a 0.0 Ref. [213]",
+      "2": "Hg⁰ + Br₂ = HgBr + Br c A 1.15 × 10¹⁵ n 0.0 E_a 30.08 Ref. [180]"
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "question_id": "batch_detail_q_d4534f1f",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Reaction-mechanisms-and-chemical-kinetics-of-merc_2020_Progress-in-Energy-an",
+      "paper_title": "Reaction-mechanisms-and-chemical-kinetics-of-merc_2020_Progress-in-Energy-an"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T17:01:01.445610",
+      "batch_processing": true,
+      "answer_length": 626
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及燃煤烟气汞转化、化学反应动力学、Arrhenius参数计算以及温度对反应速率的影响，需要燃烧工程、化学反应动力学和传热传质等能源与动力工程领域的专业知识。",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported"
+      ],
+      "other_compliant": false,
+      "other_issues": [
+        "has_meta_info"
+      ],
+      "overall_verdict": "fail",
+      "recommendation": "答案中存在关键事实错误（速率常数单位错误）和未支持的关键声明（关于Hg⁰ + Br反应速率更快的比较），应修正单位错误并提供支持速率比较的具体计算依据。"
+    }
+  },
+  {
+    "question_text": "论文详细讨论了Hg⁰在飞灰未燃碳（UBC）表面的非均相氧化机理。请详细阐述在HCl存在下，汞在UBC表面的吸附和氧化两步骤反应的具体机理，包括反应中间体、过渡态结构以及能量变化曲线。",
+    "standard_answer": "论文指出，在UBC表面，汞的氧化遵循Eley-Rideal机制。具体步骤为：首先，HCl在UBC表面解离生成活性Cl物种（StCl(s)）；其次，气态Hg⁰与吸附的Cl原子反应生成吸附的HgCl(s)中间体；最后，HgCl(s)进一步与气态HCl反应生成HgCl₂并脱附。论文强调：'StCl(s) + Hg⁰ → StHgCl(s)' 以及 'StHgCl(s) + HCl → StSA(s) + HgCl₂ + H'（第15页）。反应机理涉及表面活性位点（如不饱和碳原子）对Hg⁰的物理吸附和化学吸附。吸附能范围从-18.07 kJ/mol到-44.60 kJ/mol，表明存在多种吸附模式。该非均相反应的关键在于Cl原子的吸附强度以及后续的氧化步骤。活化能垒分析表明，第一步（Hg⁰ → StHgCl(s)）的能垒约为38.89-55.76 kcal/mol。而第二步 HgCl(s) → HgCl₂ 的能垒更高，约为85.80 kcal/mol，因此第二步是整个氧化过程的速率控制步骤。",
+    "original_text": {
+      "1": "The adsorption energy of Hg⁰ on unburned carbon surface ranges from -18.07 kJ/mol to -44.60 kJ/mol（第15页）。",
+      "2": "StHgCl(s) + HCl → StSA(s) + HgCl₂ + H is the main production channel of HgCl₂（第15页）。"
+    },
+    "type": "reasoning",
+    "difficulty": 5,
+    "topic": "CFD_modeling",
+    "question_id": "batch_detail_q_2266fdc9",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Reaction-mechanisms-and-chemical-kinetics-of-merc_2020_Progress-in-Energy-an",
+      "paper_title": "Reaction-mechanisms-and-chemical-kinetics-of-merc_2020_Progress-in-Energy-an"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T17:01:16.708610",
+      "batch_processing": true,
+      "answer_length": 448
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及燃煤过程中汞在飞灰未燃碳表面的非均相氧化机理，需要燃烧化学、表面反应动力学和能源环境工程领域的专业知识来理解反应机制、中间体和能量变化",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "fundamental_error"
+      ],
+      "other_compliant": false,
+      "other_issues": [
+        "has_meta_info"
+      ],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在严重科学错误：活化能垒值明显不合理（38.89-55.76 kcal/mol和85.80 kcal/mol过高），单位混淆（吸附能kJ/mol与活化能kcal/mol混合使用），反应机理描述存在基本错误。建议重新核对原文数据，确保反应机理和能量值的科学合理性。"
+    }
+  },
+  {
+    "question_text": "基于论文中关于Hg/O反应系统的讨论，详细分析Hg⁰与O/O₂/O₃/OH等活性氧物种的反应机理，重点比较Hg⁰ + O₃ = HgO + O₂ 与 Hg⁰ + OH = HgOH 这两个关键反应的动力学参数和热力学性质，并解释为何在低氯或无氯条件下，HgO成为主要的氧化汞物种，以及O₃注入技术对汞氧化的促进作用。",
+    "standard_answer": "论文指出，在无卤素条件下，Hg⁰的氧化主要通过与氧物种的反应实现。对于Hg⁰ + O₃ = HgO + O₂，论文引用：'Hg⁰ + O₃ = HgO + O₂ b A 1.44 × 10¹⁴ n 0.0 E_a -44.82 Ref. [182]\"，以及 'Hg⁰ + OH = HgOH b A 1.21 × 10¹⁵ n 0.0 E_a -14.62 Ref. [262]'（第13页）。这表明Hg⁰ + O₃反应具有较大的放热性，有利于HgO的生成。而Hg⁰ + OH = HgOH 反应在低温区对总汞转化的贡献不容忽视。通过Arrhenius图（图6）可以看出，实验测量和理论计算之间存在差异。这种差异可能是由于实验测量的不确定性或/和理论计算的方法/基组选择问题。因此，在无氯或低氯烟气中，HgO的形成路径成为主要关注点。",
+    "original_text": {
+      "1": "Hg⁰ + O₃ = HgO + O₂ b A 1.44 × 10¹⁴ n 0.0 E_a -44.82（第13页）",
+      "2": "Hg⁰ + OH = HgOH b A 1.21 × 10¹⁵ n 0.0 E_a -14.62（第13页）"
+    },
+    "question_id": "batch_detail_q_01e9cb23",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Reaction-mechanisms-and-chemical-kinetics-of-merc_2020_Progress-in-Energy-an",
+      "paper_title": "Reaction-mechanisms-and-chemical-kinetics-of-merc_2020_Progress-in-Energy-an"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T17:01:42.140277",
+      "batch_processing": true,
+      "answer_length": 367
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及燃烧化学、汞氧化反应机理、动力学参数和热力学性质分析，需要燃烧科学、化学反应工程和化学动力学领域的专业知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "too_brief",
+        "unsupported",
+        "factual_error"
+      ],
+      "other_compliant": false,
+      "other_issues": [
+        "has_meta_info"
+      ],
+      "overall_verdict": "fail",
+      "recommendation": "答案需要大幅扩展，应详细比较两个反应的表观活化能E_a、指前因子A等动力学参数差异，分析-44.82和-14.62的实际意义，解释为何较大放热性有利于HgO生成，并具体说明O₃注入技术如何促进氧化。同时需要去除'论文指出'等元信息表述。"
+    }
+  }
+]

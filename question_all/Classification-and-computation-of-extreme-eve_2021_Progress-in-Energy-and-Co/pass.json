@@ -1,0 +1,38 @@
+[
+  {
+    "question_text": "论文指出传统燃烧模型（如LES/RANS）在预测极端事件分布时存在局限，例如无法回答'最快的闪回速度可能是多少'。请分析现有CFD工具（如LES）为何只能获得相位平均轨迹，而无法捕捉瞬态极端值分布？",
+    "standard_answer": "传统CFD工具如LES本质上是对Navier-Stokes方程进行空间滤波，只解析大尺度湍流，而极端事件往往由亚网格尺度物理与小尺度湍流相互作用驱动。LES的控制方程可写为：∂ρ̄/∂t + ∇·(ρ̄ũ) = 0，其中亚网格应力项需要建模。问题在于：1) 极端事件常由高波数扰动激发，而LES的滤波操作会抹去这些关键尺度。具体而言，LES的滤波宽度Δ通常远大于Kolmogorov尺度η，导致无法解析当地熄火/再燃等瞬态过程。例如在边界层闪回问题中，火焰前锋速度的极端分布依赖于近壁区湍流脉动的统计特性，而LES的统计平均特性使其无法重现极端事件的完整概率密度函数（PDF），特别是尾部特性。论文图1显示，即使计算自由度增加，CO质量分数预测误差并未显著收敛，表明模型在捕捉间歇性极端现象时存在结构缺陷。",
+    "original_text": {
+      "1": "Even LES, which considers unsteady evolution of the turbulent flow, only represents a phase-averaged trajectory of the system。",
+      "2": "These methods will fail if the following question is posed: what is the fastest flashback velocity possible, or more formally, what is the distribution of flashback velocities possible?",
+      "3": "The validity of existing models depends on the predictive questions that pertain to the given extreme event."
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "fluid_mechanics",
+    "question_id": "batch_detail_q_d9c957e7",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Classification-and-computation-of-extreme-eve_2021_Progress-in-Energy-and-Co",
+      "paper_title": "Classification-and-computation-of-extreme-eve_2021_Progress-in-Energy-and-Co"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T08:23:18.934785",
+      "batch_processing": true,
+      "answer_length": 354
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及LES/RANS燃烧模型、CFD工具原理、湍流滤波、极端事件预测等专业燃烧科学和计算流体力学概念，需要燃烧/传热/流体/CFD/能源领域的专业知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量优秀，准确解释了LES滤波机制与极端事件预测局限性的物理机制，公式引用正确，与原文引用内容一致，无需要改进的问题"
+    },
+    "merge_source": "questions"
+  }
+]

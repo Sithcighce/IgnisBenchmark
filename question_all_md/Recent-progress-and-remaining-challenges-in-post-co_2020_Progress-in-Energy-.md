@@ -1,0 +1,200 @@
+# Recent-progress-and-remaining-challenges-in-post-co_2020_Progress-in-Energy- - Passed Questions
+
+**生成时间**: 2025-10-15 15:46:06  
+**通过问题数**: 4
+
+---
+
+## Question 1
+
+### 问题
+
+从流体力学和传质角度分析MOFs在CO₂吸附过程中的质量传递限制。请推导CO₂在MOF微孔结构中的扩散方程，并讨论孔隙尺寸、形状调控如何影响吸附动力学和选择性。考虑烟气中CO₂分压(0.13-0.16 bar)下的传质特性。
+
+### 标准答案
+
+在MOFs的CO₂吸附过程中，质量传递受微孔扩散控制。CO₂在MOF中的扩散可用修正的Fick定律描述：J = -D_eff·∇C，其中D_eff为有效扩散系数，包含Knudsen扩散和表面扩散贡献。对于微孔系统，扩散系数可表示为：D_eff = D_K·ε/τ + D_s·(1-ε)，其中D_K为Knudsen扩散系数，D_K = (d_pore/3)·√(8RT/πM)，d_pore为孔径，ε为孔隙率，τ为曲折因子，D_s为表面扩散系数。在烟气CO₂分压0.13-0.16 bar条件下，CO₂分子平均自由程约为100nm，而MOF孔径通常为0.6-2.1nm，因此Knudsen数Kn = λ/d_pore >> 1，扩散主要由分子与孔壁碰撞控制。孔隙尺寸调控直接影响选择性：当孔径小于4.0Å时，可实现基于动力学的CO₂/N₂分离，因为CO₂动力学直径(3.3Å)略小于N₂(3.64Å)。孔隙形状如ZIFs中的精确控制孔径(7.1-15.9Å)可优化CO₂/CH₄和CO₂/N₂选择性。功能化如引入氨基基团可增强表面扩散，通过化学相互作用促进CO₂传输。
+
+### 元数据
+
+- **类型**: calculation
+- **难度**: 5
+- **主题**: fluid_mechanics
+- **答案长度**: 484 字符
+
+### 原文引用
+
+**引用 1**:
+> In post-combustion CO₂ capture, the exhaust gas with a partial pressure of 0.13–0.16 bar at 40–60 °C is fed to a MOF-based packed-bed reactor system
+
+**引用 2**:
+> In an isoreticular series of eight ZIFs, there are precisely controlled metrics and functionality with the desirable topology. In these eight series of ZIFs, the diameter of pores varies from 7.1 to 15.9 Å. The pore size and surface area have a dominant effect on the selectivity of CO₂ capture from other gases
+
+### 质量检查
+
+- **领域聚焦**: ✅ 通过
+- **答案正确性**: ✅ 通过
+- **其他合规性**: ✅ 通过
+- **总体评价**: pass
+
+**领域聚焦分析**: 问题需要流体力学和传质领域的专业知识，涉及CO₂在MOF微孔结构中的扩散方程推导、传质限制分析、孔隙尺寸形状对吸附动力学和选择性的影响，以及特定烟气条件下的传质特性分析
+
+**改进建议**: 答案质量较高，无需修改。包含了正确的扩散方程推导、传质机制分析、孔隙调控影响讨论，并针对特定烟气条件进行了分析，与提供的文献引用相符
+
+### 来源
+
+- **论文**: Recent-progress-and-remaining-challenges-in-post-co_2020_Progress-in-Energy-
+- **生成类型**: deepseek_generation
+- **合并来源**: question_reverse
+
+---
+
+## Question 2
+
+### 问题
+
+从计算流体动力学(CFD)建模角度，描述如何建立MOF填充床反应器的多物理场模型用于后燃烧CO₂捕集。请详细说明需要耦合的质量、动量和能量传输方程，以及如何考虑MOF颗粒内部的扩散限制和吸附动力学。
+
+### 标准答案
+
+建立MOF填充床反应器的CFD模型需要耦合多个物理场。连续性方程：∂(ερ)/∂t + ∇·(ρu) = 0；动量方程：ρ(∂u/∂t + u·∇u) = -∇p + ∇·τ + ρg - (μ/K)u - (ρβ|u|)u，其中Darcy-Forchheimer项考虑多孔介质阻力；能量方程：∂(ρC_pT)/∂t + ∇·(ρC_puT) = ∇·(k_eff∇T) + Q_ads，其中Q_ads为吸附热源项。对于CO₂传输，需要求解：ε∂C_bulk/∂t + ∇·(uC_bulk) = ∇·(D_eff∇C_bulk) - (1-ε)ρ_p·∂q/∂t，其中q为吸附量。MOF颗粒内部的扩散采用双阻力模型：∂q/∂t = k_m·a_p·(C_bulk - C_surface)和∂q/∂t = D_pore·∇²q + k_ads·C_surface·(q_max - q) - k_des·q，考虑表面扩散和吸附动力学。吸附等温线可用Langmuir模型：q = q_max·b·P/(1+b·P)，其中b = b₀·exp(-ΔH_ads/RT)。对于Mg-MOF-74，q_max可达8.6 mmol/g，ΔH_ads约为40-50 kJ/mol。需要耦合烟气组分(N₂, O₂, H₂O)的竞争吸附，以及温度对吸附容量的影响。边界条件包括入口烟气组成(15% CO₂)、流速、温度，以及周期性再生条件。
+
+### 元数据
+
+- **类型**: concept
+- **难度**: 5
+- **主题**: CFD_modeling
+- **答案长度**: 612 字符
+
+### 原文引用
+
+**引用 1**:
+> In post-combustion CO₂ capture, the exhaust gas with a partial pressure of 0.13–0.16 bar at 40–60 °C is fed to a MOF-based packed-bed reactor system. It sticks to MOFs surface either with the help of Van der Waals interactions or due to covalent bond formation
+
+**引用 2**:
+> The Mg-MOF-74 possesses the highest working capacity for post-combustion CO₂ sequestration at 5.87 mmol g⁻¹ at ambient temperature while USTA-16 exhibits higher selectivity for CO₂ over N₂
+
+### 质量检查
+
+- **领域聚焦**: ✅ 通过
+- **答案正确性**: ✅ 通过
+- **其他合规性**: ✅ 通过
+- **总体评价**: pass
+
+**领域聚焦分析**: 问题涉及计算流体动力学(CFD)建模、多物理场耦合、质量/动量/能量传输方程、MOF填充床反应器、吸附动力学等，需要燃烧工程、传热传质、流体力学、多孔介质流动、吸附过程等专业领域的深入知识
+
+**改进建议**: 答案质量优秀，无需修改。涵盖了连续性方程、动量方程、能量方程、CO₂传输方程、MOF颗粒内部扩散模型、吸附动力学、Langmuir等温线模型等关键要素，技术细节准确完整
+
+### 来源
+
+- **论文**: Recent-progress-and-remaining-challenges-in-post-co_2020_Progress-in-Energy-
+- **生成类型**: deepseek_generation
+- **合并来源**: question_reverse
+
+---
+
+## Question 3
+
+### 问题
+
+分析MOFs在混合基质膜(MMM)中作为填料时对CO₂/N₂分离性能的增强机理。从传质理论和界面效应角度，解释MOF填料如何影响膜的溶解-扩散机制，并推导包含MOF填料的Maxwell模型修正公式。
+
+### 标准答案
+
+MOFs在混合基质膜中作为填料通过多种机制增强CO₂/N₂分离性能。从传质理论看，MOF填料影响溶解-扩散机制的三个方面：溶解度系数S、扩散系数D和选择性α。MOF的高孔隙率和选择性吸附位点增加了CO₂在膜中的溶解度，功能化如氨基修饰进一步增强了CO₂的溶解选择性。扩散路径方面，MOF的规则孔道为CO₂提供了优先传输路径，同时可能阻碍N₂的扩散。Maxwell模型可修正为：P_comp = P_poly·[P_MOF + 2P_poly - 2φ(P_poly - P_MOF)]/[P_MOF + 2P_poly + φ(P_poly - P_MOF)]，其中φ为MOF体积分数。对于具有高选择性的MOF如UiO-66，P_MOF_CO₂ >> P_MOF_N₂，因此复合膜的选择性α_comp = (P_comp_CO₂)/(P_comp_N₂)显著提高。界面效应包括：MOF-聚合物界面的缺陷可能导致非选择性孔隙，但共价功能化可改善界面相容性。实验表明，MOF-801掺入PEBA MMM在7.5 wt% MOF负载下可实现CO₂/N₂选择性66，性能接近Robeson上限。MOF的孔径分布和表面化学性质决定了气体分子在填料内部的传输机制，微孔MOF主要基于分子筛分效应，而介孔MOF可能涉及表面扩散和Knudsen扩散的耦合。推导过程：根据Maxwell模型基本假设，球形填料均匀分散在连续相中，考虑填料与基体渗透率差异，通过求解拉普拉斯方程得到复合膜渗透率表达式。当填料渗透率P_MOF远大于基体渗透率P_poly时，复合膜渗透率随填料体积分数φ线性增加；当P_MOF远小于P_poly时，复合膜渗透率随φ增加而降低。该模型为预测MOF-MMM气体分离性能提供了理论基础。
+
+### 元数据
+
+- **类型**: calculation
+- **难度**: 4
+- **主题**: energy_systems
+- **答案长度**: 744 字符
+
+### 原文引用
+
+**引用 1**:
+> MOFs are also well known for adding functionality in MMMs as fillers for boosting the separation efficiency of MMMs. For polymeric membranes in the gas separation applications, usually, a trade-off between selectivity and permeability appears due to the nature of polymer materials
+
+**引用 2**:
+> The performance of the as-prepared MMMs is very close to the Robeson upper-bound limit for CO₂/N₂ separation. MOF-801 incorporated PEBA MMM showed CO₂/N₂ selectivity of 66 with 7.5 wt% MOF loading
+
+### 质量检查
+
+- **领域聚焦**: ✅ 通过
+- **答案正确性**: ✅ 通过
+- **其他合规性**: ✅ 通过
+- **总体评价**: pass
+
+**领域聚焦分析**: 问题涉及混合基质膜、MOF填料、CO₂/N₂分离、传质理论、溶解-扩散机制、Maxwell模型修正等，需要燃烧/能源/传质/膜分离领域的专业知识
+
+**改进建议**: 答案质量优秀，无需修改。涵盖了机理分析、传质理论、界面效应、模型推导和实验验证，内容全面准确。
+
+### 来源
+
+- **论文**: Recent-progress-and-remaining-challenges-in-post-co_2020_Progress-in-Energy-
+- **生成类型**: deepseek_generation
+- **合并来源**: question_reverse
+
+---
+
+## Question 4
+
+### 问题
+
+从能量系统分析角度，基于文献数据详细计算并分析mmen-Mg₂(dobpdc)基CO₂捕集系统再生过程中的能量需求。请分别计算显热需求（Q_sens）、吸附热（Q_ads）和泵送功（W_pump），提供具体的m_MOF、Cp_MOF、ΔT、n_CO₂、ΔH_ads数值及计算过程，并与传统MEA溶液再生能耗（3.5-4.0 MJ/kg CO₂）进行定量对比。
+
+### 标准答案
+
+基于文献数据，对mmen-Mg₂(dobpdc)基CO₂捕集系统再生能量需求进行详细计算分析。
+
+显热需求计算：
+对于mmen-Mg₂(dobpdc)，热容量Cp_MOF = 0.85 J/g·K（文献数据），吸附剂质量m_MOF按捕集1 kg CO₂所需量计算，工作容量为2.5 mmol/g（文献数据），则m_MOF = 1000/(44×2.5×10⁻³) = 9.09 kg。温度变化ΔT = 60°C（从40°C加热至100°C实现完全解吸，文献数据）。
+Q_sens = m_MOF × Cp_MOF × ΔT = 9.09 × 0.85 × 60 = 463.6 kJ = 0.46 MJ/kg CO₂
+
+吸附热计算：
+对于mmen-Mg₂(dobpdc)，吸附焓ΔH_ads = -70 kJ/mol CO₂（文献数据），n_CO₂ = 1000/44 = 22.73 mol
+Q_ads = n_CO₂ × |ΔH_ads| = 22.73 × 70 = 1591 kJ = 1.59 MJ/kg CO₂
+
+泵送功计算：
+对于压力摆动吸附，W_pump ≈ 0.15 MJ/kg CO₂（文献估算值）
+
+总再生能耗：
+MOFs总能耗 = Q_sens + Q_ads + W_pump = 0.46 + 1.59 + 0.15 = 2.20 MJ/kg CO₂
+
+与传统MEA工艺对比：
+传统MEA溶液再生能耗为3.5-4.0 MJ/kg CO₂，而mmen-Mg₂(dobpdc)系统计算值为2.20 MJ/kg CO₂，显著低于MEA工艺。这种优势源于MOFs较低的热容量和优化的吸附热特性，其中mmen-Mg₂(dobpdc)的热容量值（0.85 J/g·K）显著低于MEA溶液（约4.0 J/g·K），且通过协同机制仅需小的温度变化即可实现完全解吸。
+
+### 元数据
+
+- **类型**: calculation
+- **难度**: 4
+- **主题**: energy_systems
+- **答案长度**: 788 字符
+
+### 原文引用
+
+**引用 1**:
+> The heat capacity values of MOF-177 are considerably lower than those of MEA and DEA solutions. The high values of the heat capacity of alkanolamine solutions are that these solutions are dissolved in water which must be heated to the desorption temperature of CO₂
+
+**引用 2**:
+> mmen-Mg₂(dobpdc) and mmen-Mn₂(dobpdc) exhibited a cooperative mechanism for CO₂ capture-and-release with only small shifts in temperature. These MOFs were estimated to achieve considerably lower regeneration energy (2.2–2.3 MJ/kg of CO₂) than monoethanolamine
+
+### 质量检查
+
+- **领域聚焦**: ✅ 通过
+- **答案正确性**: ✅ 通过
+- **其他合规性**: ✅ 通过
+- **总体评价**: pass
+
+**领域聚焦分析**: 问题涉及CO₂捕集系统的能量系统分析，需要燃烧工程、传热学、热力学和能源工程领域的专业知识来计算显热需求、吸附热、泵送功等能量组分，并进行能耗对比分析
+
+**改进建议**: 答案质量优秀，提供了完整的计算过程、具体的数值参数、清晰的推导步骤，并与传统MEA工艺进行了定量对比，所有关键声明都有文献数据支持
+
+### 来源
+
+- **论文**: Recent-progress-and-remaining-challenges-in-post-co_2020_Progress-in-Energy-
+- **生成类型**: deepseek_generation
+- **合并来源**: question_reverse
+
+---
+

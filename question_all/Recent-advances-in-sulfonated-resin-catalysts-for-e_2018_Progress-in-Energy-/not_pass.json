@@ -1,0 +1,79 @@
+[
+  {
+    "question_text": "基于论文中关于离子交换膜催化剂在生物柴油生产中的应用，从能源系统工程角度，建立完整的能量平衡模型，分析膜反应器与传统搅拌釜反应器在能耗、传质效率和过程强化方面的差异。要求模型包含反应热、热损失、产物分离、催化剂再生、膜清洗等关键项，并提供具体计算过程比较两种反应器在典型操作条件下的比能耗和热效率。重点区分酯化反应和酯交换反应的热力学参数，并验证能耗数值的合理性。",
+    "standard_answer": "从能源系统工程角度分析，离子交换膜反应器与传统搅拌釜反应器在生物柴油生产中表现出显著的能量性能差异。建立完整的能量平衡模型需考虑：输入能量E_in = E_heating + E_mixing + E_pumping + E_reaction_heat + E_catalyst_regeneration + E_membrane_cleaning，输出有用能量E_out为反应产物化学能，热效率η = E_out/E_in。\n\n对于传统搅拌釜反应器，主要能耗包括：加热能耗Q_heat = mC_pΔT/η_heater（考虑酯化反应热释放ΔH_rxn ≈ -5至-10 kJ/mol，酯交换反应ΔH_rxn ≈ -2至-5 kJ/mol），混合能耗E_mix = N_pρN³D⁵t，热损失Q_loss = UAΔT，以及后续产物分离能耗E_separation。典型条件下，搅拌釜的比能耗约为180-250 kWh/吨生物柴油。\n\n对于膜反应器，能耗主要包括：进料泵功E_pump = ΔP·V/η_pump，跨膜压差维持能耗，催化剂再生能耗E_regeneration，膜清洗能耗E_cleaning，以及较低的热损失。膜反应器的优势在于：1）连续操作避免间歇过程的能量波动；2）原位分离产物显著减少后续分离能耗；3）改善传质效率。\n\n传质系数计算推导：搅拌釜中k_L ≈ (D/δ) = 1×10^-5-1×10^-4 m/s（基于膜扩散理论），膜反应器中由于强制对流可达到k_L ≈ (D/d_p)·Re^0.5·Sc^0.33 = 5×10^-5-5×10^-4 m/s。\n\n过程强化方面，膜反应器将反应和分离耦合，打破反应平衡限制。热力学分析表明，对于典型的酯化反应（ΔG ≈ -8 kJ/mol），膜反应器通过水分子连续移除可使转化率从平衡时的~65%提高至>85%。\n\n详细计算过程：假设年产1万吨生物柴油，膜反应器通过减少分离工序能耗30-40%和优化反应条件，综合能量分析显示可比传统搅拌釜节能15-25%。具体计算：膜反应器总能耗约135-190 kWh/吨，热效率45-55%；搅拌釜总能耗约180-250 kWh/吨，热效率35-45%。能耗数值基于文献中实际工业数据验证，考虑了催化剂再生和膜清洗等实际运行能耗。",
+    "original_text": {
+      "1": "They open the possibility to convert batch arrangements (typical of homogeneously catalyzed reactions) into continuous operations using flow-through fixed bed reactors, which paves the way to process intensification",
+      "2": "Functional membranes with strong acid groups (so-called ionomeric membranes) are attracting increasing interest as solid acid catalysts, since they can prevent equipment corrosion caused by homogeneous acids and since they can be easily removed from the reaction mixture and, in principle, be re-utilized"
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题需要能源系统工程专业知识，包括能量平衡建模、反应热力学分析、传质效率计算、过程强化评估，以及生物柴油生产中反应器能耗比较，这涉及热力学、传热传质、反应工程和能源系统分析等核心领域知识。",
+      "answer_correct": false,
+      "answer_issues": [
+        "fundamental_error",
+        "unsupported"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在基本原理错误和关键声明缺乏支持的问题。具体改进建议：1）修正能量平衡模型定义错误（E_in不应包含E_reaction_heat，反应热是系统内部能量项）；2）提供完整的计算过程和参数来源，而非仅给出最终数值范围；3）明确区分酯化反应和酯交换反应的热力学参数差异，并说明这些参数如何影响能量平衡；4）验证能耗数值的合理性时，应引用具体文献数据或实验验证方法；5）补充膜反应器与传统反应器在催化剂再生、膜清洗等操作能耗的详细对比分析。"
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_c8529d87",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Recent-advances-in-sulfonated-resin-catalysts-for-e_2018_Progress-in-Energy-",
+      "paper_title": "Recent-advances-in-sulfonated-resin-catalysts-for-e_2018_Progress-in-Energy-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:26:52.403397",
+      "answer_length": 972
+    },
+    "merge_source": "question_reverse"
+  },
+  {
+    "question_text": "在连续流固定床反应器中，脂肪酸与甲醇的酯化反应为弱放热反应（ΔH ≈ -5至-10 kJ/mol），同时生成的水在操作温度下蒸发吸热。请从传热和传质角度详细分析：1）分别建立催化剂颗粒尺度和床层轴向尺度的能量平衡方程，包含内外传质限制、反应热效应和水蒸发吸热项，并明确给出各传质边界条件；2）水分子在磺化树脂催化剂孔道内的吸附与蒸发过程如何通过局部温度变化影响催化剂失活速率，需详细说明传热传质耦合机制，并定量推导失活速率与温度变化的函数关系。",
+    "standard_answer": "在连续流固定床反应器中，酯化反应热效应与水蒸发过程共同决定了温度分布。需分别建立颗粒尺度和床层尺度的能量平衡方程，并耦合传质方程。\n\n**催化剂颗粒尺度能量方程：**\nρ_pC_pp(∂T_p/∂t) = λ_peff∇²T_p + (-ΔH_ester)r_ester - (ΔH_vap)r_evap\n其中r_ester = kC_acid^mC_alcohol^nη，η为考虑内扩散限制的有效因子，定义为η = (3/φ²)(φcothφ-1)，φ为Thiele模数。\n\n**颗粒尺度传质方程：**\n∂C_i/∂t = D_ieff∇²C_i - r_ester (i=acid, alcohol)\n∂C_water/∂t = D_water_eff∇²C_water + r_ester - r_evap\n其中水蒸发速率r_evap = k_evap(C_water - C_water_sat(T_p))，C_water_sat由Antoine方程计算。\n\n**床层轴向能量方程：**\nερ_fC_pf(∂T/∂t + u_z∂T/∂z) = λ_ax∂²T/∂z² + a_vh_f(T_s-T) + (1-ε)[(-ΔH_ester)r_ester_bulk - (ΔH_vap)r_evap_bulk]\n其中r_ester_bulk和r_evap_bulk为床层平均反应和蒸发速率。\n\n**边界条件：**\n颗粒内部：r=0处∂T_p/∂r=0，∂C_i/∂r=0（对称性）；r=R处λ_peff(∂T_p/∂r)|_R = h_f(T_b-T_s)，D_ieff(∂C_i/∂r)|_R = k_m,i(C_i,b-C_i,s)\n床层轴向：z=0处T=T_in，C_i=C_i,in；z=L处∂T/∂z=0，∂C_i/∂z=0（绝热出口）\n\n传质限制导致催化剂颗粒内部形成浓度梯度，进而产生温度梯度。对于Amberlyst 15等大孔树脂，\"水分子容易在孔内吸附形成水合质子H3O+-SO3-，这不仅占据活性位点\"[2]，水的较高热容（~4.18 kJ/kg·K）影响局部热平衡，降低反应速率。当操作温度超过水沸点时，\"水开始蒸发并被甲醇蒸气带走，从而推动反应平衡向产物方向移动\"[1]。水蒸发带走大量热量（ΔH_vap ≈ 38.5 kJ/mol），可吸收30-40%反应热，导致催化剂表面温度降低2-5°C。这种局部冷却虽有利于移走反应热，但可能使温度低于最佳反应范围（80-100°C）。\n\n催化剂失活速率与局部温度变化的定量关系可通过阿伦尼乌斯方程结合水吸附平衡推导：\ndθ_deact/dt = k_deact exp(-E_deact/RT_p)θ_water\n其中θ_water = K_adsC_water/(1+K_adsC_water)，K_ads为水吸附平衡常数。温度降低导致θ_water增加，同时水合质子的形成降低了活性位点密度，加速催化剂失活。在CFD模拟中，需耦合求解动量、质量和能量方程，考虑催化剂颗粒内的扩散限制和外部膜传质系数，以准确预测温度分布和失活行为。",
+    "original_text": {
+      "1": "When the operational temperature exceeds the water boiling point, it starts to evaporate and being removed with the methanol vapor flow, thereby shifting the equilibrium toward the product side",
+      "2": "the porous resin may likely be due to solvation (poisoning) of the catalytic sites by water produced during the esterification (i.e., hydrated proton -H3O+-SO3- is formed) as well as to water adsorption on the inner/outer surfaces"
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "heat_transfer",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "该问题涉及连续流固定床反应器中的酯化反应，需要深入理解反应工程、传热传质原理、催化剂颗粒尺度与床层尺度的能量平衡、内外传质限制、反应热效应、水蒸发吸热过程、催化剂失活机制等专业知识，属于典型的燃烧/传热/流体/CFD/能源领域问题。",
+      "answer_correct": false,
+      "answer_issues": [
+        "颗粒尺度能量方程中缺少时间导数项（应为∂T_p/∂t而非∂T_p/∂t）",
+        "床层轴向能量方程中反应和蒸发速率项定义不明确（r_ester_bulk和r_evap_bulk未明确定义如何从颗粒尺度平均得到）",
+        "水蒸发速率表达式未考虑传质系数与温度的关系",
+        "催化剂失活速率推导中未明确建立与局部温度变化的函数关系，仅给出了通用表达式",
+        "未详细说明水分子吸附与蒸发过程中传热传质的具体耦合机制"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "建议：1）修正颗粒尺度能量方程中的时间导数项；2）明确定义床层尺度反应和蒸发速率如何从颗粒尺度平均得到；3）完善水蒸发速率表达式，考虑传质系数与温度的关系；4）详细推导失活速率与局部温度变化的定量函数关系；5）补充水分子吸附与蒸发过程中传热传质耦合机制的详细说明，包括热量传递、质量传递与温度变化的相互作用。"
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_52deba4f",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Recent-advances-in-sulfonated-resin-catalysts-for-e_2018_Progress-in-Energy-",
+      "paper_title": "Recent-advances-in-sulfonated-resin-catalysts-for-e_2018_Progress-in-Energy-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:27:37.173788",
+      "answer_length": 1305
+    },
+    "merge_source": "question_reverse"
+  }
+]

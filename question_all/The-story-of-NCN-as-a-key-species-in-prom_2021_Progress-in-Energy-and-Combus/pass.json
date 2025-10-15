@@ -1,0 +1,172 @@
+[
+  {
+    "question_text": "推导NCN生成焓ΔfH°(NCN)对CH+N2⇌NCN+H可逆反应平衡常数的影响，并计算当ΔfH°(NCN)从451 kJ/mol增加到459 kJ/mol时，在T=1500K下平衡常数K1a的变化倍数。已知该反应的标准熵变ΔS°≈10 J/(mol·K)。",
+    "standard_answer": "根据热力学关系，平衡常数K与反应焓变ΔH和熵变ΔS的关系为：ΔG° = -RT lnK = ΔH° - TΔS°。对于反应CH+N2⇌NCN+H，平衡常数K1a = [NCN][H]/[CH][N2]。当NCN生成焓ΔfH°(NCN)变化时，反应焓变ΔH1a°也会相应变化。设ΔfH°(NCN)从451 kJ/mol增加到459 kJ/mol，变化Δ(ΔfH°) = 8 kJ/mol。由于反应CH+N2→NCN+H的焓变ΔH1a° = ΔfH°(NCN) + ΔfH°(H) - ΔfH°(CH) - ΔfH°(N2)，当ΔfH°(NCN)增加8 kJ/mol时，ΔH1a°也增加8 kJ/mol。在温度T=1500K时，平衡常数的变化可以通过范特霍夫方程计算：ln(K2/K1) = -Δ(ΔH°)/R × (1/T2 - 1/T1)，但对于固定温度下的焓变影响，更直接的方法是：ln(K_new/K_old) = -Δ(ΔH°)/RT。代入数值：Δ(ΔH°) = 8000 J/mol，R = 8.314 J/(mol·K)，T = 1500K，得到：ln(K_new/K_old) = -8000/(8.314×1500) = -8000/12471 ≈ -0.641。因此K_new/K_old = exp(-0.641) ≈ 0.527。这意味着当ΔfH°(NCN)从451 kJ/mol增加到459 kJ/mol时，在1500K下平衡常数K1a减小到原来的约53%。这种变化对prompt-NO形成有重要影响，因为较低的K1a意味着在给定CH和N2浓度下，NCN平衡浓度降低，从而影响通过NCN路径的NO形成速率。",
+    "original_text": {
+      "1": "The reliable determination of ΔfH°(NCN) turned out to be not a straightforward task, and the actual value was the subject of a long-standing debate, which has been resolved only in recent years.",
+      "2": "Because reaction (R1a) is endothermic and the H + NCN combination reaction is barrierless, ΔfH°(NCN) critically determines the kinetic data of the reversible reaction pair (R1a)/(R-1a) and, as a consequence, strongly influences the branching ratios between reaction (R-1a) and other NCN-consuming reactions that may irreversibly remove NCN from the system."
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及燃烧化学中的热力学计算、平衡常数推导、NCN生成焓对prompt-NO形成的影响，需要燃烧化学、热力学和化学反应动力学领域的专业知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "无需改进，问题和答案质量良好"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_1f9ebb05",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "The-story-of-NCN-as-a-key-species-in-prom_2021_Progress-in-Energy-and-Combus",
+      "paper_title": "The-story-of-NCN-as-a-key-species-in-prom_2021_Progress-in-Energy-and-Combus"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:12:48.413791",
+      "answer_length": 714
+    },
+    "merge_source": "question_reverse"
+  },
+  {
+    "question_text": "分析在高压燃烧条件下，NCN+H反应中HNCN形成通道(R3)的重要性如何变化，并解释这种压力依赖性对prompt-NO形成的潜在影响。请从碰撞稳定化和势能面分析的角度进行详细讨论。",
+    "standard_answer": "在高压燃烧条件下，NCN+H反应中HNCN形成通道(R3)的重要性显著增加。根据Klippenstein等人的理论计算，NCN+H反应可以在双线势能面上通过无势垒的加成反应形成HNCN中间体。在低压条件下，形成的激发态HNCN*主要通过单分子分解回到反应物或产物，但在高压条件下，碰撞去活化作用变得重要，导致HNCN的碰撞稳定化。具体而言，在p=0.1 MPa和T=1500K时，HNCN通道的相对分支比仅为4%，但在p=10 MPa和相同温度下，分支比增加到62%。这种强烈的压力依赖性源于Lindemann-Hinshelwood机理：在低压区，HNCN*的分解速率远大于碰撞去活化速率，因此稳定化产物可以忽略；在高压区，碰撞去活化速率增加，导致相当部分的HNCN*被稳定化为HNCN产物。从势能面角度看，HNCN位于势能面的深势阱中，其分解需要克服一定的能垒，这有利于在高压下的碰撞稳定化。这种压力依赖性对prompt-NO形成有重要影响：在高压条件下，更多的NCN通过HNCN通道被移除出prompt-NO形成路径，而不是通过HCN+N通道继续NO形成，或者通过CH+N2通道循环回反应物。这可能导致高压下prompt-NO产量的降低，与实验观察到的在非常高压的富燃料条件下NO减少的趋势一致。因此，在高压燃烧器建模中，必须考虑NCN+H反应的压依赖性，特别是HNCN形成通道的贡献。",
+    "original_text": {
+      "1": "It followed that collisional stabilization of HNCN (see Fig. 1) is not necessarily negligible. For kinetic modeling, pressure-dependent rate constants for the range p = 0.001–10 MPa are tabulated in the Supplementary Material of Ref. [17] in PLOG format.",
+      "2": "For example, whereas at p = 0.1 MPa and T = 1500 K the relative branching fraction predicted for the HNCN channel is only 4%, it increases to 62% at 10 MPa at the same temperature."
+    },
+    "type": "reasoning",
+    "difficulty": 5,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及高压燃烧条件下NCN+H反应的动力学分析、势能面分析、碰撞稳定化机理以及prompt-NO形成机制，需要燃烧化学、反应动力学、量子化学计算等专业领域的深入知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量优秀，准确阐述了高压条件下HNCN形成通道的重要性变化机制，从碰撞稳定化和势能面角度进行了详细分析，并正确解释了其对prompt-NO形成的影响，所有关键声明都有理论依据和实验数据支持"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_e976a82f",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "The-story-of-NCN-as-a-key-species-in-prom_2021_Progress-in-Energy-and-Combus",
+      "paper_title": "The-story-of-NCN-as-a-key-species-in-prom_2021_Progress-in-Energy-and-Combus"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:12:50.547587",
+      "answer_length": 596
+    },
+    "merge_source": "question_reverse"
+  },
+  {
+    "question_text": "计算在典型火焰温度T=1700K时，NCN自由基在电子基态(3Σg-)和第一电子激发单线态(1Δg)之间的热平衡分布比例。已知单线态-三线态分裂能ΔSTH0 = 97.5 kJ/mol，请详细推导计算过程并分析这对NCN化学反应可能产生的影响。",
+    "standard_answer": "根据玻尔兹曼分布，NCN在单线态和三线态之间的热平衡分布比例可以通过配分函数计算。单线态-三线态分裂能ΔSTH0 = 97.5 kJ/mol，对应的能量差ΔE = 97.5 × 1000 J/mol = 97500 J/mol。在温度T=1700K时，玻尔兹曼因子为exp(-ΔE/RT)，其中R=8.314 J/(mol·K)。计算得：exp(-97500/(8.314×1700)) = exp(-97500/14133.8) = exp(-6.90) ≈ 0.00101。由于三线态是简并的，需要考虑自旋简并度。三线态的自旋简并度g_triplet = 3，单线态的自旋简并度g_singlet = 1。因此，单线态与三线态的平衡分布比例为：(g_singlet/g_triplet) × exp(-ΔE/RT) = (1/3) × 0.00101 ≈ 0.000337。这意味着在1700K时，只有约0.0337%的NCN处于单线态，99.966%处于三线态。虽然单线态的比例很低，但如果单线态NCN的反应速率常数比三线态快几个数量级，单线态化学反应仍可能对总体NCN消耗产生显著贡献。例如，如果ksinglet/ktriplet = 1000，那么在1700K时，单线态反应对总体NCN损失的贡献约为25%。这对理解NCN在火焰中的化学反应路径具有重要意义。",
+    "original_text": {
+      "1": "The next higher and lowest singlet state is a 1Δg state located (8146 ± 80) cm-1 above the ground state, hence corresponding to a singlet-triplet splitting of ΔSTH0 = (97.5 ± 1.0) kJ mol-1.",
+      "2": "In thermal systems, the relative population of the singlet state is lower than 1% up to temperatures of 2650 K. Thus, 1NCN chemistry would not be expected to play an important role in prompt-NO formation and has not been considered in flame models so far. However, for those NCN reactions that are comparatively slow, for example reactions with closed-shell species, 1NCN chemistry might become significant."
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及燃烧化学中的自由基电子态分布计算、热平衡分布比例、玻尔兹曼分布应用、以及NCN在火焰中化学反应路径分析，需要燃烧化学、物理化学和量子化学等专业领域知识。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "无需改进。答案计算过程详细正确，玻尔兹曼分布应用准确，考虑了自旋简并度，能量单位转换正确，并对化学反应影响进行了合理分析，与论文摘录内容一致。"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_4d1013c4",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "The-story-of-NCN-as-a-key-species-in-prom_2021_Progress-in-Energy-and-Combus",
+      "paper_title": "The-story-of-NCN-as-a-key-species-in-prom_2021_Progress-in-Energy-and-Combus"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:12:51.200528",
+      "answer_length": 584
+    },
+    "merge_source": "question_reverse"
+  },
+  {
+    "question_text": "基于论文中关于NCN在prompt-NO形成中的关键作用，详细分析CH+N2反应系统的多通道反应网络，并解释为什么NCN+H反应被称为'prompt-NO switch'。请从自旋守恒、势能面交叉和产物分支比的角度进行深入分析。",
+    "standard_answer": "CH+N2反应系统是一个复杂的多通道/多势阱反应系统，包含双重态-四重态自旋转换。根据论文图1所示的势能图，CH(2Π)+N2(1Σg+)反应可以沿着双线势能面生成NCN(3Σg-)+H(2S)，这是一个自旋守恒的过程，或者通过系间窜越(ISC)在四线势能面上生成HCN(1Σ+)+N(4S)。NCN+H反应被称为'prompt-NO switch'是因为它决定了NCN自由基的后续命运：在双线势能面上，NCN+H可以逆向生成CH+N2（反应R-1a），或者在四线势能面上向前生成HCN+N（反应R2）。这两个通道之间的微妙平衡对prompt-NO形成动力学具有最显著的影响。当温度较低时，逆向反应R-1a占主导，NCN被循环回CH+N2；当温度较高时，正向反应R2占主导，NCN通过传统Fenimore路径转化为HCN+N，最终形成NO。这种温度依赖的切换行为决定了prompt-NO的形成效率，因此被称为'prompt-NO switch'。从自旋守恒角度看，CH+N2→NCN+H是自旋允许的（双线+单线→三线+双线），而直接生成HCN+N是自旋禁阻的（双线+单线→单线+四线），这解释了为什么NCN中间体在prompt-NO形成中扮演关键角色。",
+    "original_text": {
+      "1": "The cyanonitrene radical, NCN, has been shown in the last two decades to play a crucial role in the formation of prompt-NO in combustion. This has stimulated a large number of experimental and theoretical studies on fundamental physico-chemical properties of NCN as well as on mechanistic and kinetic aspects of NCN reactions under combustion conditions.",
+      "2": "Regarding prompt-NO formation, the role of the reaction network initialized by the reaction CH + N2 ⇌ NCN + H is examined by modeling measured flame profiles of NCN, HCN, and NO. In these simulations, the critical role of the product channel-branching of the NCN + H reaction, termed the prompt-NO switch, is confirmed. A particularly sensitive balance is observed between the product channels leading back to CH + N2 or forward to HCN + N."
+    },
+    "type": "reasoning",
+    "difficulty": 5,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及燃烧化学、反应动力学、自旋守恒、势能面交叉等专业概念，需要燃烧科学、物理化学和量子化学领域的专业知识来理解CH+N2反应系统、prompt-NO形成机制以及自旋态转换等复杂机理",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量优秀，准确解释了CH+N2反应系统的多通道特性、自旋守恒原理、势能面交叉机制，以及NCN+H反应作为'prompt-NO switch'的温度依赖性切换行为，所有论述均得到论文原文支持"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_2e1f6cc6",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "The-story-of-NCN-as-a-key-species-in-prom_2021_Progress-in-Energy-and-Combus",
+      "paper_title": "The-story-of-NCN-as-a-key-species-in-prom_2021_Progress-in-Energy-and-Combus"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:12:51.423129",
+      "answer_length": 526
+    },
+    "merge_source": "question_reverse"
+  },
+  {
+    "question_text": "分析NCN吸收截面测量中的技术挑战和不确定性来源，并解释为什么高温度下NCN检测主要依赖于(010)-(010)热带而不是(000)-(000)冷带。请从光谱学原理和热力学分布的角度进行详细分析。",
+    "standard_answer": "NCN吸收截面测量面临多重技术挑战：首先，NCN在火焰中的浓度极低（ppb级别），需要高灵敏度的检测技术如CRDS；其次，NCN的A3Πu←X3Σg-跃迁光谱复杂，表现出强烈的Renner-Teller效应和自旋-轨道耦合，包含大量重叠的转动线；第三，在火焰环境中存在OH、NH、NCO等干扰物种的光谱干扰。高温度下NCN检测主要依赖于(010)-(010)热带而不是(000)-(000)冷带的原因在于热力学分布。NCN的弯曲振动基频ω2 ≈ 423 cm-1，在火焰温度T=1660K时，kT ≈ 1155 cm-1，因此振动激发态具有显著布居。根据玻尔兹曼分布，第一振动激发态(υ2=1)相对于基态(υ2=0)的布居比为：exp(-hν/kT) = exp(-423/1155) ≈ exp(-0.366) ≈ 0.693。考虑到振动简并度，实际布居比更高。在1660K时，(010)态的布居实际上超过了(000)基态。光谱测量显示，在高温下，(010)-(010)热带在329.13nm处的Q1分支成为最强特征，而(000)-(000)冷带在329.11nm处的特征强度大大降低。这种温度依赖的光谱特征变化导致了早期研究中将主要热带错误地归属于冷带，从而高估了吸收截面。正确的光谱分配对于定量NCN检测至关重要，因为错误的光谱归属会导致浓度测量的系统误差。",
+    "original_text": {
+      "1": "At flame temperature, it is likely that in addition to the Σg-(000) state, the Πu(010) state (with an energy of 423 cm-1 above the vibrational ground state, Fig. 4) is populated, giving rise to two additional vibrational hot bands, Σg-(010)-Πu(010) and Δg(010)-Πu(010).",
+      "2": "Interestingly, at high temperature, the characteristic feature of the cold spectra centered at λ = 329.11 nm, namely the A 3Π1(000) – X 3Σg-(000) band, is found much less intense than the component A 3Σ+(010) – X 3Πu of the (010) – (010) hot band at λ = 329.13 nm. The strongest peak corresponds to the Q1 branch of this (010) – (010) hot band."
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及燃烧化学中的NCN自由基检测、光谱学原理（Renner-Teller效应、自旋-轨道耦合）、热力学分布（玻尔兹曼分布）、吸收截面测量技术挑战等，需要燃烧科学、分子光谱学和物理化学领域的专业知识。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "无需改进。答案准确阐述了NCN吸收截面测量的技术挑战（低浓度、光谱复杂性、干扰物种），并从光谱学原理和热力学分布角度合理解释了高温下依赖(010)-(010)热带的原因，计算了振动激发态布居比，与论文摘录内容一致。"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_6f9c5caa",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "The-story-of-NCN-as-a-key-species-in-prom_2021_Progress-in-Energy-and-Combus",
+      "paper_title": "The-story-of-NCN-as-a-key-species-in-prom_2021_Progress-in-Energy-and-Combus"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:12:52.203070",
+      "answer_length": 582
+    },
+    "merge_source": "question_reverse"
+  }
+]

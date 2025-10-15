@@ -1,0 +1,44 @@
+[
+  {
+    "question_text": "在SOFC/GT混合系统中，部分负荷运行策略对系统效率有重要影响。请推导在固定燃气轮机转速和可变转速策略下，系统效率随功率输出变化的解析表达式。",
+    "standard_answer": "在部分负荷运行时，系统效率通常随功率减小而降低。例如，在100%负荷时效率为65.4%，到70%负荷时降至56.4%。请基于热力学第一定律，建立系统效率η与相对功率P/P0的关系模型：η(P/P0) = a + b·(P/P0) + c·(P/P0)^2。通过优化空气燃料比和燃气轮机转速，可以实现在低负荷下仍保持高效率。",
+    "original_text": {
+      "1": "PAt full load operation, the system achieved an exergetic efficiency of 59.8%。",
+      "original_text": {
+        "1": "PThe part-load performance of a SOFC/GT hybrid system under the part-load operation was studied. The simulation showed that the system efficiency decreases from 61% at the design point to 56.4% at 70% of the nominal power.",
+        "2": "PAt variable MGT rotational speed, it was possible to obtain very high efficiency also at very low part load conditions, i.e. the efficiency was always higher than 50%, also at 30% nominal power.",
+        "type": "calculation",
+        "difficulty": 3,
+        "topic": "energy_systems"
+      }
+    },
+    "question_id": "batch_detail_q_d0902b81",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Macroscopic-modeling-of-solid-oxide-fuel-cell--SOFC-_2018_Progress-in-Energy",
+      "paper_title": "Macroscopic-modeling-of-solid-oxide-fuel-cell--SOFC-_2018_Progress-in-Energy"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T12:32:37.284200",
+      "batch_processing": true,
+      "answer_length": 161
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及SOFC/GT混合系统的部分负荷运行策略和系统效率分析，需要热力学、能源系统、燃料电池和燃气轮机专业知识来推导解析表达式和解释运行策略对效率的影响。",
+      "answer_correct": false,
+      "answer_issues": [
+        "too_brief",
+        "factual_error",
+        "fundamental_error",
+        "unsupported"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案过于简短且存在多处问题：未推导要求的解析表达式，提供的效率数值与引用文献不符，提出的多项式模型缺乏理论依据和引用支持，未区分固定转速和可变转速策略。建议基于原文引用和热力学原理重新推导两种策略下的效率表达式。"
+    }
+  }
+]

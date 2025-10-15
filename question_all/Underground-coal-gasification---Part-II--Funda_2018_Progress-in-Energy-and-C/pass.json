@@ -1,0 +1,70 @@
+[
+  {
+    "question_text": "在UCG过程中，侧壁和顶板的空腔生长速率受多种传质和化学反应机制控制。请详细分析在典型UCG操作条件下（温度1000-1500K，压力1-10MPa），对于低阶煤和高阶煤，空腔生长的主要控制机制有何不同？并推导说明在不同温度范围内，传质控制向化学反应控制转变的临界条件。",
+    "standard_answer": "在UCG过程中，空腔生长速率控制机制取决于煤阶和操作条件。对于低阶煤（如褐煤和次烟煤），由于其高孔隙率、高挥发分含量和高内在反应性，在典型操作温度1000-1500K范围内，空腔生长主要受外部传质控制。计算表明，当Sherwood数在10^1-10^3范围内时，传质速率远高于化学反应速率。对于高阶煤（如烟煤和无烟煤），由于其低孔隙率、低挥发分含量和低内在反应性，在相同温度范围内，空腔生长主要受化学反应动力学控制。临界转变温度可通过Damköhler数分析确定：当Da = (反应时间)/(传质时间) = (k_chem * L)/(D_eff) = 1时发生转变。对于低阶煤，临界转变温度约在800-1100K，在此温度以下为化学反应控制，以上为传质控制。对于高阶煤，临界转变温度可高达1300-1500K。具体推导：传质速率r_mt = h_m * (C_b - C_s)，化学反应速率r_chem = k * C_s^n，当r_mt = r_chem时，可得临界条件k/h_m = (C_b - C_s)/C_s^n。在湍流自然对流条件下，h_m ∝ (Gr*Sc)^(1/3)，而k遵循Arrhenius关系k = A*exp(-E/RT)，因此临界温度T_crit可通过求解A*exp(-E/RT_crit) ∝ (Gr*Sc)^(1/3)得到。",
+    "original_text": {
+      "1": "For highly reactive coals, such as lignites, external mass transfer control appears to be possible, assuming that heat and mass transport is not inhibited by an ash layer on the coal surface or the presence of a porous bed of ash and rock rubble.",
+      "2": "For high rank coals, such as bituminous coals, the char reactivity is low in comparison to mass transfer at typical temperatures. The calculations indicate that if UCG is performed in high rank coals, the rate of cavity growth will be controlled by the chemical reactivity of the char."
+    },
+    "type": "reasoning",
+    "difficulty": 5,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "该问题需要燃烧工程、传质传热、化学反应动力学、煤化学等领域的专业知识，涉及UCG过程中的空腔生长机制、不同煤阶的特性差异、传质与化学反应控制的临界条件分析，以及Damköhler数等专业概念的应用。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量优秀，无需修改。答案准确分析了低阶煤和高阶煤在UCG过程中的控制机制差异，正确应用了Sherwood数和Damköhler数等专业概念，推导过程合理，与提供的原文引用和论文摘录内容一致。"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_e0df3f8b",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Underground-coal-gasification---Part-II--Funda_2018_Progress-in-Energy-and-C",
+      "paper_title": "Underground-coal-gasification---Part-II--Funda_2018_Progress-in-Energy-and-C"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:07:36.023155",
+      "answer_length": 579
+    },
+    "merge_source": "question_reverse"
+  },
+  {
+    "question_text": "在UCG建模中，辐射传热对空腔生长和温度分布有重要影响。请详细分析在UCG空腔中，气体辐射（特别是CO₂和H₂O）与壁面辐射的相互作用机制，推导考虑气体吸收和发射的辐射热流表达式，并说明在什么条件下必须使用离散坐标法或P-1模型而不是简单的Rosseland近似。",
+    "standard_answer": "在UCG空腔中，辐射传热包括气体辐射和壁面辐射的复杂相互作用。气体辐射主要由CO₂和H₂O贡献，它们在2.7μm、4.3μm和15μm波段有强吸收带。辐射传输方程可写为：dI/ds = -κI + κσT⁴/π，其中I为辐射强度，κ为吸收系数，s为路径长度。对于UCG条件，气体温度T_g≈1500K，壁面温度T_w≈1100K，总辐射热流q_rad = Fεσ(T_g⁴ - T_w⁴) + ∫κ(I_b - I)ds，其中F为视角因子，ε为发射率。气体吸收系数κ取决于CO₂和H₂O的分压和温度，典型值在0.1-0.5m⁻¹范围内。Rosseland近似仅适用于光学厚介质（κL >> 1），但在UCG空腔中，特征长度L≈5-10m，κL≈0.5-5，处于过渡区域，因此Rosseland近似不准确。必须使用更精确的模型如离散坐标法（DOM）或P-1模型的条件包括：1）中等光学厚度（0.1 < κL < 10）；2）存在强烈的各向异性辐射；3）需要准确计算局部热流密度；4）气体和壁面温度差异显著。P-1模型通过将辐射强度展开为球谐函数来简化计算，适用于大多数UCG应用，而DOM提供更高精度但计算成本更大。在UCG中，由于辐射热流可达10^5 W/m²量级，占总热流的50-70%，准确建模辐射传热对预测空腔生长至关重要。",
+    "original_text": {
+      "1": "The radiative heat transfer inside the gasifier is partially non-transparent due to the presence of gas species such as CO2 and H2O which emit and absorb radiation.",
+      "2": "The implication for UCG modeling is that radiation heat exchange must be included and that the radiative properties of the synthesis gas components, particularly CO2 and H2O, should be accounted for."
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "heat_transfer",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及UCG（地下煤气化）建模中的辐射传热机制，需要燃烧学、传热学、计算流体力学（CFD）和辐射传输理论的专业知识，包括气体辐射特性、辐射传输方程推导、不同辐射模型（Rosseland近似、离散坐标法、P-1模型）的适用条件分析",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量优秀，无需修改。答案准确分析了气体辐射与壁面辐射的相互作用机制，正确推导了辐射热流表达式，合理说明了不同辐射模型的适用条件，数值参数符合UCG实际工况，与提供的论文摘录内容一致"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_a500a025",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Underground-coal-gasification---Part-II--Funda_2018_Progress-in-Energy-and-C",
+      "paper_title": "Underground-coal-gasification---Part-II--Funda_2018_Progress-in-Energy-and-C"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:07:36.826969",
+      "answer_length": 565
+    },
+    "merge_source": "question_reverse"
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "question_text": "基于热力学、动力学和平衡原理，推导木质颗粒燃烧模拟中三种主要干燥模型的数学表达式，比较它们在计算效率和物理准确性方面的优缺点，并分析不同温度条件下（低温<373K、中温373-500K、高温>500K）如何选择适当的干燥模型。",
+    "standard_answer": "三种干燥模型的数学表达式及比较：1）热力学模型：基于能量平衡方程，假设干燥在固定沸点温度（373.15K）发生，任何高于此温度的热量都用于水分蒸发。数学上表现为当T≥373K时，蒸发速率由能量平衡方程控制：ṽ_evap = (Q_net - Q_sensible)/Δh_vap，其中Q_net为净热通量，Q_sensible为显热，Δh_vap为蒸发焓。优点是实现简单，但数值稳定性差，需要自适应时间步长控制。2）动力学模型：采用Arrhenius表达式描述蒸发速率，ṽ_evap = A·exp(-Ea/RT)·ρ_water，常用参数A=5.13×10^6 s^-1，Ea=88 kJ/mol（引用自Bryden et al.）。优点是数值稳定，允许较大时间步长（10^-4s量级），能模拟低于沸点的干燥。3）平衡模型：基于液态水与水蒸气之间的热力学平衡，浓度差为驱动力，ṽ_evap = k_m·(C_sat - C_vap)，其中C_sat为饱和蒸汽浓度，C_vap为实际蒸汽浓度，k_m为传质系数。适用于低温干燥过程。比较：热力学模型在高热通量下数值不稳定，但物理直观；动力学模型稳健但需要调整参数；平衡模型在低温下准确，在高温条件下通过适当修正后仍可应用。选择策略：高温燃烧环境（>500K）可用热力学或动力学模型，低温过程（<373K）用平衡模型，中温过程（373-500K）可采用组合方法或动力学模型。在木质颗粒燃烧中，热力学模型适用于快速燃烧阶段，动力学模型适用于精确控制蒸发过程，平衡模型适用于初始干燥阶段。",
+    "original_text": {
+      "1": "The thermal drying model is based on the assumption that drying occurs at a fixed boiling temperature at atmospheric pressure, 373.15 K, and that any amount of heat above this temperature will be consumed by the drying process in order to vaporize the moisture.",
+      "2": "In the kinetic rate models, the drying is considered a heterogeneous reaction, and an Arrhenius equation is used to calculate its rate. The pre-exponential factor and activation energy are set such that the evaporation mainly occurs around the water boiling temperature."
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及热力学、动力学和平衡原理在木质颗粒燃烧模拟中的应用，需要燃烧科学、传热传质、计算流体力学（CFD）和能源工程领域的专业知识来推导数学表达式、比较模型性能并分析温度条件下的选择策略。",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "修改答案：1）更正热力学模型描述，明确其基于能量平衡而非固定沸点假设，补充实际应用中的限制条件；2）为动力学模型参数（A=5.13×10^6 s^-1, Ea=88 kJ/mol）提供明确文献引用（Bryden et al.的具体出处），并说明参数适用范围；3）在平衡模型中明确定义传质系数k_m的计算方法或典型取值；4）补充各模型在木质颗粒多孔介质中水分传输的具体方程形式，增强物理准确性。"
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_af3c105e",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Numerical-models-for-thermochemical-degradation-of-therm_2017_Progress-in-En",
+      "paper_title": "Numerical-models-for-thermochemical-degradation-of-therm_2017_Progress-in-En"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:36:02.633817",
+      "answer_length": 665
+    }
+  }
+]

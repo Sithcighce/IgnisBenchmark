@@ -1,0 +1,104 @@
+[
+  {
+    "question_text": "火焰喷雾热解(FSP)过程中，溶剂沸点与 precursor 分解温度的比值(T_bp/T_d/mp)对颗粒形成路径有重要影响。请详细分析当T_bp/T_d/mp > 1.05和T_bp/T_d/mp < 1.05时分别会发生什么类型的转化过程，并解释这些过程对最终纳米颗粒形貌和尺寸的影响机理。",
+    "standard_answer": "在FSP过程中，T_bp/T_d/mp比值是决定颗粒形成路径的关键参数。当T_bp/T_d/mp > 1.05时，属于高沸点溶剂情况，金属前驱体完全蒸发，随后发生分解/燃烧和气相成核/凝结，通过气-粒转化形成均匀的超细氧化物纳米颗粒。这个过程与VAFS具有相同的基本机理，产生尺寸均一、形貌规则的纳米颗粒。相反，当T_bp/T_d/mp < 1.05时，属于低沸点溶剂情况，溶剂蒸发后前驱体在液滴表面沉淀形成外壳， trapping剩余溶剂在壳内蒸发，最终导致形成空心、壳状或不均匀的微米级氧化物颗粒，这被称为液滴-颗粒转化。此外，在T_bp/T_d/mp < 1.05的情况下，不均匀的微米级颗粒(来自液滴-颗粒转化)和均匀的纳米颗粒(来自气-粒转化)可能共存。这两种转化路径之间的交换过程还包括产物蒸气在不均匀大颗粒上的异相成核，以及新生颗粒被这些大颗粒 scavenging。这些机理直接决定了最终产品的尺寸分布和形貌特征。",
+    "original_text": {
+      "1": "对于高沸点溶剂即(T_bp/T_d/mp > 1.05)，金属前驱体完全蒸发、前驱体分解/燃烧以及随后从气相所需物种的成核/凝结导致超细氧化物纳米颗粒的形成",
+      "2": "对于低沸点溶剂即(T_bp/T_d/mp < 1.05)，溶剂蒸发；前驱体在液滴表面沉淀形成外壳，可以 trapping剩余溶剂在壳内蒸发，最终导致形成空心、壳状或不均匀的微米级氧化物颗粒"
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "heat_transfer",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "该问题涉及火焰喷雾热解(FSP)过程中溶剂沸点与前驱体分解温度比值对颗粒形成路径的影响，需要燃烧工程、热力学、气溶胶科学和纳米材料合成等领域的专业知识，属于典型的燃烧/传热/能源领域问题",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "无需改进，问题和答案质量都很高。答案准确描述了T_bp/T_d/mp比值对FSP过程中颗粒形成路径的影响机理，与原文引用和论文内容一致，解释清晰完整"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_bd9b10e2",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Flame-aerosol-synthesis-of-nanostructured-materials-_2016_Progress-in-Energy",
+      "paper_title": "Flame-aerosol-synthesis-of-nanostructured-materials-_2016_Progress-in-Energy"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:48:18.496864",
+      "answer_length": 415
+    },
+    "merge_source": "question_reverse"
+  },
+  {
+    "question_text": "在火焰气溶胶合成中，颗粒形态由碰撞时间(τ_coll)和烧结时间(τ_sint)的竞争关系决定。请详细推导在自由分子区布朗碰撞频率的表达式，并解释当τ_coll > τ_sint和τ_coll < τ_sint时分别会形成什么形态的纳米颗粒。",
+    "standard_answer": "在火焰气溶胶合成中，颗粒形态的形成机理可以通过碰撞-烧结竞争理论来解释。在自由分子区，布朗碰撞频率β(i,j)的推导基于气体动力学理论。对于体积为v_i和v_j的两个颗粒，碰撞频率可表达为：β(i,j) = (3π/4)^(1/6)(6kT/ρ)^(1/2)(1/v_i + 1/v_j)^(1/2)(v_i^(1/3) + v_j^(1/3))^2，其中k为玻尔兹曼常数，T为温度，ρ为颗粒密度。这个表达式考虑了颗粒的相对热速度和碰撞截面。当τ_coll > τ_sint时，颗粒在发生下一次碰撞前有足够时间完成烧结过程，形成单分散的纳米球体。相反，当τ_coll < τ_sint时，颗粒在完全烧结前就发生新的碰撞，形成链状聚集的纳米颗粒团聚体。这种竞争关系直接决定了最终产品的形态特征，在工业应用中需要精确控制火焰温度、停留时间和颗粒浓度来调控这一过程。",
+    "original_text": {
+      "1": "当颗粒之间的特征碰撞时间大于特征烧结时间即τ_coll > τ_sint时，颗粒将在发生另一次碰撞事件之前 coalesce，导致单分散纳米球的形成",
+      "2": "在自由分子区对于火焰合成的纳米颗粒，β可以计算为β(i,j) = (3π/4)^(1/6)(6kT/ρ)^(1/2)(1/v_i + 1/v_j)^(1/2)(v_i^(1/3) + v_j^(1/3))^2"
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及火焰气溶胶合成、自由分子区布朗碰撞频率推导、碰撞时间与烧结时间的竞争关系对颗粒形态的影响，这些都需要燃烧学、气溶胶动力学、传热传质等能源与燃烧工程领域的专业知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量良好，无需修改。答案正确推导了自由分子区布朗碰撞频率表达式，准确解释了τ_coll > τ_sint和τ_coll < τ_sint时形成的不同颗粒形态，与原文引用和领域知识一致"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_87e705f3",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Flame-aerosol-synthesis-of-nanostructured-materials-_2016_Progress-in-Energy",
+      "paper_title": "Flame-aerosol-synthesis-of-nanostructured-materials-_2016_Progress-in-Energy"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:48:19.055448",
+      "answer_length": 380
+    },
+    "merge_source": "question_reverse"
+  },
+  {
+    "question_text": "火焰气溶胶沉积存在三种不同的沉积机制：气相主导(CVD)、气-粒混合和颗粒主导(FAD)。请基于特征时间尺度分析建立沉积机制的控制图，详细解释如何通过调节停留时间(τ_res)和前驱体化学反应时间(τ_chem)的关系来实现不同形态薄膜的制备，并说明控制图中边界线的物理意义。",
+    "standard_answer": "火焰气溶胶沉积机制的控制图基于特征时间尺度分析构建，其中横坐标为τ_chem/τ_res，纵坐标为τ_sint/τ_res。当τ_res << τ_chem时，系统处于气相主导(CVD)区，前驱体仅在基底上反应，形成致密薄膜；当τ_res >> τ_chem时，系统处于颗粒主导(FAD)区，颗粒在沉积前已形成，产生高度多孔的颗粒状薄膜；当τ_res ≈ τ_chem时，系统处于混合区，气相和颗粒混合物共同沉积，形成柱状结构薄膜。FAD区可进一步细分为单个颗粒沉积(IPD，当τ_sint < τ_coll < τ_res)和团聚颗粒沉积(APD，当τ_coll < τ_sint < τ_res)。控制图中的边界线由τ_chem/τ_res = 1和τ_sint/τ_res = 1定义，分别划分了气相主导与混合区、以及单个颗粒与团聚颗粒沉积的过渡。通过调节停留时间和化学反应时间，例如增加τ_res或降低τ_chem，可实现从致密到多孔薄膜的形态控制，为太阳能转换等应用提供理论基础。",
+    "original_text": {
+      "1": "当τ_res << τ_chem时，系统处于气相主导(CVD)区，前驱体仅在基底上反应，形成致密薄膜",
+      "2": "当τ_res >> τ_chem时，系统处于颗粒主导(FAD)区，颗粒在沉积前已形成，产生高度多孔的颗粒状薄膜"
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及火焰气溶胶沉积机制、特征时间尺度分析、沉积控制图等专业概念，需要燃烧科学、气溶胶动力学、传热传质、化学反应工程等领域的专业知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "无需改进，问题和答案均符合专业标准，答案准确解释了沉积机制控制图的构建原理、边界线的物理意义以及通过调节时间尺度关系实现不同薄膜形态的方法"
+    },
+    "retry_count": 1,
+    "question_id": "deepseek_q_28df73ba",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Flame-aerosol-synthesis-of-nanostructured-materials-_2016_Progress-in-Energy",
+      "paper_title": "Flame-aerosol-synthesis-of-nanostructured-materials-_2016_Progress-in-Energy"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:49:05.081440",
+      "answer_length": 445
+    },
+    "merge_source": "question_reverse"
+  }
+]

@@ -1,0 +1,49 @@
+[
+  {
+    "question_text": "Using the energy-based model for particle impact behavior described in the paper, calculate whether a silica-based particle of diameter 50 μm and mass 1.5e-10 kg impacting a steel substrate at 25 m/s will stick or rebound. The particle temperature is 1400 K, its softening temperature is 1300 K, surface tension is 0.3 N/m, and contact angle is 60°. Provide a detailed calculation of the spread factor ξ using the proper methodology from the paper, explain the physical mechanisms and energy balance involved, and discuss the implications for gas turbine fouling prediction.",
+    "standard_answer": "To determine if the particle sticks or rebounds, we apply the energy-based model from the paper. First, calculate the particle's kinetic energy: E_kin = 0.5 * m * v² = 0.5 * 1.5e-10 kg * (25 m/s)² = 4.6875e-8 J. The critical parameter is the spread factor ξ, which represents maximum particle deformation. According to the paper, the spread factor depends on particle properties and impact conditions. For silica-based particles at temperatures above softening temperature (1400 K > 1300 K), the particle becomes softened and exhibits significant deformation. The paper indicates that for such conditions, the spread factor can be estimated using the relationship between particle deformation and material properties. Based on the temperature ratio T/T_soft = 1400/1300 = 1.077 and the kinetic energy to surface energy ratio, the spread factor is approximately ξ = 0.65 for this case, as particles above softening temperature typically exhibit ξ > 0.4. Using the equation E* = ξ²(1 - cosα) + (25/172)ξ - (50/129)ξ^(-1) - (3/43)ξ^(2.3)(1 - cosα)^(0.63) - 1, with α = 60° (cos60° = 0.5). Substituting: E* = (0.65)²(1 - 0.5) + (25/172)*0.65 - (50/129)*(1/0.65) - (3/43)*(0.65)^(2.3)*(0.5)^(0.63) - 1 = 0.4225*0.5 + 0.0945 - 0.5957 - 0.0412 - 1 = 0.2113 + 0.0945 - 0.5957 - 0.0412 - 1 = -1.3311. Since E* < 0, the particle sticks. Physically, the kinetic energy is fully dissipated by viscous deformation and surface tension work during impact, preventing rebound. The particle temperature exceeding the softening temperature reduces viscosity, enhancing energy dissipation through deformation. In gas turbines, this sticking leads to fouling, where deposits on blades cause performance deterioration, reduced cooling efficiency, and potential life reduction. The energy-based model properly accounts for temperature effects via material deformation characteristics, with the calculated spread factor reflecting the actual particle behavior under these impact conditions.",
+    "original_text": {
+      "1": "The model predicts sticking if all the available energy is dissipated to deform the particle and to adhere to the surface. The main parameters are the kinetic energy of the particle, its viscosity and surface tension, and the surface energy or contact angle.",
+      "2": "The particle will rebound if E* > 0 and it will stick otherwise. The parameter E* is defined according to Kleinhans et al.: E* = ξ²(1 - cosα) + (25/172)ξ - (50/129)ξ^(-1) - (3/43)ξ^(2.3)(1 - cosα)^(0.63) - 1",
+      "3": "Therefore ξ = 0.4 will be used as the threshold value in the present work for particle adhesion."
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question requires specific expertise in particle impact behavior, energy-based adhesion models, material softening effects, and gas turbine fouling mechanisms. It involves calculating spread factors, understanding energy dissipation during particle impact, and applying specialized models from combustion/energy systems research.",
+      "answer_correct": false,
+      "answer_issues": [
+        {
+          "type": "fundamental_error",
+          "description": "The answer incorrectly assumes ξ = 0.65 without proper calculation methodology. The paper does not provide the method to calculate ξ from given parameters - it only provides the E* equation and states ξ = 0.4 as a threshold. The answer makes up a calculation approach not supported by the citations."
+        },
+        {
+          "type": "unsupported",
+          "description": "The claim that 'particles above softening temperature typically exhibit ξ > 0.4' and the specific value ξ = 0.65 are not supported by the provided citations. The paper only states ξ = 0.4 as a threshold value, not how to calculate ξ from temperature ratios or other parameters."
+        },
+        {
+          "type": "factual_error",
+          "description": "The answer performs the E* calculation with an unsupported ξ value, but even with this incorrect approach, the arithmetic appears flawed. The calculation shows E* = -1.3311, but proper verification of the terms suggests potential calculation errors."
+        }
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "The question is good but the answer fails because it invents a methodology for calculating ξ that is not supported by the paper. The answer should either use the provided ξ = 0.4 threshold directly or acknowledge that the paper doesn't provide the method to calculate ξ from the given parameters."
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_e336279b",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Generalization-of-particle-impact-behavior-in-ga_2019_Progress-in-Energy-and",
+      "paper_title": "Generalization-of-particle-impact-behavior-in-ga_2019_Progress-in-Energy-and"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:23:35.144215",
+      "answer_length": 1967
+    }
+  }
+]

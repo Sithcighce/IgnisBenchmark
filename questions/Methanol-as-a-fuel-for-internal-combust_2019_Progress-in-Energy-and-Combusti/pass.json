@@ -1,0 +1,42 @@
+[
+  {
+    "question_text": "在火花点火发动机中，甲醇的快速层流燃烧速度和高抗稀释能力如何实现无节气门运行，并分析其对部分负荷效率的提升机制。",
+    "standard_answer": "甲醇的快速层流燃烧速度（LBV）和宽的可燃极限是其用于高EGR率或稀燃策略的关键优势。从湍流燃烧模型角度，湍流燃烧速度u_t与层流燃烧速度u_l和湍流速度u'相关。论文引用：'Methanol’s LBV is around 15% faster than the other alcohols for rich conditions'。此外，'这种增加的速度有助于更高的抗爆震性，同时允许更短的燃烧持续时间，这也提高了效率'。具体而言，在无节气门（WOT）运行中，负荷通过EGR率控制，这减少了泵气损失。计算显示，在制动平均有效压力（BMEP）为4 bar时，通过EGR稀释而非节气门节流来控制功率输出。这降低了进气歧管中的真空度，从而减少了与吸气相关的功。例如，在部分负荷（如BMEP=3.3 bar）下，WOT EGR策略使得制动热效率（BTE）比节气门化学当量操作提高约5-10%。其物理机制包括：较高的LBV使得在较稀或较高EGR率下仍能保持稳定燃烧（COV<10%）。从热力学循环分析，这更接近等容循环，提高了热效率。同时，较低的燃烧温度减少了热损失和NOx排放。",
+    "original_text": {
+      "1": "Methanol’s LBV is around 15% faster than the other alcohols for rich conditions'，以及'由于较快的预混燃烧，燃烧持续时间缩短，这减少了高温持续时间，从而抑制NOx形成。然而，挑战包括在冷启动时醛类排放较高，因为甲醛是甲醇氧化中的中间体'。",
+      "type": "reasoning",
+      "difficulty": 4,
+      "topic": "combustion_kinetics|CFD_modeling"
+    },
+    "5. 2": {
+      "question_text": "基于CFD模拟，详细解释甲醇喷雾在直接喷射发动机中的特性，包括其贯穿距离、雾化质量和闪沸现象的影响。",
+      "standard_answer": "甲醇的喷雾特性对其在直接喷射（DI）发动机中的混合气形成至关重要。论文指出：'For instance, if the spray changes in such a way that wall wetting would change, this will have an important effect on efficiency and emissions'。",
+      "type": "calculation",
+      "difficulty": 5,
+      "topic": "combustion_kinetics|fluid_mechanics"
+    },
+    "question_id": "batch_detail_q_c1d64657",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Methanol-as-a-fuel-for-internal-combust_2019_Progress-in-Energy-and-Combusti",
+      "paper_title": "Methanol-as-a-fuel-for-internal-combust_2019_Progress-in-Energy-and-Combusti"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T13:14:26.605039",
+      "batch_processing": true,
+      "answer_length": 488
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及火花点火发动机中的燃烧特性、层流燃烧速度、抗稀释能力、EGR策略、热效率分析等，需要燃烧学、发动机原理、热力学循环等领域的专业知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量良好，准确结合了甲醇燃烧特性与发动机运行机制，提供了具体数据和理论解释"
+    }
+  }
+]

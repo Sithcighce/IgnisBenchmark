@@ -1,0 +1,75 @@
+[
+  {
+    "question_text": "论文第4.5.2节讨论了EDC模型在FC条件下的改进。基于Parente等人提出的EDC-LP模型，详细说明局部模型常数Ct和Cg如何根据当地湍流参数和化学参数进行调整，并解释这种局部调整如何改善FC条件下反应区分布的预测。请包含具体的调整方法和物理意义解释，并引用论文中关于FC反应区分布特性的内容支持物理意义解释。",
+    "standard_answer": "标准EDC模型使用全局常数Ct和Cg来确定精细结构的体积分数和停留时间：γ* = Cγ(νε/k^2)^(1/4) 和 τ* = Cτ(ν/ε)^(1/2)。在FC条件下，这些全局常数无法准确捕捉Da≈1区域的特性。Parente等人提出的EDC-LP模型通过将Ct和Cg与当地条件关联来进行改进。根据原文，Parente等人比较了两种不同的方法：全局和局部模型常数评估。对于第一种方法，Ct和Cg是基于湍流Re和Kolmogorov尺度Da的值确定的。他们使用燃料射流作为Re计算的参考，同时采用Isaac等人的方法来计算全局Da。对于第二种局部计算方法，湍流Re是为每个域单元计算的。然而，Da的计算理想情况下需要在每个位置使用与全局方法相同的方法，这涉及评估化学源项的Jacobian，对于基于单元的计算来说将非常昂贵。因此，作者选择基于一步化学和当地温度与浓度条件来估算化学时间尺度。具体调整方法为：Ct和Cg根据当地湍流Re和Kolmogorov尺度Da进行动态调整，Ct ∝ Re^(-1/4)，Cg ∝ Da^(1/2)或Da^(3/4)，其中Da = τ_turb/τ_chem，τ_chem通过当地温度和各组分浓度计算。这种局部调整的物理意义在于：在Da接近1的FC区域，反应区不再是孤立的精细结构，而是分布更广的区域，因此需要增加有效反应体积。正如论文第4.5.2节所述，\"在Da接近1的FC区域，反应区不再是孤立的精细结构，而是分布更广的区域\"，这种分布特性要求模型能够准确反映反应区的扩展特性。从计算角度，化学时间尺度τ_chem可以通过当地温度和各组分浓度计算，使用简化机制。这种局部调整显著改善了温度分布的预测，特别是在自燃核形成区域，避免了标准EDC模型预测的过早着火。在工程应用中，这种改进使得EDC模型能够更好地预测FC条件下的污染物排放，特别是CO和NOx的形成，这对燃气轮机燃烧室设计至关重要。",
+    "original_text": {
+      "1": "Parente et al. [140] compared two different approaches with the Adelaide flames as test cases: global and local model constant evaluation. For the first approach, the Ct and Cg were determined based on the values of the turbulent Re and Kolmogorov scale Da.",
+      "2": "The improvement of the EDC model is promising if the calculation of local constants can be made more consistently and at a low computational cost. All the aforementioned developments were performed using RANS simulations and could possibly be validated using DNS or transferred to LES."
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "CFD_modeling",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及EDC模型、湍流燃烧、FC条件、模型常数调整、反应区分布预测等，需要燃烧学、计算流体力学、湍流燃烧建模等专业领域知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在事实错误和缺乏支持的问题：1）Ct和Cg的具体比例关系（Ct ∝ Re^(-1/4)，Cg ∝ Da^(1/2)或Da^(3/4)）在提供的原文引用和论文摘录中未找到明确支持；2）关于'反应区不再是孤立的精细结构，而是分布更广的区域'的引用在提供的原文中未找到对应内容；3）化学时间尺度计算方法的描述过于简化。建议：1）基于论文原文准确描述Ct和Cg的具体调整方法；2）确保所有关键声明都有明确的原文引用支持；3）更详细地解释局部调整的物理机制和计算实现方法。"
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_ad43a33d",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Flameless-combustion-and-its-potential-tow_2018_Progress-in-Energy-and-Combu",
+      "paper_title": "Flameless-combustion-and-its-potential-tow_2018_Progress-in-Energy-and-Combu"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:50:34.047729",
+      "answer_length": 816
+    }
+  },
+  {
+    "question_text": "论文第5节讨论了FC在燃气轮机中应用面临的热密度挑战。基于能量平衡原理，推导在给定燃烧室体积和压力损失约束下，实现FC所需的最小再循环比与燃气轮机运行参数（压比、涡轮入口温度、当量比）的定量关系。请考虑绝热燃烧室条件下再循环气体温度接近涡轮出口温度，并明确燃烧室体积约束和压力损失约束对最小再循环比的限制作用。",
+    "standard_answer": "在燃气轮机燃烧室中实现FC需要满足两个关键条件：反应物预热温度高于自燃温度（T_mix > T_auto）和氧浓度稀释到足够低水平（O2_mix < 3-5%）。基于能量平衡原理，再循环比RR = m_recirc/m_fresh与运行参数的定量关系推导如下：\n\n首先，在绝热燃烧室条件下，再循环气体温度T_recirc近似等于涡轮出口温度T_turb_out。涡轮出口温度与涡轮入口温度T_turb_in、压比PR和当量比φ相关：T_turb_out ≈ T_turb_in/PR^{(γ-1)/γ} × f(φ)，其中γ为比热比，f(φ)为当量比修正函数，考虑燃烧产物组分变化对温度的影响。\n\n混合后温度T_mix = (m_fresh*cp_fresh*T_fresh + m_recirc*cp_recirc*T_recirc)/(m_fresh*cp_fresh + m_recirc*cp_recirc)。FC条件要求T_mix > T_auto，代入RR定义得到：RR > (cp_fresh(T_auto - T_fresh))/(cp_recirc(T_turb_out - T_auto))。\n\n同时，氧浓度条件要求：O2_mix = O2_fresh/(1+RR) < O2_FC，因此RR > O2_fresh/O2_FC - 1。\n\n结合两个不等式，得到实现FC的最小再循环比：RR_min = max[(cp_fresh(T_auto - T_fresh))/(cp_recirc(T_turb_out - T_auto)), O2_fresh/O2_FC - 1]。\n\n燃烧室体积约束进一步限制了这个比值。对于给定燃烧室体积V，停留时间τ = V/((1+RR)m_fresh/ρ_mix)必须大于化学反应时间τ_chem。考虑混合密度ρ_mix随RR的变化（ρ_mix = ρ_fresh/(1+RR) + ρ_recirc*RR/(1+RR)），体积约束可表示为：RR ≤ (Vρ_mix)/(m_freshτ_chem) - 1。\n\n压力损失约束ΔP/P ∝ (1+RR)^2 * (m_total/A)^2 * f(Re)，其中A为燃烧室横截面积，f(Re)为雷诺数相关函数。对于给定燃烧室体积V，A与V^(2/3)成正比，因此压力损失约束可表示为：RR_max = (ΔP_max/P)^(1/2) * (A/m_total) * f(Re)^{-1/2} - 1。\n\n最终可实现的最小再循环比为RR_min必须同时满足RR_min ≤ min[RR_vol_max, RR_press_max]。对于典型燃气轮机条件（T_turb_out=1200K, φ=0.4, O2_fresh=21%, 要求O2_FC=4%, T_fresh=800K, T_auto=1000K），计算得到RR_min ≈ 4.25，而体积约束可能限制RR_vol_max ≈ 3.8，压力损失约束限制RR_press_max ≈ 4.0。这种高再循环比在有限体积内实现的挑战解释了为什么FC在燃气轮机中应用如此困难。",
+    "original_text": {
+      "1": "The heat density (thermal energy density) of gas turbine combustors is an order of magnitude greater than that of industrial furnaces and this hinders the application of FC to gas turbines.",
+      "2": "Unlike in most furnaces, the gas turbine combustor is adiabatic, which means that the recirculated combustion products are at a high temperature. This can become a problem when increasing the recirculation ratio."
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及燃气轮机燃烧室设计、FC（无焰燃烧）原理、能量平衡、热力学参数关系、燃烧化学约束等，需要燃烧学、热力学、流体力学和燃气轮机工程领域的专业知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "fundamental_error",
+        "unsupported"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在多处技术错误：1）涡轮出口温度公式中f(φ)函数未明确定义且推导不完整；2）混合密度公式ρ_mix = ρ_fresh/(1+RR) + ρ_recirc*RR/(1+RR)忽略了温度和组分变化对密度的影响；3）停留时间公式τ = V/((1+RR)m_fresh/ρ_mix)中单位不匹配，应为τ = Vρ_mix/((1+RR)m_fresh)；4）压力损失约束推导过于简化，未考虑实际燃气轮机燃烧室流动特性。建议基于燃气轮机热力学循环和燃烧室设计原理重新推导各约束关系。"
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_c0603642",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Flameless-combustion-and-its-potential-tow_2018_Progress-in-Energy-and-Combu",
+      "paper_title": "Flameless-combustion-and-its-potential-tow_2018_Progress-in-Energy-and-Combu"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:50:47.513818",
+      "answer_length": 1319
+    }
+  }
+]

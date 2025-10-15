@@ -1,0 +1,80 @@
+[
+  {
+    "question_text": "在火焰气溶胶合成中，纳米粒子的最终形貌由碰撞时间（τ_coll）和烧结时间（τ_sint）的竞争决定。请详细推导：(a) 在自由分子区，球形纳米粒子的碰撞频率函数β(i,j)的表达式。(b) 利用时间尺度分析，当τ_coll < τ_sint时，会形成怎样的粒子结构？(c) 如何通过调节火焰反应器参数控制τ_coll和τ_sint，从而实现对粒子尺寸和形貌的精确调控。",
+    "standard_answer": "根据经典气溶胶动力学理论，在自由分子区，两个质量为m_i和m_j的粒子之间的碰撞频率函数可表示为：β(i,j) = (3/4π)^(1/6)(6kT/ρ)^(1/2)(1/v_i^(1/3) + 1/v_j^(1/3))^2 (v_i^(1/3) + v_j^(1/3))^2。这个表达式源于气体动理论，其中kT代表热动能，ρ为粒子密度，v_i和v_j分别为粒子i和j的体积。当τ_coll < τ_sint时，粒子在发生下一次碰撞前没有足够时间完全烧结，因此会形成链状聚集体的结构。通过调控火焰反应器参数，如：1) 增加前驱体浓度会增大粒子数浓度，从而使碰撞时间τ_coll ∝ 1/(nβ)显著减小。此时，粒子生长机制由烧结控制转变为聚集控制。具体可通过：(i) 降低火焰温度延长τ_sint；(ii) 增加流速缩短高温区停留时间τ_res，使得τ_res < τ_sint，从而抑制烧结过程。此外，提高淬火速率（如使用临界流量喷嘴）可使温度梯度高达10^4 K/cm，从而将碰撞时间τ_coll减小一个数量级。例如在预混驻留火焰中，衬底温度从763K降至383K时，SSA从约90 m²/g增加至约190 m²/g。这符合SSA ∝ 1/dp的关系，其中dp为初级粒子直径。实验数据表明，当τ_coll/τ_sint比从0.1增至10时，粒子形貌从致密球形转变为多孔链状结构。这种形貌转变直接影响纳米材料在催化、传感等应用中的性能表现。",
+    "original_text": {
+      "1": "If the characteristic collision time between particles is larger than the characteristic sintering time i.e. τ_coll > τ_sint，particles will coalesce before another collision event occurs，resulting in mono-disperse nanospheres",
+      "2": "the characteristic sintering time (τ_sint) is very sensitive to the temperature",
+      "3": "the lateral/radial temperature profiles in the burner core region have variations of less than 25 K",
+      "4": "The coagulation term in Eqn. (7.1) can be derived from Brownian collision between particles，for which the governing equation is known as the Smoluchowski equation",
+      "5": "the coagulation term in Eqn. (7.1) can be derived from Brownian collision between particles，for which the collision kernel β can be calculated as β(i,j) = (3/4π)^(1/6)(6kT/ρ)^(1/2)(1/v_i^(1/3) + 1/v_j^(1/3))^2"
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "question_id": "batch_detail_q_7a2fa298",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Flame-aerosol-synthesis-of-nanostructured-materials-_2016_Progress-in-Energy",
+      "paper_title": "Flame-aerosol-synthesis-of-nanostructured-materials-_2016_Progress-in-Energy"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T10:41:35.854648",
+      "batch_processing": true,
+      "answer_length": 621
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及火焰气溶胶合成、纳米粒子碰撞和烧结动力学、粒子形貌控制等，需要燃烧科学、气溶胶动力学和材料合成领域的专业知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案中碰撞频率函数表达式存在错误，且关于τ_coll < τ_sint时形成链状聚集体的表述与原文引用1矛盾；建议修正公式表达并重新梳理形貌形成机制"
+    }
+  },
+  {
+    "question_text": "在掺杂合成纳米复合材料时，需要构建包含‘前驱体反应类型’、‘材料混溶性’和‘可行燃烧器设计’的掺杂图。请详细解释：(a) 如何根据前驱体分解机制（温度驱动或自由基驱动）选择适当的燃烧器类型。(b) 在TiO2和Fe2O3的混合氧化物合成中，如何通过控制火焰温度场实现从异质支撑结构向核壳结构的转变。(c) 分析在VAFS和FSP两种不同合成路线下，形成均匀单相结构的关键控制参数及其物理机理。",
+    "standard_answer": "掺杂图的构建基于三个关键因素：前驱体反应类型（R）、材料混溶性（M）和燃烧器设计（B）。对于TiO2-Fe2O3系统，当两种组分均为温度驱动分解时，需要高温环境（如FSP可达2500°C）来促进壳层（如TiO2）封装内核（如CeO2）。根据论文图8，当温度驱动分解占主导时，无论使用何种燃烧器，只要火焰温度足够高（>2000°C），熔融的TiO2壳层会包裹内部的二氧化铈内核，形成如图6(b)所示的完美球形核壳结构。具体转变机制为：在高温条件下，表面能最小化驱动熔融相分离，其中高熔点的CeO2（2400°C）保持固态核心，而较低熔点的TiO2（1843°C）形成连续壳层。这种转变的物理本质是吉布斯自由能最小化过程。对于VAFS路线，需要精确控制衬底温度（如从383K升至763K）可调控壳层厚度。混溶性在纳米尺度并非绝对，可通过：1) 调节前驱体浓度比（如Ce:Ti从1:1到1:4），壳层厚度从约0.5nm增加至2nm。同时，通过调节前驱体溶液中SiO2的浓度，可实现如图6(c)所示的理想球形核壳结构。在FSP路线中，溶剂沸点与分解温度比T_bp/T_dmp > 1.05）可促进均匀单相结构的形成。",
+    "original_text": {
+      "1": "the decomposition of both components are temperature driven, either type of burner can be used as long as the flame temperature is sufficiently high for particles to coagulate and coalesce into a single sphere under fast quenching。"
+    },
+    "type": "reasoning",
+    "difficulty": 5,
+    "topic": "combustion_kinetics",
+    "question_id": "batch_detail_q_cdb3e7b2",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Flame-aerosol-synthesis-of-nanostructured-materials-_2016_Progress-in-Energy",
+      "paper_title": "Flame-aerosol-synthesis-of-nanostructured-materials-_2016_Progress-in-Energy"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T10:41:52.579323",
+      "batch_processing": true,
+      "answer_length": 504
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及纳米复合材料掺杂合成、前驱体反应机制、燃烧器设计选择、火焰温度场控制、结构转变机理等，需要燃烧合成、材料科学、热力学和流体力学等领域的专业知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported"
+      ],
+      "other_compliant": false,
+      "other_issues": [
+        "has_meta_info"
+      ],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在事实错误和引用不匹配问题。具体问题包括：1) 将TiO2-Fe2O3系统错误引用为TiO2-CeO2系统；2) 引用图8和图6(b)但原文摘录未提供相关图表；3) 添加了SiO2浓度调节等原文未提及的内容。建议严格基于原文引用和论文内容进行回答，避免引入未验证的信息。"
+    }
+  }
+]

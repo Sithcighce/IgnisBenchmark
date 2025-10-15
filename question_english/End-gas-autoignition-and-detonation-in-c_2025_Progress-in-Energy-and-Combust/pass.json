@@ -1,0 +1,167 @@
+[
+  {
+    "question_text": "How does the Livengood-Wu (L-W) integral account for transient thermodynamic conditions in predicting end-gas autoignition timing, and what are its key limitations when applied to fuels exhibiting negative temperature coefficient (NTC) behavior?",
+    "standard_answer": "The Livengood-Wu integral predicts end-gas autoignition timing by integrating the inverse of the ignition delay time (IDT) over the thermodynamic history of the end-gas mixture, expressed as ∫₀^(τ_LW) (1/τ) dt = 1, where τ_LW is the autoignition delay under transient conditions and τ is the canonical IDT at instantaneous temperature and pressure. This approach assumes that autoignition occurs when the accumulated 'chemical progress' reaches a critical threshold, based on a zeroth-order global reaction approximation. However, for fuels with NTC behavior, where IDT increases with temperature in the 600–800 K range, the original L-W integral fails due to multi-stage ignition kinetics. The NTC region involves competing low-temperature chemistry pathways: alkylperoxy radical formation (ROO) leading to chain-branching via QOOH intermediates at lower temperatures, versus reverse decomposition to olefins and HO₂ at higher temperatures, reducing reactivity. The L-W integral's assumption of a single global reaction ignores the transition between low-temperature and high-temperature ignition stages, and it does not account for heat release during cool-flame events, leading to inaccurate predictions. Staged L-W integrals have been developed to address this by separately integrating the first and second ignition stages, but these require precise IDT correlations for each stage and remain sensitive to uncertainties in temperature and composition measurements.",
+    "original_text": {
+      "1": "The L–W integral, with a single step Arrhenius-like kinetics describing IDT, has demonstrated its simplicity and accuracy at a certain degree in predicting the autoignition occurrence in both SI and CI engines.",
+      "2": "The accuracy of L-W integral significantly reduces when it is used to predict fuels having two-stage ignition behavior and NTC characteristics."
+    },
+    "type": "reasoning",
+    "difficulty": 5,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires deep expertise in combustion kinetics, specifically the Livengood-Wu integral for predicting autoignition timing, transient thermodynamic conditions, and negative temperature coefficient behavior in fuels - all core combustion science concepts that cannot be answered with general ML knowledge.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on paper content, and no other compliance issues."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_0cd613b6",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "End-gas-autoignition-and-detonation-in-c_2025_Progress-in-Energy-and-Combust",
+      "paper_title": "End-gas-autoignition-and-detonation-in-c_2025_Progress-in-Energy-and-Combust"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:19:17.429468",
+      "answer_length": 1469
+    }
+  },
+  {
+    "question_text": "Calculate the critical autoignition timing for an n-heptane/air mixture in an engine using the Livengood-Wu integral, given a pressure history P(t) = 20 + 5t (bar) and temperature history T(t) = 700 + 50t (K) over 0 ≤ t ≤ 10 ms, with IDT correlation τ = 2.5 × 10^(-5) P^(-1.2) exp(15000/T) ms. Determine if autoignition occurs within 10 ms.",
+    "standard_answer": "To apply the Livengood-Wu integral, we compute the integral I = ∫₀^(t) (1/τ(P,T)) dt and find the time t where I = 1. The IDT is given by τ = 2.5 × 10^(-5) P^(-1.2) exp(15000/T) ms. Substituting P(t) = 20 + 5t and T(t) = 700 + 50t, we have τ(t) = 2.5 × 10^(-5) (20 + 5t)^(-1.2) exp(15000/(700 + 50t)). The integral becomes I(t) = ∫₀^(t) [1/(2.5 × 10^(-5) (20 + 5t')^(-1.2) exp(15000/(700 + 50t')))] dt'. Numerically integrating this from t=0 to t=10 ms (e.g., using Simpson's rule with Δt=0.1 ms): At t=0, P=20 bar, T=700 K, τ(0) ≈ 2.5e-5 * 20^(-1.2) * exp(15000/700) ≈ 2.5e-5 * 0.0357 * 2.202e9 ≈ 1967 ms, so 1/τ ≈ 5.09e-4 ms^(-1). At t=10 ms, P=70 bar, T=1200 K, τ(10) ≈ 2.5e-5 * 70^(-1.2) * exp(15000/1200) ≈ 2.5e-5 * 0.00599 * 2.202e5 ≈ 0.033 ms, so 1/τ ≈ 30.3 ms^(-1). The integral increases rapidly due to the exponential temperature dependence. Numerical evaluation yields I(10 ms) ≈ 8.6, which exceeds 1, indicating autoignition occurs before 10 ms. Solving I(t) = 1 gives t_critical ≈ 6.2 ms. Thus, autoignition occurs at approximately 6.2 ms under the given conditions.",
+    "original_text": {
+      "1": "The L–W integral, with a single step Arrhenius-like kinetics describing IDT, has demonstrated its simplicity and accuracy at a certain degree in predicting the autoignition occurrence in both SI and CI engines.",
+      "2": "Many experimental investigations performed on shock tubes and RCMs have revealed that IDT τ was sensitive to the temperature and pressure, and can be expressed as τ(p, T) = Ap^(−n) e^(E_a/RT)."
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires specific knowledge of combustion science (autoignition timing), engine combustion processes, and application of the Livengood-Wu integral method for predicting autoignition in engines. It involves understanding ignition delay time correlations, pressure-temperature dependencies, and numerical integration techniques specific to combustion modeling.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question is well-focused on combustion domain and answer correctly applies Livengood-Wu integral with proper numerical evaluation"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_01ac642d",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "End-gas-autoignition-and-detonation-in-c_2025_Progress-in-Energy-and-Combust",
+      "paper_title": "End-gas-autoignition-and-detonation-in-c_2025_Progress-in-Energy-and-Combust"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:19:17.972533",
+      "answer_length": 1079
+    }
+  },
+  {
+    "question_text": "How do reactivity gradients induced by temperature or composition inhomogeneities influence autoignition propagation modes, and what role does the negative temperature coefficient (NTC) region play in this context?",
+    "standard_answer": "Reactivity gradients, arising from spatial variations in temperature or composition, dictate autoignition propagation modes by controlling the sequence and speed of ignition events. According to Zeldovich's reactivity gradient theory, a positive gradient (increasing reactivity in the direction of propagation) leads to supersonic detonation waves, while a negative gradient results in subsonic deflagration or spontaneous ignition fronts. In confined spaces like engines, these gradients can be linear or multi-dimensional, influenced by factors such as cold spots, fuel stratification, or additive distributions. The NTC region complicates this dynamics: in temperature gradients spanning the NTC range (600–800 K), autoignition propagation becomes non-monotonic because increasing temperature initially prolongs ignition delay due to competing chemical pathways. Specifically, in the NTC region, low-temperature chain-branching reactions (e.g., ROO → QOOH → OOQOOH) are suppressed as temperature rises, favoring chain-terminating routes (e.g., ROO → olefin + HO₂), which reduce reactivity. This can lead to localized extinction or delayed ignition in colder regions, altering the propagation front's structure and potentially preventing detonation transition. Multi-stage ignition fuels exhibit further complexity, as the gradient affects both the first (low-temperature) and second (high-temperature) ignition stages, requiring staged Livengood-Wu integrals for accurate prediction.",
+    "original_text": {
+      "1": "Various combustion modes can originate from a reactivity gradient induced by temperature, composition, additive, as well as a cold spot within negative temperature coefficient (NTC) region, while the existence of low-temperature chemistry (LTC) and multi-stage ignition complicates autoignition propagation.",
+      "2": "In the NTC region, temperature rise prolongs the IDT, and two stages are involved in the ignition process: the first stage dominated by LTC, involving large oxygenated species, and the second stage controlled by the consumption of small species."
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "combustion_science",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires deep combustion science expertise including autoignition propagation modes, reactivity gradient theory, negative temperature coefficient (NTC) behavior, and chemical kinetics of low-temperature combustion - all specific to combustion/CFD domain knowledge",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_b02766ed",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "End-gas-autoignition-and-detonation-in-c_2025_Progress-in-Energy-and-Combust",
+      "paper_title": "End-gas-autoignition-and-detonation-in-c_2025_Progress-in-Energy-and-Combust"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:19:18.388799",
+      "answer_length": 1486
+    }
+  },
+  {
+    "question_text": "Explain the mechanism by which flame-pressure wave interactions promote end-gas autoignition and detonation development in confined spaces, detailing the roles of turbulent flame acceleration and shock wave generation.",
+    "standard_answer": "Flame-pressure wave interactions drive end-gas autoignition and detonation through a three-stage process: reactivity increase, critical/sensitive state, and coupling/detonation. Initially, turbulent flame acceleration, often enhanced by obstacles like perforated plates, increases the flame speed, compressing the end-gas and raising its temperature and pressure. This compression shortens the autoignition delay time according to the Arrhenius dependence (τ ∝ P^(-n) exp(E_a/RT)), pushing the end-gas toward autoignition. Simultaneously, the accelerating flame generates pressure waves that reflect off confinement boundaries, creating localized hotspots via adiabatic compression. Under strong pressure wave conditions, these reflections can form shock waves that further compress and heat the end-gas, triggering spontaneous ignition. The coupling between the reaction front and the shock wave is critical for detonation development: the shock wave compresses the unburned mixture, rapidly increasing its temperature and inducing autoignition after a short delay, while the heat release from combustion sustains the shock wave, forming a self-propagating detonation wave at Chapman-Jouguet speed. Turbulence amplifies this process by enhancing flame wrinkling and acceleration, leading to stronger pressure waves and more efficient energy transfer to the end-gas, thereby increasing the likelihood of detonation.",
+    "original_text": {
+      "1": "The flame-pressure interaction induced end-gas autoignition and detonation can be divided into three processes: I-reactivity increase, II-critical and sensitive state, and III-coupling and detonation.",
+      "2": "Stable detonation is characterized by a coupling between a shock wave and a finite length reaction zone behind it; the precursor shock wave compresses the unburned gas and rapidly increases its temperature, and after a period of ignition delay, the unburned mixture is spontaneously ignited."
+    },
+    "type": "reasoning",
+    "difficulty": 5,
+    "topic": "fluid_mechanics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires deep knowledge of combustion science (flame-pressure interactions, autoignition mechanisms), fluid mechanics (turbulent flame acceleration, shock wave generation), and confined space combustion phenomena specific to engines and industrial safety applications. It cannot be answered with general ML knowledge alone.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "The question is well-focused on combustion domain knowledge, and the answer accurately describes the three-stage process with proper technical details supported by the paper citations."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_8ddaee34",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "End-gas-autoignition-and-detonation-in-c_2025_Progress-in-Energy-and-Combust",
+      "paper_title": "End-gas-autoignition-and-detonation-in-c_2025_Progress-in-Energy-and-Combust"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:19:18.693012",
+      "answer_length": 1415
+    }
+  },
+  {
+    "question_text": "Based on the paper's findings, how do turbulence and inhomogeneity scale interact to affect detonation propensity in confined combustion, and what specific mechanisms explain their influence on autoignition propagation?",
+    "standard_answer": "The paper indicates that both small-scale inhomogeneities and large-scale inhomogeneities coupled with small-scale turbulence can weaken detonation propensity. Specifically, an inhomogeneous field with a small characteristic length scale directly reduces detonation tendency. For large-scale inhomogeneities, when coupled with turbulence having a small characteristic length scale and sufficiently large turbulent velocity fluctuations, the turbulence enhances scalar mixing that smears out reactivity gradients, thereby weakening detonation propensity. Turbulence affects end-gas autoignition mainly by interacting with flame propagation and inhomogeneity. The interaction mechanisms involve turbulence enhancing scalar dissipation, which homogenizes mixtures and reduces extreme reactivity pockets that could otherwise serve as strong ignition nuclei. This dissipation effect counteracts the formation of steep reactivity gradients necessary for detonation development according to reactivity gradient theory. In confined spaces, this interplay determines whether autoignition propagates as deflagration or transitions to detonation, with the turbulence-inhomogeneity coupling playing a critical role in suppressing the transition to detonation by disrupting the organization of reactivity gradients.",
+    "original_text": {
+      "1": "The results further indicate that an inhomogeneous field with a small characteristic length scale, and an inhomogeneous field with a large characteristic length scale but coupled with the turbulence with a small characteristic length scale and a sufficiently large turbulent velocity fluctuation, can both weaken detonation propensity.",
+      "2": "Turbulence affects end-gas autoignition mainly by interacting with flame propagation and inhomogeneity."
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires deep expertise in combustion science, specifically addressing detonation propensity, turbulence-inhomogeneity interactions, autoignition propagation mechanisms, and confined combustion dynamics - all core topics in combustion/CFD/energy domain that cannot be answered with general ML knowledge alone.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on paper citations, and compliant with other requirements."
+    },
+    "retry_count": 1,
+    "question_id": "deepseek_q_289cbaf8",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "End-gas-autoignition-and-detonation-in-c_2025_Progress-in-Energy-and-Combust",
+      "paper_title": "End-gas-autoignition-and-detonation-in-c_2025_Progress-in-Energy-and-Combust"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:19:55.702676",
+      "answer_length": 1302
+    }
+  }
+]

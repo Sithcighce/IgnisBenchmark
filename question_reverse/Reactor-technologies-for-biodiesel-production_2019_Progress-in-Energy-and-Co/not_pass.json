@@ -1,0 +1,74 @@
+[
+  {
+    "question_text": "从燃烧动力学角度分析生物柴油与石油柴油在发动机中燃烧特性的差异。考虑脂肪酸甲酯的分子结构（如不饱和度、链长）对点火延迟、火焰速度和污染物形成的影响，并基于文献推导十六烷值与分子结构的经验关系。",
+    "standard_answer": "生物柴油与石油柴油的燃烧特性差异主要源于分子结构和含氧特性。生物柴油主要由C14-C24脂肪酸甲酯组成，含氧量10-12%，而石油柴油为纯烃类。从燃烧动力学看，含氧分子促进更完全燃烧，减少碳烟排放，但可能因局部高温增加NOx。\n\n点火延迟τ_ign与十六烷值CN的关系为τ_ign ∝ 1/CN。基于文献，十六烷值经验公式为CN = 46.3 + 5458/Σ - 0.225×IU，其中Σ为皂化值，IU为碘值。饱和脂肪酸甲酯（如C18:0）CN约85，而多不饱和（如C18:3）CN仅约35，表明不饱和度增加显著降低CN。\n\n火焰速度S_L与分子结构相关，生物柴油因较长碳链和较低挥发性，层流火焰速度略低于石油柴油。污染物形成机理：碳烟主要来自燃料-rich区的芳烃生成，生物柴油含氧特性抑制芳烃形成，碳烟排放显著降低；NOx主要来自热机制，生物柴油的高绝热火焰温度和局部高温区可能导致NOx增加。\n\n燃烧效率η_comb需考虑实际发动机工况，不能简单用η_comb = 1 - (CO + UHC)/fuel_input估算，应结合具体运行条件分析。",
+    "original_text": {
+      "1": "Biodiesel highly resembles diesel fuel in terms of cetane number, density, and viscosity [7–9]. Chemically, biodiesel is an alkyl ester (mostly fatty acid methyl ester abbreviated as FAME) of long chain fatty acids (C14–C24)",
+      "2": "The fatty acid compositions of oils are immune against transesterification reaction, and hence, their unchanged natures influence some fuel characteristics of biodiesel"
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题需要燃烧动力学、燃料化学、发动机燃烧特性、污染物形成机理等专业领域知识，涉及十六烷值与分子结构的经验关系推导，属于能源与燃烧工程领域",
+      "answer_correct": false,
+      "answer_issues": [
+        "unsupported",
+        "factual_error"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在以下问题需要改进：1) 十六烷值经验公式CN = 46.3 + 5458/Σ - 0.225×IU缺乏文献引用支持，且公式中各参数定义不明确；2) 提供的原文引用与答案内容关联性不强，无法有效支持关键论点；3) 应补充具体文献来源支持点火延迟、火焰速度、污染物形成等机理分析；4) 建议引用燃烧动力学领域的权威文献来验证十六烷值与分子结构的关系"
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_65330b6d",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Reactor-technologies-for-biodiesel-production_2019_Progress-in-Energy-and-Co",
+      "paper_title": "Reactor-technologies-for-biodiesel-production_2019_Progress-in-Energy-and-Co"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:28:09.454637",
+      "answer_length": 477
+    }
+  },
+  {
+    "question_text": "在微通道反应器中，生物柴油合成的质量传递过程受对流-扩散机制控制。假设通道高度为h，流速为u，油滴直径为d，流体物性参数为运动粘度ν和扩散系数D。请推导层流条件下浓度边界层厚度δ与施密特数Sc和雷诺数Re的关系，并明确区分边界层发展区与充分发展区的不同关系。同时，讨论微通道几何约束对油滴传质的影响，并验证传统球形颗粒舍伍德数公式Sh = 2 + 0.6 Re^(1/2) Sc^(1/3)在微通道中的适用性，需具体说明修正因子或引用相关文献支持。",
+    "standard_answer": "在微通道反应器中，质量传递由对流和扩散共同控制。对于层流流动（Re < 2300），浓度边界层发展可用对流-扩散方程描述：∂C/∂t + u·∇C = D∇²C + R。\n\n对于边界层发展区（入口段），浓度边界层厚度δ与施密特数Sc = ν/D和雷诺数Re_x = ux/ν的关系为δ/x ∝ (Sc·Re_x)^(-1/2)。具体推导：在稳态条件下，对流项u(∂C/∂x) ≈ 扩散项D(∂²C/∂y²)，尺度分析给出uΔC/x ≈ DΔC/δ²，因此δ ∝ (Dx/u)^(1/2) = x/(Re_x·Sc)^(1/2)。这里使用发展长度x而非通道长度L，因为边界层厚度沿流动方向增长。\n\n对于充分发展流动区，浓度边界层厚度达到稳定值δ_fd，与Sc和Re的关系为δ_fd/h ∝ (Sc·Re)^(-1/3)。这源于速度边界层与浓度边界层的类比关系：在充分发展区，速度边界层厚度δ_v ∝ h/Re^(1/2)，而浓度边界层厚度δ_c与速度边界层的关系为δ_c/δ_v ∝ Sc^(-1/3)，因此δ_fd/h ∝ (Sc·Re)^(-1/3)。\n\n关于微通道几何约束对油滴传质的影响：微通道的高表面体积比和短扩散距离确实能增强传质，但几何约束会显著改变流场分布。通道壁面的存在限制了油滴的运动和变形，减少了有效传质面积。当油滴尺寸d与通道高度h相当时，壁面效应变得显著，传统无限大流体中的传质关联式需要修正。具体机制包括壁面诱导的油滴变形、局部流速变化以及受限空间对流场的影响。\n\n对于传统球形颗粒舍伍德数公式Sh = 2 + 0.6 Re^(1/2) Sc^(1/3)，该公式适用于无限大流体中的孤立球形颗粒传质。在微通道中，由于通道壁面的几何约束和受限空间对流场的影响，实际Sh值通常低于该理论预测。当d/h > 0.1时，壁面效应显著，需要对传统公式进行修正，通常引入壁面修正因子f_w = [1 - (d/h)^n]^m，其中n和m为经验常数，修正后的公式为Sh = [2 + 0.6 Re^(1/2) Sc^(1/3)]·f_w。相关文献研究表明，在微通道反应器中，当d/h ≈ 0.5时，实际Sh值可能比传统公式预测低30-50%。",
+    "original_text": {
+      "1": "A characteristic flow pattern in micro-channel reactor is slug flow, i.e., the alternate arrangement of immiscible fluids (methanol and oil) in channels and large specific interfacial area",
+      "2": "Micro-channel reactors use numerous narrow channels of millimeter range diameter allowing high surface-to-volume ratios and short diffusion distances for effective heat and mass transfer"
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "fluid_mechanics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及微通道反应器中的质量传递过程、对流-扩散机制、浓度边界层理论、施密特数和雷诺数关系、微通道几何约束对传质的影响、以及舍伍德数公式的适用性验证，这些都需要燃烧/传热/流体/CFD/能源领域的专业知识，特别是流体力学、传质理论和微反应器工程方面的深入理解。",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在事实错误和关键声明未被支持的问题。具体改进建议：1）修正浓度边界层厚度关系推导，发展区δ/x ∝ (Sc·Re_x)^(-1/2)基本正确，但充分发展区δ_fd/h ∝ (Sc·Re)^(-1/3)的推导存在错误，应基于微通道充分发展流动的传质理论重新推导；2）对传统舍伍德数公式Sh = 2 + 0.6 Re^(1/2) Sc^(1/3)的修正因子f_w = [1 - (d/h)^n]^m缺乏具体文献支持，应引用相关微通道传质研究的实验数据或理论分析来验证修正因子的形式和参数取值；3）补充微通道中油滴传质的具体实验数据或数值模拟结果，增强论证的说服力。"
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_1f2620ac",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Reactor-technologies-for-biodiesel-production_2019_Progress-in-Energy-and-Co",
+      "paper_title": "Reactor-technologies-for-biodiesel-production_2019_Progress-in-Energy-and-Co"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:29:10.705671",
+      "answer_length": 927
+    }
+  }
+]

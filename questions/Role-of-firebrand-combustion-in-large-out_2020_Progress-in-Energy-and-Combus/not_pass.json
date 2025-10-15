@@ -1,0 +1,127 @@
+[
+  {
+    "question_text": "基于论文中Tachikawa数（公式1）的定义，分析该数如何表征火羽颗粒的空气动力学特性与重力之间的平衡。推导在恒定风速下，火羽颗粒的临界直径（即最小直径，使其能够运输给定距离），并讨论其在预测火羽颗粒最大运输距离中的作用。要求结合论文中关于火羽颗粒尺寸分布的数据（如图4和图6）进行讨论。",
+    "standard_answer": "Tachikawa数（Ta）定义为Ta = ρ_∞ U² A_proj / (2 m_F g)，其中ρ_∞为空气密度，U为风速，A_proj为投影面积，m_F为火羽颗粒质量。该数表示空气动力（ρ_∞ U² A_proj）与重力（m_F g）的比值。从公式1出发，假设火羽颗粒密度恒定，则m_F ∝ ρ_F V_F，其中V_F为体积。对于圆柱形火羽颗粒，A_proj ∝ D_p L_p，其中D_p为直径，L_p为长度。假设火羽颗粒形状相似，L_p ∝ D_p，因此A_proj ∝ D_p²。同时，m_F ∝ ρ_F D_p² L_p ∝ ρ_F D_p³。因此，Ta ∝ ρ_∞ U² D_p² / (ρ_F D_p³ g) ∝ U² / (D_p g)，假设ρ_F和ρ_∞恒定。则Ta ∝ U² / D_p。较大的Ta表示空气动力主导，火羽颗粒可能运输更远距离。临界直径D_cr：为最小直径，使火羽颗粒能够运输给定距离L。从轨迹方程，水平运输距离x_p ∝ U t_flight，其中t_flight为飞行时间。在终端速度假设下，垂直运动平衡：drag force = gravity，得出终端速度v_term ∝ √(D_p g)。当Ta大时，D_p小，但v_term可能小，因此需要平衡。根据论文图4和图6的数据，大部分火羽颗粒的投影面积小于10 cm²，对应直径约3 cm（假设圆柱形）。当D_p < D_cr时，火羽颗粒可能无法到达距离L，因为过早沉积。例如，论文第6页提到：“超过85%的孔面积小于0.5 cm²”，表明小尺寸火羽颗粒的运输距离可能受燃烧寿命限制，如公式17描述燃烧速率。因此，在CFD模拟中，使用Ta数可以优化初始条件设置，提高火势蔓延预测的准确性。",
+    "original_text": {
+      "1": "Ta = ρ_∞ U² A_proj / (2 m_F g)",
+      "2": "While the majority of ﬁrebrands observed or reported during these investigations are relatively small in size, resembling a ‘shower,’ ‘rain,’ or ‘blizzard,’ of ﬁrebrands, some observations have noted lofted ﬁrebrands are large.",
+      "3": "More than 85 % of the holes had an area less than 0.5 cm²",
+      "4": "The larger the Tachikawa number, the further a windborne debris, or ﬁrebrand, can travel."
+    },
+    "type": "calculation",
+    "difficulty": 3,
+    "topic": "fluid_mechanics",
+    "question_id": "batch_detail_q_f5885707",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Role-of-firebrand-combustion-in-large-out_2020_Progress-in-Energy-and-Combus",
+      "paper_title": "Role-of-firebrand-combustion-in-large-out_2020_Progress-in-Energy-and-Combus"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T18:36:28.028702",
+      "batch_processing": true,
+      "answer_length": 741
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及火羽颗粒的空气动力学特性、重力平衡、临界直径推导和运输距离预测，需要燃烧科学、流体力学和颗粒传输等领域的专业知识。",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported"
+      ],
+      "other_compliant": false,
+      "other_issues": [
+        "has_meta_info"
+      ],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在多处事实错误和未支持的声明。建议：1）修正Tachikawa数的推导过程；2）明确临界直径的定义和推导；3）确保所有数据引用与原文一致；4）移除'论文第6页提到'等元信息表述。"
+    }
+  },
+  {
+    "question_text": "论文中描述了火羽颗粒在燃料床上的沉积和堆积，尤其是障碍物附近。请从流体力学角度分析火羽颗粒在建筑物角落和屋顶边缘的沉积机理，包括流动分离、涡旋形成和颗粒惯性效应。要求引用论文中关于火羽颗粒沉积的具体描述。",
+    "standard_answer": "火羽颗粒在障碍物附近的沉积机理涉及复杂的流体动力学过程，包括流动分离、涡旋形成和颗粒惯性效应。当水平风遇到建筑物等障碍物时，会在背风面形成低压区，导致火羽颗粒沉积。根据论文第10页：“一个较少被研究但重要的运输方面是火羽颗粒在障碍物附近的堆积”。具体分析：(1) 流动分离：风遇到建筑物时，在迎风面流动加速，在屋顶边缘和角落发生分离，形成剪层和涡旋。火羽颗粒由于惯性，可能无法跟随流线弯曲，从而撞击障碍物表面。涡旋形成：在建筑物背风面，流动分离形成卡门涡街或回流区。这些涡旋可捕获火羽颗粒，导致局部堆积。颗粒惯性效应：根据牛顿第二定律，颗粒在流场中的加速度取决于drag force和重力。在沉积点，相对速度v_R减小，drag force降低，导致颗粒减速并最终沉积。在CFD模拟中，需使用湍流模型（如LES）来解析这些结构。例如，论文引用Sardoy等人[73,74]的模拟显示双峰分布，表明一些火羽颗粒在近场沉积（大颗粒），而另一些运输到更远距离（小颗粒）。这种沉积模式直接影响点火概率，因为堆积的火羽颗粒可提供更高能量通量。论文第14页实验显示：“堆积的‘堆’火羽颗粒存储显著更多能量，构成更大点火危险”。因此，在建筑设计中，应考虑这些区域的火险，使用例如防火材料或改进几何设计以减少堆积。",
+    "original_text": {
+      "1": "An important but less studied aspect of the transport has been the accumulation of ﬁrebrands near obstacles",
+      "2": "These works conﬁrmed that ﬁrebrand showers and the accumulation of ﬁrebrands in deck crevices, fence corners, vertical walls and garden mulch, enhances the ability of the ﬁrebrands to ignite structures.",
+      "3": "The model provides the foundation for a more complete study of the problem where the effects of different factors are quantiﬁed."
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "CFD_modeling",
+    "question_id": "batch_detail_q_38408aca",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Role-of-firebrand-combustion-in-large-out_2020_Progress-in-Energy-and-Combus",
+      "paper_title": "Role-of-firebrand-combustion-in-large-out_2020_Progress-in-Energy-and-Combus"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T18:36:42.937671",
+      "batch_processing": true,
+      "answer_length": 549
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题需要流体力学、燃烧科学和计算流体动力学(CFD)的专业知识来分析火羽颗粒沉积机理，涉及流动分离、涡旋形成和颗粒惯性效应等专业概念",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported"
+      ],
+      "other_compliant": false,
+      "other_issues": [
+        "has_meta_info",
+        "too_general"
+      ],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在事实错误和缺乏引用支持的问题，建议：1）修正流动分离和背风面沉积的机制描述；2）提供更多论文中关于具体沉积位置的引用；3）删除'根据论文'等元信息；4）补充更具体的流体力学分析"
+    }
+  },
+  {
+    "question_text": "基于论文中关于火羽颗粒燃烧速率的经验模型（如公式17的直径四次方律），推导火羽颗粒在飞行过程中的质量损失方程，并分析其对终端速度和轨迹稳定性的影响。假设火羽颗粒为球体，燃烧速率常数θ由实验数据拟合。要求结合传热学分析，讨论碳层增长如何影响燃烧速率，以及这种影响在CFD模拟中如何通过耦合固体热解模型处理。",
+    "standard_answer": "火羽颗粒燃烧速率经验模型基于Tarifa等人的数据，如公式17：d(D_p^4)/dt = -2 (3θ²/4) / √t。这可以积分得到直径随时间变化：D_p(t) = [D_p0^4 - (3θ²/2) t^(1/2)。假设球体形状，质量m_p ∝ ρ_F D_p^3。则质量损失率：dm_p/dt ∝ d(D_p^3)/dt = 3 D_p^2 dD_p/dt。从公式17代入dD_p/dt = -2 (3θ²/4) / (D_p^3 √t），其中θ为燃烧常数。碳层增长影响：当火羽颗粒表面形成碳层时，碳层作为热障，减少热量向内部的传递，从而降低热解气体释放，限制气焰形成。这导致燃烧模式可能从火焰燃烧转变为辉光燃烧。在CFD模拟中，需使用耦合模型如G-Pyro处理热解和碳化。碳层增长模型可基于能量平衡：碳层厚度δ_char的增长速率dδ_char/dt ∝ k_char / (ρ_char c_char) * (T_surface - T_internal)。碳层增长导致有效直径减小速率降低，因为碳层保护内部材料。这会影响终端速度v_term ∝ √(D_p g) 的预测：当δ_char增加时，有效燃烧直径D_eff = D_p0 - 2 δ_char。因此，在轨迹计算中，燃烧速率不是常数，而是随时间变化。例如，如果初始碳层厚度为0，则初始燃烧速率高；随时间推移，碳层增长，燃烧速率下降。轨迹稳定性：如果燃烧速率变化剧烈，颗粒的加速度会波动，可能导致轨迹偏离预测。因此，在高级CFD模型中，需集成瞬态燃烧子模型，以提高火势蔓延预测的可靠性。",
+    "original_text": {
+      "1": "An approach is to use experimental data to develop empirical correlations of the variation with time of the ﬁrebrand diameter and mass",
+      "2": "d(D_p^4)/dt = -2 (3θ²/4) / √t",
+      "3": "Modeling of these burning processes is diﬃcult and complicates the accurate prediction of the ﬁrebrand trajectory.",
+      "4": "The time dependent variation of the ﬁrebrand mass and diameter affects the gravity and drag forces and through them the trajectory."
+    },
+    "type": "calculation",
+    "difficulty": 5,
+    "topic": "combustion_kinetics",
+    "question_id": "batch_detail_q_6e9fb8df",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Role-of-firebrand-combustion-in-large-out_2020_Progress-in-Energy-and-Combus",
+      "paper_title": "Role-of-firebrand-combustion-in-large-out_2020_Progress-in-Energy-and-Combus"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T18:36:57.229070",
+      "batch_processing": true,
+      "answer_length": 679
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题需要燃烧学、传热学、流体力学和CFD模拟领域的专业知识，涉及火羽颗粒燃烧速率模型、质量损失方程推导、碳层增长影响分析和终端速度计算。",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "fundamental_error",
+        "unsupported"
+      ],
+      "other_compliant": false,
+      "other_issues": [
+        "has_meta_info",
+        "too_general"
+      ],
+      "overall_verdict": "fail",
+      "recommendation": "重新推导质量损失方程，修正碳层增长影响分析，确保所有关键声明都有原文支持，避免元信息和过于宽泛的描述。"
+    }
+  }
+]

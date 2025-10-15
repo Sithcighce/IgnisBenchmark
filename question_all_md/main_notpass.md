@@ -1,0 +1,65 @@
+# main - Not Passed Questions
+
+**生成时间**: 2025-10-15 15:46:06  
+**未通过问题数**: 1
+
+---
+
+## Question 1
+
+### 问题
+
+基于论文中关于多模式发动机燃烧模式转换的讨论，请详细分析从HCCI向SI模式转换过程中热力学状态参数的演化路径，推导基于质量守恒和气体状态方程的残余气体分数控制方程，建立包含临界温度和压力条件的自燃边界判据，并解释如何通过阀定时策略和喷射策略的协调控制实现平稳转换。
+
+### 标准答案
+
+在HCCI向SI模式转换过程中，热力学状态参数经历复杂的演化路径。关键参数包括残余气体分数（χ）、混合气温度（T_mix）、压力（P_mix）和反应性分布。
+
+残余气体分数控制方程基于质量守恒和气体状态方程推导：考虑实际发动机循环过程，残余气体分数定义为χ = m_res/(m_fresh + m_res)，其中m_res为残余气体质量，m_fresh为新鲜充量质量。基于理想气体状态方程，在进气门关闭时刻（IVC）有：m_total = (P_IVC·V_IVC)/(R·T_IVC)，其中P_IVC、V_IVC、T_IVC分别为IVC时刻的压力、容积和温度。残余气体质量m_res = (P_EVC·V_EVC)/(R·T_EVC)，其中P_EVC、V_EVC、T_EVC分别为排气门关闭时刻的压力、容积和温度。因此，χ = [(P_EVC·V_EVC)/(R·T_EVC)] / [(P_IVC·V_IVC)/(R·T_IVC) + (P_EVC·V_EVC)/(R·T_EVC)]，需考虑循环间耦合效应。
+
+自燃边界由临界温度和压力条件共同决定，基于化学动力学原理：T_critical = A·P_mix^α·exp(β/φ)·(1-γχ)，其中A、α、β、γ为燃料特性参数，φ为当量比。自燃发生的临界条件为T_mix ≥ T_critical且P_mix ≥ P_critical，其中P_critical由燃料的化学动力学特性决定。
+
+在转换过程中，通过协调阀定时和喷射策略实现平稳过渡：
+
+1. 阀定时策略：从高残余气体分数工况向低残余气体分数工况过渡。通过调节气门重叠角，控制残余气体分数从HCCI阶段逐步降低至SI阶段。具体实施时，排气门关闭时刻和进气门开启时刻的相位调节需确保混合气温度在自燃边界以下，避免燃烧模式重叠。
+
+2. 喷射策略：从均质混合向分层混合过渡。在HCCI阶段采用单次早喷形成均质混合气；转换期间引入多次喷射策略，通过喷射时序和喷射量的精确控制，形成适当的燃料浓度分层；最终在SI阶段采用晚喷策略在火花塞附近形成易燃混合气。
+
+3. 转换时间控制：基于循环动力学特性，通过EGR率和增压压力的协调控制，确保在多个循环内完成转换，通过实时监测压力振荡特征，避免燃烧模式重叠导致的压力振荡，具体措施包括快速降低残余气体分数和精确控制喷射时序。
+
+### 元数据
+
+- **类型**: reasoning
+- **难度**: 4
+- **主题**: combustion_kinetics
+- **答案长度**: 991 字符
+
+### 原文引用
+
+**引用 1**:
+> Combustion mode transition from low temperature combustion (LTC) to diesel [227] or SI [225,226] are examples of existing challenging mode transitions.
+
+**引用 2**:
+> It is difficulty to predict engine cycle-by-cycle behaviour (e.g., residual gas fraction and reactivity distributions) through these mode transitions. Some examples include combustion mode transition from low temperature combustion (LTC) to diesel [227] or SI [225,226] as illustrated in Fig. 7.
+
+### 质量检查
+
+- **领域聚焦**: ✅ 通过
+- **答案正确性**: ❌ 未通过
+- **其他合规性**: ✅ 通过
+- **总体评价**: fail
+
+**领域聚焦分析**: 问题涉及多模式发动机燃烧模式转换、热力学状态参数演化、残余气体分数控制方程推导、自燃边界判据建立以及阀定时和喷射策略协调控制，这些都需要燃烧学、热力学、流体力学和发动机控制领域的专业知识。
+
+**答案问题**: unsupported, fundamental_error
+
+**改进建议**: 答案存在以下问题需要改进：1）残余气体分数控制方程推导中，未考虑实际发动机循环过程中的气体交换和混合过程，公式简化过度；2）自燃边界判据中的临界温度和压力条件缺乏具体燃料特性和实验数据支持，参数A、α、β、γ未明确来源；3）阀定时和喷射策略的协调控制描述过于笼统，未结合具体发动机工况和转换动态过程；4）答案未充分引用论文中关于燃烧模式转换挑战的讨论，如循环间行为预测困难等。建议基于论文内容补充具体数据、实验验证和实际应用案例。
+
+### 来源
+
+- **论文**: main
+- **生成类型**: deepseek_generation
+- **合并来源**: question_reverse
+
+---
+

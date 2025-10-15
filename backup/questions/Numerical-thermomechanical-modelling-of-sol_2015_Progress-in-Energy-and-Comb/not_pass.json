@@ -1,0 +1,193 @@
+[
+  {
+    "question_text": "固体氧化物燃料电池在运行过程中，由于多层材料的热膨胀系数不匹配，会引发显著的残余应力。请基于热弹性理论，推导出包含热应变和机械应变的总应变张量表达式，并详细解释热膨胀系数差异如何导致界面区域的应力集中。",
+    "standard_answer": "根据论文中的热弹性理论，固体氧化物燃料电池的总应变张量可以表示为：{ε_tot} = {ε_m} + {ε_th}。其中热应变向量定义为：{ε_th} = {α α α 0 0 0}ΔT，其中α为热膨胀系数，ΔT为当前温度与参考温度的差值。机械应变分量与应力通过广义胡克定律相关，考虑到不同材料热膨胀系数的差异。例如，电解质（YSZ）的CTE约为10.5×10⁻⁶ K⁻¹，而金属互连板（如Crofer 22APU）的CTE约为12×10⁻⁶ K⁻¹。当组件从制造温度冷却时，由于CTE不匹配，界面处会产生剪切应力和法向应力。具体推导中，若两个相邻材料层在加热时自由膨胀长度分别为L₁和L₂，冷却后收缩量分别为α₁ΔT和α₂ΔT。由于层间粘接，实际收缩受限于层间约束，从而在界面处形成应力集中。引用原文中指出：'The coefficient of thermal expansion differences between assembled fuel cell materials are of paramount importance.' 以及 'The residual stresses reach their maxima by cooling down the assembly to room temperature.' 这些引用强调了CTE匹配对残余应力控制的关键作用。",
+    "original_text": {
+      "1": "The coefficient of thermal expansion differences between assembled fuel cell materials are of paramount importance.",
+      "2": "The residual stresses reach their maxima by cooling down the assembly to room temperature."
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "heat_transfer",
+    "question_id": "batch_detail_q_bc43d687",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Numerical-thermomechanical-modelling-of-sol_2015_Progress-in-Energy-and-Comb",
+      "paper_title": "Numerical-thermomechanical-modelling-of-sol_2015_Progress-in-Energy-and-Comb"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T14:42:20.449476",
+      "batch_processing": true,
+      "answer_length": 594
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及固体氧化物燃料电池的多层材料热膨胀系数匹配、热弹性理论推导和界面应力集中分析，需要燃烧/传热/流体/CFD/能源领域的专业知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "unsupported",
+        "too_brief"
+      ],
+      "other_compliant": false,
+      "other_issues": [
+        "has_meta_info",
+        "too_general"
+      ],
+      "overall_verdict": "fail",
+      "recommendation": "答案应提供完整的张量表达式推导过程，避免使用元信息，增加具体的热弹性理论分析，减少通用描述"
+    }
+  },
+  {
+    "question_text": "在SOFC的启动和关闭阶段，瞬态温度分布会导致热梯度，进而诱发热机械应力。请使用热传导方程和热弹性本构关系，分析在加热阶段，热导率低的材料如何促进热梯度的形成，并定量评估其对热应变的影响。",
+    "standard_answer": "根据论文中热导率与热扩散率的定义，热扩散率a = k/(ρC_p)，其中k为热导率，ρ为密度，C_p为比热容。对于阳极材料（如Ni-YSZ），热导率约为5.84 W/mK，而金属互连板的热导率可高达22.1 W/mK。在瞬态加热过程中，热导率低的材料（如电解质）会阻碍热量快速传递，导致局部温度差异增大。例如，在稳态下，即使热流稳定，低k值也会在材料壁内产生高温度梯度。例如，考虑一个简单的1D热传导模型：∂T/∂t = a ∂²T/∂x²。假设边界条件为恒定热流，则热梯度∇T ≈ q/k，其中q为热流密度。若热导率从10 W/mK降至2 W/mK，热梯度增加5倍。根据热弹性应力公式，热应变ε_th = α∇T Δx，其中Δx为特征长度。引用原文中强调：'Lower thermal conductivities avoid reaching steady state temperature distributions fast, which after sometime result in large thermal gradients.' 以及 'These gradients are a measure between the cold and warm ends of the material.' 这表明热导率直接影响热应变，进而影响组件的机械可靠性。",
+    "original_text": {
+      "1": "Lower thermal conductivities avoid reaching steady state temperature distributions fast, which after sometime result in large thermal gradients.",
+      "2": "These gradients are a measure between the cold and warm ends of the material; as for instance, it is the case of the operation and shut-down stages of a fuel cell system."
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "heat_transfer",
+    "question_id": "batch_detail_q_920f4fda",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Numerical-thermomechanical-modelling-of-sol_2015_Progress-in-Energy-and-Comb",
+      "paper_title": "Numerical-thermomechanical-modelling-of-sol_2015_Progress-in-Energy-and-Comb"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T14:42:38.411522",
+      "batch_processing": true,
+      "answer_length": 586
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及固体氧化物燃料电池(SOFC)中的瞬态热传导、热梯度、热机械应力分析，需要燃烧/传热/流体/CFD/能源领域的专业知识，包括热传导方程、热弹性本构关系、材料热物性参数等专业概念。",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "fundamental_error",
+        "unsupported"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在严重技术错误：1)热扩散率公式中的密度和比热容参数缺失；2)稳态热梯度公式推导错误，实际应为∇T ≈ q/k * x；3)热应变公式错误，应为ε_th = αΔT而非ε_th = α∇T Δx。建议重新学习热传导和热弹性力学基础知识，并基于正确的物理原理重新构建分析。"
+    }
+  },
+  {
+    "question_text": "SOFC的长期运行中，金属组件的蠕变行为会显著影响密封剂的应力状态。请基于率相关非线性本构模型，推导蠕变应变对总应变的贡献，并解释蠕变如何导致应力松弛和密封剂失效。",
+    "standard_answer": "在率相关非线性模型中，总应变张量可以扩展为：{ε_tot} = {ε_el} + {ε_pl} + {ε_th} + {ε_cr}，其中{ε_cr}为蠕变应变向量。根据论文，蠕变应变在恒定载荷下随时间发展，分为初级、次级和三级蠕变阶段。例如，对于互连板材料（如Crofer 22APU），蠕变应变率可以表示为ε̇_cr = A σ^n exp(-Q/RT)，其中A为材料常数，n为应力指数，Q为激活能，R为气体常数，T为绝对温度。蠕变导致金属部件发生永久变形，从而在密封剂中引发拉伸应力。引用原文中描述：'The creep strain leads to an extent of stress relief after long-term operation.' 以及 'This behaviour affects the joined brittle sealants as the high deformation tendency of the steel components, which are stiffer and pull the sealant and subject them to tensile stresses.' 这种应力重分布可能破坏密封的完整性，导致气体泄漏。",
+    "original_text": {
+      "1": "The creep strain leads to an extent of stress relief after long-term operation.",
+      "2": "This behaviour affects the joined brittle sealants as the high deformation tendency of the steel components, which are stiffer and pull the sealant and subject them to tensile stresses."
+    },
+    "type": "concept",
+    "difficulty": 5,
+    "topic": "CFD_modeling",
+    "question_id": "batch_detail_q_86ad4692",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Numerical-thermomechanical-modelling-of-sol_2015_Progress-in-Energy-and-Comb",
+      "paper_title": "Numerical-thermomechanical-modelling-of-sol_2015_Progress-in-Energy-and-Comb"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T14:42:54.231996",
+      "batch_processing": true,
+      "answer_length": 550
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及固体氧化物燃料电池(SOFC)的金属组件蠕变行为、率相关非线性本构模型、应力松弛机制和密封剂失效分析，需要燃烧/传热/流体/CFD/能源领域的专业知识，特别是材料力学和蠕变行为建模的专业知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "fundamental_error",
+        "unsupported"
+      ],
+      "other_compliant": false,
+      "other_issues": [
+        "has_meta_info",
+        "too_general"
+      ],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在基本原理错误：蠕变导致应力松弛而非产生拉伸应力；应修正为蠕变使金属组件变形，释放密封剂中的初始压缩应力，导致密封失效。同时需去除'根据论文'等元信息，提供更具体的机理解释"
+    }
+  },
+  {
+    "question_text": "几何简化对SOFC热机械行为的影响是一个关键建模问题。请分析在FEM模型中，忽略圆角半径如何增加应力集中因子，并讨论其对组件疲劳寿命的影响。",
+    "standard_answer": "根据论文中的案例研究，几何简化（如忽略圆角半径）会显著提高热机械应力。例如，考虑一个歧管截面，Case1无圆角半径显示出最高热梯度和应力值，而Case3使用较大圆角半径显示出较低的应力分布。应力集中因子K_t可以定义为局部最大应力与名义应力之比：K_t = σ_max/σ_nom。在应力集中区域，疲劳寿命N_f可以通过Coffin-Manson关系估算：Δε_pl/2 = ε_f'(2N_f)^c，其中ε_f'为疲劳延性系数，c为疲劳延性指数。引用原文中说明：'Case1 with no fillet radius claimed to have the highest thermal gradients and stress results compared to Case2, whereas Case3 showed the lowest thermal gradients and also the lowest stress values.' 以及 'The study clearly gives an idea of the possible effects on the thermomechanical fuel cell behaviour when local geometrical regions are arbitrary simplied.' 这表明不恰当的简化可能导致对实际应力状态的严重低估，从而影响设计的可靠性。",
+    "original_text": {
+      "1": "Case1 with no fillet radius claimed to have the highest thermal gradients and stress results compared to Case2, whereas Case3 showed the lowest thermal gradients and also the lowest stress values.",
+      "2": "The study clearly gives an idea of the possible effects on the thermomechanical fuel cell behaviour when local geometrical regions are arbitrary simplied."
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "fluid_mechanics",
+    "question_id": "batch_detail_q_ffbbf07e",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Numerical-thermomechanical-modelling-of-sol_2015_Progress-in-Energy-and-Comb",
+      "paper_title": "Numerical-thermomechanical-modelling-of-sol_2015_Progress-in-Energy-and-Comb"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T14:43:06.896557",
+      "batch_processing": true,
+      "answer_length": 628
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及固体氧化物燃料电池(SOFC)的热机械行为、有限元建模、应力集中因子和疲劳寿命分析，需要燃烧/传热/流体/CFD/能源领域的专业知识，特别是热力学、材料力学和有限元分析方面的知识。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": false,
+      "other_issues": [
+        "has_meta_info"
+      ],
+      "overall_verdict": "fail",
+      "recommendation": "答案包含元信息'根据论文中的案例研究'，建议删除此类表述，直接陈述事实和引用内容。同时确保所有声明都有对应的原文引用支持。"
+    }
+  },
+  {
+    "question_text": "在SOFC的热机械建模中，材料非线性（如弹塑性行为）和几何非线性的耦合可能导致数值收敛问题。请提出至少两种策略来稳定FEM求解器在处理大变形和接触问题时的迭代过程。",
+    "standard_answer": "在非线性FEM求解中，收敛和稳定性问题常见于大变形和接触模拟。策略一：采用子步加载和阻尼因子，例如使用人工速度来减少自由度位移：u_damped = β u_calc，其中β为阻尼系数（通常为0.1-0.5），以抑制刚性体运动。策略二：应用元素形状检查选项和网格自适应，以处理高度扭曲的元素。引用原文中建议：'Some sections of the mesh can become highly distorted elements. This can cause the non-linear solution to stop, which may be corrected with element shape checking options or using load and time subsets and a damping factor.' 以及 'Convergence difficulties during the mechanical analyses are usually due to non-linearity.' 这些方法有助于在复杂的多物理场模拟中保持计算的鲁棒性。",
+    "original_text": {
+      "1": "Some sections of the mesh can become highly distorted elements. This can cause the non-linear solution to stop.",
+      "2": "Convergence difficulties during the mechanical analyses are usually due to non-linearity."
+    },
+    "type": "reasoning",
+    "difficulty": 3,
+    "topic": "CFD_modeling",
+    "question_id": "batch_detail_q_efb74b05",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Numerical-thermomechanical-modelling-of-sol_2015_Progress-in-Energy-and-Comb",
+      "paper_title": "Numerical-thermomechanical-modelling-of-sol_2015_Progress-in-Energy-and-Comb"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T14:43:18.636081",
+      "batch_processing": true,
+      "answer_length": 502
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及SOFC热机械建模中的非线性有限元分析，需要燃烧/传热/流体/CFD/能源领域的专业知识，特别是有限元方法在处理材料非线性和几何非线性方面的专门知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在事实性错误，建议修正阻尼因子应用方式，并补充更准确的数值稳定策略，如弧长法或自动时间步长控制"
+    }
+  }
+]

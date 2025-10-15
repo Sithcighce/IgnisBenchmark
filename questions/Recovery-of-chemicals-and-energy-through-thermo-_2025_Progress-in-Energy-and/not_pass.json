@@ -1,0 +1,209 @@
+[
+  {
+    "question_text": "在塑料废物的催化热解过程中，操作参数（温度、加热速率、停留时间等）如何影响目标产物（单体、轻质烯烃、BTEX）的产率和选择性？请结合聚合物的物理化学性质和化学反应机理，详细分析温度梯度对聚烯烃裂解路径和产物分布的影响，并推导说明为什么在高温下（>800°C）有利于生成轻质烯烃，而中等温度（500-650°C）更有利于BTEX的形成。",
+    "standard_answer": "操作参数对塑料废物热解产物分布具有决定性影响。温度通过控制键解离能直接影响裂解机理：在高温（>800°C）下，热能超过C-C键键能（约348 kJ mol⁻¹），促进自由基链式反应，导致随机键断裂，生成小分子烃类（C2-C4轻质烯烃）。然而，这些轻质烯烃的pi键使其易于通过Diels-Alder反应重新组合，形成芳香化合物。具体推导如下：\n\n1. 温度影响机理：\n   - 低温（<500°C）：主要发生端链断裂，生成特定单体（如PS裂解为苯乙烯）。\n   - 中温（500-650°C）：轻质烯烃重组为芳香化合物（如BTEX）的关键步骤是苯及其衍生物的形成。\n   - 高温（>800°C）：自由基浓度增加，促进环化和芳构化反应。\n   - 公式推导：根据阿伦尼乌斯方程，反应速率常数k = A exp(-Ea/RT)。当T增加时，k呈指数增长，加速二次反应。\n   - 临界温度：聚烯烃的完全热解发生在≤500°C，但>650°C时轻质烯烃产量下降，因为：\n     ΔG = -RT ln K，其中K为平衡常数。\n\n2. 加热速率与停留时间：\n   - 快速热解（≥1000°C s⁻¹）通过快速达到高温而抑制二次反应，有利于轻质烯烃生成。\n   - 停留时间影响：短停留时间（≤2 s）抑制重组，而长停留时间促进芳构化。\n   - 公式：τ = V/Q（τ为停留时间，V为反应器体积，Q为流速。\n\n3. 反应介质：例如CO2作为反应介质时，可通过与热解挥发分的气相反应（如逆水煤气变换反应：H2+CO2 → CO+H2O）促进产物分布向轻质组分偏移。\n\n4. 催化剂作用：沸石催化剂（如ZSM-5）通过其强酸性和形状选择性促进C-C键断裂和异构化/芳构化。例如，ZSM-5的强酸位促进轻质烃类生成，但同时酸性位也催化轻质烯烃重组为BTEX。\n\n总结：通过精确控制操作参数，可以优化热解路径，实现目标产物的高选择性。",
+    "original_text": {
+      "1": "Temperature is a critical parameter in the pyrolysis of plastics, significantly influencing the product distribution and composition.",
+      "2": "At higher temperatures (typically above 800°C) the pyrolysis tends to favor the production of smaller molecular weight HCs such as C2–C4 light olefins through free radical mechanisms.",
+      "3": "Nevertheless, the presence of these light olefins in the pyrolytic products creates conditions conducive to recombination. This recombination can lead to the formation of aromatic compounds, often through reactions like the Diels-Alder reaction and subsequent dehydrogenation.",
+      "4": "The generation of aromatic compounds increases the likelihood of producing PAHs, which are a group of organic compounds with multiple fused aromatic rings."
+    },
+    "type": "reasoning",
+    "difficulty": 5,
+    "topic": "combustion_kinetics",
+    "question_id": "batch_detail_q_99a12947",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Recovery-of-chemicals-and-energy-through-thermo-_2025_Progress-in-Energy-and",
+      "paper_title": "Recovery-of-chemicals-and-energy-through-thermo-_2025_Progress-in-Energy-and"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T17:52:58.806002",
+      "batch_processing": true,
+      "answer_length": 812
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及塑料废物的催化热解过程，需要燃烧科学、化学反应工程、热力学和传热传质等专业知识来分析温度、加热速率、停留时间等参数对产物分布的影响机制",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在事实性错误和未引用支持的关键声明。需要修正：1）C-C键能数据错误；2）温度区间的具体机理描述与原文不符；3）轻质烯烃产量下降的解释需要更准确的机理说明；4）关键声明应提供原文引用支持"
+    }
+  },
+  {
+    "question_text": "在塑料废物的热化学转化过程中，催化剂如何通过调控酸性和孔结构特性来窄化产物分布，特别是提高BTEX的选择性？请分析酸强度（布朗斯台德酸与路易斯酸比例）和孔径大小对裂解产物碳数分布的影响机理，并推导为什么ZSM-5有利于轻质烯烃生成，而USY沸石更有利于汽油范围（C5–C11）烃类的生成。",
+    "standard_answer": "催化剂在塑料废物热解过程中通过酸性和纹理性质显著影响产物分布。具体分析如下：\n\n1. 酸性位作用机理：\n   - 布朗斯台德酸位：通过提供质子给烃类形成碳正离子，引发β-断裂，促进轻质烯烃生成。\n   - 酸性强度顺序：ZSM-5 > Beta > Y。\n   - 碳数分布缩短：随着酸强度增加，产物分布向轻质组分偏移。\n   - 路易斯酸位：通过抽取氢负离子形成碳正离子，催化离子链式裂解。\n   - 公式：酸密度ρ = n_acid sites / m_catalyst。\n\n2. 孔径影响：\n   - ZSM-5：微孔（≤10 Å），形状选择性限制大分子挥发物进入内部活性位。\n   - 推导：根据过渡态理论，反应速率与酸强度呈正相关。\n   - 对比：USY沸石具有较大孔径，有利于汽油范围烃类（C5–C11）的生成。\n   - 实验数据：ZSM-5催化LDPE热解时，C2–C4轻质烯烃产率可达76.0 wt%。\n\n3. 双功能催化剂：过渡金属（如Ni、Ru）浸渍在沸石上，通过金属位点的C-H键活化能力，同时沸石酸性位促进C-C键断裂。\n\n4. 产物选择性调控：\n   - 高酸强度促进裂解生成轻质产物。\n   - 反应路径示意图可展示金属位点和酸性位的协同作用。\n\n结论：通过合理设计催化剂酸性和孔结构，可以实现对热解产物分布的精确控制。",
+    "original_text": {
+      "1": "Catalysts are extensively adopted in the thermo-chemical platform thanks to its inherent acidity and texture properties.",
+      "2": "The strongest acidity of ZSM-5 expedites the thermal cracking of polymeric backbone into the gaseous products, while the larger pore size of HUSY promotes catalytic reaction of pyrolytic volatiles.",
+      "3": "The use of catalysts in the pyrolysis system expedites the conversion of plastic waste into syngas.",
+      "4": "The use of ZSM-5 results in ethylene (18.5 wt%), propene (22.3 wt%), and butene (28.5 wt%) production.",
+      "5": "In contrast, HUSY has a relatively larger pore size than HZSM-5. This allows easier accessibility of heavier HCs into the internal acid sites."
+    },
+    "type": "reasoning",
+    "difficulty": 5,
+    "topic": "catalysis",
+    "question_id": "batch_detail_q_2bf531f6",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Recovery-of-chemicals-and-energy-through-thermo-_2025_Progress-in-Energy-and",
+      "paper_title": "Recovery-of-chemicals-and-energy-through-thermo-_2025_Progress-in-Energy-and"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T17:53:12.348213",
+      "batch_processing": true,
+      "answer_length": 576
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及塑料废物热化学转化过程中的催化剂设计、酸性位点机理、孔结构影响和产物选择性调控，需要燃烧科学、催化化学和反应工程领域的专业知识。",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported"
+      ],
+      "other_compliant": false,
+      "other_issues": [
+        "has_meta_info",
+        "too_general"
+      ],
+      "overall_verdict": "fail",
+      "recommendation": "建议：1）修正BTEX相关机理的错误描述；2）补充酸强度（B/L比）和孔径对碳数分布的具体影响机理；3）删除'反应路径示意图可展示'等元信息；4）增加更多来自引用的具体数据支持"
+    }
+  },
+  {
+    "question_text": "从流体力学和传热角度，分析在塑料废物热解反应器中热量和质量传递如何影响产物分布？请推导反应器设计（如流化床与锥形喷动床）对热解产物分布的影响机理，特别是如何通过优化反应器几何形状和操作条件来增强对目标产物（如单体回收）的选择性。",
+    "standard_answer": "反应器设计对塑料废物热解过程中的热量和质量传递有重要影响，进而决定产物分布。具体分析如下：\n\n1. 热量传递影响：\n   - 温度梯度：从反应器壁到中心的温度梯度会导致挥发物热量传递延迟，促进二次反应。\n   - 公式：根据傅里叶定律，热通量q = -k ∇T，其中k为热导率。\n   - 在流化床反应器中，流体化试剂和塑料进料的良好混合有助于改善热量传递。\n   - 推导：根据努塞尔数Nu = h L/k，其中h为对流传热系数，L为特征长度。\n   - 锥形喷动床反应器：通过修改反应器形状为锥形，改善流体化试剂的运动，从而增强热量/质量传递。\n\n2. 质量传递影响：\n   - 扩散限制：微孔沸石（如ZSM-5）的扩散阻力会限制大分子挥发物进入内部活性位。\n   - 停留时间控制：短停留时间抑制二次反应。\n   - 公式：根据菲克定律，扩散通量J = -D ∇C，其中D为扩散系数。\n   - 催化剂配置：原位与外置安排影响产物分布。\n   - 实验验证：使用锥形喷动床反应器进行PMMA热解时，在400°C下获得了86.5 wt%的MMA产率。\n\n3. 反应器类型比较：\n   - 批次反应器：简单操作，但挥发物停留时间长，促进重组。\n\n4. 反应器性能优化：\n   - 根据达姆科勒数Da = τ_reaction / τ_residence。当Da > 1时，反应受动力学控制；当Da < 1时，受扩散控制。\n\n结论：通过合理设计反应器几何形状和操作参数，可以实现对热解产物分布的精细调控。",
+    "original_text": {
+      "1": "A pyrolysis reactor for plastic waste should be designed to improve heat transfer and guarantee a reliable temperature control.",
+      "2": "The fluidized bed reactor operates under the fluidization of catalysts and plastic feeds.",
+      "3": "Consequently, improved movement of the fluidizing reagents results in enhanced heat/mass transfer, enabling the fine-tuning of a quality of pyrolytic product.",
+      "4": "The volatile compounds evolved from plastics stay in the closed reactor system for a long period of time; hence, the reactor pressure can unexpectedly increase by the volatiles.",
+      "5": "The conical spouted bed reactor was developed by modifying the reactor shape into a cone."
+    },
+    "type": "reasoning",
+    "difficulty": 5,
+    "topic": "fluid_mechanics",
+    "question_id": "batch_detail_q_ec3ecf3a",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Recovery-of-chemicals-and-energy-through-thermo-_2025_Progress-in-Energy-and",
+      "paper_title": "Recovery-of-chemicals-and-energy-through-thermo-_2025_Progress-in-Energy-and"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T17:53:23.574844",
+      "batch_processing": true,
+      "answer_length": 652
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及流体力学、传热学、反应器设计等专业领域知识，需要燃烧/传热/流体/能源领域的专业知识来分析热解反应器中的热量和质量传递机理",
+      "answer_correct": false,
+      "answer_issues": [
+        "unsupported"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案需要更充分地引用原文来支持关键声明，特别是关于反应器设计对产物分布影响的具体机理和优化策略"
+    }
+  },
+  {
+    "question_text": "推导塑料废物热解过程中二次反应（如热裂解、异构化、芳构化和脱氢）如何影响产物分布，特别是从轻质烯烃到BTEX的转化路径。请结合化学反应动力学，分析Diels-Alder反应和后续脱氢步骤如何促进单环芳香烃的形成，并分析如何通过操作参数调控来抑制不希望的副反应。",
+    "standard_answer": "塑料热解过程中的二次反应对产物分布有显著影响。具体推导如下：\n\n1. 动力学分析：\n   - 轻质烯烃（C2–C4）作为前体，通过环化和脱氢形成芳香化合物。具体推导：\n\n1.1 Diels-Alder反应机理：\n   - 共轭双烯与亲双烯体）之间的环加成反应，生成环己烯衍生物，随后脱氢形成苯环结构。\n   - 反应方程：共轭双烯 + 亲双烯体 → 环己烯衍生物。\n   - 速率方程：r = k [diene][dienophile]。\n   - 公式：根据碰撞理论，k = P Z exp(-Ea/RT)。\n   - 推导：根据稳态近似，自由基浓度保持恒定。\n   - 关键步骤：苯及其衍生物的形成是PAHs生成的速率决定步骤。\n\n2. 热裂解路径：\n   - 公式：反应速率常数k与温度T的关系。\n\n3. 操作参数调控：\n   - 温度：高温促进脱氢反应。\n   - 公式推导：活化能Ea可通过阿伦尼乌斯图确定。\n   - 实验验证：催化热解PS时，苯乙烯产率随温度升高而增加，但选择性可能下降。\n   - 实例：PS热解在350°C时苯乙烯产率为61.7 wt%，而在600°C时油产率可达86.0 wt%。\n\n4. 催化剂作用：通过调控酸性和金属位点，可以促进特定反应路径。\n\n结论：通过优化操作参数和催化剂设计，可以实现对热解产物分布的精确控制。",
+    "original_text": {
+      "1": "The recombination of light olefins induced by dehydrogenation and subsequent cyclization leads to the production of aromatic compounds.",
+      "2": "Nevertheless, the presence of these light olefins in the pyrolytic products creates conditions conducive to recombination.",
+      "3": "The use of CO2 enables the enhanced production of syngas.",
+      "4": "The increase in the second pyrolysis temperature (900°C) led to additional thermal cracking of the wax-like HCs, resulting in C2–C4 light olefins (70 wt%) stemming from HDPE.",
+      "5": "The enhanced reaction kinetics for the catalytic process contribute to better selectivity for the target pyrogenic products.",
+      "6": "The use of CO2 and Ce-Ni/ZSM-5 led to the increased yield of syngas (68.2–80.3 vol%)."
+    },
+    "type": "reasoning",
+    "difficulty": 5,
+    "topic": "combustion_kinetics",
+    "question_id": "batch_detail_q_d129a4c0",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Recovery-of-chemicals-and-energy-through-thermo-_2025_Progress-in-Energy-and",
+      "paper_title": "Recovery-of-chemicals-and-energy-through-thermo-_2025_Progress-in-Energy-and"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T17:53:37.587328",
+      "batch_processing": true,
+      "answer_length": 579
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及塑料热解的化学反应动力学、二次反应机理、产物分布调控等，需要燃烧科学、化学反应工程、能源转化等领域的专业知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "unsupported",
+        "factual_error",
+        "fundamental_error"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在严重缺陷：1)关键声明缺乏原文支持，如芳构化机理、速率方程推导；2)事实错误，将苯乙烯产率与油产率混为一谈；3)基本原理错误，混淆了自由基反应与Diels-Alder反应机理。建议补充具体引用，修正错误表述"
+    }
+  },
+  {
+    "question_text": "分析在塑料废物热解过程中，如何通过CO2作为反应介质来调控产物分布，特别是促进CO生成和抑制积碳形成的机理。请从热力学和反应动力学角度推导CO2在热解温度区间（≤700°C）的功能性，特别是通过布杜阿尔反应（CO2 + C(s) → 2CO）的热力学基础，并分析CO2浓度对产物分布的影响。",
+    "standard_answer": "CO2作为反应介质在塑料废物热解过程中具有多重功能。具体分析如下：\n\n1. 热力学分析：\n   - 布杜阿尔反应：ΔG° = -RT ln K。在热解温度区间（≤700°C），CO2通过以下途径影响产物分布：\n   - 逆水煤气变换反应：H2 + CO2 → CO + H2O），其平衡常数K随温度变化。\n   - 公式：K = exp(-ΔG°/RT)。\n   - 推导：当T增加时，K值变化，促进CO生成。\n   - 公式推导：根据范特霍夫方程，d(ln K)/d(1/T) = -ΔH°/R。\n   - 临界温度：CO2参与反应需要≥700°C，但在热解温度区间仍可通过气相反应影响挥发产物。\n   - 实验数据：CO2辅助热解PE时，CO产率可达10.9 vol%。\n\n2. 反应动力学：\n   - CO2与热解挥发分的反应速率：r = k [CO2][HC]。\n\n3. 积碳抑制机理：\n   - CO2通过布杜阿尔反应消耗沉积在催化剂上的碳，生成CO。\n   - 实例：使用Ni-Co-Al催化剂和CO2在800°C下进行，积碳形成从5.5 wt%降至1.7 wt%。\n\n4. CO2浓度影响：\n   - 公式：CO产率 ∝ [CO2]在流动气体中）。\n   - 推导：根据质量作用定律，反应速率与反应物浓度相关。\n\n结论：CO2作为反应介质提供了一种绿色且可持续的方法来调控塑料废物热解产物分布。",
+    "original_text": {
+      "1": "The use of CO2 offers a strategic means to offset CO2 stemming from the combustion of fossil fuels.",
+      "2": "The Boudouard reaction catalyzed by Ni-Co-Al catalyst consumes carbon deposited on the catalyst by producing CO.",
+      "3": "CO2 allows the volatile pyrogenic products to be converted into lighter molecular HCs.",
+      "4": "The mechanistic role of CO2 in the pyrolysis temperature regime of ≤700°C).",
+      "5": "The use of CO2 as a reactive gas in the pyrolysis reaction led to the significant reduction of coke formation into less than 1.5 wt%.",
+      "6": "The use of CO2 and Ce-Ni/ZSM-5 led to the increased yield of syngas (100.7 mmol g⁻¹) was achieved.",
+      "7": "The increase in the base strength of CaO facilitates the formation of carbanions on the polymer chains.",
+      "8": "The use of CO2 and Ce-Ni/ZSM-5 led to a 4.63-fold increase compared with the N2 environment.",
+      "9": "The compositional modification of pyrogenic products induced by CO2 is well supported by the distribution of three-phase pyrogenic products (gas, oil, and char)."
+    },
+    "type": "reasoning",
+    "difficulty": 5,
+    "topic": "energy_systems",
+    "question_id": "batch_detail_q_b723ea61",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Recovery-of-chemicals-and-energy-through-thermo-_2025_Progress-in-Energy-and",
+      "paper_title": "Recovery-of-chemicals-and-energy-through-thermo-_2025_Progress-in-Energy-and"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T17:53:49.896222",
+      "batch_processing": true,
+      "answer_length": 604
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及热解过程的热力学和反应动力学分析、布杜阿尔反应机理、产物分布调控等，需要燃烧、能源、化学反应工程等领域的专业知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "fundamental_error",
+        "unsupported"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在基本原理错误，布杜阿尔反应在≤700°C时热力学不利，应基于逆水煤气变换等气相反应解释CO生成机理；需要补充更多原文引用支持论点"
+    }
+  }
+]

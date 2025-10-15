@@ -1,0 +1,134 @@
+[
+  {
+    "question_text": "Why is the divergence-free velocity extension critical in evaporation simulations with high density ratios, and how does it prevent unrealistic mass predictions?",
+    "standard_answer": "In evaporation simulations with high density ratios (e.g., liquid fuel to gas), the velocity field must satisfy the divergence-free condition (∇·u=0) to ensure mass conservation, as any divergence errors can lead to unphysical mass accumulation or loss. The extension velocity method constructs a velocity field F_ext that maintains |∇φ|=1 and ∇F_ext·∇φ=0, preserving the signed distance function without re-initialization. This is crucial because evaporation introduces phase change and Stefan flow at the interface, where velocity discontinuities occur. If the liquid-phase velocity extension does not enforce divergence-free conditions, it can cause spurious mass fluxes, especially near the interface where density gradients are steep. The method ensures that the velocity field smoothly transitions across the interface, respecting the incompressible flow assumption and preventing numerical artifacts that distort mass transfer rates. For instance, in high-density-ratio cases, improper extension can amplify errors in evaporation rate calculations, leading to unrealistic droplet size predictions or combustion inefficiencies.",
+    "original_text": {
+      "1": "Unrealistic mass predictions may easily take place in the high density ratio case if the velocity field extension of the liquid phase cannot respect the divergence-free condition in the whole domain.",
+      "2": "The extension velocity F_ext is a certain velocity field which, at the zero level set, equals the propagation speed of the interface F, as shown in Fig. 5 ."
+    },
+    "type": "reasoning",
+    "difficulty": 5,
+    "topic": "fluid_mechanics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question requires specialized knowledge in fluid mechanics, specifically CFD methods for multiphase flows with phase change. It involves understanding divergence-free velocity conditions, level set methods for interface tracking, evaporation physics, and mass conservation in high density ratio scenarios - all core concepts in combustion science and CFD.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer are well-aligned with the paper's content on level set methods for evaporation simulations. The answer correctly explains the critical role of divergence-free velocity extension in preventing mass conservation errors."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_d4e8fa76",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Level-set-method-for-atomization-and-evapo_2019_Progress-in-Energy-and-Combu",
+      "paper_title": "Level-set-method-for-atomization-and-evapo_2019_Progress-in-Energy-and-Combu"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:21:47.547436",
+      "answer_length": 1133
+    }
+  },
+  {
+    "question_text": "In the context of spray combustion simulations using the level set method, what numerical challenges arise from evaporation processes, and how does the Ghost Fluid Method (GFM) address these challenges according to the paper?",
+    "standard_answer": "The evaporation process in spray combustion introduces significant numerical challenges when using the level set method for interface capturing. Specifically, evaporation adds new jump conditions across the interface to the governing equations, which further increases the complexity of the system. These jump conditions must account for mass, momentum, and energy conservation across the phase interface, requiring careful numerical treatment. The Ghost Fluid Method (GFM) has been incorporated to address these challenges by providing a framework for imposing jump conditions sharply in the level set framework. Since the level set method implicitly defines convoluted interfaces, directly imposing jump conditions on the interface is difficult; instead, they must be applied to adjacent cells. GFM enables this by defining ghost values that allow accurate discretization of the discontinuities without numerical smearing, ensuring proper treatment of the additional complexity introduced by evaporation processes in spray combustion simulations.",
+    "original_text": {
+      "1": "The evaporation process adds new jump conditions across the interface to the governing equations and further increases the complexity of system.",
+      "2": "As a result, the ghost fluid method (GFM) [121] has been incorporated, and the following sections discuss the specific numerical issues and treatments."
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "CFD_modeling",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question specifically addresses spray combustion simulations using the level set method and evaporation processes, requiring expertise in CFD modeling, interface capturing methods, and combustion science. It focuses on numerical challenges and specialized methods like GFM, which are domain-specific to combustion/CFD applications.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question is well-focused on domain-specific CFD challenges, and answer accurately reflects the paper's content about evaporation-induced jump conditions and GFM treatment."
+    },
+    "retry_count": 1,
+    "question_id": "deepseek_q_00e700f8",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Level-set-method-for-atomization-and-evapo_2019_Progress-in-Energy-and-Combu",
+      "paper_title": "Level-set-method-for-atomization-and-evapo_2019_Progress-in-Energy-and-Combu"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:22:19.406085",
+      "answer_length": 1048
+    }
+  },
+  {
+    "question_text": "In the context of level set methods for atomization and evaporation simulations, how does the hyperbolic tangent level set method improve mass conservation compared to the basic signed distance function approach, and what is the primary trade-off regarding interface representation?",
+    "standard_answer": "The hyperbolic tangent level set method improves mass conservation by replacing the standard signed distance function with a hyperbolic tangent profile that maintains a constant interface thickness controlled by parameter ε. This formulation creates a bounded level set function between 0 and 1, which reduces numerical diffusion that typically causes mass loss in conventional level set methods. The method achieves second-order accuracy and provides satisfactory mass conservation in the region bounded by the interface. However, this improved mass conservation comes at the cost of reduced interface sharpness. The hyperbolic tangent formulation, while roughly conservative, diminishes the sharpness of the level set method compared to the basic signed distance function approach. This trade-off between mass conservation and interface sharpness represents a fundamental compromise in the method's application to atomization and evaporation simulations where accurate interface tracking is crucial for predicting droplet formation and evaporation dynamics.",
+    "original_text": {
+      "1": "Instead of the signed distance function, Olsson et al. [64,65] proposed to use the hyperbolic tangent function as the level set function. It is of second-order accuracy and satisfactory of mass conservation in the region bounded by the interface.",
+      "2": "Through this hyperbolic tangent level set method, the mass loss can be considerably reduced [66-69]. However, this method also reduces the sharpness of the level set method in spite of its roughly conservative property."
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "CFD_modeling",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires specialized knowledge in CFD modeling, specifically level set methods for interface tracking in atomization and evaporation simulations. It addresses numerical methods for mass conservation and interface representation in multiphase flows, which are core topics in computational fluid dynamics applied to combustion and energy systems.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "The question is well-focused on CFD domain expertise, and the answer accurately reflects the paper's content about hyperbolic tangent level set method improvements and trade-offs."
+    },
+    "retry_count": 1,
+    "question_id": "deepseek_q_dd8a74bb",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Level-set-method-for-atomization-and-evapo_2019_Progress-in-Energy-and-Combu",
+      "paper_title": "Level-set-method-for-atomization-and-evapo_2019_Progress-in-Energy-and-Combu"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:22:22.478951",
+      "answer_length": 1059
+    }
+  },
+  {
+    "question_text": "Calculate the theoretical maximum grid resolution for the RLSG method with a super-grid size of 128^3 and a local block size of 32^3, and explain its implications for DNS of atomization based on the provided paper content.",
+    "standard_answer": "The theoretical maximum grid resolution for the RLSG method is calculated by multiplying the super-grid cell count by the local block cell count: 128^3 * 32^3 = (128*32)^3 = 4096^3 = 68,719,476,736 cells, which is approximately 68.7 billion cells. This aligns with the paper's statement that 'this approach yields a theoretical maximum resolution of about 70 billion cells' when considering rounding or approximation. For DNS of atomization, such high resolution is crucial to resolve all relevant scales, including the Kolmogorov scale (η) and the smallest droplets. The paper specifies that 'for the Kolmogorov scale, the spatial resolution criterion k_max η ≥ 1.5 [15] should be satisfied, in which k_max is the maximum wavenumber.' Additionally, resolving the smallest droplet scale requires adequate grid points to capture interface dynamics accurately. The RLSG method achieves this by focusing computational resources on the interface region, as it 'effectively reduces the number of cells and allows for high resolution of the interface, as only small fraction of cells that are located in a small band around the interface are active and stored.' This enables detailed studies of primary and secondary atomization mechanisms, but the immense computational demand highlights the trade-off between accuracy and feasibility in practical applications, especially given the multi-scale nature of atomization processes.",
+    "original_text": {
+      "1": "For example, considering a super-grid of size 128^3 and a local block size of 32^3, this approach yields a theoretical maximum resolution of about 70 billion cells.",
+      "2": "For the Kolmogorov scale, the spatial resolution criterion k_max η ≥ 1.5 [15] should be satisfied, in which k_max is the maximum wavenumber."
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "CFD_modeling",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires specific knowledge of CFD modeling methods (RLSG method), grid resolution calculations for DNS, and understanding of atomization physics including Kolmogorov scale resolution requirements, which are all domain-specific to combustion science and fluid mechanics.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer are both high quality - domain-focused, factually correct, and compliant with all requirements."
+    },
+    "retry_count": 1,
+    "question_id": "deepseek_q_0c236edb",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Level-set-method-for-atomization-and-evapo_2019_Progress-in-Energy-and-Combu",
+      "paper_title": "Level-set-method-for-atomization-and-evapo_2019_Progress-in-Energy-and-Combu"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:22:24.197174",
+      "answer_length": 1422
+    }
+  }
+]

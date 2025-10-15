@@ -1,0 +1,36 @@
+[
+  {
+    "question_text": "基于论文中双功能催化剂的设计原则，推导SRO过程中金属位点（如Pt、Ir）和酸性载体（如HY、SIRAL）对产物选择性的影响，包括表面酸性和孔结构如何影响氢化与裂解的平衡，并给出优化催化剂参数的数学表达式。",
+    "standard_answer": "催化剂设计需平衡金属位点的氢化活性和酸性位点的裂解活性。表面酸性和孔结构显著影响反应路径，例如，高Si/Al比的HY沸石具有强酸性，促进β-断裂生成小分子（如C1-C4气体），而中等酸性（如SIRAL70）更利于SRO。总酸度（mmol g⁻¹）与SRO产物产率正相关，但需避免过度裂解。数学上，酸度H与裂解速率k_crack的关系可用Arrhenius方程描述：k_crack = A exp(-E_a / RT)，其中E_a为活化能，A为指前因子。优化参数包括金属负载量（wt%）、表面面积（m² g⁻¹）和孔径（Å）。优化目标为最大化BTX产率Y_BTX，约束条件为最小化气体产率Y_gas。优化问题可表述为：max Y_BTX = f(metal loading, acidity, pore size)，需通过实验数据拟合确定反应级数。",
+    "original_text": {
+      "1": "The loading plots representing PC2, PC3, and PC4 versus PC1 are presented in Fig. 5a–c, respectively, describing 66.4% of the variance.",
+      "2": "As per the loading plot in Fig. 6a, PC1 clearly distinguishes between the conversion of the feed (positive direction of the component) and selectivity towards ring-opening products (negative direction of the component)."
+    },
+    "type": "calculation",
+    "difficulty": 5,
+    "topic": "CFD_modeling",
+    "question_id": "batch_detail_q_597b48dc",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Selective-ring-opening-of-polycyclic-to-monocyclic-_2023_Progress-in-Energy-",
+      "paper_title": "Selective-ring-opening-of-polycyclic-to-monocyclic-_2023_Progress-in-Energy-"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T18:44:06.128524",
+      "batch_processing": true,
+      "answer_length": 373
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题需要燃烧/能源领域的专业知识，涉及双功能催化剂设计、SRO过程、金属位点和酸性载体的影响、氢化与裂解平衡、催化剂参数优化等催化工程专业知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量良好，可以补充更多关于PC1区分转化率和产物选择性的统计分析细节来增强论证"
+    }
+  }
+]

@@ -1,0 +1,43 @@
+[
+  {
+    "question_text": "流体化床反应器用于共热解时，操作参数对产物分布有显著影响。请基于质量平衡和反应动力学，推导在650°C、HDPE/松木屑=1:1时，气体产物中H2浓度从24.1 vol.%增加到37.3 vol.%。请详细计算H2产率的绝对增加量，并分析流化床中气固两相流动对热质传递的影响。必须包含Ergun方程修正和颗粒-流体相互作用力分析。",
+    "standard_answer": "在流体化床共热解中，HDPE作为氢源显著提升H2产率。计算：H2产率增加 = 37.3 - 24.1 = 13.2 g H2/100g feedstock。根据论文，HDPE与松木共热解在650°C时，实验H2产率可达25 g/100g，而理论值为24.1 g/100g。流化床中，气体流速（如4 L/min N2）影响床层压降和传热系数。Ergun方程：ΔP/L = 150 (1-ε)^2 / (ε^3 dp^2) μ Ug + 1.75 (1-ε) / (ε^3 dp) ρg Ug²，其中ε为床层空隙率，dp为颗粒直径。同时，颗粒-流体曳力系数Cd = 24/Rep (1+0.15 Rep^0.687）。同时，床层温度分布（525-675°C）影响炭的BET表面积（从3.07增至7.57 m²/g）。必须包含湍流模型和反应速率常数的温度依赖性：k = A exp(-Ea/RT）。具体地，Ea值约160.6-170.8 kJ/mol。此外，二次反应如蒸汽重整（CxHy + xH2O → xCO + (x+y/2)H2）。",
+    "original_text": {
+      "1": "A fluidized-bed reactor system is usually composed of a feeding section, reactor section, temperature control section, gas supply section, and gas analysis section。",
+      "type": "calculation",
+      "difficulty": 5,
+      "topic": "energy_systems"
+    },
+    "question_id": "batch_detail_q_2bf1551f",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Co-pyrolysis-of-waste-plastic-and-solid-biomass-for_2021_Progress-in-Energy-",
+      "paper_title": "Co-pyrolysis-of-waste-plastic-and-solid-biomass-for_2021_Progress-in-Energy-"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T08:27:21.667313",
+      "batch_processing": true,
+      "answer_length": 467
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及流体化床反应器中的质量平衡、反应动力学、Ergun方程、气固两相流动、热质传递等专业知识，需要燃烧、传热、流体力学和能源系统领域的专业知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "fundamental_error",
+        "unsupported"
+      ],
+      "other_compliant": false,
+      "other_issues": [
+        "has_meta_info",
+        "too_general"
+      ],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在严重问题：1)直接将浓度增加量错误计算为产率增加量 2)提供的实验数据与问题要求不符 3)Ergun方程和曳力系数分析过于笼统，缺乏针对性计算 4)温度分布和BET数据与问题无关 5)包含'根据论文'等元信息。建议重新推导质量平衡方程，计算实际H2产率增加量，并针对650°C、HDPE/松木屑=1:1的特定条件进行详细分析"
+    },
+    "merge_source": "questions"
+  }
+]

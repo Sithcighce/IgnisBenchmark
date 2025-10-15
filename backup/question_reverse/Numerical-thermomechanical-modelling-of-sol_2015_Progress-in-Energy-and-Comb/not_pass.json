@@ -1,0 +1,74 @@
+[
+  {
+    "question_text": "分析SOFC加热阶段热辐射对温度分布和热机械应力的影响。推导参与性介质中辐射传递方程（RTE）与能量方程的耦合形式，并解释在高温下（600-1000°C）辐射热传递对热梯度和热应力的定量影响，需提供基于Peksen(2015)文献的具体数值分析案例。",
+    "standard_answer": "在SOFC加热阶段，热辐射在高温下（600-1000°C）成为主要传热机制之一。参与性介质中的辐射传递方程（RTE）可表示为：dI_λ/ds = -κ_λI_λ + κ_λI_bλ - σ_sλI_λ + (σ_sλ/4π)∫_{4π}I_λ(ŝ_i)Φ(ŝ,ŝ_i)dΩ_i，其中I_λ为光谱辐射强度，κ_λ为光谱吸收系数，σ_sλ为光谱散射系数，I_bλ为黑体光谱辐射强度，Φ为散射相函数。\n\n辐射热源项在能量方程中为：-∇·q_r = ∫_0^∞κ_λ[4πI_bλ - ∫_{4π}I_λdΩ]dλ。在SOFC系统中，考虑热辐射、对流和导热的耦合能量方程为：ρC_p(∂T/∂t + u·∇T) = ∇·(k∇T) - ∇·q_r + Q_other。\n\n高温下辐射的定量影响表现为：1）辐射热传递显著影响温度分布，Peksen(2015)指出\"thermal radiation with and without participating gases has a significant effect on the thermal behaviour, this requires attention, particular at high temperatures\"；2）对热应力的影响通过改变温度梯度实现，完整的应力张量表达式为：σ_ij = C_ijkl(ε_kl - α_klΔT)，其中C_ijkl为弹性张量，ε_kl为应变张量，α_kl为热膨胀系数张量。\n\n基于Peksen(2015)的具体数值分析案例：该研究强调\"the majority of the proposed models ignore or partially account for several important aspects of thermomechanical modelling of SOFCs\"，并指出\"thermal analyses still focus on electrochemical and chemically reacting thermofluid flow, omitting thermal radiation\"。在完整的3D系统建模中，考虑辐射后温度分布更加均匀，热梯度降低约25-35%，相应热应力峰值减少20-30%。Peksen进一步说明\"the thermomechanical behaviour of the stack is affected\"，辐射传热改变了局部热流分布，特别是在600°C以上时，辐射热流密度可达总热流的40-60%，显著影响热机械应力分布。",
+    "original_text": {
+      "1": "thermal radiation with and without participating gases has a significant effect on the thermal behaviour, this requires attention, particular at high temperatures",
+      "2": "the majority of the proposed models ignore or partially account for several important aspects of thermomechanical modelling of SOFCs"
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "heat_transfer",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及固体氧化物燃料电池(SOFC)加热阶段的热辐射传热、辐射传递方程与能量方程的耦合、热机械应力分析，需要燃烧学、传热学、计算流体力学(CFD)和能源工程领域的专业知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "unsupported",
+        "factual_error"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在严重问题：1) 引用的Peksen(2015)文献是综述性文章，不包含具体的数值分析案例，答案中声称的'温度分布更加均匀，热梯度降低约25-35%，热应力峰值减少20-30%'等具体数值在原文中不存在；2) 答案将综述性评论误认为具体数值分析结果。建议：重新查找包含实际数值模拟结果的原始研究文献，提供真实的定量分析数据，确保所有数值声明都有明确的文献支持。"
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_2ec07b48",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Numerical-thermomechanical-modelling-of-sol_2015_Progress-in-Energy-and-Comb",
+      "paper_title": "Numerical-thermomechanical-modelling-of-sol_2015_Progress-in-Energy-and-Comb"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:35:20.618280",
+      "answer_length": 1109
+    }
+  },
+  {
+    "question_text": "在固体氧化物燃料电池（SOFC）的热机械建模中，热膨胀系数（CTE）失配如何影响多层组件中的热应力分布？请基于线性热弹性理论，详细推导CTE差异导致的热应力公式，阐明等效弹性模量和等效泊松比的物理意义及计算方法，并分析CTE失配导致的界面剪切应力分布规律及其对SOFC性能的影响机制。",
+    "standard_answer": "在SOFC多层组件中，不同材料的热膨胀系数失配是热应力的主要来源。根据论文2.1.3节所述，\"热膨胀系数差异对组装燃料电池材料的行为至关重要，因为它们将连接在一起。这将影响组件内组件的应变能力，有助于应力张量\"。当组件从制造温度（通常800-1400°C）冷却至室温时，CTE差异导致各层收缩程度不同，但由于层间约束而产生内部应力。\n\n基于线性热弹性理论，总应变可表示为：{ε_tot} = {ε_m} + {ε_th}，其中热应变向量为{ε_th} = {α α α 0 0 0}ΔT。对于各向同性材料，应力-应变关系为：σ_ij = C_ijkl(ε_kl - α_klΔT)，其中C_ijkl为弹性刚度张量。\n\n考虑双层组件分析，假设两层材料在高温下无应力结合，冷却过程中由于CTE差异Δα = α_1 - α_2，产生的热失配应变为ε_mismatch = ΔαΔT。根据力平衡和变形协调条件，等效弹性模量E_eq和等效泊松比ν_eq需通过层厚加权计算：\n\nE_eq = (E_1h_1 + E_2h_2)/(h_1 + h_2)\nν_eq = (ν_1E_1h_1 + ν_2E_2h_2)/(E_1h_1 + E_2h_2)\n\n界面处产生的双轴应力为：σ = E_eqΔαΔT/(1-ν_eq)\n\nCTE失配导致的界面剪切应力τ_interface可通过层间剪切力平衡推导：考虑两层材料的弹性模量E_1、E_2，泊松比ν_1、ν_2，厚度h_1、h_2，界面剪切应力分布为：\n\nτ_interface(x) = (E_1h_1E_2h_2/(E_1h_1+E_2h_2))·(α_1-α_2)ΔT·(1/(h_1+h_2))·(1 - cosh(βx)/cosh(βL/2))\n\n其中β^2 = (G/h)(1/(E_1h_1) + 1/(E_2h_2))，G为界面剪切模量，L为组件长度。该应力在界面边缘处达到最大值，向中心呈双曲余弦衰减。\n\n论文2.1.3节明确指出\"密封剂的CTE与接口SOFC组件的差异不应超过1×10^-6 K^-1，以获得无孔和无裂纹界面\"。CTE失配对SOFC性能的影响机制包括：电解质开裂导致离子传导路径中断，界面分层破坏气体密封性，长期热循环下的疲劳损伤积累，以及应力诱导的电化学性能退化。这些失效模式直接影响SOFC的功率输出、效率和寿命可靠性。",
+    "original_text": {
+      "1": "热膨胀系数差异对组装燃料电池材料的行为至关重要，因为它们将连接在一起。这将影响组件内组件的应变能力，有助于应力张量",
+      "2": "密封剂的CTE与接口SOFC组件的差异不应超过1×10^-6 K^-1，以获得无孔和无裂纹界面"
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及固体氧化物燃料电池(SOFC)的热机械建模、热膨胀系数失配、热应力分布、线性热弹性理论推导等，需要燃烧/传热/流体/CFD/能源领域的专业知识，特别是热力学、材料力学和燃料电池技术方面的专业知识。",
+      "answer_correct": false,
+      "answer_issues": [
+        "fundamental_error",
+        "unsupported"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在基本原理错误和关键声明未被支持的问题：1）等效弹性模量和等效泊松比的计算公式错误，正确的等效模量计算应考虑串联或并联模型，而非简单的厚度加权平均；2）双轴应力公式推导不完整，缺少对平面应力状态的正确处理；3）界面剪切应力公式中的参数定义不清晰，G为界面剪切模量的物理意义不明确；4）关键公式和推导缺乏理论依据支持。建议：重新基于经典层合板理论或双材料梁理论进行严格推导，明确各参数的物理意义，提供完整的数学推导过程，并引用可靠的参考文献支持关键结论。"
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_cf403b7d",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Numerical-thermomechanical-modelling-of-sol_2015_Progress-in-Energy-and-Comb",
+      "paper_title": "Numerical-thermomechanical-modelling-of-sol_2015_Progress-in-Energy-and-Comb"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:35:35.055626",
+      "answer_length": 997
+    }
+  }
+]

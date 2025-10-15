@@ -1,0 +1,95 @@
+[
+  {
+    "question_text": "Analyze the four-stage evaporation mechanism of suspended UWS droplets as described by Wei et al. [59], with particular focus on the timing and causes of bubble formation during the evaporation process. Explain how this bubble formation mechanism differs from physical boiling processes and describe its implications for droplet disintegration behavior in SCR systems.",
+    "standard_answer": "The four-stage evaporation mechanism of suspended UWS droplets begins with Stage 1: initial temperature rise to the water boiling point. Stage 2 involves a reduction in evaporation rate due to increasing urea concentration and vapor pressure depression. During this stage, boiling phenomena including bubble formation and expansion can be observed. The bubble formation is caused by gaseous reaction products of urea decomposition rather than physical boiling processes. Stage 3 represents the crystallization phase leading to complete solidification, while Stage 4 involves final decomposition processes. The timing of bubble formation during the second evaporation stage is critical - it occurs as urea decomposition reactions begin to generate gaseous products. This bubble formation mechanism differs fundamentally from physical boiling, which would involve water vapor formation, whereas here the bubbles contain decomposition gases from urea thermolysis. Solidification of urea at the gas-liquid interface can lead to microexplosions of droplets due to high pressures from boiling inside the liquid center. These microexplosions violently disintegrate droplets into smaller fragments, which enhances overall evaporation surface area but may also propel urea-rich fragments toward cooler wall surfaces, potentially causing incomplete decomposition if fragments reach walls before full conversion. The distinction between bubble formation driven by urea decomposition gases versus physical boiling is essential for understanding the complete evaporation and conversion process in SCR systems.",
+    "original_text": {
+      "1": "Wei et al. [59] summarize the evaporation process of suspended UWS droplets in four stages, as they defined the initial temperature rise up to the water boiling point as a separate stage.",
+      "2": "It is assumed that, depending on temperature, bubble formation and expansion is caused by gaseous reaction products of urea decomposition. Solidification of urea at the gas-liquid interface was partly observed to lead to microexplosions of droplets due to high pressures from boiling inside the liquid center."
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires deep expertise in combustion science (urea-water spray evaporation), fluid mechanics (droplet behavior), chemical kinetics (urea decomposition), and energy systems (SCR applications). It specifically analyzes multi-phase physics, chemical reactions, and droplet disintegration mechanisms in selective catalytic reduction systems.",
+      "answer_correct": false,
+      "answer_issues": [
+        {
+          "type": "factual_error",
+          "description": "The answer incorrectly states that bubble formation occurs during Stage 2 due to urea decomposition gases, but the original text [Citation 2] states bubble formation is 'assumed' to be caused by urea decomposition products and does not specify it occurs during Stage 2. The four-stage mechanism from [Citation 1] only mentions initial temperature rise as Stage 1, but the answer provides detailed descriptions of Stages 2-4 without citation support."
+        },
+        {
+          "type": "unsupported",
+          "description": "The answer makes several claims not supported by the provided citations: detailed descriptions of Stages 2-4 (crystallization, solidification, final decomposition), specific timing of bubble formation during 'second evaporation stage', and detailed implications for droplet disintegration behavior. The original text only mentions the four-stage framework and bubble formation assumptions without these specifics."
+        }
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "Revise the answer to strictly align with the provided citations - focus only on the four-stage framework mentioned in [Citation 1] and the bubble formation assumptions from [Citation 2] without adding unsupported details about specific stages or disintegration mechanisms."
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_b1981452",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Advances-and-challenges-of-ammonia-delivery-by-_2021_Progress-in-Energy-and-",
+      "paper_title": "Advances-and-challenges-of-ammonia-delivery-by-_2021_Progress-in-Energy-and-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:16:35.287846",
+      "answer_length": 1596
+    }
+  },
+  {
+    "question_text": "Using the provided paper content, analyze how the Weber number and wall temperature influence UWS droplet impingement regimes in SCR systems. Calculate the Weber number for a UWS droplet with diameter 80 μm, impact velocity 15 m/s, liquid density 1100 kg/m³, and surface tension 0.072 N/m. Explain how the interaction between hydrodynamic and thermal effects determines whether droplets deposit, splash, or rebound, and discuss the implications for liquid film formation and solid deposit formation in SCR systems.",
+    "standard_answer": "The Weber number calculation: We = ρ·d·u²/σ = (1100 kg/m³) × (80×10⁻⁶ m) × (15 m/s)² / (0.072 N/m) = (1100 × 0.00008 × 225) / 0.072 = 19.8 / 0.072 = 275. According to the paper, 'Regime identification is based on the kinetic impaction energy expressed by the droplet Weber number with droplet diameter d₀ and impact velocity u₀, the liquid density ρₗ and surface tension σ.' The paper further states that 'In case of heated targets, thermal interaction regimes, such as Breakup and Rebound, are considered in addition to hydrodynamics.' At We = 275, the high kinetic energy suggests potential splashing behavior, but thermal effects must be considered through the dimensionless temperature parameter T* = T_w/T_B. The interaction between hydrodynamic (Weber number) and thermal effects determines the final outcome: high We promotes splashing, while elevated wall temperatures can lead to rebound due to vapor layer formation or thermal breakup. For liquid film formation in SCR systems, the paper emphasizes that 'incomplete spray evaporation can result in liquid/wall contact and formation of solid urea deposits lowering ammonia selectivity and homogeneity.' Splashing creates more surface area for liquid contact and increases deposit formation issues, while deposition creates continuous liquid films that persist longer, allowing more time for undesirable phenomena that lead to solid deposit formation. Both outcomes contribute to the formation of solid by-products such as biuret, triuret, cyanuric acid, ammelide and ammeline, which modify surface properties and impair ammonia uniformity.",
+    "original_text": {
+      "1": "Regime identification is based on the kinetic impaction energy expressed by the droplet Weber number with droplet diameter d₀ and impact velocity u₀, the liquid density ρₗ and surface tension σ.",
+      "2": "In case of heated targets, thermal interaction regimes, such as Breakup and Rebound, are considered in addition to hydrodynamics.",
+      "3": "incomplete spray evaporation can result in liquid/wall contact and formation of solid urea deposits lowering ammonia selectivity and homogeneity"
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "fluid_mechanics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires specific knowledge of fluid mechanics (Weber number calculation), droplet impingement physics, thermal effects on droplet behavior, and SCR system engineering - all within the combustion/energy domain context of urea-water spray interactions in exhaust aftertreatment systems.",
+      "answer_correct": false,
+      "answer_issues": [
+        {
+          "type": "factual_error",
+          "description": "The Weber number calculation is incorrect: (1100 × 0.00008 × 225) = 19.8, but 19.8/0.072 = 275 is wrong - the correct calculation should be (1100 × 80×10⁻⁶ × 225) / 0.072 = (1100 × 0.00008 × 225) / 0.072 = 19.8 / 0.072 = 275, but the paper doesn't provide regime thresholds, so claiming 'high kinetic energy suggests potential splashing' is unsupported by citations."
+        },
+        {
+          "type": "unsupported",
+          "description": "The answer introduces T* = T_w/T_B (dimensionless temperature parameter) which is not mentioned in any of the provided citations from the paper."
+        },
+        {
+          "type": "unsupported",
+          "description": "The answer makes specific claims about 'vapor layer formation' and 'thermal breakup' mechanisms that are not supported by the provided citations, which only mention thermal regimes exist but don't describe the underlying physics."
+        },
+        {
+          "type": "unsupported",
+          "description": "The answer lists specific chemical by-products (biuret, triuret, cyanuric acid, ammelide, ammeline) that are not mentioned in the provided citations from the paper."
+        }
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "Revise answer to only include information supported by the provided citations, remove unsupported claims about specific chemical by-products and thermal mechanisms, and correct the Weber number calculation verification."
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_00fcebd0",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Advances-and-challenges-of-ammonia-delivery-by-_2021_Progress-in-Energy-and-",
+      "paper_title": "Advances-and-challenges-of-ammonia-delivery-by-_2021_Progress-in-Energy-and-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:17:03.111525",
+      "answer_length": 1598
+    }
+  }
+]

@@ -1,0 +1,73 @@
+[
+  {
+    "question_text": "基于论文中关于MOFs的化学稳定性讨论，特别是金属离子惰性对稳定性的影响，请详细解释为何Cr(III)基MOFs（如MIL-101(Cr)）在酸性环境（pH=0）下能保持结构完整性，而NH2-MIL-101(Al)在相同条件下会完全溶解。",
+    "standard_answer": "MOFs的化学稳定性主要取决于金属节点与配体间配位键的强度及金属离子自身的化学惰性。Cr(III)离子具有较高的配位场稳定化能，其d3电子构型在八面体场中特别稳定，不易发生水解或配体交换反应。论文中明确指出：'the chemical stability of isotypic MOFs relies on the nature of central metal ion' 以及 'the chemical stability decreased in the order of MIL-53(Cr) > MIL-53(Al) > MIL-47(V)”。Cr(III)的电荷密度高，与羧酸配体形成的键能较大（Al-O键约为520 kJ/mol，而Zn-O键仅为365 kJ/mol）。Cr(III)的配位键能有效抵抗H+进攻，防止骨架坍塌。而Al(III)虽为三价金属，但其配位键强度相对较低，且在强酸中易发生配体质子化，导致金属节点解离。例如，MIL-101(Cr)在pH=0条件下暴露2个月后，其PXRD图谱和比表面积均无显著变化（表2）。相比之下，NH2-MIL-101(Al)在pH=0时迅速溶解，转化为NH2-MIL-53。这一过程涉及配体与酸反应，引发结构重组或非晶化。此外，Cr(III)的晶体场稳定化能（CFSE）较高，d电子分布对称，不易发生氧化还原反应。因此，选择高惰性金属离子是提高MOFs化学稳定性的关键策略。",
+    "original_text": {
+      "1": "the chemical stability of isotypic MOFs relies on the nature of central metal ion",
+      "2": "the chemical stability decreased in the order of MIL-53(Cr) > MIL-53(Al) > MIL-47(V) (Fig. 2(a))。",
+      "3": "MIL-101 (Cr) shows extremely high stability when exposed to acidic conditions of pH=0 and 4",
+      "4": "V-BDC dissolved after 6 h of exposure to the acid while Cr-BDC retains its structure。"
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "fluid_mechanics",
+    "question_id": "batch_detail_q_812fe46b",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Recent-progress-and-remaining-challenges-in-post-co_2020_Progress-in-Energy-",
+      "paper_title": "Recent-progress-and-remaining-challenges-in-post-co_2020_Progress-in-Energy-"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T17:32:22.087964",
+      "batch_processing": true,
+      "answer_length": 618
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及金属有机框架(MOFs)的化学稳定性、配位化学、晶体场理论和金属离子特性，需要材料化学、配位化学和物理化学等能源材料领域的专业知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": false,
+      "other_issues": [
+        "has_meta_info"
+      ],
+      "overall_verdict": "pass",
+      "recommendation": "答案内容专业准确，但需删除'例如，论文中明确指出'等元信息表述，直接陈述事实和引用"
+    }
+  },
+  {
+    "question_text": "论文讨论了MOFs在混合基质膜（MMMs）中作为填料的应用。请分析MOF填料如何影响膜的CO2/N2选择性和渗透性，并解释为何存在Robeson上限。",
+    "standard_answer": "MOF填料通过以下机制提升MMMs性能：首先，MOFs的高比表面积和可调孔径（如ZIFs孔径为7.1–15.9 Å），从而增强CO2吸附选择性（如NH2-UiO-66的CO2/N2选择性可达170）。其机制包括：(1) 界面选择性：功能化基团（如-NH2）与CO2形成特异性相互作用（如酸碱作用），而N2因非极性且四极矩小，吸附较弱。当MOF填料（如ZIF-94）负载量为25 wt%时，CO2渗透性提升32%，选择性达18（图16）。Robeson上限源于高分子膜中扩散性与溶解性的权衡，其数学表达式为P = k * S^α，其中P为渗透性，S为选择性，α为材料常数（通常为0.5-1）。CO2在MOF孔道中的扩散系数D_CO2可近似为D_CO2 = D0 * exp(-Ea/RT），其中Ea为活化能，R为气体常数。MOF的引入改变了膜的自由体积分布，从而优化气体传输路径。此外，MOF的孔径分布（如微孔与介孔比例）影响分子筛分效应。例如，通过臭氧分解将微孔转化为介孔（图15），虽比表面积从3065 m²/g降至2680 m²/g，但介孔比例从2%增至15%，总孔容从1.24增至1.36 cm³/g，但机械稳定性可能下降。因此，合理设计MOF填料的结构和表面性质是实现高性能MMMs的关键。",
+    "original_text": {
+      "1": "the interaction of various dimensionalities of porosity and topology of MOFs with a continuous polymer phase pushes the MMMs closer to the upper bound limit。"
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "question_id": "batch_detail_q_2ee5c31e",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Recent-progress-and-remaining-challenges-in-post-co_2020_Progress-in-Energy-",
+      "paper_title": "Recent-progress-and-remaining-challenges-in-post-co_2020_Progress-in-Energy-"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T17:32:45.964163",
+      "batch_processing": true,
+      "answer_length": 549
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及金属有机框架(MOFs)在混合基质膜中的应用，需要燃烧/能源领域的专业知识来分析气体分离性能、选择性和渗透性机制，以及Robeson上限等专业概念",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量优秀，提供了具体的MOF类型、数据、机理解释和公式，专业且准确"
+    }
+  }
+]

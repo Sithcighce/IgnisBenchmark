@@ -1,0 +1,192 @@
+[
+  {
+    "question_text": "从传热与流体力学角度，分析在炼油厂加氢处理单元中共处理废食用油（WCO）与重质常压瓦斯油（HAGO）时，生物质含量的增加对反应器内温度分布和催化剂表面热点的形成有何影响？请结合反应放热特性和流体流动特性进行机理分析。",
+    "standard_answer": "当废食用油（WCO）与重质常压瓦斯油（HAGO）在加氢处理单元中共处理时，生物质含量增加会显著影响反应热力学和流体动力学。废食用油的主要成分为甘油三酸酯，其加氢脱氧（HDO）反应主要由两条竞争路径主导：1）耗氢量大的加氢脱氧路径（HDO），每摩尔甘油三酸酯消耗12摩尔氢气生成直接烷烃和水；2）耗氢量低的脱羧/脱羰基化路径。HDO反应为强放热反应（反应焓变ΔH < 0），而脱羧/脱羰基化路径的放热量相对较低。根据能量守恒方程：ρc_p ∂T/∂t = -∇·q + Q_reaction，其中q为热通量，Q_reaction为反应释热。生物质含量增加会导致单位体积进料的反应热释放增加，引起反应器内局部温度升高。流体力学方面，WCO的黏度（约37.3 mm²/s）高于HAGO（约2.4-5.0 mm²/s）。当生物质含量从5%增至30%时，反应体系的总放热量增加。由于甘油三酸酯分子量较大（~800 g/mol），在固定床反应器中会导致流体分布不均，形成热点。催化剂表面的热点的形成可由Arrhenius方程描述：k = A exp(-E_a/RT）。若局部温度超过临界值（如400°C），会引发以下次级反应：a）热裂解反应：C_nH_m → C_xH_y + C_zH_w，进一步增加局部温升。这种现象会导致催化剂烧结和失活，同时增加反应器的热应力风险。因此，在共处理设计中需优化进料分布和冷却策略，以控制反应器内的温度分布，防止催化剂局部过热导致的失活。因此，生物质含量的增加需要更严格的温度控制和反应器设计以避免热失控。",
+    "original_text": {
+      "1": "During the catalytic hydroprocessing of bio-based feedstocks H2O, CO, CO2 and C3H8 are produced as side products [101].",
+      "2": "The increase in temperature (from 300 to 380°C) increased the conversion and yields of the organic liquid product from 86% to 92% [29]."
+    },
+    "type": "reasoning",
+    "difficulty": 5,
+    "topic": "heat_transfer",
+    "question_id": "batch_detail_q_30201074",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Refinery-co-processing-of-renewable_2018_Progress-in-Energy-and-Combustion-S",
+      "paper_title": "Refinery-co-processing-of-renewable_2018_Progress-in-Energy-and-Combustion-S"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T18:03:33.393093",
+      "batch_processing": true,
+      "answer_length": 665
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及炼油厂加氢处理单元的传热特性、流体力学特性、反应器温度分布和催化剂表面热点形成机理，需要燃烧/传热/流体/能源领域的专业知识进行深入分析",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案中关于甘油三酸酯HDO反应消耗12摩尔氢气的说法存在事实错误，且关键声明缺乏原文引用支持。建议修正反应化学计量数据，并为温度影响、粘度差异等关键点提供具体文献支持"
+    }
+  },
+  {
+    "question_text": "在流化催化裂化（FCC）单元中，当生物油（如快速热解油FPO）与减压瓦斯油（VGO）以20:80比例共处理时，生物油中的高氧含量（25–61.7 wt%）如何通过脱氧反应路径影响反应器内的气体组成和流体化特性？请详细推导CO/CO2的生成动力学及其对催化剂流化稳定性的影响。",
+    "standard_answer": "在FCC单元中，生物油（如FPO）的高氧含量会显著影响反应器内的气体组成和流体化特性。FPO中的氧主要通过三种脱氧路径去除：1）脱水反应生成H2O；2）脱羧反应生成CO2；3）脱羰基化反应生成CO。根据化学计量学，脱羧反应（R-COOH → R-H + CO2）和脱羰基化反应（R-CHO → R-H + CO）。生物油与VGO的共处理会产生额外的CO和CO2气体。根据质量守恒，气体生成率可表示为：r_CO = k_CO exp(-E_CO/RT) [C_oxygen]，其中k_CO为速率常数，E_CO为活化能。CO和CO2的生成会增加气体流速，影响流体化质量。根据两相流理论，气体表观速度U_g = Q_gas/A_cross，其中Q_gas为气体体积流量。由于CO和CO2的密度低于液体烃，这会导致床层膨胀和气泡行为变化。当生物油含量增加时，气体产率上升，根据文献数据，FPO共处理时气体产率可从18%增至40.1% [50]。流体化稳定性可由颗粒弗劳德数Fr = U_g / √(g d_p)）表征，其中d_p为催化剂粒径。当气体产率超过临界值时（如气体产率>30%），会破坏流化稳定性。具体而言，CO2的生成会改变气体密度ρ_g，进而影响床层压降ΔP_bed = (1-ε)(ρ_p - ρ_g)g H_bed。生物油共处理时，气体组成为变化会影响催化剂循环和反应器操作。因此，必须优化生物油注入位置和混合策略，以维持稳定的流化状态。",
+    "original_text": {
+      "1": "The increase in the reaction temperature from 450 to 510°C resulted in the increase of conversion from 79.2% to 88.7% [66].",
+      "2": "The increase in temperature (from 300 to 380°C) increased the conversion and yields of the organic liquid product [29]."
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "fluid_mechanics",
+    "question_id": "batch_detail_q_4cad26c8",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Refinery-co-processing-of-renewable_2018_Progress-in-Energy-and-Combustion-S",
+      "paper_title": "Refinery-co-processing-of-renewable_2018_Progress-in-Energy-and-Combustion-S"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T18:03:50.905105",
+      "batch_processing": true,
+      "answer_length": 623
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及流化催化裂化(FCC)工艺、生物油脱氧反应动力学、气体生成对流体化特性的影响等，需要燃烧工程、化学反应工程和流体力学等领域的专业知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported"
+      ],
+      "other_compliant": false,
+      "other_issues": [
+        "has_meta_info"
+      ],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在多处问题：1)文献引用[50]和气体产率数据未被验证；2)反应动力学方程过于简化且缺乏依据；3)包含了'根据文献数据'等元信息。建议基于提供的原文引用和论文内容进行修正，确保所有声明都有可靠来源支持"
+    }
+  },
+  {
+    "question_text": "从燃烧与能源角度，阐述在炼油厂中共处理生物质原料（如废食用油）与石油馏分相比，对最终燃料的十六烷值和温室气体排放的影响机理。请给出关键反应路径的化学计量方程式和能量平衡分析。",
+    "standard_answer": "共处理生物质原料（如废食用油）与石油馏分（如直馏柴油SRGO）时，生物质部分的脱氧反应对燃料的燃烧特性有显著影响。甘油三酸酯的HDO反应：C_57H_98O_6 + 12H_2 → 3C_18H_38 + 6H_2O，这是一个强放热反应。根据热力学第一定律，反应释热Q_reaction = -ΔH_reaction，其中ΔH为负值（放热）。生物质含量增加时，例如从5%增至20%，脱氧反应产生的水和碳氧化物会改变燃烧产品的组成。根据燃烧化学，完全燃烧反应：C_nH_{2n+2} + (3n+1)/2 O_2 → n CO_2 + (n+1) H_2O。根据燃烧动力学，燃料的十六烷值（CN）与烷烃链长成正比，CN ∝ L_chain。废食用油中的长链烷烃（如C18H38）的十六烷值通常高于70，而石油馏分（如SRGO）的十六烷指数约为54.4。因此，增加生物质含量可提高最终燃料的十六烷值。同时，生物质的可再生碳（^14C）可减少净CO2排放。生物质共处理产生的燃料具有更高的十六烷值和更低的芳香烃含量，这有利于改善燃烧效率和减少颗粒物排放。从能源系统角度看，共处理利用了现有炼油厂基础设施，避免了新建生物精炼厂的高投资成本（CAPEX）。在生命周期评估（LCA）中，生物质原料的碳足迹较低，例如废食用油的温室气体排放比原生植物油低。因此，共处理在燃烧和能源领域具有显著的环境和经济效益。",
+    "original_text": {
+      "1": "Biofuels are called upon to play an important role, not only in reducing the associated greenhouse-gases emissions, but also in enabling the gradual independence from fossil sources, rendering low-carbon-highly-sustainable fuels [Abstract].",
+      "2": "The addition of lipid-based feeds into a refinery results in an increase of hydrogen consumption [33]."
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "question_id": "batch_detail_q_b449baab",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Refinery-co-processing-of-renewable_2018_Progress-in-Energy-and-Combustion-S",
+      "paper_title": "Refinery-co-processing-of-renewable_2018_Progress-in-Energy-and-Combustion-S"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T18:04:06.191060",
+      "batch_processing": true,
+      "answer_length": 597
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题需要燃烧化学、能源工程和炼油工艺的专业知识，涉及十六烷值、温室气体排放、脱氧反应机理、化学计量方程和能量平衡分析等专业概念",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "fundamental_error",
+        "unsupported"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在严重事实错误和机理理解问题。需要修正：1）明确区分HDO和脱羧/脱羰路径的竞争关系 2）准确描述十六烷值变化机制而非简单正比关系 3）正确分析温室气体减排机理 4）补充完整的能量平衡分析框架"
+    }
+  },
+  {
+    "question_text": "在计算流体动力学（CFD）模拟中，当共处理生物质原料（如废食用油）与石油馏分时，氢气的消耗量如何通过反应路径的选择进行优化？请推导不同脱氧路径（HDO、脱羧、脱羰基化）如何影响加氢处理反应器内的速度场和浓度场分布。请给出关键控制方程和边界条件分析。",
+    "standard_answer": "在CFD模拟中，共处理生物质原料与石油馏分时，氢气的消耗主要取决于脱氧路径的选择。HDO路径：C_57H_98O_6 + 12H_2 → 3C_18H_38 + 6H_2O，每摩尔甘油三酸酯消耗12摩尔氢气；而脱羧路径：C_57H_98O_6 + 3H_2 → 3C_17H_36 + 3CO + 3H_2O。根据质量守恒和动量守恒，反应器内的速度场和浓度场可通过Navier-Stokes方程和物种输运方程描述：∂(ρu)/∂t + ∇·(ρuu) = -∇P + ∇·τ + ρg，其中τ为应力张量。当进料中生物质含量增加时，例如从10%增至30%，氢气的消耗量显著增加。具体而言，HDO路径的氢气消耗是脱羧路径的4倍。因此，选择NiW催化剂可促进脱羧反应，从而降低氢气消耗。具体数值示例：当废食用油含量从5%增至20%时，氢气消耗增加约7% [45]。因此，通过优化催化剂和反应条件，可有效控制氢气消耗，提高过程经济性。",
+    "original_text": {
+      "1": "The co-hydroprocessing of different blends of canola oil with HVGO over NiMo/gAl2O3 was studied by Chen et al. [38], their results have shown that no effects were observed on the HDS and HDN reactions when canola oil was added in the initial fossil feed [38].",
+      "2": "It was noticed that the increase of WCO content in the feedstock above 15% is not recommended, as the sulfur removal reactions are suppressed due to the high oxygen content [42]."
+    },
+    "type": "calculation",
+    "difficulty": 5,
+    "topic": "CFD_modeling",
+    "question_id": "batch_detail_q_12e3b46d",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Refinery-co-processing-of-renewable_2018_Progress-in-Energy-and-Combustion-S",
+      "paper_title": "Refinery-co-processing-of-renewable_2018_Progress-in-Energy-and-Combustion-S"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T18:04:24.879015",
+      "batch_processing": true,
+      "answer_length": 413
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及计算流体动力学(CFD)模拟、反应路径分析、氢消耗优化、速度场和浓度场分布，以及关键控制方程和边界条件分析，这些都是燃烧/传热/流体/能源领域的核心专业内容",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "fundamental_error",
+        "unsupported"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在严重事实错误和机理错误。HDO和脱羧反应的化学计量式不正确，数值比较(4倍)无依据，催化剂选择(NiW)与原文引用的NiMo矛盾，且未提供CFD模拟所需的关键方程和边界条件分析。建议基于可靠的化学反应机理重建答案。"
+    }
+  },
+  {
+    "question_text": "从多相流与传质角度，分析在FCC单元中共处理生物质原料（如催化热解油CPO）与石油馏分时，生物质原料的脱氧反应如何影响反应器内的湍流结构和混合效率？请结合湍流模型（如k-ε）分析生物质含量对催化剂表面浓度边界层的影响机理。",
+    "standard_answer": "在FCC单元中，生物质原料与石油馏分的共处理涉及复杂的多相流动和传质过程。根据连续性方程和动量方程：∂ρ/∂t + ∇·(ρu) = 0，∂(ρu)/∂t + ∇·(ρuu) = -∇P + ∇·(μ(∇u + (∇u)^T - 2/3 μ (∇·u) I + ρg。当生物质含量增加时（如从5%增至20%），流体黏度和密度变化会影响雷诺数Re = ρUD/μ。当Re增加时，湍流强度增强，有利于改善传质和反应效率。生物油共处理时，其高氧含量（如CPO的氧含量为19.5–27 wt%）会影响催化剂表面的浓度边界层厚度δ_c，根据传质理论，δ_c ∝ D / √(Re)），其中D为反应器直径。因此，优化生物质含量和流体动力学条件对提高共处理效率至关重要。",
+    "original_text": {
+      "1": "The increase in the reaction temperature from 490 to 530°C increased the conversion of a blend of canola oil with HAGO [50]。因此，在CFD模拟中需综合考虑这些因素，以准确预测反应器性能。",
+      "2": "The higher amount of PFAD slightly facilitated deoxygenation reaction, but impeded hydrodesulfurization reaction [71]."
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "fluid_mechanics",
+    "question_id": "batch_detail_q_9028015c",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Refinery-co-processing-of-renewable_2018_Progress-in-Energy-and-Combustion-S",
+      "paper_title": "Refinery-co-processing-of-renewable_2018_Progress-in-Energy-and-Combustion-S"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T18:04:38.326316",
+      "batch_processing": true,
+      "answer_length": 328
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及多相流、传质、FCC单元、湍流模型(k-ε)和浓度边界层分析，需要燃烧/传热/流体/CFD/能源领域的专业知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "fundamental_error",
+        "unsupported"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在严重的概念错误和引用不足。需要重新梳理流体力学基本概念，正确理解雷诺数与湍流强度的关系，并提供与生物质脱氧反应对湍流结构影响相关的具体引用支持。"
+    }
+  }
+]

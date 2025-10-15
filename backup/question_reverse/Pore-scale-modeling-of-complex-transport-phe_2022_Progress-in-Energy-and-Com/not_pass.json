@@ -1,0 +1,39 @@
+[
+  {
+    "question_text": "在固体氧化物燃料电池（SOFC）的Ni-YSZ阳极中，电化学反应发生在三相边界（TPB）。请从电化学势基本定义出发，详细推导以电化学势表示的局部活化过电位η_act,TPB的表达式，并解释在孔隙尺度模型中，如何通过耦合求解电荷传输方程和气体扩散方程来计算总电极过电位。",
+    "standard_answer": "首先从电化学势基本定义出发：μ̃_i = μ_i + z_iFφ，其中μ̃为电化学势，μ为化学势，z_i为电荷数，F为法拉第常数，φ为静电势。在Ni-YSZ阳极TPB处，氢的电化学氧化反应为：H₂ + O²⁻ → H₂O + 2e⁻。\n\n局部活化过电位η_act,TPB定义为驱动电化学反应的电化学势差。根据电化学势平衡，在TPB处有：\nη_act,TPB = -[1/(2F)](μ̃_H2 + μ̃_O2- - μ̃_H2O - 2μ̃_e-)\n\n将电化学势展开为化学势和静电势项：\nμ̃_H2 = μ_H2 + 0·Fφ_gas\nμ̃_O2- = μ_O2- + (-2)Fφ_YSZ\nμ̃_H2O = μ_H2O + 0·Fφ_gas\nμ̃_e- = μ_e- + (-1)Fφ_Ni\n\n代入得：\nη_act,TPB = -[1/(2F)][(μ_H2 + μ_O2- - μ_H2O - 2μ_e-) + F(0 + (-2)φ_YSZ - 0 - 2(-1)φ_Ni)]\n\n化学势项可表示为：μ_H2 - μ_H2O = ΔG° + RT ln(p_H2/p_H2O)，μ_O2-和μ_e-为参考值。整理得：\nη_act,TPB = [1/(2F)](ΔG° + RT ln(p_H2O/p_H2)) + (φ_Ni - φ_YSZ)\n\n在孔隙尺度模型中，通过耦合求解以下方程组：\n电子传导方程：∇·(σ_e∇φ_e) = S_react（反应源项）\n离子传导方程：∇·(σ_i∇φ_i) = 0\n气体扩散方程：采用Dusty Gas Model求解多元气体传输，考虑Knudsen扩散效应\n\n在TPB处应用Butler-Volmer方程：i = i_0[exp(α_cFη_act,TPB/(RT)) - exp(-(1-α_c)Fη_act,TPB/(RT))]\n通过迭代求解电势场(φ_e, φ_i)和浓度场(p_H2, p_H2O)，获得TPB处的η_act,TPB分布。\n\n总电极过电位基于电化学势差定义：η_anode = [1/F](μ̃_e-,RE-S - μ̃_e-,CC) - [1/(2F)](μ̃_O2-,lyte-RE - μ̃_O2-,anode-lyte)，其中考虑了参考电极和电流收集器之间的电化学势差。",
+    "original_text": {
+      "1": "η_act represents the local activation overpotential. Therefore, η_act are defined by subtracting local ohmic losses from the local overpotential η_local as: η_act,TPB = η_local,TPB - (1/F)(μ̃_e-,RE-S - μ̃_e-,YSZ-RE) - (1/(2F))(μ̃_O2-,YSZ-RE - μ̃_O2-,Ni-YSZ)",
+      "2": "The total electrode overpotential is obtained by subtracting the ohmic drops of the current collector (CC), electrolyte, and reference electrode from the potential difference between reference electrode and current collector."
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及固体氧化物燃料电池（SOFC）的电化学反应机理、三相边界（TPB）理论、电化学势推导、孔隙尺度建模、电荷传输方程和气体扩散方程耦合求解，这些都需要燃烧/能源/电化学/多相流领域的专业知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "fundamental_error",
+        "factual_error",
+        "unsupported"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在严重错误：1）电化学势展开中μ̃_O2-和μ̃_e-的静电势项符号错误（应为μ̃_O2- = μ_O2- + (-2)Fφ_YSZ，μ̃_e- = μ_e- + (-1)Fφ_Ni）；2）总电极过电位定义与原文引用不一致且推导不完整；3）关键公式（如Butler-Volmer方程）未与电化学势推导建立明确联系。建议：重新推导η_act,TPB表达式，确保电化学势各项符号正确；明确总电极过电位与局部过电位的关系；完善孔隙尺度模型求解过程的逻辑衔接。"
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_09468957",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Pore-scale-modeling-of-complex-transport-phe_2022_Progress-in-Energy-and-Com",
+      "paper_title": "Pore-scale-modeling-of-complex-transport-phe_2022_Progress-in-Energy-and-Com"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:34:10.314593",
+      "answer_length": 974
+    }
+  }
+]

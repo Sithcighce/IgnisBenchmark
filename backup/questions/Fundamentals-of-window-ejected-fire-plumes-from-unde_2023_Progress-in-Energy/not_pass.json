@@ -1,0 +1,38 @@
+[
+  {
+    "question_text": "当存在外部水平障碍物（如阳台）时，窗口喷射火灾羽流的火焰高度和热流分布如何变化？请结合羽流水平扩展长度（Lf,v）和垂直高度（Zf,e）的演化进行建模，并分析热通量降低的物理原因。",
+    "standard_answer": "水平障碍物通过改变羽流发展路径来影响火灾动力学。羽流从窗口水平喷出，在障碍物下方扩展，形成等效半径Rf的火焰扩展区域。根据几何模型，火焰扩展半径Rf满足：Rf = 0.0283(Q̇_ex/ρ∞ΔH))^(1/2) (He - Hn))^(1/2)，其中He为障碍物垂直高度。热流分布修正为：q̇′′·Zf,e/(Q̇_ex/l1) = fcn(z/Zf,e))，其中修正系数φ1表示相交部分与总体火焰体积的比率。物理机制在于：障碍物阻挡了向上动量，迫使羽流水平扩展，增加了卷吸面积但减少了直接冲击立面的热量。具体热流关联为q̇′′·Zf,e/(Q̇_ex/l1) = 0.1455·φ1。垂直温度分布同样修正，衰减指数从-1变为-5/3，表明热流衰减更快。",
+    "original_text": {
+      "1": "Rf = 0.0283(Q̇_ex/ρ∞ΔH))^(1/2) (He - Hn))^(1/2)，其中C1=0.3588(A√H/Lc^(5/2))，其中Lc为舱室尺度。",
+      "type": "reasoning",
+      "difficulty": 5,
+      "topic": "energy_systems"
+    },
+    "question_id": "batch_detail_q_fe2154d2",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Fundamentals-of-window-ejected-fire-plumes-from-unde_2023_Progress-in-Energy",
+      "paper_title": "Fundamentals-of-window-ejected-fire-plumes-from-unde_2023_Progress-in-Energy"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T11:17:44.014299",
+      "batch_processing": true,
+      "answer_length": 329
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及窗口喷射火灾羽流动力学、火焰高度、热流分布等复杂燃烧学和流体力学现象，需要燃烧科学、传热学、流体力学等专业领域的深度知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在明显事实错误和引用支持不足。需要修正火焰扩展半径公式中的变量定义，并提供更完整的热流分布修正机制解释。建议对照原文引用和论文内容重新梳理模型推导过程。"
+    }
+  }
+]

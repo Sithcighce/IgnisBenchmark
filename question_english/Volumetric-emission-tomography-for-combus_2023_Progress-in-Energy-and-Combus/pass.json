@@ -1,0 +1,167 @@
+[
+  {
+    "question_text": "Why is volumetric reconstruction in emission tomography an ill-posed inverse problem, and how do regularization techniques like Tikhonov regularization or total variation (TV) norm address the issues of uniqueness and stability?",
+    "standard_answer": "Volumetric reconstruction is ill-posed because it violates the conditions for well-posed problems: existence, uniqueness, and stability. Specifically, the inversion of projection data (e.g., from Eq. 11, Ag = p) often lacks uniqueness due to limited camera views (m < n), leading to infinitely many solutions that fit the data. Even with sufficient views, the problem is discrete ill-posed because the sensitivity matrix A is ill-conditioned, amplifying noise and model errors—small perturbations in projections cause large, non-physical artifacts in reconstructions. This instability arises from the smoothing nature of path integrals, which damp high-frequency components in the true field g. Regularization introduces prior information to constrain solutions. Tikhonov regularization adds a penalty term like ||Lg||² to the objective function, promoting smoothness and reducing noise sensitivity by favoring solutions with small derivatives. The total variation (TV) norm, ||∇g||₁, encourages piecewise-smooth solutions while allowing sharp discontinuities, which aligns with combustion structures like flame fronts. These methods transform the ill-posed problem into a well-posed one by incorporating physical plausibility, such as global smoothness or edge preservation, ensuring reconstructions are both unique and stable against measurement uncertainties.",
+    "original_text": {
+      "1": "Reconstruction necessarily violates either the uniqueness criterion, usually meaning that there are infinitely many solutions to Eq. (11), or stability, in which case there exists a unique solution that is highly sensitive to measurement errors.",
+      "2": "The most common methods of regularization in emission tomography involve truncation of an ART variant or Tikhonov-based smoothing [82,83]. Another typical penalty term is the total variation (TV) norm of g, which promotes piecewise-smooth solutions while permitting sharp discontinuities, reminiscent of combustion structures."
+    },
+    "type": "reasoning",
+    "difficulty": 5,
+    "topic": "CFD",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question specifically addresses volumetric reconstruction in emission tomography for combustion processes, requiring knowledge of inverse problems, regularization techniques, and their application to combustion diagnostics - all within the CFD/combustion domain context.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_0c9f6a12",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Volumetric-emission-tomography-for-combus_2023_Progress-in-Energy-and-Combus",
+      "paper_title": "Volumetric-emission-tomography-for-combus_2023_Progress-in-Energy-and-Combus"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:32:28.870927",
+      "answer_length": 1362
+    }
+  },
+  {
+    "question_text": "How does the radiative transfer equation (RTE) model light propagation in volumetric emission tomography, and what simplifications are made to derive the path-integrated measurement model used in combustion diagnostics?",
+    "standard_answer": "The radiative transfer equation (RTE) fundamentally describes the propagation, emission, absorption, and scattering of light through a participating medium like a flame. In volumetric emission tomography, the RTE accounts for the spectral intensity Iλ at each wavelength λ, considering contributions from emission sources and losses due to extinction (absorption and scattering). For combustion diagnostics, the RTE is simplified under specific assumptions: (1) a dark background eliminates external radiation, (2) negligible re-absorption means emitted light is not significantly reabsorbed along the path, and (3) minimal scattering reduces complexity. These assumptions lead to a simplified RTE where the spectral intensity incident on a sensor is proportional to the integral of the emission source term I′λ along the line-of-sight (LoS). This path-integrated model, expressed as Iλ(u) ∝ ∫ I′λ[Ψ⁻¹(u,l)] dl, forms the basis for tomography by relating 2D projections to the 3D emission source field. Discretization using a voxel basis then allows algebraic reconstruction, where the sensitivity matrix A encodes the contribution of each voxel to each pixel's measurement, enabling inversion to recover the 3D field from limited projections.",
+    "original_text": {
+      "1": "The production, attenuation, and transportation of monochromatic light at λ within 𝓥 are governed by the radiative transfer equation (RTE), covered at length in the texts of Modest [68] and Howell et al. [52].",
+      "2": "A simplified form of the RTE is found by assuming a dark background, negligible re-absorption, and minimal scattering. Using this approach, the spectral intensity, Iλ, that is incident on the sensor at u is Iλ(u) ∝ ∫ I′λ[Ψ⁻¹(u,l)] dl."
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "heat_transfer",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question requires specific knowledge of radiative transfer in combustion diagnostics, including the radiative transfer equation (RTE), volumetric emission tomography, and combustion-specific simplifications like dark background, negligible re-absorption, and minimal scattering assumptions.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct, and compliant with other requirements."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_635ecf28",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Volumetric-emission-tomography-for-combus_2023_Progress-in-Energy-and-Combus",
+      "paper_title": "Volumetric-emission-tomography-for-combus_2023_Progress-in-Energy-and-Combus"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:32:28.932835",
+      "answer_length": 1243
+    }
+  },
+  {
+    "question_text": "What are the key differences between chemiluminescence and laser-induced fluorescence (LIF) as emission modalities in volumetric tomography, and how do their underlying physical mechanisms influence the interpretation of reconstructed 3D fields?",
+    "standard_answer": "Chemiluminescence and LIF differ fundamentally in their excitation mechanisms and resulting signal interpretations. Chemiluminescence arises spontaneously from chemical reactions in flames, where intermediate radicals like OH* and CH* are formed in excited states and emit photons upon relaxation. This emission is isotropic and directly linked to the reaction zone, providing qualitative insights into flame topology and heat release without external stimulation. In contrast, LIF requires laser excitation: a tuned laser slab promotes molecules (e.g., ground-state OH or tracer gases like acetone) to higher energy states, and subsequent fluorescence emission is captured. This allows species-specific, quantitative measurements of concentrations or temperature, but depends on laser parameters and quenching effects. In tomography, chemiluminescence reconstructions (e.g., CTC) reveal the 3D structure of reaction zones and are useful for visualizing flame interactions and instabilities. LIF reconstructions (VLIF) offer higher spatio-temporal resolution for detailed morphology studies but necessitate careful calibration to account for laser intensity and collisional quenching. Thus, chemiluminescence is advantageous for real-time monitoring in practical combustors, while LIF excels in laboratory settings for precise scalar field characterization.",
+    "original_text": {
+      "1": "Chemiluminescence in flames is a byproduct of intermediate reactions. Radicals such as OH* and CH* are formed in an excited state, commonly indicated by an asterisk. As these molecules relax, they give off visible or ultraviolet (UV) light.",
+      "2": "Fluorescence may be stimulated in a 3D region using a laser slab and then imaged by a network of cameras to conduct volumetric LIF (VLIF). As with outgoing radiation, incoming photons are only absorbed if their wavelength is aligned with the energy of valid molecular transitions."
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "combustion_science",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires deep knowledge of combustion diagnostics, specifically comparing chemiluminescence and laser-induced fluorescence as emission modalities in volumetric tomography. It demands understanding of excitation mechanisms, signal interpretation, and how these physical mechanisms influence 3D field reconstruction - all core combustion science concepts that cannot be answered with general ML knowledge.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_085ad345",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Volumetric-emission-tomography-for-combus_2023_Progress-in-Energy-and-Combus",
+      "paper_title": "Volumetric-emission-tomography-for-combus_2023_Progress-in-Energy-and-Combus"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:32:29.752417",
+      "answer_length": 1357
+    }
+  },
+  {
+    "question_text": "How does the solid angle subtended by a camera aperture affect the signal measurement in volumetric emission tomography, and what is the quantitative relationship between aperture diameter, focal length, and the resulting f-number in the context of Eq. (5)?",
+    "standard_answer": "The solid angle Ω subtended by the camera aperture determines the fraction of isotropic emission captured from a point in the flame, directly influencing the signal strength in volumetric tomography. From Eq. (4), the signal Si at a pixel depends on Ωi(l)/4π, where Ωi(l) is the solid angle for that pixel at distance l. For a focused system, Ω is approximated as Ω = πD_ap²/(4l²), where D_ap is the aperture diameter. This relationship shows that signal decreases with the square of distance l, emphasizing the need for close camera placement to maximize light collection. The f-number (f#) simplifies this by relating aperture and focal length: f# = f/D_ap, leading to Ω ≈ f#⁻² when the target is in focus. This inverse square dependence means that smaller f-numbers (larger apertures) capture more light, improving signal-to-noise ratio but potentially reducing depth of field. In tomography, optimizing f# is crucial for balancing light collection with image sharpness, as a wide aperture (low f#) enhances sensitivity but may introduce blur, complicating reconstruction accuracy. Thus, the design of optical systems must carefully select f# based on experimental constraints to ensure reliable 3D field recovery.",
+    "original_text": {
+      "1": "The total solid angle, Ω, for volumetric emissions from a point at a distance l equals the area of the aperture divided by l². Assuming the region of interest is in focus, Ω can be approximated as follows: Ω = πD_ap²/4 / l² ≈ f#⁻² where D_ap is the diameter of the aperture, f is the focal length of the lens, and f# = f/D_ap is the resulting f-number.",
+      "2": "The ratio Ωi/Ω is the fraction of light incident on the sensor that falls inside 𝓐_i; when the target is in focus, this ratio is unity."
+    },
+    "type": "calculation",
+    "difficulty": 3,
+    "topic": "fluid_mechanics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires specific knowledge of optical physics in combustion diagnostics, including solid angle calculations, camera aperture effects on signal measurement, and f-number relationships in volumetric emission tomography - all directly related to combustion imaging techniques and instrumentation.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_7dbec0bd",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Volumetric-emission-tomography-for-combus_2023_Progress-in-Energy-and-Combus",
+      "paper_title": "Volumetric-emission-tomography-for-combus_2023_Progress-in-Energy-and-Combus"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:32:29.855524",
+      "answer_length": 1217
+    }
+  },
+  {
+    "question_text": "In the context of turbulent combustion, why are volumetric measurements essential for accurately characterizing phenomena like flame surface density and thermoacoustic oscillations, and how do they overcome limitations of planar techniques?",
+    "standard_answer": "Volumetric measurements are critical for turbulent combustion because many key phenomena are inherently three-dimensional and transient, making planar techniques inadequate. For flame surface density, which quantifies the reaction zone area per unit volume and determines system reaction rates, planar estimates from 2D slices can be erroneous by up to 40% due to the convolution of overlapping structures along the line-of-sight. Volumetric tomography directly reconstructs the 3D flame topology, providing accurate density calculations by resolving spatial variations in all directions. Similarly, thermoacoustic oscillations involve 3D heat release rate fluctuations that drive combustor instabilities; these require time-resolved 3D data to identify phase relationships and source locations, which planar methods cannot capture due to their limited dimensionality. Volumetric techniques, such as emission tomography with multiple cameras, simultaneously record projections from various angles, enabling reconstruction of instantaneous 3D fields. This eliminates the spatial averaging inherent in planar imaging and allows for the study of dynamic interactions, such as flame-vortex interactions or nanoparticle synthesis in reactors, where 3D flow and scalar histories dictate behavior. By providing comprehensive spatio-temporal resolution, volumetric measurements support improved modeling, validation of CFD simulations, and control of combustion processes in practical devices.",
+    "original_text": {
+      "1": "For example, the flame surface density is used to determine system reaction rates, but estimates derived from planar measurements can be off by as much as 40% [27]. Thermoacoustic oscillations are another intrinsically 3D effect that can lead to inefficient combustion and may even damage a combustor [28].",
+      "2": "The source of these instabilities can be tracked using 3D, time- or phase-resolved heat release rate oscillations [29,30]. Time-resolved 3D techniques are thus required to understand and characterize the behavior of combustion reactors [32,33]."
+    },
+    "type": "reasoning",
+    "difficulty": 5,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires specific knowledge of turbulent combustion diagnostics, including flame surface density, thermoacoustic oscillations, and the technical limitations of planar versus volumetric measurement techniques. It demands expertise in combustion science, fluid mechanics, and experimental methods used in energy systems.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "The question is domain-focused, the answer is factually correct and well-supported by the provided citations, and there are no other quality issues. It meets all criteria."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_c204b0d3",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Volumetric-emission-tomography-for-combus_2023_Progress-in-Energy-and-Combus",
+      "paper_title": "Volumetric-emission-tomography-for-combus_2023_Progress-in-Energy-and-Combus"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:32:30.372196",
+      "answer_length": 1485
+    }
+  }
+]

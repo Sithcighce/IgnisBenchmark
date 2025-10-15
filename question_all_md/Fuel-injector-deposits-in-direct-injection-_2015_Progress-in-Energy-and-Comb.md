@@ -1,0 +1,245 @@
+# Fuel-injector-deposits-in-direct-injection-_2015_Progress-in-Energy-and-Comb - Passed Questions
+
+**生成时间**: 2025-10-15 15:46:06  
+**通过问题数**: 5
+
+---
+
+## Question 1
+
+### 问题
+
+Calculate the expected flow rate loss after 100 hours for a fuel with K₁=0.8 %/h and K₂=0.05 h⁻¹. Compare this with a case where K₂ is doubled due to higher injection pressure. Discuss the implications for engine design.
+
+### 标准答案
+
+Using the equation: Fuel flow rate loss = -K₁/K₂·(1 - e^(-K₂·t)). Case 1: K₁=0.8, K₂=0.05, t=100 h. Loss = -(0.8/0.05)·(1 - e^(-0.05·100)) = -16·(1 - e^(-5)) = -16·(1 - 0.0067 = -15.89%. Case 2 with doubled K₂=0.1 h⁻¹: Loss = -(0.8/0.1)·(1 - e^(-0.1·100)) = -8·(1 - e^(-10)) = -8·(1 - 0.000045) ≈ -8%. This shows increasing injection pressure to double K₂ reduces deposit accumulation by half. For engine design, this suggests optimizing injection pressure is crucial. However, higher pressure increases parasitic losses. The optimal balance depends on fuel properties and injector type. This calculation validates that 'higher injection pressure contributes to increase the deposit removal rate.' Engine designers must balance between deposit control and system efficiency.
+
+### 元数据
+
+- **类型**: calculation
+- **难度**: 3
+- **主题**: fluid_mechanics
+- **答案长度**: 774 字符
+
+### 原文引用
+
+**引用 1**:
+> Fuel flow rate loss 1⁄4 (cid:3)K1=K2 (cid:4) ð1 (cid:3) expð(cid:3)K2 (cid:4) tÞÞ
+
+**引用 2**:
+> higher injection pressure contributes to increase the deposit removal rate.
+
+### 质量检查
+
+- **领域聚焦**: ✅ 通过
+- **答案正确性**: ✅ 通过
+- **其他合规性**: ✅ 通过
+- **总体评价**: pass
+
+**领域聚焦分析**: 问题涉及燃料喷射器沉积物动力学、流动损失计算和发动机设计优化，需要燃烧工程、流体力学和发动机设计领域的专业知识
+
+**改进建议**: 答案质量良好，计算准确，讨论深入，与原文引用一致。建议可以更详细说明K1和K2的物理意义以增强理解
+
+### 来源
+
+- **论文**: Fuel-injector-deposits-in-direct-injection-_2015_Progress-in-Energy-and-Comb
+- **生成类型**: batch_generation
+- **合并来源**: questions
+
+---
+
+## Question 2
+
+### 问题
+
+详细分析燃料中烯烃含量对GDI喷油器沉积物形成的影响机理，从化学动力学角度解释为什么烯烃比其他烃类更容易形成沉积物，并讨论不同分子量烯烃对沉积倾向的影响。
+
+### 标准答案
+
+燃料中烯烃含量对GDI喷油器沉积物形成具有显著促进作用，这种影响源于烯烃分子的化学特性和反应活性。从化学动力学角度分析，烯烃由于含有不饱和碳碳双键，具有较高的反应活性和较弱的热稳定性。
+
+论文指出：'From a chemical perspective, olefins are highly reactive components due to their unsaturated carbon bonds and weak thermal stability; therefore, olefins are suspected to assist deposit formation through low temperature auto-oxidation, and high temperature pyrolysis'。烯烃通过低温自氧化和高温热解两种途径促进沉积物形成。
+
+在低温自氧化路径中，烯烃的不饱和双键容易与氧气发生反应，生成氢过氧化物、醇、酮、酸等极性化合物，这些化合物进一步通过聚合反应形成高分子量的沉积前体物。在高温热解路径中，烯烃分子在高温下发生裂解和重组，形成多环芳烃，最终转化为碳质沉积物。
+
+不同分子量烯烃对沉积倾向的影响存在差异：'Uehara et al. suggested that larger molecular weight olefins led to a higher injector deposit tendency'。较大分子量的烯烃具有更高的沉积倾向，这是因为：1）较大分子量的烯烃具有更高的沸点和较低的挥发性，在喷油器高温环境中更容易残留；2）较大分子量的烯烃含有更多的反应位点，更容易发生聚合反应；3）较大分子量的烯烃形成的沉积前体物具有较低的溶解度，更容易从燃料中析出。这些因素共同导致高烯烃含量燃料，特别是含有较大分子量烯烃的燃料，具有更高的喷油器沉积物形成倾向。
+
+### 元数据
+
+- **类型**: reasoning
+- **难度**: 5
+- **主题**: combustion_kinetics
+- **答案长度**: 818 字符
+
+### 原文引用
+
+**引用 1**:
+> From a chemical perspective, olefins are highly reactive components due to their unsaturated carbon bonds and weak thermal stability; therefore, olefins are suspected to assist deposit formation through low temperature auto-oxidation, and high temperature pyrolysis
+
+**引用 2**:
+> Uehara et al. suggested that larger molecular weight olefins led to a higher injector deposit tendency
+
+### 质量检查
+
+- **领域聚焦**: ✅ 通过
+- **答案正确性**: ✅ 通过
+- **其他合规性**: ✅ 通过
+- **总体评价**: pass
+
+**领域聚焦分析**: 问题涉及燃料化学、燃烧工程、化学反应动力学、GDI喷油器沉积物形成机理等专业领域知识，需要燃烧科学、燃料化学和发动机工程方面的专业知识
+
+**改进建议**: 无需改进，问题和答案质量均符合要求
+
+### 来源
+
+- **论文**: Fuel-injector-deposits-in-direct-injection-_2015_Progress-in-Energy-and-Comb
+- **生成类型**: deepseek_generation
+- **合并来源**: question_reverse
+
+---
+
+## Question 3
+
+### 问题
+
+分析喷油器沉积物对GDI发动机喷雾特性的影响机理，包括喷雾角度、喷雾包络、喷雾贯穿距离和液滴直径的变化，并解释这些变化如何导致发动机性能和排放恶化。
+
+### 标准答案
+
+喷油器沉积物对GDI发动机喷雾特性产生严重影响，主要通过改变喷嘴内部几何形状和表面特性来实现。沉积物在喷嘴内部积累会减小有效流通面积，改变流动边界层，影响燃料的雾化过程。
+
+论文明确指出：'injector deposits will reduce injector fuel flow rates, and lead to changes in spray characteristics. Consequently, spray angle and envelope are likely to be affected, and spray penetration distance as well as droplet diameter can be increased'。喷雾角度和喷雾包络可能受到影响，喷雾贯穿距离和液滴直径会增加。
+
+具体机理分析：沉积物在喷嘴孔内积累会改变孔的几何形状，导致流动分离和湍流强度变化，从而影响液膜破碎过程。沉积物不均匀分布会导致喷雾不对称：'The original symmetrical spray can even become asymmetrical if the injector is plugged to some extent'。
+
+这些喷雾特性的变化对发动机性能产生连锁影响：增大的液滴直径和延长的喷雾贯穿距离导致燃料在气缸壁面上的撞击增加，产生壁面油膜，造成不完全燃烧。不对称的喷雾包络破坏设计的混合气形成模式，在分层燃烧模式下尤为严重。喷雾角度的改变影响燃料在燃烧室内的分布，导致局部过浓或过稀区域，增加HC和CO排放。沉积物在喷油器尖端还会吸收液体燃料液滴，导致扩散燃烧，显著增加颗粒物排放。这些效应共同导致发动机功率输出降低、燃油消耗增加、排放恶化，严重时甚至引起预燃和失火。
+
+### 元数据
+
+- **类型**: concept
+- **难度**: 4
+- **主题**: fluid_mechanics
+- **答案长度**: 774 字符
+
+### 原文引用
+
+**引用 1**:
+> injector deposits will reduce injector fuel flow rates, and lead to changes in spray characteristics. Consequently, spray angle and envelope are likely to be affected, and spray penetration distance as well as droplet diameter can be increased
+
+**引用 2**:
+> The original symmetrical spray can even become asymmetrical if the injector is plugged to some extent
+
+### 质量检查
+
+- **领域聚焦**: ✅ 通过
+- **答案正确性**: ✅ 通过
+- **其他合规性**: ✅ 通过
+- **总体评价**: pass
+
+**领域聚焦分析**: 问题涉及GDI发动机喷油器沉积物对喷雾特性的影响机理，包括喷雾角度、喷雾包络、喷雾贯穿距离和液滴直径的变化，以及这些变化对发动机性能和排放的影响，需要燃烧学、流体力学、发动机原理等领域的专业知识。
+
+**改进建议**: 无需改进，答案质量良好，准确回答了问题，并提供了详细的机理解释和引用支持。
+
+### 来源
+
+- **论文**: Fuel-injector-deposits-in-direct-injection-_2015_Progress-in-Energy-and-Comb
+- **生成类型**: deepseek_generation
+- **合并来源**: question_reverse
+
+---
+
+## Question 4
+
+### 问题
+
+基于论文中提出的GDI喷油器沉积物形成机理，详细分析低温和高温两种自由基路径（低温自氧化和高温热解）在沉积物形成过程中的物理化学机制，并解释为什么催化表面和非催化表面对沉积物形成的影响不同。
+
+### 标准答案
+
+GDI喷油器沉积物形成主要通过两种不同的自由基路径：低温自氧化和高温热解（焦化或碳沉积）。低温自氧化主要发生在温度较低时，烷基自由基与氧气反应生成氢过氧化物和其他氧化产物，这些氧化产物通过聚合/缩合反应形成沉积物。论文明确指出：'The liquid oxidation reactions of alkyl radicals generating hydro-peroxides and other oxidized products are believed to be responsible for deposit formation'。高温热解路径在较高温度下发生，主要通过烃类分解为元素碳和氢，或通过烃类物质的聚合/缩合形成沉积物。
+
+催化表面和非催化表面对沉积物形成的影响存在本质差异：'A non-catalytic surface may affect the heat/mass transfer in the system and act as an inert substrate to collect carbon deposits, the formation of which is thermally initiated in the fluid phase. In contrast, a catalytic surface could, in addition, interact with the reactive species and thus accelerate deposit formation'。催化表面不仅作为惰性基底收集沉积物，还能与反应物种相互作用，通过催化反应加速沉积物形成。而非催化表面仅通过影响系统传热传质过程，作为惰性基底收集在流体相中热引发的碳沉积物。这种差异源于催化表面能够提供活性位点促进自由基反应，而非催化表面仅提供物理沉积场所。
+
+### 元数据
+
+- **类型**: concept
+- **难度**: 4
+- **主题**: combustion_kinetics
+- **答案长度**: 802 字符
+
+### 原文引用
+
+**引用 1**:
+> The liquid oxidation reactions of alkyl radicals generating hydro-peroxides and other oxidized products are believed to be responsible for deposit formation
+
+**引用 2**:
+> A non-catalytic surface may affect the heat/mass transfer in the system and act as an inert substrate to collect carbon deposits, the formation of which is thermally initiated in the fluid phase. In contrast, a catalytic surface could, in addition, interact with the reactive species and thus accelerate deposit formation
+
+### 质量检查
+
+- **领域聚焦**: ✅ 通过
+- **答案正确性**: ✅ 通过
+- **其他合规性**: ✅ 通过
+- **总体评价**: pass
+
+**领域聚焦分析**: 问题涉及GDI喷油器沉积物形成机理，需要燃烧化学、自由基反应、热解过程、表面催化作用等专业领域知识，属于能源与燃烧工程领域的专业问题
+
+**改进建议**: 答案质量良好，准确描述了低温自氧化和高温热解两种自由基路径的物理化学机制，并正确解释了催化表面与非催化表面的差异，引用了相关论文内容作为支持
+
+### 来源
+
+- **论文**: Fuel-injector-deposits-in-direct-injection-_2015_Progress-in-Energy-and-Comb
+- **生成类型**: deepseek_generation
+- **合并来源**: question_reverse
+
+---
+
+## Question 5
+
+### 问题
+
+基于Aradi等人提出的喷油器堵塞动力学模型，推导燃料流量损失随时间变化的精确数学表达式，并分析沉积物形成速率常数K1和沉积物去除速率常数K2对最终稳态流量损失的影响。要求明确流量损失与沉积物体积V之间的物理关系。
+
+### 标准答案
+
+根据Aradi等人提出的喷油器堵塞动力学模型，净沉积速率方程为：dV/dt = K1 - K2·V，其中V为无量纲沉积物体积（沉积物体积除以喷油器喷嘴体积），K1为沉积物形成速率常数，K2为沉积物去除速率常数。
+
+推导过程：从dV/dt = K1 - K2·V出发，分离变量并积分：∫dV/(K1 - K2·V) = ∫dt，得到-ln|K1 - K2·V|/K2 = t + C。当t=0时，V=0，代入得C = -lnK1/K2。整理得：ln[(K1 - K2·V)/K1] = -K2·t，即(K1 - K2·V)/K1 = exp(-K2·t)，最终得到V = (K1/K2)[1 - exp(-K2·t)]。
+
+根据论文物理模型，喷油器流量与流通面积成正比，流通面积会因喷油器沉积物而减小。沉积面积等于沉积物体积除以有效沉积长度，因此燃料流量损失与沉积物体积V成正比。设比例系数为α，则燃料流量损失 = α·V = α·(K1/K2)[1 - exp(-K2·t)]。
+
+当时间足够长时，exp(-K2·t)→0，稳态流量损失为α·(K1/K2)。这表明最终稳态流量损失由K1和K2的比值决定，K1增大或K2减小都会增加稳态流量损失。K1增大意味着沉积物形成更快，K2减小意味着沉积物去除更慢，两者都会导致更大的稳态流量损失。
+
+### 元数据
+
+- **类型**: calculation
+- **难度**: 4
+- **主题**: combustion_kinetics
+- **答案长度**: 568 字符
+
+### 原文引用
+
+**引用 1**:
+> Net deposit rate = Deposit rate – Deposit removal rate dV/dt = K1 – K2 · V
+
+**引用 2**:
+> The injector flow rate is proportional to the flow area, which will be reduced by injector deposits. The deposit area equals to the deposit volume divided by an effective deposit length. Thus the fuel flow rate loss is proportional to the loss of flow area determined by the net deposit rate.
+
+### 质量检查
+
+- **领域聚焦**: ✅ 通过
+- **答案正确性**: ✅ 通过
+- **其他合规性**: ✅ 通过
+- **总体评价**: pass
+
+**领域聚焦分析**: 问题涉及喷油器堵塞动力学模型、燃料流量损失数学表达式推导、沉积物形成与去除速率常数分析，需要燃烧工程、流体力学、传热传质、化学反应动力学等能源与燃烧领域的专业知识
+
+### 来源
+
+- **论文**: Fuel-injector-deposits-in-direct-injection-_2015_Progress-in-Energy-and-Comb
+- **生成类型**: deepseek_generation
+- **合并来源**: question_reverse
+
+---
+

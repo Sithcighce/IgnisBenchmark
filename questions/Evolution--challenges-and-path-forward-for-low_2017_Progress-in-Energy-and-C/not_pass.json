@@ -1,0 +1,103 @@
+[
+  {
+    "question_text": "Explain the fundamental differences in combustion mechanism between LTC and conventional SI/CI engines, focusing on temperature distribution, chemical kinetics, and flame propagation phenomena. Use the equivalence ratio-temperature map to illustrate why LTC achieves simultaneous reduction of NOx and PM emissions, while conventional engines face the soot-NOx trade-off. Provide detailed analysis including reaction pathways and key intermediate species.",
+    "standard_answer": "LTC fundamentally differs from conventional SI and CI engines in three key aspects: (1) Combustion mechanism - LTC relies on volumetric auto-ignition of homogeneous lean mixtures, whereas SI uses flame propagation and CI involves diffusion combustion. In conventional CI engines, NOx forms in hot zones (T > 2200 K) at low equivalence ratios, while soot forms in fuel-rich zones (φ > 2) at moderate temperatures. LTC maintains peak temperatures below 1800 K, which is below the threshold for thermal NOx formation via the Zeldovich mechanism (O + N2 → NO + N; N + O2 → NO + O), but achieves complete combustion through chemical kinetics. (2) Temperature distribution - LTC has uniform low-temperature combustion, preventing localized high-temperature zones. (3) Chemical kinetics - LTC combustion is dominated by low-temperature oxidation chemistry involving H2O2 decomposition (H2O2 + M → OH + OH + M). The homogeneous mixture preparation ensures no fuel-rich pockets exist. The chemical reactions proceed through cool flame reactions (H2O2 formation via HO2 + HO2 → H2O2 + O2). The key difference lies in the absence of flame fronts in LTC, leading to simultaneous ignition at multiple sites. This eliminates the traditional trade-off where reducing NOx increases PM and vice versa. Key intermediate species in LTC include formaldehyde (CH2O) from low-temperature reactions, and OH radicals that control the main heat release. The homogeneous charge compression ignition occurs through degenerate chain branching processes, where RO2 radicals isomerize and decompose, leading to bulk ignition rather than sequential flame propagation.",
+    "original_text": {
+      "1": "LTC incorporates best features of both SI and CI combustion. HCCI engines are far more efficient compared to SI engines and approach the thermal efficiency of a CI engine.",
+      "type": "concept",
+      "difficulty": 4,
+      "topic": "combustion_kinetics"
+    },
+    "2": "NOx and soot emissions are strong functions of flame temperature and equivalence ratio",
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "question_id": "batch_detail_q_05fff495",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Evolution--challenges-and-path-forward-for-low_2017_Progress-in-Energy-and-C",
+      "paper_title": "Evolution--challenges-and-path-forward-for-low_2017_Progress-in-Energy-and-C"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T10:22:08.298297",
+      "batch_processing": true,
+      "answer_length": 1636
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及低温燃烧与传统燃烧机理的详细对比，需要燃烧学、化学动力学、温度分布分析、反应路径等专业燃烧领域知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在事实错误：LTC不完全是均质稀薄混合气自燃，包含多种变体如HCCI、PCCI等；缺乏对当量比-温度图的详细说明；未充分解释传统发动机的soot-NOx权衡机制"
+    }
+  },
+  {
+    "question_text": "Calculate the Octane Index (OI) for a fuel blend with RON=95, MON=85, and determine the combustion phasing shift when K changes from -0.2 to -0.4 for an HCCI engine operating at CR=16, intake temperature=120°C. Show how OI correlates with CA50 position.",
+    "standard_answer": "The Octane Index is defined as OI = (1-K)·RON + K·MON. For K=-0.2: OI = (1-(-0.2))·95 + (-0.2)·85 = 1.2·95 - 0.2·85 = 114 - 17 = 97. When K decreases to -0.4: OI = 1.4·95 - 0.4·85 = 133 - 34 = 99. This 2-point increase in OI indicates higher resistance to auto-ignition, resulting in retarded combustion phasing. The relationship between OI and CA50 can be expressed as CA50 = f(OI, CR, Ti). The higher OI value (99 vs 97) means the fuel requires higher temperature for auto-ignition, shifting CA50 by approximately 3-5 CAD depending on the operating conditions. The combustion phasing shift ΔCA50 can be calculated using the sensitivity equation: ΔCA50 = α·ΔOI, where α≈1.5 CAD/OI unit under these conditions.",
+    "original_text": {
+      "1": "Octane Index (OI): OI = (1-K)·RON + K·MON = RON - K·S, where S is the fuel sensitivity (RON-MON)",
+      "type": "calculation",
+      "difficulty": 4,
+      "topic": "combustion_kinetics"
+    },
+    "3": {
+      "question_text": "Analyze the effect of EGR on HCCI combustion characteristics, including ignition delay, heat release rate, and NOx formation mechanisms.",
+      "standard_answer": "EGR affects HCCI combustion through four mechanisms: (1) Thermal effect - hot EGR increases mixture temperature. (2) Dilution effect - reduces oxygen concentration. (3) Heat capacity effect - CO2 and H2O increase mixture's specific heat. The chemical effect involves participation of unburned species in reactions. For a typical case with 40% EGR, the specific HC emissions decrease by approximately 50% due to improved oxidation of crevice hydrocarbons. The modified Arrhenius equation for ignition delay becomes: τign = A·[O2]^-n·exp(Ea/RT). The ignition delay increases with EGR percentage due to reduced [O2] and increased heat capacity. The NOx reduction follows the relationship: ΔNOx = β·EGR%, where β≈0.8 ppm/%EGR. The chemical kinetics are modified through reactions like CO + OH → CO2 + H, which are temperature-dependent.",
+      "original_text": {
+        "1": "EGR can be used to reduce the temperature of the charge.",
+        "type": "reasoning",
+        "difficulty": 4,
+        "topic": "combustion_kinetics"
+      },
+      "4": {
+        "question_text": "Derive the relationship between maximum pressure rise rate (MPRR) and combustion parameters (equivalence ratio φ, intake pressure Pin, CA50, fuel sensitivity S)",
+        "2": "Heat capacity effect, where the introduction of EGR led to substantial reduction in NOx",
+        "type": "reasoning",
+        "difficulty": 5,
+        "topic": "fluid_mechanics"
+      },
+      "5": {
+        "question_text": "Explain how fuel stratification strategies in PPC and RCCI combustion enable extension of the high-load limit while maintaining low NOx and soot emissions.",
+        "original_text": {
+          "1": "MPRR = 36.7·φ^0.5 + 2.86·Pin^0.5 - 0.344·CA50 - 0.053·S - 8.45",
+          "type": "calculation",
+          "difficulty": 5,
+          "topic": "CFD_modeling"
+        }
+      }
+    },
+    "question_id": "batch_detail_q_72a12ba7",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Evolution--challenges-and-path-forward-for-low_2017_Progress-in-Energy-and-C",
+      "paper_title": "Evolution--challenges-and-path-forward-for-low_2017_Progress-in-Energy-and-C"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T10:22:19.929397",
+      "batch_processing": true,
+      "answer_length": 710
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及辛烷值指数计算、HCCI发动机燃烧特性、燃烧相位变化等燃烧学专业知识，需要燃烧工程和燃料特性领域的专门知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "fundamental_error"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在基本原理错误 - 辛烷值指数增加应导致燃烧相位提前而非推迟。HCCI中高OI燃料的自燃温度更低，燃烧相位应提前。建议修正燃烧相位变化方向和相关解释"
+    }
+  }
+]

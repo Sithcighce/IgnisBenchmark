@@ -1,0 +1,38 @@
+[
+  {
+    "question_text": "从多尺度建模的角度，比较热力学模型与CFD模型在吸附增强蒸汽甲烷重整过程分析中的优缺点，并解释为什么在反应器尺度上CFD模型能更准确地捕捉温度分布和传质现象。",
+    "standard_answer": "在吸附增强蒸汽甲烷重整过程的多尺度建模中，热力学模型（如吉布斯自由能最小化GFM）适用于预测系统在热力学平衡下的产物分布，但它无法解析反应器内的局部温度梯度和浓度场。而CFD模型通过求解质量、能量和动量守恒方程，能够精确描述流化床中的气泡动力学和颗粒-流体相互作用。具体而言，热力学模型基于总吉布斯自由能最小化：G(n_i) = Σ μ_i n_i，其中μ_i为化学势，n_i为物种i的摩尔数。CFD模型能模拟反应器内的非均匀温度分布，这对于优化H2产率至关重要。例如，在双流体模型中，气体和固体相分别用欧拉方法处理，并耦合颗粒拖曳力模型，以计算气体与颗粒之间的动量交换。此外，CFD模型可以集成简化的动力学模型来描述颗粒内的化学反应。然而，CFD计算成本高，特别是在处理大量颗粒和复杂几何时。然而，CFD能够考虑反应器内的局部流动结构，如气泡的生成和聚并，这些现象直接影响反应转化率。因此，虽然热力学模型计算高效，但CFD模型在捕捉反应器尺度上的复杂现象（如返混和沟流）方面具有优势。",
+    "original_text": {
+      "1": "CFD models may be applied to single particles, for detailed description of phenomena taking place within a single particle and do take a kinetic model into consideration to describe the reaction rate of the chemical reactions taking place.",
+      "type": "concept",
+      "difficulty": 4,
+      "topic": "CFD_modeling"
+    },
+    "question_id": "batch_detail_q_bb6564e0",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Progress-in-in-situ-CO2-sorption-for-enhanc_2022_Progress-in-Energy-and-Comb",
+      "paper_title": "Progress-in-in-situ-CO2-sorption-for-enhanc_2022_Progress-in-Energy-and-Comb"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T16:10:41.528731",
+      "batch_processing": true,
+      "answer_length": 443
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "该问题涉及吸附增强蒸汽甲烷重整过程的多尺度建模，需要燃烧工程、传热传质、计算流体动力学(CFD)和热力学等专业领域的深度知识，属于典型的能源与化学工程领域问题。",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在事实错误：GFM模型基于总吉布斯自由能最小化，但给出的公式G(n_i) = Σ μ_i n_i只是吉布斯自由能的定义式，并非最小化条件。需要修正为更准确的热力学平衡描述。同时，关于CFD模型能够模拟颗粒内化学反应的声明缺乏原文引用支持。"
+    }
+  }
+]

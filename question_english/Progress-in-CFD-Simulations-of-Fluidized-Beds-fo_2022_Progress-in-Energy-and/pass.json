@@ -1,0 +1,167 @@
+[
+  {
+    "question_text": "Calculate the minimum fluidization velocity for Geldart B particles with a Sauter mean diameter of 500 μm and density of 2500 kg/m³ in air at 20°C and 1 atm, using the Ergun equation. Explain the physical significance of the terms in the calculation.",
+    "standard_answer": "The minimum fluidization velocity (U_mf) is calculated using the Ergun equation at the point where pressure drop equals the weight of the bed per unit area. The Ergun equation for pressure drop in packed beds is: ΔP/L = 150[(1-ε)^2/ε^3](μU/d_p²) + 1.75[(1-ε)/ε^3](ρ_g U²/d_p), where ε is voidage (typically 0.4-0.45 for Geldart B), μ is gas viscosity, ρ_g is gas density, d_p is particle diameter. At minimum fluidization, ΔP/L = (ρ_p - ρ_g)(1-ε)g. For air at 20°C and 1 atm: μ = 1.8e-5 Pa·s, ρ_g = 1.2 kg/m³. Assume ε_mf = 0.42. Substituting: (2500-1.2)(1-0.42)*9.81 = 14200 Pa/m. Setting equal to Ergun: 14200 = 150[(1-0.42)^2/0.42^3]*(1.8e-5*U/0.0005²) + 1.75[(1-0.42)/0.42^3]*(1.2*U²/0.0005). Simplifying: 14200 = 150*2.07*(1.8e-5*U/2.5e-7) + 1.75*7.82*(1.2*U²/0.0005) = 150*2.07*72*U + 1.75*7.82*2400*U² = 22356U + 32844U². Solving quadratic: 32844U² + 22356U - 14200 = 0 → U ≈ 0.22 m/s. The first term in Ergun represents viscous losses (laminar flow), dominant for small particles/low velocities; the second term represents inertial losses (turbulent flow). At U_mf, these balance the gravitational force, indicating transition from fixed to fluidized bed where drag supports particle weight.",
+    "original_text": {
+      "1": "Empirical equations can be used to determine the fluidization velocity at the transition of subsequent regimes (summarized, e.g. by Zhang et al. [62]).",
+      "2": "Geldart [60] classified the particles, based on their fluidization behavior, into four groups: C (cohesive), A (aeratable), B (bubbling or sand-like), and D (coarse or spoutable)."
+    },
+    "type": "calculation",
+    "difficulty": 3,
+    "topic": "fluid_mechanics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question requires specific fluid mechanics and chemical engineering expertise in fluidized bed systems, including knowledge of Geldart particle classification, minimum fluidization velocity calculation using the Ergun equation, and understanding of gas-solid flow physics in energy/combustion applications.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question is well-focused on fluid mechanics domain with proper calculation and explanation requirements. Answer provides complete calculation with correct physics interpretation."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_037cae69",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Progress-in-CFD-Simulations-of-Fluidized-Beds-fo_2022_Progress-in-Energy-and",
+      "paper_title": "Progress-in-CFD-Simulations-of-Fluidized-Beds-fo_2022_Progress-in-Energy-and"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:26:20.116400",
+      "answer_length": 1199
+    }
+  },
+  {
+    "question_text": "How does the kinetic theory of granular flows (KTGF) extend classical kinetic theory to model dense gas-solid flows in fluidized beds, and what are the key closure relations derived from granular temperature?",
+    "standard_answer": "The kinetic theory of granular flows (KTGF) extends classical kinetic theory of dense gases (KTDG) by treating the solid phase as a continuum with fluctuating particle velocities, analogous to molecular motion in gases. The core concept is granular temperature, defined as the mean square of particle velocity fluctuations, which quantifies the random kinetic energy of particles. This granular temperature is governed by a transport equation accounting for generation (via shear work and particle collisions), dissipation (through inelastic collisions and gas-phase damping), and transport (diffusion and convection). Key closure relations derived include: (1) Solid pressure, which resists compaction and depends on granular temperature and particle concentration; (2) Solid viscosity, representing resistance to shear deformation, modeled as a function of granular temperature, particle diameter, and restitution coefficient; (3) Solid stress tensor, incorporating both collisional and kinetic contributions. These closures enable the two-fluid model to predict phenomena like bubble formation, solid clustering, and segregation in fluidized beds by capturing particle-phase rheology. The approach bridges microscopic particle interactions (collisions, friction) to macroscopic flow behavior, though it requires empirical inputs like particle-wall boundary conditions.",
+    "original_text": {
+      "1": "The kinetic theory of granular flows (KTGF) is explained in detail by Gidaspow [10] and is related to the kinetic theory of dense gases (KTDG) [80]. The basic idea behind KTGF is that the particles are in continuous and chaotic motion due to interaction within the gas phase (for dilute systems) and with the particles or walls, or both (for dense gas-solid flows).",
+      "2": "A temperature is defined that is a measure of fluctuations in the particles’ velocities. This is known as the granular temperature. The solid viscosity, the solid pressure, and the solid stress are a function of the granular temperature, whose time and position vary throughout the computational domain."
+    },
+    "type": "concept",
+    "difficulty": 5,
+    "topic": "fluid_mechanics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires deep expertise in fluid mechanics and multiphase flow modeling, specifically focusing on kinetic theory extensions for dense gas-solid flows in fluidized beds. It demands understanding of granular temperature concepts, closure relations, and their application to fluidized bed phenomena - all core topics in combustion science, energy systems, and CFD modeling.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_3cc9b444",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Progress-in-CFD-Simulations-of-Fluidized-Beds-fo_2022_Progress-in-Energy-and",
+      "paper_title": "Progress-in-CFD-Simulations-of-Fluidized-Beds-fo_2022_Progress-in-Energy-and"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:26:20.183295",
+      "answer_length": 1371
+    }
+  },
+  {
+    "question_text": "Based on the provided paper content, how do the authors describe the role of CFD modeling in understanding heat and mass transfer limitations in fluidized bed systems, particularly regarding gas-solid mixing and temperature distribution?",
+    "standard_answer": "The authors emphasize that CFD modeling plays a crucial role in understanding the limitations of heat and mass transfer in fluidized bed systems, particularly highlighting the incomplete gas-solid mixing that leads to significant temperature variations. They note that while fluidized beds offer strong mixing between gas and solid phases, this mixing is actually limited in practice. The paper specifically mentions that temperature differences between various zones of circulating fluidized bed furnaces have been measured, with temperatures reaching up to 1000°C or more in the core while the average bed temperature is 800-900°C. This temperature non-uniformity directly impacts heat transfer efficiency and indicates limitations in the mixing process. The authors position CFD as a valuable tool for studying these hydrodynamic characteristics and flow structures that affect thermal performance, noting that numerical models provide beneficial options to study modifications of fluidized-bed systems and gain knowledge of flow structures and their effects on fluidization for improved design and scale-up procedures.",
+    "original_text": {
+      "1": "Special attention is devoted to the forces and the moments of the forces acting on particles, the parcel modeling, the homogeneous and structure-dependent drag models, the non-spherical particle models, the heat and mass transfer, and the turbulence.",
+      "2": "However, it should be mentioned here that the gas-solid mixing and the mixing of gases are limited; for instance temperature differences between various zones of the circulating fluidized bed furnace have been measured (the temperature can be reached up to 1000 °C or more in the core of the CFB, while the average bed temperature is 800-900 °C)."
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "heat_transfer",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question specifically addresses CFD modeling in fluidized bed systems, focusing on heat and mass transfer limitations, gas-solid mixing, and temperature distribution. This requires expertise in fluid mechanics, heat transfer, and chemical/energy process engineering, which are core domain topics.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "The question is domain-focused, the answer is factually correct and well-supported by the provided citations, and there are no other quality issues. It passes all checks."
+    },
+    "retry_count": 1,
+    "question_id": "deepseek_q_471a98ad",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Progress-in-CFD-Simulations-of-Fluidized-Beds-fo_2022_Progress-in-Energy-and",
+      "paper_title": "Progress-in-CFD-Simulations-of-Fluidized-Beds-fo_2022_Progress-in-Energy-and"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:26:57.761166",
+      "answer_length": 1122
+    }
+  },
+  {
+    "question_text": "Based on the provided paper, what specific attention is given to structure-dependent drag models like EMMS in CFD simulations of gas-solid fluidized beds, and what computational performance data is presented for EMMS applications?",
+    "standard_answer": "The paper explicitly states that 'Special attention is devoted to the forces and the moments of the forces acting on particles, the parcel modeling, the homogeneous and structure-dependent drag models, the non-spherical particle models, the heat and mass transfer, and the turbulence.' This indicates that structure-dependent drag models receive focused consideration alongside other critical modeling aspects in gas-solid flow simulations. Regarding computational performance, the paper provides specific timing data: 'The processing time lasted approximately 4.65 hours of wall-clock time for 1 s of simulation time using EMMS as a drag model while excluding the reaction mechanism.' This computational benchmark demonstrates the practical feasibility of implementing EMMS drag models in industrial-scale simulations, showing that while computationally intensive, such models can be applied within reasonable timeframes for complex fluidized bed systems.",
+    "original_text": {
+      "1": "Special attention is devoted to the forces and the moments of the forces acting on particles, the parcel modeling, the homogeneous and structure-dependent drag models, the non-spherical particle models, the heat and mass transfer, and the turbulence.",
+      "2": "The processing time lasted approximately 4.65 hours of wall-clock time for 1 s of simulation time using EMMS as a drag model while excluding the reaction mechanism."
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "CFD_modeling",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question specifically addresses structure-dependent drag models (EMMS) in CFD simulations of gas-solid fluidized beds, which requires expertise in computational fluid dynamics, multiphase flow modeling, and fluidized bed technology - all core domain topics in combustion and energy process engineering.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and compliant with other requirements."
+    },
+    "retry_count": 2,
+    "question_id": "deepseek_q_7dee4da1",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Progress-in-CFD-Simulations-of-Fluidized-Beds-fo_2022_Progress-in-Energy-and",
+      "paper_title": "Progress-in-CFD-Simulations-of-Fluidized-Beds-fo_2022_Progress-in-Energy-and"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:27:27.832887",
+      "answer_length": 956
+    }
+  },
+  {
+    "question_text": "In the context of discrete-particle methods for gas-solid fluidized beds, what are the fundamental differences between hard-sphere and soft-sphere models according to the provided paper, and how do their computational requirements vary across different regions of fluidized bed systems?",
+    "standard_answer": "The fundamental differences between hard-sphere and soft-sphere models lie in their collision detection approaches and computational characteristics. According to the paper, for discrete particle simulations with stochastic or deterministic collision detections, both models are widely used for particle-particle and particle-wall collisions. The hard-sphere model is used with either stochastic collision detection models or deterministic collision detection models with adaptive particle time step, where instantaneous and single binary collisions are possible between rigid spheres with no particle deformation. In contrast, the soft-sphere model is used for deterministic collision detection models with constant particle time step. The computational performance varies significantly across different regions of fluidized bed systems. The hard-sphere model has been used in limited studies on fluidized bed systems because it cannot handle multiple collisions occurring in nearly stagnant zones with low particle velocities due to extremely high CPU time requirements. However, in regions with high particle velocities such as the spout region or core zone, the hard-sphere model leads to comparable computational cost as the soft-sphere model while providing more accurate predictions against experiments. This regional variation in computational efficiency highlights the importance of selecting the appropriate collision model based on the specific flow regime and particle dynamics within different zones of the fluidized bed system.",
+    "original_text": {
+      "1": "For the discrete particle simulations with stochastic or deterministic collision detections, two models are widely used for particle-particle and particle-wall collisions, namely hard-sphere and soft-sphere models.",
+      "2": "The hard-sphere model has been used in a limited number of studies on fluidized bed systems since it cannot handle multiple collisions, occurring in nearly stagnant zones (e.g. annulus region) with low particle velocities, due to the extremely high CPU time required. However, the hard-sphere model leads to a comparable computational cost as the soft-sphere model in regions with high particle velocities (e.g. spout region, or core zone) with more accurate predictions against experiments."
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "CFD_modeling",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question specifically addresses discrete-particle methods for gas-solid fluidized beds, requiring expertise in CFD modeling, particle collision dynamics, and computational fluid mechanics applied to energy/combustion systems. It focuses on fundamental differences between hard-sphere and soft-sphere models and their computational performance across different fluidized bed regions, which requires specialized domain knowledge in multiphase flows and numerical methods.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "The question is well-focused on CFD modeling domain and the answer accurately reflects the paper's content regarding model differences and computational requirements across fluidized bed regions."
+    },
+    "retry_count": 2,
+    "question_id": "deepseek_q_9cee4671",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Progress-in-CFD-Simulations-of-Fluidized-Beds-fo_2022_Progress-in-Energy-and",
+      "paper_title": "Progress-in-CFD-Simulations-of-Fluidized-Beds-fo_2022_Progress-in-Energy-and"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:27:33.822740",
+      "answer_length": 1541
+    }
+  }
+]

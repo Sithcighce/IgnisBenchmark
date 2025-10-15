@@ -1,0 +1,81 @@
+[
+  {
+    "question_text": "基于论文中关于SS-AD中扩散限制模型的描述，请详细解释：在高总固体含量（TS > 20%）条件下，糖类等水解产物的扩散过程如何成为速率限制步骤？并推导该模型中水解抑制项与扩散速率之间的数学关系。",
+    "standard_answer": "在SS-AD中，当总固体含量超过20%时，水解产物的扩散限制成为关键机制。根据论文2.6节，模型假设每个微菌群释放水解酶降解周围固体基质（如纤维素和半纤维素），产生糖类等水解产物。这些产物因浓度梯度从基质颗粒向微菌群扩散。扩散速率遵循Fick定律：rd = (DeA)/(LV)(S - S')，其中De为有效扩散系数，A为微菌群表面积，L为有效水解区厚度，V为基质层体积，S和S'分别为基质和微菌群内的糖浓度。由于高TS下水分含量降低，扩散路径受阻，De显著减小（在SS-AD中估计低至10^-7 cm²/s，远低于液态水中的~2×10^-5 cm²/s。此时，水解速率受抑制，数学表达式为：ri = -kiS，其中ri为水解速率减少量，ki为水解抑制系数。当TS增加时，水分减少导致：1）扩散系数De下降，减少糖类从基质向微菌群的传输；2)糖浓度S在基质中累积，通过ri项直接抑制水解动力学（-dXi/dt = khiXi - ri）。在高TS下，rd下降，S升高，从而ri增大，抑制水解，最终降低甲烷产率。验证表明，TS阈值在15-20%之间，低于此值，系统遵循Monod动力学，反应速率随TS增加；超过阈值，扩散限制占主导，反应速率下降。这解释了为什么SS-AD在TS > 20%时反应速率较低，而优化TS在15-20%可平衡微生物生长与质量传递。",
+    "original_text": {
+      "1": "Xu et al. [26] concluded that there is a TS content threshold between 15% and 20%, below which the volumetric methane production rate tends to increase with TS content as governed by the Monod kinetics, but decreases when the TS content exceeds the threshold, due to hydrolysis inhibition caused by the diffusion limitation of sugars.",
+      "2": "Hydrolysis of lignocellulosic biomass (Eq. (1)) was assumed to be inhibited by hydrolytic products such as glucose, and an empirical equation (Eq. (17)) was proposed for hydrolysis inhibition: ri = -kiS, where ri (g L⁻¹d⁻¹) is the hydrolysis rate reduction due to inhibition; ki (d⁻¹) is the hydrolysis inhibition coefficient; and S (g L⁻¹) is the concentration of soluble hydrolytic products such as sugars."
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "CFD_modeling",
+    "question_id": "batch_detail_q_1589bcba",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Mathematical-modeling-of-solid-state-anae_2015_Progress-in-Energy-and-Combus",
+      "paper_title": "Mathematical-modeling-of-solid-state-anae_2015_Progress-in-Energy-and-Combus"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T12:38:16.340618",
+      "batch_processing": true,
+      "answer_length": 578
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及固体厌氧消化(SS-AD)中的传质过程、扩散限制机制和数学建模，需要燃烧/传热/流体/能源领域的专业知识来理解扩散过程、Fick定律、水解动力学等核心概念",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported"
+      ],
+      "other_compliant": false,
+      "other_issues": [
+        "has_meta_info",
+        "too_general"
+      ],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在事实错误：论文2.6节实际讨论的是'两颗粒模型'而非'微菌群模型'；扩散速率表达式与原文不符；数学关系推导不准确。需要严格依据原文引用重新构建答案，并删除'根据论文'等元信息"
+    }
+  },
+  {
+    "question_text": "从能源系统优化角度，论文比较了L-AD与SS-AD的传质特性（表1）。请推导：在SS-AD中，由于缺乏混合，VFA的扩散如何成为抑制调控机制？结合'两粒子'模型（第2.2节）中的方程，说明扩散限制如何缓解对产甲烷菌的酸抑制。",
+    "standard_answer": "在SS-AD中，传质涉及固-液-气三相，且与L-AD相比，SS-AD的传质速率显著降低，如表1所述：'Mass transfer is severely limited. Diffusion or convection via leachate flow are assumed as the major forms of mass transfer.' 具体地，在'两粒子'模型中，VFA在'废物'颗粒中产生，通过扩散传输到'种子'颗粒。扩散速率rd由式7给出：rd = 2De/(LS² (SS - SW)/LW²)'。扩散限制反而有益，因为它降低了VFA进入'种子'颗粒的速率，从而减轻对产甲烷菌的抑制。扩散方程基于Fick定律：rd ∝ De ΔS/L，其中ΔS为浓度差，L为特征长度。当扩散阻力高时，VFA从'废物'向'种子'的传输减缓，允许产甲烷菌更渐进地适应酸性环境。数学上，当De减小时，rd降低，这延迟了VFA在'种子'颗粒中的积累，避免pH骤降。例如，Kalyuzhnyi等[38]指出，高扩散阻力可减轻接种物酸化。从能源产出角度，这意味SS-AD在较高有机负荷下可能更稳定，因为空间分离缓冲了瞬时酸冲击。优化策略包括通过稀释或空间分离限制溶质传输，从而提高甲烷产率的稳定性。",
+    "original_text": {
+      "1": "High diffusion resistance in a solid medium was considered beneficial in reducing the rate of VFAs entering the 'seed' particles and, in turn, could mitigate the inhibition of VFAs to methanogens.",
+      "2": "Thus, more investigation about the mass transfer phenomena in the solid, liquid, and gas phases in SS-AD is required to improve the efficiency of the process.",
+      "type": "concept",
+      "difficulty": 3,
+      "topic": "energy_systems"
+    },
+    "question_id": "batch_detail_q_e44808ef",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Mathematical-modeling-of-solid-state-anae_2015_Progress-in-Energy-and-Combus",
+      "paper_title": "Mathematical-modeling-of-solid-state-anae_2015_Progress-in-Energy-and-Combus"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T12:38:28.009751",
+      "batch_processing": true,
+      "answer_length": 548
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及固体厌氧消化(SS-AD)的传质特性、VFA扩散机制和'两粒子'模型，需要能源系统、生物反应工程和传质过程等专业领域的深度知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported"
+      ],
+      "other_compliant": false,
+      "other_issues": [
+        "has_meta_info"
+      ],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在严重的公式错误和缺乏支持的关键声明，需要修正扩散速率公式并增加对'两粒子'模型机制的解释支持"
+    }
+  }
+]

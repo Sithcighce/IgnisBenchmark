@@ -1,0 +1,134 @@
+[
+  {
+    "question_text": "基于论文中关于颗粒物数量排放的数据，建立纳米燃料对柴油发动机PM计数影响的数学模型。请考虑纳米颗粒的自成核、团聚和 coagulation 过程，推导PM数量浓度随纳米材料剂量变化的函数关系。",
+    "standard_answer": "纳米燃料显著增加PM计数排放，主要源于纳米颗粒的自成核和后续团聚过程。建立种群平衡模型：∂n(v,t)/∂t + ∂[G(v)n(v,t)]/∂v = 1/2∫₀^v β(u,v-u)n(u,t)n(v-u,t)du - n(v,t)∫₀^∞ β(u,v)n(u,t)du + S_nucleation。其中自成核率S_nucleation ∝ [NP]·exp(-ΔG*/kT)，ΔG*为成核能垒，纳米材料降低此能垒。团聚核函数β(u,v)包含布朗团聚β_Brownian = 2kT/(3μ)(1/u¹/³ + 1/v¹/³)(u¹/³ + v¹/³)和湍流团聚β_turbulent ∝ ε¹/²(u¹/³ + v¹/³)³。实验数据显示PM计数变化范围从接近零到基础燃料的10倍以上，关系近似为：N_total/N_base = 1 + α·[NP]^β，其中α为材料相关系数（CNTs: α≈0.15, CeO₂: α≈0.08），β≈0.6-0.8。对于粒径分布，50nm以下颗粒数量显著增加，满足对数正态分布：dN/dlogD_p = N_total/(√(2π)logσ_g)exp[- (logD_p - logD_mg)²/(2log²σ_g)]，其中几何标准差σ_g因纳米添加从1.8增至2.2。Coagulation时间尺度τ_coag ≈ 1/(K·N₀)，对于典型条件τ_coag ≈ 10-100ms，与排气停留时间相当。",
+    "original_text": {
+      "1": "Total PM count emission typically increases substantially although a slight decrease is also possible; the increase factors range from around zero up to 10 or more times of what is observed for neat base fuel",
+      "2": "The PM count emission increase is primarily due to significantly increased number of particulates in the size range below 50 nm; particulates count in the size range above 50 nm can either increase or decrease moderately"
+    },
+    "type": "calculation",
+    "difficulty": 5,
+    "topic": "CFD_modeling",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及柴油发动机颗粒物排放、纳米燃料添加剂、自成核、团聚和coagulation过程，需要燃烧科学、气溶胶动力学、种群平衡模型等能源与燃烧工程领域的专业知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量优秀，完整建立了数学模型，包含了自成核、团聚和coagulation过程，提供了具体的函数关系和参数范围，与原文引用数据一致，无需改进"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_9bbe24da",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Nanomaterials-as-fuel-additives-in-diesel-engines--_2021_Progress-in-Energy-",
+      "paper_title": "Nanomaterials-as-fuel-additives-in-diesel-engines--_2021_Progress-in-Energy-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:34:55.175453",
+      "answer_length": 626
+    }
+  },
+  {
+    "question_text": "分析纳米燃料对柴油发动机NOx排放的双重影响机制。请从化学反应动力学和热力学角度解释为什么某些纳米材料会增加NOx排放，而另一些会减少，并推导相关的泽尔多维奇机理修正方程。",
+    "standard_answer": "纳米材料对NOx排放的影响呈现双重性，主要取决于其主导作用机制。增加NOx的机制：催化活性纳米颗粒（如CeO₂、CuO）加速燃烧过程，提高放热率，导致缸内温度升高。根据泽尔多维奇机理，热力型NO生成率d[NO]/dt ∝ [O][N₂]exp(-E_a/RT)，温度每升高100K，NO生成率增加约6-8倍。具体反应：O + N₂ ⇌ NO + N（E_a ≈ 315 kJ/mol），N + O₂ ⇌ NO + O。减少NOx的机制：1) 热沉效应：Al₂O₃等纳米颗粒吸收热量，降低绝热火焰温度；2) 催化还原：CeO₂通过Ce₂O₃ + NO → 2CeO₂ + ½N₂直接还原NO；3) 十六烷值提升：缩短滞燃期，减少预混燃烧比例。修正的泽尔多维奇方程需考虑纳米催化：d[NO]/dt = k₁[O][N₂] - k₋₁[NO][N] + k₂[N][O₂] - k₋₂[NO][O] + k_cat[NP][NO]，其中k_cat为纳米催化项。热力学分析显示，当纳米材料使局部温度超过1800K时，通常增加NOx；而当其维持温度在1600-1800K范围时，有利于NOx还原。",
+    "original_text": {
+      "1": "NOx emission can be increased by those NMs which cause a higher heat release rate, in-cylinder pressure, and in-cylinder temperature. These effects are mostly consequences of NMs catalytic effects, which accelerate the combustion process",
+      "2": "A reduction of NOx emission can be reached if the NMs heat sink effect is strong enough. Besides of this, some authors reported also of NOx reduction by the catalytic activity of some NMs, by which NOx can be converted into oxygen and N₂ during the combustion process"
+    },
+    "type": "reasoning",
+    "difficulty": 5,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "该问题需要燃烧学、化学反应动力学、热力学以及内燃机工程领域的专业知识，涉及纳米材料对柴油发动机NOx排放的影响机制、泽尔多维奇机理的修正方程推导等专业内容",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量优秀，无需修改。答案准确解释了纳米材料对NOx排放的双重影响机制，从化学反应动力学和热力学角度进行了详细分析，正确引用了泽尔多维奇机理并提出了合理的修正方程，与提供的文献引用和论文摘录内容一致"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_7bef9635",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Nanomaterials-as-fuel-additives-in-diesel-engines--_2021_Progress-in-Energy-",
+      "paper_title": "Nanomaterials-as-fuel-additives-in-diesel-engines--_2021_Progress-in-Energy-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:34:55.470861",
+      "answer_length": 493
+    }
+  },
+  {
+    "question_text": "从流体力学角度分析纳米燃料在柴油发动机中引发二次雾化的物理机制，包括微爆炸和破碎行为。请推导燃料液滴内部的热传导方程，并详细解释纳米颗粒如何影响液滴的瑞利-泰勒和开尔文-亥姆霍兹不稳定性。",
+    "standard_answer": "纳米燃料的二次雾化涉及两种主要机制：微爆炸和破碎行为。微爆炸源于组分沸点差异，当低沸点组分达到临界温度时在周围高沸点组分层内爆炸。物理过程可用以下热传导方程描述：ρc_p(∂T/∂t) = ∇·(k∇T)，其中纳米颗粒的加入显著提高热导率k。对于破碎行为，纳米颗粒增加液滴与流场间的气动剪切力，诱发严重的液滴形状变形。从流体力学角度，瑞利-泰勒不稳定性增长率可表示为γ_RT = √[2π/(3λ)(ρ_fuel - ρ_air)/ρ_fuel]，纳米颗粒通过改变密度ρ_fuel和表面张力影响不稳定性。开尔文-亥姆霍兹不稳定性由速度剪切引起，增长率γ_KH = (Δu)√[2πρ_fuelρ_air/(λ(ρ_fuel + ρ_air))]，纳米颗粒增强的湍流强度进一步放大不稳定性。微爆炸的临界条件可通过过热理论分析：T_critical = T_sat + (2σ)/(r_droplet·ρ_vapor·L)，纳米颗粒作为成核位点降低活化能垒，促进气泡形成和生长。纳米颗粒通过提高热导率加速内部热传导，通过改变流体密度和表面张力影响界面稳定性，并通过增强湍流剪切促进液滴破碎。",
+    "original_text": {
+      "1": "In the case when nanofuel components exhibit different boiling points and volatilities, secondary atomization can be caused by micro-explosions. Since the lower-boiling-point components reach the critical temperature earlier than the higher-boiling-point components, this leads to explosions of lower-boiling-point components within the surrounding components layers",
+      "2": "The presence of NMs within fuel droplets may result in increased aerodynamic shear between the droplets and the flow field. This can induce severe droplets shape deformations, which may eventually cause secondary atomization of nanofuel droplets"
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "fluid_mechanics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及流体力学、纳米燃料在柴油发动机中的二次雾化机制、热传导方程推导、瑞利-泰勒和开尔文-亥姆霍兹不稳定性分析，需要燃烧学、传热学、流体力学和能源工程领域的专业知识。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "无需修改，答案已全面覆盖问题要求，机制解释清晰，公式推导合理，且与原文引用和论文摘录内容一致。"
+    },
+    "retry_count": 1,
+    "question_id": "deepseek_q_075128c3",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Nanomaterials-as-fuel-additives-in-diesel-engines--_2021_Progress-in-Energy-",
+      "paper_title": "Nanomaterials-as-fuel-additives-in-diesel-engines--_2021_Progress-in-Energy-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:35:37.785333",
+      "answer_length": 493
+    }
+  },
+  {
+    "question_text": "基于论文中关于CeO₂纳米颗粒在柴油发动机中的催化活性描述，详细分析CeO₂在燃烧室内的氧化还原循环机理。请解释CeO₂如何通过价态转换促进CO和碳烟氧化，并基于表面反应机理推导相关的化学反应动力学方程。",
+    "standard_answer": "CeO₂纳米颗粒在柴油发动机中通过可逆的氧化还原循环发挥催化作用，其机理涉及Ce⁴⁺和Ce³⁺之间的价态转换：2CeO₂ ↔ Ce₂O₃ + ½O₂（原文引用1）。在富氧条件下，CeO₂作为氧载体提供活性氧原子；在贫氧条件下，Ce₂O₃可重新氧化为CeO₂。具体反应路径包括：1) CO氧化：2CeO₂ + CO → Ce₂O₃ + CO₂；2) 碳烟氧化：CeO₂通过多步过程促进碳烟（主要成分为C）氧化，首先CeO₂提供活性氧原子攻击碳烟表面形成不稳定的C-O中间体，随后进一步氧化为CO/CO₂，同时CeO₂还原为Ce₂O₃，Ce₂O₃在富氧环境下重新氧化为CeO₂完成循环。\n\n催化活性与纳米颗粒比表面积直接相关：在粒径10nm时15%原子位于表面，1nm时全部原子位于表面（原文引用2）。更高比表面积提供更多活性位点，显著增强催化效率。\n\n基于Langmuir-Hinshelwood表面反应机理，CO氧化速率可表示为r_CO = k_CO·θ_CO·θ_O，其中θ_CO和θ_O分别为CO和表面活性氧的覆盖度，k_CO = A·exp(-E_a/RT)，活化能E_a因纳米催化效应显著降低。假设CO和O在CeO₂表面竞争吸附，根据Langmuir吸附等温式：θ_CO = K_CO·P_CO/(1+K_CO·P_CO+K_O·P_O)，θ_O = K_O·P_O/(1+K_CO·P_CO+K_O·P_O)，代入得r_CO = k_CO·K_CO·K_O·P_CO·P_O/(1+K_CO·P_CO+K_O·P_O)²。\n\n碳烟氧化遵循Eley-Rideal机理：由于碳烟固体颗粒不易吸附，反应发生在气-固界面，r_soot = k_soot·[C]·θ_O，其中[C]为碳烟浓度，θ_O为表面活性氧覆盖度。热力学分析显示，CeO₂/Ce₂O₃体系的氧化还原电位适中，适合在柴油发动机温度范围（400-800°C）内进行循环反应。这些动力学方程能够定量描述CeO₂纳米颗粒在柴油发动机中的催化氧化过程。",
+    "original_text": {
+      "1": "CeO₂ NPs have the ability to undergo a transformation from the stoichiometric CeO₂ (+4) valence state to the Ce₂O₃ (+3) state and vice versa via a relatively low redox potential between Ce⁴⁺ and Ce³⁺: 2CeO₂ ↔ Ce₂O₃ + ½O₂",
+      "2": "For example, in a nanoparticle with a diameter of 10 nm, 15% of the atoms are located on the surface, while in the nanoparticle with 1 nm diameter, all of the atoms are placed on the surface. So, smaller nanoparticles with higher specific surface area exhibit higher catalytic activity"
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "该问题需要燃烧化学、催化机理、表面反应动力学、纳米材料科学等能源与燃烧工程领域的专业知识，涉及CeO₂纳米颗粒的氧化还原循环机理、CO和碳烟氧化过程、化学反应动力学方程推导等专业内容",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量较高，无需修改。答案准确解释了CeO₂的氧化还原循环机理，正确推导了基于Langmuir-Hinshelwood和Eley-Rideal机理的动力学方程，并引用了相关文献支持关键论点"
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_cb4a4d1f",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Nanomaterials-as-fuel-additives-in-diesel-engines--_2021_Progress-in-Energy-",
+      "paper_title": "Nanomaterials-as-fuel-additives-in-diesel-engines--_2021_Progress-in-Energy-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:37:28.399623",
+      "answer_length": 857
+    }
+  }
+]

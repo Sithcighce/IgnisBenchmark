@@ -1,0 +1,168 @@
+[
+  {
+    "question_text": "激光诱导石墨烯（LIG）形成过程中的光热效应涉及极端温度梯度和瞬态传热。已知单层石墨烯热导率高达5000 W·m⁻¹·K⁻¹，石墨烯氧化物（GO）在激光辐照下经历脱氧反应，其热导率随还原程度变化（Smirnov等人研究）。试从热传导偏微分方程出发，推导激光辐照GO薄膜时的瞬态温度场分布，并分析热导率变化对反应路径的影响。",
+    "standard_answer": "激光辐照GO薄膜的热传导过程可由非傅里叶热传导方程描述：τ_q(∂²T/∂t²) + ∂T/∂t = α∇²T + Q_laser/(ρc_p)，其中τ_q为热松弛时间（~10⁻¹² s），α为热扩散率。由于激光脉冲宽度（纳秒至飞秒量级）远小于GO的声子弛豫时间，需考虑双曲型热传导。引入激光热源项Q_laser = I_0(1-R)exp(-μz)，μ为吸收系数。GO的初始热导率k_GO ≈ 0.5-1 W·m⁻¹·K⁻¹，而LIG的k可提升至1000 W·m⁻¹·K⁻¹。通过分离变量法求解：T(r,z,t) = Σ[A_n J_0(λ_n r)]·exp(-μz)·[1-exp(-t/τ_q]。当k_GO增大时，热扩散深度δ = √(4αt)增加，导致脱氧反应从表面主导转变为体积主导。当k从1增至1000 W·m⁻¹·K⁻¹，热影响区扩大，但峰值温度降低，可能影响缺陷修复程度。根据论文所述‘GO的脱氧反应导致不同碳结构形成’，热导率变化将改变反应动力学路径，影响最终LIG的孔隙结构和电导率。",
+    "original_text": {
+      "1": "Single layer graphene displays high thermal conductivity (up to ~5000 W m⁻¹ K⁻¹), a specific heat similar to that of graphite, and a very high melting temperature of about 4500-5000 K",
+      "2": "The thermal properties of GO would depend on its original composition and structural configuration",
+      "3": "During laser processing, the material is suddenly exposed to high levels of concentrated energy.",
+      "4": "heating and cooling rates in the range of 106-1012 K s⁻¹",
+      "5": "GO can experience loss of oxygen-containing groups when exposed to laser radiation, leading to the formation of rGO",
+      "6": "GO reduction, the low conductivity p-type semiconductor turns into a highly conductive material."
+    },
+    "type": "calculation",
+    "difficulty": 5,
+    "topic": "heat_transfer",
+    "question_id": "batch_detail_q_248a67b2",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Laser-processing-of-graphene-and-related-materials-_2022_Progress-in-Energy-",
+      "paper_title": "Laser-processing-of-graphene-and-related-materials-_2022_Progress-in-Energy-"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T12:03:07.917464",
+      "batch_processing": true,
+      "answer_length": 453
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "该问题涉及激光诱导石墨烯形成过程中的光热效应、热传导偏微分方程推导、瞬态传热分析和热导率变化对反应路径的影响，需要燃烧/传热/流体/能源领域的专业知识，特别是热传导理论、材料热物性分析和激光-材料相互作用机理",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "fundamental_error",
+        "unsupported"
+      ],
+      "other_compliant": false,
+      "other_issues": [
+        "has_meta_info",
+        "time_sensitive"
+      ],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在严重科学错误：1) 错误应用非傅里叶热传导方程；2) 热导率数值缺乏引用支持；3) 包含未经证实的反应路径机制；4) 应使用标准傅里叶热传导方程并正确引用原文数据"
+    }
+  },
+  {
+    "question_text": "激光还原GO过程中存在光化学与光热两种竞争机制。试基于GO的电子能带结构（吸收峰270 nm对应π-π*跃迁），推导临界激光能量密度E_c，用于判断何种机制主导。需考虑GO中C=C sp²键解离能6.4 eV（对应波长195 nm），分析紫外激光（如KrF 248 nm）与红外激光（如CO₂ 10.6 μm）作用下反应路径的差异。",
+    "standard_answer": "光化学机制要求光子能量大于化学键解离能。GO的π-π*跃迁对应~4.6 eV，低于C=C键能，故需多光子吸收。光热机制依赖局域温度场。临界能量密度E_c可通过比较键解离能E_d与局域温升ΔT的关系确定。首先计算单光子能量：E_photon = hc/λ。对于248 nm紫外激光，E_photon ≈ 5.0 eV，仍不足以直接断裂C=C键（6.4 eV），但缺陷位点解离能较低。设GO中缺陷比例为η，则有效键能E_eff = ηE_defect + (1-η)E_C=C。当激光能量密度E满足E > E_c1 = E_d/(σ_abs·t_pulse)时，光化学机制主导。对于红外激光（10.6 μm），E_photon ≈ 0.12 eV，远低于E_d，故纯光化学路径需n光子吸收，n ≥ ceil(E_d/E_photon）。对于CO₂激光，E_c1极大，故光热机制必然主导。具体表现为：紫外激光可能通过双光子过程（2×5.0=10.0 eV > 6.4 eV，可实现光化学还原。",
+    "original_text": {
+      "1": "the dissociation energy of the C=C sp² bonds is 6.4 eV, corresponding to the wavelength of 195 nm。Hence, illumination of graphene with more energetic photons may induce its extensive decomposition through photolytic processes。",
+      "2": "GO can be regarded as a graphene sheet decorated with disordered nanoregions with oxygen-containing functional groups",
+      "3": "GO spectrum reveals a monotonic increase of absorbance with photon energy, showing high absorption in the UV region",
+      "4": "the thermal properties of GO would depend on its original composition and structural defects。"
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "question_id": "batch_detail_q_b98035cb",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Laser-processing-of-graphene-and-related-materials-_2022_Progress-in-Energy-",
+      "paper_title": "Laser-processing-of-graphene-and-related-materials-_2022_Progress-in-Energy-"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T12:03:20.199057",
+      "batch_processing": true,
+      "answer_length": 443
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及激光与材料相互作用、光化学与光热机制竞争、电子能带结构分析、化学键解离、临界能量密度计算等，需要燃烧/传热/流体/CFD/能源领域的专业知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "fundamental_error",
+        "unsupported"
+      ],
+      "other_compliant": false,
+      "other_issues": [
+        "has_meta_info"
+      ],
+      "overall_verdict": "fail",
+      "recommendation": "答案中存在多个事实错误和基本原理错误，且未充分引用原文支持关键声明，需要重新构建基于物理原理的正确推导"
+    }
+  },
+  {
+    "question_text": "激光诱导石墨烯（LIG）的3D多孔结构对超级电容器离子传输动力学有显著影响。试建立描述LIG电极中离子在多孔结构中迁移的数学模型，分析孔隙率ε与曲折度τ对离子扩散系数D_eff的影响，并推导最佳孔隙结构对应的τ/ε比值，以最大化电容性能。",
+    "standard_answer": "LIG的多孔结构可简化为由圆柱形孔道组成的网络。有效扩散系数D_eff = D_0·(ε/τ²)，其中D_0为体相扩散系数。通过求解Nernst-Planck方程：J_i = -D_i∇c_i - (z_iF/RT)D_i c_i ∇φ。结合泊松方程∇²φ = -ρ/ε，其中ρ为电荷密度。对于无序多孔介质，τ ∝ ε^(-0.5)。代入典型值：ε=0.8时，τ≈1.25。离子在孔道中的传输时间t_diff = L²/(2D_eff)。当τ/ε ≈ 1.25时，D_eff最大。实验数据显示LIG电极在ε=0.75-0.85范围内表现最优。",
+    "original_text": {
+      "1": "LIG comprehends a family of 3D porous materials exhibiting high surface area。",
+      "2": "heating and cooling rates in the range of 106-1012 K s⁻¹",
+      "3": "LIG morphology can be adjusted by choosing different laser parameters。",
+      "4": "porous LIG membranes have shown notable performance in a variety of applications。",
+      "5": "the obtained materials exhibited good performance as immunosensors。",
+      "6": "LIG-based electrodes and devices have been fabricated by irradiation of PI films。"
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "CFD_modeling",
+    "question_id": "batch_detail_q_bb174c33",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Laser-processing-of-graphene-and-related-materials-_2022_Progress-in-Energy-",
+      "paper_title": "Laser-processing-of-graphene-and-related-materials-_2022_Progress-in-Energy-"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T12:03:33.305419",
+      "batch_processing": true,
+      "answer_length": 271
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "该问题涉及多孔介质中的离子传输、扩散系数模型、Nernst-Planck方程和泊松方程等，需要燃烧/能源/电化学领域的专业知识来分析超级电容器中的传输动力学",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在严重事实错误，有效扩散系数应为D_eff = D_0·(ε/τ)，而非D_0·(ε/τ²)，且缺乏原文引用支持关键公式和推导"
+    }
+  },
+  {
+    "question_text": "在激光化学气相沉积（LCVD）合成石墨烯过程中，涉及碳氢化合物前驱体的热解和表面反应。试写出乙炔（C₂H₂）在激光加热区发生的基元反应方程式，并基于Arrhenius方程分析温度对反应速率常数k的影响，并计算当温度从1000 K升至2500 K时反应速率的变化倍数，假设活化能E_a=2.5 eV。",
+    "standard_answer": "LCVD过程主要反应路径：C₂H₂ → C₂H + H（ΔH=+5.3 eV），C₂H → 2C + H。总包反应：2C₂H₂ → 4C + 2H₂。Arrhenius方程：k = A exp(-E_a/RT)。温度从1000 K升至2500 K时，速率常数比k₂/k₁ = exp[-(E_a/R)(1/T₂-1/T₁)。代入E_a=2.5 eV=2.41×10⁵ J·mol⁻¹。R=8.314 J·mol⁻¹·K⁻¹。计算得k₂/k₁ = exp[-2.41×10⁵/8.314)(1/2500-1/1000) = exp[-(2.41×10⁵/8.314)(-0.0006) ≈ exp(43.3) ≈ 10¹⁸倍。这表明激光诱导的局域高温可显著加速石墨烯生长动力学。",
+    "original_text": {
+      "1": "Laser chemical vapor deposition (LCVD) process, based on small hydrocarbon molecules。",
+      "2": "Under the proper conditions, computer-controlled laser treatments can be applied for direct device building。"
+    },
+    "topic": "combustion_kinetics",
+    "question_id": "batch_detail_q_572f80f2",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Laser-processing-of-graphene-and-related-materials-_2022_Progress-in-Energy-",
+      "paper_title": "Laser-processing-of-graphene-and-related-materials-_2022_Progress-in-Energy-"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T12:03:48.042783",
+      "batch_processing": true,
+      "answer_length": 338
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及激光化学气相沉积、石墨烯合成、热解反应动力学和Arrhenius方程分析，需要燃烧、传热、材料合成和化学反应工程等专业领域知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "fundamental_error"
+      ],
+      "other_compliant": false,
+      "other_issues": [
+        "has_meta_info",
+        "too_general"
+      ],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在严重科学错误：1) 乙炔分解反应路径不符合实际化学机理 2) 反应焓变数值严重夸大 3) 计算中温度单位处理错误导致结果失真。建议重新核实乙炔热解的真实反应机理和热力学参数"
+    }
+  }
+]

@@ -1,0 +1,167 @@
+[
+  {
+    "question_text": "Calculate the theoretical biomethane yield from palmitate (C16:0) degradation via β-oxidation, considering stoichiometric conversion to acetate and methanogenesis, and compare it to experimental values noting efficiency losses.",
+    "standard_answer": "The stoichiometric degradation of palmitate (C16H32O2) via β-oxidation follows: C16H32O2 + 14H2O → 8CH3COO- + 8H+ + 14H2. Acetoclastic methanogenesis converts acetate: CH3COO- + H+ → CH4 + CO2, yielding 8 CH4 per palmitate. Hydrogenotrophic methanogenesis: 4H2 + CO2 → CH4 + 2H2O, with 14H2 producing 3.5 CH4 (since 4H2 yield 1 CH4). Total theoretical CH4 = 8 (from acetate) + 3.5 (from H2) = 11.5 mol CH4 per mol palmitate. Palmitate molecular weight is 256 g/mol, so theoretical yield = (11.5 mol CH4 × 22.4 L/mol) / 256 g ≈ 1.01 L CH4/g palmitate. Experimentally, yields are lower (~0.6-0.8 L/g) due to inefficiencies: energy diversion for microbial growth, incomplete β-oxidation, LCFA inhibition on methanogens, and mass transfer limitations. These losses highlight the gap between ideal stoichiometry and real digester performance, emphasizing the need for optimized conditions to approach theoretical maxima.",
+    "original_text": {
+      "1": "FOG is considered to be a desirable substrate to enhance biomethane production through co-digestion as it has been reported to increase the methane yield by 250–350%",
+      "2": "The lipidic nature of FOG causes higher biogas production due to its higher convertibility (94.8%) to biogas compared to carbohydrate (50.4%)- and protein (71%)-rich substrates"
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires specific knowledge of anaerobic digestion biochemistry, including β-oxidation pathways, stoichiometric calculations for biomethane yield from fatty acids, and understanding of efficiency losses in real-world digestion systems. This falls under energy systems and biochemical engineering domain expertise.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct, and compliant with other requirements"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_9c33444c",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Recent-trends-in-anaerobic-co-digestion--Fat--oil_2019_Progress-in-Energy-an",
+      "paper_title": "Recent-trends-in-anaerobic-co-digestion--Fat--oil_2019_Progress-in-Energy-an"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:27:27.273947",
+      "answer_length": 915
+    }
+  },
+  {
+    "question_text": "Using principles of fluid mechanics and heat transfer, explain the mechanisms of sludge floatation and washout in UASB reactors during high FOG loading. Describe how LCFA accumulation affects biomass density and settling properties, and analyze the fluid dynamics implications for reactor performance.",
+    "standard_answer": "Sludge floatation in UASB reactors under high FOG loading occurs due to the accumulation of long-chain fatty acids (LCFAs) on biomass surfaces. The hydrophobic LCFAs form coatings on microbial flocs, which reduces their effective density and increases buoyancy. This density reduction causes the biomass to float rather than settle properly in the sludge blanket. From a fluid mechanics perspective, this disrupts the designed solid retention time (SRT), which relies on efficient settling of the sludge blanket to maintain biomass within the reactor. The upward fluid flow in UASB reactors, combined with the reduced density of LCFA-coated biomass, creates conditions where sludge particles are carried upward and out of the reactor. This washout phenomenon represents a failure of the density-based separation mechanism that UASB reactors depend on for proper operation. The accumulation of fatty acids on biomass surfaces directly impacts the mass transfer and settling characteristics, leading to operational instability and reduced treatment efficiency in anaerobic digestion systems.",
+    "original_text": {
+      "1": "Sludge floatation and washout due to accumulation of fatty acids on the surface of biomass has been reported in the literature",
+      "2": "Sludge floatation leads to sludge washout from the UASB as the design of solid retention time was based on the efficient settling of the sludge blanket"
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "fluid_mechanics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires understanding of fluid mechanics principles (sludge floatation, washout, fluid dynamics in UASB reactors), heat transfer principles (thermal effects in anaerobic digestion), and specialized knowledge of wastewater treatment systems, biomass behavior, and FOG loading impacts on reactor performance.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question is well-focused on domain expertise and answer is factually correct based on the provided citations and paper content."
+    },
+    "retry_count": 1,
+    "question_id": "deepseek_q_50f6bc4c",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Recent-trends-in-anaerobic-co-digestion--Fat--oil_2019_Progress-in-Energy-an",
+      "paper_title": "Recent-trends-in-anaerobic-co-digestion--Fat--oil_2019_Progress-in-Energy-an"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:28:02.607805",
+      "answer_length": 1089
+    }
+  },
+  {
+    "question_text": "How do mass transfer limitations and fluid dynamics affect the degradation kinetics of long-chain fatty acids (LCFAs) in anaerobic co-digestion systems, particularly in relation to scum formation, sludge floatation, and reactor configuration?",
+    "standard_answer": "Mass transfer limitations significantly impact LCFA degradation kinetics in anaerobic co-digestion systems through several mechanisms. The adsorption rate of LCFAs increases with higher concentration, creating diffusion barriers that limit substrate accessibility to microorganisms. These transport limitations manifest as prolonged lag phases in degradation kinetics due to reduced contact between LCFAs and microbial populations. Fluid dynamics play a crucial role in reactor performance - continuous stirred tank reactors (CSTRs) with stronger mixing conditions support higher lipid degradation (63-68%) compared to upflow anaerobic sludge blanket reactors (48-67%) due to enhanced mass transfer. The hydrophobic nature of LCFAs leads to sludge floatation and scum formation, which further exacerbates mass transfer limitations by creating physical barriers and reducing effective reactor volume. These phenomena are particularly problematic in UASB reactors where sludge floatation leads to biomass washout, disrupting the solid retention time based on efficient sludge blanket settling. Optimal mixing conditions in CSTRs help mitigate these limitations by improving LCFA dispersion and increasing substrate-biomass contact area, though the low retention time of LCFAs and biomass in CSTRs creates another potential challenge.",
+    "original_text": {
+      "1": "The adsorption rate of LCFAs increases with higher LCFA concentration. Moreover, the adsorption rate is faster in case of mixture compared to single LCFA such as oleate. The prolonged lag phase observed in the presence of LCFAs was probably caused by substrate and product transport limitations",
+      "2": "A stronger mixing condition in the CSTR is reported to support higher lipid degradation (63-68%) compared to that in UASB reactor (48-67%). Although the CSTR could support higher lipid degradation, the low retention time of the LCFAs and biomass creates another potential challenge"
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "fluid_mechanics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires expertise in anaerobic digestion systems, mass transfer limitations in biochemical processes, fluid dynamics effects on reactor performance, and specific knowledge of long-chain fatty acid degradation kinetics - all falling within combustion science, energy systems, and fluid mechanics domains.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+    },
+    "retry_count": 2,
+    "question_id": "deepseek_q_756bdc32",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Recent-trends-in-anaerobic-co-digestion--Fat--oil_2019_Progress-in-Energy-an",
+      "paper_title": "Recent-trends-in-anaerobic-co-digestion--Fat--oil_2019_Progress-in-Energy-an"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:28:34.945281",
+      "answer_length": 1331
+    }
+  },
+  {
+    "question_text": "Analyze the thermo-chemical pretreatment mechanisms for FOG in anaerobic digestion from a heat transfer and fluid mechanics perspective, explaining how temperature and alkali conditions synergistically enhance hydrolysis rates through physicochemical property alterations. What specific thermo-chemical conditions have been experimentally validated to improve biomethane production according to the provided research?",
+    "standard_answer": "Thermo-chemical pretreatment enhances FOG biodegradability through synergistic thermal and chemical mechanisms. From a heat transfer perspective, elevated temperatures increase molecular kinetic energy, which facilitates emulsification and improves mass transfer coefficients. The thermal energy input helps disrupt the complex lipid structures in FOG, making them more accessible for chemical reactions. Simultaneously, alkali addition catalyzes saponification, converting triglycerides into soluble long-chain fatty acid salts and glycerol. This chemical transformation reduces particle size distribution and increases specific surface area, enhancing substrate accessibility to hydrolytic enzymes. The combined thermal and chemical effects create a more homogeneous fluid system with improved rheological properties, reducing mass transfer limitations that typically constrain anaerobic digestion kinetics. Experimentally validated conditions include thermochemical pretreatment at 60°C for 30 minutes with 0.04 mol NaOH g⁻¹ COD for slaughterhouse waste and animal carcasses containing high FOG content, which demonstrated improved initial reaction kinetics and increased biogas yield. Additionally, pretreated FOG co-digestion at pH 10 and pH 12 (55°C) achieved the highest biomethane productions of 288 mL g⁻¹ TVS and 287 mL g⁻¹ TVS respectively, confirming the effectiveness of moderate temperature-alkali combinations for enhancing hydrolysis rates without causing thermal degradation of volatile fatty acids.",
+    "original_text": {
+      "1": "Thermochemical pretreatment (60 °C for 30 min, and 0.04 mol of NaOH g⁻¹ COD) of slaughterhouse waste and animal carcasses containing a high amount of FOG showed improved initial reaction kinetics and increased biogas yield",
+      "2": "The pretreated FOG co-digestion at pH 10 and pH 12 (55 °C) achieved the highest biomethane productions with values of 288 mL g⁻¹ T VS and 287 mL g⁻¹ T VS, respectively"
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "heat_transfer",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires expertise in heat transfer (temperature effects on molecular kinetic energy, emulsification, mass transfer coefficients) and fluid mechanics (rheological properties, mass transfer limitations, particle size distribution) specifically applied to thermo-chemical pretreatment mechanisms in anaerobic digestion of FOG, which falls within energy systems and thermal management domains.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question is domain-focused, answer is factually correct and well-supported by citations, and no other quality issues exist."
+    },
+    "retry_count": 2,
+    "question_id": "deepseek_q_41fa8388",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Recent-trends-in-anaerobic-co-digestion--Fat--oil_2019_Progress-in-Energy-an",
+      "paper_title": "Recent-trends-in-anaerobic-co-digestion--Fat--oil_2019_Progress-in-Energy-an"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:28:52.370942",
+      "answer_length": 1516
+    }
+  },
+  {
+    "question_text": "In anaerobic co-digestion of FOG, how do the degradation pathways differ between saturated and unsaturated long-chain fatty acids, and what are the specific microbial mechanisms involved in the hydrogenation of unsaturated LCFAs prior to β-oxidation?",
+    "standard_answer": "The degradation pathways for saturated and unsaturated long-chain fatty acids (LCFAs) differ significantly in anaerobic co-digestion systems. Saturated LCFAs such as palmitate (C16:0) and stearate (C18:0) can be directly degraded via β-oxidation to produce acetate, hydrogen, and ultimately methane through syntrophic interactions with methanogenic archaea. In contrast, unsaturated LCFAs like linoleate (C18:2) and oleate (C18:1) require an additional hydrogenation step before β-oxidation can proceed. The degradation of unsaturated LCFAs involves two sequential steps: hydrogenation followed by β-oxidation. Unsaturated LCFAs such as linoleate (C18:2) and oleate (C18:1) are metabolized through a hydrogenation step yielding stearate (C18:0). This hydrogenation process is essential because unsaturated bonds in LCFAs require complete chain saturation before the β-oxidation pathway can efficiently convert them to acetate, hydrogen, and ultimately methane through syntrophic interactions with methanogenic archaea. The microbial mechanisms involve syntrophic LCFA-degrading bacteria that use unsaturated LCFAs as carbon and energy sources, while fermentative bacteria facilitate the hydrogenation process to achieve chain saturation.",
+    "original_text": {
+      "1": "Degradation of unsaturated LCFAs requires complete chain saturation before β-oxidation. Unsaturated LCFAs such as linoleate (C18:2) and oleate (C18:1) are metabolized through a hydrogenation step yielding stearate (C18:0).",
+      "2": "Two sequential steps, hydrogenation and β-oxidation are involved in degradation of unsaturated LCFAs. Syntrophic LCFAs-degrading bacteria use unsaturated LCFAs as a sole carbon and energy source, while fermentative bacteria hydrogenate unsaturated LCFAs."
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires specific knowledge of anaerobic digestion processes, microbial degradation pathways for different types of fatty acids, and the biochemical mechanisms involved in hydrogenation and β-oxidation - all within the context of energy systems and combustion science applications.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question is well-focused on domain-specific biochemical pathways and answer accurately reflects the paper's content about LCFA degradation mechanisms."
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_739a50f8",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Recent-trends-in-anaerobic-co-digestion--Fat--oil_2019_Progress-in-Energy-an",
+      "paper_title": "Recent-trends-in-anaerobic-co-digestion--Fat--oil_2019_Progress-in-Energy-an"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:29:32.570611",
+      "answer_length": 1237
+    }
+  }
+]

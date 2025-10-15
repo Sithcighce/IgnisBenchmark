@@ -1,0 +1,101 @@
+[
+  {
+    "question_text": "基于Blinov和Khudyakov的经典研究，池火燃烧速率随池直径的变化可分为层流、过渡和湍流三个区域。请详细分析这三个区域内主导热反馈机制的转变过程，并解释这种转变如何影响燃烧速率与池直径的标度关系。",
+    "standard_answer": "根据Blinov和Khudyakov的研究，池火燃烧速率随池直径的变化确实可分为三个特征区域。在层流区域（D ≤ 7 cm），热传导是主导热反馈机制。此时燃烧速率与池直径呈反比关系，即ṁ'' ∝ D^(-1)。这是因为在小尺度下，火焰与容器壁之间的导热路径较短，壁面材料的热传导成为主要热源。随着池直径增大到过渡区域（7 cm < D < 20 cm），对流热反馈开始占主导地位。这是由于浮力驱动的自然对流增强，火焰与燃料表面之间的对流换热效率提高。在此区域，燃烧速率随直径增加而缓慢上升。当池直径进一步增大到湍流区域（D > 20 cm），辐射热反馈成为主导机制。此时火焰变得光学厚，烟尘颗粒的辐射发射显著增强。燃烧速率趋于渐近值ṁ''∞，遵循ṁ'' = ṁ''∞(1 - e^(-κβD))的关系。这种热反馈机制的转变源于不同尺度下火焰结构与热传递特性的根本变化：小尺度下火焰接近层流，热边界层发展充分；中等尺度下浮力驱动对流增强；大尺度下烟尘形成和辐射传输占主导。",
+    "original_text": {
+      "1": "Three burning regimes, comprising laminar, transition and turbulent burning, were identified to occur as the pool diameter increased",
+      "2": "the dominant heat transfer mode becomes radiation for large, fully turbulent pool fire, in which the flames can be either optically-thin or optically-thick"
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "heat_transfer",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及池火燃烧速率、热反馈机制（热传导、对流、辐射）、燃烧区域划分（层流、过渡、湍流）以及标度关系，需要燃烧学、传热学、流体力学等专业领域知识。",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "无需修改，问题和答案均符合质量要求。"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_da4626dc",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Pool-fire-dynamics--Principles--models-and_2023_Progress-in-Energy-and-Combu",
+      "paper_title": "Pool-fire-dynamics--Principles--models-and_2023_Progress-in-Energy-and-Combu"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:30:50.443540",
+      "answer_length": 435
+    }
+  },
+  {
+    "question_text": "池火辐射模型从简单的点源模型发展到复杂的多点和固体火焰模型。请详细比较单点源模型、固体火焰模型和加权多点源模型在预测热辐射通量方面的优缺点。特别讨论这些模型在处理近场和远场辐射、火焰几何形状变化和烟尘遮蔽效应方面的能力差异。",
+    "standard_answer": "不同辐射模型在池火热辐射预测方面各有特点和适用范围。单点源模型(SPS)假设所有辐射能量集中于火焰质心，辐射通量计算为q''r = χrQ̇τcosθ/(4πx²)。该模型在远场(x > 5R)预测较为准确，计算简单，但在近场严重高估辐射通量，误差可达25%以上，且无法处理火焰几何形状的影响。固体火焰模型将火焰理想化为均匀灰体发射器，使用q''r = τERF计算，其中ER是平均发射功率，F是几何视角因子。该模型能较好处理火焰形状变化，通过圆柱或长方体近似考虑几何效应，但假设均匀温度和发射率分布，忽略了火焰内部的实际变化。加权多点源模型(WMP)是最先进的模型，将火焰沿轴线分为M个点源，总辐射为各点源的加权和：q''r = Σwi(χrQ̇τi)/(4πSi²)cosθi。该模型能准确捕捉辐射沿火焰高度的分布特征（通常在45%-75%火焰高度处辐射最强），在近场和远场都能提供准确预测。在处理烟尘遮蔽效应方面，单点源模型完全忽略此效应；固体火焰模型可通过调整有效发射率部分考虑；而WMP模型能通过权重分布函数wi更好地表征烟尘的空间变化。对于大尺度池火中的烟尘遮蔽，还需要引入分区模型，将火焰分为燃烧区和烟尘遮蔽区，分别赋予不同的发射功率。",
+    "original_text": {
+      "1": "In the SPS model, the flame radiation is often supposed to concentrate at the centroid of the flame, with the emissive output being isotropic. As part of the total combustion heat release rate, the energy that is radiated toward external targets varies inversely with the square of the distance from the flame source",
+      "2": "The weighted multi-point source (WMP) model has been used to estimate the flame radiation by Hankinson and Lowesmith, and has been shown to be accurate in its prediction of both the near-field and far-field measurements"
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "heat_transfer",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及池火辐射模型的专业比较，需要燃烧学、热辐射传热、火焰建模等专业知识，包括点源模型、固体火焰模型、加权多点源模型的数学公式、适用范围、近场远场预测能力、火焰几何形状处理和烟尘遮蔽效应等专业内容",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量优秀，无需修改。答案全面比较了三种模型的优缺点，准确描述了各自的数学公式、适用范围和局限性，特别在处理近场远场辐射、火焰几何形状变化和烟尘遮蔽效应方面的差异分析深入且专业"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_9d180717",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Pool-fire-dynamics--Principles--models-and_2023_Progress-in-Energy-and-Combu",
+      "paper_title": "Pool-fire-dynamics--Principles--models-and_2023_Progress-in-Energy-and-Combu"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:30:53.399879",
+      "answer_length": 525
+    }
+  },
+  {
+    "question_text": "池火的脉动频率是重要的动力学特征。请基于涡旋动力学理论，详细解释池火中周期性涡环形成和脱落的物理机制，并推导脉动频率与池直径的标度关系f ∝ D^(-1/2)。进一步讨论唇高和弗劳德数对脉动行为的影响。",
+    "standard_answer": "池火的脉动现象源于浮力驱动的涡旋动力学过程。根据de Ris的理论，这一过程包含三个阶段：斜压涡量产生、涡量合并和湍流级串。斜压涡量产生源于密度梯度与压力梯度的不共线，即∇ρ × ∇P/ρ²。在池火中，高温燃烧产物与冷环境空气之间的密度差在重力场中产生浮力，驱动流体上升。在火焰基部附近，浮力加速产生剪切层，形成开尔文-亥姆霍兹不稳定性。这些初始扰动通过涡量合并过程形成大尺度涡环结构。最终，这些涡环周期性脱落，表现为火焰的脉动行为。\n\n脉动频率与池直径的标度关系可通过量纲分析得到：特征时间尺度τ ∝ (D/g)^(1/2)，因此频率f ∝ 1/τ ∝ (g/D)^(1/2)。从涡旋动力学角度，Zhang等人建立了Strouhal数St = fD/V与Froude数Fr = V²/(gD)的关系：St ∝ Fr^(1/2)。\n\n唇高影响火焰的稳定性，较高唇高会改变基部流动结构，影响脉动频率。实验表明，随着唇高增加，脉动频率略有增加，而随着池直径增大，频率减小。弗劳德数表征惯性力与浮力的比值，直接影响涡环的生成和脱落过程。当Fr增大时，涡环脱落更频繁，脉动频率增加。",
+    "original_text": {
+      "1": "The buoyant flow that rises from the pool fire surface causes the formation and periodic shedding of toroidal vortices, and these vortical structures are primarily attributed to the three stages depicted: baroclinic vorticity generation, amalgamation, and turbulent cascade",
+      "2": "St ∝ Fr^(1/2) and the relationship between the Strouhal number and the Froude number was recast into St = √Fr + (C₂/2C₁)√[(C₂/2C₁)²Fr + 1/(4.34Fr)]"
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "fluid_mechanics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及池火脉动频率、涡旋动力学理论、涡环形成和脱落机制、标度关系推导、唇高和弗劳德数影响等，需要燃烧科学、流体力学、传热传质等领域的专业知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": ""
+    },
+    "retry_count": 1,
+    "question_id": "deepseek_q_ccf30f4e",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Pool-fire-dynamics--Principles--models-and_2023_Progress-in-Energy-and-Combu",
+      "paper_title": "Pool-fire-dynamics--Principles--models-and_2023_Progress-in-Energy-and-Combu"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T11:31:47.704328",
+      "answer_length": 487
+    }
+  }
+]

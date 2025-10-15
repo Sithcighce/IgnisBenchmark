@@ -1,0 +1,168 @@
+[
+  {
+    "question_text": "Based on the survey paper by Zhang et al. (2019), how do connected HEVs/PHEVs leverage V2I communication and traffic signal information in eco-driving strategies to optimize engine operation points and improve fuel economy? Explain the mechanisms through which this optimization occurs and how it differs from conventional HEV/PHEV energy management approaches.",
+    "standard_answer": "Connected HEVs/PHEVs utilize V2I communication to access traffic signal phase and timing (SPAT) information, which enables eco-driving strategies that optimize velocity trajectories to avoid unnecessary stops and acceleration events. This optimization occurs through several key mechanisms: First, by receiving traffic light timing data, vehicles can plan smoother velocity profiles that minimize hard braking and acceleration, reducing transient engine operation where efficiency is typically lower. Second, the availability of traffic information allows for predictive energy management that can pre-plan state of charge (SOC) trajectories and power split decisions over the prediction horizon. The paper specifically notes that 'HEVs/PHEVs can provide an additional degree of freedom for regulating the engine operation points to achieve significant fuel savings' by shifting engine operation to more efficient regions. Furthermore, 'Eco-driving in urban traffic networks, using traffic signal information, is a significant field of cyber-physical systems' that enables velocity optimization to improve energy efficiency. This approach differs fundamentally from conventional HEV/PHEV energy management, which typically operates without future traffic information and must react to immediate driving conditions rather than proactively optimizing based on upcoming traffic events. The connectivity allows for integration of velocity optimization at the vehicle level with power split optimization at the powertrain level, creating a hierarchical control structure that can achieve fuel economy improvements of 9.5-35% according to various studies cited in the survey.",
+    "original_text": {
+      "1": "HEVs/PHEVs can provide an additional degree of freedom for regulating the engine operation points to achieve significant fuel savings",
+      "2": "Eco-driving in urban traffic networks, using traffic signal information, is a significant field of cyber-physical systems"
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question requires specific expertise in energy systems, hybrid electric vehicle powertrains, V2I communication, eco-driving strategies, and engine operation optimization - all core topics in combustion science and energy systems engineering. It cannot be answered with general ML knowledge alone.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+    },
+    "retry_count": 1,
+    "question_id": "deepseek_q_5880571b",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Energy-management-strategies-of-connected-HEVs-a_2019_Progress-in-Energy-and",
+      "paper_title": "Energy-management-strategies-of-connected-HEVs-a_2019_Progress-in-Energy-and"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:19:58.362385",
+      "answer_length": 1669
+    }
+  },
+  {
+    "question_text": "How do predictive energy management strategies for connected HEVs/PHEVs utilize V2V communication to forecast velocity profiles, and what specific findings does the cited research provide about the relationship between prediction capabilities and fuel economy?",
+    "standard_answer": "Predictive energy management strategies for connected HEVs/PHEVs utilize V2V communication to obtain velocity information from preceding vehicles, enabling extended forecasting capabilities beyond the immediate data received. The research by Baker et al. demonstrates that velocity prediction through V2V communication incorporates real-world driving data and analyzes the impact of prediction error on HEV fuel economy. The mechanism involves forecasting the following vehicle's velocity further ahead than the 5 seconds of information obtained from the leading vehicle, providing extended preview for the predictive powertrain controller. This extended forecasting capability allows the energy management system to anticipate driving conditions over a longer horizon, though the cited research specifically analyzes the impact of prediction error rather than making definitive claims about direct relationships between accuracy and fuel economy improvements. The predictive framework enables adaptation to changing traffic conditions through V2V data exchange, but the research focuses on understanding how prediction errors affect fuel economy performance rather than establishing a direct proportional relationship.",
+    "original_text": {
+      "1": "Baker et al. [53] predicted the velocity through V2V communication by incorporating real-world driving data and analyzed the impact of prediction error on fuel economy of HEVs.",
+      "2": "The velocity of the following vehicle is forecasted further ahead than the 5 s of information obtained from the leading vehicle and is provided for the predictive powertrain controller."
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires specific knowledge of energy management strategies for hybrid electric vehicles, V2V communication systems, velocity forecasting techniques, and fuel economy relationships - all core topics in energy systems and automotive engineering that go beyond general ML knowledge.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+    },
+    "retry_count": 2,
+    "question_id": "deepseek_q_ac1162cb",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Energy-management-strategies-of-connected-HEVs-a_2019_Progress-in-Energy-and",
+      "paper_title": "Energy-management-strategies-of-connected-HEVs-a_2019_Progress-in-Energy-and"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:20:24.035582",
+      "answer_length": 1219
+    }
+  },
+  {
+    "question_text": "According to the cited literature on connected PHEV energy management, what is the primary objective of route preview-based energy management strategies in planning the State of Charge (SOC) trajectory, and how does the stochastic model predictive controller proposed by Zeng et al. specifically utilize road grade preview information to maintain battery SOC within constrained ranges while improving fuel efficiency?",
+    "standard_answer": "The primary objective of route preview-based energy management strategies for connected PHEVs is to plan the SOC trajectory for a longer horizon using preview information, enabling strategic power allocation over the entire trip. According to the literature, 'The objective of route preview based EMSs is to plan the SOC trajectory for a longer horizon with preview information.' This approach allows the energy management system to utilize static data such as road grade and speed limits to optimize power distribution between the engine and battery. Specifically, Zeng et al. developed a stochastic model predictive controller for parallel HEVs that incorporates road grade preview to maintain battery SOC within certain constrained ranges while enhancing fuel efficiency. As cited, 'Zeng et al. proposed an energy management using a stochastic model predictive controller for a parallel HEV considering the road grade preview.' The stochastic MPC framework uses previewed road grade data to predict future power demands influenced by terrain variations, allowing the controller to adjust power split decisions in real-time. By accounting for upcoming elevation changes, the controller can pre-allocate electrical energy usage to avoid inefficient engine operation during high-load conditions like steep inclines, thereby keeping SOC within predetermined bounds and optimizing overall fuel consumption through more efficient power distribution across the prediction horizon.",
+    "original_text": {
+      "1": "The objective of route preview based EMSs is to plan the SOC trajectory for a longer horizon with preview information",
+      "2": "Zeng et al. proposed an energy management using a stochastic model predictive controller for a parallel HEV considering the road grade preview"
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question requires specific knowledge of energy management strategies for connected PHEVs, including SOC trajectory planning, route preview optimization, and stochastic model predictive control applications in vehicle energy systems - all within the energy systems domain focus.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+    },
+    "retry_count": 2,
+    "question_id": "deepseek_q_a3291e98",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Energy-management-strategies-of-connected-HEVs-a_2019_Progress-in-Energy-and",
+      "paper_title": "Energy-management-strategies-of-connected-HEVs-a_2019_Progress-in-Energy-and"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:20:33.755937",
+      "answer_length": 1476
+    }
+  },
+  {
+    "question_text": "Analyze the sequential optimization framework for connected HEVs that achieves up to 18.8% energy savings by coordinating velocity optimization, air conditioning thermal management, and power split using predictive traffic information. Explain how this hierarchical control approach leverages V2I communication to enable anticipatory energy management and reduces transient inefficiencies through subsystem coordination.",
+    "standard_answer": "The sequential optimization framework for connected HEVs employs a hierarchical control structure that systematically coordinates three key subsystems using predictive traffic information from V2I communication. First, velocity optimization utilizes traffic preview data to plan optimal speed trajectories that minimize energy consumption while maintaining mobility requirements. This involves calculating acceleration profiles that avoid unnecessary braking and maintain steady speeds where possible. Second, air conditioning thermal management is optimized based on predicted thermal loads from forecasted driving conditions, allowing proactive control of HVAC systems to reduce parasitic losses. The system can pre-cool or pre-heat the cabin during periods of lower power demand. Third, power split optimization between the internal combustion engine and electric motor is performed using the optimized velocity profile and thermal management constraints. This sequential coordination enables anticipatory energy distribution where the powertrain can prepare for upcoming driving demands, reducing transient inefficiencies and optimizing operating points of both power sources. The fundamental mechanism involves using longer prediction horizons enabled by traffic information to pre-condition vehicle states before high-demand scenarios. By decoupling these optimization problems and solving them sequentially, the approach achieves computational efficiency while maintaining near-optimal performance. The energy savings stem from reduced idling losses, optimized component operating temperatures, better utilization of regenerative braking opportunities through velocity smoothing, and coordinated management of auxiliary loads like air conditioning.",
+    "original_text": {
+      "1": "Amini et al. sequentially optimized the velocity, air conditioning thermal management, and power split with the predictive traffic information for connected HEVs, to further improve fuel economy",
+      "2": "The resultant energy savings can be achieved up to 18.8%"
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires deep expertise in energy systems, specifically hybrid electric vehicle energy management, thermal management, power split optimization, and V2I communication applications in automotive energy efficiency. It involves combustion science (engine operation), heat transfer (thermal management), and energy systems (HEV optimization) knowledge.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer are well-structured and domain-appropriate. The answer provides comprehensive technical details that align with the cited paper content about sequential optimization in connected HEVs."
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_04666c77",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Energy-management-strategies-of-connected-HEVs-a_2019_Progress-in-Energy-and",
+      "paper_title": "Energy-management-strategies-of-connected-HEVs-a_2019_Progress-in-Energy-and"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:21:00.652462",
+      "answer_length": 1755
+    }
+  },
+  {
+    "question_text": "How do energy management strategies for connected HEVs and PHEVs utilize V2I communication to enable eco-driving and coordinate velocity control with power split optimization across different vehicle scenarios, and what general mechanisms support fuel economy improvements according to the provided paper?",
+    "standard_answer": "Energy management strategies for connected HEVs and PHEVs leverage V2I communication to enable eco-driving by optimizing velocity profiles using traffic signal information, which is then integrated with power split optimization to enhance fuel economy. The paper emphasizes that 'With the available information from GPS, ITS (V2V/V2I), the velocity can be optimized in an economic manner (e.g., Eco-driving), in order to reduce fuel consumption.' This velocity optimization is fused with powertrain energy management, where the predicted velocity profile enables more efficient power distribution between the engine and electric motor. The coordination operates through hierarchical control frameworks where eco-driving provides optimal velocity trajectories that avoid unnecessary stops and maintain efficient speeds, while energy management controllers use this information to optimize power allocation. The paper notes that 'Eco-driving for connected vehicles using V2I communication is emphasized as well,' indicating this integration is a key focus area. For multi-vehicle scenarios, the paper states 'The objective of EMS in a multi-vehicle scenario is to investigate the EMS for each vehicle by coordinating the velocity control and power split, resulting in improvements of the overall performance (mobility and fuel economy).' This coordination reduces fuel consumption by minimizing energy losses from frequent acceleration and deceleration, optimizing engine operating points, and leveraging regenerative braking opportunities more effectively through the synergistic combination of velocity optimization and power split control.",
+    "original_text": {
+      "1": "With the available information from GPS, ITS (V2V/V2I), the velocity can be optimized in an economic manner (e.g., Eco-driving), in order to reduce fuel consumption.",
+      "2": "Eco-driving for connected vehicles using V2I communication is emphasized as well. In the sequel, a comprehensive literature survey is presented, and each method is elaborated in terms of its basic principles, advantages, and disadvantages.",
+      "3": "The objective of EMS in a multi-vehicle scenario is to investigate the EMS for each vehicle by coordinating the velocity control and power split, resulting in improvements of the overall performance (mobility and fuel economy)."
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires specific knowledge of energy management strategies for hybrid electric vehicles (HEVs/PHEVs), V2I communication systems, eco-driving optimization, power split control in hybrid powertrains, and fuel economy improvements - all of which fall under energy systems and automotive engineering domain expertise.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "The question is well-focused on energy systems domain and the answer correctly synthesizes information from the provided citations about V2I communication enabling eco-driving, velocity optimization, power split coordination, and fuel economy improvements in connected HEVs/PHEVs."
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_431276fb",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Energy-management-strategies-of-connected-HEVs-a_2019_Progress-in-Energy-and",
+      "paper_title": "Energy-management-strategies-of-connected-HEVs-a_2019_Progress-in-Energy-and"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:21:11.275395",
+      "answer_length": 1640
+    }
+  }
+]
