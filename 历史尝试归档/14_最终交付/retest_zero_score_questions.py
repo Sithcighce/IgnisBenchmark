@@ -20,11 +20,11 @@ DEEPSEEK_API_KEY = os.getenv('DEEPSEEK_API_KEY')
 DEEPSEEK_API_BASE = "https://api.deepseek.com"
 
 # Configuration
-VERIFY_DIR = Path(r'c:\Users\13031\Desktop\workspace\distillation_generation\验证')
-ZERO_SCORE_FILE = VERIFY_DIR / 'gpt验证结果分类' / '4_API失败_零分' / 'api_failures_zero_score.json'
-BENCHMARK_RECOVERED = VERIFY_DIR / 'benchmarkGPT5_recovered.json'
-OUTPUT_FILE = VERIFY_DIR / 'retest_zero_score_results.json'
-LOG_FILE = VERIFY_DIR / 'retest_zero_score.log'
+BASE_DIR = Path(r'c:\Users\13031\Desktop\workspace\distillation_generation\历史尝试归档\14_最终交付')
+BENCHMARK_FILE = Path(r'c:\Users\13031\Desktop\workspace\distillation_generation\历史尝试归档\12_第十一次尝试_GPT5测试\data\benchmarkGPT5_recovered.json')
+ZERO_SCORE_FILE = BASE_DIR / 'data' / 'gpt验证结果分类' / '4_API失败_零分' / 'api_failures_zero_score.json'
+OUTPUT_FILE = BASE_DIR / 'data' / 'retest_zero_score_results.json'
+LOG_FILE = BASE_DIR / 'retest_zero_score.log'
 
 # Settings
 REQUEST_TIMEOUT = 180
@@ -43,7 +43,7 @@ def log_message(msg):
 
 def load_question_full_data(question_id):
     """从 benchmarkGPT5_recovered.json 加载完整题目数据"""
-    with open(BENCHMARK_RECOVERED, 'r', encoding='utf-8') as f:
+    with open(BENCHMARK_FILE, 'r', encoding='utf-8') as f:
         all_questions = json.load(f)
     
     for q in all_questions:
