@@ -1,26 +1,26 @@
 # 第二次尝试：对比生成
 
-**时间**: 2024年初  
-**脚本**: milestone1_compare_generator.py  
-**策略**: 加入对比和多样性要求  
+## 时间
+第一次尝试后
 
-## 改进
-- 要求生成不同类型的问题
-- 加入对比示例
-- 增强质量控制
+## 目标
+通过对比不同生成策略改进题目质量
 
-## 数据文件
-- `milestone1_compare.jsonl`: 对比生成结果
-- `milestone1_compare_raw_iter1.txt`: 第一轮原始响应
-- `milestone1_compare_report.md`: 生成报告
+## 使用脚本
+- `milestone1_compare_generator.py`
 
-## Prompt
-- `生成题Prompt.md`: 改进的生成prompt
+## 特点
+- 对比不同的生成prompt
+- 尝试改进题目的专业性
+- 增加题目类型分类（concept/reasoning/calculation）
+
+## 产出数据
+- 对比生成的题目数据
 
 ## 结果
-题目多样性有所提升，但仍需改进。
+- 发现不同prompt对题目质量影响很大
+- 确定了更有效的生成策略
 
 ## 经验教训
-- ✅ 多样性要求有效
-- ✅ 对比示例有帮助
-- ❌ 仍需保留原文引用
+- Prompt工程很重要
+- 需要系统化的题目类型分类
