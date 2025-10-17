@@ -1,0 +1,82 @@
+{
+  "question_text": "Why do alkenes generally exhibit higher laminar burning velocities compared to alkanes of similar carbon number, and what key radical pathways contribute to this difference?",
+  "standard_answer": "Alkenes have higher laminar burning velocities due to their molecular structure promoting faster radical production and higher adiabatic flame temperatures. The C=C double bond in alkenes leads to the formation of resonantly stabilized radicals (e.g., allyl C3H5) during H-abstraction or decomposition, which can rapidly propagate chain reactions. Additionally, alkenes undergo faster pyrolysis and oxidation steps that generate small radicals like H, O, and OH at enhanced rates. For instance, ethylene decomposition produces vinyl radicals (C2H3) that react quickly with O2 to form CH2O and H, accelerating chain-branching. The paper states: 'They showed that alkenes have generally higher flame speeds than alkanes.' and 'The higher flame speeds of ethylene are caused by a higher adiabatic flame temperature and faster oxidation kinetics at these conditions.' Key pathways include: (1) H-abstraction from allylic sites forming stabilized radicals that resist termination, (2) addition of O2 to double bonds yielding reactive epoxides or carbonyls, and (3) decomposition of larger alkenes into C2-C4 fragments that fuel high-temperature chemistry. These mechanisms collectively increase radical pool concentrations and heat release rates, elevating flame speeds compared to alkanes, which rely on slower β-scission and isomerization steps.",
+  "original_text": {
+    "1": "They showed that alkenes have generally higher flame speeds than alkanes.",
+    "2": "The higher flame speeds of ethylene are caused by a higher adiabatic flame temperature and faster oxidation kinetics at these conditions."
+  },
+  "type": "concept",
+  "difficulty": 4,
+  "topic": "combustion_science",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires deep knowledge of combustion chemistry, specifically comparing alkene and alkane combustion behavior, laminar burning velocities, radical pathways, and molecular structure effects - all core combustion science concepts that cannot be answered with general ML knowledge.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_9f2fa2bb",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Combustion-chemistry-of-alkenes-and-al_2022_Progress-in-Energy-and-Combustio",
+    "paper_title": "Combustion-chemistry-of-alkenes-and-al_2022_Progress-in-Energy-and-Combustio"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:17:46.129514",
+    "answer_length": 1342
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly explains why alkenes have higher laminar burning velocities than alkanes, consistent with the original text. It accurately cites both key factors mentioned: (1) higher adiabatic flame temperatures and (2) faster oxidation kinetics. The detailed mechanistic explanations about resonantly stabilized radicals (allyl, vinyl), H-abstraction from allylic sites, O2 addition to double bonds, and decomposition pathways are all scientifically sound and represent established combustion chemistry principles. The answer provides appropriate elaboration beyond the original text without contradicting it. The chemical pathways described (formation of CH2O and H from vinyl radicals, chain-branching mechanisms, β-scission in alkanes) are factually correct. While the answer is detailed, all statements are accurate and logically consistent with fundamental combustion science.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:06:30.061485"
+      },
+      {
+        "correct": false,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Claims O2 adds to double bonds to form epoxides; this is not a relevant high-temperature flame pathway (epoxidation by O2 is not a dominant mechanism in flames).",
+          "States vinyl (C2H3) + O2 forms CH2O + H directly; main high-T channels proceed via CH2CHO + O or related pathways, with CH2O and H produced only after subsequent steps.",
+          "Asserts allylic (resonance-stabilized) radicals \"rapidly propagate chain reactions\" and \"resist termination\"; resonance-stabilized radicals are generally less reactive and can act as radical sinks, even though allylic H-abstraction is easier.",
+          "Generalizes higher adiabatic flame temperature to alkenes broadly; the cited ground truth supports this specifically for ethylene."
+        ],
+        "reasoning": "While the answer correctly notes that alkenes (e.g., ethylene) often have higher burning velocities due to higher adiabatic flame temperatures and faster oxidation kinetics, it includes mechanistic inaccuracies (epoxide formation via O2 addition, incorrect C2H3 + O2 products, and overstatement of allyl radical reactivity). These factual errors warrant marking the answer as incorrect despite alignment with the high-level conclusion.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:07:25.508445"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer is factually and logically correct. It accurately explains that the higher laminar burning velocity of alkenes is due to both higher adiabatic flame temperatures and faster oxidation kinetics, which is consistent with the provided text. The specific chemical pathways mentioned (e.g., formation of resonantly stabilized radicals, addition reactions to the C=C bond, and faster pyrolysis) are key, well-established mechanisms that correctly explain the kinetic enhancement over alkanes.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:07:50.091359"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:07:50.091378",
+    "consensus": {
+      "all_correct": false,
+      "correct_votes": 2,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 2
+    }
+  }
+}

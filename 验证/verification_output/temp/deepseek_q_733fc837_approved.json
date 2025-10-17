@@ -1,0 +1,77 @@
+{
+  "question_text": "Based on the provided paper content, explain the significance of the high-temperature exothermic peak that appears above 400°C in air but not in nitrogen during smouldering combustion, and discuss why thermogravimetric analysis (TGA) alone is insufficient for analyzing smouldering propagation despite its ability to identify this peak.",
+  "standard_answer": "The emergence of a high-temperature exothermic peak above 400°C in air but not in nitrogen is significant because it corresponds to self-sustained smouldering reactions enabled by extrinsic oxygen. This peak represents oxidative chemical processes that become thermodynamically and kinetically favorable at elevated temperatures, where oxygen from the gas phase can react with char or other degradation products to generate substantial heat release. The presence of this distinct peak in air atmospheres, absent in inert nitrogen environments, demonstrates that oxygen availability fundamentally alters the thermal degradation pathway by activating high-temperature oxidative reactions that contribute significantly to the overall energy release. However, while TGA can identify this peak and differentiate between oxidative and inert atmospheres, it cannot adequately analyze smouldering propagation because smouldering involves complex heat and mass transfer processes throughout porous media that extend beyond the localized chemical reactions measured in TGA. The paper explicitly states that smouldering propagation incorporates distributed heat and mass transfer mechanisms that operate at system scales, making TGA insufficient for capturing the global energy balance and transport phenomena that determine whether smouldering becomes self-sustaining and propagates through a fuel bed.",
+  "original_text": {
+    "1": "In the presence of oxygen a fourth peak above 400°C appears. This is the clearest difference between the mass loss rate traces in nitrogen and air.",
+    "2": "This peak corresponds to self-sustained smouldering. Since smouldering propagation incorporates heat and mass transfer, it cannot be analysed using TGA."
+  },
+  "type": "concept",
+  "difficulty": 4,
+  "topic": "combustion_kinetics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires specific knowledge of combustion science (smouldering combustion, oxidative reactions, thermal degradation pathways), heat transfer principles (energy release, thermal analysis), and analytical methods (TGA limitations). It directly addresses combustion kinetics, atmospheric effects on reaction pathways, and the distinction between localized chemical analysis and system-scale propagation phenomena in porous media combustion.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "The question is well-focused on combustion domain knowledge, and the answer accurately reflects the paper's content about the significance of the high-temperature exothermic peak and TGA limitations for smouldering propagation analysis."
+  },
+  "retry_count": 1,
+  "question_id": "deepseek_q_733fc837",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Processes-defining-smouldering-combustion--Int_2020_Progress-in-Energy-and-C",
+    "paper_title": "Processes-defining-smouldering-combustion--Int_2020_Progress-in-Energy-and-C"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:26:23.599069",
+    "answer_length": 1392
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly identifies and explains the significance of the high-temperature exothermic peak above 400°C in air. It accurately attributes this peak to oxidative reactions with extrinsic oxygen that are absent in nitrogen, consistent with the original text stating this peak 'corresponds to self-sustained smouldering.' The answer also correctly explains why TGA is insufficient for analyzing smouldering propagation, properly citing that smouldering involves complex heat and mass transfer processes throughout porous media that extend beyond localized chemical reactions measured in TGA. This aligns perfectly with the original text's statement that 'smouldering propagation incorporates heat and mass transfer, it cannot be analysed using TGA.' While the answer is more detailed and elaborate than the original text, all statements are factually accurate, logically sound, and consistent with combustion science principles. The additional explanations about thermodynamic favorability, energy release, and system-scale transport phenomena are correct extensions that do not contradict the source material.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:16:33.640532"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer aligns with the ground truth: it correctly attributes the >400°C peak in air to oxygen-enabled, self-sustained smouldering and explains that TGA alone cannot analyze smouldering propagation because it is governed by distributed heat and mass transfer beyond localized reactions. No factual or logical errors are present.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:16:52.079758"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer is factually and logically correct. It accurately interprets the original text, correctly identifying the high-temperature peak with oxygen-dependent exothermic reactions (char oxidation) that enable self-sustained smouldering. It also correctly explains why TGA is insufficient for analyzing propagation, by properly distinguishing between the localized chemical kinetics measured by TGA and the system-scale heat and mass transfer phenomena that govern the propagation of a smouldering front. The answer is a well-reasoned elaboration of the points made in the source text.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:17:09.686285"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:17:09.686314",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

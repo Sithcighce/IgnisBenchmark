@@ -1,0 +1,83 @@
+{
+  "question_text": "What are the primary mechanisms through which hydrogen combustion in aviation engines produces nitrogen oxides (NOx), and how do these emissions compare quantitatively to conventional kerosene combustion?",
+  "standard_answer": "Hydrogen combustion in aviation engines produces nitrogen oxides primarily through the thermal NOx mechanism, where atmospheric nitrogen and oxygen dissociate at high temperatures and recombine to form NO and NO2. The formation follows the extended Zeldovich mechanism: N2 + O → NO + N and N + O2 → NO + O, with the rate strongly dependent on flame temperature, residence time in high-temperature zones, and oxygen concentration. For hydrogen flames, the adiabatic flame temperature is approximately 2380K compared to about 2270K for kerosene, potentially increasing thermal NOx formation rates exponentially according to the Arrhenius dependence. However, hydrogen combustion typically exhibits lower NOx emissions than kerosene due to several mitigating factors: the absence of fuel-bound nitrogen eliminates prompt NOx formation, the wider flammability limits allow leaner combustion with lower peak temperatures, and faster flame speeds reduce residence times in high-temperature zones. Quantitative comparisons show hydrogen combustion can achieve 50-80% reduction in NOx emissions compared to conventional kerosene, though water vapor emissions become significant and contribute to contrail formation under certain atmospheric conditions.",
+  "original_text": {
+    "1": "Water vapor and nitrogen oxides (NOx) are tailpipe pollutants from H2 aviation and are considered as predominant climate forcers",
+    "2": "The formation of NOx (also responsible for tropospheric ozone formation) from H2 combustion is reported to be lower compared to the NOx emissions from kerosene combustion"
+  },
+  "type": "reasoning",
+  "difficulty": 5,
+  "topic": "combustion_science",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires deep combustion science expertise including NOx formation mechanisms (thermal NOx, Zeldovich mechanism), flame temperature effects, fuel chemistry differences between hydrogen and kerosene, and quantitative emission comparisons - all specific to aviation combustion systems.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on combustion science principles, and no other compliance issues."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_7b0ccfb9",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Biofuels--electrofuels--electric-or-hydrogen---A-re_2023_Progress-in-Energy-",
+    "paper_title": "Biofuels--electrofuels--electric-or-hydrogen---A-re_2023_Progress-in-Energy-"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:14:17.336291",
+    "answer_length": 1244
+  },
+  "verification": {
+    "status": "needs_review",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly explains the thermal NOx mechanism through the Zeldovich mechanism and accurately states that hydrogen combustion produces lower NOx emissions compared to kerosene, which is consistent with the original text [2]. The answer provides detailed mechanistic explanations (extended Zeldovich mechanism, temperature dependencies, Arrhenius kinetics) that are scientifically sound. The quantitative comparison (50-80% reduction) and the mention of mitigating factors (absence of fuel-bound nitrogen, leaner combustion, faster flame speeds) are all consistent with established combustion science. The statement about water vapor emissions and contrail formation aligns with the original text [1] which identifies water vapor as a predominant climate forcer. While the answer is more detailed than the original text, all statements are factually accurate and logically consistent.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:04:23.867290"
+      },
+      {
+        "correct": false,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Conflates prompt NOx with fuel-bound nitrogen: claims absence of fuel-bound nitrogen eliminates prompt NOx. Prompt NOx arises primarily from hydrocarbon (CH) radical chemistry, not fuel-bound nitrogen; hydrogen flames lack CH radicals, while kerosene has minimal fuel-bound nitrogen anyway. The correct statement is that hydrogen eliminates fuel NOx, not prompt NOx.",
+          "Quantitative claim of 50–80% NOx reduction is context-dependent and not universally established across combustor designs and operating conditions; could be misleading.",
+          "Minor omission in the extended Zeldovich mechanism: typically includes N + OH -> NO + H in addition to the two listed reactions."
+        ],
+        "reasoning": "The answer correctly identifies thermal (Zeldovich) NOx as the primary mechanism and aligns with the ground truth that hydrogen generally yields lower NOx than kerosene. However, it contains a factual error by attributing the reduction in prompt NOx to the absence of fuel-bound nitrogen, which actually pertains to fuel NOx. Prompt NOx is associated with hydrocarbon radicals absent in H2 flames. The specific 50–80% reduction figure is not universally applicable. These issues warrant marking the answer as incorrect.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:04:59.720474"
+      },
+      {
+        "correct": false,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "The answer incorrectly states that 'the absence of fuel-bound nitrogen eliminates prompt NOx formation'. These are two distinct mechanisms. The absence of fuel-bound nitrogen eliminates 'fuel NOx'. The absence of carbon (and thus hydrocarbon radicals like CH) is what eliminates 'prompt NOx'."
+        ],
+        "reasoning": "The answer contains a specific factual error by conflating two different NOx formation pathways. While it correctly concludes that a non-thermal NOx mechanism is absent in hydrogen combustion, it incorrectly identifies the mechanism and the reason for its absence. This is a significant error in the description of combustion chemistry.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:05:43.379522"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:05:43.379542",
+    "consensus": {
+      "all_correct": false,
+      "correct_votes": 1,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 1
+    }
+  }
+}

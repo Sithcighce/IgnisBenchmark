@@ -1,0 +1,88 @@
+{
+  "question_text": "Why does co-combustion of BFRs with chlorine sources lead to significant formation of mixed halogenated dioxins (PXDD/Fs), and what are the key chemical mechanisms driving this phenomenon?",
+  "standard_answer": "Co-combustion of BFRs with chlorine sources like polyvinyl chloride (PVC) promotes PXDD/Fs formation through competitive halogenation pathways and radical exchange mechanisms. The key driving factor is the different reactivity and mobility of bromine versus chlorine species in combustion environments. Bromine atoms and HBr are more reactive than their chlorine counterparts, leading to faster bromination rates. However, chlorine can displace bromine from certain positions due to thermodynamic stability considerations. The paper states: 'Co-combustion of BFRs-containing objects with a chlorine source (e.g. polyvinyl chlorides) results in the emission of significant concentrations of mixed halogenated dibenzo-p-dioxins and dibenzofurans (i.e. PXDD/Fs).' Mechanistically, this occurs through several pathways: (1) Gas-phase radical reactions where Br• and Cl• compete for addition to aromatic rings of dioxin precursors, (2) Surface-mediated reactions on fly ash where brominated and chlorinated phenols co-adsorb and undergo condensation, and (3) Halogen exchange reactions where the more nucleophilic bromine replaces chlorine in certain positions due to the higher bond strength of C-Br versus C-Cl in aromatic systems. The mixed halogenation is particularly efficient because bromine's higher reactivity initiates the formation process, while chlorine's abundance from sources like PVC ensures both halogens are available for incorporation into the dioxin structures.",
+  "original_text": {
+    "1": "Co-combustion of BFRs-containing objects with a chlorine source (e.g. polyvinyl chlorides) results in the emission of significant concentrations of mixed halogenated dibenzo-p-dioxins and dibenzofurans (i.e. PXDD/Fs).",
+    "2": "Owing to the high bromine and chlorine contents in electrical and electronic wastes (e-waste), thermal recycling of e-waste often pollutes surrounding areas with large loads of PBDD/Fs and PXDD/Fs."
+  },
+  "type": "application",
+  "difficulty": 5,
+  "topic": "combustion_chemistry",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires deep knowledge of combustion chemistry, specifically halogenated dioxin formation mechanisms, competitive halogenation pathways, radical exchange reactions in combustion environments, and the thermodynamics of bromine vs chlorine reactivity - all specialized combustion science concepts that cannot be answered with general ML knowledge.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question is well-focused on combustion chemistry domain and answer provides detailed, accurate mechanisms supported by paper content and citations."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_0d7bda50",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Thermal-decomposition-of-brominated-flame-retard_2019_Progress-in-Energy-and",
+    "paper_title": "Thermal-decomposition-of-brominated-flame-retard_2019_Progress-in-Energy-and"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:31:17.825036",
+    "answer_length": 1477
+  },
+  "verification": {
+    "status": "rejected",
+    "verifiers": [
+      {
+        "correct": false,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Claims that C-Br bonds have higher bond strength than C-Cl bonds in aromatic systems, which is factually incorrect - C-Cl bonds are actually stronger than C-Br bonds",
+          "States that chlorine displaces bromine due to thermodynamic stability and higher C-Br bond strength, creating a logical contradiction with established chemistry",
+          "The mechanistic explanation about halogen exchange is based on incorrect bond strength relationships"
+        ],
+        "reasoning": "The answer contains a fundamental factual error regarding bond strengths. In aromatic systems, C-Cl bonds (approximately 339 kJ/mol) are stronger than C-Br bonds (approximately 280 kJ/mol). The answer incorrectly states 'the higher bond strength of C-Br versus C-Cl in aromatic systems,' which reverses the actual relationship. This error undermines the mechanistic explanation for halogen exchange reactions. While the original text confirms that co-combustion leads to PXDD/Fs formation, the detailed mechanisms provided in the answer contain this critical factual error about bond strengths. The general concept that mixed halogenation occurs is supported by the original text, but the specific chemical reasoning is flawed.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:22:46.820690"
+      },
+      {
+        "correct": false,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Claims that C–Br bonds are stronger than C–Cl bonds in aromatic systems; this is incorrect (C–Cl is stronger than C–Br).",
+          "Internal contradiction: states chlorine can displace bromine for thermodynamic stability, but later claims bromine replaces chlorine due to (incorrectly asserted) stronger C–Br bonds.",
+          "Asserts bromine atoms and HBr are more reactive than chlorine atoms and HCl, leading to faster bromination; in general radical halogenation, Cl· is more reactive than Br·, and this statement is oversimplified/misleading for combustion conditions.",
+          "Mechanistic description of halogen radicals 'adding to aromatic rings' is oversimplified and not representative of the dominant precursor/surface-catalyzed pathways (phenoxy-mediated, Lewis-acid catalyzed halogenation, interhalogen species)."
+        ],
+        "reasoning": "While the answer aligns with the ground truth that co-combustion with chlorine sources yields significant PXDD/Fs, it contains key factual errors (bond strengths, relative radical reactivity), an internal contradiction about halogen exchange direction, and oversimplified mechanisms. These issues undermine accuracy despite correctly stating the overall phenomenon.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:23:32.545964"
+      },
+      {
+        "correct": false,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "The answer incorrectly states in mechanism (3) that 'bromine replaces chlorine... due to the higher bond strength of C-Br versus C-Cl'. This is factually incorrect. The aromatic C-Cl bond (~400-410 kJ/mol) is significantly stronger than the aromatic C-Br bond (~330-340 kJ/mol). Therefore, under thermodynamic control, chlorine tends to displace bromine, not the other way around."
+        ],
+        "reasoning": "The answer correctly identifies the general phenomenon and some valid mechanisms, such as competitive gas-phase radical reactions and surface-mediated condensation. However, it contains a critical factual error regarding the halogen exchange mechanism. It reverses both the direction of the exchange reaction and the relative bond strengths of C-Cl and C-Br, which is a fundamental error in chemistry. This makes the explanation of mechanism (3) incorrect.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:23:57.479819"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:23:57.479844",
+    "consensus": {
+      "all_correct": false,
+      "correct_votes": 0,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "question_text": "Calculate the equilibrium constant for the water-gas shift reaction at 400°C using the given correlation KP = exp[(4577.8/T) - 4.33], and determine the theoretical CO conversion if the initial steam-to-CO molar ratio is 3:1 at 1 bar pressure.",
+  "standard_answer": "First, convert temperature to Kelvin: T = 400 + 273 = 673 K. Substitute into the equation: KP = exp[(4577.8/673) - 4.33] = exp[6.80 - 4.33] = exp[2.47] ≈ 11.82. For the reaction CO + H2O ↔ H2 + CO2, define initial moles: CO = 1, H2O = 3, H2 = 0, CO2 = 0. Let x be the moles of CO converted. At equilibrium: CO = 1-x, H2O = 3-x, H2 = x, CO2 = x. Total moles = 4. The equilibrium constant KP = (P_H2 * P_CO2) / (P_CO * P_H2O) = [(x/4)*(x/4)] / [((1-x)/4)*((3-x)/4)] * P^2, but since pressure P = 1 bar, KP = [x^2] / [(1-x)(3-x)]. Solve 11.82 = x^2 / [(1-x)(3-x)]. Rearranging: 11.82(1-x)(3-x) = x^2 → 11.82(3 - 4x + x^2) = x^2 → 35.46 - 47.28x + 11.82x^2 = x^2 → 10.82x^2 - 47.28x + 35.46 = 0. Using quadratic formula: x = [47.28 ± sqrt(47.28^2 - 4*10.82*35.46)] / (2*10.82) = [47.28 ± sqrt(2234.4 - 1533.5)] / 21.64 = [47.28 ± sqrt(700.9)] / 21.64 = [47.28 ± 26.47] / 21.64. Taking the feasible root (x < 1): x = (47.28 - 26.47)/21.64 ≈ 20.81/21.64 ≈ 0.961. Thus, CO conversion = x/1 = 96.1%.",
+  "original_text": {
+    "1": "KP = exp[(4577.8 / T) - 4.33] where T is the absolute temperature.",
+    "2": "The forward WGS reaction is favored at lower reaction temperatures, however, at higher temperatures (~ 1000 °C), CO transformation becomes a function of steam-to-CO molar ratio."
+  },
+  "type": "calculation",
+  "difficulty": 3,
+  "topic": "energy_systems",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires combustion science and thermodynamics expertise to understand the water-gas shift reaction, equilibrium constants, and chemical equilibrium calculations for hydrogen production systems.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer are well-structured and domain-appropriate. No issues found."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_00588347",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Progress-in-in-situ-CO2-sorption-for-enhanc_2022_Progress-in-Energy-and-Comb",
+    "paper_title": "Progress-in-in-situ-CO2-sorption-for-enhanc_2022_Progress-in-Energy-and-Comb"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:26:14.115188",
+    "answer_length": 991
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly applies the given correlation to calculate KP at 400°C (673 K), obtaining KP ≈ 11.82. The equilibrium analysis for the water-gas shift reaction is properly set up with correct stoichiometry and initial conditions (CO:H2O = 1:3). The derivation of the equilibrium expression KP = x²/[(1-x)(3-x)] is correct for the given conditions at 1 bar total pressure. The quadratic equation is properly formulated and solved, yielding x ≈ 0.961 or 96.1% CO conversion. All mathematical steps are accurate, and the thermodynamic principles are correctly applied. The answer is consistent with the original text's statement that the correlation can be used to calculate KP at a given temperature.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:17:05.623941"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Minor arithmetic rounding in discriminant calculation (47.28^2 and 4ac slightly off, but negligible).",
+          "Unnecessary inclusion of P^2 in the Kp expression; pressure cancels regardless of its value for this stoichiometry, not only because P = 1 bar."
+        ],
+        "reasoning": "Temperature conversion to 673 K and use of the given correlation yield KP ≈ exp(2.472) ≈ 11.8, consistent with the original text. The equilibrium relation for WGS with a 3:1 steam-to-CO ratio correctly gives Kp = x^2/[(1−x)(3−x)] due to constant total moles. Solving the quadratic gives x ≈ 0.961, i.e., ~96% CO conversion. The logic and thermodynamics are sound; only minor presentation/rounding issues are present.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:17:43.335700"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "There are minor rounding discrepancies in the intermediate steps of the quadratic formula calculation (e.g., b^2 and 4ac values), but they do not significantly affect the final result and the overall method is correct."
+        ],
+        "reasoning": "The standard answer correctly follows the standard procedure for solving a chemical equilibrium problem. It accurately calculates the equilibrium constant (Kp) from the given correlation and temperature. It then correctly sets up the mole balance for the water-gas shift reaction based on the initial conditions and expresses Kp in terms of the extent of reaction (x). The resulting quadratic equation is formulated and solved correctly to find a physically meaningful conversion. The entire logical flow and all calculations are sound.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:18:12.060291"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:18:12.060319",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

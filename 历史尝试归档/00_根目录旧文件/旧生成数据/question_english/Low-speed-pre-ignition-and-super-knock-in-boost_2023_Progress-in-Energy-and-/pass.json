@@ -1,0 +1,134 @@
+[
+  {
+    "question_text": "How does the presence of lubricant oil in fuel-oil droplets reduce the total ignition delay time (IDT) in gasoline engines, and what are the physical and chemical mechanisms driving this reduction?",
+    "standard_answer": "The reduction in total ignition delay time (IDT) when lubricant oil is present in fuel-oil droplets stems from both physical and chemical mechanisms. Physically, the addition of lubricant oil components (e.g., C16–C18 surrogates) enhances low-temperature heat release (LTHR), which accelerates droplet vaporization by increasing local temperatures and reducing the physical IDT. This is particularly effective at ambient temperatures above 800 K, where enhanced vaporization shortens the time required for the droplet to mix with the ambient charge. Chemically, lubricant oils consist of long-chain alkanes that exhibit pronounced low-temperature chemistry, including negative temperature coefficient (NTC) behavior. This involves chain-branching reactions via alkylperoxy (ROO) and hydroperoxyalkyl (QOOH) radicals, which produce OH radicals and accelerate reactivity. At temperatures below 750 K, the chemical IDT is significantly reduced as lubricant species diminish the intermediate stage in iso-octane ignition, leading to faster overall autoignition. The combined effect is quantified by correlations showing that even a 1% volume fraction of lubricant surrogates in iso-octane can reduce total IDTs by 15%, with greater reductions at higher concentrations due to enhanced LTHR and accelerated chemical kinetics.",
+    "original_text": {
+      "1": "As shown by Kuti et al. [29], already a 1% volume fraction of C16 − C18 lubricant surrogates blended into iso-octane showed 15% shorter total IDTs in an Ignition Quality Tester (IQT) at 15 bar and 680–873 K.",
+      "2": "CFD simulations by Distaso et al. [30] with n-hexadecane/iso-octane at these conditions showed that the reduction in total IDTs can be attributed to the larger Low-temperature Heat Release (LTHR) for lubricant species than in iso-octane."
+    },
+    "type": "reasoning",
+    "difficulty": 5,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires deep knowledge of combustion kinetics, specifically ignition delay mechanisms in gasoline engines, lubricant-fuel interactions, low-temperature heat release, and chemical kinetics involving long-chain alkanes and radical reactions. This is firmly within combustion science and engine research domain expertise.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question is well-focused on combustion domain and answer is factually correct with proper citation support."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_af90083b",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Low-speed-pre-ignition-and-super-knock-in-boost_2023_Progress-in-Energy-and-",
+      "paper_title": "Low-speed-pre-ignition-and-super-knock-in-boost_2023_Progress-in-Energy-and-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:22:24.211118",
+      "answer_length": 1319
+    }
+  },
+  {
+    "question_text": "In the development of super-knock, how do the dimensionless parameters ξ and ε determine the transition from subsonic deflagration to developing detonation, and what role do hotspot size and excitation time play?",
+    "standard_answer": "The transition from subsonic deflagration to developing detonation in super-knock is governed by the dimensionless parameters ξ and ε. ξ = a/u represents the inverse ratio of acoustic velocity a to reaction wave velocity u, where u = (∂τi/∂r)^(-1) depends on the ignition delay time (IDT) gradient with distance. Lower ξ values (higher u) favor supersonic autoignitive waves or detonation. ε = r0/(a τe) combines the initial hotspot radius r0 and excitation time τe (the period of significant chemical energy release). As ε increases (larger r0 or shorter τe), the detonation regime widens, making developing detonation more likely. This is because larger hotspots provide more volume for reaction wave acceleration, while shorter excitation times allow rapid energy release that couples with shock waves. For instance, in dimethyl ether/air mixtures at 982 K and 40.5 bar, increasing ε shifts the upper limit ξu upward, expanding the detonation peninsula. Thus, engines with larger thermal inhomogeneities (large r0) and fuels with fast heat release (short τe) are prone to detonation, as the coupling between reaction fronts and pressure waves intensifies, leading to super-knock.",
+    "original_text": {
+      "1": "The propagation modes can be plotted into a detonation peninsula expressed with two dimensionless parameters, ξ and ε [4]. ξ expresses the inverse ratio of reaction wave velocity u to the acoustic velocity a. ξ = a∕u",
+      "2": "ε = r0 / (a × τe) where r0 denotes the initial hotspot radius and τe is the excitation time."
+    },
+    "type": "reasoning",
+    "difficulty": 5,
+    "topic": "combustion_science",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question requires deep combustion science expertise about super-knock phenomena, including understanding of dimensionless parameters (ξ and ε), transition mechanisms from deflagration to detonation, and the roles of hotspot size and excitation time in combustion dynamics - all specific to combustion science and engine research.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_38129e31",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Low-speed-pre-ignition-and-super-knock-in-boost_2023_Progress-in-Energy-and-",
+      "paper_title": "Low-speed-pre-ignition-and-super-knock-in-boost_2023_Progress-in-Energy-and-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:22:24.951571",
+      "answer_length": 1182
+    }
+  },
+  {
+    "question_text": "What is the critical radius for autoignition (rc) from a hotspot according to the Frank-Kamenetskii criterion, and how does it depend on thermal conductivity and activation energy? Explain the physical mechanisms behind these dependencies.",
+    "standard_answer": "The critical radius for autoignition (rc) is derived from the Frank-Kamenetskii criterion for thermal explosion in a reactive mixture. It represents the minimum hotspot size required to overcome heat losses and sustain spontaneous ignition. The equation is: rc = (δc k Ta / A Q En exp(-En))^(1/2), where δc is the critical Frank-Kamenetskii parameter, k is thermal conductivity, Ta is ambient temperature, A is the pre-exponential factor, Q is fuel mass per volume multiplied by reaction enthalpy, and En = E/(R Ta) with E as activation energy. The dependence on thermal conductivity is inverse with the square root - higher k increases rc because enhanced heat dissipation from the hotspot to cooler surroundings retards the temperature rise needed for ignition. For activation energy, the relationship is more complex due to the exp(-En) term. Since En = E/(R Ta), higher activation energy E increases En, which increases exp(-En) in the denominator, thereby increasing rc. This means higher activation energy makes autoignition more difficult, requiring a larger hotspot to overcome the energy barrier and initiate self-sustaining reactions. The physical mechanism involves balancing chemical heat generation against conductive heat losses - when the hotspot is too small, heat dissipation dominates and prevents thermal runaway.",
+    "original_text": {
+      "1": "The critical radius rc is given as: ( rc = ( δc k Ta / A Q En exp (−En) )^(1∕2 ) where δc is the critical Frank–Kamenetskii parameter before ignition [74].",
+      "2": "En = E / RTa where E is the activation energy."
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires deep knowledge of combustion kinetics, specifically the Frank-Kamenetskii criterion for thermal explosion and autoignition from hotspots. It involves understanding how thermal conductivity and activation energy affect the critical ignition radius, which is fundamental combustion science requiring domain expertise in reactive flows and thermal explosion theory.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer are both high quality - domain-focused with correct technical explanation that aligns with the provided citations."
+    },
+    "retry_count": 1,
+    "question_id": "deepseek_q_d84490bc",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Low-speed-pre-ignition-and-super-knock-in-boost_2023_Progress-in-Energy-and-",
+      "paper_title": "Low-speed-pre-ignition-and-super-knock-in-boost_2023_Progress-in-Energy-and-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:23:03.638132",
+      "answer_length": 1332
+    }
+  },
+  {
+    "question_text": "How do fuel aromatics influence Low-Speed Pre-Ignition (LSPI) through chemical transformation processes in the top ring zone, and what specific chemical species are formed according to experimental evidence?",
+    "standard_answer": "Fuel aromatics influence LSPI through chemical transformation processes in the top ring zone where fuel and lubricating oil interact. Experimental analysis of crevice samples reveals that toluene standard fuel surrogates enhance both LSPI frequency and the formation of specific chemical species that were not originally present in either the fuel or oil. These transformations result in the creation of heavier aromatics and mid-range paraffins within the crevice region. The presence of these newly formed species in oil-fuel mixtures contributes to increased LSPI propensity when these mixtures are released into the combustion chamber. Additionally, aromatics promote deposit buildup on combustion chamber surfaces, with the number of side chains in aromatic molecules increasing deposit formation. The combined effect of chemical species transformation and deposit formation significantly impacts LSPI occurrence in boosted spark-ignition engines.",
+    "original_text": {
+      "1": "Alger and Briggs [25] compared LSPI performances and analyzed crevice samples of Primary Reference Fuel (PRF) and toluene standard fuel surrogates, finding that the latter enhanced both LSPI and the formation of heavier aromatics and mid-range paraffins (which were not present in either fuel).",
+      "2": "Aromatics promote deposit buildup and the number of side chains increased the deposit formation.[45,46]"
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question specifically addresses Low-Speed Pre-Ignition (LSPI) in combustion engines, focusing on fuel aromatics' chemical transformation processes in the top ring zone. It requires deep knowledge of combustion chemistry, fuel-oil interactions, and engine-specific phenomena that cannot be answered with general ML knowledge.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question is well-focused on combustion domain and answer correctly reflects the cited experimental evidence about fuel aromatics promoting LSPI through chemical transformations and deposit formation."
+    },
+    "retry_count": 2,
+    "question_id": "deepseek_q_ffbb5622",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Low-speed-pre-ignition-and-super-knock-in-boost_2023_Progress-in-Energy-and-",
+      "paper_title": "Low-speed-pre-ignition-and-super-knock-in-boost_2023_Progress-in-Energy-and-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:23:41.953519",
+      "answer_length": 952
+    }
+  }
+]

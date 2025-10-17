@@ -1,0 +1,80 @@
+{
+  "question_text": "In tomographic absorption spectroscopy (TAS) for combustion diagnostics, explain why the linear equation system often becomes rank-deficient when only a limited number of line-of-sight (LOS) measurements are available, and discuss how this limitation affects spatial resolution and the ability to resolve critical combustion phenomena. Support your explanation with specific challenges mentioned in the provided paper excerpt.",
+  "standard_answer": "In tomographic absorption spectroscopy (TAS), the reconstruction of scalar fields like temperature or species concentration relies on solving a linear equation system where the measured line-of-sight (LOS) absorbances are related to the discretized pixel values of the region of interest (ROI). For a typical 50x50 pixel grid, there are 2500 unknowns. However, in practical combustion environments such as engine testing, optical access is severely restricted, often allowing only a few projections (e.g., 20–200 LOS measurements). This results in a highly underdetermined system where the number of equations (measurements) is much smaller than the number of unknowns (pixels), leading to rank-deficiency. As cited, 'for practical engine measurements only a few projections are usually available due to limited optical access and hence the obtainable linear equation system often becomes rank-deficient.' This rank-deficiency implies non-unique solutions, where multiple field distributions can satisfy the same LOS data, complicating accurate reconstruction. The spatial resolution is directly compromised because insufficient measurements cannot adequately sample high-frequency spatial variations. Consequently, fine-scale turbulent structures, flame fronts, or species gradients—critical for phenomena like local extinction or ignition kernels—may be smoothed out or missed entirely. For instance, features smaller than the effective resolution limit (which depends on measurement density and algorithm regularization) become unresolvable, hindering the detection of transient combustion events. To mitigate this, iterative algorithms like the Landweber method are employed, as 'the Landweber algorithm has been effectively used in applications, where only a very limited number of LOS measurements are available (20–100) and is the most suitable for harsh environments.' These algorithms incorporate prior information (e.g., smoothness constraints) to stabilize reconstructions, but they cannot fully overcome the fundamental resolution limits imposed by sparse data, emphasizing the trade-off between optical accessibility and diagnostic fidelity in combustion systems.",
+  "original_text": {
+    "1": "for practical engine measurements only a few projections are usually available due to limited optical access and hence the obtainable linear equation system often becomes rank-deficient",
+    "2": "The Landweber algorithm has been effectively used in applications, where only a very limited number of LOS measurements are available (20–100) and is the most suitable for harsh environments"
+  },
+  "type": "concept",
+  "difficulty": 4,
+  "topic": "CFD_modeling",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires specialized knowledge in combustion diagnostics, specifically tomographic absorption spectroscopy (TAS), including understanding of linear equation systems, rank-deficiency due to limited line-of-sight measurements, spatial resolution limitations, and their impact on resolving combustion phenomena like turbulent structures and flame fronts. This is deeply rooted in combustion science, fluid mechanics, and optical diagnostics expertise.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "The question is domain-focused, the answer is factually correct and well-supported by citations, and there are no other quality issues. It meets all specifications."
+  },
+  "retry_count": 1,
+  "question_id": "deepseek_q_a32ff204",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Tomographic-absorption-spectroscopy-for-the-stud_2017_Progress-in-Energy-and",
+    "paper_title": "Tomographic-absorption-spectroscopy-for-the-stud_2017_Progress-in-Energy-and"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:32:23.197448",
+    "answer_length": 2176
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately explains the rank-deficiency problem in TAS. It correctly states that a 50x50 pixel grid creates 2500 unknowns while limited optical access provides only 20-200 measurements, creating an underdetermined system. The answer properly quotes the original text about rank-deficiency due to limited optical access and the Landweber algorithm's suitability for 20-100 LOS measurements in harsh environments. The explanation of consequences (non-unique solutions, compromised spatial resolution, inability to resolve fine-scale features) follows logically from the mathematical underdetermination. The discussion of mitigation strategies using iterative algorithms with regularization is technically sound. All physical principles regarding tomographic reconstruction, spatial resolution limits, and the relationship between measurement density and resolvable features are correct. The answer is detailed but contains no factual errors or logical contradictions.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:23:45.414306"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Mentions 20–200 LOS measurements; the original text specifies 20–100.",
+          "States iterative algorithms incorporate prior information; Landweber itself relies on iterative regularization/early stopping and typically needs explicit priors or regularization terms to enforce smoothness."
+        ],
+        "reasoning": "The answer correctly attributes rank-deficiency to limited optical access yielding few LOS projections, aligns with the quoted PECS text, and accurately explains the consequences for spatial resolution and resolving fine-scale combustion phenomena. It appropriately cites the Landweber algorithm’s use with sparse LOS in harsh environments. Minor numerical and phrasing issues do not undermine the core correctness.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:24:09.352796"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer accurately explains why limited line-of-sight measurements in TAS lead to a rank-deficient, underdetermined linear system. It correctly links this mathematical issue to the physical consequence of reduced spatial resolution and the inability to resolve fine combustion structures. The explanation is logically sound, factually correct, and properly incorporates the provided text excerpts.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:24:35.429541"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:24:35.429567",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

@@ -1,0 +1,167 @@
+[
+  {
+    "question_text": "Explain the physical mechanisms through which biodiesel composition affects cold flow properties, and why saturated fatty acid esters cause operational problems at low temperatures despite their favorable combustion characteristics.",
+    "standard_answer": "Cold flow properties in biodiesel are governed by crystallization thermodynamics and molecular packing efficiency. Saturated fatty acid methyl esters (FAMEs) have straight, linear hydrocarbon chains that can pack tightly into crystalline lattices through van der Waals interactions. As temperature decreases, these molecules undergo phase transitions where they align into ordered solid structures, forming wax crystals that can plug fuel filters and lines. The crystallization onset temperature increases with chain length - methyl palmitate (C16:0) crystallizes around 30°C while methyl stearate (C18:0) crystallizes near 39°C. Unsaturated FAMEs introduce kinks in the molecular structure due to cis-double bonds, which disrupt crystalline packing and significantly depress crystallization temperatures. Methyl oleate (C18:1) remains liquid down to -20°C because the double bond prevents efficient molecular alignment. This creates a fundamental trade-off where saturated esters provide excellent cetane numbers and oxidative stability but poor cold flow, while unsaturated esters improve cold flow but reduce ignition quality and stability. The non-linear behavior of cold flow properties means they cannot be predicted by simple additive mixing rules, unlike cetane number or viscosity.",
+    "original_text": {
+      "1": "On the other hand, the properties associated with operational problems when using biodiesel cannot be predicted using the appropriate variation of Eq. (2). These properties are oxidative stability and cold flow.",
+      "2": "Minor FAME components influence these properties more strongly than indicated by the amounts."
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "fluid_mechanics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question requires deep knowledge of biodiesel chemistry, fuel properties, and combustion science. It specifically addresses the relationship between molecular structure (saturated vs. unsaturated fatty acid esters), crystallization thermodynamics, cold flow properties, and combustion characteristics - all core concepts in combustion science and energy systems.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Excellent question that demonstrates the fundamental trade-offs in biodiesel composition and requires domain expertise to answer properly. The standard answer provides comprehensive physical mechanisms and quantitative details."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_1825f606",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Biodiesel-fuels_2017_Progress-in-Energy-and-Combustion-Science",
+      "paper_title": "Biodiesel-fuels_2017_Progress-in-Energy-and-Combustion-Science"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:14:18.688707",
+      "answer_length": 1290
+    }
+  },
+  {
+    "question_text": "Calculate the kinematic viscosity of a biodiesel blend containing 40% methyl palmitate (C16:0, viscosity = 4.38 mm²/s), 35% methyl oleate (C18:1, viscosity = 4.51 mm²/s), and 25% methyl linoleate (C18:2, viscosity = 3.65 mm²/s) using the additive mixing rule, and explain why viscosity follows this linear relationship while other properties like cold flow do not.",
+    "standard_answer": "Using the additive mixing equation Pr_mix = Σ(A_C × Pr_C), where A_C is the mass or volume fraction and Pr_C is the property of the pure component: Viscosity_blend = (0.40 × 4.38) + (0.35 × 4.51) + (0.25 × 3.65) = 1.752 + 1.5785 + 0.9125 = 4.243 mm²/s. This calculated viscosity falls within the typical biodiesel range of 3.5-5.0 mm²/s specified in standards. Viscosity follows linear mixing rules because it is primarily determined by molecular size and intermolecular forces that scale proportionally with composition. The London dispersion forces between hydrocarbon chains and the polar interactions at ester groups contribute additively to the overall resistance to flow. In contrast, cold flow properties exhibit non-linear behavior because crystallization represents a phase transition phenomenon where minor components can significantly disrupt or promote crystal nucleation and growth. The formation of solid phases depends on molecular packing efficiency, which is highly sensitive to molecular geometry and cannot be described by simple linear combinations. This fundamental difference explains why viscosity can be accurately predicted while cold flow properties require more complex modeling approaches.",
+    "original_text": {
+      "1": "The properties of mixtures that generally do not pose operational problems can be predicted by the general equation Pr_mix = Σ(A_C × Pr_C) in which Pr_mix is the property of the mixture being predicted, A_C = the relative amount of an individual neat ester in the mixture, and Pr_C is the property of the individual neat ester.",
+      "2": "These properties are kinematic viscosity, cetane number and density as discussed below in the corresponding sections."
+    },
+    "type": "calculation",
+    "difficulty": 3,
+    "topic": "fluid_mechanics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question requires specific knowledge of biodiesel fuel properties, kinematic viscosity calculations using additive mixing rules, and understanding of molecular interactions in fuel blends. It combines fluid mechanics (viscosity), combustion science (biodiesel properties), and materials science (phase transitions in cold flow), all within the energy systems domain.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question is well-structured with clear domain focus, calculation requirement, and conceptual explanation. Answer correctly applies the mixing rule and provides accurate scientific reasoning for viscosity linearity versus cold flow non-linearity."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_2d3e0890",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Biodiesel-fuels_2017_Progress-in-Energy-and-Combustion-Science",
+      "paper_title": "Biodiesel-fuels_2017_Progress-in-Energy-and-Combustion-Science"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:14:19.290558",
+      "answer_length": 1217
+    }
+  },
+  {
+    "question_text": "How does the transesterification process reduce the kinematic viscosity of vegetable oils to produce biodiesel suitable for diesel engines, and what is the mathematical relationship that allows prediction of biodiesel fuel properties based on component composition?",
+    "standard_answer": "The transesterification process reduces kinematic viscosity by converting large triacylglycerol molecules into smaller fatty acid methyl esters (FAMEs). Vegetable oils have high viscosity that causes operational problems in diesel engines, including poor atomization and engine deposits. The conversion to methyl esters through transesterification fundamentally changes the molecular structure from complex branched triglycerides to simpler linear esters. This structural transformation reduces intermolecular interactions and flow resistance. The properties of biodiesel mixtures that generally do not pose operational problems can be predicted using the equation Pr_mix = Σ(A_C × Pr_C), where Pr_mix is the property of the mixture being predicted, A_C is the relative amount of an individual neat ester in the mixture, and Pr_C is the property of the individual neat ester. This linear relationship applies to kinematic viscosity, cetane number, and density, allowing engineers to calculate expected viscosity based on the fatty acid ester composition of the biodiesel fuel.",
+    "original_text": {
+      "1": "That operational problems were associated with the use of vegetable oils in a diesel engine was recognized early, with high viscosity being defined as a major cause of these problems.",
+      "2": "The properties of mixtures that generally do not pose operational problems can be predicted by the general equation Pr_mix = Σ(A_C × Pr_C) in which Pr_mix is the property of the mixture being predicted, A_C = the relative amount of an individual neat ester in the mixture, and Pr_C is the property of the individual neat ester."
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires specific knowledge of biodiesel production processes (transesterification), fuel property relationships, and combustion engineering principles related to diesel engine operation, which falls under energy systems and combustion science domain expertise.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+    },
+    "retry_count": 1,
+    "question_id": "deepseek_q_2b137d9e",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Biodiesel-fuels_2017_Progress-in-Energy-and-Combustion-Science",
+      "paper_title": "Biodiesel-fuels_2017_Progress-in-Energy-and-Combustion-Science"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:14:54.194197",
+      "answer_length": 1076
+    }
+  },
+  {
+    "question_text": "Using the general mixture equation Pr_mix = Σ(A_C × Pr_C) described in the paper, explain how the cetane number of biodiesel can be predicted from its fatty acid methyl ester composition. What does this equation reveal about the relationship between individual ester properties and the overall fuel's combustion characteristics in compression-ignition engines?",
+    "standard_answer": "The paper establishes that biodiesel properties including cetane number can be predicted using the general mixture equation Pr_mix = Σ(A_C × Pr_C), where Pr_mix represents the property of the mixture being predicted, A_C is the relative amount of an individual neat ester in the mixture, and Pr_C is the property of that individual neat ester. This equation demonstrates that cetane number varies proportionally with the amounts of individual components and their inherent properties. For biodiesel combustion in compression-ignition engines, this means that the overall ignition quality is an additive function of the constituent fatty acid methyl esters. The equation reveals that each ester contributes to the final cetane number in direct proportion to its concentration and individual cetane value, allowing for precise prediction of combustion behavior based on chemical composition. This linear relationship indicates that no synergistic or antagonistic effects occur between different esters regarding cetane number, making it possible to optimize biodiesel composition for specific engine requirements by selecting appropriate fatty acid profiles. The predictive capability of this equation is particularly valuable for fuel formulation and quality control in biodiesel production.",
+    "original_text": {
+      "1": "As will be obvious from the following discussion, the properties of mixtures that generally do not pose operational problems can be predicted by the general equation Pr_mix = Σ(A_C × Pr_C) in which Pr_mix is the property of the mixture being predicted, A_C = the relative amount (vol.−%; or amount as determined by gas chromatography) of an individual neat ester in the mixture, and Pr_C is the property of the individual neat ester.",
+      "2": "These properties are kinematic viscosity, cetane number and density as discussed below in the corresponding sections."
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires understanding of biodiesel fuel properties, cetane number prediction, fatty acid methyl ester composition, and combustion characteristics in compression-ignition engines - all core topics in combustion science and energy systems.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question is well-focused on biodiesel combustion properties and answer accurately explains the mixture equation and its implications for cetane number prediction."
+    },
+    "retry_count": 1,
+    "question_id": "deepseek_q_1f430e86",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Biodiesel-fuels_2017_Progress-in-Energy-and-Combustion-Science",
+      "paper_title": "Biodiesel-fuels_2017_Progress-in-Energy-and-Combustion-Science"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:14:54.924366",
+      "answer_length": 1290
+    }
+  },
+  {
+    "question_text": "How do minor FAME components in biodiesel disproportionately affect oxidative stability and cold flow properties compared to their relative amounts, and what is the mathematical limitation in predicting these properties using standard mixture equations?",
+    "standard_answer": "Minor FAME components in biodiesel exert a disproportionately strong influence on oxidative stability and cold flow properties relative to their concentration levels. According to the research, these properties cannot be accurately predicted using the standard mixture equation (Eq. 2) that calculates properties proportionally from individual component properties and amounts. The paper specifically states that 'minor FAME components influence these properties more strongly than indicated by the amounts.' This disproportionate impact occurs because oxidative stability and cold flow are complex properties where minor components can trigger significant changes through mechanisms that are not linearly proportional to concentration. For oxidative stability, even trace amounts of certain esters can initiate or accelerate degradation processes beyond what would be expected from their mass fraction. Similarly, for cold flow properties, minor components can disproportionately affect crystallization behavior and phase transitions. The mathematical limitation lies in the failure of Eq. 2, which works well for properties like kinematic viscosity, cetane number, and density that vary proportionally with component amounts, but cannot capture the nonlinear, threshold-dependent behavior characteristic of oxidative stability and cold flow properties in biodiesel mixtures.",
+    "original_text": {
+      "1": "On the other hand, the properties associated with operational problems when using biodiesel cannot be predicted using the appropriate variation of Eq. (2). These properties are oxidative stability and cold flow.",
+      "2": "Minor FAME components influence these properties more strongly than indicated by the amounts."
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question requires specific knowledge of biodiesel chemistry, fuel properties (oxidative stability and cold flow), and mathematical modeling limitations in fuel property prediction - all within the combustion science and energy systems domain.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+    },
+    "retry_count": 2,
+    "question_id": "deepseek_q_ec653fe8",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Biodiesel-fuels_2017_Progress-in-Energy-and-Combustion-Science",
+      "paper_title": "Biodiesel-fuels_2017_Progress-in-Energy-and-Combustion-Science"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:15:24.455795",
+      "answer_length": 1376
+    }
+  }
+]

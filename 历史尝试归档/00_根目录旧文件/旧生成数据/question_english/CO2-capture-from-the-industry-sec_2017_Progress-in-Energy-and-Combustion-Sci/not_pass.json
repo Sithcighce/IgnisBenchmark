@@ -1,0 +1,142 @@
+[
+  {
+    "question_text": "Using thermodynamic principles and the Sherwood analysis framework, explain how the CO2 concentration range of 14-33% in cement kiln flue gas affects the minimum work of separation and capture costs, and describe the general relationship between CO2 purity and separation energy requirements based on the provided paper data. Include the specific mechanisms through which concentration impacts thermodynamic work requirements.",
+    "standard_answer": "The CO2 concentration range of 14-33% in cement kiln flue gas significantly impacts both the thermodynamic minimum work of separation and estimated capture costs according to Sherwood analysis principles. The paper states that 'The CO2 content in the flue gas ranges from 14% to 33% CO2, and exits at a temperature between 150 °C and 350 °C.' This concentration variation directly affects separation energy requirements through the fundamental thermodynamic relationship where minimum work increases as CO2 becomes more dilute. The Sherwood plot correlation demonstrates that 'as concentration of a target substance within a gas stream decreases, its separation costs increase' due to the logarithmic relationship between target concentration and separation energy. For cement production specifically, the minimum work of separation decreases with higher CO2 concentrations due to reduced entropy generation during separation. The higher CO2 concentrations (approaching 33%) result in substantially lower separation work and costs compared to the lower end of the concentration range (14%), though the paper does not provide specific numerical values for cement kiln applications. This demonstrates how process conditions yielding higher CO2 concentrations in industrial emissions directly reduce the energy penalty and cost barriers for carbon capture implementation in cement manufacturing through improved separation thermodynamics.",
+    "original_text": {
+      "1": "The CO2 content in the flue gas ranges from 14% to 33% CO2, and exits at a temperature between 150 °C and 350 °C. The higher CO2 content is likely associated with the additional calcination CO2 in the precalciner and preheater.",
+      "2": "As concentration of a target substance within a gas stream decreases, its separation costs increase. This relationship was developed by Thomas K. Sherwood in 1959 when he investigated how the market prices of a metal varied with the initial concentration of the ore in the raw material."
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires understanding of thermodynamic principles (minimum work of separation), Sherwood analysis framework for separation costs, and specific application to cement kiln flue gas CO2 capture. This requires expertise in energy systems, thermodynamics, and industrial carbon capture processes.",
+      "answer_correct": false,
+      "answer_issues": [
+        {
+          "type": "factual_error",
+          "description": "The answer incorrectly states 'minimum work of separation decreases with higher CO2 concentrations due to reduced entropy generation' - this contradicts thermodynamic principles where minimum work actually increases with lower concentrations due to higher entropy of mixing, not decreases."
+        },
+        {
+          "type": "unsupported",
+          "description": "The answer claims 'Sherwood plot correlation demonstrates that as concentration of a target substance within a gas stream decreases, its separation costs increase due to the logarithmic relationship' but the provided citation only mentions cost increase with decreasing concentration, not the specific logarithmic relationship or thermodynamic mechanism."
+        },
+        {
+          "type": "unsupported",
+          "description": "The answer makes specific claims about 'reduced entropy generation during separation' and detailed thermodynamic mechanisms that are not supported by the provided citations or paper excerpt."
+        }
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "The answer contains fundamental thermodynamic errors and unsupported claims about specific mechanisms. It should be corrected to accurately reflect that minimum work increases with lower CO2 concentrations, not decreases, and should avoid making unsupported claims about specific thermodynamic relationships."
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_13b17b29",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "CO2-capture-from-the-industry-sec_2017_Progress-in-Energy-and-Combustion-Sci",
+      "paper_title": "CO2-capture-from-the-industry-sec_2017_Progress-in-Energy-and-Combustion-Sci"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:19:24.555205",
+      "answer_length": 1435
+    }
+  },
+  {
+    "question_text": "Using thermodynamic principles and separation mechanisms, explain how pressure swing adsorption (PSA) versus CO2-specific scrubbing in hydrogen purification affects CO2 stream characteristics and the resulting minimum separation work for carbon capture in refinery applications, based on the provided paper content.",
+    "standard_answer": "Pressure Swing Adsorption (PSA) and CO2-specific scrubbing create fundamentally different CO2 stream characteristics that impact separation thermodynamics through their distinct mechanisms. PSA targets hydrogen purification by adsorbing impurities on molecular sieves under pressure, with all other components including CO2 exiting as off-gas. This results in a dilute CO2 stream with concentrations between 30-45% at temperatures of 20-40°C. In contrast, CO2 scrubbing uses chemical absorption with amine solutions that specifically target CO2 removal, producing a high-purity CO2 stream (≈99%) at temperatures between 100-120°C. The thermodynamic minimum work for separation follows the Gibbs free energy relationship W_min = RT[n_CO2 ln(y_CO2) + n_other ln(y_other)] for product and feed streams. For dilute PSA off-gas (30-45% CO2), the minimum work ranges from 0-4 kJ/mol CO2 captured, while pure CO2 streams from scrubbing require near-zero minimum work when the initial feed stream purity is greater than 95%, as the paper states that 'for any industrial process that produces a stream with greater than 95% CO2 purity, the theoretical minimum work to capture it is near zero (given the assumption of 95% capture purity).' The paper's minimum work calculations in Table 3 show non-zero values even for high purity streams, with hydrogen production streams having minimum work ranging from 0-4 kJ/mol CO2 captured, demonstrating that pure CO2 streams still require separation work from the amine solution in scrubbing processes.",
+    "original_text": {
+      "1": "When CO2 scrubbing is used, an absorption column using an amine solution is used to specifically remove CO2 from the product stream. The CO2 is then released from the stripping column at high purities (≈99%) and temperatures between 100-120 °C.",
+      "2": "PSA targets hydrogen specifically, with all other impurities, including CO2, exiting as off-gas. Subsequently, PSA results in a lower concentration of CO2 in the gas stream, between 30-45%.",
+      "3": "For any industrial process that produces a stream with greater than 95% CO2 purity, the theoretical minimum work to capture it is near zero (given the assumption of 95% capture purity)."
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires deep understanding of thermodynamic principles, separation mechanisms (PSA vs. CO2 scrubbing), hydrogen purification processes, CO2 stream characteristics, and minimum separation work calculations specific to refinery applications - all core energy systems and chemical engineering concepts.",
+      "answer_correct": false,
+      "answer_issues": [
+        {
+          "type": "factual_error",
+          "description": "The answer incorrectly states that pure CO2 streams from scrubbing require near-zero minimum work when initial feed purity is >95%. Citation 3 clearly states that for streams with >95% CO2 purity, the theoretical minimum work to capture is near zero, but the answer misapplies this to the feed stream rather than the captured CO2 stream."
+        },
+        {
+          "type": "fundamental_error",
+          "description": "The answer contains a logical contradiction: it states pure CO2 streams require near-zero minimum work but then says 'pure CO2 streams still require separation work from the amine solution in scrubbing processes' - this confuses theoretical minimum work with actual process energy requirements."
+        },
+        {
+          "type": "unsupported",
+          "description": "The answer provides specific minimum work values (0-4 kJ/mol) and references 'Table 3' from the paper, but the provided citations and paper excerpt do not contain these specific numerical values or reference to Table 3, making these claims unsupported by the given evidence."
+        }
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "The answer needs correction to properly distinguish between theoretical minimum work (which is near zero for high-purity CO2 streams per citation 3) and actual process energy requirements, and should remove unsupported numerical claims."
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_171f8dfe",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "CO2-capture-from-the-industry-sec_2017_Progress-in-Energy-and-Combustion-Sci",
+      "paper_title": "CO2-capture-from-the-industry-sec_2017_Progress-in-Energy-and-Combustion-Sci"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:19:35.810242",
+      "answer_length": 1534
+    }
+  },
+  {
+    "question_text": "Using the thermodynamic principles and Sherwood analysis framework presented in the paper, explain how CO2 concentration variations across industrial processes (3-100%) fundamentally affect both the minimum work required for separation and the estimated capture costs. Your analysis should include: (1) The thermodynamic basis for minimum work calculations using the provided equation, (2) How the Sherwood plot demonstrates the inverse relationship between concentration and separation costs, and (3) Why high-purity CO2 streams represent the most promising initial targets for CCS implementation from both thermodynamic and economic perspectives.",
+    "standard_answer": "The paper establishes that CO2 concentration fundamentally determines both the thermodynamic minimum work and capture costs through first principles. The minimum work equation (W_min = RT[n_CO2_B ln y_CO2_B + n_B-CO2 ln y_B-CO2] - RT[n_CO2_A ln y_CO2_A + n_A-CO2 ln y_A-CO2] + RT[n_CO2_C ln y_CO2_C + n_C-CO2 ln y_C-CO2]) shows that separation energy increases as concentration decreases due to the logarithmic dependence on mole fractions. For streams above 95% CO2 purity, 'the theoretical minimum work to capture it is near zero (given the assumption of 95% capture purity)' since minimal additional separation is required. The Sherwood analysis demonstrates that 'as concentration of a target substance within a gas stream decreases, its separation costs increase' following the logarithmic relationship log(Price $/kg) = -0.5558 × log(mole fraction CO2) - 1.8462. This occurs because dilute streams require processing larger gas volumes per unit of captured CO2, increasing equipment size and energy requirements. The mechanism involves overcoming greater entropy of mixing in dilute systems, where random molecular distributions require more work to achieve separation. High-purity streams from industries like ethanol fermentation, ammonia processing, and natural gas processing represent optimal initial CCS targets because they combine near-zero minimum work with the principle that 'higher purity translates into lower capture costs,' making them economically viable demonstration cases before addressing more challenging dilute streams from power generation.",
+    "original_text": {
+      "1": "For any industrial process that produces a stream with greater than 95% CO2 purity, the theoretical minimum work to capture it is near zero (given the assumption of 95% capture purity).",
+      "2": "As concentration of a target substance within a gas stream decreases, its separation costs increase.",
+      "3": "Higher purity translates into lower capture costs, as will be discussed in the following section."
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires deep understanding of thermodynamic principles (minimum work calculations), Sherwood analysis framework, and industrial CO2 capture processes - all specific to energy systems and carbon capture technology. It demands expertise in separation thermodynamics, cost analysis of industrial processes, and CCS implementation strategies.",
+      "answer_correct": false,
+      "answer_issues": [
+        {
+          "type": "factual_error",
+          "description": "The minimum work equation provided in the answer appears incorrect and unsupported by the paper. The paper mentions calculating 'the thermodynamic minimum work for separation' but does not provide the specific complex equation with multiple terms and streams (A, B, C) as shown in the answer."
+        },
+        {
+          "type": "unsupported",
+          "description": "The specific Sherwood plot equation 'log(Price $/kg) = -0.5558 × log(mole fraction CO2) - 1.8462' is not found in the provided paper excerpt or citations. The paper mentions Sherwood analysis but does not provide this quantitative relationship."
+        },
+        {
+          "type": "factual_error",
+          "description": "The answer states 'For streams above 95% CO2 purity, the theoretical minimum work to capture it is near zero' but this contradicts thermodynamic principles. Even high-purity streams require some work for separation and compression to 95% capture purity, though the work is minimal compared to dilute streams."
+        }
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "The question is excellent but the answer contains unsupported equations and factual errors. Recommend revising the answer to align with the actual content and principles presented in the paper without inventing specific mathematical relationships."
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_e3c9f2ad",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "CO2-capture-from-the-industry-sec_2017_Progress-in-Energy-and-Combustion-Sci",
+      "paper_title": "CO2-capture-from-the-industry-sec_2017_Progress-in-Energy-and-Combustion-Sci"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:19:44.605221",
+      "answer_length": 1569
+    }
+  }
+]

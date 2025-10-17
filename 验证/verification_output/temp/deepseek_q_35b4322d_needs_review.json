@@ -1,0 +1,83 @@
+{
+  "question_text": "Explain the role of ketohydroperoxide (KHP) decomposition in chain-branching during low-temperature combustion, and how functional groups in biofuels can divert this pathway to chain-propagation via Korcek decomposition.",
+  "standard_answer": "Ketohydroperoxide (KHP) decomposition is the linchpin for chain-branching in low-temperature combustion, as it generates two OH radicals through unimolecular dissociation: KHP → OH + oxy radical. This step multiplies radical pools, accelerating ignition. However, functional groups in biofuels can alter this pathway through Korcek decomposition, where KHP dissociates into two stable species (e.g., carbonyls and acids) instead of radicals, converting it from chain-branching to chain-propagating. Mechanistically, Korcek decomposition involves intramolecular rearrangements favored by specific molecular structures, such as those with oxygenated groups that stabilize transition states or promote alternative reaction coordinates. For example, in esters or alcohols, the electron-withdrawing nature of functional groups can lower the energy barrier for Korcek pathways relative to OH-yielding dissociation. This diversion reduces net radical production, lengthening ignition delay times and suppressing reactivity. The balance between chain-branching and Korcek decomposition is thus critical in biofuel oxidation, as it dictates the efficiency of low-temperature ignition and is highly sensitive to functional group-induced changes in thermochemistry and reaction kinetics.",
+  "original_text": {
+    "1": "As the linchpin for autoignition, ketohydroperoxides dissociate at moderate temperatures into a second ˙OH and another oxy radical, therein providing the necessary chain-branching step.",
+    "2": "For example, dissociation of a ketohydroperoxide into two stable species, as occurs in Korcek decomposition, prevents chain branching and makes ˙OH + KHP a chain-propagating channel."
+  },
+  "type": "concept",
+  "difficulty": 5,
+  "topic": "combustion_kinetics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires deep knowledge of combustion kinetics, specifically ketohydroperoxide decomposition pathways in low-temperature combustion and how biofuel functional groups influence chain-branching vs. chain-propagation mechanisms. This is specialized combustion chemistry knowledge, not general ML/CS.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer are both high quality - domain-focused, factually correct based on citations, and compliant with all quality checks."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_35b4322d",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Influence-of-functional-groups-on-low-temperatu_2021_Progress-in-Energy-and-",
+    "paper_title": "Influence-of-functional-groups-on-low-temperatu_2021_Progress-in-Energy-and-"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:21:30.179434",
+    "answer_length": 1276
+  },
+  "verification": {
+    "status": "needs_review",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately explains KHP decomposition as the chain-branching mechanism in low-temperature combustion, correctly stating it produces two OH radicals. It properly contrasts this with Korcek decomposition, which produces stable species instead of radicals, converting the pathway from chain-branching to chain-propagating. The mechanistic details about functional groups in biofuels (esters, alcohols) affecting energy barriers and transition states are chemically sound and consistent with the original text's core message. While the answer is more detailed than the original text, all statements are factually accurate and logically consistent. The explanation of how this balance affects ignition delay times and reactivity is correct and follows from the fundamental principles described.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:10:51.847466"
+      },
+      {
+        "correct": false,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "States that KHP decomposition generates two OH radicals; ground truth specifies formation of one OH plus an oxy (alkoxy) radical.",
+          "Internal inconsistency: text claims two OH radicals but the provided reaction sketch shows OH + oxy radical."
+        ],
+        "reasoning": "The answer correctly describes the role of KHP decomposition in chain-branching and the diversion to chain-propagation via Korcek decomposition, consistent with the ground truth. However, it makes a factual error by claiming production of two OH radicals from KHP decomposition; the established mechanism yields one OH and an oxy radical. This contradicts the original text and introduces an internal inconsistency, so the answer cannot be marked as fully correct.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:11:10.197870"
+      },
+      {
+        "correct": false,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "The answer incorrectly states that ketohydroperoxide (KHP) decomposition generates 'two OH radicals'. The correct mechanism, also consistent with the original text, produces one OH radical and one oxy radical (O=R'-OOH → •OH + O=R'-O•).",
+          "The answer contains an internal contradiction: it first claims the reaction produces 'two OH radicals' but then writes the reaction scheme as 'KHP → OH + oxy radical', which correctly shows only one OH radical product."
+        ],
+        "reasoning": "The answer contains a significant factual error regarding the products of the primary KHP decomposition, which is the central chain-branching step. It claims two OH radicals are formed from the unimolecular dissociation, whereas the mechanism produces one OH radical and an oxy radical. This misrepresents the fundamental chemistry of the main degenerate branching pathway in low-temperature combustion.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:11:32.882942"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:11:32.882961",
+    "consensus": {
+      "all_correct": false,
+      "correct_votes": 1,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 1
+    }
+  }
+}

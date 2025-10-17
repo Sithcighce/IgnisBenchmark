@@ -1,0 +1,79 @@
+{
+  "question_text": "Why does collisional broadening dominate over Doppler broadening in high-pressure combustion systems, and how does this affect the lineshape function and measurement accuracy in laser absorption spectroscopy?",
+  "standard_answer": "Collisional broadening dominates at high pressures due to its linear dependence on pressure (ΔνC = 2P Σχkγk(T)), while Doppler broadening (ΔνD = ν0 √(7.1623×10^-7 T/M)) is pressure-independent. In combustion systems above ~10 bar, collisional linewidths typically exceed 0.1 cm^-1, whereas Doppler linewidths remain below 0.01 cm^-1. This dominance occurs because increased molecular number density at high pressure enhances collision frequency, perturbing energy levels through intermolecular interactions and shortening the lifetime of excited states. The resulting lineshape becomes predominantly Lorentzian, characterized by broader wings compared to the Gaussian Doppler profile. This affects measurement accuracy by simplifying lineshape modeling to Voigt profiles with strong Lorentzian character, but introduces challenges: pressure broadening coefficients γk(T) must be accurately known, as they vary with temperature and collider species. At very high pressures, line mixing and breakdown of the impact approximation may require advanced lineshape models. For LAS, the broadened lines can overlap, complicating multispecies detection, while the increased linewidth reduces peak absorbance, potentially lowering SNR unless compensated by longer path lengths or higher laser power.",
+  "original_text": {
+    "1": "Under high-pressure conditions (>10 bar) found in practical combustion systems, the Lorentzian lineshape is expected to dominate because of the strong gas pressure dependence of the collisional linewidth and the smaller magnitude of the Doppler linewidth.",
+    "2": "ΔνC = 2P Σ χkγk(T), where Xk represents the mole fraction of every kth component within the gas mixture and γik denotes the collisional broadening coefficient of the ith absorbing species with respect to the jth component."
+  },
+  "type": "concept",
+  "difficulty": 5,
+  "topic": "combustion_science",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires deep expertise in combustion science, spectroscopy, and laser diagnostics. It specifically addresses collisional vs. Doppler broadening mechanisms in high-pressure combustion environments, lineshape functions, and measurement accuracy in laser absorption spectroscopy - all core topics in combustion diagnostics and spectroscopy.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Excellent question that demonstrates deep domain knowledge and the answer is comprehensive and factually correct based on the provided citations and paper content."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_3540b70b",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Laser-sensors-for-energy-systems-and-process-ind_2022_Progress-in-Energy-and",
+    "paper_title": "Laser-sensors-for-energy-systems-and-process-ind_2022_Progress-in-Energy-and"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:21:57.323772",
+    "answer_length": 1289
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly explains why collisional broadening dominates at high pressures, accurately citing the linear pressure dependence (ΔνC = 2P Σχkγk(T)) from the original text and correctly noting Doppler broadening's pressure independence. The pressure threshold (>10 bar) and the resulting Lorentzian lineshape dominance match the original text. The answer provides accurate additional context about typical linewidth magnitudes (collisional >0.1 cm^-1 vs Doppler <0.01 cm^-1), the physical mechanism (increased collision frequency), and practical implications for LAS measurements. All physical principles stated are correct, including the Voigt profile description, temperature dependence of broadening coefficients, and measurement challenges. The elaboration beyond the original text (e.g., line mixing, SNR considerations) represents valid extensions of the core concepts without contradicting established science.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:11:30.316650"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "The statement that Doppler linewidths remain below 0.01 cm^-1 is likely understated for combustion-relevant temperatures and higher line centers; typical Doppler FWHM can be ~0.02–0.07 cm^-1 in the NIR/MIR at elevated T."
+        ],
+        "reasoning": "The answer correctly explains that collisional broadening scales with pressure and dominates over pressure-independent Doppler broadening in high-pressure combustion, consistent with the ground-truth statement and the given ΔνC expression. It accurately describes the resulting Lorentzian-dominant lineshape and practical implications for Voigt modeling, pressure-broadening coefficients, line mixing, and measurement challenges such as overlap and reduced peak absorbance. Aside from a minor numerical understatement of typical Doppler widths, the reasoning is sound and aligned with established principles.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:12:22.439195"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer is factually and logically correct. It accurately explains why collisional broadening dominates at high pressure, correctly identifies the resulting lineshape as predominantly Lorentzian, and details the implications for laser absorption spectroscopy, including modeling challenges, line overlap, and SNR reduction. All statements are consistent with the provided original text and established principles of spectroscopy.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:12:44.775209"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:12:44.775237",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

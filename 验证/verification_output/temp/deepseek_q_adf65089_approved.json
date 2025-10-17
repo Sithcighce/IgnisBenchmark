@@ -1,0 +1,81 @@
+{
+  "question_text": "How do temperature and residence time influence the competition between evaporation and thermal degradation pathways during TBBA decomposition, and what are the implications for brominated product formation?",
+  "standard_answer": "Temperature and residence time significantly influence the competition between evaporation and thermal degradation pathways during TBBA decomposition. Evaporation becomes prominent when TBBA is exposed to temperatures above its melting point (180°C), as indicated by the paper: 'Exposing BFRs to temperatures higher than their melting points results in evaporation.' This evaporation initiates through a chemical event: 'Evaporation of TBBA from brominated epoxy resins is predicted to commence by a major chemical event, that is a 1,4-H transfer.' Residence time affects the extent of condensed-phase reactions, with longer durations favoring condensation over degradation: 'A longer residence time of isothermal heating promotes condensation reactions over degradation reactions. As a result, isothermal TGA runs leave a larger residue when compared with dynamic runs.' At lower temperatures, evaporation dominates due to TBBA's low melting point, while at higher temperatures, thermal degradation pathways become more significant, leading to the formation of brominated products like brominated phenols and benzenes. The interplay between temperature and residence time determines the balance between gas-phase degradation (favored in short-residence, high-temperature processes) and condensed-phase reactions with char formation (favored in longer-residence scenarios), ultimately influencing the yields and types of brominated compounds such as PBDD/Fs precursors.",
+  "original_text": {
+    "1": "Exposing BFRs to temperatures higher than their melting points results in evaporation.",
+    "2": "Evaporation of TBBA from brominated epoxy resins is predicted to commence by a major chemical event, that is a 1,4-H transfer.",
+    "3": "A longer residence time of isothermal heating promotes condensation reactions over degradation reactions. As a result, isothermal TGA runs leave a larger residue when compared with dynamic runs."
+  },
+  "type": "reasoning",
+  "difficulty": 4,
+  "topic": "combustion_kinetics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires specific knowledge of combustion kinetics, thermal decomposition pathways, brominated flame retardant chemistry, and the interplay between temperature, residence time, and reaction mechanisms in combustion systems. It directly addresses TBBA decomposition behavior, evaporation vs. degradation competition, and brominated product formation - all core combustion science concepts.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question is well-focused on combustion kinetics domain and answer correctly synthesizes the provided citations with appropriate technical depth."
+  },
+  "retry_count": 1,
+  "question_id": "deepseek_q_adf65089",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Thermal-decomposition-of-brominated-flame-retard_2019_Progress-in-Energy-and",
+    "paper_title": "Thermal-decomposition-of-brominated-flame-retard_2019_Progress-in-Energy-and"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:31:58.606458",
+    "answer_length": 1469
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately reflects all key points from the original text. It correctly states that evaporation occurs above the melting point (180°C), accurately quotes the 1,4-H transfer mechanism for TBBA evaporation initiation, and properly explains how longer residence times promote condensation over degradation reactions. The answer extends beyond the original text by discussing the implications for brominated product formation and the competition between gas-phase and condensed-phase reactions, but these extensions are logically consistent with the provided information and represent reasonable scientific inference. No factual errors, contradictions, or logical flaws are present. The answer appropriately addresses how temperature and residence time influence the evaporation vs. thermal degradation competition.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:22:45.435731"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "medium",
+        "verification_confidence": "high",
+        "issues": [
+          "Ambiguous phrasing: 'At lower temperatures, evaporation dominates' could be misread as below the melting point; original text links evaporation to temperatures above the melting point. Better to specify 'near/just above the melting point.'",
+          "Mentions specific products (brominated phenols, benzenes, PBDD/F precursors) that are plausible but not supported by the provided original text."
+        ],
+        "reasoning": "The answer aligns with the ground truth: evaporation becomes important above the melting point and can be initiated via a 1,4-H transfer, and longer residence times promote condensation reactions, increasing residue. The interplay between temperature and residence time affecting gas-phase vs condensed-phase pathways is logically consistent. Minor issues are ambiguity about 'lower temperatures' and inclusion of product specifics not cited in the provided text.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:23:30.509836"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer correctly synthesizes the information from the original text and elaborates with sound chemical and physical principles. It accurately describes the competitive effects of temperature (evaporation vs. degradation) and residence time (condensation vs. degradation) on TBBA decomposition. The implications for brominated product formation, including the distinction between gas-phase and condensed-phase pathways, are logical and consistent with established combustion science.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:23:50.231750"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:23:50.231775",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

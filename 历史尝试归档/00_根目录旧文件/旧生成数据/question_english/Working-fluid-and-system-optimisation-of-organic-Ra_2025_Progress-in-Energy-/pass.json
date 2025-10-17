@@ -1,0 +1,167 @@
+[
+  {
+    "question_text": "How does the critical temperature of a working fluid influence the thermal efficiency of a subcritical organic Rankine cycle, and what is the thermodynamic reasoning behind the optimal critical temperature being slightly above the evaporation temperature?",
+    "standard_answer": "The critical temperature of a working fluid significantly impacts the thermal efficiency of a subcritical ORC through its effect on the temperature profile during heat addition. When the critical temperature is slightly above the evaporation temperature, the working fluid approaches its critical point during the evaporation process. This results in a higher average temperature of heat addition due to better temperature matching with the heat source fluid. As the fluid nears its critical point, the latent heat of vaporization decreases while the specific heat capacity increases dramatically, creating a more gradual temperature rise during phase change. This reduces the temperature difference between the heat source and working fluid, minimizing exergy destruction in the evaporator. The thermodynamic basis lies in the Carnot efficiency principle - higher average temperature during heat addition leads to improved cycle efficiency. Additionally, near-critical conditions enhance the 'carnotization' of the cycle by allowing more heat to be added at temperatures closer to the maximum cycle temperature. However, operating too close to the critical point increases pumping work significantly due to the rapid density changes and requires careful pressure management to avoid operational instability.",
+    "original_text": {
+      "1": "The optimal critical temperature range is typically closely related to the temperature of the thermal source. In practice, the chosen critical temperature is often slightly larger than the targeted evaporation temperature in subcritical ORCs.",
+      "2": "As such, a better match with the heat transfer-fluid is achieved, resulting in a higher average temperature during heat addition and, therefore, higher thermal efficiency."
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "thermodynamics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question requires deep thermodynamics expertise specific to energy systems and heat transfer. It focuses on critical temperature effects in organic Rankine cycles, requiring understanding of phase change thermodynamics, heat exchanger performance, and cycle efficiency optimization - all core energy engineering concepts.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Excellent question and answer that demonstrates deep thermodynamic reasoning while being well-supported by the provided citations and paper content."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_00306d5d",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Working-fluid-and-system-optimisation-of-organic-Ra_2025_Progress-in-Energy-",
+      "paper_title": "Working-fluid-and-system-optimisation-of-organic-Ra_2025_Progress-in-Energy-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:32:40.340379",
+      "answer_length": 1308
+    }
+  },
+  {
+    "question_text": "How does the temperature glide in zeotropic mixtures during phase change enable better thermal matching with heat source and sink temperature profiles in ORC systems, and what role does mixture composition play in controlling this temperature glide?",
+    "standard_answer": "Zeotropic mixtures exhibit non-isothermal phase change behavior characterized by a temperature glide, which provides significant advantages in ORC systems through improved thermal matching. The fundamental mechanism involves the varying volatility of mixture components during evaporation and condensation processes. As the mixture undergoes phase change, the more volatile components vaporize first at lower temperatures while less volatile components require higher temperatures, creating a gradual temperature increase during evaporation and a corresponding decrease during condensation. This temperature glide enables the working fluid temperature profile to better align with the temperature profiles of both the heat source (during evaporation) and heat sink (during condensation), reducing thermal mismatches that lead to exergy destruction. The degree of temperature glide is directly controlled by the mixture composition - specifically, the difference in boiling points between components and their relative concentrations. Changing the mixture percentage has a direct influence on the amount of temperature glide observed, allowing system designers to optimize the thermal matching for specific heat source and sink temperature profiles. This composition-dependent control provides immense flexibility in working fluid selection for ORC applications, making zeotropic mixtures particularly valuable for systems where the heat source and sink exhibit significant temperature variations.",
+    "original_text": {
+      "1": "These mixtures can be azeotropic, showing no temperature glide during phase change, or zeotropic. In this case, a temperature glide is observed during phase change.",
+      "2": "This can be beneficial for a better temperature profile matching with the heat source or sink. Changing the mixture percentage has an influence on the amount of temperature glide."
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question requires deep knowledge of thermodynamics, phase change behavior in zeotropic mixtures, and Organic Rankine Cycle (ORC) system design. It specifically addresses temperature glide phenomena during phase change, thermal matching with heat source/sink profiles, and mixture composition effects - all core concepts in energy systems and thermal engineering that cannot be answered with general ML knowledge alone.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer are both excellent - domain-focused, factually correct based on citations, and compliant with all quality requirements."
+    },
+    "retry_count": 1,
+    "question_id": "deepseek_q_03a1c3bc",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Working-fluid-and-system-optimisation-of-organic-Ra_2025_Progress-in-Energy-",
+      "paper_title": "Working-fluid-and-system-optimisation-of-organic-Ra_2025_Progress-in-Energy-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:33:16.338412",
+      "answer_length": 1496
+    }
+  },
+  {
+    "question_text": "Explain how the dew-curve slope classification of working fluids (dry, isentropic, wet) affects expander design and operation in ORC systems, focusing on the implications for droplet formation, erosion, and condenser load.",
+    "standard_answer": "The dew-curve slope classification significantly impacts expander design and operation through its influence on the expansion path and resulting fluid state. For dry fluids (ξ > 0), expansion occurs entirely in the superheated vapor region, which prevents droplet formation during the expansion process. This is particularly beneficial for turbine blades since it eliminates the risk of droplet impingement that could cause erosion damage and efficiency losses. Consequently, conventional turbine designs can be employed with minimal concerns about two-phase flow effects. However, the drawback of very dry fluids is that the vapor reaches a high degree of superheating at the end of expansion, leading to significantly increased condenser load due to the need to remove this additional thermal energy. For wet fluids (ξ < 0), expansion crosses the saturation line into the two-phase region, creating the potential for liquid droplet formation that can impinge on turbine blades and cause erosion, requiring specialized expander designs capable of handling these challenging two-phase flow conditions.",
+    "original_text": {
+      "1": "A fluid is defined as 'dry' when ξ > 0, 'isentropic' when ξ = 0, and 'wet' when ξ < 0. A dry fluid is considered beneficial because droplets, which may impinge on turbine blades, cannot be formed along the expansion process as the fluid expands through a superheated-vapour region.",
+      "2": "However, for very dry fluids, the condenser load can become significantly high due to the high degree of superheating reached by the vapour at the end of the expansion process."
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question requires deep knowledge of thermodynamics, fluid mechanics, and energy systems engineering specific to Organic Rankine Cycles (ORC). It demands understanding of dew-curve slope classification, expander design considerations, two-phase flow behavior, erosion mechanisms in turbines, and condenser thermodynamics - all specialized domain knowledge in energy systems and thermal engineering.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer are both excellent - domain-focused, factually correct based on citations, and properly detailed."
+    },
+    "retry_count": 1,
+    "question_id": "deepseek_q_a8d551db",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Working-fluid-and-system-optimisation-of-organic-Ra_2025_Progress-in-Energy-",
+      "paper_title": "Working-fluid-and-system-optimisation-of-organic-Ra_2025_Progress-in-Energy-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:33:17.504727",
+      "answer_length": 1101
+    }
+  },
+  {
+    "question_text": "How do group-contribution equations of state and activity coefficient models enable the prediction of thermophysical properties essential for organic Rankine cycle system design, and what is their role in computer-aided molecular design approaches?",
+    "standard_answer": "Group-contribution equations of state and activity coefficient models enable thermophysical property prediction for ORC systems by decomposing molecules into functional groups with characteristic contributions. These methods allow property estimation based solely on molecular structure without requiring experimental data for each specific compound. Group-contribution models like those of Joback and Reid provide pure-component property values as inputs to cubic equations of state, enabling prediction of fundamental thermodynamic properties. Meanwhile, group-contribution activity coefficient models such as UNIFAC can be combined with equations of state to account for both vapour and liquid phase behaviour of working fluids. This capability is crucial for ORC design as it allows prediction of properties like critical temperature, critical pressure, saturation behaviour, and phase equilibria - all of which directly impact cycle efficiency, heat exchanger sizing, and expander performance. In computer-aided molecular design approaches, these group-contribution methods form the foundation for property prediction, enabling the molecular structure of working fluids to be optimised simultaneously alongside the ORC system design. By means of such group-contribution equations of state, one can predict the properties of a working fluid based on its constituent molecular groups, allowing identification of novel working fluids that may otherwise be overlooked in traditional screening approaches.",
+    "original_text": {
+      "1": "Group-contribution models like those of Joback and Reid [64] can provide pure-component property values as inputs to cubic EoS, whereas group-contribution activity coefficient models such as UNIFAC [65] can be combined with such EoS to account for both the vapour and liquid phase behaviour of working fluids.",
+      "2": "By means of such group-contribution EoS one can predict the properties of a working fluid based on its constituent molecular groups, and the molecular structure of the fluid can be optimised simultaneously alongside the system, potentially identifying novel working fluids which may otherwise be overlooked [4]."
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question requires deep expertise in thermodynamics, molecular modeling, and energy systems engineering. It specifically addresses group-contribution methods for thermophysical property prediction in organic Rankine cycle systems, which involves understanding of thermodynamic modeling, molecular design approaches, and energy conversion system optimization - all core domain knowledge areas.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "The question is well-formulated and domain-focused, while the answer accurately reflects the paper's content about group-contribution methods and their role in CAMD for ORC systems."
+    },
+    "retry_count": 1,
+    "question_id": "deepseek_q_d14bb92e",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Working-fluid-and-system-optimisation-of-organic-Ra_2025_Progress-in-Energy-",
+      "paper_title": "Working-fluid-and-system-optimisation-of-organic-Ra_2025_Progress-in-Energy-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:33:20.084703",
+      "answer_length": 1505
+    }
+  },
+  {
+    "question_text": "Explain the thermodynamic mechanisms by which a recuperator improves thermal efficiency in an organic Rankine cycle system, and discuss the practical considerations associated with its implementation. Use the provided paper citations to support your explanation.",
+    "standard_answer": "A recuperator improves thermal efficiency in ORC systems through thermal energy recovery from the expander exhaust to preheat the working fluid before it enters the evaporator. This process reduces the amount of external heat input required from the primary heat source while maintaining the same net power output, thereby increasing the ratio of power output to heat input. The mechanism involves transferring thermal energy from the higher-temperature vapor exiting the expander to the liquid working fluid leaving the pump, which raises the temperature of the fluid entering the evaporator. This preheating effect means less thermal energy needs to be supplied by the external heat source to achieve the same evaporation conditions, resulting in higher thermal efficiency. However, practical implementation considerations include increased installation costs due to the additional heat exchanger component and higher overall pressure drops in the working-fluid loop, which can partially offset the efficiency gains. The effectiveness of recuperation depends on working fluid properties, particularly requiring dry fluids that exhibit sufficient superheating at the expander outlet to enable meaningful heat recovery.",
+    "original_text": {
+      "1": "The purpose is to recover part of the thermal energy of the vapour after expansion to preheat the working fluid pumped to the evaporator. With respect to the simple ORC system, this results in a higher power output per unit of heat input, or a higher thermal efficiency.",
+      "2": "It is important to note that the additional heat exchanger also increases the installation cost and the overall pressure drop in the working-fluid loop."
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires understanding of thermodynamic principles (energy recovery, thermal efficiency), Rankine cycle operation, heat exchanger implementation, and working fluid properties - all core energy systems concepts that cannot be answered with general ML knowledge alone.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+    },
+    "retry_count": 2,
+    "question_id": "deepseek_q_11a16016",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Working-fluid-and-system-optimisation-of-organic-Ra_2025_Progress-in-Energy-",
+      "paper_title": "Working-fluid-and-system-optimisation-of-organic-Ra_2025_Progress-in-Energy-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:33:50.203347",
+      "answer_length": 1219
+    }
+  }
+]

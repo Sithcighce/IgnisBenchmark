@@ -1,0 +1,77 @@
+{
+  "question_text": "Why does the Bayesian approach to uncertainty minimization in combustion kinetics lead to non-unique parameter sets, and how does this relate to the concept of feasible regions in parameter space?",
+  "standard_answer": "The Bayesian approach to uncertainty minimization inherently produces non-unique parameter sets because combustion kinetic models are typically underdetermined systems with more parameters than constraining experimental data. When applying Bayes' theorem, the posterior probability distribution of rate parameters given experimental data is proportional to the product of the prior distribution and the likelihood function. For complex combustion mechanisms with hundreds of parameters, this posterior distribution forms a high-dimensional manifold in parameter space where multiple combinations of rate parameters can yield statistically equivalent agreement with experimental data. This manifold defines the feasible region—the set of all parameter combinations that produce predictions within the experimental uncertainty bounds. The non-uniqueness arises from several factors: correlations between rate parameters, where changes in one parameter can be compensated by adjustments in others; the limited number of independent experimental constraints compared to the number of uncertain parameters; and the inherent noise in experimental measurements. Rather than converging to a single 'true' parameter set, Bayesian analysis identifies the entire feasible region, acknowledging that many different mechanistic interpretations may be equally consistent with available data. This perspective shifts the goal from finding unique parameters to progressively constraining the feasible region through additional targeted experiments.",
+  "original_text": {
+    "1": "A rational goal for developing a predictive reaction model cannot be the identification of a single point (equivalent to a given reaction model), for such a point can be only as arbitrary as any of an infinite number of other points on the acceptable kinetic hyper surface.",
+    "2": "The concept of non-uniqueness of parameter choices, or the feasible region, was introduced. The last point lays the foundation for what is a renewed concept of the feasible parameter set in his later publications."
+  },
+  "type": "reasoning",
+  "difficulty": 5,
+  "topic": "combustion_kinetics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires deep expertise in combustion kinetics, Bayesian uncertainty quantification, and parameter estimation in chemical kinetic models. It specifically addresses the non-uniqueness problem in combustion kinetic parameter optimization, which is a core challenge in combustion science that requires understanding of kinetic modeling, experimental constraints, and statistical inference methods applied to combustion systems.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "The question is well-focused on combustion kinetics domain knowledge and the answer provides a comprehensive, technically accurate explanation that aligns with the paper's content about Bayesian uncertainty minimization and feasible regions in parameter space."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_d1dd913e",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Combustion-kinetic-model-uncertainty-quantifica_2015_Progress-in-Energy-and-",
+    "paper_title": "Combustion-kinetic-model-uncertainty-quantifica_2015_Progress-in-Energy-and-"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:17:53.220818",
+    "answer_length": 1532
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly explains the non-uniqueness of parameter sets in Bayesian approaches to combustion kinetics. It accurately describes: (1) the underdetermined nature of combustion systems with more parameters than experimental constraints, (2) the formation of high-dimensional manifolds in parameter space representing feasible regions, (3) the role of parameter correlations and compensatory effects, and (4) the shift from seeking unique parameters to constraining feasible regions. These explanations are fully consistent with the original text's concepts of 'infinite number of other points on the acceptable kinetic hyper surface' and 'feasible parameter set/feasible region.' The answer provides appropriate elaboration on Bayesian methodology (posterior distributions, likelihood functions) that is scientifically sound and does not contradict the original text. While more detailed than the original excerpt, all statements are factually accurate and logically consistent.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:06:47.845701"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer correctly explains that Bayesian inference in high-dimensional combustion kinetics produces a posterior with many statistically equivalent parameter combinations, corresponding to an acceptable kinetic hypersurface (feasible region). It appropriately attributes non-uniqueness to parameter correlations, limited data relative to parameters, and measurement noise, consistent with the PECS text emphasizing feasible regions over a single point.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:07:06.101689"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer correctly explains why Bayesian analysis in combustion kinetics leads to non-unique parameter sets. It accurately identifies the key reasons, such as the underdetermined nature of the models, parameter correlations, and experimental uncertainty. The explanation of the 'feasible region' as a high-dimensional posterior distribution manifold is correct and consistent with the 'acceptable kinetic hyper surface' mentioned in the original text. The logic is sound and the physical principles are stated correctly.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:07:23.485853"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:07:23.485874",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

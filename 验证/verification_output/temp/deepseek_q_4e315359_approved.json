@@ -1,0 +1,81 @@
+{
+  "question_text": "Why does hydrogen content in LCVG directly impact combustion efficiency and pollutant emissions in MILD combustion, and what are the underlying chemical kinetic mechanisms?",
+  "standard_answer": "Hydrogen content in LCVG enhances combustion efficiency and influences pollutant emissions through its high reactivity and role in radical pool dynamics. Hydrogen accelerates ignition and flame propagation by providing H radicals that promote chain-branching reactions, such as H + O2 → O + OH, which increase the concentration of OH radicals. This elevated OH concentration accelerates the oxidation of CO via CO + OH → CO2 + H, reducing CO emissions and improving combustion completeness. However, higher H2 content raises the adiabatic flame temperature, which can increase thermal NOx formation through the Zeldovich mechanism. Conversely, the presence of diluents like CO2 and N2 in LCVG mitigates this by absorbing heat and reducing peak temperatures, thus suppressing thermal NOx. The balance between H2's promoting effect on CO oxidation and its potential to increase NOx necessitates optimized fuel composition and operating conditions to achieve low emissions in MILD combustion.",
+  "original_text": {
+    "1": "Hydrogen is the most reactive component in LCVG, and its content directly impacts the establishment, efficiency, and pollutant emissions of MILD combustion.",
+    "2": "Carbon dioxide, nitrogen, and water act as diluents, helping to reduce NOx emissions in MILD combustion."
+  },
+  "type": "reasoning",
+  "difficulty": 5,
+  "topic": "combustion_kinetics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires deep knowledge of combustion science, specifically MILD combustion, fuel composition effects (hydrogen content in LCVG), combustion efficiency, pollutant emissions, and detailed chemical kinetic mechanisms including radical pool dynamics and NOx formation pathways.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer are both high quality - domain-focused with correct, detailed explanation of chemical mechanisms"
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_4e315359",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "MILD-combustion-of-low-calorific-valu_2024_Progress-in-Energy-and-Combustion",
+    "paper_title": "MILD-combustion-of-low-calorific-valu_2024_Progress-in-Energy-and-Combustion"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:23:02.860360",
+    "answer_length": 989
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly explains how hydrogen content in LCVG impacts combustion efficiency and pollutant emissions in MILD combustion. It accurately describes: (1) H2's high reactivity and role in radical pool dynamics through chain-branching reactions (H + O2 → O + OH), (2) enhanced CO oxidation via CO + OH → CO2 + H leading to reduced CO emissions, (3) the potential increase in thermal NOx through elevated flame temperatures and the Zeldovich mechanism, and (4) the mitigating effect of diluents (CO2, N2) in reducing peak temperatures and suppressing NOx. All chemical kinetic mechanisms are correctly stated, the cause-effect relationships are sound, and the answer is fully consistent with the original text which confirms H2's reactivity impacts MILD combustion establishment, efficiency, and emissions, while diluents help reduce NOx. The answer provides appropriate elaboration on the underlying mechanisms without introducing factual errors.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:13:23.192555"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Does not mention H2O explicitly as a diluent (original text lists CO2, N2, and H2O).",
+          "Focuses on H + O2 chain-branching and CO + OH pathways but omits HO2/H2O2 (low-temperature) chemistry that is often influential under MILD conditions.",
+          "Uses 'flame propagation' wording, which is less precise for MILD (distributed/flameless) combustion, though the reactivity point remains valid."
+        ],
+        "reasoning": "The answer correctly states that hydrogen, as the most reactive LCVG component, affects efficiency and emissions via radical pool dynamics, enhancing OH and promoting CO oxidation, and notes that increased temperature can elevate thermal NOx while dilution by CO2/N2 suppresses it. These are consistent with the ground-truth statements and sound combustion kinetics. Minor omissions and phrasing issues do not constitute factual errors.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:14:00.575218"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer correctly identifies the key chemical kinetic mechanisms (H+O2 branching, CO+OH oxidation) and thermodynamic effects (temperature impact on thermal NOx) associated with hydrogen content in LCVG. The reasoning is sound, factually accurate, and consistent with the provided original text.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:14:23.290746"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:14:23.290765",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

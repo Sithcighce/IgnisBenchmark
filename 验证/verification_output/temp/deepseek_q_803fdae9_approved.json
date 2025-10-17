@@ -1,0 +1,79 @@
+{
+  "question_text": "Why do confined flames exhibit higher flashback propensity compared to unconfined flames, and how does flame-induced flow deceleration contribute to this phenomenon?",
+  "standard_answer": "Confined flames have higher flashback propensity due to intensified flame-flow interactions and flow deceleration mechanisms. In unconfined flames stabilized at the burner rim, the flow velocity profile upstream remains largely undisturbed, allowing the critical velocity gradient concept to apply. However, once the flame propagates into the premixer (confined configuration), the flame front becomes convex toward the reactants, causing streamline divergence and an adverse pressure gradient. This pressure rise decelerates the approaching flow, reducing local velocities near the wall below the burning velocity and facilitating upstream propagation. Additionally, volumetric expansion from heat release further accelerates this deceleration, potentially leading to boundary layer separation. The combined effects of flame curvature, pressure gradient, and thermal expansion create a feedback loop where flow deceleration promotes flame penetration, which in turn enhances deceleration. This explains why confined flames flash back at lower critical velocity gradients than unconfined flames, as the model's assumption of an undisturbed flow is invalidated.",
+  "original_text": {
+    "1": "Confined flames are more prone to flashback and the flame-wall interaction for confined flames has received considerable attention in recent years.",
+    "2": "The flame is strongly curved towards the unburned mixture as flame propagates upstream leading to a divergence of streamlines and adverse pressure gradient."
+  },
+  "type": "reasoning",
+  "difficulty": 5,
+  "topic": "fluid_mechanics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires specialized knowledge in combustion science, fluid mechanics, and flame dynamics. It specifically addresses confined vs unconfined flame behavior, flashback mechanisms, flame-flow interactions, pressure gradients, and boundary layer effects - all core concepts in combustion engineering and fluid mechanics that cannot be answered with general ML knowledge.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer are well-aligned with the paper's content on boundary layer flashback mechanisms, flame-flow interactions, and the limitations of the critical velocity gradient concept in confined configurations."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_803fdae9",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Boundary-layer-flashback-of-non-swirling-premixed-fl_2017_Progress-in-Energy",
+    "paper_title": "Boundary-layer-flashback-of-non-swirling-premixed-fl_2017_Progress-in-Energy"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:14:11.539039",
+    "answer_length": 1160
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly explains why confined flames have higher flashback propensity. It accurately describes the key mechanisms: (1) flame curvature toward reactants causing streamline divergence and adverse pressure gradient, (2) flow deceleration reducing velocities below burning velocity, and (3) volumetric expansion from heat release. These points are consistent with the original text statements about flame curvature, streamline divergence, and adverse pressure gradient. The answer provides additional mechanistic detail (boundary layer separation, feedback loops, critical velocity gradient invalidation) that logically follows from the core principles and does not contradict the original text. The physical principles of fluid mechanics and combustion are correctly applied throughout.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:04:32.549961"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "The phrase 'thermal expansion further accelerates this deceleration' is slightly awkward; expansion-driven pressure rise contributes to upstream deceleration, but the wording could be clearer."
+        ],
+        "reasoning": "The answer correctly states that confined flames are more prone to flashback and explains that strong flame curvature toward the unburned mixture leads to streamline divergence and an adverse pressure gradient, which decelerates the upstream flow—fully consistent with the ground truth. It also accurately connects deceleration to local velocities falling below the burning velocity and notes plausible additional mechanisms (boundary layer separation and feedback between flame penetration and deceleration). There are no factual or logical contradictions, and the elaboration is in line with established combustion physics.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:04:52.785388"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer is factually and logically correct. It accurately explains that confined flames, by becoming convex towards the reactants, induce an adverse pressure gradient and streamline divergence, which decelerates the upstream flow. This is perfectly consistent with the provided original text. The answer correctly elaborates on this by including the role of thermal expansion and the resulting positive feedback loop, which are established concepts in combustion science. The contrast with the unconfined case and the critical velocity gradient model is also correctly stated.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:05:15.209170"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:05:15.209190",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

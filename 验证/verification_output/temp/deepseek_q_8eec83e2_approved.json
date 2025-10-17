@@ -1,0 +1,80 @@
+{
+  "question_text": "How does thermal quenching in thermographic phosphors affect their temperature sensitivity, and what physical mechanisms govern the temperature dependence of luminescence lifetime and spectral intensity ratio?",
+  "standard_answer": "Thermal quenching in thermographic phosphors refers to the reduction in luminescence intensity and lifetime with increasing temperature due to enhanced non-radiative transitions. The temperature dependence arises from competing radiative and non-radiative decay pathways. At higher temperatures, increased lattice vibrations (phonons) provide additional energy pathways for excited electrons to return to ground state without emitting photons, reducing both luminescence intensity and lifetime. The temperature sensitivity follows an Arrhenius-type relationship where the luminescence lifetime τ decreases exponentially with temperature: τ(T) = τ₀/(1 + A·exp(-Eₐ/kT)), where Eₐ is the activation energy for thermal quenching, k is Boltzmann's constant, and A is a pre-exponential factor. For spectral intensity ratio methods, different emission bands exhibit varying temperature sensitivities due to different energy level structures and quenching mechanisms. The ratio R(T) = I₁(T)/I₂(T) provides temperature information independent of absolute intensity variations. The physical mechanisms include multi-phonon relaxation, where higher temperatures increase the probability of non-radiative transitions through phonon-assisted processes, and energy transfer to quenching centers or defects in the crystal lattice.",
+  "original_text": {
+    "1": "Temperature has a strong influence on the luminescence properties. There are two main types of temperature dependence: the change in the duration of the persistence of the luminescence after excitation, that is, the emission lifetime; and the relative change of the emission spectrum.",
+    "2": "Due to thermal quenching processes the luminescence signal and lifetime decreases with temperature; the lifetime of YAG:Dy3þ is sensitive at temperatures as high as 2000 K."
+  },
+  "type": "reasoning",
+  "difficulty": 5,
+  "topic": "heat_transfer",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires specialized knowledge in thermographic phosphor thermometry, which involves heat transfer principles (temperature sensitivity), material science (luminescence properties), and optical diagnostics for fluid temperature measurements - all core topics in combustion science and energy systems research.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct, and compliant with other requirements"
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_8eec83e2",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Temperature-measurement-techniques-for-gas-and-liqu_2018_Progress-in-Energy-",
+    "paper_title": "Temperature-measurement-techniques-for-gas-and-liqu_2018_Progress-in-Energy-"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:29:56.921665",
+    "answer_length": 1315
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly explains thermal quenching mechanisms in thermographic phosphors and is consistent with the original text. Key points verified: (1) Thermal quenching reduces luminescence intensity and lifetime with increasing temperature - matches original text statement that 'luminescence signal and lifetime decreases with temperature'. (2) The physical mechanism involving enhanced non-radiative transitions through phonon-assisted processes is scientifically sound. (3) The Arrhenius-type relationship for lifetime temperature dependence is a well-established model in luminescence thermometry. (4) The explanation of spectral intensity ratio methods and multi-phonon relaxation represents correct elaboration beyond the original text. (5) The mention of YAG:Dy3+ sensitivity up to 2000K in the original text is consistent with the answer's discussion of high-temperature sensitivity. While the answer is more detailed than the original text, all statements are factually accurate and logically consistent with established principles in luminescence physics and thermographic phosphor behavior.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:21:37.574544"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "The lifetime model and phrase 'decreases exponentially' are somewhat imprecise; a typical expression is τ(T) = 1/(k_r + A·exp(-Ea/kT)), with τ0 = 1/k_r.",
+          "For spectral intensity ratio methods, the answer does not explicitly mention thermally coupled levels and Boltzmann population as a common governing mechanism."
+        ],
+        "reasoning": "The answer correctly states that thermal quenching reduces luminescence intensity and lifetime with temperature due to increased non-radiative pathways (e.g., multiphonon relaxation and energy transfer to quenching centers). It identifies competing radiative and non-radiative rates and notes Arrhenius-type temperature dependence, consistent with the ground truth that temperature affects lifetime and emission spectrum and that signals decrease with temperature. Minor imprecision in the lifetime formula and omission of explicit Boltzmann coupling for spectral ratios do not constitute factual errors.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:22:05.023432"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly defines thermal quenching and accurately describes the underlying physical mechanisms, including the role of phonons in non-radiative decay and the competition between radiative and non-radiative pathways. It correctly presents the Arrhenius-type model for lifetime dependence and explains the principle of the spectral intensity ratio method. The answer is factually accurate, logically consistent, and elaborates correctly on the concepts mentioned in the original text.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:22:20.061534"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:22:20.061560",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

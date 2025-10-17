@@ -1,0 +1,81 @@
+{
+  "question_text": "How does crosswind-induced fuel stripping in industrial flares lead to decreased combustion efficiency, and what are the underlying fluid mechanics mechanisms?",
+  "standard_answer": "Crosswind-induced fuel stripping occurs when aerodynamic forces divert unburned fuel from the combustion zone, creating regions of low combustion efficiency in the flare plume. This phenomenon is driven by vortex formation in the wake of the flare stack, where crosswind velocities exceed the fuel jet momentum. The momentum flux ratio (MFR = ρ_j·V_j²/ρ_∞·V_∞²) quantifies this interaction, with low MFR values (<1) indicating susceptibility to stripping. As crosswind speed increases, vortices formed in the shear layer between the fuel jet and crosswind entrain fuel-rich pockets and transport them away from the reaction zone before complete combustion can occur. These fuel-rich regions become diluted below the lower flammability limit through intense local mixing, leading to local extinction events. The stripped fuel appears as cold, unburned hydrocarbons in the plume wake, significantly reducing overall combustion efficiency. Computational fluid dynamics simulations show this creates spatially heterogeneous CE fields with localized regions of <50% efficiency despite global CE estimates above 90%.",
+  "original_text": {
+    "1": "Crosswind-induced fuel stripping was first proposed by Johnson et al. [52,53]. Their wind tunnel experiments on 1′′ (25.4 mm) and 3′′ (76.2 mm) diameter flare tips revealed a strong, nonlinear relationship between CE and crosswind speed at low momentum flux ratios",
+    "2": "This low CE region results from fuel stripping, which occurs when fuel is diverted from the combustion zone by vortices formed in the wake of the flare stack, resulting in a region of unburned fuel beneath the reaction zone in the buoyant combustion plume"
+  },
+  "type": "reasoning",
+  "difficulty": 5,
+  "topic": "fluid_mechanics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires specialized knowledge in combustion science (flare combustion efficiency), fluid mechanics (crosswind effects, vortex formation, momentum flux ratio), and CFD expertise to understand the underlying mechanisms of fuel stripping in industrial flares.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct, and compliant with other requirements."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_9911bee9",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Techniques-for-measuring-flare-combustion-efficien_2025_Progress-in-Energy-a",
+    "paper_title": "Techniques-for-measuring-flare-combustion-efficien_2025_Progress-in-Energy-a"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:29:54.307548",
+    "answer_length": 1110
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately describes crosswind-induced fuel stripping mechanisms consistent with the original text. Key points verified: (1) Fuel stripping occurs when aerodynamic forces divert unburned fuel from the combustion zone via vortex formation in the wake, matching the original text's description. (2) The relationship between crosswind speed and CE at low momentum flux ratios is correctly identified. (3) The mechanism of fuel-rich pockets being entrained and transported away before complete combustion is consistent with the original description of fuel being diverted beneath the reaction zone. (4) The physical principles regarding momentum flux ratio, vortex formation in shear layers, and local extinction due to dilution below flammability limits are all sound. While the answer provides additional technical detail (MFR quantification, CFD simulation results, specific CE percentages) not explicitly in the original text, these elaborations are physically consistent and do not contradict the source material. The core mechanism—vortices diverting fuel from the combustion zone leading to unburned fuel regions and decreased CE—is correctly explained.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:21:30.491802"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Dimensional phrasing: states 'crosswind velocities exceed the fuel jet momentum' (velocity vs momentum mismatch); should compare momentum fluxes (low MFR) rather than velocity to momentum.",
+          "Introduces specific CFD-derived numerical claims (localized CE <50% with global >90%) that are not supported by the provided ground-truth text.",
+          "Speculates on dilution below the lower flammability limit and local extinction; plausible but not explicitly stated in the provided text."
+        ],
+        "reasoning": "The answer accurately captures the core mechanism: vortices in the stack wake divert fuel from the reaction zone at low momentum flux ratios, creating unburned fuel regions and reducing combustion efficiency, which aligns with the ground-truth text. It correctly introduces the momentum flux ratio concept and low-MFR susceptibility. Minor issues include an imprecise velocity-to-momentum comparison and unsupported specific CFD/numerical details, but these do not contradict the original text.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:21:51.880741"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer is factually correct, logically sound, and consistent with the provided original text. It accurately describes the mechanism of fuel stripping, correctly identifying the role of vortices in the stack's wake, the importance of the momentum flux ratio (MFR), and the subsequent dilution and local extinction of unburned fuel pockets. The explanation aligns with established principles of fluid mechanics and combustion science.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:22:10.996707"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:22:10.996736",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

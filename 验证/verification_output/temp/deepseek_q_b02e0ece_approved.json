@@ -1,0 +1,80 @@
+{
+  "question_text": "Calculate the specific energy deposition required to achieve a gas temperature rise of 500 K in atmospheric air via fast gas heating, assuming an energy efficiency ηR of 20% and initial conditions of T0 = 300 K and P = 1 atm. Use the ideal gas law and relevant thermodynamic properties.",
+  "standard_answer": "To calculate the specific energy deposition for a ΔT = 500 K rise in atmospheric air, start with the first law of thermodynamics for a constant volume process: ΔU = m * cv * ΔT, where ΔU is the internal energy change, m is mass, cv is specific heat at constant volume, and ΔT is temperature change. For air, treated as an ideal gas, cv ≈ 718 J/(kg·K) at room temperature. The density of air at 1 atm and 300 K is ρ = P / (R_specific * T0), with R_specific = 287 J/(kg·K) for air. Thus, ρ = 101325 Pa / (287 J/(kg·K) * 300 K) ≈ 1.177 kg/m³. The energy per unit volume needed for heating is ΔU_v = ρ * cv * ΔT = 1.177 kg/m³ * 718 J/(kg·K) * 500 K ≈ 422,000 J/m³. Given the FGH efficiency ηR = 20%, the specific energy deposition W_dep must account for this: W_dep = ΔU_v / ηR = 422,000 J/m³ / 0.20 = 2,110,000 J/m³ or 2.11 MJ/m³. This value aligns with experimental data where nanosecond discharges deposit energies on the order of 1–10 MJ/m³ to achieve similar temperature increases, reflecting the high power densities required for rapid heating in plasma-assisted systems.",
+  "original_text": {
+    "1": "The fraction of energy spent on fast gas heating ηR has been suggested as a universal parameter to generalize the results of empirical research on energy relaxation.",
+    "2": "Fast gas heating (FGH) is an abrupt increase in gas temperature in non-equilibrium low-temperature plasma due to relaxation of electronically excited states of atoms and molecules."
+  },
+  "type": "calculation",
+  "difficulty": 4,
+  "topic": "energy_systems",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires domain expertise in combustion science, thermodynamics, and plasma-assisted systems. It specifically involves calculating energy deposition for fast gas heating in atmospheric air, which relates to plasma-assisted combustion and energy relaxation processes discussed in the paper. The calculation requires understanding of thermodynamic properties, ideal gas law, and the concept of fast gas heating efficiency (ηR) in plasma systems.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question is well-focused on combustion/energy domain with a specific calculation. Answer correctly applies thermodynamics and aligns with paper concepts of fast gas heating efficiency."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_b02e0ece",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Relaxation-of-electronic-excitation-in-nitrogen-oxygen-_2022_Progress-in-Ene",
+    "paper_title": "Relaxation-of-electronic-excitation-in-nitrogen-oxygen-_2022_Progress-in-Ene"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:27:51.811105",
+    "answer_length": 1073
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer provides a thermodynamically sound calculation for specific energy deposition in fast gas heating. The methodology is correct: (1) uses first law of thermodynamics for constant volume process, (2) applies ideal gas law to calculate air density at given conditions, (3) uses appropriate cv value for air (~718 J/(kg·K)), (4) correctly accounts for energy efficiency ηR = 20% to determine total energy deposition needed. The calculation yields W_dep = 2.11 MJ/m³, which is physically reasonable and consistent with the cited experimental range of 1-10 MJ/m³ for nanosecond discharges. The answer correctly relates to the FGH concept mentioned in the original text as rapid temperature increase in non-equilibrium plasma. All numerical calculations are accurate (ρ ≈ 1.177 kg/m³, ΔU_v ≈ 422 kJ/m³), and the physical principles are properly applied. The answer does not contradict the original text and demonstrates proper understanding of fast gas heating mechanisms.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:19:12.846069"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "The term 'specific energy' is interpreted as per-unit-volume; some readers might expect per-unit-mass. Numerically, per-mass deposition would be cv*ΔT/ηR ≈ 1.80 MJ/kg.",
+          "cv is treated as constant at 300 K; over a 500 K rise, temperature dependence could slightly increase cv, so the result is an approximation."
+        ],
+        "reasoning": "The answer correctly models fast gas heating as an approximately constant-volume process and uses ΔU = ρ*cv*ΔT. It applies the ideal-gas law to obtain density at 1 atm and 300 K, uses a standard value cv ≈ 718 J/(kg·K), computes ΔU_v ≈ 4.22e5 J/m³, and accounts for ηR = 20% to obtain ≈ 2.11 MJ/m³. The logic and physics are sound and consistent with the notion of FGH efficiency from the provided text. Minor ambiguities about 'specific' basis and cv(T) do not affect overall correctness.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:19:39.686297"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly applies the first law of thermodynamics for a constant volume process (ΔU = m * cv * ΔT), which is the appropriate model for fast gas heating as it occurs on a timescale shorter than acoustic expansion. The values used for air's specific heat at constant volume (cv ≈ 718 J/kg·K) and specific gas constant (R_specific = 287 J/kg·K) are standard. The calculation of initial air density using the ideal gas law is correct. The subsequent calculation of the required thermal energy per unit volume (ΔU_v) and the total specific energy deposition (W_dep) after accounting for the 20% efficiency (ηR) is arithmetically and conceptually sound. The final value is physically reasonable and correctly contextualized with typical experimental data.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:20:03.928333"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:20:03.928360",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

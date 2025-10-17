@@ -1,0 +1,79 @@
+{
+  "question_text": "How does the spatial distribution of CO adsorption evolve along PEMFC anode flow channels, and what transport mechanisms (advection vs. diffusion) govern the observed distribution patterns under different flow conditions?",
+  "standard_answer": "The spatial distribution of CO adsorption in PEMFC anode flow channels exhibits significant heterogeneity due to competing transport mechanisms. Advection dominates along the channel direction, creating higher CO coverage at the inlet where fresh CO-rich gas first contacts the catalyst surface. Lateral diffusion through the porous electrode structure distributes CO perpendicular to the flow direction, but this transport is slower than advection. The interaction between these two mechanisms creates distinct distribution patterns depending on flow conditions. At low flow rates, diffusion creates anisotropic distributions of CO away from the channel, resulting in non-uniform coverage across the electrode. Higher flows produce more uniform distributions due to enhanced convective mixing that overcomes the limitations of lateral diffusion. Under galvanostatic control and in the absence of self-sustained potential oscillations, the distribution of surface coverage by CO is uneven as the adsorption of CO is faster at the inlet than at the outlet. The dispersion of CO along the channel is fundamentally a result of the competition between advection along the channel and lateral diffusion through the electrode structure, with the relative dominance of each mechanism determining the final poisoning pattern observed in segmented cell studies.",
+  "original_text": {
+    "1": "Low flow rates result in anisotropic distributions of CO away from the channel, and higher flows present a more uniform distribution. The advection along the channel and the lateral diffusion compete between each other. The dispersion of CO is a result of these two mechanisms.",
+    "2": "Under galvanostatic control and in the absence of self-sustained potential oscillations, the distribution of the surface coverage by CO was uneven as the adsorption of CO is faster at the inlet than at the outlet."
+  },
+  "type": "concept",
+  "difficulty": 4,
+  "topic": "fluid_mechanics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires specific knowledge of PEM fuel cell operation, CO poisoning mechanisms in electrochemical systems, and transport phenomena (advection vs diffusion) in porous electrode structures - all of which fall under combustion science, energy systems, and fluid mechanics domain expertise.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer are well-aligned with the paper content and domain requirements. No issues detected."
+  },
+  "retry_count": 1,
+  "question_id": "deepseek_q_b73ae65d",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Carbon-monoxide-poisoning-and-mitigation-strategies_2020_Progress-in-Energy-",
+    "paper_title": "Carbon-monoxide-poisoning-and-mitigation-strategies_2020_Progress-in-Energy-"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:17:18.603367",
+    "answer_length": 1352
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately captures all key mechanisms from the original text: (1) advection dominates along the channel creating higher CO coverage at inlet, (2) lateral diffusion distributes CO perpendicular to flow, (3) low flow rates create anisotropic distributions while higher flows produce more uniform distributions, (4) under galvanostatic control without oscillations, CO adsorption is faster at inlet than outlet creating uneven distribution, and (5) the dispersion results from competition between advection and lateral diffusion. The answer provides additional correct elaboration (e.g., explaining why advection creates higher inlet coverage, why diffusion is slower than advection) that is consistent with fundamental transport phenomena in PEMFCs. No factual errors, logical contradictions, or inconsistencies with the original text are present.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:04:48.271261"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "medium",
+        "verification_confidence": "high",
+        "issues": [
+          "The statement that lateral diffusion is slower than advection is presented as generally true; while often the case, relative rates can depend on operating conditions. This does not contradict the source but is a mild overgeneralization."
+        ],
+        "reasoning": "The standard answer accurately reflects the ground-truth points: competition between advection along the channel and lateral diffusion through the electrode governs CO dispersion; low flow yields anisotropic, non-uniform coverage, while higher flow leads to more uniform distributions; and under galvanostatic control without oscillations, inlet coverage is higher due to faster adsorption. The added explanations are consistent and physically reasonable, with only a minor overgeneralization about relative transport rates.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:05:08.741553"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer is factually correct and logically sound. It accurately synthesizes the information from the original text, correctly identifying the competing mechanisms of advection along the channel and lateral diffusion into the electrode. The description of how different flow rates (low vs. high) alter the dominance of these mechanisms to produce either anisotropic or uniform CO distributions is consistent with both the original text and fundamental principles of mass transport.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:05:41.531474"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:05:41.531492",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

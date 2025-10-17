@@ -1,0 +1,52 @@
+[
+  {
+    "question_text": "Using stagnant film theory, derive the complete relationship between burning rate and Spalding's B-number for convection-dominated pool fires. Start from the conservation equations for energy and species across the boundary layer, integrate them across the stagnant film, and show all mathematical steps leading to the final expression. Explain the physical significance of each term in the B-number expression, clarify the meaning of all variables, and discuss how this formulation applies to pool fire dynamics and its limitations.",
+    "standard_answer": "The derivation begins with the conservation equations for energy and species across the boundary layer above the fuel surface. For a convection-dominated pool fire where radiation is negligible, we consider a stagnant film of thickness δ. The energy conservation equation is: ρuC_p(dT/dy) = λ(d²T/dy²), and the species conservation equation for fuel vapor is: ρu(dY_f/dy) = ρD_d(d²Y_f/dy²). Integrating these equations across the boundary layer from y=0 (fuel surface) to y=δ (free stream) and applying boundary conditions: at y=0, T=T_l, Y_f=Y_f,s; at y=δ, T=T_∞, Y_f=Y_f,∞. The integration yields: m''C_p(T-T_l) = λ(dT/dy) and m''(Y_f-Y_f,s) = ρD_d(dY_f/dy). Defining a conserved variable b = (C_p(T-T_l) + ΔH_c(Y_o2,∞/r - Y_o2))/L_v, which remains constant across the boundary layer. At y=0, b = B = (ΔH_c·Y_o2,∞/r + C_p(T_l-T_∞))/L_v. At y=δ, b=0. Integrating db/dy across the film gives: m'' = (λ/(C_pδ))ln(1+B) = (ρD_d/δ)ln(1+B). Using the analogy between heat and mass transfer with unity Lewis number (Le=1), where λ/(ρC_p) = D_d, this becomes m'' = (μ/δ)ln(1+B). The Spalding B-number is defined as B = (ΔH_c·Y_o2,∞/r + C_p(T_l-T_∞))/L_v. Here, ΔH_c is the heat of combustion per unit mass of fuel, Y_o2,∞ is the ambient oxygen mass fraction, r is the stoichiometric oxygen-to-fuel mass ratio, C_p(T_l-T_∞) represents the sensible heating required to raise the fuel from ambient temperature T_∞ to its evaporation temperature T_l, and L_v is the latent heat of vaporization. The logarithmic term ln(1+B) arises from integrating the coupled conservation equations, accounting for the exponential decay of temperature and species concentrations across the boundary layer. Physically, higher B-numbers indicate fuels that require less energy for vaporization relative to the combustion energy released, leading to faster burning rates. This formulation is particularly applicable to non-luminous flames where convective heat transfer dominates over radiation effects, such as in small to medium-scale pool fires with low soot production. However, it has limitations when radiation becomes significant, as in large-scale pool fires or highly sooty flames, where the modified B-number accounting for radiation effects must be used.",
+    "original_text": {
+      "1": "The resulting mass transfer number is normally quoted as shown in Eq. (2-6): B = (ΔH_c·Y_o2,∞/r + C_p(T_l-T_∞))/L_v",
+      "2": "combustible liquids with low heats of evaporation (and thus high B values) will tend to burn more rapidly"
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires deep expertise in combustion science (pool fire dynamics, burning rate theory), heat transfer (stagnant film theory, boundary layer analysis), and fluid mechanics (conservation equations, Spalding B-number derivation). It specifically demands derivation from fundamental conservation equations and application to convection-dominated pool fires, which is highly domain-specific to combustion and fire science.",
+      "answer_correct": false,
+      "answer_issues": [
+        {
+          "type": "factual_error",
+          "description": "The answer incorrectly defines the conserved variable b as (C_p(T-T_l) + ΔH_c(Y_o2,∞/r - Y_o2))/L_v, which is dimensionally inconsistent and conceptually wrong. The correct conserved variable in stagnant film theory for combustion is typically the coupling function involving enthalpy and species, such as b = C_p(T - T_l)/L_v + Y_f or similar formulations that remain constant across the boundary layer."
+        },
+        {
+          "type": "factual_error",
+          "description": "The derivation incorrectly states m'' = (μ/δ)ln(1+B) at the end. This is dimensionally incorrect (μ/δ has units of kg/(m·s²), not kg/(m²·s)) and contradicts the correct result from stagnant film theory, which should be m'' = (ρD_d/δ)ln(1+B) or equivalent forms using heat transfer coefficients."
+        },
+        {
+          "type": "fundamental_error",
+          "description": "The derivation lacks proper mathematical rigor - it jumps from integrated conservation equations directly to the logarithmic form without showing the actual integration steps that lead to the exponential profiles and subsequent logarithmic relationship. The transition from m''C_p(T-T_l) = λ(dT/dy) to m'' = (λ/(C_pδ))ln(1+B) is not properly justified."
+        },
+        {
+          "type": "unsupported",
+          "description": "The answer makes claims about radiation effects and modified B-numbers for sooty flames that are not supported by the provided citations or paper excerpt. The original text only provides the basic B-number definition and a qualitative statement about burning rates, not detailed radiation corrections."
+        }
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "The question is excellent for domain testing but the answer contains multiple serious errors in the derivation. Recommend revising the answer to provide correct mathematical derivation with proper dimensional consistency and supported explanations."
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_397964cc",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Pool-fire-dynamics--Principles--models-and_2023_Progress-in-Energy-and-Combu",
+      "paper_title": "Pool-fire-dynamics--Principles--models-and_2023_Progress-in-Energy-and-Combu"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:27:48.673006",
+      "answer_length": 2235
+    }
+  }
+]

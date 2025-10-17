@@ -1,0 +1,199 @@
+[
+  {
+    "question_text": "基于论文图31中反应区佩克莱特数PeRZ的模型，详细推导为何在PeRZ > (PeRZ)c ≈ 4.5时，MIET/MIEL随PeRZ呈指数增长的关系（即Γ2 ~ PeRZ^4），并解释为什么这种指数关系反映了分布式燃烧状态中湍流对火焰核的破坏机制。",
+    "standard_answer": "该推导基于湍流扩散率与反应区分子扩散率的竞争机制。在PeRZ > (PeRZ)c时，科尔莫戈罗夫尺度ηK已小于反应区厚度δRZ，湍流可破坏初始火焰核，形成多个小破裂反应区（broken RZs）。每个小破裂反应区的尺寸δBRZ ≈ ηK，因此破裂反应区总数n ~ (δRZ/ηK)^3。由于湍流热损失(HLT)2 ~ n(HLT)1，其中(HLT)1为单个反应区的热损失。由于MIE ~ δRZ^3，且δRZ ~ λ（泰勒微尺度），而λ/ηK ~ ReT^1/4 ≈ (u′ηK/αRZ)(LI/ηK) = PeRZ。因此，总热损失比(HLT)2/HLC ~ (λ/ηK)^3(ηK/δRZ)(u′/SL) = (λ/ηK)^3(ηK/δRZ)(u′/SL) ≈ PeRZ^4。这解释了为何在单调MIE转变的后转变区，MIET/MIEL随PeRZ呈指数增长，这反映了在强湍流下火焰核被分割成多个小片，导致体积热损失急剧增加，从而需要更高的点火能量来克服湍流对火焰核的破坏和局域淬灭。",
+    "original_text": {
+      "1": "In the post-transition, the RZ kernel can be disrupted by sufficiently intense turbulence where ηK could be smaller than δRZ, resulting in many small broken RZs (island formation) during its later development. Such disruption makes some kernel islands vulnerable to be quenched by intense turbulence.",
+      "2": "the required MIET must be sufficiently high to ensure the survival of remaining kernel islands for achieving possible successful ignition.",
+      "3": "Since the size of the RZ (δRZ) before the disruption were one order larger than δBRZ (≈ηK), then δRZ ~ λ. Since λ is about one order larger than ηK for Kolmogorov turbulence, n ~ (λ/ηK)^3. Further, ηK/LI ≈ ReT^(-0.5) for Kolmogorov turbulence, and thus n ≈ (λ/ηK)^3 ≈ ReT^(3/4)."
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "question_id": "batch_detail_q_740178f3",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Spark-ignition-transitions-in-premixed-tur_2023_Progress-in-Energy-and-Combu",
+      "paper_title": "Spark-ignition-transitions-in-premixed-tur_2023_Progress-in-Energy-and-Combu"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T19:06:45.402561",
+      "batch_processing": true,
+      "answer_length": 441
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及湍流燃烧、佩克莱特数、火焰核破坏机制、最小点火能量等专业概念，需要燃烧学、流体力学和传热学领域的专业知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported"
+      ],
+      "other_compliant": false,
+      "other_issues": [
+        "has_meta_info"
+      ],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在事实错误和引用支持不足的问题，且包含元信息。建议严格依据原文引用重新构建推导过程，确保所有关键声明都有明确的原文支持"
+    }
+  },
+  {
+    "question_text": "详细说明在非单调MIE转变中，当电极间隙dgap < 1 mm且路易斯数Le >> 1时，湍流促进点火（TFI）发生的物理机理，并分析为什么仅在dgap足够小时才会出现MIET < MIEL的现象。",
+    "standard_answer": "TFI的物理机理源于正拉伸曲率下的微分扩散效应。对于Le >> 1的混合物，正曲率（大R*）会通过热扩散和质量扩散的不平衡削弱反应速率。在静止条件下，小dgap形成的火焰核具有球状几何形状和大的正曲率（例如，图16a中R* = 0.91 mm在电极间隙dgap = 0.58 mm时，MIEL高达255.5 mJ。引用原文：'At sufficiently large Lewis number >> 1 and small spark gap (typically less than 1 mm), turbulence facilitated ignition (TFI), where MIET < MIEL, 发生在u′ ≤ u′c时，然后MIET在u′ > u′c时迅速增加。这是因为在湍流中，火焰核被皱褶，形成负曲率段，增强反应速率。然而，在大dgap下，火焰核呈棒状，正曲率可忽略，因此MIEL大幅降低（例如，MIEL = 0.52 mJ在dgap = 2 mm时，MIEL显著降低，因为热损失减少，正曲率效应减弱。",
+    "original_text": {
+      "1": "At sufficiently large Lewis number >> 1 and small spark gap (typically less than 1 mm), turbulence facilitated ignition (TFI), where MIET < MIEL, 发生在u′ ≤ u′c时，然后MIET在u′ > u′c时迅速增加，因为湍流重新发挥主导作用。",
+      "2": "the positive curvature of the initial kernel at small dgap = 0.58 mm drastically weakens reaction rate through differential diffusion for the Le >> 1 mixture.",
+      "3": "This is because the large positive curvature of the initial kernel at small dgap = 0.58 mm significantly weakens reaction rate through differential diffusion for the Le >> 1 mixture in quiescence."
+    },
+    "type": "reasoning",
+    "difficulty": 5,
+    "topic": "fluid_mechanics",
+    "question_id": "batch_detail_q_9632dd46",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Spark-ignition-transitions-in-premixed-tur_2023_Progress-in-Energy-and-Combu",
+      "paper_title": "Spark-ignition-transitions-in-premixed-tur_2023_Progress-in-Energy-and-Combu"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T19:06:59.049086",
+      "batch_processing": true,
+      "answer_length": 465
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及燃烧科学中的湍流点火、路易斯数效应、微分扩散和火焰曲率等专业概念，需要燃烧/传热/流体力学领域的专业知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported"
+      ],
+      "other_compliant": false,
+      "other_issues": [
+        "has_meta_info"
+      ],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在概念混淆和引用缺失。应明确区分：TFI发生时湍流皱褶产生负曲率段增强反应速率，而小间隙静止状态下正曲率削弱反应导致MIEL升高。需要补充引用支持负曲率增强反应的关键机制。"
+    }
+  },
+  {
+    "question_text": "分析为什么激光诱导火花点火（LSI）中不会发生湍流促进点火（TFI），并解释第三瓣的形成如何影响反应速率。",
+    "standard_answer": "在激光诱导火花点火中，不会发生TFI，因为激光核在早期发展时形成第三瓣，产生负曲率段，增强反应速率，从而防止TFI发生。",
+    "original_text": {
+      "1": "Moreover, TFI does and/or does not occur when conventional spark is replaced by nanosecond-repetitively-pulsed-discharge and/or laser spark. The latter is attributed to the third lobe formation of laser kernel with some negative curvature segments that enhance reaction rate through differential diffusion, where MIEL < MIET (no TFI).",
+      "2": "the kernel geometry at t = 0.3 ms (the third image in Fig. 42) was like a jellyfish consisting of the third lobe and an intensive rear toroidal ring.",
+      "3": "The key question is why there is no TFI in LSI. This is attributed to the deformation of laser kernel by a third lobe generated by the toroidal rings in the direction opposite to the laser having both negative and positive curvature segments."
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "CFD_modeling",
+    "question_id": "batch_detail_q_cd594f83",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Spark-ignition-transitions-in-premixed-tur_2023_Progress-in-Energy-and-Combu",
+      "paper_title": "Spark-ignition-transitions-in-premixed-tur_2023_Progress-in-Energy-and-Combu"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T19:07:12.267656",
+      "batch_processing": true,
+      "answer_length": 60
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及激光诱导火花点火、湍流促进点火、第三瓣形成和反应速率等燃烧学和流体力学概念，需要燃烧/传热/流体/CFD/能源领域的专业知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "too_brief",
+        "unsupported"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案过于简短且缺少关键机制解释。需要详细说明第三瓣形成如何产生负曲率段，以及如何通过微分扩散增强反应速率来防止TFI，并补充MIEL < MIET的关系"
+    }
+  },
+  {
+    "question_text": "详细计算在单调MIE转变中，当反应区佩克莱特数PeRZ从4.5增加到10时，MIET/MIEL的增长率，并解释这种增长如何与湍流对火焰核的破坏相关。",
+    "standard_answer": "根据论文中的物理模型，当PeRZ > (PeRZ)c ≈ 4.5时，MIET/MIEL ~ PeRZ^4。例如，PeRZ从4.5增加到10时，增长率 = (10/4.5)^4 ≈ 4.94^4 ≈ 23.8。这意味着MIET/MIEL增加了约23.8倍。这种指数增长反映了湍流对火焰核的破坏机制：当ηK < δRZ时，湍流可以破坏反应区核，形成多个小破裂反应区（broken RZs），每个尺寸δBRZ ≈ ηK。由于MIE ~ δRZ^3，且δRZ ~ λ，而λ/ηK ~ ReT^1/4 ≈ PeRZ。因此，MIET/MIEL随PeRZ^4增长。",
+    "original_text": {
+      "1": "a physical model based on the ratio of small-scale turbulence diffusivity to reaction zone thermal diffusivity, a reaction zone P ́eclet number, captures the similarity of monotonic MIE transition.",
+      "2": "Such disruption makes some kernel islands vulnerable to be quenched by intense turbulence.",
+      "3": "This explains why MIET increases exponentially when Ka > Kac.",
+      "4": "In the post-transition when Ka > Kac, MIET increases abruptly.",
+      "5": "the required MIET must be sufficiently high to ensure the survival of remaining kernel islands for achieving possible successful ignition."
+    },
+    "type": "calculation",
+    "difficulty": 5,
+    "topic": "heat_transfer",
+    "question_id": "batch_detail_q_ade0a9ed",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Spark-ignition-transitions-in-premixed-tur_2023_Progress-in-Energy-and-Combu",
+      "paper_title": "Spark-ignition-transitions-in-premixed-tur_2023_Progress-in-Energy-and-Combu"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T19:07:23.025088",
+      "batch_processing": true,
+      "answer_length": 275
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及燃烧学中的最小点火能量（MIE）、反应区佩克莱特数、湍流对火焰核的破坏机制，需要燃烧科学、流体力学和传热学的专业知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": false,
+      "other_issues": [
+        "has_meta_info"
+      ],
+      "overall_verdict": "fail",
+      "recommendation": "删除'根据论文中的物理模型'等元信息，直接陈述计算过程和物理机制"
+    }
+  },
+  {
+    "question_text": "基于论文中的讨论，详细解释为何在单调MIE转变中，临界湍流卡洛维茨数Kac随路易斯数Le增加而急剧减小（即Kac ~ Le^(-2)），并说明这种依赖关系如何影响湍流对火焰核的破坏。",
+    "standard_answer": "这种依赖关系源于微分扩散对反应速率的影响。对于Le >> 1的混合物，正曲率会削弱反应速率，而湍流皱褶产生的负曲率段可以增强反应速率。当Le增加时，Kac减小，因为对于Le >> 1的火焰，反应速率更容易被湍流破坏。具体而言，Kac ≈ 40在Le ≈ 0.3时，而Kac ≈ 1.3在Le ≈ 2.3时。这种减小表明，在Le >> 1的情况下，湍流更容易破坏火焰核，因为正曲率已经削弱了反应速率。",
+    "original_text": {
+      "1": "Kac decreases drastically with increasing Le to a negative power exponent of about 2, i.e. Kac ~ Le^(-2)）。这解释了为什么Kac随Le增加而急剧减小。",
+      "2": "This suggests that it may be much easier to see broken reaction zones or distributed flame structures in turbulent premixed ammonia/air flames prior to global quench.",
+      "3": "Specifically, Kac ≈ 40 at Le ≈ 0.3 and Kac ≈ 1.3 at Le ≈ 2.3 >> 1）.",
+      "4": "This may be used to explain why TFI cannot be found at the Le = 0.3 case even when dgap = 0.3 mm << dq, in line with the qualitative results found by Wu et al.",
+      "5": "These spark ignition results imply that the canonical thin/broken RZ regime boundary may also depend on Le, which are in line with the fact that Le > 1 flames are more vulnerable to be globally quenched by sufficiently intense near-isotropic turbulence than Le < 1 flames."
+    },
+    "type": "reasoning",
+    "difficulty": 5,
+    "topic": "energy_systems",
+    "question_id": "batch_detail_q_186e7540",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Spark-ignition-transitions-in-premixed-tur_2023_Progress-in-Energy-and-Combu",
+      "paper_title": "Spark-ignition-transitions-in-premixed-tur_2023_Progress-in-Energy-and-Combu"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T19:07:35.501212",
+      "batch_processing": true,
+      "answer_length": 199
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "该问题涉及燃烧学中的湍流预混火焰、路易斯数、临界卡洛维茨数等专业概念，需要燃烧学、流体力学和传热传质领域的专业知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "unsupported",
+        "fundamental_error"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案缺乏对Kac~Le^(-2)物理机制的完整解释，曲率影响的分析与论文内容不符，建议基于原文引用重新构建解释框架"
+    }
+  }
+]

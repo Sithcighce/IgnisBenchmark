@@ -1,0 +1,83 @@
+{
+  "question_text": "Based on the experimental evidence from Dunn et al. and Zhou et al. presented in the paper, what are the key differences in flame structure and species profiles between flamelet-like flames and distributed-reaction-like flames at high Karlovitz numbers?",
+  "standard_answer": "The experimental studies by Dunn et al. and Zhou et al. reveal fundamental differences in flame structure and species profiles between flamelet-like and distributed-reaction-like flames at high Karlovitz numbers. For flamelet-like flames, the structure resembles that of laminar flames with sharp temperature gradients and well-defined reaction layers. In contrast, distributed-reaction-like flames exhibit broadened temperature gradients without well-defined reaction layers. The species profiles show dramatic differences: in flamelet-like flames, CH profiles are consistent with laminar flame structures with distinct peaks, while in distributed-reaction-like flames, CH profiles become very different and broad without the characteristic peaks. Additionally, OH radical distributions change significantly - the high OH concentrations near reaction regions characteristic of flamelet-like flames are absent in distributed-reaction-like flames. These structural changes indicate that as Karlovitz numbers increase, the traditional layered flame structure breaks down and combustion occurs in more diffuse, distributed regions rather than in thin, well-defined sheets.",
+  "original_text": {
+    "1": "the high values of OH near reaction regions characteristic of flamelet-like flames are not seen in the PM1-200 flame",
+    "2": "the CH profile of the distributed-reaction-like flame is very different. Moreover, the absence of OH in the reaction zone shown in Fig. 3 is also seen in Fig. 5"
+  },
+  "type": "concept",
+  "difficulty": 4,
+  "topic": "combustion_kinetics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires specific combustion science expertise about flame structures, species profiles, and Karlovitz numbers - all core concepts in turbulent combustion research that cannot be answered with general ML or CS knowledge.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+  },
+  "retry_count": 1,
+  "question_id": "deepseek_q_db453bbb",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Advances-and-challenges-in-modeling-high-speed-t_2017_Progress-in-Energy-and",
+    "paper_title": "Advances-and-challenges-in-modeling-high-speed-t_2017_Progress-in-Energy-and"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:14:47.365292",
+    "answer_length": 1169
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": false,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "The answer states that 'high OH concentrations near reaction regions characteristic of flamelet-like flames are absent in distributed-reaction-like flames', but the original text states 'the high values of OH near reaction regions characteristic of flamelet-like flames are not seen in the PM1-200 flame' and 'the absence of OH in the reaction zone'. This describes an absence of OH in the reaction zone of distributed flames, not just lower concentrations.",
+          "The answer claims OH radical distributions 'change significantly' but doesn't accurately capture that the original text describes a complete 'absence of OH in the reaction zone' for distributed-reaction-like flames, which is a more dramatic difference than just changed distributions."
+        ],
+        "reasoning": "While the answer correctly describes many aspects of the flame structure differences (sharp vs. broadened temperature gradients, CH profile differences), it inaccurately characterizes the OH behavior in distributed-reaction-like flames. The original text clearly states there is an 'absence of OH in the reaction zone' for distributed flames, not merely that high OH concentrations are absent or that distributions change. This is a factual misrepresentation of a key finding from the experimental evidence. The answer softens what is actually a more dramatic observation - the complete absence of OH in reaction zones rather than just reduced or redistributed OH.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:02:14.828040"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Includes general flame-structure details (sharp/broadened temperature gradients, lack of well-defined reaction layers) not explicitly stated in the provided quotes, though consistent with literature.",
+          "Characterizes CH profiles as broad and lacking peaks; the ground-truth text only asserts that the CH profile is 'very different' without specifying broadening."
+        ],
+        "reasoning": "The answer correctly captures the key differences supported by the cited experiments: high OH near reaction zones in flamelet-like flames is absent in the distributed-reaction-like PM1-200 flame, and the CH profile in distributed flames is very different. The added discussion on gradient broadening and loss of reaction layers at high Karlovitz numbers is consistent with established understanding and does not contradict the provided ground truth.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:02:40.300405"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer is factually correct and fully consistent with the provided original text. It accurately describes the key differences: flamelet-like flames have sharp gradients and distinct CH/OH peaks, while distributed-reaction-like flames have broadened structures, very different/broad CH profiles, and an absence of the high OH concentrations seen in flamelets. The answer correctly synthesizes the information from the text snippets and provides a sound physical interpretation regarding the breakdown of the layered flame structure at high Karlovitz numbers.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:03:00.268584"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:03:00.268605",
+    "consensus": {
+      "all_correct": false,
+      "correct_votes": 2,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 2
+    }
+  }
+}

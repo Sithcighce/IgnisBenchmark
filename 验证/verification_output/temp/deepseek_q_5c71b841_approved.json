@@ -1,0 +1,82 @@
+{
+  "question_text": "Why does the addition of magnesium (Mg) to boron composites significantly reduce ignition delay and enhance combustion efficiency, and what are the underlying heat transfer and chemical kinetic mechanisms?",
+  "standard_answer": "Magnesium addition reduces boron ignition delay and enhances combustion efficiency through exothermic pre-ignition reactions and improved heat transfer. Mg ignites at lower temperatures (~924 K) than boron (~2348 K melting point), releasing heat that raises the local temperature, accelerating boron oxidation kinetics. The Mg-B composite undergoes a two-stage oxidation process: first, Mg oxidizes exothermically, increasing mass by 27.5% and providing thermal energy; second, boron oxidizes with an 82.7% mass increase. Chemically, Mg combustion produces MgO, which may react with B2O3 to form lower-melting compounds, reducing the oxide barrier's effectiveness. Thermally, the higher thermal conductivity of Mg-coated particles (e.g., B@Mg) improves heat distribution, reducing thermal gradients and promoting uniform ignition. Experiments show B@Mg with 8 wt.% Mg reduces ignition delay by 28.4% compared to pure boron, due to these combined exothermic and conductive effects.",
+  "original_text": {
+    "1": "Mg ignites more easily than B, and because of its exothermicity, the addition of Mg can promote the ignition and combustion of B powder and increase heat release at lower temperatures.",
+    "2": "The thermal oxidation of B-Mg mixture with the Mg to B mole ratio equal to 1/2 occurs through a two-stage process. The temperature range and shape of the exothermic peak of the first stage are close to the oxidation and melting processes of Mg powder, during which the mass increases by 27.5%. The mass of the second stage of oxidation increases by 82.7%, which results from B oxidation.",
+    "3": "B@Mg had a significantly decreased ignition delay time, and that the Mg coating accelerated the burning of B. The ignition delay time of B@Mg (8 wt.%) was 28.4% lower than that of B0."
+  },
+  "type": "reasoning",
+  "difficulty": 4,
+  "topic": "combustion_science",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires deep knowledge of combustion science, specifically ignition mechanisms, chemical kinetics of boron-magnesium composites, heat transfer principles in particle combustion, and oxidation processes. It cannot be answered with general ML knowledge alone.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other issues."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_5c71b841",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Boron-based-composite-energetic-materials--B-CEMs_2022_Progress-in-Energy-an",
+    "paper_title": "Boron-based-composite-energetic-materials--B-CEMs_2022_Progress-in-Energy-an"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:14:26.470072",
+    "answer_length": 980
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately reflects all key points from the original text and applies correct combustion science principles. It correctly states: (1) Mg ignites at lower temperatures than B and provides exothermic heat to promote B oxidation; (2) the two-stage oxidation process with 27.5% mass increase in first stage (Mg) and 82.7% in second stage (B); (3) the 28.4% reduction in ignition delay for B@Mg (8 wt.%). The answer appropriately elaborates on mechanisms (thermal conductivity improvement, MgO-B2O3 interactions, reduced oxide barrier effectiveness) that are consistent with established combustion science, even though these specific mechanisms aren't explicitly detailed in the original text excerpts. The melting point values cited (924 K for Mg, 2348 K for B) are factually correct. No contradictions or logical errors detected.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:04:29.718928"
+      },
+      {
+        "correct": false,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Apples-to-oranges comparison: compares Mg ignition temperature (~924 K) to boron’s melting point (~2348 K), which is not a valid basis for the stated conclusion.",
+          "Likely factual error: claims MgO reacts with B2O3 to form lower-melting compounds; magnesium borates typically have higher melting points than B2O3, so this mechanism is dubious and not supported by the provided source.",
+          "Numerical detail issue: ~924 K is close to Mg’s melting point rather than a well-defined ignition temperature; this specificity is not supported by the original text."
+        ],
+        "reasoning": "Core elements match the source: Mg’s exothermic oxidation promotes B ignition, two-stage oxidation with mass gains (27.5% then 82.7%), and reduced ignition delay for B@Mg (8 wt.% leads to 28.4% reduction). However, the answer introduces a questionable chemical mechanism (lower-melting MgO–B2O3 products) and an improper temperature comparison (Mg ignition vs B melting), which constitute factual/logical issues.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:05:00.648983"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer is factually correct, logically sound, and fully consistent with the provided original text. It correctly identifies the key mechanisms: the pre-ignition exothermic reaction of Mg, the two-stage oxidation process, and the reduction in ignition delay. The answer also includes valid and relevant elaborations on the chemical interaction between MgO and B2O3 and the role of thermal conductivity, which are correct principles in this context and permissible additions.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:05:29.948895"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:05:29.948913",
+    "consensus": {
+      "all_correct": false,
+      "correct_votes": 2,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 2
+    }
+  }
+}

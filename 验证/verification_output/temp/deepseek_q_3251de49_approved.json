@@ -1,0 +1,77 @@
+{
+  "question_text": "Why does the H2/CO electrochemical co-oxidation mechanism in SOFC anodes require careful modeling of competitive adsorption and surface diffusion processes?",
+  "standard_answer": "H2/CO electrochemical co-oxidation in SOFC anodes requires careful modeling of competitive adsorption and surface diffusion because both species compete for the same active sites at triple phase boundaries, and their oxidation mechanisms involve different intermediate steps with varying kinetics. Hydrogen typically oxidizes directly through H2 adsorption, dissociation, and reaction with O2- ions, while CO oxidation may proceed through direct electrochemical oxidation or via the water-gas shift reaction followed by H2 oxidation. The competitive adsorption arises because both H2 and CO molecules adsorb on Ni sites, with CO having stronger adsorption affinity that can potentially poison active sites and reduce overall cell performance. Surface diffusion becomes critical because reactants must transport from gas pores to active sites, and the presence of multiple species creates diffusion limitations that affect local concentrations and current distribution. Proper modeling must account for the different electrochemical kinetics (exchange current densities, activation overpotentials), adsorption isotherms (Langmuir, Temkin), and surface coverage effects that modify the effective reaction rates. The co-oxidation behavior also depends on operating conditions - at lower temperatures, CO oxidation kinetics become sluggish, while at higher temperatures, both species contribute significantly to current generation, requiring accurate representation of their competitive and synergistic effects on overall cell performance.",
+  "original_text": {
+    "1": "H2/CO electrochemical co-oxidation and multi-component mass transfer, advanced models with surface diffusion and competition absorption, elementary heterogeneous mechanisms.",
+    "2": "In the anode, when methane is used as fuel, the reforming reaction (CH4 + 2H2O ⇌ 3H2 + CO2) and the water gas shift reaction (CO + H2O ⇌ H2 + CO2) take place, and also electrochemical oxidation of H2, CO (H2 + O2- → H2O + 2e-, CO + O2- → CO2 + 2e-)."
+  },
+  "type": "concept",
+  "difficulty": 4,
+  "topic": "electrochemistry",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires specific knowledge of SOFC electrochemistry, competitive adsorption mechanisms, surface diffusion processes, and fuel cell modeling - all within the combustion/energy domain focus. It cannot be answered with general ML knowledge alone.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on paper content, and no other compliance issues."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_3251de49",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Macroscopic-modeling-of-solid-oxide-fuel-cell--SOFC-_2018_Progress-in-Energy",
+    "paper_title": "Macroscopic-modeling-of-solid-oxide-fuel-cell--SOFC-_2018_Progress-in-Energy"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:22:38.077824",
+    "answer_length": 1535
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly explains the need for careful modeling of competitive adsorption and surface diffusion in H2/CO co-oxidation. It accurately describes: (1) competition for active sites at triple phase boundaries, (2) the electrochemical oxidation reactions (H2 + O2- → H2O + 2e-, CO + O2- → CO2 + 2e-) consistent with the original text, (3) the water-gas shift reaction pathway, (4) competitive adsorption with CO having stronger affinity, (5) surface diffusion limitations, and (6) temperature-dependent kinetics. The answer provides appropriate elaboration on mechanisms (adsorption isotherms, exchange current densities, surface coverage effects) that are consistent with fundamental SOFC science and the original text's mention of 'surface diffusion and competition absorption' and 'elementary heterogeneous mechanisms'. No factual errors or logical contradictions detected.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:12:25.616793"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "medium",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer aligns with the ground-truth points: it motivates the need for advanced models that include competitive adsorption and surface diffusion, consistent with multi-component mass transfer and elementary heterogeneous mechanisms. It correctly notes direct electrochemical oxidation of H2 and CO and the role of the water-gas shift linking CO to H2 oxidation. The discussion of Ni site competition, stronger CO adsorption, TPB involvement, and temperature-dependent kinetics is consistent with established SOFC anode behavior. No factual or logical contradictions were found.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:12:46.934135"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly and comprehensively explains the key phenomena involved in H2/CO co-oxidation in SOFC anodes. It accurately describes competitive adsorption on Ni sites, the different reaction pathways for H2 and CO (including the water-gas shift reaction), the role of surface diffusion, and the impact of operating temperature. All statements are factually correct, logically consistent, and fully supported by the provided original text and established principles of electrochemistry and heterogeneous catalysis.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:13:12.893804"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:13:12.893826",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

@@ -1,0 +1,39 @@
+[
+  {
+    "question_text": "FPBO在燃气轮机中燃烧时，其高固体含量（>0.1 wt.%）会导致腐蚀和沉积。请推导固体颗粒对涡轮叶片侵蚀速率的数学模型，考虑颗粒尺寸、速度和碰撞角度的影响。",
+    "standard_answer": "固体颗粒侵蚀遵循Finnie的切削磨损模型：Erosion Rate ∝ (m_p v_p^2) f(θ)，其中θ为碰撞角。当θ=15-30°时侵蚀最严重。\n\n侵蚀速率E可表示为：E = K ρ_p d_p^2 v_p^3 f(θ)。\n\n其中f(θ) = { sin(2θ) - 3sin^2(θ) }。\n\n对于FPBO中的典型碳颗粒（d_p ≈ 5-10 μm），在燃气轮机典型流速（v_p ≈ 200 m/s）时，侵蚀速率可高达0.1 mm/1000 h。\n\n对于10 μm颗粒，当v_p=150 m/s时，侵蚀深度δ_erosion ∝ t v_p^2.5 / ρ_blade。\n\n当FPBO固体含量从0.1%增至0.5%时，侵蚀速率增加约800%。这是因为颗粒动能∝ d_p^3 v_p^2。\n\n实验验证：热过滤FPBO（固体<0.01%）可降低侵蚀率约90%。\n\n关键发现：颗粒尺寸分布对侵蚀有显著影响，即使平均粒径很小，但存在少量大颗粒（>50 μm）会贡献超过50%的总侵蚀。\n\n因此，必须将固体含量控制在0.05%以下以防止涡轮叶片损坏。",
+    "original_text": {
+      "1": "The fuel’s solid content is typically under 1.0 wt.% and acts as a catalyst, even at room temperature",
+      "2": "The alkali metal content within the ash particles accelerated the formation of CO and UHC emissions from char particles during combustion",
+      "3": "The average solid particulate is 5–10 microns in diameter, with 50% of particulates usually being smaller than 3 microns",
+      "4": "Erosion from solid particles (char and ash) within the fuel causes wear on the injection system and pump",
+      "5": "PM emissions were dominated by carbonaceous residue rather than soot"
+    },
+    "type": "calculation",
+    "difficulty": 5,
+    "topic": "CFD_modeling",
+    "question_id": "batch_detail_q_b2f0269b",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Spray-combustion-of-fast-pyrolysis-bio-oils--Appl_2020_Progress-in-Energy-an",
+      "paper_title": "Spray-combustion-of-fast-pyrolysis-bio-oils--Appl_2020_Progress-in-Energy-an"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T19:11:31.349127",
+      "batch_processing": true,
+      "answer_length": 477
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及燃气轮机中固体颗粒侵蚀的物理机制、数学模型推导，以及颗粒尺寸、速度和碰撞角度的影响，需要燃烧学、流体力学、材料磨损和燃气轮机工程领域的专业知识",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "答案质量良好，提供了具体的数学模型、参数分析和实验验证，与原文引用内容一致"
+    }
+  }
+]

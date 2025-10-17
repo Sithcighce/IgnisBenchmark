@@ -1,0 +1,77 @@
+{
+  "question_text": "Based on the paper's findings, how do turbulence and inhomogeneity scale interact to affect detonation propensity in confined combustion, and what specific mechanisms explain their influence on autoignition propagation?",
+  "standard_answer": "The paper indicates that both small-scale inhomogeneities and large-scale inhomogeneities coupled with small-scale turbulence can weaken detonation propensity. Specifically, an inhomogeneous field with a small characteristic length scale directly reduces detonation tendency. For large-scale inhomogeneities, when coupled with turbulence having a small characteristic length scale and sufficiently large turbulent velocity fluctuations, the turbulence enhances scalar mixing that smears out reactivity gradients, thereby weakening detonation propensity. Turbulence affects end-gas autoignition mainly by interacting with flame propagation and inhomogeneity. The interaction mechanisms involve turbulence enhancing scalar dissipation, which homogenizes mixtures and reduces extreme reactivity pockets that could otherwise serve as strong ignition nuclei. This dissipation effect counteracts the formation of steep reactivity gradients necessary for detonation development according to reactivity gradient theory. In confined spaces, this interplay determines whether autoignition propagates as deflagration or transitions to detonation, with the turbulence-inhomogeneity coupling playing a critical role in suppressing the transition to detonation by disrupting the organization of reactivity gradients.",
+  "original_text": {
+    "1": "The results further indicate that an inhomogeneous field with a small characteristic length scale, and an inhomogeneous field with a large characteristic length scale but coupled with the turbulence with a small characteristic length scale and a sufficiently large turbulent velocity fluctuation, can both weaken detonation propensity.",
+    "2": "Turbulence affects end-gas autoignition mainly by interacting with flame propagation and inhomogeneity."
+  },
+  "type": "reasoning",
+  "difficulty": 4,
+  "topic": "combustion_kinetics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires deep expertise in combustion science, specifically addressing detonation propensity, turbulence-inhomogeneity interactions, autoignition propagation mechanisms, and confined combustion dynamics - all core topics in combustion/CFD/energy domain that cannot be answered with general ML knowledge alone.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on paper citations, and compliant with other requirements."
+  },
+  "retry_count": 1,
+  "question_id": "deepseek_q_289cbaf8",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "End-gas-autoignition-and-detonation-in-c_2025_Progress-in-Energy-and-Combust",
+    "paper_title": "End-gas-autoignition-and-detonation-in-c_2025_Progress-in-Energy-and-Combust"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:19:55.702676",
+    "answer_length": 1302
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately reflects the original text and provides correct elaboration on the mechanisms. It correctly states that both small-scale inhomogeneities and large-scale inhomogeneities coupled with small-scale turbulence weaken detonation propensity, which matches [1]. The explanation of turbulence enhancing scalar mixing and dissipation to homogenize mixtures and reduce reactivity gradients is a valid mechanistic interpretation consistent with established combustion science. The statement that turbulence affects end-gas autoignition mainly by interacting with flame propagation and inhomogeneity directly matches [2]. The discussion of reactivity gradient theory and the role of turbulence-inhomogeneity coupling in suppressing detonation transition is a reasonable extension based on the original text and established detonation theory. No factual errors or logical contradictions are present.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:08:26.237679"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "medium",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately reflects the ground-truth statements: it correctly states that small-scale inhomogeneities, and large-scale inhomogeneities when coupled with small-scale, sufficiently strong turbulence, both weaken detonation propensity. It also aligns with the note that turbulence affects end-gas autoignition mainly through interaction with flame propagation and inhomogeneity. The added mechanism of enhanced scalar dissipation/mixing smoothing reactivity gradients is a reasonable and consistent elaboration, not in conflict with the original text.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:08:43.916379"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer accurately paraphrases the key findings from the original text. The additional mechanistic explanations, such as turbulence enhancing scalar mixing/dissipation to smear out reactivity gradients and disrupt ignition nuclei, are physically sound and represent standard, correct theory in the field of turbulent combustion and detonation. The reasoning is logical and consistent with established principles like reactivity gradient theory.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:09:09.319096"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:09:09.319116",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

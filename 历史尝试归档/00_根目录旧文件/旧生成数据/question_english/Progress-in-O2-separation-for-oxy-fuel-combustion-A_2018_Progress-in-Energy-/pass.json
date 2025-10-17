@@ -1,0 +1,134 @@
+[
+  {
+    "question_text": "Calculate the theoretical oxygen flux through a La₀.₆Sr₀.₄Co₀.₂Fe₀.₈O₃-δ (LSCF) membrane with thickness 100 μm operating at 800°C, given that the surface exchange coefficients are kₒₓ = kᵣₑ = 1 × 10⁻⁷ mol/cm²s and the bulk diffusion coefficient Dᵥ = 1 × 10⁻⁶ cm²/s, with oxygen partial pressures of 0.21 bar on the feed side and 0.01 bar on the permeate side.",
+    "standard_answer": "Using the idealized flux equation for LSCF membranes: J_O₂ = [(P_O₂'^0.5 - P_O₂''^0.5)] / [(1/kₒₓ) + (1/kᵣₑ) + (2L/Dᵥ)] where P_O₂' = 0.21 bar (feed side), P_O₂'' = 0.01 bar (permeate side), L = 100 μm = 0.01 cm, kₒₓ = kᵣₑ = 1 × 10⁻⁷ mol/cm²s, and Dᵥ = 1 × 10⁻⁶ cm²/s. First calculate the numerator: (0.21^0.5 - 0.01^0.5) = (0.4583 - 0.1) = 0.3583. Then calculate the denominator: (1/1×10⁻⁷) + (1/1×10⁻⁷) + (2×0.01/1×10⁻⁶) = (1×10⁷ + 1×10⁷ + 2×10⁴) = 2.0002×10⁷ s/cm². The oxygen flux J_O₂ = 0.3583 / 2.0002×10⁷ = 1.791×10⁻⁸ mol/cm²s. Converting to more standard units: 1.791×10⁻⁸ mol/cm²s × 10⁴ cm²/m² = 1.791×10⁻⁴ mol/m²s. This calculated flux of approximately 0.18 mmol/m²s is consistent with typical LSCF membrane performance reported in the literature for similar conditions. The calculation shows that both surface exchange kinetics and bulk diffusion contribute significantly to the overall resistance, with the 2L/Dᵥ term representing approximately 0.1% of the total resistance in this case, indicating that surface exchange is the rate-limiting step for this membrane configuration.",
+    "original_text": {
+      "1": "An idealized equation for LSCF can be expressed as: J_O2 = (P_O2'^0.5 - P_O2''^0.5) / [(1/k_ox) + (1/k_re) + (2L/D_v)] where k_ox and k_re are surface exchange coefficients, L is membrane thickness, and D_v is bulk diffusion coefficient",
+      "2": "The oxygen fluxes could be improved by reducing the thickness of the dense layer (L) and/or enhancing the surface exchange kinetics on the oxygen-rich and oxygen-lean sides (k_ox and k_re)"
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "membrane_transport",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question requires specialized knowledge in membrane transport physics, oxygen separation technologies, ceramic ion transport membranes (specifically LSCF), and understanding of surface exchange kinetics and bulk diffusion coefficients - all within the context of oxy-fuel combustion and energy systems.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer are both excellent - domain-focused calculation with correct application of the membrane transport equation and proper unit conversions."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_c47c3d5b",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Progress-in-O2-separation-for-oxy-fuel-combustion-A_2018_Progress-in-Energy-",
+      "paper_title": "Progress-in-O2-separation-for-oxy-fuel-combustion-A_2018_Progress-in-Energy-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:26:33.256781",
+      "answer_length": 1091
+    }
+  },
+  {
+    "question_text": "What are the fundamental mechanisms of oxygen transport through ceramic ion transport membranes (ITMs), and how do oxygen vacancies in perovskite structures enable ionic conduction?",
+    "standard_answer": "Ceramic ion transport membranes operate through a multi-step mechanism involving surface reactions and bulk diffusion. First, oxygen molecules adsorb on the membrane surface and dissociate into oxygen atoms through surface exchange reactions. These oxygen atoms then capture electrons to form oxygen ions (O²⁻). The key enabling feature is the presence of oxygen vacancies in the perovskite crystal structure - these vacancies provide pathways for oxygen ions to hop through the lattice via a vacancy-mediated diffusion mechanism. In mixed ionic-electronic conducting (MIEC) membranes, oxygen ions migrate from the high oxygen partial pressure side to the low pressure side driven by the chemical potential gradient, while electrons move in the opposite direction to maintain charge neutrality. The ideal perovskite structure (ABO₃) cannot conduct oxide ions without defects; the presence of oxygen vacancies (denoted by δ in ABO₃-δ) is essential for ionic conduction. Doping strategies at either A-site or B-site can create and control these vacancies, with higher vacancy concentrations generally leading to higher oxygen permeation fluxes. The entire process completes when oxygen ions reach the permeate side, release electrons, and recombine into molecular oxygen that desorbs from the surface.",
+    "original_text": {
+      "1": "Oxygen is adsorbed on a porous, electrically conductive coating that is applied to the surface of the membrane. The oxygen dissociates to form oxygen ions, which are transported through the non-porous ceramic electrolyte",
+      "2": "Imperfections or defects within the perovskite structure are highly important, because the ideal, non-defective perovskite structure, shown in Fig. 5 [63], cannot conduct oxide ions. The presence of defects or oxygen vacancies is necessary for conduction or diffusion to occur"
+    },
+    "type": "reasoning",
+    "difficulty": 5,
+    "topic": "ceramic_membranes",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question requires deep knowledge of materials science (ceramic membranes, perovskite structures), solid-state ionics (oxygen vacancy mechanisms, ionic conduction), and membrane transport physics specifically applied to oxygen separation for combustion applications. It cannot be answered with general ML/CS knowledge.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Excellent question and answer - both are domain-focused, factually correct based on citations, and demonstrate proper depth for a reasoning question."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_ce85692c",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Progress-in-O2-separation-for-oxy-fuel-combustion-A_2018_Progress-in-Energy-",
+      "paper_title": "Progress-in-O2-separation-for-oxy-fuel-combustion-A_2018_Progress-in-Energy-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:26:34.014790",
+      "answer_length": 1299
+    }
+  },
+  {
+    "question_text": "How do the molecular properties of nitrogen and oxygen determine their selective adsorption behavior on zeolite sorbents in pressure swing adsorption processes for oxygen production, and what role does cation exchange play in enhancing this selectivity for oxy-fuel combustion applications?",
+    "standard_answer": "The selective adsorption behavior in zeolite-based pressure swing adsorption processes stems from fundamental differences in molecular properties between nitrogen and oxygen. Zeolites possess microporous silica-alumina crystalline structures with charge imbalances created by aluminum substitution in the framework, generating non-uniform electric fields in the pore spaces. Nitrogen's higher polarizability compared to oxygen enables stronger interactions with these electric fields and exposed cations. Since N2 is more polarizable than O2, the zeolite selectively adsorbs N2 and allows O2 gas to pass unrestricted. Thus, in zeolite-based air separation, N2 molecules are more strongly adsorbed than O2 molecules. Cation exchange strategies significantly enhance this selectivity by optimizing electrostatic interactions. Significant improvement in N2/O2 selectivity was observed by ion exchange of Na+ with Li+ in LSX (low silica X type zeolite). LiLSX with near 100% Li exchange has been the best sorbent used commercially for O2 production during the past decade. The strategic replacement of sodium cations with lithium creates stronger binding sites due to lithium's smaller ionic radius and higher charge density, which increases nitrogen adsorption capacity while maintaining oxygen permeability. This enhanced selectivity is crucial for oxy-fuel combustion applications where efficient oxygen production directly impacts the economic viability of carbon capture systems.",
+    "original_text": {
+      "1": "Since N2 is more polarizable than O2, the zeolite selectively adsorbs N2 and allows O2 gas to pass unrestricted. Thus, in zeolite-based air separation, N2 molecules are more strongly adsorbed than O2 molecules",
+      "2": "Significant improvement in N2/O2 selectivity was observed by ion exchange of Na+ with Li+ in LSX (low silica X type zeolite). LiLSX with near 100% Li exchange has been the best sorbent used commercially for O2 production during the past decade"
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires deep knowledge of molecular adsorption physics, zeolite chemistry, pressure swing adsorption processes, and oxy-fuel combustion systems - all core energy systems and combustion science concepts that cannot be answered with general ML knowledge.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+    },
+    "retry_count": 1,
+    "question_id": "deepseek_q_2e0ca92e",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Progress-in-O2-separation-for-oxy-fuel-combustion-A_2018_Progress-in-Energy-",
+      "paper_title": "Progress-in-O2-separation-for-oxy-fuel-combustion-A_2018_Progress-in-Energy-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:27:13.495029",
+      "answer_length": 1480
+    }
+  },
+  {
+    "question_text": "Based on the provided paper content, explain the thermodynamic mechanisms and thermal management considerations for integrating membrane separation with oxy-fuel combustion systems, focusing specifically on how recycled flue gas serves dual purposes in such integrated processes.",
+    "standard_answer": "The integration of membrane separation with oxy-fuel combustion creates important thermodynamic synergies through the dual utilization of recycled flue gas. According to the paper, 'In a standard electrical generation power plant, this heat can be supplied only by the flue gases' for operating ion transport membrane (ITM) units that require high temperatures. This represents a key thermodynamic benefit where waste heat from combustion is utilized to drive the membrane separation process rather than requiring additional energy input. The recycled flue gas serves two simultaneous functions: 'to provide the required thermal energy for the membrane to operate and to enhance the oxygen flux by sweeping the membrane.' The sweeping action creates a favorable oxygen partial pressure gradient across the membrane, which is the driving force for oxygen transport in ITM systems. This integrated approach allows for thermal energy recovery that would otherwise be wasted, improving the overall system efficiency. The CO2-rich flue gas acts as both a heat carrier and sweep gas, enabling oxygen separation while maintaining the temperature requirements for membrane operation. However, the paper notes that impurities in the sweep gas can affect membrane performance, requiring careful consideration of gas composition and potential modifications to the integration scheme to maintain membrane integrity and separation efficiency.",
+    "original_text": {
+      "1": "In a standard electrical generation power plant, this heat can be supplied only by the flue gases. A general scheme for a membrane integrated oxy-fuel combustion process is shown in Fig. 6 [96]",
+      "2": "The recycled flue gas can serve two purposes simultaneously, which are to provide the required thermal energy for the membrane to operate and to enhance the oxygen flux by sweeping the membrane"
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires deep understanding of oxy-fuel combustion systems, membrane separation technologies, thermodynamic principles of heat recovery, and thermal management in energy systems. It specifically asks about thermodynamic mechanisms and dual-purpose utilization of recycled flue gas, which demands expertise in combustion science, heat transfer, and energy system integration.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question is well-focused on domain-specific energy systems integration, and answer accurately reflects the paper's content about thermodynamic synergies and dual functions of recycled flue gas in membrane-oxygen combustion systems."
+    },
+    "retry_count": 1,
+    "question_id": "deepseek_q_dae6b3df",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Progress-in-O2-separation-for-oxy-fuel-combustion-A_2018_Progress-in-Energy-",
+      "paper_title": "Progress-in-O2-separation-for-oxy-fuel-combustion-A_2018_Progress-in-Energy-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:27:13.624794",
+      "answer_length": 1429
+    }
+  }
+]

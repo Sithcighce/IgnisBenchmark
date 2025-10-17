@@ -1,0 +1,92 @@
+[
+  {
+    "question_text": "Based on the provided paper content, analyze how different reactor configurations (fixed bed, fluidized bed, microwave) used in co-pyrolysis experiments affect the fundamental heat transfer mechanisms and fluid dynamics. Support your analysis with specific mechanisms and multi-step reasoning directly from the paper content, focusing only on the reactor characteristics explicitly described.",
+    "standard_answer": "The paper provides specific descriptions of different reactor configurations used in co-pyrolysis experiments, each with distinct heat transfer and fluid dynamic characteristics. For fixed bed reactors, the paper states they are used for co-pyrolysis investigation with detailed diagnostics including GC, MS, and FTIR. Fluidized bed reactors provide excellent mixing through bubble-induced circulation, creating more uniform temperature distribution that promotes rapid volatiles release. This mixing mechanism enhances particle contact and heat transfer efficiency through convective processes. Microwave reactors utilize dielectric heating that volumetrically heats materials based on their dielectric properties, enabling selective heating of specific components. This volumetric heating mechanism differs fundamentally from conventional conduction-based heating by generating heat internally within the material rather than transferring heat from external surfaces. The fundamental mechanisms involve different approaches to heat transfer and fluid dynamics: fixed beds rely on conduction through packed particles with limited mixing, fluidized beds achieve convective mixing through bubble-induced circulation for uniform temperature distribution, and microwave reactors employ volumetric dielectric heating based on material properties. These distinct thermal environments and mixing characteristics directly influence how heat is transferred to the plastic-biomass mixtures and how reaction products are transported within each reactor type, though the paper does not explicitly link these mechanisms to specific synergistic effects or product distributions.",
+    "original_text": {
+      "1": "State-of-the-art experimental methods for co-pyrolysis investigation are reviewed in detail using TGA, pyrolyzer, fixed bed reactor, fluidized bed reactor, microwave, and multi-step reactors using GC, MS, and FTIR diagnostics.",
+      "2": "Fluidized bed reactors provide excellent mixing through bubble-induced circulation, creating more uniform temperature distribution that promotes rapid volatiles release.",
+      "3": "Microwave reactors utilize dielectric heating that volumetrically heats materials based on their dielectric properties, enabling selective heating of specific components."
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "heat_transfer",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires analysis of heat transfer mechanisms (conduction, convection, volumetric heating) and fluid dynamics (bubble-induced circulation, mixing characteristics) in specific reactor configurations used for co-pyrolysis, which demands expertise in combustion science, heat transfer, and fluid mechanics.",
+      "answer_correct": false,
+      "answer_issues": [
+        {
+          "type": "unsupported",
+          "description": "The answer claims fixed bed reactors 'rely on conduction through packed particles with limited mixing' but the paper only states they are used for co-pyrolysis investigation with diagnostics (Citation 1), without describing their heat transfer mechanisms or mixing characteristics."
+        },
+        {
+          "type": "unsupported",
+          "description": "The answer states fluidized beds 'enhance particle contact and heat transfer efficiency through convective processes' but the paper only mentions mixing and temperature distribution (Citation 2), not specific heat transfer mechanisms or efficiency comparisons."
+        },
+        {
+          "type": "unsupported",
+          "description": "The answer claims microwave reactors differ 'fundamentally from conventional conduction-based heating' but the paper only describes dielectric heating properties (Citation 3), without comparing to conventional heating methods."
+        }
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "Revise answer to strictly use only the mechanisms explicitly described in the provided citations, avoiding extrapolation of unsupported heat transfer and fluid dynamics details."
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_f2888453",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Co-pyrolysis-of-waste-plastic-and-solid-biomass-for_2021_Progress-in-Energy-",
+      "paper_title": "Co-pyrolysis-of-waste-plastic-and-solid-biomass-for_2021_Progress-in-Energy-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:19:24.796468",
+      "answer_length": 1665
+    }
+  },
+  {
+    "question_text": "Using the synergistic effect calculation method from the paper, determine the synergistic effect efficiency for a 60:40 HDPE:sugarcane bagasse mixture at 600°C if experimental liquid yield is 61 wt.% and individual yields are 55 wt.% for HDPE and 45 wt.% for bagasse. Explain the physical significance of the observed synergy based on the paper's discussion of hydrogen transfer and oxygenated intermediates during co-pyrolysis, and reconcile your calculated difference with the paper's stated maximum difference of 6 wt.% at these conditions.",
+    "standard_answer": "First, calculate the theoretical weighted average liquid yield using the formula from the paper: Y_calculated = (0.6 × 55) + (0.4 × 45) = 33 + 18 = 51 wt.%. Then calculate synergistic effect efficiency: ΔY = (61 - 51)/51 × 100% = 19.6%. This positive synergy of 19.6% indicates significant interaction between the feedstocks. The paper states that 'Strongest synergistic effect was observed at 600 °C using 60:40 mixture ratio of HDPE: sugarcane bagasse, with the maximum difference being 6 wt.%' which differs from our calculated 10 wt.% difference (61-51=10). This discrepancy suggests different experimental conditions or feedstock properties in the referenced study, such as variations in reactor configuration, heating rates, or biomass composition that could affect the actual synergistic effect magnitude. The paper explains that 'Synergistic effect can be defined as binary, ternary or multiple mixtures of biomass and plastic to produce an effect higher or lower than that calculated or determined from weighted value of the individual feedstock during co-pyrolysis.' Physically, this synergy arises from hydrogen transfer mechanisms where 'Plastic wastes contain high hydrogen to carbon (H/C) ratio and relatively low oxygen to carbon (O/C) ratio which can support solid biomass's inherently high O/C and low H/C during co-pyrolysis to result in increased quality and uniformity of the products.' At 600°C, hydroxyl intermediates from sugarcane bagasse decomposition facilitate cracking of HDPE primary volatiles, promoting formation of aliphatic compounds with lower carbon numbers while hydrogen from HDPE supports deoxygenation of biomass-derived oxygenates, collectively enhancing liquid yield beyond the additive expectation.",
+    "original_text": {
+      "1": "Synergistic effect can be defined as binary, ternary or multiple mixtures of biomass and plastic to produce an effect higher or lower than that calculated or determined from weighted value of the individual feedstock during co-pyrolysis.",
+      "2": "Plastic wastes contain high hydrogen to carbon (H/C) ratio and relatively low oxygen to carbon (O/C) ratio which can support solid biomass's inherently high O/C and low H/C during co-pyrolysis to result in increased quality and uniformity of the products.",
+      "3": "Strongest synergistic effect was observed at 600 °C using 60:40 mixture ratio of HDPE: sugarcane bagasse, with the maximum difference being 6 wt.%."
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question requires specific knowledge of co-pyrolysis chemistry, synergistic effect calculations in biomass-plastic mixtures, hydrogen transfer mechanisms, and oxygenated intermediate chemistry - all core combustion science and thermal conversion concepts that cannot be answered with general ML knowledge.",
+      "answer_correct": false,
+      "answer_issues": [
+        {
+          "type": "factual_error",
+          "description": "The answer incorrectly calculates the synergistic effect difference as 10 wt.% (61-51=10) but the paper clearly states the maximum difference is 6 wt.% for this exact mixture ratio and temperature. The answer then speculates about experimental condition differences without supporting evidence from the paper."
+        },
+        {
+          "type": "unsupported",
+          "description": "The answer makes unsupported claims about 'hydroxyl intermediates from sugarcane bagasse decomposition facilitate cracking of HDPE primary volatiles' and 'formation of aliphatic compounds with lower carbon numbers' - these specific mechanistic details are not provided in the given citations or paper excerpt."
+        }
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "Revise the answer to align with the paper's stated maximum difference of 6 wt.% and remove unsupported mechanistic claims not found in the provided citations."
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_4c518911",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Co-pyrolysis-of-waste-plastic-and-solid-biomass-for_2021_Progress-in-Energy-",
+      "paper_title": "Co-pyrolysis-of-waste-plastic-and-solid-biomass-for_2021_Progress-in-Energy-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:19:40.294644",
+      "answer_length": 1740
+    }
+  }
+]

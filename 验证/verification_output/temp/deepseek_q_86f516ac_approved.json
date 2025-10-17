@@ -1,0 +1,77 @@
+{
+  "question_text": "Calculate the theoretical energy storage density for a CaCO3/CaO system after 10 cycles if the effective conversion (X_ef,10) is 0.65, and explain how dopants like Mn influence this value by altering reaction kinetics based on electronic-scale mechanisms.",
+  "standard_answer": "The theoretical energy storage density after 10 cycles is calculated using E_g,N = X_ef,N × theoretical_density, where the theoretical energy storage density of CaCO3 is 1780 kJ·kg^-1 as widely reported. For X_ef,10 = 0.65, E_g,10 = 0.65 × 1780 = 1157 kJ·kg^-1. Dopants like Mn influence this value by accelerating reaction kinetics through electronic-scale mechanisms. Density functional theory (DFT) calculations show that Mn doping lowers both the transition state energy and dissociation energy for CaCO3 decomposition. The lower transition state energy and dissociation energy make it more convenient for CO2 to separate from the Mn-doped CaCO3, which is the mainspring for the acceleration in kinetics. This kinetic enhancement helps maintain higher effective conversion over multiple cycles by facilitating faster CO2 release during decomposition, thereby potentially sustaining energy storage density closer to theoretical limits despite cyclic degradation effects that typically reduce conversion efficiency in undoped systems.",
+  "original_text": {
+    "1": "The theoretical energy storage density of CaCO3 per kilogram is 1780 kJ·kg^-1, which is widely reported.",
+    "2": "The lower transition state energy and dissociation energy make it more convenient for CO2 to separate from the Mn-doped CaCO3, which is the mainspring for the acceleration in kinetics."
+  },
+  "type": "calculation",
+  "difficulty": 4,
+  "topic": "energy_systems",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires specific knowledge of thermochemical energy storage systems (CaCO3/CaO), energy density calculations, cyclic degradation effects, and electronic-scale mechanisms of dopant influence on reaction kinetics - all within the domain of energy systems and materials science for combustion/energy applications.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+  },
+  "retry_count": 1,
+  "question_id": "deepseek_q_86f516ac",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Progress-in-multiscale-research-on-calcium-looping-f_2025_Progress-in-Energy",
+    "paper_title": "Progress-in-multiscale-research-on-calcium-looping-f_2025_Progress-in-Energy"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:26:36.963559",
+    "answer_length": 1036
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer correctly calculates the energy storage density using E_g,10 = 0.65 × 1780 = 1157 kJ·kg^-1, which is mathematically accurate and uses the correct theoretical density from the original text. The explanation of Mn dopant effects accurately reflects the original text's statement about lower transition state energy and dissociation energy facilitating CO2 separation as the 'mainspring for the acceleration in kinetics.' The answer appropriately connects this kinetic enhancement to maintaining higher effective conversion over cycles. All physical principles regarding thermochemical energy storage, DFT calculations, and dopant effects on reaction kinetics are correctly stated. The answer is detailed but contains no factual errors or logical contradictions.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:17:17.275523"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "medium",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The calculation uses the accepted theoretical energy density of 1780 kJ·kg^-1 and correctly applies X_ef,10 = 0.65 to obtain 1157 kJ·kg^-1. The explanation of Mn dopants lowering transition state and dissociation energies to accelerate kinetics and facilitate CO2 release aligns with the cited ground-truth statements, and the link to maintaining higher effective conversion over cycles is logically sound.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:17:41.272650"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "medium",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer is factually and logically correct. The calculation (0.65 * 1780 = 1157 kJ·kg^-1) is arithmetically correct and uses the theoretical density provided in the original text. The explanation for the role of the Mn dopant accurately reflects the information from the original text, stating that it lowers the transition state and dissociation energies, which accelerates kinetics. The conclusion that this kinetic enhancement helps maintain higher conversion over cycles is a sound and logical extension of the provided information.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:17:59.174135"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:17:59.174166",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "question_text": "How does the Damköhler number (Da) influence the attainment of flameless combustion (FC) in gas turbines, and why are values near unity critical for distributed reaction zones?",
+  "standard_answer": "The Damköhler number (Da), defined as the ratio of flow time-scale to chemical time-scale, is pivotal for flameless combustion (FC) as it governs turbulence-chemistry interaction. In FC, Da values near unity indicate that chemical and turbulent mixing time-scales are comparable, promoting distributed reaction zones rather than thin flame fronts. This occurs because when Da ≈ 1, turbulent eddies can effectively mix reactants and products before significant reactions occur, leading to homogenized temperature fields and reduced temperature peaks. For gas turbines, high-pressure conditions typically shorten chemical time-scales, increasing Da and pushing combustion towards conventional regimes. To achieve FC, designers must increase mixing time-scales or decrease chemical reactivity (e.g., via exhaust gas recirculation) to lower Da. The paper notes that 'values of Da are likely to be close to unity under the FC regime' and that 'the distributed reactions regime corresponds to values of Da near unity and high Ka (Karlovitz number)', emphasizing the balance required for distributed combustion and low NOx emissions.",
+  "original_text": {
+    "1": "values of Da are likely to be close to unity under the FC regime",
+    "2": "the distributed reactions regime corresponds to values of Da near unity and high Ka (Karlovitz number)"
+  },
+  "type": "reasoning",
+  "difficulty": 5,
+  "topic": "combustion_science",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires deep combustion science expertise, specifically understanding of the Damköhler number (Da) as a dimensionless parameter governing turbulence-chemistry interaction, flameless combustion (FC) regimes, distributed reaction zones, and gas turbine combustion dynamics. It cannot be answered with general ML knowledge alone.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer are both high quality - domain-focused, factually correct based on citations, and compliant with all requirements."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_dea32740",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Flameless-combustion-and-its-potential-tow_2018_Progress-in-Energy-and-Combu",
+    "paper_title": "Flameless-combustion-and-its-potential-tow_2018_Progress-in-Energy-and-Combu"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:19:59.650025",
+    "answer_length": 1126
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly explains the role of Damköhler number in flameless combustion. Key points verified: (1) Da is defined correctly as ratio of flow/chemical time-scales, (2) Da ≈ 1 promotes distributed reaction zones as stated in original text, (3) the mechanism explaining how comparable time-scales enable turbulent mixing before reactions is physically sound, (4) the connection to homogenized temperature fields and reduced peaks is consistent with FC principles, (5) the discussion of high-pressure effects on Da and strategies to achieve FC (EGR) is logically correct, (6) direct quotes from original text are accurately incorporated. The answer provides additional context and explanation beyond the original text, but all statements are factually accurate and consistent with combustion science principles. No contradictions or errors detected.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:09:16.940715"
+      },
+      {
+        "correct": false,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Claims that increasing mixing time-scales lowers Da despite defining Da = tau_flow/tau_chem; increasing tau_flow would increase Da, not decrease it.",
+          "Wording suggests mixing occurs before significant reactions at Da ≈ 1; strictly, Da ≈ 1 implies comparable mixing and chemical times, not clearly prior mixing."
+        ],
+        "reasoning": "The answer correctly links Da ≈ 1 to distributed reaction zones and mentions high Ka, consistent with the ground-truth statements. It also correctly notes that higher pressure shortens chemical time-scales and tends to increase Da. However, it contains a key logical error: stating that increasing mixing time-scales would lower Da contradicts the provided definition (Da = tau_flow/tau_chem). To move Da toward unity from large values, one would reduce tau_flow (faster mixing/shorter residence) or increase tau_chem (reduced reactivity/dilution), not increase tau_flow.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:09:45.984788"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer correctly defines the Damköhler number and accurately explains its role in achieving flameless combustion. It correctly states that Da values near unity are critical for creating distributed reaction zones, which is consistent with the provided original text and fundamental combustion theory. The explanation of how pressure affects Da in gas turbines and the methods to counteract this (like EGR) are also factually and logically sound.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:10:07.265113"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:10:07.265141",
+    "consensus": {
+      "all_correct": false,
+      "correct_votes": 2,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 2
+    }
+  }
+}

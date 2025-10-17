@@ -1,0 +1,88 @@
+{
+  "question_text": "What is the critical radius for autoignition (rc) from a hotspot according to the Frank-Kamenetskii criterion, and how does it depend on thermal conductivity and activation energy? Explain the physical mechanisms behind these dependencies.",
+  "standard_answer": "The critical radius for autoignition (rc) is derived from the Frank-Kamenetskii criterion for thermal explosion in a reactive mixture. It represents the minimum hotspot size required to overcome heat losses and sustain spontaneous ignition. The equation is: rc = (δc k Ta / A Q En exp(-En))^(1/2), where δc is the critical Frank-Kamenetskii parameter, k is thermal conductivity, Ta is ambient temperature, A is the pre-exponential factor, Q is fuel mass per volume multiplied by reaction enthalpy, and En = E/(R Ta) with E as activation energy. The dependence on thermal conductivity is inverse with the square root - higher k increases rc because enhanced heat dissipation from the hotspot to cooler surroundings retards the temperature rise needed for ignition. For activation energy, the relationship is more complex due to the exp(-En) term. Since En = E/(R Ta), higher activation energy E increases En, which increases exp(-En) in the denominator, thereby increasing rc. This means higher activation energy makes autoignition more difficult, requiring a larger hotspot to overcome the energy barrier and initiate self-sustaining reactions. The physical mechanism involves balancing chemical heat generation against conductive heat losses - when the hotspot is too small, heat dissipation dominates and prevents thermal runaway.",
+  "original_text": {
+    "1": "The critical radius rc is given as: ( rc = ( δc k Ta / A Q En exp (−En) )^(1∕2 ) where δc is the critical Frank–Kamenetskii parameter before ignition [74].",
+    "2": "En = E / RTa where E is the activation energy."
+  },
+  "type": "calculation",
+  "difficulty": 4,
+  "topic": "combustion_kinetics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires deep knowledge of combustion kinetics, specifically the Frank-Kamenetskii criterion for thermal explosion and autoignition from hotspots. It involves understanding how thermal conductivity and activation energy affect the critical ignition radius, which is fundamental combustion science requiring domain expertise in reactive flows and thermal explosion theory.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer are both high quality - domain-focused with correct technical explanation that aligns with the provided citations."
+  },
+  "retry_count": 1,
+  "question_id": "deepseek_q_d84490bc",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Low-speed-pre-ignition-and-super-knock-in-boost_2023_Progress-in-Energy-and-",
+    "paper_title": "Low-speed-pre-ignition-and-super-knock-in-boost_2023_Progress-in-Energy-and-"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:23:03.638132",
+    "answer_length": 1332
+  },
+  "verification": {
+    "status": "rejected",
+    "verifiers": [
+      {
+        "correct": false,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "The answer states that higher activation energy E increases En, which increases exp(-En) in the denominator. This is incorrect - increasing En DECREASES exp(-En), not increases it.",
+          "The conclusion that higher E increases rc is correct, but the reasoning about exp(-En) increasing is backwards. When En increases, exp(-En) decreases, making the denominator smaller, which increases rc."
+        ],
+        "reasoning": "The answer contains a fundamental mathematical error in explaining the activation energy dependence. The statement 'higher activation energy E increases En, which increases exp(-En)' is factually wrong. The exponential function exp(-En) is a decreasing function of En - as En increases, exp(-En) decreases. The correct reasoning should be: higher E increases En, which DECREASES exp(-En), thereby DECREASING the denominator, which INCREASES rc. While the final conclusion (higher E increases rc) is correct, the intermediate logical step contains a clear mathematical error that misrepresents how the exponential function behaves.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:12:16.375709"
+      },
+      {
+        "correct": false,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "States the dependence on thermal conductivity is 'inverse with the square root' while also saying higher k increases rc; mathematically rc ∝ sqrt(k), so 'inverse' is incorrect and internally inconsistent.",
+          "Claims that higher activation energy increases exp(-En); in fact exp(-En) decreases as En increases.",
+          "Logical inconsistency: asserts that an increase in the denominator leads to an increase in rc, which is mathematically incorrect."
+        ],
+        "reasoning": "The formula for rc matches the ground-truth expression, and the physical mechanism that higher k increases conductive losses (thus larger rc) is correct. However, the answer incorrectly describes the k-dependence as 'inverse', misstates how exp(-En) varies with En, and makes a logical error about how changes in the denominator affect rc. These factual and logical errors require marking the answer as incorrect.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:12:44.301713"
+      },
+      {
+        "correct": false,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "The answer incorrectly states that the dependence of rc on thermal conductivity (k) is 'inverse with the square root'. The formula shows rc is directly proportional to the square root of k (rc ∝ k^(1/2)).",
+          "The reasoning for the activation energy (E) dependence is flawed. It claims that as E (and thus En) increases, 'exp(-En) increases'. This is incorrect; the exponential function exp(-x) is a monotonically decreasing function for positive x.",
+          "The explanation for the activation energy dependence is incomplete as it only considers the exp(-En) term, ignoring that the full term in the denominator is En*exp(-En). The behavior of this combined term determines the relationship."
+        ],
+        "reasoning": "The answer contains significant factual and logical errors in its explanation of the dependencies. It incorrectly describes the mathematical relationship between the critical radius and thermal conductivity. Furthermore, its reasoning for the effect of activation energy is based on a false premise about the behavior of the exponential function, making the explanation logically unsound. Although the final conclusions about the trends (e.g., 'higher k increases rc') are correct, the explanations for *how* these dependencies arise are factually wrong.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:13:16.365495"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:13:16.365517",
+    "consensus": {
+      "all_correct": false,
+      "correct_votes": 0,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "question_text": "Based on the provided paper content, explain how biodiesel's higher viscosity and density affect engine performance and emissions in compression ignition engines, and what general engineering approaches are recommended to address these challenges according to the review.",
+  "standard_answer": "Biodiesel's higher viscosity and density compared to mineral diesel significantly influence engine performance and emission characteristics in compression ignition engines. The paper states that 'Biodiesel has higher viscosity and density, 10-15% lower calorific value, higher bulk modulus, higher oxygen content, and lower stoichiometric air-fuel ratio compared to baseline mineral diesel.' These physical property differences directly contribute to the observed increase in brake specific fuel consumption (BSFC) when using biodiesel, as the lower calorific value requires more fuel mass to be injected to achieve the same energy output. The higher oxygen content in biodiesel promotes more complete combustion, which helps explain the 'substantial reduction in particulate matter (PM), total hydrocarbons (THC) and carbon monoxide (CO) emissions in comparison to mineral diesel' reported in the review. However, the combination of physical property differences necessitates hardware modifications to optimize engine performance. The review specifically emphasizes that 'future studies should focus on optimization of fuel injection equipment and hardware modifications to develop dedicated biodiesel engines' to properly address these challenges. This indicates that while the exact spray characteristics and injection timing adjustments aren't detailed in the provided excerpts, the fundamental property differences require systematic engineering optimization of the fuel injection system and engine hardware for biodiesel compatibility.",
+  "original_text": {
+    "1": "Biodiesel has higher viscosity and density, 10-15% lower calorific value, higher bulk modulus, higher oxygen content, and lower stoichiometric air-fuel ratio compared to baseline mineral diesel",
+    "2": "Substantial reduction in particulate matter (PM), total hydrocarbons (THC) and carbon monoxide (CO) emissions in comparison to mineral diesel, and increased brake specific fuel consumption (BSFC) and oxides of nitrogen (NOX) emissions are reported by most researchers using unmodified compression ignition (CI) engines",
+    "3": "This review underscores that future studies should focus on optimization of fuel injection equipment and hardware modifications to develop dedicated biodiesel engines, improve low temperature performance of biodiesel fuelled engines, develop new biodiesel compatible lubricating oil formulations and special materials for engine components before implementing large-scale substitution of mineral diesel by biodiesel globally"
+  },
+  "type": "concept",
+  "difficulty": 4,
+  "topic": "combustion_kinetics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires understanding of biodiesel properties (viscosity, density), their impact on engine performance (BSFC, emissions) in compression ignition engines, and engineering approaches for optimization. This involves combustion science, fluid mechanics, and engine engineering expertise specific to energy systems.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer are well-aligned with the paper's content and domain focus. No issues detected."
+  },
+  "retry_count": 2,
+  "question_id": "deepseek_q_9bf53f97",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Potential-and-challenges-for-large-scale-applica_2017_Progress-in-Energy-and",
+    "paper_title": "Potential-and-challenges-for-large-scale-applica_2017_Progress-in-Energy-and"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:26:49.518178",
+    "answer_length": 1541
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately reflects all key information from the original text. It correctly identifies biodiesel's physical properties (higher viscosity and density, 10-15% lower calorific value, higher oxygen content) from [1], properly explains the emission characteristics (reduction in PM, THC, CO; increase in BSFC and NOx) from [2], and accurately cites the recommended engineering approaches (optimization of fuel injection equipment and hardware modifications) from [3]. The causal relationships are logically sound: lower calorific value → higher BSFC, higher oxygen content → more complete combustion → reduced PM/THC/CO. The answer appropriately acknowledges that specific spray characteristics and injection timing details aren't provided in the excerpts while correctly emphasizing the need for systematic engineering optimization. All statements are consistent with combustion science principles and the original text.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:15:57.405408"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Does not explicitly link higher viscosity and density to spray/atomization and mixture formation effects; attributes BSFC increase mainly to lower calorific value",
+          "Omits mention of NOx increase reported for unmodified CI engines"
+        ],
+        "reasoning": "The answer accurately reflects the original text: it notes biodiesel’s higher viscosity and density and other property differences, correctly reports increased BSFC and reduced PM/THC/CO, and cites the review’s recommendation to optimize fuel injection equipment and pursue hardware modifications for dedicated biodiesel engines. No factual or logical errors are present. Minor omissions include not explicitly tying viscosity/density to spray/combustion mechanisms and not mentioning NOx increase.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:16:23.170745"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer correctly identifies the key properties of biodiesel from the source text (lower calorific value, higher oxygen content) and accurately links them to the effects on engine performance (increased BSFC) and emissions (reduced PM, THC, CO). The explanation for these links is based on sound thermophysical principles. The answer also correctly summarizes the recommended engineering approach (optimization of fuel injection equipment and hardware) as stated in the text. All statements are factually correct and logically consistent with the provided source material.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:16:45.655646"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:16:45.655672",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

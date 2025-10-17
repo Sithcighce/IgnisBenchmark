@@ -1,0 +1,80 @@
+{
+  "question_text": "Using the provided paper content, quantitatively analyze how methane leakage throughout the natural gas supply chain affects the life cycle greenhouse gas emissions of natural gas combined cycle (NGCC) plants compared to coal generation. Specifically explain the break-even point where climate benefits diminish, supported by the paper's data and calculations.",
+  "standard_answer": "The paper provides specific quantitative data on life cycle greenhouse gas emissions for natural gas combined cycle plants and identifies the critical methane leakage threshold where climate benefits over coal diminish. According to the paper, 'Life cycle air emissions through the point-of-generation for a 555 megawatt (MW) NGCC generation facility... Total Greenhouse Gas Emissions: 484.73 g CO2e/kWh' (Table 1). This total includes emissions from both direct combustion and upstream methane emissions from the natural gas supply chain. The paper further states that 'Natural gas electricity generation may reduce GHG emissions on all time scales relative to coal if methane leakage rates do not exceed 3.2% of total system production.' This 3.2% threshold represents the break-even point where methane's potent climate impact offsets the carbon advantage of natural gas. The calculation mechanism involves comparing total life cycle emissions: when methane leakage exceeds 3.2%, the upstream methane emissions become substantial enough to eliminate the GHG advantage that NGCC plants would otherwise have over coal-fired generation. The paper notes that unconventional gas resources have been estimated to have leakage rates potentially 30-50% higher than conventional gas, which could exceed the break-even threshold and result in GHG emissions that could exceed those from coal over certain time intervals.",
+  "original_text": {
+    "1": "Life cycle air emissions through the point-of-generation for a 555 megawatt (MW) NGCC generation facility... Total Greenhouse Gas Emissions: 484.73 g CO2e/kWh",
+    "2": "Natural gas electricity generation may reduce GHG emissions on all time scales relative to coal if methane leakage rates do not exceed 3.2% of total system production"
+  },
+  "type": "calculation",
+  "difficulty": 4,
+  "topic": "energy_systems",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires deep expertise in energy systems, life cycle analysis of greenhouse gas emissions, natural gas supply chain operations, combustion science for power generation, and quantitative environmental impact assessment - all core domain knowledge in combustion and energy engineering.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and compliant with other requirements."
+  },
+  "retry_count": 2,
+  "question_id": "deepseek_q_20138914",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "The-role-of-natural-gas-and-its-infrastructure-in-mitiga_2018_Progress-in-En",
+    "paper_title": "The-role-of-natural-gas-and-its-infrastructure-in-mitiga_2018_Progress-in-En"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:32:16.644456",
+    "answer_length": 1412
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately presents the quantitative data from the original text, correctly citing the 484.73 g CO2e/kWh total GHG emissions for NGCC plants and the critical 3.2% methane leakage threshold. The explanation of the break-even point mechanism is logically sound: methane's potent greenhouse effect means that excessive leakage in the supply chain can offset the carbon advantage of natural gas over coal. The answer correctly interprets that above 3.2% leakage, the climate benefits diminish. The additional context about unconventional gas having 30-50% higher leakage rates is a reasonable elaboration that supports the main point about exceeding the threshold. All factual statements align with the original text, and the physical principles regarding methane as a potent greenhouse gas and life cycle emissions analysis are correctly applied.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:22:31.731219"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "medium",
+        "verification_confidence": "high",
+        "issues": [
+          "Mentions unconventional gas leakage rates being 30–50% higher than conventional gas, which is not supported by the provided original text excerpt",
+          "Does not show the calculation steps behind the 3.2% break-even; relies on the quoted threshold without quantitative derivation"
+        ],
+        "reasoning": "The answer correctly cites the NGCC life cycle emissions (484.73 g CO2e/kWh) and the methane leakage break-even threshold (3.2%) from the provided text. Its causal explanation—that exceeding 3.2% leakage negates NGCC’s GHG advantage over coal—is logically consistent with the paper’s statements. While it adds a claim about unconventional gas leakage not present in the supplied text and lacks detailed calculations, these do not contradict the ground truth. Therefore, the core content is accurate and acceptable.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:22:55.925981"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer accurately quotes the provided text for both the life cycle emissions of an NGCC plant (484.73 g CO2e/kWh) and the methane leakage break-even point (3.2%). The explanation of the break-even point is logically sound, correctly identifying that excessive methane leakage negates the CO2 advantage of natural gas over coal. All statements are factually correct and consistent with the provided source material.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:23:13.987963"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:23:13.988019",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "question_text": "In the context of multi-species combustion modeling using the lattice Boltzmann method, explain how the viscosity and diffusion coefficients are determined for individual species in the thermal mixture-averaged model of Kang et al. Describe the specific formulations used for these transport coefficients and how they incorporate species interactions through molar fractions and mixture properties.",
+  "standard_answer": "In the thermal mixture-averaged model of Kang et al. for multi-species combustion, the transport coefficients are determined through species-specific formulations that account for interactions between different chemical species. For viscosity, the model uses Wilke's formula which incorporates molar fractions and species interactions through the parameter φkk′. The viscosity is set through the first relaxation time as: ̄τk1/δt = 1/2 + μk/(p ∑_{k′=0}^{N_sp-1} X_k′ φ_kk′), where μ_k is the viscosity of species k, p is pressure, X_k′ are mole fractions of other species, and φ_kk′ represents the interaction parameter between species k and k′. For diffusion, the model uses the second relaxation time to set the diffusivity as: ̄τk2/δt = 1/2 + ρ_k D_k/p_k, where ρ_k is the density of species k and D_k is the mixture-average diffusion coefficient. These formulations differ significantly from simple isothermal LBM models because they explicitly account for multi-species interactions through molar fractions and mixture properties, making them suitable for combustion applications where species concentrations vary significantly and transport properties depend on local mixture composition. The model employs N_sp sets of LB solvers, one per species, with each species having different discrete velocity sizes based on their molecular weights, requiring interpolation for consistent grid propagation.",
+  "original_text": {
+    "1": "The viscosity is set through the first relaxation time and using Wilke's formula: ̄τ_k1/δt = 1/2 + μ_k/(p ∑_{k'=0}^{N_sp-1} X_k' φ_kk'),",
+    "2": "In this model the second relaxation time, ̄τ_k2 sets the diffusivity to: ̄τ_k2/δt = 1/2 + ρ_k D_k/p_k."
+  },
+  "type": "concept",
+  "difficulty": 4,
+  "topic": "combustion_kinetics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question specifically addresses multi-species combustion modeling using lattice Boltzmann method, requiring deep knowledge of combustion science, fluid mechanics, CFD numerical methods, and species transport modeling - all core domain expertise areas.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+  },
+  "retry_count": 1,
+  "question_id": "deepseek_q_85baa93c",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Lattice-Boltzmann-methods-for-combustion_2024_Progress-in-Energy-and-Combust",
+    "paper_title": "Lattice-Boltzmann-methods-for-combustion_2024_Progress-in-Energy-and-Combust"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:22:30.361043",
+    "answer_length": 1404
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately reproduces the key formulations from the original text. The viscosity formula using Wilke's formula (τ̄k1/δt = 1/2 + μk/(p Σ Xk' φkk')) and the diffusivity formula (τ̄k2/δt = 1/2 + ρkDk/pk) are correctly stated. The answer provides appropriate context about species interactions through molar fractions and mixture properties, explains the physical significance of these formulations, and correctly notes the use of Nsp sets of LB solvers. While the answer includes additional explanatory details beyond the original text (such as comparisons to isothermal LBM models and discussion of discrete velocity sizes), these additions are accurate and enhance understanding without introducing errors. All core mechanisms are correctly explained and consistent with the original text.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:11:36.360922"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "The final sentence about each species having different discrete velocity sizes and requiring interpolation is not supported by the provided ground truth and may be model-dependent/extraneous.",
+          "Saying X_k′ are mole fractions of 'other species' is slightly imprecise; the sum typically includes all species (including k), but this does not affect the core correctness."
+        ],
+        "reasoning": "The answer accurately restates the key formulations from the Kang et al. thermal mixture-averaged model: viscosity via Wilke’s formula embedded in the first relaxation time and diffusivity via the second relaxation time, with correct dependence on mole fractions, interaction parameter φ_kk′, and mixture properties. No contradictions with the provided ground truth; added details are mostly consistent, though one implementation detail is likely extraneous.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:12:14.030378"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "medium",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately reproduces the formulas for viscosity and diffusion from the original text. The explanations for the terms (μk, p, Xk', φkk', ρk, Dk) and the overall physical context, including the use of Wilke's formula and the dependence on local mixture composition, are factually correct and logically sound. The additional details provided about the model's structure (N_sp solvers, different velocity sets) are also accurate characteristics of the Kang et al. model and provide valuable context without introducing errors.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:12:32.109500"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:12:32.109518",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

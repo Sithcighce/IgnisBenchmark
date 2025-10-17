@@ -1,0 +1,77 @@
+{
+  "question_text": "Based on the provided paper content, compare the TPO yield performance between fluidized bed and fixed bed reactors, explaining the underlying reasons for the observed differences in product distribution.",
+  "standard_answer": "The comparison of reactor types reveals significant differences in TPO yield performance. Fluidized bed reactors achieve maximum TPO yield, while fixed bed and mechanically mixed reactors provide approximately 10% lower TPO production efficiency. This difference stems from fundamental process characteristics: 'Fast pyrolysis yields more liquid fraction, due to avoided secondary reactions, whereas the main product of slow pyrolysis is a solid fraction.' Fluidized bed reactors typically operate as fast pyrolysis systems with rapid heating rates and short vapor residence times, minimizing secondary cracking reactions that would otherwise convert liquid products into gases or promote solid formation. In contrast, fixed bed reactors often represent slow pyrolysis conditions with longer residence times, allowing more extensive secondary reactions that reduce liquid yield in favor of solid char production. The enhanced mixing and heat transfer in fluidized beds enable more efficient and uniform thermal decomposition of tyre materials at optimal temperatures, maximizing primary pyrolysis reactions that produce liquid TPO while suppressing undesirable secondary reactions that lead to increased solid fraction formation.",
+  "original_text": {
+    "1": "It is evident from Fig. 4 that fluidised bed reactors provide maximisation of the TPO yield. Attainable TPO production efficiency for fixed bed and mechanically mixed reactors is approximately 10% lower.",
+    "2": "Fast pyrolysis yields more liquid fraction, due to avoided secondary reactions, whereas the main product of slow pyrolysis is a solid fraction."
+  },
+  "type": "concept",
+  "difficulty": 4,
+  "topic": "energy_systems",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires knowledge of pyrolysis reactor types (fluidized bed vs. fixed bed), TPO yield performance, and product distribution mechanisms in energy systems, specifically in tyre pyrolysis for fuel production. This involves understanding reactor design impacts on pyrolysis efficiency, heat transfer, and reaction kinetics—core topics in combustion science and energy systems.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "The question is domain-focused, the answer is factually correct and well-supported by citations, and there are no other compliance issues. It passes all checks."
+  },
+  "retry_count": 2,
+  "question_id": "deepseek_q_7c270614",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Combustion-engine-applications-of-waste-ty_2021_Progress-in-Energy-and-Combu",
+    "paper_title": "Combustion-engine-applications-of-waste-ty_2021_Progress-in-Energy-and-Combu"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:18:42.666609",
+    "answer_length": 1229
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately reflects the information from the original text and provides sound scientific reasoning. It correctly states that: (1) fluidized bed reactors achieve maximum TPO yield while fixed bed and mechanically mixed reactors provide ~10% lower efficiency, matching the original text exactly; (2) the quoted statement about fast vs slow pyrolysis is directly from the original text; (3) the mechanistic explanation linking fluidized beds to fast pyrolysis (rapid heating, short residence times, minimized secondary reactions) and fixed beds to slow pyrolysis (longer residence times, more secondary reactions) is scientifically sound and consistent with established pyrolysis principles; (4) the cause-effect relationships are correct - fast pyrolysis conditions favor liquid products by avoiding secondary cracking that would convert liquids to gases or promote char formation. While the answer is detailed and elaborates beyond the minimal original text, all statements are factually accurate and logically consistent with combustion science and pyrolysis thermophysics.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:06:43.351154"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer matches the ground-truth statements: fluidized beds maximize TPO yield and fixed bed/mechanically mixed reactors are about 10% lower. It correctly attributes the difference to fast vs slow pyrolysis characteristics—rapid heating, short vapor residence, and better mixing/heat transfer in fluidized beds minimizing secondary reactions—consistent with established principles and the cited text.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:06:56.722556"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer correctly states the yield difference from the original text. It accurately explains the underlying reasons by correctly linking reactor type (fluidized vs. fixed bed) to pyrolysis regime (fast vs. slow) based on fundamental principles of heat transfer and residence time. The explanation for why fast pyrolysis maximizes liquid yield by avoiding secondary reactions is also correct and consistent with the provided text.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:07:21.268715"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:07:21.268739",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

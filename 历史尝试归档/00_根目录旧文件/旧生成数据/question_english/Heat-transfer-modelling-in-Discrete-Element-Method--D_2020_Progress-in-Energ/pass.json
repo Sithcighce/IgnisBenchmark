@@ -1,0 +1,134 @@
+[
+  {
+    "question_text": "How does the surrounding layer method account for indirect particle-fluid-particle conduction in DEM-based thermal simulations, and what are the critical parameters that influence its accuracy?",
+    "standard_answer": "The surrounding layer method models indirect particle-fluid-particle conduction by assuming each particle is surrounded by a gas layer of thickness δ. When the surfaces of two particles intersect within these layers, conductive heat transfer through the interstitial fluid is considered significant. The method calculates heat flux using geometric integrals over the overlapping regions, with heat transfer assumed one-dimensional along the center-to-center line. Critical parameters include the layer thickness δ and the minimum conduction distance s. δ determines the range over which indirect conduction is considered, with values typically around 0.1–1.0 particle radii, while s, often set to the mean free path of gas molecules (~2.75×10⁻⁸ m), prevents singularities at point contacts and accounts for surface roughness or rarefaction effects. Sensitivity analyses show that in dynamic systems, predicted heat transfer can vary by over 50% with δ changes, and in dense systems (solid concentration >0.5), results become highly sensitive to s. Proper selection of these parameters is essential for accuracy, as they directly affect the computed conductive heat flux.",
+    "original_text": {
+      "1": "Rong and Horio [45] assumed there is a gas layer surrounding each particle with the thickness of δ. If the surface of a particle intersects with the gas layer of another particle, the conductive heat transfer between the two particles is deemed significant and needs to be considered.",
+      "2": "The minimum conduction distance s has been physically related to the height of roughness asperities at the particle surface and the rarefaction effect of gas that reduces the gas thermal conductivity."
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "heat_transfer",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires specific knowledge of DEM-based thermal simulations, particle-fluid-particle conduction modeling, and the surrounding layer method, which are advanced topics in heat transfer and fluid mechanics applied to particulate systems.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer are well-aligned with domain expertise and paper content; no issues detected."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_4a3c879f",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Heat-transfer-modelling-in-Discrete-Element-Method--D_2020_Progress-in-Energ",
+      "paper_title": "Heat-transfer-modelling-in-Discrete-Element-Method--D_2020_Progress-in-Energ"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:21:00.140625",
+      "answer_length": 1170
+    }
+  },
+  {
+    "question_text": "Why does the Voronoi polyhedron-based method for indirect conduction consider heat transfer through both the interstitial fluid and particle bodies, and how does this differ from the surrounding layer method?",
+    "standard_answer": "The Voronoi polyhedron-based method accounts for conduction through both the interstitial fluid and particle bodies because it models the entire heat transfer path between neighboring particles within discretized Voronoi cells. This approach assumes heat flux occurs through double tapered cones sharing a boundary plane, integrating conduction through the solid particles (via portions of their bodies) and the fluid gap. In contrast, the surrounding layer method only considers conduction through the thin wedge of interstitial fluid between particles, neglecting intra-particle conduction paths. The Voronoi method's inclusion of solid-body conduction is crucial when the thermal conductivity ratio k_s/k_f is not extremely high, as it captures additional resistance and pathways that affect overall heat transfer. For example, in Model B, an isothermal core inside particles is assumed, and heat flux is integrated over annular spaces, providing a more comprehensive representation of conduction mechanisms in dense particulate systems.",
+    "original_text": {
+      "1": "Compared to the above surrounding layer method, more conduction paths have been considered in the Voronoi polyhedron-based method.",
+      "2": "The indirect conductive heat transfer consists of three parts: (i) conduction through the body of particle i inside the cone; (ii) conduction through the air between the particle surfaces; (iii) conduction through the body of particle j inside the cone."
+    },
+    "type": "reasoning",
+    "difficulty": 5,
+    "topic": "heat_transfer",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires specialized knowledge in heat transfer modeling, specifically conduction mechanisms in particulate systems using Voronoi polyhedron and surrounding layer methods, which are advanced CFD/thermal modeling techniques applied to energy and combustion-related particulate systems.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question is domain-focused, answer is factually correct and sufficiently detailed, no other quality issues detected."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_23e83d25",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Heat-transfer-modelling-in-Discrete-Element-Method--D_2020_Progress-in-Energ",
+      "paper_title": "Heat-transfer-modelling-in-Discrete-Element-Method--D_2020_Progress-in-Energ"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:21:00.450310",
+      "answer_length": 1040
+    }
+  },
+  {
+    "question_text": "How do continuum and discrete approaches differ in modeling radiative heat transfer in particulate systems, and what computational challenges are associated with the discrete method?",
+    "standard_answer": "Continuum and discrete approaches to radiative heat transfer in particulate systems differ fundamentally in their treatment of particle interactions. The continuum approach uses a radiation temperature for the particle-fluid mixture, often approximated as an average surrounding temperature for computational efficiency. It solves the radiative intensity field but may oversimplify local effects. In contrast, the discrete approach calculates radiative heat transfer between individual particles by solving view factors, which account for geometric visibility and blocking between particles. This method is more accurate but computationally intensive due to the O(N²) complexity of determining view factors for each particle pair, especially in dynamic systems where particle positions change. Challenges include handling occlusions, updating view factors in real-time, and the significant overhead from numerical integrations. Methods like Voronoi tessellation or short-range/long-range models have been developed to mitigate costs, but they remain prohibitive for large-scale simulations without advanced parallel algorithms.",
+    "original_text": {
+      "1": "Models available in the public domain could be categorised into i) the continuum approach and ii) the discrete approach.",
+      "2": "Evidently, the discrete approach is more delicate to calculate the radiative heat transfer, yet the determination of view factors incurs significant computational overhead."
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "heat_transfer",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires expertise in radiative heat transfer modeling approaches specific to particulate systems, including continuum vs. discrete methods, view factors, and computational challenges in thermal DEM simulations - all core topics in combustion science, heat transfer, and CFD modeling.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on paper content, and no other compliance issues."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_4a566217",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Heat-transfer-modelling-in-Discrete-Element-Method--D_2020_Progress-in-Energ",
+      "paper_title": "Heat-transfer-modelling-in-Discrete-Element-Method--D_2020_Progress-in-Energ"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:21:01.277386",
+      "answer_length": 1127
+    }
+  },
+  {
+    "question_text": "Based on the provided paper, what are the key limitations of the Ranz-Marshall correlation for convective heat transfer in particulate systems, and how have subsequent models addressed these limitations? Explain the specific improvements made by Tavassoli's modification to Gunn's correlation and the rationale behind these modifications.",
+    "standard_answer": "The Ranz-Marshall correlation, derived from evaporation experiments on water droplets, has been widely applied in DEM-based simulations but suffers from key limitations. It was developed for specific conditions and does not account for variations in solid concentration across different particulate systems. The paper states: 'After verifying the correlation of Gunn [61] that proves accurate only for systems with the solid concentration less than 0.3, Tavassoli [62] modified Gunn’s correlation [61] for the entire spectrum of solid concentration (from 0 to 0.65).' This indicates that Gunn's correlation, like Ranz-Marshall, was limited to dilute systems with solid concentrations below 0.3. Tavassoli addressed this limitation by extending the applicability range to cover the full spectrum of solid concentrations from 0 to 0.65, making it suitable for both dilute and dense particulate systems. The modification was necessary because different solid concentrations significantly affect convective heat transfer characteristics due to variations in particle crowding, flow patterns, and interstitial fluid dynamics. By expanding the concentration range, Tavassoli's model provides more accurate predictions across various industrial applications including packed beds and fluidized beds where solid concentrations vary substantially.",
+    "original_text": {
+      "1": "The classic model of Ranz & Marshall [53] proposed based on the evaporation experiments of water droplets has been widely applied in DEM-based simulations.",
+      "2": "After verifying the correlation of Gunn [61] that proves accurate only for systems with the solid concentration less than 0.3, Tavassoli [62] modified Gunn’s correlation [61] for the entire spectrum of solid concentration (from 0 to 0.65)."
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "heat_transfer",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires specific knowledge of convective heat transfer correlations in particulate systems, including limitations of the Ranz-Marshall correlation, Gunn's correlation, and Tavassoli's modifications. This involves understanding how solid concentration affects heat transfer characteristics in particulate flows, which is a core topic in heat transfer and fluid mechanics applied to energy and combustion systems.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "The question is well-focused on domain-specific heat transfer modeling, and the answer accurately reflects the paper's content regarding the limitations and improvements of the correlations."
+    },
+    "retry_count": 2,
+    "question_id": "deepseek_q_33f1ff2d",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Heat-transfer-modelling-in-Discrete-Element-Method--D_2020_Progress-in-Energ",
+      "paper_title": "Heat-transfer-modelling-in-Discrete-Element-Method--D_2020_Progress-in-Energ"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:22:22.945942",
+      "answer_length": 1338
+    }
+  }
+]

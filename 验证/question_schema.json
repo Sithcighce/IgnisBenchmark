@@ -1,0 +1,195 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://example.com/schemas/question.schema.json",
+  "title": "Question Item Schema",
+  "description": "Schema for question items in the IgnisBenchmark distillation generation project",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "question_text",
+      "standard_answer",
+      "type",
+      "difficulty",
+      "topic",
+      "question_id"
+    ],
+    "properties": {
+      "question_text": {
+        "type": "string",
+        "description": "The main question text posed to the user",
+        "minLength": 10
+      },
+      "standard_answer": {
+        "type": "string",
+        "description": "The comprehensive standard answer to the question",
+        "minLength": 50
+      },
+      "original_text": {
+        "type": "object",
+        "description": "Map of citation keys to original text excerpts from the source paper",
+        "patternProperties": {
+          "^[0-9]+$": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "type": {
+        "type": "string",
+        "description": "Question type category",
+        "enum": [
+          "concept",
+          "reasoning",
+          "calculation",
+          "analysis",
+          "comparison",
+          "application"
+        ]
+      },
+      "difficulty": {
+        "type": "integer",
+        "description": "Difficulty level on a scale (typically 1-5)",
+        "minimum": 1,
+        "maximum": 5
+      },
+      "topic": {
+        "type": "string",
+        "description": "Main technical topic area for this question",
+        "examples": [
+          "thermodynamics",
+          "electrochemical_kinetics",
+          "thermal_effects",
+          "combustion",
+          "fluid_dynamics"
+        ]
+      },
+      "quality_check": {
+        "type": "object",
+        "description": "Quality assessment results for the question-answer pair",
+        "required": [
+          "domain_focused",
+          "answer_correct",
+          "other_compliant",
+          "overall_verdict"
+        ],
+        "properties": {
+          "domain_focused": {
+            "type": "boolean",
+            "description": "Whether the question is appropriately focused on the target domain"
+          },
+          "domain_reasoning": {
+            "type": "string",
+            "description": "Explanation of domain focus assessment"
+          },
+          "answer_correct": {
+            "type": "boolean",
+            "description": "Whether the answer is factually correct based on source material"
+          },
+          "answer_issues": {
+            "type": "array",
+            "description": "List of issues found in the answer (empty if none)",
+            "items": {
+              "type": "string"
+            }
+          },
+          "other_compliant": {
+            "type": "boolean",
+            "description": "Whether other compliance criteria are met"
+          },
+          "other_issues": {
+            "type": "array",
+            "description": "List of other compliance issues (empty if none)",
+            "items": {
+              "type": "string"
+            }
+          },
+          "overall_verdict": {
+            "type": "string",
+            "description": "Overall quality assessment verdict",
+            "enum": ["pass", "fail", "needs_review"]
+          },
+          "recommendation": {
+            "type": "string",
+            "description": "Recommendation for handling this question"
+          }
+        }
+      },
+      "retry_count": {
+        "type": "integer",
+        "description": "Number of generation retry attempts for this question",
+        "minimum": 0
+      },
+      "question_id": {
+        "type": "string",
+        "description": "Unique identifier for this question",
+        "pattern": "^[a-z0-9_]+_q_[a-f0-9]+$"
+      },
+      "source": {
+        "type": "object",
+        "description": "Source information for question generation",
+        "required": ["type"],
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "Type of generation source",
+            "examples": ["deepseek_generation", "manual", "gpt_generation"]
+          },
+          "paper_file": {
+            "type": "string",
+            "description": "Source paper filename (without extension)"
+          },
+          "paper_title": {
+            "type": "string",
+            "description": "Title of the source paper"
+          },
+          "section": {
+            "type": "string",
+            "description": "Specific section of the paper if applicable"
+          }
+        }
+      },
+      "metadata": {
+        "type": "object",
+        "description": "Additional metadata about question generation",
+        "properties": {
+          "generation_model": {
+            "type": "string",
+            "description": "Name of the AI model used for generation",
+            "examples": ["deepseek-chat", "gpt-4", "gpt-3.5-turbo"]
+          },
+          "created_at": {
+            "type": "string",
+            "description": "Timestamp of question creation in ISO 8601 format",
+            "format": "date-time"
+          },
+          "answer_length": {
+            "type": "integer",
+            "description": "Character length of the standard answer",
+            "minimum": 0
+          },
+          "updated_at": {
+            "type": "string",
+            "description": "Timestamp of last update in ISO 8601 format",
+            "format": "date-time"
+          }
+        }
+      },
+      "keywords": {
+        "type": "array",
+        "description": "Relevant keywords or tags for this question",
+        "items": {
+          "type": "string"
+        }
+      },
+      "related_concepts": {
+        "type": "array",
+        "description": "Related technical concepts or equations",
+        "items": {
+          "type": "string"
+        }
+      }
+    },
+    "additionalProperties": true
+  }
+}

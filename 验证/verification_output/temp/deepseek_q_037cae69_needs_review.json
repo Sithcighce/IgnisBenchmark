@@ -1,0 +1,88 @@
+{
+  "question_text": "Calculate the minimum fluidization velocity for Geldart B particles with a Sauter mean diameter of 500 μm and density of 2500 kg/m³ in air at 20°C and 1 atm, using the Ergun equation. Explain the physical significance of the terms in the calculation.",
+  "standard_answer": "The minimum fluidization velocity (U_mf) is calculated using the Ergun equation at the point where pressure drop equals the weight of the bed per unit area. The Ergun equation for pressure drop in packed beds is: ΔP/L = 150[(1-ε)^2/ε^3](μU/d_p²) + 1.75[(1-ε)/ε^3](ρ_g U²/d_p), where ε is voidage (typically 0.4-0.45 for Geldart B), μ is gas viscosity, ρ_g is gas density, d_p is particle diameter. At minimum fluidization, ΔP/L = (ρ_p - ρ_g)(1-ε)g. For air at 20°C and 1 atm: μ = 1.8e-5 Pa·s, ρ_g = 1.2 kg/m³. Assume ε_mf = 0.42. Substituting: (2500-1.2)(1-0.42)*9.81 = 14200 Pa/m. Setting equal to Ergun: 14200 = 150[(1-0.42)^2/0.42^3]*(1.8e-5*U/0.0005²) + 1.75[(1-0.42)/0.42^3]*(1.2*U²/0.0005). Simplifying: 14200 = 150*2.07*(1.8e-5*U/2.5e-7) + 1.75*7.82*(1.2*U²/0.0005) = 150*2.07*72*U + 1.75*7.82*2400*U² = 22356U + 32844U². Solving quadratic: 32844U² + 22356U - 14200 = 0 → U ≈ 0.22 m/s. The first term in Ergun represents viscous losses (laminar flow), dominant for small particles/low velocities; the second term represents inertial losses (turbulent flow). At U_mf, these balance the gravitational force, indicating transition from fixed to fluidized bed where drag supports particle weight.",
+  "original_text": {
+    "1": "Empirical equations can be used to determine the fluidization velocity at the transition of subsequent regimes (summarized, e.g. by Zhang et al. [62]).",
+    "2": "Geldart [60] classified the particles, based on their fluidization behavior, into four groups: C (cohesive), A (aeratable), B (bubbling or sand-like), and D (coarse or spoutable)."
+  },
+  "type": "calculation",
+  "difficulty": 3,
+  "topic": "fluid_mechanics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires specific fluid mechanics and chemical engineering expertise in fluidized bed systems, including knowledge of Geldart particle classification, minimum fluidization velocity calculation using the Ergun equation, and understanding of gas-solid flow physics in energy/combustion applications.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question is well-focused on fluid mechanics domain with proper calculation and explanation requirements. Answer provides complete calculation with correct physics interpretation."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_037cae69",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Progress-in-CFD-Simulations-of-Fluidized-Beds-fo_2022_Progress-in-Energy-and",
+    "paper_title": "Progress-in-CFD-Simulations-of-Fluidized-Beds-fo_2022_Progress-in-Energy-and"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:26:20.116400",
+    "answer_length": 1199
+  },
+  "verification": {
+    "status": "needs_review",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "medium",
+        "issues": [
+          "The original text only mentions that empirical equations exist and classifies Geldart B particles, but does not provide specific validation of the Ergun equation calculation or numerical values",
+          "Cannot independently verify the numerical calculation (U ≈ 0.22 m/s) without working through the algebra, though the approach and setup appear correct",
+          "The physical properties (μ = 1.8e-5 Pa·s, ρ_g = 1.2 kg/m³) and voidage assumption (ε_mf = 0.42) are reasonable for the stated conditions but not verified by the original text"
+        ],
+        "reasoning": "The standard answer provides a detailed, methodologically sound approach to calculating minimum fluidization velocity using the Ergun equation. The physical principles are correctly stated: (1) the Ergun equation form with viscous and inertial terms is correct, (2) the condition at minimum fluidization (pressure drop equals bed weight) is correct, (3) the physical interpretation of viscous vs inertial terms is accurate. The original text confirms Geldart B classification exists and that empirical equations are used for fluidization transitions, which is consistent with the answer's approach. While the original text doesn't provide detailed validation of the specific calculation, it doesn't contradict it either. The answer demonstrates proper understanding of fluidization physics and the Ergun equation. The calculation methodology and physical explanations are sound based on established combustion/fluidization science principles.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:16:49.651269"
+      },
+      {
+        "correct": false,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Numerical error: (1-ε)^2/ε^3 was computed as 2.07 instead of the correct value ~4.54 for ε=0.42, leading to an underestimation of the viscous term.",
+          "Resulting quadratic coefficients for U are incorrect (viscous term too small), yielding U_mf ≈ 0.22 m/s instead of a corrected value ≈ 0.25 m/s."
+        ],
+        "reasoning": "Methodology and physical interpretation are correct and consistent with the ground-truth context, but a clear arithmetic error in the Ergun viscous coefficient propagates to the final U_mf. Using ε_mf=0.42, μ=1.8e-5 Pa·s, ρ_g=1.2 kg/m³, d_p=0.0005 m, the correct coefficients give approximately 49,045 U + 32,899 U² = 14,200, yielding U_mf ≈ 0.25 m/s. The standard answer’s 0.22 m/s is therefore based on an incorrect simplification.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:17:20.955817"
+      },
+      {
+        "correct": false,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "The intermediate calculation for the viscous term's voidage function, (1-ε)²/ε³, is incorrect. The answer uses a value of 2.07, while the correct calculation (1-0.42)²/0.42³ yields approximately 4.54.",
+          "This error propagates, leading to an incorrect coefficient for the linear (viscous) term in the final quadratic equation (22356U instead of the correct value which is closer to 49000U).",
+          "The final solution provided for the quadratic equation (U ≈ 0.22 m/s) is also incorrect. Solving the answer's own stated equation (32844U² + 22356U - 14200 = 0) yields U ≈ 0.40 m/s, not 0.22 m/s."
+        ],
+        "reasoning": "The answer correctly identifies the physical principles and the governing equations (Ergun equation and pressure balance at minimum fluidization). The qualitative explanation of the terms is also correct. However, the quantitative part of the answer contains multiple, significant numerical errors. The calculation of the coefficients for the Ergun equation is flawed, and the final solution provided for the resulting quadratic equation is also incorrect. These factual errors in the calculation make the final answer invalid.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:17:53.561633"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:17:53.561660",
+    "consensus": {
+      "all_correct": false,
+      "correct_votes": 1,
+      "total_votes": 3,
+      "all_high_confidence": false,
+      "disagreement_count": 1
+    }
+  }
+}

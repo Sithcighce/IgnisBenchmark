@@ -1,0 +1,77 @@
+{
+  "question_text": "Calculate the minimum number of computational samples required to estimate the probability of lean blowout in a gas turbine with 95% confidence that the estimate is within 1% of the true probability, assuming the true probability is 0.001.",
+  "standard_answer": "Using binomial distribution statistics for rare event probability estimation, the required sample size N can be determined from the relative error requirement. For a rare event probability p=0.001 with relative error ε=0.01 and confidence level 95% (z=1.96 for normal approximation), the minimum samples needed is approximately N = z²(1-p)/(ε²p) = (1.96)²(0.999)/((0.01)²(0.001)) = (3.8416)(0.999)/(0.0000001) = 3.838/0.0000001 = 38,380,000 samples. This enormous number highlights the 'data-poor' nature of extreme events - even with 38 million observations, we only achieve 1% relative error for a 0.1% probability event. This calculation demonstrates why traditional Monte Carlo approaches are infeasible for combustion extreme events and why specialized rare event sampling techniques with variance reduction are essential for practical analysis of lean blowout probabilities in engineering design.",
+  "original_text": {
+    "1": "Data-poor problems are particularly relevant when related to extreme events (also called anomalous events) that can lead to catastrophic failure of the system.",
+    "2": "Rare events refer to low-probability events. There is no probability level that universally defines a rare event. Instead one can consider that an event is rare when the overall observational cost is so large that a specific procedure is required to induce this outcome."
+  },
+  "type": "calculation",
+  "difficulty": 4,
+  "topic": "probability_estimation",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires calculating sample sizes for estimating lean blowout probability in gas turbines, which directly relates to combustion system reliability and extreme event analysis in turbulent combustion - core topics in combustion science and energy systems that require domain-specific knowledge of rare event statistics in engineering applications.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer are well-aligned with combustion domain focus and correctly address rare event probability estimation challenges discussed in the paper."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_fe1e5793",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Classification-and-computation-of-extreme-eve_2021_Progress-in-Energy-and-Co",
+    "paper_title": "Classification-and-computation-of-extreme-eve_2021_Progress-in-Energy-and-Co"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:17:06.360330",
+    "answer_length": 902
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer correctly applies statistical sampling theory for rare event probability estimation. The calculation uses the appropriate formula N = z²(1-p)/(ε²p) for determining sample size needed to estimate a rare event probability with specified confidence and relative error. The arithmetic is correct: (1.96)²(0.999)/((0.01)²(0.001)) ≈ 38,380,000 samples. The answer appropriately connects this to the original text's concepts of 'data-poor problems' and 'extreme events,' correctly explaining why such a large sample size demonstrates the impracticality of traditional Monte Carlo methods for rare events like lean blowout. The conclusion about needing specialized variance reduction techniques is logically sound and consistent with the original text's statement that 'an event is rare when the overall observational cost is so large that a specific procedure is required.' All physical and statistical principles are correctly stated.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:05:57.451409"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The sample-size formula N >= z^2 (1-p) / (ε^2 p) follows from the normal approximation to the binomial for a relative-error confidence interval. With p=0.001, ε=0.01, and z=1.96, the computed N ≈ 3.8416*0.999 / 1e-7 ≈ 3.8378e7 (≈38.38 million) is numerically consistent. The commentary on rarity and data-poor nature aligns with the provided PECS text. No factual or logical errors detected.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:06:15.346926"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer correctly applies the standard statistical formula for determining the sample size required to estimate a binomial proportion with a specified relative error. The formula N = z²(1-p)/(ε²p) is appropriate for this problem. The values for the true probability (p=0.001), relative error (ε=0.01), and z-score for 95% confidence (z=1.96) are correctly identified and substituted. The arithmetic is correct, leading to the very large sample size of approximately 38.4 million. The conclusion, which states that this result highlights the impracticality of standard Monte Carlo methods for rare combustion events and motivates the need for specialized techniques, is a key insight in the field and is perfectly consistent with the provided original text.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:06:40.557895"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:06:40.557913",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "question_text": "Using the fundamental thermoelectric equations provided in the paper, derive the expression for maximum power output from a thermoelectric generator and explain the physical mechanisms behind why load resistance matching (m = R_Load/R_TEM) affects power output. Include the step-by-step mathematical derivation and discuss how this principle applies to automotive waste heat recovery systems, specifically addressing the challenges of non-uniform temperature distribution across thermoelectric modules in exhaust systems.",
+  "standard_answer": "Starting from the basic thermoelectric equations in the paper, the open-circuit voltage is given by V_OC = α·ΔT, where α is the Seebeck coefficient and ΔT is the temperature difference between hot and cold sides. When connected to a load resistance R_Load, the current flowing through the circuit is I = V_OC/(R_TEM + R_Load) = α·ΔT/(R_TEM + R_Load). The power delivered to the load is P_Load = I²R_Load = [α·ΔT/(R_TEM + R_Load)]² × R_Load. To find the maximum power condition, we differentiate P_Load with respect to R_Load and set the derivative to zero: dP_Load/dR_Load = (αΔT)² × [(R_TEM + R_Load)² - 2R_Load(R_TEM + R_Load)]/(R_TEM + R_Load)⁴ = 0. This simplifies to (R_TEM + R_Load)² = 2R_Load(R_TEM + R_Load), giving R_TEM + R_Load = 2R_Load, so R_Load = R_TEM for maximum power. Thus m = R_Load/R_TEM = 1 maximizes power output. At this condition, P_max = (αΔT)²/(4R_TEM). The physical mechanism behind this is impedance matching - when the load resistance equals the internal resistance of the TEM, maximum power transfer occurs because the voltage drop across the load is half the open-circuit voltage, and current is maximized for power delivery. In automotive waste heat recovery applications, this principle is crucial because exhaust gas temperatures vary significantly with engine operating conditions, and as the paper notes, 'the temperature gradient across the thermoelectric generators is often not uniform, this can cause circulating currents in the array of thermoelectric modules that decreases system efficiency.' Proper load matching ensures that regardless of these variations and non-uniform temperature distributions, the system can extract the maximum possible electrical power from the available thermal energy, improving overall energy recovery efficiency from the internal combustion engine's waste heat while mitigating the effects of temperature non-uniformity.",
+  "original_text": {
+    "1": "When connecting a load (Fig. 6) the current passing through the circuit and the output will be: ILoad = VOC/(RTEM + RLoad) = α·ΔT/(RTEM + RLoad)",
+    "2": "Finally, the power of the load (PLoad) is: PLoad = VLoad·ILoad = RLoad·I²Load = RLoad(α·ΔT/(RTEM + RLoad))²",
+    "3": "since the temperature gradient across the thermoelectric generators (Fig. 7) is often not uniform, this can cause circulating currents in the array of thermoelectric modules that decreases system efficiency"
+  },
+  "type": "calculation",
+  "difficulty": 4,
+  "topic": "energy_systems",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires deep expertise in thermoelectric energy conversion systems, specifically applied to automotive waste heat recovery. It demands understanding of fundamental thermoelectric equations, power optimization principles, impedance matching theory, and practical challenges in automotive exhaust systems including non-uniform temperature distribution effects - all core topics in energy systems and combustion engineering.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Excellent question that combines mathematical derivation with practical automotive application. The answer is comprehensive, accurate, and well-supported by the paper's content and citations."
+  },
+  "retry_count": 2,
+  "question_id": "deepseek_q_8ad0d52e",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Review-of-thermoelectric-generation-for-internal_2022_Progress-in-Energy-and",
+    "paper_title": "Review-of-thermoelectric-generation-for-internal_2022_Progress-in-Energy-and"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:30:16.701309",
+    "answer_length": 1894
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer provides a comprehensive and mathematically rigorous derivation that is fully consistent with the original text. The mathematical steps are correct: starting from V_OC = α·ΔT and I = α·ΔT/(R_TEM + R_Load) (matches original text [1]), deriving P_Load = [α·ΔT/(R_TEM + R_Load)]² × R_Load (matches original text [2]), and correctly differentiating to find R_Load = R_TEM for maximum power. The physical mechanism of impedance matching is accurately explained. The application to automotive waste heat recovery correctly incorporates the quote about non-uniform temperature gradients causing circulating currents (matches original text [3]). While the answer is detailed and lengthy, all statements are factually accurate, logically sound, and consistent with fundamental thermoelectric principles and the provided original text.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:19:37.015388"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Slightly oversimplifies mitigation of non-uniform temperature effects by implying load matching alone can address circulating currents; practical systems often need additional array-level design/power conditioning."
+        ],
+        "reasoning": "The derivation of current, load power, and the maximization via dP/dR_Load=0 is correct and matches the ground-truth equations. The result R_Load=R_TEM and P_max=(αΔT)²/(4R_TEM) is correct. The physical explanation via impedance matching is accurate, including the load seeing half the open-circuit voltage at maximum power. The discussion acknowledges non-uniform temperature gradients and their impact (circulating currents), consistent with the original text. Overall, no factual or logical errors; only a minor simplification regarding practical mitigation of non-uniformity.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:20:03.902440"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer provides a mathematically correct step-by-step derivation for maximum power output, consistent with the provided equations. The physical explanation of impedance matching is accurate. The application to automotive waste heat recovery correctly identifies the challenge of non-uniform temperatures (as mentioned in the original text) and correctly states that load matching is the principle used to maximize power extraction under these conditions. The answer is factually sound, logically consistent, and complete.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:20:31.004602"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:20:31.004630",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

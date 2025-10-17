@@ -1,0 +1,80 @@
+{
+  "question_text": "Why does steam over-assistance in downstream flares paradoxically increase gas-phase hydrocarbon emissions despite suppressing visible soot formation?",
+  "standard_answer": "Steam over-assistance creates a thermal quenching effect that reduces the net heating value of the combustion zone (NHV_cz), leading to incomplete combustion and increased gaseous hydrocarbon emissions. While steam injection enhances turbulent mixing between fuel and oxidizer, suppressing soot formation through improved oxidation kinetics, excessive steam dilutes the reaction zone and lowers local temperatures below the ignition threshold. This thermal quenching occurs through multiple mechanisms: (1) The high heat capacity of steam absorbs significant combustion energy, reducing flame temperature and slowing chemical reaction rates according to Arrhenius kinetics. (2) Steam molecules participate in three-body recombination reactions that compete with chain-branching pathways, reducing radical concentrations needed for complete fuel oxidation. (3) The diluted mixture falls below the lean flammability limit in localized regions, causing flame extinction. Operators often over-assist to eliminate visible soot (which indicates >20% opacity violations) while inadvertently increasing invisible gas-phase emissions of methane and volatile organic compounds, creating a trade-off between particulate and gaseous pollutant control.",
+  "original_text": {
+    "1": "While injecting steam and air into the flare combustion zone is intended to suppress soot formation and breakthrough by promoting turbulent mixing between the HC and oxidizer streams, too much assistance can lower the net heating value of the combustion zone (NHV_cz), leading to local quenching or complete extinguishment of the flare",
+    "2": "Since gaseous HC emissions are invisible to the unaided eye, operators may over-assist to suppress visible soot formation and breakthrough at the cost of excessive gas-phase emissions"
+  },
+  "type": "reasoning",
+  "difficulty": 4,
+  "topic": "combustion_science",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires deep combustion science expertise including flame dynamics, soot formation mechanisms, thermal quenching effects, hydrocarbon oxidation kinetics, and flare operation principles. It specifically addresses the paradoxical relationship between steam assistance, soot suppression, and gas-phase emissions in combustion systems.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer are both high quality - domain-focused with correct, detailed explanation that aligns with paper content and combustion principles."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_2208f3b8",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Techniques-for-measuring-flare-combustion-efficien_2025_Progress-in-Energy-a",
+    "paper_title": "Techniques-for-measuring-flare-combustion-efficien_2025_Progress-in-Energy-a"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:29:54.492480",
+    "answer_length": 1239
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly explains the paradox of steam over-assistance in flares. It accurately describes the thermal quenching effect and reduction in NHV_cz leading to incomplete combustion, which is consistent with the original text. The answer provides detailed mechanisms (heat capacity absorption, three-body recombination, dilution below flammability limits) that are scientifically sound applications of combustion principles. The core trade-off between visible soot suppression and invisible gaseous hydrocarbon emissions is correctly identified and matches the original text's statement about operators over-assisting to suppress visible soot at the cost of gas-phase emissions. While the answer is more detailed than the original text, all additional explanations (Arrhenius kinetics, radical concentration effects, lean flammability limits) are factually correct and logically consistent with established combustion science. No contradictions or factual errors detected.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:21:30.875585"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Reference to '>20% opacity violations' is jurisdiction-specific and not supported by the provided source text; flare standards often specify 'no visible emissions' rather than an opacity percentage.",
+          "Use of 'lean flammability limit' terminology for a diffusion-dominated flare is somewhat premix-centric, though the concept of local over-dilution/quenching is still physically reasonable."
+        ],
+        "reasoning": "The answer aligns with the ground-truth points: over-assistance with steam lowers NHV_cz, causing local quenching/extinction and thereby increasing gas-phase HC emissions despite soot suppression. The added mechanisms (heat capacity/temperature reduction per Arrhenius, dilution effects, and radical chemistry considerations) are physically sound and consistent with combustion principles. The regulatory opacity remark is extraneous and not universally accurate, but it does not undermine the core technical correctness.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:22:14.692144"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer is factually and logically correct. It accurately identifies thermal quenching from excessive steam as the cause of incomplete combustion, consistent with the original text's mention of lowering the net heating value (NHV_cz) and causing quenching. The answer correctly elaborates on the mechanisms, including the high heat capacity of steam, Arrhenius kinetics, radical chain termination, and local mixture leaning, all of which are sound principles in combustion science. The explanation of the operator's trade-off between visible soot and invisible gaseous emissions also aligns perfectly with the source text.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:22:34.495343"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:22:34.495368",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

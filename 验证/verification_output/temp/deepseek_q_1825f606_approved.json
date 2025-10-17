@@ -1,0 +1,83 @@
+{
+  "question_text": "Explain the physical mechanisms through which biodiesel composition affects cold flow properties, and why saturated fatty acid esters cause operational problems at low temperatures despite their favorable combustion characteristics.",
+  "standard_answer": "Cold flow properties in biodiesel are governed by crystallization thermodynamics and molecular packing efficiency. Saturated fatty acid methyl esters (FAMEs) have straight, linear hydrocarbon chains that can pack tightly into crystalline lattices through van der Waals interactions. As temperature decreases, these molecules undergo phase transitions where they align into ordered solid structures, forming wax crystals that can plug fuel filters and lines. The crystallization onset temperature increases with chain length - methyl palmitate (C16:0) crystallizes around 30°C while methyl stearate (C18:0) crystallizes near 39°C. Unsaturated FAMEs introduce kinks in the molecular structure due to cis-double bonds, which disrupt crystalline packing and significantly depress crystallization temperatures. Methyl oleate (C18:1) remains liquid down to -20°C because the double bond prevents efficient molecular alignment. This creates a fundamental trade-off where saturated esters provide excellent cetane numbers and oxidative stability but poor cold flow, while unsaturated esters improve cold flow but reduce ignition quality and stability. The non-linear behavior of cold flow properties means they cannot be predicted by simple additive mixing rules, unlike cetane number or viscosity.",
+  "original_text": {
+    "1": "On the other hand, the properties associated with operational problems when using biodiesel cannot be predicted using the appropriate variation of Eq. (2). These properties are oxidative stability and cold flow.",
+    "2": "Minor FAME components influence these properties more strongly than indicated by the amounts."
+  },
+  "type": "concept",
+  "difficulty": 4,
+  "topic": "fluid_mechanics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires deep knowledge of biodiesel chemistry, fuel properties, and combustion science. It specifically addresses the relationship between molecular structure (saturated vs. unsaturated fatty acid esters), crystallization thermodynamics, cold flow properties, and combustion characteristics - all core concepts in combustion science and energy systems.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Excellent question that demonstrates the fundamental trade-offs in biodiesel composition and requires domain expertise to answer properly. The standard answer provides comprehensive physical mechanisms and quantitative details."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_1825f606",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Biodiesel-fuels_2017_Progress-in-Energy-and-Combustion-Science",
+    "paper_title": "Biodiesel-fuels_2017_Progress-in-Energy-and-Combustion-Science"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:14:18.688707",
+    "answer_length": 1290
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "medium",
+        "issues": [
+          "The answer makes specific quantitative claims (e.g., methyl palmitate crystallizes around 30°C, methyl stearate near 39°C, methyl oleate remains liquid to -20°C) that cannot be directly verified against the original text",
+          "The answer states that cold flow properties 'cannot be predicted by simple additive mixing rules' which aligns with the original text's statement that these properties 'cannot be predicted using the appropriate variation of Eq. (2)', though the original text also mentions minor components have disproportionate influence"
+        ],
+        "reasoning": "The standard answer provides a scientifically sound explanation of the physical mechanisms governing cold flow properties in biodiesel. The core principles are correct: saturated FAMEs have linear chains that pack efficiently into crystals, unsaturated FAMEs have kinks from cis-double bonds that disrupt packing, and this creates a trade-off between combustion properties and cold flow behavior. The answer correctly identifies that cold flow properties cannot be predicted by simple additive rules, which is consistent with the original text's statement that these properties cannot be predicted using Eq. (2) and that minor components have disproportionate influence. While the answer is quite detailed with specific temperature values that cannot be verified against the brief original text, the fundamental chemistry and thermodynamics are accurate. The explanation does not contradict the original text and addresses the question comprehensively.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:04:17.476329"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Does not explicitly mention the disproportionate influence of minor FAME components on cold flow, noted in the ground truth.",
+          "Uses pure-component melting/crystallization temperatures as examples; actual cold-flow metrics in blends (cloud/plug points) can differ, though the trends are correct."
+        ],
+        "reasoning": "The answer correctly explains the physical mechanisms: saturated FAMEs pack efficiently and crystallize at higher temperatures, forming wax crystals that cause operational issues; unsaturation introduces kinks that hinder crystallization and improve cold flow. It also notes the non-additive nature of cold-flow prediction, consistent with the ground truth. No factual or logical errors are present. Minor omission regarding the outsized role of minor components does not undermine correctness.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:04:39.449291"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer correctly explains the physical mechanisms of biodiesel crystallization based on molecular structure (saturated vs. unsaturated FAMEs). It accurately describes the trade-off between cold flow properties, combustion characteristics (cetane number), and oxidative stability. The statements about molecular packing, the effect of chain length and double bonds, and the non-linear nature of cold flow properties are all factually correct and consistent with established thermophysical principles. The final sentence directly aligns with and elaborates on the concepts presented in the original text.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:04:59.045029"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:04:59.045049",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": false,
+      "disagreement_count": 0
+    }
+  }
+}

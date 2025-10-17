@@ -1,0 +1,77 @@
+{
+  "question_text": "In the context of combustion machine learning applications, how does the maximum likelihood estimation framework enable parameter determination from experimental and computational data, and what are its key statistical properties according to the provided paper?",
+  "standard_answer": "Maximum likelihood estimation (MLE) provides a rigorous statistical framework for parameter estimation in combustion machine learning applications by maximizing the joint probability distribution of observed data given model parameters. The likelihood function L(θ|L) = Px|θ(x1=X1, x2=X2, ..., xN=XN|θ) represents the joint probability distribution of the data conditioned upon the parameterized probability distribution. When samples are independent, this simplifies to L(θ|L) = ∏Ni=1Px|θ(xi=Xi|θ). The maximum likelihood estimator is defined as θ̂_MLE = arg maxθ∈P L(θ|L), converting the inference problem into an optimization problem that can be solved using tools like gradient descent. The maximum likelihood estimator exhibits desirable statistical properties: it is consistent, unbiased, and invariant under transformation. Additionally, under some regularity conditions, the maximum likelihood estimator is normally distributed with a mean at the true population parameter and a variance inversely proportional to the estimated Fischer information. In practice, it's often more convenient to maximize the logarithm of the likelihood (log likelihood) since the logarithm is a monotonic function and this transformation simplifies subsequent calculations without affecting the estimator.",
+  "original_text": {
+    "1": "The maximum likelihood estimator is defined as: θ̂_MLE = arg max_θ∈P L(θ|L) where L(θ|L) = P_x|θ(x1=X1, x2=X2, ..., xN=XN|θ) is the joint probability distribution of the data conditioned upon the parameterized probability distribution.",
+    "2": "The maximum likelihood estimator exhibits desirable properties in that it is consistent, unbiased, and invariant under transformation. Additionally, under some regularity conditions, the maximum likelihood estimator is normally distributed with a mean at the true population parameter and a variance inversely proportional to the estimated Fischer information."
+  },
+  "type": "concept",
+  "difficulty": 4,
+  "topic": "combustion_kinetics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question specifically asks about maximum likelihood estimation in the context of combustion machine learning applications, requiring understanding of statistical parameter estimation methods as applied to combustion data analysis and modeling.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+  },
+  "retry_count": 1,
+  "question_id": "deepseek_q_03d5cd61",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Combustion-machine-learning--Principles--pr_2022_Progress-in-Energy-and-Comb",
+    "paper_title": "Combustion-machine-learning--Principles--pr_2022_Progress-in-Energy-and-Comb"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:18:26.310372",
+    "answer_length": 1293
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately represents all key concepts from the original text. It correctly defines the MLE framework (θ̂_MLE = arg maxθ∈P L(θ|L)), properly explains the likelihood function and its simplification for independent samples, accurately lists the statistical properties (consistent, unbiased, invariant under transformation, normally distributed under regularity conditions), and correctly notes the practical use of log-likelihood. The answer provides additional context about converting inference to optimization and using gradient descent, which is accurate and helpful. The mention of Fischer information variance relationship is consistent with the original text. All mathematical notation and statistical principles are correctly stated.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:06:50.785078"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately restates the MLE definition and likelihood formulation given in the original text, correctly notes the estimator’s properties (consistent, unbiased, invariant under transformation), and includes the asymptotic normality with variance tied to (estimated) Fisher information under regularity conditions. The added points on independence factorization and log-likelihood maximization are standard and do not contradict the provided paper. No factual or logical errors were identified.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:07:11.267305"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer correctly defines the maximum likelihood estimator and its likelihood function, consistent with the original text. It accurately lists the key statistical properties (consistent, unbiased, invariant, asymptotically normal) as stated in the source. The additional explanations regarding independent samples, the use of log-likelihood, and optimization methods like gradient descent are all factually correct and provide valuable context that enhances the answer's quality without contradicting the provided text.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:07:36.963291"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:07:36.963311",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

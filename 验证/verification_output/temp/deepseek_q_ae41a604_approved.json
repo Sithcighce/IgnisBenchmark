@@ -1,0 +1,77 @@
+{
+  "question_text": "How does the steam-to-carbon ratio in steam methane reforming (SMR) influence coke formation and hydrogen yield, and what are the underlying thermodynamic and kinetic mechanisms?",
+  "standard_answer": "The steam-to-carbon (S/C) ratio in SMR critically affects coke formation and hydrogen yield through thermodynamic equilibrium and kinetic pathways. Higher S/C ratios (typically 2.5–3.5) suppress coke formation by shifting the water-gas shift reaction equilibrium toward CO2 and H2 production, reducing carbon deposition via Boudouard reaction (2CO ⇌ C + CO2) and methane cracking (CH4 ⇌ C + 2H2). Thermodynamically, excess steam lowers carbon activity, preventing graphite formation. Kinetically, steam gasifies surface carbon intermediates (C* + H2O → CO + H2), maintaining catalyst activity. However, excessively high S/C ratios (>5) reduce process efficiency due to increased energy for steam generation and larger reactor volumes. The optimal S/C balance maximizes hydrogen yield while minimizing catalyst deactivation and energy penalties, governed by Le Chatelier's principle in reforming (CH4 + H2O ⇌ CO + 3H2) and shift (CO + H2O ⇌ CO2 + H2) reactions.",
+  "original_text": {
+    "1": "Common ratios are between 2 [50] and 5 [43,44], whereas ratios between 2.5 [45] and 3.5 [50] are often considered to be an optimal value in terms of purified H2 yield, efficiency, and plant dimensions.",
+    "2": "The performance of SMR is increased through applying high temperatures, and low pressures according to Le Chatelier´s principle, as well as addition of excess steam to avoid coke formation [44]."
+  },
+  "type": "reasoning",
+  "difficulty": 4,
+  "topic": "combustion_kinetics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires deep knowledge of steam methane reforming processes, including thermodynamic equilibrium principles (Le Chatelier's principle), reaction kinetics (Boudouard reaction, methane cracking, water-gas shift), coke formation mechanisms, and hydrogen production optimization - all core combustion/energy engineering concepts.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct, and compliant with other requirements."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_ae41a604",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Green--Turquoise--Blue--or-Grey--Environmentally-fr_2022_Progress-in-Energy-",
+    "paper_title": "Green--Turquoise--Blue--or-Grey--Environmentally-fr_2022_Progress-in-Energy-"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:20:58.637390",
+    "answer_length": 960
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly explains the influence of S/C ratio on coke formation and hydrogen yield. It accurately states that higher S/C ratios (2.5-3.5) suppress coke formation, which is consistent with the original text's statement that these ratios are optimal. The answer correctly identifies the thermodynamic and kinetic mechanisms (Boudouard reaction, methane cracking, water-gas shift, steam gasification of carbon). The mention of Le Chatelier's principle and the need for excess steam to avoid coke formation aligns with the original text [2]. The statement about excessively high S/C ratios (>5) reducing efficiency is consistent with the original text [1] indicating ratios up to 5 are used but 2.5-3.5 are optimal. All chemical equations, thermodynamic principles, and cause-effect relationships are scientifically sound and logically consistent.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:10:14.355207"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer is consistent with the PECS ground truth: it correctly states that excess steam suppresses coking and that typical optimal S/C ratios are 2.5–3.5 within a common range of 2–5. It accurately explains thermodynamic mechanisms (Le Chatelier applied to SMR and WGS, lowered carbon activity) and kinetic gasification of surface carbon (C* + H2O → CO + H2). The mention of reduced efficiency at very high S/C due to steam generation and larger reactor volumes is reasonable and does not contradict the source. No factual or logical errors detected.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:10:34.970810"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer is factually and logically correct. It accurately explains the thermodynamic (equilibrium shifts via Le Chatelier's principle, lower carbon activity) and kinetic (gasification of surface carbon) roles of the steam-to-carbon ratio. The specific reactions mentioned (reforming, WGS, Boudouard, methane cracking) are the correct ones. The explanation of the trade-off between coke suppression/H2 yield and energy efficiency is also accurate and consistent with the original text, which mentions an optimal S/C range of 2.5-3.5, a value also cited in the answer.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:10:55.773719"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:10:55.773750",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

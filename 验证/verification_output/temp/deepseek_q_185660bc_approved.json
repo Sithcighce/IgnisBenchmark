@@ -1,0 +1,80 @@
+{
+  "question_text": "How does temperature reduction in coal flue gas systems drive the formation of condensable particulate matter (CPM) from organic pollutants, and what are the key phase transformation mechanisms involved according to the paper?",
+  "standard_answer": "The formation of CPM from organic pollutants in coal flue gas is primarily driven by temperature reduction through air pollution control devices (APCDs). As the flue gas temperature decreases to around 50°C, which typically occurs when the gas leaves the chimney stack, the organic components (such as VOCs and PAHs) and inorganic components (such as Na₂SO₄, Na₃PO₄, NaCl, MgSO₄, and CaCO₃) in the flue gas undergo phase transformation through condensation and polymerization processes. This temperature reduction creates conditions where the vapor pressure of organic compounds decreases sufficiently to overcome the energy barrier for phase change, leading to the formation of CPM. The process is particularly significant because CPM is predominantly present in gaseous form in the flue at higher temperatures, and its production becomes substantial only when the temperature drops to approximately 50°C. This temperature-driven phase transformation results in particulate matter with sizes typically in the 1-2 μm range (PM2.5 level), which can penetrate the human respiratory system and pose health risks.",
+  "original_text": {
+    "1": "CPM is predominantly present in gaseous form in the flue. Its production is not significant until the flue gas temperature decreases to around 50°C, which occurs when the gas leaves the chimney (stack).",
+    "2": "The drop in temperature causes the organic components (such as VOCs and PAHs) and inorganic components (such as Na2SO4, Na3PO4, NaCl, MgSO4, and CaCO3, etc.) in the flue gas to form CPM through condensation and polymerization."
+  },
+  "type": "concept",
+  "difficulty": 4,
+  "topic": "heat_transfer",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires specific knowledge of combustion science (coal flue gas systems), heat transfer principles (temperature reduction effects), and environmental engineering concepts (condensable particulate matter formation mechanisms from organic pollutants). It cannot be answered with general ML knowledge alone.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+  },
+  "retry_count": 1,
+  "question_id": "deepseek_q_185660bc",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Review-of-organic-pollutants-in-coal-combustion_2025_Progress-in-Energy-and-",
+    "paper_title": "Review-of-organic-pollutants-in-coal-combustion_2025_Progress-in-Energy-and-"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:29:26.523777",
+    "answer_length": 1109
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately reflects the information in the original text and demonstrates sound understanding of the CPM formation mechanism. Key points verified: (1) CPM is predominantly gaseous in the flue and forms significantly only when temperature drops to ~50°C at stack exit - correctly stated; (2) Temperature reduction drives phase transformation of both organic (VOCs, PAHs) and inorganic components (Na₂SO₄, Na₃PO₄, NaCl, MgSO₄, CaCO₃) through condensation and polymerization - accurately described; (3) The physical mechanism involving vapor pressure reduction and energy barriers for phase change is thermodynamically sound; (4) Additional details about particle size (1-2 μm, PM2.5) and health implications, while not in the original excerpt, are reasonable extensions that don't contradict the source material. The answer correctly identifies temperature reduction through APCDs as the driving force and accurately describes the phase transformation mechanisms.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:19:34.744407"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Mentions APCDs as the driver of temperature reduction, which is plausible but not stated in the original text",
+          "Adds a typical particle size of 1–2 μm and health risk discussion, which are extraneous to the cited text and may be unsupported"
+        ],
+        "reasoning": "The answer correctly reflects the paper’s points: CPM precursors remain gaseous at higher temperatures and CPM formation becomes significant as the flue gas cools to around 50°C; key mechanisms are condensation and polymerization involving both organic (VOCs, PAHs) and inorganic components. Additional details about APCDs and particle size are not in the original text but do not contradict the core mechanisms.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:20:00.627059"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer is factually and logically correct. It accurately summarizes the key points from the original text, including the critical temperature (~50°C), the precursor components (organic and inorganic), and the primary mechanisms (condensation and polymerization). The additional explanation regarding the decrease in vapor pressure is a correct and fundamental thermodynamic principle that accurately describes the driving force for condensation. The mention of particle size (PM2.5) is also a correct and relevant contextual detail. The answer is fully consistent with the provided source text and established scientific principles.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:20:20.062473"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:20:20.062494",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

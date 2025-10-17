@@ -1,0 +1,134 @@
+[
+  {
+    "question_text": "How does the spatial distribution of CO adsorption evolve along PEMFC anode flow channels, and what transport mechanisms (advection vs. diffusion) govern the observed distribution patterns under different flow conditions?",
+    "standard_answer": "The spatial distribution of CO adsorption in PEMFC anode flow channels exhibits significant heterogeneity due to competing transport mechanisms. Advection dominates along the channel direction, creating higher CO coverage at the inlet where fresh CO-rich gas first contacts the catalyst surface. Lateral diffusion through the porous electrode structure distributes CO perpendicular to the flow direction, but this transport is slower than advection. The interaction between these two mechanisms creates distinct distribution patterns depending on flow conditions. At low flow rates, diffusion creates anisotropic distributions of CO away from the channel, resulting in non-uniform coverage across the electrode. Higher flows produce more uniform distributions due to enhanced convective mixing that overcomes the limitations of lateral diffusion. Under galvanostatic control and in the absence of self-sustained potential oscillations, the distribution of surface coverage by CO is uneven as the adsorption of CO is faster at the inlet than at the outlet. The dispersion of CO along the channel is fundamentally a result of the competition between advection along the channel and lateral diffusion through the electrode structure, with the relative dominance of each mechanism determining the final poisoning pattern observed in segmented cell studies.",
+    "original_text": {
+      "1": "Low flow rates result in anisotropic distributions of CO away from the channel, and higher flows present a more uniform distribution. The advection along the channel and the lateral diffusion compete between each other. The dispersion of CO is a result of these two mechanisms.",
+      "2": "Under galvanostatic control and in the absence of self-sustained potential oscillations, the distribution of the surface coverage by CO was uneven as the adsorption of CO is faster at the inlet than at the outlet."
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "fluid_mechanics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question requires specific knowledge of PEM fuel cell operation, CO poisoning mechanisms in electrochemical systems, and transport phenomena (advection vs diffusion) in porous electrode structures - all of which fall under combustion science, energy systems, and fluid mechanics domain expertise.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer are well-aligned with the paper content and domain requirements. No issues detected."
+    },
+    "retry_count": 1,
+    "question_id": "deepseek_q_b73ae65d",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Carbon-monoxide-poisoning-and-mitigation-strategies_2020_Progress-in-Energy-",
+      "paper_title": "Carbon-monoxide-poisoning-and-mitigation-strategies_2020_Progress-in-Energy-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:17:18.603367",
+      "answer_length": 1352
+    }
+  },
+  {
+    "question_text": "In high-temperature PEMFCs (HT-PEMFCs), how does the balance between CO production from the reverse water-gas shift reaction and CO electro-oxidation determine cell degradation, and what role does humidity play in reducing anodic overpotential through OH_ads species?",
+    "standard_answer": "HT-PEMFCs exhibit distinct CO poisoning behavior due to competing reaction pathways that determine cell degradation. The reverse water-gas shift (RWGS) reaction (CO₂ + H₂ → CO + H₂O) becomes significant at elevated temperatures, continuously generating CO from CO₂ impurities present in the fuel stream. Due to the endothermic nature of the RWGS, the production of CO is increased at higher temperatures. Simultaneously, increasing temperature also favors CO electro-oxidation, where adsorbed CO is oxidized to CO₂. The degradation of cells is determined by the ratio: CO_production/CO_electro-oxidation, with HT-PEMFCs being particularly sensitive to this balance. When electro-oxidation dominates, CO tolerance improves. Humidity plays a critical role in this system - in high-temperature PEMFCs, an increase in the humidity reduces the anodic overpotential. This is due to the presence of the OH_ads groups, which are consumed in the oxidation of CO. The availability of water promotes the formation of these hydroxyl species that facilitate CO removal through electrochemical oxidation pathways, thereby mitigating poisoning effects and maintaining cell performance.",
+    "original_text": {
+      "1": "Due to the endothermic nature of the RWGS, the production of CO is increased at higher temperatures. As incrementing the temperature also favours the CO electro-oxidation, the degradation of cells is determined by the ratio: CO_production/CO_electro-oxidation, HT-PEMFCs are particularly sensitive to this.",
+      "2": "In high-temperature PEMFCs (HT-PEMFCs), an increase in the humidity reduces the anodic overpotential. This is due to the presence of the OH_ads groups, which are consumed in the oxidation of CO."
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question requires deep expertise in fuel cell electrochemistry, specifically high-temperature PEMFC operation, CO poisoning mechanisms, reverse water-gas shift reaction thermodynamics, and electrochemical oxidation pathways. It combines knowledge of chemical kinetics, electrochemistry, and fuel cell degradation mechanisms that are specific to energy systems and combustion science.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+    },
+    "retry_count": 1,
+    "question_id": "deepseek_q_ad6b1597",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Carbon-monoxide-poisoning-and-mitigation-strategies_2020_Progress-in-Energy-",
+      "paper_title": "Carbon-monoxide-poisoning-and-mitigation-strategies_2020_Progress-in-Energy-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:17:20.620057",
+      "answer_length": 1170
+    }
+  },
+  {
+    "question_text": "Analyze the physical mechanisms driving self-sustained potential oscillations during CO poisoning in PEMFCs under galvanostatic operation, and explain how temperature, current density, and anode flow rate influence oscillation dynamics based on the feedback mechanisms described in the paper.",
+    "standard_answer": "Self-sustained potential oscillations in PEMFCs under CO poisoning arise from a nonlinear feedback loop between CO adsorption and electrochemical oxidation. As CO accumulates on the platinum catalyst surface, it blocks active sites for hydrogen oxidation, causing the anode overpotential to increase. When the potential reaches a sufficiently high value, electrochemical oxidation of CO initiates, rapidly clearing adsorbed CO from the surface and restoring hydrogen oxidation activity. This cyclic process of CO accumulation followed by oxidation creates periodic oscillations in anode potential. The oscillation dynamics are strongly influenced by operating parameters: higher temperatures accelerate both CO adsorption kinetics and oxidation rates, leading to shorter oscillation periods; increased current density enhances the electrochemical driving force for CO oxidation, reducing oscillation periods; and higher anode flow rates, combined with higher CO concentrations, deliver more CO to the catalyst surface per unit time, also resulting in shorter oscillation periods. The paper specifically notes that 'the nature of the oscillations depends on the temperature, current density, anode CO concentration and flow rate. Generally, the higher the concentration of CO and anodic flow rate are, the shorter the periods are. The period decreases with increasing current density or temperature.' This feedback mechanism represents a complex interplay between mass transport, surface chemistry, and electrochemical kinetics in the fuel cell system.",
+    "original_text": {
+      "1": "As the CO accumulates at the surface of the catalyst, the anodic overpotential increases. The higher potential attained allows the oxidation of the CO, and the cell voltage increases (anode overpotential decreases) to the original value, with the process of CO build-up occurring again, this cycle leading to anode overpotential oscillations.",
+      "2": "The nature of the oscillations depends on the temperature, current density, anode CO concentration and flow rate. Generally, the higher the concentration of CO and anodic flow rate are, the shorter the periods are. The period decreases with increasing current density or temperature."
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question requires deep expertise in PEM fuel cell operation, CO poisoning mechanisms, electrochemical kinetics, surface chemistry, and feedback dynamics in energy systems. It specifically addresses physical mechanisms in fuel cell electrochemistry and how operating parameters influence oscillation behavior, which cannot be answered with general ML knowledge.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer are well-structured, domain-focused, and factually accurate based on the provided citations and paper content."
+    },
+    "retry_count": 1,
+    "question_id": "deepseek_q_66dac860",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Carbon-monoxide-poisoning-and-mitigation-strategies_2020_Progress-in-Energy-",
+      "paper_title": "Carbon-monoxide-poisoning-and-mitigation-strategies_2020_Progress-in-Energy-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:17:24.294161",
+      "answer_length": 1551
+    }
+  },
+  {
+    "question_text": "Analyze the competitive adsorption mechanism between CO and H₂ on platinum anode catalysts in PEM fuel cells, explaining how the difference in adsorption energies leads to performance degradation through site blocking and increased anode overpotential. Describe the key thermodynamic factors governing this competitive adsorption process based on the provided paper.",
+    "standard_answer": "CO poisoning in PEMFCs occurs through competitive adsorption where CO molecules preferentially occupy active platinum sites due to their significantly higher heat of adsorption (134 kJ mol⁻¹) compared to H₂ (87.9 kJ mol⁻¹). This thermodynamic advantage allows CO to outcompete hydrogen for adsorption sites under normal anode operating potentials. The preferential adsorption of CO blocks active sites required for the hydrogen oxidation reaction (HOR), reducing the available surface area for hydrogen oxidation and increasing the anode overpotential, which consequently reduces the overall cell voltage. The magnitude of surface coverage by CO is determined by the competition between CO adsorption and/or re-adsorption processes, the electroreduction of CO₂, and CO removal through oxidation via the reactant pair mechanism. These competing processes establish a dynamic equilibrium that depends on operating conditions, with CO's stronger adsorption thermodynamics enabling it to dominate site occupation despite lower concentrations in the fuel stream.",
+    "original_text": {
+      "1": "CO competes with hydrogen for the active sites on the platinum under normal anode operating potentials. CO adsorbs on the Pt surface more easily than H₂ (heat of adsorption of CO on Pt is 134 kJ mol⁻¹, and for H₂ is 87.9 kJ mol⁻¹).",
+      "2": "The magnitude of the surface covered by CO is determined by the CO adsorption and/or re-adsorption, the electroreduction of CO₂, and the CO removal through oxidation, which occurs through the reactant pair mechanism."
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question requires specific knowledge of PEM fuel cell electrochemistry, catalyst adsorption thermodynamics, and anode reaction mechanisms. It focuses on competitive adsorption between CO and H₂ on platinum catalysts, which is a specialized topic in energy systems and electrochemical engineering that cannot be answered with general ML or CS knowledge.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+    },
+    "retry_count": 2,
+    "question_id": "deepseek_q_436b1767",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Carbon-monoxide-poisoning-and-mitigation-strategies_2020_Progress-in-Energy-",
+      "paper_title": "Carbon-monoxide-poisoning-and-mitigation-strategies_2020_Progress-in-Energy-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:17:53.733957",
+      "answer_length": 1057
+    }
+  }
+]

@@ -1,0 +1,85 @@
+{
+  "question_text": "Using the provided paper content, explain how specific energy input (SEI) affects methane conversion in dielectric barrier discharge (DBD) plasma reactors, and describe the different mechanisms by which SEI variation through power modulation versus flow rate changes influences the reaction pathways and product distribution. Your explanation must be based solely on information explicitly stated in the provided paper excerpts.",
+  "standard_answer": "According to the paper, specific energy input (SEI) is defined as the plasma input power divided by the methane flow rate, typically expressed in kJ L⁻¹ of feed flow or kJ mol⁻¹ of input methane. The paper states that increasing SEI leads to higher methane conversion through different mechanisms depending on how SEI is varied. When SEI is increased by raising input power (via applied voltage or pulse frequency), this increases the energy function of electrons and the frequency of electron-molecule collisions which then leads to higher methane conversion. The paper notes that high SEI favors carbon formation, requiring a balance between conversion and selectivity. When SEI is increased by decreasing flow rate (lengthening residence time), the residence time influences the SEI and thus the methane conversion. Long residence times in the discharge volume increase the collision probability of the feed gas molecules with the plasma active species and increase the energy input, enhancing highly energetic electrons. The paper provides experimental evidence showing that increasing SEI through power modulation in DBD reactors leads to almost linear increases in methane conversion, while varying residence time at constant power also enhances conversion through increased collision probabilities. However, the paper does not provide detailed comparisons of product selectivity patterns between power-based versus residence-time-based SEI variations or specific numerical values for conversion percentages at particular SEI levels.",
+  "original_text": {
+    "1": "Specific Energy Input (SEI) is defined as the plasma input power divided by the methane flow rate. It is usually expressed in kJ L⁻¹ of feed flow or kJ mol⁻¹ of input methane.",
+    "2": "Increasing the power (via the applied voltage or pulse frequency) increases the energy function of electrons and the frequency of electron-molecule collisions which then leads to higher methane conversion.",
+    "3": "The residence time, by changing the gas flow rate, influences the SEI and thus the methane conversion. Long residence times in the discharge volume increase the collision probability of the feed gas molecules with the plasma active species and increase the energy input, enhancing highly energetic electrons."
+  },
+  "type": "concept",
+  "difficulty": 4,
+  "topic": "combustion_kinetics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires specific knowledge of plasma chemistry, dielectric barrier discharge reactors, methane conversion mechanisms, and the relationship between specific energy input and reaction pathways - all within the combustion/energy domain context of methane processing and plasma-assisted chemical reactions.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+  },
+  "retry_count": 2,
+  "question_id": "deepseek_q_cba48942",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Current-status-and-challenges-of-plasma-and-plasm_2024_Progress-in-Energy-an",
+    "paper_title": "Current-status-and-challenges-of-plasma-and-plasm_2024_Progress-in-Energy-an"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:19:51.379078",
+    "answer_length": 1539
+  },
+  "verification": {
+    "status": "needs_review",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately reflects all key information from the original text. It correctly defines SEI, explains both mechanisms of SEI variation (power modulation and flow rate changes), and accurately describes their effects on methane conversion. The answer correctly states that increasing power increases electron energy function and collision frequency, and that decreasing flow rate (increasing residence time) increases collision probability with plasma active species. The mention of carbon formation at high SEI and the acknowledgment of lacking detailed product selectivity comparisons are appropriate caveats. All physical principles and cause-effect relationships are correctly stated and consistent with the original text.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:07:44.705933"
+      },
+      {
+        "correct": false,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "States that high SEI favors carbon formation, which is not mentioned in the provided excerpts",
+          "Claims experimental evidence of an 'almost linear' increase in methane conversion with SEI via power modulation, which is not supported by the provided excerpts"
+        ],
+        "reasoning": "The answer correctly defines SEI and accurately describes how increasing power (voltage or pulse frequency) and increasing residence time (via lower flow rate) raise electron energy/collision frequency and collision probability, respectively, thereby increasing methane conversion—consistent with the provided text. However, it introduces unsupported claims about carbon formation at high SEI and an 'almost linear' conversion trend, neither of which appears in the excerpts. These additions go beyond the explicitly stated information and render the answer incorrect under the verification criteria.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:08:01.414201"
+      },
+      {
+        "correct": false,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "The answer includes information not present in the provided original text, violating the instruction to base the explanation 'solely on information explicitly stated'.",
+          "Specifically, the claim that 'high SEI favors carbon formation, requiring a balance between conversion and selectivity' is not supported by the provided excerpts.",
+          "Additionally, the mention of 'experimental evidence showing that increasing SEI through power modulation in DBD reactors leads to almost linear increases in methane conversion' is external information not found in the source text."
+        ],
+        "reasoning": "The answer is marked as incorrect because it violates the core constraint of using only the provided text. It introduces external facts about carbon formation and specific experimental trends (linear increases) that are not mentioned in the source excerpts. While these facts might be generally true in the field of plasma catalysis, they are not supported by the given text, making the answer factually non-compliant with the prompt's strict requirements.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:08:19.197192"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:08:19.197224",
+    "consensus": {
+      "all_correct": false,
+      "correct_votes": 1,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 1
+    }
+  }
+}

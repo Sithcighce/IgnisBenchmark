@@ -1,0 +1,77 @@
+{
+  "question_text": "In membrane-supported CO2 reduction, how does using fuel oxidation on the sweep side instead of inert gas sweeping enhance oxygen permeation flux and CO2 conversion rates? Explain the mechanisms based on oxygen chemical potential gradients and surface reaction kinetics, supported by the provided paper content.",
+  "standard_answer": "Using fuel oxidation on the sweep side enhances oxygen permeation flux and CO2 conversion rates by creating a steeper oxygen chemical potential gradient across the membrane compared to inert gas sweeping. With inert gas sweeping, oxygen partial pressure reduction occurs only through dilution, requiring high flow rates and energy input. In contrast, fuel oxidation (e.g., H2 or CH4) consumes permeated oxygen through exothermic reactions, maintaining extremely low oxygen partial pressures on the sweep side. The paper states that 'using fuels to consume oxygen by full or partial oxidation' creates conditions where 'the reducing environment on both feed and sweep sides (PO2 can be as low as 10^-20–10^-15 bar under equilibrium conditions)' significantly increases the driving force for oxygen transport. This enhanced chemical potential gradient accelerates oxygen ion diffusion through the mixed ionic-electronic conducting membrane, leading to higher oxygen fluxes. Additionally, the rapid consumption of oxygen on the sweep side prevents oxygen accumulation, maintaining the low PO2 conditions necessary for efficient CO2 dissociation on the feed side. The surface reaction kinetics are improved as fuel oxidation provides continuous oxygen consumption, whereas inert sweeping relies on physical dilution which is less effective at maintaining low oxygen chemical potential. This fundamental difference in oxygen removal mechanisms explains why fuel oxidation enables higher CO2 conversion rates at equivalent operating conditions compared to inert gas sweeping.",
+  "original_text": {
+    "1": "using fuels to consume oxygen by full or partial oxidation",
+    "2": "the reducing environment on both feed and sweep sides (PO2 can be as low as 10^-20–10^-15 bar under equilibrium conditions)"
+  },
+  "type": "concept",
+  "difficulty": 4,
+  "topic": "energy_systems",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires specific knowledge of membrane-supported CO2 reduction systems, oxygen permeation mechanisms, chemical potential gradients, and surface reaction kinetics in energy systems - all core concepts in combustion science, heat transfer, and energy engineering that cannot be answered with general ML knowledge.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on paper citations, and no other compliance issues."
+  },
+  "retry_count": 1,
+  "question_id": "deepseek_q_98d789c1",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Mixed-ionic-electronic-conducting--MIEC--membranes_2019_Progress-in-Energy-a",
+    "paper_title": "Mixed-ionic-electronic-conducting--MIEC--membranes_2019_Progress-in-Energy-a"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:23:42.121191",
+    "answer_length": 1569
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer correctly explains the mechanism by which fuel oxidation enhances oxygen permeation flux compared to inert gas sweeping. Key points verified: (1) Fuel oxidation creates steeper oxygen chemical potential gradients by consuming permeated oxygen rather than just diluting it, (2) The answer accurately cites the original text regarding reducing environments on both sides with PO2 of 10^-20 to 10^-15 bar, (3) The explanation of enhanced driving force for oxygen ion diffusion through the membrane is thermodynamically sound, (4) The contrast between chemical consumption (fuel oxidation) versus physical dilution (inert sweeping) is correctly characterized, (5) The causal relationship between low PO2 maintenance and improved CO2 conversion is logically consistent. The answer provides appropriate elaboration beyond the original text fragments while remaining factually accurate and consistent with fundamental principles of membrane transport, chemical potential gradients, and surface reaction kinetics in mixed ionic-electronic conducting membranes.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:13:31.009624"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer correctly explains that fuel oxidation on the sweep side consumes permeated oxygen, producing extremely low sweep-side PO2 and thereby steepening the oxygen chemical potential gradient across the membrane compared to inert gas dilution. This is consistent with the cited PECS text about using fuels for full/partial oxidation and achieving PO2 as low as 10^-20–10^-15 bar. The causal chain—larger chemical potential gradient leading to higher oxygen ion flux and thus higher CO2 conversion—is physically sound for MIEC membranes. The comments on improved surface reaction kinetics due to sustained low PO2 are reasonable and do not contradict the provided ground-truth statements.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:13:53.623194"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer correctly explains that fuel oxidation creates a much steeper oxygen chemical potential gradient than inert gas sweeping. This is because chemical consumption of oxygen by the fuel achieves an extremely low oxygen partial pressure (as supported by the original text), which maximizes the driving force for oxygen permeation. This enhanced flux, in turn, increases the CO2 conversion rate. The physical principles and logical flow are entirely correct.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:14:16.074759"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:14:16.074779",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

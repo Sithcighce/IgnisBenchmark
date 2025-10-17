@@ -1,0 +1,77 @@
+{
+  "question_text": "Based on the provided paper content, calculate the theoretical SO2 adsorption capacity of biochar functionalized with 8% MDEA, considering that the nitrogen-containing functional groups generated are mainly C–N with conversion to N–H groups. The biochar has a nitrogen content of 5 wt%, and the molecular weights are: N = 14 g/mol, SO2 = 64 g/mol. Explain why the theoretical capacity differs from the experimental value of 156.22 mg/g at 100°C, and discuss how nitrogen functionalities influence SO2 capture compared to pore texture under these conditions.",
+  "standard_answer": "To calculate the theoretical SO2 adsorption capacity, first determine the moles of nitrogen per gram of biochar. With 5 wt% nitrogen, that is 0.05 g N per g biochar. The molar mass of N is 14 g/mol, so moles of N per g biochar = 0.05 / 14 = 0.00357 mol/g. Assuming all nitrogen is in the form of C–N and N–H groups (as per the paper's description for MDEA-functionalized biochar) and each nitrogen site can adsorb one SO2 molecule, moles of SO2 adsorbed per g biochar = 0.00357 mol N/g × 1 mol SO2/mol N = 0.00357 mol SO2/g. The molecular weight of SO2 is 64 g/mol, so theoretical adsorption capacity = 0.00357 × 64 = 0.22848 g SO2/g biochar, or 228.48 mg/g. However, this theoretical value (228.48 mg/g) exceeds the experimental value of 156.22 mg/g at 100°C because not all nitrogen sites are equally effective or accessible for SO2 adsorption. Factors such as pore blockage from MDEA impregnation, incomplete conversion of nitrogen groups to active forms, and diffusion limitations reduce the practical capacity. The paper states that with MDEA concentration higher than 8%, 'the micropore structure nearly collapsed completely meanwhile much of nitrogen-containing functional groups (mainly C–N) were generated, the chemical adsorption was dominant', and 'the nitrogen functionalities onto the biochar are more influential than the pore texture for the adsorption of SO2, with the conversion to N–H groups'. This indicates that chemisorption via nitrogen groups dominates over physisorption in micropores when nitrogen content is high, as these groups provide active sites for chemical bonding with SO2, leading to higher capacities than pore texture alone, even with collapsed pores.",
+  "original_text": {
+    "1": "When the MDEA concentration was higher than 8%, the micropore structure nearly collapsed completely meanwhile much of nitrogen-containing functional groups (mainly C–N) were generated, the chemical adsorption was dominant to receive a very high adsorption capacity of SO2, i.e., 156.22 mg/g at 100°C.",
+    "2": "The nitrogen functionalities onto the biochar are more influential than the pore texture for the adsorption of SO2, with the conversion to N–H groups."
+  },
+  "type": "calculation",
+  "difficulty": 4,
+  "topic": "energy_systems",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires expertise in combustion science (SO2 adsorption), materials science (biochar functionalization), chemical engineering (adsorption capacity calculations), and energy systems (pollutant control). It specifically addresses nitrogen functionalization effects on SO2 capture, which is a domain-specific application in combustion gas treatment.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct, and compliant with other requirements."
+  },
+  "retry_count": 2,
+  "question_id": "deepseek_q_951260d7",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Biochar-as-the-effective-adsorbent-to-combustion-gaseou_2023_Progress-in-Ene",
+    "paper_title": "Biochar-as-the-effective-adsorbent-to-combustion-gaseou_2023_Progress-in-Ene"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:15:49.688816",
+    "answer_length": 1688
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer correctly calculates the theoretical SO2 adsorption capacity (228.48 mg/g) using proper stoichiometry: 5 wt% N → 0.00357 mol N/g → 0.00357 mol SO2/g → 228.48 mg SO2/g. The explanation for why theoretical exceeds experimental (156.22 mg/g) is sound, citing pore blockage, incomplete conversion, and diffusion limitations. The answer accurately reflects the original text's key points: (1) micropore collapse with >8% MDEA while generating C–N groups, (2) chemical adsorption dominance, and (3) nitrogen functionalities being more influential than pore texture with conversion to N–H groups. All physical principles are correct, and the reasoning is logically consistent with the original text.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:04:05.915754"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "medium",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The calculation is arithmetically correct: 5 wt% N corresponds to 0.00357 mol N/g, and assuming 1:1 stoichiometry with SO2 gives 0.00357 mol SO2/g, i.e., ~228.5 mg/g. The explanation for the lower experimental value (156.22 mg/g at 100°C) is consistent with the ground-truth text: not all N sites are accessible/active due to micropore collapse and functionalization effects, leading to diffusion/availability limitations. The discussion correctly reflects that nitrogen functionalities (C–N with conversion to N–H) dominate chemisorption and are more influential than pore texture under these conditions, in line with the provided statements.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:04:37.786706"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer correctly calculates the theoretical adsorption capacity based on the provided nitrogen content and a 1:1 stoichiometric assumption between N sites and SO2 molecules. It accurately explains the discrepancy between the theoretical and experimental values by citing valid physical and chemical limitations (e.g., site accessibility, pore blockage, diffusion limits), which are standard concepts in adsorption science. The explanation of the dominance of chemical adsorption via nitrogen functionalities over physical adsorption in pores is directly and correctly supported by the provided original text.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:04:56.608323"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:04:56.608349",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

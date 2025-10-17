@@ -1,0 +1,80 @@
+{
+  "question_text": "Based on the provided paper content, explain the role of nickel-based catalysts in biomass gasification systems, focusing on how they address tar formation and contribute to syngas production. Include the specific tar composition mentioned in the paper and describe the general catalytic functions without unsupported mechanistic details. Your answer must strictly use only information from the provided citations.",
+  "standard_answer": "Nickel-based catalysts play a crucial role in biomass gasification by effectively reducing tar formation and enhancing syngas quality. According to the paper, 'Tar produced during gasification consists of mixed oxygenates, alkyl phenols, phenolic ethers, heterocyclic ethers and polynuclear aromatic hydrocarbons.' These complex tar compounds can cause operational problems in gasification systems. Nickel catalysts address this issue through their ability to facilitate specific catalytic functions. The paper states that 'Ni-based catalysts are extensively employed for tar reforming due to their high activity for C-C bond cleavage and steam activation.' This catalytic activity helps convert these tars into useful syngas components, improving the overall quality and composition of the syngas produced during biomass gasification processes. The use of nickel catalysts represents an important technological approach for managing tar-related challenges in biomass gasification systems while enhancing the production of valuable syngas for downstream applications.",
+  "original_text": {
+    "1": "Tar produced during gasification consists of mixed oxygenates, alkyl phenols, phenolic ethers, heterocyclic ethers and polynuclear aromatic hydrocarbons.",
+    "2": "Ni-based catalysts are extensively employed for tar reforming due to their high activity for C-C bond cleavage and steam activation."
+  },
+  "type": "concept",
+  "difficulty": 4,
+  "topic": "energy_systems",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires specific knowledge of biomass gasification systems, tar formation chemistry, and catalytic functions in energy conversion processes, which falls under energy systems and combustion science domain expertise.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+  },
+  "retry_count": 2,
+  "question_id": "deepseek_q_9a4690ee",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Progress-in-biofuel-production-from-ga_2017_Progress-in-Energy-and-Combustio",
+    "paper_title": "Progress-in-biofuel-production-from-ga_2017_Progress-in-Energy-and-Combustio"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:27:11.955924",
+    "answer_length": 1067
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately represents the information from the original text. It correctly quotes the tar composition ('mixed oxygenates, alkyl phenols, phenolic ethers, heterocyclic ethers and polynuclear aromatic hydrocarbons') and the catalytic properties of Ni-based catalysts ('high activity for C-C bond cleavage and steam activation'). The answer appropriately explains the role of nickel catalysts in reducing tar formation and enhancing syngas quality, which is a logical extension of the stated catalytic functions. The causal relationships are sound: tar causes operational problems → Ni catalysts facilitate C-C bond cleavage and steam activation → tars are converted to syngas components → syngas quality improves. No factual errors, contradictions, or logical flaws are present. The answer stays within the bounds of the provided citations and does not introduce unsupported mechanistic details.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:16:43.487874"
+      },
+      {
+        "correct": false,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Claims that nickel catalysts enhance syngas quality and convert tars into syngas components are not stated in the provided citations.",
+          "States that tar causes operational problems in gasification systems, which is not mentioned in the cited text."
+        ],
+        "reasoning": "The answer correctly reproduces the cited tar composition and the catalytic functions of Ni-based catalysts (high activity for C–C bond cleavage and steam activation). However, it goes beyond the provided citations by asserting syngas quality improvement, conversion of tars to syngas components, and operational problems caused by tar, none of which are explicitly supported by the given text. Given the instruction to use only information from the citations, these additions make the answer unacceptable.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:17:00.212354"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer accurately extracts and synthesizes information from the provided citations. It correctly identifies the composition of tar and the catalytic functions of nickel (C-C bond cleavage, steam activation) as stated in the source text. The logical connection between tar reforming and improved syngas quality is sound and correctly explained. The answer is factually correct and fully consistent with the provided information.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:17:15.352425"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:17:15.352453",
+    "consensus": {
+      "all_correct": false,
+      "correct_votes": 2,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 2
+    }
+  }
+}

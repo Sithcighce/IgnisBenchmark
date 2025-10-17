@@ -1,0 +1,81 @@
+{
+  "question_text": "How does radiative heat transfer couple with temperature distribution in SOFC modeling, and what are the mathematical formulations for radiosity in planar and tubular configurations?",
+  "standard_answer": "Radiative heat transfer in SOFCs couples strongly with temperature distribution through the radiosity method, which accounts for energy exchange between solid surfaces (PEN, interconnector, air supply tube) and with the environment. The coupling occurs because surface radiosities depend on both local temperature (through the blackbody emission term) and the radiation arriving from other surfaces (through view factors). For the planar and tubular geometries, the radiosity BPEN at position z on the PEN surface is governed by an integral equation that includes: emission from the local surface (εPENσBTPEN^4), reflection of incoming radiation from other surfaces, and view factors that geometrically weight the contributions from all other surface elements. The mathematical formulation involves solving coupled integral equations for each surface element's radiosity, where the view factors F account for the geometric configuration and determine how much radiation from one surface element reaches another. In planar SOFCs, radiation occurs between parallel PEN and interconnector surfaces, while in tubular designs, cylindrical geometry creates more complex view factor relationships involving the air supply tube and annular flow passages. This radiation coupling significantly affects temperature gradients, particularly in high-temperature operation where radiative fluxes can be comparable to convective and conductive heat transfer.",
+  "original_text": {
+    "1": "For the planar and tubular geometry, the radiosity of the PEN surface and the temperature distribution are strongly coupled.",
+    "2": "BPEN,k(z) = εPENσBTPEN^4(z) + (1-εPEN)[σBTe^4FdPENz,end,k + ∫0L BPEN(x)dFdPENz,dPENx,k + cP∫0L BCON,k(x)dFdPENz,dCONx,k + (1-cP)∫0L BAST,out(x)dFdPENz,dASTx,out,k]"
+  },
+  "type": "concept",
+  "difficulty": 4,
+  "topic": "heat_transfer",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires specific expertise in solid oxide fuel cell (SOFC) modeling, radiative heat transfer coupling with temperature distribution, and mathematical formulations of radiosity methods for different SOFC geometries (planar and tubular). It demands knowledge of energy systems, heat transfer principles, and computational modeling specific to combustion/CFD/energy applications.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question is well-focused on SOFC heat transfer modeling with correct technical details. No issues detected."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_6aba3cf8",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Macroscopic-modeling-of-solid-oxide-fuel-cell--SOFC-_2018_Progress-in-Energy",
+    "paper_title": "Macroscopic-modeling-of-solid-oxide-fuel-cell--SOFC-_2018_Progress-in-Energy"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:22:39.279015",
+    "answer_length": 1443
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately describes radiative heat transfer coupling in SOFCs. It correctly identifies: (1) strong coupling between radiosity and temperature distribution, (2) the radiosity method accounting for energy exchange between surfaces (PEN, interconnector, air supply tube), (3) dependence on local temperature through blackbody emission (εPENσBTPEN^4) and incoming radiation through view factors, (4) the integral equation formulation matching the original text's equation structure, (5) geometric differences between planar and tubular configurations, and (6) the significance of radiative fluxes at high temperatures. All physical principles are correctly stated, the cause-effect relationships are sound, and the explanation is consistent with the original text's mathematical formulation. The answer provides appropriate context and elaboration without introducing factual errors.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:12:25.301852"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Does not present the explicit BPEN,k(z) equation with the environment term σBTe^4FdPENz,end,k and coupling coefficients cP and (1−cP).",
+          "Omits the differential view-factor integrals and indexing that separate contributions from PEN, CON, and AST,out surfaces.",
+          "Describes planar vs tubular differences qualitatively rather than stating the specific integral form from the original text."
+        ],
+        "reasoning": "The standard answer correctly states that radiosity and temperature are strongly coupled via emissive and reflected components weighted by view factors and identifies the relevant surfaces (PEN, interconnector, air supply tube, environment). This is consistent with the original text’s mechanism. While it does not reproduce the detailed integral formulation with cP and the environment term, its description of the integral-equation structure and geometry-dependent view factors is accurate. No factual or logical errors are present; the omissions are minor in completeness.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:12:47.489219"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer correctly explains the strong coupling between radiative heat transfer and temperature in SOFCs. It accurately describes the radiosity method, identifying the key components of the governing integral equation (emission, reflection, view factors) and correctly distinguishing between the geometric complexities of planar and tubular designs. The explanation is fully consistent with the provided ground truth text and fundamental principles of thermophysics.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:13:28.178710"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:13:28.178732",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

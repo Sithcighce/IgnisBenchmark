@@ -1,0 +1,81 @@
+{
+  "question_text": "What are the fundamental differences between local and global combustion efficiency definitions in flare performance assessment, and why do they yield different values in spatially heterogeneous plumes?",
+  "standard_answer": "Local combustion efficiency (CE_local) is defined using point measurements or line-of-sight column densities of species concentrations (CE = [CO₂]/([CO₂] + [CO] + [CH₄] + ...)), while global CE (CE_global) employs mass flow rates through a control volume enveloping the entire plume (CE = ṁ_C,CO₂/(ṁ_C,CO₂ + ṁ_C,THC + ṁ_C,CO + ṁ_C,soot)). The key distinction lies in velocity weighting: CE_global accounts for spatial variations in mass flux, whereas CE_local assumes uniform velocity distribution. In heterogeneous flare plumes, regions with high unburned hydrocarbon concentrations often coincide with different flow velocities than CO₂-rich zones. For example, fuel-stripped regions containing cold, dense methane may have lower velocities than hot buoyant combustion products, causing CE_local measurements to overestimate CE_global when sampling predominantly from high-velocity, high-efficiency regions. This discrepancy is exacerbated by the need to select 'representative' sampling locations, which often miss low-CE zones in the plume wake. The difference can be significant, with studies showing CE_local overestimating CE_global by up to 50% of the combustion inefficiency (1-CE) in crosswind conditions.",
+  "original_text": {
+    "1": "Local CE measurements are based on the relative amounts of combustion products at a single point, Eq. (5), or as column densities along an LOS, Eqs. (6) and (7). Global CE is based on an overall carbon balance as shown in Eqs. (2)–(4)",
+    "2": "Concentrations and column densities do not capture the effect of nonuniform velocities throughout the plume and thus may be poor approximations of CE in regions of the flare plume where there is significant spatial variation in velocity"
+  },
+  "type": "concept",
+  "difficulty": 4,
+  "topic": "energy_systems",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires specialized knowledge in combustion science (flare combustion efficiency definitions), fluid mechanics (spatial heterogeneity in plumes, velocity variations), and energy systems (flare performance assessment). It specifically addresses measurement techniques and physical phenomena unique to combustion systems.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer are both high quality - the question requires domain expertise and the answer accurately reflects the paper's content about local vs global combustion efficiency measurements in flare plumes."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_f6937e5c",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Techniques-for-measuring-flare-combustion-efficien_2025_Progress-in-Energy-a",
+    "paper_title": "Techniques-for-measuring-flare-combustion-efficien_2025_Progress-in-Energy-a"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:29:55.639516",
+    "answer_length": 1215
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately explains the fundamental differences between local and global combustion efficiency definitions. It correctly identifies that local CE uses point measurements or line-of-sight column densities (consistent with original text's Eqs. 5-7), while global CE uses mass flow rates through a control volume (consistent with Eqs. 2-4). The key distinction about velocity weighting is explicitly supported by the original text stating that 'Concentrations and column densities do not capture the effect of nonuniform velocities.' The explanation of why they yield different values in heterogeneous plumes is logically sound and consistent with the original text's statement about spatial variation in velocity. The specific example about fuel-stripped regions and the quantitative claim about 50% overestimation, while more detailed than the original text excerpt, represents reasonable elaboration that doesn't contradict the fundamental principles established in the original text. All physical principles are correctly stated.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:21:29.715638"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Local CE formula should be interpreted on a carbon basis; using raw species concentrations without carbon normalization can be misleading",
+          "Includes a specific quantitative claim (up to 50% of (1-CE) in crosswind) that is not supported by the provided ground-truth text and cannot be verified here",
+          "Statement that CE_local 'assumes uniform velocity distribution' is slightly overstated; more precisely, local/LOS measurements do not account for velocity weighting"
+        ],
+        "reasoning": "The answer correctly distinguishes local (point/LOS concentration or column density-based) and global (carbon mass flux balance over a control volume) CE definitions, and accurately identifies velocity nonuniformity/weighting as the key reason they differ in heterogeneous plumes, consistent with the ground-truth text. Minor issues involve carbon-basis clarity and an unverified quantitative claim, but these do not undermine the core correctness.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:22:02.449871"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly identifies the fundamental difference between local (concentration-based) and global (mass-flux-based) combustion efficiency. It accurately explains that the discrepancy in heterogeneous plumes arises because local methods do not account for non-uniform velocity fields, which are correctly weighted in the global definition. The physical explanation and examples provided are sound and consistent with the provided original text.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:22:23.725917"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:22:23.725943",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

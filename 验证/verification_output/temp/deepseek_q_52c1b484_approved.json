@@ -1,0 +1,81 @@
+{
+  "question_text": "How does the Solar Aided Power Generation (SAPG) approach achieve thermodynamic leverage in a regenerative Rankine cycle, and what are the key factors limiting its maximum solar share according to the provided paper?",
+  "standard_answer": "SAPG achieves thermodynamic leverage by using solar heat to preheat feedwater in a regenerative Rankine cycle, displacing steam extraction from turbines. In a regenerative cycle, steam is bled at various stages to heat feedwater, reducing work output but improving efficiency. By injecting solar heat at feedwater heater temperatures (90–350°C), the bled steam is redirected to expand further in the turbine, generating additional work. The solar heat effectively converts low-temperature input into high-temperature equivalent work, as the displaced steam would have been extracted at higher temperatures. This results in solar-to-power efficiencies that can approach 45.3% at 260°C input for super-critical cycles, which represents a significant efficiency boost compared to stand-alone solar systems at the same temperature. Key factors limiting maximum solar share include: (1) turbine turn-down capabilities, which restrict how much steam flow can be adjusted; (2) practical constraints in retrofitting existing plants, such as land availability for solar collectors and heliostat field sizing; (3) the finite number of feedwater heaters and their temperature ranges; and (4) solar resource variability, which reduces the annually averaged solar share despite high instantaneous shares. The instantaneous solar share is only about 5% when solar thermal input is provided at 90°C, while it approaches about 25% at 260°C in the super-critical case.",
+  "original_text": {
+    "1": "The use of solar feed-water heating displaces the higher temperature steam, which is otherwise 'bled' from the turbine in a regenerative Rankine cycle, to achieve higher thermodynamic efficiency than a stand-alone solar system of the same temperature.",
+    "2": "The instantaneous solar share is only »5%, when solar thermal input is provided at 90 °C, while it approaches »25% at 260 °C in the super-critical case."
+  },
+  "type": "reasoning",
+  "difficulty": 4,
+  "topic": "energy_systems",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires specific knowledge of Solar Aided Power Generation (SAPG) systems, regenerative Rankine cycles, thermodynamic leverage concepts, and factors limiting solar share in energy systems - all falling under energy systems engineering and thermal power generation expertise.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+  },
+  "retry_count": 1,
+  "question_id": "deepseek_q_52c1b484",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Solar-thermal-hybrids-for-combustion-power-pl_2018_Progress-in-Energy-and-Co",
+    "paper_title": "Solar-thermal-hybrids-for-combustion-power-pl_2018_Progress-in-Energy-and-Co"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:29:22.726190",
+    "answer_length": 1451
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly explains the thermodynamic leverage mechanism of SAPG: solar heat displaces extracted steam in feedwater heaters, allowing that steam to expand further in the turbine and generate additional work. The numerical values for solar share (≈5% at 90°C and ≈25% at 260°C for super-critical cycles) match the original text exactly. The answer also correctly states the solar-to-power efficiency of 45.3% at 260°C. The explanation of limiting factors (turbine turn-down, retrofitting constraints, finite feedwater heaters, solar variability) is logically sound and consistent with regenerative Rankine cycle principles. While the answer is more detailed than the original text, all additional explanations are thermodynamically correct and do not contradict the source material. The core mechanism and key quantitative values are accurately presented.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:19:58.279221"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "medium",
+        "verification_confidence": "medium",
+        "issues": [
+          "Includes a specific solar-to-power efficiency value (45.3% at 260°C) that is not in the provided ground truth and cannot be verified here.",
+          "Attributes several limiting factors (turbine turn-down, retrofit constraints, finite number of feedwater heaters, solar variability) to the paper without support in the provided text.",
+          "Mentions feedwater heater temperature range up to 350°C, which is not specified in the provided text."
+        ],
+        "reasoning": "The core mechanism is correctly explained: solar feedwater heating displaces turbine bleed steam, increasing turbine work and providing thermodynamic leverage over stand-alone solar at the same temperature. The stated instantaneous solar shares (≈5% at 90°C and ≈25% at 260°C for supercritical) match the provided text. However, the answer introduces unverified numerical efficiency (45.3%) and limiting factors not supported by the given excerpt.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:20:19.733658"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer correctly explains the thermodynamic leverage mechanism of SAPG, where solar heat displaces bleed steam, allowing that steam to perform more work in the turbine. This aligns with the provided text and is thermodynamically sound. The numerical values for instantaneous solar share (5% at 90°C, 25% at 260°C) are directly and correctly cited from the original text. The listed limiting factors (turbine turn-down, retrofitting constraints, etc.), while not detailed in the short provided text, are factually correct and well-known engineering constraints for this technology. The answer is comprehensive, accurate, and logically consistent.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:20:42.574382"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:20:42.574412",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": false,
+      "disagreement_count": 0
+    }
+  }
+}

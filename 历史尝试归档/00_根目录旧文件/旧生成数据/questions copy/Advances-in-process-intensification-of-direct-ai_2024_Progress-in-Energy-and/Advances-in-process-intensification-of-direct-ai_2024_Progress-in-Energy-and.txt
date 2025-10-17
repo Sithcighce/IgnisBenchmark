@@ -1,0 +1,8500 @@
+Contents lists available at ScienceDirect
+
+Progress in Energy and Combustion Science
+
+journal homepage: www.elsevier.com/locate/pecs
+
+Advances in process intensification of direct air CO2  capture with
+chemical conversion
+
+Enrique García-Bordej ́e a, *, Rafael Gonz ́alez-Olmos b, **
+a Instituto de Carboquímica (ICB-CSIC), Miguel Luesma Cast ́an 4, 50018, Zaragoza, Spain
+b IQS School of Engineering. Universitat Ramon Llull, Vía Augusta, 390, 08017, Barcelona, Spain
+
+A R T I C L E  I N F O
+
+A B S T R A C T
+
+Handling Editor: Christof Schultz
+
+Keywords:
+Direct air CO2  capture and conversion
+Process intensification
+Renewable energy
+Catalytic conversion
+
+Capturing CO2 from air (DAC) is becoming an attractive technological route to face the climate crisis. This paper
+reviews the existing research efforts to integrate DAC with conversion technologies to transform the captured
+CO2 into chemicals or fuels. The approach can potentially lead to net zero carbon emissions, thus being of interest
+in a circular economy framework. A growing amount of research has been devoted to the combination of DAC
+with CO2 conversion, leading to creative strategies which start to be scaled up. In this review, we have critically
+analysed  the  existing  approaches  by  the  degree  of  process  integration.  From  the  point  of  view  of  process
+intensification, the integration of both capture and reaction in the same vessel can potentially lead to equipment
+and energy cost savings besides other synergistic effects. In this vessel, the DAC and conversion can occur either
+in consecutive stages with change of feed or spontaneously in a cascade reaction without changing the condi-
+tions. As a side effect, the benefits entailed by process intensification in different levels of integration may be a
+decisive driving force for the widespread deployment of  DAC. This  paper discusses  the ongoing research and
+perspectives to guide researchers in this promising new field.
+
+1. Introduction
+
+The CO2  emissions  continuously rise  due to the increase of  global
+energy demand, reaching 36.6 Gt CO2  in 2022 [1]. As a consequence,
+CO2 concentration in the atmosphere is growing at a pace of 2.4 ppm per
+year during the last decade [2], exceeding on average 420 ppm in 2022
+[3]. One of the main concerns of the current times is the global warming
+due to anthropogenic emissions. CO2 accounts for about 60% of global
+warming effects [4]. The 2015 Paris Agreement established the objective
+◦
+of acting to keep the average temperature increase below 1.5
+C. In this
+context, the Intergovernmental Panel on Climate change (IPCC) high-
+lighted  the  importance  of  reaching  net  zero  CO2  emissions  by  2050,
+pursuing a dramatic decrease of CO2 emissions after 2030 [5]. In addi-
+tion to the climate consequences, increased CO2 levels can have serious
+human health risks [6]. To meet these reduction objectives, the focus has
+been directed towards fossil-free renewable energy sources. However,
+renewable energy and the decarbonisation of the main industrial sectors
+(i.e.,  fossil-derived energy, cement,  steel and chemical industries) are
+not  enough  to  meet  this  target,  making  negative  CO2  emissions
+necessary.
+
+The  sources  of  CO2  can  be  either  stationary  sources  (e.g.  power
+stations, biogas, cement, oil refining and petrochemical industries) or
+diffused  sources  (i.e.  transportation,  natural  emissions).  In  stationary
+sources, it is relatively easy to deploy systems to capture CO2  either at
+pre-combustion, during combustion or post combustion. However, it is
+not feasible to install CO2  capture systems in diffused sources such as
+cars,  heavy  duty  transport  or  aviation,  which  represent  about  half  of
+total anthropogenic emissions [7]. Great advances have been made in
+the electrification of light vehicles using batteries. However, there are
+significant infrastructural and technological challenges to electrify other
+modes  of  transportation  such  as  heavy  duty  transport  and  aviation,
+which accounts for approximately 14% of global greenhouse gas (GHG)
+emissions [8]. Due to space constraints, these means of transport require
+high  volumetric  energy  density  which  cannot  be  easily  achieved  by
+batteries  or  H2  but  is  fulfilled  by  fossil  fuels  or  bio-jet-fuels.  Thus,  to
+mitigate atmospheric CO2 emitted from diffuse sources, solutions lead-
+ing  to  zero  or  negative  carbon emissions  are  necessary.  The  main  re-
+ported  approaches  leading  to  negative  carbon  emissions  [9]  include
+natural  solutions  such  as  afforestation  or  enhanced  weathering  and
+engineered  solutions  such  as  bioenergy  coupled  to  carbon  capture,
+
+* Corresponding author.
+** Corresponding author.
+
+E-mail addresses: jegarcia@icb.csic.es (E. García-Bordej ́e), rafael.gonzalez@iqs.url.edu (R. Gonz ́alez-Olmos).
+
+https://doi.org/10.1016/j.pecs.2023.101132
+Received 27 April 2023; Received in revised form 30 October 2023; Accepted 1 November 2023
+
+ProgressinEnergyandCombustionScience100(2024)101132Availableonline19November20230360-1285/©2023TheAuthors.PublishedbyElsevierLtd.ThisisanopenaccessarticleundertheCCBY-NC-NDlicense(http://creativecommons.org/licenses/by-nc-nd/4.0/).
+
+E. García-Bordej ́e and R. Gonz ́alez-Olmos
+
+Table 1
+Comparison between post-combustion carbon capture (PCC) from flue gases and from direct air capture (DAC).
+
+DAC
+
+Result of the capture
+Concentration in the feed
+Sources and distribution
+
+Energy source
+Contaminants
+Required % removal
+
+Reduce CO2 in atmosphere
+ca. 400 ppm
+All locations with renewable energy accessible in a future scenario
+of small in-situ distributed conversion.
+Natural gas for liquid DAC and renewable energy (electricity and low-temperature heat)
+low
+No constraint
+
+PCC from flue gases
+
+Avoid CO2 emissions
+>5 %
+Point sources, coupled to energy infrastructure
+
+Fossil fuels and renewable energy
+High level of H2O, SOx, NOx, Hg, particulates
+High throughput
+
+direct ocean capture (DOC) [10] or direct air capture (DAC) coupled to
+permanent  carbon  immobilisation.  DAC  is  one  of  the  preferred  ap-
+proaches  for  negative  emissions  since  it  has  the  lowest  impact  to  the
+environment due to the limited use of land and water [11]. DAC enables
+the capture to be independent of the emission sources. Moreover, DAC is
+a unique way to reduce CO2 concentration in the atmosphere which has
+been accumulated by emissions in the past. In fact, models have fore-
+casted that CO2  capture from stationary sources, leading to zero emis-
+sions, is not enough to reduce CO2 levels in the atmosphere. Thus, point
+capture  and  DAC  are  not  excluding  each  other  but  both  are  comple-
+mentary.  In  the  short  term,  carbon  capture  from  stationary  sources
+should be deployed to avoid the emissions. In a medium term, DAC is
+necessary to reduce the concentration of CO2 in the atmosphere, emitted
+mainly by diffuse sources. For all this, recently there is a high motivation
+to develop highly efficient technologies to implement DAC [12,13]. One
+of the most important issues related to the CO2 capture (point sources or
+with DAC) is what to do with this CO2. The conventional approach is to
+store it in the subsoil (CCS) as demonstrated for the carbon capture from
+point sources [14] or from air [15]. Another interesting alternative is to
+use the captured CO2  as raw material (CCU) for the synthesis of mole-
+cules of interest such as chemical compounds and construction materials
+[16,17]. The highest impact on CO2 utilization will be achieved when it
+is converted into products of high demand such as construction mate-
+rials (concrete or aggregates) [17,18] or fuels [19]. The conversion to
+construction materials, such as concrete, can potentially lead to negative
+emissions (carbon dioxide removal, CDR) as occurs for CCS while the
+CCU to fuels leads to neutral emissions, as long as the CO2 conversion is
+carried out with renewable energy, thus being a cornerstone of a circular
+carbon economy.
+
+The integration of CO2  capture with subsequent conversion is very
+interesting  because  it  can  lead  to  process  intensification,  which  is
+defined  by  Stankiewicz  and  Moulijn  as:  “any  chemical  engineering
+development  that  leads  to  a  substantially  smaller,  cleaner,  and  more
+energy-efficient technology”  [20]. In this review, first, we will briefly
+revise the existing methods for DAC and subsequently the integration of
+DAC with technologies for conversion into fuels, mainly C1 (i.e., mole-
+cules with one carbon atom such as methane) through catalytic tech-
+nologies.  There  is  a  significant  number  of  reviews  dealing  with  the
+integration of CO2 capture from combustion and process flue gases (CO2
+concentrations 5–30 %) and the subsequent conversion of captured CO2
+[5,21–25] but revisions about the integration of DAC with conversion
+are scarce. To the best of our knowledge, we only spotted two reviews
+[26,27]  that  are  related  to  DAC  and  conversion  somehow,  which
+appeared during the writing of this review. The review of Erans et al.
+[26]  put the emphasis  on DAC including a few considerations on the
+conversion as well. The second review [27] deals intensively about DAC
+technology and it only deals succinctly about the in-situ CO2 utilization,
+addressing techno-economic and life cycle assessment of different cap-
+ture  technologies  as  well.  In  this  article,  we  will  review  briefly  DAC
+technologies  (section  2),  to  subsequently  focus  extensively  on  the
+different levels of integration between DAC and conversion technologies
+(section 3). This section is organised by type of reaction and products
+and includes thermocatalysis, electrocatalysis and photocatalysis, which
+is  not  addressed  in  other  previous  reviews.  We  conclude  discussing
+
+briefly about techno-economic aspects of the integration of DAC with
+chemical conversion (section 4).
+
+2. Direct air capture
+
+2.1. Technology for direct air capture: developments from a historical
+perspective
+
+The  technology  for  DAC  is  necessarily  different  from  that  used  in
+post-combustion  carbon  capture  (PCC)  from  stationary  sources  (flue
+gases) due to the characteristics of atmospheric CO2 (Table 1). In DAC,
+CO2 concentration is significantly more diluted (400 ppm) than in PCC
+(5–30 %), which makes the volume of gas to be treated larger and hence
+the DAC equipment is capital intensive. The volume of air that contains
+1 kg of CO2 is 1300 m3 while in a flue gas from natural gas plant it is 13
+m3  [28]. Based on thermodynamic considerations, the minimum theo-
+retical work required for DAC is 19–22 kJ/mol CO2, which is approxi-
+mately  four-fold  higher  than  that  required  for  PCC  from  flue  gases
+[29–32].  The  cost  of  DAC  in  the  literature  spans  over  one  order  of
+magnitude,~100–1000€/tCO2  removed  [33].  The  large volume  of  air
+flowing  through  capture  material  is  translated  into  high  energy  con-
+sumption  for  fan  power.  In  addition,  the  regeneration  of  the  capture
+media  requires  mechanical  and/or  thermal  energy  [33].  The  need  of
+moving high volume of gases can be overcome by designs that allow an
+effective  movement  of  gas,  for  instance  using  wind  and  the  use  of
+structured  reactors  with  low  pressure  drop  [28].  Some  more  exotic
+implementation strategies have appeared in the literature such as the
+rail-based DAC [34]. These trains are equipped with large intakes that
+collect CO2 feedstock air by fluidic, ramjet-type processes thus avoiding
+the need for the fans required by land-based systems. The energy for the
+process  is  supplied  by  regenerative  braking  and  solar  energy  imple-
+mented in trains. The cost estimation for rail-based DAC is $45/tCO2
+including increased fuel consumption while the estimated cost of con-
+ventional DAC is about $70/tCO2.
+
+On the other hand, DAC has some advantages over PCC. For instance,
+it is more flexible in terms of location because DAC system can be placed
+anywhere while PCC only at the emitting source. Another advantage of
+DAC is that an specific throughput is not required [35]. The recovery of
+CO2  in PCC should be high to avoid emissions and the optimization to
+achieve  higher  throughput  entails  high  costs.  However,  there  are  not
+emissions constraints for CO2 capture from air, that can have CO2 cap-
+ture efficiency significantly lower than 90%. Therefore, the process can
+be optimized minimizing the costs of equipment and energy per kilo-
+gram of CO2 captured. On the other hand, contaminants in the flue gas
+streams such as NOx, SOx, particulates and Hg are significantly lower in
+air  avoiding  pollution  problems  or  the  need  of  gas  pre-treatments.
+Therefore,  the  two  processes,  PCC  from  stationary  sources  and  DAC,
+should  co-exist  in  the  near  future.  In  the  short  term,  PCC  should  be
+implemented at large-scale stationary sources to limit emissions, but this
+does not decrease the high levels of CO2  already present in the atmo-
+sphere, which should be decreased by DAC and other CDR technologies.
+According to Shi et al. [36], DAC may play six important roles for net
+zero CO2 emissions:
+
+ProgressinEnergyandCombustionScience100(2024)1011322
+
+E. García-Bordej ́e and R. Gonz ́alez-Olmos
+
+1.  Neutralizing CO2 emissions from mobile sources;
+2.  Moving CO2 storage to remote sites;
+3.  Offering  leakage  insurance  recapturing  CO2  leaked  from  CCS  or
+
+geologic CO2 storage sites;
+
+4.  Closing the carbon cycle through the conversion to synthetic fuels;
+5.  Supplying a carbon feedstock for other industrial processes;
+6.  Establishing negative emissions.
+
+DAC was firstly introduced by Lackner in 1999 [37]. In the following
+years,  many  studies  appeared  highlighting  the  importance  of  DAC
+technologies to reduce the atmospheric CO2 levels [35,38–45]. After the
+introduction of the DAC concept, the number of scientific publications
+has increased exponentially in the last decade. Recently, several review
+papers [36,46,47] have been published dealing with CO2  capture sor-
+bents, which can be classified as liquid or solid.
+
+◦
+
+At the beginning, processes based in Na/Ca hydroxides to carbonate
+cycles  were  proposed  [38],  based  on  technologies  used  in  the  Kraft
+process in paper industry. However, this process is not feasible because
+it  requires  very  high  temperature  (around  900
+C)  to  regenerate  the
+sorbent,  entailing  a  high  energy  consumption  [40].  After  these  first
+technologies,  the  field  started  to  move  towards  alternative  processes
+requiring less energy. Thus, adsorption processes, which need less en-
+ergy  for  the  regeneration,  were  evaluated.  In  this  sense,  amine  func-
+tionalized  adsorbents  are  the  most  promising  since  they  require  less
+energy to regenerate than alkaline oxides/hydroxides which form car-
+bonates.  For  instance,  quaternary  ammonium  ion-exchange  resins,
+which capture CO2  by cycling between the bicarbonate and carbonate
+forms,  can  be  regenerated  by  simple  exposure  to  moisture  at  45
+C.
+Using these resins, the energy requirements are 50 kJ/mol CO2 captured
+and it was proposed that the process is feasible at a cost of $200/tCO2
+[48]. Processes for adsorption of CO2 from air at room temperature have
+recently been studied using silica-supported amines [49,50], which can
+be regenerated with low-cost waste heat such as steam. Nevertheless,
+amine-based systems have the limitations of toxicity, volatilization, and
+oxidative degradation. Therefore, current research is focusing on solving
+these problems of amine sorbents [51,52] and on the decrease of the
+energy penalty of the regeneration of alkali hydroxide solutions [53].
+
+◦
+
+In the 2050 net zero emissions scenario, DAC is aimed to be scaled up
+to capture more than 85 Mt CO2/year by 2030 and ~980 Mt CO2/year
+by 2050 from almost 0.01 Mt CO2/year today [54]. Currently, 19 DAC
+facilities are operating in Canada, Europe and the United States. This
+level  of  deployment  will  require  several  more  large-scale  demonstra-
+tions to optimise the technology and reduce the capture costs [55]. The
+plans  for  investment  in  building  DAC  plants  is  increasing  in  the  last
+years. For instance the US Congress authorized in late 2021 $3.5 billion
+in funding to build four DAC hubs [56]. The first large-scale DAC plant of
+up to 1 Mt CO2/year is in late-stage of development and is expected to be
+operating in the United States in the next years. DAC is positioned to
+play a critical role to meet the mid-century total carbon removal goals of
+10–20  Gt  CO2/year  (also  including  capture  from  stationary  sources)
+[57].  For  this,  it  is  necessary  to  reduce  the  cost  of  DAC,  for  instance
+through  the  utilization  of  low-temperature  heat  or  other  renewable
+energy sources. One of the highest cost factor is the regeneration of the
+sorbent  [58].  Therefore,  significant  research  has  been  devoted  to
+develop  cost-effective  methods  to  regenerate  the  sorbent  such  as
+steam-stripping  [59,60]  or  temperature-vacuum  swing  adsorption
+(TVSA) [61].
+
+The ways to capture CO2 from diluted sources such as air have been
+recently  reviewed  and  techno-economic  studies  have  been  performed
+[27,30,62,63].  Despite  the  good  prospects  of  some  newly  developed
+technologies for DAC, the studies did not provide detailed experimental
+information and quantitative mass and energy balances. On the other
+hand, there are several reports with detailed information that conclude
+that  the  deployment  at  large-scale  of  CO2  capture  from  air  is  not
+economically  feasible.  For  instance,  a  techno-economic  study  using  a
+sodium-based  capture material [64] claimed that DAC will cost three
+
+times more than other CO2 mitigation options such as renewable energy,
+nuclear  power,  and  carbon  capture  from  large  CO2  emitting  point
+sources.  These  assessments  are  performed  naturally  considering  the
+available technology for CO2 separation in that moment which is not still
+optimized.  However,  DAC  will  be  cost-competitive  when  inexpensive
+renewable  energy  sources  are  available,  the  new  technological  de-
+velopments reduce the costs of CO2 capture from air and the price of CO2
+emissions rises as indicate current projections. In fact, despite the con-
+troversy about the DAC economic-efficiency, a great research effort is
+being devoted to reduce the cost of DAC by using less expensive ways to
+regenerate  the  sorbents  and  improving  the  process  efficiency  [65].
+Obtaining  a valuable product  by the conversion  of captured CO2  will
+push  the  technology  further.  The  integration  of  CO2  capture  with
+chemical conversion can entail also benefits in terms of process inten-
+sification. In the reactive regeneration, the product is obtained simul-
+taneously to the sorbent regeneration, reducing the energy consumption
+and CO2 compression and transportation costs, thus making the process
+more economically sustainable.
+
+2.2. Current implementation schemes for DAC
+
+Nowadays, the main technologies to capture CO2 from the air are of
+two types: liquid and solid DAC (L-DAC and S-DAC, respectively). L-DAC
+(Fig. 1) is based on two closed chemical loops. Aqueous alkali hydroxide
+solutions  have  been  used  in  L-DAC  technologies  (i.e.  the  technology
+developed by the company Carbon Engineering). In first stage at the air
+contactor, an alkali hydroxide (such as potassium hydroxide) solution
+reacts with CO2 to form alkali carbonate species in solution. This solu-
+tion is then contacted with Ca(OH)2, to form CaCO3 precipitate which is
+subsequently calcined to release CO2  and return CaO. CaO is slaked to
+regenerate the Ca(OH)2 which is recycled. The calciner unit work at high
+◦
+temperatures (between 300 and 900
+C) which is one of the energy-cost
+penalties of this technology.
+
+Contrarily,  S-DAC  (Fig.  2)  is  based  on  solid  adsorbents  (i.e.,  the
+technology  used  by  the  company  Climeworks),  that  chemically  binds
+CO2,  operating  through  an  adsorption/desorption  cycling  process.
+Typically,  the  adsorbents  capture  CO2  at  ambient  temperature  and
+pressure  while  they  are  heated  at  medium  temperature  (80–100
+C)
+under vacuum during the CO2 desorption which is subsequently stored.
+The  energy  requirement  for  regeneration  using  amine  functionalized
+adsorbents  accounted  for  76%  of  the  total  energy  demand.  A  single
+adsorption/desorption  unit  has  a  capture  capacity  of  about  50  tCO2/
+year.  In  addition,  water  can  be  also  extracted  from  the  atmosphere
+where local conditions allow it. Early prototypes were able to remove
+around 1 tonne of water per tonne of CO2. The water can be also useful
+when other sources of water are scarce. A S-DAC plant is designed to be
+modular and can include as many units as needed.
+
+◦
+
+S-DAC  and  L-DAC  have  different  characteristics  with  several  ad-
+vantages  and  disadvantages  (see  Table  2).  Both  technologies  have
+proven to be effective removing CO2  from the atmosphere (when the
+CO2 can be permanently stored) or to be a source of climate-neutral CO2
+for its use in the industry. These technologies can be installed at different
+territories without competing with the food or bioenergy industries for
+the  land use. Both  technologies have  different range of working  tem-
+peratures and both technologies can be modular but the size of modules
+is  larger  for  L-DAC  than  for  S-DAC  mainly  due  to  the  higher  re-
+quirements of heat and water of the former [62]. The capacity can be
+increased by sum up of modules. The capital and operational expenses
+will be mainly related to the size of the plant, operational requirements
+and  energy  needs.  From  the  operational  point  of  view,  to  operate
+continuously, S-DAC requires parallel units some of them working in the
+capture stage and some units in the regeneration stage. However, L-DAC
+can operate continuously at steady state, except for maintenance. Both
+DAC technologies have different water requirement. L-DAC needs water
+for  its  continuous  operation  while  S-DAC  can  produce  water  by
+extracting it from the air. According to Table 2, S-DAC captures water
+
+ProgressinEnergyandCombustionScience100(2024)1011323
+
+E. García-Bordej ́e and R. Gonz ́alez-Olmos
+
+Fig. 1. Typical L-DAC configuration based on Carbon Engineering technology. Reprinted from Ref. [66] with permission of Elsevier.
+
+Fig. 2. Typical S-DAC configuration based on Climeworks technology. Reprinted from Ref. [15] with permission of Elsevier.
+
+Table 2
+Key features of S-DAC and L-DAC technology approaches.
+
+S-DAC
+
+L-DAC
+
+CO2 separation
+Specific energy consumption (GJ/
+
+Solid adsorbent
+7.2–9.5
+
+Liquid absorbent
+5.5–8.8
+
+tCO2)
+
+Share as heat consumption (%)
+Share as electricity consumption
+
+75–80
+20–25
+
+80–100
+0–20
+
+(%)
+
+◦
+Regeneration temperature (
+Regeneration pressure
+Capture capacity of single
+
+C)
+
+modular unit
+
+Net water requirement
+
+(tH2O/tCO2)
+
+80–100
+Vacuum
+⁓ 50 tCO2/year per
+unit
+-2-0
+
+Around 900
+Ambient
+⁓ 0.5–1 MtCO2/
+year
+0–50
+
+Land requirement (km2/MtCO2)
+Levelized cost of capture
+
+0.03–0.91
+Up to 540
+
+0.1–0.4
+Up to 340
+
+(USD/tCO2)
+
+from the ambient, between 0 and 2 tH2O/tCO2 while L-DAC entails an
+important  water  consumption  up  to  50  tH2O/tCO2  which  can  be  an
+important drawback from an environmental point of view.
+
+Besides S-DAC and L-DAC other processes have been proposed and
+are  under  research.  For  instance,  the  use  of  membranes  for  DAC  (M-
+DAC) has been recently reviewed [67]. M-DAC has also been proposed
+for  the  separation  of  CO2  from  air  due  to  their  smaller  footprint  and
+simpler  setup  and  operation.  However,  their  application  remains
+elusive. One of the main hurdles of the membranes is that the air has to
+be  forced  through  the  membranes,  entailing  higher  operation  costs.
+According to Castro-Mu ̃noz et al. [67] the following aspects of M-DAC
+must be improved: (1) finding less expensive and available membrane
+materials,  (2)  increasing  specific  permeance  and  selectivity,  (3)
+Improving lifetime of the membrane systems to compete with the typical
+commercially stablished separation operations such as adsorption, ab-
+sorption  and  cryogenic  distillation,  and  (4)  process  cost  reduction  to
+
+make the process viable.
+
+The CO2  captured from air can be stored in deep geological forma-
+tions such as mineralization underground (carbon capture and storage,
+CCS).  This  is  the  preferred  option  because  it  yields  net  negative  CO2
+emissions.  Alternatively,  air-captured  CO2  can  be  used  directly  in  in-
+dustrial  processes  (i.e.  food  processing)  or  recycled  to  convert  it  into
+synthetic fuels and valuable chemicals (carbon capture and utilization,
+CCU). The conversion into useful products is an economic incentive to
+further develop DAC technologies while in the meantime technologies
+for  storage  are  investigated  and  implemented.  The  conversion  into
+
+Fig.  3. Scheme  illustrating  the  closing  of  the  carbon  cycle  for  zero  net  CO2
+emissions  consisting  of  CO2  capture  from  air  and  subsequent  use  for
+fuel synthesis.
+
+ProgressinEnergyandCombustionScience100(2024)1011324
+
+E. García-Bordej ́e and R. Gonz ́alez-Olmos
+
+synthetic  fuels  is  one  of  the  most  promising  due  to  the  large-scale
+market.  When  using  synthetic  fuels,  CO2  is  re-emitted  into  the  atmo-
+sphere. Thus, the CO2  emissions are not negative, but neutral when it
+substitutes  conventional  fossil  fuels,  closing  the  loop  to  a  circular
+economy (Fig. 3). Therefore, synthetic fuels should be produced from
+DAC or biomass/waste to yield net zero CO2 emissions.
+
+◦
+
+The main companies working with S-DAC and L-DAC are Climeworks
+and  Carbon  Engineering,  respectively.  Climeworks  is  a  spin-off  of  the
+university  ETH  Zurich  founded  in  Switzerland  in  2009.  Climeworks
+launched  its  first  DAC  plant  in  2017  in  Switzerland  and  has  to  date
+commissioned 15 plants [11]. Their technology uses amine functional-
+ized  solid  adsorbents  which  are  regenerated  at  temperatures  about
+C. In September 2021, Climeworks started in Iceland the world’s
+100
+first  large-scale  plant  (4000  tCO2/year)  named  “Orca”.  This  plant  is
+solely  powered  by
+(geothermal)  or  an
+renewable  energy
+energy-from-waste  process  (Fig.  4).  A  life  cycle  assessment  demon-
+strated  that  from  every  100  tons  of  CO2  captured  only  10  tons  are
+re-emitted,  thus  90  tons  are  permanently  removed.  When  the  CO2  is
+permanently stored by mineralization underground [15], the net CO2
+emissions are negative contributing to reduce the CO2 concentration in
+the atmosphere.
+
+The  CO2  can  be  alternatively  recycled  into  a  useful  raw  material.
+There are several projects pursuing the conversion of the captured CO2
+by Climeworks plants into useful materials such as fuels, chemicals, and
+plastics. To name some of these projects Kopernikus Power-to-X [68] with
+the objective to make Germany carbon neutral in 2045, STORE&GO [69]
+to integrate Power-to-Gas technology into the future European energy
+system,  Celbicon  which  tackles  the  electrochemical  and  biochemical
+conversion [70] or Norsk e-Fuel [71] which is a Norwegian project that
+produces  neutral  transportation  fuels  using  electrolysis  powered  by
+renewable energy. Rotterdam-The Hague Airport uses CO2 captured by
+Climeworks technology for the production of renewable jet fuel from air
+[72]. The process is carried out in two steps first CO2 is converted into
+syngas with electrolyser cells from Sunfire GmbH and later the syngas is
+turned  into  synthetic  hydrocarbons  by  means  of  Fischer-Tropsch
+synthesis.
+
+Carbon engineering is also a spin-off from the University of Calgary
+and Carnegie Mellon University founded in 2009 in Squamish (British
+Columbia,  Canada).  It  is  another  company  which  uses  an  alkaline
+aqueous solution for DAC [73]. In 2017, this company built the first pilot
+plant for the synthesis of clean fuels from DAC (AIR TO FUELSTM) [74].
+Carbon  Engineering  in  partnership  with  Occidental  Petroleum  is  devel-
+oping a large-scale DAC plant with capture capacity of 1 MtCO2/year.
+
+This plant is planned to be operational by 2024. Besides the synthesis of
+fuels  and  chemicals,  CO2  from  DAC  can  be  also  used  for  small-scale
+applications in food processing or for feeding algae farms [42].
+
+A cradle-to-grave life cycle assessment (LCA) has shown that both L-
+DAC  and  S-DAC  have  the  potential  to  reach  a  net  carbon-removal  of
+67–69%  based  on  a  scenario  of  1  Mt/year  CO2  captured  [75].  The
+decrease  in  efficiency  is  due  to  the  GHG  emissions  in  DAC  systems
+during capture, production of sorbents, leakage from sorbents, land use,
+CO2 storage, etc. The operation of DAC facilities has different environ-
+mental issues that must be considered when assessing the sustainability
+of the process. According to a LCA of S-DAC plants based on the Cli-
+meworks technology [76], the carbon footprint of six studied adsorbents
+ranged from 10 to 46 g of CO2  per kg of CO2  captured. Some studies
+point  that  chemisorbents  like  those  used  by  Climeworks  (supported
+amines)  have  lower  environmental  impacts  than  physisorbents.  The
+main reason is the lower inventory of material needed due to the higher
+capture  capacity  of  chemisorbents  [77].  In  addition,  the  carbon  foot-
+print of the construction of a 4 kt CO2/year S-DAC plant was estimated
+to be 15 g of CO2 per kg of CO2 captured. The impact of the operation of
+the S-DAC was dependent on the electricity grid mixes used. If DAC is
+combined with sequestration can result in negative emissions in those
+cases with a high percentage of renewable energies in the mix [76]. If
+the captured CO2 is used to produce synthetic fuels (such as methane),
+the emissions can be almost neutral if renewable energy is used. Chauvi
+et al. [78] reviewed the influence of electricity grid mix on the carbon
+footprint  for  S-DAC  and  L-DAC  when  the  capture  is  coupled  to  CO2
+storage.  They  estimated  that  if  the  electricity  mix  of  US  is  used,  the
+carbon  footprint  for  L-DAC  is  around  1.5  kg  of  CO2  per  kg  of  CO2
+captured while it is 0.25 kg of CO2  per kg of CO2  captured for S-DAC.
+These differences are mainly associated to the temperature used in each
+case (low temperature in S-DAC and high temperature in L-DAC). The
+carbon footprint for the construction of a L-DAC plant or a S-DAC plant is
+in the same range [79]. Regarding the carbon footprint of the absorbent
+and  other  used  chemicals,  it  is  very  low  (lower  than  1%)  for  L-DAC.
+Therefore, the electricity and the heat are the main contributors to the
+carbon footprint for L-DAC.
+
+3. Integration of DAC and conversion to fuels and chemicals
+
+Besides chemical storage in geological formations, a durable sink for
+CO2 captured with DAC can be the conversion into materials as concrete
+[18], polymers [80], carbon fibres [81], carbon nanotubes [82], etc. To
+obtain  these durable  products, the  CO2  capture (either  by  DAC  or  by
+
+Fig.  4. Schematic  illustration  of  CO2  capture  from  air  and  subsequent  mineralization  underground  developed  by  Climeworks-CarbFix  at  Hellisheidi,  Iceland.
+Reprinted from Ref. [15] with permission of Elsevier.
+
+ProgressinEnergyandCombustionScience100(2024)1011325
+
+E. García-Bordej ́e and R. Gonz ́alez-Olmos
+
+post-combustion  capture)  and  conversion  are  usually  separated  pro-
+cesses connected through a  gas processing system  [16]. Nevertheless,
+most of the works about higher degrees of integration coupling DAC +
+conversion  are  focused  on  the  conversion  to  gas  or  liquid  chemical
+products such as fuels rather than construction materials. The conver-
+sion of captured CO2 into useful products is an incentive to deploy DAC
+technology.  CO2  can  be  converted  into  different  chemical  products
+(Fig. 5), which can be divided in two main groups: those obtained by a
+redox reaction requiring a hydrogenating agent and those obtained by
+non-redox  reaction  such  as  urea,  carbamates,  organic  carbonates  and
+inorganic carbonates. The products of non-redox reaction are currently
+produced  from  fossil  fuels  and  comparatively  the  market  demand  for
+these chemicals is much lower than that for fuels and chemicals such as
+oxygenates, alkanes and olefins. Fuels for transport can be also produced
+starting  from  CO2  via  CO,  methanol,  methane  or  light  olefins  in-
+termediates.  The  CO2-based  hydrocarbons  produced  using  renewable
+electricity  and  water  are  also  known  as  electro  fuels  (e-fuels)  [83],
+whose carbon neutrality is ensured when the used CO2 is captured from
+air.  E-fuels  are  becoming  more  important  due  to  the  sustainability
+concerns of biofuels and the limited feedstock availability, which com-
+promises  its  scalability  [84,85].  Moreover,  the  DAC  process  can  be
+optimized  to  capture  not  only  CO2  but  also  the  H2O  needed  for  the
+synthesis of e-fuels [86].
+
+Tables 3 and 4 and 5 compiles recent literature studies dealing with
+the integration of DAC and CO2 conversion to chemical products. When
+using  H2  as  reactant  and  the  suitable  catalyst,  methane  is  favourably
+(cid:0)
+produced  at  high  temperature  (Table  3),  while  formate  (HCO2
+)  and
+methanol  are  obtained  at  lower  temperatures  but  at  high  pressures
+(Table 4). High temperature is necessary to activate CO2 due to its high
+activation  barrier  and  to  drive  the  reaction  to  highly  hydrogenated
+products such as methane. On the other hand, high pressure is required
+to activate H2  and for shifting the thermodynamic equilibrium to the
+product side [87,88]. Besides H2, other co-reactants have been used such
+as propane or methanol (see Tables 4 and 5). Some processes involving
+ionic liquids (ILs) or metal organic frameworks (MOFs) are carried out at
+temperatures  close  to  ambient  temperature  (Table  5).  However,  the
+variety of products obtained at mild temperatures are very limited such
+cyclic carbonate (non-reduced product) or formic acid (low reduction of
+carbon  valence  state),  being  kinetically  not  possible  to  obtain  highly
+reduced products.
+
+The CO2 and H2 molecules can be activated by thermal processes or
+
+non-thermal  processes.  In  non-thermal  processes  the  molecules  are
+activated vibrationally or electronically by photons (photocatalysis) or
+electrons (electrocatalysis) while in thermal processes the molecules are
+activated  by  heating  them.  In  the  products  obtained,  carbon  valence
+state is more reduced for thermal processes than for non-thermal pro-
+cesses. Thus, the main products of non-thermal processes are CO and
+formic acid (two-electron reduction) [89], while the thermal activation
+can  lead  to  more  reduced  products  such  as  methane  (eight-electron
+reduction) or methanol (six-electron reduction) [90]. Accordingly, we
+have  classified  the  DAC  + conversion  processes  as  thermal  processes
+leading  to  CH4  (power-to-gas,  Table  3),  thermal  processes  to  other
+products (power-to-X, Table 4) and non-thermal processes (such elec-
+trocatalysis or photocatalysis, Table 5) leading mainly to mildly reduced
+products  like  CO  or  formic  acid  or  non-reduced  products  such  as
+polycarbonates.
+
+Within  each  type  of  reaction,  different  degrees  of  integration  or
+process intensification have been identified to couple DAC and conver-
+sion. There  is a strong  technological driver for a higher  level of  inte-
+gration  since  the  energy  usage  associated  with  the  regeneration  and
+compression steps is reduced, as well as capital savings in equipment.
+The following four levels of integration have been identified (Fig. 6):
+
+(i) Processes denoted as D + R in which DAC and reaction are per-
+formed independently in different systems, one for DAC and other
+for  conversion  starting  from  a  concentrated  and  usually  com-
+pressed CO2 transported from an independent DAC process;
+(ii)  A further integration level is that denoted as D* + R. Herein, the
+capture medium used for DAC (containing the captured CO2) is
+transported into other reactor where the conversion occurs. The
+DAC medium is simultaneously regenerated and afterwards it is
+returned  to  the  DAC  system  to  repeat  the  cycle.  This  level  of
+integration avoids the cost of regeneration and pressurization of
+CO2.
+
+(iii)  Processes denoted as IDR is meant when both DAC and reaction
+are integrated in space because both processes are carried out in
+the same vessel. However, there is no integration in time because
+the conversion and regeneration occur in subsequent stages by
+changing the feed gas or conditions.
+
+(iv)  The highest level of integration are processes denoted as SDR, in
+which  DAC  and  reaction  are  performed  simultaneously  or  in
+
+Fig. 5. Main products that can be obtained from the captured CO2.
+
+ProgressinEnergyandCombustionScience100(2024)1011326
+
+E. García-Bordej ́e and R. Gonz ́alez-Olmos
+
+Table 3
+Reported studies dealing with DAC plus conversion for thermal power-to-gas.
+
+Level of
+integration
+
+D + R
+
+D + R
+
+D + R
+
+D + R
+
+IDR
+
+IDR
+
+IDR
+
+IDR
+
+SDR
+
+CO2
+(ppm)
+Other
+components
+
+380–430
+humidity
+380–430
+
+C,75%
+
+400–440
+humidity
+◦
+400
+humidity
+400
+humidity
+400
+humidity
+400
+humidity
+400–550
+humidity
+2000–5000
+
+DAC
+technologya
+
+DAC material/
+Catalyst
+
+Co-
+reactant
+
+Product
+
+DAC
+(μmol CO2/g)
+
+Production
+(μmol
+product/g)
+
+DAC
+conditionsb
+
+Reaction
+conditionsb
+
+Reference
+
+S-DAC
+
+S-DAC
+
+S-DAC
+
+S-DAC
+
+S-DAC
+
+S-DAC
+
+K2CO3/Al2O3/4%
+Ru/Al2O3
+K2CO3/γ-Al2O3/
+NKM-2V
+K2CO3/Al2O3/4%
+Ru/Al2O3
+MgO
+
+Ru + Na2O/Al2O3
+
+Ru + Na2O/Al2O3
+
+S-DAC
+
+Ni/Na/Al2O3
+
+S-DAC
+
+M-DAC
+
+K2CO3/Al2O3/4%
+Ru/Al2O3
+High temperature
+membrane/Ni-
+based catalyst
+
+H2
+
+H2
+
+H2
+
+H2
+
+H2
+
+H2
+
+H2
+
+H2
+
+H2
+
+CH4
+
+CH4
+
+CH4
+
+CH4
+
+CH4
+
+CH4
+
+CH4
+
+CH4
+
+CH4
+
+982
+
+903–923
+
+20–25
+
+◦
+
+C
+
+350–400
+
+◦
+
+C
+
+977–1000
+
+967–990
+
+20–25
+
+◦
+
+C
+
+420
+
+◦
+
+C
+
+[98]
+
+[99]
+
+750–932
+
+563–914
+
+25
+
+◦
+
+C
+
+300–350
+
+◦
+
+C
+
+[100]
+
+11800
+
+11800
+
+1300
+
+1040
+
+200
+
+168
+
+145
+
+159
+
+879–915
+
+826–880
+
+1.2 m3/(m2
+bar h)
+permeance
+
+12 (μmol/
+h)/g
+
+C, 1
+
+◦
+
+25
+week
+◦
+C
+25
+
+300
+bar
+300
+
+◦
+
+C, 20
+
+◦
+
+C
+
+320
+
+◦
+
+C
+
+320
+
+◦
+
+C
+
+◦
+
+C
+
+450
+9 bar
+◦
+C
+25
+
+◦
+
+C
+
+450
+9 bar
+300–350
+
+[101]
+
+[102]
+
+[103]
+
+[104]
+
+◦
+
+C
+
+[105]
+
+250–300
+
+◦
+
+C
+
+250–300
+
+◦
+
+C
+
+[106]
+
+a M-DAC: DAC using membranes, S-DAC: DAC using solid material; L-DAC:DAC using liquid sorbent.
+b When not stated, it is 1 bar atmospheric pressure.
+
+Table 4
+Compilation of the available literature dealing with DAC plus conversion for thermal power-to-X (X = methanol, formate or products different from CH4).
+
+CO2
+(ppm)
+Other
+components
+
+DAC
+technology
+
+DAC material/Catalysta
+
+Co-
+reactant
+
+Productb
+
+DAC
+(μmol
+CO2/g)c
+
+Production
+(μmol product/
+g DAC)c
+
+DAC
+conditionsd
+
+Reaction
+conditions
+
+Reference
+
+IDR
+
+408
+
+L-DAC
+
+NaOH/Ru-PNP
+
+IDR
+
+400
+
+L-DAC
+
+PEHA/Ru-Macho-BH
+
+D*+R
+
+408
+
+IDR
+
+415
+
+IDR
+
+420
+
+IDR
+
+400
+
+IDR
+IDR
+
+500
+415
+
+L-DAC
+
+L-DAC
+
+L-DAC
+
+L-DAC
+
+S-DAC
+L-DAC
+
+PEHA solution/Ru-
+Macho-BH
+Alkali OH/Ru Macho-
+BH on ethyene glycol
+KOH/Cu/ZnO/Al2O3
+PEHA/Cu/ZnO/Al2O3
+PEHA/Au/SiO2
+
+CaO/Ti@ZSM-5
+KOH/EG/Ru-Macho-
+BH
+
+H2
+
+H2
+
+H2
+
+H2
+
+H2
+
+H2
+
+formatee
+
+5000
+
+3600
+
+methanol
+
+6800
+
+5400
+
+methanol
+
+11000
+
+10500
+
+methanol
+
+methanol
+
+C1
+
+1 mol/
+mol OH
+11764
+11408
+14450
+
+25% yield after
+20 h
+10587
+10267
+9826
+
+propane
+H2
+
+propylene
+methanol
+
+5300
+25000
+
+1600
+25000
+
+A.C.
+
+A.C.
+
+A.C
+
+A.C
+
+A.C.
+
+A.C
+
+C
+
+◦
+
+600
+A.C.
+
+a PEHA = Pentaethylenehexamine.
+b C1 = (Methanol, formamide and formate).
+c When it is a solution of base or amine, it is calculated per gram of solute.
+d A.C. = Ambient conditions or not provided so we assume it to be ambient conditions.
+(cid:0)
+e Formate is the conjugate base of formic acid in basic media (HCO2
+
+).
+
+◦
+
+C
+80
+50 bar
+125–165
+50 bar
+145
+C
+80 bar
+C
+140
+
+◦
+
+◦
+
+◦
+
+◦
+
+200
+C
+70 bar
+100
+C
+16 bar
+C
+600
+140
+C
+70 bar
+
+◦
+
+◦
+
+◦
+
+C
+
+[53]
+
+[118]
+
+[119]
+
+[120]
+
+[121]
+
+[122]
+
+[123]
+[124]
+
+cascade in a single reactor, so they are fully integrated in space
+and time without changing the operational conditions.
+
+3.1. Integration of DAC with thermo-catalytic power-to-gas
+
+The power-to-gas (PtG) scheme combines the CO2 utilization and the
+chemical storage of green H2  for the synthesis of fuel gases (normally
+CH4) [91,92]. Table 3 compiles cases where DAC is combined with PtG
+using different levels of integration, which are explained below.
+
+3.1.1.
+
+Independent capture and conversion (D + R)
+
+DAC and PtG are processes that have been developed independently
+[32,93,94]. It has been reported [95] that the integration of both pro-
+cesses  is  difficult  due  to  the  complex  structure  of  interactions  and
+
+synergies.  Accordingly,  using  the  available  technologies  for  DAC  and
+PtG as separate units is the easiest approach and thus the first one that
+has been studied at various scales. DAC can be performed by sorbents
+(solid  and  liquid)  as  described  above  and  subsequently  CO2  can  be
+concentrated,  compressed,  stored  and  transported.  In  a  second  step,
+several technologies convert CO2 with H2, directly or via synthesis gas to
+fuels such as methane, methanol, Fischer–Tropsch products, polymers or
+speciality chemicals [24]. In addition, the use of green H2, i.e., produced
+from  water  electrolysis  powered  by  renewable  electricity,  makes  the
+process outstand among the more feasible solutions for seasonal storage
+of renewable energy. There are several projects worldwide in which the
+DAC  has  been  coupled  to  PtG  in  separate  reactors.  For  instance,  the
+SOLETAIR  project [92,96] uses a  DAC technology by  Hydrocell. Sub-
+sequently, decentralized mobile pilot plants produces gasoline, diesel,
+and kerosene via Fischer-Tropsch synthesis in a power-to-X approach.
+
+ProgressinEnergyandCombustionScience100(2024)1011327
+
+E. García-Bordej ́e and R. Gonz ́alez-Olmos
+
+Table 5
+Compilation of the available literature dealing with DAC plus conversion using non-thermal processes.
+
+DAC
+technology
+
+CO2
+(ppm)
+Other
+components
+
+DAC material/Catalysta
+
+Reactant
+
+Product
+
+DAC
+(μmol CO2/
+g)
+
+Production
+(μmol product/g)
+
+Adsorption
+conditionsb
+
+Reaction
+conditions
+
+Reference
+
+D*+R  350
+
+D*+R  400
+
+L-DAC
+
+KOH/electrolytic cell
+
+electrocatalysis  CO2/H2
+
+0.55 M
+
+–
+
+(methanol)
+
+L-DAC
+
+alkaline hydroxide solution
+
+electrocatalysis  CO
+
+3 M KHCO3  FE for CO
+
+production of
+59% at
+100 mA/cm2
+60% FE at
+>50 mA/cm2
+0.3⋅103-16.5⋅103
+
+3.5 (0.68 M
+KHCO3)
+32–76
+
+20,700
+
+7.5⋅103
+
+Formic acid
+
+7,600
+
+n.d
+
+A.C.
+
+A.C.
+
+A.C.
+
+[129]
+
+◦
+
+20–70
+1–4bar
+
+C
+
+[130]
+
+A.C.
+
+A.C
+
+[131]
+
+70–110
+
+◦
+
+C
+
+70–110
+
+◦
+
+C
+
+[128]
+
+◦
+
+30
+C
+1 bar
+60–70
+
+◦
+
+C
+
+50
+
+◦
+
+C
+
+60
+
+◦
+
+C
+
+◦
+
+30
+C
+1 bar
+
+50
+
+◦
+
+C
+
+60
+
+◦
+
+C
+
+[126]
+
+[125]
+
+[115]
+
+[116]
+
+51.2
+
+20 mmol
+
+n.d.
+
+n.d.
+
+n.d.
+
+n.d.
+
+1.26 μmol/g
+
+A.C., 1 bar
+
+A.C.
+
+[132]
+
+73.21 μmol/g
+
+34-37
+
+◦
+
+C
+
+A.C.
+
+[133]
+
+D*+R  air
+
+L-DAC
+
+KOH/SnO2 or Ag on carbon
+
+electrocatalysis  CO, formate
+
+IDR
+
+400
+
+S-DAC
+
+Ce0.8Zr0.2O2
+
+Methanol
+
+IDR
+
+400
+
+L-DAC
+
+IDR
+
+380–420
+
+L-DAC
+
+SDR  Air
+
+L-DAC
+
+Tetraalkylammonium
+Borohydrides (IL)
+1-ethyl-1-
+methylpyrrolidinium
+borohydride (IL)
+Calcoline
+
+HCl
+
+HCl
+
+Calcoline
+
+SDR  Air
+
+L-DAC
+
+Epoxides/Mg-MOF
+
+Epoxides
+
+Dimethyl
+carbonate
+Formic acid
+
+Calcium
+carbonate
+Cyclic
+carbonates
+
+SDR
+
+400
+
+M-DAC
+
+SDR  Air
+
+L-DAC/S-
+DAC
+
+Polyimide/Cu–TiO2
+membrane
+CuCoAl-LDH in water
+
+photocatalysis  CO
+
+photocatalysis  CO
+
+c. A.C.: Ambient conditions or not provided so we assume it to be ambient conditions.
+
+a LDH: layered double hydroxide; n.d.: not determined.
+b FE: Faraday efficiency.
+
+Fig. 6. Possible configurations for coupling DAC and chemical CO2 conversion. The D + R stands for DAC plus reaction of concentrated CO2 (i), D*+R stands for DAC
+without a separate regeneration step because the regeneration is carried out simultaneously with the subsequent conversion (ii); IDR stands for integrated DAC and
+reaction in space but not in time (iii); and SDR for simultaneous DAC and reaction, in which the integration is in space and time (iv). Dashed lines mean operational
+modes, switching from DAC to conversion and vice versa.
+
+Some of these D + R approaches tackled the heat integration of both
+reactors to make the whole process autothermic [97].
+
+In  the  pioneering  studies,  both  DAC  and  methanation  have  been
+performed  using  different  solid  materials  held  in  different  vessels.
+Veselovskaya  et  al.  [99]  (Fig.  7)  performed  the  DAC  and  subsequent
+methanation using two fixed beds connected in series and using tem-
+perature swings [98–100]. The CO2 is adsorbed from air in the first bed
+at room temperature using K2CO3  on alumina. The sorbent is regener-
+◦
+ated by increasing the temperature up to 200–300
+C while flowing H2,
+CO2 is released. Then it passes to the second vessel (conversion reactor)
+
+containing a commercial Ni catalyst [99] or Ru/Al2O3  [98,100] where
+CH4  is  produced.  In  another  D  + R  approach,  DAC  is  performed  by
+carbonation of MgSiO3  to MgCO3  and subsequently the solid is mixed
+with a Ni catalyst to produce methane of very high purity [101]. The
+capture and reaction are carried out in two separate vessels. The CO2
+capture step takes very long time (about six months) and the solid is
+transported from one vessel to the other. Processes with higher degree of
+integration, shorter capture times and without the need of transporting
+solids would be desired.
+
+ProgressinEnergyandCombustionScience100(2024)1011328
+
+E. García-Bordej ́e and R. Gonz ́alez-Olmos
+
+Fig. 7. DAC with conversion using the D + R approach. Reprinted from Ref. [99] with permission of Elsevier.
+
+3.1.2. Using a single vessel and two steps (IDR)
+
+◦
+
+The  methanation  reaction  is  usually  performed  at  intermediate
+temperatures (300–500
+C) and there are adsorbents that adsorb CO2
+within the same temperature range or lower temperatures. For instance,
+alkali and alkaline earth metals form carbonates in the same tempera-
+ture  range as  the  methanation occurs  (200–400
+C). Accordingly, the
+
+◦
+
+CO2  adsorption  and  methanation  can  be  performed  at  the  same  tem-
+perature avoiding temperature swings. The coupling of DAC and con-
+version  in  a  single  vessel  will  avoid  the  CO2  transport  from  the  DAC
+system to the reactor system. Moreover, the proximity between capture
+and  catalytic  functions  creates  synergetic  effects  (discussed  later),
+facilitating the regeneration of the capture material and favouring heat
+
+Fig. 8. Proposed process combining DAC with conversion using the IDR approach. Reprinted from Ref. [103] with permission of Elsevier.
+
+ProgressinEnergyandCombustionScience100(2024)1011329
+
+E. García-Bordej ́e and R. Gonz ́alez-Olmos
+
+and  mass  transfer,  thus  contributing  to  process  intensification  [107].
+The two different functional materials can be placed in the same vessel
+and swapping between the two feed gases; first CO2-containing air and
+subsequently H2 to release CO2 from the sorbent and convert it into CH4
+at the catalytic sites as schematically depicted in Fig. 8.
+
+◦
+
+◦
+
+C and the reaction at 300–350
+
+There  are  several  variants  for  this  approach.  One  alternative  is  to
+place  both  the  adsorbent  and  the  catalyst,  separated  but  in  the  same
+reactor (i.e., a physical solid mixture), and switching between the two
+feeds,  i.e.  air and  H2. This  approach was  used  by Veselovskaya  et  al.
+[105]  who  placed  K2CO3  as  adsorbent  and  Ru/Al2O3  as  methanation
+catalyst in two consecutive beds in a single reactor. The adsorption took
+C. The other more recent
+place at 25
+approach is using a single material encompassing both functionalities in
+intimate  (nanometre  scale)  contact.  The  very  short  diffusional  length
+leads to significant process intensification by enhancing heat and mass
+transfer  allowing  operating  at  isothermal  conditions,  thus  avoiding
+temperature  swings  [22].  The  materials  containing  the  two  functions
+(CO2  capture and catalyst) are called dual functional materials (DFM).
+They  are  comprised  of  interspersed  alkaline  adsorbent  and  catalytic
+transition  metal  supported  on  the  same  carrier,  usually  Al2O3.  DFM
+materials were originally developed for the capture and conversion of
+CO2 from flue gases [22,108–110]. Recently, their application has been
+extended to DAC. One significant difference between DAC and capture
+from flue gases is that the air contains 21% O2 that oxidises the transi-
+tion metal (Ni or Ru) during the capture step at medium temperatures.
+Subsequently,  the  metal  should  be  reduced  before  being  active  for
+methanation. In the reduction step, Ru oxides re-reduces readily being
+stable in cyclic performance in the presence of O2  and moisture [111]
+while NiO is not completely reduced loosing performance [112]. Thus,
+Ru  is  preferred  over  Ni  for  DFMs  capturing  CO2  from  air  due  to  its
+favourable  redox  properties.  Since  Ru  is  significantly  more  expensive
+than Ni, research efforts have been devoted to enhance the reducibility
+of Ni, for instance by alloying with small amounts of Ru [113].
+
+The literature dealing with the use of DFM for DAC is very scarce.
+Farrauto et al., who have thoroughly studied the application of DFM to
+flue gases, have just recently reported a feasibility study about the use of
+DFM for the integration of DAC with methanation [103]. A DFM con-
+◦
+sisting of Na and Ru demonstrated stable cyclic performance at 320
+C in
+DAC. The authors performed also the regeneration of the sorbent under
+inert gas and the regeneration was not as complete as under H2. This was
+explained  because  CO2  methanation  is  exothermic  leading  to  local
+temperature increase favouring the CO2 desorption and reaction, hence
+leading  to  more  complete  regeneration.  This  emphasises  the  process
+intensification  achieved  by  reactive  regeneration  with  H2.  Simulta-
+neously to the regeneration, a valuable product, CH4, is produced. The
+effect of moisture present in air was also studied, finding a reversible
+decrease of CO2  capture without affecting the catalytic activity in suc-
+cessive cycles. These preliminary results are very promising, revealing
+that further research is needed in the future to demonstrate the technical
+and economic viability of the process at larger scales. The authors point
+into future research directions such as lowering the operation temper-
+ature to reduce the energy requirements and increase CO2 capture and
+process optimization and DFM materials design to increase the heat and
+mass transfer, thus increasing CH4  productivity. Therefore, developing
+DFMs working at lower temperatures is a challenging opportunity ahead
+for catalysis researchers. The DFM should consist of more active syner-
+gistic methanation catalyst and sorbents materials which are completely
+regenerated at lower temperatures.
+
+In a recent study, a very low-concentration of CO2  (100 ppm CO2)
+was successfully converted into 11.5% CH4, using a DFM Ni/Na-γ-Al2O3
+[104]. The CH4 productivity increased when the pressure was increased
+from 0.1 to 0.9 MPa. These studies are preliminary and further research
+using  ambient  air  with  humidity  is  needed.  During  air  capture,  the
+heating of large volume of air is unfeasible. Therefore, it seems more
+convenient to perform the capture step at room temperature and later
+heat to regenerate. Ni/Na-γ-Al2O3 was also evaluated in non-isothermal
+
+◦
+
+C  and
+conditions,  that  is,  the  CO2  adsorption  was  performed  at  25
+◦
+subsequently the reactor was heated up to 300
+C to be regenerated with
+H2 and producing CH4 simultaneously [102]. Performing the adsorption
+◦
+at 25
+C favours the adsorption capacity of the sorbent, leading to higher
+CH4 production (ca. 1 mmol/g), which is much higher than when both
+◦
+processes were operated at 320
+C (0.145 mmol/g) [103]. In contrast to
+isothermal operation, after adsorption at 25
+C the catalyst  has to be
+◦
+heated up to 320
+C leading to a transient operation. It remains unclear
+how the transient periods will affect the quality of the product. More-
+over, methods to heat the material very fast, like technology based on
+inductive  heating,  seems  to  be  useful  to  operate  faster,  shortening
+transient periods [114]. This can eventually be the solution to enhance
+the  efficiency  of  the  process.  Moreover,  induction  heating  affords
+localized and precise temperature control and it will contribute to sus-
+tainability by the electrification of the process.
+
+◦
+
+3.1.3. Using a fully-integrated single process (SDR)
+
+In  some  processes,  DAC  and  conversion/regeneration  are  carried
+either simultaneously or in cascade, enabling continuous operation. The
+process should be designed for conditions that favour thermodynami-
+cally  a  DAC  followed  by  conversion  pathways.  In  the  context  of  CO2
+separation from space cabins, a reactive separation process with mem-
+branes is proposed in which separation and methanation reaction are
+coupled producing 12 μmol/h/g of CH4 [106]. This process was studied
+by  simulation  and  used  high  temperature  membranes  which  are
+continuously regenerated  by the Sabatier  reaction (i.e., CO2  hydroge-
+nation to CH4) using a Ni-based catalyst, thus achieving synergies for
+both  processes.  Compared  to  the  conventional  process  (Fig.  9a),  the
+membrane  process  avoids  the  compression  step  (Fig.  9b).  The  CO2
+capture and conversion processes in one single pass are very scarce in
+the  literature,  especially  those  carried  out  at  high  temperatures.  SDR
+processes are commonly non-thermal processes such as the capture and
+conversion  into  carbonates  [115]  or  polycarbonates  [116].  These
+non-thermal processes are explained more in detail in section 3.3.
+
+3.2. DAC coupled to CO2  thermal conversion to methanol, formate/
+formic acid and other products (power-to-X)
+
+Examples  of  the  combination  of  DAC  with  thermal  conversion  to
+products different from CH4 such as methanol, formate (conjugate base
+of formic acid in basic media) and propylene are compiled in Table 4.
+Methanol and formate are liquids and use mainly L-DAC and homoge-
+neous catalysts, in contrast, the production of CH4 (Table 3) uses mainly
+S-DAC and heterogeneous catalysts. The yields of methanol or formate
+(Table 4), which are carried out in homogenous phase, are also larger
+than those to CH4  (Table 3). This can be attributed  to the higher ab-
+sorption capacity of the liquid bases, higher mass transfer rate in ho-
+mogeneous phase and the use of very active homogeneous catalysts. In
+contrast,  the  homogeneous  phases  operation  entails  higher  costs  for
+separation of products and catalysts.
+
+Kar et al. performed the integration of DAC and conversion to either
+methanol or formate [117]. Therein, the compounds after CO2 capture
+(using amines or hydroxides) are directly fed to the downstream con-
+version process to synthetize methanol or formate salts (Fig. 10). The
+products  (methanol  and  formate)  are  very  attractive  for  many  useful
+applications such as fuels, fuel additives, reversible H2  storage media,
+energy  carriers,  etc.  The  processes  developed  by  this  group  can  be
+divided into amine- and hydroxide-assisted capture. The group first re-
+ported  the  tandem  capture  of  CO2  from  air  with  polyamine  and  its
+subsequent conversion into formic acid (Fig. 10a) or methanol (Fig. 10b)
+using an homogenous catalyst (named Ru-Macho-BH) at 145
+C [118],
+achieving  a  yield  to  methanol  of  75%.  The  direct  conversion  of  CO2
+captured in the polyamine can be carried out in the same vessel as the
+capture, hence it can be classified as IDR type integration. In a follow-up
+paper  [119],  they  used  a  biphasic  2-MTHF/water  system,  which  also
+facilitates  the  separation  and  recycling  of  the  amine  (in  the  aqueous
+
+◦
+
+ProgressinEnergyandCombustionScience100(2024)10113210
+
+E. García-Bordej ́e and R. Gonz ́alez-Olmos
+
+Fig.  9. Air  revitalizing  systems  and  simultaneous  CH4  production  for  space  cabins:  (a)  conventional  system;  (b)  system  based  on  membrane  following  a  SDR
+approach. Adapted from Ref. [106] with permission of Elsevier.
+
+Fig. 10. Scheme for the amine- and hydroxide assisted CO2  transformation to formic acid and methanol: a) amine-based process to formic acid; b) amine-based
+process to methanol; c) hydroxide-based process to formate. Adapted from Kar et al. [53] with permission of ACS.
+
+phase) and the catalyst (in the organic phase) for multiple reaction cy-
+cles. According to the scheme (Fig. 11), the CO2 capture is performed in
+a  vessel  before  the  CO2-loaded  amine  is  transferred  to  other  vessel,
+where it is mixed with the organic phase containing the catalyst for the
+
+conversion. Thus, the level of integration could be classified as D*+R.
+Using also the biphasic system to separate the absorbent and the cata-
+lyst, these authors used aqueous inorganic hydroxide (NaOH/KOH) so-
+lutions  for  CO2  capture  and  its  conversion  into  formate  salts  using
+
+ProgressinEnergyandCombustionScience100(2024)10113211
+
+E. García-Bordej ́e and R. Gonz ́alez-Olmos
+
+Fig. 11. Schematic representation of biphasic CO2 to methanol system recycling the catalyst in the organic phase and the amine in the aqueous phase. Adapted from
+Kar et al. [119] with permission of ACS.
+
+homogeneous pincer catalysts in the organic phase (Fig. 10c) [53] in the
+same  reactor  (IDR  integration).  The  formate  can  be  hydrolysed  to
+regenerate the NaOH and produce formic acid or the formate salts can be
+directly utilized, without any purification, in a direct formate fuel cell
+(DFFC) to produce electricity and regenerate the hydroxide base, which
+is recycled. In another work [120], the synthesis of methanol was per-
+formed from alkali carbonates and bicarbonates formed by CO2 captured
+from air in a solution of ethylene glycol. In a second step, the hydroxide
+◦
+was regenerated at temperatures as low as 100
+C while converting CO2
+into  methanol  using  a  homogeneous  pincer  catalyst.  Subsequently,
+methanol  is  separated  by  distillation.  According  to  the  authors,  this
+process can be carried in one pot (IDR integration) and it has the po-
+tential to be implemented in continuous mode. The authors claim that
+the  process  is  more  efficient  than  an  amine-based  process  due  to  the
+higher  capture  efficiency  and  higher  stability  of  the  alkali.  The  same
+group performed the integration of DAC using also an ethylene glycol
+solution  and  hydrogenation  of  CO2  to  methanol  using  a  commercial
+heterogeneous Cu/ZnO/Al2O3  catalyst at a relatively low temperature
+range (170–200
+C) using H2 [121]. Ethylene glycol enhanced the CO2
+conversion values up to 120% compared to the solvent-less system. The
+methanol yields rose up to 90%, which is close to the calculated equi-
+librium limit. The catalyst was recycled and the process carried out in
+one single vessel (IDR integration) in batch operation. Both capture and
+conversion took long time (about 72 h each one) but the authors claim
+that  it  has  the  potential  to  be  carried  out  in  continuous.  Another  re-
+ported  approach  is  the  one-reactor  two-step  process  for  the  hydroge-
+nation of amine-captured CO2  into methanol, formate, and formamide
+using silica-supported Au nanoparticles as catalyst in the presence of a
+Lewis acid such as boric acid [122]. This process converts CO2 from air
+at  ambient  pressures  to  C1  products  avoiding  the  use  of  an  organic
+solvent.
+
+◦
+
+◦
+
+In the processes discussed previously, H2 is used as co-reactant with
+the captured CO2. Other reactants different from H2 have also been used,
+although more scarcely. CO2  captured from air has been also coupled
+with other thermal reaction such as the oxidative dehydrogenation of
+propane at 600
+C [123]. In that work, a dual functional material con-
+sisting of CaO as adsorbent and M@ZSM-5 (M = V-, Ga-, Ti-, or Ni-oxide)
+as heterogeneous catalyst was prepared with a multichannel monolithic
+macrostructure using a novel direct metal-oxide 3D printing technique.
+The  monolithic  material  was  used  for  performing  both  capture  and
+conversion (IDR integration). The best CO2 capture and propylene yield
+◦
+was attained when both steps are performed isothermally at 600
+C, thus
+fully eliminating the thermal gradient which normally occurs when a
+different optimized temperature is used in each process.
+
+In general, the processes denoted as IDR use the same reactor for the
+
+capture and reaction, therefore they have the potential to be carried out
+in quasi-continuous fashion using two vessels (swing operation), in one
+reactor the capture is carried out while in the other the conversion is
+performed and subsequently the vessels are swapped. However, the re-
+action times tend to be very long, for instance 72 h for 100% conversion
+of captured CO2 [120], and the products are very diluted, leading to low
+productivities and high separation costs.
+
+3.3. CO2  capture and conversion by non-thermal processes
+
+Table 5 compiles the literature dealing with the combination of DAC
+and  the  CO2  conversion  by  non-thermal  processes.  There  are  some
+products that can be attained at room temperature using the suitable
+reducing reagent. There are several examples of chemical reduction of
+captured  CO2  at  room  temperature  using  ionic  liquids  (ILs)  or  metal
+organic frameworks (MOFs). The DAC and conversion into formate were
+performed in tandem at atmospheric conditions (room temperature and
+1 bar) using pyrrolidinium-based IL with a borohydride anion. The IL
+captures up to 1 g CO2 per 1 g IL (20 mmol CO2/g IL), which is subse-
+quently reduced to formate by borohydride [125]. The product can be
+then  treated  with  HCl  to  give  formic  acid  and  the  corresponding  IL
+chloride, which can be recycled after treating with sodium borohydride.
+In  a  subsequent  paper,  the  authors  used  another  IL  (of  tetraalky-
+lammonium family) combined with borohydride for solid–gas reduction
+of CO2 [126]. The captured CO2 is converted in a next step by reacting
+with  HCl  or  an  amine  to  valuable  products  such  as  formic  acid  or
+N-formylated amine, respectively. These processes can be classified as
+IDR  since  they can be  performed  in  one  pot by  adding the  reactants.
+However, the processes have some drawbacks such as the requirement
+of distillation to separate the IL and the consumption of sodium boro-
+hydride to regenerate the IL. Moreover, the time for CO2  capture from
+air took as long as 16 days, which is one of the inherent disadvantages of
+capturing CO2 from air versus a concentrated source such flue gas.
+
+In  other  non-thermal  processes,  the  DAC  and  conversion  are  per-
+formed  simultaneously  (SDR).  A bifunctional  Mg(II)-based  MOF,  con-
+taining a nitrogen-rich tripodal linker and a Lewis acid metal ion Mg(II),
+exhibited highly efficient fixation of CO2 from air into value-added cy-
+clic carbonates [116]. This process was carried out at mild temperature
+and in the absence of co-catalyst and solvent. In other process [127],
+sodium glycinate is used for DAC by formation of bicarbonate ions that
+accelerate the mineralization to calcium carbonate with CaO and CaSiO3
+◦
+as the precursors, achieving a degree of mineralization of 97% at 90
+C.
+This capture material is continuously and spontaneously regenerated in
+aqueous phase. In another reaction [128], CO2 was captured from air on
+powder  Ce0.8Zr0.2O2  solid  solution  and  subsequently  converted  into
+
+ProgressinEnergyandCombustionScience100(2024)10113212
+
+E. García-Bordej ́e and R. Gonz ́alez-Olmos
+
+dimethyl  carbonate  by  reacting  with  methanol  and  regenerating  the
+sorbent. The reaction occurs under mild conditions (1 bar; 70(cid:0) 110
+C)
+and  in  the  same  reactor  but  changing  the  gas  feed  (IDR  integration
+level).
+
+◦
+
+it
+
+is  more  energy
+
+intensive.  To  avoid
+
+Photocatalysis  [134]  and  electrocatalysis  [135]  outstand  among
+non-thermal processes. Combinations of these core technologies are also
+being used, such as photothermal [136], electrothermal [137] or pho-
+toelectrochemical  [138].  Each  technology  has  their  own  benefits  and
+limitations,  not  being  excluding  technologies  but  complementary.
+Comparing with thermocatalysis, the source of energy to drive the re-
+action is different: thermal energy for thermocatalysis or electrons from
+renewable  electricity for electrocatalysis, or  photogenerated electrons
+for photocatalysis. Thermocatalysis provides sufficient energy to surpass
+the CO2 activation barrier, entailing higher reaction rates and yields but
+unfortunately
+the
+heating-associated  CO2  emission  of  thermal  processes,  the  reaction
+should be heated using renewable electricity, an area that is emerging
+these days with novel electrically-heated reactor designs [139,140] or
+induction  heating  [114,141,142]  reactors.  In  contrast,  photocatalysis
+and  electrocatalysis  are  less  energy  intensive  because  do  not  require
+heating.  Nevertheless,  the  kinetics  are  slower  and  the  products  are
+diluted in a liquid solvent with the concomitant separation costs. On the
+other  hand,  CO2  is  more  difficult  to  reduce  chemically  at  room  tem-
+perature,  leading  to  less  reduced  products  than  those  obtained  by
+thermocatalysis. The higher yields and lower separation costs of ther-
+mocatalysis makes this technology more suitable for scaling up and thus
+for the immediate adoption in industry, where emitted CO2 can be easily
+captured and H2  is readily available. However, for small scale distrib-
+uted  units  integrated  with  DAC,  the  higher  yield  of  thermocatalytic
+processes is not so crucial. Because the recent interest in DAC, there are
+only a few examples of the integration of DAC with electrocatalytic or
+photocatalytic reduction which are revised below.
+
+The firstly implemented approaches for DAC and electrolysis used
+separated  reactors  (D*+R  integration  level).  In  1995,  one  of  the  pio-
+neering works of the integration of DAC and conversion was reported
+[129]. In this process, CO2 is transported from air through a hollow fibre
+membrane containing a solution of KOH, which absorbs CO2 in the form
+of K2CO3. This solution is transported to an electrolyser where CO2  is
+desorbed by electrolysis of K2CO3 and both CO2 and H2O are reduced to
+synthesis gas (CO/H2 mixture). Synthesis gas can be subsequently con-
+verted to methanol in a third reactor. If we consider synthesis gas as the
+product,  the  integration is  of  the  type D*  + R  because the  sorbent is
+
+regenerated during the conversion in the electrolytic cell. However, if
+methanol is considered as the final product, the integration would be of
+type D + R because a third reactor is needed. This latter is a three-step
+process to methanol with a low degree of integration. In the conclusions,
+the authors note that the economics of the process have not been studied
+in detail, thus further feasibility studies would be necessary.
+
+Some recent studies revise the last research efforts in the integration
+of  CO2  capture  (not  only  DAC)  and  electrochemical  conversion  [143,
+144]. These reviews  emphasize that, while both the CO2  capture and
+electrochemical  CO2  reduction  have  been  intensively  investigated  as
+separated  processes,  only  a  few  studies  addressed  integration  of  both
+processes. A highly promising approach is utilizing the capture solution
+as an electrolyte for the electrochemical CO2 reduction (eCO2R). How-
+ever, at this moment this technology is limited by low partial current
+densities and Faradaic efficiencies (FE) that can be achieved with these
+solutions. Therefore, further research is needed. One recent perspective
+article  appeared  dealing  with  the  coupling  of  electrochemical  CO2
+conversion  with  CO2  capture,  addressing  also  CO2  captured  from  air
+[145]. This perspective considers conceptually three levels of coupling
+similar to the levels that we have denoted as D + R, IDR and SDR. The
+article points that the two later levels have unique advantages including
+lower  capital  and  operational  expenditure,  but  more  research  is  still
+needed on the catalytic materials. For electrochemical reduction, the use
+of covalent organic frameworks (COFs) and MOFs are proposed to in-
+crease CO2 concentration, thus alleviating the limitations posed by low
+CO2 concentrations in air by increasing its concentration [146]. Another
+system used a solution of hydroxides to capture CO2  via formation of
+bicarbonates  (Fig.  12).  The  bicarbonate-enriched  solution  is  electro-
+catalytically reduced to CO and concomitantly the hydroxide is regen-
+erated  with  a  suitable  electrode  such  as  free-standing  porous  silver
+[130]. This system connects upstream carbon capture to electrochemical
+CO2  utilization  without  high  temperature  or  pressurization  steps
+(Fig. 12, orange pathway). The authors suggested that the CO produced
+at  high  FE  can  be  further  converted  into  C2+ by  Fischer-Tropsch.
+Nevertheless, this work uses 3 M bicarbonate and achieving this high
+concentration from the high dilution in air is not so straightforward. This
+work does not mention how to achieve this bicarbonate concentration
+from air. In another article [131], it is reported that a concentration of
+0.658 M is achieved after 8.5 h of capture from air and the FE decreases
+significantly  as  the  concentration  decreases  (Fig.  13).  The  two  later
+examples [130,131] have an integration level denoted as D* + R for CO
+production. This level involves two vessels (the DAC and the conversion
+
+Fig. 12. Comparison CO2 recovery and utilization following a combination of thermal process for CO2 desorption followed by an electrolytic process (D + R, black),
+and an exclusively electrolytic process that uses as electrolyte the bicarbonate solution after CO2  capture (D*+R, orange). The orange pathway does not require a
+thermal step for CO2  recovery, and does not require a pure stream of gaseous CO2  to be fed into the electrolyser. Reprinted from Ref. [130] with permission RSC.
+
+ProgressinEnergyandCombustionScience100(2024)10113213
+
+E. García-Bordej ́e and R. Gonz ́alez-Olmos
+
+Fig. 13. Comparison of the Faraday efficiencies (FE) reprinted from Ref. [131] with permission of ACS.
+
+vessels) and the solution containing captured CO2  is transported from
+one reactor to the other. Therefore, this type of integration is applicable
+for a L-DAC and for non-thermal conversion (such as electrocatalyst),
+where both processes occur at room temperature and it is not necessary
+to heat the fluid. As explained above, the integration level D*+R avoids
+a separate step of regeneration since regeneration is carried out during
+conversion.  After  this,  the  regenerated  material  is  recirculated  to  the
+DAC  system.  When  a  third  reactor  for  Fischer-Tropsch  is  added  the
+integration becomes of type D + R and includes a thermal process.
+
+Other type of non-thermal process coupled to DAC is photocatalysis.
+The stage of development is very incipient and there is not much liter-
+ature  about  coupling  DAC  and  CO2  conversion  using  photocatalysis
+[133].  Layered  double  hydroxides  (LDHs)  are  used  to  capture  CO2,
+which is subsequently reduced photo-catalytically to CO in the photo-
+cathode, at the same time that selective oxidation of 5-HMF is carried
+out in the photoanode (Fig. 14). Both processes are carried out sponta-
+neously  in  cascade  (SDR  integration).  Elsewhere,  the  simultaneous
+capture and photocatalytic conversion (SDR) is also carried out using
+Janus  membranes  consisting  of  polyimide  and  Cu-doped  TiO2  [132].
+The polyimide layer concentrates CO2 while it is simultaneously reduced
+photo-catalytically  to  CO  in  the  TiO2  layer.  Looking  at  the  yields  of
+photocatalytic  processes  in  Table  5,  they  are  in  the  range  of  a  few
+μmol/g, while the other thermal processes (Tables 3 and 4) are in the
+
+range of hundreds to thousands of μmol/g. Therefore, the yields of re-
+ported photocatalytic processes are still low to compete with thermal
+processes.  Nevertheless,  for  a  holistic  evaluation,  other  parameters
+should  be  considered  such  as  the  zero-energy  consumption  and  GHG
+emissions.
+
+4. Discussion about technoeconomic issues
+
+Technoeconomic  (TEA)  and  life  cycle  assessment  (LCA)  studies  of
+DAC have been performed in the literature [66,147,148]. The discussion
+in this section does not intend to be comprehensive but only give some
+clues about aspects to improve the integration of DAC and conversion
+systems. Since this technology is evolving at a fast pace, life cycle studies
+should  be  performed  on  a  technology-by-technology  basis  and  also
+considering the effect on all sustainable development goals [149]. Ac-
+cording to the revised articles, the main economic impacts of DAC are in
+the energy required for operation but there are also other environmental
+impacts related to the use of land, water, and materials. For example, in
+section 2.2, it is mentioned that the operation of L-DAC requires large
+quantities of water. In addition, for each capture material, the emissions
+generated  during  its  production,  operation  or  at  the  end  of  life  by
+decomposition  must  be  also  considered.  The  production  of  some  ad-
+sorbents can have environmental implications. For instance, some kinds
+
+Fig. 14. Mechanism for the integration of CO2  capture with its reduction and HMF oxidation. Reprinted from Ref. [133] with permission of Elsevier.
+
+ProgressinEnergyandCombustionScience100(2024)10113214
+
+Table 6
+Pros and cons of the different processes and levels of integration.
+
+Production capacity per
+weighta
+
+Equipment
+Costs and maintenance
+b
+
+Energy required for capture material
+regenerationc
+
+Energy cost for
+conversiond
+
+Capture material
+coste
+
+Catalyst
+costf
+
+Separation costs
+(product/
+catalyst)g
+
+Cost of the
+producth
+
+DAC + thermal power to gas
+þþ
+D + R
+þ
+IDR
+SDR (membranes)
+-
+DAC + thermal power-to-X
+D* + R
+IDR
+DAC + non thermal
+D* + R
+IDR
+SDR
+
+þþ
+þþ
+
+- -
+þ
+
+- -
+
+-
+þ
+
+- -
+
+-
+-
+
+þ
+þ
+þ
+
+-
+þ
+þþ
+
+þ
+þ
+
+þþ
+þþ
+þþ
+
+-
+-
+-
+
+- -
+- -
+
+þþ
+þþ
+þþ
+
+þ
+þ
+
+-
+
+þþ
+þþ
+
+þþ
+
+-
+-
+
+þ
+þ
+
+-
+-
+
+þþ
+þ
+þ
+
+þ
+þþ
+þþ
+
+- -
+- -
+
+-
+-
+-
+
+þ
+þ
+þ
+
+þþ
+þþ
+
+-
+-
+-
+
+E
+.
+
+G
+a
+r
+c
+í
+a
+-
+B
+o
+r
+d
+e
+j
+ ́e
+
+a
+n
+d
+
+R
+
+.
+
+G
+o
+n
+z
+ ́a
+l
+e
+z
+-
+O
+m
+o
+s
+
+l
+
+3 Thermal process requires significantly more energy for conversion than non-thermal process. Process under pressure increase significantly the energy required for conversion.
+
+a Based on the production (μmol g
+b The equipment costs increase when high temperature and high pressure is needed. In this comparison, the production scale has not been considered. If referred to the production scale, the equipment cost will be more
+
+(cid:0) 1) reported in the Tables 3–5.
+
+negative for the DAC + non thermal processes.
+
+c D + R integration requires more energy for regeneration than D*+R or IDR. In the latter ones the regeneration is performed simultaneously to conversion. The absorption with alkali hydroxide solution (typical for
+
+power-to-X) requires less energy than adsorption in a solid (typical of power-to-gas).
+
+d Alkaline oxides and hydroxides are significantly less expensive than membranes and ionic liquids and other more elaborated sorbents proposed for non-thermal processes.
+e The homogeneous catalyst used in power-to-X are more expensive to prepare than the heterogenous catalyst base on transition metals (as e.g Ni, Fe, Ti) used in power-to-gas and non-thermal processes.
+f The reactions in liquid phase, using homogenous catalyst and with lower selectivities have higher separation cost that reactions in gas phase.
+g Larger hydrocarbons or oxygenates (methanol) have higher value than CH4. CO has lower value because it has to undergo subsequent transformation via Fischer–Tropsch process or methanol synthesis.
+h Less reduced products such CO have lower market cost than more reduced products. The cost is also higher for oxygenates and hydrocarbons with larger number of carbon atoms.
+
+c
+a
+p
+t
+u
+r
+e
+,
+
+c
+o
+n
+v
+e
+r
+s
+i
+o
+n
+
+a
+n
+d
+
+s
+e
+p
+a
+r
+a
+t
+i
+o
+n
+
+o
+f
+
+p
+r
+o
+d
+u
+c
+t
+s
+
+a
+n
+d
+
+c
+a
+t
+a
+l
+y
+s
+t
+.
+
+O
+t
+h
+e
+r
+
+p
+r
+o
+d
+u
+c
+t
+,
+
+e
+q
+u
+i
+p
+m
+e
+n
+t
+
+c
+o
+s
+t
+,
+
+m
+a
+t
+e
+r
+i
+a
+l
+
+c
+o
+s
+t
+s
+
+a
+n
+d
+
+e
+n
+e
+r
+g
+y
+
+c
+o
+n
+s
+u
+m
+p
+t
+i
+o
+n
+
+f
+o
+r
+
+c
+o
+n
+s
+i
+d
+e
+r
+e
+d
+
+,
+
+s
+u
+c
+h
+
+a
+s
+
+t
+h
+e
+
+p
+r
+o
+d
+u
+c
+t
+i
+o
+n
+
+c
+a
+p
+a
+c
+i
+t
+y
+,
+
+v
+a
+l
+u
+e
+
+o
+f
+
+t
+h
+e
+
+o
+b
+t
+a
+i
+n
+e
+d
+
+i
+d
+e
+n
+t
+i
+fi
+e
+d
+
+t
+o
+
+a
+f
+f
+e
+c
+t
+
+t
+h
+e
+
+c
+o
+s
+t
+
+a
+n
+d
+
+s
+u
+s
+t
+a
+i
+n
+a
+b
+i
+l
+i
+t
+y
+
+b
+a
+l
+a
+n
+c
+e
+
+a
+n
+d
+
+h
+a
+v
+e
+
+t
+o
+
+b
+e
+
+p
+r
+o
+c
+e
+s
+s
+e
+s
+
+a
+n
+d
+
+l
+e
+v
+e
+l
+s
+
+o
+f
+
+i
+n
+t
+e
+g
+r
+a
+t
+i
+o
+n
+
+i
+n
+
+T
+a
+b
+l
+e
+
+6
+
+.
+
+M
+u
+l
+t
+i
+p
+l
+e
+
+f
+a
+c
+t
+o
+r
+s
+
+a
+r
+e
+
+m
+e
+t
+r
+i
+c
+s
+,
+
+w
+e
+c
+o
+m
+p
+a
+r
+e
+h
+e
+r
+e
+q
+u
+a
+l
+i
+t
+a
+t
+i
+v
+e
+l
+y
+t
+h
+e
+p
+r
+o
+s
+a
+n
+d
+c
+o
+n
+s
+o
+f
+
+t
+h
+e
+d
+i
+f
+f
+e
+r
+e
+n
+t
+
+a
+l
+s
+o
+m
+
+i
+s
+s
+i
+n
+g
+i
+n
+t
+h
+e
+m
+a
+j
+o
+r
+p
+a
+r
+t
+o
+f
+
+t
+h
+e
+
+a
+r
+t
+i
+c
+l
+e
+s
+.
+
+D
+u
+e
+
+t
+o
+t
+h
+e
+
+l
+a
+c
+k
+o
+f
+
+r
+e
+l
+e
+v
+a
+n
+t
+
+s
+u
+m
+p
+t
+i
+o
+n
+
+(
+k
+J
+/
+m
+o
+l
+)
+
+c
+o
+n
+s
+i
+d
+e
+r
+i
+n
+g
+
+b
+o
+t
+h
+
+c
+a
+p
+t
+u
+r
+e
+
+a
+n
+d
+
+c
+o
+n
+v
+e
+r
+s
+i
+o
+n
+
+,
+
+w
+h
+i
+c
+h
+
+i
+s
+
+p
+a
+r
+i
+s
+o
+n
+
+,
+
+i
+t
+
+w
+o
+u
+l
+d
+
+b
+e
+
+r
+e
+c
+o
+m
+m
+e
+n
+d
+e
+d
+
+t
+o
+
+r
+e
+p
+o
+r
+t
+
+a
+l
+s
+o
+
+t
+h
+e
+
+t
+o
+t
+a
+l
+
+e
+n
+e
+r
+g
+y
+
+c
+o
+n
+-
+
+a
+c
+c
+o
+m
+p
+l
+i
+s
+h
+
+l
+e
+a
+d
+i
+n
+g
+
+t
+o
+
+l
+o
+w
+
+t
+i
+
+m
+e
+
+y
+i
+e
+l
+d
+s
+.
+
+F
+o
+r
+
+a
+
+f
+a
+i
+r
+
+t
+e
+c
+h
+n
+o
+e
+c
+o
+n
+o
+m
+i
+c
+
+c
+o
+m
+
+-
+
+p
+r
+o
+p
+o
+s
+e
+d
+
+i
+n
+
+t
+h
+e
+
+l
+i
+t
+e
+r
+a
+t
+u
+r
+e
+
+f
+o
+r
+D
+A
+C
++
+c
+o
+n
+v
+e
+r
+s
+i
+o
+n
+
+t
+a
+k
+e
+
+v
+e
+r
+y
+
+l
+o
+n
+g
+
+t
+i
+
+m
+e
+
+t
+o
+
+g
+
+(cid:0)
+
+1
+
+h
+
+(cid:0)
+
+w
+o
+u
+l
+d
+
+1
+
+.
+
+T
+h
+i
+s
+
+i
+s
+
+r
+a
+r
+e
+l
+y
+
+r
+e
+p
+o
+r
+t
+e
+d
+
+i
+n
+
+t
+h
+e
+
+l
+i
+t
+e
+r
+a
+t
+u
+r
+e
+
+a
+n
+d
+
+s
+e
+v
+e
+r
+a
+l
+
+p
+r
+o
+c
+e
+s
+s
+e
+s
+
+b
+e
+
+a
+d
+v
+i
+s
+a
+b
+l
+e
+
+t
+o
+
+r
+e
+p
+o
+r
+t
+
+t
+h
+e
+
+p
+r
+o
+d
+u
+c
+t
+i
+v
+i
+t
+y
+
+i
+n
+p
+e
+r
+
+t
+i
+
+m
+e
+
+u
+n
+i
+t
+,
+
+i
+.
+e
+.
+,
+
+m
+o
+l
+
+e
+l
+e
+c
+t
+r
+i
+c
+i
+t
+y
+
+a
+n
+d
+m
+e
+m
+b
+r
+a
+n
+e
+s
+.
+
+c
+a
+t
+a
+l
+y
+s
+t
+s
+.
+
+F
+o
+r
+
+a
+
+T
+E
+A
+o
+f
+
+t
+h
+e
+
+d
+i
+f
+f
+e
+r
+e
+n
+t
+
+p
+r
+o
+c
+e
+s
+s
+e
+s
+
+a
+n
+d
+
+i
+n
+t
+e
+g
+r
+a
+t
+i
+o
+n
+
+l
+e
+v
+e
+l
+s
+,
+
+i
+t
+
+o
+f
+
+a
+d
+s
+o
+r
+p
+t
+i
+o
+n
+
+c
+a
+p
+a
+c
+i
+t
+y
+
+o
+r
+
+p
+r
+o
+d
+u
+c
+t
+i
+o
+n
+
+c
+a
+p
+a
+c
+i
+t
+y
+
+p
+e
+r
+
+w
+e
+i
+g
+h
+t
+
+o
+f
+
+s
+o
+r
+b
+e
+n
+t
+/
+
+M
+o
+s
+t
+
+o
+f
+
+t
+h
+e
+
+a
+r
+t
+i
+c
+l
+e
+s
+
+a
+b
+o
+u
+t
+
+D
+A
+C
++
+c
+o
+n
+v
+e
+r
+s
+i
+o
+n
+p
+r
+o
+v
+i
+d
+e
+d
+d
+a
+t
+a
+
+i
+n
+t
+e
+r
+m
+
+s
+
+o
+p
+t
+i
+
+m
+i
+z
+a
+t
+i
+o
+n
+
+o
+f
+
+t
+h
+e
+
+t
+e
+c
+h
+n
+o
+l
+o
+g
+y
+
+a
+n
+d
+
+b
+y
+
+r
+e
+d
+u
+c
+i
+n
+g
+
+t
+h
+e
+m
+a
+r
+k
+e
+t
+
+p
+r
+i
+c
+e
+s
+
+o
+f
+
+b
+e
+c
+o
+m
+e
+
+c
+o
+s
+t
+-
+c
+o
+m
+p
+e
+t
+i
+t
+i
+v
+e
+
+c
+o
+m
+p
+a
+r
+e
+d
+
+t
+o
+
+r
+
+W
+G
+S
+
+b
+y
+
+a
+d
+v
+a
+n
+c
+e
+m
+e
+n
+t
+
+a
+n
+d
+
+g
+i
+e
+s
+.
+
+B
+o
+t
+h
+c
+a
+r
+b
+o
+n
+a
+t
+e
+
+a
+n
+d
+g
+a
+s
+e
+o
+u
+s
+C
+O
+2
+
+e
+l
+e
+c
+t
+r
+o
+l
+y
+t
+i
+c
+p
+a
+t
+h
+w
+a
+y
+s
+w
+o
+u
+l
+d
+o
+n
+l
+y
+
+l
+o
+w
+e
+r
+
+c
+o
+s
+t
+
+t
+h
+a
+n
+
+t
+h
+e
+
+e
+l
+e
+c
+t
+r
+o
+l
+y
+t
+i
+c
+
+p
+a
+t
+h
+w
+a
+y
+s
+
+a
+t
+
+c
+u
+r
+r
+e
+n
+t
+
+s
+t
+a
+t
+e
+
+o
+f
+
+t
+e
+c
+h
+n
+o
+l
+o
+-
+
+T
+h
+e
+y
+
+c
+o
+n
+c
+l
+u
+d
+e
+d
+
+t
+h
+a
+t
+
+t
+h
+e
+
+c
+u
+r
+r
+e
+n
+t
+
+D
+A
+C
+-
+r
+
+W
+G
+S
+
+p
+l
+a
+n
+t
+
+p
+r
+o
+d
+u
+c
+e
+d
+
+s
+y
+n
+g
+a
+s
+
+a
+t
+
+c
+o
+m
+p
+a
+r
+e
+d
+t
+o
+t
+h
+e
+t
+h
+e
+r
+m
+o
+c
+a
+t
+a
+l
+y
+t
+i
+c
+r
+e
+v
+e
+r
+s
+e
+w
+a
+t
+e
+r
+g
+a
+s
+
+s
+h
+i
+f
+t
+
+(
+r
+
+W
+G
+S
+)
+p
+r
+o
+c
+e
+s
+s
+.
+
+e
+x
+p
+e
+n
+s
+i
+v
+e
+
+t
+h
+a
+n
+
+t
+h
+e
+
+l
+a
+t
+e
+r
+.
+
+T
+h
+e
+s
+e
+
+e
+l
+e
+c
+t
+r
+o
+l
+y
+t
+i
+c
+
+p
+a
+t
+h
+w
+a
+y
+s
+
+w
+e
+r
+e
+
+a
+l
+s
+o
+
+C
+O
+2
+
+e
+l
+e
+c
+t
+r
+o
+l
+y
+s
+i
+s
+.
+
+T
+h
+e
+y
+
+c
+o
+n
+c
+l
+u
+d
+e
+d
+
+t
+h
+a
+t
+
+t
+h
+e
+
+f
+o
+r
+m
+e
+r
+
+o
+n
+e
+
+i
+s
+
+5
+0
+%
+
+m
+o
+r
+e
+
+c
+a
+r
+b
+o
+n
+a
+t
+e
+
+c
+a
+p
+t
+u
+r
+e
+
+s
+o
+l
+u
+t
+i
+o
+n
+
+f
+r
+o
+m
+
+D
+A
+C
+
+w
+
+i
+t
+h
+
+t
+h
+e
+
+c
+o
+n
+v
+e
+n
+t
+i
+o
+n
+a
+l
+
+g
+a
+s
+e
+o
+u
+s
+
+f
+r
+o
+m
+C
+O
+2
+.
+
+I
+n
+
+t
+h
+a
+t
+
+w
+o
+r
+k
+,
+
+t
+h
+e
+y
+
+c
+o
+m
+p
+a
+r
+e
+d
+
+d
+i
+r
+e
+c
+t
+
+e
+l
+e
+c
+t
+r
+o
+r
+e
+d
+u
+c
+t
+i
+o
+n
+
+o
+f
+
+(
+b
+i
+)
+
+e
+t
+a
+l
+.
+
+[
+1
+5
+6
+]
+
+m
+a
+d
+e
+a
+T
+E
+A
+s
+t
+u
+d
+y
+o
+f
+d
+i
+f
+f
+e
+r
+e
+n
+t
+a
+l
+t
+e
+r
+n
+a
+t
+i
+v
+e
+s
+
+t
+o
+p
+r
+o
+d
+u
+c
+e
+s
+y
+n
+g
+a
+s
+
+c
+o
+n
+v
+e
+r
+s
+i
+o
+n
+
+t
+o
+
+L
+N
+G
+m
+o
+r
+e
+
+e
+c
+o
+n
+o
+m
+i
+c
+a
+l
+l
+y
+
+c
+o
+m
+p
+e
+t
+i
+t
+i
+v
+e
+.
+
+M
+o
+r
+e
+n
+o
+-
+G
+o
+n
+z
+ ́a
+l
+e
+z
+
+i
+n
+t
+e
+g
+r
+a
+t
+i
+o
+n
+o
+f
+b
+o
+t
+h
+D
+A
+C
+a
+n
+d
+c
+o
+n
+v
+e
+r
+s
+i
+o
+n
+t
+o
+C
+H
+4
+w
+
+i
+l
+l
+
+m
+a
+k
+e
+
+t
+h
+e
+p
+r
+o
+c
+e
+s
+s
+o
+f
+
+l
+i
+q
+u
+e
+fi
+e
+d
+H
+2
+.
+
+I
+t
+
+i
+s
+
+e
+x
+p
+e
+c
+t
+e
+d
+t
+h
+a
+t
+
+t
+h
+e
+d
+e
+v
+e
+l
+o
+p
+m
+e
+n
+t
+o
+f
+
+t
+e
+c
+h
+n
+o
+l
+o
+g
+i
+e
+s
+
+f
+o
+r
+
+t
+h
+e
+
+a
+d
+v
+a
+n
+t
+a
+g
+e
+
+i
+s
+
+g
+a
+i
+n
+e
+d
+
+b
+y
+
+p
+r
+o
+d
+u
+c
+i
+n
+g
+
+L
+N
+G
+
+b
+y
+
+t
+h
+e
+
+i
+n
+t
+e
+g
+r
+a
+t
+e
+d
+
+s
+y
+s
+t
+e
+m
+o
+v
+e
+r
+
+fi
+x
+e
+d
+b
+e
+d
+r
+e
+a
+c
+t
+o
+r
+s
+w
+
+i
+t
+h
+N
+
+i
+
+c
+a
+t
+a
+l
+y
+s
+t
+
+[
+1
+5
+5
+]
+.
+
+I
+t
+
+w
+a
+s
+
+c
+o
+n
+c
+l
+u
+d
+e
+d
+t
+h
+a
+t
+n
+o
+g
+r
+e
+a
+t
+
+r
+e
+n
+e
+w
+a
+b
+l
+e
+
+H
+2
+
+t
+o
+
+l
+i
+q
+u
+e
+fi
+e
+d
+m
+e
+t
+h
+a
+n
+e
+
+(
+L
+N
+G
+)
+
+u
+s
+i
+n
+g
+
+a
+
+s
+e
+r
+i
+e
+s
+
+o
+f
+
+a
+d
+i
+a
+b
+a
+t
+i
+c
+
+(
+S
+-
+D
+A
+C
+
+b
+y
+
+a
+m
+i
+n
+e
+
+b
+a
+s
+e
+d
+
+s
+y
+s
+t
+e
+m
+
+)
+
+a
+n
+d
+
+s
+e
+p
+a
+r
+a
+t
+e
+d
+
+C
+O
+2
+
+c
+o
+n
+v
+e
+r
+s
+i
+o
+n
+
+w
+
+i
+t
+h
+
+p
+e
+r
+f
+o
+r
+m
+e
+d
+
+a
+b
+o
+u
+t
+
+a
+
+l
+o
+w
+d
+e
+g
+r
+e
+e
+
+o
+f
+
+i
+n
+t
+e
+g
+r
+a
+t
+i
+o
+n
+
+(
+D
++
+R
+
+s
+c
+h
+e
+m
+e
+)
+
+o
+f
+
+D
+A
+C
+
+r
+e
+p
+o
+r
+t
+e
+d
+
+t
+h
+a
+t
+
+i
+n
+t
+e
+g
+r
+a
+t
+i
+o
+n
+
+c
+a
+n
+
+e
+v
+e
+n
+
+i
+n
+c
+r
+e
+a
+s
+e
+
+t
+h
+e
+
+c
+o
+s
+t
+.
+
+A
+
+T
+E
+A
+
+s
+t
+u
+d
+y
+w
+a
+s
+
+3
+0
+m
+o
+l
+%
+a
+r
+e
+
+e
+m
+p
+l
+o
+y
+e
+d
+
+.
+
+W
+h
+e
+n
+
+t
+h
+e
+
+C
+O
+2
+
+c
+o
+n
+c
+e
+n
+t
+r
+a
+t
+i
+o
+n
+s
+
+a
+r
+e
+
+l
+o
+w
+e
+r
+,
+
+i
+t
+
+i
+s
+
+t
+r
+i
+c
+i
+t
+y
+d
+e
+m
+a
+n
+d
+u
+p
+t
+o
+4
+6
+%
+b
+u
+t
+o
+n
+l
+y
+w
+h
+e
+n
+C
+O
+2
+c
+o
+n
+c
+e
+n
+t
+r
+a
+t
+i
+o
+n
+s
+h
+i
+g
+h
+e
+r
+
+t
+h
+a
+n
+
+a
+n
+d
+
+c
+o
+n
+v
+e
+r
+s
+i
+o
+n
+
+t
+o
+m
+e
+t
+h
+y
+l
+
+f
+o
+r
+m
+a
+t
+e
+
+i
+n
+
+o
+n
+e
+
+s
+i
+n
+g
+l
+e
+
+p
+r
+o
+c
+e
+s
+s
+
+s
+a
+v
+e
+s
+
+i
+n
+
+e
+l
+e
+c
+-
+
+A
+n
+
+i
+n
+i
+t
+i
+a
+l
+
+s
+t
+u
+d
+y
+
+[
+1
+5
+4
+]
+
+i
+n
+d
+i
+c
+a
+t
+e
+d
+
+t
+h
+a
+t
+
+t
+h
+e
+
+i
+n
+t
+e
+g
+r
+a
+t
+i
+o
+n
+
+o
+f
+C
+O
+2
+
+c
+a
+p
+t
+u
+r
+e
+
+v
+e
+s
+s
+e
+l
+
+a
+r
+e
+
+e
+v
+e
+n
+
+i
+n
+e
+x
+i
+s
+t
+e
+n
+t
+.
+
+s
+c
+a
+r
+c
+e
+
+a
+n
+d
+
+t
+h
+o
+s
+e
+
+a
+b
+o
+u
+t
+
+t
+h
+e
+
+i
+n
+t
+e
+g
+r
+a
+t
+i
+o
+n
+
+o
+f
+
+b
+o
+t
+h
+
+p
+r
+o
+c
+e
+s
+s
+e
+s
+
+i
+n
+
+o
+n
+e
+
+s
+i
+n
+g
+l
+e
+
+t
+h
+e
+o
+p
+e
+n
+l
+i
+t
+e
+r
+a
+t
+u
+r
+e
+a
+b
+o
+u
+t
+
+t
+h
+e
+i
+n
+t
+e
+g
+r
+a
+t
+i
+o
+n
+o
+f
+
+D
+A
+C
+a
+n
+d
+c
+o
+n
+v
+e
+r
+s
+i
+o
+n
+a
+r
+e
+v
+e
+r
+y
+
+a
+p
+a
+r
+t
+
+f
+r
+o
+m
+
+t
+h
+e
+e
+n
+v
+i
+r
+o
+n
+m
+e
+n
+t
+a
+l
+b
+e
+n
+e
+fi
+t
+.
+
+A
+s
+
+f
+a
+r
+a
+s
+w
+e
+k
+n
+o
+w
+
+,
+
+T
+E
+A
+s
+t
+u
+d
+i
+e
+s
+
+i
+n
+
+t
+i
+o
+n
+a
+l
+p
+r
+o
+c
+e
+s
+s
+,
+
+t
+h
+e
+
+e
+c
+o
+n
+o
+m
+i
+c
+b
+a
+l
+a
+n
+c
+e
+
+c
+o
+u
+l
+d
+b
+e
+c
+o
+m
+e
+
+e
+v
+e
+n
+m
+o
+r
+e
+p
+o
+s
+i
+t
+i
+v
+e
+,
+
+v
+a
+l
+u
+a
+b
+l
+e
+
+p
+r
+o
+d
+u
+c
+t
+
+i
+s
+
+a
+t
+t
+a
+i
+n
+e
+d
+
+a
+t
+
+r
+e
+d
+u
+c
+e
+d
+
+c
+o
+s
+t
+
+c
+o
+m
+p
+a
+r
+e
+d
+
+t
+o
+
+t
+h
+e
+
+c
+o
+n
+v
+e
+n
+-
+
+i
+n
+c
+r
+e
+a
+s
+e
+d
+
+[
+1
+4
+8
+]
+.
+
+T
+h
+e
+s
+e
+T
+E
+A
+s
+t
+u
+d
+i
+e
+s
+
+a
+p
+p
+l
+y
+
+o
+n
+l
+y
+
+f
+o
+r
+
+t
+h
+e
+C
+O
+2
+
+c
+a
+p
+t
+u
+r
+e
+.
+
+I
+f
+
+a
+
+o
+f
+
+D
+A
+C
+
+t
+e
+c
+h
+n
+o
+l
+o
+g
+y
+
+i
+s
+
+r
+e
+d
+u
+c
+e
+d
+
+o
+r
+
+t
+h
+e
+
+l
+i
+f
+e
+t
+i
+
+m
+e
+
+o
+f
+
+t
+h
+e
+
+c
+a
+p
+t
+u
+r
+e
+m
+a
+t
+e
+r
+i
+a
+l
+
+[
+1
+5
+3
+]
+,
+
+t
+h
+e
+p
+a
+y
+o
+f
+f
+o
+f
+
+D
+A
+C
+s
+t
+a
+r
+t
+s
+
+t
+o
+b
+e
+
+a
+t
+
+r
+e
+a
+c
+h
+
+,
+
+e
+s
+p
+e
+c
+i
+a
+l
+l
+y
+w
+h
+e
+n
+t
+h
+e
+p
+r
+i
+c
+e
+
+i
+n
+c
+r
+e
+a
+s
+i
+n
+g
+
+p
+r
+i
+c
+e
+s
+
+o
+f
+
+C
+O
+2
+
+e
+m
+
+i
+s
+s
+i
+o
+n
+s
+
+t
+h
+a
+t
+
+r
+e
+a
+c
+h
+e
+d
+
+$
+1
+0
+0
+
+i
+n
+
+J
+a
+n
+u
+a
+r
+y
+
+2
+0
+2
+3
+
+p
+e
+r
+
+t
+o
+n
+
+o
+f
+
+C
+O
+2
+
+c
+a
+p
+t
+u
+r
+e
+d
+
+a
+r
+e
+
+f
+o
+r
+e
+s
+e
+e
+n
+
+i
+n
+
+t
+h
+e
+
+f
+u
+t
+u
+r
+e
+
+[
+1
+4
+7
+]
+.
+
+W
+
+i
+t
+h
+
+t
+h
+e
+
+r
+a
+n
+g
+e
+8
+0
+–
+1
+9
+7
+€
+p
+e
+r
+
+t
+o
+n
+o
+f
+C
+O
+2
+
+c
+a
+p
+t
+u
+r
+e
+d
+
+.
+
+E
+s
+t
+i
+
+m
+a
+t
+i
+o
+n
+s
+
+f
+r
+o
+m
+3
+4
+€
+
+t
+o
+2
+6
+0
+€
+
+w
+h
+i
+l
+e
+
+K
+e
+i
+t
+h
+
+e
+t
+
+a
+l
+.
+
+[
+1
+5
+2
+]
+
+e
+s
+t
+i
+
+m
+a
+t
+e
+d
+
+t
+h
+a
+t
+
+t
+h
+e
+
+c
+o
+s
+t
+s
+
+o
+f
+
+L
+-
+D
+A
+C
+
+a
+r
+e
+
+i
+n
+
+t
+h
+e
+
+t
+h
+e
+
+c
+o
+s
+t
+s
+
+o
+f
+
+S
+-
+D
+A
+C
+a
+r
+e
+
+i
+n
+
+t
+h
+e
+
+r
+a
+n
+g
+e
+
+2
+6
+0
+–
+5
+2
+0
+
+€
+
+p
+e
+r
+
+t
+o
+n
+
+o
+f
+C
+O
+2
+
+c
+a
+p
+t
+u
+r
+e
+d
+
+t
+i
+o
+n
+a
+l
+E
+n
+e
+r
+g
+y
+A
+g
+e
+n
+c
+y
+(
+I
+E
+A
+)
+
+,
+
+[
+5
+5
+1
+4
+7
+]
+.
+
+A
+c
+c
+o
+r
+d
+i
+n
+g
+t
+o
+W
+
+i
+j
+e
+s
+e
+r
+i
+
+e
+t
+
+a
+l
+.
+
+[
+1
+5
+1
+]
+
+b
+e
+t
+w
+e
+e
+n
+
+$
+1
+0
+0
+
+a
+n
+d
+
+$
+1
+0
+0
+0
+
+p
+e
+r
+
+t
+o
+n
+n
+e
+
+o
+f
+
+C
+O
+2
+,
+
+a
+c
+c
+o
+r
+d
+i
+n
+g
+
+t
+o
+
+t
+h
+e
+
+I
+n
+t
+e
+r
+n
+a
+-
+
+C
+u
+r
+r
+e
+n
+t
+
+p
+r
+o
+c
+e
+s
+s
+e
+s
+
+f
+o
+r
+
+D
+A
+C
+
+(
+L
+-
+D
+A
+C
+
+o
+f
+
+S
+-
+D
+A
+C
+)
+
+a
+r
+e
+
+r
+e
+p
+o
+r
+t
+e
+d
+
+t
+o
+
+c
+o
+s
+t
+
+w
+h
+e
+n
+
+t
+h
+e
+s
+e
+w
+
+i
+l
+l
+
+b
+e
+
+i
+
+m
+p
+l
+e
+m
+e
+n
+t
+e
+d
+
+o
+n
+
+a
+
+l
+a
+r
+g
+e
+
+s
+c
+a
+l
+e
+
+[
+1
+5
+0
+]
+.
+
+o
+n
+
+a
+q
+u
+e
+o
+u
+s
+
+s
+o
+l
+u
+t
+i
+o
+n
+s
+
+a
+r
+e
+
+n
+e
+e
+d
+e
+d
+
+f
+o
+r
+
+t
+h
+e
+
+s
+y
+n
+t
+h
+e
+s
+i
+s
+
+o
+f
+
+M
+O
+F
+s
+,
+
+e
+s
+p
+e
+c
+i
+a
+l
+l
+y
+
+a
+d
+s
+o
+r
+b
+e
+n
+t
+s
+.
+
+T
+h
+e
+
+a
+u
+t
+h
+o
+r
+s
+
+a
+l
+s
+o
+m
+e
+n
+t
+i
+o
+n
+e
+d
+
+t
+h
+a
+t
+
+a
+l
+t
+e
+r
+n
+a
+t
+i
+v
+e
+
+r
+o
+u
+t
+e
+s
+
+b
+a
+s
+e
+d
+
+h
+a
+s
+
+a
+
+h
+i
+g
+h
+e
+r
+
+e
+n
+v
+i
+r
+o
+n
+m
+e
+n
+t
+a
+l
+
+i
+
+m
+p
+a
+c
+t
+
+i
+n
+
+c
+o
+m
+p
+a
+r
+i
+s
+o
+n
+
+t
+o
+
+t
+h
+e
+
+s
+i
+l
+i
+c
+a
+-
+b
+a
+s
+e
+d
+
+s
+i
+l
+i
+c
+a
+-
+b
+a
+s
+e
+d
+
+a
+d
+s
+o
+r
+b
+e
+n
+t
+s
+
+[
+1
+5
+0
+]
+
+c
+o
+n
+c
+l
+u
+d
+e
+d
+
+t
+h
+a
+t
+
+t
+h
+e
+
+p
+r
+o
+d
+u
+c
+t
+i
+o
+n
+
+o
+f
+
+M
+O
+F
+s
+
+p
+u
+b
+l
+i
+s
+h
+e
+d
+
+L
+C
+A
+
+s
+t
+u
+d
+y
+
+a
+b
+o
+u
+t
+
+t
+h
+e
+
+i
+
+m
+p
+a
+c
+t
+
+o
+f
+
+t
+h
+e
+
+p
+r
+o
+d
+u
+c
+t
+i
+o
+n
+
+o
+f
+
+M
+O
+F
+s
+
+a
+n
+d
+
+l
+e
+m
+
+s
+
+a
+s
+s
+o
+c
+i
+a
+t
+e
+d
+t
+o
+t
+h
+e
+
+r
+e
+a
+g
+e
+n
+t
+s
+u
+s
+e
+d
+d
+u
+r
+i
+n
+g
+t
+h
+e
+i
+r
+p
+r
+o
+d
+u
+c
+t
+i
+o
+n
+
+.
+
+A
+r
+e
+c
+e
+n
+t
+l
+y
+
+o
+f
+
+m
+e
+t
+a
+l
+
+o
+r
+g
+a
+n
+i
+c
+
+f
+r
+a
+m
+e
+w
+o
+r
+k
+s
+
+(
+
+M
+O
+F
+s
+)
+
+m
+a
+y
+
+c
+a
+u
+s
+e
+
+e
+n
+v
+i
+r
+o
+n
+m
+e
+n
+t
+a
+l
+
+p
+r
+o
+b
+-
+
+ProgressinEnergyandCombustionScience100(2024)10113215
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+E. García-Bordej ́e and R. Gonz ́alez-Olmos
+
+factors such as personnel costs have not been considered in the quali-
+tative comparison of Table 6 because, they are estimated to be similar
+for  all  integration  levels.  However,  they  should  be  considered  when
+performing a detailed TEA.
+
+It  is  clear  that  coupling  DAC  with  CO2  conversion  contributes  to
+circular economy. CO2 from air can be converted to different chemicals,
+polymers or fuels. LCA from cradle-to-grave of the environmental, eco-
+nomic or even social impact of each product must be performed on an
+project-by-project basis to prove the feasibility and sustainability of each
+particular process and disclose the benefits of integration [157]. For a
+circular  carbon  neutral  process,  first  CO2  conversion  must  rely  on
+renewable reducing reactants such as green H2. The cradle-to-grave LCA
+studies should also consider the GHG emissions during the whole pro-
+cess of capture and conversion [158]. Some processes are carried out at
+high temperatures and therefore it is necessary to supply heat. Heating
+in  the  multiple  energy  sectors  is  identified  as  the  most  significant
+contributor  to  GHG  emissions,  accounting  for  60%  of  the  total  GHG
+emissions  [158].  For  the  circularity  of  the  process,  electrification  of
+heating and using low-carbon electricity can further reduce GHG emis-
+sions  by 47%, but such conditions will significantly sacrifice the eco-
+nomic  benefit.  Electrifying  heating  can  also  be  performed  using  new
+heating  technologies  such as  novel electrically-heated  reactor  designs
+[139,140]  or  induction  heating  [114,141,142].  The  developments  in
+efficient heating technologies based on renewable energy will pave the
+way to a really circular economy.
+
+Alternative  to  thermal  conversion,  performing  the  conversion  at
+room temperature is beneficial from the economic and GHG emissions
+standpoints. Currently, the chemical conversion at room temperature is
+limited in terms of yield and type of compounds that can be obtained, as,
+e.g.,  organic  cyclic  carbonates,  inorganic  carbonates  or  CO.  In  this
+respect,  the  activation  of  CO2  and  reactants  by  technologies  such  as
+electrocatalysis, photocatalysis or non-thermal plasma, which are car-
+ried out at room temperature and driven by renewable energy, exhibit
+very  good  prospects.  However,  for  its  practical  deployment,  further
+research is needed about electro/photo-catalysts and their integration
+with DAC technologies. To the best our knowledge, non-thermal plasma
+has been used for CO2 conversion [159] but it has not been really tested
+under conditions of DAC.
+
+5. Conclusions and outlook
+
+The coupling of CO2 capture from air (DAC) and conversion has been
+recognized  as  a  potential  way  to  negative  or  zero  carbon  emissions,
+when CO2 is stored permanently or converted to fuels, respectively, and
+as long as the processes of storage or conversion to fuels are run with
+renewable  energy.  Compared  to  point  CO2  capture  from  stationary
+sources, DAC has some advantages such as the delocalisation, potential
+negative emissions and no stringent efficiency requirements. DAC is a
+plausible solution to reduce CO2 concentration in the atmosphere in the
+shorter-term. In the longer term, it is expected to close the carbon cycle,
+whereby the CO2 in the atmosphere is converted to fuels, ideally leading
+to net zero carbon emissions in a circular economy approach. However,
+DAC poses the challenge of the high dilution of CO2, which entails longer
+times of capture and larger gas volumes to treat. The traditional pro-
+cesses  for  DAC  are  based  on  alkaline  solutions  (L-DAC)  or  solid-
+supported amines (S-DAC), although recently other technologies such
+as membranes (M-DAC) are under investigation. An increasing research
+effort is being devoted to the integration of DAC with CO2  conversion,
+leading to creative strategies which are starting to be scaled up. The first
+strategy  explored  for  coupling  DAC  with  CO2  conversion  is  based  on
+performing  CO2  capture  and  reaction  in  different  vessels  (D  + R).  A
+higher level of integration (D*+R) is using two different vessels but the
+material saturated with CO2 is transported from one vessel to the other
+one, where the capture material is regenerated and simultaneously the
+CO2  is converted into different products. A further advance in process
+intensification  can  be  achieved  if  both  DAC  and  CO2  conversion  are
+
+integrated in the same reactor. When the combined process is carried out
+in only one vessel, the DAC and conversion can occur either in consec-
+utive stages with change of feed (IDR) or simultaneously in a cascade
+reaction (SDR). Process intensification afforded by a higher integration
+level  can  lead  to  significant  energy  and  equipment  cost  savings  and
+other synergistic effects, entailing higher efficiency.
+
+However,  this  coupling  entails  several  challenges  to  be  solved
+because  both  processes  meet  optimal  performance  at  very  different
+conditions.  Therefore,  significant  research  efforts  and  technological
+developments are needed for the integration of DAC and CO2  conver-
+sion. It is plenty of research opportunities for material development to
+integrate  the  capture  function  with  catalytic/electrocatalytic/photo-
+catalytic function. CO2  DAC + conversion offers the versatility to pro-
+duce  very  different  products  that  can  range  from  materials  (as,  e.g.,
+cyclic carbonates or inorganic carbonates) to various hydrocarbon fuels.
+The reduction of CO2  to fuels requires a chemical reducing agent that
+must be renewable to make the whole process carbon neutral, such as
+green H2. Electrons can also work as reducing agents that are active for
+the  reduction  of  both  CO2  and  H2O  into  CO  or  formic  acid  at  room
+temperature. Moreover, electrons can be renewable since they can be
+generated  either  by  renewable  electricity  or  by  photons.  For  non-
+thermal  processes,  there  is  a  large  opportunity  for  research  on  more
+electro/photoactive materials and on the integration of DAC with non-
+thermal plasma, electrocatalysis or photocatalysis. On the other hand,
+the reduction with H2 to fuels such as CH4 requires high temperatures.
+Therefore, for a carbon-neutral process, the supply of heat must be also
+based  on  renewable  electricity.  In  this  regard,  the  electrification  of
+heating plays an important role as well. Electrically heated reactors or
+magnetic induction are technologies that deserves further research.
+
+The diversity of products, yields, type of capture material, process
+conditions  etc.  makes  difficult  a  general  comparison  between  the
+different  integration  levels.  A  higher  degree  of  integration  does  not
+mean necessarily lower costs. For instance, some non-thermal processes
+have higher degree of integration than some thermal processes but the
+formers have additional costs for distillation of products and separation
+of homogeneous catalyst, besides of the lower achieved yield. Therefore,
+detailed  technoeconomic  studies  of  the  different  integration  levels
+should be performed on a project-by-project basis. These studies should
+consider  not  only  economic  factors  (higher  yields  and  energy  con-
+sumption)  but  also  carbon  balances,  use  of  resources,  benefits  of
+decentralized production and, in general, all the impacts on sustainable
+development goals (SDGs). A world based on circular economy needs
+further  developments  in  the  coupling  of  DAC  and  conversion,  whose
+deployment is expected to be propelled in the near future by cheaper
+renewable  energy,  green  H2  production  and  increasing  taxes  to  CO2
+emission.
+
+Declaration of competing interest
+
+The authors declare that they have no known competing financial
+interests or personal relationships that could have appeared to influence
+the work reported in this paper.
+
+Data availability
+
+Data will be made available on request.
+
+Acknowledgements
+
+The  authors  acknowledge  sincerely  the  funding  of  MCIN/AEI/
+10.13039/501100011033 (Grant PID2020-119160RB-C21) and Arag ́on
+Government (Arag ́on T03_20R), and associated EU Regional Develop-
+ment  Funds  are  gratefully  acknowledged.  We  also  acknowledge  the
+support by projects Opti-CCU (2022-DI-00053) and RFC+PU (2021 BP
+00029) funded by the Catalan Government. GESPA group from IQS has
+been  recognized  as  Consolidated  Research  Group  by  the  Catalan
+
+ProgressinEnergyandCombustionScience100(2024)10113216
+
+E. García-Bordej ́e and R. Gonz ́alez-Olmos
+
+Government (2021 SGR 00321).
+
+References
+
+[1] IEA World Energy Outlook 2022. https://iea.blob.core.windows.net/assets/830f
+
+e099-5530-48f2-a7c1-11f35d510983/WorldEnergyOutlook2022.pdf. [Accessed
+24 November 2022] [n.d.)].
+
+[2] NOAA. Annual greenhouse gas index. AGGI); 2020. https://www.esrl.noaa.gov/
+
+gmd/aggi/aggi.html. [Accessed 2 November 2020] [n.d.)].
+
+[3] NASA, Global Climate Change, (accessed january, 2023) https://climate.nasa.go
+
+v/vital-signs/carbon-dioxide/, (n.d.).
+
+[4] Yang H, Xu Z, Fan M, Gupta R, Slimane RB, Bland AE, Wright I. Progress in
+
+carbon dioxide separation and capture: a review. J Environ Sci 2008;20:14–27.
+https://doi.org/10.1016/S1001-0742(08)60002-9.
+
+[5] Melo Bravo P, Debecker DP. Combining CO2 capture and catalytic conversion to
+methane. Waste Disposal & Sustainable Energy 2019;1:53–65. https://doi.org/
+10.1007/s42768-019-00004-0.
+
+[6] Jacobson TA, Kler JS, Hernke MT, Braun RK, Meyer KC, Funk WE. Direct human
+health risks of increased atmospheric carbon dioxide. Nat Sustain 2019;2:
+691–701. https://doi.org/10.1038/s41893-019-0323-1.
+
+[7] Chalmers H. Fundamentals point to carbon capture. Nat Clim Change 2019;9:
+
+348. https://doi.org/10.1038/s41558-019-0462-4. 348.
+
+[8] Lamb WF, Wiedmann T, Pongratz J, Andrew R, Crippa M, Olivier JGJ,
+
+Wiedenhofer D, Mattioli G, Khourdajie AA, House J, Pachauri S, Figueroa M,
+Saheb Y, Slade R, Hubacek K, Sun L, Ribeiro SK, Khennas S, de la Rue du Can S,
+Chapungu L, Davis SJ, Bashmakov I, Dai H, Dhakal S, Tan X, Geng Y, Gu B,
+Minx J. A review of trends and drivers of greenhouse gas emissions by sector from
+1990 to 2018. Environ Res Lett 2021;16:073005. https://doi.org/10.1088/1748-
+9326/abee4e.
+
+[9] Fuhrman J, Bergero C, Weber M, Monteith S, Wang FM, Clarens AF, Doney SC,
+Shobe W, McJeon H. Diverse carbon dioxide removal approaches could reduce
+impacts on the energy–water–land system. Nat Clim Change 2023;13:341–50.
+https://doi.org/10.1038/s41558-023-01604-9.
+
+[10] Digdaya IA, Sullivan I, Lin M, Han L, Cheng W-H, Atwater HA, et al. A direct
+coupled electrochemical system for capture and conversion of CO2  from
+oceanwater. Nat Commun 2020;11:4412. https://doi.org/10.1038/s41467-020-
+18232-y.
+
+[11] McQueen N, Gomes KV, McCormick C, Blumanthal K, Pisciotta M, Wilcox J.
+
+A review of direct air capture (DAC): scaling up commercial technologies and
+innovating for the future. Progress in Energy 2021;3:032001. https://doi.org/
+10.1088/2516-1083/abf1ce.
+
+[12] Keith DW, Ha-Duong M, Stolaroff JK. Climate strategy with CO2 capture from the
+air. Climatic Change 2006;74:17–45. https://doi.org/10.1007/s10584-005-9026-
+x.
+
+[13] Keith David W. Why capture CO2 from the atmosphere? Science 2009;325:
+
+1654–5. https://doi.org/10.1126/science.1175680.
+
+[14] Blamey J, Anthony EJ, Wang J, Fennell PS. The calcium looping cycle for large-
+
+[15] Gutknecht V, Snæbj ̈ornsd ́ottir S
+
+scale CO2  capture. Prog Energy Combust Sci 2010;36:260–79. https://doi.org/
+10.1016/j.pecs.2009.10.001.
+
+ ́
+O, Sigfússon B, Arad ́ottir ES, Charles L. Creating a
+carbon dioxide removal solution by combining rapid mineralization of CO2  with
+direct air capture. Energy Proc 2018;146:129–34. https://doi.org/10.1016/j.
+egypro.2018.07.017.
+
+[16] https://carbonbuilt.com/4-corners-carbon-coalition-direct-air-capture-concrete/
+
+[n.d.)].
+
+[17] Sick V, Stokes G, Mason FC. CO2  utilization and market size projection for CO2-
+treated construction materials. Frontiers in Climate 2022;4:878756. https://doi.
+org/10.3389/fclim.2022.878756.
+
+[18] Winnefeld F, Leemann A, German A, Lothenbach B. CO2  storage in cement and
+concrete by mineral carbonation. Curr Opin Green Sustainable Chem 2022;38:
+100672. https://doi.org/10.1016/j.cogsc.2022.100672.
+
+[19] Seitz Friedrich. Raw material change in the chemical industry and the Role of
+biomass. In: Catalysis for the Conversion of Biomass and Its Derivatives, Max-
+Planck-Gesellschaft zur F ̈orderung der Wissenschaften; 2013. https://doi.org/
+10.34663/9783945561195-02.
+
+[20] Stankiewicz A, Moulijn J. Process intensification: transforming chemical
+
+engineering. Chem Eng Prog 2000;96:22–34.
+
+[21] Tsiotsias AI, Charisiou ND, Yentekakis IV, Goula MA. The role of alkali and
+
+alkaline earth metals in the CO2 methanation reaction and the combined capture
+and methanation of CO2. Catalysts 2020;10. https://doi.org/10.3390/
+catal10070812.
+
+[22] Merkouri L-P, Reina TR, Duyar MS. Closing the carbon cycle with dual function
+
+materials. Energy Fuels; 2021. https://doi.org/10.1021/acs.
+energyfuels.1c02729.
+
+[23] Omodolor IS, Otor HO, Andonegui JA, Allen BJ, Alba-Rubio AC. Dual function
+
+materials for CO2  capture and conversion: a review. Ind Eng Chem Res 2020.
+https://doi.org/10.1021/acs.iecr.0c02218.
+
+[24] Shao B, Zhang Y, Sun Z, Li J, Gao Z, Xie Z, et al. CO2  capture and in-situ
+
+conversion: recent progresses and perspectives. Green Chemical Engineering
+2021. https://doi.org/10.1016/j.gce.2021.11.009.
+
+[25] Duyar MS, Wang S, Arellano-Trevi ̃no MA, Farrauto RJ. CO2  utilization with a
+
+novel dual function material (DFM) for capture and catalytic conversion to
+synthetic natural gas: an update. J CO2 Util 2016;15:65–71. https://doi.org/
+10.1016/j.jcou.2016.05.003.
+
+[26] Erans M, Sanz-P ́erez ES, Hanak DP, Clulow Z, Reiner DM, Mutch GA. Direct air
+capture: process technology, techno-economic and socio-political challenges.
+Energy Environ Sci 2022;15:1360–405. https://doi.org/10.1039/D1EE03523A.
+[27] Jiang L, Liu W, Wang RQ, Gonzalez-Diaz A, Rojas-Michaga MF, Michailos S, et al.
+Sorption direct air capture with CO2 utilization. Prog Energy Combust Sci 2023;
+95:101069. https://doi.org/10.1016/j.pecs.2022.101069.
+
+[28] (Ashlyn) Low M-Y, Barton LV, Pini R, Petit C. Analytical review of the current
+state of knowledge of adsorption materials and processes for direct air capture.
+Chem Eng Res Des 2023;189:745–67. https://doi.org/10.1016/j.
+cherd.2022.11.040.
+
+[29] Krekel D, Samsun RC, Peters R, Stolten D. The separation of CO2 from ambient air
+– a techno-economic assessment. Appl Energy 2018;218:361–81. https://doi.org/
+10.1016/j.apenergy.2018.02.144.
+
+[30] House BAC, K Z Ranjan M, van Nierop EA, Wilcox J, Herzog HJ. Economic and
+
+energetic analysis of capturing CO2  from ambient air. Proc Natl Acad Sci USA
+2011;108:20428.
+
+[31] Socolow DM, R Aines R, Blackstock J, Bolland O, Kaarsberg T, Lewis N, et al.
+
+Direct air capture of CO2  with chemicals. 2011.
+
+[32] Schiebahn S, Grube T, Robinius M, Zhao L, Otto A, Kumar B, Weber M, Stolten D.
+
+Power to gas. 2013. https://doi.org/10.1002/9783527673872.
+
+[33] Kazemifar F. A review of technologies for carbon capture, sequestration, and
+
+utilization: cost, capacity, and technology readiness. Greenhouse Gases: Sci
+Technol 2022;12:200–30. https://doi.org/10.1002/ghg.2131.
+
+[34] Bachman E, Tavasoli A, Hatton TA, Maravelias CT, Haites E, Styring P, Aspuru-
+Guzik A, MacIntosh J, Ozin G. Rail-based direct air carbon capture. Joule 2022;6:
+1368–81. https://doi.org/10.1016/j.joule.2022.06.025.
+
+[35] Keith DW, Ha-Duong M, Stolaroff JK. Climate strategy with CO2 capture from the
+air. Climatic Change 2006;74:17–45. https://doi.org/10.1007/s10584-005-9026-
+x.
+
+[36] Shi X, Xiao H, Azarabadi H, Song J, Wu X, Chen X, et al. Sorbents for the direct
+capture of CO2  from ambient air. Angew Chem Int Ed 2020;59:6984–7006.
+https://doi.org/10.1002/anie.201906756.
+
+[37] Lackner K S, Grimes P, Ziok H-J,n.d..
+[38] Baciocchi R, Storti G, Mazzotti M. Process design and energy requirements for the
+capture of carbon dioxide from air. Chem Eng Process: Process Intensif 2006;45:
+1047–58. https://doi.org/10.1016/j.cep.2006.03.015.
+
+[39] Nikulshina V, Hirsch D, Mazzotti M, Steinfeld A. CO2  capture from air and co-
+production of H2  via the Ca(OH)2–CaCO3  cycle using concentrated solar
+power–Thermodynamic analysis. Energy 2006;31:1715–25. https://doi.org/
+10.1016/j.energy.2005.09.014.
+
+[40] Zeman F. Energy and material balance of CO2 capture from ambient air. Environ
+
+Sci Technol 2007;41:7558–63. https://doi.org/10.1021/es070874m.
+[41] Keith DW. Why capture CO2  from the atmosphere? Science 2009;325:1654.
+[42] Lackner KS. Capture of carbon dioxide from ambient air. Eur Phys J Spec Top
+
+2009;176:93.
+
+[43] Chichilnisky G, Eisenberger P. How air capture could help to promote a
+Copenhagen solution. Nature 2009;459:1053. https://doi.org/10.1038/
+4591053a. 1053.
+
+[44] Pielke RA. An idealized assessment of the economics of air capture of carbon
+
+dioxide in mitigation policy. Environ Sci Pol 2009;12:216–25. https://doi.org/
+10.1016/j.envsci.2009.01.002.
+
+[45] Goeppert A, Czaun M, Surya Prakash GK, Olah GA. Air as the renewable carbon
+
+source of the future: an overview of CO2  capture from the atmosphere. Energy
+Environ Sci 2012;5:7833–53. https://doi.org/10.1039/C2EE21586A.
+
+[46] Sanz-P ́erez ES, Murdock CR, Didas SA, Jones CW. Direct capture of CO2  from
+ambient air. Chem Rev 2016;116:11840–76. https://doi.org/10.1021/acs.
+chemrev.6b00173.
+
+[47] Zhu X, Xie W, Wu J, Miao Y, Xiang C, Chen C, Ge B, Gan Z, Yang F, Zhang M,
+O’Hare D, Li J, Ge T, Wang R. Recent advances in direct air capture by
+adsorption. Chem Soc Rev 2022;51:6574–651. https://doi.org/10.1039/
+D1CS00970B.
+
+[48] Lackner KS, Brennan S. Envisioning carbon capture and storage: expanded
+
+possibilities due to air capture, leakage insurance, and C-14 monitoring. Climatic
+Change 2009;96:357–78. https://doi.org/10.1007/s10584-009-9632-0.
+[49] Lackner KS. Capture of carbon dioxide from ambient air. Eur Phys J Spec Top
+
+2009;176:93–106. https://doi.org/10.1140/epjst/e2009-01150-3.
+
+[50] Stuckert NR, Yang RT. CO2  capture from the atmosphere and simultaneous
+concentration using zeolites and amine-grafted SBA-15. Environ Sci Technol
+2011;45:10257–64. https://doi.org/10.1021/es202647a.
+
+[51] Belmabkhout Y, Serna-Guerrero R, Sayari A. Amine-bearing mesoporous silica for
+CO2 removal from dry and humid air. Chem Eng Sci 2010;65:3695–8. https://doi.
+org/10.1016/j.ces.2010.02.044.
+
+[52] Choi S, Drese JH, Eisenberger PM, Jones CW. Application of amine-tethered solid
+sorbents for direct CO2 capture from the ambient air. Environ Sci Technol 2011;
+45:2420–7. https://doi.org/10.1021/es102797w.
+
+[53] Kar S, Goeppert A, Galvan V, Chowdhury R, Olah J, Prakash GKS. A carbon-
+neutral CO2  capture, conversion, and utilization cycle with low-temperature
+regeneration of sodium hydroxide. J Am Chem Soc 2018;140:16873–6. https://
+doi.org/10.1021/jacs.8b09325.
+
+[54] IEA. Direct air capture. A key technology for net zero. 2022. https://www.iea.
+org/reports/direct-air-capture-2022. [Accessed 28 February 2023] (n.d.).
+[55] IEA. CO2 capture by direct air capture in the Net Zero Scenario. Paris: IEA; 2020-
+2030. https://www.iea.org/data-and-statistics/charts/co2-capture-by-direct-air-
+capture-in-the-net-zero-scenario-2020-2030 (n.d.).
+
+[56] https://www.energy.gov/articles/biden-administration-launches-35-billion-pr
+
+ogram-capture-carbon-pollution-air-0 [n.d.)].
+
+ProgressinEnergyandCombustionScience100(2024)10113217
+
+E. García-Bordej ́e and R. Gonz ́alez-Olmos
+
+[57] IPCC Sixth Assessment Report, Climate change 2022., Https://Www.Ipcc.Ch/
+
+Report/Sixth-Assessment-Report-Working-Group-3/,. (n.d.) accessed june 2023.
+[58] McQueen N, Psarras P, Pilorg ́e H, Liguori S, He J, Yuan M, Woodall CM, Kian K,
+Pierpoint L, Jurewicz J, Lucas JM, Jacobson R, Deich N, Wilcox J. Cost analysis of
+direct air capture and sequestration coupled to low-carbon thermal energy in the
+United States. Environ Sci Technol 2020;54:7542–51. https://doi.org/10.1021/
+acs.est.0c00476.
+
+[59] Li W, Choi S, Drese JH, Hornbostel M, Krishnan G, Eisenberger PM, et al. Steam-
+
+stripping for regeneration of supported amine-based CO2  adsorbents.
+ChemSusChem 2010;3:899–903. https://doi.org/10.1002/cssc.201000131.
+
+[60] Elfving J, Kauppinen J, Jegoroff M, Ruuskanen V, J ̈arvinen L, Sainio T.
+
+Experimental comparison of regeneration methods for CO2 concentration from air
+using amine-based adsorbent. Chem Eng J 2021;404:126337. https://doi.org/
+10.1016/j.cej.2020.126337.
+
+[61] Sinha A, Darunte LA, Jones CW, Realff MJ, Kawajiri Y. Systems design and
+economic analysis of direct air capture of CO2  through temperature vacuum
+swing adsorption using MIL-101(Cr)-PEI-800 and mmen-Mg2(dobpdc) MOF
+adsorbents. Ind Eng Chem Res 2017;56:750–64. https://doi.org/10.1021/acs.
+iecr.6b03887.
+
+[62] Jones CW. CO2 capture from dilute gases as a component of modern global carbon
+management. Annu Rev Chem Biomol Eng 2011;2:31–52. https://doi.org/
+10.1146/annurev-chembioeng-061010-114252.
+
+[63] House KZ, Baclig AC, Ranjan M, van Nierop EA, Wilcox J, Herzog HJ. Economic
+and energetic analysis of capturing CO2 from ambient air. Proc Natl Acad Sci USA
+2011;108:20428. https://doi.org/10.1073/pnas.1012253108.
+
+[64] Nikulshina V, Ayesa N, G ́alvez ME, Steinfeld A. Feasibility of Na-based
+
+thermochemical cycles for the capture of CO2  from air—thermodynamic and
+thermogravimetric analyses. Chem Eng J 2008;140:62–70. https://doi.org/
+10.1016/j.cej.2007.09.007.
+
+[65] Bajamundi CJE, Koponen J, Ruuskanen V, Elfving J, Kosonen A, Kauppinen J,
+et al. Capturing CO2  from air: technical performance and process control
+improvement. J CO2 Util 2019;30:232–9. https://doi.org/10.1016/j.
+jcou.2019.02.002.
+
+[66] Wang J, Li S, Deng S, Zeng X, Li K, Liu J, Yan J, Lei L. Energetic and life cycle
+assessment of direct air capture: a review. Sustain Prod Consum 2023;36:1–16.
+https://doi.org/10.1016/j.spc.2022.12.017.
+
+[67] Castro-Mu ̃noz R, Zamidi Ahmad M, Malankowska M, Coronas J. A new relevant
+membrane application: CO2 direct air capture (DAC). Chem Eng J 2022;446:
+137047. https://doi.org/10.1016/j.cej.2022.137047.
+
+[68] https://www.kopernikus-projekte.de/ [n.d.)].
+[69] https://www.storeandgo.info/ [n.d.].
+[70] https://www.celbicon.org/ [n.d.].
+[71] https://www.norsk-e-fuel.com/en/ [n.d.].
+[72] https://zenidfuel.com/ [n.d.].
+[73] Carbon Engineering, Our Technology, https://carbonengineering.com/our-techn
+
+ology/(accessed January 10, 2020)., [n.d.)].
+[74] https://www.1pointfive.com/dac-technology [n.d.].
+[75] United States Energy Association: Life cycle assessment of carbon dioxide
+
+removal methods summary report, (n.d.). https://usea.org/sites/default/fil
+es/USEA_CDR_LCA_SummaryReport_Final.pdf.
+
+[76] Deutz S, Bardow A. Life-cycle assessment of an industrial direct air capture
+
+process based on temperature–vacuum swing adsorption. Nat Energy 2021;6:
+203–13. https://doi.org/10.1038/s41560-020-00771-9.
+
+[77] Leonzio G, Mwabonje O, Fennell PS, Shah N. Environmental performance of
+different sorbents used for direct air capture. Sustain Prod Consum 2022;32:
+101–11. https://doi.org/10.1016/j.spc.2022.04.004.
+
+[78] Chauvy R, Dubois L. Life cycle and techno-economic assessments of direct air
+capture processes: an integrated review. Int J Energy Res 2022;46:10320–44.
+https://doi.org/10.1002/er.7884.
+
+[79] de Jonge MMJ, Daemen J, Loriaux JM, Steinmann ZJN, Huijbregts MAJ. Life
+
+cycle carbon efficiency of Direct Air Capture systems with strong hydroxide
+sorbents. Int J Greenh Gas Control 2019;80:25–31. https://doi.org/10.1016/j.
+ijggc.2018.11.011.
+
+[80] Langanke J, Wolf A, Peters M. Chapter 5 - polymers from CO2—an industrial
+perspective. In: Styring P, Quadrelli EA, Armstrong K, editors. Carbon dioxide
+utilisation. Amsterdam: Elsevier; 2015. p. 59–71. https://doi.org/10.1016/B978-
+0-444-62746-9.00005-0.
+
+[81] Ren J, Li F-F, Lau J, Gonz ́alez-Urbina L, Licht S. One-pot synthesis of carbon
+
+nanofibers from CO2. Nano Lett 2015;15:6142–8. https://doi.org/10.1021/acs.
+nanolett.5b02427.
+
+[82] Motiei M, Rosenfeld Hacohen Y, Calderon-Moreno J, Gedanken A. Preparing
+carbon nanotubes and nested fullerenes from supercritical CO2  by a chemical
+reaction. J Am Chem Soc 2001;123:8624–5. https://doi.org/10.1021/ja015859a.
+[83] Ridjan I, Mathiesen BV, Connolly D. Terminology used for renewable liquid and
+gaseous fuels based on the conversion of electricity: a review. J Clean Prod 2016;
+112:3709–20. https://doi.org/10.1016/j.jclepro.2015.05.117.
+
+[84] Galimova T, Ram M, Bogdanov D, Fasihi M, Khalili S, Gulagi A, Karjunen H,
+
+Mensah TNO, Breyer C. Global demand analysis for carbon dioxide as raw
+material from key industrial sources and direct air capture to produce renewable
+electricity-based fuels and chemicals. J Clean Prod 2022;373:133920. https://doi.
+org/10.1016/j.jclepro.2022.133920.
+
+[85] Brynolf S, Taljegard M, Grahn M, Hansson J. Electrofuels for the transport sector:
+a review of production costs. Renew Sustain Energy Rev 2018;81:1887–905.
+https://doi.org/10.1016/j.rser.2017.05.288.
+
+[86] Bos MJ, Kersten SRA, Brilman DWF. Wind power to methanol: renewable
+
+methanol production using electricity, electrolysis of water and CO2  air capture.
+
+Appl Energy 2020;264:114672. https://doi.org/10.1016/j.
+apenergy.2020.114672.
+
+[87] Mehla S, Kandjani AE, Babarao R, Lee AF, Periasamy S, Wilson K, Ramakrishna S,
+Bhargava SK. Porous crystalline frameworks for thermocatalytic CO2 reduction:
+an emerging paradigm. Energy Environ Sci 2021;14:320–52. https://doi.org/
+10.1039/D0EE01882A.
+
+[88] Gao J, Wang Y, Ping Y, Hu D, Xu G, Gu F, Su F. A thermodynamic analysis of
+methanation reactions of carbon oxides for the production of synthetic natural
+gas. RSC Adv 2012;2:2358–68. https://doi.org/10.1039/C2RA00632D.
+[89] Feaster JT, Shi C, Cave ER, Hatsukade T, Abram DN, Kuhl KP, Hahn C,
+
+Nørskov JK, Jaramillo TF. Understanding selectivity for the electrochemical
+reduction of carbon dioxide to formic acid and carbon monoxide on metal
+electrodes. ACS Catal 2017;7:4822–7. https://doi.org/10.1021/
+acscatal.7b00687.
+
+[90] Roy S, Cherevotan A, Peter SC. Thermochemical CO2  hydrogenation to single
+
+carbon products: scientific and technological challenges. ACS Energy Lett 2018;3:
+1938–66. https://doi.org/10.1021/acsenergylett.8b00740.
+
+[91] Graves C, Ebbesen SD, Mogensen M, Lackner KS. Sustainable hydrocarbon fuels
+
+by recycling CO2  and H2O with renewable or nuclear energy. Renew Sustain
+Energy Rev 2011;15:1–23. https://doi.org/10.1016/j.rser.2010.07.014.
+[92] V ́azquez FV, Koponen J, Ruuskanen V, Bajamundi C, Kosonen A, Simell P,
+
+Ahola J, Frilund C, Elfving J, Reinikainen M, Heikkinen N, Kauppinen J,
+Piermartini P. Power-to-X technology using renewable electricity and carbon
+dioxide from ambient air: SOLETAIR proof-of-concept and improved process
+concept. J CO2 Util 2018;28:235–46. https://doi.org/10.1016/j.
+jcou.2018.09.026.
+
+[93] Ghaib K, Ben-Fares F-Z. Power-to-Methane: a state-of-the-art review. Renew
+
+Sustain Energy Rev 2018;81:433–46. https://doi.org/10.1016/j.
+rser.2017.08.004.
+
+[94] Hidalgo D, Martín-Marroquín JM. Power-to-methane, coupling CO2 capture with
+fuel production: an overview. Renew Sustain Energy Rev 2020;132:110057.
+https://doi.org/10.1016/j.rser.2020.110057.
+
+[95] Drechsler C, Agar DW. Characteristics of DAC operation within integrated PtG
+
+concepts. Int J Greenh Gas Control 2021;105:103230. https://doi.org/10.1016/j.
+ijggc.2020.103230.
+
+[96] https://www.soletairpower.fi/ [n.d.)].
+[97] Drechsler C, Agar DW. Intensified integrated direct air capture - power-to-gas
+
+process based on H2O and CO2 from ambient air. Appl Energy 2020;273:115076.
+https://doi.org/10.1016/j.apenergy.2020.115076.
+
+[98] Veselovskaya JV, Parunin PD, Netskina OV, Kibis LS, Lysikov AI, Okunev AG.
+
+Catalytic methanation of carbon dioxide captured from ambient air. Energy 2018;
+159:766–73. https://doi.org/10.1016/j.energy.2018.06.180.
+
+[99] Veselovskaya JV, Parunin PD, Okunev AG. Catalytic process for methane
+
+production from atmospheric carbon dioxide utilizing renewable energy. Catal
+Today 2017;298:117–23. https://doi.org/10.1016/j.cattod.2017.05.044.
+[100] Veselovskaya JV, Lysikov AI, Netskina OV, Kuleshov DV, Okunev AG. K2CO3-
+
+Containing composite sorbents based on thermally modified alumina: synthesis,
+properties, and potential application in a direct air capture/methanation process.
+Ind Eng Chem Res 2020;59:7130–9. https://doi.org/10.1021/acs.iecr.9b05457.
+[101] Mesters C, Rahimi N, van der Sloot D, Rhyne J, Cassiola F. Direct reduction of
+
+magnesium carbonate to methane. ACS Sustainable Chem Eng 2021;9:10977–89.
+https://doi.org/10.1021/acssuschemeng.1c01439.
+
+[102] Jeong-Potter C, Abdallah M, Sanderson C, Goldman M, Gupta R, Farrauto R. Dual
+
+function materials (Ru+Na2O/Al2O3) for direct air capture of CO2  and in situ
+catalytic methanation: the impact of realistic ambient conditions. Appl Catal B
+Environ 2022;307:120990. https://doi.org/10.1016/j.apcatb.2021.120990.
+
+[103] Jeong-Potter C, Farrauto R. Feasibility study of combining direct air capture of
+CO2 and methanation at isothermal conditions with dual function materials. Appl
+Catal B Environ 2021;282:119416. https://doi.org/10.1016/j.
+apcatb.2020.119416.
+
+[104] Kosaka F, Liu Y, Chen S-Y, Mochizuki T, Takagi H, Urakawa A, et al. Enhanced
+activity of integrated CO2  capture and reduction to CH4  under pressurized
+conditions toward atmospheric CO2 utilization. ACS Sustainable Chem Eng 2021;
+9:3452–3463. https://doi.org/10.1021/acssuschemeng.0c07162.
+
+[105] Veselovskaya JV, Parunin PD, Netskina OV, Okunev AG. A novel process for
+
+renewable methane production: combining direct air capture by K2CO3/alumina
+sorbent with CO2  methanation over Ru/alumina catalyst. Top Catal 2018;61:
+1528–36. https://doi.org/10.1007/s11244-018-0997-z.
+
+[106] Hwang HT, Harale A, Liu PKT, Sahimi M, Tsotsis TT. A membrane-based reactive
+separation system for CO2  removal in a life support system. J Membr Sci 2008;
+315:116–24. https://doi.org/10.1016/j.memsci.2008.02.018.
+
+[107] Buckingham J, Reina TR, Duyar MS. Recent advances in carbon dioxide capture
+for process intensification. Carbon Capture Science & Technology 2022;2:
+100031. https://doi.org/10.1016/j.ccst.2022.100031.
+
+[108] Gruene P, Belova AG, Yegulalp TM, Farrauto RJ, Castaldi MJ. Dispersed calcium
+oxide as a reversible and efficient CO2 sorbent at intermediate temperatures. Ind
+Eng Chem Res 2011;50:4042–9. https://doi.org/10.1021/ie102475d.
+[109] Duyar MS, Trevi ̃no MAA, Farrauto RJ. Dual function materials for CO2  capture
+and conversion using renewable H2. Appl Catal B Environ 2015;168–169:370–6.
+https://doi.org/10.1016/j.apcatb.2014.12.025.
+
+[110] Zheng Q, Farrauto R, Chau Nguyen A. Adsorption and methanation of flue gas
+CO2  with dual functional catalytic materials: a parametric study. Ind Eng Chem
+Res 2016;55:6768–76. https://doi.org/10.1021/acs.iecr.6b01275.
+
+[111] Wang S, Schrunk ET, Mahajan H, Farrauto ARJ. The role of ruthenium in CO2
+
+capture and catalytic conversion to fuel by dual function materials (DFM).
+Catalysts 2017;7. https://doi.org/10.3390/catal7030088.
+
+ProgressinEnergyandCombustionScience100(2024)10113218
+
+E. García-Bordej ́e and R. Gonz ́alez-Olmos
+
+[112] Arellano-Trevi ̃no MA, He Z, Libby MC, Farrauto RJ. Catalysts and adsorbents for
+CO2 capture and conversion with dual function materials: limitations of Ni-
+containing DFMs for flue gas applications. J CO2 Util 2019;31:143–51. https://
+doi.org/10.1016/j.jcou.2019.03.009.
+
+[113] Arellano-Trevi ̃no MA, Kanani N, Jeong-Potter CW, Farrauto RJ. Bimetallic
+
+catalysts for CO2 capture and hydrogenation at simulated flue gas conditions.
+Chem Eng J 2019;375:121953. https://doi.org/10.1016/j.cej.2019.121953.
+[114] Gholami M, Verougstraete B, Vanoudenhoven R, Baron GV, Van Assche T,
+
+[133] J. Fan, X. Yue, Y. Liu, D. Li, J. Feng, An integration system derived from LDHs for
+CO2 direct capture and photocatalytic coupling reaction, Chem Catal. (n.d.). https
+://doi.org/10.1016/j.checat.2022.01.001.
+
+[134] Dong Y, Duchesne P, Mohan A, Ghuman KK, Kant P, Hurtado L, Ulmer U,
+
+Loh JYY, Tountas AA, Wang L, Jelle A, Xia M, Dittmeyer R, Ozin GA. Shining light
+on CO2: from materials discovery to photocatalyst, photoreactor and process
+engineering. Chem Soc Rev 2020;49:5648–63. https://doi.org/10.1039/
+D0CS00597E.
+
+Denayer JFM. Induction heating as an alternative electrified heating method for
+carbon capture process. Chem Eng J 2022;431:133380. https://doi.org/10.1016/
+j.cej.2021.133380.
+
+[135] Resasco J, Bell AT. Electrocatalytic CO2 reduction to fuels: progress and
+
+opportunities. Trends in Chemistry 2020;2:825–36. https://doi.org/10.1016/j.
+trechm.2020.06.007.
+
+[115] Karimi M, Jodaei A, Khajvandi A, Sadeghinik A, Jahandideh R. In-situ capture
+
+[136] Kho ET, Tan TH, Lovell E, Wong RJ, Scott J, Amal R. A review on photo-thermal
+
+and conversion of atmospheric CO2 into nano-CaCO3 using a novel pathway
+based on deep eutectic choline chloride-calcium chloride. J Environ Manag 2018;
+206:516–22. https://doi.org/10.1016/j.jenvman.2017.11.005.
+
+[116] Das R, Ezhil T, Palakkal AS, Muthukumar D, Pillai RS, Nagaraja CM. Efficient
+
+chemical fixation of CO2 from direct air under environment-friendly co-catalyst
+and solvent-free ambient conditions. J Mater Chem A 2021;9:23127–39. https://
+doi.org/10.1039/D1TA05138E.
+
+catalytic conversion of carbon dioxide. Green Energy Environ 2017;2:204–17.
+https://doi.org/10.1016/j.gee.2017.06.003.
+
+[137] Yang B, Liu K, Li H, Liu C, Fu J, Li H, Huang JE, Ou P, Alkayyali T, Cai C, Duan Y,
+Liu H, An P, Zhang N, Li W, Qiu X, Jia C, Hu J, Chai L, Lin Z, Gao Y, Miyauchi M,
+Cort ́es E, Maier SA, Liu M. Accelerating CO2 electroreduction to multicarbon
+products via synergistic electric–thermal field on copper nanoneedles. J Am Chem
+Soc 2022. https://doi.org/10.1021/jacs.1c11253.
+
+[117] Kar S, Goeppert A, Prakash GKS. Integrated CO2 capture and conversion to
+
+[138] Kumaravel V, Bartlett J, Pillai SC. Photoelectrochemical conversion of carbon
+
+formate and methanol: connecting two threads. Acc Chem Res 2019;52:
+2892–903. https://doi.org/10.1021/acs.accounts.9b00324.
+
+dioxide (CO2) into fuels and value-added products. ACS Energy Lett 2020;5:
+486–519. https://doi.org/10.1021/acsenergylett.9b02585.
+
+[118] Kothandaraman GA, J Czaun M, Olah GA, Prakash GKS. Conversion of CO2 from
+
+[139] https://www.basf.com/global/en/media/news-releases/2022/09/p-22-326.html
+
+air into methanol using a polyamine and a homogeneous ruthenium catalyst.
+J Am Chem Soc 2016;138:778.
+
+[119] Kar S, Sen R, Goeppert A, Prakash GKS. Integrative CO2 capture and
+
+hydrogenation to methanol with reusable catalyst and amine: toward a carbon
+neutral methanol economy. J Am Chem Soc 2018;140:1580–3. https://doi.org/
+10.1021/jacs.7b12183.
+
+[120] Sen R, Goeppert A, Kar S, Prakash GKS. Hydroxide based integrated CO2 capture
+from air and conversion to methanol. J Am Chem Soc 2020;142:4544–9. https://
+doi.org/10.1021/jacs.9b12711.
+
+[121] Sen R, Koch CJ, Galvan V, Entesari N, Goeppert A, Prakash GKS. Glycol assisted
+efficient conversion of CO2 captured from air to methanol with a heterogeneous
+Cu/ZnO/Al2O3 catalyst. J CO2 Util 2021;54:101762. https://doi.org/10.1016/j.
+jcou.2021.101762.
+
+[122] Ni S, Zhu J, Roy R, Li C-J, Lennox RB. Catalytic hydrogenation of CO2 from air via
+porous silica-supported Au nanoparticles in aqueous solution. Green Chem 2021;
+23:3740–9. https://doi.org/10.1039/D0GC04303F.
+
+[123] Lawson S, Baamran K, Newport K, Alghamadi T, Jacobs G, Rezaei F,
+
+Rownaghi AA. Integrated direct air capture and oxidative dehydrogenation of
+propane with CO2 at isothermal conditions. Appl Catal B Environ 2022;303:
+120907. https://doi.org/10.1016/j.apcatb.2021.120907.
+
+[124] Sen R, Goeppert A, Kar S, Prakash GKS. Hydroxide based integrated CO2 capture
+from air and conversion to methanol. J Am Chem Soc 2020;142:4544–9. https://
+doi.org/10.1021/jacs.9b12711.
+
+[125] Lombardo L, Yang H, Zhao K, Dyson PJ, Züttel A. Solvent- and catalyst-free
+
+carbon dioxide capture and reduction to formate with borohydride ionic liquid.
+ChemSusChem 2020;13:2025–31. https://doi.org/10.1002/cssc.201903514.
+
+[126] Lombardo L, Ko Y, Zhao K, Yang H, Züttel A. Direct CO2 capture and reduction to
+high-end chemicals with tetraalkylammonium borohydrides. Angew Chem Int Ed
+2021;60:9580–9. https://doi.org/10.1002/anie.202100447.
+
+[127] Liu M, Gadikota G. Single-step, low temperature and integrated CO2 capture and
+conversion using sodium glycinate to produce calcium carbonate. Fuel 2020;275:
+117887. https://doi.org/10.1016/j.fuel.2020.117887.
+
+[128] Wotzka A, Dühren R, Suhrbier T, Polyakov M, Wohlrab S. Adsorptive capture of
+
+CO2 from air and subsequent direct esterification under mild conditions. ACS
+Sustainable Chem Eng 2020;8:5013–7. https://doi.org/10.1021/
+acssuschemeng.0c00247.
+
+[129] Stucki S, Schuler A, Constantinescu M. Coupled CO2 recovery from the
+
+atmosphere and water electrolysis: feasibility of a new process for hydrogen
+storage. Int J Hydrogen Energy 1995;20:653–63. https://doi.org/10.1016/0360-
+3199(95)00007-Z.
+
+[130] Zhang Z, Lees EW, Habibzadeh F, Salvatore DA, Ren S, Simpson GL, Wheeler DG,
+
+Liu A, Berlinguette CP. Porous metal electrodes enable efficient electrolysis of
+carbon capture solutions. Energy Environ Sci 2022;15:705–13. https://doi.org/
+10.1039/D1EE02608A.
+
+[131] Guti ́errez-S ́anchez O, de Mot B, Daems N, Bulut M, Vaes J, Pant D, Breugelmans T.
+Electrochemical conversion of CO2 from direct air capture solutions. Energy Fuel
+2022. https://doi.org/10.1021/acs.energyfuels.2c02623.
+
+[132] Hu C-C, Wang C-Y, Tsai M-C, Lecaros RLG, Hung W-S, Tsai H-A, et al. Polyimide/
+Cu-doped TiO2 Janus membranes for direct capture and photocatalytic reduction
+of carbon dioxide from air. Chem Eng J 2022;450:138008. https://doi.org/
+10.1016/j.cej.2022.138008.
+
+[n.d.)].
+
+[140] Tijani MEH, Zondag H, Van Delft Y. Review of electric cracking of hydrocarbons.
+
+ACS Sustainable Chem. Eng; 2022. https://doi.org/10.1021/
+acssuschemeng.2c03427.
+
+[141] Fache A, Marias F, Chaudret B. Catalytic reactors for highly exothermic reactions:
+steady-state stability enhancement by magnetic induction. Chem Eng J 2020;390:
+124531. https://doi.org/10.1016/j.cej.2020.124531.
+
+[142] Nguyen HM, Phan CM, Liu S, Pham-Huu C, Nguyen-Dinh L. Radio-frequency
+induction heating powered low-temperature catalytic CO2 conversion via bi-
+reforming of methane. Chem Eng J 2022;430:132934. https://doi.org/10.1016/j.
+cej.2021.132934.
+
+[143] Guti ́errez-S ́anchez O, Bohlen B, Daems N, Bulut M, Pant D, Breugelmans T.
+
+A state-of-the-art update on integrated CO2 capture and electrochemical
+conversion systems. Chemelectrochem 2022;9:e202101540. https://doi.org/
+10.1002/celc.202101540.
+
+[144] Reis Machado AS, Nunes da Ponte M. CO2 capture and electrochemical
+
+conversion. Curr Opin Green Sustainable Chem 2018;11:86–90. https://doi.org/
+10.1016/j.cogsc.2018.05.009.
+
+[145] Sullivan I, Goryachev A, Digdaya IA, Li X, Atwater HA, Vermaas DA, Xiang C.
+Coupling electrochemical CO2 conversion with CO2 capture. Nat Catal 2021;4:
+952–8. https://doi.org/10.1038/s41929-021-00699-7.
+
+[146] Zulkifli ZI, Lim KL, Teh LP. Metal-organic frameworks (MOFs) and their
+applications in CO2 adsorption and conversion. ChemistrySelect 2022;7:
+e202200572. https://doi.org/10.1002/slct.202200572.
+
+[147] Chauvy R, Dubois L. Life cycle and techno-economic assessments of direct air
+capture processes: an integrated review. Int J Energy Res 2022;46:10320–44.
+https://doi.org/10.1002/er.7884.
+
+[148] Sutherland BR. Pricing CO2 direct air capture. Joule 2019;3:1571–3. https://doi.
+
+org/10.1016/j.joule.2019.06.025.
+
+[149] Ioannou I, Gal ́an-Martín
+
+ ́
+A, P ́erez-Ramírez J, Guill ́en-Gos ́albez G. Trade-offs
+
+between sustainable development goals in carbon capture and utilisation. Energy
+Environ Sci 2023;16:113–24. https://doi.org/10.1039/D2EE01153K.
+[150] Leonzio G, Mwabonje O, Fennell PS, Shah N. Environmental performance of
+different sorbents used for direct air capture. Sustain Prod Consum 2022;32:
+101–11. https://doi.org/10.1016/j.spc.2022.04.004.
+
+[151] Wijesiri RP, Knowles GP, Yeasmin H, Hoadley AFA, Chaffee AL. Technoeconomic
+evaluation of a process capturing CO2 directly from air. Processes 2019;7. https://
+doi.org/10.3390/pr7080503.
+
+[152] Keith DW, Holmes G, Angelo DS, Heidel K. A process for capturing CO2 from the
+
+atmosphere. Joule 2018;2:1573–94. https://doi.org/10.1016/j.
+joule.2018.05.006.
+
+[153] https://ember-climate.org/data/data-tools/carbon-price-viewer/. [Accessed 1
+
+February 2023] [n.d.)].
+
+[154] Jens CM, Müller L, Leonhard K, Bardow A. To integrate or not to
+
+integrate—techno-economic and life cycle assessment of CO2  capture and
+conversion to methyl formate using methanol. ACS Sustainable Chem Eng 2019;7:
+12270–80. https://doi.org/10.1021/acssuschemeng.9b01603.
+
+[155] Kiani A, Lejeune M, Li C, Patel J, Feron P. Liquefied synthetic methane from
+ambient CO2  and renewable H2  - a technoeconomic study. J Nat Gas Sci Eng
+2021;94:104079. https://doi.org/10.1016/j.jngse.2021.104079.
+
+ProgressinEnergyandCombustionScience100(2024)10113219
+
+E. García-Bordej ́e and R. Gonz ́alez-Olmos
+
+Rafael Gonzalez-Olmos, University Ramon Llull. Dr. Gonzalez-
+Olmos is Associated Professor in the School of Engineering of
+the  Institut  Químic  de  Sarri`a  (IQS)  in  the  University  Ramon
+Llull (Spain). He is the head of the Chemical Engineering and
+Materials  Science  Department  and  the  coordinator  of  the
+research group GESPA (Group of Engineering and Simulation
+of Environmental Processes). He has a wide experience in the
+process  intensification  of  adsorption  with  catalytic  processes
+from his previous positions in the University of Girona (Spain)
+and the Helmholtz - Centre for Environmental Research - UFZ
+(Germany). Currently, his main research interests are related to
+the study of CCU systems based on the use of adsorption, cat-
+alytic,  plasma  and  radiofrequency  technologies.  He  is  also
+working  in  the  development  of  technologies for  the  mitigation  of  non-CO2  greenhouse
+gases such as fluorinated gases and in the use of life cycle assessment of CCU technologies.
+He has also a wide experience in the field of advanced water treatments using innovative
+catalytic processes.
+
+[156] Moreno-Gonzalez M, Berger A, Borsboom-Hanson T, M ́erida W. Carbon-neutral
+fuels and chemicals: economic analysis of renewable syngas pathways via CO2
+electrolysis. Energy Convers Manag 2021;244:114452. https://doi.org/10.1016/
+j.enconman.2021.114452.
+
+[157] Garcia-Garcia G, Fernandez MC, Armstrong K, Woolass S, Styring P. Analytical
+
+review of life-cycle environmental impacts of carbon capture and utilization
+technologies. ChemSusChem 2020. https://doi.org/10.1002/cssc.202002126. n/
+a.
+
+[158] Hao Z, Barecka MH, Lapkin AA. Accelerating net zero from the perspective of
+
+optimizing a carbon capture and utilization system. Energy Environ Sci 2022;15:
+2139–53. https://doi.org/10.1039/D1EE03923G.
+
+[159] Li S, Ongis M, Manzolini G, Gallucci F. Non-thermal plasma-assisted capture and
+
+conversion of CO2. Chem Eng J 2021;410:128335. https://doi.org/10.1016/j.
+cej.2020.128335.
+
+Enrique  Garcia-Bordej ́e  is  senior  scientist  at  the  Instituto  de
+Carboquimica  (Zaragoza),  CSIC  (Spanish  scientific  research
+council). He received his PhD from the University of Zaragoza
+in  1998.  He  work  as  a  postdoc  at  the  “Industrial  catalysis
+department”  of Delft University of Technology under the su-
+pervision of Prof. F. Kapteijn and at the Norwegian University
+of Science and Technology (NTNU). He has been active in the
+field  of  heterogeneous  catalysis  using  carbon  materials  and
+carbon-based  structured  reactors,  mainly  monoliths.  The  ap-
+plications  of  these  materials  include  catalytic  processes  for
+environmental protection and synthetic fuel production using
+CO2 as feedstock. He has coordinated one European project of
+7th framework programme and participated in several more.
+He has been invited to several oral presentations and chaired the organisation of the in-
+ternational conference CARBOCAT-IX.
+
+ProgressinEnergyandCombustionScience100(2024)10113220

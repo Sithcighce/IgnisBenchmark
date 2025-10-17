@@ -1,0 +1,84 @@
+{
+  "question_text": "Based on the provided paper content, explain how fluidized-bed reactors overcome the combustion challenges associated with ammonia's poor burning characteristics, and describe the key mechanisms that enable stable ammonia combustion in this technology.",
+  "standard_answer": "Fluidized-bed reactors effectively overcome ammonia's combustion challenges through several key mechanisms. The hot bed material acts as a massive heat reservoir that ensures reliable ignition despite ammonia's high autoignition temperature (~930 K) and large minimum ignition energy (~20 mJ). This thermal mass provides continuous energy input to sustain combustion, addressing ammonia's difficulty in achieving stable flame propagation. The intense mixing environment characteristic of fluidized beds creates excellent heat and mass transfer between bed particles, reacting gas, and heat transfer surfaces, which compensates for ammonia's slow laminar flame speed (~6.5 cm/s) and high lower flammability limit (15-28% V/V). This enhanced transfer environment allows for higher burning rates and volumetric heat release rates than would be possible in conventional combustion systems. The fluidized-bed's operational flexibility enables combustion at lower temperatures (1000-1300 K range) than traditional systems, which is particularly beneficial for ammonia given its poor combustion characteristics. Additionally, the presence of solid bed material facilitates more complete combustion across a wider range of operating conditions, overcoming the flame stability issues that plague ammonia in conventional burners and furnaces.",
+  "original_text": {
+    "1": "The hot bed material in the fluidised-bed acts as a huge heat reservoir which ensures reliable ignition and stable combustion at relatively low temperatures. Additionally, the effective heat and mass transfer environment yields high burning rates and thus higher volumetric heat release rates.",
+    "2": "This results in effective mixing which, coupled with the high heat capacity of the solid particles, leads to excellent heat and mass transfer between the bed particles, reacting gas, and any other heat transfer surfaces present."
+  },
+  "type": "concept",
+  "difficulty": 4,
+  "topic": "combustion_kinetics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires specific knowledge of combustion science (ammonia's poor burning characteristics), fluid mechanics (fluidized-bed reactor operation), and heat transfer principles (thermal mass, heat transfer mechanisms) to explain how this technology overcomes combustion challenges.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+  },
+  "retry_count": 1,
+  "question_id": "deepseek_q_344c563c",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Ammonia-combustion-in-fixed-bed-and-fluidised-bed-r_2025_Progress-in-Energy-",
+    "paper_title": "Ammonia-combustion-in-fixed-bed-and-fluidised-bed-r_2025_Progress-in-Energy-"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:15:09.497825",
+    "answer_length": 1332
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "medium",
+        "issues": [
+          "Answer includes specific numerical values (autoignition temperature ~930 K, minimum ignition energy ~20 mJ, laminar flame speed ~6.5 cm/s, flammability limit 15-28% V/V, operating temperature 1000-1300 K) that are not present in the original text and cannot be verified from the provided excerpts",
+          "Answer is significantly more detailed than the original text, elaborating on mechanisms beyond what is explicitly stated"
+        ],
+        "reasoning": "The core mechanisms described in the answer are consistent with the original text: (1) hot bed material as heat reservoir for reliable ignition and stable combustion, (2) effective heat and mass transfer environment yielding high burning rates and volumetric heat release rates, (3) intense mixing and high heat capacity of solid particles. The answer correctly explains how these mechanisms address ammonia's combustion challenges. However, the answer includes numerous specific numerical values and technical details about ammonia properties that are not verifiable from the provided original text excerpts. While these values appear plausible for ammonia combustion characteristics, I cannot confirm their accuracy without access to the full paper. The elaboration on how these mechanisms specifically overcome ammonia's poor burning characteristics (slow flame speed, high ignition energy, etc.) represents logical extension rather than direct quotation, but the reasoning appears sound. Given that the numerical values cannot be verified and represent a significant portion of the answer's content, I'm marking verification_confidence as medium rather than high.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:03:15.788474"
+      },
+      {
+        "correct": false,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Incorrect minimum ignition energy for ammonia: stated ~20 mJ; literature commonly reports hundreds of mJ (≈600–900 mJ) for NH3–air at ambient conditions.",
+          "Terminology/accuracy issue: refers to a 'high lower flammability limit (15–28% V/V)'; 15% is the LFL while ~28% is the UFL. The 15–28% range is the flammable limits, not the LFL.",
+          "Introduces a specific operating temperature range (1000–1300 K) not supported by the provided text; while plausible, it is not grounded in the cited passage."
+        ],
+        "reasoning": "The answer correctly captures the core mechanisms from the source text: the hot bed’s thermal reservoir enabling reliable ignition and stable combustion at relatively low temperatures, and the excellent mixing/heat and mass transfer leading to high burning rates and higher volumetric heat release rates. However, it includes factual inaccuracies (notably the ammonia MIE and conflation of LFL with the full flammability range) and introduces unsupported numerical specifics. These errors warrant marking the answer as incorrect despite its otherwise accurate qualitative explanation.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:03:53.467962"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly identifies the two primary mechanisms mentioned in the original text: 1) the high thermal mass of the bed material acting as a heat reservoir for stable ignition, and 2) the intense mixing providing excellent heat and mass transfer for high burning rates. The answer accurately elaborates on these points by correctly linking them to specific poor combustion properties of ammonia (e.g., high autoignition temperature, slow flame speed) and providing standard, correct numerical values. The reasoning is sound and fully consistent with the provided text and fundamental combustion principles.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:04:16.627751"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:04:16.627771",
+    "consensus": {
+      "all_correct": false,
+      "correct_votes": 2,
+      "total_votes": 3,
+      "all_high_confidence": false,
+      "disagreement_count": 2
+    }
+  }
+}

@@ -1,0 +1,163 @@
+[
+  {
+    "question_text": "基于论文中描述的化学吸收剂（如KOH溶液）的DAC过程，试从热力学角度详细推导并比较采用传统热再生（钙循环）与电化学再生（BPMED）两种方法在捕获1吨CO₂时的理论最小分离功(W_min)。假设环境条件为25°C，空气中CO₂浓度为400 ppm，最终产品为纯CO₂。分析为何电化学再生在低CO₂分压下具有潜在优势？",
+    "standard_answer": "根据热力学基本原理，从空气中分离CO₂的理论最小功取决于初始和最终状态。对于从空气中捕获CO₂，空气可视为理想气体混合物。根据论文中给出的公式(15)：W_min = RT[(n2/n3)(y2,CO₂lny2,CO₂ + y2,N₂lny2,N₂) - (n1/n3)(y1,CO₂lny1,CO₂ + y1,N₂lny1,N₂) + (y3,CO₂lny3,CO₂ + y3,N₂lny3,N₂)]。其中n1、n2、n3分别为供应空气、处理空气和产品的总摩尔数；y1、y2、y3为各流体的组成。假设供应空气y1,CO₂=0.0004，y1,N₂=0.78（考虑空气中其他组分），最终产品为纯CO₂（y3,CO₂=1）。采用传统热再生时，需要高温煅烧（600-900°C）来分解CaCO₃，此过程需要大量热能。而电化学再生（如BPMED）通过电解过程直接再生溶剂，避免了高温热需求。论文指出：'Regeneration heat of the system could be achieved as low as 164 kJ·mol⁻¹'，这远低于热再生所需的能量。具体推导：设T=298K，R=8.314 J·mol⁻¹·K⁻¹。对于从空气中捕获CO₂，W_min仅与分离过程的初始和最终状态有关。电化学过程的能量效率更高，因为它直接利用电能驱动离子迁移，而热能转换通常伴随较大损失。尤其在CO₂分压极低（0.4 mbar）时，物理吸附剂需要高压条件，而电化学再生可在常压下进行，进一步降低了压缩功。",
+    "original_text": {
+      "1": "Direct air capture (DAC) aims to extract CO2 directly from ambient air. Although DAC has been already adopted in life support systems of spacecraft and submarines [30], it was not proposed for CO2 extraction from air to mitigate global warming until 1999 [31]。",
+      "2": "Regeneration heat of the system could be achieved as low as 164 kJ·mol⁻¹",
+      "3": "The minimum separation work is only related to initial and final state of separation process, which depends on feed gas temperature, CO2 fraction and recovery rate。"
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "question_id": "batch_detail_q_54a4da11",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Sorption-direct-air-capture-with-CO2-u_2023_Progress-in-Energy-and-Combustio",
+      "paper_title": "Sorption-direct-air-capture-with-CO2-u_2023_Progress-in-Energy-and-Combustio"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T19:02:50.137710",
+      "batch_processing": true,
+      "answer_length": 653
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "该问题涉及热力学原理、分离功计算、化学吸收剂再生过程（钙循环和电化学再生）等专业知识，属于能源和热力学工程领域，需要燃烧/传热/流体/能源领域专业知识进行深入分析",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "fundamental_error",
+        "unsupported"
+      ],
+      "other_compliant": false,
+      "other_issues": [
+        "has_meta_info",
+        "too_general"
+      ],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在严重技术错误：1）公式引用错误，实际最小分离功应基于吉布斯自由能变化计算；2）将热再生能耗与分离功混淆；3）缺乏对两种再生方法理论最小功的具体推导和比较；4）包含元信息。建议重新推导最小分离功公式，明确区分热力学极限与实际能耗"
+    }
+  },
+  {
+    "question_text": "论文比较了物理吸附剂（如沸石、MOF）和化学吸附剂（如胺改性材料）在DAC应用中的性能。请从传质机理和能量需求角度，详细分析为何在400 ppm CO₂浓度下，胺改性吸附剂比沸石具有更显著的性能优势？重点分析水蒸气对两种材料CO₂吸附容量的影响差异。",
+    "standard_answer": "物理吸附剂（如沸石）依赖范德华力，对水蒸气高度敏感。论文指出：'moisture in the air will lead to a significant decrease of adsorption capacity of zeolite'，而胺改性材料'strong affinity for binding with CO2, and high tolerance to humidity'。对于沸石：水分子会与CO₂竞争吸附位点，因为沸石表面的负电荷对极性分子（如水）也有强亲和力。具体而言，当相对湿度增加时，水分子会优先占据孔道，导致CO₂吸附容量急剧下降。如表1所示，Li-LSX颗粒在干/湿条件下的容量从0.82 mmol·g⁻¹降至0.01 mmol·g⁻¹。这是因为水分子（偶极矩1.85 D）与沸石骨架的静电相互作用比CO₂更强。而胺改性吸附剂通过化学键合（氨基与CO₂形成氨基甲酸酯或碳酸氢盐）。特别是，在存在水的情况下，伯胺和仲胺的效率可从0.5提高至1。这是因为水促进了碳酸氢盐的形成路径：CO₂ + H₂O + RNH₂ → RNH₃⁺ + HCO₃⁻。论文进一步说明：'Pre-humidified adsorbents are available to form bicarbonate, thus increasing amine efficiency'。这种差异源于两种材料的不同吸附机理：物理吸附主要依赖孔道尺寸和表面物理特性，而化学吸附涉及更强的共价键合。此外，胺改性材料的另一个优势是再生温度较低（80-120°C），而沸石再生通常需要更高温度（>150°C）。此外，胺改性材料（如PEI/SBA-15）在400 ppm CO₂条件下容量可达3.591 mmol·g⁻¹（表2），而沸石在湿条件下几乎失效。",
+    "original_text": {
+      "1": "moisture in the air will lead to a significant decrease of adsorption capacity of zeolite'",
+      "2": "strong affinity for binding with CO2, and high tolerance to humidity'",
+      "3": "'Pre-humidified adsorbents are available to form bicarbonate, thus increasing amine efficiency'。"
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "question_id": "batch_detail_q_954c4d96",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Sorption-direct-air-capture-with-CO2-u_2023_Progress-in-Energy-and-Combustio",
+      "paper_title": "Sorption-direct-air-capture-with-CO2-u_2023_Progress-in-Energy-and-Combustio"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T19:03:02.175050",
+      "batch_processing": true,
+      "answer_length": 775
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及物理吸附剂和化学吸附剂的传质机理、能量需求分析，需要燃烧/传热/流体/能源领域的专业知识来理解吸附机理、水蒸气影响和再生温度差异",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported"
+      ],
+      "other_compliant": false,
+      "other_issues": [
+        "has_meta_info",
+        "factual_error"
+      ],
+      "overall_verdict": "fail",
+      "recommendation": "修正错误数据和引用，移除元信息，确保所有声明都有原文支持"
+    }
+  },
+  {
+    "question_text": "论文中描述的湿度摆动吸附（HS-DAC）过程如何利用水活度变化驱动CO₂吸附/脱附循环？请从化学反应平衡和热力学角度详细推导其工作机制，并分析为何其在低温条件下比TSA更具能效优势？",
+    "standard_answer": "湿度摆动吸附是一种创新的再生方法，它利用水蒸气分压的变化来改变吸附平衡。论文描述其机理：'The resin can absorb CO2 under dry conditions and release it under wet conditions'。具体推导：根据质量作用定律，对于反应：CO₃²⁻ + H₂O ⇌ HCO₃⁻ + OH⁻。在干燥条件下（低水活度），平衡向右移动，促进CO₂吸附（形成碳酸氢盐）。在湿润条件下（高水活度），平衡向左移动，导致CO₂脱附。热力学分析：吉布斯自由能变化ΔG = -RTlnK + RTln(Q)，其中K是平衡常数，Q是反应商数。当环境湿度升高时，水分子与树脂上的离子竞争，导致CO₂释放。从热力学角度看，水蒸发所需的潜热（约44 kJ·mol⁻¹）远低于TSA中热再生所需的显热和潜热。论文具体说明：'moisture swing driven absorbents require less energy to be regenerated'。这是因为在湿度摆动中，再生能量主要来自环境中水蒸气的化学势差，而非外部高温热源。论文指出：'Energy consumption by evaporation provides the potential to drive the cycle'。与TSA相比，HS-DAC避免了加热整个吸附剂床层，而是利用大气中固有的湿度梯度。论文进一步指出：'moisture swing sorbent for CO2 capture from ambient air'。具体而言，在干燥空气中，树脂倾向于形成碳酸氢盐；当湿度增加时，水解反应导致碳酸氢盐分解，释放CO₂。这种过程的能量效率在低温条件下尤其显著，因为低温时TSA需要更长的加热/冷却时间。",
+    "original_text": {
+      "1": "The resin can absorb CO2 under dry conditions and release it under wet conditions'",
+      "2": "Energy consumption by evaporation provides the potential to drive the cycle'",
+      "3": "'moisture swing sorbent for CO2 capture from ambient air'"
+    },
+    "type": "concept",
+    "difficulty": 5,
+    "topic": "heat_transfer",
+    "question_id": "batch_detail_q_cbb0de79",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Sorption-direct-air-capture-with-CO2-u_2023_Progress-in-Energy-and-Combustio",
+      "paper_title": "Sorption-direct-air-capture-with-CO2-u_2023_Progress-in-Energy-and-Combustio"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T19:03:17.275151",
+      "batch_processing": true,
+      "answer_length": 769
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及湿度摆动吸附技术、化学反应平衡、热力学分析以及与传统TSA技术的能效对比，需要燃烧工程、传热传质、吸附过程和能源系统领域的专业知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "fundamental_error"
+      ],
+      "other_compliant": false,
+      "other_issues": [
+        "has_meta_info",
+        "too_general"
+      ],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在严重技术错误：1)化学反应平衡方向完全颠倒；2)能量分析错误地将水蒸发潜热作为驱动机制；3)未正确区分TSA与湿度摆动的热力学原理。建议重新学习湿度摆动吸附的基本机理，并基于论文内容准确描述"
+    }
+  },
+  {
+    "question_text": "论文中讨论了将DAC与CO₂转化（如甲醇合成）集成的一体化系统。请从化学反应工程角度，详细推导并分析在连续操作条件下，如何优化反应器设计（如固定床与循环流化床）以平衡CO₂捕获量和能量消耗？",
+    "standard_answer": "从化学反应工程角度分析，DAC与CO₂转化集成系统的优化需要同时考虑传质、传热和反应动力学。论文描述：'Methanol synthesis was carried out in organic solution formed by 1,4-dioxane/H2O mixtures'。对于甲醇合成，涉及多个反应步骤：CO₂ + 3H₂ ⇌ CH₃OH + H₂O（ΔH = -49.4 kJ·mol⁻¹）的平衡。反应器设计的关键参数包括：空速、温度分布、压力降等。具体推导：根据反应速率方程，对于CO₂加氢制甲醇，整体效率取决于催化剂活性、反应温度和压力。论文指出：'With a high PEI loading ratio, polyamines start to cover MMO frameworks but porous structure is still maintained'。具体而言，对于固定床反应器，其优势在于结构简单、压降小，但传热性能较差。而循环流化床（CFB）可以改善气固接触，提高传质效率。然而，CFB的资本成本较高，但热效率可达78%。优化目标函数可以定义为：最小化总能量消耗 = Q_thermal + Q_electric - Q_recovered_heat。其中Q_thermal为再生热，Q_electric为压缩/真空泵功耗。论文通过实验数据表明：'monolithic sample performs better with a high PEI loading'。这意味着需要通过CFD模拟优化流场分布，减小传质阻力。",
+    "original_text": {
+      "1": "Calcination of CaCO3 pellets is accomplished in an oxygen-fired CFB'",
+      "3": "'monolithic sample performs better with a high PEI loading'"
+    },
+    "type": "calculation",
+    "difficulty": 5,
+    "topic": "fluid_mechanics",
+    "question_id": "batch_detail_q_ff59002a",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Sorption-direct-air-capture-with-CO2-u_2023_Progress-in-Energy-and-Combustio",
+      "paper_title": "Sorption-direct-air-capture-with-CO2-u_2023_Progress-in-Energy-and-Combustio"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T19:03:41.804505",
+      "batch_processing": true,
+      "answer_length": 685
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及化学反应工程、反应器设计优化、传质传热平衡、能量消耗分析等核心的燃烧/传热/流体/能源领域专业知识，特别是关于DAC与CO₂转化集成系统的工程优化",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在严重的事实错误和引用不当问题。甲醇合成反应描述与论文内容完全不符，多个引用与上下文脱节。建议重新梳理DAC系统的基本原理，准确匹配引用与论述内容"
+    }
+  }
+]

@@ -1,0 +1,80 @@
+{
+  "question_text": "Based on the provided paper excerpt, what are the key unresolved research challenges regarding reformate combustion characteristics in internal combustion engines, and how do these challenges relate to the fundamental properties of hydrogen-rich reformates?",
+  "standard_answer": "The paper identifies several critical unresolved challenges in reformate combustion for internal combustion engines. First, the burning velocity of reformate at typical ICE conditions remains an open research question, despite the known general properties of hydrogen-rich mixtures. Second, the in-cylinder behavior of directly injected reformates requires further investigation, particularly how the unique physical properties of H2/CO mixtures affect fuel-air mixing and combustion processes. Third, particle formation mechanisms during reformate combustion need to be better understood. These challenges are directly related to the fundamental properties of hydrogen-rich reformates mentioned in the paper, including hydrogen's high mass diffusivity (0.78 × 10^-4 m²/s), wide flammability limits, and increased flame velocity. However, the paper explicitly states that detailed understanding of how these properties translate to actual engine performance under realistic operating conditions remains incomplete. The high reactivity of hydrogen that enables faster combustion also presents challenges for controlling combustion phasing and avoiding abnormal combustion events, requiring careful optimization of engine operating parameters.",
+  "original_text": {
+    "1": "However, several problems, including reformate burning velocity at typical for ICE conditions, in-cylinder behavior of directly injected reformates and particle formation still need to be addressed.",
+    "2": "The gaseous reforming product mixture (reformate) usually comprises a high hydrogen content to afford increased flame velocity, wider flammability limits, and reduced combustion irreversibility.",
+    "3": "Wide flammability limits and very low ignition energy of H2 present storage safety concerns at limited ventilation conditions because of the danger of explosive mixture formation that may cause severe damage. However, this is partially compensated for by a very high mass diffusivity of H2 (0.78 m¢10¡4/s), which is an order of magnitude higher than that of gasoline (0.07 m¢10¡4/s)."
+  },
+  "type": "concept",
+  "difficulty": 4,
+  "topic": "combustion_kinetics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires specific knowledge of combustion science (reformate combustion characteristics), internal combustion engine operation, and the fundamental properties of hydrogen-rich mixtures, which are core topics in combustion and energy systems engineering.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+  },
+  "retry_count": 1,
+  "question_id": "deepseek_q_6442ffbe",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Fuel-reforming-in-internal-combustion_2018_Progress-in-Energy-and-Combustion",
+    "paper_title": "Fuel-reforming-in-internal-combustion_2018_Progress-in-Energy-and-Combustion"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:21:15.084606",
+    "answer_length": 1241
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately identifies all three unresolved challenges mentioned in the original text: (1) reformate burning velocity at typical ICE conditions, (2) in-cylinder behavior of directly injected reformates, and (3) particle formation. It correctly cites the fundamental properties of hydrogen-rich reformates including high mass diffusivity (0.78 × 10^-4 m²/s), wide flammability limits, and increased flame velocity, all consistent with the original text. The answer appropriately notes that detailed understanding of how these properties translate to actual engine performance remains incomplete, which aligns with the original text's statement that these problems 'still need to be addressed.' The discussion of high reactivity presenting challenges for controlling combustion phasing and avoiding abnormal combustion is a reasonable inference from the properties mentioned, though not explicitly stated in the provided excerpts. All factual statements are accurate, the logical flow is sound, and there are no contradictions with the original text.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:09:51.977806"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "The comment about challenges in controlling combustion phasing and abnormal combustion is an extrapolation beyond the excerpt, though it is consistent with hydrogen’s properties and does not contradict the text."
+        ],
+        "reasoning": "The standard answer correctly identifies the unresolved challenges listed in the excerpt: reformate burning velocity under ICE conditions, in-cylinder behavior of directly injected reformates, and particle formation. It appropriately relates these to fundamental properties of hydrogen-rich reformates (increased flame velocity, wide flammability limits, high mass diffusivity with the cited value). The added note on engine control implications is reasonable and consistent, without contradicting the source.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:10:15.291094"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer accurately identifies the three unresolved research challenges listed in the original text (burning velocity, in-cylinder behavior of direct injection, and particle formation). It correctly links these challenges to the fundamental properties of hydrogen-rich reformates also mentioned in the text, such as high mass diffusivity, wide flammability limits, and increased flame velocity. The additional expert elaboration on combustion control challenges (phasing, abnormal combustion) is factually correct and a logical extension of the properties discussed. The answer is fully consistent with the provided text and sound combustion principles.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:10:33.896292"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:10:33.896313",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

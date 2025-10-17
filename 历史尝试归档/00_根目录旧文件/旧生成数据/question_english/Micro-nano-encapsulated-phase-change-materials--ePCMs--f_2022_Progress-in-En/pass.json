@@ -1,0 +1,134 @@
+[
+  {
+    "question_text": "What are the fundamental physical mechanisms behind supercooling in PCMs, and how does the critical radius of solid nuclei R_cr influence the degree of supercooling according to the mathematical relationship T_sc = (4/3)(γ_o T_m)/(ρ_s H_s-l R_cr)?",
+    "standard_answer": "Supercooling occurs due to nucleation barriers where PCMs remain liquid below their equilibrium freezing temperature. The physical mechanisms involve: (1) Surface energy effects where the interface energy γ_o between solid nuclei and liquid creates an energy barrier that must be overcome for nucleation; (2) The critical radius R_cr represents the minimum stable nucleus size, below which surface tension forces dominate and cause dissolution; (3) The enthalpy of fusion H_s-l provides the driving force for phase transition, with larger values requiring more significant undercooling to initiate nucleation; (4) Density differences between solid and liquid phases affect the volumetric work required for nucleus formation. The mathematical relationship shows that supercooling degree T_sc increases with higher surface energy γ_o and melting temperature T_m, but decreases with larger R_cr, higher solid density ρ_s, and greater latent heat H_s-l. Smaller capsule sizes in micro/nano-encapsulation reduce the probability of containing nucleation sites, thereby increasing supercooling as each capsule has insufficient impurities to initiate heterogeneous nucleation.",
+    "original_text": {
+      "1": "It is also possible to express supercooling as follows: T_sc = (4/3)(γ_o T_m)/(ρ_s H_s-l R_cr)",
+      "2": "The degree of supercooling is definitely increased if the bulk volume is divided into microscopic particles through encapsulation or an emulsion process, because each capsule will have an insufficient number of impurities"
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "thermal_energy_storage",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires deep knowledge of phase-change materials (PCMs), nucleation theory, surface energy effects, and the mathematical relationship between critical radius and supercooling - all core concepts in thermal energy storage and heat transfer physics.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct, and compliant with other requirements."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_51607321",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Micro-nano-encapsulated-phase-change-materials--ePCMs--f_2022_Progress-in-En",
+      "paper_title": "Micro-nano-encapsulated-phase-change-materials--ePCMs--f_2022_Progress-in-En"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:22:56.259986",
+      "answer_length": 1168
+    }
+  },
+  {
+    "question_text": "Calculate the total thermal energy storage capacity for a latent TES system containing 50 kg of paraffin wax PCM with melting temperature 28°C, latent heat of fusion 160 kJ/kg, specific heat capacities of 2.5 kJ/kg·K (solid) and 3.0 kJ/kg·K (liquid), operating between 15°C and 45°C. Compare this to a sensible TES system using water (c_p = 4.18 kJ/kg·K) storing the same amount of energy over the same temperature range.",
+    "standard_answer": "For the latent TES system: Q_latent = M[∫_T_i^T_m c_p,s dT + H_s-l + ∫_T_m^T_f c_p,l dT] = 50[∫_15^28 2.5 dT + 160 + ∫_28^45 3.0 dT] = 50[2.5×(28-15) + 160 + 3.0×(45-28)] = 50[32.5 + 160 + 51] = 50 × 243.5 = 12,175 kJ. For the sensible water system storing equivalent energy: Q_sensible = M_water c_p,water ΔT = M_water × 4.18 × (45-15) = M_water × 125.4 kJ. Setting equal to 12,175 kJ gives M_water = 12,175/125.4 ≈ 97.1 kg. The latent system stores the same energy with approximately 48.5% less mass than the sensible system, demonstrating the superior energy density of PCM-based storage. This calculation highlights the dual functionality of latent TES, combining sensible heating in both solid and liquid phases with the high-energy-density phase transition process.",
+    "original_text": {
+      "1": "The total amount of thermal energy stored or released in latent TES storage: Q_latent = M[∫_T_i^T_m c_p,s(T)dT + H_s-l + ∫_T_m^T_f c_p,l(T)dT]",
+      "2": "Latent TES has a higher energy storage density than sensible TES, allowing the storage system to be smaller"
+    },
+    "type": "calculation",
+    "difficulty": 3,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question requires thermal energy storage (TES) domain expertise, specifically knowledge of latent heat storage using phase change materials (PCMs) and sensible heat storage calculations. It involves understanding PCM thermodynamics, heat capacity integration across phase transitions, and comparative energy density analysis between different TES technologies.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question is well-structured with clear domain focus and the answer provides accurate calculations with proper explanation of the energy density advantage of latent TES systems."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_44fd6c00",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Micro-nano-encapsulated-phase-change-materials--ePCMs--f_2022_Progress-in-En",
+      "paper_title": "Micro-nano-encapsulated-phase-change-materials--ePCMs--f_2022_Progress-in-En"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:22:57.909728",
+      "answer_length": 771
+    }
+  },
+  {
+    "question_text": "According to the paper, what are the four hierarchically distinct regions that occur during the melting process of a PCM, and what are the basic heat transfer mechanisms involved in each region?",
+    "standard_answer": "The paper identifies four hierarchically distinct regions during PCM melting: (1) pure conduction, (2) mixed conduction and natural convection, (3) dominant natural convection, and (4) shrinking solid. In the pure conduction region, heat transfer occurs primarily through conduction during the early stages of melting. As melting progresses, the mixed conduction and natural convection region emerges where both conduction and convection mechanisms are active. The paper specifically notes that 'conduction can be used to transfer heat during the early stages of melting and solidification, while convection currents dominate in the mushy zone.' This suggests that conduction is the dominant mechanism initially, but as the liquid phase develops and natural convection currents form, convection becomes increasingly important. The transition from conduction-dominated to convection-dominated heat transfer represents a fundamental aspect of PCM melting behavior that affects the overall melting rate and thermal performance of the system.",
+    "original_text": {
+      "1": "In general, four hierarchically distinct regions occur during the melting process of a PCM: (1) pure conduction, (2) mixed conduction and natural convection, (3) dominant natural convection, and (4) shrinking solid",
+      "2": "Conduction can be used to transfer heat during the early stages of melting and solidification, while convection currents dominate in the mushy zone"
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "heat_transfer",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires specific knowledge of phase-change material (PCM) melting behavior, including hierarchically distinct regions and heat transfer mechanisms (conduction, natural convection), which falls under heat transfer principles and thermal energy storage—core topics in combustion science, energy systems, and thermal management.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "The question is domain-focused, the answer is factually correct and well-supported by citations, and there are no other quality issues. It meets all specifications."
+    },
+    "retry_count": 1,
+    "question_id": "deepseek_q_036d997a",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Micro-nano-encapsulated-phase-change-materials--ePCMs--f_2022_Progress-in-En",
+      "paper_title": "Micro-nano-encapsulated-phase-change-materials--ePCMs--f_2022_Progress-in-En"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:23:35.142906",
+      "answer_length": 1038
+    }
+  },
+  {
+    "question_text": "How does the Stefan condition mathematically describe the moving boundary problem in solid-liquid PCM phase transitions, and what physical mechanisms does it account for based on the provided paper content?",
+    "standard_answer": "The Stefan condition provides the mathematical framework for tracking the moving solid-liquid interface during PCM phase transitions by balancing the latent heat absorption/release with the conductive heat fluxes from both phases. The equation H_s-lρ(ds(t)/dt) = k_s(δT_s/δx) - k_l(δT_l/δx) describes how the interface velocity ds/dt depends on the latent heat of fusion H_s-l, density ρ, and the thermal conductivity gradients across the interface. This formulation accounts for the energy required for phase transition, where the latent heat term represents the energy barrier for phase change. The condition captures conductive heat transfer mechanisms in both solid and liquid phases, with k_s and k_l governing heat diffusion rates. The time-dependent nature of phase front propagation makes this a nonlinear moving boundary problem, requiring numerical simulation using computational packages within specific temperature ranges due to the unknown position and velocity of the boundary in advance.",
+    "original_text": {
+      "1": "The Stephan condition describes this procedure, which is expressed as follows: H_s-lρ(ds(t)/dt) = k_s(δT_s/δx) - k_l(δT_l/δx)",
+      "2": "The position and velocity of this boundary are unknown in advance. Numerical simulation of the PCM during phase transition is often carried out using computational packages (e.g., COMSOL Multiphysics, ANSYS-FLUENT, Star-CCM+) within a specific temperature range."
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "heat_transfer",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question specifically addresses the Stefan condition in solid-liquid PCM phase transitions, requiring knowledge of heat transfer principles (latent heat, conductive heat fluxes), phase change physics, and mathematical modeling of moving boundary problems - all core concepts in thermal energy storage and combustion/energy systems.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question is well-focused on domain-specific heat transfer concepts and answer correctly explains the Stefan condition with appropriate mathematical formulation and physical mechanisms based on the provided citations."
+    },
+    "retry_count": 2,
+    "question_id": "deepseek_q_9ef1c53c",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Micro-nano-encapsulated-phase-change-materials--ePCMs--f_2022_Progress-in-En",
+      "paper_title": "Micro-nano-encapsulated-phase-change-materials--ePCMs--f_2022_Progress-in-En"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:24:11.630788",
+      "answer_length": 1002
+    }
+  }
+]

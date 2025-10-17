@@ -1,0 +1,78 @@
+{
+  "question_text": "Using the Sherwood plot analysis from the provided paper, explain the fundamental relationship between CO2 concentration in industrial gas streams and separation costs, and describe the thermodynamic basis for minimum separation work calculations in carbon capture systems using the Gibbs free energy approach described in the paper.",
+  "standard_answer": "The Sherwood plot analysis demonstrates a fundamental relationship where higher CO2 concentrations in industrial gas streams lead to lower separation costs. This relationship is mathematically expressed as log(Price $/kg) = -0.5558 × log(mole fraction of CO2) - 1.8462, showing that as CO2 concentration increases, the cost to separate it decreases on a molar basis. The negative coefficient (-0.5558) confirms this inverse relationship, where more concentrated CO2 streams require less energy and smaller equipment, reducing capital costs. The thermodynamic minimum work for separation is calculated using the Gibbs free energy difference between product and feed streams under isothermal, isobaric conditions, assuming ideal gas behavior. The derivation begins with the fundamental principle that minimum work equals the Gibbs free energy change of separation. For a CO2 separation system with feed stream A producing CO2-rich stream B and CO2-lean stream C, the minimum work equation accounts for the entropy of mixing effects, which are more significant in dilute streams where greater energy is required to overcome the higher degree of disorder. This thermodynamic foundation shows that minimum separation work decreases substantially as CO2 concentration increases, directly correlating with the cost trends observed in the Sherwood analysis.",
+  "original_text": {
+    "1": "The Sherwood plot correlates the relationship between concentrations of a target substance with the cost to separate it from the remaining components. As the target concentration increases, the cost to separate decreases on a molar basis.",
+    "2": "The minimum work for separation is achieved at isothermal, isobaric conditions, reducing the minimum work equation into the Gibb's Free Energy difference between the product and feed streams.",
+    "3": "log(Price $/kg) = -0.5558 × log(mole fraction of CO2) - 1.8462"
+  },
+  "type": "concept",
+  "difficulty": 4,
+  "topic": "energy_systems",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires specific knowledge of energy systems engineering, particularly carbon capture technologies, Sherwood plot analysis for separation processes, and thermodynamic principles (Gibbs free energy) applied to industrial gas separation. It directly addresses combustion science applications in industrial emissions and energy efficiency.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on paper citations, and no other compliance issues."
+  },
+  "retry_count": 3,
+  "question_id": "deepseek_q_2989d98e",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "CO2-capture-from-the-industry-sec_2017_Progress-in-Energy-and-Combustion-Sci",
+    "paper_title": "CO2-capture-from-the-industry-sec_2017_Progress-in-Energy-and-Combustion-Sci"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:19:13.683404",
+    "answer_length": 1349
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately reflects all key information from the original text. It correctly states: (1) the inverse relationship between CO2 concentration and separation costs as shown in the Sherwood plot, (2) the exact mathematical equation log(Price $/kg) = -0.5558 × log(mole fraction of CO2) - 1.8462, (3) the correct interpretation of the negative coefficient indicating inverse relationship, (4) the thermodynamic basis using Gibbs free energy difference under isothermal, isobaric conditions. The answer provides additional context about entropy of mixing and dilute streams that, while not explicitly in the original text, is consistent with established thermodynamic principles and helps explain why the relationship exists. The physical principles are correctly stated, the cause-effect relationships are sound, and there are no contradictions with the original text.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:06:05.414961"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer correctly captures the Sherwood plot relationship (higher CO2 concentration lowers separation cost) and cites the given regression. It accurately describes the thermodynamic minimum work for separation as the Gibbs free energy difference under isothermal, isobaric conditions, consistent with the ground truth. The entropy of mixing explanation aligns with the trend that dilute streams require more work. No factual or logical contradictions found.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:06:29.327949"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer correctly explains both the empirical relationship from the Sherwood plot and the underlying thermodynamic principles based on Gibbs free energy and entropy of mixing. It accurately quotes the provided equation and correctly interprets the inverse relationship between CO2 concentration and separation cost. The reasoning is sound and consistent with the provided original text and fundamental thermophysics.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:06:48.764848"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:06:48.764868",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

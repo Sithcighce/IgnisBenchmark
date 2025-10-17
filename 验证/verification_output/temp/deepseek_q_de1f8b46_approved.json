@@ -1,0 +1,80 @@
+{
+  "question_text": "Why does the metaplastic phase formation during coal pyrolysis lead to increased char yield at low heating rates, and how do repolymerization and crosslinking reactions in this phase alter the porous structure of the resulting char?",
+  "standard_answer": "The metaplastic phase consists of high-molecular-weight tar precursors trapped within the coal particle after primary depolymerization. At low heating rates, these species remain in contact with the solid matrix for extended durations, allowing repolymerization, condensation, and crosslinking reactions to occur. These reactions reconnect fragmented aromatic clusters, forming secondary char and reducing volatile release. Specifically, labile bridges in the metaplast can react with neighboring clusters to form stable charred bridges (e.g., through recombination of ξ* to c in CPD mechanism), effectively increasing the infinite cluster fraction in percolation theory. This process enhances char yield by converting potential tar into solid carbonaceous material. Additionally, the prolonged residence in the metaplastic phase promotes pore structure evolution: as volatiles are slowly released, the remaining char develops a more ordered, less porous morphology due to crosslinking, which reduces specific surface area and active sites for subsequent oxidation. In contrast, high heating rates rapidly vaporize metaplast, minimizing repolymerization and yielding a more porous char with higher reactivity. The balance between metaplast retention and release is thus critical for predicting char morphology and combustion efficiency in CFD simulations.",
+  "original_text": {
+    "1": "They stay trapped in the coal structure, forming what is also called the metaplastic phase. This can be experimentally confirmed through extraction with pyridine, which is able to dissolve these high-molecular-weight compounds and 'wash' the partially pyrolyzed coal.",
+    "2": "While they are trapped in the solid, repolymerization, condensation and crosslinking reactions can take place which promotes the formation of secondary char."
+  },
+  "type": "reasoning",
+  "difficulty": 5,
+  "topic": "combustion_kinetics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires deep expertise in coal pyrolysis chemistry, specifically metaplastic phase formation, repolymerization reactions, char yield mechanisms, and porous structure evolution - all core combustion science concepts related to coal thermochemical conversion.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_de1f8b46",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Advanced-modeling-approaches-for-CFD-simulations_2021_Progress-in-Energy-and",
+    "paper_title": "Advanced-modeling-approaches-for-CFD-simulations_2021_Progress-in-Energy-and"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:14:23.891049",
+    "answer_length": 1355
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately explains the metaplastic phase formation and its effects on char yield. It correctly identifies that: (1) the metaplastic phase consists of high-molecular-weight tar precursors trapped in the coal particle, consistent with the original text's description of compounds that can be extracted with pyridine; (2) at low heating rates, extended contact time allows repolymerization, condensation, and crosslinking reactions to occur, forming secondary char, which directly matches the original text; (3) these reactions reduce volatile release and increase char yield by converting potential tar into solid material. The answer provides additional mechanistic details (CPD mechanism, percolation theory, pore structure evolution) that are consistent with established coal pyrolysis science and do not contradict the original text. The explanation of how high heating rates minimize repolymerization and yield more porous char follows logically from the low heating rate mechanism. All physical and chemical principles stated are correct, and the cause-effect relationships are sound.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:02:05.481335"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Uses CPD-specific notation ('ξ* to c') that is unclear and may be imprecise; the qualitative concept of increased crosslinking/infinite cluster fraction is correct but the symbols are potentially misleading.",
+          "Porosity and surface area trends are generalized; while commonly observed (more crosslinked, denser char at low heating rates), detailed pore evolution can be coal- and condition-dependent."
+        ],
+        "reasoning": "The answer correctly states that metaplastic species remain trapped at low heating rates, enabling repolymerization, condensation, and crosslinking that form secondary char and reduce volatile release, consistent with the ground-truth text. It reasonably extends to explain how these reactions increase char yield and typically lead to a denser, less porous char due to enhanced crosslinking. No fundamental physical or chemical errors or contradictions are present; minor CPD notation is potentially inaccurate but does not affect the core correctness.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:02:29.280658"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer correctly explains the role of the metaplastic phase in coal pyrolysis. It accurately links low heating rates to increased residence time for metaplast, which promotes repolymerization, condensation, and crosslinking reactions, thereby increasing char yield. This is fully consistent with the provided original text. The explanation of how these processes lead to a less porous, more ordered char structure at low heating rates is also factually correct and a well-established concept in coal science. The specific reference to the CPD mechanism is an accurate and relevant detail.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:02:47.019721"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:02:47.019742",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

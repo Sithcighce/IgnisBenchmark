@@ -1,0 +1,79 @@
+{
+  "question_text": "What are the fundamental limitations of purely data-driven approaches for predicting turbulent combustion phenomena, and how do knowledge-guided methods overcome these limitations while maintaining physical consistency?",
+  "standard_answer": "Purely data-driven approaches suffer from three fundamental limitations in turbulent combustion prediction: (1) Inability to obey universal physical principles like mass, species, and energy conservation embedded in the Navier-Stokes equations, leading to physically inconsistent predictions. (2) Insufficient data to fully parameterize the high-dimensional thermochemical state space of turbulent reacting flows, where even DNS datasets spanning petabytes cannot capture all possible flame regimes. (3) Poor generalization to unseen combustion conditions due to the chaotic nature of turbulence and complex chemistry interactions. Knowledge-guided methods overcome these by embedding physical constraints directly into the ML architecture. This includes enforcing conservation laws through penalty terms in the loss function, incorporating known chemical kinetic mechanisms as prior information, and using physical symmetries and invariance properties to reduce parameter space. For example, embedding the species conservation constraint W^T·ω̇ = 0 ensures elemental balance in chemical source term predictions, while incorporating turbulence scaling laws improves extrapolation to different Reynolds numbers.",
+  "original_text": {
+    "1": "The primary reasons for this expectation are the lack of the resulting models to obey universal properties and fundamental governing laws that are intrinsic to the combustion-physical system, the lack of sufficient data to fully parameterize complex thermofluid systems, and difficulties in generalizing these models to scenarios on which they have not been trained.",
+    "2": "Knowledge-guided data-driven approaches encode prior knowledge, physical constraints, and mathematical operators into the ML model to achieve consistently accurate predictions and generalization."
+  },
+  "type": "concept",
+  "difficulty": 5,
+  "topic": "combustion_cfd",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires deep expertise in turbulent combustion phenomena, including understanding of Navier-Stokes equations, conservation laws, thermochemical state spaces, flame regimes, and the interaction between turbulence and chemistry - all core combustion science concepts that cannot be answered with general ML knowledge alone.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_cf203067",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Combustion-machine-learning--Principles--pr_2022_Progress-in-Energy-and-Comb",
+    "paper_title": "Combustion-machine-learning--Principles--pr_2022_Progress-in-Energy-and-Comb"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:17:50.623106",
+    "answer_length": 1210
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately captures and elaborates on the three fundamental limitations mentioned in the original text: (1) failure to obey universal physical laws and governing equations, (2) insufficient data to parameterize complex systems, and (3) poor generalization to untrained scenarios. The answer correctly explains how knowledge-guided methods address these by embedding physical constraints, conservation laws, and prior knowledge into ML architectures. The specific examples provided (species conservation constraint W^T·ω̇ = 0, turbulence scaling laws) are physically sound and consistent with combustion science principles. While the answer is more detailed than the original text, all statements are factually accurate and logically consistent with the ground truth.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:06:50.048442"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Minor imprecision: species conservation is not strictly part of the Navier–Stokes equations themselves but of the full reactive-flow governing set (continuity, momentum, energy, and species transport). The overall point about enforcing conservation laws remains correct."
+        ],
+        "reasoning": "The standard answer accurately captures the three fundamental limitations (lack of adherence to governing laws, insufficient data for high-dimensional thermochemical states, and poor generalization) and aligns with the ground-truth text. It correctly explains how knowledge-guided methods incorporate physical constraints, priors, and invariances, with sound examples (e.g., elemental balance constraint and turbulence scaling). No factual or logical contradictions were found.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:07:06.056923"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly identifies the three main limitations of purely data-driven models (violation of physical laws, data scarcity, and poor generalization), which is consistent with the original text. It then accurately explains how knowledge-guided methods address these by embedding physical constraints, providing specific and correct examples such as enforcing conservation laws in the loss function and ensuring elemental balance (W^T·ω̇ = 0) in chemistry predictions. All physical principles and mechanisms described are factually and logically sound.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:07:26.011943"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:07:26.011962",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

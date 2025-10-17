@@ -1,0 +1,80 @@
+{
+  "question_text": "Using the thermodynamic principles of separation work, calculate the minimum energy required to capture CO₂ from ambient air (400 ppm) and produce 95% pure CO₂ at 25°C. Explain the key factors that cause actual DAC processes to consume significantly more energy than this theoretical limit, with specific reference to sorbent characteristics and regeneration mechanisms discussed in the paper.",
+  "standard_answer": "The minimum separation work for CO₂ capture from ambient air can be derived from the Gibbs free energy of mixing for an ideal gas mixture: W_min = -RTΣy_i ln(y_i), where y_i are mole fractions. For feed air (y_CO₂=0.0004, y_N₂=0.78, y_O₂=0.21) and product streams (95% pure CO₂ and CO₂-lean air), the minimum work is approximately 20 kJ/mol CO₂. This represents the reversible thermodynamic limit. Actual DAC processes consume substantially more energy due to several irreversibilities. First, sorbent regeneration requires significant energy input beyond the theoretical minimum. As noted in the paper, 'energy consumption of sorbents is relatively high which is mainly determined by material types, sorption capacities and CO₂ selectivity.' For temperature swing adsorption (TSA) with amine sorbents, energy is needed for sensible heating of the sorbent and reactor, desorption enthalpy to break chemical bonds, and thermal losses. Pressure/vacuum swing processes require compression work. Second, material limitations contribute: physical sorbents like zeolites suffer from 'significant decrease of adsorption capacity of zeolite' due to moisture, while chemical sorbents require energy to overcome reaction enthalpies. Third, process inefficiencies such as finite mass transfer rates, non-ideal sorption isotherms, and equipment losses further increase energy consumption. The paper emphasizes that 'DAC can be used to capture CO₂ emissions unrelated to its source and time,' but the low concentration (~400 ppm) necessitates high energy inputs for air handling and sorbent regeneration, making practical systems consume 5-20 times the theoretical minimum.",
+  "original_text": {
+    "1": "energy consumption of sorbents is relatively high which is mainly determined by material types, sorption capacities and CO2 selectivity",
+    "2": "moisture in the air will lead to a significant decrease of adsorption capacity of zeolite",
+    "3": "DAC can be used to capture CO2 emissions unrelated to its source and time, i.e., DAC can potentially be deployed anywhere and operated anytime"
+  },
+  "type": "calculation",
+  "difficulty": 4,
+  "topic": "energy_systems",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires deep understanding of thermodynamic separation principles (Gibbs free energy calculations for gas mixtures), CO₂ capture from ambient air, sorbent regeneration mechanisms, and energy analysis specific to direct air capture systems - all core topics in energy systems and combustion science.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct with proper citations, and no other compliance issues."
+  },
+  "retry_count": 1,
+  "question_id": "deepseek_q_77e0e398",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Sorption-direct-air-capture-with-CO2-u_2023_Progress-in-Energy-and-Combustio",
+    "paper_title": "Sorption-direct-air-capture-with-CO2-u_2023_Progress-in-Energy-and-Combustio"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:30:14.242987",
+    "answer_length": 1660
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer correctly applies thermodynamic principles to calculate minimum separation work using Gibbs free energy of mixing. The formula W_min = -RTΣy_i ln(y_i) is appropriate for ideal gas separation. The estimated value of ~20 kJ/mol CO₂ is reasonable for the given concentrations (400 ppm to 95% purity). The answer accurately references all three original text excerpts: (1) correctly attributes high energy consumption to material types, sorption capacities and CO₂ selectivity; (2) correctly notes moisture effects on zeolite capacity; (3) correctly quotes the source-independent nature of DAC. The explanation of irreversibilities (sensible heating, desorption enthalpy, compression work, mass transfer limitations) is thermodynamically sound. The statement that practical systems consume 5-20 times the theoretical minimum is consistent with known DAC literature. All physical principles, cause-effect relationships, and references to the original text are accurate and logically consistent.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:20:23.158804"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "The formula W_min = -RT Σ y_i ln(y_i) is a generic mixing expression; for this separation it would be clearer to express per-mole-CO2 work as W_min ≈ RT ln(y_product/y_feed). The stated numerical result (~20 kJ/mol) is still correct."
+        ],
+        "reasoning": "The stated minimum separation work (~20 kJ/mol CO2 at 400 ppm to ~95% purity, 25°C) is consistent with the Gibbs free energy limit for concentrating a dilute species and is within accepted values. The explanation of why practical DAC exceeds this limit is logically sound and aligns with the PECS excerpts: energy depends on sorbent type/capacity/selectivity, moisture diminishes zeolite capacity, and regeneration incurs sensible and binding enthalpy loads; PSA/VSA require mechanical work; additional irreversibilities (mass transfer, non-ideal isotherms, thermal losses) further increase energy. No contradictions or factual errors relative to the provided ground truth.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:21:14.326543"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer is factually and thermodynamically sound. The calculated minimum separation work of ~20 kJ/mol CO₂ is correct for the given conditions. The explanation for why practical energy consumption is much higher is comprehensive, correctly identifying key irreversibilities such as sorbent regeneration energy (sensible heat, desorption enthalpy), material limitations (e.g., moisture effects on zeolites), and process inefficiencies. The answer correctly incorporates and elaborates on all points from the provided original text.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:21:41.386543"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:21:41.386574",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

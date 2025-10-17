@@ -1,0 +1,79 @@
+{
+  "question_text": "Calculate the expected capacity reduction for a Li-ion cell operating at -10°C compared to 25°C, given that the activation energy for the dominant rate-limiting process is 50 kJ/mol and the reference temperature is 25°C. Explain the physical significance of your calculation.",
+  "standard_answer": "Using the Arrhenius relationship for reaction rates: k = A exp(-E_A/RT), the ratio of rates at two temperatures is k₂/k₁ = exp[(E_A/R)(1/T₁ - 1/T₂)]. For E_A = 50,000 J/mol, R = 8.314 J/mol·K, T₁ = 298 K (25°C), T₂ = 263 K (-10°C): k₂/k₁ = exp[(50000/8.314)(1/298 - 1/263)] = exp[6013.7 × (0.003356 - 0.003802)] = exp[6013.7 × (-0.000446)] = exp[-2.682] = 0.068. This indicates the rate-limiting process operates at only 6.8% of its room temperature rate at -10°C. Physically, this substantial reduction reflects the dramatic slowing of lithium diffusion and charge transfer kinetics at lower temperatures. The capacity reduction arises because the slower kinetics create larger overpotentials during discharge, causing the cell voltage to reach the cutoff limit earlier. The calculation assumes the rate-limiting process dominates capacity accessibility and doesn't account for additional factors like electrolyte freezing or changes in internal resistance. In practice, the actual capacity reduction may be less severe due to self-heating during high-rate discharge, but this calculation demonstrates the fundamental temperature dependence of electrochemical processes governing cell performance.",
+  "original_text": {
+    "1": "The reaction rate of lithium insertion is believed to have an Arrhenius dependence on temperature (T)",
+    "2": "Higher temperatures cause both ion mobility and solid-state diffusion to improve, thus reducing a cell's internal impedance and overpotential. This means that a cell can discharge more capacity before the lower voltage limit is reached"
+  },
+  "type": "calculation",
+  "difficulty": 3,
+  "topic": "thermal_effects",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires specific knowledge of electrochemical kinetics, Arrhenius temperature dependence in battery systems, and the relationship between reaction rates and capacity in Li-ion cells. It involves understanding how temperature affects lithium diffusion, charge transfer kinetics, and overpotentials - all domain-specific concepts in energy storage and thermal effects on electrochemical systems.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question is well-formulated with clear calculation requirements and appropriate domain focus. Answer correctly applies Arrhenius kinetics and provides thorough physical interpretation aligned with the paper's discussion of temperature effects on lithium insertion rates and capacity limitations."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_c8e7df22",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "A-comparison-of-methodologies-for-the-non-invasiv_2019_Progress-in-Energy-an",
+    "paper_title": "A-comparison-of-methodologies-for-the-non-invasiv_2019_Progress-in-Energy-an"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:14:16.857014",
+    "answer_length": 1198
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly applies the Arrhenius relationship to calculate the rate reduction (to 6.8% at -10°C vs 25°C). The mathematical calculation is accurate: exp[-2.682] ≈ 0.068. The physical interpretation is consistent with the original text - it correctly explains that lower temperatures reduce ion mobility and diffusion (slowing kinetics), which increases overpotential and causes the cell to reach cutoff voltage earlier, reducing accessible capacity. The answer appropriately acknowledges limitations (doesn't account for electrolyte freezing, self-heating effects) and correctly identifies the fundamental Arrhenius temperature dependence mentioned in the original text. All physical principles are stated correctly and the causal relationships are sound.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:01:15.585716"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "medium",
+        "verification_confidence": "high",
+        "issues": [
+          "Capacity reduction is inferred from the rate constant drop; this assumes the dominant kinetic process governs accessible capacity at the chosen discharge rate. Actual capacity may not scale linearly with the rate constant."
+        ],
+        "reasoning": "Arrhenius relation and numerical calculation are correct, yielding ~6.8% of the room-temperature rate at -10°C. The physical explanation—slower kinetics increase overpotentials, causing earlier cutoff and reduced accessible capacity—is consistent with the original text (Arrhenius dependence and improved mobility/diffusion at higher T lowering impedance/overpotential). The caveat about practical deviations is appropriate.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:01:39.050994"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly applies the Arrhenius equation to calculate the rate reduction. The numerical calculation is accurate. The physical explanation correctly links slower kinetics (diffusion, charge transfer) at low temperatures to increased overpotentials, which cause the cell to reach its cutoff voltage earlier, thus reducing accessible capacity. This reasoning is fully consistent with the provided original text and fundamental electrochemical principles.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:01:54.040194"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:01:54.040222",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

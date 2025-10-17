@@ -1,0 +1,81 @@
+{
+  "question_text": "Why does dry reforming with CO2 offer the highest thermochemical recuperation potential but is prone to fast coking compared to steam reforming?",
+  "standard_answer": "Dry reforming (e.g., CH4 + CO2 → 2CO + 2H2) offers superior thermochemical recuperation because it utilizes CO2 from exhaust gas as a reactant, converting low-value CO2 into syngas (CO + H2) with a high enthalpy increase per mole of primary fuel. The endothermicity of dry reforming (ΔH > 0) allows efficient waste heat recovery, and the reaction produces two moles of H2 and two moles of CO per mole of CH4, significantly boosting the reformate's heating value. However, dry reforming is highly susceptible to coking due to the Boudouard reaction (2CO → C + CO2), which is thermodynamically favored at typical reforming temperatures (600–900 K) and low H2/CO ratios. The absence of steam in dry reforming eliminates the protective effect of steam gasification (C + H2O → CO + H2), which in steam reforming continuously removes carbon deposits. Additionally, CO2 is a weaker oxidizing agent than H2O, leading to slower kinetics for carbon removal. Catalysts in dry reforming often deactivate as carbon blocks active sites, whereas steam reforming's higher H2O partial pressure suppresses carbon formation through equilibrium shifts and enhanced oxidation pathways.",
+  "original_text": {
+    "1": "Dry reforming (with CO2) offers the best recuperation but is prone to fast coking.",
+    "2": "Carbon deposition is probably the most important concern that needs to be addressed in all catalytic techniques employed in hydrocarbon and oxygenate fuel reforming."
+  },
+  "type": "reasoning",
+  "difficulty": 5,
+  "topic": "energy_systems",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires specific knowledge of fuel reforming processes (dry reforming vs. steam reforming), thermochemical recuperation principles, and coking mechanisms in combustion/energy systems, which are domain-specific to combustion science and energy engineering.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "The question and answer are well-aligned with the paper's content and domain focus. No issues detected."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_3db18cea",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Fuel-reforming-in-internal-combustion_2018_Progress-in-Energy-and-Combustion",
+    "paper_title": "Fuel-reforming-in-internal-combustion_2018_Progress-in-Energy-and-Combustion"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:20:30.505514",
+    "answer_length": 1164
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly explains why dry reforming offers superior thermochemical recuperation (utilizes CO2 from exhaust, high enthalpy increase, efficient waste heat recovery) and accurately identifies the coking mechanisms (Boudouard reaction, absence of steam gasification protection, weaker oxidizing agent). The chemical equations, thermodynamic principles, and temperature ranges are accurate. The comparison with steam reforming is sound - steam does provide protective effects against coking through gasification and equilibrium shifts. All statements are consistent with the original text's assertion that dry reforming offers best recuperation but is prone to fast coking, and that carbon deposition is a major concern in catalytic reforming. The answer provides detailed mechanistic explanations that are factually correct and logically consistent.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:09:48.178608"
+      },
+      {
+        "correct": false,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "States typical reforming temperatures as 600–900 K; industrial dry/steam reforming typically operate around 700–900°C (≈973–1173 K).",
+          "Claims the Boudouard reaction (2CO → C + CO2) is thermodynamically favored at typical reforming temperatures; in fact it is favored at lower temperatures and becomes less favorable at the high temperatures typical of reforming.",
+          "Over-associates coking in dry reforming with Boudouard at typical conditions; methane cracking (CH4 → C + 2H2) is also a major coke route under DRM conditions."
+        ],
+        "reasoning": "The answer correctly captures that dry reforming offers high thermochemical recuperation and is prone to coking and explains the role of endothermicity, lack of steam gasification, and weaker oxidation by CO2. However, it includes a factual error about typical operating temperatures and incorrectly asserts that the Boudouard reaction is thermodynamically favored at those typical temperatures. These errors warrant marking the answer as incorrect despite overall alignment with the ground truth statement.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:10:27.498091"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly explains both aspects of the question. It accurately describes the high thermochemical recuperation potential of dry reforming due to its high endothermicity and use of CO2 to produce high-value syngas. It also correctly identifies the primary reasons for severe coking, namely the Boudouard reaction (2CO → C + CO2) and the absence of steam, which acts as a carbon gasifying agent in steam reforming. All stated chemical reactions and thermodynamic principles are correct and logically consistent.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:10:49.459137"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:10:49.459156",
+    "consensus": {
+      "all_correct": false,
+      "correct_votes": 2,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 2
+    }
+  }
+}

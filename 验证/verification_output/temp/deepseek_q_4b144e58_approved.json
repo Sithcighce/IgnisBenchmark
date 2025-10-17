@@ -1,0 +1,77 @@
+{
+  "question_text": "Why do non-premixed flames exhibit a 1/√St transfer function characteristic at intermediate Strouhal numbers, and what physical mechanisms cause this unique scaling behavior?",
+  "standard_answer": "Non-premixed flames exhibit a 1/√St transfer function characteristic at intermediate Strouhal numbers due to the sharply varying axial dependence of mean heat release near the burner exit. This behavior arises from the concentration of heat release oscillations in the near-field region where mixture fraction gradients are highest. The physical mechanism involves phase cancellation effects combined with the spatial distribution of heat release sensitivity. As Strouhal number increases from low values, the heat release response transitions from O(1) behavior to 1/√St scaling because the oscillatory heat release regions become increasingly out of phase along the flame length. The convection of disturbances along the flame at the local flow velocity creates phase differences that lead to destructive interference. However, unlike the uniform heat release distribution in premixed flames, non-premixed flames have heat release concentrated near the base, making the interference pattern different. The 1/√St scaling specifically emerges because the axial length scale over which significant heat release occurs scales with the convective wavelength, leading to a square root dependence on Strouhal number that reflects the integrated effect of the spatially varying response.",
+  "original_text": {
+    "1": "Non-premixed flames have an additional 1/√St transfer function character at an intermediate range of Strouhal numbers, due to the sharply varying axial dependence of mean heat release near the burner exit.",
+    "2": "In contrast, the heat release dynamics are quite different, as heat release oscillations in premixed flames are nearly uniformly distributed along the flame, whereas in non-premixed flames they are concentrated near the burner outlet where mixture fraction gradients are highest."
+  },
+  "type": "reasoning",
+  "difficulty": 5,
+  "topic": "combustion_instabilities",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires deep expertise in combustion science, specifically non-premixed flame dynamics, transfer function analysis, Strouhal number scaling, and heat release mechanisms in reacting flows. It cannot be answered with general ML knowledge and demands specialized combustion/CFD domain knowledge.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer are both high quality - question requires domain expertise and answer is factually correct based on the paper content."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_4b144e58",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Forced-response-of-laminar-non-premixed_2019_Progress-in-Energy-and-Combusti",
+    "paper_title": "Forced-response-of-laminar-non-premixed_2019_Progress-in-Energy-and-Combusti"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:20:27.670090",
+    "answer_length": 1281
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly explains the 1/√St transfer function characteristic in non-premixed flames. It accurately identifies the key mechanism from the original text: the sharply varying axial dependence of mean heat release near the burner exit, and the concentration of heat release oscillations where mixture fraction gradients are highest (near the burner outlet). The answer provides additional physically sound elaboration on phase cancellation effects, convective wavelength scaling, and destructive interference patterns, which are consistent with established combustion dynamics principles. The contrast with premixed flames (uniform vs. concentrated heat release distribution) is correctly stated and matches the original text. All physical mechanisms described are logically consistent and factually accurate.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:09:27.093737"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer correctly attributes the 1/√St scaling in non-premixed flames to the sharply varying axial dependence of mean heat release near the burner exit and contrasts this with the more uniform distribution in premixed flames, consistent with the ground truth. The added explanation involving convective phase differences and partial cancellation is physically plausible and does not contradict the original text.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:09:56.769855"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer is factually correct and logically sound. It correctly identifies the 'sharply varying axial dependence of mean heat release' as the primary cause, consistent with the original text. The explanation of the physical mechanism, involving phase cancellation over a concentrated heat release zone near the burner, is a correct and accurate elaboration of the principles outlined in the source material.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:10:16.531114"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:10:16.531142",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

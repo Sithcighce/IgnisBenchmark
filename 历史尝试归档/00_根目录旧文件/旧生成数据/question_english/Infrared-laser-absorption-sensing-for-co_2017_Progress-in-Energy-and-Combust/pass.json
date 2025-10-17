@@ -1,0 +1,172 @@
+[
+  {
+    "question_text": "Calculate the Doppler shift in linecenter frequency for a CO transition at 2150 cm⁻¹ in a scramjet flow at 2500 K with a velocity of 1500 m/s, and explain how this shift is used with multiple beams to determine flow velocity.",
+    "standard_answer": "The Doppler shift Δν for a single beam is given by Δν = ν_0 (U cosθ)/c, where ν_0 = 2150 cm⁻¹ = 6.445×10^13 Hz (since 1 cm⁻¹ = 2.998×10^10 Hz), U = 1500 m/s, θ is the angle between the beam and flow direction, and c = 3×10^8 m/s. For a beam at θ = 45°, cos45° = 0.7071, so Δν = (6.445×10^13) × (1500 × 0.7071) / (3×10^8) = 2.28×10^8 Hz = 0.0076 cm⁻¹. In practice, two beams are used: one upstream (θ = 45°) and one downstream (θ = 135°, cos135° = -0.7071). The upstream shift is +0.0076 cm⁻¹, and the downstream shift is -0.0076 cm⁻¹, giving a differential shift Δν_diff = 0.0152 cm⁻¹. The velocity is then calculated as U = (Δν_diff / ν_0) × (c / (2 sin45°)) = (0.0152 / 2150) × (3×10^8 / 1.414) = 1500 m/s. This method eliminates the need to know the absolute linecenter and compensates for thermal broadening, enabling accurate velocity measurements in high-speed flows like scramjets.",
+    "original_text": {
+      "1": "the velocity of a gaseous flow along a line-of-sight can be determined by measuring the Doppler-shifted absorption.",
+      "2": "U = (Δν_diff / ν_0) × (c / (2 sin(45°)))",
+      "3": "this is typically done using two laser beams, e.g., angled at 45° and 135° relative to the flow (i.e., one directed upstream and one downstream), to enable use of the differential Doppler-shift (Δν_diff)."
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "flow_velocity_measurement",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question requires specialized knowledge in laser-absorption spectroscopy for combustion flow diagnostics, specifically Doppler shift calculations for velocity measurement in scramjet flows. It involves understanding spectroscopic principles, flow measurement techniques, and practical implementation in high-speed combustion systems.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer are both high quality - domain-focused, factually correct, and compliant with all requirements."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_a35d3833",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Infrared-laser-absorption-sensing-for-co_2017_Progress-in-Energy-and-Combust",
+      "paper_title": "Infrared-laser-absorption-sensing-for-co_2017_Progress-in-Energy-and-Combust"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:21:48.109047",
+      "answer_length": 888
+    }
+  },
+  {
+    "question_text": "How do collisional-broadening coefficients vary with temperature and perturber composition in combustion gases, and what physical interactions govern their species-specific dependencies?",
+    "standard_answer": "Collisional-broadening coefficients γ_k for a given absorber depend on the perturber species k, temperature T, and the quantum states involved. The temperature dependence is typically modeled as γ_k(T) = γ_k(T_0) (T_0/T)^n_γ, where n_γ is the temperature exponent. Physically, γ_k arises from intermolecular forces during collisions: stronger interactions (e.g., dipole-dipole, dipole-induced dipole, dispersion forces) increase broadening. For H2O broadened by N2, γ is smaller than for H2O broadened by CO2 due to CO2's larger quadrupole moment enhancing interaction strength. The exponent n_γ reflects how collision cross-sections change with temperature; for hard-sphere collisions, n_γ ≈ 0.5, but real molecules exhibit deviations due to potential energy surfaces. In multi-component gases, the total broadening is Δν_C = 2P ∑x_k γ_k(T), requiring knowledge of all γ_k. High temperatures activate more rotational states, altering averaged γ_k values. Databases like HITRAN provide γ_k and n_γ, but extrapolation beyond fitted ranges can cause errors. In combustion, where gas composition varies (e.g., CO2, H2O, N2, O2), accurate lineshape modeling must account for these dependencies to prevent biases in temperature and concentration retrievals, especially at elevated pressures where collisional broadening dominates.",
+    "original_text": {
+      "1": "Collisional broadening is typically modeled as homogeneous, meaning the broadening process is independent of the absorber’s speed.",
+      "2": "γ_k(T) = γ_k(T_0)(T_0/T)^n_γ",
+      "3": "the total broadening is Δν_C = 2P ∑x_k γ_k(T), requiring knowledge of all γ_k."
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "collisional_broadening",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question requires specialized knowledge in combustion spectroscopy, specifically collisional broadening in combustion gases, which involves understanding molecular interactions, temperature dependencies, and species-specific effects in combustion environments. It cannot be answered with general ML/CS knowledge alone.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer are well-aligned with combustion spectroscopy domain and paper content. No issues detected."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_0fe9e0b4",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Infrared-laser-absorption-sensing-for-co_2017_Progress-in-Energy-and-Combust",
+      "paper_title": "Infrared-laser-absorption-sensing-for-co_2017_Progress-in-Energy-and-Combust"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:21:48.604639",
+      "answer_length": 1325
+    }
+  },
+  {
+    "question_text": "How does the Voigt profile combine Doppler and collisional broadening mechanisms in infrared laser-absorption spectroscopy, and what are the physical origins and mathematical formulations of each broadening component?",
+    "standard_answer": "The Voigt profile is a convolution of Gaussian (Doppler) and Lorentzian (collisional) lineshape functions, accounting for both broadening mechanisms simultaneously. Doppler broadening arises from the thermal motion of molecules, where molecules moving toward or away from the laser source experience Doppler-shifted frequencies. This results in a Gaussian distribution with FWHM Δν_D = 7.1623×10^(-7)ν_0√(T/M), scaling with temperature T and inversely with molecular mass M. Collisional broadening occurs due to molecular collisions that shorten the lifetime of excited states and cause phase perturbations, leading to a Lorentzian distribution with FWHM Δν_C = 2P∑x_kγ_k(T), where γ_k are species-dependent collisional-broadening coefficients. The Voigt profile integrates these effects but assumes homogeneous collisional broadening and no velocity-changing collisions. At combustion conditions, this profile is widely used due to its balance between accuracy and computational efficiency, though it may exhibit residuals up to 10% when Dicke narrowing or speed-dependent effects are significant, necessitating advanced models like Rautian or Galatry profiles for high-precision applications.",
+    "original_text": {
+      "1": "The Voigt profile (VP) is given by a convolution of the Gaussian and Lorentzian profiles and, therefore, accounts for both Doppler and collisional broadening.",
+      "2": "Doppler broadening occurs when molecules in the absorbing state have a velocity component in the same (or opposite) direction of the photon propagation.",
+      "3": "Collisional broadening of a rovibrational absorption transition occurs when: (1) inelastic collisions reduce a molecule’s lifetime in the absorbing state, (2) elastic dephasing collisions perturb the molecular rotation and/or vibration, or (3) elastic angular-momentum altering collisions re-orient the angular momentum vector of the dipole."
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "molecular_spectroscopy",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question requires specific knowledge of molecular spectroscopy, laser-absorption techniques, and lineshape physics in combustion diagnostics. It demands understanding of Doppler and collisional broadening mechanisms, their physical origins, mathematical formulations, and how they combine in the Voigt profile - all specialized combustion spectroscopy concepts.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer are well-structured, domain-focused, and factually accurate based on the provided citations and paper content."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_512fd2df",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Infrared-laser-absorption-sensing-for-co_2017_Progress-in-Energy-and-Combust",
+      "paper_title": "Infrared-laser-absorption-sensing-for-co_2017_Progress-in-Energy-and-Combust"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:21:48.791693",
+      "answer_length": 1194
+    }
+  },
+  {
+    "question_text": "Why does Dicke narrowing occur in high-J transitions of molecules like H2O at near-STP conditions, and how do the Rautian and Galatry profiles physically model this phenomenon compared to the Voigt profile?",
+    "standard_answer": "Dicke narrowing arises from velocity-changing collisions that confine the translational motion of absorbing molecules, reducing the effective Doppler width. This is particularly pronounced for high-J transitions in molecules with large rotational-energy-level spacing (e.g., H2O, HCl) because their collisional-broadening coefficients are smaller, making Doppler effects more dominant. At number densities where the mean free path is comparable to λ/(2π), collisions limit the distance molecules travel, narrowing the velocity distribution. The Voigt profile neglects this effect, leading to gull-wing-shaped residuals in fitted spectra. The Rautian profile uses a hard-collision model, where collisions randomize molecular velocities instantaneously, introducing a narrowing parameter ζ = P∑x_kβ_k(T)/(Δν_D'/√ln2). The Galatry profile employs a soft-collision model, where velocity changes are gradual, with a similar parameter but different collision frequency scaling (β_Galatry ≈ 4/3 β_Rautian). Both models improve accuracy by incorporating the frequency of velocity-changing collisions, with the Rautian profile being nearly identical to Galatry when adjusted. This is critical for high-J H2O transitions in combustion diagnostics, where Voigt residuals can reach 1–10%, affecting temperature and species concentration measurements.",
+    "original_text": {
+      "1": "Dicke narrowing [52] refers to a collision-induced reduction of the Doppler width (compared to that predicted by Eq. (11)) that occurs when collisions confine the translational motion of the absorbers.",
+      "2": "It is most noticeable for high-J transitions of molecules with large rotational-energy-level spacing (e.g., H2O, HCl, HF), since collisional-broadening of such transitions is relatively weak.",
+      "3": "The Rautian [53] (RP) and Galatry [54] (GP) profiles address Dicke narrowing using hard- and soft-collision models, respectively, via a parameter, z, that is related to the frequency of velocity-changing collisions, b."
+    },
+    "type": "reasoning",
+    "difficulty": 5,
+    "topic": "spectroscopic_lineshapes",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question requires deep expertise in spectroscopic lineshape physics, specifically Dicke narrowing phenomena in molecular spectroscopy, which is directly relevant to combustion diagnostics and laser-absorption sensing for combustion gases. It involves understanding velocity-changing collisions, Doppler broadening, and specialized lineshape models (Rautian, Galatry, Voigt) applied to high-J transitions in molecules like H2O.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer are both high quality - domain-focused, factually correct based on citations, and compliant with all quality checks."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_cc424504",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Infrared-laser-absorption-sensing-for-co_2017_Progress-in-Energy-and-Combust",
+      "paper_title": "Infrared-laser-absorption-sensing-for-co_2017_Progress-in-Energy-and-Combust"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:21:49.232062",
+      "answer_length": 1338
+    }
+  },
+  {
+    "question_text": "In wavelength-modulation spectroscopy (WMS) with 1f-normalization, how does large absorbance affect measurement accuracy in combustion diagnostics, and what approaches are suggested to address these challenges according to the provided paper content?",
+    "standard_answer": "In WMS with 1f-normalization, large absorbance leads to substantial errors in measurement accuracy, particularly problematic in combustion diagnostics where high-pressure conditions can result in broadened absorption lines and significant absorbance values. The paper specifically identifies '1f-normalization with large absorbance' as a measurement challenge that can cause significant deviations from expected results. When absorbance becomes large, the fundamental assumption of linear response in the WMS-2f/1f signal ratio breaks down, leading to non-linear behavior that distorts the relationship between the measured signal and the target gas properties like concentration and temperature. This is especially critical in high-pressure combustion environments where collisional broadening increases linewidths and can push systems into large absorbance regimes. The paper indicates that these errors motivate the use of more advanced lineshape models that can better account for the complex spectroscopic behavior under such conditions. Additionally, the development of improved, calibration-free WMS models suitable for large modulation depths has been an important advancement, as these methods were first applied to TDLAS sensors for temperature and H2O sensing in internal combustion engines and scramjet combustors where large absorbance conditions are encountered.",
+    "original_text": {
+      "1": "1f-normalization with large absorbance . . . can lead to substantial errors, thereby motivating the use of more advanced lineshape models.",
+      "2": "These methods were first applied to TDLAS sensors for temperature and H2O sensing in an IC-engine [42] and a model-scramjet combustor [43].",
+      "3": "Wavelength-modulation spectroscopy (WMS) were developed to increase the sensitivity of TDL absorption measurements."
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question requires specific expertise in combustion diagnostics, wavelength-modulation spectroscopy (WMS), and laser-absorption sensing techniques. It addresses spectroscopic measurement challenges in high-pressure combustion environments, which requires knowledge of combustion science, spectroscopy principles, and diagnostic instrumentation.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question is well-focused on combustion diagnostics domain and answer correctly reflects the paper's content about WMS challenges with large absorbance."
+    },
+    "retry_count": 1,
+    "question_id": "deepseek_q_91922397",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Infrared-laser-absorption-sensing-for-co_2017_Progress-in-Energy-and-Combust",
+      "paper_title": "Infrared-laser-absorption-sensing-for-co_2017_Progress-in-Energy-and-Combust"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:22:30.688863",
+      "answer_length": 1376
+    }
+  }
+]

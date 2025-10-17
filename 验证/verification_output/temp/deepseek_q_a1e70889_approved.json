@@ -1,0 +1,77 @@
+{
+  "question_text": "How does the reactivity gradient in RCCI combustion control the heat release rate and prevent excessive pressure rise rates at high engine loads?",
+  "standard_answer": "The reactivity gradient in RCCI combustion controls heat release rate (HRR) through sequential autoignition from high to low reactivity regions. High reactivity fuel (HRF) direct injection creates localized zones with shorter ignition delays, initiating combustion first. As combustion progresses toward lower reactivity regions containing premixed low reactivity fuel (LRF), the staged ignition prevents simultaneous volumetric combustion that would cause rapid pressure rise. The gradient allows tailoring of combustion duration by adjusting the fuel reactivity difference and injection strategy. This sequential burning reduces the maximum HRR peak compared to homogeneous charge compression ignition, where simultaneous autoignition across the chamber creates sharp pressure spikes. The controlled combustion phasing through reactivity stratification enables operation at higher loads without exceeding mechanical limits from excessive pressure rise rates, while maintaining low-temperature combustion benefits.",
+  "original_text": {
+    "1": "In the RCCI combustion mode, the combustion phasing is determined by the global reactivity of the mixture, given by the LRF to HRF ratio. At the same time, the stratification of the ignition delay controls the combustion timing (duration and phasing).",
+    "2": "Initiation of combustion takes place at HRF-air mixture locations, and the combustion progresses from high-to-low reactivity regions, which allows a controlled sequential ignition."
+  },
+  "type": "reasoning",
+  "difficulty": 5,
+  "topic": "combustion_science",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires specific knowledge of RCCI combustion, reactivity gradients, heat release rate control, and pressure rise rate management in engine combustion systems, which are core concepts in combustion science and engine engineering.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "The question and answer are well-structured, domain-focused, and factually accurate based on the provided citations and paper content."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_a1e70889",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Challenges-and-Opportunities-for-Application-of-Reactiv_2022_Progress-in-Ene",
+    "paper_title": "Challenges-and-Opportunities-for-Application-of-Reactiv_2022_Progress-in-Ene"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:16:29.433707",
+    "answer_length": 1015
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately explains the RCCI combustion mechanism and is fully consistent with the original text. Key points verified: (1) Sequential autoignition from high to low reactivity regions matches the original text's statement about combustion progressing from high-to-low reactivity regions. (2) HRF creating localized zones with shorter ignition delays that initiate combustion first aligns with 'initiation of combustion takes place at HRF-air mixture locations'. (3) The explanation of how reactivity stratification controls combustion duration and phasing is consistent with the original text's mention of stratification controlling timing. (4) The mechanism preventing simultaneous volumetric combustion and excessive pressure rise is logically sound and follows from the sequential ignition principle. (5) All physical principles regarding autoignition, heat release rate control, and pressure rise are correctly stated. The answer provides more detail than the original text but does not contradict it and maintains factual accuracy throughout.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:05:06.988218"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer accurately reflects the ground-truth statements: combustion initiates in HRF-rich regions and progresses from high to low reactivity, with stratified ignition delays controlling timing and duration. It correctly explains that this sequential ignition moderates HRR and avoids simultaneous volumetric combustion, thereby limiting pressure rise rates, and reasonably contrasts RCCI with HCCI. No factual or logical inconsistencies were found.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:05:18.895678"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly and comprehensively explains the mechanism of RCCI combustion. It accurately describes how the reactivity gradient creates a stratification of ignition delays, leading to sequential combustion from high-reactivity to low-reactivity zones. This sequential burning process effectively spreads out the heat release event, which in turn controls the heat release rate and prevents the excessive pressure rise rates typical of more homogeneous autoignition concepts like HCCI. All statements are factually correct, logically sound, and fully consistent with the principles outlined in the original text.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:05:36.916739"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:05:36.916761",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

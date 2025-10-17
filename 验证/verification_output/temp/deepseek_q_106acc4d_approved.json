@@ -1,0 +1,77 @@
+{
+  "question_text": "Why do multi-component fuels exhibit suppressed bubble growth and smoother external spray fluctuations compared to single-component fuels in flash boiling atomization?",
+  "standard_answer": "Multi-component fuels suppress bubble growth and external spray fluctuations due to differential volatility and mass transfer limitations. In single-component fuels, saturated vapor pressure is well-defined, allowing rapid bubble growth once superheat conditions are met. For multi-component mixtures, lighter components vaporize first, but bubble growth requires continuous mass and heat transfer from surrounding heavier components. This creates a concentration gradient that slows vaporization rates, as described by the Epstein-Plesset mass transfer equation. The mechanisms include: (1) Sequential evaporation, where lighter fractions vaporize initially, but bubble expansion is hindered by higher-boiling-point components; (2) Reduced superheat driving force, as local temperature drops due to latent heat absorption from vaporizing light ends; (3) Smoother liquid-vapor interfaces, since bubble growth is moderated by compositional gradients, minimizing radial fluctuations. Consequently, in-nozzle two-phase flows show less violent transitions, and external sprays exhibit reduced unsteadiness, as the phase change process is distributed over a broader temperature range rather than occurring abruptly at a fixed boiling point.",
+  "original_text": {
+    "1": "The lighter fuel vapor bubbles are surrounded by heavier fuels remained. Therefore, the bubble growth and mass transfer will be suppressed unless the fuel temperature is enough to vaporize the heavier fuels.",
+    "2": "As a result, the variation of bubble size is less apparent for multi-component fuels, which yields a smoother liquid-gas interface inside the nozzle and less radial fluctuation in the near-field of the nozzle."
+  },
+  "type": "reasoning",
+  "difficulty": 4,
+  "topic": "combustion_science",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires deep knowledge of flash boiling atomization, multi-component fuel behavior, bubble dynamics, and spray physics - all core combustion science and fluid mechanics concepts specific to fuel injection systems.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct, and compliant with other requirements."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_106acc4d",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "A-review-on-the-recent-advances-of-flash-boiling_2024_Progress-in-Energy-and",
+    "paper_title": "A-review-on-the-recent-advances-of-flash-boiling_2024_Progress-in-Energy-and"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:14:14.957174",
+    "answer_length": 1235
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly explains the suppression of bubble growth in multi-component fuels through differential volatility and mass transfer limitations. It accurately describes the core mechanism from the original text: lighter components vaporize first but bubble growth is suppressed by surrounding heavier components until sufficient temperature is reached. The answer provides additional valid detail (Epstein-Plesset equation, sequential evaporation, reduced superheat driving force, concentration gradients) that is consistent with established combustion science and thermophysics principles. The conclusion about smoother liquid-vapor interfaces and reduced radial fluctuations directly matches the original text. All physical principles stated are correct, the cause-effect relationships are sound, and there are no contradictions with the original text.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:01:47.582727"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer matches the ground truth: in multi-component fuels, light-component bubbles are surrounded by heavier components that do not readily vaporize, suppressing mass transfer and bubble growth unless temperature is high enough. This leads to smaller bubble-size variation, smoother liquid-gas interfaces, and reduced radial spray fluctuations. The elaborations on differential volatility, compositional gradients, and local cooling are physically consistent and do not contradict the original text.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:02:07.763970"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer is factually and logically correct. It accurately explains the mechanisms of differential volatility and mass transfer limitations in multi-component fuels, which suppress bubble growth. The explanation is consistent with and provides a more detailed elaboration of the principles mentioned in the original text, including correct references to concentration gradients, local superheat reduction due to latent heat, and the relevance of the Epstein-Plesset equation. The cause-and-effect relationship leading to smoother spray fluctuations is correctly described.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:02:51.621077"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:02:51.621104",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

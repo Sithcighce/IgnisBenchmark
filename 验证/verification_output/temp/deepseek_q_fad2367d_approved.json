@@ -1,0 +1,79 @@
+{
+  "question_text": "How does particle chemical composition, specifically the presence of glass formers, modifiers, and amphoteric ions, influence viscosity and adhesion behavior in gas turbine fouling?",
+  "standard_answer": "Particle chemical composition critically influences viscosity and adhesion through the roles of glass formers, modifiers, and amphoteric ions in silica-based melts. Glass formers (e.g., Si⁴⁺, Ti⁴⁺) create a covalent network structure that increases viscosity by forming strong silicate chains. Modifiers (e.g., Ca²⁺, Na⁺) disrupt this network by bonding with oxygen and terminating chains, reducing viscosity and lowering softening temperatures, which promotes adhesion at lower operating temperatures. Amphoteric ions (e.g., Al³⁺, Fe³⁺) can act as either glass formers or modifiers depending on the availability of charge-balancing ions; when paired with modifiers, they integrate into the network and stabilize it, increasing viscosity, but in excess, they behave as modifiers, decreasing viscosity. This composition-dependent viscosity directly affects sticking probability in gas turbines: particles rich in modifiers have lower viscosity at given temperatures, enhancing deformation and adhesion upon impact, while glass-former-dominated particles remain viscous and resist sticking. For example, volcanic ash with high modifier content adheres more readily in turbine hot sections, leading to fouling, whereas silica-rich sands may cause erosion instead. Predictive models like Urbain or NPL correlate composition to viscosity, enabling fouling risk assessment based on contaminant chemistry.",
+  "original_text": {
+    "1": "Modifier ions disrupt the glass structure and thus tend to lower viscosity. Amphoteric ions can act as glass formers when they combine with modifiers ions which balance their charge, thus forming stable metal-oxygen anion groups that can fit into the silicate network",
+    "2": "The sticking probability is dependent on a number of characteristics, such as particle temperature, viscosity, surface tension and wettability"
+  },
+  "type": "concept",
+  "difficulty": 5,
+  "topic": "combustion_science",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires specialized knowledge in combustion science and gas turbine technology, specifically understanding how particle chemical composition affects viscosity and adhesion behavior in gas turbine fouling. It demands expertise in materials science (glass formers, modifiers, amphoteric ions), fluid mechanics (viscosity), and combustion engineering (gas turbine fouling mechanisms).",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "The question is well-focused on gas turbine fouling domain knowledge, and the answer correctly explains the chemical mechanisms based on the provided citations and paper content."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_fad2367d",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Generalization-of-particle-impact-behavior-in-ga_2019_Progress-in-Energy-and",
+    "paper_title": "Generalization-of-particle-impact-behavior-in-ga_2019_Progress-in-Energy-and"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:20:35.122520",
+    "answer_length": 1398
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately explains the roles of glass formers, modifiers, and amphoteric ions in influencing viscosity and adhesion behavior. It correctly states that modifiers disrupt the silicate network and lower viscosity (consistent with original text [1]), and that amphoteric ions can act as glass formers when combined with modifier ions that balance their charge (directly matching original text [1]). The explanation of how composition-dependent viscosity affects sticking probability is consistent with original text [2]. The physical principles regarding network structure, viscosity-temperature relationships, and adhesion mechanisms are all scientifically sound. The answer provides appropriate examples (volcanic ash vs. silica-rich sands) and mentions relevant predictive models. While the answer is detailed and comprehensive, all statements are factually accurate and logically consistent with the original text and established combustion/materials science principles.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:10:08.789618"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Classification of Ti4+ strictly as a glass former is composition-dependent (often considered intermediate/amphoteric), but this does not affect the core correctness."
+        ],
+        "reasoning": "The answer accurately states that modifiers depolymerize the silicate network and lower viscosity, while amphoteric ions can act as network formers when charge-balanced by modifiers, increasing viscosity—consistent with the ground-truth text. It correctly links viscosity to sticking/adhesion behavior in gas turbines, noting that lower viscosity promotes adhesion. The example and mention of composition-based viscosity models are reasonable elaborations without contradictions.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:10:49.552230"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly and comprehensively explains the roles of glass formers, modifiers, and amphoteric ions in determining the viscosity of silicate melts. It accurately links lower viscosity caused by modifiers to increased adhesion and fouling risk. The explanation is fully consistent with the provided original text and established principles of materials science and thermophysics. All statements are factually correct and logically sound.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:11:10.166580"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:11:10.166608",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

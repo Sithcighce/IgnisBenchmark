@@ -1,0 +1,167 @@
+[
+  {
+    "question_text": "Why does hydrogen content in LCVG directly impact combustion efficiency and pollutant emissions in MILD combustion, and what are the underlying chemical kinetic mechanisms?",
+    "standard_answer": "Hydrogen content in LCVG enhances combustion efficiency and influences pollutant emissions through its high reactivity and role in radical pool dynamics. Hydrogen accelerates ignition and flame propagation by providing H radicals that promote chain-branching reactions, such as H + O2 → O + OH, which increase the concentration of OH radicals. This elevated OH concentration accelerates the oxidation of CO via CO + OH → CO2 + H, reducing CO emissions and improving combustion completeness. However, higher H2 content raises the adiabatic flame temperature, which can increase thermal NOx formation through the Zeldovich mechanism. Conversely, the presence of diluents like CO2 and N2 in LCVG mitigates this by absorbing heat and reducing peak temperatures, thus suppressing thermal NOx. The balance between H2's promoting effect on CO oxidation and its potential to increase NOx necessitates optimized fuel composition and operating conditions to achieve low emissions in MILD combustion.",
+    "original_text": {
+      "1": "Hydrogen is the most reactive component in LCVG, and its content directly impacts the establishment, efficiency, and pollutant emissions of MILD combustion.",
+      "2": "Carbon dioxide, nitrogen, and water act as diluents, helping to reduce NOx emissions in MILD combustion."
+    },
+    "type": "reasoning",
+    "difficulty": 5,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires deep knowledge of combustion science, specifically MILD combustion, fuel composition effects (hydrogen content in LCVG), combustion efficiency, pollutant emissions, and detailed chemical kinetic mechanisms including radical pool dynamics and NOx formation pathways.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer are both high quality - domain-focused with correct, detailed explanation of chemical mechanisms"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_4e315359",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "MILD-combustion-of-low-calorific-valu_2024_Progress-in-Energy-and-Combustion",
+      "paper_title": "MILD-combustion-of-low-calorific-valu_2024_Progress-in-Energy-and-Combustion"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:23:02.860360",
+      "answer_length": 989
+    }
+  },
+  {
+    "question_text": "Using the empirical correlation for laminar burning velocity of LCVG mixtures, calculate the laminar burning velocity for a fuel with composition XH2=0.2, XCO=0.3, XCH4=0.1, XCO2=0.2, XN2=0.2 at an unburned temperature of 500 K and equivalence ratio φ=1.0, and explain how CO2 dilution affects the result.",
+    "standard_answer": "Using the empirical correlation SL = 0.85XCO + 1.19XH2 + 0.75XCH4 - 0.66XCO2 - 0.04XN2, the laminar burning velocity is calculated as follows: SL = 0.85*0.3 + 1.19*0.2 + 0.75*0.1 - 0.66*0.2 - 0.04*0.2 = 0.255 + 0.238 + 0.075 - 0.132 - 0.008 = 0.428 m/s or 42.8 cm/s. CO2 dilution reduces the laminar burning velocity through both physical and chemical effects. Physically, CO2 has a higher heat capacity than other components, absorbing more energy and lowering the flame temperature. Chemically, CO2 can participate in reactions like CO2 + H → CO + OH, which consumes H radicals and slows down the key CO oxidation reaction CO + OH → CO2 + H, thereby reducing heat release rates and flame speed. The negative coefficient (-0.66) in the correlation quantitatively reflects this strong inhibitory effect, which is more pronounced than that of N2 (-0.04) due to CO2's greater thermal and chemical influence.",
+    "original_text": {
+      "1": "SL = 0.85XCO + 1.19XH2 + 0.75XCH4 - 0.66XCO2 - 0.04XN2",
+      "2": "CO2 can reduce the laminar burning velocity of the mixture. When the equivalence ratio is 1, the laminar burning velocities of the syngas SG-50 decrease from 112 cm/s to 82 cm/s when the CO2 dilution increased from 0 to 20 %."
+    },
+    "type": "calculation",
+    "difficulty": 3,
+    "topic": "combustion_science",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires specific knowledge of combustion science, including laminar burning velocity calculations for LCVG mixtures, understanding of fuel composition effects (H2, CO, CH4, CO2, N2), and the physical/chemical mechanisms of CO2 dilution on combustion properties. This requires specialized combustion expertise beyond general ML knowledge.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct, and compliant with other requirements."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_12440cdd",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "MILD-combustion-of-low-calorific-valu_2024_Progress-in-Energy-and-Combustion",
+      "paper_title": "MILD-combustion-of-low-calorific-valu_2024_Progress-in-Energy-and-Combustion"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:23:03.580275",
+      "answer_length": 905
+    }
+  },
+  {
+    "question_text": "What is the role of turbulence mixing in achieving MILD combustion for LCVG, and how does it interact with chemical kinetics to stabilize combustion and reduce emissions?",
+    "standard_answer": "Turbulence mixing is fundamental to establishing MILD combustion for LCVG by ensuring rapid and uniform mixing of reactants with recirculated hot products, which preheats the mixture and dilutes oxygen concentrations. This enhances ignition stability and distributes heat release over a larger volume, preventing localized high-temperature zones that lead to thermal NOx formation. The interaction between turbulence and chemical kinetics is characterized by the Damköhler number (Da), where high turbulence intensities (low Da) can strain flames and increase extinction risks, but in MILD regimes, the preheated and diluted conditions reduce chemical time scales, allowing combustion to persist even under high strain. For LCVG, the presence of diluents like CO2 and N2 further lowers flame temperatures and reactivity, making turbulence crucial for maintaining ignition through enhanced mixing. This synergy ensures complete fuel oxidation, minimizes CO and UHC emissions, and suppresses NOx by avoiding temperature peaks, aligning with the principles of flameless and colorless distributed combustion.",
+    "original_text": {
+      "1": "MILD combustion, FC, and CDC are combustion regimes that share a common principle, despite their differences in scope and implementation methods. This principle is the utilization of strong turbulence mixing to achieve low emissions and high combustion efficiency.",
+      "2": "The separation of air (‘A’) and fuel (‘F’) streams provides time for the mixing of burned gas with the air and the mixing of burned gas with the fuel forming diluted but preheated fuel flow (‘D’), which will, on the one hand, increase the quenching scalar dissipation rate making the combustion stable and on the other hand decrease the combustion temperature due to burned gas dilution to the reactants, thus making the combustion process CDC."
+    },
+    "type": "concept",
+    "difficulty": 5,
+    "topic": "fluid_mechanics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires deep knowledge of combustion science (MILD combustion, turbulence mixing, chemical kinetics), fluid mechanics (Damköhler number, turbulence intensities), and energy systems (LCVG combustion, emissions reduction) - all core domain concepts that cannot be answered with general ML knowledge alone.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer are both high quality - domain-focused, factually correct based on paper content, and compliant with all quality standards."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_a27d8455",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "MILD-combustion-of-low-calorific-valu_2024_Progress-in-Energy-and-Combustion",
+      "paper_title": "MILD-combustion-of-low-calorific-valu_2024_Progress-in-Energy-and-Combustion"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:23:03.599824",
+      "answer_length": 1104
+    }
+  },
+  {
+    "question_text": "How do the conditions Tin > Tsi and ΔT < Tsi in MILD combustion ensure high efficiency and low emissions for LCVG, and what are the implications for burner design?",
+    "standard_answer": "The conditions Tin > Tsi and ΔT < Tsi are central to MILD combustion, ensuring high efficiency and low emissions for LCVG by optimizing ignition and temperature control. Tin > Tsi guarantees that the reactant mixture is preheated above its self-ignition temperature, reducing ignition delay times and enabling complete fuel oxidation even with LCVG's high dilution. This prevents incomplete combustion, minimizing CO and UHC emissions. Meanwhile, ΔT < Tsi, achieved through diluents like CO2 and N2 in LCVG, restricts the temperature rise during combustion, avoiding local hot spots that produce thermal NOx via the Zeldovich mechanism. For burner design, these conditions necessitate features such as high-velocity jets for strong turbulence mixing, exhaust gas recirculation (EGR) to preheat and dilute reactants, and optimized injector configurations to maintain uniform temperature distributions. Burners must also accommodate variable LCVG compositions by adjusting preheating levels and dilution ratios to sustain MILD regimes, ensuring robust performance across different fuel qualities without compromising efficiency or emissions.",
+    "original_text": {
+      "1": "In MILD combustion, it is crucial to have an inlet reactant temperature higher than the self-ignition temperature (Tin > Tsi) to mitigate the difficulties associated with ignition and unstable combustion.",
+      "2": "The heat release in MILD combustion should be moderate to ensure that the combustion temperature does not become too high. The non-combustible components of LCVG are beneficial in this regard, as they allow for a temperature increase of less than the self-ignition temperature (ΔT < Tsi)."
+    },
+    "type": "application",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires deep understanding of MILD combustion principles, specifically the temperature conditions (Tin > Tsi and ΔT < Tsi) and their impact on combustion efficiency and emissions for low calorific value gases. It also asks about burner design implications, requiring expertise in combustion science, heat transfer, and energy systems engineering.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_e0123949",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "MILD-combustion-of-low-calorific-valu_2024_Progress-in-Energy-and-Combustion",
+      "paper_title": "MILD-combustion-of-low-calorific-valu_2024_Progress-in-Energy-and-Combustion"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:23:03.671064",
+      "answer_length": 1139
+    }
+  },
+  {
+    "question_text": "How do non-combustible components like CO2 and N2 in LCVG affect the establishment of MILD combustion through their influence on ignition delay time and self-ignition temperature?",
+    "standard_answer": "Non-combustible components such as CO2 and N2 in LCVG significantly increase the ignition delay time and self-ignition temperature due to their dilution effects. The presence of these diluents reduces the concentration of reactive species, lowering the collision frequency and slowing down the chain-branching reactions essential for ignition. Specifically, CO2 has a higher heat capacity than N2, absorbing more thermal energy and further suppressing reactivity by reducing the adiabatic flame temperature. This necessitates preheating the reactants to temperatures above the elevated self-ignition temperature (Tin > Tsi) to ensure timely ignition and stable combustion in MILD regimes. Additionally, the diluents help maintain the condition ΔT < Tsi by limiting temperature rise during combustion, which is critical for avoiding local high-temperature zones and reducing thermal NOx formation. The combined physical (reduced molecular collisions) and chemical (heat absorption) effects of CO2 and N2 thus enable MILD combustion by aligning with its requirements for high inlet temperatures and moderate heat release.",
+    "original_text": {
+      "1": "The presence of a large amount of dilution gas in LCVG increases the self-ignition temperature and ignition delay time of the mixture, making preheating the reactants a critical consideration.",
+      "2": "In MILD combustion, it is crucial to have an inlet reactant temperature higher than the self-ignition temperature (Tin > Tsi) to mitigate the difficulties associated with ignition and unstable combustion."
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "combustion_science",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires deep combustion science expertise, specifically about how non-combustible components (CO2, N2) in low calorific value gases affect ignition delay time, self-ignition temperature, and MILD combustion establishment - all core combustion science concepts requiring domain-specific knowledge of chemical kinetics, thermodynamics, and combustion regimes.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_841a79f1",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "MILD-combustion-of-low-calorific-valu_2024_Progress-in-Energy-and-Combustion",
+      "paper_title": "MILD-combustion-of-low-calorific-valu_2024_Progress-in-Energy-and-Combustion"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:23:03.749482",
+      "answer_length": 1119
+    }
+  }
+]

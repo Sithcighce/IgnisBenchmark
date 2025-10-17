@@ -1,0 +1,81 @@
+{
+  "question_text": "How does the Livengood-Wu (L-W) integral account for transient thermodynamic conditions in predicting end-gas autoignition timing, and what are its key limitations when applied to fuels exhibiting negative temperature coefficient (NTC) behavior?",
+  "standard_answer": "The Livengood-Wu integral predicts end-gas autoignition timing by integrating the inverse of the ignition delay time (IDT) over the thermodynamic history of the end-gas mixture, expressed as ∫₀^(τ_LW) (1/τ) dt = 1, where τ_LW is the autoignition delay under transient conditions and τ is the canonical IDT at instantaneous temperature and pressure. This approach assumes that autoignition occurs when the accumulated 'chemical progress' reaches a critical threshold, based on a zeroth-order global reaction approximation. However, for fuels with NTC behavior, where IDT increases with temperature in the 600–800 K range, the original L-W integral fails due to multi-stage ignition kinetics. The NTC region involves competing low-temperature chemistry pathways: alkylperoxy radical formation (ROO) leading to chain-branching via QOOH intermediates at lower temperatures, versus reverse decomposition to olefins and HO₂ at higher temperatures, reducing reactivity. The L-W integral's assumption of a single global reaction ignores the transition between low-temperature and high-temperature ignition stages, and it does not account for heat release during cool-flame events, leading to inaccurate predictions. Staged L-W integrals have been developed to address this by separately integrating the first and second ignition stages, but these require precise IDT correlations for each stage and remain sensitive to uncertainties in temperature and composition measurements.",
+  "original_text": {
+    "1": "The L–W integral, with a single step Arrhenius-like kinetics describing IDT, has demonstrated its simplicity and accuracy at a certain degree in predicting the autoignition occurrence in both SI and CI engines.",
+    "2": "The accuracy of L-W integral significantly reduces when it is used to predict fuels having two-stage ignition behavior and NTC characteristics."
+  },
+  "type": "reasoning",
+  "difficulty": 5,
+  "topic": "combustion_kinetics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires deep expertise in combustion kinetics, specifically the Livengood-Wu integral for predicting autoignition timing, transient thermodynamic conditions, and negative temperature coefficient behavior in fuels - all core combustion science concepts that cannot be answered with general ML knowledge.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on paper content, and no other compliance issues."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_0cd613b6",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "End-gas-autoignition-and-detonation-in-c_2025_Progress-in-Energy-and-Combust",
+    "paper_title": "End-gas-autoignition-and-detonation-in-c_2025_Progress-in-Energy-and-Combust"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:19:17.429468",
+    "answer_length": 1469
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly explains the Livengood-Wu integral mechanism (∫(1/τ)dt = 1) and accurately describes its limitations for NTC fuels. The answer is consistent with the original text's statements that: (1) L-W integral works well with single-step Arrhenius kinetics, and (2) accuracy reduces for two-stage ignition and NTC behavior. The detailed explanation of NTC chemistry (ROO radical formation, QOOH intermediates, competing pathways) and the mention of staged L-W integrals as a solution are scientifically accurate elaborations that don't contradict the original text. The physical principles regarding multi-stage ignition kinetics, cool-flame heat release, and temperature-dependent chemistry are correctly stated. While the answer is more detailed than the original text, all statements are factually correct and logically sound.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:08:22.161164"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Uses the term 'fails' which is stronger than the ground-truth phrasing 'accuracy significantly reduces'.",
+          "Describes the L-W basis as a 'zeroth-order global reaction approximation'; this phrasing is nonstandard and could be misleading.",
+          "States L-W 'does not account for heat release during cool-flame events'; while the formalism does not model staged chemistry, the transient T–P history can implicitly include heat release, so this point is somewhat overstated."
+        ],
+        "reasoning": "The answer correctly explains the L-W integral as integrating inverse IDT over the transient thermodynamic history and identifies its reduced accuracy for fuels with NTC/two-stage ignition, consistent with the ground truth. The mechanistic discussion of ROO/QOOH pathways and multi-stage ignition is sound. Minor phrasing and nuance issues do not constitute factual errors or contradictions.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:08:46.041783"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer is factually and logically correct. It accurately defines the Livengood-Wu integral and its underlying assumption of a single-stage, zeroth-order reaction. It correctly explains why this assumption fails for fuels with NTC behavior by accurately describing the competing low-temperature and intermediate-temperature chemical pathways (ROO, QOOH vs. decomposition to olefins + HO2). The explanation is fully consistent with the provided original text and established combustion science principles.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:09:04.660459"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:09:04.660484",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "question_text": "What are the key differences between the boundary condition scheme and source term scheme for handling conjugate heat transfer in unsteady pore-scale simulations, and under what conditions does each scheme maintain second-order accuracy?",
+  "standard_answer": "The boundary condition scheme treats phase interfaces as explicit boundaries between different domains, implementing the continuity conditions (Tf = Ts and -λf∂Tf/∂nf = λs∂Ts/∂ns) through specialized LB boundary operations. This scheme maintains second-order accuracy when the interface is located at the midpoint between lattice nodes, as it uses interpolation schemes that preserve the geometric interface position. The source term scheme reformulates the energy equation to match the form recoverable from standard LB models by introducing source terms at interface nodes. This approach avoids explicit boundary treatment but achieves only first-order accuracy when interfaces are not at midpoints because it doesn't account for the exact interface location. The boundary condition scheme's accuracy depends on proper geometric representation and interpolation, making it superior for curved interfaces and moving boundaries. The source term scheme is computationally simpler but less accurate for complex geometries. For unsteady heat transfer with significant (ρCp) differences between phases, the boundary condition scheme is preferred as it directly enforces the physical interface conditions, while the source term scheme may introduce numerical diffusion at interfaces. The choice depends on the interface geometry, property contrasts, and required accuracy for transient thermal analysis in porous media.",
+  "original_text": {
+    "1": "These schemes generally can be divided into two categories: the boundary condition scheme and the source term scheme.",
+    "2": "The test results indicate that when the material interface is not located at the midpoint, the boundary condition scheme is of second order accuracy, while the source term scheme is at best of first-order accuracy because such scheme does not consider the exact location of the interface."
+  },
+  "type": "concept",
+  "difficulty": 5,
+  "topic": "heat_transfer",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires deep expertise in conjugate heat transfer, pore-scale simulations, lattice Boltzmann methods, and numerical accuracy analysis - all core topics in computational fluid dynamics and heat transfer within porous media applications.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_a435beee",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Pore-scale-modeling-of-complex-transport-phe_2022_Progress-in-Energy-and-Com",
+    "paper_title": "Pore-scale-modeling-of-complex-transport-phe_2022_Progress-in-Energy-and-Com"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:25:17.343087",
+    "answer_length": 1414
+  },
+  "verification": {
+    "status": "rejected",
+    "verifiers": [
+      {
+        "correct": false,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "The answer states that the boundary condition scheme maintains second-order accuracy 'when the interface is located at the midpoint between lattice nodes', but the original text [2] clearly states that the boundary condition scheme is of second order accuracy 'when the material interface is NOT located at the midpoint'",
+          "This is a direct contradiction of the original text's key finding about when second-order accuracy is maintained"
+        ],
+        "reasoning": "The standard answer contains a critical factual error that directly contradicts the original text. According to the original text [2], the boundary condition scheme achieves second-order accuracy when the interface is NOT at the midpoint, while the source term scheme achieves only first-order accuracy in this case. The standard answer incorrectly states the opposite condition for the boundary condition scheme's second-order accuracy. This is a fundamental error regarding the key technical distinction between the two schemes, which is the central point of the question.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:15:46.658220"
+      },
+      {
+        "correct": false,
+        "baseline_confidence": "medium",
+        "verification_confidence": "high",
+        "issues": [
+          "Contradicts ground truth on the condition for second-order accuracy of the boundary condition scheme: claims second-order when the interface is at the midpoint, whereas the PECS text states second-order when the interface is NOT at the midpoint.",
+          "Logical inconsistency: asserts boundary condition scheme preserves exact geometric interface position but then ties second-order accuracy to midpoint placement.",
+          "Includes speculative assertions (e.g., superiority for curved/moving boundaries, numerical diffusion with property contrasts) that are not supported by the provided ground truth."
+        ],
+        "reasoning": "The PECS text specifies that when the material interface is not at the midpoint, the boundary condition scheme is second-order, while the source term scheme is at best first-order due to neglecting exact interface location. The standard answer reverses the condition for the boundary condition scheme, creating a direct contradiction. Other added commentary may be reasonable but is not essential; the key error makes the answer incorrect.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:16:13.952818"
+      },
+      {
+        "correct": false,
+        "baseline_confidence": "medium",
+        "verification_confidence": "high",
+        "issues": [
+          "The standard answer states that the boundary condition scheme maintains second-order accuracy 'when the interface is located at the midpoint between lattice nodes'. This directly contradicts the provided original text, which states this scheme is of second-order accuracy 'when the material interface is not located at the midpoint'."
+        ],
+        "reasoning": "The answer contains a significant factual error regarding the condition for second-order accuracy of the boundary condition scheme. It incorrectly states the condition for accuracy, which is the opposite of what is specified in the original text (the ground truth). While other parts of the explanation are plausible, this core contradiction makes the answer incorrect.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:16:37.601851"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:16:37.601879",
+    "consensus": {
+      "all_correct": false,
+      "correct_votes": 0,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

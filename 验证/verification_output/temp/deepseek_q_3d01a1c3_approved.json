@@ -1,0 +1,81 @@
+{
+  "question_text": "Based on the literature review, how do combustion temperature and coal volatile content influence the concentration trends and ring distribution of PAHs during coal combustion, and what are the underlying mechanisms driving these relationships?",
+  "standard_answer": "Combustion temperature and coal volatile content significantly influence PAH concentration trends and ring distribution through distinct mechanisms. The concentration of PAHs increases with temperature from 600 to 800°C due to enhanced pyrolysis-driven release of organic compounds, then decreases above 800°C as thermal cracking fragments larger aromatics into smaller molecules. At lower temperatures, PAHs detected primarily have a large number of rings (>4 rings), mainly attributed to free state PAHs released during coal pyrolysis. Higher volatile content promotes PAH generation by producing more organic free radicals at high temperatures, which facilitates PAH formation through complex chemical reactions. The temperature-dependent fragmentation shifts the ring distribution, with more three- and four-ring PAHs forming at higher temperatures due to molecular cleavage of large aromatics. These mechanisms explain why bituminous coal combustion releases the highest amount of PAHs, as it combines optimal volatile content with appropriate combustion conditions for PAH formation and preservation.",
+  "original_text": {
+    "1": "The concentration of PAHs increased with the increase in temperature from 600 to 800°C, while the opposite occurred in the temperature range from 800 to 1000°C.",
+    "2": "At the low temperature stage, the PAHs detected had mainly a large number of rings (>4 rings), mainly attributed to the free state PAHs released during coal pyrolysis.",
+    "3": "The higher the volatile content, the more organic free radicals are produced at high temperatures, which promotes the generation of PAHs."
+  },
+  "type": "reasoning",
+  "difficulty": 4,
+  "topic": "combustion_kinetics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires deep knowledge of combustion science (PAH formation mechanisms, temperature effects on combustion chemistry), coal chemistry (volatile content impact), and chemical kinetics (ring distribution shifts in aromatic compounds), which are specific to combustion engineering and environmental chemistry domains.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+  },
+  "retry_count": 2,
+  "question_id": "deepseek_q_3d01a1c3",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Review-of-organic-pollutants-in-coal-combustion_2025_Progress-in-Energy-and-",
+    "paper_title": "Review-of-organic-pollutants-in-coal-combustion_2025_Progress-in-Energy-and-"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:29:58.255205",
+    "answer_length": 1106
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately reflects all key points from the original text: (1) PAH concentration increases from 600-800°C then decreases above 800°C, (2) low temperatures favor large-ring PAHs (>4 rings) from pyrolysis, (3) higher volatile content promotes PAH generation through organic free radicals. The answer correctly explains the underlying mechanisms including thermal cracking fragmentation at high temperatures and the shift to smaller ring PAHs (3-4 rings) due to molecular cleavage. The conclusion about bituminous coal is a reasonable inference based on the volatile content relationship. All physical and chemical principles are correctly stated, with no contradictions to the original text.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:19:33.111577"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "States that bituminous coal combustion releases the highest amount of PAHs; this is an added claim not supported by the provided ground-truth text.",
+          "Attributes the high-temperature decrease in PAHs specifically to thermal cracking; the mechanism is plausible but not specified in the ground-truth text."
+        ],
+        "reasoning": "The answer accurately reflects the temperature trend (increase from 600–800°C, decrease from 800–1000°C), the low-temperature predominance of high-ring PAHs (>4) attributed to free-state PAHs from pyrolysis, and the role of higher volatile content in generating radicals that promote PAH formation. Mechanistic elaborations are reasonable and consistent, though the bituminous coal claim and the specific attribution to thermal cracking extend beyond the provided ground truth.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:19:52.068897"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer is factually correct and logically consistent. It accurately reflects all points from the original text regarding the effects of temperature and volatile content on PAH formation. The additional mechanistic explanations, such as thermal cracking leading to smaller ring PAHs at higher temperatures, are scientifically sound and provide a more complete picture without contradicting the source material.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:20:11.978957"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:20:11.978986",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

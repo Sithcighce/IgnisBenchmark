@@ -1,0 +1,88 @@
+{
+  "question_text": "Based on the provided paper content, explain how the different thermal behaviors of organically-associated REY versus REY phosphates during coal combustion affect their partitioning between fly ash and bottom ash. Include specific mechanisms supported by the paper's content.",
+  "standard_answer": "The paper indicates that organically-associated REY and REY phosphates exhibit fundamentally different thermal behaviors during coal combustion that significantly impact their partitioning. Organically-associated REY in low-rank coal are 'bound with carbon functional groups (e.g. -COOH and OH) or form organometallics' and decompose as organic matter volatilizes during combustion. This releases REY ions that can become mobile. In contrast, REY phosphates are described as having 'high melting, boiling, and thermal decomposition temperature,' making them refractory minerals that largely resist decomposition. The paper summarizes that 'thermal behavior and transformation of various REY forms in coal during combustion process, including organic-associated REY, REY phosphates, REY carbonates, clay-bound REY and among others were summarized.' Two retention mechanisms are proposed: 'the incorporation of the individual REY phases into the glass as inclusions and the diffusion of REY phases throughout Si-Al glass structures in the melting process.' Consequently, organically-associated REY exhibit higher mobility and are more likely to be transported with fine particles to fly ash, while refractory REY phosphates tend to remain in coarser bottom ash fractions due to their thermal stability and resistance to volatilization.",
+  "original_text": {
+    "1": "Organically-associated REY in low-rank coal might be bound with carbon functional groups (e.g. -COOH and OH) or form organometallics.",
+    "2": "Thermal behavior and transformation of various REY forms in coal during combustion process, including organic-associated REY, REY phosphates, REY carbonates, clay-bound REY and among others were summarized.",
+    "3": "Most of REY in coal are inorganic minerals (e.g. REY-phosphates) having high melting, boiling, and thermal decomposition temperature, allowing them to be enriched in coal ash after removal of organic matter."
+  },
+  "type": "concept",
+  "difficulty": 4,
+  "topic": "combustion_kinetics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires understanding of combustion science (coal combustion processes), thermal behavior of minerals during combustion, and partitioning mechanisms between fly ash and bottom ash - all specific to combustion/energy domain expertise.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on paper content, and compliant with other requirements."
+  },
+  "retry_count": 1,
+  "question_id": "deepseek_q_63a29c17",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "A-review-of-rare-earth-elements-and-yttrium-in-coal-as_2022_Progress-in-Ener",
+    "paper_title": "A-review-of-rare-earth-elements-and-yttrium-in-coal-as_2022_Progress-in-Ener"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:15:12.737232",
+    "answer_length": 1333
+  },
+  "verification": {
+    "status": "needs_review",
+    "verifiers": [
+      {
+        "correct": false,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "The answer claims organically-associated REY 'are more likely to be transported with fine particles to fly ash' while REY phosphates 'tend to remain in coarser bottom ash fractions.' However, the original text [3] states that REY phosphates (inorganic minerals) have high thermal stability 'allowing them to be enriched in coal ash after removal of organic matter' - this refers to enrichment in ash generally, not specifically bottom ash.",
+          "The answer's conclusion about partitioning (organically-associated REY → fly ash; REY phosphates → bottom ash) is not supported by the original text. The original text does not make claims about differential partitioning between fly ash and bottom ash based on REY form.",
+          "The answer extrapolates beyond what the original text states. While it correctly describes thermal behaviors from the original text, the specific partitioning mechanism (mobile organically-associated REY going to fly ash vs refractory phosphates staying in bottom ash) is an inference not explicitly supported by the provided excerpts."
+        ],
+        "reasoning": "The answer correctly quotes and paraphrases the thermal characteristics of organically-associated REY and REY phosphates from the original text. However, it makes unsupported claims about their partitioning between fly ash and bottom ash. The original text discusses thermal stability and enrichment in ash generally, but does not specify that organically-associated REY preferentially go to fly ash while phosphates go to bottom ash. This represents a logical leap beyond what the source material states, making the answer's core conclusion about partitioning mechanisms factually unsupported by the provided text.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:01:20.511957"
+      },
+      {
+        "correct": false,
+        "baseline_confidence": "medium",
+        "verification_confidence": "high",
+        "issues": [
+          "Asserts specific fly ash vs bottom ash partitioning (organically-associated REY to fly ash; REY phosphates to bottom ash) that is not supported by the provided original text.",
+          "Introduces specific retention mechanisms (incorporation as inclusions and diffusion into Si–Al glass) that are not stated in the provided original text.",
+          "Infers volatilization/release of REY ions from organic matter; plausible but not explicitly supported by the provided text."
+        ],
+        "reasoning": "While the answer correctly notes that organic-associated REY may be bound to functional groups and that REY phosphates are refractory, consistent with the provided text, it extends beyond the source by claiming detailed partitioning between fly and bottom ash and by citing specific glass incorporation/diffusion mechanisms not present in the excerpt. The provided text only supports that refractory REY (e.g., phosphates) have high thermal stability and become enriched in coal ash generally after organic matter removal, without specifying fly vs bottom ash behavior.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:01:50.813626"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "medium",
+        "verification_confidence": "high",
+        "issues": [
+          "The answer introduces two specific retention mechanisms ('incorporation... as inclusions' and 'diffusion... throughout Si-Al glass') that are not explicitly stated in the provided text snippets. However, this is a correct elaboration based on established combustion science and is permissible per the instructions."
+        ],
+        "reasoning": "The answer correctly interprets the provided text, contrasting the high mobility of decomposed organically-associated REY with the refractory nature of REY phosphates. It accurately links these behaviors to partitioning, with mobile species favoring fly ash and refractory species favoring bottom ash. The logic is sound and consistent with fundamental principles of ash formation.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:02:16.295909"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:02:16.295924",
+    "consensus": {
+      "all_correct": false,
+      "correct_votes": 1,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 1
+    }
+  }
+}

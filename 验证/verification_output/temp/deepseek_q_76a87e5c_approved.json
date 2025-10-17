@@ -1,0 +1,80 @@
+{
+  "question_text": "Why does the measured boundary for flamelet preheat layer broadening occur at a Taylor scale Reynolds number of 13.8 rather than at Karlovitz number Ka_T,P = 1 as predicted by classical theory?",
+  "standard_answer": "The measured boundary at Re_Taylor = 13.8 indicates that preheat layer broadening begins when turbulent diffusivity at the Taylor scale exceeds a critical threshold, rather than when Kolmogorov eddies fit inside the flame thickness. This is because Taylor scale eddies, while larger than Kolmogorov eddies, possess significantly more turbulent kinetic energy and create substantial velocity gradients that enhance turbulent diffusion. The turbulent diffusivity at the Taylor scale, defined as D_T,Taylor = u'_Taylor * λ_Taylor, becomes dominant when it surpasses 13.8 times the molecular kinematic viscosity (ν_300K). In contrast, the Kolmogorov scale argument (Ka_T,P = 1) assumes that the smallest eddies control diffusion, but experimental data show that this does not separate broadened from thin preheat layers effectively. Taylor eddies are strong enough to alter flame structure due to their energy content and size, which overlap with preheat layers, and their rotational velocities can compete against gas expansion effects, making them more influential than Kolmogorov eddies in broadening preheat layers under extreme turbulence.",
+  "original_text": {
+    "1": "Therefore, Eq. (5c) indicates that the measured boundary is a line where the Taylor scale Reynolds number is constant and equal to 13.8.",
+    "2": "a physical explanation of the measurements in Fig. 8 is that flamelet broadening begins when the turbulent diffusivity at the Taylor scale exceeds the value of 13.8 ν_300K."
+  },
+  "type": "reasoning",
+  "difficulty": 5,
+  "topic": "fluid_mechanics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires deep expertise in turbulent combustion, flamelet theory, Taylor and Kolmogorov scales, and turbulent diffusivity concepts specific to combustion science and fluid mechanics. It addresses a fundamental discrepancy between classical theory and experimental measurements in flame structure under extreme turbulence.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer are both high quality - domain-focused, factually correct based on paper citations, and compliant with all quality checks."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_76a87e5c",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Premixed-flames-subjected-to-extreme-turbulence_2020_Progress-in-Energy-and-",
+    "paper_title": "Premixed-flames-subjected-to-extreme-turbulence_2020_Progress-in-Energy-and-"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:25:28.749505",
+    "answer_length": 1140
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "medium",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly identifies that the measured boundary at Re_Taylor = 13.8 corresponds to turbulent diffusivity at the Taylor scale exceeding 13.8 times the molecular kinematic viscosity, which is consistent with the original text statements [1] and [2]. The answer provides additional physical explanation about why Taylor scale eddies are more influential than Kolmogorov eddies (due to their energy content, size, and velocity gradients), which is a reasonable elaboration that doesn't contradict the original text. The core mechanism - that broadening occurs when Taylor scale turbulent diffusivity exceeds a critical threshold rather than when Ka_T,P = 1 - is accurately explained. While the answer is detailed and goes beyond the minimal original text, all statements appear physically sound and logically consistent with turbulence-flame interaction principles.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:16:19.472230"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "medium",
+        "verification_confidence": "high",
+        "issues": [
+          "Uses u'_Taylor notation; standard Re_λ and turbulent diffusivity scaling typically use the rms velocity u' rather than a scale-specific u'_Taylor.",
+          "Includes additional qualitative explanations (energy content, velocity gradients, competition with gas expansion) that are not in the original text but do not contradict it."
+        ],
+        "reasoning": "The answer matches the ground-truth statements: the measured boundary is at a constant Taylor-scale Reynolds number Re_λ = 13.8, and broadening begins when turbulent diffusivity at the Taylor scale exceeds 13.8 ν_300K. It correctly contrasts this with the classical Ka_T,P = 1 criterion. The added physical explanation is reasonable and consistent, with only minor terminology nuances.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:16:54.385374"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer is factually correct and logically sound. It accurately reflects the information in the original text, stating that the boundary for preheat layer broadening is defined by a constant Taylor scale Reynolds number (Re_Taylor = 13.8). It correctly interprets this as the point where turbulent diffusivity at the Taylor scale exceeds a critical multiple of the molecular kinematic viscosity. The physical explanation, contrasting the energetic Taylor eddies with the less energetic Kolmogorov eddies, is a valid and well-established argument in advanced combustion theory.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:17:21.233868"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:17:21.233896",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

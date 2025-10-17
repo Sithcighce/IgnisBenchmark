@@ -1,0 +1,77 @@
+{
+  "question_text": "Why does the 'spill-over' effect enhance CO sensitivity in Pt-doped SnO2 sensors at low Pt loading (0.2 wt%) but diminish it at high loading (2 wt%), and what are the competing electronic and chemical sensitization mechanisms?",
+  "standard_answer": "The spill-over effect involves oxygen dissociation on noble metal clusters followed by migration of oxygen species to the metal oxide support, promoting analyte oxidation. At optimal Pt loading (0.2 wt%), Pt clusters efficiently dissociate molecular oxygen, creating reactive oxygen species that spill over to SnO2 surface. These species enhance CO oxidation: CO + O⁻ → CO2 + e⁻, injecting electrons into SnO2 conduction band and reducing resistance. Simultaneously, electronic sensitization occurs through Fermi energy control, where the oxidation state of Pt clusters modulates the SnO2 electronic structure, creating favorable band bending for charge transfer. At high Pt loading (2 wt%), several detrimental effects occur: Pt domains become larger and more continuous, creating localized reaction sites where CO oxidation occurs directly on Pt without electron transfer to SnO2. This 'short-circuiting' effect means reactions happen catalytically on Pt without contributing to the resistive signal. Additionally, excessive Pt coverage reduces the accessible SnO2 surface area and may form current-shunting pathways. The balance shifts from beneficial spill-over and electronic sensitization at low loading to predominant surface coverage and localized catalysis at high loading, explaining the sensitivity maximum at intermediate Pt concentrations.",
+  "original_text": {
+    "1": "The 'spill-over' effect (i.e. chemical sensitization) describes oxygen dissociation on the cluster surface enriching the MOx's surface with oxygen ions promoting analyte oxidation and has been proposed for Pt on SnO2.",
+    "2": "This was attributed to 'localized' consumption of CO on the Pt surface without transfer of electrons to the SnO2 conduction band."
+  },
+  "type": "reasoning",
+  "difficulty": 5,
+  "topic": "catalysis_sensitization",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires deep expertise in catalysis, gas sensor technology, and materials science - specifically understanding noble metal doping effects on metal oxide sensors, spill-over mechanisms, electronic sensitization, and how these relate to CO detection sensitivity. It involves specialized knowledge of chemical and electronic sensitization mechanisms in gas sensors.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question is well-focused on catalysis and gas sensor domain with detailed mechanistic explanation. Answer correctly explains spill-over effect, electronic sensitization, and the loading-dependent behavior using supported citations."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_45a77752",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Flame-made-chemoresistive-gas-sensors-a_2022_Progress-in-Energy-and-Combusti",
+    "paper_title": "Flame-made-chemoresistive-gas-sensors-a_2022_Progress-in-Energy-and-Combusti"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:20:09.354788",
+    "answer_length": 1352
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly explains the spill-over effect mechanism and is consistent with the original text. It accurately describes: (1) oxygen dissociation on Pt clusters and migration to SnO2 at low loading (0.2 wt%), enhancing CO oxidation and electron injection; (2) the detrimental effect at high loading (2 wt%) where CO oxidation occurs locally on Pt without electron transfer to SnO2, matching the original text's description of 'localized consumption of CO on the Pt surface without transfer of electrons to the SnO2 conduction band'. The answer provides additional mechanistic details (electronic sensitization, Fermi energy control, surface coverage effects) that are scientifically sound and do not contradict the original text. The chemical equation CO + O⁻ → CO2 + e⁻ is correct, and the explanation of competing mechanisms at different Pt loadings is logically consistent. While more detailed than the original text, all statements are factually accurate.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:09:06.239315"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "medium",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer aligns with the ground-truth: it correctly describes chemical sensitization via oxygen spill-over from Pt to SnO2 at low loading and attributes diminished sensitivity at high loading to localized CO consumption on Pt without electron transfer to SnO2. It also appropriately identifies the competing electronic sensitization (work function/Fermi level and band bending effects). No factual or logical contradictions are present.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:09:22.870966"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly explains the competing mechanisms of chemical and electronic sensitization in Pt-doped SnO2 sensors. It accurately describes the 'spill-over' effect at low Pt loading and the 'catalytic short-circuiting' or 'localized consumption' effect at high loading, which are the primary reasons for the existence of an optimal dopant concentration. The explanation is fully consistent with the provided original text and established principles of semiconductor gas sensing.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:09:45.295881"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:09:45.295901",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

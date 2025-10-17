@@ -1,0 +1,167 @@
+[
+  {
+    "question_text": "In turbulent premixed combustion, why is the β-function PDF often inadequate for modelling the reaction progress variable, and what alternative PDF models provide better accuracy?",
+    "standard_answer": "The β-function PDF is inadequate because it does not accurately represent the bimodal or multi-modal distributions typical in premixed flames, where scalars like temperature or species mass fractions exhibit sharp gradients across flame fronts. Specifically, the β-PDF tends to overpredict mean reaction rates and filtered flame speeds, as it smooths out the distinct states of reactants and products. This inaccuracy arises from its assumption of a continuous distribution, which fails to capture the delta-function-like peaks at unburned and burned states observed in DNS and experiments. Alternatives include the flamelet PDF (Eq. 23), which incorporates contributions from unburned reactants, burning intermediates, and fully burned products via Dirac delta functions and laminar flame profiles. This model better represents the actual PDF shape, especially at high variances, but may require ad hoc clipping for low variances. Other approaches, such as the Linear Eddy Model (LEM)-based PDF, offer improved accuracy by simulating sub-grid scalar mixing, though at higher computational cost. These alternatives are essential for reliable predictions in LES and RANS, as they more faithfully reproduce the physical structure of turbulent premixed flames, reducing errors in species formation and heat release rates.",
+    "original_text": {
+      "1": "Bray et al. was the first to show that the β-PDF overpredicts the mean production rates in the RANS simulation of turbulent premixed flames.",
+      "2": "The actual PDF shapes obtained from DNS and experiment are substantially different from the β-function."
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "combustion_modelling",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question requires deep expertise in turbulent combustion modeling, specifically PDF methods for premixed flames, including knowledge of β-function limitations, flamelet models, and LES/RANS applications in combustion science.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other issues."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_a0826593",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Advances-and-challenges-of-the-Conditional-Source-_2024_Progress-in-Energy-a",
+      "paper_title": "Advances-and-challenges-of-the-Conditional-Source-_2024_Progress-in-Energy-a"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:14:16.109162",
+      "answer_length": 1318
+    }
+  },
+  {
+    "question_text": "How does the doubly conditional source-term estimation (DCSE) approach enhance the accuracy of turbulence-chemistry interaction models in complex combustion regimes like local extinction or mixed-mode combustion?",
+    "standard_answer": "DCSE enhances accuracy by incorporating two conditioning variables, which further reduces fluctuations around conditional means compared to single conditioning. In complex regimes such as local extinction in non-premixed flames or mixed-mode combustion in engines, single conditioning may insufficiently capture the multi-dimensional nature of scalar fields. DCSE addresses this by using a joint probability density function (PDF) of two scalars, typically mixture fraction and a progress variable, to close the mean reaction rates. This allows for better resolution of phenomena where both mixing and reaction progress vary significantly, such as during extinction events where scalar dissipation rates peak or in stratified flames where fuel-air mixing is inhomogeneous. The mathematical formulation involves solving a doubly conditioned integral equation (Eq. 13), which, despite increased computational cost, provides more precise conditional averages by leveraging the reduced spatial gradients under double conditioning. This is particularly critical in LES where filtered scales may miss small-scale events like local ignition or extinction, as DCSE's improved closure helps capture these dynamics more reliably.",
+    "original_text": {
+      "1": "The modelling error in the first-moment singly-conditioned CMC hypothesis increases as the fluctuations around the conditional means increase. Examples of such conditions are non-premixed flames with local extinction, combustion in homogeneous charge compression ignition engines where both auto-ignition and propagating fronts exists.",
+      "2": "According to Kronenburg and Bushe, the spatial gradient of the conditional averages is substantially reduced with double conditioning compared to single conditioning."
+    },
+    "type": "concept",
+    "difficulty": 5,
+    "topic": "combustion_modelling",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question specifically addresses turbulence-chemistry interaction modeling in combustion regimes like local extinction and mixed-mode combustion, requiring deep expertise in combustion science, turbulent reacting flows, and CFD modeling techniques.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_ce5df31e",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Advances-and-challenges-of-the-Conditional-Source-_2024_Progress-in-Energy-a",
+      "paper_title": "Advances-and-challenges-of-the-Conditional-Source-_2024_Progress-in-Energy-a"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:14:16.110598",
+      "answer_length": 1219
+    }
+  },
+  {
+    "question_text": "Why is the Conditional Source-term Estimation (CSE) model considered an improvement over first-moment closure for turbulent reacting flows, and what physical mechanisms underlie its ability to reduce errors in mean reaction rate predictions?",
+    "standard_answer": "The CSE model significantly improves upon first-moment closure by addressing the high non-linearity of reaction rates with respect to temperature and species concentrations, which are subject to substantial fluctuations in turbulent flows. First-moment closure evaluates reaction rates using mean/filtered scalars, leading to large errors because the mean of a non-linear function does not equal the function of the mean. CSE mitigates this by employing conditional averaging, which reduces scalar fluctuations around conditional means. Specifically, it uses the identity between conditional and unconditional scalars (Eq. 6) and assumes conditional homogeneity over ensembles, allowing inversion of an integral equation to estimate conditional reaction rates. This approach leverages the fact that conditional averages exhibit lower spatial gradients, as supported by experimental data, thereby providing more accurate closure for turbulence-chemistry interactions. The reduction in error is physically due to the decoupling of chemical kinetics from turbulent mixing scales, enabling better resolution of local extinction and reignition events that are poorly captured by unconditional means.",
+    "original_text": {
+      "1": "Reaction rates are highly non-linear functions of temperature and species concentrations. Turbulence results in significant fluctuations in these scalars that typically cannot be resolved in a tractable, affordable simulation since the length-and time-scales associated with these fluctuations can be orders of magnitude smaller than those associated with the mean flow.",
+      "2": "Conditional averaging/filtering results in significantly lower fluctuations in the mean/filtered scalar quantity. Thus, using the conditional scalars in the chemistry model to evaluate the conditional reaction rates results in a significantly lower error compared to the no-model approach."
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "combustion_modelling",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question specifically addresses turbulent reacting flows, combustion modeling, and closure methods for reaction rate predictions, requiring deep knowledge of combustion science, turbulence-chemistry interactions, and computational fluid dynamics (CFD) modeling techniques.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer are well-structured, domain-focused, and factually accurate based on the provided citations and paper content."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_417f7e1d",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Advances-and-challenges-of-the-Conditional-Source-_2024_Progress-in-Energy-a",
+      "paper_title": "Advances-and-challenges-of-the-Conditional-Source-_2024_Progress-in-Energy-a"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:14:16.415089",
+      "answer_length": 1194
+    }
+  },
+  {
+    "question_text": "Calculate the parameters a and b for a β-PDF of mixture fraction in a turbulent non-premixed flame, given a mean mixture fraction of 0.3 and a variance of 0.05. Explain how these parameters influence the PDF shape and its implications for reaction rate closure in CSE.",
+    "standard_answer": "Using Eqs. 18 and 19: a = [̃z^2(1 - ̃z)/̃zv] - ̃z = [0.3^2 * (1 - 0.3)/0.05] - 0.3 = [0.09 * 0.7 / 0.05] - 0.3 = [0.063 / 0.05] - 0.3 = 1.26 - 0.3 = 0.96. b = a(1/̃z - 1) = 0.96 * (1/0.3 - 1) = 0.96 * (3.333 - 1) = 0.96 * 2.333 = 2.24. These parameters shape the β-PDF: a < 1 indicates a peak near ξ = 0, while b > 1 skews the distribution towards lower mixture fractions, reflecting the given mean and variance. In CSE, this PDF serves as the inversion kernel in Eq. 8, influencing the estimation of conditional scalars. A skewed PDF implies that conditional averages at certain mixture fractions (e.g., near 0) are weighted more heavily, affecting reaction rate integrals. Accurate PDF modelling is crucial because errors propagate through the CSE inversion, potentially misrepresenting local extinction or ignition events. For instance, an inaccurate PDF could smooth out high-gradient regions, leading to underprediction of peak temperatures or pollutant formation like NOx, underscoring the need for precise moment transport equations in turbulent combustion simulations.",
+    "original_text": {
+      "1": "a and b are the PDF parameters which are related to the mean ̃z and variance ̃zv of the mixture fraction as follows: a = ̃z^2(1 - ̃z)/̃zv - ̃z, b = a(1/̃z - 1)",
+      "2": "The β-function distribution – that was originally proposed by Richardson et al. – provides a good approximation of the mixture fraction PDF in turbulent mixing layers."
+    },
+    "type": "calculation",
+    "difficulty": 3,
+    "topic": "fluid_mechanics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question requires specialized knowledge in turbulent combustion modeling, specifically the use of β-PDF for mixture fraction in non-premixed flames and its role in Conditional Source-term Estimation (CSE) reaction rate closure. It involves combustion science, fluid mechanics, and CFD expertise.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct, and compliant with other requirements."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_138ff544",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Advances-and-challenges-of-the-Conditional-Source-_2024_Progress-in-Energy-a",
+      "paper_title": "Advances-and-challenges-of-the-Conditional-Source-_2024_Progress-in-Energy-a"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:14:16.659650",
+      "answer_length": 1076
+    }
+  },
+  {
+    "question_text": "What are the numerical challenges associated with solving the CSE integral equation, and how does Tikhonov regularization address the ill-posed nature of this inverse problem?",
+    "standard_answer": "The CSE integral equation is ill-posed, meaning that small errors in the input data (e.g., unconditional scalars) can lead to large, non-physical oscillations in the solution for conditional averages. This ill-posedness arises because the integral equation is a Fredholm equation of the first kind, which is inherently unstable. Numerically, discretization transforms it into a linear system Aα = b, where direct least-squares minimization (Eq. 9) often produces oscillatory solutions due to the kernel matrix's poor conditioning. Tikhonov regularization mitigates this by adding a penalty term that minimizes both the residual and the deviation from an a priori solution α0 (Eq. 10). The regularization parameter λ balances data fidelity and solution smoothness, preventing overfitting to noisy data. Physically, this ensures that conditional averages remain smooth and physically plausible, such as adhering to laminar flamelet profiles. Methods for selecting λ, like the L-curve criterion, help optimize this balance. Without regularization, solutions may exhibit unphysical peaks or negative values, undermining combustion predictions, especially in regions with sparse data or high gradients.",
+    "original_text": {
+      "1": "The reason for such behaviour is that the CSE integral equation is ill-posed and needs to be regularized.",
+      "2": "Tikhonov regularization is the most common approach in past CSE works, where not only the residual of the linear system of equations Aα = b is minimized, but also the norm of the difference between the solution and an a priori knowledge of the solution α0 is also minimized."
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "CFD",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question specifically addresses the CSE (Conditional Source-term Estimation) integral equation, which is a specialized CFD/combustion modeling technique for turbulent reacting flows. It requires understanding of inverse problems, ill-posed equations, and regularization methods in the context of combustion modeling - all domain-specific concepts in computational fluid dynamics and combustion science.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question is well-formulated and domain-focused, answer is comprehensive and factually correct based on the paper content and citations provided."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_d380f599",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Advances-and-challenges-of-the-Conditional-Source-_2024_Progress-in-Energy-a",
+      "paper_title": "Advances-and-challenges-of-the-Conditional-Source-_2024_Progress-in-Energy-a"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:14:17.206919",
+      "answer_length": 1197
+    }
+  }
+]

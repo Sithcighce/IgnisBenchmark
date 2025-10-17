@@ -1,0 +1,81 @@
+{
+  "question_text": "Why do β-scission reactions of secondary OME radicals dominate over traditional low-temperature oxidation pathways, and how does this affect ignition characteristics?",
+  "standard_answer": "β-scission reactions of secondary OME radicals dominate due to the unique bond dissociation energies in the OMEx molecular structure. The C-O bonds adjacent to ether oxygen atoms have significantly lower dissociation energies (approximately 80-85 kJ/mol) compared to typical C-C bonds (around 350 kJ/mol) in hydrocarbon fuels. This energy difference creates a strong thermodynamic driving force for β-scission. Mechanistically: (1) After H-abstraction from a secondary carbon site, the resulting radical undergoes rapid β-scission that breaks the weak C-O bond. (2) This decomposition pathway is kinetically favored over the traditional low-temperature sequence of R + O2 → RO2 → QOOH → chain-branching products. (3) The β-scission produces formaldehyde and smaller oxygenated radicals that follow different oxidation pathways. (4) This dominance of β-scission effectively short-circuits the low-temperature chain-branching chemistry that normally accelerates ignition in hydrocarbon fuels. Consequently, OMEx fuels exhibit different ignition behavior with reduced sensitivity to low-temperature chemistry, modified negative temperature coefficient (NTC) regions, and ignition delay times that are more controlled by high-temperature reactions. This explains the observed ignition characteristics where larger OMEx molecules can ignite faster than smaller ones due to increased availability of secondary radical sites favoring rapid decomposition.",
+  "original_text": {
+    "1": "This favored β-scission reaction is attributed to the significantly lower dissociation energy of the corresponding C-O bond",
+    "2": "The rate constants of secondary OME1 radicals are much larger than others over the entire temperature range, indicating a rapid β-scission of secondary OME1 radicals even at low and intermediate temperatures"
+  },
+  "type": "reasoning",
+  "difficulty": 5,
+  "topic": "combustion_kinetics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires deep expertise in combustion kinetics, specifically focusing on β-scission reactions in oxymethylene ethers (OMEx), bond dissociation energies, low-temperature oxidation pathways, and ignition characteristics - all core combustion science concepts that cannot be answered with general ML knowledge.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_23cdab8e",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Potential-of-oxymethylene-ethers-as-renewab_2024_Progress-in-Energy-and-Comb",
+    "paper_title": "Potential-of-oxymethylene-ethers-as-renewab_2024_Progress-in-Energy-and-Comb"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:25:20.642164",
+    "answer_length": 1447
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly explains why β-scission dominates over traditional low-temperature oxidation pathways in OME radicals. Key points verified: (1) Correctly identifies lower C-O bond dissociation energies (80-85 kJ/mol) compared to C-C bonds as the driving force, consistent with original text [1]. (2) Accurately describes the mechanism where secondary radicals undergo rapid β-scission even at low temperatures, matching original text [2]. (3) Correctly explains that this pathway short-circuits traditional R+O2→RO2→QOOH chain-branching chemistry. (4) Properly connects this to modified ignition characteristics including NTC behavior and the counterintuitive trend where larger OMEx molecules can ignite faster due to more secondary sites. The answer provides appropriate elaboration beyond the original text fragments without introducing factual errors or logical contradictions. All thermodynamic and kinetic principles are correctly stated.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:16:05.455522"
+      },
+      {
+        "correct": false,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Incorrect numerical values for C–O bond dissociation energies: the answer cites ~80–85 kJ/mol, which is far too low; typical C–O single bond BDEs are ~330–370 kJ/mol. The cited 80–85 kJ/mol aligns with activation barriers for β-scission of alkoxy radicals, not bond dissociation energies.",
+          "Overemphasis on a “thermodynamic driving force”: the dominance of β-scission is primarily a kinetic effect (lower barrier, higher rate constants) as indicated by the ground truth.",
+          "Overgeneralized claim that larger OMEx molecules can ignite faster than smaller ones without qualification; this trend is condition-dependent and not supported by the provided ground truth."
+        ],
+        "reasoning": "The core mechanism—β-scission of secondary OME radicals being favored due to weaker adjacent C–O bonds and yielding rapid decomposition that competes with low-temperature RO2/QOOH chemistry—is consistent with the ground truth. However, the answer introduces a significant factual error by giving C–O bond dissociation energies as 80–85 kJ/mol, likely confusing activation energies with BDEs. It also frames the dominance as thermodynamic rather than kinetic and adds an unqualified trend about larger OMEs igniting faster, making the overall answer unreliable.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:16:37.073837"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer correctly identifies the low C-O bond dissociation energy as the primary reason for the dominance of β-scission, consistent with the original text. It accurately describes how this kinetically favored pathway competes with and suppresses traditional low-temperature chain-branching mechanisms (R+O2 pathway). The resulting effects on ignition characteristics, such as a modified NTC region, are also explained logically and correctly.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:16:58.853968"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:16:58.853991",
+    "consensus": {
+      "all_correct": false,
+      "correct_votes": 2,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 2
+    }
+  }
+}

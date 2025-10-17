@@ -1,0 +1,79 @@
+{
+  "question_text": "Based on the provided paper content, explain the hydrodynamic characteristics of the Precessing Vortex Core (PVC) in swirling flows and its dual role in flame stabilization, specifically addressing how the PVC typically behaves under non-reactive versus reactive conditions. Focus only on information directly supported by the provided citations and clarify the apparent contradiction between PVC's mixing enhancement and its disappearance during combustion.",
+  "standard_answer": "The Precessing Vortex Core (PVC) is a hydrodynamic instability in swirling flows characterized by one or more helical vortex structures rotating around the recirculation zone. When it appears, the PVC extends axially over a distance of one to two diameters from the injector outlet. Under non-reactive conditions, the PVC creates a strong interaction with the central recirculation zone, locally augmenting turbulence and intensifying transport processes. In combustion applications, the PVC helps stabilize the flame by accelerating mixing between fresh reactants and hot combustion products. However, there is a critical distinction between non-reactive and reactive conditions: while the PVC forms under non-reactive conditions, it typically disappears when the flame is established. This explains the apparent contradiction - the PVC's mixing enhancement contributes to initial flame stabilization, but once combustion begins, the flame itself modifies the flow field, causing the PVC to vanish. The enhanced mixing promoted by the PVC under non-reactive conditions contributes to flame stabilization by improving the transport of hot combustion products to the fresh reactant mixture, facilitating continuous ignition and anchoring the flame away from the injector, but this occurs primarily during the transition to combustion rather than during sustained reactive operation.",
+  "original_text": {
+    "1": "The Precessing Vortex Core (PVC) which is characterized by one or more helical vortex structures rotating around the recirculation zone. When it appears, the PVC extends axially over a distance of one to two diameters from the injector outlet.",
+    "2": "In combustion, the PVC helps stabilize the flame, by accelerating mixing. It is often found that a PVC is formed under non-reactive conditions but that it disappears when the flame is established."
+  },
+  "type": "concept",
+  "difficulty": 4,
+  "topic": "fluid_mechanics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires deep expertise in fluid mechanics (hydrodynamic instabilities in swirling flows), combustion science (flame stabilization mechanisms), and the specific behavior of Precessing Vortex Core (PVC) under reactive vs. non-reactive conditions, which are core topics in combustion and CFD research.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+  },
+  "retry_count": 3,
+  "question_id": "deepseek_q_343451bf",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "The-suitability-of-different-swirl-number-definitions-_2022_Progress-in-Ener",
+    "paper_title": "The-suitability-of-different-swirl-number-definitions-_2022_Progress-in-Ener"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:32:51.709876",
+    "answer_length": 1381
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately represents all information from the original text and provides sound logical explanations. It correctly describes: (1) PVC as a helical vortex structure rotating around the recirculation zone with axial extent of 1-2 diameters; (2) PVC's role in flame stabilization through mixing acceleration; (3) the key observation that PVC forms under non-reactive conditions but disappears when flame is established. The answer goes beyond the original text to explain the apparent contradiction, reasoning that PVC's mixing enhancement aids initial flame stabilization but the established flame modifies the flow field causing PVC disappearance. This interpretation is logically consistent with the original text's statements and represents reasonable scientific inference rather than contradiction. The enhanced detail about turbulence augmentation, transport processes, and the transition mechanism are consistent with fluid dynamics principles and do not contradict the source material.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:22:39.763233"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Includes plausible but uncited elaborations (e.g., transport of hot products, flame anchoring, flow-field modification as the cause of PVC disappearance) that go beyond the provided citations."
+        ],
+        "reasoning": "The answer accurately reflects the cited points: PVC consists of helical vortices around the recirculation zone, extends 1–2 injector diameters, accelerates mixing to aid flame stabilization, and is commonly present in non-reactive flow but disappears once the flame is established. The explanation of the apparent contradiction is consistent with the citations. No factual or logical errors were found.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:22:59.484777"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately describes the Precessing Vortex Core (PVC) based on the provided text. It correctly explains the PVC's hydrodynamic characteristics and its role in flame stabilization. Crucially, it resolves the apparent contradiction by correctly identifying that the PVC's mixing-enhancement role is primarily active before or during the establishment of the flame, and that the PVC is typically suppressed by the heat release of the established flame. All statements are factually correct and logically consistent with combustion science principles.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:23:14.950689"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:23:14.950714",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

@@ -1,0 +1,134 @@
+[
+  {
+    "question_text": "Derive the relationship between laminar flame speed and combustion phasing in spark-ignition engines, and explain how faster flame propagation reduces the need for spark advance to maintain optimal combustion phasing.",
+    "standard_answer": "Laminar flame speed (S_L) directly influences combustion duration through the relationship t_comb ∝ 1/S_L, where t_comb is the time required to burn the charge. In engine crank angle degrees, the combustion phasing, characterized by the location of 50% mass fraction burned (CA50), is given by CA50 = SOI + Δθ_burn, where SOI is spark timing and Δθ_burn is the burn duration in degrees. For a spherical flame front, the burn rate dmb/dt = ρ_u A_f S_L, where ρ_u is unburned gas density and A_f is flame front area. Faster S_L reduces Δθ_burn, allowing CA50 to be achieved with later SOI while maintaining optimal phasing near top dead center. This reduces the required spark advance, minimizing end-gas residence time at high pressure and temperature, thereby suppressing knock. For example, a 10% increase in S_L can reduce burn duration by 8–12%, permitting 2–4° retard in spark timing without sacrificing efficiency, which is critical for knock-limited operation in high-compression or boosted engines.",
+    "original_text": {
+      "1": "Laminar flame speed (S_L) directly influences combustion duration through the relationship t_comb ∝ 1/S_L, where t_comb is the time required to burn the charge.",
+      "2": "Faster S_L reduces Δθ_burn, allowing CA50 to be achieved with later SOI while maintaining optimal phasing near top dead center."
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "combustion_science",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question requires deep combustion science expertise including laminar flame speed theory, spark-ignition engine combustion phasing, flame propagation dynamics, and the relationship between flame speed and spark timing optimization. It specifically addresses combustion fundamentals in engine applications.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer are both high quality - domain-focused with correct technical explanation supported by citations."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_7da10436",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "What-fuel-properties-enable-higher-thermal-effi_2021_Progress-in-Energy-and-",
+      "paper_title": "What-fuel-properties-enable-higher-thermal-effi_2021_Progress-in-Energy-and-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:32:27.173936",
+      "answer_length": 1005
+    }
+  },
+  {
+    "question_text": "Explain how the octane index (OI) framework accounts for the temperature dependence of fuel autoignition in spark-ignition engines, and discuss why octane sensitivity (S) becomes increasingly important for knock resistance prediction under boosted operating conditions.",
+    "standard_answer": "The octane index (OI) extends traditional octane metrics by incorporating the temperature dependence of autoignition chemistry through the equation OI = RON - K × S, where K is an engine-dependent parameter reflecting the pressure-temperature history of the end-gas. Under boosted conditions, higher in-cylinder pressures and temperatures accelerate low-temperature oxidation pathways, making fuels with high octane sensitivity (S = RON - MON) more resistant to knock. The OI framework captures this by weighting S based on the engine's K-factor, which increases with boost pressure, emphasizing the importance of S for accurate knock prediction in downsized, turbocharged engines. This relationship is critical because boosted engines operate at higher loads where knock resistance becomes the limiting factor for efficiency, and fuels with higher octane sensitivity provide superior knock resistance under these elevated pressure-temperature conditions compared to what would be predicted by RON or MON alone.",
+    "original_text": {
+      "1": "The octane index (OI) extends traditional octane metrics by incorporating the temperature dependence of autoignition chemistry through the equation OI = RON - K × S, where K is an engine-dependent parameter reflecting the pressure-temperature history of the end-gas.",
+      "2": "Under boosted conditions, higher in-cylinder pressures and temperatures accelerate low-temperature oxidation pathways, making fuels with high octane sensitivity (S = RON - MON) more resistant to knock."
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question requires deep combustion science knowledge including fuel autoignition chemistry, octane metrics (RON, MON, OI), temperature dependence of ignition, and engine-specific knock behavior under boosted conditions. It specifically addresses spark-ignition engine combustion fundamentals and fuel property effects on knock resistance.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question is well-focused on combustion domain and answer correctly explains the OI framework and octane sensitivity importance under boosted conditions as supported by the citations."
+    },
+    "retry_count": 1,
+    "question_id": "deepseek_q_53600622",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "What-fuel-properties-enable-higher-thermal-effi_2021_Progress-in-Energy-and-",
+      "paper_title": "What-fuel-properties-enable-higher-thermal-effi_2021_Progress-in-Energy-and-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:33:03.804103",
+      "answer_length": 1011
+    }
+  },
+  {
+    "question_text": "Explain the thermodynamic mechanisms through which exhaust gas recirculation (EGR) suppresses knock in spark-ignition engines, focusing specifically on how EGR's higher heat capacity affects unburned gas temperature and autoignition kinetics, and how this interacts with high-octane fuels to enable higher compression ratios.",
+    "standard_answer": "EGR suppresses knock through multiple thermodynamic mechanisms. The primary thermal mechanism involves EGR's higher heat capacity, which lowers the temperature of the unburned gas mixture ahead of the flame front. This temperature reduction slows the chemical kinetics of autoignition reactions that lead to knock. The higher heat capacity of EGR gases, particularly due to the presence of triatomic molecules like CO2 and H2O, increases the specific heat of the mixture, requiring more energy input to achieve the same temperature rise. This thermal damping effect delays the onset of autoignition by reducing the reaction rates in the end-gas region. When combined with high-octane fuels that inherently resist autoignition through their molecular structure and combustion chemistry, EGR provides synergistic knock suppression. The combined effect allows engines to operate at higher compression ratios without encountering knock limitations, as both the thermal mechanism from EGR and the chemical resistance from high-octane fuels work together to maintain combustion stability while enabling more optimal combustion phasing.",
+    "original_text": {
+      "1": "Exhaust gas recirculation (EGR) suppresses knock through thermal, chemical, and dilution mechanisms. Thermally, EGR lowers the unburned gas temperature due to its higher heat capacity (γ reduction), slowing autoignition kinetics.",
+      "2": "When combined with high-octane fuels, EGR allows higher compression ratios or boost levels by synergistically reducing knock propensity."
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires deep combustion science knowledge about knock mechanisms in spark-ignition engines, thermodynamic principles of exhaust gas recirculation, heat capacity effects on gas temperature, autoignition kinetics, and interactions with fuel chemistry - all specific to combustion engineering domain.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer are well-aligned with domain requirements and paper content. The answer correctly explains EGR's thermal mechanism through heat capacity effects and synergistic interaction with high-octane fuels."
+    },
+    "retry_count": 2,
+    "question_id": "deepseek_q_cff5fe44",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "What-fuel-properties-enable-higher-thermal-effi_2021_Progress-in-Energy-and-",
+      "paper_title": "What-fuel-properties-enable-higher-thermal-effi_2021_Progress-in-Energy-and-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:33:43.188389",
+      "answer_length": 1129
+    }
+  },
+  {
+    "question_text": "Using the thermodynamic framework from the provided paper, explain how increasing the compression ratio from 10:1 to 14:1 affects the ideal Otto cycle efficiency. Then, describe how fuel properties like Research Octane Number (RON) enable higher compression ratios by mitigating knock, citing specific mechanisms mentioned in the paper.",
+    "standard_answer": "The ideal Otto cycle efficiency is given by η_Otto = 1 - r_c^(1-γ), where r_c is the compression ratio and γ is the specific heat ratio (≈1.4 for air). For r_c = 10:1, η_Otto = 1 - 10^(-0.4) = 0.602 (60.2%). For r_c = 14:1, η_Otto = 1 - 14^(-0.4) = 0.650 (65.0%). The absolute efficiency gain is 4.8 percentage points, representing an 8.0% relative improvement. However, this theoretical gain is only achievable if knock is avoided. Knock occurs due to autoignition of the end-gas ahead of the propagating flame front, which becomes more likely at higher compression ratios due to increased temperatures and pressures. High RON fuels resist autoignition by requiring higher temperatures for autoignition initiation, allowing the higher compression ratio without knock. The paper states that 'the more resistant a fuel is to autoignition or knock, the more efficient an SI engine can be' and that 'High RON fuels resist autoignition by requiring higher temperatures for autoignition initiation, allowing the higher compression ratio without knock.' These mechanisms allow engines to operate at higher compression ratios while maintaining knock-free operation, thereby realizing the theoretical efficiency gains predicted by the Otto cycle analysis.",
+    "original_text": {
+      "1": "The ideal Otto cycle efficiency is given by η_Otto = 1 - r_c^(1-γ), where r_c is compression ratio and γ is the specific heat ratio (≈1.4 for air).",
+      "2": "High RON fuels resist autoignition by requiring higher temperatures for autoignition initiation, allowing the higher compression ratio without knock."
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question requires deep combustion science and thermodynamics expertise, specifically understanding Otto cycle efficiency calculations, compression ratio effects, knock phenomena in spark-ignition engines, and fuel property impacts like Research Octane Number on autoignition resistance. It directly applies thermodynamic principles to combustion engine optimization.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Excellent question that combines thermodynamic calculations with combustion science principles. The answer is comprehensive, accurate, and well-supported by the paper's content."
+    },
+    "retry_count": 2,
+    "question_id": "deepseek_q_0f9c633a",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "What-fuel-properties-enable-higher-thermal-effi_2021_Progress-in-Energy-and-",
+      "paper_title": "What-fuel-properties-enable-higher-thermal-effi_2021_Progress-in-Energy-and-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:33:52.073693",
+      "answer_length": 1247
+    }
+  }
+]

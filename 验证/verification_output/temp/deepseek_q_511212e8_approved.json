@@ -1,0 +1,80 @@
+{
+  "question_text": "Based on the thermodynamic and combustion principles discussed in the paper, explain how thermochemical recuperation with hydrogen-rich reformate improves internal combustion engine efficiency through the mechanisms of increased heating value, enhanced combustion characteristics, and operational flexibility. Include the thermodynamic basis for these improvements.",
+  "standard_answer": "Thermochemical recuperation improves ICE efficiency through three primary mechanisms supported by the paper. First, the endothermic reforming reactions convert waste heat into chemical energy, increasing the heating value of the fuel mixture. This represents direct energy recovery from exhaust waste that would otherwise be lost. Second, the hydrogen-rich reformate provides enhanced combustion characteristics including increased flame velocity and wider flammability limits, enabling more complete and efficient combustion. Third, these combustion properties allow operational flexibility through lean burning options, reducing throttling losses at partial loads by enabling unthrottled operation. The thermodynamic basis lies in the conversion of low-quality thermal energy (exhaust heat) into high-quality chemical energy (reformate fuel), while the improved combustion characteristics reduce irreversibilities and enable operation closer to ideal Otto cycle efficiency. The combined effect reduces energy losses from incomplete combustion and heat transfer while maintaining the convenience of liquid fuel infrastructure.",
+  "original_text": {
+    "1": "TCR improves the ICE efficiency because of the increased heating value of the fuel as a result of WHR as well as lean burning options, approaching the efficiency of an ideal Otto cycle and providing the possibility of applying higher compression ratios.",
+    "2": "The gaseous reforming product mixture (reformate) usually comprises a high hydrogen content to afford increased flame velocity, wider flammability limits, and reduced combustion irreversibility."
+  },
+  "type": "concept",
+  "difficulty": 4,
+  "topic": "energy_systems",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires deep knowledge of combustion science (thermochemical recuperation, hydrogen-rich reformate combustion), thermodynamics (energy conversion principles), and internal combustion engine systems (efficiency mechanisms, operational flexibility). It specifically asks about thermodynamic and combustion principles applied to engine efficiency improvement, which falls squarely within energy systems and combustion engineering domains.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+  },
+  "retry_count": 1,
+  "question_id": "deepseek_q_511212e8",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Fuel-reforming-in-internal-combustion_2018_Progress-in-Energy-and-Combustion",
+    "paper_title": "Fuel-reforming-in-internal-combustion_2018_Progress-in-Energy-and-Combustion"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:21:08.002183",
+    "answer_length": 1127
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately explains all three primary mechanisms of thermochemical recuperation (TCR) for improving ICE efficiency, consistent with the original text. It correctly identifies: (1) increased heating value through endothermic reforming converting waste heat to chemical energy, (2) enhanced combustion characteristics from hydrogen-rich reformate (increased flame velocity, wider flammability limits), and (3) operational flexibility through lean burning and reduced throttling losses. The thermodynamic basis is correctly stated - conversion of low-quality thermal energy to high-quality chemical energy, reduced irreversibilities, and operation closer to ideal Otto cycle efficiency. The answer also correctly mentions the possibility of higher compression ratios and maintaining liquid fuel infrastructure convenience. All physical principles are sound, cause-effect relationships are correct, and there are no contradictions with the original text. The answer is detailed but all statements are accurate.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:09:50.988795"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "States 'enabling unthrottled operation'; while lean burn with hydrogen-rich reformate reduces throttling losses, fully unthrottled SI operation may not be universally achievable.",
+          "Does not explicitly mention the possibility of applying higher compression ratios noted in the original text."
+        ],
+        "reasoning": "The answer aligns with the ground-truth text: it correctly attributes efficiency gains to waste-heat-driven endothermic reforming increasing fuel heating value, hydrogen-rich reformate improving flame speed and flammability limits, and lean-burn operational flexibility approaching ideal Otto cycle behavior by reducing irreversibilities and throttling losses. Thermodynamic framing (upgrading low-grade heat to chemical exergy) is sound. Minor omissions and a slightly strong claim about unthrottled operation do not constitute factual errors.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:10:11.692818"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer accurately and completely explains the three mechanisms requested in the question: increased heating value via waste heat recovery, enhanced combustion from hydrogen-rich reformate, and operational flexibility through lean burn capability. All points are factually correct, logically sound, and directly supported by the provided original text. The thermodynamic basis is also correctly stated in terms of energy quality upgrading and reduction of irreversibilities.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:10:33.035381"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:10:33.035408",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

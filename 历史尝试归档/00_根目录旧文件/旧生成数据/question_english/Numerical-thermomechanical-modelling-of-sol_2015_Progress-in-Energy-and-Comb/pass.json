@@ -1,0 +1,135 @@
+[
+  {
+    "question_text": "What are the fundamental differences between linear thermoelastic and rate-dependent non-linear material modeling approaches for SOFC components, and how do these differences affect long-term thermomechanical predictions?",
+    "standard_answer": "Linear thermoelastic modeling assumes constant material stiffness throughout deformation, where stress-strain relationships follow Hooke's law and thermal strains are purely elastic and recoverable. This approach uses the constitutive relation σ = D(ε - αΔT), where only elastic strain contributes to mechanical response. In contrast, rate-dependent non-linear modeling accounts for time-dependent inelastic deformation through creep strain, where materials undergo permanent deformation even below yield stress under sustained loading. The key difference lies in the strain decomposition: linear models use ε_total = ε_mechanical + ε_thermal, while non-linear rate-dependent models use ε_total = ε_elastic + ε_plastic + ε_creep + ε_thermal. For SOFC components operating at high temperatures (600-1000°C), the rate-dependent approach captures creep phenomena that significantly affect long-term behavior. Creep strain develops in three regimes: primary (decreasing strain rate), secondary (constant strain rate), and tertiary (accelerating strain until failure). This time-dependent deformation leads to stress relaxation over long operation periods (up to 40,000 hours), which linear models cannot predict. The inclusion of creep is particularly important for metal components where stress relief occurs over time, affecting sealant integrity and overall stack hermeticity.",
+    "original_text": {
+      "1": "Unlike the rate independent plasticity, rate dependent creep does not need a higher stress value to develop more strain. It can develop at all non-zero stress values.",
+      "2": "Under constant load, the strain vs. time behaviour of creep shows three typical regimes. The first one i.e., primary creep includes the stage in which the strain rate over time decreases, whereas the secondary stage shows a constant strain rate."
+    },
+    "type": "concept",
+    "difficulty": 5,
+    "topic": "material_modeling",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires specific knowledge of material modeling approaches (linear thermoelastic vs. rate-dependent non-linear) applied to SOFC components, including understanding of thermomechanical behavior, creep phenomena, and long-term predictions in high-temperature energy systems - all within the combustion/CFD/energy domain.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_b827f090",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Numerical-thermomechanical-modelling-of-sol_2015_Progress-in-Energy-and-Comb",
+      "paper_title": "Numerical-thermomechanical-modelling-of-sol_2015_Progress-in-Energy-and-Comb"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:24:19.052157",
+      "answer_length": 1375
+    }
+  },
+  {
+    "question_text": "In solid oxide fuel cell (SOFC) thermomechanical modeling, how does the coefficient of thermal expansion (CTE) mismatch between joined components generate thermomechanical stress during thermal cycling, and what are the fundamental physical mechanisms driving this stress development according to the provided paper?",
+    "standard_answer": "CTE mismatch between joined SOFC components generates thermomechanical stress during thermal cycling due to differential expansion and contraction when subjected to temperature changes. The physical mechanism is fundamentally based on atomic-level behavior where 'the behaviour of the joined components is based on the variation of potential energy stored and linked between atoms as a function of their spacing.' During heating, 'the vibrational energy of the atoms rise during heating and due to the asymmetry of the curve, the mean interatomic spacing r0 i.e., distance between them increases.' This atomic expansion occurs differently in materials with different CTEs, but since the components are constrained together in the SOFC assembly, this differential movement is restricted, generating internal stresses. The stress magnitude depends on the CTE difference, temperature change, material stiffness (Young's modulus), and constraint conditions. During thermal cycling, these stresses accumulate and can lead to fatigue damage, particularly at interfaces where stress concentrations occur. For sealants specifically, the paper emphasizes that 'the CTE of a sealant should not differ by more than 1 × 10^-6 K^-1 with the interfacing SOFC components, in order to obtain pore and crack free interface,' highlighting the critical importance of CTE matching for preventing mechanical failure and ensuring hermeticity in SOFC operation.",
+    "original_text": {
+      "1": "The coefficient of thermal expansion differences between assembled fuel cell materials are of paramount importance. The behaviour of the joined components is based on the variation of potential energy stored and linked between atoms as a function of their spacing.",
+      "2": "Considering a typical potential energy curve vs. interatomic distance diagram, the vibrational energy of the atoms rise during heating and due to the asymmetry of the curve, the mean interatomic spacing r0 i.e., distance between them increases",
+      "3": "the CTE of a sealant should not differ by more than 1 × 10^-6 K^-1 with the interfacing SOFC components, in order to obtain pore and crack free interface"
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires specific knowledge of solid oxide fuel cell (SOFC) thermomechanical modeling, coefficient of thermal expansion (CTE) mismatch effects, and stress development mechanisms during thermal cycling. This falls squarely within energy systems expertise, specifically fuel cell technology and thermomechanical analysis in electrochemical energy conversion systems.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+    },
+    "retry_count": 1,
+    "question_id": "deepseek_q_13256aff",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Numerical-thermomechanical-modelling-of-sol_2015_Progress-in-Energy-and-Comb",
+      "paper_title": "Numerical-thermomechanical-modelling-of-sol_2015_Progress-in-Energy-and-Comb"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:25:01.378240",
+      "answer_length": 1438
+    }
+  },
+  {
+    "question_text": "Based on the provided paper content, explain why 3D computational models are necessary for accurate thermomechanical stress analysis of SOFC wire-mesh current collectors, specifically addressing what physical phenomena 2D models fail to capture according to the cited evidence.",
+    "standard_answer": "3D computational models are essential for accurate thermomechanical stress analysis of SOFC wire-mesh current collectors because they capture the complex geometrical features that 2D models fundamentally miss. The paper specifically identifies that 'The 2D model is not capable to capture the effects due to the undulation, present in the real 3D structure. The wavy design results in local stress zones at the contact regions of the undulated wire mesh.' This undulation creates localized stress concentrations that cannot be represented in a single plane. Additionally, the paper states that 'The results reveal that the tensile stress around the wavy portion on each thread shows a tensile stress value located in the 26e40 MPa range, whereas higher values are predicted at the contact regions between each wire thread.' This demonstrates that 2D models fail to capture the non-uniform stress distribution and localized high-stress zones at contact points between wire threads, which are critical for understanding potential failure mechanisms in SOFC components. The inability to represent these three-dimensional geometrical effects leads to significant underestimation of actual stress levels and non-conservative designs.",
+    "original_text": {
+      "1": "The 2D model is not capable to capture the effects due to the undulation, present in the real 3D structure. The wavy design results in local stress zones at the contact regions of the undulated wire mesh.",
+      "2": "The results reveal that the tensile stress around the wavy portion on each thread shows a tensile stress value located in the 26e40 MPa range, whereas higher values are predicted at the contact regions between each wire thread."
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "CFD_modeling",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question requires specific expertise in computational fluid dynamics (CFD), finite element modeling, thermomechanical stress analysis, and solid oxide fuel cell (SOFC) component design. It addresses the limitations of 2D vs 3D modeling approaches for complex geometrical features in energy systems, which falls under CFD modeling and energy systems understanding.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and compliant with other requirements."
+    },
+    "retry_count": 1,
+    "question_id": "deepseek_q_9a7c11ca",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Numerical-thermomechanical-modelling-of-sol_2015_Progress-in-Energy-and-Comb",
+      "paper_title": "Numerical-thermomechanical-modelling-of-sol_2015_Progress-in-Energy-and-Comb"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:25:02.299767",
+      "answer_length": 1228
+    }
+  },
+  {
+    "question_text": "Using the thermomechanical modeling foundations from the provided paper, explain how thermal strain develops in a constrained SOFC assembly during heating from room temperature to operating temperature, and describe the key factors that influence the resulting stress distribution. Include the mathematical formulation for thermal strain and discuss why simple biaxial stress formulas are insufficient for predicting actual stress states in multi-component SOFC assemblies.",
+    "standard_answer": "Thermal strain in SOFC components develops due to differential thermal expansion when the assembly is heated from room temperature to operating temperature. According to the paper, the thermal strain vector can be defined as: {ε_th} = {α α α 0 0 0}ΔT, where α is the coefficient of thermal expansion and ΔT is the temperature difference. This represents the free expansion each material would undergo if unconstrained. However, in actual SOFC assemblies, components are joined together, creating constraints that prevent free expansion. The paper emphasizes that 'the CTE of a sealant should not differ by more than 1 × 10^-6 K^-1 with the interfacing SOFC components, in order to obtain pore and crack free interface,' highlighting the critical importance of CTE matching. The resulting stress distribution is complex and cannot be accurately predicted using simple biaxial formulas because SOFC assemblies involve multiple interacting components with different material properties, geometrical constraints, and boundary conditions. The stress state depends on the assembly's overall stiffness, which is a function of material properties, component shapes, and constraints between constituents. Factors such as temperature-dependent material properties, geometrical features like fillet radii and sealant layouts, and the interaction between ductile metallic components and brittle ceramic materials all influence the final stress distribution. The paper notes that 'the thermomechanical behaviour of the joined sealant materials is dominated by the non-linear behaviour of metal components,' indicating that material interactions and non-linear behaviors must be considered for accurate stress prediction.",
+    "original_text": {
+      "1": "The thermal strain vector can be defined as: {ε_th} = {α α α 0 0 0}ΔT",
+      "2": "The CTE of a sealant should not differ by more than 1 × 10^-6 K^-1 with the interfacing SOFC components, in order to obtain pore and crack free interface."
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires specific knowledge of thermomechanical modeling in solid oxide fuel cells (SOFCs), including thermal strain development, stress distribution in constrained assemblies, coefficient of thermal expansion matching, and limitations of simplified stress formulas. This requires expertise in energy systems, heat transfer, material science, and computational mechanics applied to fuel cell technology.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on paper citations, and no other compliance issues."
+    },
+    "retry_count": 1,
+    "question_id": "deepseek_q_3c6335cc",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Numerical-thermomechanical-modelling-of-sol_2015_Progress-in-Energy-and-Comb",
+      "paper_title": "Numerical-thermomechanical-modelling-of-sol_2015_Progress-in-Energy-and-Comb"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:25:04.416867",
+      "answer_length": 1707
+    }
+  }
+]

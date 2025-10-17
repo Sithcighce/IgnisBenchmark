@@ -1,0 +1,167 @@
+[
+  {
+    "question_text": "How does the Biot number influence the selection of thermal state metrics and the design of battery thermal management systems?",
+    "standard_answer": "The Biot number (Bi = hL/k) quantitatively determines the relative importance of internal conduction versus external convection in battery heat transfer, directly guiding metric selection and BTMS design. When Bi << 0.1, internal thermal resistance is negligible compared to surface convection, resulting in uniform temperature distribution; thus, surface temperature suffices for monitoring, and passive cooling may be adequate. When Bi > 0.1, significant internal gradients exist, necessitating core temperature or distribution monitoring to capture peak temperatures. For BTMS design, low Bi scenarios allow simpler, cost-effective solutions like natural convection, while high Bi conditions require active cooling (e.g., forced air/liquid) to enhance h and reduce Bi, or anisotropic material optimization to increase k. In large-format cells with low k⊥, Bi often exceeds 0.1, mandating distributed temperature sensing and advanced cooling strategies to mitigate hotspots and ensure safety during high-rate operations like extreme fast charging.",
+    "original_text": {
+      "1": "If the Biot number of the cell is sufficiently small (i.e., Bi = hL/k≪0.1, where h is the heat transfer coefficient, L is the characteristic length of the cell, and k denotes the thermal conductivity of the cell), the heat conduction inside the cell is much faster than the heat convection at the surface.",
+      "2": "For cylindrical batteries under forced convection cooling conditions or with a larger radius, the Biot number could be larger than 0.1 so that the temperature at the battery center could be significantly higher than that at the surface."
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "heat_transfer",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires understanding of heat transfer principles (Biot number), thermal state metrics, and battery thermal management system design, which are core topics in thermal engineering and energy systems.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer are well-aligned with domain focus and paper content; no issues detected."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_41639511",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Thermal-state-monitoring-of-lithium-ion-batteries_2024_Progress-in-Energy-an",
+      "paper_title": "Thermal-state-monitoring-of-lithium-ion-batteries_2024_Progress-in-Energy-an"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:31:09.260195",
+      "answer_length": 1049
+    }
+  },
+  {
+    "question_text": "How does the anisotropic thermal conductivity in lithium-ion batteries affect the temperature distribution and heat transfer dynamics during high-rate operations, and what are the implications for thermal management?",
+    "standard_answer": "The anisotropic thermal conductivity in LIBs, characterized by significantly higher in-plane conductivity (k‖) compared to through-plane conductivity (k⊥), creates non-uniform temperature distributions, especially under high-rate operations. The layered structure of LIBs results in k‖ being orders of magnitude greater than k⊥, leading to preferential heat conduction along the electrode planes rather than through the stack layers. This anisotropy causes substantial temperature gradients in the through-plane direction, as heat generated in the core dissipates slowly to the surface. For cylindrical cells, this manifests as radial temperature gradients, while in pouch cells, it results in in-plane variations. The Biot number (Bi = hL/k) becomes critical; when Bi > 0.1, significant internal temperature differences arise, with the core temperature exceeding the surface temperature by over 10°C in some cases. This necessitates monitoring internal temperatures to prevent thermal runaway and optimize performance, as surface measurements alone underestimate peak temperatures and thermal stresses.",
+    "original_text": {
+      "1": "Such anisotropy can be manifested by the thermal conductivities in the direction of stack layers and through them, which are also called in-plane conductivity k‖ and through-plane conductivity k⊥, respectively.",
+      "2": "The measured values of k‖ and k⊥ exhibit significant differences, with k‖ basically orders of magnitude higher than k⊥ regardless of battery chemistries, which gives rise to a large temperature gradient in the through-plane direction."
+    },
+    "type": "reasoning",
+    "difficulty": 5,
+    "topic": "heat_transfer",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires specific knowledge of anisotropic thermal conductivity in lithium-ion batteries, temperature distribution patterns, heat transfer dynamics, and thermal management implications - all core topics in energy systems and thermal engineering within the combustion/energy domain.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_ca05f9c2",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Thermal-state-monitoring-of-lithium-ion-batteries_2024_Progress-in-Energy-an",
+      "paper_title": "Thermal-state-monitoring-of-lithium-ion-batteries_2024_Progress-in-Energy-an"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:31:09.679181",
+      "answer_length": 1103
+    }
+  },
+  {
+    "question_text": "Calculate the temperature difference between the core and surface of a cylindrical lithium-ion battery with a radius of 10 mm, thermal conductivity of 1 W/m·K, heat transfer coefficient of 50 W/m²·K, and volumetric heat generation of 50,000 W/m³. Assume steady-state conditions and radial symmetry.",
+    "standard_answer": "For a cylindrical battery under steady-state conditions with radial symmetry, the temperature difference between core and surface (ΔT = T_core - T_surface) can be derived from the heat conduction equation. The volumetric heat generation q_gen = 50,000 W/m³, radius R = 0.01 m, thermal conductivity k = 1 W/m·K. The heat generation per unit length Q = q_gen * πR² = 50,000 * π * (0.01)² = 15.708 W/m. For a cylinder, the temperature distribution is parabolic: T(r) = T_surface + (q_gen / (4k)) * (R² - r²). Thus, at the core (r=0), T_core = T_surface + (q_gen * R²) / (4k) = T_surface + (50,000 * (0.01)²) / (4 * 1) = T_surface + (50,000 * 0.0001) / 4 = T_surface + 5 / 4 = T_surface + 1.25°C. The Biot number Bi = hR/k = (50 * 0.01) / 1 = 0.5, which is >0.1, confirming significant internal gradients. The calculated ΔT = 1.25°C represents the core-to-surface difference due to internal heat generation, but actual values may be higher under dynamic operations or with anisotropic conductivity.",
+    "original_text": {
+      "1": "Under high-rate operations or forced convective cooling conditions, the temperature difference between the battery core and the surface in some cylindrical cells with a large radius could be larger than 10°C.",
+      "2": "The Biot number could be larger than 0.1 so that the temperature at the battery center could be significantly higher than that at the surface."
+    },
+    "type": "calculation",
+    "difficulty": 3,
+    "topic": "heat_transfer",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires heat transfer expertise involving cylindrical geometry, thermal conductivity, heat generation, and Biot number analysis specific to battery thermal management - all core energy/thermal engineering concepts.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer meet all quality standards - domain-focused calculation with correct thermal analysis."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_ae74fec9",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Thermal-state-monitoring-of-lithium-ion-batteries_2024_Progress-in-Energy-an",
+      "paper_title": "Thermal-state-monitoring-of-lithium-ion-batteries_2024_Progress-in-Energy-an"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:31:09.770431",
+      "answer_length": 994
+    }
+  },
+  {
+    "question_text": "Explain the mechanisms by which temperature gradients in lithium-ion batteries during high-rate operations lead to non-uniform current distribution and accelerated local degradation.",
+    "standard_answer": "Temperature gradients in LIBs during high-rate operations induce non-uniform current distribution through several interconnected mechanisms. First, the Arrhenius dependence of electrochemical reaction rates means that warmer regions exhibit lower charge transfer resistance and higher ionic conductivity, attracting more current. This localized current concentration generates additional Joule heating (I²R), further elevating temperature in a positive feedback loop. Second, the temperature-dependent solubility and diffusion coefficients of lithium ions cause preferential intercalation in hotter zones, leading to uneven state of charge (SOC) distribution. Third, this non-uniform current and temperature profile accelerates local degradation: in warmer areas, enhanced side reactions like solid electrolyte interface (SEI) growth and electrode decomposition occur, while in cooler regions, lithium plating may dominate during charging. The combined effect of thermal and current inhomogeneity results in spatially varied aging rates, potentially causing local failure due to overcharge or mechanical stresses from differential expansion.",
+    "original_text": {
+      "1": "The temperature gradient inside the cell will cause non-uniform current distribution, which gives rise to local failure due to overcharge or over-discharge.",
+      "2": "The inhomogeneous current distribution in turn aggravates the temperature gradient inside the cell by producing uneven heat generation."
+    },
+    "type": "reasoning",
+    "difficulty": 5,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question requires deep expertise in energy systems, specifically lithium-ion battery electrochemistry and thermal management. It involves understanding Arrhenius kinetics, current distribution mechanisms, thermal-electrochemical coupling, and degradation processes - all specific to battery science and engineering.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct, and compliant with other requirements."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_181f3d1b",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Thermal-state-monitoring-of-lithium-ion-batteries_2024_Progress-in-Energy-an",
+      "paper_title": "Thermal-state-monitoring-of-lithium-ion-batteries_2024_Progress-in-Energy-an"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:31:09.815804",
+      "answer_length": 1141
+    }
+  },
+  {
+    "question_text": "What are the fundamental differences between using surface temperature, core temperature, and bulk temperature as metrics for battery thermal state monitoring, and under what conditions is each most appropriate?",
+    "standard_answer": "Surface temperature, core temperature, and bulk temperature serve distinct roles in thermal state monitoring based on their physical significance and measurement feasibility. Surface temperature, directly measurable via sensors, is suitable when the Biot number Bi < 0.1, indicating negligible internal gradients, such as in small cylindrical cells under natural convection. However, it underestimates internal temperatures under high-rate operations or forced cooling. Core temperature, representing the geometric center, is critical for safety management as it often corresponds to the maximum temperature in symmetric cooling conditions, but requires estimation or intrusive sensors. It is essential when Bi > 0.1 to prevent thermal runaway. Bulk temperature, the volume-averaged value, reflects the average thermal state of the jelly roll and is ideal for evaluating energy and power capabilities, as it correlates with overall electrochemical behavior. It can be approximated as the linear average of surface and core temperatures for cylindrical/prismatic cells or from multiple surface measurements for pouch cells. Each metric's appropriateness depends on the application: surface temperature for health monitoring, core temperature for safety thresholds, and bulk temperature for performance optimization.",
+    "original_text": {
+      "1": "Surface temperature can only be used to indicate the thermal state under some specific conditions where the temperature non-uniformity is negligible.",
+      "2": "Core temperature has a greater impact on the safety, performance, and aging of LIBs than the surface temperature does as it directly affects the properties of the lumped electrode assembly."
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "heat_transfer",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires specific knowledge of heat transfer principles (Biot number, temperature gradients), battery thermal management concepts (thermal runaway, internal vs. surface temperatures), and energy systems expertise (battery performance optimization, safety thresholds) - all within the context of lithium-ion battery thermal monitoring.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on paper content, and no other compliance issues."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_38dabdc5",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Thermal-state-monitoring-of-lithium-ion-batteries_2024_Progress-in-Energy-an",
+      "paper_title": "Thermal-state-monitoring-of-lithium-ion-batteries_2024_Progress-in-Energy-an"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:31:09.991986",
+      "answer_length": 1314
+    }
+  }
+]

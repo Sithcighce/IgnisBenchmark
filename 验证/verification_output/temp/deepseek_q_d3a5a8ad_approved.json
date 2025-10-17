@@ -1,0 +1,79 @@
+{
+  "question_text": "How does the formation of cyclic ethers (CEs) compete with ketohydroperoxide (KHP) formation during low-temperature hydrocarbon oxidation, and what are the implications for ignition delay and negative temperature coefficient (NTC) behavior?",
+  "standard_answer": "The competition between CE and KHP formation pathways during low-temperature oxidation (500-900 K) critically influences ignition delay and NTC behavior. Alkyl radicals (Ṙ) react with O₂ to form alkylperoxy radicals (ṘO₂), which undergo intramolecular H-abstraction to produce hydroperoxyalkyl radicals (Q̇OOH). These Q̇OOH radicals have two competing fates: (1) decomposition to form stable CEs + OH radicals, or (2) second O₂ addition to form dihydroperoxyalkyl radicals (Ṗ(OOH)₂), which decompose to KHPs + OH radicals. The CE pathway represents chain propagation without branching, while the KHP pathway leads to chain branching since KHPs contain fragile O-O bonds that readily decompose to produce two radicals. As temperature increases within the NTC region, the reversibility of Ṙ + O₂ and Q̇OOH + O₂ reactions increases, favoring CE formation over KHP formation. This reduces overall reactivity since CE formation consumes radicals without generating new chain carriers, while KHP decomposition produces additional radicals that accelerate ignition. The shift in Q̇OOH consumption from KHP to CE formation with increasing temperature creates the NTC regime where reactivity paradoxically decreases despite higher temperatures.",
+  "original_text": {
+    "1": "The pathways leading to CEs have an important impact on fuel ignition and they explain the particular behavior observed during fuel low-temperature oxidation, such as the presence of a negative temperature coefficient zone and related cool flames",
+    "2": "The reason for that the competition for Q̇OOH radical consumption turns in favor of CE formation instead of 2nd O₂ addition when increasing temperature"
+  },
+  "type": "reasoning",
+  "difficulty": 5,
+  "topic": "combustion_kinetics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires deep knowledge of combustion kinetics, specifically low-temperature hydrocarbon oxidation mechanisms, cyclic ether formation pathways, ketohydroperoxide chemistry, and their impact on ignition delay and negative temperature coefficient behavior. This is specialized combustion science knowledge beyond general ML/CS.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on paper content, and no other compliance issues"
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_d3a5a8ad",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Chemical-kinetics-of-cyclic-ethers-in-_2022_Progress-in-Energy-and-Combustio",
+    "paper_title": "Chemical-kinetics-of-cyclic-ethers-in-_2022_Progress-in-Energy-and-Combustio"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:17:13.399587",
+    "answer_length": 1235
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately describes the competition between CE and KHP formation pathways during low-temperature hydrocarbon oxidation. It correctly explains: (1) the reaction sequence from alkyl radicals through alkylperoxy and hydroperoxyalkyl radicals, (2) the two competing fates of Q̇OOH radicals (CE formation vs. second O₂ addition leading to KHP), (3) the chain propagation vs. chain branching distinction between these pathways, (4) the temperature-dependent reversibility of O₂ addition reactions favoring CE formation at higher temperatures within the NTC region, and (5) the mechanistic basis for NTC behavior arising from reduced radical generation when CE formation dominates over KHP formation. All statements are consistent with the original text, which confirms that CE pathways impact ignition and NTC behavior, and that Q̇OOH consumption shifts toward CE formation (instead of second O₂ addition) with increasing temperature. The chemical principles and cause-effect relationships are correctly stated throughout.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:05:40.626209"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Minor phrasing: CE formation does not eliminate radicals; it produces OH, so it is chain propagation with roughly unchanged radical count, whereas KHP decomposition increases radical count (branching)."
+        ],
+        "reasoning": "The answer correctly describes the low-temperature oxidation sequence (R → RO2 → QOOH), the competing fates of QOOH (CE vs second O2 addition leading to KHP), and the temperature dependence that shifts consumption toward CE as temperature rises in the NTC region. It accurately links increased CE formation to reduced chain branching and hence longer ignition delay and NTC behavior, consistent with the ground-truth statements. No factual or logical errors were found; only a minor wording nuance about radical consumption in the CE pathway.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:06:10.854649"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer provides a factually correct and logically sound explanation of the competition between cyclic ether and ketohydroperoxide formation. It accurately describes the reaction pathways (R+O2 -> RO2 -> QOOH), the two competing fates of the QOOH radical, and correctly identifies the CE pathway as chain propagating and the KHP pathway as chain branching. The explanation for the NTC behavior, based on the increased reversibility of O2 addition reactions at higher temperatures favoring the unimolecular CE formation, is accurate and consistent with the provided original text. All stated chemical principles are correct.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:06:29.540756"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:06:29.540775",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

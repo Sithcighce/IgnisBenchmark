@@ -1,0 +1,77 @@
+{
+  "question_text": "In the context of CFD modeling for underground coal gasification, what are the critical challenges in simulating multiphase flow, heat transfer, and chemical reactions within the evolving cavity geometry?",
+  "standard_answer": "CFD modeling of UCG faces challenges in accurately capturing multiphase flow, heat transfer, and reactions due to dynamic geometry and complex physics. The evolving cavity geometry requires adaptive meshing or moving boundary techniques to account for spalling, roof collapse, and cavity growth, which alter flow paths and heat distribution. Multiphase flow involves gas-solid interactions (oxidant, syngas, ash, char) and possibly liquid water influx, necessitating Eulerian-Lagrangian or volume-of-fluid methods to track phases, but these are computationally intensive. Heat transfer must model conduction in solid coal/rock, convection in gases, and radiation in voids, with temperature-dependent properties and phase changes (drying, pyrolysis). Chemical reactions include heterogeneous gas-solid reactions (char oxidation, gasification) and homogeneous gas-phase reactions (water-gas shift, combustion), requiring detailed kinetics and species transport. Turbulence modeling is complicated by porous media effects in the ash/char bed. Additionally, validation is limited by scarce field data, and scale-up from lab to field introduces uncertainties in parameters like permeability and reaction rates. These factors make predictive modeling difficult, emphasizing the need for integrated experimental and computational approaches.",
+  "original_text": {
+    "1": "From the void space, hot turbulent gas radiates heat towards the surface of the wall, leading to the subsequent drying, pyrolysis and gasification of the coal.",
+    "2": "The cavities were found to contain a permeable pile of dried coal, char, ash and in most cases roof rock material."
+  },
+  "type": "application",
+  "difficulty": 5,
+  "topic": "computational_fluid_dynamics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires specific knowledge of CFD modeling applied to underground coal gasification, including multiphase flow, heat transfer, chemical reactions, and evolving cavity geometry - all of which are domain-specific topics in combustion science, fluid mechanics, and energy systems.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on paper content, and no other compliance issues."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_31ca3c1a",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Underground-coal-gasification---Part-I--Field-de_2018_Progress-in-Energy-and",
+    "paper_title": "Underground-coal-gasification---Part-I--Field-de_2018_Progress-in-Energy-and"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:32:05.034365",
+    "answer_length": 1334
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately describes the critical challenges in CFD modeling of underground coal gasification. It correctly identifies: (1) evolving cavity geometry requiring adaptive meshing, consistent with the original text's mention of cavity formation and roof collapse; (2) multiphase flow involving gas-solid interactions with dried coal, char, ash, and roof rock material, directly supported by the original text; (3) heat transfer mechanisms including radiation from hot turbulent gas to the wall surface, matching the original text; (4) sequential processes of drying, pyrolysis, and gasification, exactly as stated in the original text; (5) chemical reactions both heterogeneous and homogeneous; (6) turbulence modeling complications from porous media effects in ash/char beds, consistent with the permeable pile description. The answer also appropriately discusses validation challenges and computational intensity. All physical principles are correctly stated, with no contradictions to the original text or fundamental combustion/thermophysics principles. The answer is comprehensive but contains no factual errors.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:24:11.312924"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer accurately identifies key CFD challenges for UCG: evolving cavity geometry (spalling, roof collapse) requiring adaptive meshing; multiphase interactions among gases, solids, and possible liquids with appropriate modeling approaches; heat transfer via conduction, convection, and radiation leading to drying, pyrolysis, and gasification; and complex heterogeneous/homogeneous reaction kinetics with species transport. These points are consistent with the ground-truth text indicating radiative heating from turbulent cavity gases driving wall drying/pyrolysis/gasification and the presence of a permeable pile of dried coal, char, ash, and roof rock. No factual or logical errors were found.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:24:28.603408"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer accurately and comprehensively describes the key challenges in CFD modeling of UCG. It correctly identifies the complexities of dynamic geometry (cavity growth), multiphase flow (gas-solid), multi-mode heat transfer (conduction, convection, radiation), and complex chemical kinetics (heterogeneous and homogeneous). The points are consistent with the provided original text, which mentions radiation, turbulence, drying, pyrolysis, gasification, and a permeable pile of char/ash/rock, and are also consistent with fundamental principles of thermophysics and combustion science.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:24:51.188368"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:24:51.188394",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

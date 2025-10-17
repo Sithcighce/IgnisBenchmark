@@ -1,0 +1,49 @@
+[
+  {
+    "question_text": "Using the reduced PRF mechanism (n-heptane/iso-octane), explain how fuel reactivity stratification in RCCI combustion enables optimal combustion phasing control at 6 bar IMEP with no EGR. Based on the paper, describe how the selection of PRF 70 fuel blend allows achievement of optimal CA50 combustion phasing between 4–6° aTDC without requiring EGR, and discuss the role of dual injection strategies in creating spatial fuel reactivity gradients for combustion control.",
+    "standard_answer": "The reduced PRF mechanism using n-heptane and iso-octane accurately represents the combustion characteristics of gasoline-diesel blends in RCCI combustion. For 6 bar IMEP operation, computational studies using this mechanism revealed that PRF 70 (70% iso-octane, 30% n-heptane) enables optimal combustion phasing without EGR. The paper states: 'when PRF 70 was used, the optimal combustion phasing could be achieved with no EGR.' This occurs because the reduced fuel reactivity of PRF 70 provides the appropriate auto-ignition characteristics for the given operating conditions. The optimal CA50 combustion phasing for 6 bar IMEP operation was found to be between 4 and 6° aTDC, as confirmed by the citation: 'The optimal CA50 combustion phasing for 6 bar IMEP operation was found to be between 4 and 6° aTDC.' RCCI combustion utilizes dual injection strategies to create spatial fuel reactivity stratification, where 'Diesel SOI 1 is at -55° aTDC for dual-fuel PCCI operation at 6 bar IMEP.' This early injection creates reactivity gradients that control the combustion process by staging the auto-ignition events, allowing precise control over combustion phasing and duration. The reactivity stratification differentiates RCCI from homogeneous HCCI combustion by providing multiple ignition sites and controlled heat release rates, enabling optimal phasing without the need for EGR while maintaining low emissions and high efficiency.",
+    "original_text": {
+      "1": "when PRF 70 was used, the optimal combustion phasing could be achieved with no EGR.",
+      "2": "The optimal CA50 combustion phasing for 6 bar IMEP operation was found to be between 4 and 6° aTDC.",
+      "3": "Diesel SOI 1 is at -55° aTDC for dual-fuel PCCI operation at 6 bar IMEP."
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires deep knowledge of combustion science (RCCI combustion, fuel reactivity stratification, PRF mechanisms), engine operation parameters (6 bar IMEP, CA50 phasing), and fuel injection strategies (dual injection, SOI timing). It specifically addresses combustion control mechanisms in internal combustion engines using specialized fuel blends.",
+      "answer_correct": false,
+      "answer_issues": [
+        {
+          "type": "unsupported",
+          "description": "The answer claims 'The reduced fuel reactivity of PRF 70 provides the appropriate auto-ignition characteristics' but the citations provided do not support this mechanistic explanation. The citations only state that PRF 70 enables optimal phasing without EGR, not why."
+        },
+        {
+          "type": "unsupported",
+          "description": "The answer states 'This early injection creates reactivity gradients that control the combustion process by staging the auto-ignition events' but citation 3 only provides the injection timing (-55° aTDC) without explaining how this creates reactivity gradients or stages ignition events."
+        },
+        {
+          "type": "unsupported",
+          "description": "The answer makes claims about 'multiple ignition sites and controlled heat release rates' and how reactivity stratification differentiates RCCI from HCCI, but none of the provided citations support these specific mechanisms."
+        }
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "The answer contains unsupported claims about combustion mechanisms. Revise to only include information directly supported by the provided citations or add appropriate citations for the mechanistic explanations."
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_69e6bf45",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Review-of-high-efficiency-and-clean-reactivity-contro_2015_Progress-in-Energ",
+      "paper_title": "Review-of-high-efficiency-and-clean-reactivity-contro_2015_Progress-in-Energ"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:30:54.880675",
+      "answer_length": 1436
+    }
+  }
+]

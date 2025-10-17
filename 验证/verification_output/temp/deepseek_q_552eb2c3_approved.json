@@ -1,0 +1,80 @@
+{
+  "question_text": "Based on the provided paper content, explain the varying co-removal efficiencies of air pollution control devices (APCDs) for VOCs (55.8-87.6%), PAHs (74.7-89.8%), and CPM (36.3-81.5%), focusing specifically on the removal mechanisms in SCR, WFGD, and WESP devices as supported by the cited evidence.",
+  "standard_answer": "The varying co-removal efficiencies across APCDs stem from differences in pollutant physical properties and the dominant removal mechanisms in each device. For SCR systems operating at ~300°C, high VOC and PAH removal occurs primarily through catalytic oxidation where organic molecules undergo complete combustion to CO₂ and H₂O. As Citation 2 states: 'When the VOCs and PAHs in the flue gas move from the boiler into the SCR device, they will be oxidized into small molecular compounds such as CO₂ and H₂O, due to the higher temperature (~300°C) and the presence of a denitrification catalyst.' WFGD provides CPM removal through washout in desulfurization slurry, with Citation 3 specifically noting: 'The removal efficiency of WFGD and WESP for organic components in CPM was 32.5 % and 10.4 %, respectively. This is mainly attributed to the washing effect of WFGD and the dusting effect of WESP.' WESP offers additional CPM capture through dusting effects, though the efficiency remains lower than for larger particles. The fundamental differences in removal mechanisms - catalytic oxidation for VOCs and PAHs in SCR, and physical capture processes for CPM in WFGD and WESP - explain the efficiency variations across pollutant classes, with Citation 1 confirming the overall efficiency ranges: 'They can remove VOCs, PAHs, and CPM at efficiencies of 55.8–87.6 %, 74.7–89.8 %, and 36.3–81.5 %, respectively.'",
+  "original_text": {
+    "1": "They can remove VOCs, PAHs, and CPM at efficiencies of 55.8–87.6 %, 74.7–89.8 %, and 36.3–81.5 %, respectively",
+    "2": "When the VOCs and PAHs in the flue gas move from the boiler into the SCR device, they will be oxidized into small molecular compounds such as CO2 and H2O, due to the higher temperature (~300°C) and the presence of a denitrification catalyst",
+    "3": "The removal efficiency of WFGD and WESP for organic components in CPM was 32.5 % and 10.4 %, respectively. This is mainly attributed to the washing effect of WFGD and the dusting effect of WESP."
+  },
+  "type": "reasoning",
+  "difficulty": 4,
+  "topic": "combustion_kinetics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires specific knowledge of air pollution control devices (APCDs) in coal combustion systems, including SCR, WFGD, and WESP technologies, and their removal mechanisms for different organic pollutants (VOCs, PAHs, CPM). This involves combustion science, pollutant chemistry, and engineering principles specific to energy and environmental systems.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "The question is well-focused on combustion domain knowledge, and the answer accurately explains the removal mechanisms using proper citations from the paper."
+  },
+  "retry_count": 2,
+  "question_id": "deepseek_q_552eb2c3",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Review-of-organic-pollutants-in-coal-combustion_2025_Progress-in-Energy-and-",
+    "paper_title": "Review-of-organic-pollutants-in-coal-combustion_2025_Progress-in-Energy-and-"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:30:22.049571",
+    "answer_length": 1410
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately explains the varying co-removal efficiencies across APCDs based on the original text. It correctly identifies: (1) SCR operates at ~300°C with catalytic oxidation as the primary mechanism for VOCs and PAHs (supported by Citation 2), (2) WFGD removes CPM through washing effects and WESP through dusting effects (supported by Citation 3), (3) the efficiency ranges match Citation 1 exactly (55.8-87.6% for VOCs, 74.7-89.8% for PAHs, 36.3-81.5% for CPM). The answer correctly attributes the efficiency variations to differences in pollutant physical properties and removal mechanisms - catalytic oxidation for organic compounds in SCR versus physical capture for particulates in WFGD/WESP. All citations are properly integrated and the physical/chemical principles are sound. No factual errors or logical contradictions detected.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:19:34.833396"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Includes a general statement that WESP efficiency is lower for smaller particles than larger ones; this trend is reasonable but not explicitly supported by the provided citations."
+        ],
+        "reasoning": "The answer aligns with the cited evidence: SCR removes VOCs/PAHs via catalytic oxidation at ~300°C to CO2 and H2O; WFGD removes CPM via washing; WESP removes CPM via dusting. It correctly cites overall co-removal ranges and attributes the differences to distinct mechanisms, consistent with the original text. No factual or logical errors detected.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:20:00.272379"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer accurately synthesizes the information from the provided text. It correctly identifies the primary removal mechanisms for each pollutant class in the respective devices: catalytic oxidation for VOCs/PAHs in SCR, and physical capture (washing/dusting) for CPM in WFGD/WESP. The reasoning is logically sound, factually correct, and directly supported by the cited snippets.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:20:28.129618"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:20:28.129652",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

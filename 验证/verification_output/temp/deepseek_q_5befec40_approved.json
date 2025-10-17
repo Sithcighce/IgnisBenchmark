@@ -1,0 +1,77 @@
+{
+  "question_text": "Using the solution-diffusion model, derive the relationship between gas permeability (P), solubility (S), and diffusivity (D) for dense polymeric membranes, and explain how this model predicts CO₂/N₂ selectivity in rubbery versus glassy polyurethanes.",
+  "standard_answer": "The solution-diffusion model describes gas transport through dense membranes as a three-step process: adsorption/dissolution at the upstream surface, diffusion driven by concentration gradient, and desorption at the downstream. Permeability (P) is derived from Fick's first law (Flux = -D dC/dL) and Henry's law (C = S p), where C is concentration, p is pressure, and L is membrane thickness. Combining these, steady-state permeability is P = (flux × L)/ΔP. Substituting Flux = -D dC/dL and integrating across the membrane with boundary conditions C₁ = S p₁ and C₂ = S p₂ gives P = S × D. For ideal selectivity of gas A over B, α_A/B = P_A/P_B = (S_A/S_B) × (D_A/D_B). In rubbery polyurethanes (above T_g), chains are flexible, and gas transport is dominated by solubility selectivity because diffusion coefficients are similar for small molecules; CO₂/N₂ selectivity arises primarily from CO₂'s higher condensability and strong dipole-quadrupole interactions with polar groups (e.g., ether oxygen), leading to S_CO₂/S_N₂ >> 1. In glassy polyurethanes (below T_g), chains are rigid, and selectivity is governed by diffusivity selectivity; smaller molecules diffuse faster, but since CO₂ and N₂ have similar kinetic diameters, D_CO₂/D_N₂ is modest, resulting in lower overall selectivity. Thus, rubbery PU membranes favor CO₂/N₂ separation via solubility, while glassy ones rely less effectively on diffusivity.",
+  "original_text": {
+    "1": "Based on the solution-diffusion model, the permeability depends on solubility (S) and diffusivity (D) coefficients and can be determined using the following equation: P = S × D",
+    "2": "In polymers in the glassy state, the gas selectivity is largely determined by the diffusion coefficient ratio, which is mainly dependent on the molecular sizes of the gases. Whereas, in polymers in the rubbery state, the solubility coefficient is the main factor that is mainly dependent on the condensability of the gas molecules and the interactions of the gas molecules with the polymer chains."
+  },
+  "type": "concept",
+  "difficulty": 4,
+  "topic": "membrane_transport",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires specific knowledge of membrane science, gas transport mechanisms (solution-diffusion model), polymer physics (rubbery vs. glassy states), and gas separation principles - all within the context of CO2 capture technology, which falls under energy systems and materials science for combustion/emissions control.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question is well-formulated and domain-focused; answer is comprehensive and aligns with the provided citations and paper content."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_5befec40",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Polyurethane-based-membranes-for-CO2-separati_2023_Progress-in-Energy-and-Co",
+    "paper_title": "Polyurethane-based-membranes-for-CO2-separati_2023_Progress-in-Energy-and-Co"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:25:22.989696",
+    "answer_length": 1410
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly derives P = S × D from the solution-diffusion model using Fick's first law and Henry's law, with proper mathematical integration. The explanation of CO₂/N₂ selectivity mechanisms is accurate and consistent with the original text: rubbery polyurethanes (above Tg) exhibit solubility-dominated selectivity due to CO₂'s higher condensability and polar interactions, while glassy polyurethanes (below Tg) show diffusivity-dominated selectivity based on molecular size differences. The answer provides additional mechanistic detail (e.g., dipole-quadrupole interactions, kinetic diameters) that is scientifically sound and enhances understanding without contradicting the original text. All physical principles, cause-effect relationships, and the fundamental equation P = S × D are correctly stated.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:15:40.623487"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "medium",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer correctly derives P = S × D via Fick’s law and Henry’s law and gives the standard selectivity relation α = (S_A/S_B)(D_A/D_B). It accurately describes that glassy polymers exhibit selectivity dominated by diffusivity (size-sieving), while rubbery polymers are dominated by solubility tied to gas condensability and polymer–gas interactions. The CO2/N2 discussion (higher CO2 solubility due to condensability and interactions; modest diffusivity selectivity due to similar sizes) is consistent with the ground truth. No factual or logical errors detected.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:16:22.979653"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly derives the P = S × D relationship from first principles (Fick's and Henry's laws). It accurately explains the distinction between solubility-dominated selectivity in rubbery polymers and diffusivity-dominated selectivity in glassy polymers, which is fully consistent with the original text. The application to CO₂/N₂ separation, including the roles of condensability, molecular interactions, and kinetic diameter, is factually correct and logically sound.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:16:43.407251"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:16:43.407273",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

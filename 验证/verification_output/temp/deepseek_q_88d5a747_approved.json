@@ -1,0 +1,83 @@
+{
+  "question_text": "Why do single atom catalysts (SACs) exhibit higher selectivity in hydrogenation reactions compared to nanoparticle catalysts, and how does atomic dispersion influence reaction pathways?",
+  "standard_answer": "Single atom catalysts (SACs) achieve higher selectivity due to their atomic dispersion, which creates uniform and isolated active sites that minimize side reactions requiring multiple adjacent sites. In hydrogenation reactions, such as selective hydrogenation of alkynes or nitroarenes, nanoparticle catalysts often have ensemble sites that facilitate over-hydrogenation or decomposition pathways. For example, in the hydrogenation of 1,3-butadiene, Pd1/graphene SACs achieve near 100% butene selectivity with over 70% selectivity to 1-butene, whereas conventional Pd/C catalysts yield lower selectivity due to non-selective sites on nanoparticle surfaces. The atomic dispersion in SACs ensures that each metal atom acts independently, limiting the availability of contiguous sites for undesired reactions like C-C bond cleavage or further hydrogenation to alkanes. Additionally, the electronic structure of isolated atoms is tuned by the support, enhancing the adsorption strength for specific intermediates. This precision reduces the activation energy for desired pathways while suppressing competing reactions, leading to superior selectivity. The absence of particle facets and edges in SACs further eliminates heterogeneous active sites that contribute to unselective catalysis.",
+  "original_text": {
+    "1": "Undesirable deleterious side reactions can be mitigated if requiring more than one atomic active site, due to the high dispersion and isolation.",
+    "2": "The Pd1/graphene catalysts produced via the ALD method are capable of achieving 100% butene selectivity, up to 95% conversion in the selective hydrogenation of 1,3-butadiene conversion."
+  },
+  "type": "reasoning",
+  "difficulty": 5,
+  "topic": "catalysis_kinetics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires expertise in catalysis science, specifically comparing single atom catalysts vs nanoparticle catalysts in hydrogenation reactions, which involves understanding reaction mechanisms, selectivity principles, and catalyst structure-property relationships in chemical engineering and energy applications.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct, and compliant with other requirements."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_88d5a747",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Elucidation-of-single-atom-catalysts-for-energy-and-su_2023_Progress-in-Ener",
+    "paper_title": "Elucidation-of-single-atom-catalysts-for-energy-and-su_2023_Progress-in-Ener"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:18:55.837122",
+    "answer_length": 1284
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": false,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Answer claims 'near 100% butene selectivity with over 70% selectivity to 1-butene' for Pd1/graphene SACs, but original text states '100% butene selectivity, up to 95% conversion' without mentioning 1-butene selectivity",
+          "Answer provides specific numerical claim (>70% 1-butene selectivity) that is not supported by the original text"
+        ],
+        "reasoning": "The answer contains a factual discrepancy regarding the performance metrics of Pd1/graphene SACs. While the original text clearly states '100% butene selectivity, up to 95% conversion', the answer modifies this to 'near 100% butene selectivity with over 70% selectivity to 1-butene'. The original text does not mention 1-butene selectivity at all, making this a factual addition that cannot be verified against the ground truth. The rest of the answer's mechanistic explanations about atomic dispersion, isolated active sites, and suppression of side reactions are consistent with the original text's statement about mitigating side reactions requiring multiple atomic sites. However, the specific numerical claim about 1-butene selectivity constitutes a factual error that contradicts the precision of the original data.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:08:17.389776"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "medium",
+        "verification_confidence": "medium",
+        "issues": [
+          "Specific claim of >70% 1-butene selectivity is not in the provided ground-truth text and cannot be verified here",
+          "Comparison to conventional Pd/C (lower selectivity) is plausible but not directly supported by the provided text"
+        ],
+        "reasoning": "The answer correctly explains that SACs offer isolated single-atom sites which mitigate side reactions requiring multi-atom ensembles, consistent with the ground-truth statement. It accurately links atomic dispersion to selective hydrogenation pathways and notes support-induced electronic effects, which are widely accepted mechanisms. The Pd1/graphene example aligns with the text’s report of (near) 100% butene selectivity at high conversion. The additional quantitative detail about >70% 1-butene selectivity and the comparison to Pd/C are not verifiable from the provided text but do not contradict it.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:08:39.941317"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer is factually and logically correct. It accurately explains that the high selectivity of SACs stems from the geometric isolation of active sites, which prevents side reactions requiring multiple adjacent atoms (ensemble effect), a point directly supported by the original text. It also correctly introduces the concept of electronic effects from the support, which tune the catalytic properties of the single atoms. The specific example of 1,3-butadiene hydrogenation on Pd1/graphene is consistent with the provided source material. The reasoning is sound and covers the key principles of single-atom catalysis.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:08:58.303718"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:08:58.303741",
+    "consensus": {
+      "all_correct": false,
+      "correct_votes": 2,
+      "total_votes": 3,
+      "all_high_confidence": false,
+      "disagreement_count": 2
+    }
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "question_text": "How do fullerene-based nanocatalysts like fullerene hydrazine nitrate (FHN) influence the decomposition kinetics and thermal behavior of nitramines such as RDX and HMX, based on their multi-step decomposition characteristics and catalytic effects documented in the literature?",
+  "standard_answer": "Fullerene-based nanocatalysts like FHN affect nitramine decomposition through their distinct multi-step decomposition profile and catalytic properties. FHN undergoes at least four decomposition steps under an N₂ atmosphere, starting around 150°C, which precedes the main decomposition of nitramines like RDX and HMX. This early decomposition releases energy and reactive species that interact with the nitramine molecules. The catalytic effect is evidenced by reductions in decomposition peak temperatures and activation energies. Specifically, FHN accelerates the decomposition of RDX and HMX, reducing the peak temperatures of exothermal decomposition. The corresponding activation energy (Ea) of RDX is decreased by 17 kJ·mol⁻¹, and that of HMX is reduced by more than 20 kJ·mol⁻¹. This multi-stage decomposition provides thermal energy and reactive intermediates that lower the energy barrier for nitramine decomposition, enhancing the overall decomposition kinetics without speculative mechanistic details beyond the cited evidence.",
+  "original_text": {
+    "1": "FHN can undergo at least four decomposition steps under an N₂ atmosphere, starting around 150°C, while FEN decomposes in only two steps.",
+    "2": "FHN can also accelerate the decomposition of RDX and HMX. The peak temperatures of the exothermal decomposition are reduced and corresponding Ea of RDX is decreased by 17 kJ mol⁻¹, and that of HMX is reduced by more than 20 kJ mol⁻¹."
+  },
+  "type": "reasoning",
+  "difficulty": 4,
+  "topic": "combustion_kinetics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires specific knowledge of combustion kinetics, energetic materials (nitramines RDX/HMX), nanocatalyst effects on decomposition, and thermal behavior analysis - all core combustion science topics that cannot be answered with general ML knowledge.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+  },
+  "retry_count": 1,
+  "question_id": "deepseek_q_08d80791",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Catalytic-effects-of-nano-additives-on-decomposition_2016_Progress-in-Energy",
+    "paper_title": "Catalytic-effects-of-nano-additives-on-decomposition_2016_Progress-in-Energy"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:17:06.683902",
+    "answer_length": 1037
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately reflects all key facts from the original text: (1) FHN undergoes at least four decomposition steps under N₂ starting around 150°C, (2) this precedes nitramine decomposition, (3) FHN accelerates RDX and HMX decomposition by reducing peak temperatures, (4) activation energy reductions are correctly stated (17 kJ·mol⁻¹ for RDX, >20 kJ·mol⁻¹ for HMX). The answer appropriately elaborates on the catalytic mechanism (energy and reactive species release, lowering energy barriers) while staying within the bounds of the cited evidence. The physical and chemical principles are sound, and the cause-effect relationships are logically consistent. The answer is detailed but contains no factual errors or contradictions with the original text.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:05:06.214618"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "medium",
+        "verification_confidence": "high",
+        "issues": [
+          "States that FHN decomposition precedes the main decomposition of RDX/HMX; plausible but not explicitly given in the provided text.",
+          "Adds general mechanistic rationale (energy/reaction intermediates lowering barriers) not stated in the excerpt, though consistent with typical catalytic interpretations."
+        ],
+        "reasoning": "The answer accurately reflects the provided ground truth: FHN decomposes in at least four steps from ~150°C under N₂ and catalytically accelerates RDX/HMX decomposition, lowering peak temperatures and reducing activation energies by ~17 kJ/mol (RDX) and >20 kJ/mol (HMX). No numerical or conceptual contradictions are present. Additional mechanistic comments are reasonable and do not conflict with the source.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:05:36.414310"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer is factually accurate and logically consistent. It correctly states that FHN's early, multi-step decomposition (starting at 150°C) provides energy and reactive species that catalyze the decomposition of RDX and HMX. This is supported by the cited evidence of reduced peak temperatures and specific decreases in activation energy (17 kJ·mol⁻¹ for RDX, >20 kJ·mol⁻¹ for HMX), all of which are correctly transcribed from the original text.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:05:58.204906"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:05:58.204923",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

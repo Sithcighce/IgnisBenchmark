@@ -1,0 +1,81 @@
+{
+  "question_text": "In the CPD model reaction mechanism, what is the physical significance of the reactive intermediate species ξ*, and how do the competing pathways (kδ and kc) determine the yields of light gases versus charred bridges?",
+  "standard_answer": "The reactive intermediate species ξ* represents a transient state formed during labile bridge scission in the coal macromolecule, where the broken bridge is highly unstable and can undergo two competing reactions: (1) Stabilization to form a side chain δ (rate constant kδ), which may later decompose to light gas g1, or (2) Recombination to form a charred bridge c (rate constant kc), which crosslinks aromatic clusters and enhances char formation. The ratio ρ = kδ/kc dictates the branching between these pathways: high ρ favors side chain formation and subsequent gas release (e.g., CO, CO2, H2O), while low ρ promotes charring through bridge recombination. The steady-state assumption for ξ* (dξ*/dt = 0) allows deriving the formation rates: dc/dt = kbξ/(ρ+1) and dδ/dt = (2ρkbξ/(ρ+1)) - kgδ. Physically, this competition reflects the balance between depolymerization (leading to volatiles) and crosslinking (leading to char), influenced by temperature and coal rank. For instance, at high temperatures, kδ may dominate due to faster stabilization, increasing gas yields, whereas at moderate temperatures, kc can prevail, enhancing char yield through reticulation reactions.",
+  "original_text": {
+    "1": "The relatively slow conversion of a labile bridge ξ into a reactive intermediate species ξ* is described by Eq. (8) dξ/dt = -kbξ.",
+    "2": "The production rate for charred bridges c is calculated using the expression for the reactive intermediate species ξ* from Eq. (12) dc/dt = kcξ* = kckbξ/(kδ+kc) = kbξ/(ρ+1)."
+  },
+  "type": "concept",
+  "difficulty": 4,
+  "topic": "combustion_kinetics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires specific knowledge of coal pyrolysis chemistry, chemical percolation devolatilization (CPD) model mechanisms, reactive intermediate species in coal macromolecular structure, and competing reaction pathways for char formation versus gas release - all core combustion science concepts.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_a6773e18",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Advanced-modeling-approaches-for-CFD-simulations_2021_Progress-in-Energy-and",
+    "paper_title": "Advanced-modeling-approaches-for-CFD-simulations_2021_Progress-in-Energy-and"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:14:24.443023",
+    "answer_length": 1178
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly explains the physical significance of ξ* as a transient reactive intermediate from labile bridge scission. The competing pathways (kδ for side chain formation and kc for charred bridge formation) are accurately described. The mathematical relationships are consistent with the original text: dc/dt = kbξ/(ρ+1) where ρ = kδ/kc matches Eq. (12). The steady-state assumption for ξ* is correctly invoked. The physical interpretation of the competition between depolymerization (volatiles) and crosslinking (char) is sound and consistent with coal pyrolysis mechanisms. The temperature effects described (high T favoring kδ and gas yields, moderate T favoring kc and char) are reasonable based on combustion science principles. While the answer is detailed and goes beyond the minimal information in the original text, all statements are factually accurate and logically consistent.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:02:05.915186"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Specifies example light gas species (CO, CO2, H2O); CPD's light gas lump may include additional species and the provided text does not enumerate them.",
+          "The dδ/dt expression omits a potential tar-loss term (kt δ) present in some CPD formulations; this omission does not affect the core branching argument or the dc/dt relation.",
+          "Qualitative statement about temperature favoring kδ over kc is parameter-dependent and not specified in the provided text."
+        ],
+        "reasoning": "The answer correctly identifies ξ* as a transient intermediate formed from labile bridge scission and explains the two competing pathways governed by kδ and kc. It correctly introduces ρ = kδ/kc and, using a steady-state assumption for ξ*, reproduces the ground-truth result dc/dt = kbξ/(ρ+1), aligning with the PECS text. The logic linking higher ρ to more side chain formation (and thus gas potential) versus lower ρ favoring charred bridges is sound. Minor additions (gas examples, temperature trend) go beyond the provided text but do not contradict it.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:02:40.157618"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer is factually correct and logically sound. It accurately describes the role of the intermediate species ξ* and the competing pathways (kδ, kc) as presented in the CPD model. The rate equations and physical interpretations are consistent with the provided original text and established combustion science principles.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:03:03.036769"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:03:03.036788",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "question_text": "How does the transesterification process reduce the kinematic viscosity of vegetable oils to produce biodiesel suitable for diesel engines, and what is the mathematical relationship that allows prediction of biodiesel fuel properties based on component composition?",
+  "standard_answer": "The transesterification process reduces kinematic viscosity by converting large triacylglycerol molecules into smaller fatty acid methyl esters (FAMEs). Vegetable oils have high viscosity that causes operational problems in diesel engines, including poor atomization and engine deposits. The conversion to methyl esters through transesterification fundamentally changes the molecular structure from complex branched triglycerides to simpler linear esters. This structural transformation reduces intermolecular interactions and flow resistance. The properties of biodiesel mixtures that generally do not pose operational problems can be predicted using the equation Pr_mix = Σ(A_C × Pr_C), where Pr_mix is the property of the mixture being predicted, A_C is the relative amount of an individual neat ester in the mixture, and Pr_C is the property of the individual neat ester. This linear relationship applies to kinematic viscosity, cetane number, and density, allowing engineers to calculate expected viscosity based on the fatty acid ester composition of the biodiesel fuel.",
+  "original_text": {
+    "1": "That operational problems were associated with the use of vegetable oils in a diesel engine was recognized early, with high viscosity being defined as a major cause of these problems.",
+    "2": "The properties of mixtures that generally do not pose operational problems can be predicted by the general equation Pr_mix = Σ(A_C × Pr_C) in which Pr_mix is the property of the mixture being predicted, A_C = the relative amount of an individual neat ester in the mixture, and Pr_C is the property of the individual neat ester."
+  },
+  "type": "reasoning",
+  "difficulty": 4,
+  "topic": "energy_systems",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires specific knowledge of biodiesel production processes (transesterification), fuel property relationships, and combustion engineering principles related to diesel engine operation, which falls under energy systems and combustion science domain expertise.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+  },
+  "retry_count": 1,
+  "question_id": "deepseek_q_2b137d9e",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Biodiesel-fuels_2017_Progress-in-Energy-and-Combustion-Science",
+    "paper_title": "Biodiesel-fuels_2017_Progress-in-Energy-and-Combustion-Science"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:14:54.194197",
+    "answer_length": 1076
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly explains the transesterification process and its effect on viscosity reduction. It accurately describes the conversion of triacylglycerols to FAMEs and the resulting structural changes that reduce intermolecular interactions. The mathematical relationship Pr_mix = Σ(A_C × Pr_C) is correctly stated and matches the original text exactly. The answer appropriately identifies that this relationship applies to kinematic viscosity, cetane number, and density. The explanation of operational problems caused by high viscosity in vegetable oils is consistent with the original text. All physical and chemical principles are correctly stated, and there are no factual errors or logical contradictions.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:04:16.400553"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "medium",
+        "verification_confidence": "high",
+        "issues": [
+          "Describes triglycerides as 'branched'; more precise to say triacylglycerols with three esterified fatty acid chains attached to a glycerol backbone.",
+          "States the linear blending relationship applies to kinematic viscosity; viscosity is often non-linear in mixtures, though the original text presents a general linear prediction equation without specifying property-specific limitations."
+        ],
+        "reasoning": "The answer correctly explains that transesterification converts triacylglycerols to smaller FAMEs, reducing viscosity and improving suitability for diesel engines, consistent with the original text’s identification of high viscosity as the core issue. It also accurately reproduces the general linear mixing rule Pr_mix = Σ(A_C × Pr_C with correct definitions. Minor overstatements about linear applicability to viscosity and wording about triglyceride structure do not contradict the provided ground truth.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:04:37.808367"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer correctly explains that transesterification reduces viscosity by converting large triglyceride molecules into smaller fatty acid methyl esters (FAMEs), which reduces intermolecular forces. This is factually correct. It also accurately presents the linear mixing rule Pr_mix = Σ(A_C × Pr_C) for predicting mixture properties, which is directly supported by the original text. The reasoning is sound and consistent with established principles of chemistry and fluid mechanics.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:04:58.555257"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:04:58.555280",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

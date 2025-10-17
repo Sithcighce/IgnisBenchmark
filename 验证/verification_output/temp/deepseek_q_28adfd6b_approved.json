@@ -1,0 +1,81 @@
+{
+  "question_text": "Based on the provided paper content, explain the role of specific radicals in initiating low temperature combustion in engines, describing the sequence of radical formation and their function as ignition kernels during the combustion process.",
+  "standard_answer": "The paper describes that formaldehyde (CH2O), hydroperoxyl (HO2), and atomic oxygen (O) radicals serve as critical ignition kernels that initiate the first stage of low temperature combustion. These radicals from previous combustion cycles accumulate and control the onset of primary low temperature reactions. The combustion process begins with these radicals present in the cylinder, where they act as active sites for ignition initiation. Once a significant number of hydroxyl (OH) radicals form, the secondary combustion reactions commence, leading to the main combustion phase. This radical-mediated ignition mechanism explains why LTC engines can achieve auto-ignition at multiple locations simultaneously throughout the combustion chamber, as opposed to conventional flame propagation. The presence of these radicals from residual gases helps overcome the challenge of controlling ignition timing in LTC engines, where direct control methods like spark timing or fuel injection timing are not available.",
+  "original_text": {
+    "1": "They referred LTC as a combination of primary low temperature reactions and secondary combustion reactions and identified the role of radicals from previous combustion cycles in controlling the onset of first stage reactions.",
+    "2": "It was observed that formaldehyde (CH2O), hydroperoxyl (HO2), and atomic oxygen (O) radicals were present and behaved as ignition kernels for initial stage of TS combustion.",
+    "3": "Upon formation of significant number of hydroxyl (OH) radicals, combustion reactions commenced."
+  },
+  "type": "concept",
+  "difficulty": 4,
+  "topic": "combustion_kinetics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question specifically asks about radical chemistry in low temperature combustion engines, requiring detailed knowledge of combustion kinetics, radical formation sequences, and ignition mechanisms - all core combustion science concepts that cannot be answered with general ML knowledge.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer are both high quality - question requires domain expertise and answer accurately reflects the paper's content about radical-mediated ignition in LTC engines."
+  },
+  "retry_count": 1,
+  "question_id": "deepseek_q_28adfd6b",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Evolution--challenges-and-path-forward-for-low_2017_Progress-in-Energy-and-C",
+    "paper_title": "Evolution--challenges-and-path-forward-for-low_2017_Progress-in-Energy-and-C"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:20:22.184279",
+    "answer_length": 1010
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately reflects all key information from the original text. It correctly identifies CH2O, HO2, and O radicals as ignition kernels for the first stage of low temperature combustion, accurately describes their role from previous combustion cycles in controlling onset of primary reactions, and correctly states that OH radical formation triggers secondary combustion reactions. The answer provides additional context about LTC engine operation and multi-location auto-ignition that, while not explicitly in the original text excerpts, represents reasonable and accurate elaboration consistent with combustion science principles. No factual errors, logical contradictions, or inconsistencies with the original text are present.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:08:35.977533"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Minor extrapolation: claims direct control via fuel injection timing is not available in LTC; this is context-dependent and not stated in the original text.",
+          "Says radicals 'accumulate' from previous cycles; original text notes their presence and role but does not explicitly state accumulation."
+        ],
+        "reasoning": "The answer accurately reflects the original text: CH2O, HO2, and O radicals act as ignition kernels initiating the first stage of low-temperature combustion, and the formation of sufficient OH radicals marks the onset of combustion reactions (interpreted as the secondary stage). The sequence and roles are consistent and logically sound. Minor extrapolations about control methods and accumulation do not contradict the provided ground truth.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:09:02.338179"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer correctly and accurately summarizes the information provided in the original text. It correctly identifies formaldehyde (CH2O), hydroperoxyl (HO2), and atomic oxygen (O) as ignition kernels for the first stage, and the formation of hydroxyl (OH) as the trigger for the secondary combustion phase. The sequence of events is described correctly. The additional explanations regarding volumetric auto-ignition and ignition control in LTC engines are factually correct and logical extensions of the core principles described in the text. There are no factual or logical errors.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:09:21.236770"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:09:21.236792",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

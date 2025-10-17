@@ -1,0 +1,167 @@
+[
+  {
+    "question_text": "Using the Peclet number analysis for boundary layer flashback, derive the relationship between flow Peclet number (Pe_flow) and flame Peclet number (Pe_flame) under the assumption of a linear velocity profile near the wall, and explain the physical significance of the scaling exponent.",
+    "standard_answer": "The Peclet number analysis non-dimensionalizes the critical velocity gradient model by relating flow and combustion time scales. The flow Peclet number is Pe_flow = D U / α, and the flame Peclet number is Pe_flame = D S_L / α, where D is the burner diameter, U is bulk velocity, S_L is laminar flame speed, and α is thermal diffusivity. Assuming a linear velocity profile near the wall and that the penetration distance d_p is proportional to the flame thickness (d_p = K α / S_L), the critical condition from g_c = S_L / d_p = 4U / D leads to 8U / D = S_L^2 / (K α). Multiplying both sides by D^2 / α gives Pe_flow = (1/(8K)) Pe_flame^2. The exponent of 2 in Pe_flow ∝ Pe_flame^2 indicates that flashback propensity scales quadratically with the flame speed relative to flow velocity, emphasizing the dominance of chemical kinetics over transport processes. Deviations at low Pe_flame occur due to non-linear velocity profiles and enhanced wall quenching effects, while at high Pe_flame, turbulence interactions cause discrepancies.",
+    "original_text": {
+      "1": "Pe_flow = (1/(8K)) (Pe_flame)^2",
+      "2": "The solid line in this figure represents Pe_flow = 0.0125(Pe_flame)^2 variation in logarithmic scales, where the slope of the trend line is equal to 2."
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "combustion_science",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires deep combustion science expertise involving boundary layer flashback mechanisms, Peclet number analysis for flame-flow interactions, velocity profile assumptions in boundary layers, and scaling relationships between flow and flame parameters - all specific to combustion physics and flame stabilization phenomena.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer are both high quality - domain-focused with correct derivation and physical interpretation supported by citations."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_90b9749c",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Boundary-layer-flashback-of-non-swirling-premixed-fl_2017_Progress-in-Energy",
+      "paper_title": "Boundary-layer-flashback-of-non-swirling-premixed-fl_2017_Progress-in-Energy"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:14:10.098643",
+      "answer_length": 1033
+    }
+  },
+  {
+    "question_text": "How do preheat temperature and operating pressure affect the laminar flame speed and quenching distance, and what are the combined implications for boundary layer flashback limits?",
+    "standard_answer": "Preheat temperature and operating pressure inversely affect laminar flame speed and quenching distance, thereby influencing flashback limits. Increasing preheat temperature raises the reactant thermal energy, accelerating reaction rates and increasing laminar flame speed S_L approximately exponentially. Simultaneously, higher temperature reduces gas density and increases thermal diffusivity, leading to a larger quenching distance d_q as heat loss to the wall becomes less effective. The critical velocity gradient g_c = S_L / d_p (with d_p ∝ d_q) thus increases with preheat, indicating higher flashback propensity. For pressure, S_L decreases with rising pressure for most hydrocarbons (S_L ∝ P^(n-2) with n ~ 1-2), while quenching distance d_q decreases due to higher collision frequencies (d_q ∝ P^(-n/2)). This results in g_c increasing with pressure (g_c ∝ P^(n-1)), making flashback more likely at elevated pressures. The combined effect means that high preheat and high pressure conditions, typical in gas turbines, significantly elevate flashback risk, necessitating careful design to avoid upstream flame propagation.",
+    "original_text": {
+      "1": "An increase in preheat temperature increases the burning velocity significantly.",
+      "2": "Assuming the reaction order of 1 < n < 2, increasing pressure causes a decrease in burning velocity and flame thickness, while increases the critical velocity gradient."
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question requires deep combustion science expertise including laminar flame speed, quenching distance, boundary layer flashback mechanisms, and how operating conditions (preheat temperature, pressure) affect these fundamental combustion parameters. It specifically addresses flashback limits in combustion systems, which is a core combustion engineering topic.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer are both high quality - question requires domain expertise and answer is factually correct with detailed explanations of the physical mechanisms."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_089ad28d",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Boundary-layer-flashback-of-non-swirling-premixed-fl_2017_Progress-in-Energy",
+      "paper_title": "Boundary-layer-flashback-of-non-swirling-premixed-fl_2017_Progress-in-Energy"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:14:11.299950",
+      "answer_length": 1130
+    }
+  },
+  {
+    "question_text": "Why do confined flames exhibit higher flashback propensity compared to unconfined flames, and how does flame-induced flow deceleration contribute to this phenomenon?",
+    "standard_answer": "Confined flames have higher flashback propensity due to intensified flame-flow interactions and flow deceleration mechanisms. In unconfined flames stabilized at the burner rim, the flow velocity profile upstream remains largely undisturbed, allowing the critical velocity gradient concept to apply. However, once the flame propagates into the premixer (confined configuration), the flame front becomes convex toward the reactants, causing streamline divergence and an adverse pressure gradient. This pressure rise decelerates the approaching flow, reducing local velocities near the wall below the burning velocity and facilitating upstream propagation. Additionally, volumetric expansion from heat release further accelerates this deceleration, potentially leading to boundary layer separation. The combined effects of flame curvature, pressure gradient, and thermal expansion create a feedback loop where flow deceleration promotes flame penetration, which in turn enhances deceleration. This explains why confined flames flash back at lower critical velocity gradients than unconfined flames, as the model's assumption of an undisturbed flow is invalidated.",
+    "original_text": {
+      "1": "Confined flames are more prone to flashback and the flame-wall interaction for confined flames has received considerable attention in recent years.",
+      "2": "The flame is strongly curved towards the unburned mixture as flame propagates upstream leading to a divergence of streamlines and adverse pressure gradient."
+    },
+    "type": "reasoning",
+    "difficulty": 5,
+    "topic": "fluid_mechanics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question requires specialized knowledge in combustion science, fluid mechanics, and flame dynamics. It specifically addresses confined vs unconfined flame behavior, flashback mechanisms, flame-flow interactions, pressure gradients, and boundary layer effects - all core concepts in combustion engineering and fluid mechanics that cannot be answered with general ML knowledge.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer are well-aligned with the paper's content on boundary layer flashback mechanisms, flame-flow interactions, and the limitations of the critical velocity gradient concept in confined configurations."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_803fdae9",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Boundary-layer-flashback-of-non-swirling-premixed-fl_2017_Progress-in-Energy",
+      "paper_title": "Boundary-layer-flashback-of-non-swirling-premixed-fl_2017_Progress-in-Energy"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:14:11.539039",
+      "answer_length": 1160
+    }
+  },
+  {
+    "question_text": "How does the critical velocity gradient concept for boundary layer flashback prediction account for the competition between local flow velocity and burning velocity near the wall, and what are its fundamental limitations in confined flame configurations?",
+    "standard_answer": "The critical velocity gradient concept predicts boundary layer flashback by equating the local flow velocity to the burning velocity at a specific distance from the wall, known as the penetration distance. For laminar flow in a tube, the velocity gradient at the wall is given by g = 4U/R, where U is the bulk velocity and R is the tube radius. At flashback, the critical gradient g_c satisfies g_c = S_L/d_p, with S_L the laminar flame speed and d_p the penetration distance. This model assumes the flow velocity profile remains undisturbed by the flame and that the burning velocity decreases parabolically to zero at the quenching distance due to heat loss. However, in confined configurations where the flame propagates upstream into the premixer, flame-flow interaction becomes significant. The flame curvature induces streamline divergence and adverse pressure gradients, potentially causing boundary layer separation. The model's neglect of these interactions, volumetric expansion effects, and changes in velocity distribution leads to inaccuracies, as the flow is no longer linear near the wall and the flame alters the approaching flow field.",
+    "original_text": {
+      "1": "The critical velocity gradient concept neglects the flame-flow interaction and assumes that the flow velocity remains undisturbed.",
+      "2": "When the flame propagates upstream in the confined configuration, the flame leading edge is convex towards the reactants, enhancing the flame stretch effect and causing the approach flow to decelerate."
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "fluid_mechanics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires deep knowledge of combustion science (boundary layer flashback, burning velocity), fluid mechanics (velocity gradients, flow profiles), and CFD concepts (flame-flow interaction, confined configurations). It specifically addresses combustion phenomena in boundary layers and the limitations of predictive models in confined flame setups, which are core topics in combustion and energy systems.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "The question is well-focused on combustion/fluid mechanics, and the answer accurately explains the critical velocity gradient concept and its limitations, supported by the provided citations and paper content."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_790a85c8",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Boundary-layer-flashback-of-non-swirling-premixed-fl_2017_Progress-in-Energy",
+      "paper_title": "Boundary-layer-flashback-of-non-swirling-premixed-fl_2017_Progress-in-Energy"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:14:12.096374",
+      "answer_length": 1152
+    }
+  },
+  {
+    "question_text": "Explain the physical mechanisms by which flame-wall interactions, including heat transfer and radical quenching, influence the burning velocity profile and flashback propensity in boundary layer flashback, focusing specifically on how these mechanisms affect flame behavior near the wall without introducing unsupported quantitative relationships.",
+    "standard_answer": "Flame-wall interactions critically affect boundary layer flashback through thermal and chemical quenching mechanisms. Near the wall, heat loss to the cooler surface reduces the local temperature, which slows reaction rates and decreases the burning velocity. Simultaneously, radical species such as H and OH are quenched upon collision with the wall, reducing chain-branching reactions and further suppressing flame propagation. The burning velocity decreases close to the wall due to these combined effects of heat loss and radical quenching. The flame is ultimately quenched at a certain distance from the wall, causing the part of the flame closest to the wall to trail behind the central position. This quenching distance represents the location where reactions cannot sustain themselves, and it varies with factors like fuel composition. For high-hydrogen fuels, the enhanced diffusivity and faster kinetics actually lead to larger quenching distances compared to hydrocarbons, contrary to some common assumptions. These flame-wall interactions create a velocity profile where the burning velocity diminishes near the wall, making the flame more susceptible to flashback when the local flow velocity drops below the diminished burning velocity in the boundary layer region. The critical velocity gradient concept captures this behavior by relating the laminar flame speed to the penetration distance where flow velocity equals burning velocity.",
+    "original_text": {
+      "1": "The burning velocity denoted by Sf(y) decreases close to the wall due to the heat loss and quenching of radicals.",
+      "2": "The flame is quenched at a certain distance from the wall and part of the flame close to the wall trails behind the central position."
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires deep combustion science expertise, specifically knowledge of flame-wall interactions, heat transfer mechanisms, radical quenching effects on combustion chemistry, boundary layer dynamics, and flashback phenomena in premixed flames. These are specialized combustion/CFD concepts that cannot be answered with general ML knowledge.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+    },
+    "retry_count": 1,
+    "question_id": "deepseek_q_f752e70c",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Boundary-layer-flashback-of-non-swirling-premixed-fl_2017_Progress-in-Energy",
+      "paper_title": "Boundary-layer-flashback-of-non-swirling-premixed-fl_2017_Progress-in-Energy"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:14:47.792077",
+      "answer_length": 1449
+    }
+  }
+]

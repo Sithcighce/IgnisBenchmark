@@ -1,0 +1,82 @@
+{
+  "question_text": "For a methane-air mixture at 0.3% fuel by volume and initial temperature of 400 K, estimate the adiabatic flame temperature using proper combustion fundamentals and explain why this temperature is insufficient for self-sustained combustion without external heat recuperation or catalysts, citing specific challenges mentioned in the paper.",
+  "standard_answer": "For a methane-air mixture at 0.3% CH4 by volume, the equivalence ratio φ is calculated as φ = 0.3/9.52 ≈ 0.0315, where 9.52% is the stoichiometric methane concentration in air. The mass fraction of methane Y_CH4 is approximately 0.0017 kg-CH4/kg-mixture, derived from the volumetric concentration using ideal gas law and molecular weights (CH4: 16 g/mol, air: 29 g/mol). The adiabatic flame temperature T_ad can be estimated from an energy balance: T_ad = T_initial + (ΔH_c × Y_CH4) / (c_p × (1 + Y_CH4 × (AFR - 1))), where ΔH_c ≈ 50 MJ/kg for methane, c_p ≈ 1.0 kJ/kg·K for the mixture (accounting for dilution), and AFR (air-to-fuel ratio) ≈ 17.2. Substituting values: T_ad ≈ 400 + (50e6 × 0.0017) / (1000 × (1 + 0.0017 × 16.2)) ≈ 400 + 85,000 / (1000 × 1.0275) ≈ 400 + 82.7 ≈ 483 K. This temperature (~483 K) is far below typical flame temperatures for sustained methane combustion (>1500 K) and the autoignition temperature (~810 K). At 483 K, reaction rates are extremely slow due to Arrhenius kinetics (e.g., rate ~ exp(-E_a/RT), with E_a ≈ 50 kcal/mol for CH4 oxidation), and radical pool formation is inadequate to overcome heat losses. The paper highlights that 'the challenges associated with ultra-lean methane oxidation are on the ignition of the ultra-lean mixture and sustainability of the combustion process,' and 'progress is needed on effective methods to ignite and to recuperate and retain heat for oxidation/combustion of the ultra-lean mixtures.' Without external heat recuperation (e.g., in TFRRs) or catalysts to lower activation energies, the mixture cannot self-sustain combustion because the energy release is insufficient to maintain temperatures above the extinction limit, and thermodynamic/aerodynamic limits remain unexplored for such lean conditions.",
+  "original_text": {
+    "1": "The challenges associated with ultra-lean methane oxidation are on the ignition of the ultra-lean mixture and sustainability of the combustion process.",
+    "2": "Progress is needed on effective methods to ignite and to recuperate and retain heat for oxidation/combustion of the ultra-lean mixtures."
+  },
+  "type": "calculation",
+  "difficulty": 4,
+  "topic": "combustion_kinetics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires combustion science expertise including adiabatic flame temperature calculation, equivalence ratio determination, fuel concentration analysis, and understanding of combustion sustainability principles specific to ultra-lean methane mixtures. It directly addresses combustion fundamentals and challenges mentioned in the paper.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct with proper calculations, and compliant with other requirements."
+  },
+  "retry_count": 1,
+  "question_id": "deepseek_q_7d7e6948",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "The-combustion-mitigation-of-methane-as-a-n_2018_Progress-in-Energy-and-Comb",
+    "paper_title": "The-combustion-mitigation-of-methane-as-a-n_2018_Progress-in-Energy-and-Comb"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:30:57.834958",
+    "answer_length": 1782
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer provides a detailed thermodynamic analysis of ultra-lean methane combustion that is factually accurate and logically sound. The calculation methodology is correct: (1) equivalence ratio φ ≈ 0.0315 is properly calculated from 0.3% CH4 vs 9.52% stoichiometric; (2) mass fraction conversion using molecular weights is appropriate; (3) the energy balance equation for adiabatic flame temperature is correctly formulated; (4) the estimated T_ad ≈ 483 K is reasonable given the extreme dilution; (5) the conclusion that this temperature is far below autoignition (~810 K) and typical flame temperatures (>1500 K) is correct; (6) the explanation of slow reaction rates via Arrhenius kinetics is sound; (7) the answer directly quotes and correctly applies the paper's statements about ignition challenges and need for heat recuperation/catalysts. The physical principles (Arrhenius kinetics, energy balance, extinction limits) are all correctly stated. The answer is comprehensive but contains no factual errors or logical contradictions, and is fully consistent with the original text's emphasis on ignition and sustainability challenges for ultra-lean mixtures.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:21:59.342123"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Energy balance expression includes an unnecessary/misaligned term (1 + Y_CH4 × (AFR − 1)) with AFR taken as the stoichiometric value (≈17.2) rather than the actual AFR (~600 for 0.3% CH4); the temperature rise should simply be ΔT ≈ Y_CH4 × LHV / c_p on a per–unit-mixture basis.",
+          "Use of AFR without specifying it is stoichiometric may confuse readers; however, the numerical estimate of T_ad (~483 K) remains essentially correct."
+        ],
+        "reasoning": "The calculation of equivalence ratio and mass fraction is correct, and the estimated adiabatic temperature rise (~80–85 K) from 400 K to ~483 K is reasonable for a 0.3% CH4/air mixture. The conclusion—that this temperature is far below what is needed for self-sustained methane combustion and even below typical autoignition temperatures—is sound and consistent with Arrhenius kinetics and lean-flame extinction considerations. The explanation explicitly aligns with the cited PECS text emphasizing ignition difficulty and the need for heat recuperation/retention for ultra-lean methane. Minor methodological issues in the energy balance formulation do not affect the central conclusion.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:22:53.436858"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "The formula used for the adiabatic flame temperature calculation, T_ad = T_initial + (ΔH_c × Y_CH4) / (c_p × (1 + Y_CH4 × (AFR - 1))), is non-standard and could be confusing. However, the final numerical result is physically correct and consistent with the standard, simpler energy balance T_ad = T_initial + (Y_f × LHV) / c_p. This is a minor presentation issue, not a factual error."
+        ],
+        "reasoning": "The answer is factually and logically sound. It correctly calculates the equivalence ratio and mass fraction. The estimation of the adiabatic flame temperature (~483 K) is accurate and consistent with a first-law energy balance for this ultra-lean mixture. The explanation for why this temperature is insufficient for self-sustained combustion is excellent, correctly citing the low temperature relative to autoignition/flame temperatures, the exponential slowdown of reaction rates via Arrhenius kinetics, and the inability to form a radical pool. The answer correctly integrates the provided text to support its conclusion about the need for heat recuperation or catalysis.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:23:38.558151"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:23:38.558180",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

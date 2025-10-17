@@ -1,0 +1,84 @@
+{
+  "question_text": "How does absorption-based nonlinear tomography (ABNT) overcome the limitations of classical absorption tomography (CAT) in optically dense environments, and what advantages does it offer for simultaneous imaging of temperature and species concentration?",
+  "standard_answer": "Absorption-based nonlinear tomography (ABNT) overcomes the limitations of classical absorption tomography (CAT) in optically dense environments by leveraging multispectral information and nonlinear inversion techniques. In CAT, the line-of-sight measurements are linear integrals of the absorption coefficient, which becomes invalid in optically thick conditions where the Beer-Lambert law may not hold due to significant absorption or scattering. ABNT, however, uses rich spectral data from broad-bandwidth lasers to form a set of nonlinear equations that directly relate the measurements to the underlying fields of temperature, species concentration, and pressure. This allows ABNT to handle scenarios where the optical depth is large, as it does not rely on the linearization of harmonic signals used in techniques like wavelength modulation spectroscopy. The advantages include improved immunity to noise due to the multiplexing of spectral information, enabling reconstructions from fewer projections (e.g., two orthogonal views) compared to CAT. Additionally, ABNT facilitates simultaneous imaging of multiple parameters by exploiting the temperature and pressure dependence of absorption line shapes across multiple transitions. This is particularly beneficial in combustion diagnostics for capturing coupled phenomena like reaction zones and heat release, where traditional CAT would struggle with limited access and high optical densities.",
+  "original_text": {
+    "1": "ABNT takes advantage of rich spectral information that becomes accessible through use of novel broad-bandwidth, wavelength-sweeping laser sources. The extra information afforded by ABNT can enhance the immunity of the technique against noise and successful reconstructions with ABNT were recently demonstrated from only two orthogonal projections.",
+    "2": "ABNT enables use of advanced, noise immune absorption techniques, such as CFWMS, which offers enhancements in signal-to-noise ratios, SNR, of 10–100 times over standard absorption techniques and is exempt from a requirement to fit baselines, offering immunity to laser intensity fluctuations."
+  },
+  "type": "application",
+  "difficulty": 5,
+  "topic": "combustion_science",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires deep expertise in combustion diagnostics, specifically comparing classical vs. nonlinear absorption tomography techniques, their limitations in optically dense environments, and advantages for simultaneous temperature/species imaging. This involves specialized knowledge of laser spectroscopy, optical physics in combustion environments, and tomographic reconstruction methods specific to reactive flow diagnostics.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer are both high quality - domain-focused, factually correct based on citations, and compliant with all requirements."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_b3d3c605",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Tomographic-absorption-spectroscopy-for-the-stud_2017_Progress-in-Energy-and",
+    "paper_title": "Tomographic-absorption-spectroscopy-for-the-stud_2017_Progress-in-Energy-and"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:31:41.746102",
+    "answer_length": 1449
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "medium",
+        "issues": [
+          "Answer makes several claims not directly supported by the provided original text excerpts, including: (1) specific mechanisms about Beer-Lambert law invalidity in optically thick conditions, (2) comparison with wavelength modulation spectroscopy, (3) details about nonlinear equations relating to temperature/species/pressure fields, (4) specific applications to combustion reaction zones. However, these claims appear technically sound and consistent with general ABNT principles.",
+          "The original text mentions CFWMS (Chirped Frequency Wavelength Modulation Spectroscopy) offering 10-100x SNR enhancement, but the answer does not mention this specific technique or its advantages."
+        ],
+        "reasoning": "The answer correctly captures the core advantages of ABNT mentioned in the original text: (1) use of rich spectral information from broad-bandwidth lasers, (2) improved noise immunity through spectral multiplexing, and (3) successful reconstruction from only two orthogonal projections. The answer provides extensive additional technical detail about how ABNT works (nonlinear inversion, handling optically thick conditions, simultaneous multi-parameter imaging) that is not contradicted by the original text and appears technically sound based on combustion diagnostics principles. While the answer goes well beyond what is stated in the provided excerpts, it does not contain factual errors or logical contradictions. The omission of CFWMS is notable but not a factual error. Given that only brief excerpts were provided as 'original text,' the answer's additional detail likely reflects broader knowledge of ABNT that is consistent with the field, though I cannot verify all specific claims against the limited excerpts provided.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:23:44.093934"
+      },
+      {
+        "correct": false,
+        "baseline_confidence": "medium",
+        "verification_confidence": "high",
+        "issues": [
+          "States that Beer–Lambert law may not hold in optically thick conditions due to significant absorption; high absorption alone does not invalidate Beer–Lambert, though scattering can.",
+          "Claims ABNT 'does not rely on the linearization of harmonic signals used in WMS'—this is not supported by the provided ground truth and ABNT in fact enables use of advanced modulation techniques like CFWMS.",
+          "Asserts direct retrieval including pressure; the provided ground truth mentions ABNT advantages (noise immunity, two-view reconstructions, CFWMS SNR and baseline immunity) but does not support pressure imaging."
+        ],
+        "reasoning": "The answer captures some correct elements consistent with the ground truth (use of rich spectral information, improved noise immunity, feasibility with two projections). However, it introduces a factual error by implying Beer–Lambert law may fail due to high absorption, and includes unsupported assertions about avoiding WMS linearization and directly retrieving pressure. These issues warrant marking the answer as incorrect.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:24:21.100177"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately explains how ABNT uses multispectral data for nonlinear inversion to overcome the limitations of CAT in optically dense media. It correctly identifies the key advantages, such as improved noise immunity and the ability to reconstruct from fewer projections, which are directly supported by the original text. The physical principles described, including the handling of optically thick conditions and the simultaneous measurement of temperature and species, are sound and logically consistent.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:24:46.691260"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:24:46.691288",
+    "consensus": {
+      "all_correct": false,
+      "correct_votes": 2,
+      "total_votes": 3,
+      "all_high_confidence": false,
+      "disagreement_count": 2
+    }
+  }
+}

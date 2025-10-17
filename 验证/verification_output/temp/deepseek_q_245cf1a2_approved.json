@@ -1,0 +1,80 @@
+{
+  "question_text": "According to the provided paper on MIEC membranes for CO₂ thermochemical reduction, what are the rate-limiting steps in oxygen permeation and how do operating conditions influence which step becomes dominant? Explain the mechanisms involved and how temperature, pressure, and membrane characteristics affect the limiting resistance.",
+  "standard_answer": "The rate-limiting steps in oxygen permeation through MIEC membranes are either bulk ambipolar diffusion or surface reaction kinetics, depending on operating conditions. As stated in the paper: 'Oxygen permeation depends on the surface reactions on both sides, i.e., oxygen adsorption/incorporation on the CO₂ side and its desorption on the sweep/permeate side, and the ambipolar diffusion of oxygen ions/vacancies and electrons/holes across the membrane.' Temperature strongly influences the dominant resistance because surface reaction kinetics typically have higher activation energies than bulk diffusion. At higher temperatures, surface reactions accelerate more rapidly, often making bulk diffusion the limiting step. Conversely, at lower temperatures, surface reactions become slower and typically become rate-limiting. The paper notes that 'The selection of transport models will also be discussed, which depends on the operating conditions and the rate-limiting steps,' indicating that the dominant resistance shifts with conditions. Pressure gradients affect the driving force for oxygen permeation but may not necessarily change the limiting step unless surface adsorption processes are pressure-sensitive. Membrane thickness is critical because thinner membranes reduce the diffusion path length, potentially shifting limitation to surface kinetics, while thicker membranes are more likely to be diffusion-limited. The relative importance of these resistances depends on the specific membrane material properties and operating conditions, requiring careful optimization to maximize permeation flux.",
+  "original_text": {
+    "1": "Oxygen permeation depends on the surface reactions on both sides, i.e., oxygen adsorption/incorporation on the CO₂ side and its desorption on the sweep/permeate side, and the ambipolar diffusion of oxygen ions/vacancies and electrons/holes across the membrane",
+    "2": "The selection of transport models will also be discussed, which depends on the operating conditions and the rate-limiting steps"
+  },
+  "type": "concept",
+  "difficulty": 4,
+  "topic": "energy_systems",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires specialized knowledge in energy systems, specifically MIEC membrane technology for CO₂ thermochemical reduction. It involves understanding oxygen permeation mechanisms, rate-limiting steps (bulk diffusion vs. surface kinetics), and how operating conditions affect transport phenomena - all requiring domain expertise in membrane science, chemical kinetics, and energy conversion systems.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and compliant with other requirements."
+  },
+  "retry_count": 1,
+  "question_id": "deepseek_q_245cf1a2",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Mixed-ionic-electronic-conducting--MIEC--membranes_2019_Progress-in-Energy-a",
+    "paper_title": "Mixed-ionic-electronic-conducting--MIEC--membranes_2019_Progress-in-Energy-a"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:23:43.574560",
+    "answer_length": 1609
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer accurately identifies the two rate-limiting steps (bulk ambipolar diffusion and surface reaction kinetics) as stated in the original text. It correctly explains the temperature dependence mechanism (surface reactions have higher activation energies and accelerate more rapidly at higher temperatures, making bulk diffusion limiting at high T and surface reactions limiting at low T). The discussion of pressure effects and membrane thickness effects on the dominant resistance is logically sound and consistent with fundamental transport phenomena. The answer appropriately quotes the original text to support key points. All physical principles regarding activation energies, diffusion path length, and the shift in limiting resistance are correctly stated. While the answer is detailed, it contains no factual errors or logical contradictions.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:13:30.235061"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "medium",
+        "verification_confidence": "high",
+        "issues": [
+          "Activation energy comparison (surface exchange typically higher than bulk diffusion) is material-dependent and not universally true.",
+          "Pressure influence on surface kinetics is understated; gas-phase partial pressures often strongly affect surface exchange and can shift the limiting step."
+        ],
+        "reasoning": "The answer correctly identifies the two main rate-limiting resistances—surface reactions on both sides and bulk ambipolar diffusion—and explains how operating conditions (temperature, pressure, thickness) can shift dominance, consistent with the provided text. The mechanisms and trends with temperature and membrane thickness are sound. Minor caveats are that the activation energy statement is a generalization and the role of pressure on surface kinetics could be emphasized more, but these do not constitute factual errors.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:13:49.805102"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer correctly identifies the two main rate-limiting steps (bulk diffusion and surface reaction kinetics) mentioned in the source text. It accurately explains the physical mechanisms by which temperature and membrane thickness influence which step is dominant. The reasoning, based on differences in activation energies for surface reactions versus bulk diffusion and the dependence of diffusion resistance on path length (thickness), is sound and consistent with established principles in materials science and transport phenomena. All statements are factually correct and logically consistent.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:14:11.563259"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:14:11.563279",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "question_text": "What is the gradient mechanism of detonation ignition, and how do gradients in temperature, pressure, and composition lead to the formation of spontaneous waves that transition to detonations?",
+  "standard_answer": "The gradient mechanism of detonation ignition involves spatial gradients in reactivity parameters—such as temperature, pressure, and composition—that create conditions for spontaneous wave formation and subsequent transition to detonation. In a reactive mixture, autoignition time (τ) varies with local conditions; a gradient (dτ/dx) means ignition occurs at different times across a region. When a hot spot forms with a critical length scale and sufficient gradient steepness, autoignition initiates at multiple points almost simultaneously but with a phase delay, appearing as a 'spontaneous wave' propagating through the gradient. Initially, these are not true waves but phase waves of reaction without acoustic communication. As the process evolves, the rapid energy release generates pressure waves that coalesce into a shock front. Once acoustic communication is established, this shock couples with the reaction zone, forming a detonation wave that propagates into the unreacted gas. The paper explains: 'the gradient mechanism of detonation ignition refers to a spatial gradient in reactivity, which can be caused by gradients in properties such as temperature, pressure, composition, or stoichiometry.' Critical factors include the gradient magnitude and hot spot size; if insufficient, the wave decouples into a shock and flame. This mechanism is central to DDT in turbulent flows where shocks and obstacles create such gradients.",
+  "original_text": {
+    "1": "Here the 'gradient mechanism' of detonation ignition refers to a spatial gradient in reactivity, which can be caused by gradients in properties such as temperature, pressure, composition, or stoichiometry.",
+    "2": "When the process slows enough to allow acoustic communication, a shock wave forms and becomes a propagating detonation as it leaves the hot spot and propagates into unreacted background gas."
+  },
+  "type": "concept",
+  "difficulty": 5,
+  "topic": "combustion_science",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires deep knowledge of combustion science, specifically detonation mechanisms, gradient effects on ignition, and the physics of deflagration-to-detonation transition (DDT). It involves understanding how spatial gradients in temperature, pressure, and composition affect reactivity and wave formation, which are core concepts in combustion and fluid dynamics.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "The question is well-focused on combustion science, and the answer accurately explains the gradient mechanism using concepts from the paper and general combustion physics."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_67519651",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Mechanisms-and-occurrence-of-detonations-in-_2020_Progress-in-Energy-and-Com",
+    "paper_title": "Mechanisms-and-occurrence-of-detonations-in-_2020_Progress-in-Energy-and-Com"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:22:43.482126",
+    "answer_length": 1440
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately explains the gradient mechanism of detonation ignition and is consistent with the original text. It correctly identifies that spatial gradients in reactivity parameters (temperature, pressure, composition) create conditions for spontaneous wave formation. The answer properly describes the sequence: autoignition at different times due to gradients, formation of phase waves, generation of pressure waves, coalescence into shock front, and eventual coupling with reaction zone to form detonation. The explanation of acoustic communication establishing shock-reaction coupling matches the original text's statement that 'when the process slows enough to allow acoustic communication, a shock wave forms and becomes a propagating detonation.' The physical principles are sound, the causal relationships are correct, and there are no contradictions with the original text. While the answer is detailed, all statements are accurate and enhance understanding of the mechanism.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:12:36.112109"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer correctly explains the Zel’dovich gradient mechanism: spatial gradients in reactivity (from temperature, pressure, or composition) create an autoignition delay gradient that produces a spontaneous (phase) ignition wave. It accurately states that, once acoustic communication is possible, pressure waves/shock form and couple with the reaction zone to yield a detonation, matching the PECS text. No factual or logical errors identified.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:12:58.441314"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer is factually and logically correct. It accurately defines the gradient mechanism based on spatial gradients in reactivity, consistent with the original text. It correctly explains the process, starting from the formation of a 'spontaneous wave' (a phase wave of ignition), the generation of pressure waves, the critical role of acoustic communication for shock formation, and the final coupling of the shock and reaction zone to form a detonation. All physical principles described are sound and consistent with established detonation theory.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:13:18.129937"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:13:18.129955",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

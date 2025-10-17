@@ -1,0 +1,77 @@
+{
+  "question_text": "What role does Bayesian inference play in quantifying uncertainties in chemical kinetic mechanisms, and how does this approach improve the predictive reliability of combustion models for engine design applications?",
+  "standard_answer": "Bayesian inference provides a probabilistic framework for uncertainty quantification in chemical kinetics by treating mechanism parameters as random variables with posterior distributions updated through experimental evidence. The approach uses Bayes' theorem p(θ|D) ∝ p(D|θ)p(θ) where p(θ) represents prior knowledge about rate parameters from theoretical calculations or previous studies, p(D|θ) is the likelihood of observed data (ignition delays, flame speeds, species concentrations) given the parameters, and p(θ|D) is the posterior distribution capturing updated parameter uncertainties. For combustion applications, this enables rigorous propagation of uncertainties from elementary reaction rates to engine-level predictions of efficiency and emissions. Markov Chain Monte Carlo sampling of the posterior distribution generates ensembles of plausible mechanisms, whose predictions provide confidence intervals for key design parameters like NOx emissions or knock limits. This is particularly valuable for transportation fuels where complex chemistry introduces significant uncertainties, allowing engineers to design robust combustion systems that perform reliably across operating conditions despite kinetic uncertainties.",
+  "original_text": {
+    "1": "Bayes' theorem can then be written as p_θ|ℓ(Θ|L) = p_ℓ|θ(L|Θ)p_θ(Θ)/p_ℓ(L) where p_θ(Θ) is the prior probability that is constructed from assumptions in the absence of data and p_ℓ(L) is the marginal likelihood function that is evaluated from the data.",
+    "2": "From this formulation, the posterior probability p_θ|ℓ(Θ|L) can be evaluated, which quantifies the probability of the parameters Θ given the observations."
+  },
+  "type": "application",
+  "difficulty": 4,
+  "topic": "energy_systems",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires deep knowledge of combustion science (chemical kinetic mechanisms, uncertainty quantification), Bayesian inference applications in engineering, and combustion model reliability for engine design. It specifically addresses how uncertainty in chemical kinetics affects predictive models for practical engine applications, which demands domain expertise in combustion science, chemical kinetics, and engine design.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "The question is well-focused on combustion domain knowledge and the answer provides a comprehensive, technically accurate explanation of Bayesian inference for uncertainty quantification in chemical kinetics, properly citing the Bayesian framework from the original text."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_de4ff1d3",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Combustion-machine-learning--Principles--pr_2022_Progress-in-Energy-and-Comb",
+    "paper_title": "Combustion-machine-learning--Principles--pr_2022_Progress-in-Energy-and-Comb"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:17:51.937173",
+    "answer_length": 1233
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly explains Bayesian inference for uncertainty quantification in chemical kinetics. The mathematical formulation p(θ|D) ∝ p(D|θ)p(θ) is consistent with the original text's p_θ|ℓ(Θ|L) = p_ℓ|θ(L|Θ)p_θ(Θ)/p_ℓ(L), just using different notation (θ for parameters, D for data vs Θ and L). The answer correctly identifies: (1) prior p(θ) representing prior knowledge, (2) likelihood p(D|θ) from experimental data, (3) posterior p(θ|D) capturing updated uncertainties. The application to combustion modeling (MCMC sampling, ensemble predictions, confidence intervals for engine design parameters) is logically sound and represents standard practice in the field. The answer provides appropriate context and examples (NOx emissions, knock limits) that are consistent with combustion engineering applications. While more detailed than the original text, all statements are factually accurate and no contradictions exist.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:06:53.201850"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately presents Bayesian inference for chemical kinetics: parameters treated as random variables, posterior derived via Bayes’ theorem with priors and likelihood informed by data, consistent with the original text. It correctly extends this to combustion modeling by highlighting uncertainty propagation to engine-level metrics and the use of MCMC to sample posterior parameter sets, yielding confidence intervals for design-relevant outputs (e.g., NOx, knock). No factual or logical errors; the elaborations are standard practice and align with the ground-truth formulation.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:07:01.718796"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer is factually and logically correct. It accurately describes the Bayesian framework for uncertainty quantification in chemical kinetics, correctly identifying the roles of the prior, likelihood, and posterior distributions. The explanation of how this framework improves combustion models for engine design—by propagating uncertainties to generate confidence intervals for key performance metrics like emissions and knock—is sound and consistent with established practice in the field. The answer aligns perfectly with the concepts presented in the original text, merely using more standard notation (p(θ|D)) and providing additional, correct context on the application.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:07:20.760712"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:07:20.760732",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

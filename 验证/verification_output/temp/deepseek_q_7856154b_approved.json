@@ -1,0 +1,80 @@
+{
+  "question_text": "How do nanosecond pulsed discharges generate gas-dynamic perturbations that enhance flame stabilization in lean combustors, and what is the role of fast gas heating in this process?",
+  "standard_answer": "Nanosecond pulsed discharges enhance flame stabilization in lean combustors by generating gas-dynamic perturbations through rapid localized heating from fast gas heating. Each discharge pulse produces FGH on timescales shorter than acoustic times (e.g., nanoseconds), creating pressure waves and weak shock waves that propagate through the flow. These perturbations interact with shear layers and flame fronts, promoting mixing and recirculation of hot products, which stabilizes flames by maintaining reactive zones in recirculation regions. Specifically, in swirl burners, FGH-induced compression waves excite instabilities that form coherent vortices, enhancing fuel-air mixing and reducing blow-off limits. The role of FGH is critical as it provides the thermal energy release that drives these gas-dynamic effects; for example, temperature rises of hundreds of kelvins in discharge channels lead to rapid expansion and wave generation. This is combined with radical production from plasma, which sustains combustion chemistry in lean conditions. Experimental studies show that pulsed nanosecond discharges with power less than 1% of flame power can significantly lower lean blow-off limits, demonstrating how FGH-driven perturbations overcome the slow flame propagation in ultra-lean mixtures by dynamically altering flow structures and reaction zones.",
+  "original_text": {
+    "1": "In particular case of pulse-periodic nanosecond discharges, fast heat release in each pulse causes gas-dynamic perturbations. Interaction of these perturbations with already existing heat region causes expansion of the region over a large volume within a time shorter than the typical ignition delay time.",
+    "2": "Plasma flow control includes drag reduction, lift enhancement, shock wave control, aerodynamic noise reduction, boundary layer re-attachment. Various discharges are used for plasma flow control, but the most efficient action is typically related to fast thermal energy release at specific points of flow in the discharge area."
+  },
+  "type": "application",
+  "difficulty": 5,
+  "topic": "fluid_mechanics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires deep knowledge of combustion science (flame stabilization in lean combustors), plasma physics (nanosecond pulsed discharges), and fluid mechanics (gas-dynamic perturbations, shear layers, flow structures). It specifically addresses how plasma-induced phenomena interact with combustion processes, which is a specialized domain topic.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "The question is well-focused on the domain, the answer is comprehensive and factually correct based on the provided citations and paper content, and there are no other quality issues."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_7856154b",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Relaxation-of-electronic-excitation-in-nitrogen-oxygen-_2022_Progress-in-Ene",
+    "paper_title": "Relaxation-of-electronic-excitation-in-nitrogen-oxygen-_2022_Progress-in-Ene"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:27:50.721565",
+    "answer_length": 1357
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly explains the mechanism by which nanosecond pulsed discharges enhance flame stabilization through fast gas heating (FGH). It accurately describes: (1) rapid localized heating generating pressure waves and shock waves, (2) interaction with flow structures promoting mixing and recirculation, (3) the critical role of FGH in driving gas-dynamic perturbations through thermal energy release, and (4) combined effects with radical production. The answer is consistent with the original text's statements about pulse-periodic discharges causing gas-dynamic perturbations through fast heat release and the efficiency of fast thermal energy release in plasma flow control. While the answer is detailed and includes specific examples (swirl burners, temperature rises, power requirements), all statements are physically sound and consistent with combustion science principles. The elaboration beyond the original text is accurate and appropriate for explaining the mechanisms.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:19:10.322044"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Introduces additional mechanisms (shear-layer/vortex dynamics, radical chemistry, and <1% power effect on blow-off) that are not in the provided ground-truth text but are plausibly consistent with broader literature.",
+          "Mentions timescales shorter than acoustic times; the ground-truth text specifically highlights times shorter than ignition delay. This is a reasonable extension but not explicitly stated in the original excerpt."
+        ],
+        "reasoning": "The answer correctly identifies fast gas heating in nanosecond pulses as the driver of gas-dynamic perturbations and explains how these perturbations enhance stabilization, consistent with the PECS text stating that fast heat release per pulse generates perturbations and rapidly expands the heated region. The added details are plausible and do not introduce factual or logical errors.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:19:39.913099"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer correctly and comprehensively explains the mechanism of flame stabilization by nanosecond pulsed discharges. It accurately identifies fast gas heating (FGH) as the driver for gas-dynamic perturbations (pressure/shock waves), which in turn enhance mixing and create stable recirculation zones. The explanation is fully consistent with the provided original text and established principles of plasma-assisted combustion. The answer also correctly includes relevant details such as the timescale of heating, the effect in swirl burners, and the complementary role of radical production.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:20:01.190259"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:20:01.190294",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

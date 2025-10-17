@@ -1,0 +1,77 @@
+{
+  "question_text": "Why does the absorption function E(m) exhibit wavelength dependence for soot particles in LII, and how does this affect the laser heating efficiency at different excitation wavelengths?",
+  "standard_answer": "The absorption function E(m) = -Im[(m²-1)/(m²+2)] exhibits wavelength dependence due to the complex refractive index m = n + ik of soot, where the imaginary part k represents absorption. For mature soot, k generally decreases with increasing wavelength in the visible to near-IR range, causing E(m) to be higher at shorter wavelengths (e.g., 532 nm) than longer wavelengths (e.g., 1064 nm). This wavelength dependence arises from the electronic structure of graphitic carbon—shorter wavelengths probe π-π* transitions in aromatic structures, leading to stronger absorption, while longer wavelengths involve weaker interband transitions. Consequently, laser heating efficiency Q̇_abs = π²dp³E(m)Eλ/λL is higher at 532 nm than 1064 nm for the same laser fluence, where Eλ is laser irradiance and λL is laser wavelength. However, practical LII often uses 1064 nm to avoid interference from laser-induced fluorescence of polycyclic aromatic hydrocarbons (PAHs) that emit strongly in visible wavelengths. The temperature rise ΔT during laser heating scales with E(m)/λL, creating a trade-off between absorption strength and wavelength. Additionally, E(m) can vary with soot maturity—less mature soot with higher H/C ratios typically has lower E(m) values due to different carbon hybridization states, further complicating wavelength selection for optimal LII signal generation.",
+  "original_text": {
+    "1": "The absorption function E(m) = -Im[(m²-1)/(m²+2)] exhibits wavelength dependence due to the complex refractive index m = n + ik of soot, where the imaginary part k represents absorption.",
+    "2": "Laser heating efficiency Q̇_abs = π²dp³E(m)Eλ/λL is higher at 532 nm than 1064 nm for the same laser fluence, where Eλ is laser irradiance and λL is laser wavelength."
+  },
+  "type": "concept",
+  "difficulty": 4,
+  "topic": "combustion_science",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires specific knowledge of laser-induced incandescence (LII) techniques, soot particle optics, and combustion diagnostics. It involves understanding the wavelength-dependent absorption properties of soot particles, complex refractive indices, and how these affect laser heating efficiency in combustion applications.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "The question is well-focused on combustion diagnostics and the answer provides comprehensive, technically accurate explanations supported by the citations and domain knowledge."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_3f1adb49",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Laser-induced-incandescence--Particulate-diagnostic_2015_Progress-in-Energy-",
+    "paper_title": "Laser-induced-incandescence--Particulate-diagnostic_2015_Progress-in-Energy-"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:21:54.079242",
+    "answer_length": 1372
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly explains the wavelength dependence of E(m) through the complex refractive index and its imaginary part k. It accurately states that E(m) is higher at shorter wavelengths (532 nm) than longer wavelengths (1064 nm), consistent with the original text. The heating efficiency formula Q̇_abs = π²dp³E(m)Eλ/λL matches the original text exactly. The answer provides additional valid context about π-π* transitions in aromatic structures, PAH fluorescence interference, and soot maturity effects, which are scientifically sound elaborations that don't contradict the original text. The physical principles regarding absorption, electronic structure of graphitic carbon, and the trade-off between absorption strength and wavelength are all correctly stated. While the answer is more detailed than the original text, all statements are factually accurate and logically consistent.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:11:11.180083"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer accurately explains that E(m) is wavelength dependent because the complex refractive index of soot varies with wavelength and correctly states the heating efficiency scaling with E(m)/λ, matching the provided ground truth. It correctly notes higher heating efficiency at 532 nm than 1064 nm for the same laser conditions and adds valid contextual details (e.g., PAH fluorescence considerations) without contradiction.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:11:41.378688"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer is factually correct and logically sound. It correctly identifies the wavelength dependence of the complex refractive index (m) as the source of the wavelength dependence of the absorption function E(m). It accurately states the trend (higher E(m) at shorter wavelengths like 532 nm vs. 1064 nm) and correctly links this to higher laser heating efficiency. The provided formula for heating rate is correct. The answer also includes accurate and relevant elaborations on the underlying electronic transitions, practical considerations like PAH fluorescence interference, and the effect of soot maturity, all of which are consistent with established principles in LII diagnostics.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:12:03.149814"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:12:03.149835",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

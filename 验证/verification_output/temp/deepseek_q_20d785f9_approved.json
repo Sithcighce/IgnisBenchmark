@@ -1,0 +1,79 @@
+{
+  "question_text": "What mechanisms explain the formation of intra-particle pressure peaks during wood devolatilization, and how do these pressures influence mass transfer and product distribution?",
+  "standard_answer": "Intra-particle pressure peaks during devolatilization arise from rapid volatile production within the porous wood structure, where gas generation rates exceed outflow capacities. Key mechanisms include: (1) Thermal degradation of biopolymers (cellulose, hemicellulose, lignin) releasing gases and tars, increasing local gas density. (2) Restricted permeability due to pore structure and possible tar condensation, reducing gas escape. (3) Temperature-dependent reaction kinetics accelerating gas production in heated regions. These pressure gradients drive convective mass transfer, affecting product distribution by altering residence times—higher pressures can force volatiles inward, leading to secondary reactions like tar cracking or condensation, which modify yields of char, gases, and tars. Conversely, lower pressures favor outward flow, reducing secondary reactions. Modeling this requires coupling Darcy's law for flow with reaction kinetics to capture transport-reaction interactions.",
+  "original_text": {
+    "1": "It has been experimentally shown that significant pressure peaks can form inside a wood log.",
+    "2": "The pressure has an influence on the distribution of the devolatilization products within the solid, since the mass transfer is linked to the effect of pressure gradients on mass transfer velocity and thus also on residence times of products in the interior of the particle."
+  },
+  "type": "reasoning",
+  "difficulty": 5,
+  "topic": "fluid_mechanics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires specific knowledge of wood devolatilization processes, including thermal degradation mechanisms of biopolymers (cellulose, hemicellulose, lignin), intra-particle pressure dynamics, mass transfer in porous media, and product distribution effects - all core topics in combustion science and thermochemical conversion of biomass.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer are well-aligned with domain expertise and paper content. The answer provides comprehensive mechanisms and correctly links pressure effects to mass transfer and product distribution as supported by the citations."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_20d785f9",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Numerical-models-for-thermochemical-degradation-of-therm_2017_Progress-in-En",
+    "paper_title": "Numerical-models-for-thermochemical-degradation-of-therm_2017_Progress-in-En"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:23:58.765426",
+    "answer_length": 996
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly explains the formation of intra-particle pressure peaks during wood devolatilization and their influence on mass transfer and product distribution. It accurately identifies the key mechanisms: (1) rapid volatile production from biopolymer degradation, (2) restricted permeability limiting gas escape, and (3) temperature-dependent reaction kinetics. The answer correctly describes how pressure gradients drive convective mass transfer and affect product distribution through altered residence times, consistent with the original text's statement that 'mass transfer is linked to the effect of pressure gradients on mass transfer velocity and thus also on residence times.' The explanation of how higher pressures can force volatiles inward leading to secondary reactions (tar cracking/condensation) versus lower pressures favoring outward flow is logically sound and consistent with established combustion science principles. The mention of coupling Darcy's law with reaction kinetics for modeling is appropriate. While the answer is more detailed than the original text, all statements are factually accurate and no contradictions exist.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:14:54.527498"
+      },
+      {
+        "correct": false,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Claims that higher pressures can force volatiles inward and that lower pressures favor outward flow; this inverts the direction of pressure-driven flow (flow proceeds from high to low pressure)."
+        ],
+        "reasoning": "The answer correctly identifies mechanisms for pressure build-up (rapid volatile generation, limited permeability/tar blockage, temperature-dependent kinetics) and correctly notes that pressure gradients affect mass transfer and residence times, aligning with the ground-truth statements. However, it contains a key physical/logical error by asserting that higher pressures can force volatiles inward and lower pressures favor outward flow, which contradicts basic pressure-driven transport where flow is from high to low pressure. This inversion undermines the correctness of the explanation.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:15:14.339954"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly and comprehensively explains the mechanisms of intra-particle pressure generation and its effects on mass transfer and product distribution. It accurately identifies the roles of rapid volatile production, limited permeability, and temperature-dependent kinetics. The explanation of how pressure gradients drive convective flow, alter residence times, and promote secondary reactions (tar cracking, condensation) is factually sound, logically consistent, and aligns perfectly with the provided original text.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:15:33.010482"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:15:33.010501",
+    "consensus": {
+      "all_correct": false,
+      "correct_votes": 2,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 2
+    }
+  }
+}

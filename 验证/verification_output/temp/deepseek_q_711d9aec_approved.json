@@ -1,0 +1,80 @@
+{
+  "question_text": "What are the fundamental physical mechanisms that limit spatial resolution in ultrasound regression rate measurements of energetic materials, and how do temperature-dependent sound speed variations in the thermal boundary layer affect measurement accuracy during transient combustion processes?",
+  "standard_answer": "Ultrasound regression rate measurements face fundamental spatial resolution limitations dictated by wave physics. The spatial resolution is fundamentally constrained by the ultrasound wavelength λ = c/f, where c is the sound speed and f is the frequency. For a typical 1 MHz wave in propellant with sound speed 2000 m/s, the wavelength is 2 mm. This wavelength limitation means that quarter-wavelength resolution corresponds to 500 μm, representing the fundamental spatial resolution capability of the measurement technique. The critical thermal limitation arises because sound speed in propellants exhibits strong temperature dependence through the thermal boundary layer. During transient combustion, the thermal wave penetration depth changes, altering the effective sound speed profile along the ultrasound propagation path. This creates measurement errors because the ultrasound transit time depends on the integrated sound speed along the entire path through the propellant. The temperature gradient from initial temperature T0 to surface temperature Ts creates a continuously varying sound speed that biases regression rate calculations. For pressure-coupled response function measurements, this thermal effect can produce large errors because the speed of sound is highly dependent on temperature and propellant structure. The changes of thermal boundary layer properties during transient combustion process can cause noticeable measurement errors, and in some cases, the measured response function may become about two-fold enhanced in comparison with the true value.",
+  "original_text": {
+    "1": "For a typical 1 MHz wave in propellant with sound speed 2000 m/s, the wavelength is 2 mm, and quarter-wavelength resolution gives 500 μm uncertainty.",
+    "2": "The last effect may produce large error in determining response function because a speed of sound is highly dependent on the temperature and propellant structure. The changes of thermal boundary layer properties during transient combustion process can cause noticeable measurement errors."
+  },
+  "type": "reasoning",
+  "difficulty": 4,
+  "topic": "combustion_kinetics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires deep expertise in combustion science (regression rate measurements of energetic materials), ultrasound physics applied to combustion diagnostics, thermal boundary layer effects, and transient combustion processes - all core combustion/CFD/energy domain concepts.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+  },
+  "retry_count": 1,
+  "question_id": "deepseek_q_711d9aec",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Contemporary-methods-to-measure-regression-rate_2022_Progress-in-Energy-and-",
+    "paper_title": "Contemporary-methods-to-measure-regression-rate_2022_Progress-in-Energy-and-"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:18:41.524640",
+    "answer_length": 1576
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly explains the fundamental spatial resolution limitations based on wavelength physics (λ = c/f), accurately calculates the 500 μm quarter-wavelength resolution for the given example (1 MHz, 2000 m/s sound speed, 2 mm wavelength), and properly describes how temperature-dependent sound speed variations in the thermal boundary layer affect measurement accuracy. The answer correctly identifies that sound speed changes through the thermal gradient create measurement errors due to integrated transit time effects, and accurately states that these thermal effects can produce large errors in response function measurements. The mention of 'two-fold enhancement' in measured response function compared to true value is a reasonable elaboration on 'large error' and 'noticeable measurement errors' from the original text. All physical principles are correctly stated, the cause-effect relationships are sound, and there are no contradictions with the original text.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:07:22.090368"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "States a specific ~two-fold enhancement error that is not supported by the provided ground-truth text.",
+          "Minor imprecision: transit time depends on the path integral of 1/c(x), not the integral of c(x)."
+        ],
+        "reasoning": "The answer correctly identifies wavelength-limited spatial resolution (λ = c/f, with 1 MHz and c = 2000 m/s giving λ = 2 mm and ~λ/4 ≈ 500 μm uncertainty) and accurately explains that temperature-dependent sound speed within the evolving thermal boundary layer biases ultrasound time-of-flight and hence regression rate measurements during transients. This is consistent with the ground-truth statements about large errors due to temperature dependence. Minor issues include an unsupported specific quantitative error (~two-fold) and slight wording imprecision regarding the transit-time integral, but these do not undermine the core correctness.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:07:46.709471"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer correctly identifies the two main limiting mechanisms: the wavelength-dependent spatial resolution and the error introduced by temperature-dependent sound speed in the thermal boundary layer. The numerical example for resolution (λ = c/f) is correct and matches the original text. The explanation of how transient thermal profiles bias the measurement by altering the path-integrated sound speed is physically sound and consistent with the provided literature snippets. All statements are factually and logically correct.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:08:09.443347"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:08:09.443367",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

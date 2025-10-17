@@ -1,0 +1,79 @@
+{
+  "question_text": "How does combustion-induced dilatation affect flow reversal and fresh air entrainment in spray flames, and what are the implications for flame stabilization?",
+  "standard_answer": "Combustion-induced dilatation significantly alters the flow field in spray flames through gas expansion effects. The chemical heat release increases gas temperature and causes volumetric expansion, which modifies velocity components at downstream positions. This dilatation magnifies existing vortices and can reverse flow direction back toward the nozzle. The velocity component toward the nozzle accelerates the transport of hot combustion products upstream, which influences spray evaporation and mixture preparation. Concurrently, this flow reversal counteracts fresh air entrainment into the spray flame. Compared to non-reacting cases, the entrainment of fresh air is reduced by approximately 25% for reacting cases, with the first drop in entrainment rate appearing at the location of the flame lift-off length. This reduction in entrainment affects mixture preparation and flame stabilization by limiting the availability of fresh oxidizer while enhancing the recirculation of hot products that can promote ignition and sustain combustion in the stabilization region.",
+  "original_text": {
+    "1": "Combustion-induced dilatation magnifies this vortex and even reverses the flow back towards the nozzle. The velocity component toward the nozzle can accelerate the transport of hot products upstream, which further influences the spray evaporation.",
+    "2": "Compared to the inert case, the simulation results showed that the entrainment of fresh air was reduced by approximately 25% for the reacting case"
+  },
+  "type": "concept",
+  "difficulty": 4,
+  "topic": "combustion_kinetics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires deep understanding of combustion science (combustion-induced dilatation, flow reversal), fluid mechanics (flow fields, vortex dynamics, entrainment), and spray flame behavior (flame stabilization mechanisms). It specifically addresses how combustion physics affects flow patterns and mixing in spray flames, which is core combustion/CFD domain knowledge.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question is well-focused on combustion domain and answer correctly explains the mechanisms with proper citation support. No issues found."
+  },
+  "retry_count": 1,
+  "question_id": "deepseek_q_4b3988f6",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Spray-turbulence-chemistry-interactions-unde_2021_Progress-in-Energy-and-Com",
+    "paper_title": "Spray-turbulence-chemistry-interactions-unde_2021_Progress-in-Energy-and-Com"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:29:40.585596",
+    "answer_length": 1075
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately describes the mechanisms presented in the original text and extends them logically. Key points verified: (1) Combustion-induced dilatation magnifies vortices and reverses flow toward the nozzle - consistent with original text [1]. (2) Flow reversal accelerates hot product transport upstream, affecting spray evaporation - matches original text [1]. (3) Fresh air entrainment is reduced by approximately 25% in reacting vs. inert cases - directly matches original text [2]. The answer additionally provides correct physical explanations (gas expansion from heat release, temperature increase causing volumetric expansion) and logical implications (reduced oxidizer availability, enhanced hot product recirculation for flame stabilization) that are consistent with fundamental combustion physics. The mention of flame lift-off length location and effects on mixture preparation are reasonable extensions not contradicted by the original text. No factual errors, logical contradictions, or inconsistencies detected.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:20:37.021736"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Mentions the first drop in entrainment at the flame lift-off length, which is not stated in the provided original text (though it is plausible and consistent with common observations)."
+        ],
+        "reasoning": "The answer accurately reflects the original text: combustion-induced dilatation magnifies vortices, can reverse flow toward the nozzle, and promotes upstream transport of hot products affecting evaporation. It correctly states that fresh air entrainment is reduced by about 25% in reacting cases. The implications for stabilization (reduced oxidizer entrainment but enhanced hot-product recirculation) are physically sound. No contradictions or factual errors were found.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:20:57.328064"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly explains the physical mechanisms of combustion-induced dilatation, its effect on flow reversal and reduced air entrainment, and the resulting implications for flame stabilization. All statements are factually accurate, logically sound, and fully consistent with the provided original text. The answer correctly synthesizes the information to address all parts of the question.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:21:13.879408"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:21:13.879436",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

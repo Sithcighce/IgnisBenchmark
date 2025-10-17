@@ -1,0 +1,79 @@
+{
+  "question_text": "Based on the provided paper, analyze the energy efficiency of a microwave-assisted pyrolysis system processing HDPE. The system consumes 5 MJ electrical energy per kg of HDPE and produces gas that can potentially generate 6.1 MJ of electrical energy. Calculate the energy efficiency and explain the fundamental heat transfer mechanisms that differentiate microwave-assisted pyrolysis from conventional pyrolysis systems, including how these mechanisms affect thermal gradients and product distribution.",
+  "standard_answer": "To calculate the energy efficiency of the microwave-assisted pyrolysis system, we must consider the electrical energy input and the electrical energy that can be recovered from the gas product. For 1 kg of HDPE: Electrical energy input = 5 MJ, Electrical energy potentially produced from gas = 6.1 MJ. The energy efficiency is calculated as (Useful energy output / Total energy input) × 100% = (6.1 / 5) × 100% = 122%. However, this calculation represents electrical-to-electrical efficiency and does not imply thermodynamic efficiency exceeding 100%, as it accounts for energy recovery from the chemical energy in the gas. The process achieves energy self-sufficiency, as the recoverable electrical energy from the gas exceeds the electrical energy input. Microwave-assisted pyrolysis fundamentally differs from conventional pyrolysis in heat transfer mechanisms. Conventional pyrolysis relies on conduction from heated reactor walls and convection from carrier gases, leading to significant thermal gradients and slower heating rates. This can cause non-uniform heating, promoting secondary reactions and wider product distributions. In contrast, microwave pyrolysis employs dielectric heating, where microwave-absorbing materials (like SiC balls) are volumetrically heated. Since plastics are microwave-transparent, the SiC particles are preferentially heated, and heat is transferred to the plastic via conduction from these hot particles. This results in rapid, selective heating with minimal thermal gradients, reducing side reactions and allowing better control over product distribution through precise thermal management. The vigorous mixing of SiC balls in the microwave reactor further enhances heat transfer efficiency.",
+  "original_text": {
+    "1": "Based on a 200 kg/day lab-scale continuous microwave pyrolysis system, Ruanʼs group has shown that pyrolysis of 1 kg HDPE chips consumed a total of 5 MJ electrical energy",
+    "2": "6.1 MJ of electrical energy potentially produced from gas product enables this process to be energy self-sufficient"
+  },
+  "type": "calculation",
+  "difficulty": 4,
+  "topic": "energy_systems",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires understanding of pyrolysis systems, energy efficiency calculations for thermal processes, and detailed knowledge of heat transfer mechanisms (conduction, convection, dielectric heating) specific to pyrolysis technology. It also requires understanding how different heating methods affect thermal gradients and product distribution in chemical processes.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question is well-structured, domain-focused, and answer is factually correct with proper calculations and detailed heat transfer explanations."
+  },
+  "retry_count": 1,
+  "question_id": "deepseek_q_d1c585f8",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Pyrolysis-technology-for-plastic-waste-recycli_2022_Progress-in-Energy-and-C",
+    "paper_title": "Pyrolysis-technology-for-plastic-waste-recycli_2022_Progress-in-Energy-and-C"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:27:18.400916",
+    "answer_length": 1731
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer correctly calculates the energy efficiency as 122% (6.1/5 × 100%) and appropriately clarifies that this represents electrical-to-electrical efficiency accounting for chemical energy recovery, not a violation of thermodynamics. The numerical values match the original text exactly (5 MJ input, 6.1 MJ potential output). The explanation of heat transfer mechanisms is scientifically sound: conventional pyrolysis uses conduction/convection leading to thermal gradients, while microwave pyrolysis uses dielectric heating with volumetric heating of microwave-absorbing materials (SiC), resulting in rapid, selective heating with minimal thermal gradients. The answer correctly explains that plastics are microwave-transparent and heat is transferred from hot SiC particles via conduction. All physical principles stated are correct, and the answer is consistent with the original text's assertion of energy self-sufficiency.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:17:46.283784"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Minor overstatement: 'minimal thermal gradients'—microwave systems using susceptors still transfer heat to polymers primarily via conduction at contact points, so local gradients can persist."
+        ],
+        "reasoning": "The energy calculation (6.1/5 = 122%) is consistent with the provided data and correctly framed as electrical-to-electrical recovery, aligning with the text's claim of energy self-sufficiency. The explanation accurately contrasts conventional pyrolysis (wall/convection heating, larger gradients) with microwave-assisted pyrolysis (dielectric heating of susceptors like SiC, faster and more distributed heating), and reasonably ties these mechanisms to thermal gradients and product distribution without factual or logical errors.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:18:21.194832"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer correctly calculates the electrical-to-electrical energy efficiency based on the provided text and accurately interprets the result (122%) as an indicator of energy self-sufficiency, not a violation of thermodynamics. It correctly explains the fundamental differences in heat transfer mechanisms between conventional (conduction/convection from external surfaces) and microwave-assisted (volumetric dielectric heating of absorbers) pyrolysis. Furthermore, it correctly links these mechanisms to their respective effects on thermal gradients, heating rates, and product distribution. All statements are factually and logically sound.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:18:35.600343"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:18:35.600366",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

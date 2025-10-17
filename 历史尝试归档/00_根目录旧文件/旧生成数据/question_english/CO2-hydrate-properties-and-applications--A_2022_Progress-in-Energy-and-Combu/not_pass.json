@@ -1,0 +1,48 @@
+[
+  {
+    "question_text": "Using the structural information from the paper, calculate the theoretical maximum gas storage capacity of structure I CH4 hydrate in volumes of gas (STP) per volume of hydrate, and explain the discrepancy between this theoretical value and the practical storage capacity of 170 v/v reported in the paper. Then, based on the cage occupancy data for mixed hydrates, analyze how incomplete cage filling affects storage capacity in hydrate-based energy systems, with specific focus on CO2 sequestration applications. Discuss the thermodynamic and kinetic factors that contribute to these occupancy differences, citing relevant mechanisms from the paper.",
+    "standard_answer": "The theoretical maximum storage capacity calculation begins with the structural parameters: a unit cell of structure I hydrate contains 2 small cages (512) and 6 large cages (51262) with 46 water molecules. For fully occupied CH4 hydrate, all 8 cages would contain CH4 molecules, giving 8 moles of CH4 per unit cell. The molar volume of hydrate is approximately 0.172 L/mol, and STP gas volume is 22.4 L/mol. The theoretical capacity is (8 mol CH4 / 0.172 L hydrate) × 22.4 L/mol = ~1042 v/v. However, the paper explicitly states 'Estimations suggest a fully loaded sI CH4 hydrate can store 170 volumes of gas (STP) per volume of hydrate,' indicating a significant practical limitation. This discrepancy arises from incomplete cage filling due to thermodynamic and kinetic constraints. The cage occupancy data shows selective filling patterns: 'Gas chromatography and NMR analysis for CH2+CH4 hydrate displayed that although the CO2 adsorption in the large cages (0.67) is more than that of CH4 (0.31), the CO2 cage occupancy in the small cages (0.1) is much lower than that of CH4 (0.66).' Thermodynamically, CO2 molecules preferentially occupy large cages due to better size compatibility, while CH4 shows more balanced distribution. Kinetic barriers during hydrate formation, including nucleation rates, diffusion limitations, and competitive adsorption between gas species, further reduce practical storage capacity. In CO2 sequestration applications, these factors critically determine replacement efficiency in natural gas hydrate reservoirs, as differential cage occupancy affects both the rate and extent of CO2/CH4 exchange, influencing stability and long-term storage potential of sequestered CO2.",
+    "original_text": {
+      "1": "A unit cell of sI, sII, sH clathrate hydrates includes structure I, 2 (512).6 (51262): 46 H2O; structure II, 16 (512).8 (51264):136 H2O; and structure H, 3 (512).2 (435663).1 (51268): 34 H2O, respectively.",
+      "2": "Gas chromatography and NMR analysis for CH2+CH4 hydrate displayed that although the CO2 adsorption in the large cages (0.67) is more than that of CH4 (0.31), the CO2 cage occupancy in the small cages (0.1) is much lower than that of CH4 (0.66)"
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question requires deep expertise in gas hydrate chemistry, structural analysis of clathrate hydrates, thermodynamic principles of cage occupancy, and application-specific knowledge of CO2 sequestration in energy systems. It involves calculating storage capacities based on hydrate crystal structures and analyzing practical limitations in energy storage applications.",
+      "answer_correct": false,
+      "answer_issues": [
+        {
+          "type": "factual_error",
+          "description": "The theoretical calculation is incorrect. The answer states 8 moles of CH4 per unit cell, but with 46 water molecules per unit cell, the hydrate molar mass is ~828 g/mol. The correct theoretical calculation should be: (8 mol CH4 × 22.4 L/mol) / (0.172 L hydrate) = ~1042 v/v, but the paper explicitly states the practical value is 170 v/v, indicating the theoretical calculation methodology or assumptions are flawed."
+        },
+        {
+          "type": "unsupported",
+          "description": "The answer claims 'thermodynamically, CO2 molecules preferentially occupy large cages due to better size compatibility' but this mechanism is not supported by the provided citations. Citation 2 only provides occupancy data without explaining the thermodynamic reasons for preferential occupancy."
+        },
+        {
+          "type": "unsupported",
+          "description": "The answer discusses 'kinetic barriers during hydrate formation, including nucleation rates, diffusion limitations, and competitive adsorption' but these specific kinetic factors are not mentioned or supported by the provided citations from the paper."
+        }
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "The question is domain-appropriate but the answer contains multiple factual and unsupported claims. Revise the theoretical calculation methodology and ensure all mechanistic explanations are directly supported by paper citations."
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_fe0fb203",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "CO2-hydrate-properties-and-applications--A_2022_Progress-in-Energy-and-Combu",
+      "paper_title": "CO2-hydrate-properties-and-applications--A_2022_Progress-in-Energy-and-Combu"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:19:52.379823",
+      "answer_length": 1707
+    }
+  }
+]

@@ -1,0 +1,77 @@
+{
+  "question_text": "How does the coupling between positive stretch and preferential diffusion, characterized by the Lewis number, affect the critical ignition radius and minimum ignition energy in premixed flame ignition?",
+  "standard_answer": "The coupling between positive stretch and preferential diffusion significantly influences ignition by altering the thermal and chemical structure of the expanding flame kernel. Positive stretch, induced by flame front expansion, enhances heat and mass transfer rates. For mixtures with Lewis number (Le) greater than 1, where thermal diffusion is faster than mass diffusion, stretch increases the rate of heat loss relative to reactant supply, weakening the flame. This requires a larger critical ignition radius to accumulate sufficient thermal energy for self-sustenance, thereby increasing the minimum ignition energy (MIE). Conversely, for Le < 1, faster mass diffusion supplies reactants more effectively, potentially reducing the critical radius and MIE. The stretch effect is quantified through the flame stretch rate, which modifies the local flame speed and temperature, directly impacting the energy balance needed to transition from a kernel to a self-propagating flame. The critical radius scales with the flame thickness and Le, where higher Le demands more energy to overcome enhanced conductive losses under stretch.",
+  "original_text": {
+    "1": "Specifically, positive stretch makes the expanding ignition kernel weaker at larger Lewis numbers, consequently increasing the critical ignition radius and MIE.",
+    "2": "These stages are profoundly affected by the coupling of positive stretch with preferential diffusion, characterized by the Lewis number."
+  },
+  "type": "reasoning",
+  "difficulty": 5,
+  "topic": "combustion_science",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires deep combustion science expertise, specifically knowledge of flame stretch effects, preferential diffusion, Lewis number dynamics, critical ignition radius, and minimum ignition energy - all core concepts in premixed flame ignition theory that cannot be answered with general ML knowledge.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_5b5e496c",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Premixed-flame-ignition--Theoretical-d_2024_Progress-in-Energy-and-Combustio",
+    "paper_title": "Premixed-flame-ignition--Theoretical-d_2024_Progress-in-Energy-and-Combustio"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:25:18.230213",
+    "answer_length": 1131
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly explains the coupling between positive stretch and preferential diffusion characterized by the Lewis number. It accurately states that for Le > 1, positive stretch increases heat loss relative to reactant supply, weakening the flame and increasing critical ignition radius and MIE, which is consistent with the original text. The answer also correctly describes the Le < 1 case (faster mass diffusion) and provides sound physical reasoning about flame stretch rate, local flame speed, temperature effects, and energy balance. The explanation of scaling relationships and the role of flame thickness is physically sound. While more detailed than the original text, all statements are factually accurate and logically consistent with established combustion science principles.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:16:10.447047"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer accurately states that positive stretch coupled with preferential diffusion (via Lewis number) weakens ignition kernels at higher Le, increasing critical ignition radius and MIE, which aligns with the ground truth. It also correctly notes the contrasting trend for Le < 1 and explains the mechanism via heat loss versus reactant supply and stretch-modified burning velocity. No factual or logical errors detected.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:16:32.486707"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly and comprehensively explains the coupling between flame stretch and preferential diffusion. It accurately states that for Le > 1, positive stretch weakens the flame, increasing the critical ignition radius and MIE, which is directly supported by the original text. The additional explanations for the Le < 1 case and the underlying physical mechanisms (e.g., enhanced heat loss, scaling with flame thickness) are also factually correct and logically sound.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:16:54.921028"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:16:54.921052",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "question_text": "Using the distributed activation energy model (DAEM), derive the relationship between conversion degree (α) and temperature for WPCBs pyrolysis, and explain how this model accounts for the complex multi-step decomposition kinetics observed in thermogravimetric analysis. Focus specifically on the activation energy distribution and stages supported by the provided paper content.",
+  "standard_answer": "The distributed activation energy model (DAEM) describes pyrolysis kinetics by assuming a continuous distribution of activation energies due to heterogeneous reactions in WPCBs. The fundamental equation is: dα/dt = ∫[A exp(-E/RT) f(E) dE], where α is conversion degree, A is frequency factor, E is activation energy, R is gas constant, T is temperature, and f(E) is the distribution function of E. For WPCBs pyrolysis, the decomposition involves multiple stages with varying activation energies. According to the paper, Stage I (α < 0.075) has an activation energy of 119 kJ mol⁻¹, while Stage II (0.075 < α < 0.85) shows activation energy gradually increasing from 119 to 357 kJ mol⁻¹. The average activation energy value was determined as 337.0 kJ mol⁻¹ by the DAEM method, which was comparable to that of FWO. DAEM fits this complex behavior by representing f(E) as a distribution function that captures the varying energy barriers across different conversion stages. This model avoids assuming a single reaction mechanism, instead integrating over all possible pathways, which aligns with the multi-step decomposition observed in TG analysis where activation energies change significantly with conversion degree.",
+  "original_text": {
+    "1": "In Stage I (α < 0.075) the corresponding Ea was determined to be 119 kJ mol⁻¹. In Stage II (0.075 < α < 0.85), Ea gradually increasing from 119 to 357 kJ mol⁻¹.",
+    "2": "The average Ea value was determined as 337.0 kJ mol⁻¹ by the DAEM method, which was comparable to that of FWO."
+  },
+  "type": "reasoning",
+  "difficulty": 4,
+  "topic": "combustion_kinetics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires understanding of pyrolysis kinetics, activation energy models, and thermogravimetric analysis specific to waste printed circuit boards combustion/energy systems, which falls under combustion science and energy systems expertise.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other issues."
+  },
+  "retry_count": 1,
+  "question_id": "deepseek_q_619988ac",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Thermochemical-conversion-of-waste-printed-circuit-board_2023_Progress-in-En",
+    "paper_title": "Thermochemical-conversion-of-waste-printed-circuit-board_2023_Progress-in-En"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:32:16.277868",
+    "answer_length": 1216
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer correctly explains the DAEM model and its application to WPCBs pyrolysis. All factual statements are accurate: (1) The fundamental DAEM equation dα/dt = ∫[A exp(-E/RT) f(E) dE] is correct; (2) Stage I activation energy of 119 kJ mol⁻¹ matches the original text; (3) Stage II activation energy range (119 to 357 kJ mol⁻¹) is correctly stated; (4) Average activation energy of 337.0 kJ mol⁻¹ by DAEM method matches the original text; (5) The comparison with FWO is accurately mentioned; (6) The explanation of how DAEM accounts for complex multi-step decomposition through activation energy distribution f(E) is physically sound and logically consistent. The answer appropriately explains that DAEM integrates over all possible pathways rather than assuming a single mechanism, which correctly captures the model's strength in handling heterogeneous reactions. No contradictions with the original text or fundamental combustion/thermophysics principles were found.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:23:21.090322"
+      },
+      {
+        "correct": false,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Incorrect DAEM fundamental equation: dα/dt = ∫ A exp(-E/RT) f(E) dE omits the survival term and is not the DAEM rate expression.",
+          "Fails to derive the α–T relationship central to DAEM under non-isothermal TGA; should include the heating-rate-dependent integral α(T) = ∫ [1 − exp(−(A/β) ∫ exp(−E/RT) dT)] f(E) dE.",
+          "Does not mention the heating rate β, which is essential for DAEM in thermogravimetric analysis.",
+          "While stage-wise Ea values and average Ea match the original text, the kinetic formulation presented is incomplete/incorrect."
+        ],
+        "reasoning": "The stage-wise activation energies and the average Ea reported align with the provided text. However, the DAEM equation given is incorrect and does not provide the required α–T relationship; DAEM requires a survival probability term and explicit dependence on heating rate β for TGA. This constitutes a factual/technical error, so the answer should be marked incorrect.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:23:40.250201"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer is factually and logically correct. It accurately defines the Distributed Activation Energy Model (DAEM) and presents its fundamental integral equation. It correctly explains that DAEM accounts for complex pyrolysis by assuming a distribution of activation energies, which corresponds to the multiple parallel reactions occurring in a heterogeneous material like WPCBs. The numerical values for activation energy at different conversion stages (Stage I and Stage II) and the average activation energy are cited correctly from the original text. The reasoning that this model is suitable for multi-step decomposition where activation energy varies with conversion is sound and well-explained.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:24:00.925750"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:24:00.925777",
+    "consensus": {
+      "all_correct": false,
+      "correct_votes": 2,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 2
+    }
+  }
+}

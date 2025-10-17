@@ -1,0 +1,80 @@
+{
+  "question_text": "How do the mass transfer mechanisms in underground coal thermal treatment (UCTT) differ from those in underground oil shale retorting, and what are the implications for process design based on permeability and porosity characteristics?",
+  "standard_answer": "Mass transfer in UCTT leverages coal's inherent dual-porosity system, where volatiles diffuse through matrix pores into cleats and convect out. The paper states: 'Mass transport in coal occurs at two scales: diffusion through the pores of the coal matrix, and flow through the macroscopic cleats, the natural fracture system of coal.' This natural permeability allows UCTT to potentially operate without extensive artificial fracturing. In contrast, oil shale has very low natural permeability due to its inorganic rock structure with kerogen-filled pores. The paper notes: 'Rubblization is usually needed for efficient operation of underground oil shale retorting due to the low permeability and porosity in oil shale.' This fundamental difference in permeability arises from coal's organic-rich, porous matrix versus oil shale's dense inorganic matrix. For process design, UCTT can utilize simpler well configurations that exploit the existing cleat system, reducing the need for energy-intensive rubblization. However, UCTT must account for coal's higher volumetric heat capacity, which requires more efficient heating systems to achieve pyrolysis temperatures. Oil shale retorting designs must incorporate rubblization techniques to create artificial flow paths, adding complexity and cost but benefiting from lower heat capacity per unit volume.",
+  "original_text": {
+    "1": "Rubblization is usually needed for efficient operation of underground oil shale retorting due to the low permeability and porosity in oil shale.",
+    "2": "Mass transport in coal occurs at two scales: diffusion through the pores of the coal matrix, and flow through the macroscopic cleats, the natural fracture system of coal."
+  },
+  "type": "concept",
+  "difficulty": 4,
+  "topic": "fluid_mechanics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires specific knowledge of mass transfer mechanisms in underground thermal treatment processes, comparing coal and oil shale properties including permeability, porosity, and their implications for process design. This requires expertise in fluid mechanics, heat transfer, and geological properties specific to energy extraction processes.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other issues."
+  },
+  "retry_count": 1,
+  "question_id": "deepseek_q_d79500a1",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Underground-in-situ-coal-thermal-treatment-fo_2017_Progress-in-Energy-and-Co",
+    "paper_title": "Underground-in-situ-coal-thermal-treatment-fo_2017_Progress-in-Energy-and-Co"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:32:34.915431",
+    "answer_length": 1350
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer accurately describes the mass transfer mechanisms in both UCTT and oil shale retorting, correctly citing the original text. It properly explains coal's dual-porosity system (diffusion through matrix pores and convection through cleats) versus oil shale's low permeability requiring rubblization. The process design implications are logically derived from these fundamental differences. The additional discussion of volumetric heat capacity and well configurations, while beyond the original text, represents reasonable engineering extensions that are consistent with combustion science principles. No factual errors or logical contradictions are present.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:24:26.074200"
+      },
+      {
+        "correct": false,
+        "baseline_confidence": "medium",
+        "verification_confidence": "high",
+        "issues": [
+          "States coal has higher volumetric heat capacity than oil shale and that oil shale benefits from lower volumetric heat capacity; this is generally opposite of typical material properties (oil shale/mineral matrix usually has higher volumetric heat capacity than coal).",
+          "Design implication tied to the incorrect heat-capacity comparison (UCTT requiring more efficient heating than oil shale) is therefore misleading."
+        ],
+        "reasoning": "The answer correctly contrasts mass transport mechanisms (coal: diffusion in matrix and flow in cleats; oil shale: low permeability requiring rubblization), consistent with the provided ground truth. However, it introduces an incorrect claim about relative volumetric heat capacities and uses it to infer design implications, which makes the overall answer factually flawed.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:24:45.439575"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer correctly identifies the fundamental difference in mass transfer mechanisms based on the material structures: coal's dual-porosity system (matrix diffusion, cleat convection) versus oil shale's low-permeability rock matrix. It accurately quotes and interprets the provided original text. The implications for process design—namely, the need for rubblization in oil shale versus leveraging natural fractures in coal—are logically derived and correct. The additional point about differences in volumetric heat capacity is a valid and relevant thermophysical consideration for process design, even though it is not in the source text.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:25:08.296313"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:25:08.296334",
+    "consensus": {
+      "all_correct": false,
+      "correct_votes": 2,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 2
+    }
+  }
+}

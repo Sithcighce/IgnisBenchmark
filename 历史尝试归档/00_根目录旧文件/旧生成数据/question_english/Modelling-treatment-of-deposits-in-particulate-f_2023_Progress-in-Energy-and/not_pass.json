@@ -1,0 +1,129 @@
+[
+  {
+    "question_text": "Based on the provided scientific literature, explain the multi-stage transition from deep bed filtration to soot cake formation in particulate filters, describing the physical mechanisms that drive this transition as particles deposit within the filter wall.",
+    "standard_answer": "The transition from deep bed filtration to soot cake formation occurs through distinct stages driven by pore blockage mechanisms. Initially, during the deep bed filtration stage, particles are trapped within the porous structure of the filter wall. As deposition continues, particles begin to block the pores on the surface of the wall, which forces incoming particles to build upon the wall surface rather than penetrating deeper. This pore blockage mechanism redirects particle deposition from internal wall surfaces to external wall surfaces, leading to the formation of localized accumulations called 'particle trees' over blocked pores. As particle deposition continues further, these particle trees begin to grow laterally, with particles depositing on the ceramic surface between the trees. Eventually, the soot cake becomes uniform, marking the beginning of the soot cake layer stage where the rate of thickness growth becomes steady. The entire transition is physically governed by the progressive blockage of surface pores, which systematically changes the deposition pattern from internal filtration to external cake formation.",
+    "original_text": {
+      "1": "The soot deposition process in particulate filters may be divided into four stages as shown in Fig. 5. The first stage is called the 'deep bed filtration' or 'depth deposition' stage where particles are trapped within the filter wall.",
+      "2": "As particles deposit within the filter wall, they can block the pores on the surface of the wall. This forces incoming particles to build upon the wall surface instead."
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "CFD_modeling",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires specific knowledge of particulate filter physics, including deep bed filtration mechanisms, pore blockage dynamics, and soot cake formation processes - all core concepts in combustion science and particulate filtration engineering.",
+      "answer_correct": false,
+      "answer_issues": [
+        {
+          "type": "unsupported",
+          "description": "The answer introduces concepts like 'particle trees' and detailed lateral growth mechanisms that are not supported by the provided citations. Citations only mention deep bed filtration and pore blockage forcing particles to build on the surface, but do not describe the specific 'particle trees' formation or lateral growth processes mentioned in the answer."
+        },
+        {
+          "type": "too_brief",
+          "description": "While the answer exceeds 300 characters, it lacks sufficient detail about the complete four-stage process mentioned in Citation 1, which states 'The soot deposition process in particulate filters may be divided into four stages' but the answer only describes two main stages without detailing all four."
+        }
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "Revise the answer to strictly follow the provided citations, remove unsupported claims about 'particle trees' and lateral growth, and provide more complete coverage of the four-stage process mentioned in the original text."
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_248bdd95",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Modelling-treatment-of-deposits-in-particulate-f_2023_Progress-in-Energy-and",
+      "paper_title": "Modelling-treatment-of-deposits-in-particulate-f_2023_Progress-in-Energy-and"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:25:26.684804",
+      "answer_length": 1138
+    }
+  },
+  {
+    "question_text": "According to the paper, how do pore-scale, channel-scale, and monolith-scale modeling approaches address multi-scale phenomena in particulate filters, and what are the computational requirements associated with each approach?",
+    "standard_answer": "The paper categorizes particulate filter models into three main approaches based on length-scale: pore-scale, channel-scale, and monolith-scale. Pore-scale models focus on processes within individual pores of the filter wall, requiring a sufficiently large domain that contains statistical representation of morphological features. These models are computationally demanding due to high spatial resolution needs at characteristic lengths of O(nm)-O(μm) and require detailed three-dimensional topology of the porous wall. Channel-scale models focus on phenomena at the channel diameter scale (O(μm)-O(mm)), considering single channels or minimum repeating units in asymmetric designs. Monolith-scale models consider an ensemble of multiple inlet and outlet channels to study inlet maldistribution and interaction between filter channels, requiring large spatial domains that extend beyond filter channels to capture flow distribution effects, making them generally expensive to solve due to the extensive spatial coverage needed. The computational demands increase from channel-scale to pore-scale and monolith-scale approaches, with pore-scale requiring high resolution for detailed pore structures and monolith-scale requiring extensive domain coverage for flow distribution studies.",
+    "original_text": {
+      "1": "Particulate filter models can be put into three main categories based on the length-scale of interest, namely pore-scale, channel-scale and monolith-scale.",
+      "2": "Pore-scale models focus on processes happening within individual pores of the filter wall. A prerequisite of meaningful pore-scale simulations is to consider 'a sufficiently large domain that contains statistical representation of the morphological features present in the studied system'.",
+      "3": "Monolith-scale models consider an ensemble of multiple inlet and outlet channels. They are developed to study the impact of inlet maldistribution and interaction between filter channels. Monolith-scale models are generally expensive to solve given the large spatial domain involved."
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "CFD_modeling",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question specifically addresses multi-scale modeling approaches for particulate filters, requiring knowledge of CFD modeling techniques, length-scale considerations in filtration systems, and computational requirements - all core concepts in combustion/CFD/energy domain expertise.",
+      "answer_correct": false,
+      "answer_issues": [
+        {
+          "type": "unsupported",
+          "description": "The answer makes claims about channel-scale models (characteristic lengths of O(μm)-O(mm), consideration of single channels or minimum repeating units) that are not supported by the provided citations or paper excerpt. The citations only mention pore-scale and monolith-scale approaches explicitly."
+        },
+        {
+          "type": "unsupported",
+          "description": "The answer states computational demands 'increase from channel-scale to pore-scale and monolith-scale' and provides specific computational requirements for channel-scale models, but the citations provide no information about channel-scale computational demands or comparative computational requirements between the three approaches."
+        }
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "Revise the answer to only include information actually present in the provided citations about pore-scale and monolith-scale models, and remove unsupported claims about channel-scale models and comparative computational requirements."
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_bcfcb96f",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Modelling-treatment-of-deposits-in-particulate-f_2023_Progress-in-Energy-and",
+      "paper_title": "Modelling-treatment-of-deposits-in-particulate-f_2023_Progress-in-Energy-and"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:25:29.913029",
+      "answer_length": 1284
+    }
+  },
+  {
+    "question_text": "Based on the provided paper content, describe the three primary filtration mechanisms in particulate filters as presented in unit collector models, including their physical descriptions. Explain how these mechanisms are considered in filtration models and discuss what particle properties and flow conditions influence their relative importance in engine emission filtration.",
+    "standard_answer": "According to the paper, the three major filtration mechanisms in particulate filters are Brownian diffusion, interception, and inertial impaction. Brownian diffusion involves particle deposition onto collectors due to random collision with gas molecules, where particles exhibit random motion that brings them into contact with collector surfaces. Interception occurs when particles following gas streamlines pass close enough to collector surfaces to be captured because they follow along gas streamlines that lie closely to the surface of collectors. Inertial impaction filters particles that are too large to follow the streamlines and cannot change direction fast enough to avoid colliding with the collector. These mechanisms are incorporated into unit collector models where the complex internal structures of the filter wall are represented by an ensemble of particle collectors with simple geometry. The relative importance of these mechanisms depends on particle size, with inertial impaction being more relevant for larger particles, while Brownian diffusion dominates for smaller particles. Flow conditions such as gas velocity and temperature also influence the mechanisms, as they affect particle diffusion coefficients and the ability of particles to follow streamlines. The paper specifically notes that inertial impaction is often neglected for particles below 1 μm, which are typical in engine emissions, making Brownian diffusion and interception the dominant mechanisms for most engine-out particulates.",
+    "original_text": {
+      "1": "The three major filtration mechanisms, namely Brownian diffusion, interception and inertial impaction, are shown in Fig. 6.",
+      "2": "Brownian diffusion considers particle deposition onto the collector due to random collision with gas molecules. Interception considers particles that are trapped on the collectors because they follow along gas streamlines that lie closely to the surface of collectors."
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "fluid_mechanics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires knowledge of particulate filtration mechanisms in engine emission control systems, specifically focusing on fluid mechanics principles (Brownian diffusion, interception, inertial impaction), particle transport in porous media, and how these mechanisms apply to engine emission filtration - all core combustion/CFD/energy domain topics.",
+      "answer_correct": false,
+      "answer_issues": [
+        {
+          "type": "unsupported",
+          "description": "The answer provides detailed physical descriptions of inertial impaction and discusses particle size dependencies and flow condition effects, but these details are not supported by the provided citations. Citation 1 only lists the three mechanisms, and Citation 2 only describes Brownian diffusion and interception briefly. The extensive elaboration on inertial impaction, size dependencies, and flow effects lacks citation support."
+        },
+        {
+          "type": "factual_error",
+          "description": "The answer states 'inertial impaction is often neglected for particles below 1 μm' and that Brownian diffusion and interception are 'dominant mechanisms for most engine-out particulates,' but the paper excerpt shows engine-out particles include nucleation mode (<50 nm), accumulation mode (50 nm to 1 micron), and coarse mode (>1 micron), suggesting inertial impaction could be relevant for larger particles in the coarse mode."
+        }
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "Revise the answer to strictly align with the provided citations, removing unsupported claims about inertial impaction details, particle size dependencies, and flow condition effects that go beyond what the citations support."
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_86ae3512",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Modelling-treatment-of-deposits-in-particulate-f_2023_Progress-in-Energy-and",
+      "paper_title": "Modelling-treatment-of-deposits-in-particulate-f_2023_Progress-in-Energy-and"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:25:42.247643",
+      "answer_length": 1522
+    }
+  }
+]

@@ -1,0 +1,167 @@
+[
+  {
+    "question_text": "Calculate the equilibrium constant for the water-gas shift reaction at 400°C using the given correlation KP = exp[(4577.8/T) - 4.33], and determine the theoretical CO conversion if the initial steam-to-CO molar ratio is 3:1 at 1 bar pressure.",
+    "standard_answer": "First, convert temperature to Kelvin: T = 400 + 273 = 673 K. Substitute into the equation: KP = exp[(4577.8/673) - 4.33] = exp[6.80 - 4.33] = exp[2.47] ≈ 11.82. For the reaction CO + H2O ↔ H2 + CO2, define initial moles: CO = 1, H2O = 3, H2 = 0, CO2 = 0. Let x be the moles of CO converted. At equilibrium: CO = 1-x, H2O = 3-x, H2 = x, CO2 = x. Total moles = 4. The equilibrium constant KP = (P_H2 * P_CO2) / (P_CO * P_H2O) = [(x/4)*(x/4)] / [((1-x)/4)*((3-x)/4)] * P^2, but since pressure P = 1 bar, KP = [x^2] / [(1-x)(3-x)]. Solve 11.82 = x^2 / [(1-x)(3-x)]. Rearranging: 11.82(1-x)(3-x) = x^2 → 11.82(3 - 4x + x^2) = x^2 → 35.46 - 47.28x + 11.82x^2 = x^2 → 10.82x^2 - 47.28x + 35.46 = 0. Using quadratic formula: x = [47.28 ± sqrt(47.28^2 - 4*10.82*35.46)] / (2*10.82) = [47.28 ± sqrt(2234.4 - 1533.5)] / 21.64 = [47.28 ± sqrt(700.9)] / 21.64 = [47.28 ± 26.47] / 21.64. Taking the feasible root (x < 1): x = (47.28 - 26.47)/21.64 ≈ 20.81/21.64 ≈ 0.961. Thus, CO conversion = x/1 = 96.1%.",
+    "original_text": {
+      "1": "KP = exp[(4577.8 / T) - 4.33] where T is the absolute temperature.",
+      "2": "The forward WGS reaction is favored at lower reaction temperatures, however, at higher temperatures (~ 1000 °C), CO transformation becomes a function of steam-to-CO molar ratio."
+    },
+    "type": "calculation",
+    "difficulty": 3,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question requires combustion science and thermodynamics expertise to understand the water-gas shift reaction, equilibrium constants, and chemical equilibrium calculations for hydrogen production systems.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer are well-structured and domain-appropriate. No issues found."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_00588347",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Progress-in-in-situ-CO2-sorption-for-enhanc_2022_Progress-in-Energy-and-Comb",
+      "paper_title": "Progress-in-in-situ-CO2-sorption-for-enhanc_2022_Progress-in-Energy-and-Comb"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:26:14.115188",
+      "answer_length": 991
+    }
+  },
+  {
+    "question_text": "How does the Le Chatelier's principle explain the enhancement of hydrogen yield in sorption-enhanced steam reforming when CO2 is selectively removed by solid sorbents?",
+    "standard_answer": "Le Chatelier's principle states that a system at equilibrium will shift to counteract any imposed change. In steam reforming of hydrocarbons (e.g., CH4 + H2O ↔ CO + 3H2), the water-gas shift reaction (CO + H2O ↔ H2 + CO2) further produces hydrogen but is equilibrium-limited. When a solid sorbent like CaO captures CO2 in situ (CaO + CO2 → CaCO3), the CO2 concentration in the gas phase decreases. According to Le Chatelier's principle, the equilibrium of the water-gas shift reaction shifts forward to produce more H2 and CO2, compensating for the removed CO2. This continuous removal drives both reforming and WGS reactions toward higher H2 production, exceeding thermodynamic limits of conventional processes. The exothermic carbonation (e.g., -179 kJ/mol for CaO) also provides heat, favoring endothermic reforming. Thus, selective CO2 sorption alters reaction equilibria, enhancing H2 yield and purity.",
+    "original_text": {
+      "1": "Le Chatelier’s principle is governing the CO2-sorption enhanced gasification where CO2 is selectively removed shifting the equilibrium toward the formation of the other reaction product which is hydrogen.",
+      "2": "By the sorption of CO2 from the gaseous product species employing a solid sorbent, the normal equilibrium limit of the reforming reaction is extended beyond the thermodynamic limitation of the original system without the CO2 removal."
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires understanding of chemical equilibrium principles (Le Chatelier's principle) applied specifically to sorption-enhanced steam reforming processes for hydrogen production, which involves combustion science, reaction kinetics, and energy systems expertise.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct, and compliant with other requirements."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_8c89aef5",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Progress-in-in-situ-CO2-sorption-for-enhanc_2022_Progress-in-Energy-and-Comb",
+      "paper_title": "Progress-in-in-situ-CO2-sorption-for-enhanc_2022_Progress-in-Energy-and-Comb"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:26:14.633107",
+      "answer_length": 907
+    }
+  },
+  {
+    "question_text": "Using the Arrhenius equation and equilibrium principles, explain why the water-gas shift reaction is typically operated in two stages (high-temperature followed by low-temperature) in industrial hydrogen production.",
+    "standard_answer": "The water-gas shift reaction (CO + H2O ↔ H2 + CO2) is exothermic (-41.1 kJ/mol), so lower temperatures favor higher equilibrium CO conversion per Le Chatelier's principle. However, kinetics governed by the Arrhenius equation (k = A exp(-E/RT)) show that reaction rates increase with temperature. Thus, a single-stage reactor faces a trade-off: high temperatures (350–500°C) with fast kinetics but lower equilibrium conversion, or low temperatures (150–250°C) with high conversion but slow rates. To resolve this, industrial systems use two stages: HT-WGS with Fe-Cr/Ni catalysts at 350–500°C for rapid initial conversion, followed by LT-WGS with Cu-Zn catalysts at 150–250°C to approach equilibrium. This sequential approach leverages kinetics in the first stage and thermodynamics in the second, maximizing H2 yield efficiently. The equilibrium constant KP decreases with temperature (e.g., KP ≈ 10^3 at <100°C vs. ~5 at 500°C), guiding stage design.",
+    "original_text": {
+      "1": "The Arrhenius principle reflects the importance of elevated reaction temperature for an enhanced reaction rate whereas Le Chatelier’s principle recommends lower reaction temperature for higher CO conversion.",
+      "2": "Therefore, in practice, WGS is implemented in two stages where HT-WGS is followed by LT-WGS."
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires understanding of chemical kinetics (Arrhenius equation), thermodynamics (equilibrium principles), and industrial process design specific to hydrogen production and combustion chemistry. It involves specialized knowledge of the water-gas shift reaction, catalyst selection, and temperature optimization strategies in industrial energy systems.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct, and compliant with other requirements."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_268519a0",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Progress-in-in-situ-CO2-sorption-for-enhanc_2022_Progress-in-Energy-and-Comb",
+      "paper_title": "Progress-in-in-situ-CO2-sorption-for-enhanc_2022_Progress-in-Energy-and-Comb"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:26:15.153557",
+      "answer_length": 951
+    }
+  },
+  {
+    "question_text": "In sorption-enhanced processes using fluidized beds, what is the relationship between gas residence time and CO₂ sorption kinetics, and how does this impact reactor design according to the provided paper?",
+    "standard_answer": "According to the paper, in fluidized beds, high gas velocities are employed to achieve fluidization of solids, but this results in very small gas residence times in the bed. This short duration of contact between the sorbent and CO₂, typically lasting only several seconds, necessitates faster sorption kinetics to achieve effective CO₂ capture. The paper states: 'In fluidized beds, high gas velocities are employed to achieve fluidization of solids with the disadvantage being the very small gas residence times in the bed.' This creates a fundamental constraint where the sorption kinetics must be sufficiently rapid to capture CO₂ within the brief contact period. The paper emphasizes that 'whether it is a packed bed or a fluidized bed, the role of CO₂ sorption kinetics is crucial.' This interaction between residence time and kinetics directly influences reactor selection and design. For processes requiring rapid CO₂ capture, fluidized beds with fast-kinetics sorbents are preferred, while slower kinetics may necessitate alternative configurations with longer contact times. The limited gas residence time in fluidized beds represents a key design consideration that must be balanced with sorbent kinetic properties to achieve optimal CO₂ capture efficiency.",
+    "original_text": {
+      "1": "In fluidized beds, high gas velocities are employed to achieve fluidization of solids with the disadvantage being the very small gas residence times in the bed.",
+      "2": "Therefore, whether it is a packed bed or a fluidized bed, the role of CO2 sorption kinetics is crucial."
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question requires specific knowledge of fluidized bed reactor design, gas residence time effects, and CO₂ sorption kinetics in energy systems - all core concepts in combustion science, heat transfer, and energy engineering. It cannot be answered with general ML knowledge alone.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "The question is well-focused on energy systems domain and the answer correctly interprets the relationship between gas residence time and sorption kinetics from the provided citations."
+    },
+    "retry_count": 1,
+    "question_id": "deepseek_q_a68fc5cc",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Progress-in-in-situ-CO2-sorption-for-enhanc_2022_Progress-in-Energy-and-Comb",
+      "paper_title": "Progress-in-in-situ-CO2-sorption-for-enhanc_2022_Progress-in-Energy-and-Comb"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:26:49.410431",
+      "answer_length": 1268
+    }
+  },
+  {
+    "question_text": "How do nucleation-growth models (A-series) describe CO2 sorption kinetics in alkali ceramic sorbents, and what specific characteristics of the reaction rate profile distinguish them from other kinetic models?",
+    "standard_answer": "Nucleation-growth models, specifically the A-series models, describe CO2 sorption kinetics in alkali ceramic sorbents through a characteristic reaction rate profile that initially increases, reaches a peak, and then declines. This behavior is governed by the Avrami-Erofeev model, where the rate enhancement is triggered by spontaneous nucleation and growth of carbonate nuclei within the sorbent material. The initial increase occurs as nuclei develop and expand, overcoming surface tension barriers. As these nuclei grow larger, they eventually overlap with neighboring nuclei, creating spatial constraints that inhibit further growth and cause the reaction rate to slow down. This distinctive arch-shaped profile with a clear peak distinguishes A-series models from diffusion-limited models (D-series), which exhibit continuously decreasing reaction rates, and from power law models (P-series), which show constantly increasing rates without growth constraints. The CO2 capture by solid sorbents such as alkali ceramic sorbents (sodium zirconate, lithium orthosilicate) are governed by the A-series mechanism, making this kinetic approach particularly suitable for describing their sorption behavior.",
+    "original_text": {
+      "1": "In A-series models for CO2 sorption by solid sorbents, the rate of reaction speeds up, reaches a peak and then slows down and it is defined by the Avrami-Erofeev model.",
+      "2": "The CO2 capture by solid sorbents such as alkali ceramic sorbents (sodium zirconate, lithium orthosilicate) are governed by the A-series mechanism."
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires specific knowledge of CO2 sorption kinetics in alkali ceramic sorbents, nucleation-growth models (A-series), and kinetic modeling approaches - all within the domain of combustion science, energy systems, and chemical kinetics relevant to CO2 capture technologies.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+    },
+    "retry_count": 1,
+    "question_id": "deepseek_q_f2767e82",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Progress-in-in-situ-CO2-sorption-for-enhanc_2022_Progress-in-Energy-and-Comb",
+      "paper_title": "Progress-in-in-situ-CO2-sorption-for-enhanc_2022_Progress-in-Energy-and-Comb"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:26:51.211964",
+      "answer_length": 1203
+    }
+  }
+]

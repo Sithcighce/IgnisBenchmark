@@ -1,0 +1,79 @@
+{
+  "question_text": "How does the oxidant composition (air vs. oxygen/steam) affect the syngas heating value and oxygen utilization in underground coal gasification, and what are the underlying chemical mechanisms?",
+  "standard_answer": "The oxidant composition significantly impacts syngas heating value and oxygen utilization through stoichiometric and thermodynamic principles. Air-blown gasification introduces nitrogen, which dilutes the syngas, reducing its heating value to 4–5 MJ/Nm³. In contrast, oxygen/steam gasification eliminates nitrogen dilution, allowing higher concentrations of combustible gases like H₂ and CO, increasing heating values to 10–11 MJ/Nm³. Oxygen utilization, defined as energy in syngas per kmol of injected oxygen, improves from ~950 MJ/kmol with air to ~1200 MJ/kmol with oxygen/steam due to enhanced reaction efficiency. The Boudouard reaction (C + CO₂ ⇌ 2CO) and water-gas shift (CO + H₂O ⇌ CO₂ + H₂) are promoted under oxygen/steam conditions, favoring endothermic gasification reactions over exothermic combustion. Higher temperatures from oxygen enrichment accelerate kinetics, while steam injection moderates temperature via endothermic reactions, preventing slagging and optimizing gas composition. This balance maximizes carbon conversion and syngas energy density.",
+  "original_text": {
+    "1": "For gasification operations on air, the oxidant was injected into the main injection wellbore and the dry syngas heating value was 4 to 5 MJ/Nm³ with an oxygen utilization of » 950 MJ/kmol.",
+    "2": "On oxygen blown gasification the syngas heating value was in the range 10 to 11 MJ/Nm³ and the oxygen utilization was around 1200 MJ/kmol."
+  },
+  "type": "reasoning",
+  "difficulty": 4,
+  "topic": "combustion_science",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires specific knowledge of underground coal gasification processes, including how oxidant composition affects syngas properties and chemical mechanisms like the Boudouard reaction and water-gas shift, which are core combustion science and energy systems concepts.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer are well-aligned with domain focus and paper content; no issues detected."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_ea1ba313",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Underground-coal-gasification---Part-I--Field-de_2018_Progress-in-Energy-and",
+    "paper_title": "Underground-coal-gasification---Part-I--Field-de_2018_Progress-in-Energy-and"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:32:04.611845",
+    "answer_length": 1071
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly states the key numerical values from the original text: air-blown gasification produces syngas with 4-5 MJ/Nm³ heating value and ~950 MJ/kmol oxygen utilization, while oxygen-blown gasification produces 10-11 MJ/Nm³ with ~1200 MJ/kmol oxygen utilization. The chemical mechanisms described (nitrogen dilution in air-blown systems, Boudouard reaction, water-gas shift reaction) are scientifically accurate. The explanation of how oxygen/steam conditions promote endothermic gasification reactions over exothermic combustion is thermodynamically sound. The discussion of temperature effects, reaction kinetics, and the role of steam in moderating temperature while preventing slagging is consistent with established combustion science principles. While the answer is more detailed than the original text, all additional explanations are factually correct and logically consistent.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:24:10.932869"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Minor clarity: It would help to explicitly mention the water–gas reaction (C + H2O -> CO + H2) as the key endothermic steam-gasification step; the water–gas shift itself is mildly exothermic in the forward direction."
+        ],
+        "reasoning": "The answer correctly states that air-blown UCG yields 4–5 MJ/Nm³ with ~950 MJ/kmol O2 utilization and oxygen/steam raises LHV to 10–11 MJ/Nm³ with ~1200 MJ/kmol O2 utilization, matching the ground-truth values. It accurately attributes higher LHV to elimination of nitrogen dilution and higher CO/H2 fractions, and explains oxygen utilization improvement plausibly. The described mechanisms (role of steam moderating temperature via endothermic reactions, oxygen enrichment increasing temperature/kinetics, and participation of Boudouard and WGS equilibria) are physically sound. No contradictions with the original text.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:24:45.372658"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer is factually correct, logically sound, and fully consistent with the provided original text. It accurately reports the numerical values for heating value (4–5 MJ/Nm³ for air, 10–11 MJ/Nm³ for O₂) and oxygen utilization (~950 MJ/kmol for air, ~1200 MJ/kmol for O₂). Furthermore, it correctly explains the underlying mechanisms, including nitrogen dilution, the promotion of endothermic gasification reactions (Boudouard, water-gas), and the temperature moderation effect of steam, all of which are standard principles in combustion and gasification science.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:25:10.453869"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:25:10.453895",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

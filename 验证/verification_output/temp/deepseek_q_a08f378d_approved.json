@@ -1,0 +1,77 @@
+{
+  "question_text": "Calculate the expected time delay τ in the n-τ model for a premixed flame with length Lf = 0.1 m and mean flow velocity u0 = 20 m/s, and explain the physical significance of this delay in the flame transfer function.",
+  "standard_answer": "For a laminar premixed flame in the n-τ model, the time delay τ is typically proportional to the convection time from disturbance origin to flame midpoint. For a 2D flame, τ = Lf/(2u0) = 0.1 m / (2 × 20 m/s) = 0.0025 s or 2.5 ms. This delay represents the time for flow disturbances (velocity fluctuations, vortices, or equivalence ratio perturbations) to convect from their point of excitation (e.g., nozzle exit) to the region of maximum heat release in the flame. Physically, this convection time determines the phase relationship between the input disturbance and the resulting heat release oscillation in the flame transfer function F(ω) = n exp(-iωτ). The phase angle φ = -ωτ increases linearly with frequency, causing the flame response to lag the excitation. At frequencies where ωτ = π (f = 1/(2τ) = 200 Hz for this case), the phase reaches -180° and the heat release becomes completely out of phase with the disturbance, potentially leading to damping rather than driving of oscillations. This time delay is crucial for determining stability boundaries since it affects whether heat release reinforces or opposes acoustic pressure oscillations according to the Rayleigh criterion.",
+  "original_text": {
+    "1": "Typical characteristic delay times between the excitation of the flow disturbance and the heat release are convective in nature, usually involving the time required for a vortex to convect from its point of initiation to the midpoint of the flame.",
+    "2": "It can be shown that the n-τ model accurately describes velocity-coupled premixed flame response in the fLf/u0 ≪ 1 limit, where τ is proportional to Lf/u0 (e.g., for laminar 2-D flames, τ = Lf/2u0)."
+  },
+  "type": "calculation",
+  "difficulty": 3,
+  "topic": "combustion_kinetics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires specific knowledge of combustion science (n-τ model for premixed flames), flame transfer functions, and the physical interpretation of time delays in combustion instability analysis. It involves understanding flame dynamics, convection processes, and the relationship between flow disturbances and heat release oscillations.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer are well-structured, domain-focused, and factually correct based on the provided citations."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_a08f378d",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Transverse-combustion-instabilities--Acoustic--_2015_Progress-in-Energy-and-",
+    "paper_title": "Transverse-combustion-instabilities--Acoustic--_2015_Progress-in-Energy-and-"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:32:00.239030",
+    "answer_length": 1190
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly calculates τ = Lf/(2u0) = 0.0025 s (2.5 ms) for a 2D laminar flame, which matches the formula given in the original text. The physical explanation is accurate: the delay represents convection time from disturbance origin to the flame region, consistent with the original text stating 'time required for a vortex to convect from its point of initiation to the midpoint of the flame.' The discussion of phase relationships (φ = -ωτ), the flame transfer function F(ω) = n exp(-iωτ), the 180° phase shift at f = 200 Hz, and the connection to Rayleigh criterion are all physically sound extensions that correctly apply combustion instability theory. The answer appropriately elaborates on the physical significance while remaining consistent with the original text's core statements about convective delay times and the n-τ model formulation.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:23:55.535313"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "Computation of τ = Lf/(2u0) = 0.0025 s matches the PECS text for a laminar 2D premixed flame. The explanation that τ represents convective delay to the flame midpoint is consistent with the ground truth. The FTF form F(ω) = n exp(-iωτ), phase φ = -ωτ, and the example frequency f = 1/(2τ) = 200 Hz for a 180° phase shift are all correct. The physical significance and stability implications via phase lag are accurately described.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:24:18.668492"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer is entirely correct. The calculation of the time delay τ is accurate, and the formula used (τ = Lf/2u0) is appropriate for a 2D flame, consistent with the original text. The physical explanation correctly identifies τ as a convective time delay that determines the phase lag in the flame transfer function and its crucial role in thermoacoustic stability via the Rayleigh criterion.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:24:37.386062"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:24:37.386088",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

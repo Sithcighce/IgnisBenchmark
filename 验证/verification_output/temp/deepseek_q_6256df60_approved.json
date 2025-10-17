@@ -1,0 +1,77 @@
+{
+  "question_text": "Why does decreasing residence time from 1.58s to 0.91s increase light olefin yields in polypropylene pyrolysis, and what specific secondary reactions are suppressed?",
+  "standard_answer": "Shorter residence times (0.91s vs 1.58s) enhance light olefin yields by minimizing secondary reactions that consume primary pyrolysis products. The key suppressed pathways include: (1) Diels-Alder cyclization where dienes react with olefins to form cyclic compounds and eventually aromatics; (2) Hydrogen abstraction acetylene addition (HACA) mechanisms that build polyaromatic hydrocarbons; (3) Bimolecular recombination reactions between radical intermediates; and (4) Repolymerization of light olefins to heavier hydrocarbons. At longer residence times, the produced light olefins act as intermediates in these bimolecular reactions, converting to aromatic compounds and coke. The residence time effect is particularly pronounced for propylene and butenes, which have higher reactivity than ethylene. Short residence times effectively quench the radical chain reactions after primary scission events, preserving the initial light olefin distribution before secondary decomposition can occur.",
+  "original_text": {
+    "1": "It is widely agreed that the time of residence should be less than 2 s as longer residence times result in lower olefin yields through secondary reactions",
+    "2": "At a prolonged residence time, the produced light olefins can act as intermediates in bimolecular reactions and are then converted to aromatic compounds and coke"
+  },
+  "type": "reasoning",
+  "difficulty": 4,
+  "topic": "chemical_kinetics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires specific knowledge of chemical kinetics, pyrolysis mechanisms, and secondary reaction pathways in polypropylene pyrolysis - all core combustion science and chemical engineering concepts. It demands understanding of residence time effects on reaction pathways and specific suppression mechanisms.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other issues."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_6256df60",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Challenges-and-opportunities-of-light-olefin-production_2023_Progress-in-Ene",
+    "paper_title": "Challenges-and-opportunities-of-light-olefin-production_2023_Progress-in-Ene"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:16:41.214124",
+    "answer_length": 994
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly explains that shorter residence times increase light olefin yields by suppressing secondary reactions. The core mechanism is consistent with the original text: light olefins act as intermediates in bimolecular reactions at longer residence times and convert to aromatics and coke. The answer provides additional mechanistic details (Diels-Alder cyclization, HACA mechanisms, radical recombination, repolymerization) that are scientifically sound and represent well-established secondary reaction pathways in pyrolysis chemistry. These elaborations do not contradict the original text but rather provide specific examples of the 'secondary reactions' and 'bimolecular reactions' mentioned. The explanation of radical chain quenching and the differential reactivity of propylene/butenes versus ethylene are consistent with established combustion and pyrolysis science. No factual errors or logical contradictions detected.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:05:21.821261"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer aligns with the ground truth: shorter residence time suppresses secondary bimolecular reactions that convert light olefins to aromatics and coke, thereby increasing olefin yield. The listed mechanisms (radical recombination, oligomerization, cyclization toward aromatics, and PAH growth pathways) are plausible and consistent elaborations without contradicting the original text.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:05:52.945970"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer is factually correct and logically sound. It correctly identifies that shorter residence times suppress secondary reactions, which is consistent with the provided original text. The specific secondary reaction pathways listed (Diels-Alder, HACA, recombination, repolymerization) are all valid and well-established mechanisms in pyrolysis that convert primary light olefins into heavier products, aromatics, and coke. The explanation is more detailed than the original text but all elaborations are accurate and relevant.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:06:15.371319"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:06:15.371338",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "question_text": "Based on the provided paper content, explain the physical interpretation of the numerator and denominator in the unified flash boiling number (FB) definition. What does the paper hypothesize about the relationship between this dimensionless number and vapor fraction in the nozzle, and what limitations does it acknowledge regarding the predictive capability of the FB number?",
+  "standard_answer": "The paper defines the flash boiling number (FB) as a dimensionless parameter that unifies the analysis of cavitating and superheated flows. The denominator [1 - (p_inj/p_back)] physically represents the phase change tendency without the influence of flow velocity, capturing the fundamental pressure-driven potential for phase transition. The numerator [1 - (p_v/p_back)] represents the suppression effect of high injection pressure inside the fuel nozzle, indicating how the injection pressure conditions can inhibit or modify the phase change process. The paper hypothesizes that the so-defined flash boiling number is quantitatively associated with the vapor fraction in the nozzle, especially near the nozzle exit, suggesting that higher FB values would correspond to increased vapor generation within the nozzle flow. However, the paper explicitly acknowledges significant limitations in the FB number's predictive capability. It states that the flash boiling number is more meaningful for fast determination of spray status but cannot quantitatively or accurately predict the exact characteristics of spray breakups or external spray features. This limitation arises because the potential field inside the nozzle is quite sensitive to boundary conditions and nozzle design, making precise quantitative predictions challenging with a single dimensionless parameter alone.",
+  "original_text": {
+    "1": "The FB number is a dimensionless number by definition. The denominator of the FB represents the phase change tendency without the influence of flow velocity, and the numerator of the FB represents the suppression effect of high injection pressure inside the fuel nozzle.",
+    "2": "We hypothesize that the so-defined flash boiling number or other dimensionless numbers are quantitatively associated with the vapor fraction in the nozzle, especially near the nozzle exit.",
+    "3": "Therefore, in our opinion, the establishment of the flash boiling number or cavitation number is more meaningful for fast determination of the status of the sprays, but not for quantitatively or accurately predicting the characteristics of the spray breakups or external spray features."
+  },
+  "type": "concept",
+  "difficulty": 4,
+  "topic": "fluid_mechanics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires understanding of fluid mechanics concepts (flash boiling, cavitation, superheated flows), dimensionless analysis in multiphase flows, and spray atomization physics - all core topics in combustion science and energy systems.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+  },
+  "retry_count": 2,
+  "question_id": "deepseek_q_570601c5",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "A-review-on-the-recent-advances-of-flash-boiling_2024_Progress-in-Energy-and",
+    "paper_title": "A-review-on-the-recent-advances-of-flash-boiling_2024_Progress-in-Energy-and"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:15:33.429471",
+    "answer_length": 1376
+  },
+  "verification": {
+    "status": "rejected",
+    "verifiers": [
+      {
+        "correct": false,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "The standard answer reverses the physical interpretation of the numerator and denominator. According to the original text, the DENOMINATOR represents 'phase change tendency without the influence of flow velocity' while the NUMERATOR represents 'suppression effect of high injection pressure inside the fuel nozzle'. The standard answer incorrectly assigns these interpretations in reverse."
+        ],
+        "reasoning": "The standard answer contains a critical factual error by swapping the physical interpretations of the numerator and denominator in the FB number definition. The original text clearly states: 'The denominator of the FB represents the phase change tendency without the influence of flow velocity, and the numerator of the FB represents the suppression effect of high injection pressure inside the fuel nozzle.' However, the standard answer states the opposite - claiming the denominator represents suppression effect and the numerator represents phase change tendency. The rest of the answer regarding the hypothesis about vapor fraction correlation and limitations of predictive capability is accurate and consistent with the original text.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:01:56.574884"
+      },
+      {
+        "correct": false,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Introduces explicit forms for numerator/denominator ([1 - p_inj/p_back] and [1 - p_v/p_back]) that are not provided in the original text and misassigns their physical roles relative to injection and vapor pressures.",
+          "Claims a directional trend (higher FB implies more vapor generation) not stated in the original text; the text only hypothesizes a quantitative association without specifying monotonic behavior.",
+          "Adds an assertion that FB unifies cavitating and superheated flows, which is not explicitly supported by the provided text (though not necessarily wrong)."
+        ],
+        "reasoning": "While the answer correctly paraphrases the physical interpretations (denominator: phase change tendency without velocity effects; numerator: suppression by high injection pressure) and the limitations of FB for predictive accuracy, it introduces unsourced and likely incorrect explicit formula forms and an unsubstantiated monotonic trend between FB and vapor fraction. These constitute factual/interpretive errors relative to the provided ground truth.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:02:28.331337"
+      },
+      {
+        "correct": false,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "The answer incorrectly maps the mathematical formulas to their physical interpretations for the numerator and denominator. The term related to injection pressure, which causes the 'suppression effect', is incorrectly associated with the 'phase change tendency'. Conversely, the term related to vapor pressure, which drives the 'phase change tendency', is incorrectly associated with the 'suppression effect'.",
+          "The answer's elaboration on the hypothesis is incorrect. It suggests that higher FB values lead to increased vapor generation. However, based on the paper's definition (where the numerator represents the suppression effect and the denominator represents the phase change tendency), a higher FB number would imply a stronger suppression effect relative to the phase change driver, thus leading to *less* vapor generation."
+        ],
+        "reasoning": "The answer contains two significant errors. First, while it correctly quotes the physical roles of the numerator and denominator from the original text, it assigns the wrong mathematical expressions to them. The term [1 - (p_inj/p_back)] relates to the suppression effect, not the phase change tendency. Second, the conclusion that a higher FB number corresponds to increased vapor is inconsistent with the paper's definition of the FB number, which would imply the opposite trend.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:03:30.330926"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:03:30.330945",
+    "consensus": {
+      "all_correct": false,
+      "correct_votes": 0,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

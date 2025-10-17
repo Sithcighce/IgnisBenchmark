@@ -1,0 +1,134 @@
+[
+  {
+    "question_text": "How does the temperature glide of zeotropic mixtures in evaporation and condensation processes improve thermal matching in Rankine cycles for ICE waste heat recovery, and what are the potential drawbacks?",
+    "standard_answer": "Zeotropic mixtures improve thermal matching in Rankine cycles by exhibiting a temperature glide during phase change, which allows the working fluid's temperature profile to better align with the temperature glide of the waste heat sources (e.g., exhaust gas cooling from 500°C to 120°C) and the cold sink. During evaporation, the mixture's temperature increases gradually rather than remaining constant, reducing the average temperature difference for heat transfer and minimizing exergy destruction. Similarly, in condensation, the temperature decrease matches the cold source's warming, enhancing efficiency. This leads to higher net power output and thermodynamic perfection, as seen in mixtures like R600/R1234ze achieving shorter payback periods. However, drawbacks include the risk of composition shift due to fractionation, where components evaporate or condense at different rates, altering the mixture's properties and reducing performance over time. Additionally, excessive temperature glide can cause pinch point violations in heat exchangers, necessitating careful design to avoid inefficiencies. The non-ideal behavior requires complex optimization of composition and operating conditions, making practical application challenging compared to pure fluids.",
+    "original_text": {
+      "1": "The temperature glide of zeotropic mixtures in evaporation and condensation processes favors a better thermal matching with the heat source (sink), and results in a desirable system performance.",
+      "2": "However, excessive temperature glide may induce a composition shift and fractionating of the zeotropic mixtures, resulting in output power loss. Thus, it is difficult to draw a general conclusion that mixtures are more desirable than their pure components."
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "heat_transfer",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires specific knowledge of thermodynamics, heat transfer, and energy systems engineering related to zeotropic mixtures, Rankine cycles, and internal combustion engine waste heat recovery. It demands understanding of temperature glide phenomena, thermal matching principles, and practical challenges in energy conversion systems.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_9d5e0073",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Challenges-and-opportunities-of-Rankine-cycle-for-_2021_Progress-in-Energy-a",
+      "paper_title": "Challenges-and-opportunities-of-Rankine-cycle-for-_2021_Progress-in-Energy-a"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:17:14.098344",
+      "answer_length": 1268
+    }
+  },
+  {
+    "question_text": "Why do working fluids with high critical temperatures, such as cyclohexane, benzene, toluene, and MM (siloxanes), achieve higher thermodynamic perfection in basic Rankine cycles for ICE waste heat recovery compared to traditional refrigerants like R245fa?",
+    "standard_answer": "Working fluids with high critical temperatures, such as cyclohexane (Tc ≈ 280°C), benzene (Tc ≈ 289°C), toluene (Tc ≈ 319°C), and MM (hexamethyldisiloxane, Tc ≈ 245°C), achieve higher thermodynamic perfection in basic Rankine cycles because they enable better thermal matching with high-temperature waste heat sources like exhaust gas (300–900°C). This reduces the high-temperature thermal mismatch zone where low cycle temperatures limit heat absorption. Specifically, these fluids allow higher evaporation temperatures and pressures, increasing the cycle's top temperature and reducing the temperature difference during heat exchange, which minimizes exergy destruction. For instance, basic Rankine cycles using these fluids can reach thermodynamic perfection up to 54.1%, whereas R245fa (Tc = 154°C) is limited to around 34.2% due to its lower critical temperature and thermal decomposition risk above 250°C. The higher critical temperature also permits operation closer to the heat source's temperature glide, improving the alignment in the t-q diagram and enhancing the net power output by reducing irreversibilities in the evaporator.",
+    "original_text": {
+      "1": "With respect to working fluids, C x H y O z and siloxanes with high critical temperature (such as cyclohexane, benzene, toluene, and MM) have a satisfactory thermal matching with waste heat sources. Basic Rankine cycles using these working fluids could yield a high thermodynamic perfection of up to 54.1%.",
+      "2": "One of the key bottlenecks for the application of traditional refrigerants in ICE-WHR is their low thermal decomposition temperature (for instance, 250 °C for R245fa). To avoid the thermal decomposition of refrigerants caused by local overheating, an intermediate heat transfer cycle was added between the working fluid and the exhaust gas in previous studies."
+    },
+    "type": "reasoning",
+    "difficulty": 5,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires specific knowledge of thermodynamics, Rankine cycles, working fluid properties, and waste heat recovery systems in internal combustion engines. It involves understanding critical temperatures, thermal matching, exergy destruction, and thermodynamic perfection - all specialized energy systems concepts.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other issues."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_38a9954e",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Challenges-and-opportunities-of-Rankine-cycle-for-_2021_Progress-in-Energy-a",
+      "paper_title": "Challenges-and-opportunities-of-Rankine-cycle-for-_2021_Progress-in-Energy-a"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:17:14.294775",
+      "answer_length": 1140
+    }
+  },
+  {
+    "question_text": "How does the thermodynamic perfection metric, based on the heat source ideal thermodynamic cycle (H-iCycle), provide a more accurate evaluation of Rankine cycle performance for internal combustion engine waste heat recovery compared to the Carnot efficiency?",
+    "standard_answer": "The thermodynamic perfection metric, defined as the ratio of actual net power output to the ideal net power output from the H-iCycle, offers a superior evaluation for Rankine cycles in ICE waste heat recovery because it accounts for the finite heat capacity and multiple temperature levels of real waste heat sources, unlike the Carnot efficiency which assumes infinite heat capacity isothermal sources. The H-iCycle is constructed by achieving ideal thermal matching to the external boundary conditions of the actual heat sources, such as exhaust gas and engine coolant, which have varying temperatures and heat capacities. This cycle absorbs heat along the high-pressure curve and rejects it along the low-pressure curve with no temperature differences, minimizing irreversibilities. In contrast, the Carnot cycle's isothermal processes are incompatible with finite-heat-capacity sources, leading to overestimation of potential performance. The H-iCycle thus sets a realistic upper limit by considering the entropy transfer and heat ejection specific to the composite heat source curve, enabling a uniform standard to compare different working fluids and cycle configurations under identical boundary conditions, as demonstrated by thermodynamic perfection values ranging from 20% to 62% in studies.",
+    "original_text": {
+      "1": "The Carnot cycle has two isothermal process, which is incapable for multiple and finite-heat-capacity waste heat sources provided by the ICEs, meaning that the Carnot cycle may no longer be a very effective tool for system evaluation and optimization guidance.",
+      "2": "The proposed H-iCycle is a theoretical ideal thermodynamic cycle, which has the maximum efficiency possible of a heat engine (WHR-RCs) allowed by thermodynamic laws. The H-iCycle is constructed based on the assumption of no irreversible loss in the heat transfer process, compression and expansion process, and the assumption of the absence of incidental wasteful processes such as friction and leakage."
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires deep knowledge of thermodynamics, heat transfer, and energy systems specific to internal combustion engine waste heat recovery. It involves comparing thermodynamic cycles (Carnot vs H-iCycle), understanding waste heat source characteristics (finite heat capacity, multiple temperature levels), and evaluating Rankine cycle performance metrics - all core combustion/energy engineering concepts.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on paper citations, and no other compliance issues."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_a85f6560",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Challenges-and-opportunities-of-Rankine-cycle-for-_2021_Progress-in-Energy-a",
+      "paper_title": "Challenges-and-opportunities-of-Rankine-cycle-for-_2021_Progress-in-Energy-a"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:17:14.521781",
+      "answer_length": 1301
+    }
+  },
+  {
+    "question_text": "Calculate the ideal net power output for a Rankine cycle using the H-iCycle method, given a composite heat source of exhaust gas (inlet 500°C, outlet 120°C, mass flow 0.5 kg/s, cp=1.1 kJ/kg·K) and engine coolant (inlet 90°C, outlet 70°C, mass flow 1.0 kg/s, cp=4.2 kJ/kg·K), with a cold source at 25°C. Assume no irreversibilities and ideal thermal matching. Use proper thermodynamic integration methods as specified in the paper, particularly for the heat rejection calculation Q_out = ∫T ds_out. Show the complete step-by-step calculation process, including the integration method for Q_out, and explain why the specific temperature-entropy relationship for the low-pressure curve cannot be determined from the given citations alone.",
+    "standard_answer": "To calculate the ideal net power output using the H-iCycle method, first determine the total heat input and entropy transfer from the composite heat source using proper integration with absolute temperatures. The heat input from exhaust gas: Q_eg = m_eg * cp_eg * (T_eg,in - T_eg,out) = 0.5 kg/s * 1.1 kJ/kg·K * ((500+273) - (120+273)) K = 0.5 * 1.1 * 380 = 209 kW. For engine coolant: Q_ec = m_ec * cp_ec * (T_ec,in - T_ec,out) = 1.0 kg/s * 4.2 kJ/kg·K * ((90+273) - (70+273)) K = 4.2 * 20 = 84 kW. Total heat input Q_in = 209 + 84 = 293 kW. Next, compute the entropy transferred from each heat source using the correct integration method s_in = ∫(dq_in/T). For exhaust gas with constant cp: s_eg = m_eg * cp_eg * ln(T_eg,in/T_eg,out) = 0.5 * 1.1 * ln(773/393) ≈ 0.5 * 1.1 * 0.677 = 0.372 kW/K. For engine coolant: s_ec = m_ec * cp_ec * ln(T_ec,in/T_ec,out) = 1.0 * 4.2 * ln(363/343) ≈ 4.2 * 0.057 = 0.239 kW/K. Total entropy in s_in = 0.372 + 0.239 = 0.611 kW/K. Since the H-iCycle is internally reversible, s_out = s_in = 0.611 kW/K. The heat rejected to the cold source requires proper integration Q_out = ∫T ds_out. However, the paper only states the general formula without providing the specific temperature-entropy relationship for the low-pressure curve needed to perform this integration. The citations indicate 'Q_out = ∫T ds_out' but do not specify the functional form T(s) along the rejection path. For an ideal cycle with ideal thermal matching, the temperature at which entropy is rejected varies along the low-pressure curve, and the minimum rejection temperature is constrained by the cold source temperature T_cold = 25 + 273 = 298 K. Without knowing the precise T-s profile, which depends on the working fluid properties and cycle configuration not provided in the citations, we cannot complete the integration. Therefore, while we can calculate Q_in = 293 kW and s_out = 0.611 kW/K, Q_out remains indeterminate from the given information, and thus W_net,ideal = Q_in - Q_out cannot be fully calculated. This highlights the limitation of the provided citations, which state the method but not the specific implementation details.",
+    "original_text": {
+      "1": "First, the total entropy transferred from the heat source to the H-iCycle is estimated by: s_in = ∫(dq_in / T). Because the H-iCycle is an internal reversible cycle, there is no entropy generation during the cycle process. Therefore, the entropy extracted from the heat source is equal to the entropy deposited into the cold source, as expressed in Eq. (2). s_in = s_out. Thus, the heat ejected from the H-iCycle into the cold source can be obtained as Eq. (3) and the total net power output is estimated by Eq. (4). Q_out = ∫T ds_out, W_net,ideal = Q_in - Q_out.",
+      "2": "To evaluate results from various existing studies, a uniform evaluation standard, thermodynamic perfection, was proposed based on the benchmark of the heat source based ideal thermodynamic cycle(H-iCycle), which is determined by achieving ideal thermal matching to external boundary conditions."
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question requires deep thermodynamics and energy systems expertise, specifically Rankine cycle analysis, entropy calculations, heat transfer integration methods, and understanding of ideal thermal matching concepts in waste heat recovery systems - all core energy engineering domain knowledge.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question is well-designed and answer correctly identifies the limitation in calculating Q_out due to missing T-s relationship specification in the provided citations."
+    },
+    "retry_count": 3,
+    "question_id": "deepseek_q_bb7c0f08",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Challenges-and-opportunities-of-Rankine-cycle-for-_2021_Progress-in-Energy-a",
+      "paper_title": "Challenges-and-opportunities-of-Rankine-cycle-for-_2021_Progress-in-Energy-a"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:20:13.985823",
+      "answer_length": 2148
+    }
+  }
+]

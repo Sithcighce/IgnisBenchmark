@@ -1,0 +1,83 @@
+{
+  "question_text": "How do the fundamental factors governing thermal runaway processes in reactive chemicals interact to determine critical conditions for self-heating ignition, and what role does the balance between heat generation and dissipation play in this phenomenon?",
+  "standard_answer": "Thermal runaway processes in reactive chemicals are governed by three fundamental factors: heat generation from chemical reactions, heat exchange with the environment, and internal heat and mass transfer. The critical condition for self-heating ignition occurs when the rate of heat generation exceeds the rate of heat dissipation to the surroundings. This imbalance creates a positive feedback loop where increasing temperature accelerates chemical reaction rates exponentially (following Arrhenius kinetics), while heat dissipation typically increases only linearly through conduction and convection mechanisms. For autocatalytic-type reactive chemicals, there is typically an induction period where autocatalysts are slowly generated with minimal thermal conversion, followed by a sudden dramatic increase in heat generation rate that triggers thermal runaway. The specific critical conditions depend on factors such as the mass of reactive mixture, reactor size, surface area for heat exchange, physical state of substances, and thermophysical properties that collectively determine whether the system can maintain thermal equilibrium or progress toward runaway conditions.",
+  "original_text": {
+    "1": "A thermal runaway process is generally governed by three factors, the heat generation due to reaction (influenced by mass of reactive mixture and reactor size), the heat exchange with environment (such as the surface of reactor), and the internal heat and mass transfer (such as the physical state of substances and thermophysical properties)",
+    "2": "The final thermal runaway happens when all the autocatalysts are produced. Note that in the induction period, there is no noticeable thermal conversion at temperature lower than the onset temperature. Finally the heat generation rate suddenly increases to the maximum, with a higher order of magnitudes than heat generation rate of the induction period"
+  },
+  "type": "reasoning",
+  "difficulty": 4,
+  "topic": "combustion_kinetics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires deep understanding of combustion kinetics, thermal runaway processes, heat generation/dissipation balance, and self-heating ignition mechanisms - all core concepts in combustion science and thermal hazard assessment of reactive chemicals.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+  },
+  "retry_count": 1,
+  "question_id": "deepseek_q_64727826",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Assessment-on-thermal-hazards-of-reactive-chemical_2020_Progress-in-Energy-a",
+    "paper_title": "Assessment-on-thermal-hazards-of-reactive-chemical_2020_Progress-in-Energy-a"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:15:08.693518",
+    "answer_length": 1177
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": false,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "The answer states that for autocatalytic-type reactive chemicals, thermal runaway occurs when heat generation exceeds heat dissipation, followed by an induction period. However, the original text indicates that the induction period comes FIRST (with minimal thermal conversion), and THEN the final thermal runaway happens when all autocatalysts are produced.",
+          "The answer describes the sequence incorrectly: it suggests the critical condition (heat generation > dissipation) creates a feedback loop, and then mentions an induction period follows. The original text clearly states the induction period precedes the final thermal runaway."
+        ],
+        "reasoning": "The standard answer contains a logical sequencing error regarding autocatalytic thermal runaway. According to the original text, the correct sequence is: (1) induction period with slow autocatalyst generation and minimal thermal conversion, (2) then sudden dramatic increase in heat generation rate triggering thermal runaway when autocatalysts are produced. The answer incorrectly implies the critical condition and feedback loop occur first, followed by an induction period. This reverses the actual temporal sequence of events in autocatalytic thermal runaway processes. While the answer correctly identifies the three fundamental factors and the general principle of heat generation vs. dissipation, this sequencing error represents a factual inaccuracy about how autocatalytic thermal runaway actually progresses.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:03:58.164126"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Heat dissipation described as 'only linear' via conduction and convection is a simplification; radiative heat loss can be strongly non-linear, though the overall balance point explanation remains correct.",
+          "Does not explicitly state the PECS note that final runaway happens when all autocatalysts are produced, though it accurately describes the induction period and sudden increase in heat generation."
+        ],
+        "reasoning": "The standard answer matches the ground-truth factors (heat generation, environmental exchange, internal transport), correctly emphasizes the heat-generation vs. heat-dissipation balance for self-heating ignition, and describes autocatalytic induction and the subsequent surge in heat release consistent with the cited PECS text. No factual or logical errors detected.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:04:22.359551"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer is factually correct, logically sound, and fully consistent with the provided original text. It accurately describes the three governing factors of thermal runaway, the critical condition based on the balance between heat generation (exponential with temperature) and dissipation (linear with temperature), and correctly incorporates the specific details about autocatalytic systems mentioned in the source text. The explanation of the positive feedback loop is a cornerstone of thermal explosion theory and is stated correctly.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:04:40.961723"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:04:40.961742",
+    "consensus": {
+      "all_correct": false,
+      "correct_votes": 2,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 2
+    }
+  }
+}

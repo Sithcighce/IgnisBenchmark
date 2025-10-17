@@ -1,0 +1,81 @@
+{
+  "question_text": "How does the spin conservation principle govern the branching between the CH + N2 → NCN + H and CH + N2 → HCN + N reaction pathways, and what are the implications for prompt-NO formation kinetics?",
+  "standard_answer": "Spin conservation dictates that the total spin angular momentum must be preserved in elementary reactions. The CH radical has a doublet ground state (²CH), and N₂ is a singlet. The reaction CH + N₂ → NCN + H is spin-allowed because it proceeds on the doublet surface: doublet + singlet yields triplet (³NCN) + doublet (H), conserving overall spin. In contrast, CH + N₂ → HCN + N is spin-forbidden as it would require a doublet + singlet to yield singlet (HCN) + quartet (⁴N), violating spin conservation. This necessitates an intersystem crossing (ISC) from the doublet to quartet potential energy surface, which is a slow process due to weak spin-orbit coupling. Consequently, the spin-allowed pathway producing NCN dominates at combustion temperatures (>1200 K), making NCN a key intermediate in prompt-NO formation rather than direct HCN production. The kinetic favorability of the spin-conserved route explains why earlier models assuming direct HCN formation required anomalously high rate constants.",
+  "original_text": {
+    "1": "The new pathway with NCN + H products proposed by Moskaleva et al. [7,8] accounts for spin conservation (a doublet + singlet reaction can yield triplet + doublet species without overall spin-flip).",
+    "2": "In contrast, the original Fenimore pathway does not obey spin conservation (a doublet + singlet reaction should not directly yield singlet + quartet species as the main products) and therefore the assumed rate constant values were unusually high for such a spin-forbidden process."
+  },
+  "type": "reasoning",
+  "difficulty": 5,
+  "topic": "combustion_kinetics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires deep expertise in combustion kinetics, specifically understanding spin conservation principles in chemical reactions, reaction pathways for prompt-NO formation, and the implications for combustion modeling. It involves specialized knowledge of electronic spin states, intersystem crossing, and how these quantum mechanical principles govern reaction kinetics in combustion systems.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "The question is well-focused on combustion kinetics domain and the answer accurately reflects the paper's content on spin conservation principles governing CH + N2 reaction pathways and their implications for prompt-NO formation."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_92163bd6",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "The-story-of-NCN-as-a-key-species-in-prom_2021_Progress-in-Energy-and-Combus",
+    "paper_title": "The-story-of-NCN-as-a-key-species-in-prom_2021_Progress-in-Energy-and-Combus"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:31:04.920198",
+    "answer_length": 1005
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": false,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "The answer incorrectly states that CH + N₂ → NCN + H yields triplet NCN (³NCN) + doublet H. According to the original text, this spin-allowed pathway yields 'triplet + doublet species' as products, but the answer's specific assignment appears problematic.",
+          "More critically, the answer states that CH + N₂ → HCN + N 'would require a doublet + singlet to yield singlet (HCN) + quartet (⁴N)', but nitrogen atom in its ground state is actually a quartet (⁴S), and HCN is a singlet. The original text correctly identifies this as 'singlet + quartet species as the main products', which the answer repeats, but the fundamental issue is that the answer's spin accounting is confused about which pathway produces which products.",
+          "The answer correctly identifies the NCN pathway as spin-allowed and the HCN pathway as spin-forbidden, which aligns with the original text. However, the detailed spin state assignments contain errors in the explanation of the product states."
+        ],
+        "reasoning": "While the answer correctly captures the main concept that the NCN pathway is spin-allowed and the HCN pathway is spin-forbidden (consistent with the original text), it contains errors in the detailed spin state assignments for the products. The original text states that doublet + singlet → triplet + doublet is spin-allowed (NCN pathway), and doublet + singlet → singlet + quartet is spin-forbidden (HCN pathway). The answer's attempt to assign specific spin states to NCN and the products appears to contain inaccuracies in the detailed mechanism, even though the overall conclusion about which pathway dominates is correct.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:22:38.998792"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer matches the ground text: it correctly identifies CH as a doublet and N2 as a singlet, explains that the NCN + H products can conserve total spin on a doublet surface, and that the HCN + N products are spin-forbidden without intersystem crossing. It appropriately links this to the kinetic implications for prompt-NO, noting the need for unusually high rate constants in earlier HCN-based models. No contradictions or factual errors are present.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:23:11.206543"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer correctly identifies the spin states of reactants (CH doublet, N2 singlet) and products for both pathways. It correctly applies the spin conservation rule to show that the NCN + H channel is spin-allowed (a doublet + triplet product state can couple to a doublet, matching the reactants) while the HCN + N channel is spin-forbidden (a singlet + quartet product state can only be a quartet, which does not match the doublet reactants). This accurately explains the kinetic dominance of the NCN pathway in prompt-NO formation, which is fully consistent with the provided original text. All physical principles and logical steps are correct.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:23:31.377224"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:23:31.377249",
+    "consensus": {
+      "all_correct": false,
+      "correct_votes": 2,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 2
+    }
+  }
+}

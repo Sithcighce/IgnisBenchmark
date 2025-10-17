@@ -1,0 +1,80 @@
+{
+  "question_text": "How does the doubly conditional source-term estimation (DCSE) approach enhance the accuracy of turbulence-chemistry interaction models in complex combustion regimes like local extinction or mixed-mode combustion?",
+  "standard_answer": "DCSE enhances accuracy by incorporating two conditioning variables, which further reduces fluctuations around conditional means compared to single conditioning. In complex regimes such as local extinction in non-premixed flames or mixed-mode combustion in engines, single conditioning may insufficiently capture the multi-dimensional nature of scalar fields. DCSE addresses this by using a joint probability density function (PDF) of two scalars, typically mixture fraction and a progress variable, to close the mean reaction rates. This allows for better resolution of phenomena where both mixing and reaction progress vary significantly, such as during extinction events where scalar dissipation rates peak or in stratified flames where fuel-air mixing is inhomogeneous. The mathematical formulation involves solving a doubly conditioned integral equation (Eq. 13), which, despite increased computational cost, provides more precise conditional averages by leveraging the reduced spatial gradients under double conditioning. This is particularly critical in LES where filtered scales may miss small-scale events like local ignition or extinction, as DCSE's improved closure helps capture these dynamics more reliably.",
+  "original_text": {
+    "1": "The modelling error in the first-moment singly-conditioned CMC hypothesis increases as the fluctuations around the conditional means increase. Examples of such conditions are non-premixed flames with local extinction, combustion in homogeneous charge compression ignition engines where both auto-ignition and propagating fronts exists.",
+    "2": "According to Kronenburg and Bushe, the spatial gradient of the conditional averages is substantially reduced with double conditioning compared to single conditioning."
+  },
+  "type": "concept",
+  "difficulty": 5,
+  "topic": "combustion_modelling",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question specifically addresses turbulence-chemistry interaction modeling in combustion regimes like local extinction and mixed-mode combustion, requiring deep expertise in combustion science, turbulent reacting flows, and CFD modeling techniques.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_ce5df31e",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Advances-and-challenges-of-the-Conditional-Source-_2024_Progress-in-Energy-a",
+    "paper_title": "Advances-and-challenges-of-the-Conditional-Source-_2024_Progress-in-Energy-a"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:14:16.110598",
+    "answer_length": 1219
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately explains how DCSE enhances turbulence-chemistry interaction models. It correctly identifies that double conditioning reduces fluctuations around conditional means compared to single conditioning, which aligns with the original text's statement about reduced spatial gradients. The answer appropriately describes complex regimes (local extinction in non-premixed flames, mixed-mode combustion) mentioned in the original text. The explanation of using joint PDF of two scalars (mixture fraction and progress variable) is consistent with DCSE methodology. The answer correctly explains that single conditioning may be insufficient in multi-dimensional scalar fields, matching the original text's point about increased modeling error when fluctuations around conditional means increase. All physical principles stated are sound, and the reasoning about improved closure for capturing small-scale events like local ignition or extinction is logically consistent with the fundamental premise that double conditioning reduces conditional fluctuations.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:02:21.907284"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "medium",
+        "verification_confidence": "high",
+        "issues": [
+          "References a specific 'Eq. 13' without context; cannot verify from the provided ground-truth excerpt",
+          "Claims reduction of fluctuations around conditional means under double conditioning; the ground truth explicitly mentions reduced spatial gradients, not fluctuations, though the statement is plausible"
+        ],
+        "reasoning": "The standard answer aligns with the ground truth by explaining that double conditioning (as in DCSE/CMC) improves accuracy in complex regimes (local extinction, mixed-mode combustion) and cites the reduction in spatial gradients of conditional averages under double conditioning, consistent with Kronenburg and Bushe. It correctly identifies that single conditioning can be inadequate when fluctuations around conditional means are large, matching the provided examples. The added details on joint PDFs and LES context are reasonable and consistent with combustion modeling practices. Minor issues include an unverifiable equation reference and a slightly extrapolated claim about fluctuations, but these do not constitute factual or logical errors.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:02:51.794285"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer is factually and logically correct. It accurately explains that DCSE improves model accuracy by using two conditioning variables (e.g., mixture fraction and a progress variable) to better resolve complex combustion phenomena like local extinction. This is consistent with the provided original text, which states that double conditioning reduces fluctuations around conditional means ([1]) and reduces the spatial gradients of conditional averages ([2]), leading to a more accurate closure for the mean reaction rates.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:03:21.440816"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:03:21.440836",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

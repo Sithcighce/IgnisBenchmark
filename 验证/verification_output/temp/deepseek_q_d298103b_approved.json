@@ -1,0 +1,77 @@
+{
+  "question_text": "How does the dusty gas model (DGM) account for Knudsen diffusion and pressure-driven flow in porous SOFC electrodes, and why is it superior to Fickian and Stefan-Maxwell models in predicting concentration overpotential?",
+  "standard_answer": "The dusty gas model (DGM) treats the porous solid matrix as an additional stationary 'dust' species with large molecular weight, enabling it to capture three transport mechanisms simultaneously: molecular diffusion, Knudsen diffusion, and viscous (pressure-driven) flow. Knudsen diffusion becomes significant when pore sizes are comparable to the gas mean free path, where gas-wall collisions dominate over intermolecular collisions. The DGM incorporates Knudsen diffusion through the Knudsen diffusion coefficient Di,K and accounts for pressure gradients that develop due to non-equimolar fluxes in multicomponent systems. This is particularly important in SOFC electrodes where electrochemical reactions create stoichiometrically determined flux ratios that violate the equimolar counter-diffusion assumption. The DGM's superiority over Fickian and Stefan-Maxwell models lies in its ability to correctly predict the concentration overpotential by accurately capturing the species concentration profiles at the triple phase boundaries. Fickian models underestimate concentration gradients in concentrated systems and poorly handle Knudsen effects, while Stefan-Maxwell models without proper Knudsen corrections fail to account for pore-gas interactions and pressure-driven flow components that significantly affect species transport in fine-pore electrodes.",
+  "original_text": {
+    "1": "The DGM evolves from the SMM, as that the porous solid wall is considered as an additional 'dust' species ('M') with large molecular weight, constrained to be stationary by external clamping forces.",
+    "2": "The DGM has the ability to indicate the pore-gas interaction (i.e. Knudsen diffusion) and its influence on pressure gradient, and therefore the DGM has been one of the most recognized solutions to represent combined viscous flow, bulk diffusion, and Knudsen diffusion."
+  },
+  "type": "reasoning",
+  "difficulty": 5,
+  "topic": "fluid_mechanics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires deep expertise in fluid mechanics, porous media transport, and SOFC electrochemistry. It specifically addresses the dusty gas model's treatment of Knudsen diffusion and pressure-driven flow in porous electrodes, which are specialized concepts in combustion/energy systems and cannot be answered with general ML/CS knowledge.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer are both high quality - domain-focused, factually correct based on citations, and compliant with all quality checks."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_d298103b",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Macroscopic-modeling-of-solid-oxide-fuel-cell--SOFC-_2018_Progress-in-Energy",
+    "paper_title": "Macroscopic-modeling-of-solid-oxide-fuel-cell--SOFC-_2018_Progress-in-Energy"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:22:39.475493",
+    "answer_length": 1358
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately explains the DGM mechanism and is consistent with the original text. Key points verified: (1) DGM treats porous solid as 'dust' species with large molecular weight that is stationary - matches original text [1]; (2) DGM captures three transport mechanisms (molecular diffusion, Knudsen diffusion, viscous flow) - consistent with original text [2] mentioning 'combined viscous flow, bulk diffusion, and Knudsen diffusion'; (3) Correctly explains Knudsen diffusion occurs when pore sizes are comparable to mean free path with gas-wall collisions dominating; (4) Accurately describes DGM's superiority over Fickian and Stefan-Maxwell models in handling pore-gas interactions and pressure gradients - supported by original text [2]. The answer provides additional valid context about SOFC electrodes, concentration overpotential, and triple phase boundaries that, while more detailed than the original text, is scientifically accurate and relevant to the question. No factual errors, logical contradictions, or inconsistencies with the original text were found.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:12:28.456104"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately reflects the ground truth: DGM models the solid as a stationary dust species, and captures molecular diffusion, Knudsen diffusion, and viscous (pressure-driven) flow while acknowledging pore-gas interactions and their influence on pressure gradients. Its explanation of Knudsen regimes and non-equimolar fluxes in SOFC electrodes is physically sound. The comparison to Fickian and Stefan–Maxwell approaches is reasonable, highlighting DGM’s superiority for concentration overpotential predictions in fine-pore electrodes.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:12:39.598683"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly and comprehensively explains the Dusty Gas Model (DGM). It accurately states that the DGM treats the porous matrix as a stationary 'dust' species, which is consistent with the original text. It correctly identifies the three transport mechanisms captured (molecular, Knudsen, viscous/pressure-driven) and correctly explains why this is superior to Fickian and Stefan-Maxwell models for SOFC applications, particularly in predicting concentration overpotential due to non-equimolar fluxes and fine pore structures. All physical principles are stated correctly and the reasoning is sound.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:13:00.874114"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:13:00.874133",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

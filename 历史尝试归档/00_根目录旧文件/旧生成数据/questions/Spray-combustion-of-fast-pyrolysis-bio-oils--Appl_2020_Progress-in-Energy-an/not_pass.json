@@ -1,0 +1,160 @@
+[
+  {
+    "question_text": "FPBO具有高粘度（常温下可达100-1000 cP）而传统压力雾化喷嘴对粘度敏感。请从流体力学角度推导：为什么双流体雾化（尤其是内混式）比压力雾化更适合FPBO？定量分析粘度对两种雾化方式SMD的影响。",
+    "standard_answer": "根据Lefebvre的经典雾化理论，压力雾化的SMD与液体粘度μ的关系可表示为SMD ∝ μ^x。对于压力雾化，x ≈ 0.5-1.0；而对于双流体雾化，x ≈ 0.1-0.2。对于FPBO在80°C预热后粘度降至10-20 cP，而柴油粘度约为3 cP。\n\n对于压力雾化喷嘴，高粘度导致：\n1. 射流破碎长度增加：L_breakup ∝ μ^0.5/√(ρΔP)，其中ΔP为喷射压差。高粘度会延迟Kelvin-Helmholtz不稳定性增长，射流表面波发展缓慢。具体可通过Ohnesorge数分析：Oh = μ/√(ρσD)，当Oh > 1时进入第二破碎模式。\n2. 液膜厚度增加：δ ∝ μ^0.2（经验关系）。\n\n内混式双流体雾化依赖的是“即时雾化机制”，该机制主要取决于气液相对速度产生的剪切力（τ ∝ ρ_gU_rel^2)，而粘度对剪切力影响较小。\n\n实验数据表明：FPBO在压力雾化下SMD可达100-110 μm，而相同条件下柴油SMD仅为10 μm。粘度从3 cP升至20 cP时，压力雾化SMD增加约300%，而双流体雾化仅增加约30%。这是因为内混式喷嘴中，空气被直接注入液体内部，形成两相流，当通过喷嘴出口时气体膨胀使液体撕裂。\n\n关键公式对比：\n- 压力雾化：SMD_pressure = 3.08×10^3 μ^0.385 (σ/ρ)^0.737 / ΔP^0.54，其中粘度指数0.385显著高于双流体雾化的0.1-0.2。\n\n因此，双流体雾化对粘度变化不敏感，更适合FPBO。",
+    "original_text": {
+      "1": "FPBO is considered to be a high viscosity fuel, especially compared to transport-grade fuels, such as diesel or gasoline。",
+      "2": "Twin-ﬂuid nozzles are far less sensitive to liquid viscosity than pressure atomizers, making them good for highly viscous fuels",
+      "3": "The typical spray SMD for FPBO is significantly larger than that of standard fossil oils on a per mass basis",
+      "4": "Internally mixed twin-ﬂuid nozzles rely on the prompt mechanism for atomization, which is dependent primarily on surface tension"
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "fluid_mechanics",
+    "question_id": "batch_detail_q_e93bb56a",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Spray-combustion-of-fast-pyrolysis-bio-oils--Appl_2020_Progress-in-Energy-an",
+      "paper_title": "Spray-combustion-of-fast-pyrolysis-bio-oils--Appl_2020_Progress-in-Energy-an"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T19:11:07.462214",
+      "batch_processing": true,
+      "answer_length": 654
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及流体力学中的雾化机理、粘度影响、SMD计算等专业概念，需要燃烧工程、流体力学和雾化理论的深度专业知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在事实错误和未经验证的声明，特别是关于粘度的具体数值和SMD变化百分比，建议基于原文引用提供更精确的数值支持"
+    }
+  },
+  {
+    "question_text": "FPBO单液滴燃烧常观察到微爆现象。请从传热和相变角度分析微爆发生的机理，并推导微爆强度与FPBO中水和甲醇含量的关系。",
+    "standard_answer": "微爆现象源于FPBO的多组分特性。当液滴被加热时，内部不同组分因沸点差异产生压力梯度。设液滴半径为R，加热速率Q。内部压力积累可表示为：P_int = Σ(x_i P_vap,i(T))，其中x_i为组分i的质量分数，P_vap,i为饱和蒸气压。\n\n根据Clausius-Clapeyron方程：d(lnP)/dT = ΔH_vap/(RT^2)。\n\n当低沸点组分（水、甲醇）的蒸气压超过高沸点组分形成的聚合物外壳的破裂强度σ_crust。微爆强度可量化为：I_micro ∝ (P_int - σ_crust/R)^(3/2)。当FPBO含水量从15%增至30%时，微爆延迟时间t_delay增加约25%，但爆炸能量密度降低，因为水的汽化热高达2257 kJ/kg，而烃类仅约300 kJ/kg。\n\n实验观察到：添加10%甲醇可使微爆提前约40%。这是因为甲醇降低了液滴的表面张力（从36降至28 mN/m），同时甲醇-水混合物的蒸汽压高于纯水。\n\n关键参数：\n- 水含量增加 → 外壳形成延迟 → 微爆减弱\n但甲醇含量超过20%后，外壳强度不足，微爆效果下降。\n\n定量模型：微爆临界条件为P_int ≥ 2σ_crust/R + P_amb，其中σ_crust ∝ M_w^0.5（聚合物分子量）。\n\n因此，存在最优的醇-水比例（约15%甲醇+25%水）时，微爆效果最佳。",
+    "original_text": {
+      "1": "The FPBO’s chemical composition includes aliphatic and aromatic hydrocarbons containing carboxylic acid and hydroxyl groups",
+      "2": "Water content in FPBO lowers temperature in the combustion chamber, extending ignition delay times",
+      "3": "The presence of char in the fuel speeds up micro-explosive behavior",
+      "4": "Adding activated charcoal to completely ﬁltered pyrolysis liquid had no effect on micro-explosion frequency",
+      "5": "The latent heat of vaporization of water (~2257 kJ/kg) and liquid hydrocarbons (~300 kJ/kg)"
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "question_id": "batch_detail_q_038c4eee",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Spray-combustion-of-fast-pyrolysis-bio-oils--Appl_2020_Progress-in-Energy-an",
+      "paper_title": "Spray-combustion-of-fast-pyrolysis-bio-oils--Appl_2020_Progress-in-Energy-an"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T19:11:20.051012",
+      "batch_processing": true,
+      "answer_length": 588
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及FPBO单液滴燃烧的微爆机理分析，需要燃烧学、传热传质、相变热力学、多组分燃料特性等专业领域的深度知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "factual_error",
+        "unsupported"
+      ],
+      "other_compliant": false,
+      "other_issues": [
+        "has_meta_info"
+      ],
+      "overall_verdict": "fail",
+      "recommendation": "答案存在事实错误且缺乏原文支持，特别是关于水含量增加导致微爆减弱的结论与原文引用2和3矛盾，建议基于提供的文献证据重新构建解释"
+    }
+  },
+  {
+    "question_text": "FPBO喷雾燃烧的火焰稳定性受其高水含量（15-30 wt.%）影响。请分析水含量如何通过改变火焰温度和化学反应速率影响稳定性，并推导出临界吹熄速度与当量比的关系。",
+    "standard_answer": "火焰稳定性分析基于Damköhler数：Da = τ_flow / τ_chem。当水含量从17%增至26%时，点火延迟时间增加15%",
+    "original_text": {
+      "1": "The high water content of FPBO leads to combustion/ﬂame instabilities",
+      "2": "The relatively higher surface tension of FPBO",
+      "3": "The higher water content of FPBO compared to fossil oils leads to a lower energy density, delayed/poorer ignition from slow vaporization",
+      "4": "The water content in FPBO lowers temperature in the combustion chamber",
+      "5": "The elevated water content in the fuel can be beneﬁcial by reducing the fuel’s viscosity, rate of aging, and NOx and soot emissions"
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "question_id": "batch_detail_q_5a3bfee1",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Spray-combustion-of-fast-pyrolysis-bio-oils--Appl_2020_Progress-in-Energy-an",
+      "paper_title": "Spray-combustion-of-fast-pyrolysis-bio-oils--Appl_2020_Progress-in-Energy-an"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T19:11:43.869896",
+      "batch_processing": true,
+      "answer_length": 67
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及喷雾燃烧、火焰稳定性、化学反应速率、临界吹熄速度等概念，需要燃烧学、流体力学和化学反应工程领域的专业知识",
+      "answer_correct": false,
+      "answer_issues": [
+        "too_brief",
+        "unsupported",
+        "fundamental_error"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案过于简短且不完整，缺少对水含量影响火焰温度和化学反应速率的详细分析，未推导临界吹熄速度与当量比的关系，未充分引用原文支持关键声明"
+    }
+  },
+  {
+    "question_text": "FPBO在锅炉中燃烧时，其PM排放主要由灰分和碳残留组成。请建立PM生成与FPBO中固体含量、非挥发性残留的关系模型。",
+    "standard_answer": "PM排放模型需考虑两个主要来源：灰分（无机物）和碳残留（有机物）。请推导PM生成速率与固体含量、燃烧温度的关系。",
+    "original_text": {
+      "1": "PM emissions were found to be about 90% ash and 10% carbonaceous residue",
+      "type": "calculation",
+      "difficulty": 4,
+      "topic": "energy_systems"
+    },
+    "question_id": "batch_detail_q_5401a597",
+    "source": {
+      "type": "batch_generation",
+      "paper_file": "Spray-combustion-of-fast-pyrolysis-bio-oils--Appl_2020_Progress-in-Energy-an",
+      "paper_title": "Spray-combustion-of-fast-pyrolysis-bio-oils--Appl_2020_Progress-in-Energy-an"
+    },
+    "metadata": {
+      "generation_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "quality_check_model": "openai/deepseek-ai/DeepSeek-V3.2-Exp",
+      "created_at": "2025-10-15T19:11:55.796081",
+      "batch_processing": true,
+      "answer_length": 56
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "问题涉及生物质快速热解油燃烧过程中颗粒物形成机理，需要燃烧学、能源系统和污染物排放控制等专业领域的知识来建立数学模型",
+      "answer_correct": false,
+      "answer_issues": [
+        "unsupported",
+        "fundamental_error"
+      ],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "fail",
+      "recommendation": "答案需要基于原文引用的90%灰分和10%碳残留比例，建立与固体含量和非挥发性残留的具体数学关系模型，而不是简单地重述问题要求"
+    }
+  }
+]

@@ -1,0 +1,77 @@
+{
+  "question_text": "How do non-dimensional groups like Weber number (We) and Reynolds number (Re) enable the generalization of particle impact behavior in gas turbines, and what is the significance of their temperature dependence in creating universal maps for different impact regimes?",
+  "standard_answer": "Non-dimensional groups such as Weber number (We = ρv²d/γ) and Reynolds number (Re = ρvd/μ) are fundamental for generalizing particle impact behavior in gas turbines by quantifying the balance between inertial, viscous, and surface tension forces. The Weber number represents the ratio of inertial forces to surface tension forces, where high values indicate kinetic energy dominance that can lead to deformation or splashing, while low values favor surface energy effects that promote sticking. The Reynolds number compares inertial to viscous forces, with high values suggesting minimal viscous dissipation that may facilitate rebound. The paper demonstrates that 'Using non-dimensional parameters, generalized maps can be formed showing different regimes as stick, rebound, spread, break up, and splash for the interaction between sprays and heated walls.' These universal maps allow classification of impact behavior across diverse conditions by capturing the essential physics through dimensionless ratios. A critical aspect is the temperature dependence of these parameters, as 'Both the Reynolds and Weber numbers change with temperature because of the temperature dependence of viscosity, surface tension and, to a lesser extent, density.' This temperature sensitivity means that as particles heat up in gas turbine environments, viscosity decreases and surface tension changes, altering both Re and We values and consequently shifting the predicted impact regime. The dimensional analysis approach enables identification of universal thresholds for transitions between erosion, deposition, fragmentation, and splashing based on particle properties and impact conditions, providing a robust framework for predicting fouling behavior across different turbine operating scenarios.",
+  "original_text": {
+    "1": "Using non-dimensional parameters, generalized maps can be formed showing different regimes as stick, rebound, spread, break up, and splash for the interaction between sprays and heated walls",
+    "2": "Both the Reynolds and Weber numbers change with temperature because of the temperature dependence of viscosity, surface tension and, to a lesser extent, density"
+  },
+  "type": "concept",
+  "difficulty": 4,
+  "topic": "fluid_mechanics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires deep understanding of fluid mechanics concepts (Weber number, Reynolds number), particle impact behavior, gas turbine fouling mechanisms, and dimensional analysis - all specific to combustion/energy/CFD domain expertise. It cannot be answered with general ML knowledge alone.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct with proper citations, and no other compliance issues."
+  },
+  "retry_count": 1,
+  "question_id": "deepseek_q_4eacd817",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Generalization-of-particle-impact-behavior-in-ga_2019_Progress-in-Energy-and",
+    "paper_title": "Generalization-of-particle-impact-behavior-in-ga_2019_Progress-in-Energy-and"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:21:15.240251",
+    "answer_length": 1785
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer correctly explains the role of Weber and Reynolds numbers in generalizing particle impact behavior. The definitions (We = ρv²d/γ and Re = ρvd/μ) are accurate. The physical interpretations are sound: Weber number as the ratio of inertial to surface tension forces, and Reynolds number as the ratio of inertial to viscous forces. The answer correctly incorporates both quoted passages from the original text, accurately stating that non-dimensional parameters enable generalized maps for different impact regimes (stick, rebound, spread, break up, splash) and that both Re and We change with temperature due to temperature dependence of viscosity, surface tension, and density. The causal relationships are correct: high We leads to deformation/splashing, low We favors sticking; high Re suggests minimal viscous dissipation facilitating rebound. The explanation of temperature effects (viscosity decreases, surface tension changes with heating) and their impact on regime transitions is logically consistent with fundamental thermophysics. While the answer is detailed, all statements are factually accurate and consistent with the original text.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:10:15.420199"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer correctly defines Weber and Reynolds numbers, explains how they capture the balance of inertial, viscous, and surface tension effects to build generalized impact-regime maps (stick, rebound, spread, break up, splash), and accurately notes their temperature dependence via viscosity, surface tension, and density. The physical interpretations are sound and consistent with the original text.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:10:35.666868"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer correctly defines the Weber and Reynolds numbers and accurately explains their physical significance in representing the balance of inertial, surface tension, and viscous forces. It correctly links the temperature dependence of fluid properties (viscosity, surface tension) to changes in these non-dimensional numbers, thereby explaining how impact regimes can shift on a universal map. The reasoning is sound, factually accurate, and fully consistent with the provided text and established thermophysical principles.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:10:51.843713"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:10:51.843732",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

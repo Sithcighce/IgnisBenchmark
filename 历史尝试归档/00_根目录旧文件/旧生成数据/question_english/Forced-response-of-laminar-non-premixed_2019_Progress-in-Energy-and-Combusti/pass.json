@@ -1,0 +1,167 @@
+[
+  {
+    "question_text": "Calculate the axial location of the first interference maximum in a non-premixed flame subjected to bulk axial forcing at frequency f, given U₀ = 2 m/s, R_f = 0.01 m, and explain the physical mechanism behind this interference pattern.",
+    "standard_answer": "For a non-premixed flame with bulk axial forcing, the flame position fluctuation is given by ξ₁,ₙ(x,t) ∝ [1 - exp(i2πStx/R_f)] where St = fR_f/U₀ is the Strouhal number. The interference pattern arises from the term 1 - exp(i2πStx/R_f) = 2sin(πStx/R_f)exp[i(πStx/R_f - π/2)]. The first maximum occurs when |sin(πStx/R_f)| = 1, which requires πStx/R_f = π/2, giving x_max = R_f/(2St). Substituting St = fR_f/U₀, we get x_max = U₀/(2f). For U₀ = 2 m/s and R_f = 0.01 m, the first maximum occurs at x_max = 2/(2f) = 1/f meters. Physically, this interference pattern results from the superposition of two effects: wrinkles generated at the flame base (x=0) due to flame attachment, and disturbances excited locally throughout the flame length. The term '1' represents the spatially uniform response from the boundary condition, while exp(i2πStx/R_f) represents wrinkles convecting downstream at speed U₀. When these two components are in phase (constructive interference), maxima occur; when out of phase (destructive interference), nodes form. The first maximum at x = U₀/(2f) corresponds to a phase difference of π radians between the boundary-generated and locally-excited disturbances, where the convective time delay x/U₀ equals half the forcing period 1/(2f).",
+    "original_text": {
+      "1": "In both cases, local maxima and minima arise through this 1 - e^(i2πfx/U₀) waveform term, due to interference between wrinkles generated at the x = 0 boundary and disturbances excited locally.",
+      "2": "1 - e^(i2πfx/U₀) = 2sin(πfx/U₀)e^(i(πfx/U₀ - π/2))"
+    },
+    "type": "calculation",
+    "difficulty": 3,
+    "topic": "combustion_dynamics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question requires specialized knowledge in combustion dynamics, specifically non-premixed flame response to axial forcing, interference patterns in flame sheets, Strouhal number relationships, and flame wrinkle convection physics - all core combustion science concepts that cannot be answered with general ML or CS knowledge.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer are both high quality - domain-focused with correct technical derivation and physical explanation supported by citations."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_746076d5",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Forced-response-of-laminar-non-premixed_2019_Progress-in-Energy-and-Combusti",
+      "paper_title": "Forced-response-of-laminar-non-premixed_2019_Progress-in-Energy-and-Combusti"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:20:27.424908",
+      "answer_length": 1261
+    }
+  },
+  {
+    "question_text": "Why do non-premixed flames exhibit a 1/√St transfer function characteristic at intermediate Strouhal numbers, and what physical mechanisms cause this unique scaling behavior?",
+    "standard_answer": "Non-premixed flames exhibit a 1/√St transfer function characteristic at intermediate Strouhal numbers due to the sharply varying axial dependence of mean heat release near the burner exit. This behavior arises from the concentration of heat release oscillations in the near-field region where mixture fraction gradients are highest. The physical mechanism involves phase cancellation effects combined with the spatial distribution of heat release sensitivity. As Strouhal number increases from low values, the heat release response transitions from O(1) behavior to 1/√St scaling because the oscillatory heat release regions become increasingly out of phase along the flame length. The convection of disturbances along the flame at the local flow velocity creates phase differences that lead to destructive interference. However, unlike the uniform heat release distribution in premixed flames, non-premixed flames have heat release concentrated near the base, making the interference pattern different. The 1/√St scaling specifically emerges because the axial length scale over which significant heat release occurs scales with the convective wavelength, leading to a square root dependence on Strouhal number that reflects the integrated effect of the spatially varying response.",
+    "original_text": {
+      "1": "Non-premixed flames have an additional 1/√St transfer function character at an intermediate range of Strouhal numbers, due to the sharply varying axial dependence of mean heat release near the burner exit.",
+      "2": "In contrast, the heat release dynamics are quite different, as heat release oscillations in premixed flames are nearly uniformly distributed along the flame, whereas in non-premixed flames they are concentrated near the burner outlet where mixture fraction gradients are highest."
+    },
+    "type": "reasoning",
+    "difficulty": 5,
+    "topic": "combustion_instabilities",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question requires deep expertise in combustion science, specifically non-premixed flame dynamics, transfer function analysis, Strouhal number scaling, and heat release mechanisms in reacting flows. It cannot be answered with general ML knowledge and demands specialized combustion/CFD domain knowledge.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer are both high quality - question requires domain expertise and answer is factually correct based on the paper content."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_4b144e58",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Forced-response-of-laminar-non-premixed_2019_Progress-in-Energy-and-Combusti",
+      "paper_title": "Forced-response-of-laminar-non-premixed_2019_Progress-in-Energy-and-Combusti"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:20:27.670090",
+      "answer_length": 1281
+    }
+  },
+  {
+    "question_text": "How do the governing equations for premixed (G-equation) and non-premixed (Z-equation) flames differ in their treatment of flame dynamics, and what physical mechanisms underlie these differences?",
+    "standard_answer": "The G-equation for premixed flames and Z-equation for non-premixed flames differ fundamentally in their mathematical structure and physical interpretation. The G-equation (∂G/∂t + u·∇G = s_d|∇G|) is nonlinear due to the flame propagation term s_d|∇G|, where s_d represents the displacement speed relative to the flow. This term accounts for flame propagation normal to itself, making premixed flame dynamics dependent only on the local flow velocity at the flame sheet. In contrast, the Z-equation (∂Z/∂t + u·∇Z = D∇²Z) is linear and contains a diffusion operator rather than a propagation term, reflecting that non-premixed flames do not propagate but rather exist where fuel and oxidizer mix diffusively at stoichiometric conditions. Physically, this means premixed flame dynamics are determined solely by the velocity field at the flame surface, while non-premixed flame dynamics depend on the entire velocity field throughout the domain. The G-equation is only physically meaningful at the flame surface (G=0), whereas the Z-equation describes the actual mixture fraction field everywhere, requiring solution of the entire field to extract the flame sheet position Z=Z_st.",
+    "original_text": {
+      "1": "The G-equation is physically meaningful and valid only at the flame itself where G(x,t)=0 (i.e., although it can be solved away from the flame, the resulting G values have no physical significance).",
+      "2": "In contrast, the Z-equation describes the physical values of the mixture fraction field everywhere. This point was alluded to earlier as well for constant property surfaces, whose dynamics are determined by the instantaneous property field, rather than simply the velocity at the surface."
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "combustion_dynamics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question requires deep combustion science expertise, specifically knowledge of flame dynamics, governing equations for premixed (G-equation) and non-premixed (Z-equation) flames, and the physical mechanisms underlying their differences. It demands understanding of combustion fundamentals, flame propagation, diffusion processes, and mathematical formulations specific to combustion modeling.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "The question is well-focused on combustion domain knowledge, and the answer accurately describes the mathematical and physical differences between G-equation and Z-equation flame dynamics with proper technical detail."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_f332847c",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Forced-response-of-laminar-non-premixed_2019_Progress-in-Energy-and-Combusti",
+      "paper_title": "Forced-response-of-laminar-non-premixed_2019_Progress-in-Energy-and-Combusti"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:20:28.483636",
+      "answer_length": 1176
+    }
+  },
+  {
+    "question_text": "What are the key differences in wrinkle convection mechanisms between premixed and non-premixed flames under harmonic flow forcing, and how do these differences manifest in their respective flame transfer functions?",
+    "standard_answer": "The key difference in wrinkle convection between premixed and non-premixed flames lies in the axial convection speed of flame disturbances. For non-premixed flames, wrinkles convect axially downstream at the bulk flow velocity U₀, as expressed in the solution ξ₁,ₙ(x,t) ∝ [1 - exp(i2πStx/R_f)]. This occurs because non-premixed flames do not propagate - they are simply advected by the flow. In contrast, premixed flame wrinkles convect at U₀/cos²θ, which represents the vector superposition of the axial flow velocity and the axial projection of the flame propagation normal to itself. This difference arises from the fundamental distinction that premixed flames have finite displacement speed s_d while non-premixed flames have zero propagation velocity relative to the flow. These convection mechanisms manifest in the transfer functions through the interference terms: both flames show 1 - exp(i2πfx/U_c) behavior, but with different convection velocities U_c. This leads to different spatial distributions of flame wrinkling and consequently different phase relationships in the heat release response. The premixed flame's enhanced convection speed due to propagation results in shorter convective wavelengths and different interference patterns compared to non-premixed flames at the same Strouhal number.",
+    "original_text": {
+      "1": "The non-premixed flame does not propagate, and wrinkles convect axially downstream at the bulk flow speed, U₀. In contrast, wrinkles on the premixed flame convect in the axial direction at the speed U₀/cos²θ, which is the vector superposition of the axial flow velocity and the axial projection of a vector pointing normal to the flame (into the reactants) with a magnitude equal to the burning velocity, s_d.",
+      "2": "Both expressions also contain a term of the form, 1 - e^(i2πfx/U₀); the first term which describes spatially invariant bulk fluctuations, arises from the homogeneous boundary condition, while the second describes downstream convection of wrinkles whose axial speed is equivalent to the axial mean flow."
+    },
+    "type": "reasoning",
+    "difficulty": 4,
+    "topic": "flame_dynamics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question requires deep expertise in combustion science and flame dynamics, specifically comparing wrinkle convection mechanisms between premixed and non-premixed flames under harmonic flow forcing, and their manifestation in flame transfer functions. It involves specialized knowledge of flame propagation physics, convection speeds, and transfer function characteristics that are specific to combustion research.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "This is an excellent domain-focused question with a comprehensive and factually correct answer that aligns well with the cited paper content. No changes needed."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_89ca001d",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Forced-response-of-laminar-non-premixed_2019_Progress-in-Energy-and-Combusti",
+      "paper_title": "Forced-response-of-laminar-non-premixed_2019_Progress-in-Energy-and-Combusti"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:20:28.775846",
+      "answer_length": 1311
+    }
+  },
+  {
+    "question_text": "Using the provided paper content, derive the steady-state mixture fraction field solution for a non-premixed jet flame with step inflow boundary conditions, neglecting axial diffusion (Model Problem A). Explain the physical significance of the Peclet number (Pe = U₀R_f/D) in this context and how it appears in the solution. Then, describe how this steady solution is used to determine the flame position and discuss the implications for flame structure.",
+    "standard_answer": "The steady-state mixture fraction field solution for Model Problem A (neglecting axial diffusion, b=0) is derived from the Z-equation with step inflow boundary conditions. The solution is given by: Z₀ = R_f/R_w + Σ[2/(nπ)sin(A_n)cos(A_ny/R_f)exp(-A_n²x/PeR_f)] where A_n = nπ(R_f/R_w) are the eigenvalues. The Peclet number Pe = U₀R_f/D physically corresponds to the relative time scales for convective and diffusive processes to transport mass over a distance R_f. In the solution, Pe appears in the exponential decay term exp(-A_n²x/PeR_f), showing that transverse modes decay more rapidly with axial distance at lower Pe values where diffusion dominates, leading to broader mixture fraction profiles. The flame position is determined by solving the implicit equation Z₀(x,y=ξ₀(x)) = Z_st, where Z_st is the stoichiometric mixture fraction. This means the flame sheet lies along the contour where the mixture fraction equals its stoichiometric value. The steady solution shows that mixture fraction gradients are sharpest near the burner exit and decay downstream, with the decay rate controlled by Pe. Higher Pe values (convection-dominated) maintain sharper gradients further downstream, while lower Pe values (diffusion-dominated) lead to more rapid smoothing of concentration gradients, affecting flame length and shape.",
+    "original_text": {
+      "1": "The Peclet number, Pe = U₀R_f/D, physically corresponding to the relative time scales for convective and diffusive processes to transport mass over a distance R_f.",
+      "2": "The steady state mixture fraction field solution is given by: Z₀ = R_f/R_w + Σ[2/(nπ)sin(A_n)cos(A_ny/R_f)exp(-A_n²x/PeR_f)] where A_n = nπ(R_f/R_w) are the eigenvalues."
+    },
+    "type": "calculation",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question requires deep expertise in combustion science, specifically non-premixed jet flame dynamics, mixture fraction field solutions, Peclet number analysis in combustion contexts, and flame structure determination. It involves specialized knowledge of combustion modeling, transport phenomena in flames, and flame position analysis that goes beyond general ML/CS knowledge.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+    },
+    "retry_count": 1,
+    "question_id": "deepseek_q_13c2bd96",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Forced-response-of-laminar-non-premixed_2019_Progress-in-Energy-and-Combusti",
+      "paper_title": "Forced-response-of-laminar-non-premixed_2019_Progress-in-Energy-and-Combusti"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:21:09.799309",
+      "answer_length": 1326
+    }
+  }
+]

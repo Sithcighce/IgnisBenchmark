@@ -1,0 +1,77 @@
+{
+  "question_text": "How does the Richardson equation quantitatively describe the temperature dependence of hydrogen permeation through metallic membranes, and what physical parameters are included in this equation according to the provided paper?",
+  "standard_answer": "The Richardson equation J_H2 = Pe^0_H2/δ * (p_H2,ret^0.5 - p_H2,perm^0.5) * exp(-E_a/RT) provides a quantitative description of hydrogen permeation temperature dependence through metallic membranes. This equation directly incorporates Arrhenius temperature dependence, where Pe^0_H2 is the pre-exponential factor representing the intrinsic permeability at infinite temperature, E_a is the apparent activation energy for hydrogen permeation, R is the universal gas constant, and T is absolute temperature. The equation combines the pressure driving force term (p_H2,ret^0.5 - p_H2,perm^0.5) with the exponential temperature dependence term exp(-E_a/RT), showing that permeation increases exponentially with temperature. The membrane thickness δ appears in the denominator, indicating that thinner membranes yield higher permeation fluxes. The physical parameters explicitly defined in the Richardson equation are the pre-exponential factor Pe^0_H2, apparent activation energy E_a, gas constant R, absolute temperature T, membrane thickness δ, and hydrogen partial pressures on retentate and permeate sides.",
+  "original_text": {
+    "1": "The membrane permeability is a function of temperature and may be described by an Arrhenius-type relationship: Pe_H2 = Pe^0_H2 exp(-E_a/RT)",
+    "2": "Combining equations (4) and (6) yields the Richardson's equation: J_H2 = Pe^0_H2/δ * (p_H2,ret^0.5 - p_H2,perm^0.5) * exp(-E_a/RT)"
+  },
+  "type": "concept",
+  "difficulty": 4,
+  "topic": "energy_systems",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires specific knowledge of hydrogen permeation through metallic membranes, including the Richardson equation's mathematical formulation, temperature dependence via Arrhenius relationship, and physical parameters relevant to membrane science and energy systems - all domain-specific concepts in combustion science and energy engineering.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and compliant with other requirements."
+  },
+  "retry_count": 1,
+  "question_id": "deepseek_q_3a5a10e8",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Opportunities-and-challenges-of-low-carbon-hyd_2020_Progress-in-Energy-and-C",
+    "paper_title": "Opportunities-and-challenges-of-low-carbon-hyd_2020_Progress-in-Energy-and-C"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:25:17.471676",
+    "answer_length": 1105
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately describes the Richardson equation and its physical parameters. It correctly presents the equation J_H2 = Pe^0_H2/δ * (p_H2,ret^0.5 - p_H2,perm^0.5) * exp(-E_a/RT) as shown in the original text. All physical parameters are correctly identified: Pe^0_H2 (pre-exponential factor), E_a (apparent activation energy), R (gas constant), T (absolute temperature), δ (membrane thickness), and hydrogen partial pressures. The answer correctly explains the Arrhenius temperature dependence, the pressure driving force term with square root dependence (Sieverts' law), and the inverse relationship with membrane thickness. The physical interpretation that permeation increases exponentially with temperature and that thinner membranes yield higher fluxes is thermodynamically sound and consistent with the original text.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:15:11.525913"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The provided equation and parameter descriptions match the ground-truth text exactly. The answer correctly explains the Arrhenius temperature dependence embedded in the Richardson equation, identifies all included physical parameters (Pe^0_H2, E_a, R, T, δ, and the square-root partial pressure terms), and correctly notes the inverse dependence on thickness. No factual or logical errors were found.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:15:28.266985"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately reproduces the Richardson equation from the original text. It correctly identifies all physical parameters (Pe^0_H2, E_a, R, T, δ, partial pressures) and correctly explains the Arrhenius-type exponential dependence of permeation flux on temperature. The reasoning is sound and fully consistent with the provided source material and established principles of transport phenomena.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:15:44.968948"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:15:44.968965",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

@@ -1,0 +1,134 @@
+[
+  {
+    "question_text": "Using the correlation τign = 3.7 × 10^(-6)P^(-0.5)ϕ^(-0.4)χO2^(-5.4)exp(12500/RT), calculate the ignition delay time for a syngas mixture at P = 20 bar, T = 1000 K, ϕ = 0.5, and oxygen mole fraction χO2 = 0.18, and explain the physical significance of each parameter in the correlation.",
+    "standard_answer": "Calculation: τign = 3.7 × 10^(-6) × (20)^(-0.5) × (0.5)^(-0.4) × (0.18)^(-5.4) × exp(12500/(8.314 × 1000)) = 3.7 × 10^(-6) × 0.2236 × 1.3195 × 173.78 × exp(1.503) = 3.7 × 10^(-6) × 0.2236 × 1.3195 × 173.78 × 4.493 = 3.7 × 10^(-6) × 230.8 = 0.000854 ms = 0.854 ms. The physical significance of each parameter: P^(-0.5) represents the pressure dependence where increasing pressure generally decreases ignition delay due to higher collision frequencies, though this exponent reflects the complex pressure effects observed in syngas ignition. ϕ^(-0.4) indicates that richer mixtures have shorter ignition delays due to higher fuel concentration and reaction rates. χO2^(-5.4) shows strong dependence on oxygen concentration, with higher oxygen significantly reducing ignition delay by promoting oxidation reactions. The exponential term exp(12500/RT) represents the Arrhenius temperature dependence, where 12500 J/mol is the apparent activation energy, and increasing temperature exponentially decreases ignition delay by accelerating reaction rates through increased molecular kinetic energy.",
+    "original_text": {
+      "1": "τign = 3.7 × 10^(-6)P^(-0.5)ϕ^(-0.4)χO2^(-5.4)exp(12500/RT)",
+      "2": "The IDT data spanned pressures between p = 7.1-26.7 bar, temperatures from T = 855-1051 K, equivalence ratios from ϕ = 0.1-1.0, oxygen mole fractions from 15% to 20% and H2:CO ratios from 0.25 to 4.0"
+    },
+    "type": "calculation",
+    "difficulty": 3,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question requires deep combustion kinetics expertise to calculate ignition delay time using a specific syngas correlation and explain the physical significance of pressure, equivalence ratio, oxygen concentration, and temperature parameters - all core combustion science concepts.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer meet all quality standards - domain-focused, calculation correct, explanations accurate, and no other issues."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_6e6db9ff",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Synthesis-gas-as-a-fuel-for-internal-combusti_2022_Progress-in-Energy-and-Co",
+      "paper_title": "Synthesis-gas-as-a-fuel-for-internal-combusti_2022_Progress-in-Energy-and-Co"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:29:44.464176",
+      "answer_length": 1089
+    }
+  },
+  {
+    "question_text": "How does methane addition to syngas mixtures affect ignition characteristics, and what specific chemical reactions are responsible for the observed ignition-inhibiting effects?",
+    "standard_answer": "Methane addition to syngas mixtures exhibits complex ignition-inhibiting effects through specific chemical reaction pathways. Even with low methane concentrations (~6%), CH4 demonstrates an ignition-inhibiting effect due to OH radical consumption through the reaction CH4 + OH → CH3 + H2O. This consumption of OH radicals competes with chain-branching reactions that accelerate ignition, thereby increasing ignition delay times. The effect is particularly pronounced at high temperatures where OH radicals play a crucial role in the ignition process. For syngas mixtures containing >50% methane by mole fraction, CO with low concentrations (≤30%) shows no inhibiting effect, while methane itself remains the primary inhibitor. The presence of methane can also lead to two-step ignition behavior with separate regions of fast pressure increase, characterized by τign1 and τign2, indicating complex ignition chemistry. This behavior arises because methane's oxidation involves multiple intermediate species and competing pathways that can delay the transition to rapid heat release.",
+    "original_text": {
+      "1": "CH4 with an even low mole fraction (~ 6%) in the fuel showed an ignition-inhibiting effect due to OH consumption by CH4 + OH = CH3 + H2O",
+      "2": "With the addition of CH4 (> 50% by mole fraction) to the H2/CO-oxidizer mixture, CO, with low mole fraction (≤ 30%), had no inhibiting effect on either IDTs of CH4/H2/CO or CH4/CO"
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires specific knowledge of combustion kinetics, ignition characteristics, and chemical reaction pathways in syngas mixtures with methane addition. It demands understanding of radical chemistry (OH consumption), ignition delay mechanisms, and multi-step ignition behavior - all core combustion science concepts.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_fd38c12d",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Synthesis-gas-as-a-fuel-for-internal-combusti_2022_Progress-in-Energy-and-Co",
+      "paper_title": "Synthesis-gas-as-a-fuel-for-internal-combusti_2022_Progress-in-Energy-and-Co"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:29:45.245527",
+      "answer_length": 1080
+    }
+  },
+  {
+    "question_text": "How do the fundamental combustion properties of syngas, particularly its high laminar flame speed and wide flammability limits, influence its application in different internal combustion engine types and combustion strategies?",
+    "standard_answer": "Syngas's fundamental combustion properties significantly impact its application across various IC engine types and combustion strategies. The high laminar flame speed, second only to hydrogen among common fuels, enables faster combustion completion, which is particularly beneficial for spark ignition (SI) engines where it allows for more optimal spark timing and improved thermal efficiency. The wide flammability limits (24-60% by volume in air) facilitate stable ultra-lean combustion operation, extending the lean burn limit and reducing NOx emissions through lower combustion temperatures. In compression ignition (CI) engines, these properties enable dual-fuel operation where syngas can be used as a secondary fuel to enhance combustion stability, especially at low loads. For advanced combustion strategies like homogeneous charge compression ignition (HCCI), the combination of wide flammability limits and high flame speed helps achieve more controlled auto-ignition and combustion phasing. The high hydrogen content also facilitates cold starts and guarantees rapid ignition, though it increases propensity for pre-ignition and backfire in SI engines. These properties make syngas particularly suitable as a secondary fuel in IC engines, especially at low engine loads where combustion stability is challenging.",
+    "original_text": {
+      "1": "Syngas has the highest laminar flame speed and widest flammability limits amongst all fuels after hydrogen, making it beneficial for application as a secondary fuel in IC engines, especially at low engine loads",
+      "2": "It means that a wide range of stable operation (from rich to lean) could be achieved with syngas fuel, especially promoting the ultra-lean combustion in spark-ignition engines"
+    },
+    "type": "application",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires deep knowledge of combustion science (syngas properties like laminar flame speed and flammability limits), internal combustion engine types (SI, CI, HCCI), and combustion strategies. It specifically asks how fundamental combustion properties influence engine applications, which demands expertise in both combustion physics and engine technology.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "The question is well-focused on combustion domain knowledge and the answer is comprehensive, factually correct, and well-supported by the provided citations and paper content."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_a3b60285",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Synthesis-gas-as-a-fuel-for-internal-combusti_2022_Progress-in-Energy-and-Co",
+      "paper_title": "Synthesis-gas-as-a-fuel-for-internal-combusti_2022_Progress-in-Energy-and-Co"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:29:45.997657",
+      "answer_length": 1323
+    }
+  },
+  {
+    "question_text": "What physical mechanisms explain the pressure dependence of syngas ignition delay times, particularly the transition from decreasing to increasing IDT with pressure in different temperature regimes?",
+    "standard_answer": "The pressure dependence of syngas ignition delay times exhibits complex behavior due to competing chemical kinetic pathways that dominate in different temperature regimes. At high temperatures (>1250 K), increasing pressure significantly shortens IDT because higher molecular number density increases collision frequency, accelerating elementary reaction rates according to collision theory. However, at low temperatures, increasing pressure can exhibit increasing IDT trends due to competition between chain-branching and chain-terminating reactions. The chain-branching reaction H + O2 → O + OH dominates at high temperatures and has pressure dependence at high pressures due to third-body effects, while the pressure-dependent propagation reaction H + O2(+M) → HO2(+M) becomes more favorable at elevated pressures and low temperatures. The HO2 radical is less reactive than H atoms, inhibiting the chain-branching process and resulting in longer ignition delays. This pressure-dependent reaction is more favorable at high pressures and inhibits chain branching, explaining the paradoxical increase in IDT with pressure in low-temperature regions.",
+    "original_text": {
+      "1": "At high temperatures (>1250 K), higher pressures significantly shorten the IDT, while at intermediate temperatures (1110 K<T<1250 K), increasing pressure from 1.6 to 32 atm exhibits a mild decreasing and even increasing decreasing trend for IDT",
+      "2": "The pressure-dependent propagation reaction (H + O2(+M) → HO2(+M)) dominates in the low-temperature region, inhibiting the chain branching and resulting in longer IDT at elevated pressures"
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question requires deep knowledge of combustion kinetics, specifically syngas ignition behavior, pressure-dependent chemical reactions, and temperature regime transitions in combustion systems. It demands understanding of chain-branching mechanisms, radical chemistry, and pressure effects on elementary reactions - all core combustion science concepts.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+    },
+    "retry_count": 1,
+    "question_id": "deepseek_q_5b94b9e0",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Synthesis-gas-as-a-fuel-for-internal-combusti_2022_Progress-in-Energy-and-Co",
+      "paper_title": "Synthesis-gas-as-a-fuel-for-internal-combusti_2022_Progress-in-Energy-and-Co"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:30:19.195802",
+      "answer_length": 1149
+    }
+  }
+]

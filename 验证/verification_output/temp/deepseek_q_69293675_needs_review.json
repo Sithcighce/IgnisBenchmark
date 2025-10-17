@@ -1,0 +1,86 @@
+{
+  "question_text": "Quantitatively, how do temperature and pressure affect CO₂ conversion and CH₄ selectivity in methanation, and what thermodynamic and kinetic principles underlie these trends?",
+  "standard_answer": "Temperature and pressure exert opposing effects on CO₂ conversion and CH₄ selectivity in methanation due to thermodynamic and kinetic constraints. CO₂ methanation (CO₂ + 4H₂ → CH₄ + 2H₂O, ΔH = -164.63 kJ/mol) is exothermic and volume-reducing (moles decrease from 5 to 3). Thermodynamically, according to Le Chatelier's principle, low temperatures (200–350°C) favor higher equilibrium conversion and CH₄ selectivity, while high temperatures shift equilibrium toward reactants and promote endothermic side reactions like reverse water-gas shift (RWGS), reducing CH₄ selectivity. Kinetically, elevated temperatures increase reaction rates but exacerbate thermal limitations. Pressure enhancement (e.g., from 1 to 30 atm) improves both conversion and selectivity by favoring the volume-reduction pathway; for instance, at H₂/CO₂ = 4, CH₄ selectivity rises from 73% at 1 atm to 88% at 30 atm. Quantitatively, CO₂ conversion decreases with temperature above ~300°C due to equilibrium constraints, while CH₄ selectivity peaks around 300–350°C and declines at higher temperatures as RWGS dominates. Optimal conditions typically involve pressures >10 atm and temperatures <400°C to maximize yield while minimizing carbon deposition and catalyst sintering.",
+  "original_text": {
+    "1": "elevated pressure increased both CO₂ conversion and CH₄ selectivity, raising temperature only has a positive effect on CO₂ conversion, with CH₄ selectivity passing through a maximum and decreasing for higher temperatures",
+    "2": "high pressure, low temperature, and an appropriate H₂/CO₂ ratio (more than 4) should be used for the optimized CO₂ methanation"
+  },
+  "type": "calculation",
+  "difficulty": 4,
+  "topic": "thermodynamics_kinetics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires deep knowledge of chemical reaction engineering, thermodynamics (Le Chatelier's principle, equilibrium constraints), kinetics (reaction rates, side reactions), and specific domain expertise in CO₂ methanation processes, including temperature/pressure effects on conversion and selectivity, which are core topics in combustion science and energy systems.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "The question is well-focused on domain-specific thermodynamics and kinetics of CO₂ methanation, and the answer accurately reflects the cited paper content regarding temperature/pressure effects on conversion and selectivity."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_69293675",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Recent-advances-in-CO2-hydrogenation-to-value-added_2021_Progress-in-Energy-",
+    "paper_title": "Recent-advances-in-CO2-hydrogenation-to-value-added_2021_Progress-in-Energy-"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:27:01.698442",
+    "answer_length": 1247
+  },
+  "verification": {
+    "status": "needs_review",
+    "verifiers": [
+      {
+        "correct": false,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "The standard answer states 'CO₂ conversion decreases with temperature above ~300°C due to equilibrium constraints', but the original text [1] clearly states 'raising temperature only has a positive effect on CO₂ conversion'. This is a direct contradiction.",
+          "The answer claims temperature has opposing effects on conversion versus selectivity, but the original text indicates temperature has a positive effect on conversion while selectivity passes through a maximum - not that conversion decreases at higher temperatures."
+        ],
+        "reasoning": "The standard answer contains a factual error that directly contradicts the original text. While the answer correctly explains that CH₄ selectivity passes through a maximum and decreases at higher temperatures (consistent with original text [1]), it incorrectly states that CO₂ conversion decreases with temperature above ~300°C. The original text explicitly states that raising temperature 'only has a positive effect on CO₂ conversion', meaning conversion increases (or at least does not decrease) with temperature. This is a fundamental misrepresentation of the temperature-conversion relationship. The thermodynamic explanation about exothermic reactions and Le Chatelier's principle is correct in general, but the conclusion about conversion decreasing contradicts the empirical observation stated in the authoritative source.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:18:07.351055"
+      },
+      {
+        "correct": false,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Contradicts ground truth by stating CO₂ conversion decreases with temperature above ~300°C; original text says raising temperature has a positive effect on CO₂ conversion",
+          "States low temperatures favor higher equilibrium conversion without reconciling that the net observed trend in conversion versus temperature is positive in the cited literature",
+          "Includes an unverified quantitative example (CH₄ selectivity 73% at 1 atm to 88% at 30 atm) without source support"
+        ],
+        "reasoning": "The answer correctly describes pressure increasing both conversion and selectivity and the CH₄ selectivity passing through a maximum and declining at higher temperatures. However, it incorrectly asserts that CO₂ conversion decreases with increasing temperature above ~300°C, which contradicts the ground truth stating temperature has a positive effect on conversion. It also introduces an unsupported quantitative example.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:18:30.271341"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "The standard answer states that CO₂ conversion decreases with temperature above ~300°C due to equilibrium limitations. This appears to contradict original text [1], which claims temperature 'only has a positive effect on CO₂ conversion'. However, the standard answer's explanation is scientifically correct and aligns with original text [2], which recommends 'low temperature' for optimization. The standard answer correctly synthesizes the trade-off between kinetics (favored by high T) and thermodynamics (favored by low T), providing a more complete picture than the isolated statements in the original text."
+        ],
+        "reasoning": "The standard answer is factually and logically correct. It accurately explains the thermodynamic and kinetic principles governing CO₂ methanation. It correctly identifies the reaction as exothermic and volume-reducing, leading to the conclusion that high pressure and low temperature favor equilibrium conversion (Le Chatelier's principle). It also correctly notes that high temperature increases reaction rates but can promote the undesirable reverse water-gas shift (RWGS) reaction, reducing CH₄ selectivity. The description of an optimal temperature range resulting from the trade-off between kinetics and thermodynamics is a cornerstone of understanding this process and is consistent with the overall optimization goal mentioned in the original text [2]. The apparent contradiction with text [1] is resolved by the standard answer's more comprehensive explanation, which implicitly clarifies that the statement in [1] likely refers only to the kinetically-limited regime.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:19:12.845949"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:19:12.845968",
+    "consensus": {
+      "all_correct": false,
+      "correct_votes": 1,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 1
+    }
+  }
+}

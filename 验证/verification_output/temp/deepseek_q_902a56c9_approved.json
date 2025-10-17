@@ -1,0 +1,80 @@
+{
+  "question_text": "Calculate the required ammonia mass flow rate for a 660 MW power plant operating at 55% efficiency, and explain how the thermophysical properties of ammonia influence fluidized-bed reactor design and combustion stability based on the provided paper content.",
+  "standard_answer": "For a 660 MW power plant operating at 55% efficiency, the thermal input required is calculated as: Power Output / Efficiency = 660 MW / 0.55 = 1200 MW. Converting to consistent units: 1200 MW = 4,320,000 MJ/h. Using ammonia's low heating value of 18.6 MJ/kg from the paper, the mass flow rate is: 4,320,000 MJ/h ÷ 18.6 MJ/kg = 232,258 kg/h ≈ 232 t/h. This substantial flow rate has major implications for fluidized-bed reactor design. The paper states that 'ammonia can be stored and transported as a liquid at 240 K and 1.1 bar–1.5 bar under which conditions the gravimetric and volumetric energy densities are 22.5 MJ/kg and 15.6 MJ/L, respectively.' The low volumetric energy density means larger volumetric flow rates must be accommodated in reactor sizing. Additionally, the paper notes that 'ammonia exhibits an unusually high LFL, meaning that less air (or more fuel) is required to sustain the reaction for the same thermal throughput. This results in a substantially reduced total mass flowrate capability through a combustor compared to other fuels, thereby adversely impacting convective heat transfer and posing challenges in fluidised-bed reactor design and operation.' The high autoignition temperature (~930 K) and low laminar flame speed (~6.5 cm/s) necessitate careful reactor design to ensure stable combustion. The fluidized-bed technology is advocated because 'the hot bed material in the fluidised-bed acts as a huge heat reservoir which ensures reliable ignition and stable combustion at relatively low temperatures.'",
+  "original_text": {
+    "1": "For a 660 MW power plant which operates using an ultra-supercritical Rankine cycle at 55 % efficiency, the fuel is required to deliver 660/0.55 = 1200 MW = 4,320,000 MJ/h to the system. At a heating value of 18.6 MJ/kg, the mass flowrate of NH3 to the system is 4,320,000/18.6 = 232 t/h.",
+    "2": "Ammonia exhibits an unusually high LFL, meaning that less air (or more fuel) is required to sustain the reaction for the same thermal throughput. This results in a substantially reduced total mass flowrate capability through a combustor compared to other fuels, thereby adversely impacting convective heat transfer and posing challenges in fluidised-bed reactor design and operation."
+  },
+  "type": "calculation",
+  "difficulty": 4,
+  "topic": "energy_systems",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires calculating ammonia mass flow rate for power generation and explaining how thermophysical properties influence fluidized-bed reactor design and combustion stability, which demands expertise in energy systems, combustion science, and reactor engineering specific to ammonia combustion.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "The question is domain-focused, the answer is factually correct and well-supported by citations, and there are no other quality issues. It passes all checks."
+  },
+  "retry_count": 1,
+  "question_id": "deepseek_q_902a56c9",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Ammonia-combustion-in-fixed-bed-and-fluidised-bed-r_2025_Progress-in-Energy-",
+    "paper_title": "Ammonia-combustion-in-fixed-bed-and-fluidised-bed-r_2025_Progress-in-Energy-"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:15:15.359551",
+    "answer_length": 1539
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer is factually accurate and logically sound. The calculation is correct: 660 MW / 0.55 = 1200 MW = 4,320,000 MJ/h, and 4,320,000 MJ/h ÷ 18.6 MJ/kg = 232,258 kg/h ≈ 232 t/h, matching the original text. The answer correctly quotes and applies the paper's statements about ammonia's storage conditions, volumetric energy density, high LFL, and its impact on mass flowrate and convective heat transfer in fluidized-bed reactors. The discussion of autoignition temperature (~930 K) and low laminar flame speed (~6.5 cm/s) are consistent with known ammonia properties. The explanation of how fluidized-bed technology addresses combustion stability through the hot bed material acting as a heat reservoir is appropriately cited from the paper. All physical principles are correctly stated, and the cause-effect relationships are sound. While the answer is detailed, it contains no factual errors or contradictions with the original text.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:03:14.312990"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Includes additional data (storage conditions, energy densities, autoignition temperature, laminar flame speed) not present in the provided original text; these appear plausible but are not directly supported by [1]-[2].",
+          "Uses LHV (18.6 MJ/kg) for the mass flow calculation and cites HHV-type volumetric energy density values later, which could cause minor confusion though it does not affect the calculation."
+        ],
+        "reasoning": "The calculation matches the ground-truth text: 660/0.55 = 1200 MW = 4,320,000 MJ/h, and with LHV 18.6 MJ/kg gives ≈232 t/h, consistent with [1]. The explanation of ammonia’s high LFL leading to reduced total mass flow through the combustor and impacts on convective heat transfer and fluidized-bed design is consistent with [2]. Additional thermophysical details (storage conditions, energy densities, autoignition temperature, flame speed) are plausible but not explicitly in the provided excerpts; they do not contradict the core points.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:03:48.174904"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer is factually and logically correct. The calculation for the ammonia mass flow rate is performed correctly and matches the values provided in the original text. The explanation of how ammonia's properties influence reactor design correctly cites the provided text regarding the high Lower Flammability Limit (LFL) and its consequences. The additional information provided (e.g., volumetric energy density, autoignition temperature, laminar flame speed, and the role of the fluidized bed as a heat reservoir) is factually accurate within the field of combustion science and serves as a valid and relevant elaboration on the topic, even though it is not all present in the short snippets provided.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:04:18.256263"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:04:18.256284",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

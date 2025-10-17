@@ -1,0 +1,79 @@
+{
+  "question_text": "How do the spatiotemporal scaling challenges in turbulent combustion necessitate the development of specialized closure models, and what role do data-driven approaches play in addressing these challenges according to the principles discussed in the paper?",
+  "standard_answer": "The spatiotemporal scaling challenges in turbulent combustion arise because the scales associated with large-scale flow dynamics, turbulence, scalar mixing, chemical reactions, and heat release span several orders of magnitude, making it infeasible to resolve all scales in practical simulations. This necessitates the development of specialized closure models that can accurately represent unresolved processes. Low-pass filtering techniques are commonly employed for separating large-scale processes that evolve on resolved scales from processes that occur on numerically unresolved scales. Closure models in the form of algebraic or differential equations for turbulence/chemistry coupling, turbulent stresses, and turbulent transport have been developed using physical arguments. Data-driven approaches offer a new paradigm for addressing these challenges by learning from large datasets generated from simulations and experiments. Machine learning techniques can extract complex structures from high-dimensional combustion data and construct models that map from resolved-scale variables to unclosed terms. However, purely data-driven approaches may lack predictive capability due to their inability to obey universal physical properties and fundamental governing laws. Therefore, knowledge-guided data-driven approaches that encode prior physical knowledge, constraints, and conservation principles into ML models have been developed to achieve consistently accurate predictions and generalization across different combustion scenarios.",
+  "original_text": {
+    "1": "The spatio-temporal scales associated with large-scale flow dynamics, turbulence, scalar mixing, chemical reactions, and heat release span several orders of magnitude, making it infeasible to resolve all scales.",
+    "2": "Low-pass filtering techniques are commonly employed for separating large-scale processes that evolve on resolved scales and processes that occur on numerically unresolved scales. Closure models in the form of algebraic or differential equations for turbulence/chemistry coupling, turbulent stresses, and turbulent transport have been developed using physical arguments."
+  },
+  "type": "concept",
+  "difficulty": 4,
+  "topic": "CFD_modeling",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires deep knowledge of turbulent combustion physics, spatiotemporal scaling challenges in CFD, closure model development, and the application of data-driven methods in combustion science - all core combustion/CFD domain expertise",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues"
+  },
+  "retry_count": 1,
+  "question_id": "deepseek_q_5c2e9497",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Combustion-machine-learning--Principles--pr_2022_Progress-in-Energy-and-Comb",
+    "paper_title": "Combustion-machine-learning--Principles--pr_2022_Progress-in-Energy-and-Comb"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:18:27.218455",
+    "answer_length": 1542
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "medium",
+        "issues": [
+          "The answer includes extensive discussion of data-driven and machine learning approaches that are not present in the provided original text excerpts, making full verification impossible"
+        ],
+        "reasoning": "The first portion of the answer accurately reflects the original text: it correctly explains that spatiotemporal scales span several orders of magnitude making full resolution infeasible, accurately describes low-pass filtering for scale separation, and correctly mentions closure models developed using physical arguments. However, the majority of the answer discusses data-driven approaches, machine learning techniques, knowledge-guided approaches, and their role in addressing turbulent combustion challenges. While these statements appear logically sound and consistent with modern computational combustion research, they cannot be verified against the provided original text excerpts [1] and [2], which do not mention data-driven or ML approaches at all. The question explicitly asks about 'data-driven approaches' and references 'principles discussed in the paper,' suggesting this content should exist in the full paper but is not included in the excerpts provided. Given that the verifiable portions are accurate and the unverifiable portions contain no obvious factual errors or logical inconsistencies with established combustion science principles, I mark this as correct but with medium verification confidence due to incomplete source material.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:06:55.084327"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer accurately states that multi-scale spatiotemporal dynamics in turbulent combustion make full resolution infeasible, necessitating low-pass filtering and specialized closure models derived from physical arguments for unclosed terms (turbulence-chemistry coupling, stresses, transport), consistent with the original text. Its discussion of data-driven and physics-informed ML approaches as complementary tools to learn closures from resolved variables without violating physical constraints is logically sound and does not contradict the provided ground truth.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:07:11.243823"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer is factually correct and logically consistent. The first part of the answer, which discusses the spatiotemporal scaling challenges and the necessity of traditional closure models, is a direct and accurate reflection of the provided original text. The second part of the answer, which elaborates on the role of data-driven approaches, is not covered by the original text but is a correct and modern description of the state-of-the-art in turbulent combustion modeling. It accurately identifies the potential of machine learning, its limitations (lack of physical consistency), and the current research direction towards knowledge-guided or physics-informed models. The entire explanation is sound from a combustion science and thermophysics perspective.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:07:31.820069"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:07:31.820090",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": false,
+      "disagreement_count": 0
+    }
+  }
+}

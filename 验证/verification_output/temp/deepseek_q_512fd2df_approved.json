@@ -1,0 +1,81 @@
+{
+  "question_text": "How does the Voigt profile combine Doppler and collisional broadening mechanisms in infrared laser-absorption spectroscopy, and what are the physical origins and mathematical formulations of each broadening component?",
+  "standard_answer": "The Voigt profile is a convolution of Gaussian (Doppler) and Lorentzian (collisional) lineshape functions, accounting for both broadening mechanisms simultaneously. Doppler broadening arises from the thermal motion of molecules, where molecules moving toward or away from the laser source experience Doppler-shifted frequencies. This results in a Gaussian distribution with FWHM Δν_D = 7.1623×10^(-7)ν_0√(T/M), scaling with temperature T and inversely with molecular mass M. Collisional broadening occurs due to molecular collisions that shorten the lifetime of excited states and cause phase perturbations, leading to a Lorentzian distribution with FWHM Δν_C = 2P∑x_kγ_k(T), where γ_k are species-dependent collisional-broadening coefficients. The Voigt profile integrates these effects but assumes homogeneous collisional broadening and no velocity-changing collisions. At combustion conditions, this profile is widely used due to its balance between accuracy and computational efficiency, though it may exhibit residuals up to 10% when Dicke narrowing or speed-dependent effects are significant, necessitating advanced models like Rautian or Galatry profiles for high-precision applications.",
+  "original_text": {
+    "1": "The Voigt profile (VP) is given by a convolution of the Gaussian and Lorentzian profiles and, therefore, accounts for both Doppler and collisional broadening.",
+    "2": "Doppler broadening occurs when molecules in the absorbing state have a velocity component in the same (or opposite) direction of the photon propagation.",
+    "3": "Collisional broadening of a rovibrational absorption transition occurs when: (1) inelastic collisions reduce a molecule’s lifetime in the absorbing state, (2) elastic dephasing collisions perturb the molecular rotation and/or vibration, or (3) elastic angular-momentum altering collisions re-orient the angular momentum vector of the dipole."
+  },
+  "type": "concept",
+  "difficulty": 4,
+  "topic": "molecular_spectroscopy",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires specific knowledge of molecular spectroscopy, laser-absorption techniques, and lineshape physics in combustion diagnostics. It demands understanding of Doppler and collisional broadening mechanisms, their physical origins, mathematical formulations, and how they combine in the Voigt profile - all specialized combustion spectroscopy concepts.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer are well-structured, domain-focused, and factually accurate based on the provided citations and paper content."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_512fd2df",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Infrared-laser-absorption-sensing-for-co_2017_Progress-in-Energy-and-Combust",
+    "paper_title": "Infrared-laser-absorption-sensing-for-co_2017_Progress-in-Energy-and-Combust"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:21:48.791693",
+    "answer_length": 1194
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly explains the Voigt profile as a convolution of Gaussian (Doppler) and Lorentzian (collisional) lineshape functions, consistent with the original text. The physical origins are accurately described: Doppler broadening from thermal molecular motion causing frequency shifts, and collisional broadening from molecular collisions affecting excited state lifetimes and phase perturbations. The original text mentions three collision mechanisms (inelastic lifetime reduction, elastic dephasing, and angular-momentum altering collisions), which align with the answer's description of 'collisions that shorten the lifetime of excited states and cause phase perturbations.' The mathematical formulations provided (Gaussian FWHM scaling with √(T/M) and Lorentzian FWHM proportional to pressure) are physically sound. The additional details about assumptions, limitations, and advanced models (Dicke narrowing, Rautian/Galatry profiles) represent reasonable extensions beyond the original text but contain no factual errors or contradictions. All physical principles are correctly stated.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:10:56.181966"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Doppler FWHM constant (7.1623e-7) given without unit conventions; implicitly assumes ν0 in cm^-1 and M in g/mol.",
+          "Does not explicitly mention elastic angular-momentum–altering collisions as a contributor to collisional broadening (listed in the ground-truth text)."
+        ],
+        "reasoning": "The answer correctly states that the Voigt profile is the convolution of Gaussian (Doppler) and Lorentzian (collisional) components, provides appropriate physical origins (thermal motion for Doppler; lifetime reduction and phase perturbations for collisions), and presents standard FWHM formulations: Doppler ∝ ν0√(T/M) and Lorentzian FWHM = 2P∑xkγk(T). The added notes about homogeneous broadening, absence of velocity-changing collisions in the Voigt model, and alternatives (Rautian/Galatry) are accurate. Minor issues concern unit specificity in the Doppler constant and omission of angular-momentum reorientation collisions, but these do not affect overall correctness.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:12:02.382915"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer is factually correct and logically sound. It accurately defines the Voigt profile as a convolution of Gaussian (Doppler) and Lorentzian (collisional) profiles, consistent with the original text. It correctly provides the physical origins and standard mathematical formulations for both broadening mechanisms, and appropriately discusses the limitations of the Voigt profile (e.g., neglecting Dicke narrowing) and the context of its use in combustion. All statements are consistent with established principles in spectroscopy and thermophysics.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:12:24.919331"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:12:24.919350",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

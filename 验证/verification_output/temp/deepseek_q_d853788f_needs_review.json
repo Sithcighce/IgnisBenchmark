@@ -1,0 +1,88 @@
+{
+  "question_text": "How does the inverse jet diffusion flame (IJDF) configuration fundamentally alter soot formation mechanisms compared to normal jet diffusion flames (NJDF), and what are the key fluid dynamic and chemical kinetic factors responsible for reduced soot volume fraction in IJDF?",
+  "standard_answer": "The IJDF configuration fundamentally alters soot formation by reversing the reactant delivery mode, with central air surrounded by annular fuel, which decouples soot oxidation from evolution. In NJDF, soot forms on the fuel-rich side of the flame sheet, remains in high-temperature zones for extended residence times, and undergoes significant surface growth and oxidation, leading to higher soot volume fractions (∼10⁻⁷). In contrast, IJDF's flow dynamics cause incipient soot particles to be carried across the flame sheet by the high-velocity central air jet, reducing residence time in high-temperature regions and inhibiting surface growth. Key factors include: (1) Enhanced fuel entrainment and mixing due to the relative momentum between air and fuel jets, which limits soot precursor (e.g., PAH) accumulation. (2) The annular sooting zone in IJDF is sandwiched between inner OH and outer PAH layers, preventing soot from crossing into oxidizer-rich regions, thus minimizing oxidation and maturation. (3) Numerical simulations show surface growth rates are slower in IJDF, with peak soot volume fractions an order of magnitude lower (∼10⁻⁹) than NJDF. This is supported by experimental observations where soot particles in IJDF are smaller (3–5 nm) and less carbonized, indicating incipient characteristics due to reduced thermal and chemical exposure.",
+  "original_text": {
+    "1": "The soot formation, evolution and morphology in inverse jet diffusion flame differ fundamentally from that of the normal jet diffusion flame (NJDF) due to its distinct reactant delivery mode and fluid dynamics.",
+    "2": "In IJDF, the soot formation strongly depends on the air and fuel jet velocities. This is due to the fact that the incipient soot particles in the fuel-rich annular region are carried across the flame sheet by the high-velocity central air jet, which gives less residence time for the soot particles to stay in the high-temperature flame zone and hence inhibits their surface growth."
+  },
+  "type": "reasoning",
+  "difficulty": 5,
+  "topic": "combustion_soot",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires deep expertise in combustion science, specifically soot formation mechanisms in jet diffusion flames, understanding of fluid dynamics (jet velocities, mixing, residence times), and chemical kinetics (soot precursors, PAH formation, oxidation processes). It cannot be answered with general ML knowledge alone.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer are well-aligned with the paper's content and domain requirements. No issues detected."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_d853788f",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "The-inverse-jet-diffusion-flames--A-syst_2025_Progress-in-Energy-and-Combust",
+    "paper_title": "The-inverse-jet-diffusion-flames--A-syst_2025_Progress-in-Energy-and-Combust"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:30:39.989660",
+    "answer_length": 1359
+  },
+  "verification": {
+    "status": "needs_review",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "medium",
+        "issues": [
+          "Answer contains extensive details about soot volume fractions (10⁻⁷ for NJDF, 10⁻⁹ for IJDF), particle sizes (3-5 nm), and specific mechanisms (OH/PAH layers, surface growth rates) that cannot be verified against the provided original text",
+          "The original text only confirms two key points: (1) fundamental differences in soot formation due to reactant delivery mode and fluid dynamics, and (2) the mechanism of soot particles being carried across the flame sheet by high-velocity air jet with reduced residence time"
+        ],
+        "reasoning": "The standard answer is consistent with the two key mechanisms stated in the original text: (1) IJDF's distinct reactant delivery mode (central air, annular fuel) fundamentally alters soot formation, and (2) incipient soot particles are carried across the flame sheet by the high-velocity central air jet, reducing residence time and inhibiting surface growth. However, the answer contains many specific quantitative details (soot volume fractions, particle sizes, layer structures) that go well beyond what can be verified from the provided original text excerpts. Since the original text is limited to two sentences, I cannot verify these additional claims, though they appear physically plausible and logically consistent with combustion science principles. The core mechanisms are correctly explained and match the original text, so the answer is marked as correct, but verification confidence is medium due to inability to confirm the extensive additional details.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:22:23.139694"
+      },
+      {
+        "correct": false,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Contradicts original text by stating the annular sooting zone prevents soot from crossing into oxidizer-rich regions; the ground truth explicitly says incipient soot is carried across the flame sheet by the central air jet.",
+          "Claims IJDF decouples soot oxidation from evolution, which is not supported by the original text.",
+          "Numerical values for soot volume fractions (∼10⁻⁷ for NJDF and ∼10⁻⁹ for IJDF) are introduced without support and the statement 'an order of magnitude lower' conflicts with the two-orders-of-magnitude difference implied by the numbers.",
+          "Layering description (inner OH and outer PAH layers) and its inferred effect on oxidation is speculative and not in the original text.",
+          "Additional claims about particle sizes (3–5 nm) and reduced carbonization are not supported by the provided ground truth."
+        ],
+        "reasoning": "While the answer correctly highlights the reversed reactant delivery and the key fluid dynamic mechanism—central air jet carrying incipient soot across the flame sheet, reducing residence time and inhibiting surface growth—it introduces contradictions and unsupported claims. Specifically, it incorrectly asserts that soot is prevented from entering oxidizer-rich regions (contrary to the ground truth), adds speculative layering and oxidation arguments, and includes inconsistent and unsupported numerical comparisons.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:22:50.432527"
+      },
+      {
+        "correct": false,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Point (2) incorrectly states that the flame structure 'prevents' soot from crossing into oxidizer-rich regions. This contradicts the primary mechanism, also mentioned in the answer and the original text, where incipient soot is 'carried across the flame sheet' by the central air jet. The key is rapid transport across the oxidation zone, not prevention of crossing."
+        ],
+        "reasoning": "The answer contains a direct contradiction regarding the soot particle trajectory. It correctly states that soot is carried across the flame sheet but then incorrectly claims in point (2) that the flame structure prevents this crossing. The reduced soot is due to the short residence time *during* this transport across the oxidation zone, not a barrier preventing it. This is a significant logical and factual error in describing the core mechanism.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:23:17.321416"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:23:17.321442",
+    "consensus": {
+      "all_correct": false,
+      "correct_votes": 1,
+      "total_votes": 3,
+      "all_high_confidence": false,
+      "disagreement_count": 1
+    }
+  }
+}

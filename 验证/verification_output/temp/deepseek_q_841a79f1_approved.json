@@ -1,0 +1,80 @@
+{
+  "question_text": "How do non-combustible components like CO2 and N2 in LCVG affect the establishment of MILD combustion through their influence on ignition delay time and self-ignition temperature?",
+  "standard_answer": "Non-combustible components such as CO2 and N2 in LCVG significantly increase the ignition delay time and self-ignition temperature due to their dilution effects. The presence of these diluents reduces the concentration of reactive species, lowering the collision frequency and slowing down the chain-branching reactions essential for ignition. Specifically, CO2 has a higher heat capacity than N2, absorbing more thermal energy and further suppressing reactivity by reducing the adiabatic flame temperature. This necessitates preheating the reactants to temperatures above the elevated self-ignition temperature (Tin > Tsi) to ensure timely ignition and stable combustion in MILD regimes. Additionally, the diluents help maintain the condition ΔT < Tsi by limiting temperature rise during combustion, which is critical for avoiding local high-temperature zones and reducing thermal NOx formation. The combined physical (reduced molecular collisions) and chemical (heat absorption) effects of CO2 and N2 thus enable MILD combustion by aligning with its requirements for high inlet temperatures and moderate heat release.",
+  "original_text": {
+    "1": "The presence of a large amount of dilution gas in LCVG increases the self-ignition temperature and ignition delay time of the mixture, making preheating the reactants a critical consideration.",
+    "2": "In MILD combustion, it is crucial to have an inlet reactant temperature higher than the self-ignition temperature (Tin > Tsi) to mitigate the difficulties associated with ignition and unstable combustion."
+  },
+  "type": "reasoning",
+  "difficulty": 4,
+  "topic": "combustion_science",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires deep combustion science expertise, specifically about how non-combustible components (CO2, N2) in low calorific value gases affect ignition delay time, self-ignition temperature, and MILD combustion establishment - all core combustion science concepts requiring domain-specific knowledge of chemical kinetics, thermodynamics, and combustion regimes.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_841a79f1",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "MILD-combustion-of-low-calorific-valu_2024_Progress-in-Energy-and-Combustion",
+    "paper_title": "MILD-combustion-of-low-calorific-valu_2024_Progress-in-Energy-and-Combustion"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:23:03.749482",
+    "answer_length": 1119
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly explains how non-combustible components (CO2 and N2) affect MILD combustion establishment. It accurately states that these diluents increase ignition delay time and self-ignition temperature through dilution effects, which is consistent with the original text [1]. The answer correctly identifies the mechanisms: reduced reactive species concentration, lower collision frequency, and slowed chain-branching reactions. The distinction between CO2's higher heat capacity versus N2 is factually correct. The answer properly connects these effects to the MILD combustion requirement that Tin > Tsi (consistent with original text [2]) and explains the ΔT < Tsi condition for avoiding high-temperature zones and NOx formation. The physical and chemical mechanisms described are scientifically sound and align with established combustion principles. While the answer is detailed and goes beyond the original text in explaining mechanisms, all statements are accurate and no contradictions exist.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:13:27.101632"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Minor phrasing: heat absorption by CO2/N2 is a thermal/physical effect rather than a 'chemical' effect",
+          "Statement about lowered 'collision frequency' is better interpreted as reduced reactive collision frequency due to dilution (not total molecular collisions at fixed P,T)"
+        ],
+        "reasoning": "The answer correctly states that CO2 and N2 dilution in LCVG increases ignition delay and self-ignition temperature, necessitating preheating with Tin > Tsi, consistent with the ground-truth text. It accurately notes CO2’s higher heat capacity and the resulting reduction in adiabatic flame temperature, and it appropriately links dilution to maintaining moderate temperature rise (supporting MILD conditions). No factual or logical contradictions with the original text were found; only minor wording nuances are present.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:13:59.433666"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer is factually correct and logically consistent. It accurately explains the dual role of diluents (CO2, N2) in increasing ignition delay and self-ignition temperature through both physical (concentration reduction) and thermal (heat absorption) effects. It correctly compares the higher heat capacity of CO2 to N2. The answer correctly links these effects to the core requirements for establishing MILD combustion (Tin > Tsi and ΔT < Tsi), which is consistent with the provided original text and established combustion science principles.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:14:19.611981"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:14:19.612002",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

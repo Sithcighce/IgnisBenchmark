@@ -1,0 +1,77 @@
+{
+  "question_text": "Based on the provided paper content, explain how preferential diffusion effects are addressed in turbulent flame modeling using the Flamelet Generated Manifold (FGM) approach, and describe the computational strategy employed to handle these effects efficiently.",
+  "standard_answer": "The paper identifies that preferential diffusion phenomena can have a significant impact on flame structure and dynamics, particularly when hydrogen enrichment is involved. These effects arise from differences in molecular diffusion rates between species, which can alter local mixture compositions and flame behavior. In turbulent flames with strong preferential diffusion effects, the FGM approach addresses these challenges by incorporating an additional control variable specifically designed to capture changes in element mass fractions and enthalpy. This computational strategy allows the model to efficiently account for the variations caused by differential diffusion without requiring full resolution of all chemical species transport equations. The inclusion of this single additional control variable enables the FGM model to maintain accuracy while significantly reducing computational cost, making it suitable for practical combustion simulations where preferential diffusion plays an important role in flame dynamics and stability.",
+  "original_text": {
+    "1": "Hydrogen enrichment of fossil fuels from bio-sources introduces preferential diffusion phenomena which may have a huge impact on the structure and dynamics of underlying combustion processes.",
+    "2": "Turbulent flames with strong preferential diffusion effects can also be modeled efficiently with an FGM model using a single additional control variable for the changes in element mass fractions and enthalpy."
+  },
+  "type": "concept",
+  "difficulty": 4,
+  "topic": "combustion_kinetics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires deep expertise in combustion science, specifically turbulent flame modeling, preferential diffusion phenomena, and the Flamelet Generated Manifold (FGM) approach. It addresses complex CFD concepts involving species transport, chemical kinetics, and computational efficiency strategies that are specific to combustion modeling.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer are both high quality - the question is domain-focused and the answer accurately reflects the paper's content about FGM handling preferential diffusion with an additional control variable."
+  },
+  "retry_count": 1,
+  "question_id": "deepseek_q_7a877eee",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "State-of-the-art-in-premixed-combustion-modelin_2016_Progress-in-Energy-and-",
+    "paper_title": "State-of-the-art-in-premixed-combustion-modelin_2016_Progress-in-Energy-and-"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:30:01.005954",
+    "answer_length": 1045
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately captures all key points from the original text: (1) preferential diffusion phenomena arise from hydrogen enrichment and have significant impact on flame structure and dynamics, (2) these effects stem from differences in molecular diffusion rates between species, (3) FGM approach addresses this using a single additional control variable for changes in element mass fractions and enthalpy, and (4) this strategy maintains accuracy while reducing computational cost. The answer provides appropriate elaboration on the mechanisms (differential diffusion altering local mixture compositions) and benefits (efficient modeling without full resolution of all species transport) that are consistent with combustion science principles and the original text. No factual errors or logical contradictions detected.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:20:49.549119"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer accurately reflects the ground-truth statements: it notes the impact of hydrogen enrichment on preferential diffusion and explains that FGM efficiently models turbulent flames with strong preferential diffusion by using a single additional control variable capturing changes in element mass fractions and enthalpy. The elaboration on efficiency and reduced need to resolve all species transport equations is reasonable and consistent.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:20:59.793367"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer accurately reflects the information provided in the original text. It correctly identifies that FGM addresses preferential diffusion by using a 'single additional control variable' to track changes in 'element mass fractions and enthalpy'. The explanation of the computational benefit (efficiency by avoiding full species transport) is a correct and logical elaboration consistent with the purpose of manifold models. There are no factual or logical errors.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:21:11.854960"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:21:11.854980",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

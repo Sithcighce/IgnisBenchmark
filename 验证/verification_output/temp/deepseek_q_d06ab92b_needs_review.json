@@ -1,0 +1,85 @@
+{
+  "question_text": "Calculate the change in brake thermal efficiency (BTE) when 10% ethanol (by volume) is blended with diesel, given the lower heating values: diesel 46 MJ/kg, ethanol 21.1 MJ/L, and densities: diesel 0.831 kg/L, ethanol 0.789 kg/L. Assume the engine operates at constant brake power and the blend's BSFC increases by 8% compared to neat diesel.",
+  "standard_answer": "To calculate the change in BTE, first determine the energy content of the blend. For a 10% ethanol blend (D90E10), the volume fractions are 0.9 diesel and 0.1 ethanol. The mass of diesel per liter of blend is 0.9 L * 0.831 kg/L = 0.7479 kg, and for ethanol, 0.1 L * 0.789 kg/L = 0.0789 kg. Total mass per liter of blend is 0.7479 + 0.0789 = 0.8268 kg. The energy from diesel per liter of blend is 0.7479 kg * 46 MJ/kg = 34.4034 MJ, and from ethanol is 0.0789 kg * (21.1 MJ/L / 0.789 kg/L) = 0.0789 kg * 26.74 MJ/kg = 2.109 MJ (since 21.1 MJ/L / 0.789 kg/L = 26.74 MJ/kg). Total energy per liter of blend is 34.4034 + 2.109 = 36.5124 MJ. Neat diesel energy per liter is 0.831 kg/L * 46 MJ/kg = 38.226 MJ. The lower heating value ratio (blend/diesel) is 36.5124 / 38.226 = 0.955. BSFC increases by 8%, so BSFC_blend = 1.08 * BSFC_diesel. BTE is inversely proportional to BSFC and directly proportional to heating value: BTE ∝ (heating value) / BSFC. Thus, BTE_blend / BTE_diesel = (0.955 / 1.08) = 0.884. Therefore, BTE decreases by approximately 11.6%.",
+  "original_text": {
+    "1": "Brake thermal efficiency (bte) is the ratio between the brake power output and the energy introduced through fuel injection, while the latter is the product of the injected fuel mass flow rate and the lower heating value.",
+    "2": "The caloric value of the oxygenated additives is less than that of the diesel fuel, and therefore, their inclusion in diesel dilutes the final energy content of blends."
+  },
+  "type": "calculation",
+  "difficulty": 4,
+  "topic": "energy_systems",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires combustion science and energy systems expertise to understand brake thermal efficiency, fuel blending effects, heating values, and engine performance relationships in diesel-ethanol blends.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question is well-focused on energy systems domain and answer provides correct calculation methodology with proper physics-based reasoning."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_d06ab92b",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Impacts-of-additives-on-performance-and-emission-cha_2017_Progress-in-Energy",
+    "paper_title": "Impacts-of-additives-on-performance-and-emission-cha_2017_Progress-in-Energy"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:21:29.071465",
+    "answer_length": 1051
+  },
+  "verification": {
+    "status": "needs_review",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly applies the fundamental principles stated in the original text. It properly calculates: (1) the blend's energy content per liter by accounting for mass and heating values of both components, (2) recognizes that ethanol's lower caloric value dilutes the blend's energy content (consistent with original text statement [2]), and (3) correctly applies the BTE definition from original text statement [1] by relating BTE to the ratio of heating value to BSFC. The mathematical calculations are accurate: blend energy (36.5124 MJ/L) vs diesel (38.226 MJ/L) gives ratio 0.955, and with 8% BSFC increase (1.08), the BTE ratio becomes 0.955/1.08 = 0.884, representing an 11.6% decrease. The logic is sound and consistent with thermodynamic principles and the original text.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:10:47.393290"
+      },
+      {
+        "correct": false,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Uses an incorrect proportionality: states BTE ∝ LHV/BSFC; correct relation at constant brake power is BTE = 1/(BSFC × LHV_mass).",
+          "Mixes volumetric energy density with mass-based BSFC, leading to inconsistent units.",
+          "Numerical result is wrong: using mass-based LHV for D90E10 (~44.17 MJ/kg) and an 8% BSFC increase gives BTE_blend/BTE_diesel ≈ 46/(1.08×44.17) ≈ 0.963 (≈3.7% decrease), not 11.6%."
+        ],
+        "reasoning": "The answer correctly notes ethanol dilutes the blend’s energy but applies the wrong BTE dependence and combines volumetric LHV with mass-based BSFC. Using the proper BTE = 1/(BSFC×LHV_mass) relation yields an approximate 3.7% decrease in BTE, not 11.6%.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:11:35.031073"
+      },
+      {
+        "correct": false,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "The answer incorrectly states the relationship between Brake Thermal Efficiency (BTE), Brake Specific Fuel Consumption (BSFC), and Lower Heating Value (LHV). It claims `BTE ∝ (heating value) / BSFC`.",
+          "The correct relationship, derived from the definition of BTE and BSFC, is `BTE = 1 / (BSFC * LHV)`, meaning BTE is inversely proportional to both BSFC and LHV.",
+          "This fundamental error in the formula leads to an incorrect final calculation and conclusion. The ratio should be `BTE_blend / BTE_diesel = 1 / ((BSFC_blend / BSFC_diesel) * (LHV_blend / LHV_diesel))`."
+        ],
+        "reasoning": "The standard answer contains a critical factual and logical error. It incorrectly states the formula relating BTE, BSFC, and LHV. The correct formula is BTE = 1 / (BSFC * LHV), as BTE is the ratio of power output to fuel energy input, and BSFC is the ratio of fuel mass flow to power output. The answer uses a flawed formula, `BTE ∝ LHV / BSFC`, which inverts the relationship with LHV. This leads to an incorrect numerical result.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:12:07.883354"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:12:07.883374",
+    "consensus": {
+      "all_correct": false,
+      "correct_votes": 1,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 1
+    }
+  }
+}

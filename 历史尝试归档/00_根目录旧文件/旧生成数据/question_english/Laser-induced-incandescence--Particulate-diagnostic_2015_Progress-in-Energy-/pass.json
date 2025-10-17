@@ -1,0 +1,101 @@
+[
+  {
+    "question_text": "How does the thermal accommodation coefficient (αT) influence the conductive cooling rate of laser-heated soot particles in LII, and what physical mechanisms govern its dependence on gas composition and temperature?",
+    "standard_answer": "The thermal accommodation coefficient (αT) critically determines the conductive cooling rate in LII by quantifying the efficiency of energy transfer during gas-particle collisions. It represents the fraction of kinetic energy exchanged when gas molecules collide with the heated particle surface, ranging from 0 (no energy transfer) to 1 (complete thermal equilibrium). The conductive cooling rate Q̇_cond is proportional to αT through the expression Q̇_cond = πdp²αTκa(T - T0)/L, where dp is particle diameter, κa is gas thermal conductivity, T is particle temperature, T0 is ambient temperature, and L is mean free path. Physically, αT depends on gas composition because different molecules (e.g., N2, O2, CO2) have varying molecular masses, collision cross-sections, and internal degrees of freedom that affect energy transfer efficiency. For heavier molecules like CO2, αT tends to be higher due to better momentum matching with carbon atoms. Temperature dependence arises because higher temperatures increase molecular velocities, potentially reducing interaction time during collisions and decreasing αT. Additionally, surface chemistry effects—such as physisorption/chemisorption of gas molecules—can enhance αT by creating temporary bonding that facilitates energy transfer. In LII modeling, αT values typically range from 0.2 to 0.9 depending on gas composition, with significant uncertainties remaining particularly for complex gas mixtures encountered in combustion environments.",
+    "original_text": {
+      "1": "The thermal accommodation coefficient αT critically determines the conductive cooling rate in LII by quantifying the efficiency of energy transfer during gas-particle collisions.",
+      "2": "The conductive cooling rate Q̇_cond is proportional to αT through the expression Q̇_cond = πdp²αTκa(T - T0)/L, where dp is particle diameter, κa is gas thermal conductivity, T is particle temperature, T0 is ambient temperature, and L is mean free path."
+    },
+    "type": "reasoning",
+    "difficulty": 5,
+    "topic": "heat_transfer",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question requires specialized knowledge in combustion science (laser-induced incandescence), heat transfer (conductive cooling, thermal accommodation coefficient), and nanoscale heat transfer physics specific to soot particle diagnostics in combustion environments.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues"
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_3156da16",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Laser-induced-incandescence--Particulate-diagnostic_2015_Progress-in-Energy-",
+      "paper_title": "Laser-induced-incandescence--Particulate-diagnostic_2015_Progress-in-Energy-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:21:53.719488",
+      "answer_length": 1490
+    }
+  },
+  {
+    "question_text": "Why does the absorption function E(m) exhibit wavelength dependence for soot particles in LII, and how does this affect the laser heating efficiency at different excitation wavelengths?",
+    "standard_answer": "The absorption function E(m) = -Im[(m²-1)/(m²+2)] exhibits wavelength dependence due to the complex refractive index m = n + ik of soot, where the imaginary part k represents absorption. For mature soot, k generally decreases with increasing wavelength in the visible to near-IR range, causing E(m) to be higher at shorter wavelengths (e.g., 532 nm) than longer wavelengths (e.g., 1064 nm). This wavelength dependence arises from the electronic structure of graphitic carbon—shorter wavelengths probe π-π* transitions in aromatic structures, leading to stronger absorption, while longer wavelengths involve weaker interband transitions. Consequently, laser heating efficiency Q̇_abs = π²dp³E(m)Eλ/λL is higher at 532 nm than 1064 nm for the same laser fluence, where Eλ is laser irradiance and λL is laser wavelength. However, practical LII often uses 1064 nm to avoid interference from laser-induced fluorescence of polycyclic aromatic hydrocarbons (PAHs) that emit strongly in visible wavelengths. The temperature rise ΔT during laser heating scales with E(m)/λL, creating a trade-off between absorption strength and wavelength. Additionally, E(m) can vary with soot maturity—less mature soot with higher H/C ratios typically has lower E(m) values due to different carbon hybridization states, further complicating wavelength selection for optimal LII signal generation.",
+    "original_text": {
+      "1": "The absorption function E(m) = -Im[(m²-1)/(m²+2)] exhibits wavelength dependence due to the complex refractive index m = n + ik of soot, where the imaginary part k represents absorption.",
+      "2": "Laser heating efficiency Q̇_abs = π²dp³E(m)Eλ/λL is higher at 532 nm than 1064 nm for the same laser fluence, where Eλ is laser irradiance and λL is laser wavelength."
+    },
+    "type": "concept",
+    "difficulty": 4,
+    "topic": "combustion_science",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question requires specific knowledge of laser-induced incandescence (LII) techniques, soot particle optics, and combustion diagnostics. It involves understanding the wavelength-dependent absorption properties of soot particles, complex refractive indices, and how these affect laser heating efficiency in combustion applications.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "The question is well-focused on combustion diagnostics and the answer provides comprehensive, technically accurate explanations supported by the citations and domain knowledge."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_3f1adb49",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Laser-induced-incandescence--Particulate-diagnostic_2015_Progress-in-Energy-",
+      "paper_title": "Laser-induced-incandescence--Particulate-diagnostic_2015_Progress-in-Energy-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:21:54.079242",
+      "answer_length": 1372
+    }
+  },
+  {
+    "question_text": "What physical mechanisms cause the LII signal saturation at high laser fluences, and how does this relate to the sublimation thermodynamics of carbon clusters?",
+    "standard_answer": "LII signal saturation occurs when particles reach the sublimation temperature, typically around 4000-4500 K for carbonaceous materials, where the absorbed laser energy is balanced by massive evaporative cooling. The saturation mechanism involves phase transition thermodynamics: as temperature approaches the sublimation point, the vapor pressure of carbon clusters increases exponentially according to the Clausius-Clapeyron relation. The evaporative cooling rate Q̇_sub becomes dominant and scales with the saturation vapor pressure pV ∝ exp(-ΔHV/RT), where ΔHV is the enthalpy of sublimation. For carbon, multiple sublimation pathways exist with different thermodynamic thresholds: C3 sublimation occurs around 4140 K (ΔHV ≈ 710 kJ/mol), while C2 sublimation requires ~4460 K (ΔHV ≈ 830 kJ/mol). When laser heating drives the particle to these temperatures, Q̇_sub increases dramatically because the mass loss rate dM/dt_sub becomes substantial, consuming the latent heat of sublimation. This creates a temperature plateau where further increases in laser fluence do not raise particle temperature but instead accelerate mass loss. The saturation behavior is observed experimentally as a flattening of the peak LII signal versus fluence curve, since the incandescence signal S ∝ dp²T⁴ (from Planck's law) cannot increase once T becomes constant and dp decreases due to sublimation. The exact saturation temperature depends on the dominant subliming species and the wavelength-dependent emissivity used for temperature inference.",
+    "original_text": {
+      "1": "LII signal saturation occurs when particles reach the sublimation temperature, typically around 4000-4500 K for carbonaceous materials, where the absorbed laser energy is balanced by massive evaporative cooling.",
+      "2": "For carbon, multiple sublimation pathways exist with different thermodynamic thresholds: C3 sublimation occurs around 4140 K, while C2 sublimation requires ~4460 K."
+    },
+    "type": "reasoning",
+    "difficulty": 5,
+    "topic": "combustion_science",
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires deep knowledge of laser-induced incandescence (LII) physics, carbon sublimation thermodynamics, and combustion diagnostics. It specifically addresses physical mechanisms of signal saturation, sublimation thermodynamics of carbon clusters, and the relationship between laser fluence and particle temperature - all core combustion science concepts that cannot be answered with general ML knowledge.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+    },
+    "retry_count": 0,
+    "question_id": "deepseek_q_12f46c09",
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Laser-induced-incandescence--Particulate-diagnostic_2015_Progress-in-Energy-",
+      "paper_title": "Laser-induced-incandescence--Particulate-diagnostic_2015_Progress-in-Energy-"
+    },
+    "metadata": {
+      "generation_model": "deepseek-chat",
+      "created_at": "2025-10-15T16:21:54.614090",
+      "answer_length": 1531
+    }
+  }
+]

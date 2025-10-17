@@ -1,0 +1,80 @@
+{
+  "question_text": "How do the properties of pyrolysis bio-oils, including their high oxygen content and complex composition, affect their co-processing with petroleum fractions in hydroprocessing units, and what are the main challenges and technological considerations for successful implementation?",
+  "standard_answer": "The high oxygen content and complex composition of pyrolysis bio-oils significantly impact their co-processing with petroleum fractions in hydroprocessing units. Bio-oils contain up to 50 wt% oxygen, which necessitates extensive hydrodeoxygenation (HDO) reactions to remove oxygen and produce stable hydrocarbon fuels. The complex mixture of oxygenated compounds in bio-oils, including phenols, aldehydes, ketones, and acids, creates challenges for catalytic processing due to competitive adsorption on catalyst active sites and potential catalyst deactivation. Additionally, bio-oils typically have high water content (15-62%), low heating values (16-28 MJ/kg), and poor stability, which can lead to phase separation when blended with petroleum fractions. These properties require careful consideration of blending ratios, catalyst selection, and operating conditions to maintain process efficiency and product quality. The main technological challenges include managing increased hydrogen consumption for oxygen removal, preventing catalyst poisoning from bio-oil contaminants, and ensuring compatibility between bio-oil and petroleum fractions during co-processing. Successful implementation often requires pre-treatment steps such as mild hydrotreating to improve bio-oil stability and reduce polarity before co-processing with conventional refinery streams.",
+  "original_text": {
+    "1": "HDO reactions are necessary for the removal of oxygen compounds, which are not desired in certain refinery products such as kerosene. HDO reactions are particularly important for bio-based feedstocks some of which might contain as much as 50 wt% oxygen.",
+    "2": "The complex composition of bio-oils and their physical-chemical properties together with their instability under storage prevent the direct blending of bio-oils with petroleum fractions. While blending is a prerequisite for the successful co-processing by hydrotreating, FCC can be theoretically accomplished without blending the bio-oil with a petroleum fraction."
+  },
+  "type": "concept",
+  "difficulty": 4,
+  "topic": "energy_systems",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires specific knowledge of pyrolysis bio-oils, their chemical properties (oxygen content, complex composition), hydroprocessing technology, co-processing challenges with petroleum fractions, and refinery operations - all falling within energy systems and combustion science domain expertise.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question is well-focused on energy systems domain and answer provides comprehensive, factually correct information supported by the paper content."
+  },
+  "retry_count": 1,
+  "question_id": "deepseek_q_e4b928fd",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Refinery-co-processing-of-renewable_2018_Progress-in-Energy-and-Combustion-S",
+    "paper_title": "Refinery-co-processing-of-renewable_2018_Progress-in-Energy-and-Combustion-S"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:28:33.407875",
+    "answer_length": 1362
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately reflects the information in the original text and provides correct additional technical details. The original text confirms: (1) HDO reactions are necessary for oxygen removal, with bio-based feedstocks containing up to 50 wt% oxygen, and (2) bio-oils' complex composition and physical-chemical properties prevent direct blending with petroleum fractions, making blending a prerequisite for successful co-processing by hydrotreating. The answer's additional details about specific oxygen content ranges, compound types (phenols, aldehydes, ketones, acids), water content, heating values, catalyst challenges, hydrogen consumption, and pre-treatment requirements are all consistent with established combustion science and bio-oil processing principles. No factual errors or logical contradictions are present. The answer appropriately addresses the question's focus on properties, challenges, and technological considerations.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:19:07.800944"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "medium",
+        "issues": [
+          "Numerical ranges given for water content (15–62 wt%) and LHV (16–28 MJ/kg) of pyrolysis bio-oils may be overstated for typical fast pyrolysis oils; values are generally lower (water ~15–30 wt%, LHV ~16–20 MJ/kg), though variability exists.",
+          "Does not mention the PECS note that FCC can theoretically accept unblended bio-oil, but this is outside the hydroprocessing focus of the question."
+        ],
+        "reasoning": "The answer aligns with the ground-truth points: high oxygen content (up to ~50 wt%) necessitates HDO, and the instability/complex composition of bio-oils hinder direct blending with petroleum fractions, impacting hydroprocessing. It correctly identifies key challenges (hydrogen demand, catalyst deactivation/poisoning, immiscibility/phase separation, need for pretreatment and careful blending/operating conditions). Minor potential overstatements in typical property ranges do not contradict the core mechanisms and the original text.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:19:54.619907"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer is factually correct, logically sound, and consistent with the provided original text. It accurately describes the key properties of pyrolysis bio-oils (high oxygen up to 50 wt%, complex composition, instability, high water content) and correctly links them to the major challenges in co-hydroprocessing, such as the need for extensive hydrodeoxygenation (HDO), high hydrogen consumption, catalyst deactivation, and phase separation issues. The answer correctly elaborates on the points mentioned in the original text and provides additional, accurate details that are standard knowledge in this field.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:20:18.516379"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:20:18.516409",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": false,
+      "disagreement_count": 0
+    }
+  }
+}
