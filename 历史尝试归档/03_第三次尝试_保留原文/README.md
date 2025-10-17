@@ -22,14 +22,73 @@
 - `milestone1_withtext_generator.py`
 - `scripts/milestone1_withtext_generator.py`（副本）
 
-### Prompt策略
-- 要求LLM在生成题目时**引用原文片段**
-- 题目数据结构包含 `original_text` 字段
-- 每道题保存对应的文献位置信息
+### 模型配置（从脚本确认）
+- **生成模型**: `openai/deepseek-ai/DeepSeek-V3` (via SiliconFlow)
+- **质检模型**: `openai/deepseek-ai/DeepSeek-V3`
+- **参数**:
+  - `citation_similarity_threshold=0.85` (原文引用相似度阈值)
+  - `min_answer_length=100` (答案最少100字符)
+  - `temperature=0.8`
+
+### Prompt策略（从脚本提取的实际Prompt）
+
+**核心要求**：
+```
+# ROLE
+You are a senior expert in combustion science and engineering thermophysics
+
+# TASK
+Generate 20 high-quality questions WITH ORIGINAL TEXT CITATIONS
+
+## ✅ REQUIREMENTS:
+
+1. Based on Paper but Independent of Paper
+   - Questions based on concepts/principles from paper
+   - ❌ DO NOT ask about the paper itself
+   - ✅ Test domain knowledge, not reading comprehension
+
+2. **CRITICAL: Include Original Text Citations**
+   - ✅ For EACH question, provide 1-3 EXACT QUOTES from the paper
+   - ✅ Quotes must be VERBATIM (word-for-word), NOT paraphrased
+   - ✅ Quotes should be substantial (at least 50 characters each)
+   - ✅ Quotes must be directly relevant to question's scientific content
+
+   Example:
+   {
+     "question_text": "Why does increasing pressure shorten ignition delay?",
+     "standard_answer": "Increased pressure raises molecular number density...",
+     "original_text": {
+       "1": "The ignition delay time decreases with increasing pressure...",
+       "2": "At elevated pressures, three-body reactions become more important..."
+     },
+     "type": "reasoning",
+     "difficulty": 4
+   }
+
+3. Clear and Determinable Answers
+4. Time-Independent (based on principles, not specific years)
+5. Depth First (require understanding WHY, MECHANISM, HOW TO DERIVE)
+
+📊 QUESTION TYPE DISTRIBUTION:
+- reasoning (Reasoning Analysis) - 50%
+- concept (Conceptual Understanding) - 25%
+- calculation (Calculation) - 15%
+- application (Application) - 10%
+
+🎯 DIFFICULTY LEVELS:
+- difficulty 3-4: 70% (main body)
+- difficulty 5: 20% (challenging)
+- difficulty 1-2: 10% (basic)
+```
+
+**对比01/02的关键改进**：
+- **强制要求原文引用**：每题必须包含1-3条VERBATIM引用
+- **引用验证机制**：citation_similarity_threshold=0.85自动验证引用真实性
+- **引用格式规范**：original_text字段以字典形式存储多条引用
 
 ### 测试规模
 - **1篇论文** → **20道题**
-- 使用SiliconFlow API (Qwen模型)
+- 使用DeepSeek-V3模型
 
 ---
 
