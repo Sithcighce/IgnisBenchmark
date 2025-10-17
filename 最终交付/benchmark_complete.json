@@ -13353,5 +13353,407 @@
     },
     "benchmark_category": "api_failure_with_score",
     "benchmark_note": "GPT-5回答太短（<500字符）或部分失败，但有1-80分"
+  },
+  {
+    "question_id": "deepseek_q_0cac3a29",
+    "question_text": "What are the key mechanisms by which the double distribution function (DDF) approach in LBM enables accurate simulation of thermal compressible flows with variable Prandtl numbers?",
+    "standard_answer": "The double distribution function (DDF) approach in LBM enables accurate simulation of thermal compressible flows by decoupling the evolution of translational and internal energy modes through two distribution functions: f_i for mass and momentum, and g_i for total energy. This separation allows independent control over relaxation processes, facilitating variable Prandtl numbers. The key mechanism involves a quasi-equilibrium formulation where relaxation to equilibrium occurs in two stages: a fast relaxation to an intermediate quasi-equilibrium (f_i*, g_i*) followed by a slow relaxation to the full equilibrium (f_i^eq, g_i^eq). The Prandtl number is adjusted by tuning the relaxation times τ and τ1, with Pr = (2 - δt/τ)/(2 - δt/τ1). The quasi-equilibrium g_i* modifies the first-order moment to control non-equilibrium heat flux, ensuring correct recovery of Fourier diffusion and viscous heating terms in the energy equation. For multi-species flows, additional corrections account for enthalpy flux due to species diffusion and non-linear dependence of enthalpy on composition. This approach overcomes limitations of single-distribution models, such as fixed Prandtl numbers and specific heat ratios, by leveraging kinetic theory principles to separately handle different energy modes and transport phenomena.",
+    "difficulty": 5,
+    "topic": "heat_transfer",
+    "type": "concept",
+    "original_text": {
+      "1": "The double distribution function (DDF) can be represented through the following general form of the evolution equation: ̄fi(x + ciδt, t + δt) − ̄fi(x, t) = (δt/̄τ)(f_i^eq(x, t) − ̄fi(x, t)) + (δt/̄τ1)(f_i*(x, t) − ̄fi(x, t)),",
+      "2": "Setting λ = (̄τ1/δt) - 1/2 c_p p, one recovers the energy balance equation with variable Prandtl number as Pr = (2 - δt/̄τ)/(2 - δt/̄τ1)."
+    },
+    "verification": {
+      "status": "approved",
+      "verifiers": [
+        {
+          "correct": true,
+          "baseline_confidence": "high",
+          "verification_confidence": "high",
+          "issues": [],
+          "reasoning": "The standard answer accurately describes the DDF approach in LBM for thermal compressible flows. It correctly identifies the use of two distribution functions (f_i for mass/momentum, g_i for total energy) and the quasi-equilibrium formulation with two-stage relaxation. The Prandtl number formula Pr = (2 - δt/τ)/(2 - δt/τ1) matches the original text exactly. The answer correctly explains how this decoupling enables variable Prandtl numbers through independent control of relaxation times. While the answer provides additional detail about multi-species flows and specific mechanisms not explicitly mentioned in the brief original text excerpt, these elaborations are consistent with established LBM theory and do not contradict the provided ground truth. The core mechanisms are accurately presented.",
+          "model_name": "anthropic/claude-sonnet-4.5",
+          "model_short": "claude-sonnet-4.5",
+          "verified_at": "2025-10-15T20:11:34.163375"
+        },
+        {
+          "correct": true,
+          "baseline_confidence": "medium",
+          "verification_confidence": "high",
+          "issues": [
+            "Includes extraneous elaboration on multi-species corrections and specific heat ratio flexibility, which are not in the provided ground-truth excerpt but do not contradict it"
+          ],
+          "reasoning": "The answer correctly identifies the core mechanism: using two distribution functions with a quasi-equilibrium, two-stage relaxation enabling independent control of momentum and energy relaxation rates, thereby achieving variable Prandtl numbers. It reproduces the correct Pr relation Pr = (2 - δt/τ)/(2 - δt/τ1) and aligns with the ground-truth form involving relaxation to equilibrium and quasi-equilibrium. Added details on heat flux control and recovery of energy equation terms are consistent with the DDF approach. No factual or logical contradictions with the provided text were found.",
+          "model_name": "openai/gpt-5",
+          "model_short": "gpt-5",
+          "verified_at": "2025-10-15T20:11:58.889094"
+        },
+        {
+          "correct": true,
+          "baseline_confidence": "high",
+          "verification_confidence": "high",
+          "issues": [],
+          "reasoning": "The standard answer is factually and logically correct. It accurately explains the core principle of the Double Distribution Function (DDF) approach, which is the decoupling of momentum and energy transport via two separate distribution functions (f_i and g_i). This allows for independent relaxation times, which in turn enables the tuning of the Prandtl number. The answer correctly cites the relationship between the Prandtl number and the two relaxation times (τ and τ1), which is consistent with the provided original text. Furthermore, the explanation of the quasi-equilibrium state's role in recovering the correct energy equation terms (like viscous heating) is a key aspect of advanced thermal LBM and is stated correctly.",
+          "model_name": "google/gemini-2.5-pro",
+          "model_short": "gemini-2.5-pro",
+          "verified_at": "2025-10-15T20:12:27.628158"
+        }
+      ],
+      "failed_verifiers": [],
+      "verified_at": "2025-10-15T20:12:27.628180",
+      "consensus": {
+        "all_correct": true,
+        "correct_votes": 3,
+        "total_votes": 3,
+        "all_high_confidence": true,
+        "disagreement_count": 0
+      }
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question specifically addresses the double distribution function (DDF) approach in Lattice Boltzmann Method (LBM) for thermal compressible flows with variable Prandtl numbers, requiring deep expertise in computational fluid dynamics (CFD), numerical methods for combustion, and heat transfer principles.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "The question is domain-focused, the answer is factually correct and detailed, and there are no other quality issues. It meets all specifications."
+    },
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Lattice-Boltzmann-methods-for-combustion_2024_Progress-in-Energy-and-Combust",
+      "paper_title": "Lattice-Boltzmann-methods-for-combustion_2024_Progress-in-Energy-and-Combust"
+    },
+    "gpt5_test_result": {
+      "score": 45,
+      "answer_length": 3341,
+      "category": "api_failure_zero_score_retest",
+      "note": "原API失败0分，重测得分45分，答错"
+    },
+    "benchmark_category": "api_failure_zero_score_retest",
+    "benchmark_note": "原API失败0分，OpenAI重测得分45，答错但有分"
+  },
+  {
+    "question_id": "deepseek_q_3acd1555",
+    "question_text": "Explain how sulfur dioxide (SO₂) in flue gas promotes the conversion of alkali chlorides (NaCl, KCl) to hydrogen chloride (HCl) during municipal solid waste incineration, describing both homogeneous gas-phase and heterogeneous surface reaction pathways as documented in the provided paper.",
+    "standard_answer": "The presence of SO₂ in flue gas facilitates HCl formation from alkali chlorides through both homogeneous gas-phase reactions and heterogeneous surface reactions. Homogeneously, SO₂ reacts with alkali chlorides and oxygen in the gas phase to form sulfates and release HCl, following the reaction: 2NaCl + 1/2O₂ + SO₂ + H₂O → 2HCl + Na₂SO₄. This sulfation process converts volatile alkali chlorides that would otherwise condense on boiler tubes into less problematic sulfates. Heterogeneously, SO₂ interacts with deposited alkali chlorides on heat exchanger surfaces, where conversion occurs at the solid-gas interface. The paper specifically notes that 'Some species that exist in the incineration chamber, such as SOx, facilitate the formation of HCl from inorganic chlorides (NaCl and KCl), either homogeneously in the gas phase or heterogeneously in the deposit.' This dual-pathway mechanism is crucial for mitigating corrosion in waste-to-energy plants by reducing the availability of chlorine for corrosive alkali chloride deposition. The reaction 2NaCl + 1/2O₂ + SO₂ + H₂O → 2HCl + Na₂SO₄ represents the key transformation where sulfur dioxide captures alkali metals to form stable sulfates while liberating hydrogen chloride.",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "type": "concept",
+    "original_text": {
+      "1": "Some species that exist in the incineration chamber, such as SOx, facilitate the formation of HCl from inorganic chlorides (NaCl and KCl), either homogeneously in the gas phase or heterogeneously in the deposit.",
+      "2": "2NaCl + 1/2O₂ + SO₂ + H₂O → 2HCl + Na₂SO₄"
+    },
+    "verification": {
+      "status": "approved",
+      "verifiers": [
+        {
+          "correct": true,
+          "baseline_confidence": "high",
+          "verification_confidence": "high",
+          "issues": [],
+          "reasoning": "The standard answer accurately describes both homogeneous gas-phase and heterogeneous surface reaction pathways for SO₂-promoted conversion of alkali chlorides to HCl. It correctly quotes the original text stating that 'SOx facilitate the formation of HCl from inorganic chlorides (NaCl and KCl), either homogeneously in the gas phase or heterogeneously in the deposit.' The chemical equation 2NaCl + 1/2O₂ + SO₂ + H₂O → 2HCl + Na₂SO₄ is accurately reproduced. The answer provides appropriate context about sulfation processes, corrosion mitigation, and the dual-pathway mechanism, all of which are consistent with established combustion chemistry principles. The explanation of how SO₂ captures alkali metals to form stable sulfates while liberating HCl is chemically sound and aligns with the original text. While the answer is detailed, all statements are factually accurate and logically consistent.",
+          "model_name": "anthropic/claude-sonnet-4.5",
+          "model_short": "claude-sonnet-4.5",
+          "verified_at": "2025-10-15T20:22:07.323519"
+        },
+        {
+          "correct": true,
+          "baseline_confidence": "high",
+          "verification_confidence": "high",
+          "issues": [],
+          "reasoning": "The answer accurately reflects the original text: it identifies both homogeneous gas-phase and heterogeneous deposit pathways by which SOx (specifically SO2) promotes conversion of NaCl/KCl to HCl, and it correctly cites the provided stoichiometric reaction (2NaCl + 1/2O2 + SO2 + H2O → 2HCl + Na2SO4). The added context about sulfation reducing corrosive alkali chloride deposition is consistent with established understanding and does not contradict the source.",
+          "model_name": "openai/gpt-5",
+          "model_short": "gpt-5",
+          "verified_at": "2025-10-15T20:22:34.222773"
+        },
+        {
+          "correct": true,
+          "baseline_confidence": "high",
+          "verification_confidence": "high",
+          "issues": [],
+          "reasoning": "The answer accurately explains the role of SO₂ in converting alkali chlorides to HCl via both homogeneous and heterogeneous pathways, consistent with the provided original text. The chemical reaction is stated correctly, and the explanation of the corrosion mitigation effect is factually sound and relevant to the context of waste incineration.",
+          "model_name": "google/gemini-2.5-pro",
+          "model_short": "gemini-2.5-pro",
+          "verified_at": "2025-10-15T20:22:53.364875"
+        }
+      ],
+      "failed_verifiers": [],
+      "verified_at": "2025-10-15T20:22:53.364898",
+      "consensus": {
+        "all_correct": true,
+        "correct_votes": 3,
+        "total_votes": 3,
+        "all_high_confidence": true,
+        "disagreement_count": 0
+      }
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "This question requires specific knowledge of combustion chemistry, municipal solid waste incineration processes, alkali chloride transformation pathways, and sulfur-chlorine interactions in thermal systems. It demands understanding of both homogeneous gas-phase reactions and heterogeneous surface reactions in combustion environments, which are core combustion science concepts.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer are well-aligned with paper content and domain requirements. The answer accurately describes both reaction pathways with proper chemical equation and citations."
+    },
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "The-fate-of-chlorine-during-MSW-incineration--Vapor_2020_Progress-in-Energy-",
+      "paper_title": "The-fate-of-chlorine-during-MSW-incineration--Vapor_2020_Progress-in-Energy-"
+    },
+    "gpt5_test_result": {
+      "score": 45,
+      "answer_length": 3088,
+      "category": "api_failure_zero_score_retest",
+      "note": "原API失败0分，重测得分45分，答错"
+    },
+    "benchmark_category": "api_failure_zero_score_retest",
+    "benchmark_note": "原API失败0分，OpenAI重测得分45，答错但有分"
+  },
+  {
+    "question_id": "deepseek_q_3fed5e25",
+    "question_text": "Analyze the enhanced efficacy of methane removal in reducing radiative forcing compared to other non-CO2 greenhouse gases within solar chimney power plant-photocatalytic reactor (SCPP-PCR) hybrid systems, focusing on the atmospheric chemistry mechanisms and photocatalytic transformation processes described in the paper.",
+    "standard_answer": "Methane removal provides enhanced efficacy in reducing radiative forcing due to its unique atmospheric chemistry interactions and photocatalytic transformation mechanisms. The paper states: 'Removal of methane, as compared to other GHGs, has enhanced efficacy in reducing radiative forcing because it liberates more °OH radicals to accelerate the cleaning of the troposphere.' This occurs because methane naturally reacts with hydroxyl radicals (°OH) in the atmosphere, reducing the atmosphere's oxidizing capacity. When methane is removed through photocatalytic oxidation, this reaction no longer consumes °OH radicals, effectively liberating them for other atmospheric cleaning processes. The photocatalytic transformation itself converts methane to less harmful products, with the paper noting: 'Photocatalysis of methane oxidizes it to CO2, effectively reducing its global warming potential (GWP) by at least 90%.' This transformation is beneficial because while CO2 remains a greenhouse gas, the GWP reduction from CH4 (GWP100 = 28-34) to CO2 (GWP100 = 1) represents a substantial net decrease in radiative forcing. The liberated °OH radicals from methane removal can then participate in oxidizing other atmospheric pollutants, creating a compounding effect on radiative forcing reduction that is not observed with other non-CO2 GHGs like N2O or halocarbons, which have different atmospheric interactions and photocatalytic pathways.",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "type": "concept",
+    "original_text": {
+      "1": "Removal of methane, as compared to other GHGs, has enhanced efficacy in reducing radiative forcing because it liberates more °OH radicals to accelerate the cleaning of the troposphere.",
+      "2": "Photocatalysis of methane oxidizes it to CO2, effectively reducing its global warming potential (GWP) by at least 90%."
+    },
+    "verification": {
+      "status": "approved",
+      "verifiers": [
+        {
+          "correct": true,
+          "baseline_confidence": "high",
+          "verification_confidence": "high",
+          "issues": [],
+          "reasoning": "The standard answer accurately reflects the original text and provides sound scientific explanations. It correctly explains that methane removal liberates °OH radicals for tropospheric cleaning (matching original text [1]), and accurately states the GWP reduction of at least 90% when methane is oxidized to CO2 (matching original text [2]). The answer provides appropriate context by explaining the atmospheric chemistry mechanism (methane's reaction with °OH radicals), correctly identifies the GWP values (CH4 GWP100 = 28-34, CO2 GWP100 = 1), and logically explains why this creates enhanced efficacy compared to other non-CO2 GHGs. The additional explanations about the compounding effect and comparison with N2O and halocarbons are reasonable extensions that don't contradict the original text. All physical and chemical principles stated are correct.",
+          "model_name": "anthropic/claude-sonnet-4.5",
+          "model_short": "claude-sonnet-4.5",
+          "verified_at": "2025-10-15T20:19:12.227058"
+        },
+        {
+          "correct": true,
+          "baseline_confidence": "medium",
+          "verification_confidence": "high",
+          "issues": [
+            "Does not explicitly tie mechanisms to SCPP-PCR system design or operation; focuses on general atmospheric and photocatalytic processes."
+          ],
+          "reasoning": "The answer accurately reflects the ground-truth statements: removing methane liberates OH radicals, enhancing tropospheric cleaning, and photocatalysis converts CH4 to CO2, reducing GWP by at least 90%. The causal explanation that CH4 consumes atmospheric OH and its removal frees OH is chemically sound. The GWP values cited are correct, and the reasoning about net radiative forcing reduction is consistent. No factual or logical errors are present; the response is broadly consistent with the original text, albeit with limited SCPP-PCR-specific context.",
+          "model_name": "openai/gpt-5",
+          "model_short": "gpt-5",
+          "verified_at": "2025-10-15T20:19:31.572139"
+        },
+        {
+          "correct": true,
+          "baseline_confidence": "high",
+          "verification_confidence": "high",
+          "issues": [],
+          "reasoning": "The answer correctly explains both key mechanisms mentioned in the original text. First, it accurately describes the atmospheric chemistry mechanism where removing methane (a major sink for °OH radicals) effectively 'liberates' these radicals, enhancing the troposphere's self-cleaning capacity. Second, it correctly explains the photocatalytic transformation of methane to CO2, providing accurate context with standard GWP values (CH4 GWP100 ≈ 28-34 vs. CO2 GWP100 = 1) to validate the claim of a >90% GWP reduction. The reasoning is factually sound and logically consistent.",
+          "model_name": "google/gemini-2.5-pro",
+          "model_short": "gemini-2.5-pro",
+          "verified_at": "2025-10-15T20:19:49.582718"
+        }
+      ],
+      "failed_verifiers": [],
+      "verified_at": "2025-10-15T20:19:49.582746",
+      "consensus": {
+        "all_correct": true,
+        "correct_votes": 3,
+        "total_votes": 3,
+        "all_high_confidence": true,
+        "disagreement_count": 0
+      }
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires deep expertise in atmospheric chemistry, greenhouse gas radiative forcing, photocatalytic transformation processes, and solar chimney power plant systems - all within the energy systems and combustion science domain. It specifically asks about methane removal mechanisms, radiative forcing impacts, and photocatalytic processes in hybrid energy systems.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+    },
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Removal-of-non-CO2-greenhouse-gases-by-large-sc_2017_Progress-in-Energy-and-",
+      "paper_title": "Removal-of-non-CO2-greenhouse-gases-by-large-sc_2017_Progress-in-Energy-and-"
+    },
+    "gpt5_test_result": {
+      "score": 45,
+      "answer_length": 3509,
+      "category": "api_failure_zero_score_retest",
+      "note": "原API失败0分，重测得分45分，答错"
+    },
+    "benchmark_category": "api_failure_zero_score_retest",
+    "benchmark_note": "原API失败0分，OpenAI重测得分45，答错但有分"
+  },
+  {
+    "question_id": "deepseek_q_4e3a531c",
+    "question_text": "What distinguishes self-sustained smouldering from smouldering propagation, and how do heat and mass transfer inefficiencies affect the transition between these states?",
+    "standard_answer": "Self-sustained smouldering is a local chemical process where net exothermic reactions (e.g., char oxidation) release sufficient energy to sustain themselves without external heat input, defined intrinsically by fuel chemistry and activation energies. In contrast, smouldering propagation is a global phenomenon involving the spatial and temporal movement of the reaction front through the porous bed, governed by heat and mass transfer. The transition from self-sustained smouldering to propagation requires that heat and mass transfer efficiencies allow the generated energy to preheat adjacent fuel and maintain oxygen supply. Inefficiencies—such as low thermal conductivity delaying heat diffusion or high flow resistance limiting oxygen access—can prevent propagation even if local reactions are exothermic. For instance, in opposed smouldering, oxygen diffusion against the front direction may starve reactions, while in forward smouldering, forced convection enhances oxygen delivery but increases convective losses. Thus, propagation depends on the interplay between local kinetics and global transport, where optima in permeability and thermal properties determine success.",
+    "difficulty": 4,
+    "topic": "heat_transfer",
+    "type": "concept",
+    "original_text": {
+      "1": "Self-sustained smouldering is an intrinsic (i.e., local) chemical process that does not consider heat and mass transfer throughout the porous fuel bed. Smouldering propagation is the result of complex heat and mass transfer processes.",
+      "2": "The conditions leading to smouldering propagation always involve inefficiencies associated with heat and mass transfer that do not need to be considered when analysing the conditions leading to intrinsic self-sustained smouldering."
+    },
+    "verification": {
+      "status": "approved",
+      "verifiers": [
+        {
+          "correct": true,
+          "baseline_confidence": "high",
+          "verification_confidence": "high",
+          "issues": [],
+          "reasoning": "The standard answer correctly distinguishes self-sustained smouldering as a local/intrinsic chemical process from smouldering propagation as a global phenomenon involving spatial/temporal movement governed by heat and mass transfer, which aligns with the original text. The answer accurately explains that propagation requires efficient heat and mass transfer to preheat adjacent fuel and maintain oxygen supply, and correctly identifies that inefficiencies (low thermal conductivity, high flow resistance) can prevent propagation even when local reactions are exothermic. The examples of opposed vs. forward smouldering correctly illustrate how transport limitations affect propagation. The answer appropriately elaborates on the original text's core concepts without contradicting them, providing mechanistic details that are physically sound and consistent with combustion science principles.",
+          "model_name": "anthropic/claude-sonnet-4.5",
+          "model_short": "claude-sonnet-4.5",
+          "verified_at": "2025-10-15T20:16:24.150897"
+        },
+        {
+          "correct": true,
+          "baseline_confidence": "high",
+          "verification_confidence": "high",
+          "issues": [],
+          "reasoning": "The answer correctly distinguishes local, intrinsic self-sustained smouldering from transport-driven smouldering propagation and explains how heat and mass transfer inefficiencies can impede the transition to propagation. It aligns with the ground-truth that propagation is governed by complex heat/mass transfer and that inefficiencies are central to propagation analysis. No factual or logical contradictions were found.",
+          "model_name": "openai/gpt-5",
+          "model_short": "gpt-5",
+          "verified_at": "2025-10-15T20:16:58.978807"
+        },
+        {
+          "correct": true,
+          "baseline_confidence": "high",
+          "verification_confidence": "high",
+          "issues": [],
+          "reasoning": "The standard answer is factually and logically correct. It accurately distinguishes between self-sustained smouldering as a local chemical phenomenon and smouldering propagation as a global transport-driven process, which is perfectly aligned with the original text. The explanation of how heat and mass transfer inefficiencies (e.g., low thermal conductivity, high flow resistance) can prevent the transition from a self-sustaining state to a propagating one is sound. The examples of opposed and forward smouldering correctly illustrate these transport limitations and trade-offs. The answer elaborates on the principles in the original text without contradicting them.",
+          "model_name": "google/gemini-2.5-pro",
+          "model_short": "gemini-2.5-pro",
+          "verified_at": "2025-10-15T20:17:23.179267"
+        }
+      ],
+      "failed_verifiers": [],
+      "verified_at": "2025-10-15T20:17:23.179295",
+      "consensus": {
+        "all_correct": true,
+        "correct_votes": 3,
+        "total_votes": 3,
+        "all_high_confidence": true,
+        "disagreement_count": 0
+      }
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question requires specialized knowledge in combustion science (smouldering processes), heat transfer (thermal conductivity, heat diffusion), and mass transfer (oxygen diffusion, flow resistance) in porous media, which are core concepts in combustion and energy systems engineering.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer are well-aligned with domain focus and paper content; no issues detected."
+    },
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Processes-defining-smouldering-combustion--Int_2020_Progress-in-Energy-and-C",
+      "paper_title": "Processes-defining-smouldering-combustion--Int_2020_Progress-in-Energy-and-C"
+    },
+    "gpt5_test_result": {
+      "score": 45,
+      "answer_length": 3588,
+      "category": "api_failure_zero_score_retest",
+      "note": "原API失败0分，重测得分45分，答错"
+    },
+    "benchmark_category": "api_failure_zero_score_retest",
+    "benchmark_note": "原API失败0分，OpenAI重测得分45，答错但有分"
+  },
+  {
+    "question_id": "deepseek_q_85baa93c",
+    "question_text": "In the context of multi-species combustion modeling using the lattice Boltzmann method, explain how the viscosity and diffusion coefficients are determined for individual species in the thermal mixture-averaged model of Kang et al. Describe the specific formulations used for these transport coefficients and how they incorporate species interactions through molar fractions and mixture properties.",
+    "standard_answer": "In the thermal mixture-averaged model of Kang et al. for multi-species combustion, the transport coefficients are determined through species-specific formulations that account for interactions between different chemical species. For viscosity, the model uses Wilke's formula which incorporates molar fractions and species interactions through the parameter φkk′. The viscosity is set through the first relaxation time as: ̄τk1/δt = 1/2 + μk/(p ∑_{k′=0}^{N_sp-1} X_k′ φ_kk′), where μ_k is the viscosity of species k, p is pressure, X_k′ are mole fractions of other species, and φ_kk′ represents the interaction parameter between species k and k′. For diffusion, the model uses the second relaxation time to set the diffusivity as: ̄τk2/δt = 1/2 + ρ_k D_k/p_k, where ρ_k is the density of species k and D_k is the mixture-average diffusion coefficient. These formulations differ significantly from simple isothermal LBM models because they explicitly account for multi-species interactions through molar fractions and mixture properties, making them suitable for combustion applications where species concentrations vary significantly and transport properties depend on local mixture composition. The model employs N_sp sets of LB solvers, one per species, with each species having different discrete velocity sizes based on their molecular weights, requiring interpolation for consistent grid propagation.",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "type": "concept",
+    "original_text": {
+      "1": "The viscosity is set through the first relaxation time and using Wilke's formula: ̄τ_k1/δt = 1/2 + μ_k/(p ∑_{k'=0}^{N_sp-1} X_k' φ_kk'),",
+      "2": "In this model the second relaxation time, ̄τ_k2 sets the diffusivity to: ̄τ_k2/δt = 1/2 + ρ_k D_k/p_k."
+    },
+    "verification": {
+      "status": "approved",
+      "verifiers": [
+        {
+          "correct": true,
+          "baseline_confidence": "high",
+          "verification_confidence": "high",
+          "issues": [],
+          "reasoning": "The standard answer accurately reproduces the key formulations from the original text. The viscosity formula using Wilke's formula (τ̄k1/δt = 1/2 + μk/(p Σ Xk' φkk')) and the diffusivity formula (τ̄k2/δt = 1/2 + ρkDk/pk) are correctly stated. The answer provides appropriate context about species interactions through molar fractions and mixture properties, explains the physical significance of these formulations, and correctly notes the use of Nsp sets of LB solvers. While the answer includes additional explanatory details beyond the original text (such as comparisons to isothermal LBM models and discussion of discrete velocity sizes), these additions are accurate and enhance understanding without introducing errors. All core mechanisms are correctly explained and consistent with the original text.",
+          "model_name": "anthropic/claude-sonnet-4.5",
+          "model_short": "claude-sonnet-4.5",
+          "verified_at": "2025-10-15T20:11:36.360922"
+        },
+        {
+          "correct": true,
+          "baseline_confidence": "high",
+          "verification_confidence": "high",
+          "issues": [
+            "The final sentence about each species having different discrete velocity sizes and requiring interpolation is not supported by the provided ground truth and may be model-dependent/extraneous.",
+            "Saying X_k′ are mole fractions of 'other species' is slightly imprecise; the sum typically includes all species (including k), but this does not affect the core correctness."
+          ],
+          "reasoning": "The answer accurately restates the key formulations from the Kang et al. thermal mixture-averaged model: viscosity via Wilke’s formula embedded in the first relaxation time and diffusivity via the second relaxation time, with correct dependence on mole fractions, interaction parameter φ_kk′, and mixture properties. No contradictions with the provided ground truth; added details are mostly consistent, though one implementation detail is likely extraneous.",
+          "model_name": "openai/gpt-5",
+          "model_short": "gpt-5",
+          "verified_at": "2025-10-15T20:12:14.030378"
+        },
+        {
+          "correct": true,
+          "baseline_confidence": "medium",
+          "verification_confidence": "high",
+          "issues": [],
+          "reasoning": "The standard answer accurately reproduces the formulas for viscosity and diffusion from the original text. The explanations for the terms (μk, p, Xk', φkk', ρk, Dk) and the overall physical context, including the use of Wilke's formula and the dependence on local mixture composition, are factually correct and logically sound. The additional details provided about the model's structure (N_sp solvers, different velocity sets) are also accurate characteristics of the Kang et al. model and provide valuable context without introducing errors.",
+          "model_name": "google/gemini-2.5-pro",
+          "model_short": "gemini-2.5-pro",
+          "verified_at": "2025-10-15T20:12:32.109500"
+        }
+      ],
+      "failed_verifiers": [],
+      "verified_at": "2025-10-15T20:12:32.109518",
+      "consensus": {
+        "all_correct": true,
+        "correct_votes": 3,
+        "total_votes": 3,
+        "all_high_confidence": true,
+        "disagreement_count": 0
+      }
+    },
+    "quality_check": {
+      "domain_focused": true,
+      "domain_reasoning": "The question specifically addresses multi-species combustion modeling using lattice Boltzmann method, requiring deep knowledge of combustion science, fluid mechanics, CFD numerical methods, and species transport modeling - all core domain expertise areas.",
+      "answer_correct": true,
+      "answer_issues": [],
+      "other_compliant": true,
+      "other_issues": [],
+      "overall_verdict": "pass",
+      "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+    },
+    "source": {
+      "type": "deepseek_generation",
+      "paper_file": "Lattice-Boltzmann-methods-for-combustion_2024_Progress-in-Energy-and-Combust",
+      "paper_title": "Lattice-Boltzmann-methods-for-combustion_2024_Progress-in-Energy-and-Combust"
+    },
+    "gpt5_test_result": {
+      "score": 30,
+      "answer_length": 3273,
+      "category": "api_failure_zero_score_retest",
+      "note": "原API失败0分，重测得分30分，答错"
+    },
+    "benchmark_category": "api_failure_zero_score_retest",
+    "benchmark_note": "原API失败0分，OpenAI重测得分30，答错但有分"
   }
 ]

@@ -1158,5 +1158,45 @@
     "difficulty": 4,
     "topic": "combustion_kinetics",
     "type": "concept"
+  },
+  {
+    "question_id": "deepseek_q_0cac3a29",
+    "question_text": "What are the key mechanisms by which the double distribution function (DDF) approach in LBM enables accurate simulation of thermal compressible flows with variable Prandtl numbers?",
+    "standard_answer": "The double distribution function (DDF) approach in LBM enables accurate simulation of thermal compressible flows by decoupling the evolution of translational and internal energy modes through two distribution functions: f_i for mass and momentum, and g_i for total energy. This separation allows independent control over relaxation processes, facilitating variable Prandtl numbers. The key mechanism involves a quasi-equilibrium formulation where relaxation to equilibrium occurs in two stages: a fast relaxation to an intermediate quasi-equilibrium (f_i*, g_i*) followed by a slow relaxation to the full equilibrium (f_i^eq, g_i^eq). The Prandtl number is adjusted by tuning the relaxation times τ and τ1, with Pr = (2 - δt/τ)/(2 - δt/τ1). The quasi-equilibrium g_i* modifies the first-order moment to control non-equilibrium heat flux, ensuring correct recovery of Fourier diffusion and viscous heating terms in the energy equation. For multi-species flows, additional corrections account for enthalpy flux due to species diffusion and non-linear dependence of enthalpy on composition. This approach overcomes limitations of single-distribution models, such as fixed Prandtl numbers and specific heat ratios, by leveraging kinetic theory principles to separately handle different energy modes and transport phenomena.",
+    "difficulty": 5,
+    "topic": "heat_transfer",
+    "type": "concept"
+  },
+  {
+    "question_id": "deepseek_q_3acd1555",
+    "question_text": "Explain how sulfur dioxide (SO₂) in flue gas promotes the conversion of alkali chlorides (NaCl, KCl) to hydrogen chloride (HCl) during municipal solid waste incineration, describing both homogeneous gas-phase and heterogeneous surface reaction pathways as documented in the provided paper.",
+    "standard_answer": "The presence of SO₂ in flue gas facilitates HCl formation from alkali chlorides through both homogeneous gas-phase reactions and heterogeneous surface reactions. Homogeneously, SO₂ reacts with alkali chlorides and oxygen in the gas phase to form sulfates and release HCl, following the reaction: 2NaCl + 1/2O₂ + SO₂ + H₂O → 2HCl + Na₂SO₄. This sulfation process converts volatile alkali chlorides that would otherwise condense on boiler tubes into less problematic sulfates. Heterogeneously, SO₂ interacts with deposited alkali chlorides on heat exchanger surfaces, where conversion occurs at the solid-gas interface. The paper specifically notes that 'Some species that exist in the incineration chamber, such as SOx, facilitate the formation of HCl from inorganic chlorides (NaCl and KCl), either homogeneously in the gas phase or heterogeneously in the deposit.' This dual-pathway mechanism is crucial for mitigating corrosion in waste-to-energy plants by reducing the availability of chlorine for corrosive alkali chloride deposition. The reaction 2NaCl + 1/2O₂ + SO₂ + H₂O → 2HCl + Na₂SO₄ represents the key transformation where sulfur dioxide captures alkali metals to form stable sulfates while liberating hydrogen chloride.",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "type": "concept"
+  },
+  {
+    "question_id": "deepseek_q_3fed5e25",
+    "question_text": "Analyze the enhanced efficacy of methane removal in reducing radiative forcing compared to other non-CO2 greenhouse gases within solar chimney power plant-photocatalytic reactor (SCPP-PCR) hybrid systems, focusing on the atmospheric chemistry mechanisms and photocatalytic transformation processes described in the paper.",
+    "standard_answer": "Methane removal provides enhanced efficacy in reducing radiative forcing due to its unique atmospheric chemistry interactions and photocatalytic transformation mechanisms. The paper states: 'Removal of methane, as compared to other GHGs, has enhanced efficacy in reducing radiative forcing because it liberates more °OH radicals to accelerate the cleaning of the troposphere.' This occurs because methane naturally reacts with hydroxyl radicals (°OH) in the atmosphere, reducing the atmosphere's oxidizing capacity. When methane is removed through photocatalytic oxidation, this reaction no longer consumes °OH radicals, effectively liberating them for other atmospheric cleaning processes. The photocatalytic transformation itself converts methane to less harmful products, with the paper noting: 'Photocatalysis of methane oxidizes it to CO2, effectively reducing its global warming potential (GWP) by at least 90%.' This transformation is beneficial because while CO2 remains a greenhouse gas, the GWP reduction from CH4 (GWP100 = 28-34) to CO2 (GWP100 = 1) represents a substantial net decrease in radiative forcing. The liberated °OH radicals from methane removal can then participate in oxidizing other atmospheric pollutants, creating a compounding effect on radiative forcing reduction that is not observed with other non-CO2 GHGs like N2O or halocarbons, which have different atmospheric interactions and photocatalytic pathways.",
+    "difficulty": 4,
+    "topic": "energy_systems",
+    "type": "concept"
+  },
+  {
+    "question_id": "deepseek_q_4e3a531c",
+    "question_text": "What distinguishes self-sustained smouldering from smouldering propagation, and how do heat and mass transfer inefficiencies affect the transition between these states?",
+    "standard_answer": "Self-sustained smouldering is a local chemical process where net exothermic reactions (e.g., char oxidation) release sufficient energy to sustain themselves without external heat input, defined intrinsically by fuel chemistry and activation energies. In contrast, smouldering propagation is a global phenomenon involving the spatial and temporal movement of the reaction front through the porous bed, governed by heat and mass transfer. The transition from self-sustained smouldering to propagation requires that heat and mass transfer efficiencies allow the generated energy to preheat adjacent fuel and maintain oxygen supply. Inefficiencies—such as low thermal conductivity delaying heat diffusion or high flow resistance limiting oxygen access—can prevent propagation even if local reactions are exothermic. For instance, in opposed smouldering, oxygen diffusion against the front direction may starve reactions, while in forward smouldering, forced convection enhances oxygen delivery but increases convective losses. Thus, propagation depends on the interplay between local kinetics and global transport, where optima in permeability and thermal properties determine success.",
+    "difficulty": 4,
+    "topic": "heat_transfer",
+    "type": "concept"
+  },
+  {
+    "question_id": "deepseek_q_85baa93c",
+    "question_text": "In the context of multi-species combustion modeling using the lattice Boltzmann method, explain how the viscosity and diffusion coefficients are determined for individual species in the thermal mixture-averaged model of Kang et al. Describe the specific formulations used for these transport coefficients and how they incorporate species interactions through molar fractions and mixture properties.",
+    "standard_answer": "In the thermal mixture-averaged model of Kang et al. for multi-species combustion, the transport coefficients are determined through species-specific formulations that account for interactions between different chemical species. For viscosity, the model uses Wilke's formula which incorporates molar fractions and species interactions through the parameter φkk′. The viscosity is set through the first relaxation time as: ̄τk1/δt = 1/2 + μk/(p ∑_{k′=0}^{N_sp-1} X_k′ φ_kk′), where μ_k is the viscosity of species k, p is pressure, X_k′ are mole fractions of other species, and φ_kk′ represents the interaction parameter between species k and k′. For diffusion, the model uses the second relaxation time to set the diffusivity as: ̄τk2/δt = 1/2 + ρ_k D_k/p_k, where ρ_k is the density of species k and D_k is the mixture-average diffusion coefficient. These formulations differ significantly from simple isothermal LBM models because they explicitly account for multi-species interactions through molar fractions and mixture properties, making them suitable for combustion applications where species concentrations vary significantly and transport properties depend on local mixture composition. The model employs N_sp sets of LB solvers, one per species, with each species having different discrete velocity sizes based on their molecular weights, requiring interpolation for consistent grid propagation.",
+    "difficulty": 4,
+    "topic": "combustion_kinetics",
+    "type": "concept"
   }
 ]
