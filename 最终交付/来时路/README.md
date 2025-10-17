@@ -855,9 +855,9 @@ GPT-5测试（872道）
 ## 📝 致谢
 
 感谢在这个项目中使用的所有AI模型和API服务:
-- DeepSeek-V3 (题目生成和评分)
+- DeepSeek-V3.2 (题目生成和评分)
 - Claude Sonnet 4.5 (验证)
-- GPT-5 / GPT-4o (验证和测试)
+- GPT-5 (验证和测试)
 - Gemini 2.5 Pro (验证)
 
 感谢Progress in Energy and Combustion Science等期刊提供的高质量学术论文。
@@ -866,5 +866,5 @@ GPT-5测试（872道）
 
 **版本**: v1.0  
 **最后更新**: 2025年1月  
-**作者**: IgnisBenchmark Team  
+**作者**: Sithcighce
 **License**: MIT

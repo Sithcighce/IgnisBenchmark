@@ -15,7 +15,7 @@ from dotenv import load_dotenv
 # Load environment
 load_dotenv()
 
-OPENROUTER_API_KEY = os.getenv('OPENROUTER_API_KEY')
+OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
 DEEPSEEK_API_KEY = os.getenv('DEEPSEEK_API_KEY')
 DEEPSEEK_API_BASE = "https://api.deepseek.com"
 
@@ -67,12 +67,12 @@ def format_original_text(original_text_dict):
 def call_gpt5_openai(question_text: str):
     """
     使用 OpenAI API 调用 GPT-5 回答题目
-    使用与 benchmark_gpt5.py 完全相同的提示词和模型
+    注意: 使用 OpenAI 官方 API,模型为 gpt-5
     """
-    url = "https://openrouter.ai/api/v1/chat/completions"
+    url = "https://api.openai.com/v1/chat/completions"
     
     headers = {
-        "Authorization": f"Bearer {OPENROUTER_API_KEY}",
+        "Authorization": f"Bearer {OPENAI_API_KEY}",
         "Content-Type": "application/json",
     }
     
@@ -98,7 +98,7 @@ Provide your detailed answer below:
 """
     
     payload = {
-        "model": "openai/gpt-5",  # 使用 GPT-5 (与原始脚本完全一致)
+        "model": "gpt-5",  # 使用 OpenAI 的 GPT-5 模型
         "messages": [
             {
                 "role": "system",
@@ -114,7 +114,7 @@ Provide your detailed answer below:
     
     for attempt in range(MAX_RETRIES):
         try:
-            log_message(f"  → Calling GPT-5 via OpenRouter (attempt {attempt + 1}/{MAX_RETRIES})...")
+            log_message(f"  → Calling GPT-5 via OpenAI API (attempt {attempt + 1}/{MAX_RETRIES})...")
             response = requests.post(url, headers=headers, json=payload, timeout=REQUEST_TIMEOUT)
             
             if response.status_code == 200:
