@@ -109,7 +109,7 @@ Provide your detailed answer below:
                 "content": prompt
             }
         ],
-        "temperature": 0.3,
+        # GPT-5 只支持默认 temperature=1，不能自定义
     }
     
     for attempt in range(MAX_RETRIES):
