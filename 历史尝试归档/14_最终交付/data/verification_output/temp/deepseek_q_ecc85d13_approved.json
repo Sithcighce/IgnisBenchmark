@@ -1,0 +1,83 @@
+{
+  "question_text": "Why is the Darrieus-Landau (DL) instability relevant to inertial confinement fusion (ICF), and how does its manifestation in laser ablation differ from classical combustion flames?",
+  "standard_answer": "The DL instability, which wrinkles premixed flame fronts due to hydrodynamic effects, is relevant to ICF because laser ablation flows exhibit front-like propagation analogous to deflagration. In ICF, the laser ablation front separates dense cold plasma (fuel) from light hot plasma (ablated), and when this front is perturbed, the DL mechanism can amplify corrugations, affecting compression symmetry and potentially leading to spontaneous self-turbulization. However, in laser ablation, the DL instability differs from classical flames in several key aspects: (1) Compressibility: Laser deflagration operates near the Chapman-Jouguet regime with Mach numbers up to 1/√γ at the critical surface, whereas flames are highly subsonic (Ma < 3×10^-2). (2) Thermal conduction: Plasma thermal conduction has strong temperature dependence (κ ∝ T^n, n=0.7–6.5), unlike the weak dependence in gases (κ ∝ √T). (3) Front speed determination: Flame speed is set by thermal conduction and reaction times (U_f ~ √(κ/τ_R)), while laser deflagration speed U_a is governed by boundary conditions at the critical surface and energy flux in the rarefaction wave, scaling as U_a ∝ I^(1/3) λ_laser^(4/3). These differences alter the linear growth rates and stability thresholds, requiring modified dispersion relations that account for compressibility and variable transport properties.",
+  "original_text": {
+    "1": "In inertial confinement fusion the methodology of combustion science (in particular, of the DL theory) provided a clue to the long standing problem of the stabilization of the RT instability by the laser ablation flow.",
+    "2": "In contrast to laser deflagration, planar flows associated with laminar flames are noticeably subsonic, with the typical limitation for the Mach number Ma ≡ U_f/c_s < 3×10^-2."
+  },
+  "type": "concept",
+  "difficulty": 4,
+  "topic": "fluid_mechanics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires deep expertise in combustion science (Darrieus-Landau instability), fluid mechanics (hydrodynamic effects, compressibility), plasma physics (laser ablation, plasma properties), and inertial confinement fusion concepts. It specifically compares combustion phenomena with laser plasma physics, demanding cross-domain knowledge of both combustion flames and ICF processes.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on paper content, and compliant with other requirements."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_ecc85d13",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Combustion-phenomena-in-modern-physics--I--In_2015_Progress-in-Energy-and-Co",
+    "paper_title": "Combustion-phenomena-in-modern-physics--I--In_2015_Progress-in-Energy-and-Co"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:18:11.815418",
+    "answer_length": 1364
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly explains the relevance of DL instability to ICF and accurately describes key differences from classical combustion flames. It is consistent with the original text, which confirms: (1) DL theory from combustion science provided insights into RT instability stabilization in ICF laser ablation, and (2) flames are highly subsonic with Ma < 3×10^-2. The answer provides extensive additional detail about compressibility, thermal conduction, and front speed determination that, while not directly verifiable from the brief original text excerpts, represents standard physics in this field and contains no factual errors or logical contradictions. The physical principles stated (Chapman-Jouguet regime, thermal conductivity scaling, flame speed relationships) are correct. The answer appropriately addresses both parts of the question: why DL is relevant to ICF and how it differs from classical flames.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:06:53.518416"
+      },
+      {
+        "correct": false,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "States the ablation-front Mach number can be up to 1/√γ at the critical surface; the sonic point is Mach 1, not 1/√γ",
+          "Provides an incorrect wavelength scaling for laser ablation front speed (U_a ∝ I^(1/3) λ^(4/3)); standard Manheimer-type scalings indicate different exponents (e.g., ṁ ∝ I^(1/3) λ^(2/3), p_a ∝ I^(2/3) λ^(−2/3))",
+          "Uses an overly broad/unsupported range for plasma thermal conductivity temperature dependence (κ ∝ T^n with n=0.7–6.5); classical Spitzer conductivity scales as κ ∝ T^(5/2)",
+          "Describes laser ablation as operating near the Chapman–Jouguet regime, which is a combustion/detonation concept and is misleading for a driven transonic plasma outflow",
+          "Speculates about DL-driven 'spontaneous self-turbulization' in ICF ablation; the PECS text emphasizes DL theory’s role in understanding RT stabilization, not turbulence"
+        ],
+        "reasoning": "The answer correctly notes the relevance of DL methodology to ICF and the subsonic nature of laminar flames, consistent with the PECS text. However, it introduces multiple factual inaccuracies and misleading specifics: incorrect Mach-number characterization at the critical surface, wrong wavelength exponent in the ablation-speed scaling, an unsupported conductivity temperature-dependence range, and conflating CJ concepts with laser ablation. These errors warrant marking the answer as incorrect.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:07:28.332459"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer is factually accurate and logically consistent. It correctly identifies the analogy between laser ablation and deflagration, explaining the relevance of the DL instability to ICF. It accurately details the key physical differences from classical combustion, such as compressibility (consistent with the original text's Mach number limit for flames), thermal conductivity dependence, and the mechanism determining the front speed. All stated principles and scaling laws are correct.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:07:49.832217"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:07:49.832262",
+    "consensus": {
+      "all_correct": false,
+      "correct_votes": 2,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 2
+    }
+  }
+}

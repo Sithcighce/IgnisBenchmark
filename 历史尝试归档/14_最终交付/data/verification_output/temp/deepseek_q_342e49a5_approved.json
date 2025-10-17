@@ -1,0 +1,82 @@
+{
+  "question_text": "How do impurities like COS and CS2 affect the efficiency of sulfur recovery in the Claus process, and what mechanisms lead to their formation and impact?",
+  "standard_answer": "Impurities like COS (carbonyl sulfide) and CS2 (carbon disulfide) negatively affect sulfur recovery efficiency in the Claus process by forming stable compounds that bypass the main sulfur-producing reactions and deactivate catalysts. COS and CS2 are formed in the thermal stage through reactions such as CO + S → COS and CH4 + 2S → CS2 + 2H2, especially in the presence of hydrocarbons or CO2. These species are less reactive than H2S and can pass through the thermal and catalytic stages unconverted, reducing overall sulfur yield. In the catalytic stage, they can hydrolyze to H2S and CO2 (e.g., COS + H2O → H2S + CO2), but this is hindered by water competition for active sites on alumina catalysts. The paper notes that 'the overall sulfur recovery efficiency is hindered in the presence of high amounts of COS and CS2 in the tail gas, which are formed in the thermal stage of the reactor', and that catalyst deactivation from sulfation or carbon deposition further exacerbates the issue, requiring tailored operational strategies to mitigate their impact.",
+  "original_text": {
+    "1": "the overall sulfur recovery efficiency is hindered in the presence of high amounts of COS and CS2 in the tail gas, which are formed in the thermal stage of the reactor",
+    "2": "COS and CS2 are either present in the acid gas as impurities or formed in the thermal stage of reactor"
+  },
+  "type": "reasoning",
+  "difficulty": 4,
+  "topic": "combustion_kinetics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires specific knowledge of combustion chemistry, sulfur recovery processes (Claus process), chemical kinetics of impurity formation (COS and CS2), and catalyst behavior in energy systems - all core topics in combustion science and energy engineering.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on paper citations, and no other compliance issues."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_342e49a5",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Advances-in-sulfur-chemistry-for-treatmen_2016_Progress-in-Energy-and-Combus",
+    "paper_title": "Advances-in-sulfur-chemistry-for-treatmen_2016_Progress-in-Energy-and-Combus"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:14:10.494454",
+    "answer_length": 1060
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately describes how COS and CS2 affect sulfur recovery efficiency in the Claus process. It correctly states that these impurities are formed in the thermal stage (consistent with original text [1] and [2]), provides accurate formation mechanisms (CO + S → COS and CH4 + 2S → CS2 + 2H2), explains their lower reactivity compared to H2S, describes the hydrolysis reaction (COS + H2O → H2S + CO2), and mentions catalyst deactivation issues. The answer directly quotes the original text and all chemical principles stated are correct. The additional mechanistic details provided (hydrolysis reactions, water competition for active sites, catalyst deactivation) are consistent with established Claus process chemistry and do not contradict the original text. While the answer is detailed, all statements are factually accurate and logically sound.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:02:53.015052"
+      },
+      {
+        "correct": false,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Incorrect CS2 formation stoichiometry: states CH4 + 2S -> CS2 + 2H2; in Claus furnace chemistry hydrogen typically forms H2S, e.g., CH4 + 2S2 -> CS2 + 2H2S",
+          "Oversimplified COS formation pathway: CO + S -> COS is not the principal route; COS is commonly formed via CO2/CO reacting with H2S (e.g., CO2 + H2S -> COS + H2O, CO + H2S -> COS + H2)",
+          "Claims COS/CS2 'deactivate catalysts' without support; deactivation in Claus units is more commonly due to sulfation (SO3) or coking from hydrocarbons, not directly from COS/CS2",
+          "Suggests hydrolysis is hindered by water competition on alumina; water is a required reactant for COS/CS2 hydrolysis and inhibition effects are nuanced"
+        ],
+        "reasoning": "The answer correctly states that COS and CS2 formed in the thermal stage hinder sulfur recovery and may persist in tail gas, consistent with the ground truth. However, it includes a clear factual error in the CS2 formation reaction stoichiometry and presents oversimplified or misleading formation pathways and catalyst effects. These errors warrant marking the answer as incorrect despite the correct high-level impact description.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:03:28.417498"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer is factually correct, logically consistent, and aligns with the provided original text. It accurately describes the formation mechanisms of COS and CS2 in the Claus process thermal stage, their higher stability compared to H2S, and how their 'slip' through the process reduces overall sulfur recovery efficiency. The explanation of catalytic hydrolysis and its limitations (e.g., water competition, catalyst deactivation) is also accurate and provides a comprehensive view of the problem.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:03:51.284639"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:03:51.284659",
+    "consensus": {
+      "all_correct": false,
+      "correct_votes": 2,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 2
+    }
+  }
+}

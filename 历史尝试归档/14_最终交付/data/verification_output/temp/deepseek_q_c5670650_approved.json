@@ -1,0 +1,79 @@
+{
+  "question_text": "Analyze the thermodynamic and mass balance implications of methane pyrolysis (MP) for hydrogen production, considering the stoichiometric hydrogen-to-carbon mass ratio of 1:3. Calculate the carbon by-product yield when meeting the current global pure hydrogen demand of 70 Mt/a via MP, and compare this to the forecasted global carbon black market of 15 Mt/a in 2025. Explain the engineering challenges this carbon oversupply creates for process economics and carbon management strategies.",
+  "standard_answer": "The methane pyrolysis reaction CH4 → 2H2 + C has a stoichiometric mass balance of 16 g CH4 → 4 g H2 + 12 g C, giving a hydrogen-to-carbon mass ratio of 4:12 = 1:3. For the current global pure hydrogen demand of 70 Mt/a, the carbon by-product yield would be 70 Mt H2 × 3 = 210 Mt C. Comparing this to the forecasted global carbon black market of 15 Mt/a in 2025 reveals a massive oversupply factor of 210/15 = 14. This creates significant engineering challenges: First, the carbon management requires either permanent sequestration or development of new carbon utilization markets. Second, the economic viability of MP depends heavily on finding value for the carbon by-product, as only 25% of the product mass is the primary target product H2. Third, from a heat transfer perspective, the process must efficiently handle the solid carbon deposition that can cause reactor clogging and reduced heat transfer efficiency. Fourth, fluid mechanics considerations include managing the separation of solid carbon particles from the gas stream and preventing catalyst deactivation. The carbon oversupply necessitates either developing new industrial applications for carbon materials or implementing permanent carbon storage solutions to avoid environmental impacts from carbon release.",
+  "original_text": {
+    "1": "On a mass basis, MP yields a hydrogen-to-carbon ratio of 1:3, which means that only 25% of the product mass attributes to the primary target product H2 [10].",
+    "2": "The worldwide annual carbon black consumption in 2025 is forecasted to grow beyond 15 Mt/a [144]. In comparison, meeting the current annual demand of pure H2 of around 70 Mt [8] by MP would lead to approximately 210 Mt/a of carbon by-product and, thus, exceed the estimated market demand for carbon black by a factor of 14."
+  },
+  "type": "calculation",
+  "difficulty": 4,
+  "topic": "energy_systems",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires deep knowledge of energy systems, specifically hydrogen production via methane pyrolysis, including thermodynamic mass balances, stoichiometric calculations, carbon management strategies, and engineering challenges related to heat transfer and fluid mechanics in reactor design and carbon separation.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "The question is well-focused on energy systems and the answer correctly applies stoichiometry, cites the provided data accurately, and explains engineering challenges coherently. No issues detected."
+  },
+  "retry_count": 1,
+  "question_id": "deepseek_q_c5670650",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Green--Turquoise--Blue--or-Grey--Environmentally-fr_2022_Progress-in-Energy-",
+    "paper_title": "Green--Turquoise--Blue--or-Grey--Environmentally-fr_2022_Progress-in-Energy-"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:21:45.180487",
+    "answer_length": 1278
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer is factually accurate and logically consistent with the original text. Key verifications: (1) Stoichiometric calculation is correct: CH4 (16 g) → 2H2 (4 g) + C (12 g), giving H2:C mass ratio of 1:3. (2) Carbon by-product calculation is correct: 70 Mt H2 × 3 = 210 Mt C. (3) Oversupply factor is correct: 210/15 = 14. (4) The 25% mass fraction for H2 is correctly stated and matches the original text. (5) Engineering challenges discussed (carbon management, economic viability, heat transfer issues, reactor clogging, fluid mechanics, catalyst deactivation) are all reasonable and logically sound extensions based on the fundamental mass balance problem. While the answer is more detailed than the original text, all additional explanations are technically sound and do not contradict any established principles in combustion science or thermophysics.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:10:21.653692"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Thermodynamic implications are only briefly touched (heat transfer), without discussing the endothermic heat requirement of methane pyrolysis."
+        ],
+        "reasoning": "All quantitative elements match the ground truth: CH4 → 2H2 + C yields a 1:3 H2:C mass ratio; 70 Mt/a H2 implies ~210 Mt/a carbon; this exceeds the ~15 Mt/a carbon black market by a factor of 14. The engineering discussion appropriately highlights carbon management, economic reliance on carbon valorization, and operational challenges with solid carbon handling. No factual or logical errors detected.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:10:44.960439"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer is factually and logically correct. It accurately states the stoichiometry of methane pyrolysis (CH4 → C + 2H2) and correctly calculates the mass balance (16g CH4 → 12g C + 4g H2), leading to the 1:3 H2:C mass ratio. The calculation of the carbon by-product (210 Mt/a) from the hydrogen demand (70 Mt/a) is correct and matches the original text. The comparison with the carbon black market (15 Mt/a) and the resulting oversupply factor (14) are also correct. The enumerated engineering challenges—carbon management, economic viability, heat transfer issues (fouling/clogging), and fluid mechanics (separation/catalyst deactivation)—are all valid and direct consequences of producing a large quantity of solid carbon.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:11:12.329282"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:11:12.329302",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

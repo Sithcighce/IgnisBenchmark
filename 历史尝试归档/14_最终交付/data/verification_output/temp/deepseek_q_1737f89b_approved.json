@@ -1,0 +1,80 @@
+{
+  "question_text": "Based on the provided paper content, explain how biodiesel's higher viscosity compared to petrodiesel affects its application in diesel engines, and discuss the emissions performance of biodiesel relative to petrodiesel according to the cited evidence.",
+  "standard_answer": "The paper states that 'the higher viscosity of natural oils and fats hinders their widespread application in compression ignition diesel engines.' This indicates that elevated viscosity creates operational challenges for biodiesel in standard diesel engines, likely affecting fuel flow, injection characteristics, and combustion efficiency. Regarding emissions performance, the paper clearly states that 'Biodiesel outperforms petrodiesel in terms of most regulated emissions exhausted (i.e., carbon monoxide (CO), unburnt hydrocarbon (UHC), particulate matter (PM), and smoke) except the emission of nitrogen oxides (NOx).' This demonstrates that despite potential viscosity-related challenges, biodiesel actually reduces several key pollutants compared to conventional diesel fuel. The higher viscosity may contribute to combustion modifications that affect NOx emissions, but overall biodiesel shows superior environmental performance for CO, UHC, PM, and smoke emissions.",
+  "original_text": {
+    "1": "However, the higher viscosity of natural oils and fats hinders their widespread application in compression ignition diesel engines.",
+    "2": "Biodiesel outperforms petrodiesel in terms of most regulated emissions exhausted (i.e., carbon monoxide (CO), unburnt hydrocarbon (UHC), particulate matter (PM), and smoke) except the emission of nitrogen oxides (NOx)."
+  },
+  "type": "concept",
+  "difficulty": 4,
+  "topic": "combustion_kinetics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires specific knowledge of combustion science (diesel engine operation), fluid mechanics (viscosity effects on fuel flow and injection), and emissions performance in energy systems, which are core domain topics in combustion and energy engineering.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "The question is well-focused on domain expertise and the answer accurately reflects the cited evidence from the paper regarding viscosity challenges and emissions performance of biodiesel."
+  },
+  "retry_count": 1,
+  "question_id": "deepseek_q_1737f89b",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Machine-learning-technology-in-biodiesel-r_2021_Progress-in-Energy-and-Combu",
+    "paper_title": "Machine-learning-technology-in-biodiesel-r_2021_Progress-in-Energy-and-Combu"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:22:48.841126",
+    "answer_length": 975
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately reflects both key points from the original text: (1) it correctly quotes and interprets that higher viscosity of natural oils/fats hinders their application in diesel engines, and appropriately elaborates on likely operational challenges (fuel flow, injection, combustion efficiency); (2) it accurately quotes the emissions comparison, correctly stating that biodiesel outperforms petrodiesel for CO, UHC, PM, and smoke but not for NOx. The answer's additional interpretations (e.g., viscosity affecting combustion modifications that may influence NOx) are reasonable inferences that don't contradict the original text. All factual statements align with the source material and established combustion science principles.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:12:15.726913"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Slight conflation between natural oils/fats and biodiesel regarding viscosity-related applicability",
+          "Speculative link that viscosity may affect NOx (not stated in the original text)"
+        ],
+        "reasoning": "The answer accurately reflects the core points from the ground-truth text: higher viscosity hinders application in CI engines and biodiesel reduces CO, UHC, PM, and smoke relative to petrodiesel while tending to be worse for NOx. The added explanations about fuel flow/injection effects are reasonable elaborations. Minor speculative linkage between viscosity and NOx and the subtle shift from natural oils/fats to biodiesel do not contradict the source.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:12:38.358993"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer accurately reflects the information provided in the original text. It correctly identifies that higher viscosity hinders biodiesel application and accurately summarizes the emissions profile (lower CO, UHC, PM, smoke; higher NOx). The additional explanations regarding how viscosity affects fuel flow, injection, and combustion are scientifically sound and represent a reasonable and correct elaboration on the source material.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:12:54.674615"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:12:54.674633",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

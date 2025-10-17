@@ -1,0 +1,80 @@
+{
+  "question_text": "Derive the relationship between laminar flame speed and combustion phasing in spark-ignition engines, and explain how faster flame propagation reduces the need for spark advance to maintain optimal combustion phasing.",
+  "standard_answer": "Laminar flame speed (S_L) directly influences combustion duration through the relationship t_comb ∝ 1/S_L, where t_comb is the time required to burn the charge. In engine crank angle degrees, the combustion phasing, characterized by the location of 50% mass fraction burned (CA50), is given by CA50 = SOI + Δθ_burn, where SOI is spark timing and Δθ_burn is the burn duration in degrees. For a spherical flame front, the burn rate dmb/dt = ρ_u A_f S_L, where ρ_u is unburned gas density and A_f is flame front area. Faster S_L reduces Δθ_burn, allowing CA50 to be achieved with later SOI while maintaining optimal phasing near top dead center. This reduces the required spark advance, minimizing end-gas residence time at high pressure and temperature, thereby suppressing knock. For example, a 10% increase in S_L can reduce burn duration by 8–12%, permitting 2–4° retard in spark timing without sacrificing efficiency, which is critical for knock-limited operation in high-compression or boosted engines.",
+  "original_text": {
+    "1": "Laminar flame speed (S_L) directly influences combustion duration through the relationship t_comb ∝ 1/S_L, where t_comb is the time required to burn the charge.",
+    "2": "Faster S_L reduces Δθ_burn, allowing CA50 to be achieved with later SOI while maintaining optimal phasing near top dead center."
+  },
+  "type": "calculation",
+  "difficulty": 4,
+  "topic": "combustion_science",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires deep combustion science expertise including laminar flame speed theory, spark-ignition engine combustion phasing, flame propagation dynamics, and the relationship between flame speed and spark timing optimization. It specifically addresses combustion fundamentals in engine applications.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer are both high quality - domain-focused with correct technical explanation supported by citations."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_7da10436",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "What-fuel-properties-enable-higher-thermal-effi_2021_Progress-in-Energy-and-",
+    "paper_title": "What-fuel-properties-enable-higher-thermal-effi_2021_Progress-in-Energy-and-"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:32:27.173936",
+    "answer_length": 1005
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly explains the relationship between laminar flame speed and combustion phasing. Key points verified: (1) The inverse relationship t_comb ∝ 1/S_L is correctly stated and matches the original text. (2) The explanation of CA50 = SOI + Δθ_burn is physically sound. (3) The burn rate equation dmb/dt = ρ_u A_f S_L is correct for a propagating flame front. (4) The causal chain is logical: faster S_L → reduced Δθ_burn → later SOI possible while maintaining optimal CA50 → reduced knock tendency. (5) The numerical example (10% S_L increase → 8-12% burn duration reduction → 2-4° spark retard) is consistent with the inverse relationship and typical engine behavior. (6) The knock suppression mechanism through reduced end-gas residence time is thermodynamically sound. All statements align with the original text and established combustion science principles. The answer is more detailed than the original text but contains no factual errors or logical contradictions.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:24:46.057677"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Uses SOI to denote spark timing, which is unconventional; CA50 = SOI + Δθ_burn is a simplified relation and Δθ_burn must be interpreted as the crank-angle to 50% MFB (not total burn), otherwise ambiguous",
+          "Quantitative example (10% increase in S_L leading to 8–12% shorter burn and 2–4° spark retard) is heuristic and engine-dependent, not universally applicable"
+        ],
+        "reasoning": "The answer correctly links laminar flame speed to combustion duration (t_comb ∝ 1/S_L) and explains that higher S_L reduces burn duration in crank-angle degrees, enabling later spark timing to maintain optimal CA50 near TDC. The burn rate relation dmb/dt = ρ_u A_f S_L is appropriate for a laminar spherical front and supports the causal chain. It aligns with the provided ground truth and contains no factual or logical errors, though it uses simplified notation and includes illustrative, non-universal numerical examples.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:25:15.573995"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer is factually and logically correct. It accurately reproduces the core relationships from the original text (t_comb ∝ 1/S_L and the link between faster S_L and later SOI). The additional details, such as the mass burn rate equation, the mechanism for knock suppression, and the quantitative example, are all accurate and relevant, providing a comprehensive and correct explanation.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:25:38.913676"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:25:38.913704",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

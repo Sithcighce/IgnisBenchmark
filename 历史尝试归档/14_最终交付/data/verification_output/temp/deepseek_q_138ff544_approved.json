@@ -1,0 +1,85 @@
+{
+  "question_text": "Calculate the parameters a and b for a β-PDF of mixture fraction in a turbulent non-premixed flame, given a mean mixture fraction of 0.3 and a variance of 0.05. Explain how these parameters influence the PDF shape and its implications for reaction rate closure in CSE.",
+  "standard_answer": "Using Eqs. 18 and 19: a = [̃z^2(1 - ̃z)/̃zv] - ̃z = [0.3^2 * (1 - 0.3)/0.05] - 0.3 = [0.09 * 0.7 / 0.05] - 0.3 = [0.063 / 0.05] - 0.3 = 1.26 - 0.3 = 0.96. b = a(1/̃z - 1) = 0.96 * (1/0.3 - 1) = 0.96 * (3.333 - 1) = 0.96 * 2.333 = 2.24. These parameters shape the β-PDF: a < 1 indicates a peak near ξ = 0, while b > 1 skews the distribution towards lower mixture fractions, reflecting the given mean and variance. In CSE, this PDF serves as the inversion kernel in Eq. 8, influencing the estimation of conditional scalars. A skewed PDF implies that conditional averages at certain mixture fractions (e.g., near 0) are weighted more heavily, affecting reaction rate integrals. Accurate PDF modelling is crucial because errors propagate through the CSE inversion, potentially misrepresenting local extinction or ignition events. For instance, an inaccurate PDF could smooth out high-gradient regions, leading to underprediction of peak temperatures or pollutant formation like NOx, underscoring the need for precise moment transport equations in turbulent combustion simulations.",
+  "original_text": {
+    "1": "a and b are the PDF parameters which are related to the mean ̃z and variance ̃zv of the mixture fraction as follows: a = ̃z^2(1 - ̃z)/̃zv - ̃z, b = a(1/̃z - 1)",
+    "2": "The β-function distribution – that was originally proposed by Richardson et al. – provides a good approximation of the mixture fraction PDF in turbulent mixing layers."
+  },
+  "type": "calculation",
+  "difficulty": 3,
+  "topic": "fluid_mechanics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires specialized knowledge in turbulent combustion modeling, specifically the use of β-PDF for mixture fraction in non-premixed flames and its role in Conditional Source-term Estimation (CSE) reaction rate closure. It involves combustion science, fluid mechanics, and CFD expertise.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct, and compliant with other requirements."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_138ff544",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Advances-and-challenges-of-the-Conditional-Source-_2024_Progress-in-Energy-a",
+    "paper_title": "Advances-and-challenges-of-the-Conditional-Source-_2024_Progress-in-Energy-a"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:14:16.659650",
+    "answer_length": 1076
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": false,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Calculation error in parameter a: The formula states a = ̃z^2(1 - ̃z)/̃zv - ̃z, but the answer incorrectly calculates it as [̃z^2(1 - ̃z)/̃zv] - ̃z. The correct calculation should be: a = ̃z^2(1 - ̃z)/̃zv - ̃z = 0.3^2 * (1 - 0.3) / 0.05 - 0.3. However, the formula should be interpreted as a = ̃z * [(1 - ̃z)/̃zv - 1] based on standard β-PDF parameterization, or the given formula needs proper grouping.",
+          "Actually, re-examining: Using the exact formula as written: a = ̃z^2(1 - ̃z)/̃zv - ̃z. This equals (0.09 * 0.7)/0.05 - 0.3 = 1.26 - 0.3 = 0.96. The calculation appears correct.",
+          "However, the standard β-PDF formulation typically uses: a = ̃z[̃z(1-̃z)/̃zv - 1], which would give a = 0.3[(0.3*0.7)/0.05 - 1] = 0.3[0.21/0.05 - 1] = 0.3[4.2 - 1] = 0.3 * 3.2 = 0.96. This matches.",
+          "Wait - checking the original formula more carefully: a = ̃z^2(1 - ̃z)/̃zv - ̃z. Let me verify if this is dimensionally and mathematically the standard form. The standard form is a = ̃z[(̃z(1-̃z)/̃zv) - 1]. Expanding: a = ̃z^2(1-̃z)/̃zv - ̃z. This matches the given formula exactly.",
+          "The numerical calculation in the answer is actually correct: 0.063/0.05 = 1.26, and 1.26 - 0.3 = 0.96.",
+          "For b: b = 0.96 * (10/3 - 1) = 0.96 * 2.333... = 2.24. This is correct.",
+          "The interpretation states 'a < 1 indicates a peak near ξ = 0' - this is INCORRECT. For a β-PDF, when a < 1 and b > 1, the mode is at ξ = 0 (boundary peak). When both a > 1 and b > 1, there is an interior mode at (a-1)/(a+b-2). The statement about the peak location is misleading or incorrect."
+        ],
+        "reasoning": "While the numerical calculations for parameters a and b are correct (a = 0.96, b = 2.24), the answer contains a significant error in interpreting the PDF shape. The statement 'a < 1 indicates a peak near ξ = 0' is incorrect for β-distributions. When a < 1, the PDF actually has a singularity (infinite density) at ξ = 0, not just a peak. The correct interpretation is that a < 1 causes the PDF to be unbounded at the lower boundary. This is a factual error in describing the β-PDF behavior.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:02:36.043465"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The computed parameters are correct using the provided relations: a = 0.96 and b = 2.24. The explanation of how a < 1 and b > 1 shape the β-PDF (peak near zero and skew toward lower mixture fractions) is consistent with Beta distribution properties. The discussion of implications for reaction rate closure in CSE—PDF weighting affecting conditional averages and reaction rate integrals—is logically sound and aligns with standard PDF-based closure concepts. No contradictions with the provided ground-truth relations.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:02:55.367869"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer correctly calculates the Beta-PDF parameters 'a' and 'b' using the provided formulas and input values. The numerical steps are accurate. The interpretation of how these parameters shape the PDF (a < 1 leading to a peak at z=0, and the relative values of a and b determining the skewness) is correct. The explanation of the PDF's role in Conditional Source-term Estimation (CSE) as an inversion kernel and the consequences of PDF inaccuracies (e.g., misrepresenting local extinction/ignition, underpredicting peak temperatures/pollutants) is factually correct and demonstrates a deep understanding of turbulent combustion modeling.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:03:16.088246"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:03:16.088264",
+    "consensus": {
+      "all_correct": false,
+      "correct_votes": 2,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 2
+    }
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "question_text": "Quantitatively, how does the ion exchange capacity (IEC) of sulphonated resins correlate with FFA conversion in biodiesel production, and what are the trade-offs with surface area and pore structure?",
+  "standard_answer": "Ion exchange capacity (IEC), measured in mmol H⁺/g, directly correlates with FFA conversion up to a point, but trade-offs with surface area and pore structure dictate optimal performance. Higher IEC provides more acid sites for proton donation, accelerating the esterification reaction rate according to kinetic models where rate ∝ [H⁺]. For instance, resins with IEC ~5 mmol/g (e.g., Amberlyst 15) achieve ~96% conversion under ideal conditions. However, excessive functionalization can reduce accessible surface area by blocking micropores, as seen in hyper-crosslinked resins where higher sulphonation decreased BET area from 280 to 205 m²/g, lowering efficiency. Pore structure also modulates mass transfer; macroporous resins with large pore diameters (>50 nm) facilitate FFA diffusion to acid sites, enhancing conversion despite moderate IEC. The paper states: 'conversions increased linearly with the resins hydrogen exchange capacity, pointing out the key role of this parameter,' but also notes that 'a greater extent of functionalization reduces the available surface area, likely because (solvated) acid groups blocks some of the network micropores.' Thus, an optimal catalyst balances high IEC with sufficient surface area and pore volume to ensure reactant accessibility, avoiding diffusion limitations that cap conversion gains.",
+  "original_text": {
+    "1": "conversions increased linearly with the resins hydrogen exchange capacity, pointing out the key role of this parameter.",
+    "2": "a greater extent of functionalization reduces the available surface area, likely because (solvated) acid groups blocks some of the network micropores, reducing the accessibility to reactants.",
+    "3": "macroporous resins can have much higher surface area in the dry state (50–100 m²g⁻¹)... and tend to exhibit a wide pore size distribution."
+  },
+  "type": "calculation",
+  "difficulty": 4,
+  "topic": "energy_systems",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires specific knowledge of biodiesel production chemistry, ion exchange capacity effects on catalytic performance, and the interplay between catalyst properties (IEC, surface area, pore structure) and reaction efficiency. It involves chemical engineering principles specific to energy systems and catalysis.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question is well-focused on energy systems domain and answer is factually correct with proper citations. No issues detected."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_7a67af2e",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Recent-advances-in-sulfonated-resin-catalysts-for-e_2018_Progress-in-Energy-",
+    "paper_title": "Recent-advances-in-sulfonated-resin-catalysts-for-e_2018_Progress-in-Energy-"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:27:32.946063",
+    "answer_length": 1342
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately reflects the original text and presents sound scientific principles. It correctly states that: (1) IEC correlates with FFA conversion as supported by the original text's statement about linear increase with hydrogen exchange capacity; (2) excessive functionalization reduces surface area by blocking micropores, directly quoting and paraphrasing the original text; (3) macroporous resins facilitate mass transfer with large pore diameters. The specific numerical examples (IEC ~5 mmol/g for Amberlyst 15, 96% conversion, BET area reduction from 280 to 205 m²/g, pore diameter >50 nm) are reasonable and consistent with typical catalyst literature, though not directly from the provided original text. The kinetic relationship (rate ∝ [H⁺]) is fundamentally correct for acid-catalyzed esterification. The answer appropriately balances the trade-offs between IEC, surface area, and pore structure, which aligns with the original text's discussion of these competing factors. No factual errors or logical contradictions detected.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:18:16.221975"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "medium",
+        "verification_confidence": "medium",
+        "issues": [
+          "Includes specific quantitative examples (IEC ≈ 5 mmol/g with ~96% conversion; BET area change 280→205 m²/g; pore diameter >50 nm) that are not in the cited text and cannot be verified here, though they do not contradict it."
+        ],
+        "reasoning": "The answer correctly reflects the linear correlation between IEC and conversion and the trade-off where increased functionalization can reduce accessible surface area by blocking micropores, consistent with the original text. It also appropriately notes the role of pore structure in mass transfer. While it adds illustrative numerical examples not present in the source, these do not contradict the ground truth.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:18:41.287778"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly identifies the direct correlation between Ion Exchange Capacity (IEC) and FFA conversion, as supported by the original text. It accurately explains the underlying kinetic reason (more acid sites). Crucially, it correctly describes the trade-off: higher functionalization (IEC) can reduce surface area and block pores, creating mass transfer limitations, which is also consistent with the original text. The conclusion about an optimal balance between IEC and physical structure (surface area, pore size) is logical and sound. All stated principles of heterogeneous catalysis are correct.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:19:03.967273"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:19:03.967296",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": false,
+      "disagreement_count": 0
+    }
+  }
+}

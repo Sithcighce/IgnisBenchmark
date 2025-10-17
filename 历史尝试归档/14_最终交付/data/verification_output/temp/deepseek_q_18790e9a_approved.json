@@ -1,0 +1,77 @@
+{
+  "question_text": "How do obstacles in a congested channel promote flame acceleration and facilitate deflagration-to-detonation transition (DDT) through specific fluid dynamic and combustion mechanisms?",
+  "standard_answer": "Obstacles in congested channels promote flame acceleration and DDT through multiple interconnected fluid dynamic and combustion mechanisms. First, obstacles increase flame surface area by inducing flow separation, recirculation zones, and shear layers that wrinkle and stretch the flame front, enhancing turbulent burning rates. This increased burning rate accelerates the flow, generating pressure waves that coalesce into shock waves. Second, obstacles cause shock reflections and interactions that create localized regions of high temperature and pressure (hot spots) in the unreacted mixture. These hot spots, characterized by gradients in reactivity (temperature, pressure, composition), can undergo autoignition with shortened ignition delays. Third, obstacles enhance turbulence levels, which further amplifies flame wrinkling and shock-flame interactions, leading to a feedback loop that sustains acceleration. The transition to detonation occurs when a hot spot meets critical conditions for gradient ignition, producing spontaneous reaction waves that evolve into a detonation. As stated, 'Obstacles in the flow have two important functions... to allow and even force the flame to become turbulent more quickly, so that DDT may occur more quickly' and 'The surface area of the flame increases when the flame interacts with shear layers and recirculation flow in wake of obstacles.'",
+  "original_text": {
+    "1": "Obstacles in the flow have two important functions. The practical reason is to allow and even force the flame to become turbulent more quickly, so that DDT may occur more quickly and studied more 'economically.'",
+    "2": "The surface area of the flame increases when the flame interacts with shear layers and recirculation flow in wake of obstacles. As the flame passes obstacles, it wrinkles due to the fluid instabilities caused by the flow acceleration and by shock-flame interactions that trigger flow instabilities."
+  },
+  "type": "reasoning",
+  "difficulty": 5,
+  "topic": "combustion_fluid_mechanics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires deep knowledge of combustion science (flame acceleration, deflagration-to-detonation transition), fluid mechanics (flow separation, recirculation zones, shear layers, turbulence), and specific combustion mechanisms in congested environments. It cannot be answered with general ML or CS knowledge alone.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer are well-aligned with the paper's content on DDT mechanisms in congested channels. The answer provides comprehensive coverage of fluid dynamic and combustion mechanisms as described in the citations and paper excerpt."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_18790e9a",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Mechanisms-and-occurrence-of-detonations-in-_2020_Progress-in-Energy-and-Com",
+    "paper_title": "Mechanisms-and-occurrence-of-detonations-in-_2020_Progress-in-Energy-and-Com"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:22:43.709569",
+    "answer_length": 1391
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately captures and expands upon the mechanisms described in the original text. It correctly identifies that obstacles promote flame acceleration through: (1) increased flame surface area via flow separation, recirculation zones, and shear layers; (2) flame wrinkling due to fluid instabilities from flow acceleration and shock-flame interactions; and (3) enhanced turbulence leading to faster DDT. The answer appropriately incorporates the direct quotes from the original text. While the standard answer provides additional detail about shock reflections, hot spots, autoignition, and gradient ignition mechanisms that go beyond the original text excerpt, these are well-established concepts in DDT physics and are logically consistent with the core mechanisms described. The physical principles stated (turbulent burning rate enhancement, pressure wave coalescence into shocks, autoignition in hot spots) are all correct. No factual errors or logical contradictions are present.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:12:38.576588"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer aligns with the original text: it emphasizes obstacle-induced turbulence, flame wrinkling via shear layers and recirculation, and shock–flame interactions that accelerate the flame. Its elaboration on pressure wave steepening, shock reflections, hot-spot formation, and gradient-induced autoignition is consistent with established DDT mechanisms and does not contradict the provided ground truth. No factual or logical errors detected.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:12:53.743415"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer accurately and comprehensively describes the key mechanisms of flame acceleration and DDT in congested channels. It correctly identifies the roles of obstacles in increasing flame surface area via turbulence and wrinkling, generating and focusing shock waves to create hot spots, and establishing a positive feedback loop. The explanation is consistent with the provided original text and established principles of combustion physics.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:13:12.553939"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:13:12.553960",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

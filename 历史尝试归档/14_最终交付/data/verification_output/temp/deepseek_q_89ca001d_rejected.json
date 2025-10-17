@@ -1,0 +1,85 @@
+{
+  "question_text": "What are the key differences in wrinkle convection mechanisms between premixed and non-premixed flames under harmonic flow forcing, and how do these differences manifest in their respective flame transfer functions?",
+  "standard_answer": "The key difference in wrinkle convection between premixed and non-premixed flames lies in the axial convection speed of flame disturbances. For non-premixed flames, wrinkles convect axially downstream at the bulk flow velocity U₀, as expressed in the solution ξ₁,ₙ(x,t) ∝ [1 - exp(i2πStx/R_f)]. This occurs because non-premixed flames do not propagate - they are simply advected by the flow. In contrast, premixed flame wrinkles convect at U₀/cos²θ, which represents the vector superposition of the axial flow velocity and the axial projection of the flame propagation normal to itself. This difference arises from the fundamental distinction that premixed flames have finite displacement speed s_d while non-premixed flames have zero propagation velocity relative to the flow. These convection mechanisms manifest in the transfer functions through the interference terms: both flames show 1 - exp(i2πfx/U_c) behavior, but with different convection velocities U_c. This leads to different spatial distributions of flame wrinkling and consequently different phase relationships in the heat release response. The premixed flame's enhanced convection speed due to propagation results in shorter convective wavelengths and different interference patterns compared to non-premixed flames at the same Strouhal number.",
+  "original_text": {
+    "1": "The non-premixed flame does not propagate, and wrinkles convect axially downstream at the bulk flow speed, U₀. In contrast, wrinkles on the premixed flame convect in the axial direction at the speed U₀/cos²θ, which is the vector superposition of the axial flow velocity and the axial projection of a vector pointing normal to the flame (into the reactants) with a magnitude equal to the burning velocity, s_d.",
+    "2": "Both expressions also contain a term of the form, 1 - e^(i2πfx/U₀); the first term which describes spatially invariant bulk fluctuations, arises from the homogeneous boundary condition, while the second describes downstream convection of wrinkles whose axial speed is equivalent to the axial mean flow."
+  },
+  "type": "reasoning",
+  "difficulty": 4,
+  "topic": "flame_dynamics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires deep expertise in combustion science and flame dynamics, specifically comparing wrinkle convection mechanisms between premixed and non-premixed flames under harmonic flow forcing, and their manifestation in flame transfer functions. It involves specialized knowledge of flame propagation physics, convection speeds, and transfer function characteristics that are specific to combustion research.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "This is an excellent domain-focused question with a comprehensive and factually correct answer that aligns well with the cited paper content. No changes needed."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_89ca001d",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Forced-response-of-laminar-non-premixed_2019_Progress-in-Energy-and-Combusti",
+    "paper_title": "Forced-response-of-laminar-non-premixed_2019_Progress-in-Energy-and-Combusti"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:20:28.775846",
+    "answer_length": 1311
+  },
+  "verification": {
+    "status": "rejected",
+    "verifiers": [
+      {
+        "correct": false,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "The standard answer states that non-premixed flame wrinkles convect at U₀ and references the solution ξ₁,ₙ(x,t) ∝ [1 - exp(i2πStx/R_f)], but the original text [2] clearly states that the convection term is '1 - e^(i2πfx/U₀)' with U₀ in the denominator, not a different parameter like R_f",
+          "The standard answer claims 'both flames show 1 - exp(i2πfx/U_c) behavior, but with different convection velocities U_c'. However, the original text [2] explicitly states that wrinkles convect 'whose axial speed is equivalent to the axial mean flow' (U₀), suggesting the convection term uses U₀ for both flame types, not different U_c values",
+          "The original text [1] describes premixed wrinkles convecting at U₀/cos²θ in the axial direction, but the original text [2] describes the convection term as having U₀ in the denominator for both cases, creating an inconsistency in the standard answer's interpretation that different convection velocities appear in the transfer function interference terms"
+        ],
+        "reasoning": "The standard answer contains a factual error regarding how the different convection mechanisms manifest in the transfer functions. While it correctly identifies that non-premixed wrinkles convect at U₀ and premixed wrinkles at U₀/cos²θ (consistent with original text [1]), it incorrectly claims these different velocities appear as different U_c values in the interference term '1 - exp(i2πfx/U_c)'. The original text [2] explicitly states the convection term uses U₀ for the axial convection speed in the transfer function expression, not the different effective velocities. This is a substantive error in understanding how the physical convection mechanisms translate into the mathematical transfer function representation.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:09:37.360753"
+      },
+      {
+        "correct": false,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Claims both flames’ interference terms are of the form 1 - exp(i2π f x / U_c) with different U_c; the ground-truth text specifies both contain 1 - exp(i2π f x / U0), i.e., the convected term in that interference travels at U0 for both cases."
+        ],
+        "reasoning": "The answer correctly states the distinct wrinkle convection speeds: U0 for non-premixed and U0/cos^2θ for premixed, and attributes the premixed enhancement to finite burning velocity—consistent with the source. However, it contradicts the ground truth by asserting that the interference term uses different convection velocities for premixed vs non-premixed flames. The PECS text explicitly states that both expressions include a 1 - exp(i2π f x / U0) term, tying that convected component to the mean flow U0 in both cases.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:10:21.471465"
+      },
+      {
+        "correct": false,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "The answer incorrectly states that the premixed flame's enhanced convection speed results in 'shorter convective wavelengths'. Since convective wavelength is defined as λ_c = U_c / f, a higher convection velocity (U_c) at a given frequency (f) results in a LONGER convective wavelength, not a shorter one."
+        ],
+        "reasoning": "The answer contains a clear factual error regarding the relationship between convection velocity and convective wavelength. It correctly identifies that the premixed flame has an enhanced convection speed (U_c > U₀) but then incorrectly concludes this leads to a shorter wavelength. According to the fundamental wave relation λ = velocity / frequency, a higher velocity must result in a longer wavelength. This reversal of a key physical relationship makes the answer incorrect.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:10:56.412896"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:10:56.412917",
+    "consensus": {
+      "all_correct": false,
+      "correct_votes": 0,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

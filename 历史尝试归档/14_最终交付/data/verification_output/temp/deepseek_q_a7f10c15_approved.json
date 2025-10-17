@@ -1,0 +1,77 @@
+{
+  "question_text": "In a countercurrent fixed-bed biomass combustion experiment with multiple thermocouples placed along the bed height, the distance between adjacent thermocouples is 0.1 m and the raw bed bulk density is 400 kg/m³. The time differences for a reference temperature of 300°C to pass between consecutive thermocouple pairs are: 200 s between positions 1-2, 210 s between positions 2-3, and 190 s between positions 3-4. Calculate the ignition front velocity using the proper averaging method and determine the ignition rate. Explain the physical significance of these parameters and their relationship to the pyrolysis process in fixed-bed combustion.",
+  "standard_answer": "To calculate the ignition front velocity, we must use the averaging method specified in the literature. First, we calculate the velocity between each thermocouple pair: v₁₂ = 0.1 m / 200 s = 0.0005 m/s, v₂₃ = 0.1 m / 210 s = 0.000476 m/s, v₃₄ = 0.1 m / 190 s = 0.000526 m/s. With NT = 4 thermocouples, the ignition front velocity is the average of these three values: v_ig = (0.0005 + 0.000476 + 0.000526) / 3 = 0.0005007 m/s ≈ 0.0005 m/s. The ignition rate is then calculated as m''_ig = ρ_b × v_ig = 400 kg/m³ × 0.0005 m/s = 0.2 kg/(s·m²). Physically, the ignition front velocity represents the propagation speed of the reaction zone through the bed, where fresh fuel particles undergo heating, drying, and pyrolysis. The ignition rate quantifies the mass of fuel entering the devolatilization phase per unit time and cross-sectional area. As the ignition front advances, it initiates pyrolysis in successive fuel layers, releasing volatile gases that mix with air and combust. The ignition rate is directly proportional to the pyrolysis rate since it determines how quickly fuel mass transitions into the volatile release phase. This relationship is crucial for designing air supply systems to match volatile production and ensure complete combustion while minimizing emissions.",
+  "original_text": {
+    "1": "Finally, the ignition front velocity vig is obtained by the average of the ratios estimated in the previous step: vig = 1/(NT-1) * Σ [(H_{i+1} - H_i) / (t(T_ref)_{i+1} - t(T_ref)_i)]",
+    "2": "The ignition rate m''_ig is directly related to the bed's release rate of volatile gases, also called the pyrolysis rate. The ignition rate is the result of the product of the ignition front propagation velocity (vig) and the raw bed bulk density (ρ_b): m''_ig = ρ_b vig"
+  },
+  "type": "calculation",
+  "difficulty": 4,
+  "topic": "combustion_kinetics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires specific knowledge of fixed-bed biomass combustion, ignition front propagation, pyrolysis processes, and experimental measurement techniques in combustion science. It involves understanding thermocouple placement strategies, ignition front velocity calculations, and the relationship between ignition rate and pyrolysis - all core concepts in combustion engineering and thermal sciences.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct, and properly structured for combustion science assessment."
+  },
+  "retry_count": 1,
+  "question_id": "deepseek_q_a7f10c15",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Experimental-research-on-the-countercurrent-fi_2025_Progress-in-Energy-and-C",
+    "paper_title": "Experimental-research-on-the-countercurrent-fi_2025_Progress-in-Energy-and-C"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:20:28.565963",
+    "answer_length": 1281
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly applies the averaging formula from the original text. Calculations are accurate: v₁₂=0.0005 m/s, v₂₃=0.000476 m/s, v₃₄=0.000526 m/s, with average v_ig=0.0005007 m/s. The ignition rate calculation m''_ig = ρ_b × v_ig = 400 × 0.0005 = 0.2 kg/(s·m²) is correct and matches the formula in the original text. The physical explanation accurately describes the ignition front as the propagation of the reaction zone through the bed, correctly relates ignition rate to pyrolysis rate as stated in the original text, and appropriately explains the significance for combustion system design. All statements are factually accurate and logically consistent with the original text.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:08:53.342654"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The ignition front velocity was computed using the prescribed averaging of segment ratios and yields ~5.01e-4 m/s, reported as ~5e-4 m/s. The ignition rate m''_ig = ρ_b v_ig = 400×0.0005 ≈ 0.2 kg/(m²·s) is correct with proper units. The physical interpretation matches the PECS text: v_ig is the propagation speed of the ignition front and m''_ig relates directly to the pyrolysis (volatile release) rate. No factual or logical errors found.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:09:17.775943"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer is fully correct. The calculations for ignition front velocity and ignition rate are accurate and follow the method prescribed in the original text. The physical explanations of the ignition front, ignition rate, and their direct relationship to the pyrolysis process in fixed-bed combustion are factually sound and consistent with established combustion theory.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:09:37.606217"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:09:37.606239",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

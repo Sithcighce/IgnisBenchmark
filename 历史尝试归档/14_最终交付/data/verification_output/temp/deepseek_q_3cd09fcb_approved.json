@@ -1,0 +1,77 @@
+{
+  "question_text": "How does the thickened flame model (TFM) address the challenge of resolving thin flame fronts in large eddy simulation (LES) of premixed turbulent combustion, and what physical mechanisms underlie its efficiency function?",
+  "standard_answer": "The thickened flame model addresses the resolution challenge by artificially increasing the flame thickness through a thickening factor F, which allows the flame front to be resolved on coarser computational grids typical of LES. This is achieved by modifying the species and energy diffusion coefficients (multiplied by F) and the reaction rates (divided by F) to maintain the correct laminar flame speed. The efficiency function ΓK accounts for the reduced flame-turbulence interaction due to thickening, as smaller turbulent eddies that would normally wrinkle the flame become less effective when the flame is artificially thickened. Physically, ΓK compensates for the decreased flame surface area and altered strain effects by modeling the unresolved subgrid-scale turbulence-flame interactions. The model ensures that the turbulent flame speed remains accurate despite the numerical thickening, bridging the gap between DNS-resolution requirements and practical LES applications in internal combustion engines.",
+  "original_text": {
+    "1": "The thickened flame model (TFM) addresses the resolution challenge by artificially increasing the flame thickness through a thickening factor F, which allows the flame front to be resolved on coarser computational grids typical of LES.",
+    "2": "The efficiency function ΓK accounts for the reduced flame-turbulence interaction due to thickening, as smaller turbulent eddies that would normally wrinkle the flame become less effective when the flame is artificially thickened."
+  },
+  "type": "reasoning",
+  "difficulty": 5,
+  "topic": "CFD",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires deep expertise in combustion science, CFD modeling, and turbulent combustion physics. It specifically addresses the thickened flame model in LES simulations, which involves understanding flame-turbulence interactions, numerical resolution challenges in combustion modeling, and specialized CFD techniques for premixed turbulent combustion - all core domain concepts in combustion and energy systems.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "The question is well-focused on combustion CFD modeling and the answer provides comprehensive technical details that align with the cited paper content and established physical principles of the thickened flame model."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_3cd09fcb",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Turbulent-combustion-modeling-for-internal-com_2025_Progress-in-Energy-and-C",
+    "paper_title": "Turbulent-combustion-modeling-for-internal-com_2025_Progress-in-Energy-and-C"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:31:56.717907",
+    "answer_length": 1015
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately describes the TFM mechanism and is consistent with the original text. It correctly explains: (1) artificial thickening via factor F to resolve flames on coarser grids, (2) modification of diffusion coefficients (multiplied by F) and reaction rates (divided by F) to maintain laminar flame speed, (3) the efficiency function ΓK compensating for reduced flame-turbulence interaction when smaller eddies become less effective at wrinkling the thickened flame, and (4) ΓK modeling unresolved subgrid-scale interactions to maintain accurate turbulent flame speed. The additional technical details about maintaining laminar flame speed and application to internal combustion engines are physically sound elaborations that don't contradict the original text. All physical principles and cause-effect relationships are correct.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:24:01.824904"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer accurately states that TFM increases flame thickness via a thickening factor F so the front can be resolved on LES grids, and correctly describes the standard modification of diffusion (×F) and reaction rates (÷F) to preserve laminar flame speed. It also correctly explains that the efficiency function ΓK accounts for reduced flame–turbulence interactions caused by thickening, particularly the diminished impact of small eddies on wrinkling, consistent with the original text. No factual or logical errors were found.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:24:26.395243"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer is factually correct and logically sound. It accurately describes the core principle of the Thickened Flame Model (TFM), which involves artificially thickening the flame by a factor F by modifying diffusion and reaction terms while preserving the laminar flame speed. It also correctly explains the physical purpose of the efficiency function (ΓK) as a correction for the reduced flame-turbulence interaction at sub-grid scales, which is a direct consequence of the artificial thickening. The explanation is consistent with the provided original text and established principles of turbulent combustion modeling.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:24:43.490871"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:24:43.490901",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "question_text": "Using the Peclet number analysis for boundary layer flashback, derive the relationship between flow Peclet number (Pe_flow) and flame Peclet number (Pe_flame) under the assumption of a linear velocity profile near the wall, and explain the physical significance of the scaling exponent.",
+  "standard_answer": "The Peclet number analysis non-dimensionalizes the critical velocity gradient model by relating flow and combustion time scales. The flow Peclet number is Pe_flow = D U / α, and the flame Peclet number is Pe_flame = D S_L / α, where D is the burner diameter, U is bulk velocity, S_L is laminar flame speed, and α is thermal diffusivity. Assuming a linear velocity profile near the wall and that the penetration distance d_p is proportional to the flame thickness (d_p = K α / S_L), the critical condition from g_c = S_L / d_p = 4U / D leads to 8U / D = S_L^2 / (K α). Multiplying both sides by D^2 / α gives Pe_flow = (1/(8K)) Pe_flame^2. The exponent of 2 in Pe_flow ∝ Pe_flame^2 indicates that flashback propensity scales quadratically with the flame speed relative to flow velocity, emphasizing the dominance of chemical kinetics over transport processes. Deviations at low Pe_flame occur due to non-linear velocity profiles and enhanced wall quenching effects, while at high Pe_flame, turbulence interactions cause discrepancies.",
+  "original_text": {
+    "1": "Pe_flow = (1/(8K)) (Pe_flame)^2",
+    "2": "The solid line in this figure represents Pe_flow = 0.0125(Pe_flame)^2 variation in logarithmic scales, where the slope of the trend line is equal to 2."
+  },
+  "type": "calculation",
+  "difficulty": 4,
+  "topic": "combustion_science",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires deep combustion science expertise involving boundary layer flashback mechanisms, Peclet number analysis for flame-flow interactions, velocity profile assumptions in boundary layers, and scaling relationships between flow and flame parameters - all specific to combustion physics and flame stabilization phenomena.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer are both high quality - domain-focused with correct derivation and physical interpretation supported by citations."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_90b9749c",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Boundary-layer-flashback-of-non-swirling-premixed-fl_2017_Progress-in-Energy",
+    "paper_title": "Boundary-layer-flashback-of-non-swirling-premixed-fl_2017_Progress-in-Energy"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:14:10.098643",
+    "answer_length": 1033
+  },
+  "verification": {
+    "status": "needs_review",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly derives the relationship Pe_flow = (1/(8K)) Pe_flame^2, which matches the original text's equation Pe_flow = 0.0125(Pe_flame)^2 (where 0.0125 = 1/(8K) with K≈10). The answer properly defines the Peclet numbers, correctly applies the linear velocity profile assumption, derives the critical condition from g_c = S_L/d_p = 4U/D, and accurately explains the physical significance of the quadratic scaling (exponent of 2). The explanation of deviations at low and high Pe_flame regimes is physically sound. All factual statements are accurate and consistent with the original text, and the logical flow of the derivation is correct.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:04:32.453010"
+      },
+      {
+        "correct": false,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Inconsistent/incorrect wall shear gradient: the answer states g_c = S_L/d_p = 4U/D, but the subsequent derivation and the ground-truth coefficient 1/(8K) require the laminar pipe near-wall gradient g = 8U/D. This mismatch is a factual/logical error."
+        ],
+        "reasoning": "The final relationship Pe_flow = (1/(8K)) Pe_flame^2 and the slope of 2 are consistent with the ground truth. However, the answer introduces an incorrect intermediate condition (4U/D) before using 8U/D in the derivation. This inconsistency constitutes a factual/logical error, so the answer cannot be accepted as fully correct.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:04:56.010877"
+      },
+      {
+        "correct": false,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "The derivation contains a logical contradiction. It first equates the critical velocity gradient to `4U/D` (i.e., `g_c = 4U/D`), but then immediately uses `8U/D` in the subsequent equation (`8U / D = S_L^2 / (K α)`) without any justification for doubling the value.",
+          "A consistent derivation requires using the same expression for the velocity gradient throughout. To arrive at the stated final result, the wall velocity gradient should be taken as `g = 8U/D` (the correct value for fully developed laminar flow in a circular pipe), not `4U/D`."
+        ],
+        "reasoning": "The answer correctly states the final relationship between the Peclet numbers and provides a valid physical interpretation of the scaling exponent, both of which are consistent with the original text. However, the core of the question is to *derive* this relationship, and the derivation presented is logically flawed. It contains a direct contradiction by using two different values for the velocity gradient (`4U/D` and `8U/D`) in consecutive steps to force the correct outcome. This constitutes a significant error in the reasoning process.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:05:40.778545"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:05:40.778561",
+    "consensus": {
+      "all_correct": false,
+      "correct_votes": 1,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 1
+    }
+  }
+}

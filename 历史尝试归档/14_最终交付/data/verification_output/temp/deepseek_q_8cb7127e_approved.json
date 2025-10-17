@@ -1,0 +1,82 @@
+{
+  "question_text": "How does the reaction zone Péclet number (PeRZ) capture the similarity of monotonic MIE transition across different ignition sources, turbulent flows, and fuel types?",
+  "standard_answer": "The reaction zone Péclet number (PeRZ) is defined as the ratio of small-scale turbulence diffusivity to reaction zone thermal diffusivity, which effectively characterizes the competition between turbulent mixing and thermal diffusion in the flame kernel. In monotonic MIE transition, PeRZ serves as a unifying parameter because it scales the turbulent strain effects relative to the chemical reaction timescale. When PeRZ is low (indicating dominant thermal diffusion over turbulent mixing), the flame kernel develops similarly to laminar conditions, and MIET increases gradually with turbulence. As PeRZ exceeds a critical value, turbulent mixing disrupts the reaction zone structure, leading to exponential increases in MIET due to enhanced heat and mass losses. This scaling holds regardless of ignition source (electrode vs. laser), flow configuration, or fuel type because PeRZ intrinsically accounts for the turbulence-chemistry interaction, making it a universal descriptor for the transition from flamelet to distributed combustion regimes.",
+  "original_text": {
+    "1": "In particular, the ratio of small-scale turbulence diffusivity to reaction zone thermal diffusivity, a reaction zone P ́eclet number, captures the similarity of monotonic MIE transition, regardless of different ignition sources (conventional electrodes versus laser), turbulent flows, pressure, and fuel types.",
+    "2": "The monotonic MIE transition was first reported between two distinct modes on spark ignition in near-isotropic turbulence of methane-air mixtures with Le ~1 depending on a critical turbulent Karlovitz number (Kac) [24,60,61], where Kac ≈ 8–26 depending on φ with the minimum Kac ≈ 8 occurring near φ = 1 [61]."
+  },
+  "type": "reasoning",
+  "difficulty": 5,
+  "topic": "combustion_science",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires deep knowledge of combustion science, specifically turbulent premixed combustion, ignition transitions, and the role of dimensionless numbers like Péclet number in characterizing turbulence-chemistry interactions. It involves understanding flame kernel development, turbulent mixing effects, and regime transitions in combustion systems.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on paper citations, and no other compliance issues."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_8cb7127e",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Spark-ignition-transitions-in-premixed-tur_2023_Progress-in-Energy-and-Combu",
+    "paper_title": "Spark-ignition-transitions-in-premixed-tur_2023_Progress-in-Energy-and-Combu"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:29:12.473011",
+    "answer_length": 1048
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly explains how PeRZ captures the similarity of monotonic MIE transition. It accurately describes PeRZ as the ratio of small-scale turbulence diffusivity to reaction zone thermal diffusivity, which matches the original text. The explanation of the physical mechanism is sound: low PeRZ corresponds to thermal diffusion dominance (laminar-like behavior with gradual MIET increase), while high PeRZ indicates turbulent mixing disruption of the reaction zone (exponential MIET increase). The answer correctly identifies that this scaling is universal across ignition sources, flow configurations, and fuel types because PeRZ intrinsically captures turbulence-chemistry interaction. The description of the transition from flamelet to distributed combustion regimes is consistent with established combustion theory. While the answer provides more mechanistic detail than the original text, all statements are physically accurate and logically consistent.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:20:27.687877"
+      },
+      {
+        "correct": false,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Mischaracterizes PeRZ as scaling turbulent effects relative to the chemical reaction timescale; PeRZ is defined as a ratio of turbulent (small-scale) diffusivity to reaction-zone thermal diffusivity, not a chemistry-timescale comparison.",
+          "Introduces an unsubstantiated claim of a critical PeRZ leading to exponential increases in MIET; the provided ground truth does not state this behavior.",
+          "Asserts a transition to distributed combustion regimes tied to PeRZ, which is not supported by the cited text.",
+          "Overextends by implying intrinsic coverage of turbulence-chemistry interaction beyond what the PeRZ definition guarantees."
+        ],
+        "reasoning": "The answer correctly states the definition of PeRZ and its role in collapsing MIE behavior across ignition sources, flow types, and fuels. However, it incorrectly links PeRZ to a chemical timescale, adds unsupported claims about a critical PeRZ causing exponential MIET growth, and references a flamelet-to-distributed regime transition not present in the ground truth. These constitute factual/interpretive errors beyond the provided text.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:20:51.734323"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly defines the reaction zone Péclet number (PeRZ) and accurately explains its physical significance as the competition between turbulent mixing and thermal diffusion. The explanation of how PeRZ governs the monotonic MIE transition by characterizing the turbulence-chemistry interaction is physically sound and consistent with the provided original text. The description of flame kernel behavior at low and high PeRZ values is correct and aligns with established combustion theory.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:21:11.934551"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:21:11.934579",
+    "consensus": {
+      "all_correct": false,
+      "correct_votes": 2,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 2
+    }
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "question_text": "Why does the presence of oxygen in the feed gas enhance CO₂ permeation flux in mixed electronic, oxide-ionic, and carbonate-ionic conductor (MEOCC) membranes, and how do the relative conductivities of electrons and oxide ions modulate this effect?",
+  "standard_answer": "In MEOCC membranes, oxygen in the feed gas enhances CO₂ permeation flux by providing an alternative charge compensation pathway via electron conduction, which can dominate over oxide-ion conduction depending on the material's conductivity ratios. The permeation chemistry involves CO₂ ionization to CO₃²⁻, which is charge-compensated by either electrons (e⁻) or oxide ions (O²⁻). When O₂ is present, it facilitates the reaction CO₂ + 1/2O₂ + 2e⁻ → CO₃²⁻, increasing the driving force for CO₂ transport. The flux equation for MEOCC membranes shows that J_CO₂ depends on the sum of electronic (σ_e⁻) and oxide-ionic (σ_O²⁻) conductivities. If σ_e⁻ is high (>1 S cm⁻¹), increasing σ_O²⁻ has a diminishing or negative effect because electron transport becomes the preferred pathway, and additional O²⁻ flux may counter CO₃²⁻ transport. Conversely, at low σ_e⁻ (≤0.1 S cm⁻¹), higher σ_O²⁻ significantly boosts flux by enabling efficient charge balance. For example, in membranes with dominant electronic conductivity, O₂ presence shifts the permeation mechanism toward MECC-like behavior, where CO₂ flux is proportional to (p_CO₂ * p_O₂^(1/2)), exploiting both CO₂ and O₂ partial pressures for enhanced performance. This interplay ensures that MEOCC membranes adapt to feed compositions, optimizing flux through dynamic charge carrier selection.",
+  "original_text": {
+    "1": "For MEOCC membranes shown in Fig. 2c, CO₃²⁻ charge compensation mechanisms depend on feed-gas composition. If there is O₂ in the feed side, the following equation is adequate to calculate J_CO₂.",
+    "2": "J_CO₂ can be enhanced by the presence of oxygen in feed side, increasing electronic conductivity of solid matrix, increasing oxide-ionic conductivity at a low electronic conductivity (≤0.1 S cm⁻¹); while J_CO₂ decreases with increasing oxide-ionic conductivity at a high electronic conductivity (>1 S cm⁻¹)."
+  },
+  "type": "concept",
+  "difficulty": 5,
+  "topic": "combustion_science",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires specific knowledge of electrochemical CO₂ transport membranes, charge compensation mechanisms in mixed conductors, and the interplay between electronic and ionic conductivities in energy conversion systems - all core concepts in combustion science and energy materials.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no compliance issues."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_11f71ab1",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "The-current-status-of-high-temperature-electrochemistr_2021_Progress-in-Ener",
+    "paper_title": "The-current-status-of-high-temperature-electrochemistr_2021_Progress-in-Ener"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:30:41.245062",
+    "answer_length": 1340
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "medium",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately explains the mechanisms described in the original text. It correctly identifies that: (1) oxygen enhances CO₂ permeation by providing an alternative charge compensation pathway via electron conduction, (2) the effect depends on conductivity ratios, (3) at high electronic conductivity (>1 S cm⁻¹), increasing oxide-ionic conductivity has diminishing/negative effects, (4) at low electronic conductivity (≤0.1 S cm⁻¹), higher oxide-ionic conductivity boosts flux. The answer provides additional mechanistic detail (e.g., specific reactions, flux equations, MECC-like behavior) that is consistent with the principles stated in the original text and represents reasonable elaboration based on established membrane science. No factual errors or logical contradictions detected.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:21:55.600991"
+      },
+      {
+        "correct": false,
+        "baseline_confidence": "medium",
+        "verification_confidence": "high",
+        "issues": [
+          "Claims J_CO₂ depends on the sum of electronic and oxide-ionic conductivities; this is inconsistent with the stated trend that increasing oxide-ion conductivity can decrease J_CO₂ at high electronic conductivity and is not supported by the original text.",
+          "Introduces a specific proportionality (J_CO₂ ∝ p_CO₂ · p_O₂^(1/2)) and 'MECC-like behavior' not mentioned in the ground-truth text; this is speculative."
+        ],
+        "reasoning": "The answer correctly captures that O₂ in the feed enhances CO₂ flux and that oxide-ion conductivity increases flux only at low electronic conductivity while decreasing it at high electronic conductivity, matching the ground truth. However, it incorrectly states that J_CO₂ depends on the sum of electronic and oxide-ionic conductivities, which contradicts the non-monotonic dependence described. It also adds an unsupported partial-pressure dependence and mechanism shift not present in the original text.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:22:45.378478"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "medium",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer is factually correct and logically sound. It accurately explains why oxygen enhances CO₂ flux by providing the relevant chemical reaction (CO₂ + 1/2O₂ + 2e⁻ → CO₃²⁻). Furthermore, it correctly describes the complex, modulating effect of electronic and oxide-ionic conductivities, perfectly aligning with the trends described in the original text for both high (>1 S cm⁻¹) and low (≤0.1 S cm⁻¹) electronic conductivity regimes. The explanation is consistent with established principles of mixed ionic-electronic conduction in ceramic membranes.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:23:04.528461"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:23:04.528485",
+    "consensus": {
+      "all_correct": false,
+      "correct_votes": 2,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 2
+    }
+  }
+}

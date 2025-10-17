@@ -1,0 +1,89 @@
+{
+  "question_text": "Calculate the theoretical SO2 emission rate in g/kWh for a marine engine burning fuel with 2.5% sulfur content, assuming complete conversion of fuel sulfur to SO2, and explain how this changes with scrubber efficiency.",
+  "standard_answer": "To calculate SO2 emissions, start with the fuel's sulfur content and energy basis. For marine fuels, typical lower heating value (LHV) is ~42 MJ/kg. Sulfur mass fraction: 2.5% = 0.025 kg S/kg fuel. Upon combustion, S + O2 → SO2, so molecular weights: S (32 g/mol) to SO2 (64 g/mol), giving a conversion factor of 64/32 = 2. Thus, SO2 produced per kg fuel = 0.025 kg S/kg fuel × 2 = 0.05 kg SO2/kg fuel. Energy input per kg fuel = 42 MJ. SO2 emission per MJ = 0.05 kg / 42 MJ = 0.00119 kg/MJ = 1.19 g/MJ. Convert to g/kWh: 1 kWh = 3.6 MJ, so SO2 = 1.19 g/MJ × 3.6 MJ/kWh = 4.28 g/kWh. This is the engine-out emission without control. With a scrubber of efficiency η (e.g., 99%), post-scrubber SO2 = 4.28 × (1 - η) g/kWh. For η=0.99, SO2 = 0.0428 g/kWh, demonstrating scrubbers' effectiveness even with high-sulfur fuels.",
+  "original_text": {
+    "1": "Fuel with 3.5% sulphur content leads theoretically to SO2 emissions of 14 g/kWh, and fuel with 0.5% sulphur content to SO2 emissions of 2 g/kWh, respectively.",
+    "2": "Scrubbers on-board have demonstrated the potential of SO2 emissions at a very low level, for example, 0.07 g/kWh using fuel with a sulfur content of 1.9 wt%"
+  },
+  "type": "calculation",
+  "difficulty": 3,
+  "topic": "energy_systems",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires combustion science knowledge (SO2 formation from fuel sulfur), energy systems expertise (marine engine emissions in g/kWh), and understanding of emission control technologies (scrubber efficiency), all within the marine engine/combustion domain context.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer are both high quality - domain-focused, factually correct calculation with proper explanation, and compliant with all quality checks."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_f532e7a1",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Reduction-in-greenhouse-gas-and-other-emissions-fr_2023_Progress-in-Energy-a",
+    "paper_title": "Reduction-in-greenhouse-gas-and-other-emissions-fr_2023_Progress-in-Energy-a"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:27:53.418571",
+    "answer_length": 819
+  },
+  "verification": {
+    "status": "rejected",
+    "verifiers": [
+      {
+        "correct": false,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Calculated SO2 emission rate of 4.28 g/kWh for 2.5% sulfur fuel contradicts the original text's reference values",
+          "Original text states 3.5% sulfur leads to 14 g/kWh, which implies 2.5% sulfur should yield approximately 10 g/kWh (proportional scaling)",
+          "The answer's calculation appears to use an incorrect LHV value or conversion methodology"
+        ],
+        "reasoning": "The standard answer's calculation yields 4.28 g/kWh for 2.5% sulfur fuel, but this is inconsistent with the original text's data points. The original text states that 3.5% sulfur produces 14 g/kWh and 0.5% sulfur produces 2 g/kWh. These values show a linear relationship: (14-2)/(3.5-0.5) = 4 g/kWh per percentage point of sulfur. Therefore, 2.5% sulfur should yield approximately 2 + (2.5-0.5)×4 = 10 g/kWh, not 4.28 g/kWh. The discrepancy suggests an error in the calculation methodology, possibly in the LHV value used or the conversion factors. The scrubber efficiency discussion methodology is sound, but the base calculation is incorrect.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:18:57.928033"
+      },
+      {
+        "correct": false,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Uses fuel LHV to convert to g/kWh as if 100% conversion to shaft work; g/kWh emissions are typically referenced to brake power, not fuel energy.",
+          "Numerical result (4.28 g/kWh at 2.5% S) contradicts the ground-truth scaling (≈4 g/kWh per wt% S), which implies 10 g/kWh for 2.5% S.",
+          "Implied per-%S factor (~1.71 g/kWh per wt% S) is inconsistent with PECS values (4 g/kWh per wt% S)."
+        ],
+        "reasoning": "Stoichiometry is correct (S→SO2, factor 2 by mass), but the conversion to g/kWh incorrectly assumes 100% efficiency from fuel LHV to shaft work. PECS ground truth indicates ~4 g/kWh per wt% S, so 2.5% S should yield ~10 g/kWh engine-out. The scrubber treatment (post-scrubber = engine-out × (1 − η)) is conceptually correct, but the baseline value is underestimated and inconsistent with the cited literature.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:19:26.831372"
+      },
+      {
+        "correct": false,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "The answer calculates the emission rate in grams per kWh of thermal energy input (g/kWh_th), not per kWh of mechanical work output (g/kWh_work), which is the standard convention for engine emissions.",
+          "This leads to a result (4.28 g/kWh) that is inconsistent with the methodology implied by the ground truth text. The ground truth values (e.g., 14 g/kWh for 3.5% S) are based on a typical specific fuel consumption (SFOC) of ~200 g/kWh, which relates emissions to work output.",
+          "Using the correct methodology based on work output, the emission for 2.5% S fuel should be approximately 10 g/kWh, not 4.28 g/kWh."
+        ],
+        "reasoning": "The standard answer incorrectly calculates emissions based on thermal energy input (g/kWh_th) instead of the standard metric of mechanical work output (g/kWh_work). This is a conceptual error that leads to a value inconsistent with industry standards and the provided ground truth text. The ground truth implies a calculation based on specific fuel consumption (SFOC), which relates fuel burn to work output, yielding a significantly different and correct result.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:20:04.053763"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:20:04.053788",
+    "consensus": {
+      "all_correct": false,
+      "correct_votes": 0,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

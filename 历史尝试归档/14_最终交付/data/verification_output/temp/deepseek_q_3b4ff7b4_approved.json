@@ -1,0 +1,82 @@
+{
+  "question_text": "Describe how the hydrogen-to-carbon (H/C) ratio of gasoline surrogates affects both the lower heating value and pollutant formation mechanisms, particularly for soot and NOx emissions.",
+  "standard_answer": "The H/C ratio fundamentally influences gasoline combustion through thermodynamic and chemical kinetic pathways. Thermodynamically, LHV increases linearly with H/C ratio because hydrogen oxidation (H2 + ½O2 → H2O) releases more energy per unit mass (120 MJ/kg) than carbon oxidation (C + O2 → CO2 releases 32.8 MJ/kg). A higher H/C ratio indicates greater hydrogen content, thus higher energy content per mass. For pollutant formation, soot production decreases with increasing H/C ratio due to reduced carbon availability and altered pyrolysis chemistry. Lower H/C fuels (e.g., aromatics) undergo ring condensation and polycyclic aromatic hydrocarbon (PAH) formation more readily, serving as soot precursors. Higher H/C fuels (e.g., paraffins) produce more aliphatic fragments that are less likely to form stable aromatic rings. For NOx formation, the effect is more complex: higher H/C ratios generally increase flame temperatures due to higher LHV, which would promote thermal NOx through the Zeldovich mechanism. However, the H/C ratio also affects radical pool concentrations - hydrogen-rich flames produce more H and OH radicals that can influence NO formation pathways. Additionally, fuels with higher H/C ratios often have different combustion phasing and heat release rates, altering the temperature-time history that governs NOx formation. This creates a trade-off where optimizing for one pollutant may exacerbate another, requiring careful surrogate formulation.",
+  "original_text": {
+    "1": "The LHV is linearly proportional to the H/C ratio of a complex real fuel mixture.",
+    "2": "Increasing the aromatic content increases hydrocarbon and soot emissions while lowering oxides of nitrogen (NOx)."
+  },
+  "type": "concept",
+  "difficulty": 4,
+  "topic": "energy_systems",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires deep knowledge of combustion science (H/C ratio effects on heating value and pollutant formation), thermodynamics (LHV calculations), chemical kinetics (soot and NOx formation mechanisms), and fuel chemistry (gasoline surrogate composition). It specifically addresses combustion fundamentals and pollutant formation in energy systems.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer are both high quality - domain-focused, factually correct, and compliant with all requirements."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_3b4ff7b4",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Recent-progress-in-gasoline-surrogat_2018_Progress-in-Energy-and-Combustion-",
+    "paper_title": "Recent-progress-in-gasoline-surrogat_2018_Progress-in-Energy-and-Combustion-"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:27:36.955056",
+    "answer_length": 1473
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": false,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "The answer states that higher H/C ratios generally increase flame temperatures and promote thermal NOx formation, but this contradicts the original text which states that increasing aromatic content (lower H/C ratio) lowers NOx emissions, implying that higher H/C ratios should increase NOx, not through temperature mechanism as stated but through other pathways",
+          "More critically, the original text clearly states that increasing aromatic content (which means LOWER H/C ratio) LOWERS NOx. The standard answer's explanation suggests higher H/C ratios would increase NOx due to higher flame temperatures, which would mean lower H/C (more aromatics) should increase NOx - this directly contradicts the original text"
+        ],
+        "reasoning": "The standard answer contains a significant contradiction with the original text regarding NOx formation. The original text [2] explicitly states that increasing aromatic content (lower H/C ratio) lowers NOx. However, the standard answer suggests that higher H/C ratios increase flame temperatures and promote thermal NOx through the Zeldovich mechanism, which would logically mean lower H/C ratios (more aromatics) should produce less NOx due to lower temperatures. While this temperature-based reasoning might seem plausible, it contradicts the established fact from the original text. The answer's LHV and soot formation discussions are generally correct and consistent with the original text, but the NOx formation mechanism explanation is inconsistent with the ground truth provided.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:18:42.448407"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "The linkage between higher H/C (higher LHV) and higher flame temperature/NOx is context-dependent (depends on equivalence ratio, heat loss, and timing), though the stated general trend aligns with the ground truth that aromatics (lower H/C) reduce NOx."
+        ],
+        "reasoning": "The answer correctly states that LHV increases roughly linearly with H/C, consistent with the ground-truth statement. It accurately ties lower H/C (higher aromatic content) to higher soot via PAH pathways and indicates that higher H/C tends to increase NOx via higher temperatures (thermal NOx), which is consistent with the ground truth that increasing aromatics lowers NOx. The mechanistic explanations are sound and contain no factual contradictions.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:19:30.269001"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer is factually and logically correct. It accurately describes the linear relationship between LHV and H/C ratio. It correctly explains that higher H/C ratios reduce soot formation by limiting precursor availability (aromatics) and correctly identifies the complex trade-off with NOx, where higher H/C can increase thermal NOx due to higher flame temperatures. All points are consistent with the provided original text and fundamental combustion principles.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:19:53.588445"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:19:53.588475",
+    "consensus": {
+      "all_correct": false,
+      "correct_votes": 2,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 2
+    }
+  }
+}

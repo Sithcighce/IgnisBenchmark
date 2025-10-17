@@ -1,0 +1,82 @@
+{
+  "question_text": "Based on the provided review paper, what are the key mechanisms through which flash boiling atomization enhances spray breakup compared to sub-cooled atomization, and how do in-nozzle phase change processes influence near-field spray characteristics?",
+  "standard_answer": "Flash boiling atomization enhances spray breakup through fundamentally different mechanisms than sub-cooled atomization. The primary enhancement comes from internal energy-driven phase change processes rather than aerodynamic forces. Key mechanisms include: (1) Fierce phase change near the nozzle exit and in the near-field region, where the working fluid experiences flash boiling with nucleation onsets and bubble developments inside the nozzle as the local pressure drops below the saturated vapor pressure. (2) The formation of vapor-liquid mixtures that exit the nozzle, creating unique boundary conditions that accelerate disintegration. Unlike sub-cooled atomization that relies on surface tension and aerodynamic shear, flash boiling utilizes phase change energy to achieve finer atomization. The in-nozzle phase change processes directly influence near-field characteristics by altering the liquid-vapor boundary conditions at the nozzle exit, which impacts primary breakup mechanisms. Importantly, the paper clarifies that 'no nucleation or bubble growth can be observed in the external spray,' indicating that the phase change effects are primarily confined to the nozzle and immediate near-field region.",
+  "original_text": {
+    "1": "Flash boiling atomization is caused by the micro-explosion of the vapor phase within the bulk liquid near the atomizer nozzle. Therefore, when the spray is superheated or under cavitating conditions, the atomization of the bulk liquid is the coupled effect of the competition of cohesive/disruptive forces, as well as the gas-phase expansion-induced disintegration from fierce phase changes.",
+    "2": "The so-called flash boiling atomizations rely primarily on the fierce phase change near the exit and in the near-field of the injector, which means the propagation process of the flash boiling spray might be under sub-cooled conditions."
+  },
+  "type": "concept",
+  "difficulty": 4,
+  "topic": "fluid_mechanics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires deep knowledge of fluid mechanics, spray atomization, phase change processes, and combustion science. It specifically addresses flash boiling atomization mechanisms, in-nozzle phase change processes, and near-field spray characteristics - all core concepts in combustion and energy systems that cannot be answered with general ML knowledge.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question is well-focused on domain-specific flash boiling atomization mechanisms. Answer correctly synthesizes the paper's content about internal energy-driven phase change, fierce phase change near nozzle exit, and confinement of phase change effects to nozzle and near-field region."
+  },
+  "retry_count": 1,
+  "question_id": "deepseek_q_aa5b9046",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "A-review-on-the-recent-advances-of-flash-boiling_2024_Progress-in-Energy-and",
+    "paper_title": "A-review-on-the-recent-advances-of-flash-boiling_2024_Progress-in-Energy-and"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:14:56.362458",
+    "answer_length": 1216
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately captures the key mechanisms of flash boiling atomization as described in the original text. It correctly identifies: (1) the fierce phase change near the nozzle exit and near-field region with nucleation and bubble development inside the nozzle when pressure drops below saturation pressure, (2) the formation of vapor-liquid mixtures creating unique boundary conditions, and (3) the fundamental difference from sub-cooled atomization (internal energy-driven phase change vs. aerodynamic forces). The answer also correctly notes that phase change effects are primarily confined to the nozzle and immediate near-field region, consistent with the original text stating 'no nucleation or bubble growth can be observed in the external spray.' The explanation of how in-nozzle phase change processes influence near-field characteristics through altered liquid-vapor boundary conditions is logically sound and consistent with the original text's description of 'gas-phase expansion-induced disintegration from fierce phase changes.' All physical principles are correctly stated, and there are no contradictions with the original text.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:01:56.135798"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Claims 'no nucleation or bubble growth can be observed in the external spray'—this absolute statement and quoted phrasing are not in the provided text and may be overstated.",
+          "The phrasing 'rather than aerodynamic forces' downplays the coupled role of cohesive/disruptive forces noted in the original text, though the emphasis on phase change being primary is consistent."
+        ],
+        "reasoning": "The answer correctly emphasizes that flash boiling breakup is primarily driven by fierce phase change near the nozzle exit and in the near-field, with gas expansion-induced disintegration and vapor–liquid mixtures altering exit boundary conditions and influencing primary breakup—consistent with the provided PECS text. Minor overstatements do not contradict the core mechanisms.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:02:24.280986"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "The answer includes a statement in quotes ('no nucleation or bubble growth can be observed in the external spray') and attributes it to the paper, but this quote is not present in the provided original text snippet. However, the scientific point being made is physically correct and consistent with the implications of the provided text."
+        ],
+        "reasoning": "The standard answer correctly identifies the key mechanisms of flash boiling atomization, contrasting it with sub-cooled atomization. It accurately describes the role of in-nozzle phase change driven by internal energy and its effect on near-field spray characteristics. All physical principles stated are correct and consistent with the provided original text. While it contains a quote not found in the provided snippet, the underlying physical statement is correct and logically follows from the information given (i.e., if the downstream spray becomes sub-cooled, nucleation would cease). Therefore, the answer is factually and logically sound.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:03:00.824028"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:03:00.824048",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

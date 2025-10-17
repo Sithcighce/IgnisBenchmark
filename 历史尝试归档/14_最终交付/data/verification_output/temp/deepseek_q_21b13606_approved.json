@@ -1,0 +1,81 @@
+{
+  "question_text": "What mechanisms cause the flame in a parallel-channel unidirectional reactor to exhibit two-dimensional curvature, and how does this relate to external heat losses?",
+  "standard_answer": "The flame in a parallel-channel unidirectional reactor exhibits two-dimensional curvature due to radial variations in external heat losses. Channels near the reactor periphery experience greater heat loss to the environment, leading to lower local temperatures and reduced reaction rates. This causes flames in outer channels to stabilize further downstream (closer to the reactor center) where radiative and conductive losses are minimized. In contrast, inner channels have less heat loss, allowing flames to stabilize closer to the inlet. Consequently, the overall flame front becomes curved, with a concave shape towards the flow direction when viewed from the side. This curvature is a result of the balance between heat recirculation (which promotes upstream preheating) and heat loss (which dampens reactivity). Computational studies show that without external losses, flames are nearly flat; with losses, the curvature emerges as heat transfers transversely from inner to outer channels, trying to compensate for the differential cooling. Thus, the two-dimensional flame shape is a direct manifestation of non-uniform heat loss distribution, impacting stability and requiring design considerations to minimize Ȟ (dimensionless heat loss ratio) for optimal performance.",
+  "original_text": {
+    "1": "For channels near the exterior, there is more external radial heat loss and the flame stabilizes closer to the center where there is less radiative heat loss from the ends of the channels.",
+    "2": "These results show that the flames are two-dimensional on two different scales: the individual flames within the channels are elongated and the overall flame in the burner is curved, which indicates heat loss via transfer in the transverse direction"
+  },
+  "type": "reasoning",
+  "difficulty": 4,
+  "topic": "CFD",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires specific knowledge of combustion science, heat transfer principles, and CFD modeling related to flame behavior in heat recirculating reactors. It involves understanding how external heat losses affect flame curvature and stabilization positions, which are specialized combustion engineering concepts.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer are both high quality - domain-focused with correct, detailed explanation supported by citations"
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_21b13606",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Heat-recirculating-reactors--Fundamental-res_2019_Progress-in-Energy-and-Com",
+    "paper_title": "Heat-recirculating-reactors--Fundamental-res_2019_Progress-in-Energy-and-Com"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:20:54.725812",
+    "answer_length": 1275
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly explains the two-dimensional flame curvature mechanism. It accurately describes that outer channels experience greater heat loss, causing flames to stabilize further downstream (closer to center), while inner channels with less heat loss allow upstream stabilization. This matches the original text's statement that 'channels near the exterior...have more external radial heat loss and the flame stabilizes closer to the center.' The answer also correctly identifies the two-dimensional nature involving both individual channel flames and overall curved flame front, consistent with the original text. The physical principles regarding heat recirculation, radiative/conductive losses, and the balance between preheating and heat loss are sound. The additional details about concave shape, computational studies, and dimensionless heat loss ratio (Ȟ) represent reasonable elaborations that don't contradict the original text. No factual errors or logical inconsistencies detected.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:10:25.623060"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Ambiguous phrasing equating 'further downstream' with 'closer to the reactor center'; axial downstream is not necessarily the axial center.",
+          "Specifies the flame front as 'concave towards the flow direction' without support from the original text; curvature direction is not stated in the source.",
+          "Introduces an undefined symbol (Ȟ) for a heat-loss ratio not mentioned in the original text."
+        ],
+        "reasoning": "The answer correctly states that non-uniform external (radial) heat losses cause differential cooling, leading to variation in local reaction rates and stabilization positions among channels, which produces a two-dimensional, curved overall flame front. It also notes transverse heat transfer across channels, consistent with the source indicating two-dimensionality and heat loss in the transverse direction. Minor issues are limited to wording about geometry/curvature orientation and introducing an undefined parameter, but the core mechanisms align with the original text.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:11:27.730209"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer correctly identifies that radial variations in external heat loss cause the two-dimensional flame curvature. It accurately explains that outer channels lose more heat, causing flames to stabilize further downstream, while inner channels stabilize further upstream, resulting in a curved flame front. This is fully consistent with the provided original text and fundamental combustion principles. The reasoning is logical and factually sound.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:11:49.787193"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:11:49.787215",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

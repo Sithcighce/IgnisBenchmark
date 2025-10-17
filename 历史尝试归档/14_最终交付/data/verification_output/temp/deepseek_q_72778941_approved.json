@@ -1,0 +1,80 @@
+{
+  "question_text": "What distinguishes autocatalytic (AC-type) from thermal decomposition (TD-type) reactions in terms of their kinetic behavior and heat release profiles during isothermal experiments?",
+  "standard_answer": "Autocatalytic (AC-type) and thermal decomposition (TD-type) reactions exhibit fundamentally different kinetic behaviors and heat release profiles. AC-type reactions involve intermediate species that catalyze their own formation, creating positive feedback. In isothermal experiments, AC-type reactions show an induction period with gradually increasing heat flow as catalysts accumulate, reaching a maximum before decaying. This S-shaped profile reflects the autocatalytic mechanism where initial slow radical generation accelerates until catalyst concentration peaks. In contrast, TD-type reactions follow nth-order kinetics where heat flow immediately peaks at experiment start then decays exponentially, as reaction rate depends solely on reactant concentration without self-acceleration. The distinction arises from reaction mechanisms: AC-type involves chain-branching where radicals like ROO• from organic peroxides generate additional reactive species, while TD-type proceeds through direct molecular decomposition. For AC-type, the induction period represents slow accumulation of critical catalyst concentration, after which rapid autocatalytic decomposition occurs. This mechanistic difference has major safety implications, as AC-type substances can appear stable then suddenly undergo violent decomposition after sufficient induction time.",
+  "original_text": {
+    "1": "A TD type reaction is basically accelerated by temperature increase and the reaction rate depends only upon temperature through an n-th order rate law, that is, at a certain temperature the heat flow leaps to the maximum at the beginning and then declines exponentially",
+    "2": "If, at the initial stage, some intermediate free radicals are generated and in turn trigger self-acceleration decomposition, the reaction scheme represents the mechanism of AC type. The generation and consumption of free radicals simultaneously occur in the initial decomposition stage (i.e. induction period), leading to the gradual increase of both reaction rate and heat flow until they reach the climax"
+  },
+  "type": "concept",
+  "difficulty": 4,
+  "topic": "combustion_kinetics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires deep knowledge of combustion kinetics, specifically distinguishing between autocatalytic and thermal decomposition reaction mechanisms, their kinetic behaviors, and heat release profiles during isothermal experiments. This is specialized combustion science knowledge that cannot be answered with general ML or CS expertise.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer are both high quality - question requires domain expertise and answer is factually correct based on the provided citations and paper content."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_72778941",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Assessment-on-thermal-hazards-of-reactive-chemical_2020_Progress-in-Energy-a",
+    "paper_title": "Assessment-on-thermal-hazards-of-reactive-chemical_2020_Progress-in-Energy-a"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:14:32.808871",
+    "answer_length": 1351
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately describes the kinetic behavior and heat release profiles of both AC-type and TD-type reactions, consistent with the original text. For TD-type: correctly states heat flow peaks immediately then decays exponentially, with rate depending on reactant concentration through nth-order kinetics. For AC-type: correctly describes the induction period with gradual heat flow increase due to intermediate radical accumulation, followed by maximum then decay, creating an S-shaped profile. The mechanistic explanations (chain-branching radicals for AC-type vs direct decomposition for TD-type) are sound. The safety implications mentioned are logical extensions. While the answer is more detailed than the original text, all additional information (e.g., ROO• radicals, positive feedback, safety implications) is factually correct and enhances understanding without contradicting the source material.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:03:54.987155"
+      },
+      {
+        "correct": false,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "States that TD-type reaction rate depends solely on reactant concentration; the ground truth specifies the rate depends only upon temperature through an n-th order rate law.",
+          "Describes an 'S-shaped' heat-flow profile for AC-type; the ground truth specifies gradual increase to a maximum (climax) then decay, which could be misread if 'S-shaped' is taken literally for heat flow rather than conversion."
+        ],
+        "reasoning": "The answer correctly distinguishes AC-type and TD-type by their heat-flow behavior in isothermal tests (AC shows an induction period with gradual rise to a maximum; TD shows an immediate maximum followed by exponential decay). However, it contradicts the ground truth by asserting TD-type rate depends solely on reactant concentration, whereas the cited source states dependence only on temperature through an n-th order rate law. The 'S-shaped profile' wording for AC-type heat flow is potentially misleading, though the core trend is aligned.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:04:22.921351"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately describes the distinct kinetic behaviors and heat release profiles of AC-type and TD-type reactions. It correctly identifies the S-shaped profile with an induction period for AC reactions due to self-catalysis, and the immediate peak followed by exponential decay for TD reactions based on nth-order kinetics. The explanation is fully consistent with the provided original text and established principles of chemical kinetics.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:04:40.889327"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:04:40.889346",
+    "consensus": {
+      "all_correct": false,
+      "correct_votes": 2,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 2
+    }
+  }
+}

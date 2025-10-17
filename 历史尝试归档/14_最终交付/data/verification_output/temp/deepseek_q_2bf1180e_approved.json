@@ -1,0 +1,77 @@
+{
+  "question_text": "Why do filtration reactors exhibit superadiabatic temperatures during co-current propagation (reaction zone moving with flow), and how does the propagation velocity relative to the thermal front velocity enable this?",
+  "standard_answer": "Filtration reactors achieve superadiabatic temperatures due to the alignment of combustion and thermal fronts during co-current propagation. The temperature rise ΔT is given by ΔT = ΔT_ad / (1 - u_w/u_t), where ΔT_ad is the adiabatic temperature rise, u_w is the combustion front velocity, and u_t is the thermal front velocity. When u_w < u_t but close in magnitude (co-current propagation), the denominator becomes less than 1, amplifying ΔT beyond adiabatic values. This occurs because the thermal front, driven by heat conduction and radiation through the porous solid, preheats the incoming reactants more effectively when moving in the same direction as the combustion front. The solid acts as a regenerator, storing heat from products and transferring it to reactants, leading to local enthalpy exceeding equilibrium. If u_w = 0 (stationary front), ΔT = ΔT_ad; if u_w and u_t are opposite (counter-current), ΔT < ΔT_ad (subadiabatic). Thus, superadiabatic conditions rely on the synergistic propagation of thermal and reaction fronts, enhancing preheating and reaction rates.",
+  "original_text": {
+    "1": "The temperature increase may be significantly greater than that due to adiabatic combustion when u_w is less than u_t but close in magnitude so that the thermal and combustion fronts shown in Fig. 16 are nearly aligned.",
+    "2": "According to Zhdanok's theory, superadiabatic temperatures only occur when the combustion front is propagating in the same direction as the flow (co-currently)."
+  },
+  "type": "reasoning",
+  "difficulty": 5,
+  "topic": "combustion_science",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires specialized knowledge of combustion science, specifically filtration reactors, superadiabatic temperatures, thermal front propagation, and heat recirculation mechanisms. It involves understanding combustion front dynamics, thermal transport in porous media, and the physics of excess enthalpy combustion - all core combustion science concepts.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_2bf1180e",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Heat-recirculating-reactors--Fundamental-res_2019_Progress-in-Energy-and-Com",
+    "paper_title": "Heat-recirculating-reactors--Fundamental-res_2019_Progress-in-Energy-and-Com"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:20:55.127943",
+    "answer_length": 1082
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly explains superadiabatic temperatures in filtration reactors. It accurately states that: (1) superadiabatic conditions occur during co-current propagation when u_w < u_t with fronts nearly aligned, consistent with original text [1]; (2) the mathematical relationship ΔT = ΔT_ad / (1 - u_w/u_t) correctly shows temperature amplification when the denominator is less than 1; (3) the physical mechanism of thermal front preheating reactants and the solid acting as a regenerator is sound; (4) the co-current requirement matches original text [2]. The answer also correctly contrasts with stationary (u_w = 0) and counter-current cases. All physical principles, causal relationships, and logical reasoning are correct and consistent with the original text.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:10:32.397395"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer aligns with the ground-truth points: superadiabatic temperatures occur when the combustion front propagates co-currently and u_w < u_t with near alignment of thermal and reaction fronts. The provided amplification relation ΔT = ΔT_ad / (1 - u_w/u_t) is consistent with Zhdanok-type theory, correctly explaining how ΔT exceeds adiabatic when u_w approaches u_t from below. The mechanism of regenerative heat transfer in the porous matrix and the note that counter-current yields subadiabatic behavior are also consistent. No factual or logical errors detected.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:11:11.001693"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly explains the mechanism of superadiabatic combustion in filtration reactors. It accurately identifies the role of co-current propagation, the relative velocities of the combustion (u_w) and thermal (u_t) fronts, and the heat recuperation by the porous solid matrix. The provided formula and its interpretation are correct and consistent with established theory and the original text. The reasoning is logically sound and factually accurate.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:11:28.855921"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:11:28.855943",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "question_text": "How does the transition from forced to natural convection impact mass transfer rates to the coal sidewall in UCG, and what dimensionless numbers govern this transition?",
+  "standard_answer": "The transition from forced to natural convection significantly enhances mass transfer rates to the coal sidewall in UCG due to buoyancy-driven flows. Forced convection, driven by pressure gradients from oxidant injection, typically yields lower Sherwood numbers (Sh_fc) correlated with Reynolds number (Re) and Schmidt number (Sc). In contrast, natural convection, induced by density variations from heating and combustion, produces higher Sh_nc values correlated with Grashof number (Gr) and Sc. The Grashof number (Gr = gβΔT L^3/ν^2) quantifies buoyancy forces relative to viscous forces, where g is gravity, β is thermal expansion coefficient, ΔT is temperature difference, L is characteristic length, and ν is kinematic viscosity. Under UCG conditions, natural convection can increase mass transfer rates by up to an order of magnitude compared to forced convection, as density gradients from high-temperature reactions (e.g., >1000 K) dominate flow patterns. The transition occurs when Gr/Re^2 >> 1, indicating buoyancy dominance. Turbulent natural convection requires Gr > 10^9, common in UCG cavities due to large L and ΔT, enhancing reactant transport to the wall and accelerating cavity growth.",
+  "original_text": {
+    "1": "Early thinking in UCG assumed that forced convection was the dominating mass transfer mechanism, but modeling studies could not explain field observations.",
+    "2": "Eddy and Schwarz showed that heat and mass transfer rates resulting from natural convection were up to an order of magnitude greater than forced convection rates under typical conditions."
+  },
+  "type": "reasoning",
+  "difficulty": 5,
+  "topic": "fluid_mechanics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires specific knowledge of fluid mechanics (forced vs natural convection, dimensionless numbers), combustion science (UCG processes, mass transfer to coal sidewall), and energy systems (underground coal gasification). It cannot be answered with general ML/CS knowledge alone.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer are well-aligned with domain focus and paper content. No issues detected."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_15654699",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Underground-coal-gasification---Part-II--Funda_2018_Progress-in-Energy-and-C",
+    "paper_title": "Underground-coal-gasification---Part-II--Funda_2018_Progress-in-Energy-and-C"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:32:15.267465",
+    "answer_length": 1203
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly explains the transition from forced to natural convection in UCG and its impact on mass transfer rates. Key points verified: (1) Natural convection enhances mass transfer rates compared to forced convection - consistent with original text stating 'up to an order of magnitude greater'; (2) Correct dimensionless numbers identified (Sherwood, Reynolds, Schmidt, Grashof); (3) Grashof number formula and physical interpretation are accurate; (4) The transition criterion Gr/Re^2 >> 1 is correct for buoyancy dominance; (5) Physical mechanisms (buoyancy-driven flows, density gradients from high temperatures) are sound. The answer provides extensive detail beyond the original text, including mathematical formulations and specific conditions (Gr > 10^9 for turbulent natural convection), but all statements are factually accurate and logically consistent with combustion science principles. The elaboration enhances understanding without introducing errors.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:24:22.999024"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "Consistent with the PECS ground truth, the answer correctly states that natural convection can increase mass transfer rates by up to an order of magnitude relative to forced convection. It accurately identifies governing dimensionless groups (Re, Sc for forced; Gr, Sc for natural) and uses the standard mixed-convection criterion Gr/Re^2 >> 1 for the transition. The physical reasoning (buoyancy-driven flows due to high ΔT in UCG cavities) is sound and does not contradict the original text.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:24:43.608038"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer is factually correct and consistent with the original text. It accurately explains that natural convection significantly enhances mass transfer rates in UCG, providing the correct governing dimensionless numbers (Gr, Re, Sc, Sh) and the transition criterion (Gr/Re^2 >> 1). The physical reasoning, linking UCG conditions (large L, large ΔT) to buoyancy dominance, is sound and correctly elaborates on the principles underlying the observation in the original text.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:25:03.892975"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:25:03.893004",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

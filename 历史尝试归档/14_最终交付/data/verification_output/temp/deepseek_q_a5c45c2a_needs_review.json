@@ -1,0 +1,82 @@
+{
+  "question_text": "In catalytic hydrodeoxygenation (HDO), why do phenolic compounds exhibit higher resistance to deoxygenation compared to aliphatic oxygenates, and how do bond dissociation energies and reaction pathways influence this reactivity trend?",
+  "standard_answer": "Phenolic compounds resist deoxygenation due to the strong aromatic C–O bond and the stability of the aromatic ring, whereas aliphatic oxygenates have weaker C–O bonds and are more reactive. The bond dissociation energy for Ar–OH (phenolic) is approximately 468 kJ/mol, significantly higher than for R–OH (aliphatic, 385 kJ/mol) or R–OR' (422 kJ/mol), making scission energetically unfavorable. In HDO, phenolics like guaiacol require hydrogenation of the aromatic ring to cyclohexanol intermediates before deoxygenation, a multi-step pathway that demands high hydrogen pressure and specific catalysts (e.g., sulfided CoMo). This hydrogenation step weakens the C–O bond by reducing resonance stabilization, but it is thermodynamically limited at higher temperatures (>275°C), where direct deoxygenation (DDO) to benzene may occur but faces kinetic barriers. In contrast, aliphatic oxygenates (e.g., ketones, acids) undergo direct decarbonylation or hydrogenation more readily due to lower activation energies and absence of aromatic stabilization. For instance, acetic acid decarboxylates easily over catalysts like Pd/C, while phenol deoxygenation requires rigorous conditions. The reactivity trend follows: aldehydes/ketones > acids > furans > phenols, with phenolics having the highest isoreactive temperatures (>300°C) and activation energies.",
+  "original_text": {
+    "1": "Phenolic species, primarily derived from lignin, are very resistant to HDO owing to the strong Ar(cid:1)(cid:1)O bond and the stabilizing nature of the aromatic ring.",
+    "2": "The bond dissociation energy for breakage of C(cid:1)(cid:1)O bonds follows the trend Ar(cid:1)(cid:1)OH > Ar(cid:1)(cid:1)OR > R(cid:1)(cid:1)OH > R(cid:1)(cid:1)OR’ with dissociation energies of 468, 422, 385, and 339 kJ/mol, respectively."
+  },
+  "type": "concept",
+  "difficulty": 5,
+  "topic": "combustion_kinetics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires specific knowledge of catalytic hydrodeoxygenation (HDO) chemistry, bond dissociation energies, and reaction pathways for different oxygenated compounds - all core concepts in combustion science, fuel processing, and chemical kinetics relevant to energy systems.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_a5c45c2a",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Transportation-fuels-from-biomass-fast-pyrolysis--ca_2018_Progress-in-Energy",
+    "paper_title": "Transportation-fuels-from-biomass-fast-pyrolysis--ca_2018_Progress-in-Energy"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:32:00.613979",
+    "answer_length": 1346
+  },
+  "verification": {
+    "status": "needs_review",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer is factually accurate and consistent with the original text. It correctly states that phenolic compounds resist deoxygenation due to strong aromatic C–O bonds (Ar–OH bond dissociation energy ~468 kJ/mol) compared to aliphatic oxygenates (R–OH ~385 kJ/mol, R–OR' ~339 kJ/mol), matching the bond dissociation energy trend from the original text. The answer correctly explains that aromatic ring stability contributes to resistance, and provides mechanistically sound explanations of HDO pathways (hydrogenation to cyclohexanol intermediates, direct deoxygenation routes). The reactivity trend (aldehydes/ketones > acids > furans > phenols) is chemically logical and consistent with the bond strength principles. While the answer is detailed and includes information beyond the original text (e.g., specific catalysts, temperature ranges, reaction mechanisms), all additional statements are scientifically sound and do not contradict the original text. The core principle that phenolic compounds are more resistant to HDO due to stronger Ar–O bonds and aromatic stabilization is correctly conveyed.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:23:53.599706"
+      },
+      {
+        "correct": false,
+        "baseline_confidence": "medium",
+        "verification_confidence": "high",
+        "issues": [
+          "Misassignment of bond dissociation energies: the answer gives 422 kJ/mol for R–OR’, but the ground-truth value is 339 kJ/mol; 422 kJ/mol corresponds to Ar–OR.",
+          "Incorrect trend implied by the stated energies: the proper sequence is Ar–OH (468) > Ar–OR (422) > R–OH (385) > R–OR’ (339), which the answer does not present correctly."
+        ],
+        "reasoning": "The explanation of phenolics resisting HDO due to strong aromatic C–O bonds and ring stabilization aligns with the original text. However, the bond dissociation energy values are incorrectly assigned, contradicting the ground-truth data and the correct trend. This constitutes a factual error, so the answer should be marked incorrect.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:24:15.491670"
+      },
+      {
+        "correct": false,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "The answer incorrectly states the bond dissociation energy (BDE) for an aliphatic ether (R–OR') as 422 kJ/mol. According to the provided original text, the BDE for R–OR' is 339 kJ/mol, while 422 kJ/mol is the BDE for an aromatic ether (Ar–OR)."
+        ],
+        "reasoning": "The answer contains a factual error regarding a specific bond dissociation energy value. It misattributes the BDE of an aromatic ether (Ar–OR) to an aliphatic ether (R–OR'), directly contradicting the provided original text which serves as the ground truth. Although the rest of the explanation of reaction pathways and general principles is detailed and largely correct, this specific numerical error makes the answer factually incorrect.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:24:35.106963"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:24:35.106988",
+    "consensus": {
+      "all_correct": false,
+      "correct_votes": 1,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 1
+    }
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "question_text": "Based on the provided paper content, explain how different fuel injection strategies (direct cavity injection vs. upstream diffuser injection) affect fuel-air mixing and combustion stability in trapped vortex combustors, specifically addressing the mechanisms supported by the citations.",
+  "standard_answer": "The paper identifies two primary fuel injection strategies for trapped vortex combustors with distinct effects on mixing and stability. Direct cavity injection reinforces the locked vortex when fuel is supplied in a way that strengthens the recirculation zone. Citation 1 states: 'When the fuel is injected directly into the cavity, it is desirable to supply the fuel in such way that the locked vortex in the cavity is reinforced.' This reinforcement stabilizes combustion by maintaining the vortex that anchors the flame. Additionally, direct injection promotes fuel-air mixing as 'the fuel-air mixing in the cavity will be promoted, as the bypass air is directly added into the cavity.' The stable recirculation zone, shielded from the main flow, enables combustion stability even with high-speed inflows. In contrast, upstream diffuser injection pre-mixes fuel and air before entry into the combustor, as noted in Citation 1: 'Injecting from the diffuser leads to the fuel being mixed with the air before it enters the combustor.' This pre-mixing can enhance uniformity but may not directly reinforce the cavity vortex. The location of direct injection is critical; for example, in single vortex designs, 'the fuel injectors are located just above the centerline of the front face of the cavity' (Citation 2), and variations in placement can significantly impact performance, underscoring the importance of precise injection positioning for optimal stability and mixing.",
+  "original_text": {
+    "1": "Injecting from the diffuser leads to the fuel being mixed with the air before it enters the combustor. When the fuel is injected directly into the cavity, it is desirable to supply the fuel in such way that the locked vortex in the cavity is reinforced.",
+    "2": "Locating the fuel deep in the cavity plays a critical role in achieving good idle performance. The single vortex design is shown in Fig. 6(e); the fuel injectors are located just above the centerline of the front face of the cavity."
+  },
+  "type": "concept",
+  "difficulty": 4,
+  "topic": "combustion_kinetics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires specific knowledge of trapped vortex combustor design, fuel injection strategies, cavity aerodynamics, and combustion stability mechanisms - all core combustion science and fluid mechanics concepts that cannot be answered with general ML knowledge.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+  },
+  "retry_count": 1,
+  "question_id": "deepseek_q_a61bc372",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "A-review-of-cavity-based-trapped-vortex--ultra-c_2018_Progress-in-Energy-and",
+    "paper_title": "A-review-of-cavity-based-trapped-vortex--ultra-c_2018_Progress-in-Energy-and"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:14:43.769056",
+    "answer_length": 1474
+  },
+  "verification": {
+    "status": "needs_review",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately represents the information from the original text and demonstrates sound understanding of trapped vortex combustor fuel injection strategies. All direct quotes are accurate. The answer correctly explains that direct cavity injection reinforces the locked vortex and promotes fuel-air mixing, while upstream diffuser injection pre-mixes fuel and air before combustor entry. The discussion of injection location criticality is supported by Citation 2. The physical mechanisms described (vortex reinforcement, recirculation zone stabilization, flame anchoring) are consistent with combustion science principles. The answer provides appropriate elaboration beyond the original text (e.g., explaining how stable recirculation enables combustion stability with high-speed inflows) without introducing factual errors. No contradictions with the original text or logical inconsistencies are present.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:01:15.418781"
+      },
+      {
+        "correct": false,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Invented quotation about fuel-air mixing and 'bypass air is directly added into the cavity'—not present in the provided citations.",
+          "Asserts that direct fuel injection adds bypass air to the cavity; this is unsupported and physically incorrect in this context.",
+          "Includes mechanisms (shielding from main flow enabling stability at high-speed inflows) not supported by the provided citations.",
+          "Omits the citation-backed point that locating the fuel deep in the cavity is critical for good idle performance."
+        ],
+        "reasoning": "While the answer correctly captures that diffuser injection pre-mixes and that direct cavity injection should reinforce the locked vortex, it fabricates a quote and introduces an incorrect mechanism involving bypass air. It also misses the cited importance of locating fuel deep in the cavity for idle performance.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:01:41.972760"
+      },
+      {
+        "correct": false,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "The answer incorrectly attributes a statement to the source material. It includes the phrase 'the fuel-air mixing in the cavity will be promoted, as the bypass air is directly added into the cavity' and implies it is from the paper, but this information is not present in the provided original text."
+        ],
+        "reasoning": "The answer is marked as incorrect because it presents information as being from the source text when it is not. The question explicitly asks for an explanation 'Based on the provided paper content'. By including a statement about fuel-air mixing being promoted by bypass air—a detail not found in the provided citations—and framing it as part of the paper's explanation, the answer makes a factual error regarding the content of the source document. This violates the primary constraint of the question.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:02:27.121838"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:02:27.121858",
+    "consensus": {
+      "all_correct": false,
+      "correct_votes": 1,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 1
+    }
+  }
+}

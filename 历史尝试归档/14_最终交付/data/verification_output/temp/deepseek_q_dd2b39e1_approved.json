@@ -1,0 +1,77 @@
+{
+  "question_text": "According to the paper by Gonzalez-Juez et al., what are the fundamental closure problems in LES/RANS modeling of high-speed turbulent combustion, and why do traditional scale-separation assumptions become inadequate in this context?",
+  "standard_answer": "The fundamental closure problems in LES/RANS modeling of high-speed turbulent combustion involve multiple unclosed terms in the filtered conservation equations. These include the average chemical source term, which requires turbulent combustion modeling to account for subgrid turbulence-chemistry interactions, and the high-speed source term involving pressure-dilatation and viscous heating that becomes significant and requires closure models accounting for compressibility effects. Additionally, subgrid stress terms, internal energy fluxes, and species transport fluxes all require modeling. Traditional scale-separation assumptions become inadequate because they 'traditionally assume that the scales of the turbulence are separated enough from those relevant to combustion.' However, this practice 'disregards the close coupling between flow compressions and expansions and combustion' observed in high-speed combustion environments. In high-speed combustion, the strong interactions between combustion and flow compressions/expansions mean that turbulence models developed for nonreacting flows cannot adequately capture the two-way interactions where combustion affects turbulence through mechanisms like baroclinic torque generation and pressure-dilatation effects. The assumption that turbulence scales are well-separated from combustion scales breaks down when there is significant overlap between turbulent and combustion scales, particularly in distributed-reaction zones where turbulent eddies penetrate reaction zones.",
+  "original_text": {
+    "1": "the closure problem of turbulent combustion, i.e., modeling all the terms in Table 2, traditionally assumes that the scales of the turbulence are separated enough from those relevant to combustion",
+    "2": "this practice disregards the close coupling between flow compressions and expansions and combustion seen in Fig. 6"
+  },
+  "type": "concept",
+  "difficulty": 4,
+  "topic": "CFD_modeling",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires deep expertise in CFD modeling, specifically LES/RANS approaches for high-speed turbulent combustion, including closure problems, scale-separation assumptions, and interactions between turbulence and combustion physics - all core combustion science and fluid mechanics concepts.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+  },
+  "retry_count": 1,
+  "question_id": "deepseek_q_dd2b39e1",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Advances-and-challenges-in-modeling-high-speed-t_2017_Progress-in-Energy-and",
+    "paper_title": "Advances-and-challenges-in-modeling-high-speed-t_2017_Progress-in-Energy-and"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:14:49.410997",
+    "answer_length": 1534
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately addresses the fundamental closure problems in LES/RANS modeling of high-speed turbulent combustion. It correctly identifies multiple unclosed terms (chemical source term, pressure-dilatation, viscous heating, subgrid stresses, fluxes) which is consistent with the reference to 'all the terms in Table 2' in the original text. The answer accurately quotes and paraphrases the two key points from the original text: (1) traditional scale-separation assumptions between turbulence and combustion scales, and (2) the inadequacy of this practice due to close coupling between flow compressions/expansions and combustion. The additional explanations about two-way interactions, baroclinic torque, distributed-reaction zones, and turbulent eddies penetrating reaction zones are physically sound elaborations that are consistent with established combustion science principles and do not contradict the original text. While the answer is detailed, all statements are factually accurate and logically consistent.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:02:16.162535"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "medium",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer aligns with the original text: it identifies the need to close multiple filtered terms (consistent with modeling all terms in Table 2) and explains that traditional scale-separation assumptions fail because they ignore the strong coupling between flow compressions/expansions and combustion in high-speed regimes. The added details (pressure-dilatation, viscous heating, subgrid stresses, scalar/energy fluxes) are physically sound and consistent with compressible turbulent combustion, without contradicting the ground truth.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:02:34.484536"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer is factually correct and logically sound. It accurately identifies the key closure problems in high-speed combustion (chemical source term, pressure-dilatation, etc.) and correctly explains why scale-separation assumptions fail, which is due to the strong two-way coupling between compressibility and combustion. This explanation is fully consistent with the provided original text and elaborates on it with correct physical principles, such as baroclinic torque and distributed reaction zones.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:02:53.148998"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:02:53.149026",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

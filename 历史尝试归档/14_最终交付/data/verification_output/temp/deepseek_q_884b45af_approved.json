@@ -1,0 +1,82 @@
+{
+  "question_text": "How does the strong temperature dependence of thermal conduction in laser plasmas (k ∝ T^n) influence the structure of the laser deflagration front, and what are the implications for modeling the ablation surface as a discontinuity?",
+  "standard_answer": "The strong temperature dependence of thermal conduction (k ∝ T^n, with n typically 0.7–6.5) creates a continuum of length scales in the laser deflagration front, bounded by the cold plasma scale La = κa/(C_p ρ_a U_a) and hot plasma scale L_c = κ_c/(C_p ρ_c U_c). For n > 1, the ratio L_c/L_a = (T_c/T_a)^n can exceed 10^3, leading to extreme gradients near the ablation surface. The temperature profile follows T = T_c [n(z - z_a)/L_c]^(1/n) for Ta/T_c → 0, resulting in diverging gradients at z → z_a when n > 1. This makes the ablation surface poorly approximated as a discontinuity because the region of high gradients (thickness ~L_a) is not negligible compared to external scales like L_c. For instance, with n = 5/2 and T_c/T_a = 16, L_c/L_a ≈ 1000, so the ablation zone thickness is significant relative to L_c, violating the discontinuity assumption. Only for unrealistically high n (e.g., n = 6.5 for radiative conduction) might the discontinuity model be marginally applicable, but for typical ICF parameters, finite-thickness effects must be included.",
+  "original_text": {
+    "1": "Because of the strong temperature dependence of the thermal conduction coefficient, we find a large difference between the two length scales in Eq. (14), L_c/L_a = κ_c/κ_a = (T_c/T_a)^n.",
+    "2": "For strong temperature dependence of the thermal conduction coefficient, n > 1, typical for laser plasmas, the scaling law Eq. (17) results in diverging temperature gradients at the ablation surface, z → z_a, as illustrated in Fig. 6."
+  },
+  "type": "reasoning",
+  "difficulty": 5,
+  "topic": "heat_transfer",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires specialized knowledge in laser plasmas, thermal conduction physics, deflagration front structure, and ablation surface modeling - all specific to combustion science applications in inertial confinement fusion (ICF) and plasma physics.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and compliant with other requirements."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_884b45af",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Combustion-phenomena-in-modern-physics--I--In_2015_Progress-in-Energy-and-Co",
+    "paper_title": "Combustion-phenomena-in-modern-physics--I--In_2015_Progress-in-Energy-and-Co"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:18:11.118635",
+    "answer_length": 1062
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly explains how strong temperature dependence (k ∝ T^n with n > 1) creates extreme gradients at the ablation surface. It accurately describes: (1) the ratio L_c/L_a = (T_c/T_a)^n from the original text's Eq. (14), (2) the diverging temperature gradients at z → z_a for n > 1 as stated in the original text, and (3) the implications for modeling the ablation surface as a discontinuity. The temperature profile formula T = T_c [n(z - z_a)/L_c]^(1/n) is consistent with the scaling law mentioned in the original text (Eq. 17). The numerical example (n = 5/2, T_c/T_a = 16 giving L_c/L_a ≈ 1000) correctly demonstrates the extreme gradient issue. The conclusion that the ablation surface cannot be well-approximated as a discontinuity for typical ICF parameters logically follows from the diverging gradients described in the original text. All physical principles and cause-effect relationships are sound and consistent with the original text.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:06:53.864483"
+      },
+      {
+        "correct": false,
+        "baseline_confidence": "medium",
+        "verification_confidence": "high",
+        "issues": [
+          "Internal logical contradiction: the answer asserts L_c/L_a ≈ 10^3 yet claims the ablation-zone thickness (~L_a) is significant relative to L_c; a large L_c/L_a implies L_a is negligible compared to L_c.",
+          "Incorrect implication about discontinuity modeling: greater scale separation (larger n and larger L_c/L_a) would generally strengthen the discontinuity approximation, not weaken it.",
+          "Unverified specific temperature profile expression T = T_c [n(z - z_a)/L_c]^(1/n) is introduced without support; while divergence of gradients for n>1 is consistent with the ground truth, the exact form is not substantiated here.",
+          "Questionable numerical range for n (0.7–6.5) and attribution of radiative conduction exponent (n = 6.5) are unsupported by the provided ground-truth text and may be inaccurate."
+        ],
+        "reasoning": "The standard answer correctly reflects two key points from the ground truth: (1) strong temperature dependence leads to large scale separation L_c/L_a = (T_c/T_a)^n, and (2) for n>1 the temperature gradient diverges near the ablation surface. However, it then draws a flawed conclusion about the discontinuity approximation, claiming the ablation-zone thickness is significant relative to L_c despite stating L_c/L_a ≫ 1. This is a clear logical inconsistency. The added numerical range for n and a specific temperature profile are not supported by the ground-truth excerpt and may be inaccurate, further undermining the answer.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:07:23.571878"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer correctly explains the physical mechanism. It accurately states that the T^n dependence of thermal conductivity leads to a large ratio of characteristic length scales (L_c/L_a), which causes diverging temperature gradients at the cold ablation surface for n > 1. This complex internal structure, with a finite-thickness cold layer (L_a), invalidates the modeling of the ablation front as a simple discontinuity. The reasoning is physically sound, the mathematical relationships are correct, and the conclusions are fully consistent with the provided original text.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:07:47.950004"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:07:47.950024",
+    "consensus": {
+      "all_correct": false,
+      "correct_votes": 2,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 2
+    }
+  }
+}

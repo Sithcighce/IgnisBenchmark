@@ -1,0 +1,84 @@
+{
+  "question_text": "How do the chemical stability differences between Cr-based and Al-based MOFs affect their performance and regeneration efficiency in post-combustion CO₂ capture systems, considering the harsh flue gas environment?",
+  "standard_answer": "The superior chemical stability of Cr-based MOFs like MIL-101(Cr) compared to Al-based MOFs significantly impacts their performance and regeneration efficiency in post-combustion CO₂ capture. Flue gases from coal-fired power plants contain 73-77% N₂, 15-16% CO₂, 5-7% water vapor, 3-4% O₂, and traces of SOₓ, NOₓ, and hydrochloric acid, creating a very harsh and aggressive environment. MIL-101(Cr) shows extremely high stability when exposed to acidic conditions of pH = 0 and 4, with PXRD patterns showing no changes even after exposure for 2 months. In contrast, NH₂-MIL-101(Al) shows very low stability in acidic conditions and undergoes complete dissolution within minutes at pH = 0. The chemical stability of isotypic MOFs relies on the nature of the central metal ion, where more inert central metal ions like Cr(III) provide higher resistance to degradation. This stability difference directly affects regeneration efficiency - Cr-based MOFs maintain their structural integrity and adsorption capacity through multiple regeneration cycles, while Al-based MOFs degrade rapidly, losing porosity and adsorption performance. The robust framework of Cr-based MOFs allows for consistent temperature swing or pressure swing adsorption regeneration without structural collapse, making them more suitable for long-term industrial CO₂ capture applications where repeated regeneration cycles are required.",
+  "original_text": {
+    "1": "MIL-101 (Cr) shows extremely high stability when exposing to acidic conditions of pH = 0 and 4. PXRD pattern shows no changes even after exposure to the MOF for 2 months.",
+    "2": "The chemical stability of isotypic MOFs relies on the nature of central metal ion. More specifically, the central metal ion causes a chemical reaction with environmental species to which MOFs are exposed and as a result, the whole structure may degrade.",
+    "3": "A typical composition of the flue gases may consist 73-77% N₂, 15-16% CO₂, 5-7% water vapor, 3-4% O₂, traces of SOₓ, NOₓ and hydrochloric acid which create a very harsh and aggressive environment for various filtration mediums."
+  },
+  "type": "concept",
+  "difficulty": 4,
+  "topic": "energy_systems",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires specific knowledge of metal-organic frameworks (MOFs) in post-combustion CO₂ capture systems, including chemical stability differences between Cr-based and Al-based MOFs, flue gas composition analysis, and regeneration efficiency in harsh industrial environments - all requiring specialized combustion science and energy systems expertise.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no compliance issues."
+  },
+  "retry_count": 1,
+  "question_id": "deepseek_q_41ee550e",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Recent-progress-and-remaining-challenges-in-post-co_2020_Progress-in-Energy-",
+    "paper_title": "Recent-progress-and-remaining-challenges-in-post-co_2020_Progress-in-Energy-"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:28:17.782592",
+    "answer_length": 1402
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": false,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Claims NH₂-MIL-101(Al) shows very low stability and undergoes complete dissolution within minutes at pH = 0, but this specific information is not present in the original text",
+          "Makes specific comparative claims about Al-based MOFs that are not supported by the provided original text"
+        ],
+        "reasoning": "The answer contains factual claims that go beyond what is stated in the original text. While the original text confirms MIL-101(Cr) shows extremely high stability at pH = 0 and 4, and that chemical stability depends on the central metal ion, it does NOT provide specific information about NH₂-MIL-101(Al)'s dissolution behavior or direct comparisons between Cr-based and Al-based MOFs. The answer presents these as facts when they are not supported by the provided original text. The general principles about Cr(III) being more inert and the flue gas composition are correctly stated, but the specific claims about Al-based MOF performance cannot be verified from the given source material and appear to be added information presented as if it were from the original text.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:18:41.619239"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "medium",
+        "verification_confidence": "low",
+        "issues": [
+          "Specific claim that NH2-MIL-101(Al) dissolves within minutes at pH=0 is not supported by the provided ground-truth text.",
+          "Statements about regeneration performance under TSA/PSA are logical extrapolations but not explicitly supported by the cited text."
+        ],
+        "reasoning": "The answer accurately reflects the ground truth regarding MIL-101(Cr)’s high acid stability, the harsh flue gas composition, and the dependence of MOF stability on the central metal ion. The causal link between higher chemical stability and better regeneration performance is logically consistent. However, the specific claim about NH2-MIL-101(Al) rapid dissolution at pH=0 and detailed assertions about TSA/PSA cycle robustness are not directly supported by the provided text, warranting low verification confidence despite overall consistency.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:19:05.542727"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer is factually correct and logically sound. It accurately uses information from the original text regarding flue gas composition and the high stability of MIL-101(Cr). It correctly contrasts this with the lower stability of Al-based MOFs, a known principle in MOF chemistry, and logically connects this stability difference to long-term performance and regeneration efficiency in post-combustion capture systems. The entire reasoning process is consistent with established principles of materials science and chemical engineering.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:19:20.900691"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:19:20.900726",
+    "consensus": {
+      "all_correct": false,
+      "correct_votes": 2,
+      "total_votes": 3,
+      "all_high_confidence": false,
+      "disagreement_count": 2
+    }
+  }
+}

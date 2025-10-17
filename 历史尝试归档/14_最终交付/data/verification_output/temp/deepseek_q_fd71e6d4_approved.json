@@ -1,0 +1,80 @@
+{
+  "question_text": "How do metal-support interactions in bifunctional catalysts affect the reaction mechanism of dry reforming, particularly in terms of reactant activation and intermediate formation?",
+  "standard_answer": "Metal-support interactions create bifunctional pathways where methane and carbon dioxide activate on different sites, with the metal-support interface serving as the reaction zone. Methane undergoes dissociative adsorption on metal sites through sequential C-H bond cleavage (CH₄ → CH₃ → CH₂ → CH → C), which is often rate-limiting due to the high CH₃-H bond energy of 439.3 kJ/mol. Carbon dioxide activation occurs predominantly on the support or metal-support interface, where it can dissociate directly to CO and adsorbed oxygen or form carbonate precursors on basic sites. The interfacial region enables spillover phenomena: hydrogen from methane dissociation spills over to the support to form hydroxyl groups with adsorbed oxygen, while oxygen species migrate to metal sites to oxidize CHₓ fragments into CHₓO intermediates. These CHₓO species then rapidly decompose to CO and H₂. The support's basicity enhances CO₂ adsorption through carbonate formation, while redox-active supports like ceria provide mobile oxygen for carbon gasification. This spatial separation of activation sites and the interfacial reaction zone optimize the reaction pathway while minimizing direct competition between reactants for the same active sites.",
+  "original_text": {
+    "1": "CH₄ and CO₂ are activated on two different sites and the reaction between the intermediates formed is taking place at the metal–support interface",
+    "2": "Carbon dioxide adsorbs on the support, the metal surface and on the metal-support interface. Nevertheless, in most cases, carbon dioxide adsorbs on the support or at the interface with the metal"
+  },
+  "type": "reasoning",
+  "difficulty": 5,
+  "topic": "reaction_mechanisms",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires deep knowledge of catalysis, specifically metal-support interactions in bifunctional catalysts for dry reforming of methane, which involves reaction mechanisms, reactant activation pathways, and intermediate formation - all core concepts in chemical engineering and catalysis science within the energy/combustion domain.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_fd71e6d4",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Analysis-of-Dry-Reforming-as-direct-route-for-gas-phas_2022_Progress-in-Ener",
+    "paper_title": "Analysis-of-Dry-Reforming-as-direct-route-for-gas-phas_2022_Progress-in-Ener"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:14:17.407964",
+    "answer_length": 1237
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately reflects the original text and provides correct mechanistic details. It correctly states that CH₄ and CO₂ activate on different sites with the metal-support interface as the reaction zone, which aligns with the original text [1]. It also correctly notes that CO₂ adsorbs predominantly on the support or metal-support interface, consistent with original text [2]. The additional mechanistic details about CH₄ dissociation pathways, bond energies, spillover phenomena, and the role of support basicity are all scientifically sound and represent reasonable elaboration beyond the original text. No factual errors or logical contradictions are present.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:03:28.769249"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Minor phrasing: the bond energy cited is the C–H bond in methane (~439 kJ/mol); calling it 'CH3–H' could be confusing.",
+          "Direct CO2 dissociation to CO + O* is material-dependent and more typical on reducible oxides/interfaces; the statement is broadly plausible but not universally true."
+        ],
+        "reasoning": "The answer aligns with the ground-truth statements: CH4 and CO2 activate on different sites, and their intermediates react at the metal–support interface. It correctly states that CO2 adsorption is predominant on the support or interface and elaborates mechanisms (CHx formation on metal, carbonate/oxygen species on support, interfacial spillover and oxidation to CHxO leading to CO and H2) that are consistent with established DRM bifunctional catalysis. No factual or logical contradictions with the original text were found.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:03:52.526444"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer accurately describes the bifunctional mechanism for dry reforming, consistent with the provided original text. It correctly identifies the separate activation sites for CH₄ (metal) and CO₂ (support/interface) and the role of the interface for intermediate reactions like spillover. All chemical principles and mechanistic steps described, including the rate-limiting nature of C-H bond cleavage and the role of support properties (basicity, redox), are factually correct and well-established in catalysis literature.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:04:11.005883"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:04:11.005904",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

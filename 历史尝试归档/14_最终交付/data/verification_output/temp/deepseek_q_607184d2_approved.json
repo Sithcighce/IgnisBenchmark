@@ -1,0 +1,80 @@
+{
+  "question_text": "Calculate the ideal solar-to-work efficiency for a hybrid system with a mean solar flux concentration ratio of 1000, receiver temperature of 800°C, and cold reservoir at 25°C, and explain how combustion integration affects this efficiency compared to a solar-only system.",
+  "standard_answer": "The ideal solar-to-work efficiency is given by η_solar-to-work,ideal = [1 - (σT_H⁴)/(C I)] * [1 - (T_L/T_H)], where σ = 5.67e-8 W/m²K⁴, T_H = 800 + 273 = 1073 K, T_L = 25 + 273 = 298 K, C = 1000, and I ≈ 1000 W/m² (typical DNI). First, compute the radiation term: σT_H⁴ = 5.67e-8 * (1073)^4 ≈ 5.67e-8 * 1.33e12 ≈ 75,411 W/m². Then, (σT_H⁴)/(C I) = 75,411 / (1000 * 1000) = 0.0754. The Carnot term is 1 - (T_L/T_H) = 1 - (298/1073) ≈ 1 - 0.2777 = 0.7223. Thus, η_ideal = (1 - 0.0754) * 0.7223 ≈ 0.9246 * 0.7223 ≈ 0.667 or 66.7%. In a hybrid system, combustion integration raises the effective T_H by supplementing heat downstream of the receiver, reducing the impact of re-radiation losses. For example, if combustion increases the cycle inlet temperature to 1200°C (1473 K), the Carnot efficiency improves to 1 - (298/1473) ≈ 0.797, and radiation losses are mitigated by lower receiver-only temperatures. This shifts the optimum operating point, allowing higher overall efficiency than solar-only systems, which are limited by receiver temperature constraints and intermittent solar flux.",
+  "original_text": {
+    "1": "The ideal solar-to-work energy conversion efficiency of an ideal system is given by, η_solar-to-work,ideal = [1 - (σT_H⁴)/(C I)] * [1 - (T_L/T_H)]",
+    "2": "In a hybrid, there is an incentive to introduce the enthalpy of combustion downstream, rather than upstream, from the receiver. This increases the temperature of the power cycle above that of the receiver, reducing the limitation of the re-radiation losses."
+  },
+  "type": "calculation",
+  "difficulty": 4,
+  "topic": "energy_systems",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires specialized knowledge in energy systems, specifically solar thermal power generation and combustion integration. It involves calculating solar-to-work efficiency using thermodynamic principles (Carnot efficiency, radiation losses) and understanding how combustion affects system performance - core topics in combustion science and energy engineering.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer are well-structured and domain-appropriate. The calculation is correct and the explanation of combustion integration aligns with the cited paper content."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_607184d2",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Solar-thermal-hybrids-for-combustion-power-pl_2018_Progress-in-Energy-and-Co",
+    "paper_title": "Solar-thermal-hybrids-for-combustion-power-pl_2018_Progress-in-Energy-and-Co"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:28:43.706099",
+    "answer_length": 1088
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer correctly applies the ideal solar-to-work efficiency formula from the original text. The numerical calculations are accurate: σT_H⁴ = 75,411 W/m², radiation term = 0.0754, Carnot efficiency = 0.7223, yielding η_ideal ≈ 66.7%. The explanation of combustion integration is consistent with the original text's statement that introducing combustion downstream increases the power cycle temperature above the receiver temperature, thereby reducing re-radiation loss limitations. The example with 1200°C combustion temperature and improved Carnot efficiency (0.797) correctly illustrates this principle. All physical principles are sound and the reasoning is logically consistent.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:19:56.199207"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Assumes DNI I = 1000 W/m^2 (not explicitly given but a standard value)",
+          "Minor rounding in σT_H^4 calculation (does not affect conclusion)"
+        ],
+        "reasoning": "The answer correctly applies the PECS formula η = [1 - (σT_H^4)/(C I)] * [1 - (T_L/T_H)] with T_H = 1073 K, T_L = 298 K, C = 1000, and I ≈ 1000 W/m^2, yielding ~66.7%. The numerical steps are sound. The explanation of hybrid integration is consistent with the original text: adding combustion downstream elevates the power-cycle temperature above the receiver temperature and reduces the constraint from receiver re-radiation losses. The illustrative example of higher Carnot efficiency at 1473 K is logically consistent.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:20:27.922357"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer correctly calculates the ideal solar-to-work efficiency using the provided formula and values. The numerical steps are accurate. The explanation for the effect of combustion integration is also factually and logically sound, correctly stating that adding heat downstream of the receiver decouples the power cycle temperature from the receiver temperature. This allows for a higher Carnot efficiency without incurring prohibitive re-radiation losses (which scale with T_H^4), a concept that is perfectly consistent with the provided original text.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:20:51.514505"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:20:51.514547",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "question_text": "Compare the ignition characteristics of toluene and n-heptane at 800 K and 20 atm pressure, explaining the fundamental combustion chemistry differences that lead to their contrasting research octane numbers (RON) of 124 and 0 respectively. Focus on the role of resonance-stabilized radicals and their impact on oxidation reactivity.",
+  "standard_answer": "Toluene exhibits significantly longer ignition delays than n-heptane under identical conditions due to fundamental differences in their low-temperature oxidation chemistry. The key distinction lies in the formation of resonance-stabilized radicals (RSRs) during aromatic combustion. As stated in the paper: 'Aromatics have higher research octane number (RON) than alkanes, alkenes and cycloalkanes with equivalent C-atoms, which means lower oxidation reactivity. One common reason is the formation of various resonance stabilized radicals (RSRs) in the combustion of aromatics, e.g. benzyl, xylyl, phenoxy and cyclopentadienyl.' In toluene oxidation, the weak benzylic C-H bond (BDE ~88 kcal/mol) facilitates H-abstraction to form benzyl radicals, which are stabilized by resonance delocalization across the aromatic ring. The paper further explains: 'The long-lived RSRs have lower reactivity with O2 than normal radicals. Instead, they recombine other active radicals as radical sink.' This radical-sink behavior significantly retards the chain-branching reactions essential for ignition. In contrast, n-heptane undergoes extensive low-temperature oxidation through alkylperoxy radical isomerization and decomposition, producing highly reactive OH radicals that accelerate ignition. The strong aromatic C-H bonds (~113 kcal/mol) on the toluene ring resist H-abstraction, further limiting radical production. These combined factors - resonance stabilization of benzyl radicals acting as radical sinks and the stability of aromatic ring bonds - make toluene's oxidation reactivity orders of magnitude lower than n-heptane's, explaining their extreme RON difference.",
+  "original_text": {
+    "1": "Aromatics have higher research octane number (RON) than alkanes, alkenes and cycloalkanes with equivalent C-atoms, which means lower oxidation reactivity. One common reason is the formation of various resonance stabilized radicals (RSRs) in the combustion of aromatics, e.g. benzyl, xylyl, phenoxy and cyclopentadienyl.",
+    "2": "The long-lived RSRs have lower reactivity with O2 than normal radicals. Instead, they recombine other active radicals as radical sink."
+  },
+  "type": "concept",
+  "difficulty": 4,
+  "topic": "combustion_kinetics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires deep knowledge of combustion chemistry, specifically comparing ignition characteristics of different hydrocarbon fuels (toluene vs n-heptane), understanding research octane numbers, resonance-stabilized radicals, and oxidation reactivity mechanisms - all core combustion science concepts that cannot be answered with general ML knowledge.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer are both high quality - domain-focused, factually correct based on citations, and compliant with all quality requirements."
+  },
+  "retry_count": 1,
+  "question_id": "deepseek_q_ae54ee38",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Combustion-chemistry-of-aromatic-hydr_2023_Progress-in-Energy-and-Combustion",
+    "paper_title": "Combustion-chemistry-of-aromatic-hydr_2023_Progress-in-Energy-and-Combustion"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:18:48.557310",
+    "answer_length": 1665
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer accurately explains the ignition characteristics differences between toluene and n-heptane. It correctly identifies the formation of resonance-stabilized radicals (RSRs) in aromatic combustion and their role as radical sinks with lower O2 reactivity, which is directly supported by the original text. The explanation of benzyl radical formation from weak benzylic C-H bonds, the radical-sink behavior retarding chain-branching reactions, and the contrast with n-heptane's low-temperature oxidation chemistry are all scientifically sound. The specific bond dissociation energies cited (88 kcal/mol for benzylic C-H, 113 kcal/mol for aromatic C-H) are consistent with established combustion chemistry literature. The causal relationship between RSR formation and reduced oxidation reactivity correctly explains the RON difference. While the answer is detailed, all statements are factually accurate and logically consistent with the original text.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:06:35.332057"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer correctly states that toluene has longer ignition delays than n-heptane at the stated conditions, ties the higher RON of aromatics to lower oxidation reactivity, and accurately attributes this to resonance-stabilized radicals (e.g., benzyl) that have low O2 reactivity and act as radical sinks, consistent with the provided PECS text. It correctly contrasts this with n-heptane’s low-temperature RO2→QOOH chemistry driving chain branching and OH production. Bond strength comments (benzylic ~88 kcal/mol; aromatic ~113 kcal/mol) are reasonable and support the mechanistic explanation. No factual or logical errors detected.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:07:01.514060"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer is factually and logically correct. It accurately explains the core chemical kinetic differences between toluene and n-heptane that govern their autoignition behavior. The role of the resonance-stabilized benzyl radical as a radical sink, which inhibits chain-branching, is correctly identified as the primary reason for toluene's high octane number. This is contrasted well with the low-temperature chain-branching pathways available to n-heptane. The answer is fully consistent with the provided original text and elaborates on it with correct, standard principles of combustion chemistry, such as bond dissociation energies.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:07:22.609474"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:07:22.609500",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

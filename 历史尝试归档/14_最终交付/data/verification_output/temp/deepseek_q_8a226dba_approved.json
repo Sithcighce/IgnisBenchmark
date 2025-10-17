@@ -1,0 +1,80 @@
+{
+  "question_text": "Why does the combustion wave velocity decrease with increasing inert salt concentration in SP-CS, and how does this relate to heat transfer and reaction kinetics?",
+  "standard_answer": "The combustion wave velocity (Uc) decreases with increasing inert salt concentration due to reduced thermal feedback and altered reaction kinetics. Uc is governed by the energy conservation equation Uc ∝ √(α / τ), where α is thermal diffusivity and τ is characteristic reaction time. Inert salts like NaCl lower the adiabatic temperature (Tad), which exponentially increases τ via the Arrhenius law (τ ∝ exp(Ea/RTad)) for solid-state reactions, as lower temperatures slow diffusion and interface reactions. Additionally, salts increase the effective heat capacity of the system, reducing thermal diffusivity α = k/(ρCp), where k is thermal conductivity, ρ is density, and Cp is specific heat. For instance, in the WO3 + 3Mg + kNaCl system, Uc drops from 0.37 cm/s at k=0 to near 0.05 cm/s at k=6.5. This deceleration stems from diminished heat release per unit volume and enhanced heat sinking, which narrows the reaction zone and prolongs the time for heat conduction to preheat unreacted material. The discrete wave propagation observed in systems like B2O3-Mg-C, with bright spots, indicates localized reactions where salt dilution disrupts continuous wavefronts, further reducing Uc. Thus, salt addition modulates Uc through combined effects on thermodynamics (Tad reduction) and transport properties (increased Cp, decreased α).",
+  "original_text": {
+    "1": "Decreasing the combustion temperature decreases the wave propagation velocities (Uc). As shown in Fig. 2c, the wave velocity was decreased by almost an order of magnitude using NaCl additive",
+    "2": "According to the presented images, the wave shows a discrete character and consists of a number of bright spots travelling in both longitudinal and transverse directions",
+    "3": "In the carbide systems, a continuous decrease of the temperature occurred when increasing the NaF concentration. With the selected amount of NaF the synthesis temperature drops below 1600 K"
+  },
+  "type": "reasoning",
+  "difficulty": 4,
+  "topic": "fluid_mechanics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires deep knowledge of combustion science (combustion wave propagation, reaction kinetics), heat transfer principles (thermal diffusivity, heat capacity), and thermodynamics (adiabatic temperature, Arrhenius kinetics) specific to solid-phase combustion synthesis systems. It cannot be answered with general ML or CS knowledge alone.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct, and compliant with other requirements."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_8a226dba",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Combustion-synthesis-of-zero---one---two--and-three-_2017_Progress-in-Energy",
+    "paper_title": "Combustion-synthesis-of-zero---one---two--and-three-_2017_Progress-in-Energy"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:18:25.504962",
+    "answer_length": 1333
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly explains the mechanism of combustion wave velocity decrease with inert salt concentration. Key points verified: (1) The answer correctly states that Uc decreases with NaCl addition, consistent with original text showing velocity drop from 0.37 to 0.05 cm/s and 'almost an order of magnitude' decrease. (2) Physical principles are sound: the relationship Uc ∝ √(α/τ), Arrhenius dependence of reaction time on temperature, and thermal diffusivity equation α = k/(ρCp) are all correct. (3) The causal chain is logical: inert salts → lower Tad → increased τ (via Arrhenius) and increased Cp → decreased α → decreased Uc. (4) The mention of discrete wave propagation with bright spots matches the original text's description. (5) The temperature reduction below 1600 K with NaF is consistent with the original text. While the answer is detailed and includes equations not explicitly in the original text, all statements are physically accurate and consistent with combustion theory. The elaboration on mechanisms (heat capacity increase, thermal diffusivity reduction, heat sinking effects) represents valid scientific reasoning that explains the observed phenomena described in the original text.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:06:58.602498"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Includes a specific numerical example (WO3–Mg–NaCl velocities) that is not provided in the ground-truth text and cannot be verified here"
+        ],
+        "reasoning": "The answer correctly explains that adding inert salts lowers combustion temperature and increases heat capacity, reducing thermal diffusivity and slowing reaction kinetics via Arrhenius behavior, which decreases wave velocity. This aligns with the ground truth stating that NaCl/NaF additions reduce temperature and wave speed and that waves can become discrete with bright spots. The use of Uc ∝ √(α/τ) and α = k/(ρCp) is standard and physically sound. Aside from an unverified numerical example, the explanation is accurate and consistent.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:07:23.258780"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer is factually accurate, logically sound, and fully consistent with the provided original text. It correctly explains the dual role of inert salts in reducing combustion wave velocity by (1) lowering the adiabatic temperature, which exponentially slows reaction kinetics (increases τ), and (2) increasing the system's heat capacity, which reduces thermal diffusivity (α). The theoretical relationship Uc ∝ √(α / τ) is correctly cited and applied. The answer also correctly incorporates and explains the 'discrete wave' phenomenon mentioned in the source text.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:07:47.021721"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:07:47.021741",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

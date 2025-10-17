@@ -1,0 +1,77 @@
+{
+  "question_text": "Using the provided experimental data on PCCI combustion with hydrotreated vegetable oil (HVO), explain the combustion mechanism behind NOx reduction when increasing EGR from 0% to 39%. Include how EGR affects in-cylinder conditions, NOx formation pathways, and the specific role of HVO properties in this context. Support your explanation with the quantitative emission changes observed in the experiment.",
+  "standard_answer": "The experimental data shows that increasing EGR from 0% to 39% reduces NOx emissions by almost 7 g/kWh while increasing PM emissions by approximately 0.3 g/kWh. This NOx reduction occurs through several interconnected mechanisms. EGR introduces inert exhaust gases (primarily CO2 and H2O) into the intake charge, which increases the specific heat capacity of the cylinder mixture. This higher heat capacity lowers peak combustion temperatures during the premixed combustion phase characteristic of PCCI mode. Since NOx formation follows the thermal (Zeldovich) mechanism and is highly temperature-dependent, reduced combustion temperatures directly suppress thermal NOx production. Additionally, EGR dilutes the oxygen concentration in the charge, further limiting NOx formation by reducing O2 availability for nitrogen oxidation reactions. The PCCI strategy with early fuel injection enhances premixing, avoiding localized high-temperature zones typical of conventional diesel combustion. HVO's properties contribute significantly to this effect - being free from cycloalkanes and aromatics and containing oxygen in its molecular structure makes it particularly responsive to higher EGR levels. The oxygen content in HVO helps maintain combustion stability even with diluted mixtures, while its clean-burning characteristics synergize with EGR to achieve substantial NOx reduction. The observed PM increase of 0.3 g/kWh represents the typical trade-off, where reduced oxygen availability and lower temperatures can slightly increase particulate formation, though HVO's oxygenated nature helps mitigate this effect compared to conventional diesel fuels.",
+  "original_text": {
+    "1": "The results show that the increasing EGR from 0% to 39% reduces NOx emissions by almost 7 g/kWh with a penalty increase of ~ 0.3 g/kWh PM.",
+    "2": "Specifically, they emphasized that HVO responds well to higher EGRs (25%) and lower boost pressures (130 kPa). Biofuels like HVO, free from cycloalkanes and aromatics and with the presence of oxygen in their molecule, play a significant role in reducing soot formation, making it easier to control the NOx emissions."
+  },
+  "type": "concept",
+  "difficulty": 4,
+  "topic": "combustion_kinetics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires deep knowledge of combustion science, specifically PCCI combustion mechanisms, EGR effects on in-cylinder conditions, NOx formation pathways (thermal/Zeldovich mechanism), and fuel properties (HVO characteristics). It demands understanding of how EGR dilution affects combustion temperatures, oxygen availability, and emission trade-offs - all core combustion/CFD/energy domain concepts.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer are both high quality - domain-focused with correct, detailed explanation supported by citations."
+  },
+  "retry_count": 3,
+  "question_id": "deepseek_q_86976200",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Challenges-and-Opportunities-for-Application-of-Reactiv_2022_Progress-in-Ene",
+    "paper_title": "Challenges-and-Opportunities-for-Application-of-Reactiv_2022_Progress-in-Ene"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:18:41.427881",
+    "answer_length": 1653
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly explains the NOx reduction mechanism through EGR in PCCI combustion with HVO. Key points verified: (1) Quantitative data matches original text (7 g/kWh NOx reduction, 0.3 g/kWh PM increase with 0-39% EGR); (2) Correctly describes thermal NOx formation via Zeldovich mechanism and temperature dependence; (3) Accurately explains EGR effects through increased heat capacity and oxygen dilution; (4) Properly characterizes HVO properties (free from cycloalkanes/aromatics, oxygen content) and their role in the mechanism; (5) Correctly notes the NOx-PM trade-off. The answer provides additional mechanistic detail (specific heat capacity, premixed combustion phase, oxygen availability for nitrogen oxidation) that is consistent with established combustion science and does not contradict the original text. The explanation is comprehensive and scientifically sound.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:05:10.093494"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer accurately reflects the experimental findings (NOx decreases by ~7 g/kWh with a PM penalty of ~0.3 g/kWh when EGR increases from 0% to 39%) and correctly explains the mechanisms: EGR raises mixture heat capacity and dilutes oxygen, lowering peak temperatures and suppressing thermal (Zeldovich) NOx formation in PCCI. It appropriately notes PCCI’s premixed nature reducing hot spots and aligns with the original text on HVO’s properties (lack of aromatics/cycloalkanes and oxygen presence) aiding soot reduction and enabling effective NOx control under higher EGR. The reasoning is physically sound and consistent with the provided ground truth.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:05:38.064944"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer is factually and logically correct. It accurately incorporates the quantitative data from the original text. It correctly explains the primary mechanisms of NOx reduction via EGR (thermal effect due to increased specific heat and dilution effect due to reduced O2 concentration) and correctly links them to the temperature-sensitive Zeldovich mechanism. Furthermore, it correctly describes the synergistic role of PCCI combustion and HVO's specific properties (oxygen content, lack of aromatics) in enabling this NOx reduction while managing the typical NOx-PM trade-off, consistent with the provided text and established combustion science principles.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:06:04.377837"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:06:04.377856",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

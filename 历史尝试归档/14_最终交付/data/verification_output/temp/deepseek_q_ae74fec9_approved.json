@@ -1,0 +1,77 @@
+{
+  "question_text": "Calculate the temperature difference between the core and surface of a cylindrical lithium-ion battery with a radius of 10 mm, thermal conductivity of 1 W/m·K, heat transfer coefficient of 50 W/m²·K, and volumetric heat generation of 50,000 W/m³. Assume steady-state conditions and radial symmetry.",
+  "standard_answer": "For a cylindrical battery under steady-state conditions with radial symmetry, the temperature difference between core and surface (ΔT = T_core - T_surface) can be derived from the heat conduction equation. The volumetric heat generation q_gen = 50,000 W/m³, radius R = 0.01 m, thermal conductivity k = 1 W/m·K. The heat generation per unit length Q = q_gen * πR² = 50,000 * π * (0.01)² = 15.708 W/m. For a cylinder, the temperature distribution is parabolic: T(r) = T_surface + (q_gen / (4k)) * (R² - r²). Thus, at the core (r=0), T_core = T_surface + (q_gen * R²) / (4k) = T_surface + (50,000 * (0.01)²) / (4 * 1) = T_surface + (50,000 * 0.0001) / 4 = T_surface + 5 / 4 = T_surface + 1.25°C. The Biot number Bi = hR/k = (50 * 0.01) / 1 = 0.5, which is >0.1, confirming significant internal gradients. The calculated ΔT = 1.25°C represents the core-to-surface difference due to internal heat generation, but actual values may be higher under dynamic operations or with anisotropic conductivity.",
+  "original_text": {
+    "1": "Under high-rate operations or forced convective cooling conditions, the temperature difference between the battery core and the surface in some cylindrical cells with a large radius could be larger than 10°C.",
+    "2": "The Biot number could be larger than 0.1 so that the temperature at the battery center could be significantly higher than that at the surface."
+  },
+  "type": "calculation",
+  "difficulty": 3,
+  "topic": "heat_transfer",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires heat transfer expertise involving cylindrical geometry, thermal conductivity, heat generation, and Biot number analysis specific to battery thermal management - all core energy/thermal engineering concepts.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused calculation with correct thermal analysis."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_ae74fec9",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Thermal-state-monitoring-of-lithium-ion-batteries_2024_Progress-in-Energy-an",
+    "paper_title": "Thermal-state-monitoring-of-lithium-ion-batteries_2024_Progress-in-Energy-an"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:31:09.770431",
+    "answer_length": 994
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly applies the heat conduction equation for a cylindrical geometry with volumetric heat generation. The calculation of ΔT = 1.25°C is mathematically correct using the given parameters (q_gen = 50,000 W/m³, R = 0.01 m, k = 1 W/m·K). The Biot number calculation (Bi = 0.5) is accurate and correctly interpreted as indicating significant internal temperature gradients (>0.1 threshold). The answer appropriately notes that the calculated 1.25°C is for the specific conditions given, and acknowledges that actual values may be higher under different operating conditions (high-rate operations, anisotropic conductivity), which is consistent with the original text's statement that temperature differences 'could be larger than 10°C' under high-rate operations or forced convective cooling in large-radius cells. The answer does not contradict the original text; rather, it provides a specific calculation for the given parameters while recognizing that other conditions can produce larger temperature differences. All physical principles and mathematical derivations are sound.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:23:00.372476"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly derives the core-to-surface temperature difference for a solid cylinder with uniform volumetric heat generation: ΔT = q̇ R²/(4k) = 1.25 K, which is independent of the convective coefficient h. The Biot number calculation (0.5) is correct and aligns with the original text’s note that Bi > 0.1 indicates significant internal gradients. The result does not contradict the ground-truth statement that larger cells or more extreme conditions can yield >10°C differences.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:23:23.784102"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly applies the steady-state heat conduction equation for a cylinder with uniform volumetric heat generation. The formula used for the temperature difference between the core and surface, ΔT = (q_gen * R²) / (4k), is correct. All numerical calculations are accurate. The answer also correctly calculates the Biot number and interprets its significance (Bi > 0.1 indicates non-negligible internal temperature gradients), which is fully consistent with the provided original text.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:23:43.409755"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:23:43.409785",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

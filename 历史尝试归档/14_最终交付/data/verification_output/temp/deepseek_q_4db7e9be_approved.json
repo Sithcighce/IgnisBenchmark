@@ -1,0 +1,77 @@
+{
+  "question_text": "Why does the uncertainty in combustion model predictions remain substantial even when all rate coefficients are known to within 15% uncertainty, and what physical mechanisms amplify these uncertainties?",
+  "standard_answer": "The persistence of significant prediction uncertainties despite relatively small individual rate uncertainties arises from several amplifying mechanisms in combustion systems. First, the highly nonlinear nature of chemical kinetics means that small uncertainties in rate parameters can propagate exponentially through reaction networks. Second, the coupling between reactions creates synergistic effects where uncertainties in multiple parameters combine nonlinearly. Third, combustion phenomena often exhibit sensitivity to specific critical reactions whose uncertainties dominate the overall prediction. For instance, in perfectly stirred reactor simulations of ethylene oxidation, even with all rates constrained to 15% uncertainty, ignition and extinction times can vary by factors of 2 due to the complex interplay between chain-branching and chain-terminating reactions. The uncertainty is further amplified in systems exhibiting hysteresis or bifurcation behavior, where small parameter changes can cause dramatic shifts between stable states. Additionally, the Arrhenius temperature dependence means that rate uncertainties become magnified at different temperature regimes, particularly when extrapolating beyond validation conditions.",
+  "original_text": {
+    "1": "Even if all rate parameters could be determined to within 15% uncertainty and all reaction pathways were accounted for, the uncertainty of the model prediction is still not negligible. As shown in the figure, the extinction and ignition times can be still uncertain by as much as a factor of 2.",
+    "2": "The tremendous advances in laser diagnostics and shock tube techniques in the late 1980s and early 1990s brought significant improvement in the accuracy of k1. Today, the best experiments give a two-standard deviation uncertainty in k1 better than 15% over the temperature range of 1100 K-3370 K."
+  },
+  "type": "reasoning",
+  "difficulty": 5,
+  "topic": "combustion_kinetics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires deep combustion kinetics expertise, specifically addressing uncertainty propagation in chemical reaction networks, nonlinear kinetics behavior, and combustion system sensitivity analysis - all core combustion science concepts that cannot be answered with general ML knowledge.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_4db7e9be",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Combustion-kinetic-model-uncertainty-quantifica_2015_Progress-in-Energy-and-",
+    "paper_title": "Combustion-kinetic-model-uncertainty-quantifica_2015_Progress-in-Energy-and-"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:17:51.776793",
+    "answer_length": 1244
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly explains why uncertainties persist despite 15% rate coefficient uncertainties. It accurately identifies key mechanisms: (1) nonlinear propagation through reaction networks, (2) coupling effects between reactions, (3) sensitivity to critical reactions, (4) amplification in systems with hysteresis/bifurcation, and (5) Arrhenius temperature dependence effects. The specific example of ethylene oxidation with factor-of-2 uncertainty in ignition/extinction times directly matches the original text's statement. All physical principles (nonlinear kinetics, chain-branching/terminating reactions, Arrhenius behavior) are correctly stated. The answer provides reasonable elaboration beyond the original text, but contains no factual errors or contradictions with the source material.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:06:44.460285"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer is consistent with the PECS text: it explains that significant prediction uncertainty (factor ~2 in ignition/extinction times) can persist even when individual rate coefficients have ~15% uncertainty. The mechanisms cited—nonlinearity of kinetics, coupled reaction networks, sensitivity to key reactions, bifurcation/hysteresis near critical points, and strong Arrhenius temperature dependence—are physically sound and correctly describe how small parameter uncertainties can be amplified in combustion systems. No contradictions or factual errors relative to the original text were found.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:07:04.034938"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly and comprehensively explains the key mechanisms responsible for uncertainty amplification in combustion models. It accurately identifies nonlinearity, reaction coupling, sensitivity to critical reactions, bifurcation behavior, and the Arrhenius temperature dependence as the primary drivers. The explanation is factually sound, logically consistent, and aligns perfectly with the premise established in the original text, providing the necessary theoretical background that the text implies but does not state.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:07:25.783093"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:07:25.783116",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "question_text": "Based on the provided paper content, describe the key chain-branching pathways at low and high temperatures in hydrocarbon combustion, explain how they differ chemically, and discuss their roles in cool flame and hot flame formation. Include specific reaction sequences and temperature regimes as supported by the paper.",
+  "standard_answer": "The paper identifies two distinct chain-branching pathways that dominate hydrocarbon combustion at different temperature regimes. At low temperatures (below approximately 750 K), the dominant pathway is the peroxy chemistry sequence: R → RO₂ → QOOH → O₂QOOH → OQ'O + 2OH. This pathway involves sequential oxygen additions and decompositions that produce multiple OH radicals, driving the partial fuel oxidation and limited temperature rise characteristic of cool flames. The key reactions include fuel radical (R) formation via H-abstraction, O₂ addition to form RO₂, internal isomerization to QOOH, second O₂ addition to form O₂QOOH, and subsequent decompositions that yield ketohydroperoxide and ultimately produce two OH radicals. At high temperatures (above approximately 1050 K), the dominant chain-branching pathway shifts to H + O₂ = OH + O, which provides rapid radical multiplication that sustains hot flames with complete fuel oxidation and significant temperature increases. The chemical difference lies in the molecular complexity: low-temperature pathways involve large, fuel-sized molecules and sequential oxygen additions, while high-temperature pathways focus on small radical interactions. These distinct pathways govern flame transitions as temperature increases: low-temperature chemistry becomes suppressed due to faster decomposition of intermediates and reverse reactions, allowing high-temperature chemistry to take over, explaining the transition from cool flames to hot flames observed in staged ignition processes.",
+  "original_text": {
+    "1": "Low-temperature chain-branching pathway: R → RO₂ → QOOH → O₂QOOH → OQ'O + 2OH",
+    "2": "High-temperature chain-branching pathway: H + O₂ = OH + O"
+  },
+  "type": "concept",
+  "difficulty": 4,
+  "topic": "combustion_kinetics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires deep knowledge of combustion chemistry, specifically chain-branching pathways in hydrocarbon combustion at different temperature regimes, cool flame and hot flame formation mechanisms, and detailed reaction sequences. It demands expertise in combustion kinetics, chemical mechanisms, and flame physics that cannot be answered with general ML or CS knowledge.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer are well-aligned with the paper's content on combustion chemistry pathways and meet all quality criteria."
+  },
+  "retry_count": 1,
+  "question_id": "deepseek_q_c1d93d95",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Dynamics-of-cool-flames_2019_Progress-in-Energy-and-Combustion-Science",
+    "paper_title": "Dynamics-of-cool-flames_2019_Progress-in-Energy-and-Combustion-Science"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:19:16.957975",
+    "answer_length": 1540
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately describes both chain-branching pathways from the original text. It correctly identifies the low-temperature pathway (R → RO₂ → QOOH → O₂QOOH → OQ'O + 2OH) and high-temperature pathway (H + O₂ = OH + O), provides appropriate temperature regimes (~750 K for low-temp, ~1050 K for high-temp), explains the chemical differences (large fuel-sized molecules with sequential O₂ additions vs. small radical interactions), and correctly describes their roles in cool flame vs. hot flame formation. The mechanistic details about peroxy chemistry, internal isomerization, and the transition between regimes are all consistent with established combustion science principles and the original text. The answer is detailed but contains no factual errors or logical contradictions.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:07:56.934124"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Includes specific temperature thresholds (~750 K and ~1050 K) not stated in the provided original text; they are broadly consistent with common literature but not explicitly supported by the excerpt."
+        ],
+        "reasoning": "The standard answer accurately identifies and explains the two chain-branching pathways (low-temperature peroxy sequence and high-temperature H+O2 branching) exactly as in the original text. It correctly outlines the reaction sequence R → RO2 → QOOH → O2QOOH → OQ'O + 2OH and the role of H + O2 = OH + O at high temperatures, and appropriately ties them to cool flame and hot flame behaviors. No factual or logical errors are present; the added temperature ranges are plausible though not directly supported by the provided excerpt.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:08:20.157038"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly identifies and describes the low-temperature (peroxy chemistry) and high-temperature (H + O2 = OH + O) chain-branching pathways, consistent with the original text. It accurately specifies the temperature regimes, the chemical nature of the intermediates (large vs. small molecules), and their respective roles in causing cool flames (partial oxidation, limited temperature rise) and hot flames (rapid radical multiplication, complete oxidation). The explanation for the transition between these regimes is also physically and chemically sound. No factual or logical errors were found.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:08:44.118060"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:08:44.118087",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

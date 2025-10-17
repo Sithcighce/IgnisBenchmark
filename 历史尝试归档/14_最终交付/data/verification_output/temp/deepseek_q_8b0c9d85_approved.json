@@ -1,0 +1,80 @@
+{
+  "question_text": "How do the thermal decomposition characteristics of cellulose, hemicellulose, and lignin in biomass affect the temperature programming and product distribution in fast pyrolysis reactors?",
+  "standard_answer": "The three main biomass components decompose at distinct temperature ranges due to their chemical structures, requiring careful temperature control in pyrolysis reactors. Cellulose, with its crystalline D-glucose subunits in microfibrils, is relatively resistant to thermal decomposition and requires higher temperatures (315–400°C) for effective breakdown. Hemicellulose, being the least thermally stable component, decomposes at lower temperatures (220–315°C) due to its amorphous structure and branched polymer chains. Lignin shows the highest thermal stability with decomposition occurring over a wide temperature range (160–900°C) due to its complex interconnected linkages between p-hydroxyphenyl, syringyl, and guaiacyl units. This differential thermal behavior necessitates reactor designs that can accommodate varying heating requirements. In fluidized bed reactors, the operating temperature (450–600°C) must be optimized to maximize bio-oil yield while accounting for these component-specific decomposition profiles. The temperature gradient affects product distribution: higher cellulose content requires elevated temperatures for optimal conversion, while lignin's broad decomposition range contributes to char formation, with maximum char yield around 500°C. Understanding these thermal characteristics is crucial for reactor design, as improper temperature control can lead to incomplete decomposition of cellulose or excessive char formation from lignin.",
+  "original_text": {
+    "1": "Due to the D-glucose subunits arranged in the crystalline structure of microfibrils, cellulose is relatively resistant to thermal decomposition.",
+    "2": "Cellulose and hemicellulose (represented by xylan) decompose at the temperature ranges of 315–400 °C and 220–315 °C, respectively, compared to a wider and higher temperature range (160–900 °C) for lignin"
+  },
+  "type": "reasoning",
+  "difficulty": 4,
+  "topic": "heat_transfer",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires specific knowledge of biomass pyrolysis, thermal decomposition characteristics of biomass components (cellulose, hemicellulose, lignin), and how these affect reactor temperature programming and product distribution - all core topics in combustion science, energy systems, and thermal processing.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues"
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_8b0c9d85",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "The-multi-scale-challenges-of-biomass-fast-pyrolysis-a_2019_Progress-in-Ener",
+    "paper_title": "The-multi-scale-challenges-of-biomass-fast-pyrolysis-a_2019_Progress-in-Ener"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:30:38.006740",
+    "answer_length": 1469
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately reflects the information from the original text and demonstrates sound understanding of biomass pyrolysis. Key facts are correct: (1) Cellulose decomposition at 315-400°C due to crystalline structure, (2) Hemicellulose decomposition at 220-315°C, (3) Lignin decomposition over wide range 160-900°C. The answer correctly identifies cellulose as relatively resistant to thermal decomposition due to its crystalline D-glucose microfibrils structure, matching the original text. The explanation of hemicellulose's lower thermal stability due to amorphous structure and lignin's complex structure are consistent with established biomass chemistry principles. The discussion of reactor design implications, temperature optimization (450-600°C for fluidized bed reactors), and product distribution effects are logical extensions that don't contradict the original text. While the answer is detailed and goes beyond the minimal information in the original text, all statements are factually accurate and logically sound.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:22:22.292793"
+      },
+      {
+        "correct": false,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Incorrectly states that maximum char yield occurs around 500°C; in fast pyrolysis, char yield generally decreases as temperature approaches ~500°C (where liquid yield is typically maximized), and lignin-derived char is not maximized at this temperature.",
+          "Potentially misleading: suggests a 450–600°C operating window to maximize bio-oil yield; typical optima for fluidized-bed fast pyrolysis are closer to 450–550°C, with yields often declining near 600°C."
+        ],
+        "reasoning": "The answer correctly reflects the decomposition temperature ranges and relative thermal stabilities of cellulose, hemicellulose, and lignin, consistent with the provided ground truth. However, it contains a factual error about char yield peaking around 500°C, which contradicts established fast pyrolysis behavior (liquid yields tend to peak near ~500°C while char is lower). The operating temperature range given for maximizing bio-oil is also somewhat overstated toward 600°C.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:22:49.442319"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer accurately states the distinct thermal decomposition temperature ranges for cellulose, hemicellulose, and lignin, which are consistent with the provided original text. The explanations for these differences (e.g., crystallinity of cellulose, amorphous nature of hemicellulose, complex structure of lignin) are factually correct. Furthermore, the answer correctly links these fundamental properties to practical implications in fast pyrolysis, such as temperature optimization for maximizing bio-oil yield and the role of lignin in char formation. The reasoning is logical and free of errors.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:23:12.782354"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:23:12.782379",
+    "consensus": {
+      "all_correct": false,
+      "correct_votes": 2,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 2
+    }
+  }
+}

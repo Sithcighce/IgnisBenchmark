@@ -1,0 +1,77 @@
+{
+  "question_text": "What are the key vibrational modes and their wavenumbers for ³NCN, and how do these spectroscopic parameters inform the calculation of thermodynamic properties like heat capacity?",
+  "standard_answer": "The triplet NCN radical has three fundamental vibrational modes: the symmetric stretch (ω₁ ≈ 1245 cm⁻¹), the bending mode (ω₂ ≈ 423 cm⁻¹), and the asymmetric stretch (ω₃ ≈ 1472 cm⁻¹), with a rotational constant B₀ ≈ 0.3973 cm⁻¹. These parameters, determined from high-resolution UV and IR spectroscopy, are essential for computing thermodynamic properties via the rigid rotor harmonic oscillator (RRHO) approximation. The molar heat capacity Cₚ°(T) is derived from the partition function Q, which sums over all accessible rovibrational states. Specifically, Cₚ°/R = T²(∂²lnQ/∂T²) + 2T(∂lnQ/∂T) + 1, where Q includes contributions from translational, rotational, and vibrational degrees of freedom. The vibrational partition function depends on the wavenumbers ωᵢ, and the rotational partition function on B₀. At high temperatures, the low bending frequency (423 cm⁻¹) means this mode contributes significantly to Cₚ° even at moderate temperatures, while the stretches become fully excited at higher T. These data are fitted to NASA polynomials for combustion modeling, ensuring accurate enthalpy and entropy calculations critical for kinetic simulations.",
+  "original_text": {
+    "1": "Experimental results reported in the literature... vibrational wavenumbers for 3NCN, rounded to integer values (ω1: symmetric stretch, ω2: bending, ω3: antisymmetric stretch) and rotational constants (B0)... ω1 = 1245 cm⁻¹, ω2 = 423 cm⁻¹, ω3 = 1472 cm⁻¹, B0 = 0.3973 cm⁻¹",
+    "2": "The heat capacity of an ideal gas, Cₚ°, can be related to the corresponding spectroscopic properties via the molecular partition function Q. One has: Cₚ°/R = T²(∂²lnQ/∂T²) + 2T(∂lnQ/∂T) + 1 with R denoting the gas constant."
+  },
+  "type": "concept",
+  "difficulty": 4,
+  "topic": "thermochemistry",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires specific knowledge of combustion spectroscopy and thermochemistry, focusing on vibrational modes of the NCN radical and their relationship to thermodynamic property calculations, which is directly relevant to combustion science and energy systems.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question is well-focused on combustion domain knowledge and answer is factually correct based on provided citations."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_58fdce43",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "The-story-of-NCN-as-a-key-species-in-prom_2021_Progress-in-Energy-and-Combus",
+    "paper_title": "The-story-of-NCN-as-a-key-species-in-prom_2021_Progress-in-Energy-and-Combus"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:31:03.154670",
+    "answer_length": 1154
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately reproduces all spectroscopic parameters from the original text (ω₁ = 1245 cm⁻¹, ω₂ = 423 cm⁻¹, ω₃ = 1472 cm⁻¹, B₀ = 0.3973 cm⁻¹) and correctly states the heat capacity formula Cₚ°/R = T²(∂²lnQ/∂T²) + 2T(∂lnQ/∂T) + 1. The physical principles are sound: the RRHO approximation is appropriate for these calculations, the partition function approach is correct, and the discussion of temperature-dependent vibrational contributions is physically accurate (low-frequency bending mode contributing at moderate temperatures, higher-frequency stretches requiring higher temperatures for excitation). The additional context about NASA polynomials and combustion modeling, while not in the original text, is correct and relevant. No factual errors or logical contradictions detected.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:22:32.557808"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer reproduces the vibrational wavenumbers (1245, 423, 1472 cm⁻¹) and rotational constant (B0 ≈ 0.3973 cm⁻¹) exactly as in the original text, correctly identifies the vibrational modes, and uses the stated Cp°/R relation via the partition function. The RRHO framework and the qualitative temperature dependence of mode excitation are sound. Mention of NASA polynomial fitting is a reasonable and accurate extension for combustion modeling. No factual or logical errors detected.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:22:53.797772"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer is factually correct and logically sound. It accurately provides the spectroscopic constants for ³NCN and correctly explains their use in calculating thermodynamic properties via statistical mechanics (RRHO model). The provided values and the formula for heat capacity are fully consistent with the original text. The additional context on physical interpretation and the use of NASA polynomials is also correct and relevant to the field of combustion.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:23:12.148262"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:23:12.148296",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

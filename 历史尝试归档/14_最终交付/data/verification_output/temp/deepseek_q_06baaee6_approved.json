@@ -1,0 +1,77 @@
+{
+  "question_text": "Why does reverse RCCI combustion configuration reduce hydrocarbon and carbon monoxide emissions compared to conventional RCCI at low loads?",
+  "standard_answer": "Reverse RCCI (R-RCCI) reduces HC and CO emissions through improved combustion efficiency and reduced charge cooling effects. In conventional RCCI, a significant portion of premixed low reactivity fuel becomes trapped in squish volumes and crevice regions where temperatures remain too low for complete oxidation. The high volatility of gasoline-like fuels in these regions creates substantial charge cooling that further suppresses combustion. R-RCCI addresses this by premixing only a small quantity of high reactivity fuel while directly injecting the low reactivity fuel. This strategy minimizes fuel trapping in cold boundary layers since the premixed HRF has higher oxidation tendency and the DI LRF achieves better vaporization and mixing. The reduced charge cooling from lesser premixed fuel quantity allows higher local temperatures for complete combustion. Additionally, the reverse reactivity stratification maintains controlled combustion phasing while ensuring more fuel burns in optimal temperature regions, significantly improving combustion efficiency and reducing unburned hydrocarbon and carbon monoxide emissions.",
+  "original_text": {
+    "1": "In R-RCCI combustion mode, a relatively smaller quantity of HRF than conventional RCCI is premixed, resulting in lesser fuel trapped in the squish and crevice regions.",
+    "2": "The higher oxidization tendency of the trapped premixed HRF is another important aspect of the R-RCCI combustion mode, enhancing the combustion efficiency."
+  },
+  "type": "application",
+  "difficulty": 4,
+  "topic": "combustion_science",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question specifically addresses reverse RCCI combustion configuration and its impact on hydrocarbon and carbon monoxide emissions at low loads, requiring deep knowledge of combustion science, engine combustion modes, fuel reactivity stratification, and emissions formation mechanisms in internal combustion engines.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "The question is well-focused on combustion science domain and the answer correctly explains the mechanisms behind R-RCCI's emission reduction benefits, supported by the provided citations about reduced fuel trapping and higher oxidation tendency of premixed HRF."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_06baaee6",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Challenges-and-Opportunities-for-Application-of-Reactiv_2022_Progress-in-Ene",
+    "paper_title": "Challenges-and-Opportunities-for-Application-of-Reactiv_2022_Progress-in-Ene"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:16:30.839165",
+    "answer_length": 1131
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly explains the R-RCCI emission reduction mechanism and is consistent with the original text. Key points verified: (1) R-RCCI uses smaller quantity of premixed HRF, reducing fuel trapped in squish/crevice regions - matches original text [1]; (2) Higher oxidation tendency of premixed HRF improves combustion efficiency - matches original text [2]. The answer provides additional valid elaboration on charge cooling effects, temperature distribution, and reactivity stratification, which are physically sound combustion principles that complement the core mechanisms from the original text. No factual errors, logical contradictions, or inconsistencies detected. The more detailed explanation enhances understanding without introducing inaccuracies.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:05:07.520061"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer aligns with the ground truth: R-RCCI premixes a smaller amount of HRF, reducing fuel trapped in crevices/squish regions, and the trapped premixed HRF has higher oxidation tendency, improving combustion efficiency. The additional points on reduced charge cooling, improved local temperatures, and maintained combustion phasing are physically reasonable and consistent with RCCI/R-RCCI principles. No factual or logical contradictions found.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:05:30.651640"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer correctly identifies the key mechanisms for reduced HC/CO emissions in R-RCCI at low loads, consistent with the provided original text. It correctly states that R-RCCI uses a smaller quantity of premixed fuel, which reduces trapping in cold regions (consistent with original text [1]), and that this premixed fuel (HRF) has a higher oxidation tendency, improving combustion of any trapped fuel (consistent with original text [2]). The answer also correctly adds other relevant factors like reduced charge cooling and better vaporization of the directly injected LRF. All stated principles are factually and logically sound.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:05:52.809673"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:05:52.809695",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

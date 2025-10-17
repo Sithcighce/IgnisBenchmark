@@ -1,0 +1,77 @@
+{
+  "question_text": "How does the coupling between positive stretch and preferential diffusion, characterized by the Lewis number, influence the critical ignition radius and minimum ignition energy (MIE) in premixed flame ignition according to transient ignition theory?",
+  "standard_answer": "The coupling between positive stretch and preferential diffusion, characterized by the Lewis number (Le), profoundly affects the critical ignition radius and minimum ignition energy (MIE) in premixed flame ignition. Positive stretch, which occurs during flame kernel expansion, enhances mass and heat transfer rates at the flame front. When combined with preferential diffusion—where species with different diffusivities separate—this coupling alters the flame's thermal and chemical structure. For mixtures with large Lewis numbers (Le > 1), where thermal diffusion dominates mass diffusion, positive stretch weakens the expanding ignition kernel. This weakening occurs because stretch increases heat loss relative to chemical heat release, making it harder for the kernel to sustain itself. Consequently, the critical ignition radius, which is the minimum size required for a self-sustaining flame, increases. A larger critical radius demands more energy to form the kernel, thereby raising the MIE. Transient ignition theory, which accounts for the 'memory effect' of external heating, accurately describes this evolution by modeling how stretch and diffusion interact over time, showing that higher Le values exacerbate these effects and elevate ignition thresholds. This theory provides the most sensible evaluation of MIE by integrating dynamic processes rather than assuming steady states.",
+  "original_text": {
+    "1": "These stages are profoundly affected by the coupling of positive stretch with preferential diffusion, characterized by the Lewis number. Specifically, positive stretch makes the expanding ignition kernel weaker at larger Lewis numbers, consequently increasing the critical ignition radius and MIE.",
+    "2": "Particularly, the transient ignition theory appropriately acknowledges the 'memory effect' of external heating, offering the most accurate description of the evolution of the ignition kernel and the most sensible evaluation of minimum ignition energy."
+  },
+  "type": "reasoning",
+  "difficulty": 4,
+  "topic": "combustion_kinetics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires deep combustion science expertise, specifically knowledge of flame ignition theory, stretch effects, preferential diffusion characterized by Lewis number, critical ignition radius, and minimum ignition energy (MIE) - all core concepts in combustion physics and flame dynamics.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+  },
+  "retry_count": 1,
+  "question_id": "deepseek_q_89b62403",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Premixed-flame-ignition--Theoretical-d_2024_Progress-in-Energy-and-Combustio",
+    "paper_title": "Premixed-flame-ignition--Theoretical-d_2024_Progress-in-Energy-and-Combustio"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:25:58.624300",
+    "answer_length": 1396
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately explains the coupling between positive stretch and preferential diffusion characterized by the Lewis number and its effects on critical ignition radius and MIE. Key points verified: (1) Positive stretch enhances mass/heat transfer at the flame front during kernel expansion - correct physical principle. (2) For Le > 1 (thermal diffusion dominates), positive stretch weakens the kernel by increasing heat loss relative to chemical heat release - consistent with original text stating 'positive stretch makes the expanding ignition kernel weaker at larger Lewis numbers'. (3) This leads to increased critical ignition radius and MIE - directly matches original text. (4) Transient ignition theory accounts for 'memory effect' and provides accurate MIE evaluation - directly quoted concept from original text. The answer provides additional mechanistic detail (e.g., explaining why stretch weakens kernels at high Le) that is physically sound and consistent with combustion theory. No factual errors, logical contradictions, or inconsistencies with the original text detected.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:16:19.225706"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer aligns with the ground-truth text: it states that positive stretch coupled with preferential diffusion (Lewis number effect) weakens the ignition kernel at higher Le, thereby increasing the critical ignition radius and MIE. It correctly notes that transient ignition theory accounts for the memory effect of external heating and provides an accurate, sensible evaluation of MIE. The physical explanations (Le>1 implying greater thermal relative to mass diffusion, increased heat loss under positive stretch) are consistent and logically sound.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:16:36.682785"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer is factually correct, logically sound, and fully consistent with the provided original text. It correctly explains that for Le > 1, positive stretch weakens the flame kernel, which increases the critical ignition radius and, consequently, the Minimum Ignition Energy (MIE). The explanation of the underlying mechanism (enhanced heat loss relative to reactant supply) is accurate. It also correctly identifies transient ignition theory as the appropriate framework for evaluating these dynamic effects, aligning with the source text.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:16:57.853220"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:16:57.853248",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

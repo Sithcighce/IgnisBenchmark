@@ -1,0 +1,79 @@
+{
+  "question_text": "Based on the provided paper, what specific attention is given to structure-dependent drag models like EMMS in CFD simulations of gas-solid fluidized beds, and what computational performance data is presented for EMMS applications?",
+  "standard_answer": "The paper explicitly states that 'Special attention is devoted to the forces and the moments of the forces acting on particles, the parcel modeling, the homogeneous and structure-dependent drag models, the non-spherical particle models, the heat and mass transfer, and the turbulence.' This indicates that structure-dependent drag models receive focused consideration alongside other critical modeling aspects in gas-solid flow simulations. Regarding computational performance, the paper provides specific timing data: 'The processing time lasted approximately 4.65 hours of wall-clock time for 1 s of simulation time using EMMS as a drag model while excluding the reaction mechanism.' This computational benchmark demonstrates the practical feasibility of implementing EMMS drag models in industrial-scale simulations, showing that while computationally intensive, such models can be applied within reasonable timeframes for complex fluidized bed systems.",
+  "original_text": {
+    "1": "Special attention is devoted to the forces and the moments of the forces acting on particles, the parcel modeling, the homogeneous and structure-dependent drag models, the non-spherical particle models, the heat and mass transfer, and the turbulence.",
+    "2": "The processing time lasted approximately 4.65 hours of wall-clock time for 1 s of simulation time using EMMS as a drag model while excluding the reaction mechanism."
+  },
+  "type": "concept",
+  "difficulty": 4,
+  "topic": "CFD_modeling",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question specifically addresses structure-dependent drag models (EMMS) in CFD simulations of gas-solid fluidized beds, which requires expertise in computational fluid dynamics, multiphase flow modeling, and fluidized bed technology - all core domain topics in combustion and energy process engineering.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and compliant with other requirements."
+  },
+  "retry_count": 2,
+  "question_id": "deepseek_q_7dee4da1",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Progress-in-CFD-Simulations-of-Fluidized-Beds-fo_2022_Progress-in-Energy-and",
+    "paper_title": "Progress-in-CFD-Simulations-of-Fluidized-Beds-fo_2022_Progress-in-Energy-and"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:27:27.832887",
+    "answer_length": 956
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately reflects both key points from the original text. It correctly quotes the statement about special attention being devoted to structure-dependent drag models (among other aspects), and accurately reports the computational performance data of 4.65 hours wall-clock time for 1 second of simulation time using EMMS drag model without reaction mechanism. The answer appropriately contextualizes these facts by explaining their significance for industrial-scale simulations. All factual statements are correct and consistent with the original text.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:16:47.254370"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "medium",
+        "verification_confidence": "high",
+        "issues": [
+          "Minor extrapolation: claims practical feasibility for industrial-scale simulations, which is not stated in the original text"
+        ],
+        "reasoning": "The answer accurately reflects the paper's emphasis on structure-dependent drag models and correctly reports the EMMS computational timing data. The added comment on industrial-scale feasibility is an interpretation beyond the provided text but does not contradict it.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:17:05.214742"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately quotes and paraphrases the original text to address both parts of the question. It correctly identifies that 'special attention' is given to structure-dependent drag models and correctly reports the computational performance data (4.65 hours for 1s of simulation). The concluding statement about practical feasibility is a logical and reasonable interpretation of the provided data.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:17:34.523328"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:17:34.523359",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

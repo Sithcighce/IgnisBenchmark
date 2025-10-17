@@ -1,0 +1,77 @@
+{
+  "question_text": "How does the coordination geometry of copper nodes in MOFs (e.g., CuO4 vs. CuO5) influence the selectivity between CO and CH4 production during electrocatalytic CO2 reduction, and what are the underlying electronic structure mechanisms?",
+  "standard_answer": "The coordination geometry of copper nodes in MOFs critically determines product selectivity by modulating the d-orbital energy levels and adsorption strengths of key intermediates. CuO4 structures (square planar) exhibit lower d-orbital energies (dz², dxz, dyz), leading to weaker *CO adsorption that favors CO desorption as the primary product. In contrast, CuO5 structures (square pyramidal) have higher d-orbital energies, resulting in stronger *CO adsorption that facilitates further hydrogenation to *CHO and subsequent CH4 formation through multi-step proton-coupled electron transfers. This electronic structure difference arises from the additional axial ligand in CuO5 coordination, which raises the energy of antibonding orbitals and enhances back-donation to CO π* orbitals. The stronger *CO binding in CuO5 structures lowers the activation barrier for *CO hydrogenation to *CHO (the potential-limiting step for methane formation), while the weaker binding in CuO4 structures allows CO to desorb before further reduction. This mechanistic understanding explains why Cu-HHTP (CuO4) exclusively produces CO while Cu-DBC (CuO5) achieves 56% FE for CH4 at similar overpotentials.",
+  "original_text": {
+    "1": "Through density functional theory (DFT) calculations and Cu L-edge X-ray absorption spectroscopy, it was determined that the energy levels of d orbitals (dz2 , dxz, and dyz) in the CuO5 structure are higher than those in the CuO4 structure.",
+    "2": "Consequently, the CuO5 structure exhibited stronger adsorption interactions with *CO intermediates, facilitating the hydrogenation of *CO to *CHO and promoting the generation of CH4 instead of CO."
+  },
+  "type": "reasoning",
+  "difficulty": 5,
+  "topic": "electrocatalysis_kinetics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires deep expertise in electrocatalysis, coordination chemistry, and materials science specific to CO2 reduction. It demands understanding of MOF structure-property relationships, d-orbital electronic structure effects on catalytic selectivity, and mechanistic pathways in electrochemical CO2 reduction - all specialized domain knowledge beyond general ML/CS.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question is well-focused on electrocatalytic mechanisms and answer correctly explains the electronic structure effects on selectivity with proper citation support."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_ccd635a1",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Structure-performance-relationships-in-MOF-deriv_2024_Progress-in-Energy-and",
+    "paper_title": "Structure-performance-relationships-in-MOF-deriv_2024_Progress-in-Energy-and"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:29:47.275639",
+    "answer_length": 1186
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "medium",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately reflects the key points from the original text and provides correct elaboration. It correctly states that CuO5 structures have higher d-orbital energies than CuO4 structures, leading to stronger *CO adsorption in CuO5 that facilitates hydrogenation to *CHO and CH4 formation, while CuO4's weaker binding favors CO desorption. The mechanistic explanation involving back-donation to CO π* orbitals and the role of the additional axial ligand in CuO5 are consistent with established coordination chemistry principles. The specific examples (Cu-HHTP producing CO vs Cu-DBC producing CH4) align with the general mechanism described. While the answer is more detailed than the original text, all additional explanations (e.g., antibonding orbitals, proton-coupled electron transfers, activation barriers) are scientifically sound and do not contradict the original text.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:21:02.610299"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "medium",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer aligns with the ground-truth statements: CuO5 raises dz2, dxz, dyz energies relative to CuO4, strengthening *CO adsorption and promoting *CO → *CHO hydrogenation toward CH4, while CuO4 favors CO desorption. The added explanations (square planar vs. square pyramidal geometry, axial ligand effects, back-donation rationale, and lower barrier for *CO → *CHO) are consistent with established electronic-structure logic and do not contradict the original text.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:21:25.603526"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "medium",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer is factually correct and logically consistent. It accurately reflects the information in the original text, stating that CuO5's higher d-orbital energies lead to stronger *CO adsorption and subsequent hydrogenation to CH4, while CuO4's lower d-orbital energies lead to weaker adsorption and CO desorption. The answer correctly elaborates on the underlying electronic mechanisms (back-donation) and kinetic consequences, which are consistent with established catalysis principles.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:21:50.792900"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:21:50.792928",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

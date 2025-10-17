@@ -1,0 +1,82 @@
+{
+  "question_text": "Using the Buswell formula for anaerobic digestion, calculate the theoretical methane yield from cellulose (C6H10O5) and explain how practical methane production in landfills deviates from this theoretical maximum due to microbial and substrate limitations.",
+  "standard_answer": "The Buswell formula for anaerobic digestion is: CnHaOb + (n - a/4 - b/2)H2O → (n/2 - a/8 + b/4)CH4 + (n/2 + a/8 - b/4)CO2. For cellulose (C6H10O5), where n=6, a=10, b=5: CH4 yield = (6/2 - 10/8 + 5/4) = (3 - 1.25 + 1.25) = 3 moles CH4 per mole cellulose. Since molecular weight of cellulose is 162 g/mol and CH4 is 16 g/mol, theoretical yield = (3 × 16) / 162 = 48/162 = 0.296 g CH4/g cellulose or 296 L CH4/kg cellulose at STP. However, practical landfill methane production significantly deviates from this theoretical maximum due to several factors: Only 20-30% of organic matter is typically mineralized because lignin content inhibits cellulose degradation; microbial competition from sulfate-reducing bacteria consumes available hydrogen; temperature and pH variations affect methanogen activity; gas collection efficiency limitations; and methane oxidation in landfill cover soils consumes 10-90% of produced methane. Additionally, the complex waste composition in landfills creates inhibitory substances that reduce microbial efficiency, and the slow hydrolysis of complex polymers limits substrate availability for methanogenesis.",
+  "original_text": {
+    "1": "The Buswell formula (Equation (1)) is also applied to calculate the maximum amount of methane may be generated during AD process [86].",
+    "2": "Anaerobic digestion is not very efficient, however, and typically only 20–30% of infeed organic matter is mineralized, because of the large amount of lignin in typical AD feedstocks [87]."
+  },
+  "type": "calculation",
+  "difficulty": 4,
+  "topic": "energy_systems",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires specific knowledge of anaerobic digestion chemistry (Buswell formula), methane yield calculations for cellulose, and understanding of landfill microbial processes and substrate limitations - all within energy systems and waste-to-energy domain expertise.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question is well-structured, domain-focused, and answer is factually correct with proper calculations and supported explanations of practical limitations."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_8e4c1bfa",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Methane-emissions-as-energy-reservoir--Context--_2016_Progress-in-Energy-and",
+    "paper_title": "Methane-emissions-as-energy-reservoir--Context--_2016_Progress-in-Energy-and"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:22:44.865248",
+    "answer_length": 1139
+  },
+  "verification": {
+    "status": "needs_review",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly applies the Buswell formula to cellulose (C6H10O5) with accurate stoichiometric calculations yielding 3 moles CH4 per mole cellulose and 0.296 g CH4/g cellulose. The calculation is mathematically correct: (6/2 - 10/8 + 5/4) = 3. The answer is consistent with the original text regarding the 20-30% mineralization efficiency and lignin inhibition. While the answer provides extensive additional details about practical deviations (microbial competition, temperature/pH effects, gas collection efficiency, methane oxidation, etc.) that are not explicitly mentioned in the brief original text excerpts, these are well-established facts in anaerobic digestion science and do not contradict the original text. The original text confirms the Buswell formula application and the 20-30% efficiency limitation due to lignin, which are the core points. The additional mechanistic explanations in the answer are accurate elaborations that enhance understanding without introducing factual errors.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:13:00.832099"
+      },
+      {
+        "correct": false,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Incorrect STP volumetric yield: 296 L CH4/kg cellulose is too low; correct value is ~414–420 L/kg (3 mol CH4 per 162 g cellulose → ~18.5 mol CH4 per kg → ~414 L at 22.4 L/mol).",
+          "Includes factors like gas collection efficiency and cover soil oxidation that affect recovered methane rather than production, which is slightly off-scope though not incorrect."
+        ],
+        "reasoning": "Stoichiometry via the Buswell formula and the mass-based yield (0.296 g CH4/g cellulose) are correct and consistent with the ground truth. However, the conversion to volume at STP is wrong; 296 g CH4/kg corresponds to ~414 L/kg, not 296 L/kg. The discussion of practical deviations is broadly sound and aligns with the cited inefficiency (20–30% mineralization due to lignin), but the volumetric error is a clear factual mistake.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:13:30.158498"
+      },
+      {
+        "correct": false,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "The conversion from mass-based yield to volume-based yield is incorrect. The answer states that 0.296 g CH4/g cellulose is equivalent to 296 L CH4/kg cellulose at STP. The correct conversion, using the ideal gas law (22.4 L/mol at STP), yields approximately 415 L CH4/kg cellulose."
+        ],
+        "reasoning": "The answer correctly calculates the molar and mass-based theoretical methane yield using the Buswell formula. However, it makes a significant numerical error when converting this mass-based yield (0.296 g/g) to a volume-based yield (L/kg). The stated value of 296 L/kg is incorrect; the correct value at STP is approximately 415 L/kg. This constitutes a factual error in the calculation part of the answer. The qualitative explanation of practical deviations is otherwise accurate and comprehensive.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:13:59.638896"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:13:59.638920",
+    "consensus": {
+      "all_correct": false,
+      "correct_votes": 1,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 1
+    }
+  }
+}

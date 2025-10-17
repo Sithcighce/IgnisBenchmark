@@ -1,0 +1,77 @@
+{
+  "question_text": "What are the fundamental physical mechanisms behind the three components of heat transfer in gas-fluidized beds (particle convection, gas convection, and radiation), and how does their relative importance vary with particle size and temperature?",
+  "standard_answer": "The three heat transfer mechanisms in gas-fluidized beds operate through distinct physical processes with different dependencies on operating parameters. Particle convection (hpc) arises from unsteady state conduction through a gas film and particles during the time that particles are contacting the wall. This mechanism relies on frequent particle replacement, where convection by particles to the bulk of the bed occurs after transfer has taken place by unsteady state conduction. The gas convective component (hconv) becomes rate-controlling for large particles where the interstitial gas velocity is significant, involving heat transfer due to mixing of gas percolating along the surface in the interstitial voids between particles. Radiation (hrad) follows the Stefan-Boltzmann law and becomes important at high temperatures. The relative importance of these components shifts with both particle size and temperature. For modest bed temperatures (e.g., less than about 1000°C), the particle convective component dominates for small particles, while the convective component hconv is rate-controlling for large particles where the interstitial gas velocity is significant. The radiation component hrad becomes important at high temperature. This variation occurs because fine particles facilitate more frequent surface renewal through bubble-induced mixing, enhancing particle convection, while larger particles create higher interstitial gas velocities that boost gas convection. At elevated temperatures, radiative transfer becomes increasingly dominant due to the T⁴ dependence in the Stefan-Boltzmann equation.",
+  "original_text": {
+    "1": "The overall heat transfer coefficient between the bed and a wall, h, is made up three components: h = hpc + hconv + hrad",
+    "2": "For modest bed temperatures (e.g., less than about 1000°C) the particle convective component dominates for small particles while the convective component hconv is rate-controlling for large particles where the interstitial gas velocity is significant. The radiation component hrad becomes important at high temperature."
+  },
+  "type": "concept",
+  "difficulty": 4,
+  "topic": "heat_transfer",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires deep expertise in heat transfer mechanisms specific to gas-fluidized beds, including particle convection, gas convection, and radiation. It demands understanding of how these mechanisms operate physically and how they vary with particle size and temperature, which is specialized knowledge in thermal engineering and fluidized bed technology.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "The question is well-focused on domain-specific heat transfer mechanisms in fluidized beds, and the answer accurately describes the physical processes and dependencies based on the provided citations and paper content."
+  },
+  "retry_count": 1,
+  "question_id": "deepseek_q_1a84fec6",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Opportunities-and-challenges-in-using-particle-circ_2023_Progress-in-Energy-",
+    "paper_title": "Opportunities-and-challenges-in-using-particle-circ_2023_Progress-in-Energy-"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:25:21.665928",
+    "answer_length": 1619
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately explains all three heat transfer mechanisms in gas-fluidized beds and correctly describes how their relative importance varies with particle size and temperature. The answer is consistent with the original text on all key points: (1) particle convection dominates for small particles at modest temperatures, (2) gas convection becomes rate-controlling for large particles with significant interstitial gas velocity, (3) radiation becomes important at high temperatures following Stefan-Boltzmann law. The answer provides additional mechanistic detail (e.g., unsteady state conduction, particle replacement, bubble-induced mixing, T⁴ dependence) that is physically sound and enhances understanding without contradicting the original text. The physical principles stated are correct, and the cause-effect relationships are properly explained.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:15:04.739261"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer correctly states that total heat transfer is composed of particle convection, gas convection, and radiation, and accurately describes their mechanisms. It aligns with the ground truth by stating that at modest temperatures (< ~1000°C) particle convection dominates for small particles, gas convection becomes rate-controlling for large particles with significant interstitial gas velocity, and radiation becomes important at high temperature. The mechanistic elaborations (surface renewal via particle contacts and unsteady conduction, gas percolation in voids, T^4 dependence for radiation) are consistent and contain no factual or logical errors.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:15:19.389587"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer is factually correct and logically sound. It accurately describes the three heat transfer mechanisms (particle convection, gas convection, and radiation) in a gas-fluidized bed. The explanation of how their relative importance shifts with particle size and temperature is consistent with both the provided original text and established principles in thermophysics. The descriptions of unsteady state conduction for particle convection, interstitial gas flow for gas convection, and the T⁴ dependence for radiation are all correct.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:15:38.505066"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:15:38.505085",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

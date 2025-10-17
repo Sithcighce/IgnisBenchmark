@@ -1,0 +1,79 @@
+{
+  "question_text": "Using principles of combustion science, fluid mechanics, and heat transfer, explain how the inclusion of oxygenated additives in diesel fuel affects combustion characteristics and emission formation through their physicochemical properties, with specific focus on viscosity and latent heat of vaporization mechanisms.",
+  "standard_answer": "The inclusion of oxygenated additives in diesel fuel significantly alters combustion characteristics and emission formation through their physicochemical properties, particularly viscosity and latent heat of vaporization. Lower viscosity additives improve fuel atomization by reducing droplet size, which enhances air-fuel mixing and promotes more uniform combustion. This reduces locally rich zones, thereby decreasing particulate matter (PM) and unburned hydrocarbon (HC) emissions. However, additives with high latent heat of vaporization absorb substantial energy during the vaporization process, cooling the in-cylinder charge and lowering combustion temperatures. This cooling effect can reduce thermal NOx formation but may also lead to incomplete combustion if temperatures fall below oxidation thresholds, potentially increasing CO and HC emissions. The combined impact depends on engine operating conditions - at high loads, improved mixing may dominate to reduce emissions, while at low loads, charge cooling can exacerbate incomplete combustion. These mechanisms demonstrate the complex interplay between fluid dynamics (atomization), heat transfer (vaporization cooling), and combustion chemistry in determining overall engine performance and emissions.",
+  "original_text": {
+    "1": "The lower viscosity of the alcohol used must have improved the air-fuel mixture formation and due to the higher latent heat of vaporization of the alcohol, the temperature of the in-cylinder compression strokes reduced.",
+    "2": "This issue would be intensified when the share of an oxygenated additive in diesel fuel increases. For instance, Pidol et al. used 40% ethanol in B50 in presence of the EGR (as high as 45%) and their results showed more than 50% increase in bsfc compared to the neat diesel."
+  },
+  "type": "concept",
+  "difficulty": 4,
+  "topic": "combustion_kinetics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires deep knowledge of combustion science (emission formation, combustion characteristics), fluid mechanics (fuel atomization, air-fuel mixing), and heat transfer (latent heat of vaporization effects on temperature). It specifically focuses on physicochemical properties of oxygenated additives in diesel engines, which is a core domain topic in combustion and energy systems.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question is well-focused on domain expertise and answer is factually correct with appropriate detail."
+  },
+  "retry_count": 1,
+  "question_id": "deepseek_q_2733c7f3",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Impacts-of-additives-on-performance-and-emission-cha_2017_Progress-in-Energy",
+    "paper_title": "Impacts-of-additives-on-performance-and-emission-cha_2017_Progress-in-Energy"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:22:07.121641",
+    "answer_length": 1266
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly explains the mechanisms described in the original text. It accurately states that lower viscosity improves atomization and air-fuel mixing (consistent with [1]), and that high latent heat of vaporization causes charge cooling and temperature reduction (also consistent with [1]). The answer correctly identifies the dual effects: reduced NOx from lower temperatures but potential increases in CO/HC from incomplete combustion at low temperatures. The discussion of load-dependent effects and the trade-offs between improved mixing and charge cooling align with the original text's mention of increased bsfc with higher oxygenated additive shares [2]. All physical principles (fluid dynamics, heat transfer, combustion chemistry) are correctly stated with proper cause-effect relationships. No factual errors or logical contradictions detected.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:10:50.691404"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Does not mention the observed increase in bsfc at high oxygenate shares (e.g., 40% ethanol with EGR) noted in the source text"
+        ],
+        "reasoning": "The answer correctly explains that lower viscosity improves atomization/mixing and that higher latent heat of vaporization cools the in-cylinder charge, lowering temperatures, which can reduce NOx but risk incomplete combustion and higher CO/HC—fully consistent with the original text's mechanisms. The reasoning is sound and aligned with combustion, fluid mechanics, and heat transfer principles. A minor omission is the lack of reference to increased bsfc at high oxygenate fractions, but this does not make the answer incorrect given the question’s focus on viscosity and latent heat mechanisms.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:11:05.452688"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly identifies and explains the two key mechanisms: 1) lower viscosity improving fuel atomization and mixing, and 2) higher latent heat of vaporization causing charge cooling. It accurately describes the consequences of these effects on emissions (PM, HC, NOx) and combustion completeness. The reasoning is sound and fully consistent with the provided original text and fundamental principles of combustion and fluid dynamics.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:11:27.168126"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:11:27.168145",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

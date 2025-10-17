@@ -1,0 +1,85 @@
+{
+  "question_text": "What are the key uncertainties in the thermochemistry of NCN that impact prompt-NO modeling, and how do these uncertainties propagate to NO predictions in flames?",
+  "standard_answer": "The heat of formation of NCN (ΔfH°298) is a major uncertainty in prompt-NO modeling, with reported values ranging from 106.1 to 111.1 kcal/mol. This ±2.5 kcal/mol uncertainty significantly affects the equilibrium constants and rate constants of reactions involving NCN, particularly the reverse reaction CH + N2 ↔ NCN + H (R4/R4b) and the branching of NCN + H. A higher ΔfH°(NCN) makes R4 less exothermic, reducing the forward rate constant k4 and thus decreasing prompt-NO initiation. It also shifts the equilibrium of R4b, affecting the recycling of NCN to CH. This uncertainty propagates to NO predictions because the NCN concentration and its reaction pathways control the fixed nitrogen partitioning between NO and cyanides. For example, a 1 kcal/mol increase in ΔfH°(NCN) can alter NO yields by 10-20% in fuel-rich flames due to changes in the NCN + H branching ratio. The recent ATcT value of 107.7 kcal/mol helps reduce this uncertainty, but residual errors in high-temperature extrapolations of thermochemical data still limit modeling accuracy, especially in predicting the transition from NO to HCN dominance under very rich conditions.",
+  "original_text": {
+    "1": "Values for the heat of formation of NCN used in modeling studies vary more than three kcal mol^-1; differences that have a significant impact on modeling predictions.",
+    "2": "The accuracy of the theoretical values is affected by uncertainty in the prediction of the inter-system crossing probability for NCN + H and in the thermodynamic properties for NCN and CH when extrapolated to high temperatures."
+  },
+  "type": "concept",
+  "difficulty": 5,
+  "topic": "combustion_kinetics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires deep expertise in combustion kinetics, specifically prompt-NO formation mechanisms, thermochemistry of nitrogen species (NCN), and how uncertainties in thermodynamic properties propagate through chemical kinetic models to affect NOx predictions. It cannot be answered with general ML knowledge and requires specialized combustion chemistry understanding.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer are both high quality - domain-focused, factually correct based on citations, and compliant with all quality checks."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_e2239222",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Modeling-nitrogen-chemistry-in-comb_2018_Progress-in-Energy-and-Combustion-S",
+    "paper_title": "Modeling-nitrogen-chemistry-in-comb_2018_Progress-in-Energy-and-Combustion-S"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:23:17.851140",
+    "answer_length": 1147
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "medium",
+        "issues": [
+          "Answer provides very specific numerical values (106.1-111.1 kcal/mol, ±2.5 kcal/mol, 107.7 kcal/mol ATcT value, 10-20% NO yield changes) that cannot be directly verified from the original text, which only mentions 'more than three kcal mol^-1' variation",
+          "Answer discusses detailed mechanistic pathways (R4/R4b reactions, NCN + H branching, nitrogen partitioning) that go beyond what is stated in the original text",
+          "The original text mentions 'inter-system crossing probability for NCN + H' and 'thermodynamic properties for NCN and CH' as sources of uncertainty, which the answer addresses but with much more elaboration"
+        ],
+        "reasoning": "The answer is consistent with the core points from the original text: (1) heat of formation of NCN varies significantly and impacts modeling, and (2) uncertainties in thermodynamic properties at high temperatures affect accuracy. The answer provides extensive mechanistic detail and specific numerical values that extend beyond the original text, but these elaborations do not contradict the original text and appear to be scientifically sound explanations of how the uncertainties propagate. The physical principles (equilibrium constants affected by heat of formation, temperature extrapolation uncertainties) are correctly stated. While I cannot independently verify all the specific numerical values cited, the general logic and mechanisms described are consistent with combustion chemistry principles and the original text's assertions.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:13:52.817064"
+      },
+      {
+        "correct": false,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Claims that increasing ΔfH°(NCN) reduces the forward rate constant k4 for CH + N2 → H + NCN; in elementary kinetics the forward rate constant is not determined by thermochemistry. ΔfH° affects the equilibrium constant and thus the reverse rate via detailed balance, not kf unless kf is computed from Keq and a specified kr.",
+          "Does not explicitly note the inter-system crossing (ISC) uncertainty for NCN + H highlighted in the ground-truth, referring only to generic 'branching'.",
+          "Introduces specific numerical values (106.1–111.1 kcal/mol) and a 1 kcal/mol → 10–20% NO change assertion that are not supported by the provided ground-truth text."
+        ],
+        "reasoning": "The answer correctly identifies that uncertainty in ΔfH°(NCN) and high-temperature thermodynamic extrapolations impact prompt-NO modeling and propagation to NO via NCN chemistry, consistent with the ground-truth. However, it contains a key mechanistic error by linking ΔfH° directly to a reduction in the forward rate constant for CH + N2 → H + NCN and omits explicit mention of ISC uncertainty for NCN + H. It also adds unsupported quantitative specifics.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:14:43.301422"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer correctly identifies the heat of formation of NCN as the key thermochemical uncertainty, which is consistent with the original text. It accurately explains the propagation mechanism: a change in ΔfH°(NCN) alters the equilibrium and rate constants of the crucial CH + N2 reaction, thereby affecting NCN concentration and the subsequent partitioning of fixed nitrogen into NO or cyanides. The reasoning is thermodynamically and kinetically sound. The answer also correctly incorporates the point from the original text about uncertainties in high-temperature extrapolations of thermodynamic data.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:15:09.550958"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:15:09.550982",
+    "consensus": {
+      "all_correct": false,
+      "correct_votes": 2,
+      "total_votes": 3,
+      "all_high_confidence": false,
+      "disagreement_count": 2
+    }
+  }
+}

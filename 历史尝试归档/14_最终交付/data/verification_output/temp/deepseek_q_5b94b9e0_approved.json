@@ -1,0 +1,80 @@
+{
+  "question_text": "What physical mechanisms explain the pressure dependence of syngas ignition delay times, particularly the transition from decreasing to increasing IDT with pressure in different temperature regimes?",
+  "standard_answer": "The pressure dependence of syngas ignition delay times exhibits complex behavior due to competing chemical kinetic pathways that dominate in different temperature regimes. At high temperatures (>1250 K), increasing pressure significantly shortens IDT because higher molecular number density increases collision frequency, accelerating elementary reaction rates according to collision theory. However, at low temperatures, increasing pressure can exhibit increasing IDT trends due to competition between chain-branching and chain-terminating reactions. The chain-branching reaction H + O2 → O + OH dominates at high temperatures and has pressure dependence at high pressures due to third-body effects, while the pressure-dependent propagation reaction H + O2(+M) → HO2(+M) becomes more favorable at elevated pressures and low temperatures. The HO2 radical is less reactive than H atoms, inhibiting the chain-branching process and resulting in longer ignition delays. This pressure-dependent reaction is more favorable at high pressures and inhibits chain branching, explaining the paradoxical increase in IDT with pressure in low-temperature regions.",
+  "original_text": {
+    "1": "At high temperatures (>1250 K), higher pressures significantly shorten the IDT, while at intermediate temperatures (1110 K<T<1250 K), increasing pressure from 1.6 to 32 atm exhibits a mild decreasing and even increasing decreasing trend for IDT",
+    "2": "The pressure-dependent propagation reaction (H + O2(+M) → HO2(+M)) dominates in the low-temperature region, inhibiting the chain branching and resulting in longer IDT at elevated pressures"
+  },
+  "type": "concept",
+  "difficulty": 4,
+  "topic": "combustion_kinetics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires deep knowledge of combustion kinetics, specifically syngas ignition behavior, pressure-dependent chemical reactions, and temperature regime transitions in combustion systems. It demands understanding of chain-branching mechanisms, radical chemistry, and pressure effects on elementary reactions - all core combustion science concepts.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+  },
+  "retry_count": 1,
+  "question_id": "deepseek_q_5b94b9e0",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Synthesis-gas-as-a-fuel-for-internal-combusti_2022_Progress-in-Energy-and-Co",
+    "paper_title": "Synthesis-gas-as-a-fuel-for-internal-combusti_2022_Progress-in-Energy-and-Co"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:30:19.195802",
+    "answer_length": 1149
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly explains the pressure dependence of syngas ignition delay times across different temperature regimes. It accurately describes: (1) high-temperature behavior where increased pressure shortens IDT due to higher collision frequency; (2) low-temperature behavior where increased pressure can increase IDT due to the dominance of H + O2(+M) → HO2(+M), which produces less reactive HO2 radicals that inhibit chain branching. The answer is consistent with the original text's statements about pressure effects at high temperatures (>1250 K) and the role of the pressure-dependent propagation reaction in the low-temperature region. The physical mechanisms (collision theory, chain-branching vs chain-terminating reactions, third-body effects) are correctly stated. While the answer is detailed, all statements are factually accurate and logically sound.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:21:22.033356"
+      },
+      {
+        "correct": false,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Incorrectly states that the chain-branching reaction H + O2 → O + OH has third-body dependence; this reaction is bimolecular and does not involve a third body.",
+          "Does not explicitly address the intermediate-temperature regime (1110–1250 K) where the pressure trend can transition, as noted in the original text."
+        ],
+        "reasoning": "The answer correctly explains that higher pressure shortens IDT at high temperatures and that at lower temperatures the pressure-dependent HO2 formation reaction H + O2(+M) → HO2(+M) inhibits chain branching, increasing IDT. However, it contains a factual error by attributing third-body effects to the chain-branching reaction H + O2 → O + OH, which is bimolecular. This contradiction warrants marking the answer as incorrect.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:21:48.003821"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly identifies the competing chemical kinetic pathways (H + O2 → O + OH vs. H + O2 + M → HO2 + M) that govern syngas ignition. It accurately explains that at high temperatures, increased pressure accelerates all reactions, shortening IDT, while at lower temperatures, pressure favors the less reactive HO2 formation pathway, inhibiting chain branching and thus increasing IDT. This explanation is factually sound and fully consistent with the provided original text.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:22:19.045228"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:22:19.045259",
+    "consensus": {
+      "all_correct": false,
+      "correct_votes": 2,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 2
+    }
+  }
+}

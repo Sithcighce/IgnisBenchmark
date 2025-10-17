@@ -1,0 +1,79 @@
+{
+  "question_text": "What is the physical significance of the tortuosity factor and constriction factor in modeling gas diffusion through porous char particles, and how do they quantitatively affect the effective diffusion coefficient?",
+  "standard_answer": "The tortuosity factor (τ) and constriction factor (θc) are critical parameters that account for the complex geometry of pore networks in char particles and significantly impact the effective diffusion coefficient. The tortuosity factor represents the ratio of the actual diffusive path length through the porous material to the length of a straight path, accounting for the winding nature of pores. Values between 3 and 7 are reasonable for chars, with 3 predicted for randomly oriented, long cylindrical pores. The constriction factor accounts for variations in pore cross-sectional area along the diffusion path, particularly the presence of bottleneck-type pores that limit diffusive flow. Its value ranges between 0 and 1, with lower values indicating greater impact of constrictions. Quantitatively, these factors appear in the expression for effective diffusivity as D_i,eff = (Θθc/τ)(1/D_i + 1/D_Kn,i)^(-1), where Θ is porosity. This shows that both factors directly scale the effective diffusivity - higher tortuosity (longer paths) decreases diffusivity, while higher constriction (fewer bottlenecks) increases it. For coal and biomass chars, experimental determinations suggest θc ≈ 0.5 when combined with τ = 3 for randomly oriented cylindrical pores. The physical significance lies in how these factors capture the microstructural complexity: tortuosity addresses the increased path length due to pore winding, while constriction addresses the reduced cross-sectional area at pore narrowings, both of which resist gas transport and affect char conversion rates.",
+  "original_text": {
+    "1": "The tortuosity factor is the ratio of the length of the actual diffusive paths through the porous material to the length of a straight path through the material. Values for tortuosity between three and seven are reasonable for chars; a value of three is predicted for randomly oriented, long cylindrical pores.",
+    "2": "The constriction factor accounts for the variations in pore cross-sectional area normal to the diffusional path and is a function of the ratio of the smallest to largest cross-sectional pore area. Its value is between zero and one, the lower the value the greater the impact of bottleneck-type pores on limiting diffusive flow through the porous system."
+  },
+  "type": "concept",
+  "difficulty": 4,
+  "topic": "porous_media_transport",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires specific knowledge of porous media transport physics, including tortuosity and constriction factors in gas diffusion through char particles, which is a specialized topic in combustion science and energy systems involving detailed understanding of pore network geometry effects on mass transport.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question is well-focused on domain-specific porous media transport concepts, and answer accurately reflects the cited definitions, quantitative relationships, and physical significance from the paper."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_714338f4",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Numerical-approaches-for-thermochemical-co_2022_Progress-in-Energy-and-Combu",
+    "paper_title": "Numerical-approaches-for-thermochemical-co_2022_Progress-in-Energy-and-Combu"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:24:33.730446",
+    "answer_length": 1573
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately explains both the tortuosity factor and constriction factor consistent with the original text. Key points verified: (1) Tortuosity is correctly defined as the ratio of actual to straight path length, with values 3-7 for chars and 3 for randomly oriented cylindrical pores. (2) Constriction factor correctly described as accounting for pore cross-sectional area variations, ranging 0-1 with lower values indicating greater bottleneck impact. (3) The quantitative expression D_i,eff = (Θθc/τ)(1/D_i + 1/D_Kn,i)^(-1) is physically sound, showing tortuosity in denominator (decreases diffusivity) and constriction in numerator (increases diffusivity when higher). (4) The physical significance is correctly explained - tortuosity captures path lengthening, constriction captures area reduction. The answer provides additional context (experimental values θc ≈ 0.5, impact on char conversion) that is reasonable and does not contradict the original text. All factual statements align with the source material and combustion science principles.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:14:47.555563"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Adds a specific Deff formula and a typical value (θc ≈ 0.5 with τ = 3) that are not in the provided ground-truth excerpt and can be model-dependent; ensure tortuosity/constrictivity definitions match the chosen formulation."
+        ],
+        "reasoning": "The answer correctly states the physical significance and ranges of tortuosity and constriction factors, consistent with the original text, and correctly indicates that they scale the effective diffusivity (higher τ lowers Deff; higher constriction raises Deff). The provided quantitative expression is a standard Bosanquet-type formulation and does not contradict the ground truth.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:15:30.857411"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer is factually correct and logically sound. It accurately defines tortuosity and constriction factor, consistent with the original text. The provided quantitative formula for effective diffusivity is standard in the field and correctly shows how both factors scale the diffusion coefficient. The explanation of their physical significance is clear and accurate.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:15:48.689151"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:15:48.689169",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

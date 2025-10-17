@@ -1,0 +1,80 @@
+{
+  "question_text": "Using the thermomechanical modeling foundations from the provided paper, explain how thermal strain develops in a constrained SOFC assembly during heating from room temperature to operating temperature, and describe the key factors that influence the resulting stress distribution. Include the mathematical formulation for thermal strain and discuss why simple biaxial stress formulas are insufficient for predicting actual stress states in multi-component SOFC assemblies.",
+  "standard_answer": "Thermal strain in SOFC components develops due to differential thermal expansion when the assembly is heated from room temperature to operating temperature. According to the paper, the thermal strain vector can be defined as: {ε_th} = {α α α 0 0 0}ΔT, where α is the coefficient of thermal expansion and ΔT is the temperature difference. This represents the free expansion each material would undergo if unconstrained. However, in actual SOFC assemblies, components are joined together, creating constraints that prevent free expansion. The paper emphasizes that 'the CTE of a sealant should not differ by more than 1 × 10^-6 K^-1 with the interfacing SOFC components, in order to obtain pore and crack free interface,' highlighting the critical importance of CTE matching. The resulting stress distribution is complex and cannot be accurately predicted using simple biaxial formulas because SOFC assemblies involve multiple interacting components with different material properties, geometrical constraints, and boundary conditions. The stress state depends on the assembly's overall stiffness, which is a function of material properties, component shapes, and constraints between constituents. Factors such as temperature-dependent material properties, geometrical features like fillet radii and sealant layouts, and the interaction between ductile metallic components and brittle ceramic materials all influence the final stress distribution. The paper notes that 'the thermomechanical behaviour of the joined sealant materials is dominated by the non-linear behaviour of metal components,' indicating that material interactions and non-linear behaviors must be considered for accurate stress prediction.",
+  "original_text": {
+    "1": "The thermal strain vector can be defined as: {ε_th} = {α α α 0 0 0}ΔT",
+    "2": "The CTE of a sealant should not differ by more than 1 × 10^-6 K^-1 with the interfacing SOFC components, in order to obtain pore and crack free interface."
+  },
+  "type": "concept",
+  "difficulty": 4,
+  "topic": "energy_systems",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires specific knowledge of thermomechanical modeling in solid oxide fuel cells (SOFCs), including thermal strain development, stress distribution in constrained assemblies, coefficient of thermal expansion matching, and limitations of simplified stress formulas. This requires expertise in energy systems, heat transfer, material science, and computational mechanics applied to fuel cell technology.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on paper citations, and no other compliance issues."
+  },
+  "retry_count": 1,
+  "question_id": "deepseek_q_3c6335cc",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Numerical-thermomechanical-modelling-of-sol_2015_Progress-in-Energy-and-Comb",
+    "paper_title": "Numerical-thermomechanical-modelling-of-sol_2015_Progress-in-Energy-and-Comb"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:25:04.416867",
+    "answer_length": 1707
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately explains thermal strain development in SOFC assemblies and correctly incorporates both key elements from the original text: (1) the thermal strain vector formulation {ε_th} = {α α α 0 0 0}ΔT is correctly stated, and (2) the CTE matching criterion (not differing by more than 1 × 10^-6 K^-1) is accurately quoted. The answer correctly explains that thermal strain arises from differential thermal expansion in constrained assemblies, and appropriately discusses why simple biaxial stress formulas are insufficient due to multi-component interactions, geometrical constraints, temperature-dependent properties, and non-linear material behavior. The physical principles are sound, the cause-effect relationships are correct (CTE mismatch → constraint → stress development), and the discussion of factors influencing stress distribution (material properties, geometry, ductile-brittle interactions) is consistent with fundamental thermomechanical principles in SOFC systems. While the answer is detailed, all statements are accurate and no factual errors or logical contradictions are present.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:14:57.325854"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "medium",
+        "issues": [
+          "Includes a quoted claim about dominance of non-linear behavior of metal components that is not present in the provided ground-truth text and may be context-dependent.",
+          "Does not explicitly mention thermal gradients, which commonly influence stress distribution in SOFC assemblies, though this omission is minor."
+        ],
+        "reasoning": "The answer correctly formulates thermal strain as {ε_th} = {α α α 0 0 0}ΔT and accurately explains that constraints and CTE mismatch in multi-component SOFC assemblies lead to complex stress states, making simple biaxial formulas insufficient. It aligns with the provided ground-truth statements, particularly the strict CTE matching requirement. Most elaborations are physically sound; however, the specific quoted claim about metal non-linear behavior dominating sealant thermomechanics is not verifiable from the provided text and may not be universally true. Overall, the core mechanisms and principles are correctly conveyed.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:15:21.508253"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer is factually and logically correct. It accurately incorporates the provided mathematical formulation and the guideline on CTE matching from the original text. The explanation for why simple biaxial stress formulas are insufficient is sound and based on correct principles of solid mechanics for composite assemblies. The discussion of factors like geometry, temperature-dependent properties, and material non-linearity is accurate and relevant to the thermomechanical analysis of SOFCs.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:15:40.814542"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:15:40.814562",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": false,
+      "disagreement_count": 0
+    }
+  }
+}

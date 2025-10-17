@@ -1,0 +1,82 @@
+{
+  "question_text": "Based on the provided paper content, how do the authors describe the role of CFD modeling in understanding heat and mass transfer limitations in fluidized bed systems, particularly regarding gas-solid mixing and temperature distribution?",
+  "standard_answer": "The authors emphasize that CFD modeling plays a crucial role in understanding the limitations of heat and mass transfer in fluidized bed systems, particularly highlighting the incomplete gas-solid mixing that leads to significant temperature variations. They note that while fluidized beds offer strong mixing between gas and solid phases, this mixing is actually limited in practice. The paper specifically mentions that temperature differences between various zones of circulating fluidized bed furnaces have been measured, with temperatures reaching up to 1000°C or more in the core while the average bed temperature is 800-900°C. This temperature non-uniformity directly impacts heat transfer efficiency and indicates limitations in the mixing process. The authors position CFD as a valuable tool for studying these hydrodynamic characteristics and flow structures that affect thermal performance, noting that numerical models provide beneficial options to study modifications of fluidized-bed systems and gain knowledge of flow structures and their effects on fluidization for improved design and scale-up procedures.",
+  "original_text": {
+    "1": "Special attention is devoted to the forces and the moments of the forces acting on particles, the parcel modeling, the homogeneous and structure-dependent drag models, the non-spherical particle models, the heat and mass transfer, and the turbulence.",
+    "2": "However, it should be mentioned here that the gas-solid mixing and the mixing of gases are limited; for instance temperature differences between various zones of the circulating fluidized bed furnace have been measured (the temperature can be reached up to 1000 °C or more in the core of the CFB, while the average bed temperature is 800-900 °C)."
+  },
+  "type": "concept",
+  "difficulty": 4,
+  "topic": "heat_transfer",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question specifically addresses CFD modeling in fluidized bed systems, focusing on heat and mass transfer limitations, gas-solid mixing, and temperature distribution. This requires expertise in fluid mechanics, heat transfer, and chemical/energy process engineering, which are core domain topics.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "The question is domain-focused, the answer is factually correct and well-supported by the provided citations, and there are no other quality issues. It passes all checks."
+  },
+  "retry_count": 1,
+  "question_id": "deepseek_q_471a98ad",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Progress-in-CFD-Simulations-of-Fluidized-Beds-fo_2022_Progress-in-Energy-and",
+    "paper_title": "Progress-in-CFD-Simulations-of-Fluidized-Beds-fo_2022_Progress-in-Energy-and"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:26:57.761166",
+    "answer_length": 1122
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately reflects the content from the original text. It correctly identifies that: (1) CFD modeling is emphasized as a tool for understanding heat and mass transfer limitations in fluidized bed systems, (2) gas-solid mixing is limited in practice despite fluidized beds offering strong mixing capabilities, (3) the specific temperature measurements are accurately cited (1000°C or more in the core vs 800-900°C average bed temperature), and (4) CFD is positioned as valuable for studying hydrodynamic characteristics and flow structures. While the standard answer is more detailed and elaborative than the original text excerpts provided, all statements are consistent with the source material and contain no factual errors or logical contradictions. The answer appropriately addresses the question about CFD's role in understanding heat and mass transfer limitations.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:16:47.905840"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Includes a general statement about CFD aiding design/scale-up not explicitly mentioned in the provided excerpt"
+        ],
+        "reasoning": "The answer correctly reflects that the paper devotes CFD attention to heat and mass transfer and notes limited gas-solid mixing with measured temperature non-uniformity (core up to ~1000°C vs. 800–900°C average). It reasonably connects CFD's role to understanding these limitations. The added point about design/scale-up is plausible but not explicitly stated in the excerpt; however, it does not contradict the text.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:17:12.227263"
+      },
+      {
+        "correct": false,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "The answer's central claim about the role of CFD modeling is not supported by the provided original text.",
+          "The answer incorrectly attributes statements about CFD to the authors of the provided text."
+        ],
+        "reasoning": "The question specifically asks what the authors describe about the role of CFD modeling 'Based on the provided paper content'. The provided original text mentions heat/mass transfer limitations and temperature non-uniformities in fluidized beds, but it does NOT mention 'CFD modeling' at all. The standard answer fabricates the connection, claiming the authors position CFD as a crucial tool for understanding these phenomena. While this might be true in a general context of combustion science, it is not a statement made within the provided text. Therefore, the answer is factually incorrect as it fails to base its claims on the given source material.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:17:31.503435"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:17:31.503462",
+    "consensus": {
+      "all_correct": false,
+      "correct_votes": 2,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 2
+    }
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "question_text": "Based on the provided paper content, explain why CO2 capture from flue gas streams is considered an energy-intensive process, and discuss how the CO2 concentration in flue streams affects the technical and economic challenges of capture technologies. Include specific thermodynamic considerations related to separation energy and practical limitations mentioned in the paper.",
+  "standard_answer": "The paper explicitly states that 'CO2 capture is an expensive and highly energy intensive process complicated further by logistics and the diversity of the emission sources.' This energy intensity stems from fundamental thermodynamic challenges in separating CO2 from nitrogen-dominated flue streams. The paper notes that 'stack gasses from natural gas and coal fired plants contain, respectively, about 3% to 5% CO2 and 10% to 15% CO2, with the remaining made up largely by nitrogen.' These low concentrations create significant separation challenges because the thermodynamic minimum work for gas separation increases as concentration decreases, making dilute streams more energy-intensive to process. Additionally, the paper emphasizes that 'capturing CO2 at such massive quantities would require resources and technologies that can operate cost-effectively at the multi-gigaton scale, which we currently lack,' highlighting both the scale challenge and current technological limitations. The energy penalty is further compounded by practical considerations including the need to cool hot flue streams, chemical regeneration requirements in processes like amine scrubbing, compression work for transport and storage, and the capital intensity of building industrial-scale capture facilities capable of handling gigaton quantities.",
+  "original_text": {
+    "1": "CO2 capture is an expensive and highly energy intensive process complicated further by logistics and the diversity of the emission sources",
+    "2": "capturing CO2 at such massive quantities would require resources and technologies that can operate cost-effectively at the multi-gigaton scale, which we currently lack",
+    "3": "stack gasses from natural gas and coal fired plants contain, respectively, about 3% to 5% CO2 and 10% to 15% CO2, with the remaining made up largely by nitrogen"
+  },
+  "type": "concept",
+  "difficulty": 4,
+  "topic": "energy_systems",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires expertise in energy systems, specifically CO2 capture technologies, thermodynamic principles of gas separation, and practical engineering challenges in combustion/emissions control. It directly addresses combustion science (flue gas composition), energy systems (capture technologies), and thermodynamic considerations.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+  },
+  "retry_count": 1,
+  "question_id": "deepseek_q_0faebf26",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Carbon-Dioxide-Emissions--Capture--Storage-and-Util_2022_Progress-in-Energy-",
+    "paper_title": "Carbon-Dioxide-Emissions--Capture--Storage-and-Util_2022_Progress-in-Energy-"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:17:03.748877",
+    "answer_length": 1333
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately incorporates all three key statements from the original text: (1) CO2 capture being expensive and energy-intensive, (2) the lack of cost-effective multi-gigaton scale technologies, and (3) the specific CO2 concentration ranges in flue gas (3-5% for natural gas, 10-15% for coal). The answer correctly explains the thermodynamic principle that separation work increases as concentration decreases, which is a well-established fact in separation science. The additional practical considerations mentioned (cooling hot flue streams, chemical regeneration, compression work, capital intensity) are logical extensions consistent with industrial CO2 capture processes and do not contradict the original text. While the answer is detailed, all statements are factually accurate and logically sound.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:04:46.964795"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer accurately reflects the original text: it cites the energy-intensive nature of CO2 capture, the low CO2 concentrations in flue gas (3–5% for NG, 10–15% for coal), and the scale challenge. It correctly explains the thermodynamic reason that separation work increases as concentration decreases, consistent with ideal mixing/separation principles. Additional practical considerations (cooling, sorbent regeneration, compression, capital intensity) are reasonable elaborations and do not contradict the provided text.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:05:11.054130"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer accurately quotes and synthesizes information from the provided text. It correctly explains the fundamental thermodynamic principle that the minimum work of separation increases as the concentration of the target gas (CO2) decreases, directly linking the low concentrations mentioned in the text to the high energy intensity. The additional practical considerations listed (cooling, regeneration, compression) are factually correct and relevant elaborations that explain why the real-world energy penalty is even higher than the thermodynamic minimum, which is consistent with the source text's claim of a 'highly energy intensive process'.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:05:31.342180"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:05:31.342201",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

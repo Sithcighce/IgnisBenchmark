@@ -1,0 +1,83 @@
+{
+  "question_text": "How does the implementation of spinning motion in a trapped vortex combustor affect combustion efficiency and fuel-air mixing, and what are the observed flow characteristics that explain these effects?",
+  "standard_answer": "The spinning motion in a trapped vortex combustor enhances combustion efficiency by improving fuel-air mixing through the development of three-dimensional flow structures. Compared to non-spinning cases where flow is largely two-dimensional, the spinning motion creates obvious three-dimensional flow features in both the cavity and wake regions. This three-dimensionality increases the interfacial contact between fuel and air, leading to more thorough mixing. The improved mixing performance directly translates to higher combustion efficiency, particularly in regions close to the spinning components. Computational studies using large-eddy simulations confirm these observations, showing that the spinning motion modifies the cavity flow dynamics and creates coherent structures that maintain flow within the cavity while enhancing mixing efficiency.",
+  "original_text": {
+    "1": "The spinning motion is found to lead to an increased combustion efficiency close to the spinning disc. The improved performance can be explained by the increased fuel-air mixing resulted from the spinning motion.",
+    "2": "Compared with 3D flow in the non-spinning case as shown in Fig. 16(a), obvious 3D flow features are clearly seen in the cavity and in the wake region as the spinning motion is involved as shown in Fig. 16(b)."
+  },
+  "type": "concept",
+  "difficulty": 4,
+  "topic": "combustion_kinetics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires specific knowledge of trapped vortex combustor design, combustion efficiency mechanisms, fuel-air mixing dynamics, and flow characteristics in combustion systems - all core combustion science and fluid mechanics concepts that cannot be answered with general ML knowledge.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+  },
+  "retry_count": 1,
+  "question_id": "deepseek_q_2bc64090",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "A-review-of-cavity-based-trapped-vortex--ultra-c_2018_Progress-in-Energy-and",
+    "paper_title": "A-review-of-cavity-based-trapped-vortex--ultra-c_2018_Progress-in-Energy-and"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:14:36.979262",
+    "answer_length": 854
+  },
+  "verification": {
+    "status": "needs_review",
+    "verifiers": [
+      {
+        "correct": false,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "The answer states that non-spinning cases have 'largely two-dimensional' flow, but the original text explicitly states 'Compared with 3D flow in the non-spinning case' - indicating that the non-spinning case also exhibits 3D flow, not 2D flow",
+          "The answer incorrectly characterizes the comparison: it should be comparing 3D flow features between non-spinning (which has some 3D flow) versus spinning (which has obvious/enhanced 3D flow features), not 2D versus 3D"
+        ],
+        "reasoning": "The standard answer contains a factual error in its characterization of the non-spinning case. The original text clearly states 'Compared with 3D flow in the non-spinning case' which means the non-spinning case already has 3D flow characteristics. The answer incorrectly claims the non-spinning case has 'largely two-dimensional' flow. The correct interpretation is that spinning motion creates MORE OBVIOUS or ENHANCED 3D flow features compared to the 3D flow already present in the non-spinning case. This is a significant misrepresentation of the flow characteristics being compared.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:01:15.695813"
+      },
+      {
+        "correct": false,
+        "baseline_confidence": "medium",
+        "verification_confidence": "high",
+        "issues": [
+          "Claims the non-spinning case is largely two-dimensional, which contradicts the original text stating 3D flow exists in the non-spinning case.",
+          "Introduces validation by large-eddy simulations not mentioned in the ground truth (not necessarily wrong, but unsupported here)."
+        ],
+        "reasoning": "The answer correctly links spinning motion to increased combustion efficiency via improved fuel–air mixing and notes 3D features in the cavity and wake near the spinning disc, consistent with the original text. However, it incorrectly contrasts this with a non-spinning case described as largely two-dimensional, whereas the ground truth explicitly states the non-spinning case also exhibits 3D flow. This contradiction makes the answer incorrect.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:01:34.458601"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "medium",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer correctly identifies that spinning motion enhances combustion efficiency by improving fuel-air mixing. It accurately attributes this improvement to the creation of more pronounced three-dimensional flow structures, which is consistent with the provided original text. The logical chain of cause and effect (spinning -> 3D flow -> better mixing -> higher efficiency) is sound and aligns with fundamental combustion and fluid dynamics principles.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:02:04.143517"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:02:04.143536",
+    "consensus": {
+      "all_correct": false,
+      "correct_votes": 1,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 1
+    }
+  }
+}

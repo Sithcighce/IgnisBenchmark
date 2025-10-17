@@ -1,0 +1,81 @@
+{
+  "question_text": "How does the presence of lubricant oil in fuel-oil droplets reduce the total ignition delay time (IDT) in gasoline engines, and what are the physical and chemical mechanisms driving this reduction?",
+  "standard_answer": "The reduction in total ignition delay time (IDT) when lubricant oil is present in fuel-oil droplets stems from both physical and chemical mechanisms. Physically, the addition of lubricant oil components (e.g., C16–C18 surrogates) enhances low-temperature heat release (LTHR), which accelerates droplet vaporization by increasing local temperatures and reducing the physical IDT. This is particularly effective at ambient temperatures above 800 K, where enhanced vaporization shortens the time required for the droplet to mix with the ambient charge. Chemically, lubricant oils consist of long-chain alkanes that exhibit pronounced low-temperature chemistry, including negative temperature coefficient (NTC) behavior. This involves chain-branching reactions via alkylperoxy (ROO) and hydroperoxyalkyl (QOOH) radicals, which produce OH radicals and accelerate reactivity. At temperatures below 750 K, the chemical IDT is significantly reduced as lubricant species diminish the intermediate stage in iso-octane ignition, leading to faster overall autoignition. The combined effect is quantified by correlations showing that even a 1% volume fraction of lubricant surrogates in iso-octane can reduce total IDTs by 15%, with greater reductions at higher concentrations due to enhanced LTHR and accelerated chemical kinetics.",
+  "original_text": {
+    "1": "As shown by Kuti et al. [29], already a 1% volume fraction of C16 − C18 lubricant surrogates blended into iso-octane showed 15% shorter total IDTs in an Ignition Quality Tester (IQT) at 15 bar and 680–873 K.",
+    "2": "CFD simulations by Distaso et al. [30] with n-hexadecane/iso-octane at these conditions showed that the reduction in total IDTs can be attributed to the larger Low-temperature Heat Release (LTHR) for lubricant species than in iso-octane."
+  },
+  "type": "reasoning",
+  "difficulty": 5,
+  "topic": "combustion_kinetics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires deep knowledge of combustion kinetics, specifically ignition delay mechanisms in gasoline engines, lubricant-fuel interactions, low-temperature heat release, and chemical kinetics involving long-chain alkanes and radical reactions. This is firmly within combustion science and engine research domain expertise.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question is well-focused on combustion domain and answer is factually correct with proper citation support."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_af90083b",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Low-speed-pre-ignition-and-super-knock-in-boost_2023_Progress-in-Energy-and-",
+    "paper_title": "Low-speed-pre-ignition-and-super-knock-in-boost_2023_Progress-in-Energy-and-"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:22:24.211118",
+    "answer_length": 1319
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly explains both physical and chemical mechanisms for IDT reduction. It accurately cites the 1% volume fraction leading to 15% shorter IDTs from Kuti et al. and correctly attributes the reduction to enhanced LTHR as shown by Distaso et al. The explanation of low-temperature chemistry, NTC behavior, and chain-branching reactions via ROO and QOOH radicals is consistent with established combustion science. The temperature ranges (above 800 K for physical effects, below 750 K for chemical effects) and the mechanistic details about long-chain alkanes are scientifically sound. While the answer is more detailed than the original text, all additional explanations (vaporization enhancement, OH radical production, iso-octane intermediate stage reduction) are correct and consistent with fundamental combustion principles. No factual errors or logical contradictions detected.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:12:15.427520"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Introduces specific temperature thresholds (e.g., <750 K, >800 K) that are not stated in the cited text.",
+          "Posits a reduction in physical IDT via enhanced vaporization due to LTHR; this is plausible but not explicitly supported by the cited sources.",
+          "Claims greater reductions at higher lubricant concentrations; this extrapolation is not provided in the original text."
+        ],
+        "reasoning": "The answer is consistent with the ground truth: it correctly states that adding small amounts (1% vol) of C16–C18 lubricant surrogates to iso-octane reduces total IDT by about 15% in IQT conditions (15 bar, 680–873 K), and attributes the reduction to stronger low-temperature heat release of the lubricant species, as supported by CFD findings. The additional chemical mechanism details (NTC, ROO/QOOH pathways and OH production) are accurate and consistent with established low-temperature alkane oxidation chemistry. The added physical vaporization discussion and specific temperature thresholds are plausible but not directly cited; however, they do not contradict the ground truth. Overall, the explanation is correct and logically sound.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:12:53.794090"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer is factually correct and logically sound. It accurately identifies the larger Low-Temperature Heat Release (LTHR) of lubricant species as the primary driver, which is consistent with the original text. The explanation correctly separates the physical effect (enhanced vaporization due to LTHR) and the chemical effect (accelerated low-temperature kinetics via ROO/QOOH pathways), both of which are standard and correct principles in combustion science. The quantitative data cited also matches the original text.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:13:16.020812"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:13:16.020834",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

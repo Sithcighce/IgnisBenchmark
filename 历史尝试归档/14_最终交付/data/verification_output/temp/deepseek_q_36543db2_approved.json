@@ -1,0 +1,77 @@
+{
+  "question_text": "What are the fundamental limitations of distributed time delay models in representing flame dynamics, particularly regarding stability, causality, and the assumption of linear time-invariance?",
+  "standard_answer": "Distributed time delay models are fundamentally limited by the assumptions of linearity, time-invariance, and BIBO stability. Linearity fails for large-amplitude perturbations where nonlinear effects like flame saturation or extinction become significant. Time-invariance is violated if operating conditions drift or if the flame exhibits hysteresis. For BIBO stability, the impulse response must be absolutely summable; this condition may not hold if the flame develops absolute instabilities (e.g., hydrodynamic or thermo-diffusive) that grow unbounded from small perturbations. Causality requires that the impulse response is zero for negative times, meaning the flame cannot respond before a perturbation occurs—this is physically consistent but must be enforced in model identification. Additionally, DTD models assume the flame is acoustically compact, which breaks down when the flame length is comparable to acoustic wavelengths, necessitating spatial resolution. These limitations restrict DTD models to small perturbations and stable operating regimes, and they may not capture transient growth or non-modal stability phenomena without extensions to nonlinear or state-space formulations.",
+  "original_text": {
+    "1": "an LTI system is bounded-input, bounded-output stable (”BIBO stable”) if all bounded inputs yield bounded outputs: |r_l| ≤ M_r, M_r < ∞ for all |s_l| ≤ M_s, M_s < ∞. With (7) one deduces that any LTI system is BIBO stable if and only if the impulse response is absolutely convergent, Σ|h_k| < ∞.",
+    "2": "An LTI system is causal (or realizable) if its output r_l at time l = l_0 depends only on values of the input at earlier times l ≤ l_0, i.e., the present state of the output depends only on present and previous states of the system. This implies that h_l = 0 for l < 0—only the past and the present should influence the present!"
+  },
+  "type": "concept",
+  "difficulty": 4,
+  "topic": "system_identification",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question specifically addresses distributed time delay models in the context of flame dynamics, requiring knowledge of combustion science (flame behavior, thermoacoustic instabilities), fluid mechanics (convective transport, perturbations), and system identification applied to combustion systems. It cannot be answered with general ML knowledge alone.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "The question is domain-focused, the answer is factually correct and well-supported by the paper content, and there are no other quality issues. It passes all checks."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_36543db2",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Modeling-and-analysis-of-premixed-flame-dynamics_2020_Progress-in-Energy-and",
+    "paper_title": "Modeling-and-analysis-of-premixed-flame-dynamics_2020_Progress-in-Energy-and"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:23:11.930251",
+    "answer_length": 1198
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly explains the fundamental limitations of distributed time delay (DTD) models. It accurately describes BIBO stability requiring absolutely summable impulse response (consistent with original text stating 'Σ|h_k| < ∞'), and correctly explains causality requiring h_l = 0 for l < 0 (matching the original text). The answer appropriately extends these concepts to flame dynamics, discussing linearity limitations with large perturbations, time-invariance violations, and the physical interpretation of these mathematical constraints. The additional context about flame compactness, nonlinear effects, and model applicability ranges are physically sound elaborations that don't contradict the original text. All core principles are correctly stated.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:13:40.933025"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer correctly states LTI limitations relevant to distributed time delay flame models and aligns with the ground-truth definitions: BIBO stability requires an absolutely summable impulse response and causality requires zero impulse response for negative times. It accurately notes where linearity and time-invariance can fail in practical flame dynamics and reasonably adds that DTD models are constrained by acoustic compactness and may miss non-modal/transient growth without richer formulations. No factual or logical contradictions with the original text.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:14:00.671234"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer is factually correct, logically sound, and comprehensive. It correctly identifies the key limitations of DTD models (linearity, time-invariance, BIBO stability, causality) and links them to specific physical flame phenomena like saturation, absolute instability, and hysteresis. The explanation of BIBO stability and causality is consistent with the provided original text. The answer also correctly includes the important limitation of the acoustically compact assumption, which is a critical aspect of these models.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:14:23.735676"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:14:23.735695",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

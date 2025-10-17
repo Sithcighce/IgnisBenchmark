@@ -1,0 +1,80 @@
+{
+  "question_text": "Explain the thermodynamic mechanisms by which a recuperator improves thermal efficiency in an organic Rankine cycle system, and discuss the practical considerations associated with its implementation. Use the provided paper citations to support your explanation.",
+  "standard_answer": "A recuperator improves thermal efficiency in ORC systems through thermal energy recovery from the expander exhaust to preheat the working fluid before it enters the evaporator. This process reduces the amount of external heat input required from the primary heat source while maintaining the same net power output, thereby increasing the ratio of power output to heat input. The mechanism involves transferring thermal energy from the higher-temperature vapor exiting the expander to the liquid working fluid leaving the pump, which raises the temperature of the fluid entering the evaporator. This preheating effect means less thermal energy needs to be supplied by the external heat source to achieve the same evaporation conditions, resulting in higher thermal efficiency. However, practical implementation considerations include increased installation costs due to the additional heat exchanger component and higher overall pressure drops in the working-fluid loop, which can partially offset the efficiency gains. The effectiveness of recuperation depends on working fluid properties, particularly requiring dry fluids that exhibit sufficient superheating at the expander outlet to enable meaningful heat recovery.",
+  "original_text": {
+    "1": "The purpose is to recover part of the thermal energy of the vapour after expansion to preheat the working fluid pumped to the evaporator. With respect to the simple ORC system, this results in a higher power output per unit of heat input, or a higher thermal efficiency.",
+    "2": "It is important to note that the additional heat exchanger also increases the installation cost and the overall pressure drop in the working-fluid loop."
+  },
+  "type": "concept",
+  "difficulty": 4,
+  "topic": "energy_systems",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires understanding of thermodynamic principles (energy recovery, thermal efficiency), Rankine cycle operation, heat exchanger implementation, and working fluid properties - all core energy systems concepts that cannot be answered with general ML knowledge alone.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+  },
+  "retry_count": 2,
+  "question_id": "deepseek_q_11a16016",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Working-fluid-and-system-optimisation-of-organic-Ra_2025_Progress-in-Energy-",
+    "paper_title": "Working-fluid-and-system-optimisation-of-organic-Ra_2025_Progress-in-Energy-"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:33:50.203347",
+    "answer_length": 1219
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly explains the thermodynamic mechanisms of recuperator operation in ORC systems. It accurately describes: (1) thermal energy recovery from expander exhaust to preheat working fluid, (2) reduction in external heat input while maintaining power output, (3) the resulting increase in thermal efficiency (power/heat ratio), and (4) practical considerations including increased installation costs and pressure drops. The answer is consistent with the original text from [1] and [2], though more detailed. The additional explanations about the heat transfer mechanism, working fluid properties, and dry fluids are thermodynamically sound and do not contradict the source material. The answer appropriately addresses all aspects of the question with correct physical principles and logical reasoning.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:24:49.526602"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "States that net power output is maintained; in practice recuperation can also change net power slightly depending on operating constraints",
+          "Adds a fluid-property consideration (dry fluids, superheated exhaust) that is not in the provided text but is generally correct"
+        ],
+        "reasoning": "The answer correctly states that a recuperator recovers heat from the expander exhaust to preheat the pump outlet stream, thereby reducing external heat input and increasing thermal efficiency, consistent with the ground-truth text. It also appropriately notes increased installation cost and pressure drop. No factual or logical contradictions were found; only a minor nuance about net power and an added (generally correct) fluid-property consideration.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:25:12.277158"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer correctly explains the thermodynamic mechanism of heat recovery via a recuperator, its effect on reducing heat input and increasing thermal efficiency, and the practical trade-offs of cost and pressure drop. All statements are factually correct, logically sound, and consistent with the provided original text. The additional detail about the requirement for dry fluids is also a correct and relevant point in the context of ORC design.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:25:25.229103"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:25:25.229129",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

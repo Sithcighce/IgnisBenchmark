@@ -1,0 +1,77 @@
+{
+  "question_text": "A lithium-ion battery operates at 300 K with a volumetric current density of 50 A/m³, specific interfacial area of 1000 m⁻¹, Faraday constant of 96485 C/mol, open circuit potential temperature coefficient of 0.1 mV/K, and overpotential of 0.05 V. Calculate the total heat generation rate per unit volume and explain the physical mechanisms behind reversible and irreversible heat generation components, including how these relate to thermal runaway risks in battery systems.",
+  "standard_answer": "The total heat generation rate Q_total is the sum of reversible heat Q_rev and irreversible heat Q_rxn. First, the transfer current J is calculated as J = I / (a_s * F) = 50 A/m³ / (1000 m⁻¹ * 96485 C/mol) = 5.18 × 10⁻⁷ mol/(m²·s). For reversible heat generation: Q_rev = -a_s * J * F * T * (∂E_oc/∂T) = -1000 m⁻¹ * 5.18 × 10⁻⁷ mol/(m²·s) * 96485 C/mol * 300 K * 0.0001 V/K = -1.50 W/m³. The negative sign indicates endothermic behavior during discharge, meaning the battery absorbs heat due to entropy changes in the electrochemical reactions. For irreversible heat generation: Q_rxn = a_s * J * F * (E_oc - E) = 1000 m⁻¹ * 5.18 × 10⁻⁷ mol/(m²·s) * 96485 C/mol * 0.05 V = 2.50 W/m³. This component is always exothermic and arises from overpotentials due to ohmic losses, charge transfer limitations, and mass transfer resistances. Thus, Q_total = Q_rev + Q_rxn = -1.50 + 2.50 = 1.00 W/m³. The reversible heat is tied to the entropy change of the electrochemical reaction and can be endothermic or exothermic depending on the sign of ∂E_oc/∂T, while irreversible heat is always exothermic due to energy dissipation. Under normal operation, irreversible heat dominates, but during thermal runaway, exothermic chemical reactions (e.g., SEI decomposition, anode-electrolyte reactions) vastly exceed these values, leading to uncontrolled temperature rise and potential fire hazards as described in the paper.",
+  "original_text": {
+    "1": "The total heat generation in LIB (Q_total, W m⁻³) is composed of reversible heat generation (Q_rev, W m⁻³) by the electrochemical reaction and the irreversible heat generation (Q_rxn, W m⁻³) by charge-discharge cycling as shown in Eq. (1c).",
+    "2": "Q_rev = -IT(∂E_oc/∂T) = -a_s J F T(∂E_oc/∂T); Q_rxn = I(E_oc - E) = a_s J F (E_oc - E); Q_total = Q_rev + Q_rxn"
+  },
+  "type": "calculation",
+  "difficulty": 4,
+  "topic": "energy_systems",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires specific knowledge of lithium-ion battery electrochemistry, heat generation mechanisms (reversible and irreversible heat), thermal runaway physics, and energy systems principles. It involves calculations using battery-specific parameters (volumetric current density, specific interfacial area, open circuit potential temperature coefficient) and understanding how these relate to thermal safety in energy storage systems.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question is well-focused on energy systems domain with appropriate calculation and explanation requirements. Answer correctly applies the formulas from citations and provides comprehensive explanation of heat generation mechanisms and thermal runaway risks."
+  },
+  "retry_count": 1,
+  "question_id": "deepseek_q_ff0422e4",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "A-review-of-lithium-ion-battery-failure-mechani_2019_Progress-in-Energy-and-",
+    "paper_title": "A-review-of-lithium-ion-battery-failure-mechani_2019_Progress-in-Energy-and-"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:15:24.456782",
+    "answer_length": 1404
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly applies the equations from the original text. The calculation of transfer current J = I/(a_s*F) = 50/(1000*96485) = 5.18×10⁻⁷ mol/(m²·s) is accurate. The reversible heat Q_rev = -a_s*J*F*T*(∂E_oc/∂T) = -1000*5.18×10⁻⁷*96485*300*0.0001 = -1.50 W/m³ is correctly computed and properly interpreted as endothermic during discharge. The irreversible heat Q_rxn = a_s*J*F*(E_oc-E) = 1000*5.18×10⁻⁷*96485*0.05 = 2.50 W/m³ is also correct. The total Q_total = 1.00 W/m³ is the correct sum. The physical explanations are sound: reversible heat relates to entropy changes in electrochemical reactions (can be endothermic or exothermic depending on ∂E_oc/∂T), while irreversible heat arises from overpotentials and is always exothermic. The discussion of thermal runaway mechanisms is consistent with battery thermal management principles. All formulas match the original text exactly, and the numerical calculations are verified to be correct.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:01:18.623279"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "Numerical calculations match the ground-truth formulas: Q_rev = -I T (dE_oc/dT) = -50*300*0.0001 = -1.5 W/m³ and Q_rxn = I(E_oc - E) = 50*0.05 = 2.5 W/m³, yielding Q_total = 1.0 W/m³. Units and use of a_s, J, and F are consistent (I = a_s J F). The explanation correctly identifies reversible heat as entropy-related (sign depends on ∂E_oc/∂T) and irreversible heat as exothermic dissipation due to overpotentials. The linkage to thermal runaway via exothermic side reactions is accurate and appropriately contextual.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:01:38.396202"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly applies the provided equations to calculate the reversible, irreversible, and total heat generation rates. The numerical calculations are accurate. The physical explanations for reversible (entropic) heat, irreversible (overpotential) heat, and their distinction from the much larger heat sources during thermal runaway are factually correct and consistent with established principles of battery thermodynamics.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:02:07.185783"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:02:07.185802",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

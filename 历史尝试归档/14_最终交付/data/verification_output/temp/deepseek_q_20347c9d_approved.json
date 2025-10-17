@@ -1,0 +1,83 @@
+{
+  "question_text": "How does the formation of nitrogen oxides (NOx) in diesel engines depend on the interplay between local temperature fields, equivalence ratio distributions, and residence times, and what computational challenges arise when attempting to model these multi-scale phenomena using conventional approaches?",
+  "standard_answer": "NOx formation in diesel engines is governed by the Zeldovich thermal mechanism, where the primary reactions (N2 + O → NO + N and N + O2 → NO + O) are highly temperature-dependent with an exponential Arrhenius relationship. The formation rate peaks around 2200-2400K and is negligible below 1800K. The complex interplay involves: (1) Local temperature fields created by turbulent combustion where flame fronts and burned gas regions exhibit significant spatial variations. High-temperature regions near stoichiometric combustion zones become primary NOx sources. (2) Equivalence ratio distributions from fuel injection and mixing processes that determine the availability of oxygen and nitrogen for reactions. Near-stoichiometric regions provide optimal conditions for thermal NOx formation. (3) Residence times in high-temperature zones that allow the relatively slow NOx formation reactions to proceed to significant levels. The computational challenges in modeling these phenomena stem from the multi-scale nature: microscale chemical kinetics (nanosecond timescales) must be coupled with macroscale turbulent flow (millisecond timescales) and engine cycle dynamics (crank angle resolution). Conventional CFD approaches require detailed chemical mechanisms with hundreds of species and reactions, coupled with turbulence-chemistry interaction models like PDF methods or flamelet approaches. The computational cost becomes prohibitive for design optimization or real-time control applications, as resolving all relevant scales requires extremely fine meshes and small time steps. Additionally, the strong nonlinearities and coupling between turbulence, mixing, and chemistry make convergence difficult and solutions sensitive to model parameters and initial conditions.",
+  "original_text": {
+    "1": "Predicting pollutants formation and engine-out emissions particularly for transient conditions is still a major challenge for the ICE combustion researchers, particularly for unburned hydrocarbons [201], CO [203], soot [230], and particulate number [204,205].",
+    "2": "These factors include: air-fuel distribution, combustion kinetics, local fuel-air equivalence ratio, in-cylinder temperature and pressure gradients, flame-wall interaction, fuel injection parameters"
+  },
+  "type": "reasoning",
+  "difficulty": 5,
+  "topic": "combustion_science",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires deep combustion science expertise including NOx formation mechanisms (Zeldovich mechanism), diesel engine combustion processes, temperature dependencies, equivalence ratio effects, residence time considerations, and computational fluid dynamics challenges in multi-scale modeling - all core combustion/CFD domain knowledge",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question is well-formulated and domain-focused; answer provides comprehensive technical details that align with combustion science principles and computational modeling challenges"
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_20347c9d",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Modeling--diagnostics--optimization--and-control-of-int_2022_Progress-in-Ene",
+    "paper_title": "Modeling--diagnostics--optimization--and-control-of-int_2022_Progress-in-Ene"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:23:20.475793",
+    "answer_length": 1770
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "medium",
+        "issues": [
+          "The standard answer provides extensive technical detail about NOx formation mechanisms (Zeldovich mechanism, temperature ranges, Arrhenius relationships) that cannot be directly verified against the provided original text, which only mentions general factors like temperature gradients and equivalence ratio",
+          "The original text focuses on the general challenge of predicting pollutants (including NOx implicitly) and lists contributing factors, but does not specifically detail NOx formation chemistry or computational modeling challenges at the level presented in the standard answer"
+        ],
+        "reasoning": "The standard answer provides a technically detailed and scientifically sound explanation of NOx formation in diesel engines, covering the Zeldovich mechanism, temperature dependencies, and computational challenges. The physical and chemical principles stated (Arrhenius relationships, temperature ranges 1800-2400K, thermal NOx mechanism) are consistent with established combustion science. The original text confirms that predicting pollutant formation is challenging and lists relevant factors (temperature gradients, equivalence ratio, combustion kinetics) that align with the standard answer's discussion. However, the original text does not provide the specific technical details about NOx chemistry that the standard answer elaborates on. Since the standard answer does not contradict the original text and the technical content appears scientifically accurate based on combustion science principles, I mark it as correct. The medium verification confidence reflects that I cannot directly verify all specific technical claims (e.g., exact temperature ranges, specific reaction pathways) against the limited original text provided, though they align with general combustion science knowledge.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:13:36.061873"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Thermal NOx mechanism typically includes the N + OH -> NO + H path in the extended Zeldovich mechanism; only two reactions were listed.",
+          "Statement that formation rate 'peaks around 2200–2400 K' is a simplification; thermal NO generally increases steeply with temperature above ~1800–2000 K, with practical limits set by mixture conditions and dissociation."
+        ],
+        "reasoning": "The answer correctly explains NOx dependence on temperature, equivalence ratio, and residence time, consistent with established thermal NOx chemistry and with the original text's emphasis on local mixture and temperature fields. It accurately identifies multi-scale modeling challenges in coupling detailed kinetics with turbulent flow and engine transients, noting computational cost, mesh/time-step requirements, and convergence sensitivities. Minor omissions (e.g., the N+OH reaction) and slight over-specificity in temperature ranges do not constitute factual errors.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:13:58.259900"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly identifies the Zeldovich mechanism as the primary pathway for thermal NOx formation in diesel engines. It accurately describes the critical roles of local temperature (threshold >1800K), equivalence ratio (near-stoichiometric), and residence time. The discussion of computational challenges, including the multi-scale problem, the need for turbulence-chemistry interaction models (PDF, flamelet), and the prohibitive computational cost, is also factually correct and well-explained. The answer is consistent with the provided original text and established principles of combustion science.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:14:23.723431"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:14:23.723449",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": false,
+      "disagreement_count": 0
+    }
+  }
+}

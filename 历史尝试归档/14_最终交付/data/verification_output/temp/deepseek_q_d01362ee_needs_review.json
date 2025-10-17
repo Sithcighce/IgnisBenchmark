@@ -1,0 +1,84 @@
+{
+  "question_text": "Why does ammonia exhibit significantly lower laminar burning velocity compared to conventional hydrocarbons, and what molecular properties and reaction kinetics cause this behavior?",
+  "standard_answer": "Ammonia's low laminar burning velocity stems from its unique molecular structure and reaction kinetics. The strong N-H bonds (BDE ≈ 435 kJ/mol) require substantial energy for hydrogen abstraction, making the initial decomposition steps highly endothermic. The primary initiation reaction NH3 → NH2 + H has an activation energy of ~460 kJ/mol, significantly higher than C-H bond cleavage in hydrocarbons (~420 kJ/mol for methane). Furthermore, the ammonia oxidation mechanism involves multiple slow intermediate steps: NH2 radicals predominantly react through NH2 + NO → N2 + H2O rather than chain-branching pathways, and the NH + O2 → HNO + O reaction has a high activation barrier. The system also suffers from radical termination through reactions like NH2 + NH2 → N2H4, which consumes reactive radicals without producing chain carriers. Additionally, ammonia's high nitrogen content leads to significant heat sink effects as energy is consumed in breaking strong N≡N bonds (941 kJ/mol) during N2 formation. The combined effect of high bond dissociation energies, slow radical production rates, and efficient termination pathways results in laminar burning velocities typically 5-7 times lower than methane under similar conditions.",
+  "original_text": {
+    "1": "Ammonia combustion faces challenges including low laminar burning velocity due to strong N-H bonds and complex reaction kinetics involving multiple slow intermediate steps.",
+    "2": "The primary initiation reaction NH3 → NH2 + H has an activation energy of ~460 kJ/mol, significantly higher than C-H bond cleavage in conventional hydrocarbons."
+  },
+  "type": "reasoning",
+  "difficulty": 5,
+  "topic": "combustion_science",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires deep combustion science expertise, specifically knowledge of laminar burning velocity, molecular properties (bond dissociation energies), and detailed reaction kinetics of ammonia combustion compared to hydrocarbons. It cannot be answered with general ML knowledge and requires domain-specific combustion chemistry understanding.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer are both high quality - the question requires domain expertise and the answer provides comprehensive, factually correct explanation supported by the paper content."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_d01362ee",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Ammonia-pyrolysis-and-oxidation-che_2024_Progress-in-Energy-and-Combustion-S",
+    "paper_title": "Ammonia-pyrolysis-and-oxidation-che_2024_Progress-in-Energy-and-Combustion-S"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:14:12.018913",
+    "answer_length": 1234
+  },
+  "verification": {
+    "status": "needs_review",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer is factually accurate and consistent with the original text. It correctly identifies the strong N-H bonds and high activation energy (~460 kJ/mol) for NH3 → NH2 + H as key factors, matching the original text. The additional details provided (BDE values, specific reaction pathways like NH2 + NO → N2 + H2O, radical termination mechanisms, and the 5-7x lower burning velocity compared to methane) represent reasonable elaborations that are consistent with established ammonia combustion chemistry. The logical flow from molecular structure → bond energies → slow kinetics → low burning velocity is sound. While the answer is more detailed than the original text, all statements are scientifically accurate and no contradictions exist.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:03:27.470660"
+      },
+      {
+        "correct": false,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Incorrect statement that energy is consumed by breaking strong N≡N bonds during N2 formation; N2 formation creates the N≡N bond and releases energy.",
+          "Bond dissociation energies are misstated: N–H in NH3 is ~391 kJ/mol and C–H in CH4 is ~439 kJ/mol; the answer implies N–H (~435) > C–H (~420), reversing their relative magnitudes.",
+          "Overstates NH2 + NO as a predominant pathway without noting it is context-dependent on NO presence.",
+          "NH2 + NH2 -> N2H4 cited as a significant termination pathway at flame conditions is questionable; its importance is limited at typical high-temperature flames."
+        ],
+        "reasoning": "While the answer captures the core idea that strong N–H bonds and slow radical chemistry reduce ammonia’s burning velocity (consistent with the provided ground truth), it contains a clear factual error about N2 bond energetics and inaccurate bond energy values, along with overstated pathway dominance. These issues warrant marking the answer as incorrect.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:04:02.640538"
+      },
+      {
+        "correct": false,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "The answer incorrectly states that energy is consumed in breaking strong N≡N bonds during N2 formation. The formation of the strong N≡N bond (941 kJ/mol) is a highly exothermic process that releases a significant amount of energy. The statement confuses bond formation (which is exothermic) with bond breaking (which is endothermic). While the high stability of N2 is a thermodynamic driver, the statement misrepresents its role as a 'heat sink' during its formation."
+        ],
+        "reasoning": "The answer contains a significant factual and logical error regarding the thermodynamics of N2 formation. It correctly identifies most of the key kinetic reasons for ammonia's low burning velocity (high N-H BDE, slow initiation, termination pathways), which are consistent with the original text. However, the claim that forming N2 acts as a heat sink by breaking N≡N bonds is fundamentally incorrect and reverses the thermodynamic principle. Energy is released, not consumed, when the stable N2 molecule is formed.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:04:21.756502"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:04:21.756527",
+    "consensus": {
+      "all_correct": false,
+      "correct_votes": 1,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 1
+    }
+  }
+}

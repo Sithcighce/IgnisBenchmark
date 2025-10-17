@@ -1,0 +1,80 @@
+{
+  "question_text": "Analyze the thermodynamic mechanisms through which auxiliary systems like air conditioning contribute to the gap between laboratory-measured and real-world CO2 emissions in passenger cars, focusing on how these systems create additional thermal loads and affect overall vehicle energy efficiency.",
+  "standard_answer": "Auxiliary systems such as air conditioning contribute significantly to the gap between laboratory and real-world CO2 emissions through their thermodynamic impact on vehicle energy systems. The paper states that 'the test procedure disregards various real-world conditions such as additional weight, number of passengers, use of air conditioning, realistic gear shifting, cold starts, operation at higher velocities and congestion.' This exclusion creates a systematic underestimation because air conditioning systems impose substantial parasitic loads on the engine. Thermodynamically, these systems require mechanical work input to drive compressors, which draws power directly from the engine shaft. This additional load increases fuel consumption proportionally, as more fuel must be burned to maintain the same propulsion power while simultaneously powering the cooling system. The paper further notes that 'factors such as driving behaviour, vehicle configuration and traffic conditions are reconfirmed as highly influential,' with auxiliary systems being a key component of vehicle configuration that affects real-world performance. The cumulative effect of these neglected factors contributes to the reported 30-40% gap between official laboratory values and real-world CO2 emissions estimates, with auxiliary system usage being one of the significant contributors to this divergence in energy efficiency calculations.",
+  "original_text": {
+    "1": "The test procedure disregards various real-world conditions such as additional weight, number of passengers, use of air conditioning, realistic gear shifting, cold starts, operation at higher velocities and congestion",
+    "2": "Factors such as driving behaviour, vehicle configuration and traffic conditions are reconfirmed as highly influential. Neglected factors (e.g. side winds, rain, road grade), which may have significant contributions in fuel consumption in real world driving are identified"
+  },
+  "type": "concept",
+  "difficulty": 4,
+  "topic": "energy_systems",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires deep understanding of thermodynamic principles in vehicle energy systems, specifically how auxiliary systems like air conditioning create thermal loads and affect energy efficiency in combustion-based passenger cars. This requires domain expertise in energy systems, heat transfer, and vehicle thermodynamics.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on paper citations, and no other compliance issues."
+  },
+  "retry_count": 1,
+  "question_id": "deepseek_q_b220ca9d",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Fuel-consumption-and-CO2-emissions-from-passenger-c_2017_Progress-in-Energy-",
+    "paper_title": "Fuel-consumption-and-CO2-emissions-from-passenger-c_2017_Progress-in-Energy-"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:21:03.112687",
+    "answer_length": 1425
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer correctly explains the thermodynamic mechanisms by which auxiliary systems like air conditioning contribute to the gap between laboratory and real-world CO2 emissions. It accurately quotes the original text regarding the test procedure disregarding real-world conditions including air conditioning use. The thermodynamic explanation is sound: air conditioning systems require mechanical work to drive compressors, drawing power from the engine shaft, which increases fuel consumption. The answer correctly identifies this as a parasitic load and explains the proportional relationship between additional load and fuel consumption. The reference to the 30-40% gap and the role of auxiliary systems as part of vehicle configuration is consistent with the original text's statement about influential factors. All physical principles stated (mechanical work input, compressor operation, engine shaft power draw, fuel consumption relationships) are thermodynamically correct. No factual errors or logical contradictions detected.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:09:41.422550"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Includes a specific numerical claim (30–40% gap) that is not present in the provided ground-truth text and thus is unsupported here",
+          "Assumes AC compressor draws power directly from the engine shaft; while common for ICE vehicles, some modern systems use electrically driven compressors (minor generalization)"
+        ],
+        "reasoning": "The answer aligns with the ground-truth statements that air conditioning and other real-world factors are excluded from test procedures and that vehicle configuration and conditions influence emissions. Its thermodynamic explanation—that AC imposes parasitic mechanical work via the compressor, increasing fuel consumption and CO2 emissions—is physically sound and logically consistent. The only concern is the added numerical magnitude of the gap, which is not supported by the provided text.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:10:01.642463"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer correctly explains the thermodynamic mechanism by which air conditioning systems increase fuel consumption. It accurately identifies the A/C compressor as a parasitic load on the engine, requiring additional mechanical work and thus more fuel combustion. This explanation is factually sound, logically consistent, and correctly uses the provided original text for support.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:10:17.356565"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:10:17.356593",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

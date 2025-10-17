@@ -1,0 +1,77 @@
+{
+  "question_text": "How does hydrogen enrichment in swirl combustors lead to flame flashback, and what role does the near-wall velocity profile play in enabling upstream flame propagation according to the provided paper?",
+  "standard_answer": "Hydrogen enrichment significantly increases flame reactivity, making the fuel-air mixture so reactive that the flame may not remain confined to the combustion chamber and instead propagates upstream. In swirl combustors specifically, the flame can exploit the low velocity regions near the walls to creep upstream into the fuel-air mixing chamber. This upstream migration is problematic because premixing chambers are typically not designed to withstand high-temperature gases, making them vulnerable to damage from flashback events. The combination of hydrogen's enhanced reactivity and the favorable velocity conditions in boundary layer regions creates conditions conducive to flashback, representing a critical stability challenge in hydrogen-enriched combustion systems.",
+  "original_text": {
+    "1": "Hydrogen use has a negative impact on the stability properties of the flame. In particular, the fuel-air mixture can be so reactive that the flame may not remain in the combustion chamber but instead, propagate upstream.",
+    "2": "In swirl combustors, for example, the flame can take advantage of the low near-wall velocity to creep upstream into the fuel-air mixing chamber. The premixing chamber is typically not designed to support the presence of high-temperature gases and can be damaged because of the flashback."
+  },
+  "type": "concept",
+  "difficulty": 4,
+  "topic": "combustion_kinetics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires specific knowledge of combustion science (hydrogen enrichment effects, flame flashback mechanisms) and fluid mechanics (swirl combustor behavior, near-wall velocity profiles), which are core domain concepts in combustion engineering and CFD.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+  },
+  "retry_count": 1,
+  "question_id": "deepseek_q_c1c6c82d",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Classification-and-computation-of-extreme-eve_2021_Progress-in-Energy-and-Co",
+    "paper_title": "Classification-and-computation-of-extreme-eve_2021_Progress-in-Energy-and-Co"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:17:34.722246",
+    "answer_length": 775
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately captures all key points from the original text: (1) hydrogen enrichment increases flame reactivity causing upstream propagation, (2) in swirl combustors, flames exploit low near-wall velocity regions to creep upstream into the mixing chamber, and (3) premixing chambers are not designed for high-temperature gases and can be damaged by flashback. The answer correctly explains the cause-effect relationships and physical mechanisms. While the answer provides additional context (e.g., 'boundary layer regions', 'critical stability challenge'), these elaborations are accurate and consistent with combustion science principles. No factual errors or logical contradictions detected.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:05:57.342929"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately reflects the PECS text: hydrogen enrichment increases mixture reactivity leading to upstream flame propagation, and in swirl combustors the low near-wall velocity enables the flame to creep upstream into the premixer, which is vulnerable to damage from hot gases. The cause-effect logic and physical principles are consistent with the original statement.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:06:08.481544"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer accurately paraphrases and synthesizes the information from the original text. It correctly identifies that hydrogen's high reactivity, combined with the low-velocity regions near the walls of a swirl combustor, enables upstream flame propagation (flashback). All stated physical principles are correct and logically consistent.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:06:26.897793"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:06:26.897813",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

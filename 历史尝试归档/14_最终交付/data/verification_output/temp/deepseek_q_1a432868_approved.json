@@ -1,0 +1,80 @@
+{
+  "question_text": "Explain the role of the NCN + H reaction branching in prompt-NO formation, including how the competition between CH + N2 regeneration and HCN + N production affects NO yield under fuel-rich conditions, based on the provided paper content.",
+  "standard_answer": "The NCN + H reaction is a critical branching point in prompt-NO formation with two main product channels: CH + N2 (R4b) and HCN + N (R8). Under fuel-rich conditions, this branching directly influences NO yield through competing pathways. The CH + N2 regeneration channel (R4b) recycles NCN back to the prompt-NO initiation step, effectively delaying NO formation by conserving fixed nitrogen as NCN. In contrast, the HCN + N channel (R8) produces nitrogen atoms that can rapidly oxidize to NO through reactions with OH or O2. The branching ratio exhibits temperature dependence: at lower temperatures, R4b dominates due to its negative temperature dependence, while R8 becomes increasingly competitive at higher temperatures as its rate increases with temperature. This temperature-sensitive branching means that in fuel-rich flames where temperatures are moderate, NO formation can be suppressed if R4b prevails, but under hotter rich conditions, R8 enhances NO production. The accurate prediction of this branching is essential for modeling prompt-NO in diffusion flames and reburning zones, as the competition between these pathways determines whether nitrogen is recycled back to N2 or converted to NO.",
+  "original_text": {
+    "1": "The NCN + H reaction is dominated by the channel to CH + N2 (R4b) at low to medium temperatures, while HCN + N (R8) becomes competitive at high temperatures.",
+    "2": "Since k4b has a negative temperature dependence while k8 increases with temperature, the overall rate constant for NCN + H has an inflection point."
+  },
+  "type": "concept",
+  "difficulty": 4,
+  "topic": "combustion_kinetics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires deep knowledge of combustion kinetics, specifically prompt-NO formation mechanisms, reaction pathways (NCN + H branching), and how these affect NO yield under fuel-rich conditions. This is specialized combustion science knowledge that cannot be answered with general ML or CS expertise.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+  },
+  "retry_count": 1,
+  "question_id": "deepseek_q_1a432868",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Modeling-nitrogen-chemistry-in-comb_2018_Progress-in-Energy-and-Combustion-S",
+    "paper_title": "Modeling-nitrogen-chemistry-in-comb_2018_Progress-in-Energy-and-Combustion-S"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:23:56.252085",
+    "answer_length": 1206
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately describes the NCN + H reaction branching mechanism and is fully consistent with the original text. Key points verified: (1) Correctly identifies the two competing channels R4b (CH + N2) and R8 (HCN + N); (2) Accurately states that R4b dominates at low-medium temperatures while R8 becomes competitive at high temperatures, matching the original text; (3) Correctly explains the temperature dependencies - R4b has negative temperature dependence while R8 increases with temperature, consistent with the inflection point mentioned in the original text; (4) The mechanistic explanations about R4b recycling nitrogen and R8 producing N atoms that oxidize to NO are chemically sound; (5) The discussion of implications for fuel-rich conditions and NO yield is logically consistent with the branching behavior described. While the answer is detailed and elaborates beyond the minimal original text, all statements are factually accurate and no contradictions exist.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:13:50.580171"
+      },
+      {
+        "correct": false,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "States that R4b conserves fixed nitrogen as NCN; in fact, NCN + H -> CH + N2 (R4b) destroys NCN and returns nitrogen to N2 (unfixed), while regenerating CH + N2.",
+          "Phrasing \"recycles NCN back to the prompt-NO initiation step\" is misleading; the channel regenerates CH + N2, not NCN."
+        ],
+        "reasoning": "The answer correctly captures the temperature-dependent branching (R4b dominant at low–medium T; R8 competitive at high T) and the implications for NO yield under fuel-rich conditions, consistent with the provided text. However, it contains a factual error about the fate of fixed nitrogen in the R4b channel: R4b consumes NCN and produces CH + N2, returning nitrogen to N2 rather than conserving it as NCN. This misstatement warrants marking the answer as incorrect despite the otherwise sound reasoning.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:14:32.668264"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer accurately explains the competing pathways of the NCN + H reaction and their temperature dependence, consistent with the provided text and established combustion chemistry. It correctly links the CH + N2 channel (R4b) to nitrogen recycling/suppression of NO and the HCN + N channel (R8) to NO production. The logic regarding the impact of temperature on the branching ratio and subsequent NO yield is sound and directly supported by the source text.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:14:55.158231"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:14:55.158265",
+    "consensus": {
+      "all_correct": false,
+      "correct_votes": 2,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 2
+    }
+  }
+}

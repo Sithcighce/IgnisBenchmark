@@ -1,0 +1,77 @@
+{
+  "question_text": "Calculate the turbulent diffusivity at the Taylor scale for a premixed flame with u'_Taylor = 2 m/s and λ_Taylor = 0.5 mm, and explain how this value compares to the molecular diffusivity to assess its impact on preheat layer broadening.",
+  "standard_answer": "The turbulent diffusivity at the Taylor scale is calculated using the formula D_T,Taylor = u'_Taylor * λ_Taylor. Given u'_Taylor = 2 m/s and λ_Taylor = 0.5 mm = 0.0005 m, the calculation is D_T,Taylor = 2 m/s * 0.0005 m = 0.001 m²/s. The molecular thermal diffusivity for reactants at 300 K, α_300K, is typically on the order of 2e-5 m²/s for air. Thus, D_T,Taylor / α_300K ≈ 0.001 / 0.00002 = 50, meaning the turbulent diffusivity is 50 times larger than the molecular diffusivity. This significant enhancement indicates that turbulent transport dominates over molecular diffusion at the Taylor scale, leading to preheat layer broadening. According to the measured boundary, when D_T,Taylor exceeds 13.8 * ν_300K (where ν_300K ≈ 1.5e-5 m²/s for air, so 13.8 * ν_300K ≈ 2.07e-4 m²/s), broadening occurs. Here, D_T,Taylor = 0.001 m²/s is much greater than 2.07e-4 m²/s, confirming that preheat layers would be broadened under these conditions. This quantitative comparison highlights the role of Taylor scale eddies in enhancing diffusion and altering flame structure in extreme turbulence.",
+  "original_text": {
+    "1": "Eq. (6) is based on the definition of turbulent diffusivity first proposed by Prandtl. He noted that the molecular diffusivity is the product of the mean thermal velocity of molecules and a molecular collision distance that is called the mean free path.",
+    "2": "a physical explanation of the measurements in Fig. 8 is that flamelet broadening begins when the turbulent diffusivity at the Taylor scale exceeds the value of 13.8 ν_300K."
+  },
+  "type": "calculation",
+  "difficulty": 3,
+  "topic": "heat_transfer",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires specific knowledge of turbulent combustion physics, including turbulent diffusivity calculations at the Taylor scale, molecular diffusivity values for combustion reactants, and understanding of preheat layer broadening mechanisms in premixed flames - all core concepts in combustion science and fluid mechanics.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer are well-structured and domain-appropriate. The answer correctly applies turbulent diffusivity concepts and compares with molecular diffusivity as specified in the paper's citations."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_09a24e04",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Premixed-flames-subjected-to-extreme-turbulence_2020_Progress-in-Energy-and-",
+    "paper_title": "Premixed-flames-subjected-to-extreme-turbulence_2020_Progress-in-Energy-and-"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:25:29.505396",
+    "answer_length": 1089
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer correctly calculates D_T,Taylor = u'_Taylor * λ_Taylor = 2 m/s * 0.0005 m = 0.001 m²/s. The comparison with molecular thermal diffusivity (α_300K ≈ 2e-5 m²/s) yielding a ratio of 50 is mathematically correct. The answer properly applies the criterion from the original text that flamelet broadening begins when D_T,Taylor exceeds 13.8 * ν_300K. The calculation of 13.8 * ν_300K ≈ 2.07e-4 m²/s (using ν_300K ≈ 1.5e-5 m²/s for air) is accurate, and the conclusion that D_T,Taylor = 0.001 m²/s >> 2.07e-4 m²/s confirms preheat layer broadening is logically sound. The physical interpretation that turbulent transport dominates over molecular diffusion at the Taylor scale is consistent with the Prandtl turbulent diffusivity concept mentioned in the original text. All numerical calculations, physical principles, and logical reasoning are correct and consistent with the original text.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:16:22.562047"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The calculation D_T = u' * λ = 2 m/s * 0.0005 m = 0.001 m²/s is correct and aligns with the Prandtl-style mixing-length concept. The comparison to molecular thermal diffusivity (~2e-5 m²/s) is reasonable, yielding a ratio of ~50. The use of the threshold D_T,Taylor > 13.8 ν_300K from the original text is correctly applied: 13.8 ν ≈ 2.07e-4 m²/s, and 0.001 m²/s exceeds this, indicating preheat layer broadening. No factual or logical errors are present, and the answer is consistent with the provided ground truth.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:16:49.374360"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer is factually and logically correct. It correctly calculates the turbulent diffusivity at the Taylor scale using the provided formula and values. It uses standard, accurate values for the molecular thermal diffusivity (α) and kinematic viscosity (ν) of air. The comparison and conclusion about preheat layer broadening are directly supported by the provided original text, which states that broadening occurs when D_T,Taylor > 13.8 * ν_300K. The answer correctly applies this criterion to the calculated values, confirming the physical outcome.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:17:10.756940"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:17:10.756969",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

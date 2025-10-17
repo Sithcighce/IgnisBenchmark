@@ -1,0 +1,79 @@
+{
+  "question_text": "What are the fundamental differences in reaction mechanisms between homogeneous acid-catalyzed and supercritical non-catalytic transesterification of triglycerides, and how do these differences affect product selectivity and byproduct formation?",
+  "standard_answer": "Homogeneous acid-catalyzed transesterification proceeds through a protonation mechanism where the carbonyl oxygen of triglycerides is protonated by the acid catalyst, creating a carbocation that undergoes nucleophilic attack by methanol. This stepwise mechanism involves tetrahedral intermediates and requires catalyst regeneration. In contrast, supercritical non-catalytic transesterification occurs through direct nucleophilic attack by methanol monomers on the carbonyl carbon, facilitated by the unique solvent properties of supercritical methanol. The acid-catalyzed pathway is sensitive to water content and can lead to hydrolysis side reactions producing free fatty acids, while the supercritical route simultaneously esterifies free fatty acids and transesterifies triglycerides without catalyst-induced side reactions. The supercritical mechanism eliminates saponification issues common in base-catalyzed systems and avoids catalyst contamination in the final product, though it requires higher energy input for maintaining supercritical conditions.",
+  "original_text": {
+    "1": "This mechanism involves the protonation of the carbonyl group, nucleophilic attack of methanol to produce a tetrahedral intermediate, followed by proton migration and intermediate breakdown.",
+    "2": "As methanol clusters break into free monomers at high temperatures and high pressures, they attack the carbon atom of the carbonyl group in triglycerides, resulting in an intermediate via the transfer of a methoxide moiety"
+  },
+  "type": "concept",
+  "difficulty": 4,
+  "topic": "combustion_kinetics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires deep knowledge of chemical reaction mechanisms, transesterification processes, catalysis, supercritical fluid chemistry, and biodiesel production - all within the combustion/energy domain context. It specifically addresses reaction kinetics, mechanism differences, and their impact on product selectivity and byproduct formation in biodiesel synthesis.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer are well-aligned with the paper content and domain requirements. The answer provides detailed mechanistic explanations that match the citations and covers the key differences between catalytic and supercritical transesterification pathways."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_8df8ac81",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "State-of-the-art-of-biodiesel-production-unde_2017_Progress-in-Energy-and-Co",
+    "paper_title": "State-of-the-art-of-biodiesel-production-unde_2017_Progress-in-Energy-and-Co"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:29:16.351413",
+    "answer_length": 1058
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately describes both mechanisms consistent with the original text. For acid-catalyzed transesterification, it correctly identifies protonation of the carbonyl oxygen, nucleophilic attack by methanol, and formation of tetrahedral intermediates, matching [1]. For supercritical non-catalytic transesterification, it correctly describes direct nucleophilic attack by methanol monomers on the carbonyl carbon, consistent with [2]. The answer also provides accurate additional context about water sensitivity, hydrolysis side reactions, free fatty acid esterification, saponification avoidance, and energy requirements - all of which are scientifically sound principles in transesterification chemistry. No factual errors or logical contradictions detected.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:20:50.712778"
+      },
+      {
+        "correct": false,
+        "baseline_confidence": "medium",
+        "verification_confidence": "high",
+        "issues": [
+          "States that protonation creates a carbocation in the acid-catalyzed pathway; acid catalysis proceeds via a protonated carbonyl and tetrahedral intermediate, not a discrete carbocation, which contradicts the ground-truth description."
+        ],
+        "reasoning": "The answer correctly contrasts protonation/nucleophilic attack with tetrahedral intermediates for acid catalysis and direct nucleophilic attack by methanol monomers in supercritical conditions, consistent with the provided texts. It also reasonably discusses byproduct trends (hydrolysis under acid, simultaneous esterification/transesterification under supercritical, avoidance of saponification and catalyst contamination). However, describing the acid-catalyzed mechanism as forming a carbocation is a factual error inconsistent with the ground-truth mechanism.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:21:13.578286"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately describes both the acid-catalyzed and supercritical non-catalytic transesterification mechanisms, consistent with the provided original text. The explanation of the acid-catalyzed pathway (protonation, tetrahedral intermediate) and the supercritical pathway (direct attack by methanol monomers) is correct. Furthermore, the discussion on byproduct formation (hydrolysis in acid-catalyzed systems) and process characteristics (simultaneous FFA esterification in supercritical systems) is factually accurate and logically sound.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:21:48.797004"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:21:48.797038",
+    "consensus": {
+      "all_correct": false,
+      "correct_votes": 2,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 2
+    }
+  }
+}

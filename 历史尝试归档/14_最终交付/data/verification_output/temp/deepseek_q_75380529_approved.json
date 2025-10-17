@@ -1,0 +1,80 @@
+{
+  "question_text": "How does the oxygen vacancy concentration gradient across a mixed ionic-electronic conducting (MIEC) membrane drive oxygen permeation during CO2 thermochemical reduction, and what are the key transport mechanisms involved?",
+  "standard_answer": "The oxygen vacancy concentration gradient across an MIEC membrane is the primary driving force for oxygen permeation during CO2 thermochemical reduction. On the feed side, CO2 dissociates, consuming oxygen vacancies (V••O) and producing CO, which increases the oxygen chemical potential. On the sweep side, oxygen desorbs or reacts with fuels, replenishing vacancies and lowering the oxygen chemical potential. This establishes a steady-state vacancy gradient, with minimum concentration on the feed side and maximum on the sweep side. Oxygen transport occurs via ambipolar diffusion, where oxygen ions (O2-) migrate through vacancies, and electrons or holes move in the opposite direction to maintain charge neutrality. The flux is governed by the Nernst-Planck equation, incorporating vacancy diffusivity (DV), conductivity (σ), and the oxygen chemical potential gradient (∇μO2). Surface reactions, such as oxygen incorporation and desorption, can become rate-limiting if kinetics are slow relative to bulk diffusion. The overall permeation flux (JO2) is proportional to the inverse of membrane thickness (L) when bulk diffusion dominates, but becomes independent of L under surface reaction control.",
+  "original_text": {
+    "1": "Location dependent : the oxygen vacancy concentrations vary across the membrane, being minimum on the feed side and maximum on the sweep side",
+    "2": "Oxygen permeation is driven by its partial pressure gradient across the membrane (or its chemical potential in the general case)"
+  },
+  "type": "reasoning",
+  "difficulty": 5,
+  "topic": "fluid_mechanics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires specialized knowledge in combustion science, energy systems, and materials science related to CO2 thermochemical reduction. It specifically addresses oxygen permeation mechanisms in mixed ionic-electronic conducting membranes, which involves understanding oxygen vacancy gradients, transport phenomena, and surface reaction kinetics - all domain-specific concepts in energy and combustion research.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on paper content, and no compliance issues."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_75380529",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Mixed-ionic-electronic-conducting--MIEC--membranes_2019_Progress-in-Energy-a",
+    "paper_title": "Mixed-ionic-electronic-conducting--MIEC--membranes_2019_Progress-in-Energy-a"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:23:03.860561",
+    "answer_length": 1202
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly explains the oxygen vacancy concentration gradient mechanism in MIEC membranes. It accurately states that vacancy concentration is minimum on the feed side and maximum on the sweep side, which directly matches the original text [1]. The answer correctly identifies that oxygen permeation is driven by the oxygen chemical potential gradient (consistent with original text [2]). The detailed explanation of ambipolar diffusion, the Nernst-Planck equation, surface reaction kinetics, and the relationship between flux and membrane thickness are all physically sound and represent standard MIEC membrane transport theory. While the answer is more detailed than the original text, all additional explanations (CO2 dissociation mechanism, charge neutrality, surface vs bulk diffusion control) are factually correct and logically consistent with established principles in solid-state ionics and membrane science. No contradictions or errors detected.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:13:27.357979"
+      },
+      {
+        "correct": false,
+        "baseline_confidence": "medium",
+        "verification_confidence": "high",
+        "issues": [
+          "Misstates the primary driving force: identifies the vacancy concentration gradient as primary, whereas the ground truth specifies oxygen partial pressure (chemical potential) gradient drives permeation.",
+          "Overemphasizes vacancy gradient as the driver rather than as a consequence of the oxygen chemical potential gradient that modulates transport properties."
+        ],
+        "reasoning": "The answer correctly describes the location-dependent vacancy profile (minimum feed, maximum sweep), ambipolar diffusion, possible surface reaction limitation, and thickness scaling. However, it incorrectly states that the vacancy gradient is the primary driving force. According to the ground truth, oxygen permeation is driven by the oxygen partial pressure/chemical potential gradient; the vacancy gradient arises from and reflects this driving force.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:14:05.972165"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly identifies the key mechanisms of oxygen permeation in an MIEC membrane. It accurately describes the role of surface reactions in establishing an oxygen vacancy gradient, which is consistent with the fundamental driving force of the oxygen chemical potential gradient mentioned in the original text. The concepts of ambipolar diffusion, rate-limiting steps (bulk diffusion vs. surface kinetics), and their dependence on membrane thickness are all explained correctly and are factually sound. The answer is fully consistent with the provided original text and established principles of solid-state ionics.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:14:45.752804"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:14:45.752826",
+    "consensus": {
+      "all_correct": false,
+      "correct_votes": 2,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 2
+    }
+  }
+}

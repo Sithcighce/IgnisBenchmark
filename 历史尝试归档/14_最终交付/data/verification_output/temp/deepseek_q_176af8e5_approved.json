@@ -1,0 +1,80 @@
+{
+  "question_text": "How does the competition between heterogeneous and homogeneous reaction pathways affect the homogeneous ignition distance in catalytic combustion systems, and what are the key controlling parameters?",
+  "standard_answer": "The competition between heterogeneous (catalytic) and homogeneous (gas-phase) reaction pathways significantly influences the homogeneous ignition distance through multiple mechanisms. Heterogeneous reactions consume the deficient reactant near the catalytic wall, creating transverse stratification that depletes fuel concentration in the boundary layer. This depletion inhibits homogeneous ignition by reducing the available fuel for gas-phase reactions. Simultaneously, the exothermicity of catalytic reactions heats the gas through wall conduction, promoting homogeneous ignition by increasing local temperatures. The analytical criterion shows that homogeneous ignition distance ζ_ig,g depends on the catalytic Damköhler number Da_s and gas-phase Damköhler number Da_g through the relationship F(ζ_ig,g) = (1/2Pr)A/(Da_g,eff), where Da_g,eff = τ_d,eff/τ_ch,g. As Da_s increases (higher catalytic reactivity), the homogeneous ignition distance ζ_ig,g increases due to enhanced fuel consumption by the catalytic pathway. Conversely, increasing Da_g (higher gas-phase reactivity) decreases ζ_ig,g. The controlling parameters include the catalytic and gas-phase activation energies, wall-to-inlet temperature ratio, Lewis number of the deficient reactant, and the characteristic transverse diffusion time scale. The complex interplay creates isolines of constant ζ_ig,g for different combinations of Da_s and Da_g, demonstrating that multiple reactivity combinations can yield identical ignition distances.",
+  "original_text": {
+    "1": "The competition between the catalytic and gaseous pathways is evident in Fig. 10. For a given Da_s, the homogeneous ignition distance ζ_ig,g obviously decreases with increasing gas-phase reactivity Da_g. On the other hand, for a given Da_g a rise in the catalytic reactivity (Da_s) inhibits homogeneous ignition by increasing ζ_ig,g, since the catalytic pathway converts fuel at the expense of the gaseous pathway.",
+    "2": "The existence of multiple combinations of gaseous and surface reactivities producing the same ζ_ig,g complicates the experimental validation of homogeneous reaction schemes using PLIF."
+  },
+  "type": "reasoning",
+  "difficulty": 5,
+  "topic": "combustion_kinetics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires deep expertise in catalytic combustion systems, specifically understanding the competition between heterogeneous (catalytic) and homogeneous (gas-phase) reaction pathways, ignition distances, Damköhler numbers, and controlling parameters like activation energies, Lewis numbers, and temperature ratios - all core concepts in combustion science and chemical kinetics.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Excellent question and answer - both demonstrate deep domain knowledge and align perfectly with the paper's content on hetero-/homogeneous combustion competition."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_176af8e5",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Progress-in-non-intrusive-laser-based-measurements-of_2019_Progress-in-Energ",
+    "paper_title": "Progress-in-non-intrusive-laser-based-measurements-of_2019_Progress-in-Energ"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:26:50.727484",
+    "answer_length": 1506
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately describes the competition between heterogeneous and homogeneous reaction pathways in catalytic combustion systems. It correctly states that: (1) increasing catalytic reactivity (Da_s) increases homogeneous ignition distance ζ_ig,g by consuming fuel, (2) increasing gas-phase reactivity (Da_g) decreases ζ_ig,g, and (3) multiple combinations of Da_s and Da_g can yield identical ignition distances. These key points are consistent with the original text. The answer also provides additional mechanistic details (fuel depletion in boundary layer, thermal heating effects, analytical criterion) that are physically sound and represent reasonable elaboration beyond the original text. The physical principles regarding catalytic fuel consumption inhibiting gas-phase ignition and the inverse relationship between Da_g and ζ_ig,g are correctly stated. No factual errors or logical contradictions detected.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:17:22.888122"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "medium",
+        "issues": [
+          "Introduces a specific analytical relation F(ζ_ig,g) = (1/2Pr)A/(Da_g,eff) and Da_g,eff = τ_d,eff/τ_ch,g that is not supported by the provided ground-truth text and cannot be verified here.",
+          "Mechanistic details about near-wall fuel stratification and heating via wall conduction are plausible but not explicitly stated in the ground-truth excerpt."
+        ],
+        "reasoning": "The answer correctly captures the key trends from the ground-truth: for fixed Da_s, ζ_ig,g decreases with increasing Da_g; for fixed Da_g, ζ_ig,g increases with increasing Da_s; and multiple (Da_s, Da_g) combinations can yield the same ζ_ig,g. The added mechanistic explanations are reasonable and consistent with combustion physics. The only concern is the inclusion of a specific analytical formula not present in the provided text, which cannot be verified here but does not contradict the stated trends.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:17:47.441564"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly identifies the competing effects of heterogeneous and homogeneous reactions on the homogeneous ignition distance. It accurately states that higher catalytic reactivity (Da_s) increases the ignition distance by consuming fuel, while higher gas-phase reactivity (Da_g) decreases it. This is in perfect agreement with the original text. The answer also correctly elaborates on the underlying physical mechanisms (fuel depletion vs. thermal promotion) and lists relevant controlling parameters, all of which are consistent with established combustion science principles.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:18:11.087124"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:18:11.087145",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": false,
+      "disagreement_count": 0
+    }
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "question_text": "Using thermodynamic principles from combustion science and energy systems, explain why high-purity CO2 streams (>95%) from industries like ethanol fermentation and natural gas processing require near-zero minimum work for separation, and contrast this with the higher separation requirements for dilute combustion flue gases (3-15% CO2). Include the role of entropy of mixing and Gibbs free energy in your explanation.",
+  "standard_answer": "The thermodynamic minimum work for CO2 separation approaches zero for high-purity streams (>95% CO2) because the feed stream composition closely matches the desired product stream composition. When the CO2 concentration in the feed stream is already above 95%, the Gibbs free energy change between feed and product streams becomes minimal, requiring negligible work to achieve the target purity. This occurs because the entropy penalty for isolating CO2 from the gas mixture is negligible when compositions are similar. In contrast, dilute flue gases (3-15% CO2) require substantial separation work due to the large entropy of mixing that must be overcome. The fundamental difference lies in overcoming the natural mixing tendencies - for pure streams, CO2 molecules are already largely concentrated, requiring only dehydration and compression, while dilute streams demand significant energy expenditure to work against the favorable entropy state of mixed gases. This thermodynamic principle explains why capture costs are substantially lower for high-purity industrial streams compared to dilute combustion sources.",
+  "original_text": {
+    "1": "For any industrial process that produces a stream with greater than 95% CO2 purity, the theoretical minimum work to capture it is near zero (given the assumption of 95% capture purity).",
+    "2": "Such pure streams of CO2 may only require dehydration and compression. There is still an associated capital cost for building the capture system in addition to operational and maintenance costs, resulting in $14 per metric ton of CO2 capture on average."
+  },
+  "type": "concept",
+  "difficulty": 4,
+  "topic": "energy_systems",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires deep understanding of thermodynamic principles (Gibbs free energy, entropy of mixing) applied specifically to CO2 separation processes in combustion science and energy systems, comparing high-purity industrial streams versus dilute combustion flue gases.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Excellent question and answer - well-grounded in thermodynamic principles and accurately reflects the paper's content about minimum separation work for high-purity CO2 streams."
+  },
+  "retry_count": 1,
+  "question_id": "deepseek_q_10a4063a",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "CO2-capture-from-the-industry-sec_2017_Progress-in-Energy-and-Combustion-Sci",
+    "paper_title": "CO2-capture-from-the-industry-sec_2017_Progress-in-Energy-and-Combustion-Sci"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:17:53.290952",
+    "answer_length": 1117
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly explains the thermodynamic principles underlying CO2 separation work requirements. It accurately states that high-purity streams (>95% CO2) require near-zero minimum work because the feed composition closely matches the product composition, resulting in minimal Gibbs free energy change and negligible entropy penalty. The contrast with dilute flue gases (3-15% CO2) is correctly explained through the entropy of mixing concept - dilute streams require substantial work to overcome the favorable entropy state of mixed gases. The answer correctly identifies that high-purity streams mainly need dehydration and compression, which aligns with the original text. All thermodynamic principles (Gibbs free energy, entropy of mixing, natural mixing tendencies) are correctly applied. The explanation is more detailed than the original text but contains no factual errors or logical contradictions.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:06:03.839248"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer is consistent with the PECS ground truth and thermodynamics: it correctly ties minimum separation work to Gibbs free energy and entropy of mixing, explains why near-pure (>95%) CO2 streams have near-zero theoretical work, contrasts with dilute flue gases where mixing entropy is large, and notes that high-purity streams typically require only dehydration and compression. No factual or logical errors detected.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:06:27.188623"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly explains the thermodynamic principles behind CO2 separation work. It accurately links the near-zero minimum work for high-purity streams to the negligible change in Gibbs free energy and the low entropy of mixing. The contrast with dilute streams is also explained correctly. The answer is fully consistent with the provided original text and established thermodynamic laws.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:06:46.322848"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:06:46.322871",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "question_text": "What are the four main coupling mechanisms between heterogeneous and homogeneous chemistry in catalytic combustion systems, and how do they collectively influence the onset of gas-phase ignition?",
+  "standard_text": {
+    "1": "There are four main coupling routes between the heterogeneous and homogeneous reaction pathways. The first mechanism is the promotion of homogeneous ignition due to the exothermicity of the catalytic pathway that heats up the channel walls and consequently the flowing gas. At the same time homogeneous ignition is inhibited by the near-wall depletion of the deficient reactant. A third mechanism of coupling is via the major species produced by the catalytic pathway over the gaseous induction zone. The fourth mechanism of coupling is via catalytic adsorption/desorption reactions of radical species.",
+    "2": "The net effect is a moderate inhibition of homogeneous ignition via the hetero-/homogeneous radical coupling."
+  },
+  "standard_answer": "The four primary coupling mechanisms between heterogeneous and homogeneous chemistry in catalytic combustion systems are: (1) Thermal coupling through catalytic exothermicity - the heat released by surface reactions increases wall and gas temperatures, promoting homogeneous ignition by accelerating gas-phase reaction rates through Arrhenius temperature dependence. (2) Reactant depletion coupling - catalytic consumption of the deficient reactant near the wall creates transverse concentration gradients that reduce fuel availability for gas-phase reactions, thereby inhibiting homogeneous ignition. (3) Chemical inhibition/promotion by catalytic products - major species like H₂O produced catalytically can chemically inhibit homogeneous ignition in H₂/air mixtures while promoting it in CH₄/air mixtures through their influence on reaction pathways and radical pools. (4) Radical coupling through adsorption/desorption - while catalytic surfaces are poor net radical sources, they become efficient radical sinks when significant radicals are produced gas-phase, shifting from net-desorptive behavior upstream of ignition to net-adsorptive behavior near and after ignition. Collectively, these mechanisms create a complex balance where thermal promotion competes with chemical and radical inhibition. The exothermic heating tends to advance ignition, while reactant depletion and radical adsorption retard it, resulting in the homogeneous ignition position being determined by the net effect of these competing influences. The relative strength of each coupling mechanism depends on operating conditions, fuel type, and catalyst properties.",
+  "type": "concept",
+  "difficulty": 5,
+  "topic": "heterogeneous_homogeneous_coupling",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question specifically addresses coupling mechanisms between heterogeneous and homogeneous chemistry in catalytic combustion systems, requiring deep knowledge of combustion science, chemical kinetics, catalytic processes, and ignition phenomena - all core domain topics in combustion and energy systems.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question is well-focused on domain-specific coupling mechanisms in catalytic combustion, and the answer provides comprehensive, accurate details about all four coupling mechanisms and their collective influence on gas-phase ignition."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_507bba18",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Progress-in-non-intrusive-laser-based-measurements-of_2019_Progress-in-Energ",
+    "paper_title": "Progress-in-non-intrusive-laser-based-measurements-of_2019_Progress-in-Energ"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:26:49.290942",
+    "answer_length": 1643
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "medium",
+        "issues": [
+          "No original text provided for verification - assessment based on scientific principles and domain knowledge only"
+        ],
+        "reasoning": "The answer correctly identifies and explains four well-established coupling mechanisms in catalytic combustion: (1) Thermal coupling through exothermic surface reactions is accurately described with correct Arrhenius temperature dependence; (2) Reactant depletion coupling correctly explains how catalytic consumption creates concentration gradients that inhibit gas-phase reactions; (3) Chemical inhibition/promotion by products (H₂O effects) is consistent with known chemistry - H₂O can act as a third-body in different ways for H₂ vs CH₄ systems; (4) Radical coupling mechanism correctly describes the transition from net-desorptive to net-adsorptive behavior. The collective influence description accurately captures the competing promotional and inhibitory effects. All physical principles, cause-effect relationships, and chemical mechanisms are scientifically sound. However, without the original PECS text to verify against, verification confidence is medium rather than high, as I cannot confirm specific details like the exact characterization of surfaces as 'poor net radical sources' or verify the precise wording matches the authoritative source.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:17:20.021855"
+      },
+      {
+        "correct": false,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Mischaracterizes radical coupling: claims a shift from net-desorptive (source) upstream of ignition to net-adsorptive (sink) near/after ignition. In established catalytic combustion literature, catalytic surfaces act as radical sinks both before and after gas-phase ignition, with sink strength increasing after ignition.",
+          "Misattributes chemical promotion in CH4/air to H2O. Steam generally inhibits homogeneous ignition (via dilution/third-body/radical-recombination effects). Promotion of gas-phase ignition in methane systems is primarily due to catalytic formation of reactive intermediates (H2, CO, partial oxidation products), not H2O.",
+          "Omission/underemphasis of the key role of catalytically produced intermediates (H2, CO) as a distinct pathway of chemical coupling that promotes homogeneous ignition, which is widely recognized as a main coupling mechanism."
+        ],
+        "reasoning": "The answer correctly lists thermal coupling and reactant-depletion effects and notes competing influences on ignition. However, it incorrectly states that surfaces are net radical sources upstream of ignition; they are sinks both pre- and post-ignition. It also incorrectly suggests H2O promotes CH4/air ignition, whereas promotion is primarily due to H2/CO intermediates, while steam generally inhibits. These constitute factual errors in two of the four mechanisms.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:18:06.476263"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer correctly identifies and explains the four primary coupling mechanisms in catalytic combustion: thermal coupling, reactant depletion, chemical effects of products, and radical coupling. The description of each mechanism and their collective, competing influence on gas-phase ignition (thermal promotion vs. chemical/radical inhibition) is factually accurate and consistent with established principles in combustion science and catalysis.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:18:31.481992"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:18:31.482017",
+    "consensus": {
+      "all_correct": false,
+      "correct_votes": 2,
+      "total_votes": 3,
+      "all_high_confidence": false,
+      "disagreement_count": 2
+    }
+  }
+}

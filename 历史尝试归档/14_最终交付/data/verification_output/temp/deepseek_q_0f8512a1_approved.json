@@ -1,0 +1,80 @@
+{
+  "question_text": "Why do thermo-chemical storage (TCS) systems exhibit higher energy storage densities compared to sensible and latent heat storage, and how does the reversible chemical reaction enthalpy contribute to this advantage?",
+  "standard_answer": "Thermo-chemical storage systems achieve higher energy storage densities because they utilize the enthalpy of reversible chemical reactions, which is typically much larger per unit mass than sensible heat capacity or latent heat of fusion. Sensible heat storage relies on temperature change (Q = m·Cp·ΔT), with Cp around 1 kJ/kg·K, yielding ~500 kJ/kg for a 500°C range. Latent heat storage adds phase change enthalpy (ΔHm), reaching 700–1000 kJ/kg. In contrast, TCS stores energy as chemical potential in reaction bonds (Q = m·ΔHr·α), where ΔHr for reactions like Ca(OH)2 decomposition can exceed 1000 kJ/kg. This high ΔHr arises from breaking and forming strong chemical bonds during endothermic (charging) and exothermic (discharging) steps. Additionally, TCS allows long-term storage with minimal thermal losses since energy is stored chemically rather than thermally. The reversibility ensures multiple cycles without degradation, making TCS ideal for applications requiring compact, high-capacity storage, such as in solar thermal plants where space and efficiency are critical.",
+  "original_text": {
+    "1": "For an operation between 750 °C and 250 °C, with specific heat value around 1 kJ/kg, the heat storage capacity of sensible heat storage is ~500 kJ/kg, between 700 and 1000 kJ/kg in latent heat storage due to the contribution of the heat of phase transition, and in excess of 1000 kJ/kg for thermo-chemical storage, respectively.",
+    "2": "Thermo-chemical storage (TCS) uses the heat absorbed and released by a reversible chemical reaction. The amount of heat stored is proportional to the amount of storage material (m), the endothermic heat of the reaction (ΔHr) and the conversion (α)."
+  },
+  "type": "concept",
+  "difficulty": 5,
+  "topic": "energy_systems",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires knowledge of thermal energy storage mechanisms, specifically comparing thermo-chemical storage with sensible and latent heat storage, and understanding how reversible chemical reaction enthalpy contributes to energy density. This falls under energy systems expertise with thermodynamics and heat transfer principles.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all criteria; no changes needed."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_0f8512a1",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Thermal-energy-storage--Recent-developments_2016_Progress-in-Energy-and-Comb",
+    "paper_title": "Thermal-energy-storage--Recent-developments_2016_Progress-in-Energy-and-Comb"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:31:17.943360",
+    "answer_length": 1083
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly explains why TCS systems have higher energy storage densities compared to sensible and latent heat storage. It accurately presents the numerical values from the original text (sensible: ~500 kJ/kg, latent: 700-1000 kJ/kg, TCS: >1000 kJ/kg) and correctly identifies the underlying mechanisms. The answer properly explains that sensible heat uses Q = m·Cp·ΔT, latent heat adds phase change enthalpy, and TCS uses Q = m·ΔHr·α where ΔHr represents the enthalpy of reversible chemical reactions. The Ca(OH)2 decomposition example is appropriate and the explanation of chemical bond breaking/forming during endothermic charging and exothermic discharging is thermodynamically sound. The additional discussion about long-term storage with minimal thermal losses and reversibility for multiple cycles, while extending beyond the original text, is factually correct and relevant to the question. All physical principles are stated correctly and there are no contradictions with the original text.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:22:54.016824"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Minor overstatement: 'reversibility ensures multiple cycles without degradation'—in practice, TCS materials can degrade over cycling despite reversible reactions.",
+          "System- vs. material-level basis is not specified; figures given align with material-level values, which matches the cited context but could be clarified."
+        ],
+        "reasoning": "The answer correctly explains that TCS achieves higher energy density by storing energy as the enthalpy of reversible chemical reactions and provides consistent quantitative comparisons: ~500 kJ/kg for sensible (m·Cp·ΔT with Cp ~1 kJ/kg·K over 500 K), 700–1000 kJ/kg for latent, and >1000 kJ/kg for TCS. It also correctly uses Q = m·ΔHr·α. The added comments on reduced thermal losses and cycling are generally true, though the 'no degradation' phrasing is overstated. Core mechanisms are accurate and consistent with the ground truth.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:23:25.839926"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer is factually correct, logically consistent, and aligns perfectly with the provided original text. It correctly identifies the high enthalpy of reversible chemical reactions as the primary reason for the superior energy density of TCS compared to sensible and latent heat storage. The numerical values, formulas, and underlying physical principles (bond energy, endothermic/exothermic processes) are all stated correctly and provide a comprehensive explanation.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:23:42.475991"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:23:42.476015",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

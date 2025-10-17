@@ -1,0 +1,77 @@
+{
+  "question_text": "Based on the provided paper content, describe the evolution of pressure drop across a particulate filter during loading and explain the mathematical relationship for pressure drop across the filter wall, including how particle deposition affects permeability.",
+  "standard_answer": "The pressure drop across a particulate filter increases during loading due to particle deposition within the filter wall, which reduces the wall permeability. The general pressure drop equation for the filter wall is ΔP = (μw/κ)v + βρ_gwv², where ΔP is the pressure drop, μ is the dynamic viscosity, w is the wall thickness, κ is the permeability of the porous wall, v is the gas velocity, ρ_g is the gas density, and β is the Forchheimer coefficient. The first term represents viscous losses, and the second term accounts for inertial losses. As particles deposit within the filter wall, the permeability κ decreases, leading to an increase in pressure drop. This is supported by the paper's statement: 'As particles deposit within the filter wall, its permeability (κ in Eq. (41)) will reduce and hence lead to an increase in pressure drop.' The Forchheimer coefficient β can be derived from Ergun's equation as β = (1.75/d_c)((1-ε)/ε³), where d_c is the collector diameter and ε is the porosity. However, inertial losses are often neglected in filter models due to low wall Reynolds numbers. The pressure drop evolution is directly linked to the reduction in wall permeability caused by in-wall particle deposition during the deep bed filtration stage.",
+  "original_text": {
+    "1": "The corresponding pressure drop across the filter wall in a channel-scale model can be generally described as ΔP = (μw/κ)v + βρ_gwv², where ΔP is the pressure drop, w is the thickness of the porous medium (wall), κ is the permeability of the porous medium (wall), ρ_g is the gas density and β is the Forchheimer coefficient of the porous medium (wall).",
+    "2": "As particles deposit within the filter wall, its permeability (κ in Eq. (41)) will reduce and hence lead to an increase in pressure drop."
+  },
+  "type": "concept",
+  "difficulty": 4,
+  "topic": "fluid_mechanics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires specific knowledge of fluid mechanics in particulate filters, including pressure drop evolution during loading, mathematical relationships for porous media flow, and how particle deposition affects permeability - all core concepts in combustion/CFD/energy domain applications.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+  },
+  "retry_count": 1,
+  "question_id": "deepseek_q_74c11fe3",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Modelling-treatment-of-deposits-in-particulate-f_2023_Progress-in-Energy-and",
+    "paper_title": "Modelling-treatment-of-deposits-in-particulate-f_2023_Progress-in-Energy-and"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:24:19.279503",
+    "answer_length": 1255
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately describes the pressure drop evolution and mathematical relationship. It correctly presents the pressure drop equation ΔP = (μw/κ)v + βρ_gwv² with all terms properly defined, matches the original text's explanation that permeability κ decreases as particles deposit (leading to increased pressure drop), and correctly identifies the viscous and inertial loss terms. The additional information about the Forchheimer coefficient derivation from Ergun's equation and the mention of deep bed filtration stage, while not in the provided excerpt, represents standard knowledge in particulate filtration that is consistent with the field and does not contradict the original text. All physical principles are correctly stated.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:13:53.475735"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer accurately states that pressure drop increases during loading due to reduced wall permeability from particle deposition, matching the original text. It correctly presents the Darcy–Forchheimer form ΔP = (μ w/κ) v + β ρ_g w v² and identifies viscous and inertial contributions. Additional notes on the Forchheimer coefficient via Ergun and the common neglect of inertial losses at low Reynolds numbers are consistent with standard theory and do not contradict the provided text.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:14:17.743867"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer is factually correct and logically sound. It accurately presents the pressure drop equation from the original text and correctly explains the relationship between particle deposition, reduced wall permeability, and increased pressure drop. The additional information provided about the Forchheimer coefficient and the negligibility of inertial losses is also correct and relevant expert knowledge that does not contradict the source text.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:14:40.668039"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:14:40.668060",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

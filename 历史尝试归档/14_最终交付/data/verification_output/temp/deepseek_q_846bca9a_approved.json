@@ -1,0 +1,77 @@
+{
+  "question_text": "Explain the thermodynamic basis of the Nernst potential in solid oxide fuel cells, focusing on how water production affects the maximum achievable voltage. Discuss why the open circuit potential represents the thermodynamic limit and how actual operating conditions differ from this ideal value due to various loss mechanisms.",
+  "standard_answer": "The Nernst potential represents the thermodynamic maximum voltage achievable in solid oxide fuel cells under equilibrium conditions where no current flows. This potential is fundamentally derived from the Gibbs free energy change of the electrochemical reactions occurring in the cell. When dry hydrogen is used as fuel, the production of water during operation leads to a reduction in the thermodynamically-maximum potential. This occurs because the reaction products change the gas composition at the electrodes, altering the chemical potentials that drive the electrochemical reactions. The open circuit potential occurs at equilibrium when current density equals zero and represents the theoretical maximum voltage under given operating conditions. However, in actual operation, the cell voltage decreases significantly from this ideal value due to various overpotentials including activation losses from charge transfer kinetics, ohmic losses from electrical resistance in cell components, and concentration losses from mass transport limitations of reactants and products. These losses become more pronounced as current density increases, causing the actual operating voltage to deviate substantially from the thermodynamic Nernst potential limit.",
+  "original_text": {
+    "1": "The open circuit or Nernst potential, E, occurs at equilibrium i'' = 0 and represents the thermodynamic maximum voltage achievable under given operating conditions.",
+    "2": "When the fuel employed is dry hydrogen, the production of water by the reaction leads to a reduction in the thermodynamically-maximum potential, E."
+  },
+  "type": "concept",
+  "difficulty": 4,
+  "topic": "energy_systems",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires deep expertise in energy systems, specifically solid oxide fuel cell thermodynamics, electrochemical principles, and fuel cell operation. It demands understanding of Nernst potential derivation from Gibbs free energy, the impact of water production on electrochemical potential, and various loss mechanisms in fuel cell operation - all specialized combustion/energy domain knowledge.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer are both high quality - domain-focused, factually correct based on citations, and compliant with all quality requirements."
+  },
+  "retry_count": 2,
+  "question_id": "deepseek_q_846bca9a",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Continuum-scale-modelling-and-complementary-exp_2021_Progress-in-Energy-and-",
+    "paper_title": "Continuum-scale-modelling-and-complementary-exp_2021_Progress-in-Energy-and-"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:19:45.265336",
+    "answer_length": 1253
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly explains the thermodynamic basis of the Nernst potential in SOFCs and is fully consistent with the original text. Key points verified: (1) Correctly states that open circuit/Nernst potential occurs at equilibrium (i=0) and represents thermodynamic maximum voltage - matches original text [1]. (2) Correctly explains that water production from dry hydrogen fuel reduces the thermodynamically-maximum potential by changing gas composition and chemical potentials - consistent with original text [2]. (3) Accurately describes the deviation from ideal Nernst potential due to activation, ohmic, and concentration overpotentials during actual operation - this is standard SOFC theory. (4) Properly links Nernst potential to Gibbs free energy, which is the correct thermodynamic foundation. All physical principles, cause-effect relationships, and logical reasoning are sound. The answer is more detailed than the original text but contains no factual errors or contradictions.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:07:33.914329"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer accurately states that the Nernst (open-circuit) potential is the thermodynamic maximum at i'' = 0 and derives from Gibbs free energy. It correctly explains that, with dry H2 fuel, water production lowers the maximum potential by shifting chemical potentials via composition changes. It also properly distinguishes real operating voltages from the thermodynamic limit due to activation, ohmic, and concentration overpotentials. This is consistent with the original text and standard SOFC theory.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:07:46.181195"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer is factually and logically correct. It accurately explains that the Nernst potential is the thermodynamic maximum voltage derived from the Gibbs free energy change at equilibrium. It correctly states, in line with the original text, that water production from dry hydrogen fuel reduces this maximum potential. The explanation provided for this phenomenon—that changing gas composition alters chemical potentials—is sound. Furthermore, the answer correctly identifies the main voltage loss mechanisms (activation, ohmic, and concentration overpotentials) that cause the actual operating voltage to be lower than the ideal Nernst potential, especially as current density increases. All statements are consistent with fundamental electrochemical and thermodynamic principles.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:08:04.145860"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:08:04.145881",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "question_text": "In the context of turbulent combustion, why are volumetric measurements essential for accurately characterizing phenomena like flame surface density and thermoacoustic oscillations, and how do they overcome limitations of planar techniques?",
+  "standard_answer": "Volumetric measurements are critical for turbulent combustion because many key phenomena are inherently three-dimensional and transient, making planar techniques inadequate. For flame surface density, which quantifies the reaction zone area per unit volume and determines system reaction rates, planar estimates from 2D slices can be erroneous by up to 40% due to the convolution of overlapping structures along the line-of-sight. Volumetric tomography directly reconstructs the 3D flame topology, providing accurate density calculations by resolving spatial variations in all directions. Similarly, thermoacoustic oscillations involve 3D heat release rate fluctuations that drive combustor instabilities; these require time-resolved 3D data to identify phase relationships and source locations, which planar methods cannot capture due to their limited dimensionality. Volumetric techniques, such as emission tomography with multiple cameras, simultaneously record projections from various angles, enabling reconstruction of instantaneous 3D fields. This eliminates the spatial averaging inherent in planar imaging and allows for the study of dynamic interactions, such as flame-vortex interactions or nanoparticle synthesis in reactors, where 3D flow and scalar histories dictate behavior. By providing comprehensive spatio-temporal resolution, volumetric measurements support improved modeling, validation of CFD simulations, and control of combustion processes in practical devices.",
+  "original_text": {
+    "1": "For example, the flame surface density is used to determine system reaction rates, but estimates derived from planar measurements can be off by as much as 40% [27]. Thermoacoustic oscillations are another intrinsically 3D effect that can lead to inefficient combustion and may even damage a combustor [28].",
+    "2": "The source of these instabilities can be tracked using 3D, time- or phase-resolved heat release rate oscillations [29,30]. Time-resolved 3D techniques are thus required to understand and characterize the behavior of combustion reactors [32,33]."
+  },
+  "type": "reasoning",
+  "difficulty": 5,
+  "topic": "energy_systems",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires specific knowledge of turbulent combustion diagnostics, including flame surface density, thermoacoustic oscillations, and the technical limitations of planar versus volumetric measurement techniques. It demands expertise in combustion science, fluid mechanics, and experimental methods used in energy systems.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "The question is domain-focused, the answer is factually correct and well-supported by the provided citations, and there are no other quality issues. It meets all criteria."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_c204b0d3",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Volumetric-emission-tomography-for-combus_2023_Progress-in-Energy-and-Combus",
+    "paper_title": "Volumetric-emission-tomography-for-combus_2023_Progress-in-Energy-and-Combus"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:32:30.372196",
+    "answer_length": 1485
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately reflects and expands upon the original text. It correctly states that flame surface density estimates from planar measurements can be off by up to 40% (matching the original text), and properly explains that thermoacoustic oscillations are 3D phenomena requiring time-resolved 3D measurements. The answer provides additional valid technical details about volumetric tomography, line-of-sight convolution issues, and spatial averaging limitations that are consistent with combustion science principles. The explanation of why volumetric measurements overcome planar technique limitations is logically sound and factually accurate. While more detailed than the original text, all statements are scientifically correct and no contradictions exist.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:24:41.992237"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Minor overgeneralization: attributing the ~40% planar FSD error specifically to line-of-sight convolution; some planar laser sheet techniques (e.g., PLIF) are not line-of-sight integrated.",
+          "Statement that volumetric methods eliminate 'spatial averaging inherent in planar imaging' is somewhat broad; the key limitation is loss of 3D topology and stereological bias rather than universal spatial averaging."
+        ],
+        "reasoning": "The answer correctly reflects the ground truth: key turbulent combustion phenomena (flame surface density, thermoacoustic oscillations) are intrinsically 3D and require time/phase-resolved volumetric measurements. It accurately notes that planar estimates of FSD can be off by ~40% and that 3D, time-resolved heat release rate oscillations are needed to track thermoacoustic sources. It reasonably explains how volumetric tomography overcomes planar limitations. Minor phrasing issues do not contradict the core facts.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:25:07.542497"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer correctly identifies that turbulent combustion phenomena like flame surface density (FSD) and thermoacoustics are inherently 3D and transient. It accurately quotes the potential 40% error in planar FSD estimates from the original text and correctly explains that volumetric methods are needed to resolve 3D heat release fluctuations for thermoacoustic analysis. The reasoning is physically sound, and the elaborations on tomographic methods and their benefits are correct and relevant.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:25:30.197714"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:25:30.197739",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

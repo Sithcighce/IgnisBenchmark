@@ -1,0 +1,77 @@
+{
+  "question_text": "Why does carbon deposition occur more severely with heavier hydrocarbons than lighter ones in SOFC anodes, and how do heterogeneous and homogeneous reaction pathways contribute to this?",
+  "standard_answer": "Carbon deposition is more severe with heavier hydrocarbons due to their weaker C–C bonds compared to the strong C–H bonds in lighter hydrocarbons like methane, facilitating easier decomposition into carbon. Heterogeneous pathways involve surface reactions on the Ni catalyst, where hydrocarbons decompose directly into carbon and hydrogen (e.g., CₓHᵧ → xC + y/2 H₂) or via the Boudouard reaction (2CO → C + CO₂). This leads to graphitic carbon fibers that degrade anode performance. Homogeneous pathways occur in the gas phase, where pyrolysis at high temperatures produces radicals and intermediates like C₂H₄ and C₂H₂, which recombine into polycyclic aromatic hydrocarbons (PAHs) and form amorphous soot. For heavier hydrocarbons such as iso-octane, gas-phase reactions are significant due to lower activation energies for C–C scission, whereas methane primarily undergoes heterogeneous deposition at typical SOFC temperatures (<1000 K). The combined effects of these pathways result in higher carbon accumulation, obstructing active sites and reducing cell durability.",
+  "original_text": {
+    "1": "Since the C–H bonds in CH₄ are much stronger than the C–C bonds in heavier hydrocarbons, the carbon deposition is mainly from the heterogeneous route for methane at the typical SOFC operation temperatures (<1000 K). However, for higher hydrocarbons such as iso-octane, the gas-phase pyrolysis route of carbon formation cannot be ignored.",
+    "2": "The carbon from heterogeneous reactions occurs mainly in the form of graphitic fibers, while the carbon from homogeneous reactions is amorphous."
+  },
+  "type": "reasoning",
+  "difficulty": 5,
+  "topic": "combustion_kinetics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires specific knowledge of combustion kinetics, hydrocarbon chemistry, and SOFC anode processes including bond strength differences between hydrocarbons, heterogeneous/homogeneous reaction pathways, and carbon deposition mechanisms in fuel cell systems.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_a6be5735",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Toward-mobility-of-solid-oxide-fuel_2024_Progress-in-Energy-and-Combustion-S",
+    "paper_title": "Toward-mobility-of-solid-oxide-fuel_2024_Progress-in-Energy-and-Combustion-S"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:31:36.679034",
+    "answer_length": 1071
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately explains carbon deposition mechanisms in SOFC anodes and is fully consistent with the original text. Key points verified: (1) Correctly identifies that C-C bonds in heavier hydrocarbons are weaker than C-H bonds in methane, facilitating decomposition; (2) Accurately describes heterogeneous pathways (surface reactions on Ni catalyst producing graphitic carbon fibers) and homogeneous pathways (gas-phase pyrolysis producing amorphous soot); (3) Correctly states that methane primarily undergoes heterogeneous deposition at typical SOFC temperatures (<1000 K) while heavier hydrocarbons like iso-octane involve significant gas-phase reactions; (4) Properly explains the morphological differences (graphitic fibers vs amorphous soot) from the two pathways. The answer provides additional mechanistic details (specific reactions, PAH formation, lower activation energies for C-C scission) that are scientifically sound and enhance understanding without contradicting the original text. All chemical principles and cause-effect relationships are correct.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:23:46.728331"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer matches the ground truth: it correctly attributes greater carbon deposition from heavier hydrocarbons to weaker C–C bonds relative to methane’s strong C–H bonds, emphasizes that methane carbon formation is mainly heterogeneous at <1000 K, and notes that gas-phase pyrolysis becomes significant for heavier fuels like iso-octane. It also correctly distinguishes carbon morphologies (graphitic fibers for heterogeneous; amorphous for homogeneous) and describes plausible heterogeneous (surface cracking, Boudouard) and homogeneous (radical/PAH leading to soot) pathways without contradictions.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:24:16.262859"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer is factually correct and consistent with the original text. It accurately explains that weaker C-C bonds in heavier hydrocarbons make them more susceptible to both heterogeneous and homogeneous deposition pathways compared to methane. The descriptions of the pathways, key reactions (Boudouard), and resulting carbon morphologies are all accurate.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:24:37.452330"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:24:37.452357",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "question_text": "Why does RCCI combustion achieve simultaneous reduction of NOx and soot emissions compared to conventional diesel combustion, and what are the underlying mechanisms?",
+  "standard_answer": "RCCI combustion achieves simultaneous NOx and soot reduction through two primary mechanisms: lowered combustion temperatures and enhanced fuel-air mixing. NOx formation is highly temperature-dependent, following the Zeldovich mechanism, where rates increase exponentially above ~1800 K. In RCCI, the extensive premixing of the low-reactivity fuel and the staged combustion from reactivity stratification result in lower peak in-cylinder temperatures, thus suppressing thermal NOx. Soot formation is minimized due to the prolonged ignition delay, which allows ample time for fuel vaporization and mixing before combustion, avoiding rich, soot-producing zones. The high-reactivity fuel injections create localized regions that ignite first, but the overall lean and well-mixed charge prevents significant soot nucleation and growth. Additionally, the use of high EGR further dilutes the charge and reduces oxygen concentration, curbing both NOx and soot, but RCCI can operate with lower EGR than conventional diesel due to its inherent reactivity control, maintaining high efficiency.",
+  "original_text": {
+    "1": "Lower combustion temperatures result in NOx reduction due to the high activation energy of the NO formation reactions.",
+    "2": "Utilizing long ignition delay times allows adequate time for mixing prior to the start of combustion; thus, rich regions in the combustion chamber are reduced and soot formation is inhibited."
+  },
+  "type": "reasoning",
+  "difficulty": 5,
+  "topic": "combustion_science",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires deep knowledge of combustion science, specifically RCCI combustion mechanisms, NOx and soot formation chemistry, temperature dependencies, fuel-air mixing dynamics, and engine combustion principles. It cannot be answered with general ML knowledge alone.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer are well-aligned with domain requirements and paper content. No issues detected."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_18152332",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Review-of-high-efficiency-and-clean-reactivity-contro_2015_Progress-in-Energ",
+    "paper_title": "Review-of-high-efficiency-and-clean-reactivity-contro_2015_Progress-in-Energ"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:28:18.324884",
+    "answer_length": 1082
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly explains the simultaneous reduction of NOx and soot in RCCI combustion through mechanisms consistent with the original text. It accurately states that: (1) lower combustion temperatures suppress NOx formation via the Zeldovich mechanism (consistent with original text [1] about high activation energy of NO formation), and (2) long ignition delays enable better fuel-air mixing, reducing rich zones and inhibiting soot formation (consistent with original text [2]). The answer provides additional accurate details about the Zeldovich mechanism, temperature thresholds (~1800 K), reactivity stratification, and EGR effects that are all scientifically sound and do not contradict the original text. The physical principles regarding NOx temperature dependence and soot formation in rich zones are correct. While more detailed than the original text, all statements are factually accurate and logically consistent.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:19:28.867693"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Minor nuance: While EGR commonly reduces NOx, its effect on soot can be context-dependent; in conventional diesel it may hinder soot oxidation, but in RCCI/LTC the premixed nature and lower temperatures generally keep soot low. The answer’s EGR statement is acceptable in the RCCI context."
+        ],
+        "reasoning": "The standard answer aligns with the ground-truth mechanisms: lower combustion temperatures suppress thermal NOx (Zeldovich), and longer ignition delay/premixing reduces rich regions and inhibits soot formation. The elaboration on reactivity stratification, premixing, and temperature dependence is correct. Added EGR commentary is broadly consistent with RCCI operation and does not contradict the core mechanisms.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:19:55.162532"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer is factually correct and logically sound. It accurately identifies the two core mechanisms for simultaneous NOx and soot reduction in RCCI: 1) lowered combustion temperatures to suppress thermal NOx (Zeldovich mechanism), and 2) enhanced fuel-air mixing due to a long ignition delay to avoid rich, soot-forming zones. These points are directly consistent with the provided original text. The additional details, such as mentioning the ~1800 K threshold, reactivity stratification, and the role of EGR, are all correct and provide valuable context without introducing errors.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:20:17.006831"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:20:17.006862",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

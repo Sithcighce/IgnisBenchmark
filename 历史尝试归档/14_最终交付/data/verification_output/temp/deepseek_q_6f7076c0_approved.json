@@ -1,0 +1,83 @@
+{
+  "question_text": "In transcritical flows of heavy hydrocarbon fuels injected into hot coflowing streams, what physical mechanisms cause the transcritical interface to vanish at the supercriticalization edge, and how is the supercriticalization length L_TR quantitatively estimated from thermal and flow parameters using an integral enthalpy balance approach?",
+  "standard_answer": "The transcritical interface vanishes at the supercriticalization edge because the mixture transitions to a fully supercritical state where the diffusional instability ceases. This occurs when the local temperature along the interface reaches the diffusional critical temperature T_c,diff of the mixture, at which the phase coexistence region terminates. The supercriticalization length L_TR can be estimated from an integral balance between the streamwise variation of the enthalpy flux in the fuel stream and the total amount of heat conduction received across the interface from the hot coflow. For axisymmetric jets, this balance yields L_TR ~ (R_F^2 U_F / D_T,O) * (c_p,F / c_p,O) * ((T_c,F - T_F)/(T_O - T_F))^2, where R_F is the orifice radius, U_F is the fuel velocity, D_T,O is the thermal diffusivity of the coflow, c_p are specific heats, and T are temperatures. This derivation assumes the thermal mixing layer thickness δ_T scales as (D_T,O L_TR / U_F)^(1/2) and T_TR ≈ T_c,diff ≈ T_c,F. The length increases with lower coflow temperatures or larger orifice sizes, reflecting the delayed thermal equilibration needed to reach supercritical conditions.",
+  "original_text": {
+    "1": "The transcritical interface vanishes at an edge that gives rise to a fully supercritical mixing layer.",
+    "2": "The supercriticalization length L_TR can be obtained by an integral balance between the streamwise variation of the enthalpy flux in the fuel stream and the total amount of heat conduction received across the interface from the hot coflow."
+  },
+  "type": "calculation",
+  "difficulty": 4,
+  "topic": "fluid_mechanics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires deep expertise in transcritical fluid mechanics, high-pressure thermodynamics of hydrocarbon fuels, and combustion science. It specifically addresses physical mechanisms at transcritical interfaces, supercriticalization phenomena, and quantitative estimation using enthalpy balance approaches - all core topics in combustion and energy systems research.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Excellent question that requires domain expertise and has a correct, detailed answer supported by the paper content."
+  },
+  "retry_count": 1,
+  "question_id": "deepseek_q_6f7076c0",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Transcritical-diffuse-interface-hydrodynamics-of-prop_2021_Progress-in-Energ",
+    "paper_title": "Transcritical-diffuse-interface-hydrodynamics-of-prop_2021_Progress-in-Energ"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:32:34.721988",
+    "answer_length": 1163
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly explains both physical mechanisms requested in the question. First, it accurately describes that the transcritical interface vanishes when the mixture reaches a fully supercritical state where diffusional instability ceases, consistent with the original text stating 'fully supercritical mixing layer.' Second, it correctly presents the integral enthalpy balance approach for estimating L_TR, matching the original text's description of 'balance between streamwise variation of enthalpy flux in fuel stream and total heat conduction from hot coflow.' The detailed scaling formula L_TR ~ (R_F^2 U_F / D_T,O) * (c_p,F / c_p,O) * ((T_c,F - T_F)/(T_O - T_F))^2 is physically sound, properly incorporating thermal diffusivity scaling and enthalpy balance principles. The additional mechanistic details about T_c,diff, thermal mixing layer thickness scaling, and parametric dependencies (lower coflow temperature, larger orifice size increasing L_TR) are all physically consistent and represent reasonable elaborations beyond the original text. No factual errors or logical contradictions detected.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:23:54.363865"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "medium",
+        "issues": [
+          "The detailed scaling for L_TR likely omits density effects and may have incorrect exponents (c_p ratio appears squared in common derivations, and density ratios often appear).",
+          "Assuming T_TR ≈ T_c,diff ≈ T_c,F is an oversimplification; the mixture’s diffusional critical temperature generally differs from the pure-fuel critical temperature.",
+          "The phrase 'diffusional instability ceases' is vague and not necessary to justify the interface vanishing; the key point is reaching a fully supercritical state."
+        ],
+        "reasoning": "The answer correctly states that the interface vanishes at the edge where the flow becomes fully supercritical and that L_TR follows from an integral enthalpy balance between the fuel’s enthalpy flux increase and conductive heat from the hot coflow, consistent with the ground truth. However, the provided closed-form scaling is likely over-specified and missing density-ratio effects, and it uses a simplifying assumption on critical temperatures that is not generally valid. Despite these caveats, the core mechanism and the integral-balance method are accurately conveyed.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:25:10.163980"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "The quantitative formula for L_TR uses a simplified approximation for the driving temperature difference, but this is an acceptable simplification within an integral balance framework."
+        ],
+        "reasoning": "The answer is factually and logically sound. It correctly explains that the interface vanishes upon reaching the mixture's critical temperature, which is a correct elaboration of the ground truth. It properly identifies the integral enthalpy balance as the method for estimating the supercriticalization length L_TR, matching the original text. The provided formula for L_TR is a valid scaling law derived from this balance, with physically correct dependencies on flow and thermal parameters. While the temperature term in the formula represents a simplification compared to more detailed derivations in the literature, it is a plausible approximation for an integral analysis and does not constitute a factual error.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:26:22.944826"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:26:22.944853",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": false,
+      "disagreement_count": 0
+    }
+  }
+}

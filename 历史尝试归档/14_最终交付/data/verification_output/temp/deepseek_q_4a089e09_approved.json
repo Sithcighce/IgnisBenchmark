@@ -1,0 +1,77 @@
+{
+  "question_text": "Why do perovskite membranes containing alkaline-earth elements (Sr, Ba) exhibit poor stability in CO2-containing atmospheres, and what strategies can mitigate this degradation while maintaining high oxygen permeability?",
+  "standard_answer": "Perovskite membranes containing alkaline-earth elements (Sr, Ba) suffer from carbonate formation when exposed to CO2, following the reaction: SrO (in perovskite) + CO2 → SrCO3. This reaction is thermodynamically favorable at typical operating temperatures (700-900°C) as shown by Ellingham diagrams, where the CO2 chemical potential exceeds the decomposition potential of SrCO3. The formed carbonate layer is impermeable to oxygen, blocking surface exchange sites and dramatically reducing oxygen flux. Three primary mitigation strategies exist: (1) Partial substitution of Sr/Ba with rare-earth cations (La³⁺, Gd³⁺) that form more stable oxides, reducing alkaline-earth content and carbonate formation tendency. For example, La0.6Sr0.4Co0.2Fe0.8O3-d shows improved CO2 tolerance over SrCo0.8Fe0.2O3-d. (2) B-site doping with high-valence cations (Ti⁴⁺, Zr⁴⁺, Nb⁵⁺, Ta⁵⁺) that stabilize the perovskite structure and reduce alkaline-earth mobility. However, this often decreases oxygen permeability due to stronger metal-oxygen bonds. (3) Dual-phase membranes combining stable ionic conductors (Ce0.8Gd0.2O2-d) with electronic conductors, where the fluorite phase provides CO2 resistance while the perovskite phase enables electronic conduction. The optimal approach balances CO2 tolerance through reduced alkaline-earth content or protective phases while maintaining sufficient oxygen vacancy concentration and electronic conductivity for high permeation fluxes.",
+  "original_text": {
+    "1": "Most mixed conducting ceramic materials contain alkaline-earth elements like Ca, Sr, or Ba. Due to the presence of these elements, carbonates formation would occur when these membranes are exposed to a CO2-containing atmosphere",
+    "2": "To increase the CO2 tolerance of SrCo0.8Fe0.2O3-d membranes, Sr2+ was partially substituted with La3+, or Co/Fe with Ti4+, Zr4+, Ta5+ or Nb5+"
+  },
+  "type": "reasoning",
+  "difficulty": 4,
+  "topic": "materials_stability",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires deep expertise in materials science for energy applications, specifically perovskite membrane chemistry, carbonate formation thermodynamics, oxygen transport mechanisms, and materials engineering strategies for CO2 tolerance - all within the combustion/energy domain context",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct, and compliant with other requirements"
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_4a089e09",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Perovskite-oxides-applications-in-high-temperature-ox_2017_Progress-in-Energ",
+    "paper_title": "Perovskite-oxides-applications-in-high-temperature-ox_2017_Progress-in-Energ"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:25:10.395326",
+    "answer_length": 1462
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly explains the carbonate formation mechanism (SrO + CO2 → SrCO3) and its detrimental effects on oxygen permeability. The three mitigation strategies are consistent with the original text: (1) partial substitution of Sr/Ba with rare-earth cations like La³⁺, (2) B-site doping with high-valence cations (Ti⁴⁺, Zr⁴⁺, Ta⁵⁺, Nb⁵⁺), and (3) dual-phase membranes. The specific example of La0.6Sr0.4Co0.2Fe0.8O3-d showing improved CO2 tolerance over SrCo0.8Fe0.2O3-d aligns with the original text's mention of partial La³⁺ substitution for Sr²⁺. The answer provides additional thermodynamic context (Ellingham diagrams, operating temperatures) and mechanistic details (oxygen vacancy concentration, electronic conductivity) that are scientifically sound and enhance understanding without contradicting the original text. The trade-offs mentioned (e.g., B-site doping reducing oxygen permeability) are physically reasonable. All factual statements are accurate and logically consistent.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:15:30.057761"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer correctly identifies carbonate formation of Sr/Ba-containing perovskites in CO2 as the degradation mechanism and explains its impact on oxygen transport. It aligns with the ground-truth mitigation strategies: partial substitution of Sr2+ with La3+ and B-site doping with Ti4+, Zr4+, Ta5+, Nb5+. The added thermodynamic rationale (Ellingham) and the dual-phase membrane strategy are accurate and consistent with established literature. No factual or logical errors detected.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:16:02.819355"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer is factually correct, logically sound, and consistent with the provided original text. It correctly identifies carbonate formation as the degradation mechanism and accurately describes the chemical reaction and its thermodynamic basis. The mitigation strategies mentioned (A-site substitution, B-site doping, and dual-phase membranes) are all standard and valid approaches in the field. The answer correctly elaborates on the information present in the original text without introducing any errors.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:16:22.564490"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:16:22.564514",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

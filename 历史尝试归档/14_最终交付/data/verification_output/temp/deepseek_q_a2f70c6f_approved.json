@@ -1,0 +1,79 @@
+{
+  "question_text": "Why does the swirl number S remain constant in a cylindrical duct with constant cross-section under high Reynolds number conditions, and what physical principles govern this conservation?",
+  "standard_answer": "The swirl number S remains constant in a cylindrical duct with constant cross-section under high Reynolds number conditions due to the conservation of the axial flow rates of angular momentum Gθ and axial momentum Gx. For confined flows, the governing equations derived from the Reynolds-averaged Navier-Stokes equations show that dGθ/dx = 2πRc²τrθ|r=Rc and dGx/dx = 2πRcτrx|r=Rc, where τ represents wall shear stresses. Under high Reynolds number assumptions, viscous losses at the wall are negligible, leading to dGθ/dx ≈ 0 and dGx/dx ≈ 0. Since S = Gθ/(R Gx), with R as the characteristic radius, the constancy of Gθ and Gx implies S is invariant along the duct axis. This conservation property stems from the balance of momentum fluxes and the absence of significant cross-sectional changes or viscous dissipation, ensuring that the dimensionless ratio characterizing swirl intensity does not vary axially.",
+  "original_text": {
+    "1": "As will be seen later, Gθ and Gx are conserved in free jets and in confined flows if the duct has a constant cross-section and viscous losses at the wall are negligible.",
+    "2": "Since Gθ and Gx are conserved, at least in certain types of flows, this is translated into a constant swirl number, a feature that is crucial for its accurate determination from measured velocity profiles."
+  },
+  "type": "reasoning",
+  "difficulty": 4,
+  "topic": "fluid_mechanics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires specific fluid mechanics expertise about swirl number conservation in cylindrical ducts, involving concepts of angular momentum, axial momentum, Reynolds number effects, and wall shear stresses - all core fluid dynamics principles relevant to combustion and CFD applications.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on paper citations, and no other compliance issues."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_a2f70c6f",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "The-suitability-of-different-swirl-number-definitions-_2022_Progress-in-Ener",
+    "paper_title": "The-suitability-of-different-swirl-number-definitions-_2022_Progress-in-Ener"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:31:03.572349",
+    "answer_length": 910
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly explains why swirl number S remains constant in a cylindrical duct under high Reynolds number conditions. It accurately identifies the conservation of angular momentum (Gθ) and axial momentum (Gx) as the governing principle, provides the correct governing equations (dGθ/dx = 2πRc²τrθ|r=Rc and dGx/dx = 2πRcτrx|r=Rc), correctly applies the high Reynolds number assumption (negligible viscous losses leading to dGθ/dx ≈ 0 and dGx/dx ≈ 0), and properly derives that S = Gθ/(R Gx) remains constant when both Gθ and Gx are conserved. The physical principles are sound, the logic is consistent, and the answer aligns with the original text's statement that Gθ and Gx are conserved in confined flows with constant cross-section and negligible viscous losses. While the answer is more detailed than the original text, all additional explanations are accurate and enhance understanding without introducing errors.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:22:36.155505"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Implicates high Reynolds number as implying negligible wall viscous losses; strictly, the key condition is negligible wall losses, not Re alone. However, this aligns with the question’s assumption and the PECS statement."
+        ],
+        "reasoning": "The answer correctly states that in a constant-area cylindrical duct with negligible wall viscous losses, the axial fluxes of angular momentum (Gθ) and axial momentum (Gx) are conserved, making S = Gθ/(R Gx) constant. This matches the PECS text. The provided RANS-based flux-balance expressions with wall shear terms are consistent and the logic that negligible wall shear implies dGθ/dx ≈ 0 and dGx/dx ≈ 0 is sound. Minor nuance: high Re does not automatically guarantee negligible wall losses, but the answer’s core reasoning remains consistent with the ground truth.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:23:17.305958"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly identifies the conservation of axial and angular momentum fluxes (Gx and Gθ) as the reason for the constant swirl number. It accurately explains that this conservation holds in a constant cross-section duct under high Reynolds number conditions because the wall shear stresses, which would otherwise cause these fluxes to decay, become negligible. The provided equations for the axial derivatives of Gθ and Gx are correct representations of the momentum balance. The logic is sound and fully consistent with the provided original text and fundamental principles of fluid dynamics.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:23:40.243050"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:23:40.243081",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

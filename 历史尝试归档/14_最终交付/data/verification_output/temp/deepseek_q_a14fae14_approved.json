@@ -1,0 +1,82 @@
+{
+  "question_text": "Explain the energy-based sticking criterion for ash particles impacting surfaces in combustion systems, including how particle kinetic energy and impact angle affect sticking behavior. Describe how different surface conditions (molten layer vs. particulate deposit) influence particle capture according to the provided paper.",
+  "standard_answer": "The energy-based sticking criterion states that if all kinetic energy is dissipated during impact, the particle will remain on the surface. This principle forms the foundation for understanding ash particle deposition in combustion systems. Particle kinetic energy (KE = 0.5 * m * v²) must be fully absorbed by the surface through various dissipation mechanisms for sticking to occur. The impact angle plays a crucial role because it determines the normal component of velocity that contributes to energy dissipation - shallow angles reduce the effective kinetic energy directed perpendicular to the surface, potentially increasing sticking likelihood. However, surface conditions dramatically alter this relationship. A molten surface layer will collect all impacting particles regardless of their stickiness due to capillary forces and the liquid nature of the surface, which provides continuous energy dissipation. In contrast, a particulate deposit behaves differently - it might capture incoming particles if their kinetic energy is low enough to be absorbed by the porous structure, but high-energy impacts can cause erosion and removal of existing deposit material. The paper emphasizes that surface structure and stickiness are crucial considerations for predicting deposition rates in solid fuel-fired systems, as the interaction between particle properties and surface characteristics determines whether particles stick, rebound, or cause erosion.",
+  "original_text": {
+    "1": "If all kinetic energy is dissipated during the impact, the particle will remain on the surface. This review presents an overview of major ash forming elements found in biomass and coal, and discusses the heterogeneity of particles' inorganic composition.",
+    "2": "For instance, a particulate deposit might capture incoming particles or be removed due to erosion, while a molten layer will collect all impacting particles, no matter if they are sticky or not."
+  },
+  "type": "concept",
+  "difficulty": 4,
+  "topic": "combustion_kinetics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires specific knowledge of combustion science (ash particle deposition), fluid mechanics (particle impact dynamics), and energy systems (combustion systems), including understanding of kinetic energy dissipation, impact angles, and surface conditions in ash deposition processes.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on paper citations, and no other compliance issues."
+  },
+  "retry_count": 1,
+  "question_id": "deepseek_q_a14fae14",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Ash-formation-and-deposition-in-coal-and-biomass-fired-c_2018_Progress-in-En",
+    "paper_title": "Ash-formation-and-deposition-in-coal-and-biomass-fired-c_2018_Progress-in-En"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:14:47.617202",
+    "answer_length": 1457
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": false,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "The answer states that shallow impact angles 'reduce the effective kinetic energy directed perpendicular to the surface, potentially increasing sticking likelihood.' This is logically inconsistent - if less kinetic energy needs to be dissipated (due to shallow angle), sticking would be MORE likely, not just 'potentially' more likely. However, the answer doesn't clearly establish this causal relationship.",
+          "More critically, the answer claims 'a molten surface layer will collect all impacting particles regardless of their stickiness' but the original text states a molten layer collects particles 'no matter if they are sticky or not' - this is about particle stickiness property, not 'regardless of their stickiness' which could be misinterpreted.",
+          "The answer adds extensive elaboration about kinetic energy formulas (KE = 0.5 * m * v²), capillary forces, porous structures, and erosion mechanisms that are NOT present in the original text. While these may be scientifically plausible, they represent significant additions beyond what the original text supports.",
+          "The original text does not mention impact angle effects on sticking at all, yet the answer provides detailed explanation of this mechanism without source support."
+        ],
+        "reasoning": "While the answer captures some core concepts from the original text (energy dissipation criterion, difference between molten and particulate surfaces), it contains significant elaborations and mechanistic details not supported by the provided original text. The original text is quite brief and only states: (1) particles stick if all kinetic energy is dissipated, and (2) molten layers collect all particles while particulate deposits might capture or be eroded. The answer adds extensive unsupported details about impact angles, kinetic energy formulas, capillary forces, and porous structures. Since we must treat the original text as ground truth and verify against it, these additions - while potentially correct in general combustion science - cannot be verified against the provided source material.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:03:54.021197"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer accurately restates the energy-based sticking criterion and correctly links sticking to dissipation of kinetic energy. The impact-angle discussion is reasonable via the normal velocity component affecting the energy to be dissipated. It aligns with the ground-truth statements that molten layers collect all impacting particles and that particulate deposits may capture or be eroded. No contradictions or factual errors detected.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:04:12.402564"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer accurately explains the energy-based sticking criterion, consistent with the provided original text. It correctly describes the influence of kinetic energy and surface conditions (molten vs. particulate) on particle capture. The additional details provided, such as the role of the normal velocity component and capillary forces, are physically sound and represent a correct elaboration on the core principles.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:04:32.550126"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:04:32.550140",
+    "consensus": {
+      "all_correct": false,
+      "correct_votes": 2,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 2
+    }
+  }
+}

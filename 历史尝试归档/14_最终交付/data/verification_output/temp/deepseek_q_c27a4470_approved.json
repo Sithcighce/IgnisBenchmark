@@ -1,0 +1,80 @@
+{
+  "question_text": "Why does hemicellulose decompose at lower temperatures than cellulose during biomass pyrolysis, and how do structural differences drive this behavior?",
+  "standard_answer": "Hemicellulose pyrolyzes at lower temperatures (typically 200-300°C) compared to cellulose (300-400°C) due to fundamental structural differences. Hemicellulose is a branched, amorphous heteropolymer with short chains (DP~200) and numerous side groups like acetyl and uronic acids, which introduce weak points. These side groups undergo facile thermal decomposition, initiating chain scission at lower energies. In contrast, cellulose has a highly ordered crystalline structure with extensive intra- and intermolecular hydrogen bonding, requiring more energy to disrupt. The crystalline regions in cellulose act as thermal barriers, delaying decomposition onset. Additionally, hemicellulose's pentose-rich composition (e.g., xylose) forms less stable intermediates compared to cellulose's glucose units. The lack of C6 hydroxymethyl groups in pentoses prevents formation of stable anhydrosugars like levoglucosan, instead favoring char-forming polymerization pathways at lower temperatures. This combination of branched morphology, weak linkages, and less stable monomer units makes hemicellulose the most thermally labile biomass component.",
+  "original_text": {
+    "1": "The temperature corresponding to the maximum weight loss rate for xylan (283 °C) was obviously lower than that for monosaccharides (over 330 °C)",
+    "2": "Hemicellulose is a branched, amorphous heteropolymer with short chains and numerous side groups like acetyl and uronic acids, which introduce weak points."
+  },
+  "type": "concept",
+  "difficulty": 4,
+  "topic": "heat_transfer",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires specific knowledge of biomass pyrolysis, combustion science, and thermal decomposition behavior of lignocellulosic components. It demands understanding of structural differences between hemicellulose and cellulose, thermal stability mechanisms, and pyrolysis temperature ranges - all domain-specific combustion and energy conversion concepts.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_c27a4470",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Lignocellulosic-biomass-pyrolysis-mechanism--_2017_Progress-in-Energy-and-Co",
+    "paper_title": "Lignocellulosic-biomass-pyrolysis-mechanism--_2017_Progress-in-Energy-and-Co"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:21:51.644494",
+    "answer_length": 1139
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly explains the structural and thermal decomposition differences between hemicellulose and cellulose. Key points are accurate: (1) Temperature ranges (200-300°C for hemicellulose vs 300-400°C for cellulose) align with the original text's data showing xylan decomposition at 283°C vs monosaccharides over 330°C. (2) Structural description matches the original text - branched, amorphous heteropolymer with short chains and weak side groups. (3) The mechanistic explanations (crystalline vs amorphous structure, hydrogen bonding, pentose vs hexose chemistry, levoglucosan formation) are consistent with established biomass pyrolysis science. (4) The causal relationships are logically sound - weak linkages and branched structure lead to lower decomposition temperatures. While the answer is detailed and goes beyond the minimal original text excerpts, all additional explanations are scientifically accurate and relevant to the question.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:11:55.434298"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "The claim that pentose-rich hemicellulose 'favors char-forming polymerization pathways at lower temperatures' is likely misleading; hemicellulose typically yields less char than cellulose or lignin.",
+          "Includes a specific DP (~200) not in the provided ground truth; while plausible, it is ancillary and not necessary."
+        ],
+        "reasoning": "The answer correctly attributes hemicellulose’s lower decomposition temperature to its branched, amorphous structure with labile side groups (acetyl, uronic acids), consistent with the ground truth and general thermophysical principles. It also correctly contrasts cellulose’s crystalline, hydrogen-bonded structure requiring more energy to disrupt. The temperature ranges provided are reasonable and align with the cited trend (xylan ~283 °C < monosaccharides >330 °C). A minor issue is the suggestion that hemicellulose favors char formation at lower temperatures, which is not generally supported, but this does not undermine the core explanation.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:12:20.941763"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer is factually correct and logically sound. It accurately describes the key structural differences between hemicellulose (amorphous, branched, weak side groups, lower degree of polymerization) and cellulose (crystalline, linear, strong H-bonding) and correctly links these features to their different thermal decomposition temperatures. The explanation is consistent with the provided original text and established principles of thermochemical conversion. The temperature ranges cited are standard, and the mechanistic details regarding monomer stability (pentose vs. glucose) and product pathways (levoglucosan formation) are correct.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:12:45.103780"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:12:45.103805",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

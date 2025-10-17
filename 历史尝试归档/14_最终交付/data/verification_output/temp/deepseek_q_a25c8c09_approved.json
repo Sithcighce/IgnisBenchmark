@@ -1,0 +1,81 @@
+{
+  "question_text": "What physical mechanisms cause the negative feedback loop that leads to flame extinction in concurrent flame spread over thermally-thick materials under low-speed convection conditions?",
+  "standard_answer": "The negative feedback extinction mechanism in concurrent flame spread over thermally-thick materials arises from the interplay between flame spread rate, thermal penetration depth, and heat loss mechanisms. As the flame spread rate (V_f) decreases in low-speed convection, the solid residence time (t_s,res = L_pr/V_f) increases proportionally. This longer residence time allows for greater thermal penetration into the solid, as τ_h = √(α_s t_s,res). The increased thermal penetration depth reduces the temperature gradient at the pyrolysis front, which in turn decreases the conductive heat flux driving the flame spread. Simultaneously, the larger preheating zone length (L_pr) enhances surface re-radiation losses, as radiative heat flux scales with the exposed surface area. The radiation number R_rad,s = (σε_s(T_p^4 - T_∞^4))/(λ_g(T_f - T_p)/L_y) quantifies this effect, showing that radiative losses become more significant with larger L_y (characteristic length). This creates a self-reinforcing cycle: reduced V_f → increased t_s,res → increased τ_h → reduced temperature gradient → further reduced V_f. The paper explains that 'a slight decrease in the FSR will enlarge t_s,res as well as L_sx. Consequently, the larger L_sx in turn reduces the temperature gradient at the flame front while increases the surface re-radiation, leading to a further reduction in the FSR.' This negative feedback eventually drives the system to extinction when the heat losses exceed the energy available to sustain pyrolysis and flame propagation.",
+  "original_text": {
+    "1": "A slight decrease in the FSR will enlarge t_s,res as well as L_sx. Consequently, the larger L_sx in turn reduces the temperature gradient at the flame front while increases the surface re-radiation, leading to a further reduction in the FSR.",
+    "2": "As a result, the flame front cannot spread forward and flame extinction may occur due to this negative feedback loop."
+  },
+  "type": "reasoning",
+  "difficulty": 5,
+  "topic": "heat_transfer",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires deep understanding of combustion science (flame spread mechanisms), heat transfer (thermal penetration depth, temperature gradients, radiative losses), and fluid mechanics (convection effects) specific to thermally-thick materials under low-speed convection conditions.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer are well-aligned with domain requirements and paper content. No issues detected."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_a25c8c09",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Flame-spread-over-solid-materials-under-red_2025_Progress-in-Energy-and-Comb",
+    "paper_title": "Flame-spread-over-solid-materials-under-red_2025_Progress-in-Energy-and-Comb"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:20:14.679188",
+    "answer_length": 1540
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly explains the negative feedback extinction mechanism in concurrent flame spread. It accurately describes the causal chain: decreased flame spread rate (V_f) → increased solid residence time (t_s,res) → increased thermal penetration depth (τ_h) → reduced temperature gradient → further reduced V_f. The answer also correctly identifies the role of increased surface re-radiation losses with larger preheating zone length (L_pr or L_sx). The physical relationships are sound, including the scaling of thermal penetration with √(α_s t_s,res) and the radiation number formulation. The answer provides appropriate mathematical context and correctly quotes the original text's key statement about the feedback loop. All cause-effect relationships align with the original text, and the thermophysical principles are correctly stated. The additional detail and equations enhance understanding without introducing errors.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:09:10.153489"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Uses 'radiative heat flux scales with exposed surface area'—more precise to say total radiative loss (power) increases with larger radiating area; flux is per-area.",
+          "Introduces a specific radiation number expression and characteristic length L_y that are not mentioned in the cited text; while not wrong, this is somewhat extraneous and could confuse streamwise vs transverse length scales.",
+          "Minor notation: τ_h is used for thermal penetration depth but expressed as √(α_s t), which is a length; typically denoted δ_th."
+        ],
+        "reasoning": "The answer captures the core negative feedback: a reduced flame spread rate increases residence time and preheating length, which lowers the temperature gradient at the front and increases surface re-radiation, further reducing spread rate and potentially causing extinction. This matches the original text. Physical reasoning is sound; minor terminology and extraneous dimensionless detail do not contradict the mechanism.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:09:55.496310"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer is factually and logically sound. It correctly identifies the negative feedback loop involving decreased flame spread rate, increased solid residence time, and consequently larger heat losses (both conductive into the solid and radiative from the surface). The explanation is consistent with the provided original text and fundamental principles of heat transfer and combustion. The causal relationships described form the correct mechanism for extinction in this regime.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:10:27.203354"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:10:27.203374",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "question_text": "How does the scale effect influence the dominant heat transfer mechanisms in pool fires, and what physical processes cause the transition between different burning regimes as pool diameter increases?",
+  "standard_answer": "The scale effect in pool fires fundamentally alters the dominant heat transfer mechanisms as pool diameter increases, leading to transitions between distinct burning regimes. According to the paper, 'Three burning regimes, comprising laminar, transition and turbulent burning, were identified to occur as the pool diameter increased.' This transition occurs because the relative contribution of different heat transfer pathways changes with scale. The heat transfer to the fuel surface can be analyzed through enthalpy balance, where 'The first, second and third terms on the right-hand side (RHS) of Eq. (2-2) represent the conduction, convection, and radiation, respectively.' For small pool diameters, conduction through the vessel walls and convective heat transfer dominate because the flame remains laminar. As pool diameter increases, the flame transitions to turbulent regime, enhancing convective heat transfer through increased air entrainment and mixing. Simultaneously, larger flame volumes and longer optical paths significantly increase radiative heat transfer due to enhanced soot formation and emission. The transition between regimes occurs because conduction scales inversely with diameter, while radiation scales with flame volume and optical depth. For larger diameters, radiation becomes increasingly dominant as the flame becomes optically thick, with radiative feedback constituting a substantial portion of total heat transfer to the fuel surface.",
+  "original_text": {
+    "1": "Three burning regimes, comprising laminar, transition and turbulent burning, were identified to occur as the pool diameter increased",
+    "2": "The first, second and third terms on the right-hand side (RHS) of Eq. (2-2) represent the conduction, convection, and radiation, respectively"
+  },
+  "type": "concept",
+  "difficulty": 4,
+  "topic": "heat_transfer",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires deep knowledge of combustion science (pool fire dynamics), heat transfer mechanisms (conduction, convection, radiation), and fluid mechanics (laminar to turbulent transition) specific to fire science and combustion engineering. It cannot be answered with general ML knowledge alone.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+  },
+  "retry_count": 2,
+  "question_id": "deepseek_q_752fb82e",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Pool-fire-dynamics--Principles--models-and_2023_Progress-in-Energy-and-Combu",
+    "paper_title": "Pool-fire-dynamics--Principles--models-and_2023_Progress-in-Energy-and-Combu"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:26:19.081779",
+    "answer_length": 1471
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer correctly identifies the three burning regimes (laminar, transition, turbulent) as stated in the original text. It accurately describes the three heat transfer mechanisms (conduction, convection, radiation) from Eq. (2-2). The physical explanations are sound: conduction dominates in small pools and scales inversely with diameter, convection increases with turbulence and air entrainment, and radiation becomes dominant in larger pools due to increased flame volume, optical path length, and soot formation. The cause-effect relationships are correct - the transition between regimes is properly attributed to the changing relative contributions of heat transfer mechanisms with scale. All statements are consistent with fundamental combustion physics and the original text.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:15:46.972023"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Conflates the 'conduction' term with conduction through vessel walls; in many surface energy balances, conduction refers to heat conducted into the liquid beneath the surface, while wall losses are a separate effect.",
+          "The statement that 'conduction scales inversely with diameter' is valid for wall heat losses via perimeter-to-area scaling, but does not generally describe conduction into the liquid."
+        ],
+        "reasoning": "The answer aligns with the ground-truth points: burning regimes shift from laminar to turbulent as pool diameter increases, and the energy balance terms correspond to conduction, convection, and radiation. It correctly describes that small pools are dominated by convective (and some conductive) feedback, whereas radiative feedback becomes increasingly dominant for large, optically thick, soot-laden flames. The causal mechanisms—enhanced air entrainment/mixing and increased optical depth—are physically sound. Minor issues involve the interpretation of the conduction term and its scaling, but these do not undermine the core correctness.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:16:09.544770"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer is factually accurate and logically sound. It correctly identifies the three burning regimes and the three primary heat transfer mechanisms (conduction, convection, radiation) as supported by the original text. The explanation of how the dominance of these mechanisms shifts with increasing pool diameter (scale effect) is consistent with established principles of combustion and heat transfer in pool fires. Specifically, it correctly states that conduction through the rim is important for small pools, while radiation becomes the dominant heat feedback mechanism for large, optically thick turbulent flames.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:16:24.574827"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:16:24.574848",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

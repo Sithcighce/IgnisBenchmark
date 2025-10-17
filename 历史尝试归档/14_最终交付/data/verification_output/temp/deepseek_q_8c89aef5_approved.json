@@ -1,0 +1,77 @@
+{
+  "question_text": "How does the Le Chatelier's principle explain the enhancement of hydrogen yield in sorption-enhanced steam reforming when CO2 is selectively removed by solid sorbents?",
+  "standard_answer": "Le Chatelier's principle states that a system at equilibrium will shift to counteract any imposed change. In steam reforming of hydrocarbons (e.g., CH4 + H2O ↔ CO + 3H2), the water-gas shift reaction (CO + H2O ↔ H2 + CO2) further produces hydrogen but is equilibrium-limited. When a solid sorbent like CaO captures CO2 in situ (CaO + CO2 → CaCO3), the CO2 concentration in the gas phase decreases. According to Le Chatelier's principle, the equilibrium of the water-gas shift reaction shifts forward to produce more H2 and CO2, compensating for the removed CO2. This continuous removal drives both reforming and WGS reactions toward higher H2 production, exceeding thermodynamic limits of conventional processes. The exothermic carbonation (e.g., -179 kJ/mol for CaO) also provides heat, favoring endothermic reforming. Thus, selective CO2 sorption alters reaction equilibria, enhancing H2 yield and purity.",
+  "original_text": {
+    "1": "Le Chatelier’s principle is governing the CO2-sorption enhanced gasification where CO2 is selectively removed shifting the equilibrium toward the formation of the other reaction product which is hydrogen.",
+    "2": "By the sorption of CO2 from the gaseous product species employing a solid sorbent, the normal equilibrium limit of the reforming reaction is extended beyond the thermodynamic limitation of the original system without the CO2 removal."
+  },
+  "type": "reasoning",
+  "difficulty": 4,
+  "topic": "combustion_kinetics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires understanding of chemical equilibrium principles (Le Chatelier's principle) applied specifically to sorption-enhanced steam reforming processes for hydrogen production, which involves combustion science, reaction kinetics, and energy systems expertise.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct, and compliant with other requirements."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_8c89aef5",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Progress-in-in-situ-CO2-sorption-for-enhanc_2022_Progress-in-Energy-and-Comb",
+    "paper_title": "Progress-in-in-situ-CO2-sorption-for-enhanc_2022_Progress-in-Energy-and-Comb"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:26:14.633107",
+    "answer_length": 907
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly explains Le Chatelier's principle and its application to sorption-enhanced steam reforming. It accurately describes how CO2 removal by solid sorbents (e.g., CaO) shifts the water-gas shift reaction equilibrium forward to produce more H2, consistent with the original text's statement that CO2 removal shifts equilibrium toward hydrogen formation. The answer correctly notes that this extends beyond the thermodynamic limitation of the conventional system, matching the original text. The chemical equations provided (CH4 + H2O ↔ CO + 3H2, CO + H2O ↔ H2 + CO2, CaO + CO2 → CaCO3) are accurate. The additional details about exothermic carbonation providing heat for endothermic reforming, while not explicitly in the original text, are thermodynamically correct and represent valid elaboration. All core mechanisms are properly explained with no factual errors or logical contradictions.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:17:07.126258"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer correctly applies Le Chatelier’s principle: selective removal of CO2 by a solid sorbent lowers its partial pressure, shifting the WGS and overall reforming equilibria toward additional H2 formation and thereby extending the apparent equilibrium limit compared to the conventional (no-sorption) case. This aligns with the original text. The added note about exothermic carbonation aiding the endothermic reforming is accurate and does not contradict the core explanation.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:17:28.601082"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly applies Le Chatelier's principle to explain how the removal of a product (CO2) shifts the equilibrium of the water-gas shift reaction to favor the formation of more products (H2). This is fully consistent with the original text. The answer accurately provides relevant chemical equations (reforming, WGS, carbonation) and correctly identifies that this process allows the system to exceed the normal thermodynamic equilibrium limits. The additional point about the exothermic carbonation reaction providing heat for the endothermic reforming reaction is also factually correct and adds valuable context.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:17:48.620243"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:17:48.620275",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

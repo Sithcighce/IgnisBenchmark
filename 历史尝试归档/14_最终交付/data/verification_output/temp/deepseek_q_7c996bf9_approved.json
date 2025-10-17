@@ -1,0 +1,74 @@
+{
+  "question_text": "How do mixed ionic-electronic conducting (MIEC) membranes differ from pure hydrogen-permeable membranes in methane conversion reactors, and what advantages do they offer for controlling product selectivity and carbon deposition?",
+  "standard_answer": "Mixed ionic-electronic conducting (MIEC) membranes, such as doped perovskites (e.g., BaZr0.9Y0.1O3−δ), transport both ions (e.g., protons, oxide ions) and electrons, unlike pure hydrogen-permeable membranes (e.g., Pd) that only transport H2. In methane dehydroaromatization (MDA) reactors, MIEC membranes can simultaneously remove hydrogen as protons and introduce oxide ions that react with H2 to form water on the sweep side. This dual functionality mitigates carbon deposition by introducing steam in situ, which gasifies coke precursors (e.g., naphthalene) via reactions like C10H8 + 10H2O → 10CO + 14H2. In contrast, pure H2 membranes only shift equilibrium but may exacerbate carbon formation due to reduced H2 partial pressures. For oxidative coupling of methane (OCM), MIEC membranes can control oxygen delivery along the reactor length, improving temperature management and selectivity by avoiding hot spots from premixed O2/CH4. The electronic conductivity enables charge compensation without external circuits, though materials like protonic ceramics may require optimized dopant levels to balance ion transference numbers. These characteristics make MIEC membranes superior for integrated reaction-separation processes, enhancing both conversion and catalyst longevity.",
+  "original_text": {
+    "1": "Materials such yttrium- and cerium-doped barium zirconates (BCZY) can simultaneously transport both protons and oxide ions. Depending on the sweep-gas and catalyst-bed composition, the net effect can be hydrogen leaving the catalyst bed and steam entering the catalyst bed.",
+    "2": "Because steam can react with deleterious side products such as naphthalene, ceramic MIEC membranes can offer potentially significant advantages compared to pure hydrogen-permeable membranes."
+  },
+  "type": "application",
+  "difficulty": 5,
+  "topic": "energy_systems",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires specific knowledge of membrane materials science (MIEC vs. pure hydrogen-permeable membranes), methane conversion processes (MDA, OCM), reactor engineering concepts (product selectivity control, carbon deposition mitigation), and chemical reaction mechanisms - all within the combustion/energy systems domain.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no compliance issues."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_7c996bf9",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Progress-in-the-direct-catalytic-conversion-of_2016_Progress-in-Energy-and-C",
+    "paper_title": "Progress-in-the-direct-catalytic-conversion-of_2016_Progress-in-Energy-and-C"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:26:30.923000",
+    "answer_length": 1281
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately reflects and expands upon the original text. It correctly identifies that MIEC membranes (like BCZY) can transport both protons and oxide ions, enabling simultaneous hydrogen removal and steam introduction. The explanation of how steam gasifies coke precursors like naphthalene is consistent with the original text's statement that 'steam can react with deleterious side products such as naphthalene.' The answer provides additional mechanistic details (e.g., specific reactions, OCM applications, electronic conductivity) that are scientifically sound and do not contradict the original text. The comparison with pure H2-permeable membranes (e.g., Pd) is logical and correctly highlights the advantages of MIEC membranes for controlling carbon deposition and product selectivity. All physical and chemical principles stated are correct.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:17:29.643740"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer is factually correct and logically sound. It accurately describes the dual ionic (proton, oxide ion) and electronic transport in MIEC membranes and contrasts it with pure H2-permeable membranes. It correctly explains the advantage for carbon deposition mitigation in MDA via in-situ steam generation for gasifying coke precursors, which is fully consistent with the original text. The additional, correct example of using MIEC membranes for distributed oxygen feed in OCM is a valid and relevant extension. All principles stated are valid in catalysis and materials science.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:18:40.122325"
+      }
+    ],
+    "failed_verifiers": [
+      {
+        "success": false,
+        "model": "openai/gpt-5",
+        "error": "Invalid control character at: line 7 column 211 (char 576)",
+        "verified_at": "2025-10-15T20:18:16.749145"
+      }
+    ],
+    "verified_at": "2025-10-15T20:18:40.122354",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 2,
+      "total_votes": 2,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "question_text": "How does the converging-diverging Laval nozzle in a supersonic separator achieve phase change of CO₂ and water vapor through energy conversion, and what thermodynamic principles govern the temperature drop and condensation onset?",
+  "standard_answer": "The Laval nozzle achieves phase change through adiabatic expansion in supersonic flow, converting internal energy and pressure into kinetic energy, which results in a significant temperature drop. As the gas accelerates through the converging section, it reaches sonic velocity at the throat (Mach 1), then expands supersonically in the diverging section. This rapid expansion causes the static temperature to decrease sharply due to the conservation of energy (first law of thermodynamics), making the gas supersaturated with respect to condensable components like CO₂ and water vapor. The supersaturation ratio (S) increases rapidly, and when it exceeds a critical value (S_crit), homogeneous nucleation occurs, forming microdroplets. The process is governed by the isentropic relations for ideal gases, where temperature and pressure follow T/T₀ = (1 + (γ-1)/2 * Ma²)^(-1) and P/P₀ = (T/T₀)^(γ/(γ-1)), with γ as the specific heat ratio and Ma as the Mach number. The condensation onset is triggered when the local temperature drops below the saturation temperature at the partial pressure of the condensable species, leading to spontaneous nucleation and droplet growth. The short residence time in the nozzle (microseconds) prevents re-evaporation and ensures efficient separation before shock waves in the diffuser recover pressure and temperature.",
+  "original_text": {
+    "1": "The supersonic nozzle serves as a crucial component in the design and optimization of supersonic separators, playing a pivotal role in accelerating fluid to supersonic velocities by converting pressure and temperature into kinetic energy.",
+    "2": "As the gas expands and cools through the nozzle, the supersaturation ration (S) rapidly increases. When the supersaturation exceeds a critical value (S_crit) on a microsecond timescale, phase transition occurs."
+  },
+  "type": "reasoning",
+  "difficulty": 5,
+  "topic": "fluid_mechanics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires deep knowledge of fluid mechanics (Laval nozzle operation, supersonic flow principles), thermodynamics (energy conversion, temperature drop mechanisms, phase change), and combustion/energy systems (CO₂ and water vapor condensation in supersonic separators). It specifically asks about thermodynamic principles governing temperature drop and condensation onset, which requires domain-specific expertise beyond general ML/CS knowledge.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question is well-focused on domain expertise and answer is factually correct with appropriate detail. No changes needed."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_2ef909f9",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Supersonic-separation-towards-sustainable-gas_2024_Progress-in-Energy-and-Co",
+    "paper_title": "Supersonic-separation-towards-sustainable-gas_2024_Progress-in-Energy-and-Co"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:29:54.959762",
+    "answer_length": 1353
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly explains the phase change mechanism in a Laval nozzle through adiabatic expansion and energy conversion, consistent with the original text. Key points verified: (1) Conversion of pressure/temperature into kinetic energy matches original text statement about converting pressure and temperature into kinetic energy; (2) Supersaturation ratio (S) exceeding critical value (S_crit) triggering phase transition on microsecond timescale is directly stated in original text; (3) Thermodynamic principles (isentropic relations, first law) are correctly applied; (4) Physical mechanisms (sonic throat, supersonic expansion, temperature drop, homogeneous nucleation) are sound and consistent with established gas dynamics; (5) The mathematical relationships for temperature and pressure ratios with Mach number are standard isentropic flow equations. While the answer is more detailed than the original text, all additional explanations (shock waves, residence time, droplet growth) are accurate extensions of the core mechanism and do not contradict the original text. No factual errors or logical inconsistencies detected.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:21:07.037139"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Uses ideal-gas isentropic relations; real-gas effects and mixture-dependent gamma can matter in CO₂/H₂O flows",
+          "Assumes homogeneous nucleation; in practice heterogeneous nucleation may also occur, but this does not contradict the original text"
+        ],
+        "reasoning": "The answer correctly describes energy conversion in a Laval nozzle (adiabatic/isentroptic expansion converting enthalpy to kinetic energy), the Mach-1 throat and supersonic diverging section, and the resulting temperature drop leading to supersaturation and nucleation. It aligns with the ground-truth statements about rapid increase in supersaturation and microsecond-scale phase transition. The isentropic relations provided are correct for ideal gases, and the condensation onset criterion (temperature below saturation at the partial pressure) is consistent with supersaturation-driven nucleation. No factual or logical errors were found.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:21:38.668639"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer is factually and logically correct. It accurately describes the energy conversion process (internal energy/pressure to kinetic energy) in a Laval nozzle, which is consistent with the original text. The thermodynamic principles, including the first law of thermodynamics and the isentropic flow relations for temperature and pressure as a function of Mach number, are stated correctly. The mechanism of condensation via supersaturation exceeding a critical value also aligns perfectly with the provided text and established nucleation theory. The answer is comprehensive and contains no errors.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:21:58.891099"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:21:58.891126",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

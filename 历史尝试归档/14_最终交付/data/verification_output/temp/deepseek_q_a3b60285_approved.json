@@ -1,0 +1,83 @@
+{
+  "question_text": "How do the fundamental combustion properties of syngas, particularly its high laminar flame speed and wide flammability limits, influence its application in different internal combustion engine types and combustion strategies?",
+  "standard_answer": "Syngas's fundamental combustion properties significantly impact its application across various IC engine types and combustion strategies. The high laminar flame speed, second only to hydrogen among common fuels, enables faster combustion completion, which is particularly beneficial for spark ignition (SI) engines where it allows for more optimal spark timing and improved thermal efficiency. The wide flammability limits (24-60% by volume in air) facilitate stable ultra-lean combustion operation, extending the lean burn limit and reducing NOx emissions through lower combustion temperatures. In compression ignition (CI) engines, these properties enable dual-fuel operation where syngas can be used as a secondary fuel to enhance combustion stability, especially at low loads. For advanced combustion strategies like homogeneous charge compression ignition (HCCI), the combination of wide flammability limits and high flame speed helps achieve more controlled auto-ignition and combustion phasing. The high hydrogen content also facilitates cold starts and guarantees rapid ignition, though it increases propensity for pre-ignition and backfire in SI engines. These properties make syngas particularly suitable as a secondary fuel in IC engines, especially at low engine loads where combustion stability is challenging.",
+  "original_text": {
+    "1": "Syngas has the highest laminar flame speed and widest flammability limits amongst all fuels after hydrogen, making it beneficial for application as a secondary fuel in IC engines, especially at low engine loads",
+    "2": "It means that a wide range of stable operation (from rich to lean) could be achieved with syngas fuel, especially promoting the ultra-lean combustion in spark-ignition engines"
+  },
+  "type": "application",
+  "difficulty": 4,
+  "topic": "energy_systems",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires deep knowledge of combustion science (syngas properties like laminar flame speed and flammability limits), internal combustion engine types (SI, CI, HCCI), and combustion strategies. It specifically asks how fundamental combustion properties influence engine applications, which demands expertise in both combustion physics and engine technology.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "The question is well-focused on combustion domain knowledge and the answer is comprehensive, factually correct, and well-supported by the provided citations and paper content."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_a3b60285",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Synthesis-gas-as-a-fuel-for-internal-combusti_2022_Progress-in-Energy-and-Co",
+    "paper_title": "Synthesis-gas-as-a-fuel-for-internal-combusti_2022_Progress-in-Energy-and-Co"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:29:45.997657",
+    "answer_length": 1323
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately reflects and appropriately elaborates on the original text. Key facts are correct: (1) syngas has high laminar flame speed and wide flammability limits, second only to hydrogen; (2) wide flammability limits (24-60% cited) enable stable ultra-lean combustion in SI engines; (3) beneficial as secondary fuel especially at low engine loads. The answer provides reasonable extensions discussing CI engines, HCCI, and practical considerations (cold starts, pre-ignition risks) that are consistent with combustion science principles and do not contradict the original text. The elaborations on thermal efficiency, NOx reduction through lower temperatures, and combustion phasing are logically sound applications of the fundamental properties mentioned in the original text.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:21:20.297924"
+      },
+      {
+        "correct": false,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "States specific flammability limits of 24–60% by volume in air for syngas; this is not generally correct and contradicts the notion of wide limits driven by hydrogen content. Syngas flammability limits are composition-dependent and typically much wider (lower LFL), not as high as 24%.",
+          "Misapplies laminar flame speed to HCCI: HCCI is auto-ignition controlled with no propagating flame, so claiming high flame speed helps achieve controlled auto-ignition is mechanistically inaccurate.",
+          "Overstates certainty by saying high hydrogen content \"guarantees\" rapid ignition; syngas composition varies and ignition behavior is not guaranteed."
+        ],
+        "reasoning": "The answer captures the core ideas from the ground-truth: syngas has high laminar flame speed and wide flammability limits, promoting ultra-lean SI operation and suitability as a secondary fuel at low loads. However, it introduces an incorrect numeric flammability range and a conceptual error by linking flame speed to HCCI behavior, and it overstates ignition certainty. These factual and logical issues warrant marking the answer as incorrect.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:21:42.345674"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "The specific numerical range given for flammability limits (24-60% by volume in air) is questionable for typical syngas compositions, as the lower limit is usually much lower. However, this is a minor detail, and the qualitative point that the limits are wide is correct and central to the argument."
+        ],
+        "reasoning": "The answer correctly identifies the key combustion properties of syngas (high flame speed, wide flammability limits) and accurately explains their implications for various IC engine types (SI, CI, HCCI) and combustion strategies. The explanations for improved thermal efficiency, ultra-lean operation, NOx reduction, and dual-fuel stability are all factually and logically sound. The answer is consistent with and correctly elaborates upon the provided original text.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:22:25.446291"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:22:25.446311",
+    "consensus": {
+      "all_correct": false,
+      "correct_votes": 2,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 2
+    }
+  }
+}

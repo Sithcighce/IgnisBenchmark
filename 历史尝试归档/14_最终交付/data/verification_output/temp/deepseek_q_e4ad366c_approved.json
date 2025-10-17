@@ -1,0 +1,79 @@
+{
+  "question_text": "How do dispersion coefficients and gas flow velocities in different pyrolysis reactors (e.g., fixed bed vs. fluidized bed) correlate with the observed char yields and secondary reaction extents during tire pyrolysis, and what are the implications for tire char properties based on the reactor operating conditions?",
+  "standard_answer": "The dispersion coefficient (D) and gas flow velocity (υ) are key parameters that characterize reactor hydrodynamics and mixing behavior, which correlate with observed pyrolysis outcomes. According to the literature, fixed bed reactors typically operate with D = 0.0-0.02 m²·s⁻¹ and υ = 0.02-0.6 m·s⁻¹, while fluidized beds operate with D = 0.001-0.6 m²·s⁻¹ and υ = 0.015-0.7 m·s⁻¹. These parameters help quantify the degree of back-mixing and deviation from ideal plug flow behavior, which influences residence time distribution. The char yield obtained in fast pyrolysis is usually slightly higher than the carbon black content of original tire rubber, i.e. in the 25 to 35% range. However, the opposite effect can be observed under slow pyrolysis conditions with a higher extent of secondary reactions, higher char yields, and carbon black adulteration, typically yielding 35-45% char. Reactor type influences these conditions - fluidized beds often operate under fast pyrolysis with high heating rates (10³-10⁴ °C·s⁻¹) and short residence times, minimizing secondary reactions and producing char closer to original carbon black content. Fixed beds typically operate under slower heating rates (5-40 °C·min⁻¹) with longer residence times, promoting secondary condensation reactions that increase char yield and alter char properties through carbon black adulteration. The dispersion coefficient is therefore crucial for reactor design as it determines the residence time distribution in the reactor, which affects the extent of secondary reactions and consequently the balance between char yield and quality.",
+  "original_text": {
+    "1": "According to the dispersion coefficient and gas flow velocity, the following models are defined: fixed bed (D = 0.0-0.02 m²·s⁻¹, υ = 0.02-0.6 m·s⁻¹) [102,103], fluidized bed (D = 0.001-0.6 m²·s⁻¹, υ = 0.015-0.7 m·s⁻¹) [104–106]",
+    "2": "Thus, the char yield obtained in fast pyrolysis is usually slightly higher than the carbon black content of original tire rubber, i.e. in the 25 to 35% range. However, the opposite effect can be observed under slow pyrolysis conditions with a higher extent of secondary reactions, higher char yields, and carbon black adulteration."
+  },
+  "type": "concept",
+  "difficulty": 4,
+  "topic": "fluid_mechanics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires deep knowledge of pyrolysis reactor hydrodynamics (dispersion coefficients, gas flow velocities), reactor-specific pyrolysis behavior (fixed bed vs. fluidized bed), and how these parameters affect char yields and secondary reactions in tire pyrolysis - all requiring specialized combustion/energy/chemical engineering domain expertise.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer are well-aligned with domain focus and paper content. No issues detected."
+  },
+  "retry_count": 3,
+  "question_id": "deepseek_q_e4ad366c",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Tire-pyrolysis-char--Processes--properties--u_2022_Progress-in-Energy-and-Co",
+    "paper_title": "Tire-pyrolysis-char--Processes--properties--u_2022_Progress-in-Energy-and-Co"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:33:41.118321",
+    "answer_length": 1610
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately reflects all information from the original text and provides sound logical extensions. Key facts verified: (1) Dispersion coefficients and gas flow velocities for fixed bed (D=0.0-0.02 m²·s⁻¹, υ=0.02-0.6 m·s⁻¹) and fluidized bed (D=0.001-0.6 m²·s⁻¹, υ=0.015-0.7 m·s⁻¹) match exactly. (2) Char yield ranges (25-35% for fast pyrolysis, 35-45% for slow pyrolysis) are consistent with the original text. (3) The explanation of secondary reactions and carbon black adulteration under slow pyrolysis conditions matches the original. (4) The logical connections made between reactor hydrodynamics, residence time distribution, heating rates, and char properties are scientifically sound and consistent with combustion/pyrolysis principles. The answer appropriately elaborates on the mechanisms (e.g., heating rates of 10³-10⁴ °C·s⁻¹ for fluidized beds vs 5-40 °C·min⁻¹ for fixed beds) which, while not explicitly in the original text excerpt, are standard knowledge in pyrolysis reactor design and do not contradict the original text. No factual errors or logical inconsistencies detected.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:23:31.333150"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "medium",
+        "verification_confidence": "high",
+        "issues": [
+          "Includes additional numeric details (heating rates, slow-pyro char range 35–45%) not present in the provided original text, though they are plausible and do not contradict it."
+        ],
+        "reasoning": "The answer correctly reproduces the dispersion coefficient and gas velocity ranges for fixed and fluidized beds and accurately connects higher dispersion/back-mixing to broader residence time distributions affecting secondary reactions. It aligns with the original text on char yields: fast pyrolysis yields near the carbon black content (25–35%), and slow pyrolysis increases char via secondary reactions and carbon black adulteration. The added heating rate and typical slow-pyro char yield values are reasonable and support the stated mechanisms without contradicting the ground truth.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:23:53.313837"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer is factually correct, logically sound, and consistent with the provided original text. It accurately states the dispersion coefficients and flow velocities for different reactors, correctly links reactor types (fixed vs. fluidized bed) to pyrolysis conditions (slow vs. fast), and correctly explains the impact on secondary reactions, char yield, and char properties. The reasoning is consistent with fundamental principles of chemical reaction engineering and thermophysics.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:24:18.273367"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:24:18.273396",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

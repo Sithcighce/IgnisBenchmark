@@ -1,0 +1,77 @@
+{
+  "question_text": "Given a supersonic jet flame with exit velocity 500 m/s, hydrogen fuel in vitiated air at 1500 K, and pressure 5 atm, estimate the order of magnitude for the pressure-dilatation term in the turbulent kinetic energy equation relative to the shear production term, and explain the physical significance of this ratio.",
+  "standard_answer": "For a supersonic hydrogen jet flame under these conditions, the pressure-dilatation term becomes comparable to the shear production term, with a ratio on the order of 0.5-1.0. This estimation is based on DNS studies by Luo that showed: (1) In nonreacting supersonic jets, the pressure-dilatation term is negligible compared to shear production. (2) In reacting cases, pressure-dilatation increases significantly and becomes of the same order as shear production. (3) The ratio increases further with higher total heat release. Physically, this means that compressibility effects and combustion-induced flow accelerations contribute significantly to turbulent kinetic energy production. The pressure-dilatation term represents work done by pressure during fluid expansion/compression, while in reacting flows, heat release causes substantial density changes and flow accelerations. The comparable magnitude indicates that traditional turbulence models based solely on shear production are inadequate for high-speed combustion, as they neglect the important energy transfer between internal and kinetic energy through compressibility effects. This has profound implications for turbulence modeling in propulsion systems, requiring models that explicitly account for combustion-compressibility interactions.",
+  "original_text": {
+    "1": "Luo observes that the values of the pressure–dilatation term are of the order of the shear-production term in the reacting cases, and that they increase when going from the low- to the high-total-heat-release case",
+    "2": "the pressure–dilatation term in the turbulent-kinetic-energy equation, which quantifies the effect of flow compressions and expansions on the turbulence, is negligible in the nonreacting case"
+  },
+  "type": "calculation",
+  "difficulty": 4,
+  "topic": "energy_systems",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires specialized knowledge in combustion science (supersonic jet flame with hydrogen fuel), fluid mechanics (turbulent kinetic energy equation, pressure-dilatation term, shear production term), and CFD modeling. It specifically addresses compressibility effects in high-speed reacting flows, which is a core topic in propulsion system analysis and requires domain expertise beyond general ML/CS knowledge.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_e16b739d",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Advances-and-challenges-in-modeling-high-speed-t_2017_Progress-in-Energy-and",
+    "paper_title": "Advances-and-challenges-in-modeling-high-speed-t_2017_Progress-in-Energy-and"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:14:15.154508",
+    "answer_length": 1304
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately reflects the information from the original text. It correctly states that: (1) the pressure-dilatation term is negligible in nonreacting supersonic jets, (2) becomes comparable to shear production (order 0.5-1.0) in reacting cases, and (3) increases with higher total heat release. These points directly align with Luo's observations cited in the original text. The physical explanation of pressure-dilatation representing work done during expansion/compression and its connection to combustion-induced density changes is sound. The implications for turbulence modeling are logically derived from the comparable magnitudes of the two terms. While the answer is detailed, all statements are factually accurate and consistent with fundamental combustion and turbulence physics.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:02:11.263825"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer matches the ground-truth statements: it asserts that pressure–dilatation is negligible in nonreacting cases and of the same order as shear production in reacting cases, increasing with higher heat release. The estimated ratio (0.5–1.0) is consistent with 'order-of-magnitude' equivalence. The physical explanation about compressibility and heat-release-driven density changes affecting TKE via pressure–dilatation is sound and reasonable.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:02:30.661071"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer is factually correct and logically sound. It accurately reflects the information in the original text, stating that the pressure-dilatation term becomes comparable to the shear production term in reacting supersonic flows, unlike in non-reacting cases. The provided numerical estimate (0.5-1.0) is a reasonable interpretation of 'of the same order'. The physical explanation correctly identifies heat release-induced expansion as the primary driver and accurately describes the implications for turbulence modeling. All statements are consistent with established principles of compressible turbulence and combustion.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:02:55.987133"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:02:55.987152",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

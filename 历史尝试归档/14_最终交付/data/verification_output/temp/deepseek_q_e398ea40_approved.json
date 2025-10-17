@@ -1,0 +1,77 @@
+{
+  "question_text": "How does the coordination number in the Bethe lattice approximation of the CPD model influence the distinction between char and tar formation during coal pyrolysis, and what is the theoretical basis for this distinction according to percolation theory?",
+  "standard_answer": "In the Chemical Percolation Devolatilization (CPD) model, the Bethe lattice approximation represents the coal macromolecular structure using two key parameters: the coordination number and the fraction of intact bridges. The coordination number directly affects how the lattice connectivity governs the formation of infinite arrays versus finite fragments during pyrolysis. According to percolation theory, infinite arrays correspond to macroscopic lattices of unreacted coal and/or char, while finite fragments represent relatively small tar molecules. A higher coordination number increases the connectivity between aromatic clusters, promoting the formation of larger, interconnected structures that remain as char. Conversely, a lower coordination number reduces connectivity, favoring the generation of smaller, finite fragments that can be released as tar. The mathematical framework of percolation theory defines a critical bridge population above which infinite arrays coexist with finite fragments, and this critical value depends on the coordination number. Thus, the coordination number in the Bethe lattice fundamentally determines the statistical distribution between char (infinite arrays) and tar (finite fragments) by influencing the lattice's percolation behavior during the depolymerization process.",
+  "original_text": {
+    "1": "Bethe lattices are defined by two parameters: The coordination number; The fraction of intact bridges.",
+    "2": "The infinite arrays of percolation theory represent macroscopic lattices of unreacted coal and/or char, while the finite fragments of percolation theory characterize relatively small tar molecules."
+  },
+  "type": "concept",
+  "difficulty": 4,
+  "topic": "combustion_kinetics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires deep knowledge of coal pyrolysis modeling, specifically the Chemical Percolation Devolatilization (CPD) model, Bethe lattice approximations, percolation theory, and the distinction between char and tar formation - all core concepts in combustion science and energy systems.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+  },
+  "retry_count": 1,
+  "question_id": "deepseek_q_e398ea40",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Advanced-modeling-approaches-for-CFD-simulations_2021_Progress-in-Energy-and",
+    "paper_title": "Advanced-modeling-approaches-for-CFD-simulations_2021_Progress-in-Energy-and"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:15:01.707968",
+    "answer_length": 1317
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately reflects the information in the original text and provides a logically sound explanation. It correctly identifies that Bethe lattices are defined by coordination number and fraction of intact bridges (from [1]), and accurately explains that infinite arrays represent char while finite fragments represent tar (from [2]). The answer extends this with correct applications of percolation theory, explaining how coordination number affects connectivity and the char/tar distribution. The physical principles are sound: higher coordination increases connectivity favoring char formation, lower coordination favors tar formation. The explanation of critical bridge population and percolation behavior is consistent with established percolation theory in polymer networks. While the answer is detailed and elaborates beyond the minimal original text, all statements are factually accurate and logically consistent with the ground truth.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:02:05.707552"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer aligns with the PECS text: it correctly identifies the Bethe lattice parameters (coordination number and fraction of intact bridges) and maps percolation outcomes to char (infinite arrays) and tar (finite fragments). It accurately explains that higher coordination number increases connectivity, favoring infinite clusters (char), while lower coordination number favors finite fragments (tar). The mention of a critical bridge population dependent on coordination number is consistent with percolation theory and CPD’s framework. No factual or logical errors detected.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:02:15.423109"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "medium",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer is factually correct and logically sound. It accurately describes the role of the coordination number in the Bethe lattice approximation within the CPD model. The mapping of percolation theory concepts (infinite arrays to char, finite fragments to tar) is correct and consistent with the provided original text. The reasoning that a higher coordination number increases connectivity and thus promotes char formation is a correct application of percolation theory principles.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:02:30.626694"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:02:30.626713",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

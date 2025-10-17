@@ -1,0 +1,82 @@
+{
+  "question_text": "Calculate the theoretical methane yield (in mL) from CO2 reduction in a microbial electrolysis cell operating at -1.0 V vs. Ag/AgCl for 10 hours with a constant current of 10 mA, assuming 100% faradaic efficiency for electromethanogenesis.",
+  "standard_answer": "To calculate the theoretical methane yield, use Faraday's law. The electromethanogenesis reaction is CO2 + 8H⁺ + 8e⁻ → CH4 + 2H2O, requiring 8 moles of electrons per mole of CH4. First, determine the total charge passed: Q = I × t = 0.01 A × 36000 s = 360 C. The number of moles of electrons is ne = Q / F = 360 C / 96485 C mol⁻¹ ≈ 0.00373 mol. The moles of CH4 produced are n_CH4 = ne / 8 = 0.00373 / 8 ≈ 0.000466 mol. At standard temperature and pressure (273 K, 1 atm), 1 mole of CH4 occupies 22.4 L. Thus, the volume of CH4 is V = n_CH4 × 22400 mL/mol ≈ 10.44 mL. Therefore, the theoretical methane yield is approximately 10.44 mL under these conditions.",
+  "original_text": {
+    "1": "CO2 + 8H⁺ + 8e⁻ → CH4 (g) + H2O",
+    "2": "Considerable methane yield was achieved at a poised potential of –0.9 V vs. Ag/AgCl, being 2.30 ± 0.34 mL after 5 h of operation with a faradaic efficiency of 24.2 ± 4.7%."
+  },
+  "type": "calculation",
+  "difficulty": 3,
+  "topic": "energy_systems",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires specific knowledge of microbial electrolysis cells (MECs), electromethanogenesis reactions, Faraday's law applications in bioelectrochemical systems, and energy conversion principles - all within the energy systems domain focused on clean electrofuels generation and CO2 capture technologies.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused calculation requiring specialized energy systems knowledge, answer is factually correct and properly detailed."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_eeca08ae",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Microbial-electrolysis-cell-platform-for-simultaneous-wa_2017_Progress-in-En",
+    "paper_title": "Microbial-electrolysis-cell-platform-for-simultaneous-wa_2017_Progress-in-En"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:22:58.579795",
+    "answer_length": 658
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly applies Faraday's law to calculate theoretical methane yield. The calculation steps are accurate: Q = I × t = 0.01 A × 36000 s = 360 C; ne = 360/96485 ≈ 0.00373 mol electrons; n_CH4 = 0.00373/8 ≈ 0.000466 mol; V = 0.000466 × 22400 ≈ 10.44 mL. The electromethanogenesis reaction equation (CO2 + 8H⁺ + 8e⁻ → CH4 + 2H2O) matches the original text and correctly shows 8 electrons per mole of CH4. The assumption of 100% faradaic efficiency is clearly stated, which differs from the 24.2% efficiency mentioned in the original text, but this is appropriate for a theoretical calculation as requested in the question. All physical principles, mathematical operations, and chemical stoichiometry are correct.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:13:18.186908"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Reaction stoichiometry shows 2 H2O instead of 1 H2O as in the original text; electron requirement (8 e− per CH4) is correctly used, so the calculation is unaffected.",
+          "Assumes STP molar volume (22.4 L/mol) without temperature/pressure specified in the question."
+        ],
+        "reasoning": "The answer correctly applies Faraday's law: 10 mA for 10 hours yields 360 C, corresponding to 0.00373 mol e−. Using 8 e− per CH4 gives 0.000466 mol CH4, which at 22.4 L/mol is ~10.44 mL. The logic and principles are sound and consistent with the ground truth regarding electron stoichiometry for electromethanogenesis.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:13:42.620082"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "The standard answer uses the correctly balanced chemical equation (CO2 + 8H⁺ + 8e⁻ → CH4 + 2H2O), while the original text provides an unbalanced version (ending in ...CH4 + H2O). This is not an error in the standard answer; it is an improvement, as the crucial electron stoichiometry (8e⁻ per CH4) is consistent, and the standard answer's equation is the chemically correct one."
+        ],
+        "reasoning": "The standard answer is factually and logically sound. It correctly applies Faraday's law to determine the total moles of electrons transferred and then uses the correct reaction stoichiometry (8 moles of electrons per mole of methane) to find the moles of CH4 produced. The final conversion to volume, assuming standard temperature and pressure (a reasonable assumption for a theoretical calculation), is also correct. All calculations are arithmetically accurate and follow established electrochemical principles.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:14:08.395592"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:14:08.395615",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

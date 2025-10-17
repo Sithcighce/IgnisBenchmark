@@ -1,0 +1,82 @@
+{
+  "question_text": "Why does the addition of toluene to H2S acid gas increase the optimal reactor temperature in the Claus thermal stage, and what combustion chemistry pathways are involved?",
+  "standard_answer": "The addition of toluene to H2S acid gas increases the optimal reactor temperature in the Claus thermal stage due to the complex combustion chemistry of aromatic hydrocarbons, which introduces competing reaction pathways and alters the radical pool. Toluene combustion involves high-temperature pyrolysis and oxidation reactions that produce intermediate species like benzyl radicals, which can react with sulfur-containing species. These reactions consume radicals such as H, O, and OH, reducing the availability for H2S oxidation and sulfur formation. The paper states that 'the presence of aromatics in the acid gas increases the optimum operating temperature of the thermal stage Claus reactor', as aromatics require higher temperatures for complete conversion to prevent soot and carbon deposition, which could deactivate catalysts. Specifically, toluene's stable ring structure necessitates elevated temperatures for ring-opening and oxidation, delaying the main Claus reactions and shifting the temperature for maximum sulfur conversion efficiency upward.",
+  "original_text": {
+    "1": "the presence of aromatics in the acid gas increases the optimum operating temperature of the thermal stage Claus reactor, while this optimum operating temperature decreases with CO2 in the gas stream [71–73]",
+    "2": "For example, the presence of aromatics in the acid gas increases the optimum operating temperature of the thermal stage Claus reactor"
+  },
+  "type": "reasoning",
+  "difficulty": 5,
+  "topic": "combustion_kinetics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires specific knowledge of combustion chemistry in the Claus process, including how aromatic hydrocarbons like toluene interact with H2S oxidation pathways, radical chemistry, and optimal reactor temperature determination - all core combustion science and chemical engineering concepts specific to acid gas treatment.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_dd8748a5",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Advances-in-sulfur-chemistry-for-treatmen_2016_Progress-in-Energy-and-Combus",
+    "paper_title": "Advances-in-sulfur-chemistry-for-treatmen_2016_Progress-in-Energy-and-Combus"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:14:10.562899",
+    "answer_length": 1061
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "medium",
+        "verification_confidence": "medium",
+        "issues": [
+          "Answer provides extensive mechanistic detail about toluene combustion chemistry (benzyl radicals, radical pool consumption, ring-opening) that cannot be directly verified from the original text, which only states the empirical observation that aromatics increase optimal temperature"
+        ],
+        "reasoning": "The answer correctly states the core fact from the original text: aromatics increase the optimal operating temperature of the Claus thermal stage reactor. The mechanistic explanations provided (toluene pyrolysis, benzyl radical formation, radical pool competition, need for higher temperatures to prevent soot/carbon deposition and achieve complete conversion) are chemically plausible and logically consistent with combustion science principles. While the original text doesn't provide these specific mechanistic details, the answer doesn't contradict the source material and offers reasonable scientific explanations for the observed phenomenon. The causal relationships described (stable aromatic structure → higher temperature needed for ring-opening → delayed Claus reactions → shifted optimal temperature) follow sound thermochemical logic. No factual errors or logical contradictions detected, though the detailed mechanisms go beyond what can be verified from the brief original text.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:02:56.081567"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Mechanistic details (benzyl radicals reacting with sulfur species) are plausible but somewhat speculative and not directly supported by the provided ground-truth text.",
+          "Does not mention potential carbon–sulfur coupling pathways (e.g., CS2/COS formation) that are often pertinent in Claus thermal-stage chemistry."
+        ],
+        "reasoning": "The answer aligns with the ground-truth statement that aromatics increase the optimum operating temperature in the Claus thermal stage and provides a reasonable mechanistic rationale: aromatic stability, radical pool competition, and soot avoidance necessitating higher temperatures. No clear factual or logical errors are present. While some mechanistic details go beyond the provided text, they are consistent with combustion chemistry principles and do not contradict the ground truth.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:03:19.590247"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer is factually correct and provides a sound explanation based on established combustion chemistry principles. It correctly identifies two key mechanisms: 1) radical competition, where toluene combustion pathways consume H, O, and OH radicals that are also essential for H2S oxidation, and 2) the high thermal stability of toluene's aromatic ring, which requires higher temperatures for complete oxidation to prevent soot formation. This explanation is consistent with the original text and provides the correct underlying chemical kinetic reasoning.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:03:38.003150"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:03:38.003170",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": false,
+      "disagreement_count": 0
+    }
+  }
+}

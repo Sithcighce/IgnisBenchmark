@@ -1,0 +1,80 @@
+{
+  "question_text": "A Li-ion battery with LiCoO₂ cathode and graphite anode operates at an average voltage of 3.7 V. The cathode has a specific capacity of 140 mAh/g and the anode 372 mAh/g. Using a 1:1 mass ratio between cathode and anode, calculate the theoretical specific energy of the full cell considering the total mass of both electrodes. Then, explain how polarization losses affect the practical energy density, relating these mechanisms to the cited paper's discussion of voltage deviations and energy maximization in electrochemical energy storage systems.",
+  "standard_answer": "To calculate the theoretical specific energy, first determine the cell capacity based on the limiting electrode. With a 1:1 mass ratio, the cathode capacity is 140 mAh/g and anode is 372 mAh/g, so the cathode limits the capacity. For total cell mass (cathode + anode = 2 g if each is 1 g), the specific capacity is 140 mAh per 2 g total mass = 70 mAh/g. Convert to Ah/kg: 70 mAh/g = 70 Ah/kg. Theoretical specific energy = Capacity (Ah/kg) × Voltage (V) = 70 Ah/kg × 3.7 V = 259 Wh/kg. This aligns with the cited range of 75-200 Wh/kg for Li-ion batteries, considering practical cells include additional components. Polarization losses reduce practical energy density through voltage deviations from the open-circuit value. As cited, 'the operating voltage, Eop, is given by: Eop = Eoc - η, where Eoc is the open-circuit voltage and η is the overvoltage... caused mainly by polarization.' The paper classifies polarizations into three types: activation polarization related to electrode kinetics at the electrode-electrolyte interface, concentration polarization caused by mass transport limitations, and ohmic polarization related to contact resistance within the cell. These different polarization losses lead to a voltage drop as a function of operating current. Therefore, 'the available energy can be maximized, when the cell is close to the open-circuit voltage, because its value is associated with the cell capacity and average operating voltage.' For example, if polarization causes a 0.2 V drop to 3.5 V, practical energy becomes 70 Ah/kg × 3.5 V = 245 Wh/kg, a 5.4% reduction. To minimize these losses, the paper suggests designing electrodes with porous structures to reduce local current density and enhance mass transport while using electrolytes with high ionic conductivity to decrease ohmic polarization.",
+  "original_text": {
+    "1": "These different polarization losses lead to a voltage drop as a function of operating current, as shown in Fig. 3b, and the operating voltage, Eop, is given by: Eop = Eoc - η, where Eoc is the open-circuit voltage (i.e., the potential difference between the electrodes) and η is the overvoltage (i.e., a deviation in the equilibrium open-circuit voltage from its theoretical value, caused mainly by polarization).",
+    "2": "Therefore, the available energy can be maximized, when the cell is close to the open-circuit voltage, because its value is associated with the cell capacity and average operating voltage: ε = QspEop, where ε is the available energy, and Qsp is the specific capacity obtained by dividing the capacity, Q, by the mass, m, or volume, V, of the cell."
+  },
+  "type": "calculation",
+  "difficulty": 4,
+  "topic": "energy_systems",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires specific knowledge of battery electrochemistry, electrode materials (LiCoO₂ cathode, graphite anode), capacity calculations, polarization mechanisms, and energy density relationships - all core concepts in energy systems and electrochemical energy storage within the combustion/energy domain.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer are well-structured, domain-focused, and factually accurate based on the provided citations and paper content."
+  },
+  "retry_count": 2,
+  "question_id": "deepseek_q_e28fe895",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Commercial-and-research-battery-technologies-for_2015_Progress-in-Energy-and",
+    "paper_title": "Commercial-and-research-battery-technologies-for_2015_Progress-in-Energy-and"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:19:36.187075",
+    "answer_length": 1821
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer correctly calculates the theoretical specific energy (259 Wh/kg) using proper methodology: identifying the cathode as the limiting electrode with 1:1 mass ratio, calculating specific capacity as 70 mAh/g for total mass, converting to 70 Ah/kg, and multiplying by 3.7V. The explanation of polarization losses is accurate and consistent with the original text, correctly citing the equation Eop = Eoc - η and explaining the three types of polarization (activation, concentration, ohmic). The numerical example showing 5.4% reduction with 0.2V drop is mathematically correct (245/259 ≈ 94.6%). The answer properly relates these mechanisms to energy maximization as stated in the original text, and the suggested mitigation strategies (porous electrode structures, high ionic conductivity electrolytes) are scientifically sound. All physical principles and cause-effect relationships are correct.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:07:08.205113"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "medium",
+        "verification_confidence": "high",
+        "issues": [
+          "States that 259 Wh/kg 'aligns' with a 75–200 Wh/kg range; numerically it is above that range and the range is not in the provided ground-truth text",
+          "Ohmic polarization is described primarily as contact resistance, which is incomplete (it also includes electrolyte, separator, and electrode resistances)"
+        ],
+        "reasoning": "The capacity-limiting cathode and the mass-based specific capacity (140 mAh over 2 g → 70 mAh/g → 70 Ah/kg) are correctly used, and the theoretical specific energy (70 Ah/kg × 3.7 V = 259 Wh/kg) is computed correctly for the total electrode mass. The treatment of polarization losses matches the ground truth: Eop = Eoc − η and ε = Qsp·Eop, with correct identification of activation, concentration, and ohmic polarizations causing voltage deviations that reduce practical energy density. The illustrative 0.2 V drop and percentage reduction are arithmetically sound. Minor issues are the questionable 'alignment' with a 75–200 Wh/kg range and a slightly narrow description of ohmic polarization.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:07:29.816736"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer is factually and logically sound. The calculation of the theoretical specific energy is correct, correctly identifying the cathode as the limiting electrode and normalizing the capacity by the total mass of both electrodes. The explanation of polarization losses accurately reflects the provided text and established electrochemical principles, correctly linking overvoltage (η) to a reduction in practical energy density. The numerical example provided is also correct and effectively illustrates the concept.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:07:48.656098"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:07:48.656123",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

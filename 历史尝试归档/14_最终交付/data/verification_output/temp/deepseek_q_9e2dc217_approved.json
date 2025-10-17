@@ -1,0 +1,81 @@
+{
+  "question_text": "What are the dominant heat transfer mechanisms in Solid Oxide Fuel Cells (SOFCs), and how do radiation, conduction, and convection interact to establish temperature gradients across cell components?",
+  "standard_answer": "SOFCs exhibit complex multi-mode heat transfer involving conduction, convection, and radiation, each playing critical roles in establishing temperature distributions. Conduction occurs primarily through solid structures like electrodes and electrolytes, where temperature gradients drive heat flow according to Fourier's law. The high operating temperatures (1023-1123 K) make radiation significant between solid surfaces, particularly for electrode-electrolyte interfaces and within flow channels, where surface-to-surface radiation can substantially alter temperature fields. Convection involves both single and multi-phase heat transfer between solid components and gas streams (fuel/air), with species transportation contributing to enthalpy changes. The interplay between these mechanisms creates non-uniform temperature profiles, often with higher temperatures near inlets due to direct hydrogen oxidation from fuel crossover. Radiation becomes increasingly important at elevated temperatures, enhancing heat redistribution and potentially mitigating hot spots. Convective cooling by reactant flows competes with internal heat generation from electrochemical reactions and overpotential losses, while conductive paths through current collectors and interconnects help distribute heat. The nonlinear coupling between these modes, influenced by local reaction rates and material properties, makes thermal management challenging and necessitates comprehensive modeling of energy conservation with appropriate source terms for reaction heats, ohmic losses, and phase changes.",
+  "original_text": {
+    "1": "Fig. 8 depicts the mechanisms of heat transfer between the main components of a SOFC, including heat transfer by species transportation, conduction between two solid structures, convection between the solid and gas structures, and radiation between two solid surfaces [55].",
+    "2": "It is further noted that radiation heat transfer within the electrode and electrolyte substrates and also surface-to-surface radiation within the fuel and oxygen flow channels can considerably affect the temperature fields and the overall operational condition of SOFCs [67]."
+  },
+  "type": "concept",
+  "difficulty": 4,
+  "topic": "heat_transfer",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires specific knowledge of heat transfer mechanisms in Solid Oxide Fuel Cells (SOFCs), including conduction through solid structures, convection with gas streams, and radiation at high temperatures, which are specialized topics in energy systems and thermal management of electrochemical devices.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "The question is domain-focused, the answer is factually correct and well-supported by citations, and there are no other quality issues. It meets all criteria."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_9e2dc217",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Progress-and-challenges-on-the-thermal-management-of-ele_2022_Progress-in-En",
+    "paper_title": "Progress-and-challenges-on-the-thermal-management-of-ele_2022_Progress-in-En"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:25:59.501077",
+    "answer_length": 1577
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately describes the multi-mode heat transfer mechanisms in SOFCs and is fully consistent with the original text. It correctly identifies conduction through solid structures, convection between solid and gas phases, radiation between solid surfaces, and heat transfer by species transportation - all mentioned in the original text. The answer appropriately elaborates on these mechanisms with sound physical principles (Fourier's law for conduction, temperature dependence of radiation at 1023-1123 K, convective cooling by reactant flows). The statement about radiation being significant within electrode-electrolyte interfaces and flow channels directly aligns with the original text's mention of 'radiation heat transfer within the electrode and electrolyte substrates and also surface-to-surface radiation within the fuel and oxygen flow channels.' The additional details about temperature profiles, hot spots, electrochemical reactions, and thermal management challenges represent reasonable and accurate extensions of the core concepts without contradicting the original text. All physical principles stated are thermodynamically sound.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:16:37.427130"
+      },
+      {
+        "correct": false,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Misidentifies electrode–electrolyte interfaces as locations of significant surface-to-surface radiation; these are contacting solids where radiation is negligible. Ground truth emphasizes radiation within substrates and surface-to-surface radiation in flow channels.",
+          "Claims higher temperatures near inlets due to direct hydrogen oxidation from fuel crossover; this is speculative and likely incorrect. Inlet regions are often cooler due to convective cooling, and fuel crossover is typically minimal in dense electrolytes.",
+          "Introduces multi-phase convection and phase changes as typical considerations; under normal SOFC operation flows are gas-phase and phase change is not a dominant mechanism, which may mislead."
+        ],
+        "reasoning": "The answer correctly describes the multi-mode nature of heat transfer (conduction, convection, radiation) and notes species-transport enthalpy and the importance of radiation at high temperatures, consistent with the cited ground truth. However, it contains specific inaccuracies: it places surface-to-surface radiation at the electrode–electrolyte interfaces (contrary to the established understanding and the ground truth, which highlight radiation within substrates and in flow channels), asserts inlet hot spots due to fuel crossover without support and likely contrary to typical behavior, and mentions multi-phase/phase-change effects that are not dominant in standard SOFC operation. These errors warrant marking the answer as incorrect.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:17:22.171127"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly identifies and explains the roles of conduction, convection, and radiation in SOFCs, consistent with the original text. It accurately describes how these mechanisms interact, driven by internal heat generation (electrochemical reactions, overpotentials) and reactant flows, to create temperature gradients. All physical principles mentioned, such as the significance of radiation at high temperatures and the competition between heat generation and convective cooling, are sound and correctly applied to the SOFC context.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:17:42.569167"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:17:42.569218",
+    "consensus": {
+      "all_correct": false,
+      "correct_votes": 2,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 2
+    }
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "question_text": "Based on the provided paper content, explain how particle size affects the ignition temperature of aluminum particles from micron to nano-scale, including the specific temperature values mentioned. Discuss the role of surface atom fraction in nanoparticle behavior using the provided formula, but do not perform unsupported calculations. Focus only on mechanisms and relationships directly supported by the cited text.",
+  "standard_answer": "The ignition temperature of aluminum particles exhibits a strong size dependence, decreasing significantly as particle size reduces from micron to nano-scale. According to the paper: 'The ignition temperature of aluminum particles decreases with decreasing particle size, from a value as high as 2350 K at 100 mm to »1000 K at 100 nm.' This represents a dramatic reduction of approximately 1350 K when transitioning from larger particles to nanoscale particles. The paper attributes this behavior to the unique properties of nanoparticles, stating: 'The unique behavior of nanoparticles can be partly attributed to the presence of a large number of atoms on the surface and the excess energy associated with these surface atoms.' The paper provides the formula for calculating surface atom fraction: 'The fraction of atoms in the surface layer of the particle, f, can be calculated using the following equation: f = 1 - (1 - 2δ/Dp)^3, where Dp is the particle diameter and δ the thickness of the surface layer.' While the paper notes that surface atoms have lower coordination numbers and greater energies than interior atoms, it specifically states these properties contribute to size-dependent behavior at nano-scales. The increased specific surface area and excess energy of surface atoms in nanoparticles enhance their reactivity, facilitating easier ignition at lower temperatures compared to micron-sized particles. This size-dependent ignition behavior is crucial for understanding nanoparticle combustion in propulsion and energy-conversion applications.",
+  "original_text": {
+    "1": "The ignition temperature of aluminum particles decreases with decreasing particle size, from a value as high as 2350 K at 100 mm to »1000 K at 100 nm",
+    "2": "The unique behavior of nanoparticles can be partly attributed to the presence of a large number of atoms on the surface and the excess energy associated with these surface atoms",
+    "3": "The fraction of atoms in the surface layer of the particle, f, can be calculated using the following equation: f = 1 - (1 - 2δ/Dp)^3, where Dp is the particle diameter and δ the thickness of the surface layer"
+  },
+  "type": "concept",
+  "difficulty": 4,
+  "topic": "combustion_kinetics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires specific knowledge of combustion kinetics, nanoparticle physics, and ignition behavior of aluminum particles - all core topics in combustion science and energetic materials research.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and compliant with other requirements."
+  },
+  "retry_count": 2,
+  "question_id": "deepseek_q_9a8ac208",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Metal-based-nanoenergetic-materials--Synthesis_2017_Progress-in-Energy-and-C",
+    "paper_title": "Metal-based-nanoenergetic-materials--Synthesis_2017_Progress-in-Energy-and-C"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:24:00.041121",
+    "answer_length": 1562
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately represents all key information from the original text. It correctly states the ignition temperature range (2350 K at 100 mm to ~1000 K at 100 nm), properly quotes the explanation about surface atoms and excess energy, accurately presents the formula for surface atom fraction, and correctly explains the mechanism linking surface properties to enhanced reactivity. The answer appropriately avoids unsupported calculations as instructed. All factual statements align with the original text, the logical flow is sound (increased surface atom fraction → excess energy → enhanced reactivity → lower ignition temperature), and the physical principles are correctly stated. The answer is detailed but contains no errors or contradictions.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:12:51.097736"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "medium",
+        "verification_confidence": "high",
+        "issues": [
+          "Includes a general note about lower coordination numbers of surface atoms not explicitly stated in the provided text"
+        ],
+        "reasoning": "The answer correctly states the size-dependent decrease in ignition temperature (2350 K at 100 mm to ~1000 K at 100 nm) and appropriately references the role of surface atoms and the provided surface atom fraction formula. The causal explanation aligns with the cited text. No factual or logical errors are present; minor elaboration about coordination numbers is beyond the provided citations but is generally accurate.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:13:14.937291"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "The answer correctly quotes the '100 mm' particle size from the source text. While this value is likely a typo in the original paper for '100 µm', the answer's adherence to the provided text is correct for this verification task."
+        ],
+        "reasoning": "The answer accurately extracts all relevant information from the provided text, including the trend of decreasing ignition temperature with size, the specific temperature values, and the underlying mechanism related to surface atoms. The logical connections between surface atom fraction, excess energy, and reduced ignition temperature are explained correctly and are consistent with the source material and established combustion principles.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:13:49.602133"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:13:49.602151",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "question_text": "Calculate the energy efficiency of a tyre pyrolysis process producing TPO, given a tyre feedstock lower heating value (LHV) of 35 MJ/kg and TPO yield of 45% with LHV of 42 MJ/kg, considering only the liquid product energy output.",
+  "standard_answer": "The energy efficiency based on TPO output is calculated as the ratio of energy in TPO to energy in the tyre feedstock. For 1 kg of tyre feedstock: Energy input = 35 MJ. TPO mass produced = 0.45 kg. Energy in TPO = 0.45 kg × 42 MJ/kg = 18.9 MJ. Energy efficiency = (18.9 MJ / 35 MJ) × 100% = 54%. This calculation assumes no energy recovery from gaseous or solid fractions, which would improve overall efficiency. In practice, pyrolysis processes often utilize gaseous products to power the reactor, achieving energy self-sustainability. The high LHV of TPO (42 MJ/kg) compared to diesel (∼45 MJ/kg) makes it a viable fuel, but the 54% efficiency highlights the importance of optimizing yield and leveraging by-products for comprehensive energy balance.",
+  "original_text": {
+    "1": "Pyrolysis process efficiency is high and feedstock for TPO is both available and flexible.",
+    "2": "The gaseous fraction can be reused to power the pyrolytic reactor and make the process self-sustainable in energy terms."
+  },
+  "type": "calculation",
+  "difficulty": 3,
+  "topic": "energy_systems",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires calculating energy efficiency for a tyre pyrolysis process, which involves understanding pyrolysis principles, energy conversion in thermal processes, heating values, and product yields - all core concepts in energy systems and combustion science.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused calculation with correct energy efficiency computation and appropriate contextual discussion."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_056e6f9a",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Combustion-engine-applications-of-waste-ty_2021_Progress-in-Energy-and-Combu",
+    "paper_title": "Combustion-engine-applications-of-waste-ty_2021_Progress-in-Energy-and-Combu"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:17:31.157779",
+    "answer_length": 752
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly calculates the energy efficiency (54%) using sound thermodynamic principles: Energy efficiency = (TPO energy output / feedstock energy input) × 100% = (0.45 kg × 42 MJ/kg / 35 MJ) × 100% = 54%. The calculation is mathematically correct and logically sound. The answer appropriately notes that this calculation considers only liquid product output and acknowledges that gaseous and solid fractions could improve overall efficiency. The statement about gaseous products powering the reactor aligns with the original text's mention of process self-sustainability. The comparison of TPO LHV (42 MJ/kg) to diesel (~45 MJ/kg) is factually accurate. No contradictions with the original text exist - the answer elaborates on the efficiency calculation while remaining consistent with the original text's statements about high process efficiency and energy self-sustainability through gas reuse.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:06:36.644091"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The calculation correctly uses the given LHVs and yield to compute liquid-only energy efficiency: 0.45 kg × 42 MJ/kg = 18.9 MJ, divided by 35 MJ/kg feedstock gives 54%. It aligns with thermodynamic principles and is consistent with the original text by noting that gaseous fractions can improve overall energy sustainability.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:06:46.838353"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly calculates the energy efficiency based on the provided data (0.45 kg * 42 MJ/kg) / (1 kg * 35 MJ/kg) = 18.9 MJ / 35 MJ = 54%. The arithmetic is accurate, and the definition of energy efficiency for the liquid product is correctly applied. The answer also provides valid and relevant context regarding the use of by-products (gas and char) to improve overall process efficiency, which is consistent with the provided original text [2]. The comparison of TPO LHV to diesel is also factually correct.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:07:05.909923"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:07:05.909951",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

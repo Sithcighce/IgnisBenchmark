@@ -1,0 +1,79 @@
+{
+  "question_text": "Based on the provided paper content, what are the fundamental differences in combustion conditions between pulverised biomass injection (PBI) in blast furnace raceways and pulverised fuel combustion in boilers, and how do these differences affect the transferability of combustion findings from boiler studies to PBI applications?",
+  "standard_answer": "The paper identifies critical differences in combustion conditions between blast furnace raceways and conventional boilers that fundamentally impact the applicability of boiler combustion studies to PBI applications. According to Table 1 in the paper, combustion in raceways occurs at much higher temperatures (1,400-2,200°C compared to 1,100-1,300°C in boilers), higher pressures (300-500 kPa versus ~101 kPa), higher particle velocities (200-300 m/s versus 15-30 m/s), and dramatically shorter residence times (10-40 ms versus >1 second). Additionally, raceway conditions feature much higher heating rates (10^6 K/s compared to 10^4 K/s in boilers). These extreme conditions create fundamentally different combustion environments where the kinetics, particle dispersion, and heat transfer mechanisms operate on completely different timescales and under different physical constraints. The extremely short residence time in raceways is particularly critical, as it requires much faster combustion kinetics for complete burnout compared to boiler conditions. Furthermore, the paper notes that 'in the raceway, the combusting fuel particles will either recirculate within the raceway or flow into the surrounding coke bed under the effect of their momentum,' creating additional complexities not present in boiler combustion. These fundamental differences mean that 'the findings from pulverised coal/biomass combustion studies for other combustors cannot be directly transferred to BF raceway combustion,' necessitating specialized experimental approaches and mathematical modeling specifically tailored to raceway conditions rather than relying on boiler combustion data.",
+  "original_text": {
+    "1": "Such differences mean that the findings from pulverised coal/biomass combustion studies for other combustors cannot be directly transferred to BF raceway combustion.",
+    "2": "In the raceway, the combusting fuel particles will either recirculate within the raceway or flow into the surrounding coke bed under the effect of their momentum."
+  },
+  "type": "reasoning",
+  "difficulty": 4,
+  "topic": "combustion_kinetics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires deep understanding of combustion science, specifically comparing combustion conditions between blast furnace raceways and boilers, including temperature, pressure, particle velocity, residence time, and heating rates. It also requires knowledge of how these differences affect combustion kinetics, particle behavior, and the transferability of research findings between different combustion systems.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question is well-focused on combustion domain and answer is comprehensive and factually correct based on the paper content."
+  },
+  "retry_count": 3,
+  "question_id": "deepseek_q_f916b558",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Modelling-and-optimisation-of-biomass-injectio_2021_Progress-in-Energy-and-C",
+    "paper_title": "Modelling-and-optimisation-of-biomass-injectio_2021_Progress-in-Energy-and-C"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:25:41.275639",
+    "answer_length": 1672
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately describes the fundamental differences in combustion conditions between blast furnace raceways and boilers, citing specific quantitative differences from Table 1 (temperature: 1,400-2,200°C vs 1,100-1,300°C; pressure: 300-500 kPa vs ~101 kPa; particle velocity: 200-300 m/s vs 15-30 m/s; residence time: 10-40 ms vs >1 second; heating rate: 10^6 K/s vs 10^4 K/s). The answer correctly explains how these extreme conditions create fundamentally different combustion environments affecting kinetics, particle dispersion, and heat transfer mechanisms. Both direct quotes from the original text are accurately incorporated and properly contextualized. The logical reasoning about why these differences prevent direct transfer of boiler combustion findings to PBI applications is sound and consistent with combustion science principles. The answer correctly identifies the critical importance of extremely short residence times requiring faster combustion kinetics. While the answer is detailed and comprehensive, all statements are factually accurate and logically consistent with the original text and established combustion science.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:13:53.517960"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "medium",
+        "issues": [
+          "Includes specific numerical ranges for temperature, pressure, velocity, residence time, and heating rate that are not present in the provided original text excerpt; these details cannot be directly verified from the excerpt."
+        ],
+        "reasoning": "The answer correctly captures that raceway conditions differ substantially from boiler conditions and that findings from boiler studies are not directly transferable, which aligns with the provided original text. It also accurately notes particle recirculation/penetration into the coke bed due to momentum. No logical or physical contradictions are present. However, the numerical values cited cannot be verified from the supplied excerpt.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:14:19.106522"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer is factually and logically correct. It accurately identifies the key differences in combustion conditions (temperature, pressure, velocity, residence time, heating rate) between blast furnace raceways and conventional boilers. The cited numerical ranges are representative of typical operating conditions for both systems. The reasoning, which concludes that these stark differences—especially the extremely short residence time in the raceway—make findings from boiler studies non-transferable, is sound and directly supported by the provided original text. All physical principles are stated correctly.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:14:45.401419"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:14:45.401439",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": false,
+      "disagreement_count": 0
+    }
+  }
+}

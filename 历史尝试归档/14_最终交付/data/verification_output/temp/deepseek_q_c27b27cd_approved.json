@@ -1,0 +1,80 @@
+{
+  "question_text": "How does the resonance stabilization of benzyl radicals influence the ignition delay time and low-temperature oxidation reactivity of alkylbenzenes compared to normal alkanes?",
+  "standard_answer": "The resonance stabilization of benzyl radicals significantly increases ignition delay time and reduces low-temperature oxidation reactivity in alkylbenzenes compared to normal alkanes due to several mechanisms. Benzyl radicals are resonance-stabilized radicals (RSRs) where the unpaired electron is delocalized over the aromatic ring, lowering their reactivity with O2. This creates a radical sink effect where benzyl radicals preferentially recombine with other active radicals rather than propagating chain-branching reactions. In contrast, normal alkyl radicals from alkanes readily react with O2 to form peroxy radicals that undergo isomerization and decomposition, producing OH radicals that accelerate ignition. The bond dissociation energy (BDE) of benzylic C-H bonds in alkylbenzenes (~88 kcal/mol) is significantly lower than typical C-H bonds in alkanes (~100 kcal/mol), making H-abstraction easier but the resulting benzyl radicals are less reactive. This combination of facile formation and slow consumption of benzyl radicals creates a kinetic bottleneck that delays ignition. Additionally, the electron-rich aromatic ring influences substituent reactivity through electrophilic substitution effects, further modifying oxidation pathways compared to straight-chain hydrocarbons.",
+  "original_text": {
+    "1": "One common reason is the formation of various resonance stabilized radicals (RSRs) in the combustion of aromatics, e.g. benzyl, xylyl, phenoxy and cyclopentadienyl. The long-lived RSRs have lower reactivity with O2 than normal radicals. Instead, they recombine other active radicals as radical sink.",
+    "2": "Benzylic C–C and C–H bonds are the weakest in alkylbenzenes, which have lower BDEs than ordinary alkanes. The BDEs of the benzylic C–H bonds in three xylene isomers are almost the same as that of toluene [45]. All these characteristics make it easy for these aromatic molecules to produce resonance-stabilized benzylic radicals via C–C/C–H bond fission or H-atom abstraction reactions."
+  },
+  "type": "reasoning",
+  "difficulty": 5,
+  "topic": "combustion_kinetics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires deep knowledge of combustion chemistry, specifically the kinetic effects of resonance-stabilized radicals on ignition behavior and low-temperature oxidation reactivity. It compares alkylbenzenes vs. normal alkanes, requiring expertise in radical chemistry, bond dissociation energies, and combustion kinetics - all core combustion science concepts.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer both meet specifications - domain-focused combustion chemistry with correct, detailed explanation supported by citations."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_c27b27cd",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Combustion-chemistry-of-aromatic-hydr_2023_Progress-in-Energy-and-Combustion",
+    "paper_title": "Combustion-chemistry-of-aromatic-hydr_2023_Progress-in-Energy-and-Combustion"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:18:03.564282",
+    "answer_length": 1291
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately explains the mechanisms by which resonance stabilization of benzyl radicals affects ignition delay and oxidation reactivity in alkylbenzenes. Key points are consistent with the original text: (1) RSRs have lower reactivity with O2 and act as radical sinks by recombining with active radicals, (2) benzylic C-H bonds have lower BDEs (~88 kcal/mol vs ~100 kcal/mol in alkanes) making H-abstraction easier, (3) the resulting benzyl radicals are less reactive due to resonance stabilization. The answer correctly identifies the 'kinetic bottleneck' created by facile formation but slow consumption of benzyl radicals. The additional discussion of chain-branching reactions in alkanes and aromatic ring effects, while more detailed than the original text, is scientifically accurate and provides appropriate context. No factual errors or logical contradictions detected.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:06:34.500105"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "The mention of electrophilic substitution effects is not relevant to gas-phase combustion oxidation mechanisms, which are dominated by radical pathways; this could be misleading.",
+          "Specific BDE values (~88 vs ~100 kcal/mol) are reasonable but not provided in the ground-truth text; minor note."
+        ],
+        "reasoning": "The answer accurately reflects the ground truth: benzyl (and other resonance-stabilized) radicals have reduced reactivity with O2 and act as radical sinks, which lowers low-temperature oxidation reactivity and increases ignition delay for alkylbenzenes relative to alkanes. It correctly notes the weaker benzylic bonds facilitating radical formation and the contrast with alkyl radicals leading to RO2 formation and chain-branching. Minor extraneous/possibly misleading mention of electrophilic substitution does not undermine the core correctness.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:07:04.081896"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer is factually and logically correct. It accurately explains that the resonance stabilization of benzyl radicals makes them less reactive with O2, causing them to act as a radical sink. It also correctly states that the lower Bond Dissociation Energy (BDE) of benzylic C-H bonds facilitates the formation of these unreactive radicals. This combination creates a kinetic bottleneck that increases ignition delay time. The explanation is fully consistent with the provided original text and established principles of combustion chemistry.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:07:19.787601"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:07:19.787626",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

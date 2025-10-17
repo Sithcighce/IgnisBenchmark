@@ -1,0 +1,77 @@
+{
+  "question_text": "Calculate the permeability of CO₂ through a polyimide membrane at 150°C if its permeability at 25°C is 10 Barrer, given an activation energy for diffusion of 40 kJ/mol and an enthalpy of sorption of -15 kJ/mol. Assume the pre-exponential factors remain constant.",
+  "standard_answer": "To calculate the permeability at 150°C, use the combined solution-diffusion model where permeability P = S × D. First, convert temperatures to Kelvin: T₁ = 25°C = 298 K, T₂ = 150°C = 423 K. The diffusivity D follows Arrhenius: D₂/D₁ = exp[-(E_D/R)(1/T₂ - 1/T₁)], with E_D = 40,000 J/mol, R = 8.314 J/mol·K. Thus, D₂/D₁ = exp[-(40000/8.314)(1/423 - 1/298)] = exp[-(4810.5)(0.002364 - 0.003356)] = exp[-(4810.5)(-0.000992)] = exp[4.773] ≈ 118.3. Solubility S follows van't Hoff: S₂/S₁ = exp[-(ΔH_s/R)(1/T₂ - 1/T₁)], with ΔH_s = -15,000 J/mol. So, S₂/S₁ = exp[-( -15000/8.314)(1/423 - 1/298)] = exp[(1804.5)(-0.000992)] = exp[-1.790] ≈ 0.167. Then, permeability P₂ = P₁ × (S₂/S₁) × (D₂/D₁) = 10 Barrer × 0.167 × 118.3 ≈ 197.6 Barrer. This calculation shows that despite the decrease in CO₂ solubility at higher temperature, the large increase in diffusivity dominates, resulting in a net increase in permeability.",
+  "original_text": {
+    "1": "The diffusion of gas molecules in a dense membrane is a thermally activated process and is described by the Arrhenius equation: DA = D0A exp(-EDA/RT)",
+    "2": "The influence of temperature on solubility is typically written in terms of van't Hoff relationship: SA = S0A exp(-ΔHs/RT)"
+  },
+  "type": "calculation",
+  "difficulty": 4,
+  "topic": "heat_transfer",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires specific knowledge of gas transport through polymer membranes, including the solution-diffusion model, Arrhenius behavior of diffusion, van't Hoff relationship for solubility, and permeability calculations - all core concepts in membrane science for gas separation applications relevant to energy and combustion systems.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question is well-focused on membrane transport physics with correct calculation methodology. Answer provides detailed step-by-step solution with proper temperature conversions and formula applications."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_895848e2",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Thermally-stable-polymers-for-advanced-high-per_2018_Progress-in-Energy-and-",
+    "paper_title": "Thermally-stable-polymers-for-advanced-high-per_2018_Progress-in-Energy-and-"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:31:30.930263",
+    "answer_length": 910
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly applies the solution-diffusion model (P = S × D) and uses the appropriate temperature-dependent relationships from the original text. The Arrhenius equation is correctly applied for diffusivity with E_D = 40 kJ/mol, and the van't Hoff relationship is correctly applied for solubility with ΔH_s = -15 kJ/mol. The mathematical calculations are accurate: D₂/D₁ ≈ 118.3 (diffusivity increases with temperature), S₂/S₁ ≈ 0.167 (solubility decreases due to negative enthalpy of sorption), and the final permeability P₂ ≈ 197.6 Barrer correctly shows the net increase. The physical interpretation that diffusivity increase dominates over solubility decrease is sound and consistent with membrane transport principles.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:22:59.315341"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer correctly applies the solution–diffusion model (P = S × D) and uses the Arrhenius relation for diffusivity and the van't Hoff relation for solubility exactly as stated in the ground-truth text. Signs are handled correctly (positive activation energy increases D with T; negative sorption enthalpy decreases S with T). The temperature conversion, use of R, and numerical calculations are consistent and lead to a plausible result (~198 Barrer). No factual or logical errors detected.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:23:23.811081"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly applies the solution-diffusion model (P = S x D). It uses the Arrhenius equation for the temperature dependence of diffusivity (D) and the van't Hoff equation for the temperature dependence of solubility (S), which is consistent with the provided original text. The numerical calculations are accurate, and the final conclusion that the increase in diffusivity outweighs the decrease in solubility is logically sound and correctly derived from the given parameters.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:23:44.642390"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:23:44.642432",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "question_text": "Calculate the turbulent Karlovitz number (Ka) for a premixed flame with a laminar flame thickness of 0.5 mm and a Kolmogorov length scale of 0.1 mm, and explain its implication for the flame regime classification.",
+  "standard_answer": "The turbulent Karlovitz number is calculated as Ka = (δl / lk)^2, where δl is the laminar flame thickness and lk is the Kolmogorov length scale. Substituting the given values: δl = 0.5 mm = 0.0005 m, lk = 0.1 mm = 0.0001 m, Ka = (0.0005 / 0.0001)^2 = (5)^2 = 25. Since Ka > 1, this indicates the flame is in the thin reaction zone or broken reaction zone regime, depending on the reaction zone Karlovitz number (Kaδ). Specifically, Ka = 25 suggests that turbulent eddies at the Kolmogorov scale are smaller than the flame thickness, penetrating the preheat zone and potentially affecting the reaction zone if Kaδ > 1. This implies significant turbulence-chemistry interaction, where the inner flame structure may be altered, necessitating combustion models that account for subgrid-scale effects in LES or detailed chemistry in RANS to accurately capture flame propagation and heat release.",
+  "original_text": {
+    "1": "The turbulent Karlovitz number Ka = (δl / lk)^2 involving the laminar flame thickness δl and the Kolomogorov length scale lk.",
+    "2": "In the broken reaction zone, turbulent motions have a major impact on the preheat and reaction zone, resulting in the absence of a laminar flame structure."
+  },
+  "type": "calculation",
+  "difficulty": 3,
+  "topic": "combustion_science",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires specific knowledge of turbulent combustion theory, including flame thickness, Kolmogorov length scale, Karlovitz number calculation, and flame regime classification - all core concepts in combustion science and fluid mechanics.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct, and compliant with other requirements."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_e5ac0a3d",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Turbulent-combustion-modeling-for-internal-com_2025_Progress-in-Energy-and-C",
+    "paper_title": "Turbulent-combustion-modeling-for-internal-com_2025_Progress-in-Energy-and-C"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:31:55.049522",
+    "answer_length": 890
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer correctly calculates Ka = (δl / lk)^2 = (0.5/0.1)^2 = 25, which matches the formula from the original text. The interpretation that Ka > 1 indicates thin reaction zone or broken reaction zone regime is consistent with the original text's description that turbulent motions impact the preheat and reaction zone in the broken reaction zone regime. The explanation about Kolmogorov-scale eddies penetrating the preheat zone and potentially affecting the reaction zone is physically sound and aligns with the original text's statement about turbulent motions having major impact on both zones. The discussion of turbulence-chemistry interaction and modeling requirements (LES, RANS) is appropriate for this regime, though not explicitly mentioned in the original text - these are correct extensions of the fundamental concepts. All physical principles and numerical calculations are accurate.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:23:59.766090"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The formula Ka = (δl/lk)^2 matches the ground-truth definition, and the numerical calculation yields Ka = 25 correctly. The regime interpretation is consistent: Ka > 1 indicates entry into the thin reaction zone, with possible transition to the broken reaction zone depending on reaction-zone-specific criteria (e.g., Kaδ). This aligns with the original text’s description of the broken reaction zone. No factual or logical errors detected.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:24:18.160871"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer correctly calculates the Karlovitz number using the standard formula, which matches the original text [1]. The interpretation of the result (Ka=25) is physically sound, correctly placing the flame in a regime where turbulence interacts with the inner flame structure (thin or broken reaction zones). This is consistent with established combustion theory and the description of high-Ka regimes in the original text [2]. The calculation and reasoning are free of errors.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:24:40.657746"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:24:40.657766",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

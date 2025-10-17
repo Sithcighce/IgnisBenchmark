@@ -1,0 +1,81 @@
+{
+  "question_text": "How does the multi-scale modeling approach integrate molecular, particle, and reactor levels to predict biomass pyrolysis, and what intra-particle phenomena are critical at the particle level?",
+  "standard_answer": "Multi-scale modeling of biomass pyrolysis integrates three hierarchical levels: molecular, particle, and reactor, to accurately describe the process. At the molecular level, detailed reaction mechanisms for cellulose, hemicellulose, and lignin are employed, including primary pyrolysis and secondary charring reactions, often using schemes like Ranzi or RAC that account for competitive pathways and product composition. At the particle level, intra-particle phenomena such as heat and mass transfer, chemical reactions, and drying are modeled. Critical phenomena include: (1) Heat transfer limitations, where internal temperature gradients affect reaction rates; (2) Mass transfer of volatiles through porous char, influencing secondary reactions and char yield; (3) Evaporation of intermediate liquid compounds (ILC) and their reactive boiling ejection; and (4) Catalytic effects of inorganics on reaction pathways. These are governed by non-dimensional numbers (e.g., Biot for heat transfer, Thiele for reaction-diffusion). At the reactor level, models for fixed or fluidized beds incorporate particle-level submodels into computational fluid dynamics (CFD) to simulate hydrodynamics, heat exchange, and product distribution. This multi-scale approach ensures that molecular kinetics inform particle behavior, which in turn affects reactor performance, enabling predictive design of pyrolysis systems for optimized bio-oil and char production.",
+  "original_text": {
+    "1": "It is demonstrated that a multi-scale consideration of pyrolysis on multiple levels – specifically, on molecular, particle and reaction levels – is required to accurately describe biomass pyrolysis.",
+    "2": "Intra-particle phenomena and particle models are discussed and the reactor level is analysed with a focus placed on fixed bed and fluidised bed pyrolysis.",
+    "3": "Chemical reactions and drying ... Transport of mass and energy ... Physical structure"
+  },
+  "type": "application",
+  "difficulty": 5,
+  "topic": "energy_systems",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires deep knowledge of biomass pyrolysis modeling, including multi-scale integration (molecular, particle, reactor levels), intra-particle phenomena (heat/mass transfer, chemical reactions), and specific biomass components (cellulose, hemicellulose, lignin). This is firmly within combustion science, heat transfer, and energy systems domain expertise.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer are well-aligned with paper content and domain focus. No issues detected."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_e7dc0e4f",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Reaction-mechanisms-and-multi-scale-modelling-o_2016_Progress-in-Energy-and-",
+    "paper_title": "Reaction-mechanisms-and-multi-scale-modelling-o_2016_Progress-in-Energy-and-"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:27:07.287134",
+    "answer_length": 1446
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately describes multi-scale modeling of biomass pyrolysis across molecular, particle, and reactor levels, which aligns with the original text's statement about multi-scale consideration on these three levels. The answer correctly identifies critical intra-particle phenomena including heat transfer, mass transfer, chemical reactions, and drying, which matches the original text's mention of 'Chemical reactions and drying' and 'Transport of mass and energy'. The detailed elaboration on specific mechanisms (temperature gradients, volatile transport, ILC evaporation, catalytic effects, non-dimensional numbers, and CFD integration) represents reasonable scientific extension beyond the original text but contains no factual errors or contradictions. The physical principles stated (Biot and Thiele numbers, reaction-diffusion coupling, hierarchical integration) are scientifically sound and consistent with combustion science and thermophysics. While the answer is more detailed than the original text, all statements are accurate and logically consistent.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:17:57.632645"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Minor: The acronym 'RAC' for a molecular kinetic scheme is not a commonly recognized shorthand in biomass pyrolysis literature; 'POLIMI/Ranzi mechanism' is standard.",
+          "Minor: Use of the Thiele modulus for pyrolysis can be non-standard; Damköhler-type comparisons are more typical, though the concept of reaction–diffusion limitation is valid."
+        ],
+        "reasoning": "The answer correctly describes integration across molecular, particle, and reactor scales and identifies critical intra-particle phenomena (heat/mass transfer, reactions, drying, structural/porosity effects). It aligns with the ground truth emphasis on multi-scale modeling and reactor types (fixed and fluidized beds). No factual or logical contradictions were found; added details are reasonable and accurate.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:18:29.844568"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly and comprehensively describes the multi-scale modeling approach for biomass pyrolysis, consistent with the provided original text. It accurately identifies the three hierarchical levels (molecular, particle, reactor) and their integration. The critical intra-particle phenomena listed, such as heat/mass transfer limitations (correctly linked to Biot/Thiele numbers), ILC evaporation, and catalysis, are all factually correct and central to the topic. The reasoning is logically sound, and there are no contradictions with established thermophysical principles.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:18:50.920366"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:18:50.920391",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

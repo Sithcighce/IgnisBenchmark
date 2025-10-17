@@ -1,0 +1,80 @@
+{
+  "question_text": "Calculate the approximate number density of soot nuclei in a flame if the mole fraction of benzene is 10^-3, pyrene is 10^-5, and coronene is 10^-7, assuming a total gas number density of 10^18 cm^-3. How does this compare to typical soot nuclei concentrations?",
+  "standard_answer": "To calculate the number density of each species, multiply the mole fraction by the total gas number density. For benzene: number density = 10^-3 × 10^18 cm^-3 = 10^15 cm^-3. For pyrene: 10^-5 × 10^18 = 10^13 cm^-3. For coronene: 10^-7 × 10^18 = 10^11 cm^-3. Typical soot nuclei number densities range from 10^11 to 10^13 cm^-3. Thus, pyrene and coronene concentrations (10^13 and 10^11 cm^-3, respectively) fall within the same order of magnitude as soot nuclei, suggesting that PAH of similar size to pyrene or larger are involved in soot inception. This quantitative alignment supports the hypothesis that these larger aromatic species are key precursors to nanoparticle formation, as their abundances are commensurate with observed nuclei densities.",
+  "original_text": {
+    "1": "If the mole fraction of benzene is ∼ 10^-3, those of pyrene and coronene would be roughly 10^-5 and 10^-7, respectively, which are of the same orders of magnitude as the number densities of soot nuclei (10^11–10^13 cm^-3)",
+    "2": "Therefore, either PCAH the size of pyrene to coronene are involved in soot formation or larger aromatic species of a similar concentration."
+  },
+  "type": "calculation",
+  "difficulty": 3,
+  "topic": "combustion_science",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires specific knowledge of combustion science, including soot formation mechanisms, polycyclic aromatic hydrocarbon (PAH) chemistry, and quantitative analysis of species concentrations in flames. It involves calculating number densities of specific aromatic compounds (benzene, pyrene, coronene) and comparing them to soot nuclei concentrations, which is a core topic in combustion research.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "The question is well-focused on combustion science and the answer correctly follows the calculations and interpretations from the original text citations. No issues detected."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_73c1b6c5",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Soot-inception--Carbonaceous-nanoparticle-_2022_Progress-in-Energy-and-Combu",
+    "paper_title": "Soot-inception--Carbonaceous-nanoparticle-_2022_Progress-in-Energy-and-Combu"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:29:01.414684",
+    "answer_length": 752
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": false,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Critical error in comparing mole fractions to number densities. The answer states that pyrene and coronene concentrations (10^13 and 10^11 cm^-3) fall within the same order of magnitude as soot nuclei (10^11-10^13 cm^-3), but this comparison is incorrect. The original text states that the MOLE FRACTIONS (10^-5 and 10^-7) are of the same orders of magnitude as the NUMBER DENSITIES of soot nuclei (10^11-10^13 cm^-3). These are different quantities being compared.",
+          "The answer calculates number densities correctly (benzene: 10^15 cm^-3, pyrene: 10^13 cm^-3, coronene: 10^11 cm^-3) but then makes an incorrect comparison. The original text's comparison is between dimensionless mole fractions and number densities with units of cm^-3, which is a direct numerical comparison of the magnitude values, not a comparison of the calculated number densities."
+        ],
+        "reasoning": "The standard answer contains a fundamental misinterpretation of the original text. The original text states that mole fractions of pyrene (10^-5) and coronene (10^-7) are of the same orders of magnitude as soot nuclei number densities (10^11-10^13 cm^-3). This is a direct numerical comparison: 10^-5 ≈ 10^-5 to 10^-3 in terms of order of magnitude relative to the reference scale. However, the answer incorrectly interprets this as comparing the calculated number densities of pyrene and coronene (10^13 and 10^11 cm^-3) to soot nuclei densities. While these calculated values do happen to fall in the same range, this is not what the original text is stating. The original text is making a more subtle point about the numerical values of mole fractions matching the numerical values of soot nuclei densities, despite different units.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:20:19.137448"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The calculations of number densities (benzene: 1e15 cm^-3, pyrene: 1e13 cm^-3, coronene: 1e11 cm^-3) are correct given the stated mole fractions and total number density. The comparison to typical soot nuclei densities (1e11–1e13 cm^-3) matches the PECS text, and the conclusion that PAHs of pyrene-to-coronene size are implicated in soot inception is consistent with the original statements. No factual or logical errors are present.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:20:33.549527"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly calculates the number densities for benzene, pyrene, and coronene based on the provided mole fractions and total gas number density. The comparison with the typical soot nuclei concentration range (10^11–10^13 cm^-3) is accurate. The conclusion, which posits that PAHs like pyrene and coronene are plausible soot precursors because their concentrations are commensurate with nuclei densities, is logically sound and aligns perfectly with the reasoning presented in the original text.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:20:56.086210"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:20:56.086241",
+    "consensus": {
+      "all_correct": false,
+      "correct_votes": 2,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 2
+    }
+  }
+}

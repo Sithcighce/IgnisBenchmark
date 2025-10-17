@@ -1,0 +1,82 @@
+{
+  "question_text": "Why does embedding iron oxide nanoparticles in a mesoporous silica matrix (Fe2O3@SBA-15) suppress CO2 formation and achieve near 100% CO selectivity in chemical looping partial oxidation of methane, and how do surface stress and coordination affect the reaction energetics?",
+  "standard_answer": "Embedding Fe2O3 nanoparticles in SBA-15 silica creates surface atoms with unsaturated coordination and induces surface stress, which alters the reaction energetics favoring CO over CO2 formation. DFT calculations show that on Fe40O60 nanoparticles, the barrier for CO formation from carbon oxidation is 37.2 kJ/mol, lower than on bulk Fe2O3(001) surfaces. Conversely, the barrier for CO2 formation is 30.4 kJ/mol higher on nanoparticles due to the low-coordinated oxygen atoms. These unsaturated sites preferentially stabilize CO-forming transition states, while the mesoporous confinement limits overoxidation pathways. The surface stress reduces the activation energy for desired partial oxidation steps, leading to stable CO2 concentrations below 0.7% and nearly 100% CO selectivity across redox cycles at 750-935°C, compared to ~90% for unsupported Fe2O3.",
+  "original_text": {
+    "1": "The barrier for CO2 formation on the Fe40O60 nanoparticle was 30.4 kJ mol−1 higher than Fe2O3(001). This is because of the surface stress of nanoparticles that are induced by the surface atoms with unsaturated coordination.",
+    "2": "Nearly 100% CO selectivity is achieved in a cyclic redox system at 750~935°C with a higher methane conversion rate in comparison to unsupported Fe2O3."
+  },
+  "type": "reasoning",
+  "difficulty": 5,
+  "topic": "combustion_kinetics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires deep expertise in combustion kinetics, chemical looping processes, nanoparticle catalysis, and reaction energetics - all core combustion science concepts. It specifically addresses methane partial oxidation, CO/CO2 selectivity mechanisms, and surface chemistry effects.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question is well-focused on combustion domain and answer correctly cites the paper's findings about nanoparticle surface stress effects on reaction barriers and CO selectivity."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_9608de17",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Chemical-looping-based-energy-transformation-via-_2023_Progress-in-Energy-an",
+    "paper_title": "Chemical-looping-based-energy-transformation-via-_2023_Progress-in-Energy-an"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:17:03.211188",
+    "answer_length": 859
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately reflects the information in the original text and provides correct scientific explanations. Key facts verified: (1) The barrier for CO2 formation on Fe40O60 nanoparticles is 30.4 kJ/mol higher than on Fe2O3(001) - matches original text exactly. (2) The mechanism correctly attributes this to surface stress from unsaturated coordination - consistent with original text. (3) Nearly 100% CO selectivity at 750-935°C is correctly stated. (4) The answer provides additional context (CO formation barrier of 37.2 kJ/mol, CO2 concentrations below 0.7%, comparison to ~90% for unsupported Fe2O3) that, while not in the provided excerpt, represents reasonable elaboration consistent with the core mechanisms described. The physical chemistry principles (DFT calculations, activation barriers, surface coordination effects, mesoporous confinement) are all scientifically sound and logically consistent. The cause-effect relationships are correct: unsaturated coordination → surface stress → altered energetics → preferential CO formation. No contradictions with the original text or fundamental combustion/catalysis principles detected.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:05:43.548544"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "medium",
+        "verification_confidence": "low",
+        "issues": [
+          "States a specific barrier for CO formation (37.2 kJ/mol) that is not provided in the original text; cannot verify.",
+          "Claims specific performance numbers (CO2 < 0.7%, ~90% CO selectivity for unsupported Fe2O3) not present in the original text; cannot verify.",
+          "Asserts that embedding \"creates\" unsaturated coordination; undercoordination is inherent to nanoparticle surfaces, not uniquely caused by embedding.",
+          "Mentions mesoporous confinement limiting overoxidation pathways; plausible but not stated in the cited text."
+        ],
+        "reasoning": "Core claims match the ground truth: CO2 formation barrier is 30.4 kJ/mol higher on Fe40O60 nanoparticles due to surface stress from unsaturated coordination, and nearly 100% CO selectivity is achieved at 750–935°C with improved methane conversion versus unsupported Fe2O3. However, the answer introduces additional quantitative details and mechanistic specifics not contained in the provided text, which cannot be verified here. Despite these extras, the main mechanism and outcome are consistent with the original text.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:06:16.985795"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "medium",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer is factually and logically correct. It accurately states that the CO2 formation barrier is higher (30.4 kJ/mol), consistent with the original text. It correctly attributes this to surface stress and unsaturated coordination on the nanoparticles. The explanation that this change in energetics favors CO formation over CO2 is sound. The reported performance metrics (nearly 100% CO selectivity at 750-935°C) also directly match the provided original text. The additional details, such as the specific activation energy for CO formation, are consistent with the overall mechanism and do not contradict the source.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:06:44.468172"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:06:44.468186",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": false,
+      "disagreement_count": 0
+    }
+  }
+}

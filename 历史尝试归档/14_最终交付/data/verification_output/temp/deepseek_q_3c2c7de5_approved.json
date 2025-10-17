@@ -1,0 +1,77 @@
+{
+  "question_text": "For a stoichiometric n-heptane/air mixture at 20 atm, calculate the approximate first-stage ignition delay time at 700 K and 1000 K initial temperatures, and explain the physical reasons for the difference based on dominant chemistry.",
+  "standard_answer": "At 20 atm and stoichiometric conditions, the first-stage ignition delay for n-heptane/air is approximately 10 ms at 700 K and negligible (effectively zero) at 1000 K. This difference arises from the temperature-dependent dominance of reaction pathways. At 700 K, low-temperature chemistry prevails, where R + O2 → RO2 → QOOH → O2QOOH → OQ'O + 2OH chain-branching occurs, but the rates are limited by slower initiation and isomerization, resulting in a measurable delay. At 1000 K, the system is above the NTC region, and high-temperature chemistry (H + O2 = OH + O) dominates, bypassing low-temperature pathways due to faster radical production and the suppression of RO2 formation via reverse reactions. Thus, the ignition delay decreases sharply with temperature, and at 1000 K, only single-stage high-temperature ignition occurs without a distinct first stage.",
+  "original_text": {
+    "1": "At 700 K, there is two-stage ignition. First-stage LTI occurs at 10 ms through which the fuel is partially oxidized to intermediate species.",
+    "2": "As the initial mixture temperature becomes sufficiently high (e.g., 1000 K at 20 atm), the LTI stage and the associated low-temperature reactivity disappear, and only single-stage HTI remains."
+  },
+  "type": "calculation",
+  "difficulty": 3,
+  "topic": "combustion_kinetics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "This question requires specific knowledge of combustion kinetics, including first-stage ignition delay calculations for n-heptane/air mixtures, understanding of low-temperature vs high-temperature chemistry pathways, and the physical mechanisms behind temperature-dependent ignition behavior. It demands expertise in fuel oxidation chemistry, chain-branching reactions, and the negative temperature coefficient region - all core combustion science concepts.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "The question is well-focused on combustion kinetics and the answer correctly explains the temperature-dependent chemistry mechanisms with appropriate detail and factual accuracy based on the provided citations."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_3c2c7de5",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Dynamics-of-cool-flames_2019_Progress-in-Energy-and-Combustion-Science",
+    "paper_title": "Dynamics-of-cool-flames_2019_Progress-in-Energy-and-Combustion-Science"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:18:39.963141",
+    "answer_length": 863
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly identifies the first-stage ignition delay times (10 ms at 700 K, negligible at 1000 K) consistent with the original text. It accurately explains the physical chemistry: at 700 K, low-temperature chemistry with RO2 and QOOH pathways dominates with measurable delay; at 1000 K, high-temperature chemistry prevails, suppressing low-temperature pathways and eliminating the distinct first stage. The mechanistic details (chain-branching pathways, NTC region, reverse reactions suppressing RO2) are scientifically sound and consistent with established n-heptane combustion chemistry. The answer appropriately addresses both parts of the question (delay times and physical reasons) without factual errors or logical contradictions.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:07:56.163182"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer aligns with the ground truth: ~10 ms first-stage delay at 700 K and disappearance of low-temperature ignition at 1000 K (single-stage HT ignition only). The mechanistic explanation correctly attributes the behavior to low-temperature RO2/QOOH pathways at 700 K and dominant high-temperature chain-branching (H + O2 = OH + O) with reduced RO2 stability at 1000 K. No factual or logical contradictions were found.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:08:20.965017"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer is factually correct and consistent with the provided original text. It accurately states the first-stage ignition delay at 700 K (~10 ms) and its disappearance at 1000 K. The explanation correctly contrasts the dominant chemical pathways: the multi-step low-temperature chain-branching (R+O2 -> RO2 -> etc.) at 700 K versus the direct high-temperature chain-branching (H+O2=OH+O) at 1000 K. The reasoning for the suppression of low-temperature chemistry at higher temperatures (suppression of RO2 formation) is also correctly stated. The entire explanation is physically and chemically sound.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:08:40.408484"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:08:40.408506",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

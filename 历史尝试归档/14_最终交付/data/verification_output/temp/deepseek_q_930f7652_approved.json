@@ -1,0 +1,82 @@
+{
+  "question_text": "Based on the provided paper, what are the key factors contributing to the divergence between laboratory-measured and real-world CO2 emissions from passenger cars, and how do these factors specifically relate to thermal, fluid, and energy system considerations in vehicle operation?",
+  "standard_answer": "The paper identifies several key factors contributing to the laboratory-real world CO2 emissions gap. First, the test procedure disregards various real-world conditions such as additional weight, number of passengers, use of air conditioning, realistic gear shifting, cold starts, operation at higher velocities and congestion. These factors significantly impact thermal management, fluid flow, and energy system efficiency. Second, factors such as driving behaviour, vehicle configuration and traffic conditions are reconfirmed as highly influential. From a thermal and energy perspective, neglected factors like side winds, rain, and road grade may have significant contributions to fuel consumption in real world driving. The margins of the present certification procedure contribute between 10 and 20% in the gap between reported values and reality. The overall divergence was estimated to be of the order of 40%, or 47.5 gCO2/km for 2015 average fleet emissions, but could range up to 60% or down to 19% depending on prevailing traffic conditions. The introduction of a new test protocol is expected to bridge about half of the present divergence between laboratory and real world.",
+  "original_text": {
+    "1": "The test procedure disregards various real-world conditions such as additional weight, number of passengers, use of air conditioning, realistic gear shifting, cold starts, operation at higher velocities and congestion",
+    "2": "Factors such as driving behaviour, vehicle configuration and traffic conditions are reconfirmed as highly influential. Neglected factors (e.g. side winds, rain, road grade), which may have significant contributions in fuel consumption in real world driving are identified"
+  },
+  "type": "reasoning",
+  "difficulty": 4,
+  "topic": "energy_systems",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires understanding of vehicle energy systems, thermal management (engine warm-up, A/C operation), fluid mechanics (aerodynamic effects of side winds, rain), and combustion science (CO2 emissions from fuel consumption) in the context of passenger car operation, which are core domain topics in energy systems and combustion science.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "The question is well-focused on domain-specific factors affecting CO2 emissions divergence, and the answer accurately reflects the paper's content with proper citations and detailed explanations."
+  },
+  "retry_count": 1,
+  "question_id": "deepseek_q_930f7652",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Fuel-consumption-and-CO2-emissions-from-passenger-c_2017_Progress-in-Energy-",
+    "paper_title": "Fuel-consumption-and-CO2-emissions-from-passenger-c_2017_Progress-in-Energy-"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:21:03.267135",
+    "answer_length": 1186
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer accurately reflects all key points from the original text. It correctly identifies the test procedure disregarding real-world conditions (additional weight, passengers, air conditioning, gear shifting, cold starts, higher velocities, congestion) and confirms that driving behavior, vehicle configuration, and traffic conditions are influential factors. The answer appropriately mentions neglected factors like side winds, rain, and road grade. While the standard answer includes additional quantitative details (10-20% contribution from certification margins, 40% overall divergence, 47.5 gCO2/km for 2015, range of 19-60%, and the new test protocol bridging half the gap), these appear to be from the same source document and are presented as factual data rather than contradicting the original text excerpts provided. The answer also appropriately connects these factors to thermal management, fluid flow, and energy system efficiency as requested by the question. No factual errors, logical contradictions, or inconsistencies with the original text are present.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:09:43.850006"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "medium",
+        "verification_confidence": "medium",
+        "issues": [
+          "Includes specific quantitative estimates (10–20% contribution, 40% overall divergence, 47.5 gCO2/km, 19–60% range, and ‘new test protocol bridges about half’) that are not present in the provided ground-truth text and cannot be verified here."
+        ],
+        "reasoning": "The answer accurately reflects the key factors noted in the original text (neglected real-world conditions; influence of driving behavior, vehicle configuration, and traffic; and effects of side winds, rain, and grade). It reasonably connects these to thermal management, fluid dynamics, and energy system efficiency. However, it introduces quantitative claims not supported by the provided ground truth, which prevents high-confidence verification of those specific figures.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:10:01.947051"
+      },
+      {
+        "correct": false,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "The answer includes specific quantitative data (e.g., '10 and 20%', 'of the order of 40%', '47.5 gCO2/km') that is not present in the provided original text.",
+          "The answer makes a claim about the introduction of a new test protocol ('expected to bridge about half of the present divergence') which is not mentioned in the source text."
+        ],
+        "reasoning": "The answer is marked as incorrect because it presents several specific numerical values and predictions (e.g., divergence percentages, impact of new protocols) as if they are from the provided text, but this information is absent from the source material. While the qualitative factors listed in the first part of the answer are correct and consistent with the text, the inclusion of unsubstantiated quantitative claims makes the answer factually incorrect in the context of the verification task, which is to verify the answer based *only* on the provided text.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:10:25.050944"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:10:25.050964",
+    "consensus": {
+      "all_correct": false,
+      "correct_votes": 2,
+      "total_votes": 3,
+      "all_high_confidence": false,
+      "disagreement_count": 2
+    }
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "question_text": "How does the bias-variance decomposition explain the trade-off between underfitting and overfitting in machine learning models applied to combustion data, and what physical implications does this have for predicting flame properties?",
+  "standard_answer": "The bias-variance decomposition quantifies the generalization error of ML models as the sum of irreducible noise, bias squared, and variance. Bias measures the average deviation of model predictions from the true underlying function (Bayes' model), representing systematic error due to overly simplistic model assumptions. High bias causes underfitting, where the model fails to capture complex combustion physics like nonlinear flame speed dependencies on equivalence ratio. Variance measures the sensitivity of model predictions to fluctuations in the training data, representing overfitting where the model memorizes noise rather than learning generalizable combustion principles. In combustion applications, high-variance models may accurately fit training data from DNS but perform poorly on new turbulent flame configurations due to over-parameterization. The optimal balance minimizes total error by selecting model complexity appropriate for the combustion phenomenon - simple polynomials for smooth laminar flame speed curves versus deep neural networks for turbulent flame structure mapping.",
+  "original_text": {
+    "1": "The bias term in Eq. (34) measures the difference between the average prediction of models of a selected family generated over distinct datasets and the prediction of Bayes' model.",
+    "2": "The last term in Eq. (34) measures the variance of predictions of ML models learned from all possible learning datasets. Generally, high model bias is indicative of underfitting, while high variance relates to overfitting"
+  },
+  "type": "reasoning",
+  "difficulty": 4,
+  "topic": "combustion_ml",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires understanding of both ML concepts (bias-variance decomposition) AND their specific application to combustion phenomena like flame properties, nonlinear flame speed dependencies, and turbulent flame configurations. It connects ML theory to combustion physics, requiring domain expertise in combustion science.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_69bd9f78",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Combustion-machine-learning--Principles--pr_2022_Progress-in-Energy-and-Comb",
+    "paper_title": "Combustion-machine-learning--Principles--pr_2022_Progress-in-Energy-and-Comb"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:17:50.276444",
+    "answer_length": 1101
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": false,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "The answer incorrectly states that bias-variance decomposition quantifies error as 'the sum of irreducible noise, bias squared, and variance' and defines bias as 'the average deviation of model predictions from the true underlying function (Bayes' model)'. According to the original text, bias measures 'the difference between the average prediction of models of a selected family generated over distinct datasets and the prediction of Bayes' model' - this is a comparison between average predictions and Bayes' model, not deviation from the true underlying function.",
+          "The question asks about bias-variance decomposition in the context of combustion science, but the original text does not support the combustion-specific claims made in the answer. The original text only provides the general definition of bias and variance terms without any combustion-specific context or applications."
+        ],
+        "reasoning": "While the answer provides an elaborate discussion of bias-variance tradeoff in combustion applications, it contains a subtle but important mischaracterization of what bias measures according to the original text. The original text specifically states bias measures the difference between average predictions of models and Bayes' model predictions, not deviation from 'the true underlying function'. Additionally, the extensive combustion-specific elaborations (DNS, turbulent flames, flame speed dependencies, etc.) are not supported by the provided original text, which only gives general definitions. However, the most critical issue is the misrepresentation of the bias definition.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:06:52.985576"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer aligns with the ground-truth definitions: bias as the deviation from Bayes’ model averaged over datasets and variance as prediction variability across datasets. It correctly links high bias to underfitting and high variance to overfitting, and provides appropriate combustion-specific implications (e.g., laminar flame speed and turbulent flame generalization). No factual or logical errors were found.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:07:03.020051"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer correctly defines bias and variance, accurately links them to underfitting and overfitting, and provides physically sound examples relevant to combustion science (flame speed, turbulent flames from DNS). The explanation is fully consistent with the provided original text and established principles in both machine learning and combustion.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:07:27.265277"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:07:27.265297",
+    "consensus": {
+      "all_correct": false,
+      "correct_votes": 2,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 2
+    }
+  }
+}

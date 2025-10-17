@@ -1,0 +1,81 @@
+{
+  "question_text": "What physical mechanisms cause the decorrelation between fuel consumption and heat release rates in highly turbulent premixed flames, and how does this differ between hydrocarbon fuels?",
+  "standard_answer": "The decorrelation between fuel consumption and heat release rates in turbulent premixed flames arises from multiple physical mechanisms. For heavy hydrocarbons like n-dodecane, fuel pyrolysis occurs endothermically at lower temperatures, separating the fuel consumption zone from the exothermic oxidation reactions. Turbulence enhances this separation by creating localized regions with different thermochemical histories and strain rates. The displacement speed equation s_D = (Dψ/Dt)/|∇ψ| shows that turbulent straining modifies scalar gradient evolution, which can spatially separate regions of maximum fuel consumption rate from maximum heat release rate. For methane/air flames, the co-location is maintained at moderate turbulence, but at high Karlovitz numbers, turbulent mixing can create local compositions where intermediate species formation and consumption occur in different spatial locations. Hydrogen/air flames exhibit different behavior due to their lack of a distinct preheat zone and faster chemistry, making them more resistant to decorrelation but still affected by turbulent scalar gradient dynamics. The fundamental mechanism involves turbulence altering the balance between reaction, diffusion, and advection terms in the species transport equations, creating local conditions where the timescales for fuel breakdown and heat release become temporally and spatially separated.",
+  "original_text": {
+    "1": "For the n-dodecane/air flame, fuel consumption precedes the heat release zone due to endothermic fuel pyrolysis. Such fuel cracking is expected for all heavy hydrocarbons.",
+    "2": "Decorrelated fuel consumption and heat release rates occur due to turbulence creating localized regions with different thermochemical histories and strain rates."
+  },
+  "type": "reasoning",
+  "difficulty": 5,
+  "topic": "combustion_chemistry",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires deep knowledge of combustion science (turbulent premixed flames, fuel chemistry), heat transfer (heat release rates), and fluid mechanics (turbulence effects). It specifically asks about physical mechanisms in combustion systems and differences between hydrocarbon fuels, which cannot be answered with general ML knowledge alone.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_2e9a5e67",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Structure-and-dynamics-of-highly-turbulent-_2021_Progress-in-Energy-and-Comb",
+    "paper_title": "Structure-and-dynamics-of-highly-turbulent-_2021_Progress-in-Energy-and-Comb"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:29:38.350490",
+    "answer_length": 1400
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly explains the decorrelation mechanisms and is consistent with the original text. It accurately describes: (1) endothermic fuel pyrolysis in heavy hydrocarbons like n-dodecane causing spatial separation of fuel consumption and heat release zones, (2) turbulence creating localized regions with different thermochemical histories and strain rates, (3) the displacement speed equation and its role in scalar gradient evolution, (4) differences between fuel types (methane, hydrogen) in their susceptibility to decorrelation, and (5) the fundamental mechanism involving altered balance between reaction, diffusion, and advection terms. All physical principles are correctly stated, including the endothermic nature of pyrolysis, the effects of high Karlovitz numbers, and the role of turbulent scalar gradient dynamics. The answer provides additional detail beyond the original text (e.g., specific discussion of methane and hydrogen flames, displacement speed equation), but these elaborations are scientifically sound and do not contradict the original text. No factual errors or logical inconsistencies detected.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:21:00.174190"
+      },
+      {
+        "correct": false,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Claims hydrogen/air flames lack a distinct preheat zone; premixed H2 flames do have a preheat zone (though thin and highly diffusive), so this is factually incorrect.",
+          "Includes hydrogen behavior despite the question asking about hydrocarbon fuels; this is out of scope.",
+          "Displacement speed relation is stated imprecisely (missing sign/conventions and omitting source terms), though this does not affect the main conclusion."
+        ],
+        "reasoning": "The answer correctly identifies the key mechanisms supported by the ground-truth text: endothermic pyrolysis in heavy hydrocarbons (e.g., n-dodecane) causing fuel consumption to precede heat release, and turbulence producing localized thermochemical histories/strain that decorrelate the fields. However, it introduces a factual error about hydrogen flames lacking a preheat zone and extends beyond the hydrocarbon scope requested. The rest of the content is logically consistent and aligned with the original text.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:21:53.321963"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer is factually correct, logically consistent, and fully aligned with the provided original text. It correctly identifies endothermic pyrolysis for heavy hydrocarbons and the role of turbulence in creating non-uniform thermochemical states as key mechanisms for decorrelation. The additional details on displacement speed, Karlovitz number effects, and comparisons with methane and hydrogen are accurate and enhance the explanation.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:22:15.723443"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:22:15.723467",
+    "consensus": {
+      "all_correct": false,
+      "correct_votes": 2,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 2
+    }
+  }
+}

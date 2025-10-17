@@ -1,0 +1,81 @@
+{
+  "question_text": "Why does the critical point elevation occur in multicomponent hydrocarbon-fueled mixtures at high pressures, and how does this phenomenon enable the persistence of interfaces with surface tension despite supercritical pressures relative to individual components?",
+  "standard_answer": "Critical point elevation in multicomponent mixtures arises due to non-ideal mixing effects governed by high-pressure equations of state, such as the Peng-Robinson EOS. For hydrocarbon-fueled mixtures with gases like nitrogen or oxygen, the diffusional critical point of the mixture (T_c,diff, P_c,diff) exceeds the critical pressures of the pure components. This occurs because intermolecular interactions in mixtures, characterized by binary interaction parameters, shift the phase envelope to higher pressures. The elevation is quantified by the condition P_c,mix > P_c,individual, where P_c,mix depends on composition and interaction coefficients. Consequently, even when the combustor pressure P_∞ exceeds the critical pressures of the separate components, the mixture's phase diagram may still exhibit a two-phase region due to this elevated critical point. This allows interfaces with surface tension to persist, as the mixture remains in a metastable or unstable state where large composition gradients exist, leading to diffusional instabilities that sustain the interface. The surface tension arises from the gradient-energy contributions in the Helmholtz free energy, which are significant in these non-ideal mixtures, enabling interface formation despite high pressures.",
+  "original_text": {
+    "1": "The description of the thermodynamics of hydrocarbon-fueled mixtures employed in chemical propulsion systems is complex and involves mixing-induced phenomena, including an elevation of the critical point whereby the coexistence region of the mixture extends up to pressures much larger than the critical pressures of the individual components.",
+    "2": "As a result, interfaces subject to surface-tension forces may persist in multi-component systems despite the high pressures, and may give rise to unexpected spray-like atomization dynamics that are otherwise absent in monocomponent systems above their critical point."
+  },
+  "type": "reasoning",
+  "difficulty": 5,
+  "topic": "thermodynamics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires deep knowledge of thermodynamics, phase behavior, and high-pressure fluid mechanics specific to combustion systems. It involves critical point phenomena, multicomponent mixture behavior, and surface tension effects at transcritical conditions - all specialized topics in combustion science and propulsion systems that cannot be answered with general ML or CS knowledge.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "The question is well-focused on combustion thermodynamics and the answer provides detailed, accurate explanations consistent with the paper's content about critical point elevation and interface persistence in multicomponent systems."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_9f8782fd",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Transcritical-diffuse-interface-hydrodynamics-of-prop_2021_Progress-in-Energ",
+    "paper_title": "Transcritical-diffuse-interface-hydrodynamics-of-prop_2021_Progress-in-Energ"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:31:57.646975",
+    "answer_length": 1281
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly explains critical point elevation in multicomponent hydrocarbon mixtures. Key points verified: (1) Critical point elevation occurs due to non-ideal mixing effects and intermolecular interactions in mixtures, (2) The mixture's critical point (P_c,mix) can exceed individual component critical pressures, (3) This allows two-phase regions and interfaces with surface tension to persist even at pressures above individual component critical points, (4) The answer correctly invokes high-pressure equations of state (Peng-Robinson) and binary interaction parameters as governing factors. While the standard answer provides more mechanistic detail than the original text (e.g., mentioning gradient-energy contributions to Helmholtz free energy, diffusional instabilities), these additions are thermodynamically sound and consistent with the fundamental phenomenon described in the original text. The answer does not contradict any statements in the original text and correctly addresses both parts of the question regarding why elevation occurs and how it enables interface persistence.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:23:52.857779"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "References to 'metastable or unstable state' and 'diffusional instabilities that sustain the interface' are unnecessary and potentially misleading; interfaces persist because the mixture retains a true two-phase coexistence region at elevated critical conditions.",
+          "Use of the term 'diffusional critical point' is nonstandard and may cause confusion; 'mixture critical point' or 'critical locus' is more typical.",
+          "Claim that surface tension arises specifically from gradient-energy contributions (square-gradient theory) is model-dependent and not required to justify the persistence of interfaces in the coexistence region."
+        ],
+        "reasoning": "The answer correctly attributes critical point elevation to non-ideal mixing captured by high-pressure EOS and explains that the mixture can still have a two-phase region at pressures exceeding pure-component critical pressures, enabling interfaces with surface tension. These points align with the ground truth. Minor overreach in invoking metastability/diffusional instabilities and model-specific gradient-energy framing does not undermine the core correctness.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:24:16.015058"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer correctly and accurately explains the phenomenon of critical point elevation in multicomponent mixtures. It correctly attributes this to non-ideal mixing effects modeled by high-pressure equations of state (like Peng-Robinson) and binary interaction parameters. The logical connection between the elevated mixture critical point and the persistence of a two-phase interface with surface tension is sound and consistent with the provided ground truth text. The explanation is factually correct, logically consistent, and provides appropriate detail on the underlying thermodynamic principles.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:24:36.736372"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:24:36.736401",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}

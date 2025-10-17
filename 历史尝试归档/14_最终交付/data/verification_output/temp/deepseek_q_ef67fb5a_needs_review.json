@@ -1,0 +1,86 @@
+{
+  "question_text": "What physical mechanisms cause concentration jumps at fluid-solid interfaces in porous media mass transport, and how do these jumps affect the interfacial boundary conditions in pore-scale modeling?",
+  "standard_answer": "Concentration jumps at fluid-solid interfaces arise from thermodynamic equilibrium conditions governed by Henry's Law, where the solute concentration in the solid phase (Cs) relates to the fluid phase concentration (Cf) through Cs = Cf/H, with H being the Henry constant. This creates a discontinuity C_jump = Cs - Cf = Cf(1/H - 1). The jump affects mass conservation by introducing additional flux terms at the interface. The complete interfacial conditions become: Cf = Cs + C_jump for concentration continuity and -Df∂Cf/∂nf = Ds∂Cs/∂ns + q_jump for flux continuity, where q_jump represents any additional interfacial flux from reactions or adsorption. In pore-scale modeling, these conditions require specialized numerical schemes that can handle both the concentration discontinuity and potential flux jumps. The lattice Boltzmann method addresses this through modified streaming operations that incorporate both Henry's constant (σ = Ds/Df) and jump parameters, ensuring accurate prediction of mass transfer resistance across interfaces, which is particularly important in electrochemical devices where interfacial transport dominates overall performance.",
+  "original_text": {
+    "1": "Unlike heat transfer where the temperature is continuous across the interface, for mass transport, according to the Henry's law, the concentration is not continuous at the interface of different constituents, and this discontinuity is termed as the concentration jump.",
+    "2": "The interfacial conjugate conditions for concentration are given as Cf = Cs + Cjump and -Df∂Cf/∂nf = Ds∂Cs/∂ns + qjump"
+  },
+  "type": "concept",
+  "difficulty": 4,
+  "topic": "mass_transport",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires deep knowledge of mass transport in porous media, including thermodynamic equilibrium (Henry's Law), interfacial boundary conditions, and pore-scale modeling techniques like lattice Boltzmann methods. This falls under fluid mechanics, heat/mass transfer, and CFD expertise applied to porous media systems common in energy applications like fuel cells.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "The question is well-focused on domain-specific mass transport phenomena, and the answer accurately describes the physical mechanisms and modeling implications based on the provided citations."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_ef67fb5a",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Pore-scale-modeling-of-complex-transport-phe_2022_Progress-in-Energy-and-Com",
+    "paper_title": "Pore-scale-modeling-of-complex-transport-phe_2022_Progress-in-Energy-and-Com"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:25:18.452941",
+    "answer_length": 1161
+  },
+  "verification": {
+    "status": "needs_review",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly explains concentration jumps at fluid-solid interfaces in porous media. It accurately states that these jumps arise from thermodynamic equilibrium governed by Henry's Law (Cs = Cf/H), correctly derives the concentration jump expression C_jump = Cf(1/H - 1), and properly presents the interfacial boundary conditions that match the original text: Cf = Cs + Cjump for concentration and -Df∂Cf/∂nf = Ds∂Cs/∂ns + qjump for flux. The answer also correctly notes the discontinuity differs from heat transfer (where temperature is continuous), consistent with the original text. The additional discussion of numerical schemes, lattice Boltzmann methods, and electrochemical applications, while more detailed than the original text, represents valid extensions and applications of the core principles without introducing factual errors or contradictions.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:15:49.567248"
+      },
+      {
+        "correct": false,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Defines C_jump with opposite sign (C_jump = Cs - Cf), which contradicts the original condition Cf = Cs + C_jump (implying C_jump = Cf - Cs).",
+          "Algebraic inconsistency: Using C_jump = Cs - Cf in Cf = Cs + C_jump leads to Cf = Cs (no jump), contradicting the stated discontinuity.",
+          "Misidentifies Henry's constant as σ = Ds/Df in the lattice Boltzmann discussion; Ds/Df is a diffusivity ratio, not Henry's constant.",
+          "Refers to 'concentration continuity' while describing a discontinuity; terminology is misleading, though the boundary condition form matches the original text."
+        ],
+        "reasoning": "While the answer correctly attributes concentration jumps to Henry’s law and reproduces the conjugate interfacial boundary conditions in form, it incorrectly defines the jump’s sign and introduces an algebraic contradiction. It also falsely equates Henry’s constant to the diffusivity ratio. These are factual and logical errors relative to the ground-truth text.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:16:11.531008"
+      },
+      {
+        "correct": false,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "The answer contains a major logical contradiction. It defines the concentration jump as C_jump = Cs - Cf, but then states the boundary condition as Cf = Cs + C_jump. Substituting the definition into the equation leads to Cf = Cs, which eliminates the jump, contradicting the premise.",
+          "The answer incorrectly implies that Henry's constant is the ratio of diffusivities, σ = Ds/Df. Henry's constant is a thermodynamic partition coefficient relating equilibrium concentrations (e.g., H = Cf/Cs), whereas Ds/Df is a ratio of transport properties (diffusivities).",
+          "The answer's definition of the jump (C_jump = Cs - Cf) contradicts the definition implied by the ground truth's boundary condition (Cf = Cs + Cjump, which implies Cjump = Cf - Cs)."
+        ],
+        "reasoning": "The answer is incorrect due to a critical logical contradiction in its formulation of the concentration jump and the corresponding boundary condition. Furthermore, it contains a clear factual error by misidentifying the ratio of diffusivities as Henry's constant. These errors make the explanation physically and mathematically unsound.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:16:40.911970"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:16:40.911993",
+    "consensus": {
+      "all_correct": false,
+      "correct_votes": 1,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 1
+    }
+  }
+}

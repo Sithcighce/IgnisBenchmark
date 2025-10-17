@@ -1,0 +1,80 @@
+{
+  "question_text": "What physical mechanisms cause the LII signal saturation at high laser fluences, and how does this relate to the sublimation thermodynamics of carbon clusters?",
+  "standard_answer": "LII signal saturation occurs when particles reach the sublimation temperature, typically around 4000-4500 K for carbonaceous materials, where the absorbed laser energy is balanced by massive evaporative cooling. The saturation mechanism involves phase transition thermodynamics: as temperature approaches the sublimation point, the vapor pressure of carbon clusters increases exponentially according to the Clausius-Clapeyron relation. The evaporative cooling rate Q̇_sub becomes dominant and scales with the saturation vapor pressure pV ∝ exp(-ΔHV/RT), where ΔHV is the enthalpy of sublimation. For carbon, multiple sublimation pathways exist with different thermodynamic thresholds: C3 sublimation occurs around 4140 K (ΔHV ≈ 710 kJ/mol), while C2 sublimation requires ~4460 K (ΔHV ≈ 830 kJ/mol). When laser heating drives the particle to these temperatures, Q̇_sub increases dramatically because the mass loss rate dM/dt_sub becomes substantial, consuming the latent heat of sublimation. This creates a temperature plateau where further increases in laser fluence do not raise particle temperature but instead accelerate mass loss. The saturation behavior is observed experimentally as a flattening of the peak LII signal versus fluence curve, since the incandescence signal S ∝ dp²T⁴ (from Planck's law) cannot increase once T becomes constant and dp decreases due to sublimation. The exact saturation temperature depends on the dominant subliming species and the wavelength-dependent emissivity used for temperature inference.",
+  "original_text": {
+    "1": "LII signal saturation occurs when particles reach the sublimation temperature, typically around 4000-4500 K for carbonaceous materials, where the absorbed laser energy is balanced by massive evaporative cooling.",
+    "2": "For carbon, multiple sublimation pathways exist with different thermodynamic thresholds: C3 sublimation occurs around 4140 K, while C2 sublimation requires ~4460 K."
+  },
+  "type": "reasoning",
+  "difficulty": 5,
+  "topic": "combustion_science",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question requires deep knowledge of laser-induced incandescence (LII) physics, carbon sublimation thermodynamics, and combustion diagnostics. It specifically addresses physical mechanisms of signal saturation, sublimation thermodynamics of carbon clusters, and the relationship between laser fluence and particle temperature - all core combustion science concepts that cannot be answered with general ML knowledge.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "Question and answer meet all quality standards - domain-focused, factually correct based on citations, and no other compliance issues."
+  },
+  "retry_count": 0,
+  "question_id": "deepseek_q_12f46c09",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Laser-induced-incandescence--Particulate-diagnostic_2015_Progress-in-Energy-",
+    "paper_title": "Laser-induced-incandescence--Particulate-diagnostic_2015_Progress-in-Energy-"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:21:54.614090",
+    "answer_length": 1531
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The standard answer correctly explains LII signal saturation mechanisms and is fully consistent with the original text. Key facts verified: (1) saturation occurs at sublimation temperature (4000-4500 K) due to evaporative cooling balancing laser absorption, (2) C3 sublimation at ~4140 K and C2 at ~4460 K with correct thermodynamic thresholds. The answer provides extensive additional detail on thermodynamic mechanisms (Clausius-Clapeyron relation, vapor pressure scaling, enthalpy values ΔHV ≈ 710 kJ/mol for C3 and 830 kJ/mol for C2, temperature plateau formation, signal dependence S ∝ dp²T⁴) that are all physically sound and consistent with established combustion science principles. The explanation of why saturation appears as signal flattening (constant T, decreasing dp) is logically correct. While much more detailed than the original text, all statements are accurate and no factual errors or logical contradictions are present.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:11:13.516546"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "medium",
+        "issues": [
+          "Specific enthalpy values given for C3 (~710 kJ/mol) and C2 (~830 kJ/mol) are not in the ground-truth and may be inaccurate or ambiguously defined for cluster sublimation.",
+          "The scaling S ∝ dp² T⁴ is a useful approximation but LII signals at a fixed wavelength more precisely follow A·ελ·Bλ(T); stating T⁴ as from Planck’s law is an oversimplification."
+        ],
+        "reasoning": "The answer correctly identifies LII saturation as arising from evaporative cooling near the carbon sublimation temperature (~4000–4500 K) and ties it to the rapid rise of vapor pressure per Clausius–Clapeyron, consistent with the ground-truth including the C3 (~4140 K) and C2 (~4460 K) thresholds. The causal chain—dominant sublimation cooling causing a temperature plateau and signal saturation—is sound. Minor issues concern potentially inaccurate enthalpy values for specific clusters and a simplified emission scaling, but these do not contradict the core mechanism.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:11:49.268667"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer is factually and logically correct. It accurately describes the physical mechanism of LII saturation, consistent with the provided original text. The explanation correctly invokes thermodynamic principles like the Clausius-Clapeyron relation to explain the massive evaporative cooling that balances laser energy absorption, leading to a temperature plateau. All statements are consistent with established combustion and thermophysics principles.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:12:19.550639"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:12:19.550659",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": false,
+      "disagreement_count": 0
+    }
+  }
+}

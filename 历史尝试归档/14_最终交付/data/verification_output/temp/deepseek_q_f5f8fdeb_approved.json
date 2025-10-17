@@ -1,0 +1,80 @@
+{
+  "question_text": "In the context of CFD simulations for Claus furnace design, how do global reaction models differ from detailed kinetic models in predicting species concentrations and temperature profiles, and what are their respective limitations according to the provided paper?",
+  "standard_answer": "Global reaction models in CFD simulations for Claus furnaces use simplified reaction sets to reduce computational cost, but they often fail to capture intermediate species and complex reaction pathways. According to the paper, 'Global reaction models for Claus furnace design... Limitations include poor prediction of emission species and sensitivity to flow-chemistry interactions.' This means global models cannot accurately predict the formation of important sulfur species like COS, CS₂, and other intermediates that affect downstream catalytic units. In contrast, detailed kinetic models incorporate comprehensive reaction mechanisms developed through quantum calculations and experimental studies. The paper states that 'The detailed models have also helped in predicting the formation of large PAHs in the furnace that possibly explain the carbon-sulfur complexes found in the downstream catalytic units and in the process optimization to reduce the sulfur production cost.' Detailed models account for radical chemistry, disulfur species formation, and sulfur-hydrocarbon interactions that global models miss. However, detailed models are computationally expensive and require extensive validation data from plant tests and laboratory experiments. The limitations of global models stem from their inability to capture the complex sulfur chemistry involving hundreds of elementary reactions, while detailed models face challenges in computational requirements and the need for accurate turbulence-chemistry closure in CFD simulations.",
+  "original_text": {
+    "1": "Global reaction models for Claus furnace design... Limitations include poor prediction of emission species and sensitivity to flow-chemistry interactions.",
+    "2": "The detailed models have also helped in predicting the formation of large PAHs in the furnace that possibly explain the carbon-sulfur complexes found in the downstream catalytic units and in the process optimization to reduce the sulfur production cost."
+  },
+  "type": "concept",
+  "difficulty": 4,
+  "topic": "combustion_kinetics",
+  "quality_check": {
+    "domain_focused": true,
+    "domain_reasoning": "The question specifically addresses CFD simulations for Claus furnace design, requiring knowledge of combustion kinetics (global vs. detailed models), sulfur chemistry (species like COS, CS₂, PAHs), and industrial process modeling. It demands expertise in combustion science, fluid mechanics, and chemical engineering principles applied to sulfur recovery units.",
+    "answer_correct": true,
+    "answer_issues": [],
+    "other_compliant": true,
+    "other_issues": [],
+    "overall_verdict": "pass",
+    "recommendation": "The question is domain-focused, the answer is factually correct and well-supported by citations, and there are no other quality issues. It passes all checks."
+  },
+  "retry_count": 1,
+  "question_id": "deepseek_q_f5f8fdeb",
+  "source": {
+    "type": "deepseek_generation",
+    "paper_file": "Combustion-kinetics-of-H2S-and-other-sulfurous-sp_2020_Progress-in-Energy-an",
+    "paper_title": "Combustion-kinetics-of-H2S-and-other-sulfurous-sp_2020_Progress-in-Energy-an"
+  },
+  "metadata": {
+    "generation_model": "deepseek-chat",
+    "created_at": "2025-10-15T16:18:29.101722",
+    "answer_length": 1541
+  },
+  "verification": {
+    "status": "approved",
+    "verifiers": [
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer accurately distinguishes between global and detailed kinetic models for Claus furnace CFD simulations. It correctly quotes and interprets both original text passages. The explanation that global models fail to capture intermediate species and are limited in predicting emission species aligns with passage [1]. The discussion of detailed models predicting PAH formation and carbon-sulfur complexes accurately reflects passage [2]. The additional context about computational costs, radical chemistry, and turbulence-chemistry closure, while not directly quoted, represents accurate domain knowledge consistent with combustion modeling principles. No factual errors or logical contradictions are present.",
+        "model_name": "anthropic/claude-sonnet-4.5",
+        "model_short": "claude-sonnet-4.5",
+        "verified_at": "2025-10-15T20:06:48.538510"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [
+          "Does not explicitly address temperature profile differences",
+          "Adds plausible details (specific species, computational expense, turbulence-chemistry closure) not present in provided quotes but not contradictory"
+        ],
+        "reasoning": "The answer aligns with the ground-truth statements: global models have poor prediction of emission species and are sensitive to flow–chemistry interactions, while detailed models help predict large PAHs and explain downstream carbon–sulfur complexes with process optimization benefits. The added specifics are reasonable and do not contradict the provided text; no factual or logical errors detected.",
+        "model_name": "openai/gpt-5",
+        "model_short": "gpt-5",
+        "verified_at": "2025-10-15T20:07:11.826545"
+      },
+      {
+        "correct": true,
+        "baseline_confidence": "high",
+        "verification_confidence": "high",
+        "issues": [],
+        "reasoning": "The answer accurately defines and contrasts global and detailed kinetic models in the context of Claus furnace CFD. It correctly quotes the provided text and provides factually sound elaborations on the limitations of each approach, such as the inability of global models to predict specific byproducts (COS, CS₂) and the computational expense of detailed models. The reasoning is logical and consistent with established principles of combustion and chemical reaction engineering.",
+        "model_name": "google/gemini-2.5-pro",
+        "model_short": "gemini-2.5-pro",
+        "verified_at": "2025-10-15T20:07:38.966445"
+      }
+    ],
+    "failed_verifiers": [],
+    "verified_at": "2025-10-15T20:07:38.966464",
+    "consensus": {
+      "all_correct": true,
+      "correct_votes": 3,
+      "total_votes": 3,
+      "all_high_confidence": true,
+      "disagreement_count": 0
+    }
+  }
+}
